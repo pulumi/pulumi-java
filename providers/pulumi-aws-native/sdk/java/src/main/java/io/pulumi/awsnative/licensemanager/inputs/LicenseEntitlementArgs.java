@@ -116,62 +116,50 @@ public final class LicenseEntitlementArgs extends io.pulumi.resources.ResourceAr
             this.allowCheckIn = allowCheckIn;
             return this;
         }
-
         public Builder allowCheckIn(@Nullable Boolean allowCheckIn) {
             this.allowCheckIn = Output.ofNullable(allowCheckIn);
             return this;
         }
-
         public Builder maxCount(@Nullable Output<Integer> maxCount) {
             this.maxCount = maxCount;
             return this;
         }
-
         public Builder maxCount(@Nullable Integer maxCount) {
             this.maxCount = Output.ofNullable(maxCount);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder overage(@Nullable Output<Boolean> overage) {
             this.overage = overage;
             return this;
         }
-
         public Builder overage(@Nullable Boolean overage) {
             this.overage = Output.ofNullable(overage);
             return this;
         }
-
         public Builder unit(Output<String> unit) {
             this.unit = Objects.requireNonNull(unit);
             return this;
         }
-
         public Builder unit(String unit) {
             this.unit = Output.of(Objects.requireNonNull(unit));
             return this;
         }
-
         public Builder value(@Nullable Output<String> value) {
             this.value = value;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = Output.ofNullable(value);
             return this;
-        }
-        public LicenseEntitlementArgs build() {
+        }        public LicenseEntitlementArgs build() {
             return new LicenseEntitlementArgs(allowCheckIn, maxCount, name, overage, unit, value);
         }
     }

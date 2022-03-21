@@ -76,12 +76,10 @@ public final class GoogleCloudDatacatalogV1ContactsPersonResponse extends io.pul
             this.designation = Objects.requireNonNull(designation);
             return this;
         }
-
         public Builder email(String email) {
             this.email = Objects.requireNonNull(email);
             return this;
-        }
-        public GoogleCloudDatacatalogV1ContactsPersonResponse build() {
+        }        public GoogleCloudDatacatalogV1ContactsPersonResponse build() {
             return new GoogleCloudDatacatalogV1ContactsPersonResponse(designation, email);
         }
     }

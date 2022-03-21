@@ -156,72 +156,58 @@ public final class OauthIdpConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.clientId = Objects.requireNonNull(clientId);
             return this;
         }
-
         public Builder clientId(String clientId) {
             this.clientId = Output.of(Objects.requireNonNull(clientId));
             return this;
         }
-
         public Builder clientSecret(@Nullable Output<String> clientSecret) {
             this.clientSecret = clientSecret;
             return this;
         }
-
         public Builder clientSecret(@Nullable String clientSecret) {
             this.clientSecret = Output.ofNullable(clientSecret);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
         }
-
         public Builder issuer(Output<String> issuer) {
             this.issuer = Objects.requireNonNull(issuer);
             return this;
         }
-
         public Builder issuer(String issuer) {
             this.issuer = Output.of(Objects.requireNonNull(issuer));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
-        }
-        public OauthIdpConfigArgs build() {
+        }        public OauthIdpConfigArgs build() {
             return new OauthIdpConfigArgs(clientId, clientSecret, displayName, enabled, issuer, name, project);
         }
     }

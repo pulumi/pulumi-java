@@ -148,62 +148,56 @@ public final class MatchConditionArgs extends io.pulumi.resources.ResourceArgs {
             this.matchValue = Objects.requireNonNull(matchValue);
             return this;
         }
-
         public Builder matchValue(List<String> matchValue) {
             this.matchValue = Output.of(Objects.requireNonNull(matchValue));
             return this;
         }
-
+        public Builder matchValue(String... matchValue) {
+            return matchValue(List.of(matchValue));
+        }
         public Builder matchVariable(Output<Either<String,MatchVariable>> matchVariable) {
             this.matchVariable = Objects.requireNonNull(matchVariable);
             return this;
         }
-
         public Builder matchVariable(Either<String,MatchVariable> matchVariable) {
             this.matchVariable = Output.of(Objects.requireNonNull(matchVariable));
             return this;
         }
-
         public Builder negateCondition(@Nullable Output<Boolean> negateCondition) {
             this.negateCondition = negateCondition;
             return this;
         }
-
         public Builder negateCondition(@Nullable Boolean negateCondition) {
             this.negateCondition = Output.ofNullable(negateCondition);
             return this;
         }
-
         public Builder operator(Output<Either<String,Operator>> operator) {
             this.operator = Objects.requireNonNull(operator);
             return this;
         }
-
         public Builder operator(Either<String,Operator> operator) {
             this.operator = Output.of(Objects.requireNonNull(operator));
             return this;
         }
-
         public Builder selector(@Nullable Output<String> selector) {
             this.selector = selector;
             return this;
         }
-
         public Builder selector(@Nullable String selector) {
             this.selector = Output.ofNullable(selector);
             return this;
         }
-
         public Builder transforms(@Nullable Output<List<Either<String,TransformType>>> transforms) {
             this.transforms = transforms;
             return this;
         }
-
         public Builder transforms(@Nullable List<Either<String,TransformType>> transforms) {
             this.transforms = Output.ofNullable(transforms);
             return this;
         }
-        public MatchConditionArgs build() {
+        public Builder transforms(Either<String,TransformType>... transforms) {
+            return transforms(List.of(transforms));
+        }        public MatchConditionArgs build() {
             return new MatchConditionArgs(matchValue, matchVariable, negateCondition, operator, selector, transforms);
         }
     }

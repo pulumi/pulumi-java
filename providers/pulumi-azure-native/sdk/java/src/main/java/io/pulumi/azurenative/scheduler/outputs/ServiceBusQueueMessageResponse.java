@@ -154,37 +154,30 @@ public final class ServiceBusQueueMessageResponse {
             this.authentication = authentication;
             return this;
         }
-
         public Builder brokeredMessageProperties(@Nullable ServiceBusBrokeredMessagePropertiesResponse brokeredMessageProperties) {
             this.brokeredMessageProperties = brokeredMessageProperties;
             return this;
         }
-
         public Builder customMessageProperties(@Nullable Map<String,String> customMessageProperties) {
             this.customMessageProperties = customMessageProperties;
             return this;
         }
-
         public Builder message(@Nullable String message) {
             this.message = message;
             return this;
         }
-
         public Builder namespace(@Nullable String namespace) {
             this.namespace = namespace;
             return this;
         }
-
         public Builder queueName(@Nullable String queueName) {
             this.queueName = queueName;
             return this;
         }
-
         public Builder transportType(@Nullable String transportType) {
             this.transportType = transportType;
             return this;
-        }
-        public ServiceBusQueueMessageResponse build() {
+        }        public ServiceBusQueueMessageResponse build() {
             return new ServiceBusQueueMessageResponse(authentication, brokeredMessageProperties, customMessageProperties, message, namespace, queueName, transportType);
         }
     }

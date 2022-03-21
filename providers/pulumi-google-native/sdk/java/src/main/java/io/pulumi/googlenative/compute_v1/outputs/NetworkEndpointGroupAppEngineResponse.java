@@ -85,17 +85,14 @@ public final class NetworkEndpointGroupAppEngineResponse {
             this.service = Objects.requireNonNull(service);
             return this;
         }
-
         public Builder urlMask(String urlMask) {
             this.urlMask = Objects.requireNonNull(urlMask);
             return this;
         }
-
         public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
-        }
-        public NetworkEndpointGroupAppEngineResponse build() {
+        }        public NetworkEndpointGroupAppEngineResponse build() {
             return new NetworkEndpointGroupAppEngineResponse(service, urlMask, version);
         }
     }

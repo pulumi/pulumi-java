@@ -55,12 +55,10 @@ public final class DeviceState {
             this.binaryData = binaryData;
             return this;
         }
-
         public Builder updateTime(@Nullable String updateTime) {
             this.updateTime = updateTime;
             return this;
-        }
-        public DeviceState build() {
+        }        public DeviceState build() {
             return new DeviceState(binaryData, updateTime);
         }
     }

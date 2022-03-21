@@ -79,22 +79,18 @@ public final class RateLimitsArgs extends io.pulumi.resources.ResourceArgs {
             this.maxConcurrentDispatches = maxConcurrentDispatches;
             return this;
         }
-
         public Builder maxConcurrentDispatches(@Nullable Integer maxConcurrentDispatches) {
             this.maxConcurrentDispatches = Output.ofNullable(maxConcurrentDispatches);
             return this;
         }
-
         public Builder maxDispatchesPerSecond(@Nullable Output<Double> maxDispatchesPerSecond) {
             this.maxDispatchesPerSecond = maxDispatchesPerSecond;
             return this;
         }
-
         public Builder maxDispatchesPerSecond(@Nullable Double maxDispatchesPerSecond) {
             this.maxDispatchesPerSecond = Output.ofNullable(maxDispatchesPerSecond);
             return this;
-        }
-        public RateLimitsArgs build() {
+        }        public RateLimitsArgs build() {
             return new RateLimitsArgs(maxConcurrentDispatches, maxDispatchesPerSecond);
         }
     }

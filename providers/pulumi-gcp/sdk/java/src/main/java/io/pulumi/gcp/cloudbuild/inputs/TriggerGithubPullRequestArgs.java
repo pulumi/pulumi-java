@@ -92,32 +92,26 @@ public final class TriggerGithubPullRequestArgs extends io.pulumi.resources.Reso
             this.branch = Objects.requireNonNull(branch);
             return this;
         }
-
         public Builder branch(String branch) {
             this.branch = Output.of(Objects.requireNonNull(branch));
             return this;
         }
-
         public Builder commentControl(@Nullable Output<String> commentControl) {
             this.commentControl = commentControl;
             return this;
         }
-
         public Builder commentControl(@Nullable String commentControl) {
             this.commentControl = Output.ofNullable(commentControl);
             return this;
         }
-
         public Builder invertRegex(@Nullable Output<Boolean> invertRegex) {
             this.invertRegex = invertRegex;
             return this;
         }
-
         public Builder invertRegex(@Nullable Boolean invertRegex) {
             this.invertRegex = Output.ofNullable(invertRegex);
             return this;
-        }
-        public TriggerGithubPullRequestArgs build() {
+        }        public TriggerGithubPullRequestArgs build() {
             return new TriggerGithubPullRequestArgs(branch, commentControl, invertRegex);
         }
     }

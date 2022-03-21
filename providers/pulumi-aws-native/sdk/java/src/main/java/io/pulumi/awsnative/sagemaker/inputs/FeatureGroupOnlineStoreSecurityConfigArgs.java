@@ -53,12 +53,10 @@ public final class FeatureGroupOnlineStoreSecurityConfigArgs extends io.pulumi.r
             this.kmsKeyId = kmsKeyId;
             return this;
         }
-
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = Output.ofNullable(kmsKeyId);
             return this;
-        }
-        public FeatureGroupOnlineStoreSecurityConfigArgs build() {
+        }        public FeatureGroupOnlineStoreSecurityConfigArgs build() {
             return new FeatureGroupOnlineStoreSecurityConfigArgs(kmsKeyId);
         }
     }

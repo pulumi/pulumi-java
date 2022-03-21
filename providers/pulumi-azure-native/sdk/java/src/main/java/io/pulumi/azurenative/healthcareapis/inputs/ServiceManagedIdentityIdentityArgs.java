@@ -63,12 +63,10 @@ public final class ServiceManagedIdentityIdentityArgs extends io.pulumi.resource
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable Either<String,ManagedServiceIdentityType> type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public ServiceManagedIdentityIdentityArgs build() {
+        }        public ServiceManagedIdentityIdentityArgs build() {
             return new ServiceManagedIdentityIdentityArgs(type);
         }
     }

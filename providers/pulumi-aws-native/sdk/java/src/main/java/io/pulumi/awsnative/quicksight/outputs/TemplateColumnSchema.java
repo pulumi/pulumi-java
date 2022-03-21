@@ -87,17 +87,14 @@ public final class TemplateColumnSchema {
             this.dataType = dataType;
             return this;
         }
-
         public Builder geographicRole(@Nullable String geographicRole) {
             this.geographicRole = geographicRole;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
-        }
-        public TemplateColumnSchema build() {
+        }        public TemplateColumnSchema build() {
             return new TemplateColumnSchema(dataType, geographicRole, name);
         }
     }

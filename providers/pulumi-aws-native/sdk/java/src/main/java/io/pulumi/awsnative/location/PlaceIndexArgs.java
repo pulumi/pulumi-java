@@ -104,52 +104,42 @@ public final class PlaceIndexArgs extends io.pulumi.resources.ResourceArgs {
             this.dataSource = Objects.requireNonNull(dataSource);
             return this;
         }
-
         public Builder dataSource(String dataSource) {
             this.dataSource = Output.of(Objects.requireNonNull(dataSource));
             return this;
         }
-
         public Builder dataSourceConfiguration(@Nullable Output<PlaceIndexDataSourceConfigurationArgs> dataSourceConfiguration) {
             this.dataSourceConfiguration = dataSourceConfiguration;
             return this;
         }
-
         public Builder dataSourceConfiguration(@Nullable PlaceIndexDataSourceConfigurationArgs dataSourceConfiguration) {
             this.dataSourceConfiguration = Output.ofNullable(dataSourceConfiguration);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder indexName(Output<String> indexName) {
             this.indexName = Objects.requireNonNull(indexName);
             return this;
         }
-
         public Builder indexName(String indexName) {
             this.indexName = Output.of(Objects.requireNonNull(indexName));
             return this;
         }
-
         public Builder pricingPlan(@Nullable Output<PlaceIndexPricingPlan> pricingPlan) {
             this.pricingPlan = pricingPlan;
             return this;
         }
-
         public Builder pricingPlan(@Nullable PlaceIndexPricingPlan pricingPlan) {
             this.pricingPlan = Output.ofNullable(pricingPlan);
             return this;
-        }
-        public PlaceIndexArgs build() {
+        }        public PlaceIndexArgs build() {
             return new PlaceIndexArgs(dataSource, dataSourceConfiguration, description, indexName, pricingPlan);
         }
     }

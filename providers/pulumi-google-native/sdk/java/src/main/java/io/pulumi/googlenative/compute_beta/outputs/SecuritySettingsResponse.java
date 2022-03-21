@@ -70,12 +70,13 @@ public final class SecuritySettingsResponse {
             this.clientTlsPolicy = Objects.requireNonNull(clientTlsPolicy);
             return this;
         }
-
         public Builder subjectAltNames(List<String> subjectAltNames) {
             this.subjectAltNames = Objects.requireNonNull(subjectAltNames);
             return this;
         }
-        public SecuritySettingsResponse build() {
+        public Builder subjectAltNames(String... subjectAltNames) {
+            return subjectAltNames(List.of(subjectAltNames));
+        }        public SecuritySettingsResponse build() {
             return new SecuritySettingsResponse(clientTlsPolicy, subjectAltNames);
         }
     }

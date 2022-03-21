@@ -160,72 +160,58 @@ public final class WebAclRuleStatementOrStatementStatementOrStatementStatementAn
             this.allQueryArguments = allQueryArguments;
             return this;
         }
-
         public Builder allQueryArguments(@Nullable WebAclRuleStatementOrStatementStatementOrStatementStatementAndStatementStatementXssMatchStatementFieldToMatchAllQueryArgumentsGetArgs allQueryArguments) {
             this.allQueryArguments = Output.ofNullable(allQueryArguments);
             return this;
         }
-
         public Builder body(@Nullable Output<WebAclRuleStatementOrStatementStatementOrStatementStatementAndStatementStatementXssMatchStatementFieldToMatchBodyGetArgs> body) {
             this.body = body;
             return this;
         }
-
         public Builder body(@Nullable WebAclRuleStatementOrStatementStatementOrStatementStatementAndStatementStatementXssMatchStatementFieldToMatchBodyGetArgs body) {
             this.body = Output.ofNullable(body);
             return this;
         }
-
         public Builder method(@Nullable Output<WebAclRuleStatementOrStatementStatementOrStatementStatementAndStatementStatementXssMatchStatementFieldToMatchMethodGetArgs> method) {
             this.method = method;
             return this;
         }
-
         public Builder method(@Nullable WebAclRuleStatementOrStatementStatementOrStatementStatementAndStatementStatementXssMatchStatementFieldToMatchMethodGetArgs method) {
             this.method = Output.ofNullable(method);
             return this;
         }
-
         public Builder queryString(@Nullable Output<WebAclRuleStatementOrStatementStatementOrStatementStatementAndStatementStatementXssMatchStatementFieldToMatchQueryStringGetArgs> queryString) {
             this.queryString = queryString;
             return this;
         }
-
         public Builder queryString(@Nullable WebAclRuleStatementOrStatementStatementOrStatementStatementAndStatementStatementXssMatchStatementFieldToMatchQueryStringGetArgs queryString) {
             this.queryString = Output.ofNullable(queryString);
             return this;
         }
-
         public Builder singleHeader(@Nullable Output<WebAclRuleStatementOrStatementStatementOrStatementStatementAndStatementStatementXssMatchStatementFieldToMatchSingleHeaderGetArgs> singleHeader) {
             this.singleHeader = singleHeader;
             return this;
         }
-
         public Builder singleHeader(@Nullable WebAclRuleStatementOrStatementStatementOrStatementStatementAndStatementStatementXssMatchStatementFieldToMatchSingleHeaderGetArgs singleHeader) {
             this.singleHeader = Output.ofNullable(singleHeader);
             return this;
         }
-
         public Builder singleQueryArgument(@Nullable Output<WebAclRuleStatementOrStatementStatementOrStatementStatementAndStatementStatementXssMatchStatementFieldToMatchSingleQueryArgumentGetArgs> singleQueryArgument) {
             this.singleQueryArgument = singleQueryArgument;
             return this;
         }
-
         public Builder singleQueryArgument(@Nullable WebAclRuleStatementOrStatementStatementOrStatementStatementAndStatementStatementXssMatchStatementFieldToMatchSingleQueryArgumentGetArgs singleQueryArgument) {
             this.singleQueryArgument = Output.ofNullable(singleQueryArgument);
             return this;
         }
-
         public Builder uriPath(@Nullable Output<WebAclRuleStatementOrStatementStatementOrStatementStatementAndStatementStatementXssMatchStatementFieldToMatchUriPathGetArgs> uriPath) {
             this.uriPath = uriPath;
             return this;
         }
-
         public Builder uriPath(@Nullable WebAclRuleStatementOrStatementStatementOrStatementStatementAndStatementStatementXssMatchStatementFieldToMatchUriPathGetArgs uriPath) {
             this.uriPath = Output.ofNullable(uriPath);
             return this;
-        }
-        public WebAclRuleStatementOrStatementStatementOrStatementStatementAndStatementStatementXssMatchStatementFieldToMatchGetArgs build() {
+        }        public WebAclRuleStatementOrStatementStatementOrStatementStatementAndStatementStatementXssMatchStatementFieldToMatchGetArgs build() {
             return new WebAclRuleStatementOrStatementStatementOrStatementStatementAndStatementStatementXssMatchStatementFieldToMatchGetArgs(allQueryArguments, body, method, queryString, singleHeader, singleQueryArgument, uriPath);
         }
     }

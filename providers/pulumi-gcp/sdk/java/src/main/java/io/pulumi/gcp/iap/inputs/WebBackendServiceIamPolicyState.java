@@ -108,42 +108,34 @@ public final class WebBackendServiceIamPolicyState extends io.pulumi.resources.R
             this.etag = etag;
             return this;
         }
-
         public Builder etag(@Nullable String etag) {
             this.etag = Output.ofNullable(etag);
             return this;
         }
-
         public Builder policyData(@Nullable Output<String> policyData) {
             this.policyData = policyData;
             return this;
         }
-
         public Builder policyData(@Nullable String policyData) {
             this.policyData = Output.ofNullable(policyData);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder webBackendService(@Nullable Output<String> webBackendService) {
             this.webBackendService = webBackendService;
             return this;
         }
-
         public Builder webBackendService(@Nullable String webBackendService) {
             this.webBackendService = Output.ofNullable(webBackendService);
             return this;
-        }
-        public WebBackendServiceIamPolicyState build() {
+        }        public WebBackendServiceIamPolicyState build() {
             return new WebBackendServiceIamPolicyState(etag, policyData, project, webBackendService);
         }
     }

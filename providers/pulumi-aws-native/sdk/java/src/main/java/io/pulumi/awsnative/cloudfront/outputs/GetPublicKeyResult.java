@@ -64,17 +64,14 @@ public final class GetPublicKeyResult {
             this.createdTime = createdTime;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder publicKeyConfig(@Nullable PublicKeyConfig publicKeyConfig) {
             this.publicKeyConfig = publicKeyConfig;
             return this;
-        }
-        public GetPublicKeyResult build() {
+        }        public GetPublicKeyResult build() {
             return new GetPublicKeyResult(createdTime, id, publicKeyConfig);
         }
     }

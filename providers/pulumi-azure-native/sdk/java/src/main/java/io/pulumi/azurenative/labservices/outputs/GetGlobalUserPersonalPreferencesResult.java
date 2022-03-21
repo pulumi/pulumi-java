@@ -72,12 +72,13 @@ public final class GetGlobalUserPersonalPreferencesResult {
             this.favoriteLabResourceIds = favoriteLabResourceIds;
             return this;
         }
-
+        public Builder favoriteLabResourceIds(String... favoriteLabResourceIds) {
+            return favoriteLabResourceIds(List.of(favoriteLabResourceIds));
+        }
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
-        }
-        public GetGlobalUserPersonalPreferencesResult build() {
+        }        public GetGlobalUserPersonalPreferencesResult build() {
             return new GetGlobalUserPersonalPreferencesResult(favoriteLabResourceIds, id);
         }
     }

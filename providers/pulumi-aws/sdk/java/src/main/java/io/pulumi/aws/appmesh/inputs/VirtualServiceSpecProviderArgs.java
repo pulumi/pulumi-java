@@ -75,22 +75,18 @@ public final class VirtualServiceSpecProviderArgs extends io.pulumi.resources.Re
             this.virtualNode = virtualNode;
             return this;
         }
-
         public Builder virtualNode(@Nullable VirtualServiceSpecProviderVirtualNodeArgs virtualNode) {
             this.virtualNode = Output.ofNullable(virtualNode);
             return this;
         }
-
         public Builder virtualRouter(@Nullable Output<VirtualServiceSpecProviderVirtualRouterArgs> virtualRouter) {
             this.virtualRouter = virtualRouter;
             return this;
         }
-
         public Builder virtualRouter(@Nullable VirtualServiceSpecProviderVirtualRouterArgs virtualRouter) {
             this.virtualRouter = Output.ofNullable(virtualRouter);
             return this;
-        }
-        public VirtualServiceSpecProviderArgs build() {
+        }        public VirtualServiceSpecProviderArgs build() {
             return new VirtualServiceSpecProviderArgs(virtualNode, virtualRouter);
         }
     }

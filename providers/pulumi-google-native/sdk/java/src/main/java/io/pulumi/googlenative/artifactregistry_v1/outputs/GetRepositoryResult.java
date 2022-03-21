@@ -167,42 +167,34 @@ public final class GetRepositoryResult {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder format(String format) {
             this.format = Objects.requireNonNull(format);
             return this;
         }
-
         public Builder kmsKeyName(String kmsKeyName) {
             this.kmsKeyName = Objects.requireNonNull(kmsKeyName);
             return this;
         }
-
         public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder mavenConfig(MavenRepositoryConfigResponse mavenConfig) {
             this.mavenConfig = Objects.requireNonNull(mavenConfig);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
-        }
-        public GetRepositoryResult build() {
+        }        public GetRepositoryResult build() {
             return new GetRepositoryResult(createTime, description, format, kmsKeyName, labels, mavenConfig, name, updateTime);
         }
     }

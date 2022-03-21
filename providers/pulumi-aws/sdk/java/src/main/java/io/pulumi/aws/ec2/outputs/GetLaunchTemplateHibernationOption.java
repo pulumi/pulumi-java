@@ -43,8 +43,7 @@ public final class GetLaunchTemplateHibernationOption {
         public Builder configured(Boolean configured) {
             this.configured = Objects.requireNonNull(configured);
             return this;
-        }
-        public GetLaunchTemplateHibernationOption build() {
+        }        public GetLaunchTemplateHibernationOption build() {
             return new GetLaunchTemplateHibernationOption(configured);
         }
     }

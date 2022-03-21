@@ -63,12 +63,10 @@ public final class OpenAuthenticationAccessPoliciesArgs extends io.pulumi.resour
             this.policies = policies;
             return this;
         }
-
         public Builder policies(@Nullable Map<String,OpenAuthenticationAccessPolicyArgs> policies) {
             this.policies = Output.ofNullable(policies);
             return this;
-        }
-        public OpenAuthenticationAccessPoliciesArgs build() {
+        }        public OpenAuthenticationAccessPoliciesArgs build() {
             return new OpenAuthenticationAccessPoliciesArgs(policies);
         }
     }

@@ -56,12 +56,10 @@ public final class ServiceTemplateSpecContainerEnvFromSecretRefLocalObjectRefere
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
-        }
-        public ServiceTemplateSpecContainerEnvFromSecretRefLocalObjectReferenceGetArgs build() {
+        }        public ServiceTemplateSpecContainerEnvFromSecretRefLocalObjectReferenceGetArgs build() {
             return new ServiceTemplateSpecContainerEnvFromSecretRefLocalObjectReferenceGetArgs(name);
         }
     }

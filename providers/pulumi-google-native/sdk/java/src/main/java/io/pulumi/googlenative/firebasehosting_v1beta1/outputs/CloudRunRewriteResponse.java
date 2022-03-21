@@ -69,12 +69,10 @@ public final class CloudRunRewriteResponse {
             this.region = Objects.requireNonNull(region);
             return this;
         }
-
         public Builder serviceId(String serviceId) {
             this.serviceId = Objects.requireNonNull(serviceId);
             return this;
-        }
-        public CloudRunRewriteResponse build() {
+        }        public CloudRunRewriteResponse build() {
             return new CloudRunRewriteResponse(region, serviceId);
         }
     }

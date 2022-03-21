@@ -90,22 +90,18 @@ public final class GetCertificateAuthorityIamPolicyArgs extends io.pulumi.resour
             this.certificateAuthorityId = Objects.requireNonNull(certificateAuthorityId);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder optionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
             this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetCertificateAuthorityIamPolicyArgs build() {
+        }        public GetCertificateAuthorityIamPolicyArgs build() {
             return new GetCertificateAuthorityIamPolicyArgs(certificateAuthorityId, location, optionsRequestedPolicyVersion, project);
         }
     }

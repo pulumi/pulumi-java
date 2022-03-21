@@ -87,17 +87,14 @@ public final class NotebookResourceInfoResponse extends io.pulumi.resources.Invo
             this.fqdn = fqdn;
             return this;
         }
-
         public Builder notebookPreparationError(@Nullable NotebookPreparationErrorResponse notebookPreparationError) {
             this.notebookPreparationError = notebookPreparationError;
             return this;
         }
-
         public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = resourceId;
             return this;
-        }
-        public NotebookResourceInfoResponse build() {
+        }        public NotebookResourceInfoResponse build() {
             return new NotebookResourceInfoResponse(fqdn, notebookPreparationError, resourceId);
         }
     }

@@ -92,32 +92,26 @@ public final class ClassificationJobScheduleFrequencyGetArgs extends io.pulumi.r
             this.dailySchedule = dailySchedule;
             return this;
         }
-
         public Builder dailySchedule(@Nullable Boolean dailySchedule) {
             this.dailySchedule = Output.ofNullable(dailySchedule);
             return this;
         }
-
         public Builder monthlySchedule(@Nullable Output<Integer> monthlySchedule) {
             this.monthlySchedule = monthlySchedule;
             return this;
         }
-
         public Builder monthlySchedule(@Nullable Integer monthlySchedule) {
             this.monthlySchedule = Output.ofNullable(monthlySchedule);
             return this;
         }
-
         public Builder weeklySchedule(@Nullable Output<String> weeklySchedule) {
             this.weeklySchedule = weeklySchedule;
             return this;
         }
-
         public Builder weeklySchedule(@Nullable String weeklySchedule) {
             this.weeklySchedule = Output.ofNullable(weeklySchedule);
             return this;
-        }
-        public ClassificationJobScheduleFrequencyGetArgs build() {
+        }        public ClassificationJobScheduleFrequencyGetArgs build() {
             return new ClassificationJobScheduleFrequencyGetArgs(dailySchedule, monthlySchedule, weeklySchedule);
         }
     }

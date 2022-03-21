@@ -53,8 +53,7 @@ public final class DomainRetentionPolicy {
         public Builder homeEfsFileSystem(@Nullable String homeEfsFileSystem) {
             this.homeEfsFileSystem = homeEfsFileSystem;
             return this;
-        }
-        public DomainRetentionPolicy build() {
+        }        public DomainRetentionPolicy build() {
             return new DomainRetentionPolicy(homeEfsFileSystem);
         }
     }

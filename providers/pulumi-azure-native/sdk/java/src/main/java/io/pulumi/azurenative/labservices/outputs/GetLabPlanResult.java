@@ -270,72 +270,61 @@ public final class GetLabPlanResult {
             this.allowedRegions = allowedRegions;
             return this;
         }
-
+        public Builder allowedRegions(String... allowedRegions) {
+            return allowedRegions(List.of(allowedRegions));
+        }
         public Builder defaultAutoShutdownProfile(@Nullable AutoShutdownProfileResponse defaultAutoShutdownProfile) {
             this.defaultAutoShutdownProfile = defaultAutoShutdownProfile;
             return this;
         }
-
         public Builder defaultConnectionProfile(@Nullable ConnectionProfileResponse defaultConnectionProfile) {
             this.defaultConnectionProfile = defaultConnectionProfile;
             return this;
         }
-
         public Builder defaultNetworkProfile(@Nullable LabPlanNetworkProfileResponse defaultNetworkProfile) {
             this.defaultNetworkProfile = defaultNetworkProfile;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder linkedLmsInstance(@Nullable String linkedLmsInstance) {
             this.linkedLmsInstance = linkedLmsInstance;
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder sharedGalleryId(@Nullable String sharedGalleryId) {
             this.sharedGalleryId = sharedGalleryId;
             return this;
         }
-
         public Builder supportInfo(@Nullable SupportInfoResponse supportInfo) {
             this.supportInfo = supportInfo;
             return this;
         }
-
         public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetLabPlanResult build() {
+        }        public GetLabPlanResult build() {
             return new GetLabPlanResult(allowedRegions, defaultAutoShutdownProfile, defaultConnectionProfile, defaultNetworkProfile, id, linkedLmsInstance, location, name, provisioningState, sharedGalleryId, supportInfo, systemData, tags, type);
         }
     }

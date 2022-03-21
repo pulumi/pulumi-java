@@ -111,42 +111,34 @@ public final class EndpointPortArgs extends io.pulumi.resources.ResourceArgs {
             this.appProtocol = appProtocol;
             return this;
         }
-
         public Builder appProtocol(@Nullable String appProtocol) {
             this.appProtocol = Output.ofNullable(appProtocol);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder port(@Nullable Output<Integer> port) {
             this.port = port;
             return this;
         }
-
         public Builder port(@Nullable Integer port) {
             this.port = Output.ofNullable(port);
             return this;
         }
-
         public Builder protocol(@Nullable Output<String> protocol) {
             this.protocol = protocol;
             return this;
         }
-
         public Builder protocol(@Nullable String protocol) {
             this.protocol = Output.ofNullable(protocol);
             return this;
-        }
-        public EndpointPortArgs build() {
+        }        public EndpointPortArgs build() {
             return new EndpointPortArgs(appProtocol, name, port, protocol);
         }
     }

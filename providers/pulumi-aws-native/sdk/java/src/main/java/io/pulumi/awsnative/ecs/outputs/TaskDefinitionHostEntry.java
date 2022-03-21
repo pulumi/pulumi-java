@@ -55,12 +55,10 @@ public final class TaskDefinitionHostEntry {
             this.hostname = hostname;
             return this;
         }
-
         public Builder ipAddress(@Nullable String ipAddress) {
             this.ipAddress = ipAddress;
             return this;
-        }
-        public TaskDefinitionHostEntry build() {
+        }        public TaskDefinitionHostEntry build() {
             return new TaskDefinitionHostEntry(hostname, ipAddress);
         }
     }

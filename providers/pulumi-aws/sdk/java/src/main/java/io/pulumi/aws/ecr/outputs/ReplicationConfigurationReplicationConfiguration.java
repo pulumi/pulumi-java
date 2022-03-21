@@ -51,8 +51,7 @@ public final class ReplicationConfigurationReplicationConfiguration {
         public Builder rule(ReplicationConfigurationReplicationConfigurationRule rule) {
             this.rule = Objects.requireNonNull(rule);
             return this;
-        }
-        public ReplicationConfigurationReplicationConfiguration build() {
+        }        public ReplicationConfigurationReplicationConfiguration build() {
             return new ReplicationConfigurationReplicationConfiguration(rule);
         }
     }

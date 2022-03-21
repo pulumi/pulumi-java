@@ -84,17 +84,14 @@ public final class GetManagedInstanceAdministratorArgs extends io.pulumi.resourc
             this.administratorName = Objects.requireNonNull(administratorName);
             return this;
         }
-
         public Builder managedInstanceName(String managedInstanceName) {
             this.managedInstanceName = Objects.requireNonNull(managedInstanceName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetManagedInstanceAdministratorArgs build() {
+        }        public GetManagedInstanceAdministratorArgs build() {
             return new GetManagedInstanceAdministratorArgs(administratorName, managedInstanceName, resourceGroupName);
         }
     }

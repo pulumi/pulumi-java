@@ -78,32 +78,26 @@ public final class RulePredicateGetArgs extends io.pulumi.resources.ResourceArgs
             this.dataId = Objects.requireNonNull(dataId);
             return this;
         }
-
         public Builder dataId(String dataId) {
             this.dataId = Output.of(Objects.requireNonNull(dataId));
             return this;
         }
-
         public Builder negated(Output<Boolean> negated) {
             this.negated = Objects.requireNonNull(negated);
             return this;
         }
-
         public Builder negated(Boolean negated) {
             this.negated = Output.of(Objects.requireNonNull(negated));
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public RulePredicateGetArgs build() {
+        }        public RulePredicateGetArgs build() {
             return new RulePredicateGetArgs(dataId, negated, type);
         }
     }

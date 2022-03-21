@@ -76,12 +76,10 @@ public final class VolumeResponse extends io.pulumi.resources.InvokeArgs {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
-        }
-        public VolumeResponse build() {
+        }        public VolumeResponse build() {
             return new VolumeResponse(name, path);
         }
     }

@@ -51,8 +51,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
         public Builder inputLambdaProcessor(ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputProcessingConfigurationInputLambdaProcessor inputLambdaProcessor) {
             this.inputLambdaProcessor = Objects.requireNonNull(inputLambdaProcessor);
             return this;
-        }
-        public ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputProcessingConfiguration build() {
+        }        public ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputProcessingConfiguration build() {
             return new ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputProcessingConfiguration(inputLambdaProcessor);
         }
     }

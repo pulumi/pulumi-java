@@ -76,12 +76,10 @@ public final class GoogleAccountResponse extends io.pulumi.resources.InvokeArgs 
             this.password = Objects.requireNonNull(password);
             return this;
         }
-
         public Builder username(String username) {
             this.username = Objects.requireNonNull(username);
             return this;
-        }
-        public GoogleAccountResponse build() {
+        }        public GoogleAccountResponse build() {
             return new GoogleAccountResponse(password, username);
         }
     }

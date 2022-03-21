@@ -102,32 +102,26 @@ public final class RegionBackendServiceConsistentHashArgs extends io.pulumi.reso
             this.httpCookie = httpCookie;
             return this;
         }
-
         public Builder httpCookie(@Nullable RegionBackendServiceConsistentHashHttpCookieArgs httpCookie) {
             this.httpCookie = Output.ofNullable(httpCookie);
             return this;
         }
-
         public Builder httpHeaderName(@Nullable Output<String> httpHeaderName) {
             this.httpHeaderName = httpHeaderName;
             return this;
         }
-
         public Builder httpHeaderName(@Nullable String httpHeaderName) {
             this.httpHeaderName = Output.ofNullable(httpHeaderName);
             return this;
         }
-
         public Builder minimumRingSize(@Nullable Output<Integer> minimumRingSize) {
             this.minimumRingSize = minimumRingSize;
             return this;
         }
-
         public Builder minimumRingSize(@Nullable Integer minimumRingSize) {
             this.minimumRingSize = Output.ofNullable(minimumRingSize);
             return this;
-        }
-        public RegionBackendServiceConsistentHashArgs build() {
+        }        public RegionBackendServiceConsistentHashArgs build() {
             return new RegionBackendServiceConsistentHashArgs(httpCookie, httpHeaderName, minimumRingSize);
         }
     }

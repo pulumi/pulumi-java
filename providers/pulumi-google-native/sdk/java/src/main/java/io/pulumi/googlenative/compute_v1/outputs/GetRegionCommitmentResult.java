@@ -314,87 +314,76 @@ public final class GetRegionCommitmentResult {
             this.autoRenew = Objects.requireNonNull(autoRenew);
             return this;
         }
-
         public Builder category(String category) {
             this.category = Objects.requireNonNull(category);
             return this;
         }
-
         public Builder creationTimestamp(String creationTimestamp) {
             this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder endTimestamp(String endTimestamp) {
             this.endTimestamp = Objects.requireNonNull(endTimestamp);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder licenseResource(LicenseResourceCommitmentResponse licenseResource) {
             this.licenseResource = Objects.requireNonNull(licenseResource);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder plan(String plan) {
             this.plan = Objects.requireNonNull(plan);
             return this;
         }
-
         public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
-
         public Builder reservations(List<ReservationResponse> reservations) {
             this.reservations = Objects.requireNonNull(reservations);
             return this;
         }
-
+        public Builder reservations(ReservationResponse... reservations) {
+            return reservations(List.of(reservations));
+        }
         public Builder resources(List<ResourceCommitmentResponse> resources) {
             this.resources = Objects.requireNonNull(resources);
             return this;
         }
-
+        public Builder resources(ResourceCommitmentResponse... resources) {
+            return resources(List.of(resources));
+        }
         public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
-
         public Builder startTimestamp(String startTimestamp) {
             this.startTimestamp = Objects.requireNonNull(startTimestamp);
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder statusMessage(String statusMessage) {
             this.statusMessage = Objects.requireNonNull(statusMessage);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetRegionCommitmentResult build() {
+        }        public GetRegionCommitmentResult build() {
             return new GetRegionCommitmentResult(autoRenew, category, creationTimestamp, description, endTimestamp, kind, licenseResource, name, plan, region, reservations, resources, selfLink, startTimestamp, status, statusMessage, type);
         }
     }

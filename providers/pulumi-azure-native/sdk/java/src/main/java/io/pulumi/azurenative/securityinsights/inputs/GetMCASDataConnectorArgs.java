@@ -88,17 +88,14 @@ public final class GetMCASDataConnectorArgs extends io.pulumi.resources.InvokeAr
             this.dataConnectorId = Objects.requireNonNull(dataConnectorId);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
-        }
-        public GetMCASDataConnectorArgs build() {
+        }        public GetMCASDataConnectorArgs build() {
             return new GetMCASDataConnectorArgs(dataConnectorId, resourceGroupName, workspaceName);
         }
     }

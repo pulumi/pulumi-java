@@ -71,12 +71,10 @@ public final class Nfs3TargetResponse {
             this.target = target;
             return this;
         }
-
         public Builder usageModel(@Nullable String usageModel) {
             this.usageModel = usageModel;
             return this;
-        }
-        public Nfs3TargetResponse build() {
+        }        public Nfs3TargetResponse build() {
             return new Nfs3TargetResponse(target, usageModel);
         }
     }

@@ -157,72 +157,58 @@ public final class SecurityUserConfigurationArgs extends io.pulumi.resources.Res
             this.configurationName = configurationName;
             return this;
         }
-
         public Builder configurationName(@Nullable String configurationName) {
             this.configurationName = Output.ofNullable(configurationName);
             return this;
         }
-
         public Builder deleteExistingNSGs(@Nullable Output<Either<String,DeleteExistingNSGs>> deleteExistingNSGs) {
             this.deleteExistingNSGs = deleteExistingNSGs;
             return this;
         }
-
         public Builder deleteExistingNSGs(@Nullable Either<String,DeleteExistingNSGs> deleteExistingNSGs) {
             this.deleteExistingNSGs = Output.ofNullable(deleteExistingNSGs);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder networkManagerName(Output<String> networkManagerName) {
             this.networkManagerName = Objects.requireNonNull(networkManagerName);
             return this;
         }
-
         public Builder networkManagerName(String networkManagerName) {
             this.networkManagerName = Output.of(Objects.requireNonNull(networkManagerName));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder securityType(@Nullable Output<Either<String,SecurityType>> securityType) {
             this.securityType = securityType;
             return this;
         }
-
         public Builder securityType(@Nullable Either<String,SecurityType> securityType) {
             this.securityType = Output.ofNullable(securityType);
             return this;
-        }
-        public SecurityUserConfigurationArgs build() {
+        }        public SecurityUserConfigurationArgs build() {
             return new SecurityUserConfigurationArgs(configurationName, deleteExistingNSGs, description, displayName, networkManagerName, resourceGroupName, securityType);
         }
     }

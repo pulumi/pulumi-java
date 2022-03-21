@@ -54,8 +54,7 @@ public final class GetOutpostInstanceTypesArgs extends io.pulumi.resources.Invok
         public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
-        }
-        public GetOutpostInstanceTypesArgs build() {
+        }        public GetOutpostInstanceTypesArgs build() {
             return new GetOutpostInstanceTypesArgs(arn);
         }
     }

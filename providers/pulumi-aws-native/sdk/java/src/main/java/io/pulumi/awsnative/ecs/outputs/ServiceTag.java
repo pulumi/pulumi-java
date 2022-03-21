@@ -55,12 +55,10 @@ public final class ServiceTag {
             this.key = key;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public ServiceTag build() {
+        }        public ServiceTag build() {
             return new ServiceTag(key, value);
         }
     }

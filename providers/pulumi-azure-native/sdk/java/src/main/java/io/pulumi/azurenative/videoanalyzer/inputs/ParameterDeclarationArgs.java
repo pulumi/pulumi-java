@@ -112,42 +112,34 @@ public final class ParameterDeclarationArgs extends io.pulumi.resources.Resource
             this.$default = $default;
             return this;
         }
-
         public Builder $default(@Nullable String $default) {
             this.$default = Output.ofNullable($default);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder type(Output<Either<String,ParameterType>> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(Either<String,ParameterType> type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public ParameterDeclarationArgs build() {
+        }        public ParameterDeclarationArgs build() {
             return new ParameterDeclarationArgs($default, description, name, type);
         }
     }

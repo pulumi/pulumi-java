@@ -59,12 +59,10 @@ public final class PolicyAdmissionWhitelistPatternArgs extends io.pulumi.resourc
             this.namePattern = Objects.requireNonNull(namePattern);
             return this;
         }
-
         public Builder namePattern(String namePattern) {
             this.namePattern = Output.of(Objects.requireNonNull(namePattern));
             return this;
-        }
-        public PolicyAdmissionWhitelistPatternArgs build() {
+        }        public PolicyAdmissionWhitelistPatternArgs build() {
             return new PolicyAdmissionWhitelistPatternArgs(namePattern);
         }
     }

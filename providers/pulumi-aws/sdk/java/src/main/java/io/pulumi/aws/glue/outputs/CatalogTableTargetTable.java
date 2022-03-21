@@ -85,17 +85,14 @@ public final class CatalogTableTargetTable {
             this.catalogId = Objects.requireNonNull(catalogId);
             return this;
         }
-
         public Builder databaseName(String databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public CatalogTableTargetTable build() {
+        }        public CatalogTableTargetTable build() {
             return new CatalogTableTargetTable(catalogId, databaseName, name);
         }
     }

@@ -62,17 +62,17 @@ public final class InstanceFromTemplateSchedulingNodeAffinity {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder operator(String operator) {
             this.operator = Objects.requireNonNull(operator);
             return this;
         }
-
         public Builder values(List<String> values) {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-        public InstanceFromTemplateSchedulingNodeAffinity build() {
+        public Builder values(String... values) {
+            return values(List.of(values));
+        }        public InstanceFromTemplateSchedulingNodeAffinity build() {
             return new InstanceFromTemplateSchedulingNodeAffinity(key, operator, values);
         }
     }

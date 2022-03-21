@@ -106,22 +106,18 @@ public final class AzureBlobStorageLocationResponse {
             this.container = container;
             return this;
         }
-
         public Builder fileName(@Nullable Object fileName) {
             this.fileName = fileName;
             return this;
         }
-
         public Builder folderPath(@Nullable Object folderPath) {
             this.folderPath = folderPath;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public AzureBlobStorageLocationResponse build() {
+        }        public AzureBlobStorageLocationResponse build() {
             return new AzureBlobStorageLocationResponse(container, fileName, folderPath, type);
         }
     }

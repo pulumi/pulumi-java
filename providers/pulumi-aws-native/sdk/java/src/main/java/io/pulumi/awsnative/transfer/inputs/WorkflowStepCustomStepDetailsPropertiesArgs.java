@@ -95,32 +95,26 @@ public final class WorkflowStepCustomStepDetailsPropertiesArgs extends io.pulumi
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder target(@Nullable Output<String> target) {
             this.target = target;
             return this;
         }
-
         public Builder target(@Nullable String target) {
             this.target = Output.ofNullable(target);
             return this;
         }
-
         public Builder timeoutSeconds(@Nullable Output<Integer> timeoutSeconds) {
             this.timeoutSeconds = timeoutSeconds;
             return this;
         }
-
         public Builder timeoutSeconds(@Nullable Integer timeoutSeconds) {
             this.timeoutSeconds = Output.ofNullable(timeoutSeconds);
             return this;
-        }
-        public WorkflowStepCustomStepDetailsPropertiesArgs build() {
+        }        public WorkflowStepCustomStepDetailsPropertiesArgs build() {
             return new WorkflowStepCustomStepDetailsPropertiesArgs(name, target, timeoutSeconds);
         }
     }

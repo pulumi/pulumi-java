@@ -157,37 +157,30 @@ public final class WebAclRuleStatementAndStatementStatementSizeConstraintStateme
             this.allQueryArguments = allQueryArguments;
             return this;
         }
-
         public Builder body(@Nullable WebAclRuleStatementAndStatementStatementSizeConstraintStatementFieldToMatchBody body) {
             this.body = body;
             return this;
         }
-
         public Builder method(@Nullable WebAclRuleStatementAndStatementStatementSizeConstraintStatementFieldToMatchMethod method) {
             this.method = method;
             return this;
         }
-
         public Builder queryString(@Nullable WebAclRuleStatementAndStatementStatementSizeConstraintStatementFieldToMatchQueryString queryString) {
             this.queryString = queryString;
             return this;
         }
-
         public Builder singleHeader(@Nullable WebAclRuleStatementAndStatementStatementSizeConstraintStatementFieldToMatchSingleHeader singleHeader) {
             this.singleHeader = singleHeader;
             return this;
         }
-
         public Builder singleQueryArgument(@Nullable WebAclRuleStatementAndStatementStatementSizeConstraintStatementFieldToMatchSingleQueryArgument singleQueryArgument) {
             this.singleQueryArgument = singleQueryArgument;
             return this;
         }
-
         public Builder uriPath(@Nullable WebAclRuleStatementAndStatementStatementSizeConstraintStatementFieldToMatchUriPath uriPath) {
             this.uriPath = uriPath;
             return this;
-        }
-        public WebAclRuleStatementAndStatementStatementSizeConstraintStatementFieldToMatch build() {
+        }        public WebAclRuleStatementAndStatementStatementSizeConstraintStatementFieldToMatch build() {
             return new WebAclRuleStatementAndStatementStatementSizeConstraintStatementFieldToMatch(allQueryArguments, body, method, queryString, singleHeader, singleQueryArgument, uriPath);
         }
     }

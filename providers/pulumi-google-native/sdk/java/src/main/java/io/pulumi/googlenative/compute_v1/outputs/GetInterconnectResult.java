@@ -394,112 +394,99 @@ public final class GetInterconnectResult {
             this.adminEnabled = Objects.requireNonNull(adminEnabled);
             return this;
         }
-
         public Builder circuitInfos(List<InterconnectCircuitInfoResponse> circuitInfos) {
             this.circuitInfos = Objects.requireNonNull(circuitInfos);
             return this;
         }
-
+        public Builder circuitInfos(InterconnectCircuitInfoResponse... circuitInfos) {
+            return circuitInfos(List.of(circuitInfos));
+        }
         public Builder creationTimestamp(String creationTimestamp) {
             this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
             return this;
         }
-
         public Builder customerName(String customerName) {
             this.customerName = Objects.requireNonNull(customerName);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder expectedOutages(List<InterconnectOutageNotificationResponse> expectedOutages) {
             this.expectedOutages = Objects.requireNonNull(expectedOutages);
             return this;
         }
-
+        public Builder expectedOutages(InterconnectOutageNotificationResponse... expectedOutages) {
+            return expectedOutages(List.of(expectedOutages));
+        }
         public Builder googleIpAddress(String googleIpAddress) {
             this.googleIpAddress = Objects.requireNonNull(googleIpAddress);
             return this;
         }
-
         public Builder googleReferenceId(String googleReferenceId) {
             this.googleReferenceId = Objects.requireNonNull(googleReferenceId);
             return this;
         }
-
         public Builder interconnectAttachments(List<String> interconnectAttachments) {
             this.interconnectAttachments = Objects.requireNonNull(interconnectAttachments);
             return this;
         }
-
+        public Builder interconnectAttachments(String... interconnectAttachments) {
+            return interconnectAttachments(List.of(interconnectAttachments));
+        }
         public Builder interconnectType(String interconnectType) {
             this.interconnectType = Objects.requireNonNull(interconnectType);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder linkType(String linkType) {
             this.linkType = Objects.requireNonNull(linkType);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder nocContactEmail(String nocContactEmail) {
             this.nocContactEmail = Objects.requireNonNull(nocContactEmail);
             return this;
         }
-
         public Builder operationalStatus(String operationalStatus) {
             this.operationalStatus = Objects.requireNonNull(operationalStatus);
             return this;
         }
-
         public Builder peerIpAddress(String peerIpAddress) {
             this.peerIpAddress = Objects.requireNonNull(peerIpAddress);
             return this;
         }
-
         public Builder provisionedLinkCount(Integer provisionedLinkCount) {
             this.provisionedLinkCount = Objects.requireNonNull(provisionedLinkCount);
             return this;
         }
-
         public Builder requestedLinkCount(Integer requestedLinkCount) {
             this.requestedLinkCount = Objects.requireNonNull(requestedLinkCount);
             return this;
         }
-
         public Builder satisfiesPzs(Boolean satisfiesPzs) {
             this.satisfiesPzs = Objects.requireNonNull(satisfiesPzs);
             return this;
         }
-
         public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
-        }
-        public GetInterconnectResult build() {
+        }        public GetInterconnectResult build() {
             return new GetInterconnectResult(adminEnabled, circuitInfos, creationTimestamp, customerName, description, expectedOutages, googleIpAddress, googleReferenceId, interconnectAttachments, interconnectType, kind, linkType, location, name, nocContactEmail, operationalStatus, peerIpAddress, provisionedLinkCount, requestedLinkCount, satisfiesPzs, selfLink, state);
         }
     }

@@ -187,47 +187,56 @@ public final class ApplicationRuleConditionResponse {
             this.description = description;
             return this;
         }
-
         public Builder destinationAddresses(@Nullable List<String> destinationAddresses) {
             this.destinationAddresses = destinationAddresses;
             return this;
         }
-
+        public Builder destinationAddresses(String... destinationAddresses) {
+            return destinationAddresses(List.of(destinationAddresses));
+        }
         public Builder fqdnTags(@Nullable List<String> fqdnTags) {
             this.fqdnTags = fqdnTags;
             return this;
         }
-
+        public Builder fqdnTags(String... fqdnTags) {
+            return fqdnTags(List.of(fqdnTags));
+        }
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder protocols(@Nullable List<FirewallPolicyRuleConditionApplicationProtocolResponse> protocols) {
             this.protocols = protocols;
             return this;
         }
-
+        public Builder protocols(FirewallPolicyRuleConditionApplicationProtocolResponse... protocols) {
+            return protocols(List.of(protocols));
+        }
         public Builder ruleConditionType(String ruleConditionType) {
             this.ruleConditionType = Objects.requireNonNull(ruleConditionType);
             return this;
         }
-
         public Builder sourceAddresses(@Nullable List<String> sourceAddresses) {
             this.sourceAddresses = sourceAddresses;
             return this;
         }
-
+        public Builder sourceAddresses(String... sourceAddresses) {
+            return sourceAddresses(List.of(sourceAddresses));
+        }
         public Builder sourceIpGroups(@Nullable List<String> sourceIpGroups) {
             this.sourceIpGroups = sourceIpGroups;
             return this;
         }
-
+        public Builder sourceIpGroups(String... sourceIpGroups) {
+            return sourceIpGroups(List.of(sourceIpGroups));
+        }
         public Builder targetFqdns(@Nullable List<String> targetFqdns) {
             this.targetFqdns = targetFqdns;
             return this;
         }
-        public ApplicationRuleConditionResponse build() {
+        public Builder targetFqdns(String... targetFqdns) {
+            return targetFqdns(List.of(targetFqdns));
+        }        public ApplicationRuleConditionResponse build() {
             return new ApplicationRuleConditionResponse(description, destinationAddresses, fqdnTags, name, protocols, ruleConditionType, sourceAddresses, sourceIpGroups, targetFqdns);
         }
     }

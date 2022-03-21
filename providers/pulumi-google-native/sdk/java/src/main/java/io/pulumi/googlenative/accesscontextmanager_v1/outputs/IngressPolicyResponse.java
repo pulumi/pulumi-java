@@ -70,12 +70,10 @@ public final class IngressPolicyResponse {
             this.ingressFrom = Objects.requireNonNull(ingressFrom);
             return this;
         }
-
         public Builder ingressTo(IngressToResponse ingressTo) {
             this.ingressTo = Objects.requireNonNull(ingressTo);
             return this;
-        }
-        public IngressPolicyResponse build() {
+        }        public IngressPolicyResponse build() {
             return new IngressPolicyResponse(ingressFrom, ingressTo);
         }
     }

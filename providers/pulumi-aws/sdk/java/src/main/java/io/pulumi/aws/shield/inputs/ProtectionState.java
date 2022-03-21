@@ -123,52 +123,42 @@ public final class ProtectionState extends io.pulumi.resources.ResourceArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder resourceArn(@Nullable Output<String> resourceArn) {
             this.resourceArn = resourceArn;
             return this;
         }
-
         public Builder resourceArn(@Nullable String resourceArn) {
             this.resourceArn = Output.ofNullable(resourceArn);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
-        }
-        public ProtectionState build() {
+        }        public ProtectionState build() {
             return new ProtectionState(arn, name, resourceArn, tags, tagsAll);
         }
     }

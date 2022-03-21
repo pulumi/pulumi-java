@@ -120,27 +120,22 @@ public final class ServiceLoadMetricDescriptionResponse {
             this.defaultLoad = defaultLoad;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder primaryDefaultLoad(@Nullable Integer primaryDefaultLoad) {
             this.primaryDefaultLoad = primaryDefaultLoad;
             return this;
         }
-
         public Builder secondaryDefaultLoad(@Nullable Integer secondaryDefaultLoad) {
             this.secondaryDefaultLoad = secondaryDefaultLoad;
             return this;
         }
-
         public Builder weight(@Nullable String weight) {
             this.weight = weight;
             return this;
-        }
-        public ServiceLoadMetricDescriptionResponse build() {
+        }        public ServiceLoadMetricDescriptionResponse build() {
             return new ServiceLoadMetricDescriptionResponse(defaultLoad, name, primaryDefaultLoad, secondaryDefaultLoad, weight);
         }
     }

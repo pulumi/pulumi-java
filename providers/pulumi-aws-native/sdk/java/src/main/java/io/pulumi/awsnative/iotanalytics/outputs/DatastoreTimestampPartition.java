@@ -55,12 +55,10 @@ public final class DatastoreTimestampPartition {
             this.attributeName = Objects.requireNonNull(attributeName);
             return this;
         }
-
         public Builder timestampFormat(@Nullable String timestampFormat) {
             this.timestampFormat = timestampFormat;
             return this;
-        }
-        public DatastoreTimestampPartition build() {
+        }        public DatastoreTimestampPartition build() {
             return new DatastoreTimestampPartition(attributeName, timestampFormat);
         }
     }

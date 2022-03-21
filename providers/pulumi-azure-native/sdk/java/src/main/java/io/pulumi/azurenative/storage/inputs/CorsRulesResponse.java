@@ -62,7 +62,9 @@ public final class CorsRulesResponse extends io.pulumi.resources.InvokeArgs {
             this.corsRules = corsRules;
             return this;
         }
-        public CorsRulesResponse build() {
+        public Builder corsRules(CorsRuleResponse... corsRules) {
+            return corsRules(List.of(corsRules));
+        }        public CorsRulesResponse build() {
             return new CorsRulesResponse(corsRules);
         }
     }

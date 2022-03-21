@@ -70,12 +70,10 @@ public final class GkeClusterResponse {
             this.clusterMissing = Objects.requireNonNull(clusterMissing);
             return this;
         }
-
         public Builder resourceLink(String resourceLink) {
             this.resourceLink = Objects.requireNonNull(resourceLink);
             return this;
-        }
-        public GkeClusterResponse build() {
+        }        public GkeClusterResponse build() {
             return new GkeClusterResponse(clusterMissing, resourceLink);
         }
     }

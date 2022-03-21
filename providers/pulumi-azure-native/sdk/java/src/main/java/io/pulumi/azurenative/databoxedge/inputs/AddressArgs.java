@@ -158,72 +158,58 @@ public final class AddressArgs extends io.pulumi.resources.ResourceArgs {
             this.addressLine1 = addressLine1;
             return this;
         }
-
         public Builder addressLine1(@Nullable String addressLine1) {
             this.addressLine1 = Output.ofNullable(addressLine1);
             return this;
         }
-
         public Builder addressLine2(@Nullable Output<String> addressLine2) {
             this.addressLine2 = addressLine2;
             return this;
         }
-
         public Builder addressLine2(@Nullable String addressLine2) {
             this.addressLine2 = Output.ofNullable(addressLine2);
             return this;
         }
-
         public Builder addressLine3(@Nullable Output<String> addressLine3) {
             this.addressLine3 = addressLine3;
             return this;
         }
-
         public Builder addressLine3(@Nullable String addressLine3) {
             this.addressLine3 = Output.ofNullable(addressLine3);
             return this;
         }
-
         public Builder city(@Nullable Output<String> city) {
             this.city = city;
             return this;
         }
-
         public Builder city(@Nullable String city) {
             this.city = Output.ofNullable(city);
             return this;
         }
-
         public Builder country(Output<String> country) {
             this.country = Objects.requireNonNull(country);
             return this;
         }
-
         public Builder country(String country) {
             this.country = Output.of(Objects.requireNonNull(country));
             return this;
         }
-
         public Builder postalCode(@Nullable Output<String> postalCode) {
             this.postalCode = postalCode;
             return this;
         }
-
         public Builder postalCode(@Nullable String postalCode) {
             this.postalCode = Output.ofNullable(postalCode);
             return this;
         }
-
         public Builder state(@Nullable Output<String> state) {
             this.state = state;
             return this;
         }
-
         public Builder state(@Nullable String state) {
             this.state = Output.ofNullable(state);
             return this;
-        }
-        public AddressArgs build() {
+        }        public AddressArgs build() {
             return new AddressArgs(addressLine1, addressLine2, addressLine3, city, country, postalCode, state);
         }
     }

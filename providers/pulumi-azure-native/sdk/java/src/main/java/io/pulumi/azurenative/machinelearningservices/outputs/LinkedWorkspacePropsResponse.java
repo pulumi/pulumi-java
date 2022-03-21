@@ -71,12 +71,10 @@ public final class LinkedWorkspacePropsResponse {
             this.linkedWorkspaceResourceId = linkedWorkspaceResourceId;
             return this;
         }
-
         public Builder userAssignedIdentityResourceId(@Nullable String userAssignedIdentityResourceId) {
             this.userAssignedIdentityResourceId = userAssignedIdentityResourceId;
             return this;
-        }
-        public LinkedWorkspacePropsResponse build() {
+        }        public LinkedWorkspacePropsResponse build() {
             return new LinkedWorkspacePropsResponse(linkedWorkspaceResourceId, userAssignedIdentityResourceId);
         }
     }

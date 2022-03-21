@@ -200,52 +200,42 @@ public final class GetKustoClusterDataSetMappingResult {
             this.dataSetId = Objects.requireNonNull(dataSetId);
             return this;
         }
-
         public Builder dataSetMappingStatus(String dataSetMappingStatus) {
             this.dataSetMappingStatus = Objects.requireNonNull(dataSetMappingStatus);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder kustoClusterResourceId(String kustoClusterResourceId) {
             this.kustoClusterResourceId = Objects.requireNonNull(kustoClusterResourceId);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetKustoClusterDataSetMappingResult build() {
+        }        public GetKustoClusterDataSetMappingResult build() {
             return new GetKustoClusterDataSetMappingResult(dataSetId, dataSetMappingStatus, id, kind, kustoClusterResourceId, location, name, provisioningState, systemData, type);
         }
     }

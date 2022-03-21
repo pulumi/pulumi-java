@@ -106,42 +106,34 @@ public final class FleetEc2InboundPermissionArgs extends io.pulumi.resources.Res
             this.fromPort = Objects.requireNonNull(fromPort);
             return this;
         }
-
         public Builder fromPort(Integer fromPort) {
             this.fromPort = Output.of(Objects.requireNonNull(fromPort));
             return this;
         }
-
         public Builder ipRange(Output<String> ipRange) {
             this.ipRange = Objects.requireNonNull(ipRange);
             return this;
         }
-
         public Builder ipRange(String ipRange) {
             this.ipRange = Output.of(Objects.requireNonNull(ipRange));
             return this;
         }
-
         public Builder protocol(Output<String> protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
-
         public Builder protocol(String protocol) {
             this.protocol = Output.of(Objects.requireNonNull(protocol));
             return this;
         }
-
         public Builder toPort(Output<Integer> toPort) {
             this.toPort = Objects.requireNonNull(toPort);
             return this;
         }
-
         public Builder toPort(Integer toPort) {
             this.toPort = Output.of(Objects.requireNonNull(toPort));
             return this;
-        }
-        public FleetEc2InboundPermissionArgs build() {
+        }        public FleetEc2InboundPermissionArgs build() {
             return new FleetEc2InboundPermissionArgs(fromPort, ipRange, protocol, toPort);
         }
     }

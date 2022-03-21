@@ -236,62 +236,53 @@ public final class GetContactProfileResult {
             this.autoTrackingConfiguration = autoTrackingConfiguration;
             return this;
         }
-
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder eventHubUri(@Nullable String eventHubUri) {
             this.eventHubUri = eventHubUri;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder links(List<ContactProfileLinkResponse> links) {
             this.links = Objects.requireNonNull(links);
             return this;
         }
-
+        public Builder links(ContactProfileLinkResponse... links) {
+            return links(List.of(links));
+        }
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder minimumElevationDegrees(@Nullable Double minimumElevationDegrees) {
             this.minimumElevationDegrees = minimumElevationDegrees;
             return this;
         }
-
         public Builder minimumViableContactDuration(@Nullable String minimumViableContactDuration) {
             this.minimumViableContactDuration = minimumViableContactDuration;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetContactProfileResult build() {
+        }        public GetContactProfileResult build() {
             return new GetContactProfileResult(autoTrackingConfiguration, etag, eventHubUri, id, links, location, minimumElevationDegrees, minimumViableContactDuration, name, systemData, tags, type);
         }
     }

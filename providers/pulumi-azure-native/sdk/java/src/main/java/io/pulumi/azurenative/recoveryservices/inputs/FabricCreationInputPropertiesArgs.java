@@ -64,12 +64,10 @@ public final class FabricCreationInputPropertiesArgs extends io.pulumi.resources
             this.customDetails = customDetails;
             return this;
         }
-
         public Builder customDetails(@Nullable Object customDetails) {
             this.customDetails = Output.ofNullable(customDetails);
             return this;
-        }
-        public FabricCreationInputPropertiesArgs build() {
+        }        public FabricCreationInputPropertiesArgs build() {
             return new FabricCreationInputPropertiesArgs(customDetails);
         }
     }

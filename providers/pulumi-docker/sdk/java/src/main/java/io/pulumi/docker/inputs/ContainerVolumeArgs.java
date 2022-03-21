@@ -103,52 +103,42 @@ public final class ContainerVolumeArgs extends io.pulumi.resources.ResourceArgs 
             this.containerPath = containerPath;
             return this;
         }
-
         public Builder containerPath(@Nullable String containerPath) {
             this.containerPath = Output.ofNullable(containerPath);
             return this;
         }
-
         public Builder fromContainer(@Nullable Output<String> fromContainer) {
             this.fromContainer = fromContainer;
             return this;
         }
-
         public Builder fromContainer(@Nullable String fromContainer) {
             this.fromContainer = Output.ofNullable(fromContainer);
             return this;
         }
-
         public Builder hostPath(@Nullable Output<String> hostPath) {
             this.hostPath = hostPath;
             return this;
         }
-
         public Builder hostPath(@Nullable String hostPath) {
             this.hostPath = Output.ofNullable(hostPath);
             return this;
         }
-
         public Builder readOnly(@Nullable Output<Boolean> readOnly) {
             this.readOnly = readOnly;
             return this;
         }
-
         public Builder readOnly(@Nullable Boolean readOnly) {
             this.readOnly = Output.ofNullable(readOnly);
             return this;
         }
-
         public Builder volumeName(@Nullable Output<String> volumeName) {
             this.volumeName = volumeName;
             return this;
         }
-
         public Builder volumeName(@Nullable String volumeName) {
             this.volumeName = Output.ofNullable(volumeName);
             return this;
-        }
-        public ContainerVolumeArgs build() {
+        }        public ContainerVolumeArgs build() {
             return new ContainerVolumeArgs(containerPath, fromContainer, hostPath, readOnly, volumeName);
         }
     }

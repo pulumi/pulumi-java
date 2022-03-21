@@ -157,37 +157,30 @@ public final class WebAclRuleStatementOrStatementStatementOrStatementStatementSi
             this.allQueryArguments = allQueryArguments;
             return this;
         }
-
         public Builder body(@Nullable WebAclRuleStatementOrStatementStatementOrStatementStatementSizeConstraintStatementFieldToMatchBody body) {
             this.body = body;
             return this;
         }
-
         public Builder method(@Nullable WebAclRuleStatementOrStatementStatementOrStatementStatementSizeConstraintStatementFieldToMatchMethod method) {
             this.method = method;
             return this;
         }
-
         public Builder queryString(@Nullable WebAclRuleStatementOrStatementStatementOrStatementStatementSizeConstraintStatementFieldToMatchQueryString queryString) {
             this.queryString = queryString;
             return this;
         }
-
         public Builder singleHeader(@Nullable WebAclRuleStatementOrStatementStatementOrStatementStatementSizeConstraintStatementFieldToMatchSingleHeader singleHeader) {
             this.singleHeader = singleHeader;
             return this;
         }
-
         public Builder singleQueryArgument(@Nullable WebAclRuleStatementOrStatementStatementOrStatementStatementSizeConstraintStatementFieldToMatchSingleQueryArgument singleQueryArgument) {
             this.singleQueryArgument = singleQueryArgument;
             return this;
         }
-
         public Builder uriPath(@Nullable WebAclRuleStatementOrStatementStatementOrStatementStatementSizeConstraintStatementFieldToMatchUriPath uriPath) {
             this.uriPath = uriPath;
             return this;
-        }
-        public WebAclRuleStatementOrStatementStatementOrStatementStatementSizeConstraintStatementFieldToMatch build() {
+        }        public WebAclRuleStatementOrStatementStatementOrStatementStatementSizeConstraintStatementFieldToMatch build() {
             return new WebAclRuleStatementOrStatementStatementOrStatementStatementSizeConstraintStatementFieldToMatch(allQueryArguments, body, method, queryString, singleHeader, singleQueryArgument, uriPath);
         }
     }

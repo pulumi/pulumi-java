@@ -90,17 +90,14 @@ public final class GetBucketObjectContentArgs extends io.pulumi.resources.Invoke
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
-
         public Builder content(@Nullable String content) {
             this.content = content;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public GetBucketObjectContentArgs build() {
+        }        public GetBucketObjectContentArgs build() {
             return new GetBucketObjectContentArgs(bucket, content, name);
         }
     }

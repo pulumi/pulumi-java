@@ -96,32 +96,26 @@ public final class SBSkuArgs extends io.pulumi.resources.ResourceArgs {
             this.capacity = capacity;
             return this;
         }
-
         public Builder capacity(@Nullable Integer capacity) {
             this.capacity = Output.ofNullable(capacity);
             return this;
         }
-
         public Builder name(Output<SkuName> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(SkuName name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder tier(@Nullable Output<SkuTier> tier) {
             this.tier = tier;
             return this;
         }
-
         public Builder tier(@Nullable SkuTier tier) {
             this.tier = Output.ofNullable(tier);
             return this;
-        }
-        public SBSkuArgs build() {
+        }        public SBSkuArgs build() {
             return new SBSkuArgs(capacity, name, tier);
         }
     }

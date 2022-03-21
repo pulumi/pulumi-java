@@ -184,47 +184,38 @@ public final class DatasetAccessItemResponse {
             this.dataset = Objects.requireNonNull(dataset);
             return this;
         }
-
         public Builder domain(String domain) {
             this.domain = Objects.requireNonNull(domain);
             return this;
         }
-
         public Builder groupByEmail(String groupByEmail) {
             this.groupByEmail = Objects.requireNonNull(groupByEmail);
             return this;
         }
-
         public Builder iamMember(String iamMember) {
             this.iamMember = Objects.requireNonNull(iamMember);
             return this;
         }
-
         public Builder role(String role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }
-
         public Builder routine(RoutineReferenceResponse routine) {
             this.routine = Objects.requireNonNull(routine);
             return this;
         }
-
         public Builder specialGroup(String specialGroup) {
             this.specialGroup = Objects.requireNonNull(specialGroup);
             return this;
         }
-
         public Builder userByEmail(String userByEmail) {
             this.userByEmail = Objects.requireNonNull(userByEmail);
             return this;
         }
-
         public Builder view(TableReferenceResponse view) {
             this.view = Objects.requireNonNull(view);
             return this;
-        }
-        public DatasetAccessItemResponse build() {
+        }        public DatasetAccessItemResponse build() {
             return new DatasetAccessItemResponse(dataset, domain, groupByEmail, iamMember, role, routine, specialGroup, userByEmail, view);
         }
     }

@@ -89,17 +89,23 @@ public final class EventConnectionAuthParametersOauthOauthHttpParameters {
             this.bodies = bodies;
             return this;
         }
-
+        public Builder bodies(EventConnectionAuthParametersOauthOauthHttpParametersBody... bodies) {
+            return bodies(List.of(bodies));
+        }
         public Builder headers(@Nullable List<EventConnectionAuthParametersOauthOauthHttpParametersHeader> headers) {
             this.headers = headers;
             return this;
         }
-
+        public Builder headers(EventConnectionAuthParametersOauthOauthHttpParametersHeader... headers) {
+            return headers(List.of(headers));
+        }
         public Builder queryStrings(@Nullable List<EventConnectionAuthParametersOauthOauthHttpParametersQueryString> queryStrings) {
             this.queryStrings = queryStrings;
             return this;
         }
-        public EventConnectionAuthParametersOauthOauthHttpParameters build() {
+        public Builder queryStrings(EventConnectionAuthParametersOauthOauthHttpParametersQueryString... queryStrings) {
+            return queryStrings(List.of(queryStrings));
+        }        public EventConnectionAuthParametersOauthOauthHttpParameters build() {
             return new EventConnectionAuthParametersOauthOauthHttpParameters(bodies, headers, queryStrings);
         }
     }

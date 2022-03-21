@@ -67,22 +67,18 @@ public final class NetworkInsightsAccessScopePathStatementRequestArgs extends io
             this.packetHeaderStatement = packetHeaderStatement;
             return this;
         }
-
         public Builder packetHeaderStatement(@Nullable NetworkInsightsAccessScopePacketHeaderStatementRequestArgs packetHeaderStatement) {
             this.packetHeaderStatement = Output.ofNullable(packetHeaderStatement);
             return this;
         }
-
         public Builder resourceStatement(@Nullable Output<NetworkInsightsAccessScopeResourceStatementRequestArgs> resourceStatement) {
             this.resourceStatement = resourceStatement;
             return this;
         }
-
         public Builder resourceStatement(@Nullable NetworkInsightsAccessScopeResourceStatementRequestArgs resourceStatement) {
             this.resourceStatement = Output.ofNullable(resourceStatement);
             return this;
-        }
-        public NetworkInsightsAccessScopePathStatementRequestArgs build() {
+        }        public NetworkInsightsAccessScopePathStatementRequestArgs build() {
             return new NetworkInsightsAccessScopePathStatementRequestArgs(packetHeaderStatement, resourceStatement);
         }
     }

@@ -145,72 +145,58 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
             this.annotations = annotations;
             return this;
         }
-
         public Builder annotations(@Nullable Map<String,String> annotations) {
             this.annotations = Output.ofNullable(annotations);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder networkConfig(@Nullable Output<NetworkConfigArgs> networkConfig) {
             this.networkConfig = networkConfig;
             return this;
         }
-
         public Builder networkConfig(@Nullable NetworkConfigArgs networkConfig) {
             this.networkConfig = Output.ofNullable(networkConfig);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder workerConfig(@Nullable Output<WorkerConfigArgs> workerConfig) {
             this.workerConfig = workerConfig;
             return this;
         }
-
         public Builder workerConfig(@Nullable WorkerConfigArgs workerConfig) {
             this.workerConfig = Output.ofNullable(workerConfig);
             return this;
         }
-
         public Builder workerPoolId(Output<String> workerPoolId) {
             this.workerPoolId = Objects.requireNonNull(workerPoolId);
             return this;
         }
-
         public Builder workerPoolId(String workerPoolId) {
             this.workerPoolId = Output.of(Objects.requireNonNull(workerPoolId));
             return this;
-        }
-        public WorkerPoolArgs build() {
+        }        public WorkerPoolArgs build() {
             return new WorkerPoolArgs(annotations, displayName, location, networkConfig, project, workerConfig, workerPoolId);
         }
     }

@@ -175,42 +175,37 @@ public final class UrlMapTestResponse extends io.pulumi.resources.InvokeArgs {
             this.backendServiceWeight = Objects.requireNonNull(backendServiceWeight);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder expectedOutputUrl(String expectedOutputUrl) {
             this.expectedOutputUrl = Objects.requireNonNull(expectedOutputUrl);
             return this;
         }
-
         public Builder expectedRedirectResponseCode(Integer expectedRedirectResponseCode) {
             this.expectedRedirectResponseCode = Objects.requireNonNull(expectedRedirectResponseCode);
             return this;
         }
-
         public Builder headers(List<UrlMapTestHeaderResponse> headers) {
             this.headers = Objects.requireNonNull(headers);
             return this;
         }
-
+        public Builder headers(UrlMapTestHeaderResponse... headers) {
+            return headers(List.of(headers));
+        }
         public Builder host(String host) {
             this.host = Objects.requireNonNull(host);
             return this;
         }
-
         public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
-
         public Builder service(String service) {
             this.service = Objects.requireNonNull(service);
             return this;
-        }
-        public UrlMapTestResponse build() {
+        }        public UrlMapTestResponse build() {
             return new UrlMapTestResponse(backendServiceWeight, description, expectedOutputUrl, expectedRedirectResponseCode, headers, host, path, service);
         }
     }

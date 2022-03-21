@@ -95,17 +95,14 @@ public final class VM extends io.pulumi.resources.InvokeArgs {
             this.id = id;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
-        }
-        public VM build() {
+        }        public VM build() {
             return new VM(id, location, tags);
         }
     }

@@ -64,12 +64,13 @@ public final class PipelineDefinitionParameterObject {
             this.attributes = attributes;
             return this;
         }
-
+        public Builder attributes(PipelineDefinitionParameterObjectAttribute... attributes) {
+            return attributes(List.of(attributes));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
-        }
-        public PipelineDefinitionParameterObject build() {
+        }        public PipelineDefinitionParameterObject build() {
             return new PipelineDefinitionParameterObject(attributes, id);
         }
     }

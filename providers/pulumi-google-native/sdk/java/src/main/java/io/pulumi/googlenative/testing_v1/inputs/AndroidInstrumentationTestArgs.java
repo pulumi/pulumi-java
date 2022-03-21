@@ -195,92 +195,77 @@ public final class AndroidInstrumentationTestArgs extends io.pulumi.resources.Re
             this.appApk = appApk;
             return this;
         }
-
         public Builder appApk(@Nullable FileReferenceArgs appApk) {
             this.appApk = Output.ofNullable(appApk);
             return this;
         }
-
         public Builder appBundle(@Nullable Output<AppBundleArgs> appBundle) {
             this.appBundle = appBundle;
             return this;
         }
-
         public Builder appBundle(@Nullable AppBundleArgs appBundle) {
             this.appBundle = Output.ofNullable(appBundle);
             return this;
         }
-
         public Builder appPackageId(@Nullable Output<String> appPackageId) {
             this.appPackageId = appPackageId;
             return this;
         }
-
         public Builder appPackageId(@Nullable String appPackageId) {
             this.appPackageId = Output.ofNullable(appPackageId);
             return this;
         }
-
         public Builder orchestratorOption(@Nullable Output<AndroidInstrumentationTestOrchestratorOption> orchestratorOption) {
             this.orchestratorOption = orchestratorOption;
             return this;
         }
-
         public Builder orchestratorOption(@Nullable AndroidInstrumentationTestOrchestratorOption orchestratorOption) {
             this.orchestratorOption = Output.ofNullable(orchestratorOption);
             return this;
         }
-
         public Builder shardingOption(@Nullable Output<ShardingOptionArgs> shardingOption) {
             this.shardingOption = shardingOption;
             return this;
         }
-
         public Builder shardingOption(@Nullable ShardingOptionArgs shardingOption) {
             this.shardingOption = Output.ofNullable(shardingOption);
             return this;
         }
-
         public Builder testApk(Output<FileReferenceArgs> testApk) {
             this.testApk = Objects.requireNonNull(testApk);
             return this;
         }
-
         public Builder testApk(FileReferenceArgs testApk) {
             this.testApk = Output.of(Objects.requireNonNull(testApk));
             return this;
         }
-
         public Builder testPackageId(@Nullable Output<String> testPackageId) {
             this.testPackageId = testPackageId;
             return this;
         }
-
         public Builder testPackageId(@Nullable String testPackageId) {
             this.testPackageId = Output.ofNullable(testPackageId);
             return this;
         }
-
         public Builder testRunnerClass(@Nullable Output<String> testRunnerClass) {
             this.testRunnerClass = testRunnerClass;
             return this;
         }
-
         public Builder testRunnerClass(@Nullable String testRunnerClass) {
             this.testRunnerClass = Output.ofNullable(testRunnerClass);
             return this;
         }
-
         public Builder testTargets(@Nullable Output<List<String>> testTargets) {
             this.testTargets = testTargets;
             return this;
         }
-
         public Builder testTargets(@Nullable List<String> testTargets) {
             this.testTargets = Output.ofNullable(testTargets);
             return this;
         }
-        public AndroidInstrumentationTestArgs build() {
+        public Builder testTargets(String... testTargets) {
+            return testTargets(List.of(testTargets));
+        }        public AndroidInstrumentationTestArgs build() {
             return new AndroidInstrumentationTestArgs(appApk, appBundle, appPackageId, orchestratorOption, shardingOption, testApk, testPackageId, testRunnerClass, testTargets);
         }
     }

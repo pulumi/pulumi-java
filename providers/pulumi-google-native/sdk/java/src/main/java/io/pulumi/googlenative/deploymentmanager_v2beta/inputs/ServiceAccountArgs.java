@@ -61,12 +61,10 @@ public final class ServiceAccountArgs extends io.pulumi.resources.ResourceArgs {
             this.email = email;
             return this;
         }
-
         public Builder email(@Nullable String email) {
             this.email = Output.ofNullable(email);
             return this;
-        }
-        public ServiceAccountArgs build() {
+        }        public ServiceAccountArgs build() {
             return new ServiceAccountArgs(email);
         }
     }

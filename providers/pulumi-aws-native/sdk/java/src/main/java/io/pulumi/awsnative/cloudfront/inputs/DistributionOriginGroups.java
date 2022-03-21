@@ -68,12 +68,13 @@ public final class DistributionOriginGroups extends io.pulumi.resources.InvokeAr
             this.items = items;
             return this;
         }
-
+        public Builder items(DistributionOriginGroup... items) {
+            return items(List.of(items));
+        }
         public Builder quantity(Integer quantity) {
             this.quantity = Objects.requireNonNull(quantity);
             return this;
-        }
-        public DistributionOriginGroups build() {
+        }        public DistributionOriginGroups build() {
             return new DistributionOriginGroups(items, quantity);
         }
     }

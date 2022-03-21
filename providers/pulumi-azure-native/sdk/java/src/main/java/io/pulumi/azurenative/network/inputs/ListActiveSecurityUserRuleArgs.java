@@ -107,22 +107,21 @@ public final class ListActiveSecurityUserRuleArgs extends io.pulumi.resources.In
             this.networkManagerName = Objects.requireNonNull(networkManagerName);
             return this;
         }
-
         public Builder regions(@Nullable List<String> regions) {
             this.regions = regions;
             return this;
         }
-
+        public Builder regions(String... regions) {
+            return regions(List.of(regions));
+        }
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder skipToken(@Nullable String skipToken) {
             this.skipToken = skipToken;
             return this;
-        }
-        public ListActiveSecurityUserRuleArgs build() {
+        }        public ListActiveSecurityUserRuleArgs build() {
             return new ListActiveSecurityUserRuleArgs(networkManagerName, regions, resourceGroupName, skipToken);
         }
     }

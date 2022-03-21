@@ -53,8 +53,7 @@ public final class WebPubSubTlsSettingsResponse {
         public Builder clientCertEnabled(@Nullable Boolean clientCertEnabled) {
             this.clientCertEnabled = clientCertEnabled;
             return this;
-        }
-        public WebPubSubTlsSettingsResponse build() {
+        }        public WebPubSubTlsSettingsResponse build() {
             return new WebPubSubTlsSettingsResponse(clientCertEnabled);
         }
     }

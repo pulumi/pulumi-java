@@ -58,12 +58,13 @@ public final class PreventionStoredInfoTypeDictionaryWordListGetArgs extends io.
             this.words = Objects.requireNonNull(words);
             return this;
         }
-
         public Builder words(List<String> words) {
             this.words = Output.of(Objects.requireNonNull(words));
             return this;
         }
-        public PreventionStoredInfoTypeDictionaryWordListGetArgs build() {
+        public Builder words(String... words) {
+            return words(List.of(words));
+        }        public PreventionStoredInfoTypeDictionaryWordListGetArgs build() {
             return new PreventionStoredInfoTypeDictionaryWordListGetArgs(words);
         }
     }

@@ -51,8 +51,7 @@ public final class GetRegexPatternSetRegularExpression {
         public Builder regexString(String regexString) {
             this.regexString = Objects.requireNonNull(regexString);
             return this;
-        }
-        public GetRegexPatternSetRegularExpression build() {
+        }        public GetRegexPatternSetRegularExpression build() {
             return new GetRegexPatternSetRegularExpression(regexString);
         }
     }

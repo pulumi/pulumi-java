@@ -159,72 +159,58 @@ public final class SoaRecordArgs extends io.pulumi.resources.ResourceArgs {
             this.email = email;
             return this;
         }
-
         public Builder email(@Nullable String email) {
             this.email = Output.ofNullable(email);
             return this;
         }
-
         public Builder expireTime(@Nullable Output<Double> expireTime) {
             this.expireTime = expireTime;
             return this;
         }
-
         public Builder expireTime(@Nullable Double expireTime) {
             this.expireTime = Output.ofNullable(expireTime);
             return this;
         }
-
         public Builder host(@Nullable Output<String> host) {
             this.host = host;
             return this;
         }
-
         public Builder host(@Nullable String host) {
             this.host = Output.ofNullable(host);
             return this;
         }
-
         public Builder minimumTtl(@Nullable Output<Double> minimumTtl) {
             this.minimumTtl = minimumTtl;
             return this;
         }
-
         public Builder minimumTtl(@Nullable Double minimumTtl) {
             this.minimumTtl = Output.ofNullable(minimumTtl);
             return this;
         }
-
         public Builder refreshTime(@Nullable Output<Double> refreshTime) {
             this.refreshTime = refreshTime;
             return this;
         }
-
         public Builder refreshTime(@Nullable Double refreshTime) {
             this.refreshTime = Output.ofNullable(refreshTime);
             return this;
         }
-
         public Builder retryTime(@Nullable Output<Double> retryTime) {
             this.retryTime = retryTime;
             return this;
         }
-
         public Builder retryTime(@Nullable Double retryTime) {
             this.retryTime = Output.ofNullable(retryTime);
             return this;
         }
-
         public Builder serialNumber(@Nullable Output<Double> serialNumber) {
             this.serialNumber = serialNumber;
             return this;
         }
-
         public Builder serialNumber(@Nullable Double serialNumber) {
             this.serialNumber = Output.ofNullable(serialNumber);
             return this;
-        }
-        public SoaRecordArgs build() {
+        }        public SoaRecordArgs build() {
             return new SoaRecordArgs(email, expireTime, host, minimumTtl, refreshTime, retryTime, serialNumber);
         }
     }

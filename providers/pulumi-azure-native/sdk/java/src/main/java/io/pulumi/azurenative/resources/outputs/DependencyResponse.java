@@ -105,22 +105,21 @@ public final class DependencyResponse {
             this.dependsOn = dependsOn;
             return this;
         }
-
+        public Builder dependsOn(BasicDependencyResponse... dependsOn) {
+            return dependsOn(List.of(dependsOn));
+        }
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder resourceName(@Nullable String resourceName) {
             this.resourceName = resourceName;
             return this;
         }
-
         public Builder resourceType(@Nullable String resourceType) {
             this.resourceType = resourceType;
             return this;
-        }
-        public DependencyResponse build() {
+        }        public DependencyResponse build() {
             return new DependencyResponse(dependsOn, id, resourceName, resourceType);
         }
     }

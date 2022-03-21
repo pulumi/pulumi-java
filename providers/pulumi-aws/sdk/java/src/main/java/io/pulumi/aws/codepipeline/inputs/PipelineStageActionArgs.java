@@ -237,122 +237,104 @@ public final class PipelineStageActionArgs extends io.pulumi.resources.ResourceA
             this.category = Objects.requireNonNull(category);
             return this;
         }
-
         public Builder category(String category) {
             this.category = Output.of(Objects.requireNonNull(category));
             return this;
         }
-
         public Builder configuration(@Nullable Output<Map<String,String>> configuration) {
             this.configuration = configuration;
             return this;
         }
-
         public Builder configuration(@Nullable Map<String,String> configuration) {
             this.configuration = Output.ofNullable(configuration);
             return this;
         }
-
         public Builder inputArtifacts(@Nullable Output<List<String>> inputArtifacts) {
             this.inputArtifacts = inputArtifacts;
             return this;
         }
-
         public Builder inputArtifacts(@Nullable List<String> inputArtifacts) {
             this.inputArtifacts = Output.ofNullable(inputArtifacts);
             return this;
         }
-
+        public Builder inputArtifacts(String... inputArtifacts) {
+            return inputArtifacts(List.of(inputArtifacts));
+        }
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder namespace(@Nullable Output<String> namespace) {
             this.namespace = namespace;
             return this;
         }
-
         public Builder namespace(@Nullable String namespace) {
             this.namespace = Output.ofNullable(namespace);
             return this;
         }
-
         public Builder outputArtifacts(@Nullable Output<List<String>> outputArtifacts) {
             this.outputArtifacts = outputArtifacts;
             return this;
         }
-
         public Builder outputArtifacts(@Nullable List<String> outputArtifacts) {
             this.outputArtifacts = Output.ofNullable(outputArtifacts);
             return this;
         }
-
+        public Builder outputArtifacts(String... outputArtifacts) {
+            return outputArtifacts(List.of(outputArtifacts));
+        }
         public Builder owner(Output<String> owner) {
             this.owner = Objects.requireNonNull(owner);
             return this;
         }
-
         public Builder owner(String owner) {
             this.owner = Output.of(Objects.requireNonNull(owner));
             return this;
         }
-
         public Builder provider(Output<String> provider) {
             this.provider = Objects.requireNonNull(provider);
             return this;
         }
-
         public Builder provider(String provider) {
             this.provider = Output.of(Objects.requireNonNull(provider));
             return this;
         }
-
         public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
-
         public Builder region(@Nullable String region) {
             this.region = Output.ofNullable(region);
             return this;
         }
-
         public Builder roleArn(@Nullable Output<String> roleArn) {
             this.roleArn = roleArn;
             return this;
         }
-
         public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = Output.ofNullable(roleArn);
             return this;
         }
-
         public Builder runOrder(@Nullable Output<Integer> runOrder) {
             this.runOrder = runOrder;
             return this;
         }
-
         public Builder runOrder(@Nullable Integer runOrder) {
             this.runOrder = Output.ofNullable(runOrder);
             return this;
         }
-
         public Builder version(Output<String> version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public Builder version(String version) {
             this.version = Output.of(Objects.requireNonNull(version));
             return this;
-        }
-        public PipelineStageActionArgs build() {
+        }        public PipelineStageActionArgs build() {
             return new PipelineStageActionArgs(category, configuration, inputArtifacts, name, namespace, outputArtifacts, owner, provider, region, roleArn, runOrder, version);
         }
     }

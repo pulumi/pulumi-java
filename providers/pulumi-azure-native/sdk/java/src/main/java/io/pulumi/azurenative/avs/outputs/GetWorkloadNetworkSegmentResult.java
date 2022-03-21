@@ -203,52 +203,45 @@ public final class GetWorkloadNetworkSegmentResult {
             this.connectedGateway = connectedGateway;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder portVif(List<WorkloadNetworkSegmentPortVifResponse> portVif) {
             this.portVif = Objects.requireNonNull(portVif);
             return this;
         }
-
+        public Builder portVif(WorkloadNetworkSegmentPortVifResponse... portVif) {
+            return portVif(List.of(portVif));
+        }
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder revision(@Nullable Double revision) {
             this.revision = revision;
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder subnet(@Nullable WorkloadNetworkSegmentSubnetResponse subnet) {
             this.subnet = subnet;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetWorkloadNetworkSegmentResult build() {
+        }        public GetWorkloadNetworkSegmentResult build() {
             return new GetWorkloadNetworkSegmentResult(connectedGateway, displayName, id, name, portVif, provisioningState, revision, status, subnet, type);
         }
     }

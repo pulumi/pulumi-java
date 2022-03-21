@@ -89,17 +89,20 @@ public final class SafetyRuleGatingRule {
             this.gatingControls = Objects.requireNonNull(gatingControls);
             return this;
         }
-
+        public Builder gatingControls(String... gatingControls) {
+            return gatingControls(List.of(gatingControls));
+        }
         public Builder targetControls(List<String> targetControls) {
             this.targetControls = Objects.requireNonNull(targetControls);
             return this;
         }
-
+        public Builder targetControls(String... targetControls) {
+            return targetControls(List.of(targetControls));
+        }
         public Builder waitPeriodMs(Integer waitPeriodMs) {
             this.waitPeriodMs = Objects.requireNonNull(waitPeriodMs);
             return this;
-        }
-        public SafetyRuleGatingRule build() {
+        }        public SafetyRuleGatingRule build() {
             return new SafetyRuleGatingRule(gatingControls, targetControls, waitPeriodMs);
         }
     }

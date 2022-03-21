@@ -57,12 +57,10 @@ public final class InstanceNetworkPerformanceConfigGetArgs extends io.pulumi.res
             this.totalEgressBandwidthTier = Objects.requireNonNull(totalEgressBandwidthTier);
             return this;
         }
-
         public Builder totalEgressBandwidthTier(String totalEgressBandwidthTier) {
             this.totalEgressBandwidthTier = Output.of(Objects.requireNonNull(totalEgressBandwidthTier));
             return this;
-        }
-        public InstanceNetworkPerformanceConfigGetArgs build() {
+        }        public InstanceNetworkPerformanceConfigGetArgs build() {
             return new InstanceNetworkPerformanceConfigGetArgs(totalEgressBandwidthTier);
         }
     }

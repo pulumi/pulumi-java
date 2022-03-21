@@ -61,12 +61,10 @@ public final class VirtualHardDiskArgs extends io.pulumi.resources.ResourceArgs 
             this.uri = uri;
             return this;
         }
-
         public Builder uri(@Nullable String uri) {
             this.uri = Output.ofNullable(uri);
             return this;
-        }
-        public VirtualHardDiskArgs build() {
+        }        public VirtualHardDiskArgs build() {
             return new VirtualHardDiskArgs(uri);
         }
     }

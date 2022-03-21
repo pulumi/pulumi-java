@@ -58,8 +58,7 @@ public final class ScriptHandlerResponse extends io.pulumi.resources.InvokeArgs 
         public Builder scriptPath(String scriptPath) {
             this.scriptPath = Objects.requireNonNull(scriptPath);
             return this;
-        }
-        public ScriptHandlerResponse build() {
+        }        public ScriptHandlerResponse build() {
             return new ScriptHandlerResponse(scriptPath);
         }
     }

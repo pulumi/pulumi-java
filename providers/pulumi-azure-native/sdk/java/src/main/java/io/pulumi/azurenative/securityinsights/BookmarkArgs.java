@@ -301,162 +301,133 @@ public final class BookmarkArgs extends io.pulumi.resources.ResourceArgs {
             this.bookmarkId = bookmarkId;
             return this;
         }
-
         public Builder bookmarkId(@Nullable String bookmarkId) {
             this.bookmarkId = Output.ofNullable(bookmarkId);
             return this;
         }
-
         public Builder created(@Nullable Output<String> created) {
             this.created = created;
             return this;
         }
-
         public Builder created(@Nullable String created) {
             this.created = Output.ofNullable(created);
             return this;
         }
-
         public Builder createdBy(@Nullable Output<UserInfoArgs> createdBy) {
             this.createdBy = createdBy;
             return this;
         }
-
         public Builder createdBy(@Nullable UserInfoArgs createdBy) {
             this.createdBy = Output.ofNullable(createdBy);
             return this;
         }
-
         public Builder displayName(Output<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
-
         public Builder eventTime(@Nullable Output<String> eventTime) {
             this.eventTime = eventTime;
             return this;
         }
-
         public Builder eventTime(@Nullable String eventTime) {
             this.eventTime = Output.ofNullable(eventTime);
             return this;
         }
-
         public Builder incidentInfo(@Nullable Output<IncidentInfoArgs> incidentInfo) {
             this.incidentInfo = incidentInfo;
             return this;
         }
-
         public Builder incidentInfo(@Nullable IncidentInfoArgs incidentInfo) {
             this.incidentInfo = Output.ofNullable(incidentInfo);
             return this;
         }
-
         public Builder labels(@Nullable Output<List<String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable List<String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
+        public Builder labels(String... labels) {
+            return labels(List.of(labels));
+        }
         public Builder notes(@Nullable Output<String> notes) {
             this.notes = notes;
             return this;
         }
-
         public Builder notes(@Nullable String notes) {
             this.notes = Output.ofNullable(notes);
             return this;
         }
-
         public Builder query(Output<String> query) {
             this.query = Objects.requireNonNull(query);
             return this;
         }
-
         public Builder query(String query) {
             this.query = Output.of(Objects.requireNonNull(query));
             return this;
         }
-
         public Builder queryEndTime(@Nullable Output<String> queryEndTime) {
             this.queryEndTime = queryEndTime;
             return this;
         }
-
         public Builder queryEndTime(@Nullable String queryEndTime) {
             this.queryEndTime = Output.ofNullable(queryEndTime);
             return this;
         }
-
         public Builder queryResult(@Nullable Output<String> queryResult) {
             this.queryResult = queryResult;
             return this;
         }
-
         public Builder queryResult(@Nullable String queryResult) {
             this.queryResult = Output.ofNullable(queryResult);
             return this;
         }
-
         public Builder queryStartTime(@Nullable Output<String> queryStartTime) {
             this.queryStartTime = queryStartTime;
             return this;
         }
-
         public Builder queryStartTime(@Nullable String queryStartTime) {
             this.queryStartTime = Output.ofNullable(queryStartTime);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder updated(@Nullable Output<String> updated) {
             this.updated = updated;
             return this;
         }
-
         public Builder updated(@Nullable String updated) {
             this.updated = Output.ofNullable(updated);
             return this;
         }
-
         public Builder updatedBy(@Nullable Output<UserInfoArgs> updatedBy) {
             this.updatedBy = updatedBy;
             return this;
         }
-
         public Builder updatedBy(@Nullable UserInfoArgs updatedBy) {
             this.updatedBy = Output.ofNullable(updatedBy);
             return this;
         }
-
         public Builder workspaceName(Output<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
-
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
             return this;
-        }
-        public BookmarkArgs build() {
+        }        public BookmarkArgs build() {
             return new BookmarkArgs(bookmarkId, created, createdBy, displayName, eventTime, incidentInfo, labels, notes, query, queryEndTime, queryResult, queryStartTime, resourceGroupName, updated, updatedBy, workspaceName);
         }
     }

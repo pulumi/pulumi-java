@@ -120,27 +120,22 @@ public final class GetSqlResourceSqlStoredProcedureArgs extends io.pulumi.resour
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder containerName(String containerName) {
             this.containerName = Objects.requireNonNull(containerName);
             return this;
         }
-
         public Builder databaseName(String databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder storedProcedureName(String storedProcedureName) {
             this.storedProcedureName = Objects.requireNonNull(storedProcedureName);
             return this;
-        }
-        public GetSqlResourceSqlStoredProcedureArgs build() {
+        }        public GetSqlResourceSqlStoredProcedureArgs build() {
             return new GetSqlResourceSqlStoredProcedureArgs(accountName, containerName, databaseName, resourceGroupName, storedProcedureName);
         }
     }

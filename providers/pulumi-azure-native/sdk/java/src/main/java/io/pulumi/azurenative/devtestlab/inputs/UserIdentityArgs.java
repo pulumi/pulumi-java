@@ -126,52 +126,42 @@ public final class UserIdentityArgs extends io.pulumi.resources.ResourceArgs {
             this.appId = appId;
             return this;
         }
-
         public Builder appId(@Nullable String appId) {
             this.appId = Output.ofNullable(appId);
             return this;
         }
-
         public Builder objectId(@Nullable Output<String> objectId) {
             this.objectId = objectId;
             return this;
         }
-
         public Builder objectId(@Nullable String objectId) {
             this.objectId = Output.ofNullable(objectId);
             return this;
         }
-
         public Builder principalId(@Nullable Output<String> principalId) {
             this.principalId = principalId;
             return this;
         }
-
         public Builder principalId(@Nullable String principalId) {
             this.principalId = Output.ofNullable(principalId);
             return this;
         }
-
         public Builder principalName(@Nullable Output<String> principalName) {
             this.principalName = principalName;
             return this;
         }
-
         public Builder principalName(@Nullable String principalName) {
             this.principalName = Output.ofNullable(principalName);
             return this;
         }
-
         public Builder tenantId(@Nullable Output<String> tenantId) {
             this.tenantId = tenantId;
             return this;
         }
-
         public Builder tenantId(@Nullable String tenantId) {
             this.tenantId = Output.ofNullable(tenantId);
             return this;
-        }
-        public UserIdentityArgs build() {
+        }        public UserIdentityArgs build() {
             return new UserIdentityArgs(appId, objectId, principalId, principalName, tenantId);
         }
     }

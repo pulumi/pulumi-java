@@ -112,42 +112,34 @@ public final class PrivateClusterConfigArgs extends io.pulumi.resources.Resource
             this.enablePrivateEndpoint = enablePrivateEndpoint;
             return this;
         }
-
         public Builder enablePrivateEndpoint(@Nullable Boolean enablePrivateEndpoint) {
             this.enablePrivateEndpoint = Output.ofNullable(enablePrivateEndpoint);
             return this;
         }
-
         public Builder enablePrivateNodes(@Nullable Output<Boolean> enablePrivateNodes) {
             this.enablePrivateNodes = enablePrivateNodes;
             return this;
         }
-
         public Builder enablePrivateNodes(@Nullable Boolean enablePrivateNodes) {
             this.enablePrivateNodes = Output.ofNullable(enablePrivateNodes);
             return this;
         }
-
         public Builder masterGlobalAccessConfig(@Nullable Output<PrivateClusterMasterGlobalAccessConfigArgs> masterGlobalAccessConfig) {
             this.masterGlobalAccessConfig = masterGlobalAccessConfig;
             return this;
         }
-
         public Builder masterGlobalAccessConfig(@Nullable PrivateClusterMasterGlobalAccessConfigArgs masterGlobalAccessConfig) {
             this.masterGlobalAccessConfig = Output.ofNullable(masterGlobalAccessConfig);
             return this;
         }
-
         public Builder masterIpv4CidrBlock(@Nullable Output<String> masterIpv4CidrBlock) {
             this.masterIpv4CidrBlock = masterIpv4CidrBlock;
             return this;
         }
-
         public Builder masterIpv4CidrBlock(@Nullable String masterIpv4CidrBlock) {
             this.masterIpv4CidrBlock = Output.ofNullable(masterIpv4CidrBlock);
             return this;
-        }
-        public PrivateClusterConfigArgs build() {
+        }        public PrivateClusterConfigArgs build() {
             return new PrivateClusterConfigArgs(enablePrivateEndpoint, enablePrivateNodes, masterGlobalAccessConfig, masterIpv4CidrBlock);
         }
     }

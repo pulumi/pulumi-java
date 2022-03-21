@@ -121,27 +121,25 @@ public final class GetSigningProfileResult {
             this.arn = arn;
             return this;
         }
-
         public Builder profileName(@Nullable String profileName) {
             this.profileName = profileName;
             return this;
         }
-
         public Builder profileVersion(@Nullable String profileVersion) {
             this.profileVersion = profileVersion;
             return this;
         }
-
         public Builder profileVersionArn(@Nullable String profileVersionArn) {
             this.profileVersionArn = profileVersionArn;
             return this;
         }
-
         public Builder tags(@Nullable List<SigningProfileTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetSigningProfileResult build() {
+        public Builder tags(SigningProfileTag... tags) {
+            return tags(List.of(tags));
+        }        public GetSigningProfileResult build() {
             return new GetSigningProfileResult(arn, profileName, profileVersion, profileVersionArn, tags);
         }
     }

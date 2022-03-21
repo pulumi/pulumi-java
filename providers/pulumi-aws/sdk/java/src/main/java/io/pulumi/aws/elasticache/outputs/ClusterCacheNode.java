@@ -88,22 +88,18 @@ public final class ClusterCacheNode {
             this.address = address;
             return this;
         }
-
         public Builder availabilityZone(@Nullable String availabilityZone) {
             this.availabilityZone = availabilityZone;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder port(@Nullable Integer port) {
             this.port = port;
             return this;
-        }
-        public ClusterCacheNode build() {
+        }        public ClusterCacheNode build() {
             return new ClusterCacheNode(address, availabilityZone, id, port);
         }
     }

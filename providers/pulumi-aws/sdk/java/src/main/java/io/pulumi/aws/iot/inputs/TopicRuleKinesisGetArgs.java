@@ -90,32 +90,26 @@ public final class TopicRuleKinesisGetArgs extends io.pulumi.resources.ResourceA
             this.partitionKey = partitionKey;
             return this;
         }
-
         public Builder partitionKey(@Nullable String partitionKey) {
             this.partitionKey = Output.ofNullable(partitionKey);
             return this;
         }
-
         public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public Builder roleArn(String roleArn) {
             this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
         }
-
         public Builder streamName(Output<String> streamName) {
             this.streamName = Objects.requireNonNull(streamName);
             return this;
         }
-
         public Builder streamName(String streamName) {
             this.streamName = Output.of(Objects.requireNonNull(streamName));
             return this;
-        }
-        public TopicRuleKinesisGetArgs build() {
+        }        public TopicRuleKinesisGetArgs build() {
             return new TopicRuleKinesisGetArgs(partitionKey, roleArn, streamName);
         }
     }

@@ -76,12 +76,10 @@ public final class ExecStepResponse extends io.pulumi.resources.InvokeArgs {
             this.linuxExecStepConfig = Objects.requireNonNull(linuxExecStepConfig);
             return this;
         }
-
         public Builder windowsExecStepConfig(ExecStepConfigResponse windowsExecStepConfig) {
             this.windowsExecStepConfig = Objects.requireNonNull(windowsExecStepConfig);
             return this;
-        }
-        public ExecStepResponse build() {
+        }        public ExecStepResponse build() {
             return new ExecStepResponse(linuxExecStepConfig, windowsExecStepConfig);
         }
     }

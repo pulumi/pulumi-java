@@ -111,22 +111,24 @@ public final class VirtualHubRouteV2Response extends io.pulumi.resources.InvokeA
             this.destinationType = destinationType;
             return this;
         }
-
         public Builder destinations(@Nullable List<String> destinations) {
             this.destinations = destinations;
             return this;
         }
-
+        public Builder destinations(String... destinations) {
+            return destinations(List.of(destinations));
+        }
         public Builder nextHopType(@Nullable String nextHopType) {
             this.nextHopType = nextHopType;
             return this;
         }
-
         public Builder nextHops(@Nullable List<String> nextHops) {
             this.nextHops = nextHops;
             return this;
         }
-        public VirtualHubRouteV2Response build() {
+        public Builder nextHops(String... nextHops) {
+            return nextHops(List.of(nextHops));
+        }        public VirtualHubRouteV2Response build() {
             return new VirtualHubRouteV2Response(destinationType, destinations, nextHopType, nextHops);
         }
     }

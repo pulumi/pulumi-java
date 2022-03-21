@@ -168,42 +168,34 @@ public final class GetDisasterRecoveryConfigResult {
             this.alternateName = alternateName;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder partnerNamespace(@Nullable String partnerNamespace) {
             this.partnerNamespace = partnerNamespace;
             return this;
         }
-
         public Builder pendingReplicationOperationsCount(Double pendingReplicationOperationsCount) {
             this.pendingReplicationOperationsCount = Objects.requireNonNull(pendingReplicationOperationsCount);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder role(String role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetDisasterRecoveryConfigResult build() {
+        }        public GetDisasterRecoveryConfigResult build() {
             return new GetDisasterRecoveryConfigResult(alternateName, id, name, partnerNamespace, pendingReplicationOperationsCount, provisioningState, role, type);
         }
     }

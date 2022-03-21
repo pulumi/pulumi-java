@@ -89,32 +89,29 @@ public final class InstanceAccessControlAttributeConfigurationArgs extends io.pu
             this.accessControlAttributes = accessControlAttributes;
             return this;
         }
-
         public Builder accessControlAttributes(@Nullable List<InstanceAccessControlAttributeConfigurationAccessControlAttributeArgs> accessControlAttributes) {
             this.accessControlAttributes = Output.ofNullable(accessControlAttributes);
             return this;
         }
-
+        public Builder accessControlAttributes(InstanceAccessControlAttributeConfigurationAccessControlAttributeArgs... accessControlAttributes) {
+            return accessControlAttributes(List.of(accessControlAttributes));
+        }
         public Builder instanceAccessControlAttributeConfiguration(@Nullable Output<InstanceAccessControlAttributeConfigurationPropertiesArgs> instanceAccessControlAttributeConfiguration) {
             this.instanceAccessControlAttributeConfiguration = instanceAccessControlAttributeConfiguration;
             return this;
         }
-
         public Builder instanceAccessControlAttributeConfiguration(@Nullable InstanceAccessControlAttributeConfigurationPropertiesArgs instanceAccessControlAttributeConfiguration) {
             this.instanceAccessControlAttributeConfiguration = Output.ofNullable(instanceAccessControlAttributeConfiguration);
             return this;
         }
-
         public Builder instanceArn(Output<String> instanceArn) {
             this.instanceArn = Objects.requireNonNull(instanceArn);
             return this;
         }
-
         public Builder instanceArn(String instanceArn) {
             this.instanceArn = Output.of(Objects.requireNonNull(instanceArn));
             return this;
-        }
-        public InstanceAccessControlAttributeConfigurationArgs build() {
+        }        public InstanceAccessControlAttributeConfigurationArgs build() {
             return new InstanceAccessControlAttributeConfigurationArgs(accessControlAttributes, instanceAccessControlAttributeConfiguration, instanceArn);
         }
     }

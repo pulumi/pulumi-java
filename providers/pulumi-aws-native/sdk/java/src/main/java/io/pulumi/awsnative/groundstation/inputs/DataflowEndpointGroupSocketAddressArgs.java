@@ -67,22 +67,18 @@ public final class DataflowEndpointGroupSocketAddressArgs extends io.pulumi.reso
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder port(@Nullable Output<Integer> port) {
             this.port = port;
             return this;
         }
-
         public Builder port(@Nullable Integer port) {
             this.port = Output.ofNullable(port);
             return this;
-        }
-        public DataflowEndpointGroupSocketAddressArgs build() {
+        }        public DataflowEndpointGroupSocketAddressArgs build() {
             return new DataflowEndpointGroupSocketAddressArgs(name, port);
         }
     }

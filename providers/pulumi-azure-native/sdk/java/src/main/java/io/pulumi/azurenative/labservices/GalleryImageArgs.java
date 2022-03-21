@@ -204,102 +204,82 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
             this.galleryImageName = galleryImageName;
             return this;
         }
-
         public Builder galleryImageName(@Nullable String galleryImageName) {
             this.galleryImageName = Output.ofNullable(galleryImageName);
             return this;
         }
-
         public Builder isEnabled(@Nullable Output<Boolean> isEnabled) {
             this.isEnabled = isEnabled;
             return this;
         }
-
         public Builder isEnabled(@Nullable Boolean isEnabled) {
             this.isEnabled = Output.ofNullable(isEnabled);
             return this;
         }
-
         public Builder isOverride(@Nullable Output<Boolean> isOverride) {
             this.isOverride = isOverride;
             return this;
         }
-
         public Builder isOverride(@Nullable Boolean isOverride) {
             this.isOverride = Output.ofNullable(isOverride);
             return this;
         }
-
         public Builder isPlanAuthorized(@Nullable Output<Boolean> isPlanAuthorized) {
             this.isPlanAuthorized = isPlanAuthorized;
             return this;
         }
-
         public Builder isPlanAuthorized(@Nullable Boolean isPlanAuthorized) {
             this.isPlanAuthorized = Output.ofNullable(isPlanAuthorized);
             return this;
         }
-
         public Builder labAccountName(Output<String> labAccountName) {
             this.labAccountName = Objects.requireNonNull(labAccountName);
             return this;
         }
-
         public Builder labAccountName(String labAccountName) {
             this.labAccountName = Output.of(Objects.requireNonNull(labAccountName));
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder provisioningState(@Nullable Output<String> provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
-
         public Builder provisioningState(@Nullable String provisioningState) {
             this.provisioningState = Output.ofNullable(provisioningState);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder uniqueIdentifier(@Nullable Output<String> uniqueIdentifier) {
             this.uniqueIdentifier = uniqueIdentifier;
             return this;
         }
-
         public Builder uniqueIdentifier(@Nullable String uniqueIdentifier) {
             this.uniqueIdentifier = Output.ofNullable(uniqueIdentifier);
             return this;
-        }
-        public GalleryImageArgs build() {
+        }        public GalleryImageArgs build() {
             return new GalleryImageArgs(galleryImageName, isEnabled, isOverride, isPlanAuthorized, labAccountName, location, provisioningState, resourceGroupName, tags, uniqueIdentifier);
         }
     }

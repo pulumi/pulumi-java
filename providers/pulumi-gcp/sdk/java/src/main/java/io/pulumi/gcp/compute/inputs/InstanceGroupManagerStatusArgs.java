@@ -93,32 +93,32 @@ public final class InstanceGroupManagerStatusArgs extends io.pulumi.resources.Re
             this.isStable = isStable;
             return this;
         }
-
         public Builder isStable(@Nullable Boolean isStable) {
             this.isStable = Output.ofNullable(isStable);
             return this;
         }
-
         public Builder statefuls(@Nullable Output<List<InstanceGroupManagerStatusStatefulArgs>> statefuls) {
             this.statefuls = statefuls;
             return this;
         }
-
         public Builder statefuls(@Nullable List<InstanceGroupManagerStatusStatefulArgs> statefuls) {
             this.statefuls = Output.ofNullable(statefuls);
             return this;
         }
-
+        public Builder statefuls(InstanceGroupManagerStatusStatefulArgs... statefuls) {
+            return statefuls(List.of(statefuls));
+        }
         public Builder versionTargets(@Nullable Output<List<InstanceGroupManagerStatusVersionTargetArgs>> versionTargets) {
             this.versionTargets = versionTargets;
             return this;
         }
-
         public Builder versionTargets(@Nullable List<InstanceGroupManagerStatusVersionTargetArgs> versionTargets) {
             this.versionTargets = Output.ofNullable(versionTargets);
             return this;
         }
-        public InstanceGroupManagerStatusArgs build() {
+        public Builder versionTargets(InstanceGroupManagerStatusVersionTargetArgs... versionTargets) {
+            return versionTargets(List.of(versionTargets));
+        }        public InstanceGroupManagerStatusArgs build() {
             return new InstanceGroupManagerStatusArgs(isStable, statefuls, versionTargets);
         }
     }

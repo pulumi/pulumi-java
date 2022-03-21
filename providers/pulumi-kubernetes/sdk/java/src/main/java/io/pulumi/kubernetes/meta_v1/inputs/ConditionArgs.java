@@ -143,62 +143,50 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
             this.lastTransitionTime = Objects.requireNonNull(lastTransitionTime);
             return this;
         }
-
         public Builder lastTransitionTime(String lastTransitionTime) {
             this.lastTransitionTime = Output.of(Objects.requireNonNull(lastTransitionTime));
             return this;
         }
-
         public Builder message(Output<String> message) {
             this.message = Objects.requireNonNull(message);
             return this;
         }
-
         public Builder message(String message) {
             this.message = Output.of(Objects.requireNonNull(message));
             return this;
         }
-
         public Builder observedGeneration(@Nullable Output<Integer> observedGeneration) {
             this.observedGeneration = observedGeneration;
             return this;
         }
-
         public Builder observedGeneration(@Nullable Integer observedGeneration) {
             this.observedGeneration = Output.ofNullable(observedGeneration);
             return this;
         }
-
         public Builder reason(Output<String> reason) {
             this.reason = Objects.requireNonNull(reason);
             return this;
         }
-
         public Builder reason(String reason) {
             this.reason = Output.of(Objects.requireNonNull(reason));
             return this;
         }
-
         public Builder status(Output<String> status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder status(String status) {
             this.status = Output.of(Objects.requireNonNull(status));
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public ConditionArgs build() {
+        }        public ConditionArgs build() {
             return new ConditionArgs(lastTransitionTime, message, observedGeneration, reason, status, type);
         }
     }

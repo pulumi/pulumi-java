@@ -86,17 +86,14 @@ public final class TimeWindowResponse {
             this.endTime = Objects.requireNonNull(endTime);
             return this;
         }
-
         public Builder maintenanceExclusionOptions(MaintenanceExclusionOptionsResponse maintenanceExclusionOptions) {
             this.maintenanceExclusionOptions = Objects.requireNonNull(maintenanceExclusionOptions);
             return this;
         }
-
         public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
-        }
-        public TimeWindowResponse build() {
+        }        public TimeWindowResponse build() {
             return new TimeWindowResponse(endTime, maintenanceExclusionOptions, startTime);
         }
     }

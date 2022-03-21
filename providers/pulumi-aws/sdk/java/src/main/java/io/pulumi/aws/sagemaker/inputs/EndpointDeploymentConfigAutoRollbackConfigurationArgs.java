@@ -58,12 +58,13 @@ public final class EndpointDeploymentConfigAutoRollbackConfigurationArgs extends
             this.alarms = alarms;
             return this;
         }
-
         public Builder alarms(@Nullable List<EndpointDeploymentConfigAutoRollbackConfigurationAlarmArgs> alarms) {
             this.alarms = Output.ofNullable(alarms);
             return this;
         }
-        public EndpointDeploymentConfigAutoRollbackConfigurationArgs build() {
+        public Builder alarms(EndpointDeploymentConfigAutoRollbackConfigurationAlarmArgs... alarms) {
+            return alarms(List.of(alarms));
+        }        public EndpointDeploymentConfigAutoRollbackConfigurationArgs build() {
             return new EndpointDeploymentConfigAutoRollbackConfigurationArgs(alarms);
         }
     }

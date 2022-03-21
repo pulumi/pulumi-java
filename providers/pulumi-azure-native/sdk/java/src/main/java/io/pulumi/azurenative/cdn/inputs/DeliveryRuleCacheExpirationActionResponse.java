@@ -78,12 +78,10 @@ public final class DeliveryRuleCacheExpirationActionResponse extends io.pulumi.r
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder parameters(CacheExpirationActionParametersResponse parameters) {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
-        }
-        public DeliveryRuleCacheExpirationActionResponse build() {
+        }        public DeliveryRuleCacheExpirationActionResponse build() {
             return new DeliveryRuleCacheExpirationActionResponse(name, parameters);
         }
     }

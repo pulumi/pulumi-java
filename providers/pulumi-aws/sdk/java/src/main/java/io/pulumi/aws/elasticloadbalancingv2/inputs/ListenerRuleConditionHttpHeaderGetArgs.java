@@ -74,22 +74,21 @@ public final class ListenerRuleConditionHttpHeaderGetArgs extends io.pulumi.reso
             this.httpHeaderName = Objects.requireNonNull(httpHeaderName);
             return this;
         }
-
         public Builder httpHeaderName(String httpHeaderName) {
             this.httpHeaderName = Output.of(Objects.requireNonNull(httpHeaderName));
             return this;
         }
-
         public Builder values(Output<List<String>> values) {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-
         public Builder values(List<String> values) {
             this.values = Output.of(Objects.requireNonNull(values));
             return this;
         }
-        public ListenerRuleConditionHttpHeaderGetArgs build() {
+        public Builder values(String... values) {
+            return values(List.of(values));
+        }        public ListenerRuleConditionHttpHeaderGetArgs build() {
             return new ListenerRuleConditionHttpHeaderGetArgs(httpHeaderName, values);
         }
     }

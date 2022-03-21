@@ -94,32 +94,26 @@ public final class Hl7StoreIamPolicyState extends io.pulumi.resources.ResourceAr
             this.etag = etag;
             return this;
         }
-
         public Builder etag(@Nullable String etag) {
             this.etag = Output.ofNullable(etag);
             return this;
         }
-
         public Builder hl7V2StoreId(@Nullable Output<String> hl7V2StoreId) {
             this.hl7V2StoreId = hl7V2StoreId;
             return this;
         }
-
         public Builder hl7V2StoreId(@Nullable String hl7V2StoreId) {
             this.hl7V2StoreId = Output.ofNullable(hl7V2StoreId);
             return this;
         }
-
         public Builder policyData(@Nullable Output<String> policyData) {
             this.policyData = policyData;
             return this;
         }
-
         public Builder policyData(@Nullable String policyData) {
             this.policyData = Output.ofNullable(policyData);
             return this;
-        }
-        public Hl7StoreIamPolicyState build() {
+        }        public Hl7StoreIamPolicyState build() {
             return new Hl7StoreIamPolicyState(etag, hl7V2StoreId, policyData);
         }
     }

@@ -72,12 +72,10 @@ public final class GetExpressRouteGatewayArgs extends io.pulumi.resources.Invoke
             this.expressRouteGatewayName = Objects.requireNonNull(expressRouteGatewayName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetExpressRouteGatewayArgs build() {
+        }        public GetExpressRouteGatewayArgs build() {
             return new GetExpressRouteGatewayArgs(expressRouteGatewayName, resourceGroupName);
         }
     }

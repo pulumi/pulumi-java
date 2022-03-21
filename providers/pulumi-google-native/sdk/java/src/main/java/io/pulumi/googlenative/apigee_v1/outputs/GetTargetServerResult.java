@@ -152,37 +152,30 @@ public final class GetTargetServerResult {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder host(String host) {
             this.host = Objects.requireNonNull(host);
             return this;
         }
-
         public Builder isEnabled(Boolean isEnabled) {
             this.isEnabled = Objects.requireNonNull(isEnabled);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder port(Integer port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
-
         public Builder protocol(String protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
-
         public Builder sSLInfo(GoogleCloudApigeeV1TlsInfoResponse sSLInfo) {
             this.sSLInfo = Objects.requireNonNull(sSLInfo);
             return this;
-        }
-        public GetTargetServerResult build() {
+        }        public GetTargetServerResult build() {
             return new GetTargetServerResult(description, host, isEnabled, name, port, protocol, sSLInfo);
         }
     }

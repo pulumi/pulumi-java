@@ -142,62 +142,50 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder accountName(String accountName) {
             this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
-
         public Builder instanceCount(@Nullable Output<Integer> instanceCount) {
             this.instanceCount = instanceCount;
             return this;
         }
-
         public Builder instanceCount(@Nullable Integer instanceCount) {
             this.instanceCount = Output.ofNullable(instanceCount);
             return this;
         }
-
         public Builder instanceSize(@Nullable Output<Either<String,ServiceSize>> instanceSize) {
             this.instanceSize = instanceSize;
             return this;
         }
-
         public Builder instanceSize(@Nullable Either<String,ServiceSize> instanceSize) {
             this.instanceSize = Output.ofNullable(instanceSize);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder serviceName(@Nullable Output<String> serviceName) {
             this.serviceName = serviceName;
             return this;
         }
-
         public Builder serviceName(@Nullable String serviceName) {
             this.serviceName = Output.ofNullable(serviceName);
             return this;
         }
-
         public Builder serviceType(@Nullable Output<Either<String,ServiceType>> serviceType) {
             this.serviceType = serviceType;
             return this;
         }
-
         public Builder serviceType(@Nullable Either<String,ServiceType> serviceType) {
             this.serviceType = Output.ofNullable(serviceType);
             return this;
-        }
-        public ServiceArgs build() {
+        }        public ServiceArgs build() {
             return new ServiceArgs(accountName, instanceCount, instanceSize, resourceGroupName, serviceName, serviceType);
         }
     }

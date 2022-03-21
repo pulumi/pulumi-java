@@ -79,12 +79,10 @@ public final class SizeConstraintSetSizeConstraintFieldToMatch {
             this.data = data;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public SizeConstraintSetSizeConstraintFieldToMatch build() {
+        }        public SizeConstraintSetSizeConstraintFieldToMatch build() {
             return new SizeConstraintSetSizeConstraintFieldToMatch(data, type);
         }
     }

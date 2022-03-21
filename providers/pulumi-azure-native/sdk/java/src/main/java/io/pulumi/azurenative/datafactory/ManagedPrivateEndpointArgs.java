@@ -122,52 +122,42 @@ public final class ManagedPrivateEndpointArgs extends io.pulumi.resources.Resour
             this.factoryName = Objects.requireNonNull(factoryName);
             return this;
         }
-
         public Builder factoryName(String factoryName) {
             this.factoryName = Output.of(Objects.requireNonNull(factoryName));
             return this;
         }
-
         public Builder managedPrivateEndpointName(@Nullable Output<String> managedPrivateEndpointName) {
             this.managedPrivateEndpointName = managedPrivateEndpointName;
             return this;
         }
-
         public Builder managedPrivateEndpointName(@Nullable String managedPrivateEndpointName) {
             this.managedPrivateEndpointName = Output.ofNullable(managedPrivateEndpointName);
             return this;
         }
-
         public Builder managedVirtualNetworkName(Output<String> managedVirtualNetworkName) {
             this.managedVirtualNetworkName = Objects.requireNonNull(managedVirtualNetworkName);
             return this;
         }
-
         public Builder managedVirtualNetworkName(String managedVirtualNetworkName) {
             this.managedVirtualNetworkName = Output.of(Objects.requireNonNull(managedVirtualNetworkName));
             return this;
         }
-
         public Builder properties(Output<io.pulumi.azurenative.datafactory.inputs.ManagedPrivateEndpointArgs> properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
-
         public Builder properties(io.pulumi.azurenative.datafactory.inputs.ManagedPrivateEndpointArgs properties) {
             this.properties = Output.of(Objects.requireNonNull(properties));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
-        }
-        public ManagedPrivateEndpointArgs build() {
+        }        public ManagedPrivateEndpointArgs build() {
             return new ManagedPrivateEndpointArgs(factoryName, managedPrivateEndpointName, managedVirtualNetworkName, properties, resourceGroupName);
         }
     }

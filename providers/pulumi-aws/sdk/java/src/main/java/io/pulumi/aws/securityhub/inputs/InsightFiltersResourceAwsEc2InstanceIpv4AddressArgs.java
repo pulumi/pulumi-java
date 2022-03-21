@@ -56,12 +56,10 @@ public final class InsightFiltersResourceAwsEc2InstanceIpv4AddressArgs extends i
             this.cidr = Objects.requireNonNull(cidr);
             return this;
         }
-
         public Builder cidr(String cidr) {
             this.cidr = Output.of(Objects.requireNonNull(cidr));
             return this;
-        }
-        public InsightFiltersResourceAwsEc2InstanceIpv4AddressArgs build() {
+        }        public InsightFiltersResourceAwsEc2InstanceIpv4AddressArgs build() {
             return new InsightFiltersResourceAwsEc2InstanceIpv4AddressArgs(cidr);
         }
     }

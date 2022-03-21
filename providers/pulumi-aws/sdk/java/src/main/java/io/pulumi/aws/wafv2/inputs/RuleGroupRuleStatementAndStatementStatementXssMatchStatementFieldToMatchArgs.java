@@ -160,72 +160,58 @@ public final class RuleGroupRuleStatementAndStatementStatementXssMatchStatementF
             this.allQueryArguments = allQueryArguments;
             return this;
         }
-
         public Builder allQueryArguments(@Nullable RuleGroupRuleStatementAndStatementStatementXssMatchStatementFieldToMatchAllQueryArgumentsArgs allQueryArguments) {
             this.allQueryArguments = Output.ofNullable(allQueryArguments);
             return this;
         }
-
         public Builder body(@Nullable Output<RuleGroupRuleStatementAndStatementStatementXssMatchStatementFieldToMatchBodyArgs> body) {
             this.body = body;
             return this;
         }
-
         public Builder body(@Nullable RuleGroupRuleStatementAndStatementStatementXssMatchStatementFieldToMatchBodyArgs body) {
             this.body = Output.ofNullable(body);
             return this;
         }
-
         public Builder method(@Nullable Output<RuleGroupRuleStatementAndStatementStatementXssMatchStatementFieldToMatchMethodArgs> method) {
             this.method = method;
             return this;
         }
-
         public Builder method(@Nullable RuleGroupRuleStatementAndStatementStatementXssMatchStatementFieldToMatchMethodArgs method) {
             this.method = Output.ofNullable(method);
             return this;
         }
-
         public Builder queryString(@Nullable Output<RuleGroupRuleStatementAndStatementStatementXssMatchStatementFieldToMatchQueryStringArgs> queryString) {
             this.queryString = queryString;
             return this;
         }
-
         public Builder queryString(@Nullable RuleGroupRuleStatementAndStatementStatementXssMatchStatementFieldToMatchQueryStringArgs queryString) {
             this.queryString = Output.ofNullable(queryString);
             return this;
         }
-
         public Builder singleHeader(@Nullable Output<RuleGroupRuleStatementAndStatementStatementXssMatchStatementFieldToMatchSingleHeaderArgs> singleHeader) {
             this.singleHeader = singleHeader;
             return this;
         }
-
         public Builder singleHeader(@Nullable RuleGroupRuleStatementAndStatementStatementXssMatchStatementFieldToMatchSingleHeaderArgs singleHeader) {
             this.singleHeader = Output.ofNullable(singleHeader);
             return this;
         }
-
         public Builder singleQueryArgument(@Nullable Output<RuleGroupRuleStatementAndStatementStatementXssMatchStatementFieldToMatchSingleQueryArgumentArgs> singleQueryArgument) {
             this.singleQueryArgument = singleQueryArgument;
             return this;
         }
-
         public Builder singleQueryArgument(@Nullable RuleGroupRuleStatementAndStatementStatementXssMatchStatementFieldToMatchSingleQueryArgumentArgs singleQueryArgument) {
             this.singleQueryArgument = Output.ofNullable(singleQueryArgument);
             return this;
         }
-
         public Builder uriPath(@Nullable Output<RuleGroupRuleStatementAndStatementStatementXssMatchStatementFieldToMatchUriPathArgs> uriPath) {
             this.uriPath = uriPath;
             return this;
         }
-
         public Builder uriPath(@Nullable RuleGroupRuleStatementAndStatementStatementXssMatchStatementFieldToMatchUriPathArgs uriPath) {
             this.uriPath = Output.ofNullable(uriPath);
             return this;
-        }
-        public RuleGroupRuleStatementAndStatementStatementXssMatchStatementFieldToMatchArgs build() {
+        }        public RuleGroupRuleStatementAndStatementStatementXssMatchStatementFieldToMatchArgs build() {
             return new RuleGroupRuleStatementAndStatementStatementXssMatchStatementFieldToMatchArgs(allQueryArguments, body, method, queryString, singleHeader, singleQueryArgument, uriPath);
         }
     }

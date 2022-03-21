@@ -260,142 +260,114 @@ public final class RegionNetworkEndpointGroupArgs extends io.pulumi.resources.Re
             this.annotations = annotations;
             return this;
         }
-
         public Builder annotations(@Nullable Map<String,String> annotations) {
             this.annotations = Output.ofNullable(annotations);
             return this;
         }
-
         public Builder appEngine(@Nullable Output<NetworkEndpointGroupAppEngineArgs> appEngine) {
             this.appEngine = appEngine;
             return this;
         }
-
         public Builder appEngine(@Nullable NetworkEndpointGroupAppEngineArgs appEngine) {
             this.appEngine = Output.ofNullable(appEngine);
             return this;
         }
-
         public Builder cloudFunction(@Nullable Output<NetworkEndpointGroupCloudFunctionArgs> cloudFunction) {
             this.cloudFunction = cloudFunction;
             return this;
         }
-
         public Builder cloudFunction(@Nullable NetworkEndpointGroupCloudFunctionArgs cloudFunction) {
             this.cloudFunction = Output.ofNullable(cloudFunction);
             return this;
         }
-
         public Builder cloudRun(@Nullable Output<NetworkEndpointGroupCloudRunArgs> cloudRun) {
             this.cloudRun = cloudRun;
             return this;
         }
-
         public Builder cloudRun(@Nullable NetworkEndpointGroupCloudRunArgs cloudRun) {
             this.cloudRun = Output.ofNullable(cloudRun);
             return this;
         }
-
         public Builder defaultPort(@Nullable Output<Integer> defaultPort) {
             this.defaultPort = defaultPort;
             return this;
         }
-
         public Builder defaultPort(@Nullable Integer defaultPort) {
             this.defaultPort = Output.ofNullable(defaultPort);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder network(@Nullable Output<String> network) {
             this.network = network;
             return this;
         }
-
         public Builder network(@Nullable String network) {
             this.network = Output.ofNullable(network);
             return this;
         }
-
         public Builder networkEndpointType(@Nullable Output<RegionNetworkEndpointGroupNetworkEndpointType> networkEndpointType) {
             this.networkEndpointType = networkEndpointType;
             return this;
         }
-
         public Builder networkEndpointType(@Nullable RegionNetworkEndpointGroupNetworkEndpointType networkEndpointType) {
             this.networkEndpointType = Output.ofNullable(networkEndpointType);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder pscTargetService(@Nullable Output<String> pscTargetService) {
             this.pscTargetService = pscTargetService;
             return this;
         }
-
         public Builder pscTargetService(@Nullable String pscTargetService) {
             this.pscTargetService = Output.ofNullable(pscTargetService);
             return this;
         }
-
         public Builder region(Output<String> region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
-
         public Builder region(String region) {
             this.region = Output.of(Objects.requireNonNull(region));
             return this;
         }
-
         public Builder requestId(@Nullable Output<String> requestId) {
             this.requestId = requestId;
             return this;
         }
-
         public Builder requestId(@Nullable String requestId) {
             this.requestId = Output.ofNullable(requestId);
             return this;
         }
-
         public Builder subnetwork(@Nullable Output<String> subnetwork) {
             this.subnetwork = subnetwork;
             return this;
         }
-
         public Builder subnetwork(@Nullable String subnetwork) {
             this.subnetwork = Output.ofNullable(subnetwork);
             return this;
-        }
-        public RegionNetworkEndpointGroupArgs build() {
+        }        public RegionNetworkEndpointGroupArgs build() {
             return new RegionNetworkEndpointGroupArgs(annotations, appEngine, cloudFunction, cloudRun, defaultPort, description, name, network, networkEndpointType, project, pscTargetService, region, requestId, subnetwork);
         }
     }

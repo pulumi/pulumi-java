@@ -124,52 +124,42 @@ public final class DeploymentConfigState extends io.pulumi.resources.ResourceArg
             this.computePlatform = computePlatform;
             return this;
         }
-
         public Builder computePlatform(@Nullable String computePlatform) {
             this.computePlatform = Output.ofNullable(computePlatform);
             return this;
         }
-
         public Builder deploymentConfigId(@Nullable Output<String> deploymentConfigId) {
             this.deploymentConfigId = deploymentConfigId;
             return this;
         }
-
         public Builder deploymentConfigId(@Nullable String deploymentConfigId) {
             this.deploymentConfigId = Output.ofNullable(deploymentConfigId);
             return this;
         }
-
         public Builder deploymentConfigName(@Nullable Output<String> deploymentConfigName) {
             this.deploymentConfigName = deploymentConfigName;
             return this;
         }
-
         public Builder deploymentConfigName(@Nullable String deploymentConfigName) {
             this.deploymentConfigName = Output.ofNullable(deploymentConfigName);
             return this;
         }
-
         public Builder minimumHealthyHosts(@Nullable Output<DeploymentConfigMinimumHealthyHostsGetArgs> minimumHealthyHosts) {
             this.minimumHealthyHosts = minimumHealthyHosts;
             return this;
         }
-
         public Builder minimumHealthyHosts(@Nullable DeploymentConfigMinimumHealthyHostsGetArgs minimumHealthyHosts) {
             this.minimumHealthyHosts = Output.ofNullable(minimumHealthyHosts);
             return this;
         }
-
         public Builder trafficRoutingConfig(@Nullable Output<DeploymentConfigTrafficRoutingConfigGetArgs> trafficRoutingConfig) {
             this.trafficRoutingConfig = trafficRoutingConfig;
             return this;
         }
-
         public Builder trafficRoutingConfig(@Nullable DeploymentConfigTrafficRoutingConfigGetArgs trafficRoutingConfig) {
             this.trafficRoutingConfig = Output.ofNullable(trafficRoutingConfig);
             return this;
-        }
-        public DeploymentConfigState build() {
+        }        public DeploymentConfigState build() {
             return new DeploymentConfigState(computePlatform, deploymentConfigId, deploymentConfigName, minimumHealthyHosts, trafficRoutingConfig);
         }
     }

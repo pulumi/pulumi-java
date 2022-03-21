@@ -61,12 +61,10 @@ public final class ConnectionDrainingArgs extends io.pulumi.resources.ResourceAr
             this.drainingTimeoutSec = drainingTimeoutSec;
             return this;
         }
-
         public Builder drainingTimeoutSec(@Nullable Integer drainingTimeoutSec) {
             this.drainingTimeoutSec = Output.ofNullable(drainingTimeoutSec);
             return this;
-        }
-        public ConnectionDrainingArgs build() {
+        }        public ConnectionDrainingArgs build() {
             return new ConnectionDrainingArgs(drainingTimeoutSec);
         }
     }

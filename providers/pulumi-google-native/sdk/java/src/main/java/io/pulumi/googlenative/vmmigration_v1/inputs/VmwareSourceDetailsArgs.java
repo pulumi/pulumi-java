@@ -110,42 +110,34 @@ public final class VmwareSourceDetailsArgs extends io.pulumi.resources.ResourceA
             this.password = password;
             return this;
         }
-
         public Builder password(@Nullable String password) {
             this.password = Output.ofNullable(password);
             return this;
         }
-
         public Builder thumbprint(@Nullable Output<String> thumbprint) {
             this.thumbprint = thumbprint;
             return this;
         }
-
         public Builder thumbprint(@Nullable String thumbprint) {
             this.thumbprint = Output.ofNullable(thumbprint);
             return this;
         }
-
         public Builder username(@Nullable Output<String> username) {
             this.username = username;
             return this;
         }
-
         public Builder username(@Nullable String username) {
             this.username = Output.ofNullable(username);
             return this;
         }
-
         public Builder vcenterIp(@Nullable Output<String> vcenterIp) {
             this.vcenterIp = vcenterIp;
             return this;
         }
-
         public Builder vcenterIp(@Nullable String vcenterIp) {
             this.vcenterIp = Output.ofNullable(vcenterIp);
             return this;
-        }
-        public VmwareSourceDetailsArgs build() {
+        }        public VmwareSourceDetailsArgs build() {
             return new VmwareSourceDetailsArgs(password, thumbprint, username, vcenterIp);
         }
     }

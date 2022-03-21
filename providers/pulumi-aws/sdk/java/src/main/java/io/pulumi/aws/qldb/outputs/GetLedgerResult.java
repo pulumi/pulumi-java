@@ -86,27 +86,22 @@ public final class GetLedgerResult {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder deletionProtection(Boolean deletionProtection) {
             this.deletionProtection = Objects.requireNonNull(deletionProtection);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder permissionsMode(String permissionsMode) {
             this.permissionsMode = Objects.requireNonNull(permissionsMode);
             return this;
-        }
-        public GetLedgerResult build() {
+        }        public GetLedgerResult build() {
             return new GetLedgerResult(arn, deletionProtection, id, name, permissionsMode);
         }
     }

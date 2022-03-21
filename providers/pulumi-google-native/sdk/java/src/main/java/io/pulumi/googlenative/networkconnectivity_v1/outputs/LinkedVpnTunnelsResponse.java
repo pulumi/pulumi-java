@@ -71,12 +71,13 @@ public final class LinkedVpnTunnelsResponse {
             this.siteToSiteDataTransfer = Objects.requireNonNull(siteToSiteDataTransfer);
             return this;
         }
-
         public Builder uris(List<String> uris) {
             this.uris = Objects.requireNonNull(uris);
             return this;
         }
-        public LinkedVpnTunnelsResponse build() {
+        public Builder uris(String... uris) {
+            return uris(List.of(uris));
+        }        public LinkedVpnTunnelsResponse build() {
             return new LinkedVpnTunnelsResponse(siteToSiteDataTransfer, uris);
         }
     }

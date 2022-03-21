@@ -69,12 +69,10 @@ public final class SecretManagerSecretResponse {
             this.env = Objects.requireNonNull(env);
             return this;
         }
-
         public Builder versionName(String versionName) {
             this.versionName = Objects.requireNonNull(versionName);
             return this;
-        }
-        public SecretManagerSecretResponse build() {
+        }        public SecretManagerSecretResponse build() {
             return new SecretManagerSecretResponse(env, versionName);
         }
     }

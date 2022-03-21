@@ -87,17 +87,17 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskInputResponse {
             this.selectedDatabases = Objects.requireNonNull(selectedDatabases);
             return this;
         }
-
+        public Builder selectedDatabases(MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputResponse... selectedDatabases) {
+            return selectedDatabases(List.of(selectedDatabases));
+        }
         public Builder sourceConnectionInfo(PostgreSqlConnectionInfoResponse sourceConnectionInfo) {
             this.sourceConnectionInfo = Objects.requireNonNull(sourceConnectionInfo);
             return this;
         }
-
         public Builder targetConnectionInfo(PostgreSqlConnectionInfoResponse targetConnectionInfo) {
             this.targetConnectionInfo = Objects.requireNonNull(targetConnectionInfo);
             return this;
-        }
-        public MigratePostgreSqlAzureDbForPostgreSqlSyncTaskInputResponse build() {
+        }        public MigratePostgreSqlAzureDbForPostgreSqlSyncTaskInputResponse build() {
             return new MigratePostgreSqlAzureDbForPostgreSqlSyncTaskInputResponse(selectedDatabases, sourceConnectionInfo, targetConnectionInfo);
         }
     }

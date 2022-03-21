@@ -73,12 +73,13 @@ public final class MonitoringScheduleMonitoringOutputConfig {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
-
         public Builder monitoringOutputs(List<MonitoringScheduleMonitoringOutput> monitoringOutputs) {
             this.monitoringOutputs = Objects.requireNonNull(monitoringOutputs);
             return this;
         }
-        public MonitoringScheduleMonitoringOutputConfig build() {
+        public Builder monitoringOutputs(MonitoringScheduleMonitoringOutput... monitoringOutputs) {
+            return monitoringOutputs(List.of(monitoringOutputs));
+        }        public MonitoringScheduleMonitoringOutputConfig build() {
             return new MonitoringScheduleMonitoringOutputConfig(kmsKeyId, monitoringOutputs);
         }
     }

@@ -55,12 +55,10 @@ public final class NetworkInsightsAnalysisPortRange {
             this.from = from;
             return this;
         }
-
         public Builder to(@Nullable Integer to) {
             this.to = to;
             return this;
-        }
-        public NetworkInsightsAnalysisPortRange build() {
+        }        public NetworkInsightsAnalysisPortRange build() {
             return new NetworkInsightsAnalysisPortRange(from, to);
         }
     }

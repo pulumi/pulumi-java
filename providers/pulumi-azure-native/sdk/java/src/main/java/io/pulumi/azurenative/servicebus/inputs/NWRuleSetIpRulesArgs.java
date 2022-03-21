@@ -80,22 +80,18 @@ public final class NWRuleSetIpRulesArgs extends io.pulumi.resources.ResourceArgs
             this.action = action;
             return this;
         }
-
         public Builder action(@Nullable Either<String,NetworkRuleIPAction> action) {
             this.action = Output.ofNullable(action);
             return this;
         }
-
         public Builder ipMask(@Nullable Output<String> ipMask) {
             this.ipMask = ipMask;
             return this;
         }
-
         public Builder ipMask(@Nullable String ipMask) {
             this.ipMask = Output.ofNullable(ipMask);
             return this;
-        }
-        public NWRuleSetIpRulesArgs build() {
+        }        public NWRuleSetIpRulesArgs build() {
             return new NWRuleSetIpRulesArgs(action, ipMask);
         }
     }

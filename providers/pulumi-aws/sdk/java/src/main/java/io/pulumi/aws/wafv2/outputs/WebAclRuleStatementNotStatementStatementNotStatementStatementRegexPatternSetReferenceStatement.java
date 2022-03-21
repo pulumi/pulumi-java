@@ -90,17 +90,17 @@ public final class WebAclRuleStatementNotStatementStatementNotStatementStatement
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder fieldToMatch(@Nullable WebAclRuleStatementNotStatementStatementNotStatementStatementRegexPatternSetReferenceStatementFieldToMatch fieldToMatch) {
             this.fieldToMatch = fieldToMatch;
             return this;
         }
-
         public Builder textTransformations(List<WebAclRuleStatementNotStatementStatementNotStatementStatementRegexPatternSetReferenceStatementTextTransformation> textTransformations) {
             this.textTransformations = Objects.requireNonNull(textTransformations);
             return this;
         }
-        public WebAclRuleStatementNotStatementStatementNotStatementStatementRegexPatternSetReferenceStatement build() {
+        public Builder textTransformations(WebAclRuleStatementNotStatementStatementNotStatementStatementRegexPatternSetReferenceStatementTextTransformation... textTransformations) {
+            return textTransformations(List.of(textTransformations));
+        }        public WebAclRuleStatementNotStatementStatementNotStatementStatementRegexPatternSetReferenceStatement build() {
             return new WebAclRuleStatementNotStatementStatementNotStatementStatementRegexPatternSetReferenceStatement(arn, fieldToMatch, textTransformations);
         }
     }

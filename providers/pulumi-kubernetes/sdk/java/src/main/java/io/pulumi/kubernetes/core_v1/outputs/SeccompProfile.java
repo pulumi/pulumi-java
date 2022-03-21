@@ -85,12 +85,10 @@ public final class SeccompProfile {
             this.localhostProfile = localhostProfile;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public SeccompProfile build() {
+        }        public SeccompProfile build() {
             return new SeccompProfile(localhostProfile, type);
         }
     }

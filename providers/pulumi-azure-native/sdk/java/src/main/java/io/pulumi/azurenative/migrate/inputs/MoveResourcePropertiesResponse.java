@@ -242,57 +242,52 @@ public final class MoveResourcePropertiesResponse extends io.pulumi.resources.In
             this.dependsOn = Objects.requireNonNull(dependsOn);
             return this;
         }
-
+        public Builder dependsOn(MoveResourceDependencyResponse... dependsOn) {
+            return dependsOn(List.of(dependsOn));
+        }
         public Builder dependsOnOverrides(@Nullable List<MoveResourceDependencyOverrideResponse> dependsOnOverrides) {
             this.dependsOnOverrides = dependsOnOverrides;
             return this;
         }
-
+        public Builder dependsOnOverrides(MoveResourceDependencyOverrideResponse... dependsOnOverrides) {
+            return dependsOnOverrides(List.of(dependsOnOverrides));
+        }
         public Builder errors(MoveResourcePropertiesResponseErrors errors) {
             this.errors = Objects.requireNonNull(errors);
             return this;
         }
-
         public Builder existingTargetId(@Nullable String existingTargetId) {
             this.existingTargetId = existingTargetId;
             return this;
         }
-
         public Builder isResolveRequired(Boolean isResolveRequired) {
             this.isResolveRequired = Objects.requireNonNull(isResolveRequired);
             return this;
         }
-
         public Builder moveStatus(MoveResourcePropertiesResponseMoveStatus moveStatus) {
             this.moveStatus = Objects.requireNonNull(moveStatus);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder resourceSettings(@Nullable Object resourceSettings) {
             this.resourceSettings = resourceSettings;
             return this;
         }
-
         public Builder sourceId(String sourceId) {
             this.sourceId = Objects.requireNonNull(sourceId);
             return this;
         }
-
         public Builder sourceResourceSettings(Object sourceResourceSettings) {
             this.sourceResourceSettings = Objects.requireNonNull(sourceResourceSettings);
             return this;
         }
-
         public Builder targetId(String targetId) {
             this.targetId = Objects.requireNonNull(targetId);
             return this;
-        }
-        public MoveResourcePropertiesResponse build() {
+        }        public MoveResourcePropertiesResponse build() {
             return new MoveResourcePropertiesResponse(dependsOn, dependsOnOverrides, errors, existingTargetId, isResolveRequired, moveStatus, provisioningState, resourceSettings, sourceId, sourceResourceSettings, targetId);
         }
     }

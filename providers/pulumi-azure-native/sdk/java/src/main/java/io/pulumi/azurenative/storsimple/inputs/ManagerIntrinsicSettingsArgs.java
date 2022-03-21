@@ -60,12 +60,10 @@ public final class ManagerIntrinsicSettingsArgs extends io.pulumi.resources.Reso
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(ManagerType type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public ManagerIntrinsicSettingsArgs build() {
+        }        public ManagerIntrinsicSettingsArgs build() {
             return new ManagerIntrinsicSettingsArgs(type);
         }
     }

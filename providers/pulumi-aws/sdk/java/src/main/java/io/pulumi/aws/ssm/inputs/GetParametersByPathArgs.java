@@ -91,17 +91,14 @@ public final class GetParametersByPathArgs extends io.pulumi.resources.InvokeArg
             this.path = Objects.requireNonNull(path);
             return this;
         }
-
         public Builder recursive(@Nullable Boolean recursive) {
             this.recursive = recursive;
             return this;
         }
-
         public Builder withDecryption(@Nullable Boolean withDecryption) {
             this.withDecryption = withDecryption;
             return this;
-        }
-        public GetParametersByPathArgs build() {
+        }        public GetParametersByPathArgs build() {
             return new GetParametersByPathArgs(path, recursive, withDecryption);
         }
     }

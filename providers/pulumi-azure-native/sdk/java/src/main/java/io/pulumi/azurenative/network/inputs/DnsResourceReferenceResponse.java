@@ -79,12 +79,13 @@ public final class DnsResourceReferenceResponse extends io.pulumi.resources.Invo
             this.dnsResources = dnsResources;
             return this;
         }
-
+        public Builder dnsResources(SubResourceResponse... dnsResources) {
+            return dnsResources(List.of(dnsResources));
+        }
         public Builder targetResource(@Nullable SubResourceResponse targetResource) {
             this.targetResource = targetResource;
             return this;
-        }
-        public DnsResourceReferenceResponse build() {
+        }        public DnsResourceReferenceResponse build() {
             return new DnsResourceReferenceResponse(dnsResources, targetResource);
         }
     }

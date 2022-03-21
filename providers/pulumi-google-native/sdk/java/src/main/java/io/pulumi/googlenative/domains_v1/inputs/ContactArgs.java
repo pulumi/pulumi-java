@@ -111,42 +111,34 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
             this.email = Objects.requireNonNull(email);
             return this;
         }
-
         public Builder email(String email) {
             this.email = Output.of(Objects.requireNonNull(email));
             return this;
         }
-
         public Builder faxNumber(@Nullable Output<String> faxNumber) {
             this.faxNumber = faxNumber;
             return this;
         }
-
         public Builder faxNumber(@Nullable String faxNumber) {
             this.faxNumber = Output.ofNullable(faxNumber);
             return this;
         }
-
         public Builder phoneNumber(Output<String> phoneNumber) {
             this.phoneNumber = Objects.requireNonNull(phoneNumber);
             return this;
         }
-
         public Builder phoneNumber(String phoneNumber) {
             this.phoneNumber = Output.of(Objects.requireNonNull(phoneNumber));
             return this;
         }
-
         public Builder postalAddress(Output<PostalAddressArgs> postalAddress) {
             this.postalAddress = Objects.requireNonNull(postalAddress);
             return this;
         }
-
         public Builder postalAddress(PostalAddressArgs postalAddress) {
             this.postalAddress = Output.of(Objects.requireNonNull(postalAddress));
             return this;
-        }
-        public ContactArgs build() {
+        }        public ContactArgs build() {
             return new ContactArgs(email, faxNumber, phoneNumber, postalAddress);
         }
     }

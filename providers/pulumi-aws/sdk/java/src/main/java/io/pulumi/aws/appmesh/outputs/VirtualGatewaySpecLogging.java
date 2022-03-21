@@ -53,8 +53,7 @@ public final class VirtualGatewaySpecLogging {
         public Builder accessLog(@Nullable VirtualGatewaySpecLoggingAccessLog accessLog) {
             this.accessLog = accessLog;
             return this;
-        }
-        public VirtualGatewaySpecLogging build() {
+        }        public VirtualGatewaySpecLogging build() {
             return new VirtualGatewaySpecLogging(accessLog);
         }
     }

@@ -85,17 +85,14 @@ public final class MaintenanceWindowResponse {
             this.endTime = Objects.requireNonNull(endTime);
             return this;
         }
-
         public Builder recurrence(String recurrence) {
             this.recurrence = Objects.requireNonNull(recurrence);
             return this;
         }
-
         public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
-        }
-        public MaintenanceWindowResponse build() {
+        }        public MaintenanceWindowResponse build() {
             return new MaintenanceWindowResponse(endTime, recurrence, startTime);
         }
     }

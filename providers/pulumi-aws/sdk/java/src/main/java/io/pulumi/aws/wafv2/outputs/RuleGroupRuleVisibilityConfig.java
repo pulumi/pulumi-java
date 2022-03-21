@@ -86,17 +86,14 @@ public final class RuleGroupRuleVisibilityConfig {
             this.cloudwatchMetricsEnabled = Objects.requireNonNull(cloudwatchMetricsEnabled);
             return this;
         }
-
         public Builder metricName(String metricName) {
             this.metricName = Objects.requireNonNull(metricName);
             return this;
         }
-
         public Builder sampledRequestsEnabled(Boolean sampledRequestsEnabled) {
             this.sampledRequestsEnabled = Objects.requireNonNull(sampledRequestsEnabled);
             return this;
-        }
-        public RuleGroupRuleVisibilityConfig build() {
+        }        public RuleGroupRuleVisibilityConfig build() {
             return new RuleGroupRuleVisibilityConfig(cloudwatchMetricsEnabled, metricName, sampledRequestsEnabled);
         }
     }

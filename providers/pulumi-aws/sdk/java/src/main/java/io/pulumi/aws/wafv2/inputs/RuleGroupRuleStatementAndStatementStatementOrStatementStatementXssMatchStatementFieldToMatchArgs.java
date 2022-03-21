@@ -160,72 +160,58 @@ public final class RuleGroupRuleStatementAndStatementStatementOrStatementStateme
             this.allQueryArguments = allQueryArguments;
             return this;
         }
-
         public Builder allQueryArguments(@Nullable RuleGroupRuleStatementAndStatementStatementOrStatementStatementXssMatchStatementFieldToMatchAllQueryArgumentsArgs allQueryArguments) {
             this.allQueryArguments = Output.ofNullable(allQueryArguments);
             return this;
         }
-
         public Builder body(@Nullable Output<RuleGroupRuleStatementAndStatementStatementOrStatementStatementXssMatchStatementFieldToMatchBodyArgs> body) {
             this.body = body;
             return this;
         }
-
         public Builder body(@Nullable RuleGroupRuleStatementAndStatementStatementOrStatementStatementXssMatchStatementFieldToMatchBodyArgs body) {
             this.body = Output.ofNullable(body);
             return this;
         }
-
         public Builder method(@Nullable Output<RuleGroupRuleStatementAndStatementStatementOrStatementStatementXssMatchStatementFieldToMatchMethodArgs> method) {
             this.method = method;
             return this;
         }
-
         public Builder method(@Nullable RuleGroupRuleStatementAndStatementStatementOrStatementStatementXssMatchStatementFieldToMatchMethodArgs method) {
             this.method = Output.ofNullable(method);
             return this;
         }
-
         public Builder queryString(@Nullable Output<RuleGroupRuleStatementAndStatementStatementOrStatementStatementXssMatchStatementFieldToMatchQueryStringArgs> queryString) {
             this.queryString = queryString;
             return this;
         }
-
         public Builder queryString(@Nullable RuleGroupRuleStatementAndStatementStatementOrStatementStatementXssMatchStatementFieldToMatchQueryStringArgs queryString) {
             this.queryString = Output.ofNullable(queryString);
             return this;
         }
-
         public Builder singleHeader(@Nullable Output<RuleGroupRuleStatementAndStatementStatementOrStatementStatementXssMatchStatementFieldToMatchSingleHeaderArgs> singleHeader) {
             this.singleHeader = singleHeader;
             return this;
         }
-
         public Builder singleHeader(@Nullable RuleGroupRuleStatementAndStatementStatementOrStatementStatementXssMatchStatementFieldToMatchSingleHeaderArgs singleHeader) {
             this.singleHeader = Output.ofNullable(singleHeader);
             return this;
         }
-
         public Builder singleQueryArgument(@Nullable Output<RuleGroupRuleStatementAndStatementStatementOrStatementStatementXssMatchStatementFieldToMatchSingleQueryArgumentArgs> singleQueryArgument) {
             this.singleQueryArgument = singleQueryArgument;
             return this;
         }
-
         public Builder singleQueryArgument(@Nullable RuleGroupRuleStatementAndStatementStatementOrStatementStatementXssMatchStatementFieldToMatchSingleQueryArgumentArgs singleQueryArgument) {
             this.singleQueryArgument = Output.ofNullable(singleQueryArgument);
             return this;
         }
-
         public Builder uriPath(@Nullable Output<RuleGroupRuleStatementAndStatementStatementOrStatementStatementXssMatchStatementFieldToMatchUriPathArgs> uriPath) {
             this.uriPath = uriPath;
             return this;
         }
-
         public Builder uriPath(@Nullable RuleGroupRuleStatementAndStatementStatementOrStatementStatementXssMatchStatementFieldToMatchUriPathArgs uriPath) {
             this.uriPath = Output.ofNullable(uriPath);
             return this;
-        }
-        public RuleGroupRuleStatementAndStatementStatementOrStatementStatementXssMatchStatementFieldToMatchArgs build() {
+        }        public RuleGroupRuleStatementAndStatementStatementOrStatementStatementXssMatchStatementFieldToMatchArgs build() {
             return new RuleGroupRuleStatementAndStatementStatementOrStatementStatementXssMatchStatementFieldToMatchArgs(allQueryArguments, body, method, queryString, singleHeader, singleQueryArgument, uriPath);
         }
     }

@@ -160,72 +160,58 @@ public final class WebAclRuleStatementAndStatementStatementByteMatchStatementFie
             this.allQueryArguments = allQueryArguments;
             return this;
         }
-
         public Builder allQueryArguments(@Nullable WebAclRuleStatementAndStatementStatementByteMatchStatementFieldToMatchAllQueryArgumentsGetArgs allQueryArguments) {
             this.allQueryArguments = Output.ofNullable(allQueryArguments);
             return this;
         }
-
         public Builder body(@Nullable Output<WebAclRuleStatementAndStatementStatementByteMatchStatementFieldToMatchBodyGetArgs> body) {
             this.body = body;
             return this;
         }
-
         public Builder body(@Nullable WebAclRuleStatementAndStatementStatementByteMatchStatementFieldToMatchBodyGetArgs body) {
             this.body = Output.ofNullable(body);
             return this;
         }
-
         public Builder method(@Nullable Output<WebAclRuleStatementAndStatementStatementByteMatchStatementFieldToMatchMethodGetArgs> method) {
             this.method = method;
             return this;
         }
-
         public Builder method(@Nullable WebAclRuleStatementAndStatementStatementByteMatchStatementFieldToMatchMethodGetArgs method) {
             this.method = Output.ofNullable(method);
             return this;
         }
-
         public Builder queryString(@Nullable Output<WebAclRuleStatementAndStatementStatementByteMatchStatementFieldToMatchQueryStringGetArgs> queryString) {
             this.queryString = queryString;
             return this;
         }
-
         public Builder queryString(@Nullable WebAclRuleStatementAndStatementStatementByteMatchStatementFieldToMatchQueryStringGetArgs queryString) {
             this.queryString = Output.ofNullable(queryString);
             return this;
         }
-
         public Builder singleHeader(@Nullable Output<WebAclRuleStatementAndStatementStatementByteMatchStatementFieldToMatchSingleHeaderGetArgs> singleHeader) {
             this.singleHeader = singleHeader;
             return this;
         }
-
         public Builder singleHeader(@Nullable WebAclRuleStatementAndStatementStatementByteMatchStatementFieldToMatchSingleHeaderGetArgs singleHeader) {
             this.singleHeader = Output.ofNullable(singleHeader);
             return this;
         }
-
         public Builder singleQueryArgument(@Nullable Output<WebAclRuleStatementAndStatementStatementByteMatchStatementFieldToMatchSingleQueryArgumentGetArgs> singleQueryArgument) {
             this.singleQueryArgument = singleQueryArgument;
             return this;
         }
-
         public Builder singleQueryArgument(@Nullable WebAclRuleStatementAndStatementStatementByteMatchStatementFieldToMatchSingleQueryArgumentGetArgs singleQueryArgument) {
             this.singleQueryArgument = Output.ofNullable(singleQueryArgument);
             return this;
         }
-
         public Builder uriPath(@Nullable Output<WebAclRuleStatementAndStatementStatementByteMatchStatementFieldToMatchUriPathGetArgs> uriPath) {
             this.uriPath = uriPath;
             return this;
         }
-
         public Builder uriPath(@Nullable WebAclRuleStatementAndStatementStatementByteMatchStatementFieldToMatchUriPathGetArgs uriPath) {
             this.uriPath = Output.ofNullable(uriPath);
             return this;
-        }
-        public WebAclRuleStatementAndStatementStatementByteMatchStatementFieldToMatchGetArgs build() {
+        }        public WebAclRuleStatementAndStatementStatementByteMatchStatementFieldToMatchGetArgs build() {
             return new WebAclRuleStatementAndStatementStatementByteMatchStatementFieldToMatchGetArgs(allQueryArguments, body, method, queryString, singleHeader, singleQueryArgument, uriPath);
         }
     }

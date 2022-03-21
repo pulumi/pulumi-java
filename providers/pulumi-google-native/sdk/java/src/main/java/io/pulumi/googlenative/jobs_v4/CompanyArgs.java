@@ -245,132 +245,109 @@ public final class CompanyArgs extends io.pulumi.resources.ResourceArgs {
             this.careerSiteUri = careerSiteUri;
             return this;
         }
-
         public Builder careerSiteUri(@Nullable String careerSiteUri) {
             this.careerSiteUri = Output.ofNullable(careerSiteUri);
             return this;
         }
-
         public Builder displayName(Output<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
-
         public Builder eeoText(@Nullable Output<String> eeoText) {
             this.eeoText = eeoText;
             return this;
         }
-
         public Builder eeoText(@Nullable String eeoText) {
             this.eeoText = Output.ofNullable(eeoText);
             return this;
         }
-
         public Builder externalId(Output<String> externalId) {
             this.externalId = Objects.requireNonNull(externalId);
             return this;
         }
-
         public Builder externalId(String externalId) {
             this.externalId = Output.of(Objects.requireNonNull(externalId));
             return this;
         }
-
         public Builder headquartersAddress(@Nullable Output<String> headquartersAddress) {
             this.headquartersAddress = headquartersAddress;
             return this;
         }
-
         public Builder headquartersAddress(@Nullable String headquartersAddress) {
             this.headquartersAddress = Output.ofNullable(headquartersAddress);
             return this;
         }
-
         public Builder hiringAgency(@Nullable Output<Boolean> hiringAgency) {
             this.hiringAgency = hiringAgency;
             return this;
         }
-
         public Builder hiringAgency(@Nullable Boolean hiringAgency) {
             this.hiringAgency = Output.ofNullable(hiringAgency);
             return this;
         }
-
         public Builder imageUri(@Nullable Output<String> imageUri) {
             this.imageUri = imageUri;
             return this;
         }
-
         public Builder imageUri(@Nullable String imageUri) {
             this.imageUri = Output.ofNullable(imageUri);
             return this;
         }
-
         public Builder keywordSearchableJobCustomAttributes(@Nullable Output<List<String>> keywordSearchableJobCustomAttributes) {
             this.keywordSearchableJobCustomAttributes = keywordSearchableJobCustomAttributes;
             return this;
         }
-
         public Builder keywordSearchableJobCustomAttributes(@Nullable List<String> keywordSearchableJobCustomAttributes) {
             this.keywordSearchableJobCustomAttributes = Output.ofNullable(keywordSearchableJobCustomAttributes);
             return this;
         }
-
+        public Builder keywordSearchableJobCustomAttributes(String... keywordSearchableJobCustomAttributes) {
+            return keywordSearchableJobCustomAttributes(List.of(keywordSearchableJobCustomAttributes));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder size(@Nullable Output<CompanySize> size) {
             this.size = size;
             return this;
         }
-
         public Builder size(@Nullable CompanySize size) {
             this.size = Output.ofNullable(size);
             return this;
         }
-
         public Builder tenantId(Output<String> tenantId) {
             this.tenantId = Objects.requireNonNull(tenantId);
             return this;
         }
-
         public Builder tenantId(String tenantId) {
             this.tenantId = Output.of(Objects.requireNonNull(tenantId));
             return this;
         }
-
         public Builder websiteUri(@Nullable Output<String> websiteUri) {
             this.websiteUri = websiteUri;
             return this;
         }
-
         public Builder websiteUri(@Nullable String websiteUri) {
             this.websiteUri = Output.ofNullable(websiteUri);
             return this;
-        }
-        public CompanyArgs build() {
+        }        public CompanyArgs build() {
             return new CompanyArgs(careerSiteUri, displayName, eeoText, externalId, headquartersAddress, hiringAgency, imageUri, keywordSearchableJobCustomAttributes, name, project, size, tenantId, websiteUri);
         }
     }

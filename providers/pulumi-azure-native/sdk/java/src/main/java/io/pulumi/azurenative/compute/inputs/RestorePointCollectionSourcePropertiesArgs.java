@@ -61,12 +61,10 @@ public final class RestorePointCollectionSourcePropertiesArgs extends io.pulumi.
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
-        }
-        public RestorePointCollectionSourcePropertiesArgs build() {
+        }        public RestorePointCollectionSourcePropertiesArgs build() {
             return new RestorePointCollectionSourcePropertiesArgs(id);
         }
     }

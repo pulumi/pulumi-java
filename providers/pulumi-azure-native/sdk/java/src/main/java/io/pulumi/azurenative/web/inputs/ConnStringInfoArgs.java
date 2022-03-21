@@ -95,32 +95,26 @@ public final class ConnStringInfoArgs extends io.pulumi.resources.ResourceArgs {
             this.connectionString = connectionString;
             return this;
         }
-
         public Builder connectionString(@Nullable String connectionString) {
             this.connectionString = Output.ofNullable(connectionString);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder type(@Nullable Output<ConnectionStringType> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable ConnectionStringType type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public ConnStringInfoArgs build() {
+        }        public ConnStringInfoArgs build() {
             return new ConnStringInfoArgs(connectionString, name, type);
         }
     }

@@ -162,67 +162,69 @@ public final class BotIntent {
             this.description = description;
             return this;
         }
-
         public Builder dialogCodeHook(@Nullable BotDialogCodeHookSetting dialogCodeHook) {
             this.dialogCodeHook = dialogCodeHook;
             return this;
         }
-
         public Builder fulfillmentCodeHook(@Nullable BotFulfillmentCodeHookSetting fulfillmentCodeHook) {
             this.fulfillmentCodeHook = fulfillmentCodeHook;
             return this;
         }
-
         public Builder inputContexts(@Nullable List<BotInputContext> inputContexts) {
             this.inputContexts = inputContexts;
             return this;
         }
-
+        public Builder inputContexts(BotInputContext... inputContexts) {
+            return inputContexts(List.of(inputContexts));
+        }
         public Builder intentClosingSetting(@Nullable BotIntentClosingSetting intentClosingSetting) {
             this.intentClosingSetting = intentClosingSetting;
             return this;
         }
-
         public Builder intentConfirmationSetting(@Nullable BotIntentConfirmationSetting intentConfirmationSetting) {
             this.intentConfirmationSetting = intentConfirmationSetting;
             return this;
         }
-
         public Builder kendraConfiguration(@Nullable BotKendraConfiguration kendraConfiguration) {
             this.kendraConfiguration = kendraConfiguration;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder outputContexts(@Nullable List<BotOutputContext> outputContexts) {
             this.outputContexts = outputContexts;
             return this;
         }
-
+        public Builder outputContexts(BotOutputContext... outputContexts) {
+            return outputContexts(List.of(outputContexts));
+        }
         public Builder parentIntentSignature(@Nullable String parentIntentSignature) {
             this.parentIntentSignature = parentIntentSignature;
             return this;
         }
-
         public Builder sampleUtterances(@Nullable List<BotSampleUtterance> sampleUtterances) {
             this.sampleUtterances = sampleUtterances;
             return this;
         }
-
+        public Builder sampleUtterances(BotSampleUtterance... sampleUtterances) {
+            return sampleUtterances(List.of(sampleUtterances));
+        }
         public Builder slotPriorities(@Nullable List<BotSlotPriority> slotPriorities) {
             this.slotPriorities = slotPriorities;
             return this;
         }
-
+        public Builder slotPriorities(BotSlotPriority... slotPriorities) {
+            return slotPriorities(List.of(slotPriorities));
+        }
         public Builder slots(@Nullable List<BotSlot> slots) {
             this.slots = slots;
             return this;
         }
-        public BotIntent build() {
+        public Builder slots(BotSlot... slots) {
+            return slots(List.of(slots));
+        }        public BotIntent build() {
             return new BotIntent(description, dialogCodeHook, fulfillmentCodeHook, inputContexts, intentClosingSetting, intentConfirmationSetting, kendraConfiguration, name, outputContexts, parentIntentSignature, sampleUtterances, slotPriorities, slots);
         }
     }

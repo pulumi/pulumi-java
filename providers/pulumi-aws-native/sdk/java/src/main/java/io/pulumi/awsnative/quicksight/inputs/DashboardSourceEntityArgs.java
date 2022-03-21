@@ -57,12 +57,10 @@ public final class DashboardSourceEntityArgs extends io.pulumi.resources.Resourc
             this.sourceTemplate = sourceTemplate;
             return this;
         }
-
         public Builder sourceTemplate(@Nullable DashboardSourceTemplateArgs sourceTemplate) {
             this.sourceTemplate = Output.ofNullable(sourceTemplate);
             return this;
-        }
-        public DashboardSourceEntityArgs build() {
+        }        public DashboardSourceEntityArgs build() {
             return new DashboardSourceEntityArgs(sourceTemplate);
         }
     }

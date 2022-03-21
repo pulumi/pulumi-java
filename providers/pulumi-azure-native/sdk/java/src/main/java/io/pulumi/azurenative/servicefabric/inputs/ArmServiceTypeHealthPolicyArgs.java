@@ -94,32 +94,26 @@ public final class ArmServiceTypeHealthPolicyArgs extends io.pulumi.resources.Re
             this.maxPercentUnhealthyPartitionsPerService = maxPercentUnhealthyPartitionsPerService;
             return this;
         }
-
         public Builder maxPercentUnhealthyPartitionsPerService(@Nullable Integer maxPercentUnhealthyPartitionsPerService) {
             this.maxPercentUnhealthyPartitionsPerService = Output.ofNullable(maxPercentUnhealthyPartitionsPerService);
             return this;
         }
-
         public Builder maxPercentUnhealthyReplicasPerPartition(@Nullable Output<Integer> maxPercentUnhealthyReplicasPerPartition) {
             this.maxPercentUnhealthyReplicasPerPartition = maxPercentUnhealthyReplicasPerPartition;
             return this;
         }
-
         public Builder maxPercentUnhealthyReplicasPerPartition(@Nullable Integer maxPercentUnhealthyReplicasPerPartition) {
             this.maxPercentUnhealthyReplicasPerPartition = Output.ofNullable(maxPercentUnhealthyReplicasPerPartition);
             return this;
         }
-
         public Builder maxPercentUnhealthyServices(@Nullable Output<Integer> maxPercentUnhealthyServices) {
             this.maxPercentUnhealthyServices = maxPercentUnhealthyServices;
             return this;
         }
-
         public Builder maxPercentUnhealthyServices(@Nullable Integer maxPercentUnhealthyServices) {
             this.maxPercentUnhealthyServices = Output.ofNullable(maxPercentUnhealthyServices);
             return this;
-        }
-        public ArmServiceTypeHealthPolicyArgs build() {
+        }        public ArmServiceTypeHealthPolicyArgs build() {
             return new ArmServiceTypeHealthPolicyArgs(maxPercentUnhealthyPartitionsPerService, maxPercentUnhealthyReplicasPerPartition, maxPercentUnhealthyServices);
         }
     }

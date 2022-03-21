@@ -72,12 +72,16 @@ public final class ObjectTypeKey {
             this.fieldNames = fieldNames;
             return this;
         }
-
+        public Builder fieldNames(String... fieldNames) {
+            return fieldNames(List.of(fieldNames));
+        }
         public Builder standardIdentifiers(@Nullable List<ObjectTypeKeyStandardIdentifiersItem> standardIdentifiers) {
             this.standardIdentifiers = standardIdentifiers;
             return this;
         }
-        public ObjectTypeKey build() {
+        public Builder standardIdentifiers(ObjectTypeKeyStandardIdentifiersItem... standardIdentifiers) {
+            return standardIdentifiers(List.of(standardIdentifiers));
+        }        public ObjectTypeKey build() {
             return new ObjectTypeKey(fieldNames, standardIdentifiers);
         }
     }

@@ -62,7 +62,9 @@ public final class DailyRetentionFormatResponse extends io.pulumi.resources.Invo
             this.daysOfTheMonth = daysOfTheMonth;
             return this;
         }
-        public DailyRetentionFormatResponse build() {
+        public Builder daysOfTheMonth(DayResponse... daysOfTheMonth) {
+            return daysOfTheMonth(List.of(daysOfTheMonth));
+        }        public DailyRetentionFormatResponse build() {
             return new DailyRetentionFormatResponse(daysOfTheMonth);
         }
     }

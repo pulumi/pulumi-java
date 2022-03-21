@@ -74,22 +74,18 @@ public final class ObjectLambdaAccessPointConfigurationTransformationConfigurati
             this.functionArn = Objects.requireNonNull(functionArn);
             return this;
         }
-
         public Builder functionArn(String functionArn) {
             this.functionArn = Output.of(Objects.requireNonNull(functionArn));
             return this;
         }
-
         public Builder functionPayload(@Nullable Output<String> functionPayload) {
             this.functionPayload = functionPayload;
             return this;
         }
-
         public Builder functionPayload(@Nullable String functionPayload) {
             this.functionPayload = Output.ofNullable(functionPayload);
             return this;
-        }
-        public ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationAwsLambdaArgs build() {
+        }        public ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationAwsLambdaArgs build() {
             return new ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationAwsLambdaArgs(functionArn, functionPayload);
         }
     }

@@ -186,92 +186,77 @@ public final class DevicePoolState extends io.pulumi.resources.ResourceArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder maxDevices(@Nullable Output<Integer> maxDevices) {
             this.maxDevices = maxDevices;
             return this;
         }
-
         public Builder maxDevices(@Nullable Integer maxDevices) {
             this.maxDevices = Output.ofNullable(maxDevices);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder projectArn(@Nullable Output<String> projectArn) {
             this.projectArn = projectArn;
             return this;
         }
-
         public Builder projectArn(@Nullable String projectArn) {
             this.projectArn = Output.ofNullable(projectArn);
             return this;
         }
-
         public Builder rules(@Nullable Output<List<DevicePoolRuleGetArgs>> rules) {
             this.rules = rules;
             return this;
         }
-
         public Builder rules(@Nullable List<DevicePoolRuleGetArgs> rules) {
             this.rules = Output.ofNullable(rules);
             return this;
         }
-
+        public Builder rules(DevicePoolRuleGetArgs... rules) {
+            return rules(List.of(rules));
+        }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
-
         public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public DevicePoolState build() {
+        }        public DevicePoolState build() {
             return new DevicePoolState(arn, description, maxDevices, name, projectArn, rules, tags, tagsAll, type);
         }
     }

@@ -235,62 +235,59 @@ public final class ActiveConnectivityConfigurationResponse {
             this.appliesToGroups = appliesToGroups;
             return this;
         }
-
+        public Builder appliesToGroups(ConnectivityGroupItemResponse... appliesToGroups) {
+            return appliesToGroups(List.of(appliesToGroups));
+        }
         public Builder commitTime(@Nullable String commitTime) {
             this.commitTime = commitTime;
             return this;
         }
-
         public Builder configurationGroups(@Nullable List<ConfigurationGroupResponse> configurationGroups) {
             this.configurationGroups = configurationGroups;
             return this;
         }
-
+        public Builder configurationGroups(ConfigurationGroupResponse... configurationGroups) {
+            return configurationGroups(List.of(configurationGroups));
+        }
         public Builder connectivityTopology(String connectivityTopology) {
             this.connectivityTopology = Objects.requireNonNull(connectivityTopology);
             return this;
         }
-
         public Builder deleteExistingPeering(@Nullable String deleteExistingPeering) {
             this.deleteExistingPeering = deleteExistingPeering;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder hubs(@Nullable List<HubResponse> hubs) {
             this.hubs = hubs;
             return this;
         }
-
+        public Builder hubs(HubResponse... hubs) {
+            return hubs(List.of(hubs));
+        }
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder isGlobal(@Nullable String isGlobal) {
             this.isGlobal = isGlobal;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder region(@Nullable String region) {
             this.region = region;
             return this;
-        }
-        public ActiveConnectivityConfigurationResponse build() {
+        }        public ActiveConnectivityConfigurationResponse build() {
             return new ActiveConnectivityConfigurationResponse(appliesToGroups, commitTime, configurationGroups, connectivityTopology, deleteExistingPeering, description, displayName, hubs, id, isGlobal, provisioningState, region);
         }
     }

@@ -139,62 +139,50 @@ public final class EventTargetRedshiftTargetGetArgs extends io.pulumi.resources.
             this.database = Objects.requireNonNull(database);
             return this;
         }
-
         public Builder database(String database) {
             this.database = Output.of(Objects.requireNonNull(database));
             return this;
         }
-
         public Builder dbUser(@Nullable Output<String> dbUser) {
             this.dbUser = dbUser;
             return this;
         }
-
         public Builder dbUser(@Nullable String dbUser) {
             this.dbUser = Output.ofNullable(dbUser);
             return this;
         }
-
         public Builder secretsManagerArn(@Nullable Output<String> secretsManagerArn) {
             this.secretsManagerArn = secretsManagerArn;
             return this;
         }
-
         public Builder secretsManagerArn(@Nullable String secretsManagerArn) {
             this.secretsManagerArn = Output.ofNullable(secretsManagerArn);
             return this;
         }
-
         public Builder sql(@Nullable Output<String> sql) {
             this.sql = sql;
             return this;
         }
-
         public Builder sql(@Nullable String sql) {
             this.sql = Output.ofNullable(sql);
             return this;
         }
-
         public Builder statementName(@Nullable Output<String> statementName) {
             this.statementName = statementName;
             return this;
         }
-
         public Builder statementName(@Nullable String statementName) {
             this.statementName = Output.ofNullable(statementName);
             return this;
         }
-
         public Builder withEvent(@Nullable Output<Boolean> withEvent) {
             this.withEvent = withEvent;
             return this;
         }
-
         public Builder withEvent(@Nullable Boolean withEvent) {
             this.withEvent = Output.ofNullable(withEvent);
             return this;
-        }
-        public EventTargetRedshiftTargetGetArgs build() {
+        }        public EventTargetRedshiftTargetGetArgs build() {
             return new EventTargetRedshiftTargetGetArgs(database, dbUser, secretsManagerArn, sql, statementName, withEvent);
         }
     }

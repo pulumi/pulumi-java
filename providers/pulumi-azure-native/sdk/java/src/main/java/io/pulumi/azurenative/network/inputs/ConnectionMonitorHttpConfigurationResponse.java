@@ -146,32 +146,32 @@ public final class ConnectionMonitorHttpConfigurationResponse extends io.pulumi.
             this.method = method;
             return this;
         }
-
         public Builder path(@Nullable String path) {
             this.path = path;
             return this;
         }
-
         public Builder port(@Nullable Integer port) {
             this.port = port;
             return this;
         }
-
         public Builder preferHTTPS(@Nullable Boolean preferHTTPS) {
             this.preferHTTPS = preferHTTPS;
             return this;
         }
-
         public Builder requestHeaders(@Nullable List<HTTPHeaderResponse> requestHeaders) {
             this.requestHeaders = requestHeaders;
             return this;
         }
-
+        public Builder requestHeaders(HTTPHeaderResponse... requestHeaders) {
+            return requestHeaders(List.of(requestHeaders));
+        }
         public Builder validStatusCodeRanges(@Nullable List<String> validStatusCodeRanges) {
             this.validStatusCodeRanges = validStatusCodeRanges;
             return this;
         }
-        public ConnectionMonitorHttpConfigurationResponse build() {
+        public Builder validStatusCodeRanges(String... validStatusCodeRanges) {
+            return validStatusCodeRanges(List.of(validStatusCodeRanges));
+        }        public ConnectionMonitorHttpConfigurationResponse build() {
             return new ConnectionMonitorHttpConfigurationResponse(method, path, port, preferHTTPS, requestHeaders, validStatusCodeRanges);
         }
     }

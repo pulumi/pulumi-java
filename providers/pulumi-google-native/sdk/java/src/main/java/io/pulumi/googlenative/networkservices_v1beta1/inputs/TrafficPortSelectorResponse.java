@@ -60,7 +60,9 @@ public final class TrafficPortSelectorResponse extends io.pulumi.resources.Invok
             this.ports = Objects.requireNonNull(ports);
             return this;
         }
-        public TrafficPortSelectorResponse build() {
+        public Builder ports(String... ports) {
+            return ports(List.of(ports));
+        }        public TrafficPortSelectorResponse build() {
             return new TrafficPortSelectorResponse(ports);
         }
     }

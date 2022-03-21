@@ -79,32 +79,35 @@ public final class ServiceTaskSpecContainerSpecDnsConfigGetArgs extends io.pulum
             this.nameservers = Objects.requireNonNull(nameservers);
             return this;
         }
-
         public Builder nameservers(List<String> nameservers) {
             this.nameservers = Output.of(Objects.requireNonNull(nameservers));
             return this;
         }
-
+        public Builder nameservers(String... nameservers) {
+            return nameservers(List.of(nameservers));
+        }
         public Builder options(@Nullable Output<List<String>> options) {
             this.options = options;
             return this;
         }
-
         public Builder options(@Nullable List<String> options) {
             this.options = Output.ofNullable(options);
             return this;
         }
-
+        public Builder options(String... options) {
+            return options(List.of(options));
+        }
         public Builder searches(@Nullable Output<List<String>> searches) {
             this.searches = searches;
             return this;
         }
-
         public Builder searches(@Nullable List<String> searches) {
             this.searches = Output.ofNullable(searches);
             return this;
         }
-        public ServiceTaskSpecContainerSpecDnsConfigGetArgs build() {
+        public Builder searches(String... searches) {
+            return searches(List.of(searches));
+        }        public ServiceTaskSpecContainerSpecDnsConfigGetArgs build() {
             return new ServiceTaskSpecContainerSpecDnsConfigGetArgs(nameservers, options, searches);
         }
     }

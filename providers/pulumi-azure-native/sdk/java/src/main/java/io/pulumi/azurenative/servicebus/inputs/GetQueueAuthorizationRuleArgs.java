@@ -104,22 +104,18 @@ public final class GetQueueAuthorizationRuleArgs extends io.pulumi.resources.Inv
             this.authorizationRuleName = Objects.requireNonNull(authorizationRuleName);
             return this;
         }
-
         public Builder namespaceName(String namespaceName) {
             this.namespaceName = Objects.requireNonNull(namespaceName);
             return this;
         }
-
         public Builder queueName(String queueName) {
             this.queueName = Objects.requireNonNull(queueName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetQueueAuthorizationRuleArgs build() {
+        }        public GetQueueAuthorizationRuleArgs build() {
             return new GetQueueAuthorizationRuleArgs(authorizationRuleName, namespaceName, queueName, resourceGroupName);
         }
     }

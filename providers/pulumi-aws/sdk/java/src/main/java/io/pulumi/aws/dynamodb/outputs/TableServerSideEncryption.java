@@ -74,12 +74,10 @@ public final class TableServerSideEncryption {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
             this.kmsKeyArn = kmsKeyArn;
             return this;
-        }
-        public TableServerSideEncryption build() {
+        }        public TableServerSideEncryption build() {
             return new TableServerSideEncryption(enabled, kmsKeyArn);
         }
     }

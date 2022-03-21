@@ -75,22 +75,18 @@ public final class LaunchTemplateCapacityReservationSpecificationArgs extends io
             this.capacityReservationPreference = capacityReservationPreference;
             return this;
         }
-
         public Builder capacityReservationPreference(@Nullable String capacityReservationPreference) {
             this.capacityReservationPreference = Output.ofNullable(capacityReservationPreference);
             return this;
         }
-
         public Builder capacityReservationTarget(@Nullable Output<LaunchTemplateCapacityReservationSpecificationCapacityReservationTargetArgs> capacityReservationTarget) {
             this.capacityReservationTarget = capacityReservationTarget;
             return this;
         }
-
         public Builder capacityReservationTarget(@Nullable LaunchTemplateCapacityReservationSpecificationCapacityReservationTargetArgs capacityReservationTarget) {
             this.capacityReservationTarget = Output.ofNullable(capacityReservationTarget);
             return this;
-        }
-        public LaunchTemplateCapacityReservationSpecificationArgs build() {
+        }        public LaunchTemplateCapacityReservationSpecificationArgs build() {
             return new LaunchTemplateCapacityReservationSpecificationArgs(capacityReservationPreference, capacityReservationTarget);
         }
     }

@@ -58,8 +58,7 @@ public final class GcpFilestoreCsiDriverConfigResponse extends io.pulumi.resourc
         public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
-        }
-        public GcpFilestoreCsiDriverConfigResponse build() {
+        }        public GcpFilestoreCsiDriverConfigResponse build() {
             return new GcpFilestoreCsiDriverConfigResponse(enabled);
         }
     }

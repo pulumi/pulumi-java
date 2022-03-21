@@ -60,8 +60,7 @@ public final class WebTestPropertiesResponseConfiguration extends io.pulumi.reso
         public Builder webTest(@Nullable String webTest) {
             this.webTest = webTest;
             return this;
-        }
-        public WebTestPropertiesResponseConfiguration build() {
+        }        public WebTestPropertiesResponseConfiguration build() {
             return new WebTestPropertiesResponseConfiguration(webTest);
         }
     }

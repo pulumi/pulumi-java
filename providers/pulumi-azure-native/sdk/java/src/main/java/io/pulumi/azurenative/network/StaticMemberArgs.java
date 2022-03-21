@@ -122,52 +122,42 @@ public final class StaticMemberArgs extends io.pulumi.resources.ResourceArgs {
             this.networkGroupName = Objects.requireNonNull(networkGroupName);
             return this;
         }
-
         public Builder networkGroupName(String networkGroupName) {
             this.networkGroupName = Output.of(Objects.requireNonNull(networkGroupName));
             return this;
         }
-
         public Builder networkManagerName(Output<String> networkManagerName) {
             this.networkManagerName = Objects.requireNonNull(networkManagerName);
             return this;
         }
-
         public Builder networkManagerName(String networkManagerName) {
             this.networkManagerName = Output.of(Objects.requireNonNull(networkManagerName));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder resourceId(@Nullable Output<String> resourceId) {
             this.resourceId = resourceId;
             return this;
         }
-
         public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = Output.ofNullable(resourceId);
             return this;
         }
-
         public Builder staticMemberName(@Nullable Output<String> staticMemberName) {
             this.staticMemberName = staticMemberName;
             return this;
         }
-
         public Builder staticMemberName(@Nullable String staticMemberName) {
             this.staticMemberName = Output.ofNullable(staticMemberName);
             return this;
-        }
-        public StaticMemberArgs build() {
+        }        public StaticMemberArgs build() {
             return new StaticMemberArgs(networkGroupName, networkManagerName, resourceGroupName, resourceId, staticMemberName);
         }
     }

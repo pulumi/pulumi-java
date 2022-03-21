@@ -311,162 +311,160 @@ public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
             this.actionGroupName = actionGroupName;
             return this;
         }
-
         public Builder actionGroupName(@Nullable String actionGroupName) {
             this.actionGroupName = Output.ofNullable(actionGroupName);
             return this;
         }
-
         public Builder armRoleReceivers(@Nullable Output<List<ArmRoleReceiverArgs>> armRoleReceivers) {
             this.armRoleReceivers = armRoleReceivers;
             return this;
         }
-
         public Builder armRoleReceivers(@Nullable List<ArmRoleReceiverArgs> armRoleReceivers) {
             this.armRoleReceivers = Output.ofNullable(armRoleReceivers);
             return this;
         }
-
+        public Builder armRoleReceivers(ArmRoleReceiverArgs... armRoleReceivers) {
+            return armRoleReceivers(List.of(armRoleReceivers));
+        }
         public Builder automationRunbookReceivers(@Nullable Output<List<AutomationRunbookReceiverArgs>> automationRunbookReceivers) {
             this.automationRunbookReceivers = automationRunbookReceivers;
             return this;
         }
-
         public Builder automationRunbookReceivers(@Nullable List<AutomationRunbookReceiverArgs> automationRunbookReceivers) {
             this.automationRunbookReceivers = Output.ofNullable(automationRunbookReceivers);
             return this;
         }
-
+        public Builder automationRunbookReceivers(AutomationRunbookReceiverArgs... automationRunbookReceivers) {
+            return automationRunbookReceivers(List.of(automationRunbookReceivers));
+        }
         public Builder azureAppPushReceivers(@Nullable Output<List<AzureAppPushReceiverArgs>> azureAppPushReceivers) {
             this.azureAppPushReceivers = azureAppPushReceivers;
             return this;
         }
-
         public Builder azureAppPushReceivers(@Nullable List<AzureAppPushReceiverArgs> azureAppPushReceivers) {
             this.azureAppPushReceivers = Output.ofNullable(azureAppPushReceivers);
             return this;
         }
-
+        public Builder azureAppPushReceivers(AzureAppPushReceiverArgs... azureAppPushReceivers) {
+            return azureAppPushReceivers(List.of(azureAppPushReceivers));
+        }
         public Builder azureFunctionReceivers(@Nullable Output<List<AzureFunctionReceiverArgs>> azureFunctionReceivers) {
             this.azureFunctionReceivers = azureFunctionReceivers;
             return this;
         }
-
         public Builder azureFunctionReceivers(@Nullable List<AzureFunctionReceiverArgs> azureFunctionReceivers) {
             this.azureFunctionReceivers = Output.ofNullable(azureFunctionReceivers);
             return this;
         }
-
+        public Builder azureFunctionReceivers(AzureFunctionReceiverArgs... azureFunctionReceivers) {
+            return azureFunctionReceivers(List.of(azureFunctionReceivers));
+        }
         public Builder emailReceivers(@Nullable Output<List<EmailReceiverArgs>> emailReceivers) {
             this.emailReceivers = emailReceivers;
             return this;
         }
-
         public Builder emailReceivers(@Nullable List<EmailReceiverArgs> emailReceivers) {
             this.emailReceivers = Output.ofNullable(emailReceivers);
             return this;
         }
-
+        public Builder emailReceivers(EmailReceiverArgs... emailReceivers) {
+            return emailReceivers(List.of(emailReceivers));
+        }
         public Builder enabled(Output<Boolean> enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public Builder enabled(Boolean enabled) {
             this.enabled = Output.of(Objects.requireNonNull(enabled));
             return this;
         }
-
         public Builder groupShortName(Output<String> groupShortName) {
             this.groupShortName = Objects.requireNonNull(groupShortName);
             return this;
         }
-
         public Builder groupShortName(String groupShortName) {
             this.groupShortName = Output.of(Objects.requireNonNull(groupShortName));
             return this;
         }
-
         public Builder itsmReceivers(@Nullable Output<List<ItsmReceiverArgs>> itsmReceivers) {
             this.itsmReceivers = itsmReceivers;
             return this;
         }
-
         public Builder itsmReceivers(@Nullable List<ItsmReceiverArgs> itsmReceivers) {
             this.itsmReceivers = Output.ofNullable(itsmReceivers);
             return this;
         }
-
+        public Builder itsmReceivers(ItsmReceiverArgs... itsmReceivers) {
+            return itsmReceivers(List.of(itsmReceivers));
+        }
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder logicAppReceivers(@Nullable Output<List<LogicAppReceiverArgs>> logicAppReceivers) {
             this.logicAppReceivers = logicAppReceivers;
             return this;
         }
-
         public Builder logicAppReceivers(@Nullable List<LogicAppReceiverArgs> logicAppReceivers) {
             this.logicAppReceivers = Output.ofNullable(logicAppReceivers);
             return this;
         }
-
+        public Builder logicAppReceivers(LogicAppReceiverArgs... logicAppReceivers) {
+            return logicAppReceivers(List.of(logicAppReceivers));
+        }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder smsReceivers(@Nullable Output<List<SmsReceiverArgs>> smsReceivers) {
             this.smsReceivers = smsReceivers;
             return this;
         }
-
         public Builder smsReceivers(@Nullable List<SmsReceiverArgs> smsReceivers) {
             this.smsReceivers = Output.ofNullable(smsReceivers);
             return this;
         }
-
+        public Builder smsReceivers(SmsReceiverArgs... smsReceivers) {
+            return smsReceivers(List.of(smsReceivers));
+        }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder voiceReceivers(@Nullable Output<List<VoiceReceiverArgs>> voiceReceivers) {
             this.voiceReceivers = voiceReceivers;
             return this;
         }
-
         public Builder voiceReceivers(@Nullable List<VoiceReceiverArgs> voiceReceivers) {
             this.voiceReceivers = Output.ofNullable(voiceReceivers);
             return this;
         }
-
+        public Builder voiceReceivers(VoiceReceiverArgs... voiceReceivers) {
+            return voiceReceivers(List.of(voiceReceivers));
+        }
         public Builder webhookReceivers(@Nullable Output<List<WebhookReceiverArgs>> webhookReceivers) {
             this.webhookReceivers = webhookReceivers;
             return this;
         }
-
         public Builder webhookReceivers(@Nullable List<WebhookReceiverArgs> webhookReceivers) {
             this.webhookReceivers = Output.ofNullable(webhookReceivers);
             return this;
         }
-        public ActionGroupArgs build() {
+        public Builder webhookReceivers(WebhookReceiverArgs... webhookReceivers) {
+            return webhookReceivers(List.of(webhookReceivers));
+        }        public ActionGroupArgs build() {
             return new ActionGroupArgs(actionGroupName, armRoleReceivers, automationRunbookReceivers, azureAppPushReceivers, azureFunctionReceivers, emailReceivers, enabled, groupShortName, itsmReceivers, location, logicAppReceivers, resourceGroupName, smsReceivers, tags, voiceReceivers, webhookReceivers);
         }
     }

@@ -78,32 +78,26 @@ public final class AzureClusterWorkloadIdentityConfigGetArgs extends io.pulumi.r
             this.identityProvider = identityProvider;
             return this;
         }
-
         public Builder identityProvider(@Nullable String identityProvider) {
             this.identityProvider = Output.ofNullable(identityProvider);
             return this;
         }
-
         public Builder issuerUri(@Nullable Output<String> issuerUri) {
             this.issuerUri = issuerUri;
             return this;
         }
-
         public Builder issuerUri(@Nullable String issuerUri) {
             this.issuerUri = Output.ofNullable(issuerUri);
             return this;
         }
-
         public Builder workloadPool(@Nullable Output<String> workloadPool) {
             this.workloadPool = workloadPool;
             return this;
         }
-
         public Builder workloadPool(@Nullable String workloadPool) {
             this.workloadPool = Output.ofNullable(workloadPool);
             return this;
-        }
-        public AzureClusterWorkloadIdentityConfigGetArgs build() {
+        }        public AzureClusterWorkloadIdentityConfigGetArgs build() {
             return new AzureClusterWorkloadIdentityConfigGetArgs(identityProvider, issuerUri, workloadPool);
         }
     }

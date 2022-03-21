@@ -75,22 +75,18 @@ public final class RegionInstanceGroupManagerAutoHealingPoliciesGetArgs extends 
             this.healthCheck = Objects.requireNonNull(healthCheck);
             return this;
         }
-
         public Builder healthCheck(String healthCheck) {
             this.healthCheck = Output.of(Objects.requireNonNull(healthCheck));
             return this;
         }
-
         public Builder initialDelaySec(Output<Integer> initialDelaySec) {
             this.initialDelaySec = Objects.requireNonNull(initialDelaySec);
             return this;
         }
-
         public Builder initialDelaySec(Integer initialDelaySec) {
             this.initialDelaySec = Output.of(Objects.requireNonNull(initialDelaySec));
             return this;
-        }
-        public RegionInstanceGroupManagerAutoHealingPoliciesGetArgs build() {
+        }        public RegionInstanceGroupManagerAutoHealingPoliciesGetArgs build() {
             return new RegionInstanceGroupManagerAutoHealingPoliciesGetArgs(healthCheck, initialDelaySec);
         }
     }

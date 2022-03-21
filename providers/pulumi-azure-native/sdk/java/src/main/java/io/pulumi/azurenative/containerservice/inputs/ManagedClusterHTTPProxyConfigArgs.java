@@ -111,42 +111,37 @@ public final class ManagedClusterHTTPProxyConfigArgs extends io.pulumi.resources
             this.httpProxy = httpProxy;
             return this;
         }
-
         public Builder httpProxy(@Nullable String httpProxy) {
             this.httpProxy = Output.ofNullable(httpProxy);
             return this;
         }
-
         public Builder httpsProxy(@Nullable Output<String> httpsProxy) {
             this.httpsProxy = httpsProxy;
             return this;
         }
-
         public Builder httpsProxy(@Nullable String httpsProxy) {
             this.httpsProxy = Output.ofNullable(httpsProxy);
             return this;
         }
-
         public Builder noProxy(@Nullable Output<List<String>> noProxy) {
             this.noProxy = noProxy;
             return this;
         }
-
         public Builder noProxy(@Nullable List<String> noProxy) {
             this.noProxy = Output.ofNullable(noProxy);
             return this;
         }
-
+        public Builder noProxy(String... noProxy) {
+            return noProxy(List.of(noProxy));
+        }
         public Builder trustedCa(@Nullable Output<String> trustedCa) {
             this.trustedCa = trustedCa;
             return this;
         }
-
         public Builder trustedCa(@Nullable String trustedCa) {
             this.trustedCa = Output.ofNullable(trustedCa);
             return this;
-        }
-        public ManagedClusterHTTPProxyConfigArgs build() {
+        }        public ManagedClusterHTTPProxyConfigArgs build() {
             return new ManagedClusterHTTPProxyConfigArgs(httpProxy, httpsProxy, noProxy, trustedCa);
         }
     }

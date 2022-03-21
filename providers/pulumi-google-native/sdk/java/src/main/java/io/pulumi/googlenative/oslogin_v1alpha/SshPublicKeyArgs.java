@@ -86,32 +86,26 @@ public final class SshPublicKeyArgs extends io.pulumi.resources.ResourceArgs {
             this.expirationTimeUsec = expirationTimeUsec;
             return this;
         }
-
         public Builder expirationTimeUsec(@Nullable String expirationTimeUsec) {
             this.expirationTimeUsec = Output.ofNullable(expirationTimeUsec);
             return this;
         }
-
         public Builder key(@Nullable Output<String> key) {
             this.key = key;
             return this;
         }
-
         public Builder key(@Nullable String key) {
             this.key = Output.ofNullable(key);
             return this;
         }
-
         public Builder userId(Output<String> userId) {
             this.userId = Objects.requireNonNull(userId);
             return this;
         }
-
         public Builder userId(String userId) {
             this.userId = Output.of(Objects.requireNonNull(userId));
             return this;
-        }
-        public SshPublicKeyArgs build() {
+        }        public SshPublicKeyArgs build() {
             return new SshPublicKeyArgs(expirationTimeUsec, key, userId);
         }
     }

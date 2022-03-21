@@ -80,22 +80,21 @@ public final class ContainerRecipeInstanceConfigurationArgs extends io.pulumi.re
             this.blockDeviceMappings = blockDeviceMappings;
             return this;
         }
-
         public Builder blockDeviceMappings(@Nullable List<ContainerRecipeInstanceBlockDeviceMappingArgs> blockDeviceMappings) {
             this.blockDeviceMappings = Output.ofNullable(blockDeviceMappings);
             return this;
         }
-
+        public Builder blockDeviceMappings(ContainerRecipeInstanceBlockDeviceMappingArgs... blockDeviceMappings) {
+            return blockDeviceMappings(List.of(blockDeviceMappings));
+        }
         public Builder image(@Nullable Output<String> image) {
             this.image = image;
             return this;
         }
-
         public Builder image(@Nullable String image) {
             this.image = Output.ofNullable(image);
             return this;
-        }
-        public ContainerRecipeInstanceConfigurationArgs build() {
+        }        public ContainerRecipeInstanceConfigurationArgs build() {
             return new ContainerRecipeInstanceConfigurationArgs(blockDeviceMappings, image);
         }
     }

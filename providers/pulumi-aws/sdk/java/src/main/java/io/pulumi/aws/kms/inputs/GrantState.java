@@ -206,102 +206,91 @@ public final class GrantState extends io.pulumi.resources.ResourceArgs {
             this.constraints = constraints;
             return this;
         }
-
         public Builder constraints(@Nullable List<GrantConstraintGetArgs> constraints) {
             this.constraints = Output.ofNullable(constraints);
             return this;
         }
-
+        public Builder constraints(GrantConstraintGetArgs... constraints) {
+            return constraints(List.of(constraints));
+        }
         public Builder grantCreationTokens(@Nullable Output<List<String>> grantCreationTokens) {
             this.grantCreationTokens = grantCreationTokens;
             return this;
         }
-
         public Builder grantCreationTokens(@Nullable List<String> grantCreationTokens) {
             this.grantCreationTokens = Output.ofNullable(grantCreationTokens);
             return this;
         }
-
+        public Builder grantCreationTokens(String... grantCreationTokens) {
+            return grantCreationTokens(List.of(grantCreationTokens));
+        }
         public Builder grantId(@Nullable Output<String> grantId) {
             this.grantId = grantId;
             return this;
         }
-
         public Builder grantId(@Nullable String grantId) {
             this.grantId = Output.ofNullable(grantId);
             return this;
         }
-
         public Builder grantToken(@Nullable Output<String> grantToken) {
             this.grantToken = grantToken;
             return this;
         }
-
         public Builder grantToken(@Nullable String grantToken) {
             this.grantToken = Output.ofNullable(grantToken);
             return this;
         }
-
         public Builder granteePrincipal(@Nullable Output<String> granteePrincipal) {
             this.granteePrincipal = granteePrincipal;
             return this;
         }
-
         public Builder granteePrincipal(@Nullable String granteePrincipal) {
             this.granteePrincipal = Output.ofNullable(granteePrincipal);
             return this;
         }
-
         public Builder keyId(@Nullable Output<String> keyId) {
             this.keyId = keyId;
             return this;
         }
-
         public Builder keyId(@Nullable String keyId) {
             this.keyId = Output.ofNullable(keyId);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder operations(@Nullable Output<List<String>> operations) {
             this.operations = operations;
             return this;
         }
-
         public Builder operations(@Nullable List<String> operations) {
             this.operations = Output.ofNullable(operations);
             return this;
         }
-
+        public Builder operations(String... operations) {
+            return operations(List.of(operations));
+        }
         public Builder retireOnDelete(@Nullable Output<Boolean> retireOnDelete) {
             this.retireOnDelete = retireOnDelete;
             return this;
         }
-
         public Builder retireOnDelete(@Nullable Boolean retireOnDelete) {
             this.retireOnDelete = Output.ofNullable(retireOnDelete);
             return this;
         }
-
         public Builder retiringPrincipal(@Nullable Output<String> retiringPrincipal) {
             this.retiringPrincipal = retiringPrincipal;
             return this;
         }
-
         public Builder retiringPrincipal(@Nullable String retiringPrincipal) {
             this.retiringPrincipal = Output.ofNullable(retiringPrincipal);
             return this;
-        }
-        public GrantState build() {
+        }        public GrantState build() {
             return new GrantState(constraints, grantCreationTokens, grantId, grantToken, granteePrincipal, keyId, name, operations, retireOnDelete, retiringPrincipal);
         }
     }

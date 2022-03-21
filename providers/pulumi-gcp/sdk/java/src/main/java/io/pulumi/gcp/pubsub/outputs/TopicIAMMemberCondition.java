@@ -63,17 +63,14 @@ public final class TopicIAMMemberCondition {
             this.description = description;
             return this;
         }
-
         public Builder expression(String expression) {
             this.expression = Objects.requireNonNull(expression);
             return this;
         }
-
         public Builder title(String title) {
             this.title = Objects.requireNonNull(title);
             return this;
-        }
-        public TopicIAMMemberCondition build() {
+        }        public TopicIAMMemberCondition build() {
             return new TopicIAMMemberCondition(description, expression, title);
         }
     }

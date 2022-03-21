@@ -108,22 +108,18 @@ public final class ApigatewayExprResponse extends io.pulumi.resources.InvokeArgs
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder expression(String expression) {
             this.expression = Objects.requireNonNull(expression);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder title(String title) {
             this.title = Objects.requireNonNull(title);
             return this;
-        }
-        public ApigatewayExprResponse build() {
+        }        public ApigatewayExprResponse build() {
             return new ApigatewayExprResponse(description, expression, location, title);
         }
     }

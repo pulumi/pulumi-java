@@ -90,22 +90,18 @@ public final class GetRepositoryIamPolicyArgs extends io.pulumi.resources.Invoke
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder optionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
             this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder repositoryId(String repositoryId) {
             this.repositoryId = Objects.requireNonNull(repositoryId);
             return this;
-        }
-        public GetRepositoryIamPolicyArgs build() {
+        }        public GetRepositoryIamPolicyArgs build() {
             return new GetRepositoryIamPolicyArgs(location, optionsRequestedPolicyVersion, project, repositoryId);
         }
     }

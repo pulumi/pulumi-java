@@ -227,57 +227,49 @@ public final class ProtectionContainerMappingPropertiesResponse extends io.pulum
             this.health = health;
             return this;
         }
-
         public Builder healthErrorDetails(@Nullable List<HealthErrorResponse> healthErrorDetails) {
             this.healthErrorDetails = healthErrorDetails;
             return this;
         }
-
+        public Builder healthErrorDetails(HealthErrorResponse... healthErrorDetails) {
+            return healthErrorDetails(List.of(healthErrorDetails));
+        }
         public Builder policyFriendlyName(@Nullable String policyFriendlyName) {
             this.policyFriendlyName = policyFriendlyName;
             return this;
         }
-
         public Builder policyId(@Nullable String policyId) {
             this.policyId = policyId;
             return this;
         }
-
         public Builder providerSpecificDetails(@Nullable Either<A2AProtectionContainerMappingDetailsResponse,VMwareCbtProtectionContainerMappingDetailsResponse> providerSpecificDetails) {
             this.providerSpecificDetails = providerSpecificDetails;
             return this;
         }
-
         public Builder sourceFabricFriendlyName(@Nullable String sourceFabricFriendlyName) {
             this.sourceFabricFriendlyName = sourceFabricFriendlyName;
             return this;
         }
-
         public Builder sourceProtectionContainerFriendlyName(@Nullable String sourceProtectionContainerFriendlyName) {
             this.sourceProtectionContainerFriendlyName = sourceProtectionContainerFriendlyName;
             return this;
         }
-
         public Builder state(@Nullable String state) {
             this.state = state;
             return this;
         }
-
         public Builder targetFabricFriendlyName(@Nullable String targetFabricFriendlyName) {
             this.targetFabricFriendlyName = targetFabricFriendlyName;
             return this;
         }
-
         public Builder targetProtectionContainerFriendlyName(@Nullable String targetProtectionContainerFriendlyName) {
             this.targetProtectionContainerFriendlyName = targetProtectionContainerFriendlyName;
             return this;
         }
-
         public Builder targetProtectionContainerId(@Nullable String targetProtectionContainerId) {
             this.targetProtectionContainerId = targetProtectionContainerId;
             return this;
-        }
-        public ProtectionContainerMappingPropertiesResponse build() {
+        }        public ProtectionContainerMappingPropertiesResponse build() {
             return new ProtectionContainerMappingPropertiesResponse(health, healthErrorDetails, policyFriendlyName, policyId, providerSpecificDetails, sourceFabricFriendlyName, sourceProtectionContainerFriendlyName, state, targetFabricFriendlyName, targetProtectionContainerFriendlyName, targetProtectionContainerId);
         }
     }

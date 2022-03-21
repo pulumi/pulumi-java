@@ -97,32 +97,29 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentResultVersionMetricsA
             this.metrics = metrics;
             return this;
         }
-
         public Builder metrics(@Nullable List<GoogleCloudDialogflowCxV3beta1ExperimentResultMetricArgs> metrics) {
             this.metrics = Output.ofNullable(metrics);
             return this;
         }
-
+        public Builder metrics(GoogleCloudDialogflowCxV3beta1ExperimentResultMetricArgs... metrics) {
+            return metrics(List.of(metrics));
+        }
         public Builder sessionCount(@Nullable Output<Integer> sessionCount) {
             this.sessionCount = sessionCount;
             return this;
         }
-
         public Builder sessionCount(@Nullable Integer sessionCount) {
             this.sessionCount = Output.ofNullable(sessionCount);
             return this;
         }
-
         public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = Output.ofNullable(version);
             return this;
-        }
-        public GoogleCloudDialogflowCxV3beta1ExperimentResultVersionMetricsArgs build() {
+        }        public GoogleCloudDialogflowCxV3beta1ExperimentResultVersionMetricsArgs build() {
             return new GoogleCloudDialogflowCxV3beta1ExperimentResultVersionMetricsArgs(metrics, sessionCount, version);
         }
     }

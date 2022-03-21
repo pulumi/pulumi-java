@@ -92,32 +92,26 @@ public final class InstanceNetworkInterfaceArgs extends io.pulumi.resources.Reso
             this.deleteOnTermination = deleteOnTermination;
             return this;
         }
-
         public Builder deleteOnTermination(@Nullable Boolean deleteOnTermination) {
             this.deleteOnTermination = Output.ofNullable(deleteOnTermination);
             return this;
         }
-
         public Builder deviceIndex(Output<Integer> deviceIndex) {
             this.deviceIndex = Objects.requireNonNull(deviceIndex);
             return this;
         }
-
         public Builder deviceIndex(Integer deviceIndex) {
             this.deviceIndex = Output.of(Objects.requireNonNull(deviceIndex));
             return this;
         }
-
         public Builder networkInterfaceId(Output<String> networkInterfaceId) {
             this.networkInterfaceId = Objects.requireNonNull(networkInterfaceId);
             return this;
         }
-
         public Builder networkInterfaceId(String networkInterfaceId) {
             this.networkInterfaceId = Output.of(Objects.requireNonNull(networkInterfaceId));
             return this;
-        }
-        public InstanceNetworkInterfaceArgs build() {
+        }        public InstanceNetworkInterfaceArgs build() {
             return new InstanceNetworkInterfaceArgs(deleteOnTermination, deviceIndex, networkInterfaceId);
         }
     }

@@ -51,8 +51,7 @@ public final class AwsNodePoolMaxPodsConstraint {
         public Builder maxPodsPerNode(Integer maxPodsPerNode) {
             this.maxPodsPerNode = Objects.requireNonNull(maxPodsPerNode);
             return this;
-        }
-        public AwsNodePoolMaxPodsConstraint build() {
+        }        public AwsNodePoolMaxPodsConstraint build() {
             return new AwsNodePoolMaxPodsConstraint(maxPodsPerNode);
         }
     }

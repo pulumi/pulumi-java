@@ -160,72 +160,58 @@ public final class WebAclRuleStatementByteMatchStatementFieldToMatchArgs extends
             this.allQueryArguments = allQueryArguments;
             return this;
         }
-
         public Builder allQueryArguments(@Nullable WebAclRuleStatementByteMatchStatementFieldToMatchAllQueryArgumentsArgs allQueryArguments) {
             this.allQueryArguments = Output.ofNullable(allQueryArguments);
             return this;
         }
-
         public Builder body(@Nullable Output<WebAclRuleStatementByteMatchStatementFieldToMatchBodyArgs> body) {
             this.body = body;
             return this;
         }
-
         public Builder body(@Nullable WebAclRuleStatementByteMatchStatementFieldToMatchBodyArgs body) {
             this.body = Output.ofNullable(body);
             return this;
         }
-
         public Builder method(@Nullable Output<WebAclRuleStatementByteMatchStatementFieldToMatchMethodArgs> method) {
             this.method = method;
             return this;
         }
-
         public Builder method(@Nullable WebAclRuleStatementByteMatchStatementFieldToMatchMethodArgs method) {
             this.method = Output.ofNullable(method);
             return this;
         }
-
         public Builder queryString(@Nullable Output<WebAclRuleStatementByteMatchStatementFieldToMatchQueryStringArgs> queryString) {
             this.queryString = queryString;
             return this;
         }
-
         public Builder queryString(@Nullable WebAclRuleStatementByteMatchStatementFieldToMatchQueryStringArgs queryString) {
             this.queryString = Output.ofNullable(queryString);
             return this;
         }
-
         public Builder singleHeader(@Nullable Output<WebAclRuleStatementByteMatchStatementFieldToMatchSingleHeaderArgs> singleHeader) {
             this.singleHeader = singleHeader;
             return this;
         }
-
         public Builder singleHeader(@Nullable WebAclRuleStatementByteMatchStatementFieldToMatchSingleHeaderArgs singleHeader) {
             this.singleHeader = Output.ofNullable(singleHeader);
             return this;
         }
-
         public Builder singleQueryArgument(@Nullable Output<WebAclRuleStatementByteMatchStatementFieldToMatchSingleQueryArgumentArgs> singleQueryArgument) {
             this.singleQueryArgument = singleQueryArgument;
             return this;
         }
-
         public Builder singleQueryArgument(@Nullable WebAclRuleStatementByteMatchStatementFieldToMatchSingleQueryArgumentArgs singleQueryArgument) {
             this.singleQueryArgument = Output.ofNullable(singleQueryArgument);
             return this;
         }
-
         public Builder uriPath(@Nullable Output<WebAclRuleStatementByteMatchStatementFieldToMatchUriPathArgs> uriPath) {
             this.uriPath = uriPath;
             return this;
         }
-
         public Builder uriPath(@Nullable WebAclRuleStatementByteMatchStatementFieldToMatchUriPathArgs uriPath) {
             this.uriPath = Output.ofNullable(uriPath);
             return this;
-        }
-        public WebAclRuleStatementByteMatchStatementFieldToMatchArgs build() {
+        }        public WebAclRuleStatementByteMatchStatementFieldToMatchArgs build() {
             return new WebAclRuleStatementByteMatchStatementFieldToMatchArgs(allQueryArguments, body, method, queryString, singleHeader, singleQueryArgument, uriPath);
         }
     }

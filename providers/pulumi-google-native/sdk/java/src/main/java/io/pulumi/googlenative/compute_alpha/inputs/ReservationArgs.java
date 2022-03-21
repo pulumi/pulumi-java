@@ -145,62 +145,50 @@ public final class ReservationArgs extends io.pulumi.resources.ResourceArgs {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder shareSettings(@Nullable Output<ShareSettingsArgs> shareSettings) {
             this.shareSettings = shareSettings;
             return this;
         }
-
         public Builder shareSettings(@Nullable ShareSettingsArgs shareSettings) {
             this.shareSettings = Output.ofNullable(shareSettings);
             return this;
         }
-
         public Builder specificReservation(@Nullable Output<AllocationSpecificSKUReservationArgs> specificReservation) {
             this.specificReservation = specificReservation;
             return this;
         }
-
         public Builder specificReservation(@Nullable AllocationSpecificSKUReservationArgs specificReservation) {
             this.specificReservation = Output.ofNullable(specificReservation);
             return this;
         }
-
         public Builder specificReservationRequired(@Nullable Output<Boolean> specificReservationRequired) {
             this.specificReservationRequired = specificReservationRequired;
             return this;
         }
-
         public Builder specificReservationRequired(@Nullable Boolean specificReservationRequired) {
             this.specificReservationRequired = Output.ofNullable(specificReservationRequired);
             return this;
         }
-
         public Builder zone(@Nullable Output<String> zone) {
             this.zone = zone;
             return this;
         }
-
         public Builder zone(@Nullable String zone) {
             this.zone = Output.ofNullable(zone);
             return this;
-        }
-        public ReservationArgs build() {
+        }        public ReservationArgs build() {
             return new ReservationArgs(description, name, shareSettings, specificReservation, specificReservationRequired, zone);
         }
     }

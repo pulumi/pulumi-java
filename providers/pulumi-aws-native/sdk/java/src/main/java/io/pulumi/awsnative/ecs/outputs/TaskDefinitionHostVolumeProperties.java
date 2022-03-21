@@ -45,8 +45,7 @@ public final class TaskDefinitionHostVolumeProperties {
         public Builder sourcePath(@Nullable String sourcePath) {
             this.sourcePath = sourcePath;
             return this;
-        }
-        public TaskDefinitionHostVolumeProperties build() {
+        }        public TaskDefinitionHostVolumeProperties build() {
             return new TaskDefinitionHostVolumeProperties(sourcePath);
         }
     }

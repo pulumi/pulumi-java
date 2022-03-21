@@ -87,17 +87,14 @@ public final class InstanceLaunchTemplate {
             this.id = id;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = version;
             return this;
-        }
-        public InstanceLaunchTemplate build() {
+        }        public InstanceLaunchTemplate build() {
             return new InstanceLaunchTemplate(id, name, version);
         }
     }

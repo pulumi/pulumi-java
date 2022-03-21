@@ -155,72 +155,58 @@ public final class ConnectorProfileSnowflakeConnectorProfilePropertiesArgs exten
             this.accountName = accountName;
             return this;
         }
-
         public Builder accountName(@Nullable String accountName) {
             this.accountName = Output.ofNullable(accountName);
             return this;
         }
-
         public Builder bucketName(Output<String> bucketName) {
             this.bucketName = Objects.requireNonNull(bucketName);
             return this;
         }
-
         public Builder bucketName(String bucketName) {
             this.bucketName = Output.of(Objects.requireNonNull(bucketName));
             return this;
         }
-
         public Builder bucketPrefix(@Nullable Output<String> bucketPrefix) {
             this.bucketPrefix = bucketPrefix;
             return this;
         }
-
         public Builder bucketPrefix(@Nullable String bucketPrefix) {
             this.bucketPrefix = Output.ofNullable(bucketPrefix);
             return this;
         }
-
         public Builder privateLinkServiceName(@Nullable Output<String> privateLinkServiceName) {
             this.privateLinkServiceName = privateLinkServiceName;
             return this;
         }
-
         public Builder privateLinkServiceName(@Nullable String privateLinkServiceName) {
             this.privateLinkServiceName = Output.ofNullable(privateLinkServiceName);
             return this;
         }
-
         public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
-
         public Builder region(@Nullable String region) {
             this.region = Output.ofNullable(region);
             return this;
         }
-
         public Builder stage(Output<String> stage) {
             this.stage = Objects.requireNonNull(stage);
             return this;
         }
-
         public Builder stage(String stage) {
             this.stage = Output.of(Objects.requireNonNull(stage));
             return this;
         }
-
         public Builder warehouse(Output<String> warehouse) {
             this.warehouse = Objects.requireNonNull(warehouse);
             return this;
         }
-
         public Builder warehouse(String warehouse) {
             this.warehouse = Output.of(Objects.requireNonNull(warehouse));
             return this;
-        }
-        public ConnectorProfileSnowflakeConnectorProfilePropertiesArgs build() {
+        }        public ConnectorProfileSnowflakeConnectorProfilePropertiesArgs build() {
             return new ConnectorProfileSnowflakeConnectorProfilePropertiesArgs(accountName, bucketName, bucketPrefix, privateLinkServiceName, region, stage, warehouse);
         }
     }

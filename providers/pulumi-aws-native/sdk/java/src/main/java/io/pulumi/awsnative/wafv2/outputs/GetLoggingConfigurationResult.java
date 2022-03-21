@@ -107,22 +107,24 @@ public final class GetLoggingConfigurationResult {
             this.logDestinationConfigs = logDestinationConfigs;
             return this;
         }
-
+        public Builder logDestinationConfigs(String... logDestinationConfigs) {
+            return logDestinationConfigs(List.of(logDestinationConfigs));
+        }
         public Builder loggingFilter(@Nullable LoggingFilterProperties loggingFilter) {
             this.loggingFilter = loggingFilter;
             return this;
         }
-
         public Builder managedByFirewallManager(@Nullable Boolean managedByFirewallManager) {
             this.managedByFirewallManager = managedByFirewallManager;
             return this;
         }
-
         public Builder redactedFields(@Nullable List<LoggingConfigurationFieldToMatch> redactedFields) {
             this.redactedFields = redactedFields;
             return this;
         }
-        public GetLoggingConfigurationResult build() {
+        public Builder redactedFields(LoggingConfigurationFieldToMatch... redactedFields) {
+            return redactedFields(List.of(redactedFields));
+        }        public GetLoggingConfigurationResult build() {
             return new GetLoggingConfigurationResult(logDestinationConfigs, loggingFilter, managedByFirewallManager, redactedFields);
         }
     }

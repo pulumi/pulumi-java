@@ -122,17 +122,14 @@ public final class RegionBackendServiceFailoverPolicy {
             this.disableConnectionDrainOnFailover = disableConnectionDrainOnFailover;
             return this;
         }
-
         public Builder dropTrafficIfUnhealthy(@Nullable Boolean dropTrafficIfUnhealthy) {
             this.dropTrafficIfUnhealthy = dropTrafficIfUnhealthy;
             return this;
         }
-
         public Builder failoverRatio(@Nullable Double failoverRatio) {
             this.failoverRatio = failoverRatio;
             return this;
-        }
-        public RegionBackendServiceFailoverPolicy build() {
+        }        public RegionBackendServiceFailoverPolicy build() {
             return new RegionBackendServiceFailoverPolicy(disableConnectionDrainOnFailover, dropTrafficIfUnhealthy, failoverRatio);
         }
     }

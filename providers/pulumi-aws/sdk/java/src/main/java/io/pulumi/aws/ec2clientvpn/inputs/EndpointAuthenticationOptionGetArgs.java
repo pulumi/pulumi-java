@@ -122,52 +122,42 @@ public final class EndpointAuthenticationOptionGetArgs extends io.pulumi.resourc
             this.activeDirectoryId = activeDirectoryId;
             return this;
         }
-
         public Builder activeDirectoryId(@Nullable String activeDirectoryId) {
             this.activeDirectoryId = Output.ofNullable(activeDirectoryId);
             return this;
         }
-
         public Builder rootCertificateChainArn(@Nullable Output<String> rootCertificateChainArn) {
             this.rootCertificateChainArn = rootCertificateChainArn;
             return this;
         }
-
         public Builder rootCertificateChainArn(@Nullable String rootCertificateChainArn) {
             this.rootCertificateChainArn = Output.ofNullable(rootCertificateChainArn);
             return this;
         }
-
         public Builder samlProviderArn(@Nullable Output<String> samlProviderArn) {
             this.samlProviderArn = samlProviderArn;
             return this;
         }
-
         public Builder samlProviderArn(@Nullable String samlProviderArn) {
             this.samlProviderArn = Output.ofNullable(samlProviderArn);
             return this;
         }
-
         public Builder selfServiceSamlProviderArn(@Nullable Output<String> selfServiceSamlProviderArn) {
             this.selfServiceSamlProviderArn = selfServiceSamlProviderArn;
             return this;
         }
-
         public Builder selfServiceSamlProviderArn(@Nullable String selfServiceSamlProviderArn) {
             this.selfServiceSamlProviderArn = Output.ofNullable(selfServiceSamlProviderArn);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public EndpointAuthenticationOptionGetArgs build() {
+        }        public EndpointAuthenticationOptionGetArgs build() {
             return new EndpointAuthenticationOptionGetArgs(activeDirectoryId, rootCertificateChainArn, samlProviderArn, selfServiceSamlProviderArn, type);
         }
     }

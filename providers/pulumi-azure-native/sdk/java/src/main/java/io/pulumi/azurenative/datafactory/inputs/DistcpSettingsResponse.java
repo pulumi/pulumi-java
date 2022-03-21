@@ -94,17 +94,14 @@ public final class DistcpSettingsResponse extends io.pulumi.resources.InvokeArgs
             this.distcpOptions = distcpOptions;
             return this;
         }
-
         public Builder resourceManagerEndpoint(Object resourceManagerEndpoint) {
             this.resourceManagerEndpoint = Objects.requireNonNull(resourceManagerEndpoint);
             return this;
         }
-
         public Builder tempScriptPath(Object tempScriptPath) {
             this.tempScriptPath = Objects.requireNonNull(tempScriptPath);
             return this;
-        }
-        public DistcpSettingsResponse build() {
+        }        public DistcpSettingsResponse build() {
             return new DistcpSettingsResponse(distcpOptions, resourceManagerEndpoint, tempScriptPath);
         }
     }

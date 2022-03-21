@@ -72,12 +72,10 @@ public final class GetSqlManagedInstanceArgs extends io.pulumi.resources.InvokeA
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder sqlManagedInstanceName(String sqlManagedInstanceName) {
             this.sqlManagedInstanceName = Objects.requireNonNull(sqlManagedInstanceName);
             return this;
-        }
-        public GetSqlManagedInstanceArgs build() {
+        }        public GetSqlManagedInstanceArgs build() {
             return new GetSqlManagedInstanceArgs(resourceGroupName, sqlManagedInstanceName);
         }
     }

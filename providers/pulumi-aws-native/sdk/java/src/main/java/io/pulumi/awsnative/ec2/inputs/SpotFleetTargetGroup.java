@@ -50,8 +50,7 @@ public final class SpotFleetTargetGroup extends io.pulumi.resources.InvokeArgs {
         public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
-        }
-        public SpotFleetTargetGroup build() {
+        }        public SpotFleetTargetGroup build() {
             return new SpotFleetTargetGroup(arn);
         }
     }

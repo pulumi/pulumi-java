@@ -71,12 +71,13 @@ public final class LoggingFilterProperties {
             this.defaultBehavior = Objects.requireNonNull(defaultBehavior);
             return this;
         }
-
         public Builder filters(List<LoggingConfigurationFilter> filters) {
             this.filters = Objects.requireNonNull(filters);
             return this;
         }
-        public LoggingFilterProperties build() {
+        public Builder filters(LoggingConfigurationFilter... filters) {
+            return filters(List.of(filters));
+        }        public LoggingFilterProperties build() {
             return new LoggingFilterProperties(defaultBehavior, filters);
         }
     }

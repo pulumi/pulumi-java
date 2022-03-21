@@ -123,52 +123,42 @@ public final class ClusterConfigurationExecuteCommandConfigurationLogConfigurati
             this.cloudWatchEncryptionEnabled = cloudWatchEncryptionEnabled;
             return this;
         }
-
         public Builder cloudWatchEncryptionEnabled(@Nullable Boolean cloudWatchEncryptionEnabled) {
             this.cloudWatchEncryptionEnabled = Output.ofNullable(cloudWatchEncryptionEnabled);
             return this;
         }
-
         public Builder cloudWatchLogGroupName(@Nullable Output<String> cloudWatchLogGroupName) {
             this.cloudWatchLogGroupName = cloudWatchLogGroupName;
             return this;
         }
-
         public Builder cloudWatchLogGroupName(@Nullable String cloudWatchLogGroupName) {
             this.cloudWatchLogGroupName = Output.ofNullable(cloudWatchLogGroupName);
             return this;
         }
-
         public Builder s3BucketEncryptionEnabled(@Nullable Output<Boolean> s3BucketEncryptionEnabled) {
             this.s3BucketEncryptionEnabled = s3BucketEncryptionEnabled;
             return this;
         }
-
         public Builder s3BucketEncryptionEnabled(@Nullable Boolean s3BucketEncryptionEnabled) {
             this.s3BucketEncryptionEnabled = Output.ofNullable(s3BucketEncryptionEnabled);
             return this;
         }
-
         public Builder s3BucketName(@Nullable Output<String> s3BucketName) {
             this.s3BucketName = s3BucketName;
             return this;
         }
-
         public Builder s3BucketName(@Nullable String s3BucketName) {
             this.s3BucketName = Output.ofNullable(s3BucketName);
             return this;
         }
-
         public Builder s3KeyPrefix(@Nullable Output<String> s3KeyPrefix) {
             this.s3KeyPrefix = s3KeyPrefix;
             return this;
         }
-
         public Builder s3KeyPrefix(@Nullable String s3KeyPrefix) {
             this.s3KeyPrefix = Output.ofNullable(s3KeyPrefix);
             return this;
-        }
-        public ClusterConfigurationExecuteCommandConfigurationLogConfigurationGetArgs build() {
+        }        public ClusterConfigurationExecuteCommandConfigurationLogConfigurationGetArgs build() {
             return new ClusterConfigurationExecuteCommandConfigurationLogConfigurationGetArgs(cloudWatchEncryptionEnabled, cloudWatchLogGroupName, s3BucketEncryptionEnabled, s3BucketName, s3KeyPrefix);
         }
     }

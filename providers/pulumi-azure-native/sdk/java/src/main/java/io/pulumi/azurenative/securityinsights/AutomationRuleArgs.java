@@ -176,82 +176,69 @@ public final class AutomationRuleArgs extends io.pulumi.resources.ResourceArgs {
             this.actions = Objects.requireNonNull(actions);
             return this;
         }
-
         public Builder actions(List<Either<AutomationRuleModifyPropertiesActionArgs,AutomationRuleRunPlaybookActionArgs>> actions) {
             this.actions = Output.of(Objects.requireNonNull(actions));
             return this;
         }
-
+        public Builder actions(Either<AutomationRuleModifyPropertiesActionArgs,AutomationRuleRunPlaybookActionArgs>... actions) {
+            return actions(List.of(actions));
+        }
         public Builder automationRuleId(@Nullable Output<String> automationRuleId) {
             this.automationRuleId = automationRuleId;
             return this;
         }
-
         public Builder automationRuleId(@Nullable String automationRuleId) {
             this.automationRuleId = Output.ofNullable(automationRuleId);
             return this;
         }
-
         public Builder displayName(Output<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
-
         public Builder operationalInsightsResourceProvider(Output<String> operationalInsightsResourceProvider) {
             this.operationalInsightsResourceProvider = Objects.requireNonNull(operationalInsightsResourceProvider);
             return this;
         }
-
         public Builder operationalInsightsResourceProvider(String operationalInsightsResourceProvider) {
             this.operationalInsightsResourceProvider = Output.of(Objects.requireNonNull(operationalInsightsResourceProvider));
             return this;
         }
-
         public Builder order(Output<Integer> order) {
             this.order = Objects.requireNonNull(order);
             return this;
         }
-
         public Builder order(Integer order) {
             this.order = Output.of(Objects.requireNonNull(order));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder triggeringLogic(Output<AutomationRuleTriggeringLogicArgs> triggeringLogic) {
             this.triggeringLogic = Objects.requireNonNull(triggeringLogic);
             return this;
         }
-
         public Builder triggeringLogic(AutomationRuleTriggeringLogicArgs triggeringLogic) {
             this.triggeringLogic = Output.of(Objects.requireNonNull(triggeringLogic));
             return this;
         }
-
         public Builder workspaceName(Output<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
-
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
             return this;
-        }
-        public AutomationRuleArgs build() {
+        }        public AutomationRuleArgs build() {
             return new AutomationRuleArgs(actions, automationRuleId, displayName, operationalInsightsResourceProvider, order, resourceGroupName, triggeringLogic, workspaceName);
         }
     }

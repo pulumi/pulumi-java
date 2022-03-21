@@ -95,32 +95,32 @@ public final class SolutionPropertiesArgs extends io.pulumi.resources.ResourceAr
             this.containedResources = containedResources;
             return this;
         }
-
         public Builder containedResources(@Nullable List<String> containedResources) {
             this.containedResources = Output.ofNullable(containedResources);
             return this;
         }
-
+        public Builder containedResources(String... containedResources) {
+            return containedResources(List.of(containedResources));
+        }
         public Builder referencedResources(@Nullable Output<List<String>> referencedResources) {
             this.referencedResources = referencedResources;
             return this;
         }
-
         public Builder referencedResources(@Nullable List<String> referencedResources) {
             this.referencedResources = Output.ofNullable(referencedResources);
             return this;
         }
-
+        public Builder referencedResources(String... referencedResources) {
+            return referencedResources(List.of(referencedResources));
+        }
         public Builder workspaceResourceId(Output<String> workspaceResourceId) {
             this.workspaceResourceId = Objects.requireNonNull(workspaceResourceId);
             return this;
         }
-
         public Builder workspaceResourceId(String workspaceResourceId) {
             this.workspaceResourceId = Output.of(Objects.requireNonNull(workspaceResourceId));
             return this;
-        }
-        public SolutionPropertiesArgs build() {
+        }        public SolutionPropertiesArgs build() {
             return new SolutionPropertiesArgs(containedResources, referencedResources, workspaceResourceId);
         }
     }

@@ -95,32 +95,26 @@ public final class BucketLambdaConfigurationArgs extends io.pulumi.resources.Res
             this.event = Objects.requireNonNull(event);
             return this;
         }
-
         public Builder event(String event) {
             this.event = Output.of(Objects.requireNonNull(event));
             return this;
         }
-
         public Builder filter(@Nullable Output<BucketNotificationFilterArgs> filter) {
             this.filter = filter;
             return this;
         }
-
         public Builder filter(@Nullable BucketNotificationFilterArgs filter) {
             this.filter = Output.ofNullable(filter);
             return this;
         }
-
         public Builder function(Output<String> function) {
             this.function = Objects.requireNonNull(function);
             return this;
         }
-
         public Builder function(String function) {
             this.function = Output.of(Objects.requireNonNull(function));
             return this;
-        }
-        public BucketLambdaConfigurationArgs build() {
+        }        public BucketLambdaConfigurationArgs build() {
             return new BucketLambdaConfigurationArgs(event, filter, function);
         }
     }

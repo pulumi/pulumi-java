@@ -76,22 +76,21 @@ public final class FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigur
             this.parameters = parameters;
             return this;
         }
-
         public Builder parameters(@Nullable List<FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationProcessorParameterArgs> parameters) {
             this.parameters = Output.ofNullable(parameters);
             return this;
         }
-
+        public Builder parameters(FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationProcessorParameterArgs... parameters) {
+            return parameters(List.of(parameters));
+        }
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationProcessorArgs build() {
+        }        public FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationProcessorArgs build() {
             return new FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationProcessorArgs(parameters, type);
         }
     }

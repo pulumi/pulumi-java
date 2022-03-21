@@ -132,52 +132,48 @@ public final class InstanceNetworkGetArgs extends io.pulumi.resources.ResourceAr
             this.connectMode = connectMode;
             return this;
         }
-
         public Builder connectMode(@Nullable String connectMode) {
             this.connectMode = Output.ofNullable(connectMode);
             return this;
         }
-
         public Builder ipAddresses(@Nullable Output<List<String>> ipAddresses) {
             this.ipAddresses = ipAddresses;
             return this;
         }
-
         public Builder ipAddresses(@Nullable List<String> ipAddresses) {
             this.ipAddresses = Output.ofNullable(ipAddresses);
             return this;
         }
-
+        public Builder ipAddresses(String... ipAddresses) {
+            return ipAddresses(List.of(ipAddresses));
+        }
         public Builder modes(Output<List<String>> modes) {
             this.modes = Objects.requireNonNull(modes);
             return this;
         }
-
         public Builder modes(List<String> modes) {
             this.modes = Output.of(Objects.requireNonNull(modes));
             return this;
         }
-
+        public Builder modes(String... modes) {
+            return modes(List.of(modes));
+        }
         public Builder network(Output<String> network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }
-
         public Builder network(String network) {
             this.network = Output.of(Objects.requireNonNull(network));
             return this;
         }
-
         public Builder reservedIpRange(@Nullable Output<String> reservedIpRange) {
             this.reservedIpRange = reservedIpRange;
             return this;
         }
-
         public Builder reservedIpRange(@Nullable String reservedIpRange) {
             this.reservedIpRange = Output.ofNullable(reservedIpRange);
             return this;
-        }
-        public InstanceNetworkGetArgs build() {
+        }        public InstanceNetworkGetArgs build() {
             return new InstanceNetworkGetArgs(connectMode, ipAddresses, modes, network, reservedIpRange);
         }
     }

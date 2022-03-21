@@ -60,7 +60,9 @@ public final class BackendResponse extends io.pulumi.resources.InvokeArgs {
             this.rules = Objects.requireNonNull(rules);
             return this;
         }
-        public BackendResponse build() {
+        public Builder rules(BackendRuleResponse... rules) {
+            return rules(List.of(rules));
+        }        public BackendResponse build() {
             return new BackendResponse(rules);
         }
     }

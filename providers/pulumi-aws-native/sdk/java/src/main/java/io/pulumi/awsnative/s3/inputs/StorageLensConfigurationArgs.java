@@ -155,82 +155,66 @@ public final class StorageLensConfigurationArgs extends io.pulumi.resources.Reso
             this.accountLevel = Objects.requireNonNull(accountLevel);
             return this;
         }
-
         public Builder accountLevel(StorageLensAccountLevelArgs accountLevel) {
             this.accountLevel = Output.of(Objects.requireNonNull(accountLevel));
             return this;
         }
-
         public Builder awsOrg(@Nullable Output<StorageLensAwsOrgArgs> awsOrg) {
             this.awsOrg = awsOrg;
             return this;
         }
-
         public Builder awsOrg(@Nullable StorageLensAwsOrgArgs awsOrg) {
             this.awsOrg = Output.ofNullable(awsOrg);
             return this;
         }
-
         public Builder dataExport(@Nullable Output<StorageLensDataExportArgs> dataExport) {
             this.dataExport = dataExport;
             return this;
         }
-
         public Builder dataExport(@Nullable StorageLensDataExportArgs dataExport) {
             this.dataExport = Output.ofNullable(dataExport);
             return this;
         }
-
         public Builder exclude(@Nullable Output<StorageLensBucketsAndRegionsArgs> exclude) {
             this.exclude = exclude;
             return this;
         }
-
         public Builder exclude(@Nullable StorageLensBucketsAndRegionsArgs exclude) {
             this.exclude = Output.ofNullable(exclude);
             return this;
         }
-
         public Builder id(Output<String> id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Output.of(Objects.requireNonNull(id));
             return this;
         }
-
         public Builder include(@Nullable Output<StorageLensBucketsAndRegionsArgs> include) {
             this.include = include;
             return this;
         }
-
         public Builder include(@Nullable StorageLensBucketsAndRegionsArgs include) {
             this.include = Output.ofNullable(include);
             return this;
         }
-
         public Builder isEnabled(Output<Boolean> isEnabled) {
             this.isEnabled = Objects.requireNonNull(isEnabled);
             return this;
         }
-
         public Builder isEnabled(Boolean isEnabled) {
             this.isEnabled = Output.of(Objects.requireNonNull(isEnabled));
             return this;
         }
-
         public Builder storageLensArn(@Nullable Output<String> storageLensArn) {
             this.storageLensArn = storageLensArn;
             return this;
         }
-
         public Builder storageLensArn(@Nullable String storageLensArn) {
             this.storageLensArn = Output.ofNullable(storageLensArn);
             return this;
-        }
-        public StorageLensConfigurationArgs build() {
+        }        public StorageLensConfigurationArgs build() {
             return new StorageLensConfigurationArgs(accountLevel, awsOrg, dataExport, exclude, id, include, isEnabled, storageLensArn);
         }
     }

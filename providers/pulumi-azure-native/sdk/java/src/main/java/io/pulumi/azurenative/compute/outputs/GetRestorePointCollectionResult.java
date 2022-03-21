@@ -187,47 +187,41 @@ public final class GetRestorePointCollectionResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder restorePointCollectionId(String restorePointCollectionId) {
             this.restorePointCollectionId = Objects.requireNonNull(restorePointCollectionId);
             return this;
         }
-
         public Builder restorePoints(List<RestorePointResponse> restorePoints) {
             this.restorePoints = Objects.requireNonNull(restorePoints);
             return this;
         }
-
+        public Builder restorePoints(RestorePointResponse... restorePoints) {
+            return restorePoints(List.of(restorePoints));
+        }
         public Builder source(@Nullable RestorePointCollectionSourcePropertiesResponse source) {
             this.source = source;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetRestorePointCollectionResult build() {
+        }        public GetRestorePointCollectionResult build() {
             return new GetRestorePointCollectionResult(id, location, name, provisioningState, restorePointCollectionId, restorePoints, source, tags, type);
         }
     }

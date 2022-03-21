@@ -84,17 +84,17 @@ public final class CertificateCertificateDescriptionSubjectDescriptionSubjectAlt
             this.critical = critical;
             return this;
         }
-
         public Builder obectIds(@Nullable List<CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanObectId> obectIds) {
             this.obectIds = obectIds;
             return this;
         }
-
+        public Builder obectIds(CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanObectId... obectIds) {
+            return obectIds(List.of(obectIds));
+        }
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSan build() {
+        }        public CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSan build() {
             return new CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSan(critical, obectIds, value);
         }
     }

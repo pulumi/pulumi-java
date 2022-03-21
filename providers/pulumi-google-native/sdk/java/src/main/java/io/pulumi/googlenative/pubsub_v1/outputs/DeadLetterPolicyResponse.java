@@ -70,12 +70,10 @@ public final class DeadLetterPolicyResponse {
             this.deadLetterTopic = Objects.requireNonNull(deadLetterTopic);
             return this;
         }
-
         public Builder maxDeliveryAttempts(Integer maxDeliveryAttempts) {
             this.maxDeliveryAttempts = Objects.requireNonNull(maxDeliveryAttempts);
             return this;
-        }
-        public DeadLetterPolicyResponse build() {
+        }        public DeadLetterPolicyResponse build() {
             return new DeadLetterPolicyResponse(deadLetterTopic, maxDeliveryAttempts);
         }
     }

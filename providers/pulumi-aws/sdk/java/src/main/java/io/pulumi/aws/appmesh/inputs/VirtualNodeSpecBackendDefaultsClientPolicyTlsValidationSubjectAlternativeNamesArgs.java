@@ -56,12 +56,10 @@ public final class VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationSubjec
             this.match = Objects.requireNonNull(match);
             return this;
         }
-
         public Builder match(VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesMatchArgs match) {
             this.match = Output.of(Objects.requireNonNull(match));
             return this;
-        }
-        public VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesArgs build() {
+        }        public VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesArgs build() {
             return new VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesArgs(match);
         }
     }

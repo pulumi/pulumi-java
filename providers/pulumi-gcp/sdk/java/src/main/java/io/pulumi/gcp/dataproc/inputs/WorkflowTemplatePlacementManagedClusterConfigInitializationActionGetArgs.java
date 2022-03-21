@@ -74,22 +74,18 @@ public final class WorkflowTemplatePlacementManagedClusterConfigInitializationAc
             this.executableFile = executableFile;
             return this;
         }
-
         public Builder executableFile(@Nullable String executableFile) {
             this.executableFile = Output.ofNullable(executableFile);
             return this;
         }
-
         public Builder executionTimeout(@Nullable Output<String> executionTimeout) {
             this.executionTimeout = executionTimeout;
             return this;
         }
-
         public Builder executionTimeout(@Nullable String executionTimeout) {
             this.executionTimeout = Output.ofNullable(executionTimeout);
             return this;
-        }
-        public WorkflowTemplatePlacementManagedClusterConfigInitializationActionGetArgs build() {
+        }        public WorkflowTemplatePlacementManagedClusterConfigInitializationActionGetArgs build() {
             return new WorkflowTemplatePlacementManagedClusterConfigInitializationActionGetArgs(executableFile, executionTimeout);
         }
     }

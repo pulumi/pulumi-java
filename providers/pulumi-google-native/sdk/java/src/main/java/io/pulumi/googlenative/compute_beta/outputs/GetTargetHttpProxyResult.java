@@ -199,52 +199,45 @@ public final class GetTargetHttpProxyResult {
             this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder fingerprint(String fingerprint) {
             this.fingerprint = Objects.requireNonNull(fingerprint);
             return this;
         }
-
         public Builder httpFilters(List<String> httpFilters) {
             this.httpFilters = Objects.requireNonNull(httpFilters);
             return this;
         }
-
+        public Builder httpFilters(String... httpFilters) {
+            return httpFilters(List.of(httpFilters));
+        }
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder proxyBind(Boolean proxyBind) {
             this.proxyBind = Objects.requireNonNull(proxyBind);
             return this;
         }
-
         public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
-
         public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
-
         public Builder urlMap(String urlMap) {
             this.urlMap = Objects.requireNonNull(urlMap);
             return this;
-        }
-        public GetTargetHttpProxyResult build() {
+        }        public GetTargetHttpProxyResult build() {
             return new GetTargetHttpProxyResult(creationTimestamp, description, fingerprint, httpFilters, kind, name, proxyBind, region, selfLink, urlMap);
         }
     }

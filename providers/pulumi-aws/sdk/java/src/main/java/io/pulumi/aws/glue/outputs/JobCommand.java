@@ -87,17 +87,14 @@ public final class JobCommand {
             this.name = name;
             return this;
         }
-
         public Builder pythonVersion(@Nullable String pythonVersion) {
             this.pythonVersion = pythonVersion;
             return this;
         }
-
         public Builder scriptLocation(String scriptLocation) {
             this.scriptLocation = Objects.requireNonNull(scriptLocation);
             return this;
-        }
-        public JobCommand build() {
+        }        public JobCommand build() {
             return new JobCommand(name, pythonVersion, scriptLocation);
         }
     }

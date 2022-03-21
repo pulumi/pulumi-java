@@ -73,12 +73,10 @@ public final class InstanceContainerImage {
             this.repository = Objects.requireNonNull(repository);
             return this;
         }
-
         public Builder tag(@Nullable String tag) {
             this.tag = tag;
             return this;
-        }
-        public InstanceContainerImage build() {
+        }        public InstanceContainerImage build() {
             return new InstanceContainerImage(repository, tag);
         }
     }

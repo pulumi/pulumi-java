@@ -74,22 +74,18 @@ public final class SigningJobDestinationS3Args extends io.pulumi.resources.Resou
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
-
         public Builder bucket(String bucket) {
             this.bucket = Output.of(Objects.requireNonNull(bucket));
             return this;
         }
-
         public Builder prefix(@Nullable Output<String> prefix) {
             this.prefix = prefix;
             return this;
         }
-
         public Builder prefix(@Nullable String prefix) {
             this.prefix = Output.ofNullable(prefix);
             return this;
-        }
-        public SigningJobDestinationS3Args build() {
+        }        public SigningJobDestinationS3Args build() {
             return new SigningJobDestinationS3Args(bucket, prefix);
         }
     }

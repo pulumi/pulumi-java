@@ -74,22 +74,18 @@ public final class InstanceGroupManagerStatefulDiskArgs extends io.pulumi.resour
             this.deleteRule = deleteRule;
             return this;
         }
-
         public Builder deleteRule(@Nullable String deleteRule) {
             this.deleteRule = Output.ofNullable(deleteRule);
             return this;
         }
-
         public Builder deviceName(Output<String> deviceName) {
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }
-
         public Builder deviceName(String deviceName) {
             this.deviceName = Output.of(Objects.requireNonNull(deviceName));
             return this;
-        }
-        public InstanceGroupManagerStatefulDiskArgs build() {
+        }        public InstanceGroupManagerStatefulDiskArgs build() {
             return new InstanceGroupManagerStatefulDiskArgs(deleteRule, deviceName);
         }
     }

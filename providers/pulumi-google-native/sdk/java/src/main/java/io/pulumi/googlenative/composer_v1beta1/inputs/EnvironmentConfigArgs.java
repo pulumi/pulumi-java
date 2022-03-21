@@ -249,122 +249,98 @@ public final class EnvironmentConfigArgs extends io.pulumi.resources.ResourceArg
             this.databaseConfig = databaseConfig;
             return this;
         }
-
         public Builder databaseConfig(@Nullable DatabaseConfigArgs databaseConfig) {
             this.databaseConfig = Output.ofNullable(databaseConfig);
             return this;
         }
-
         public Builder encryptionConfig(@Nullable Output<EncryptionConfigArgs> encryptionConfig) {
             this.encryptionConfig = encryptionConfig;
             return this;
         }
-
         public Builder encryptionConfig(@Nullable EncryptionConfigArgs encryptionConfig) {
             this.encryptionConfig = Output.ofNullable(encryptionConfig);
             return this;
         }
-
         public Builder environmentSize(@Nullable Output<EnvironmentConfigEnvironmentSize> environmentSize) {
             this.environmentSize = environmentSize;
             return this;
         }
-
         public Builder environmentSize(@Nullable EnvironmentConfigEnvironmentSize environmentSize) {
             this.environmentSize = Output.ofNullable(environmentSize);
             return this;
         }
-
         public Builder maintenanceWindow(@Nullable Output<MaintenanceWindowArgs> maintenanceWindow) {
             this.maintenanceWindow = maintenanceWindow;
             return this;
         }
-
         public Builder maintenanceWindow(@Nullable MaintenanceWindowArgs maintenanceWindow) {
             this.maintenanceWindow = Output.ofNullable(maintenanceWindow);
             return this;
         }
-
         public Builder masterAuthorizedNetworksConfig(@Nullable Output<MasterAuthorizedNetworksConfigArgs> masterAuthorizedNetworksConfig) {
             this.masterAuthorizedNetworksConfig = masterAuthorizedNetworksConfig;
             return this;
         }
-
         public Builder masterAuthorizedNetworksConfig(@Nullable MasterAuthorizedNetworksConfigArgs masterAuthorizedNetworksConfig) {
             this.masterAuthorizedNetworksConfig = Output.ofNullable(masterAuthorizedNetworksConfig);
             return this;
         }
-
         public Builder nodeConfig(@Nullable Output<NodeConfigArgs> nodeConfig) {
             this.nodeConfig = nodeConfig;
             return this;
         }
-
         public Builder nodeConfig(@Nullable NodeConfigArgs nodeConfig) {
             this.nodeConfig = Output.ofNullable(nodeConfig);
             return this;
         }
-
         public Builder nodeCount(@Nullable Output<Integer> nodeCount) {
             this.nodeCount = nodeCount;
             return this;
         }
-
         public Builder nodeCount(@Nullable Integer nodeCount) {
             this.nodeCount = Output.ofNullable(nodeCount);
             return this;
         }
-
         public Builder privateEnvironmentConfig(@Nullable Output<PrivateEnvironmentConfigArgs> privateEnvironmentConfig) {
             this.privateEnvironmentConfig = privateEnvironmentConfig;
             return this;
         }
-
         public Builder privateEnvironmentConfig(@Nullable PrivateEnvironmentConfigArgs privateEnvironmentConfig) {
             this.privateEnvironmentConfig = Output.ofNullable(privateEnvironmentConfig);
             return this;
         }
-
         public Builder softwareConfig(@Nullable Output<SoftwareConfigArgs> softwareConfig) {
             this.softwareConfig = softwareConfig;
             return this;
         }
-
         public Builder softwareConfig(@Nullable SoftwareConfigArgs softwareConfig) {
             this.softwareConfig = Output.ofNullable(softwareConfig);
             return this;
         }
-
         public Builder webServerConfig(@Nullable Output<WebServerConfigArgs> webServerConfig) {
             this.webServerConfig = webServerConfig;
             return this;
         }
-
         public Builder webServerConfig(@Nullable WebServerConfigArgs webServerConfig) {
             this.webServerConfig = Output.ofNullable(webServerConfig);
             return this;
         }
-
         public Builder webServerNetworkAccessControl(@Nullable Output<WebServerNetworkAccessControlArgs> webServerNetworkAccessControl) {
             this.webServerNetworkAccessControl = webServerNetworkAccessControl;
             return this;
         }
-
         public Builder webServerNetworkAccessControl(@Nullable WebServerNetworkAccessControlArgs webServerNetworkAccessControl) {
             this.webServerNetworkAccessControl = Output.ofNullable(webServerNetworkAccessControl);
             return this;
         }
-
         public Builder workloadsConfig(@Nullable Output<WorkloadsConfigArgs> workloadsConfig) {
             this.workloadsConfig = workloadsConfig;
             return this;
         }
-
         public Builder workloadsConfig(@Nullable WorkloadsConfigArgs workloadsConfig) {
             this.workloadsConfig = Output.ofNullable(workloadsConfig);
             return this;
-        }
-        public EnvironmentConfigArgs build() {
+        }        public EnvironmentConfigArgs build() {
             return new EnvironmentConfigArgs(databaseConfig, encryptionConfig, environmentSize, maintenanceWindow, masterAuthorizedNetworksConfig, nodeConfig, nodeCount, privateEnvironmentConfig, softwareConfig, webServerConfig, webServerNetworkAccessControl, workloadsConfig);
         }
     }

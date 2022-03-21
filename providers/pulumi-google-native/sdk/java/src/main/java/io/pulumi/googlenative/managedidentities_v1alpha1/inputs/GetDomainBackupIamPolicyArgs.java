@@ -90,22 +90,18 @@ public final class GetDomainBackupIamPolicyArgs extends io.pulumi.resources.Invo
             this.backupId = Objects.requireNonNull(backupId);
             return this;
         }
-
         public Builder domainId(String domainId) {
             this.domainId = Objects.requireNonNull(domainId);
             return this;
         }
-
         public Builder optionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
             this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetDomainBackupIamPolicyArgs build() {
+        }        public GetDomainBackupIamPolicyArgs build() {
             return new GetDomainBackupIamPolicyArgs(backupId, domainId, optionsRequestedPolicyVersion, project);
         }
     }

@@ -284,77 +284,62 @@ public final class GetHanaInstanceResult {
             this.hanaInstanceId = Objects.requireNonNull(hanaInstanceId);
             return this;
         }
-
         public Builder hardwareProfile(@Nullable HardwareProfileResponse hardwareProfile) {
             this.hardwareProfile = hardwareProfile;
             return this;
         }
-
         public Builder hwRevision(String hwRevision) {
             this.hwRevision = Objects.requireNonNull(hwRevision);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder networkProfile(@Nullable NetworkProfileResponse networkProfile) {
             this.networkProfile = networkProfile;
             return this;
         }
-
         public Builder osProfile(@Nullable OSProfileResponse osProfile) {
             this.osProfile = osProfile;
             return this;
         }
-
         public Builder partnerNodeId(@Nullable String partnerNodeId) {
             this.partnerNodeId = partnerNodeId;
             return this;
         }
-
         public Builder powerState(String powerState) {
             this.powerState = Objects.requireNonNull(powerState);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder proximityPlacementGroup(String proximityPlacementGroup) {
             this.proximityPlacementGroup = Objects.requireNonNull(proximityPlacementGroup);
             return this;
         }
-
         public Builder storageProfile(@Nullable StorageProfileResponse storageProfile) {
             this.storageProfile = storageProfile;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetHanaInstanceResult build() {
+        }        public GetHanaInstanceResult build() {
             return new GetHanaInstanceResult(hanaInstanceId, hardwareProfile, hwRevision, id, location, name, networkProfile, osProfile, partnerNodeId, powerState, provisioningState, proximityPlacementGroup, storageProfile, tags, type);
         }
     }

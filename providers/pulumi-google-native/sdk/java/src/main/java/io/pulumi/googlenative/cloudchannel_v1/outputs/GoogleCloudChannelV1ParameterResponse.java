@@ -87,17 +87,14 @@ public final class GoogleCloudChannelV1ParameterResponse {
             this.editable = Objects.requireNonNull(editable);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder value(GoogleCloudChannelV1ValueResponse value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public GoogleCloudChannelV1ParameterResponse build() {
+        }        public GoogleCloudChannelV1ParameterResponse build() {
             return new GoogleCloudChannelV1ParameterResponse(editable, name, value);
         }
     }

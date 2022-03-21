@@ -72,12 +72,10 @@ public final class RobotApplicationRobotSoftwareSuite {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder version(@Nullable RobotApplicationRobotSoftwareSuiteVersion version) {
             this.version = version;
             return this;
-        }
-        public RobotApplicationRobotSoftwareSuite build() {
+        }        public RobotApplicationRobotSoftwareSuite build() {
             return new RobotApplicationRobotSoftwareSuite(name, version);
         }
     }

@@ -85,17 +85,14 @@ public final class WorkloadIdentityConfigResponse {
             this.identityNamespace = Objects.requireNonNull(identityNamespace);
             return this;
         }
-
         public Builder identityProvider(String identityProvider) {
             this.identityProvider = Objects.requireNonNull(identityProvider);
             return this;
         }
-
         public Builder workloadPool(String workloadPool) {
             this.workloadPool = Objects.requireNonNull(workloadPool);
             return this;
-        }
-        public WorkloadIdentityConfigResponse build() {
+        }        public WorkloadIdentityConfigResponse build() {
             return new WorkloadIdentityConfigResponse(identityNamespace, identityProvider, workloadPool);
         }
     }

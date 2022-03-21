@@ -173,82 +173,66 @@ public final class IotConnectorFhirDestinationArgs extends io.pulumi.resources.R
             this.fhirDestinationName = fhirDestinationName;
             return this;
         }
-
         public Builder fhirDestinationName(@Nullable String fhirDestinationName) {
             this.fhirDestinationName = Output.ofNullable(fhirDestinationName);
             return this;
         }
-
         public Builder fhirMapping(Output<IotMappingPropertiesArgs> fhirMapping) {
             this.fhirMapping = Objects.requireNonNull(fhirMapping);
             return this;
         }
-
         public Builder fhirMapping(IotMappingPropertiesArgs fhirMapping) {
             this.fhirMapping = Output.of(Objects.requireNonNull(fhirMapping));
             return this;
         }
-
         public Builder fhirServiceResourceId(Output<String> fhirServiceResourceId) {
             this.fhirServiceResourceId = Objects.requireNonNull(fhirServiceResourceId);
             return this;
         }
-
         public Builder fhirServiceResourceId(String fhirServiceResourceId) {
             this.fhirServiceResourceId = Output.of(Objects.requireNonNull(fhirServiceResourceId));
             return this;
         }
-
         public Builder iotConnectorName(Output<String> iotConnectorName) {
             this.iotConnectorName = Objects.requireNonNull(iotConnectorName);
             return this;
         }
-
         public Builder iotConnectorName(String iotConnectorName) {
             this.iotConnectorName = Output.of(Objects.requireNonNull(iotConnectorName));
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder resourceIdentityResolutionType(Output<Either<String,IotIdentityResolutionType>> resourceIdentityResolutionType) {
             this.resourceIdentityResolutionType = Objects.requireNonNull(resourceIdentityResolutionType);
             return this;
         }
-
         public Builder resourceIdentityResolutionType(Either<String,IotIdentityResolutionType> resourceIdentityResolutionType) {
             this.resourceIdentityResolutionType = Output.of(Objects.requireNonNull(resourceIdentityResolutionType));
             return this;
         }
-
         public Builder workspaceName(Output<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
-
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
             return this;
-        }
-        public IotConnectorFhirDestinationArgs build() {
+        }        public IotConnectorFhirDestinationArgs build() {
             return new IotConnectorFhirDestinationArgs(fhirDestinationName, fhirMapping, fhirServiceResourceId, iotConnectorName, location, resourceGroupName, resourceIdentityResolutionType, workspaceName);
         }
     }

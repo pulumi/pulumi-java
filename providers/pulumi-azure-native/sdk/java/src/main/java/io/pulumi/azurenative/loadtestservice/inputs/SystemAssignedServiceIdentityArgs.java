@@ -62,12 +62,10 @@ public final class SystemAssignedServiceIdentityArgs extends io.pulumi.resources
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(Either<String,SystemAssignedServiceIdentityType> type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public SystemAssignedServiceIdentityArgs build() {
+        }        public SystemAssignedServiceIdentityArgs build() {
             return new SystemAssignedServiceIdentityArgs(type);
         }
     }

@@ -61,17 +61,14 @@ public final class NodePoolNodeConfigTaint {
             this.effect = Objects.requireNonNull(effect);
             return this;
         }
-
         public Builder key(String key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public NodePoolNodeConfigTaint build() {
+        }        public NodePoolNodeConfigTaint build() {
             return new NodePoolNodeConfigTaint(effect, key, value);
         }
     }

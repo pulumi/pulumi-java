@@ -51,8 +51,7 @@ public final class AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMap
         public Builder recordRowPath(String recordRowPath) {
             this.recordRowPath = Objects.requireNonNull(recordRowPath);
             return this;
-        }
-        public AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersJson build() {
+        }        public AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersJson build() {
             return new AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersJson(recordRowPath);
         }
     }

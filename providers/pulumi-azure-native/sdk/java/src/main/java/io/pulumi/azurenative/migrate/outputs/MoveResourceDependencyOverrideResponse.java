@@ -73,12 +73,10 @@ public final class MoveResourceDependencyOverrideResponse {
             this.id = id;
             return this;
         }
-
         public Builder targetId(@Nullable String targetId) {
             this.targetId = targetId;
             return this;
-        }
-        public MoveResourceDependencyOverrideResponse build() {
+        }        public MoveResourceDependencyOverrideResponse build() {
             return new MoveResourceDependencyOverrideResponse(id, targetId);
         }
     }

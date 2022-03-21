@@ -86,22 +86,18 @@ public final class ServicePerimeterSpecIngressPolicyIngressFromSourceGetArgs ext
             this.accessLevel = accessLevel;
             return this;
         }
-
         public Builder accessLevel(@Nullable String accessLevel) {
             this.accessLevel = Output.ofNullable(accessLevel);
             return this;
         }
-
         public Builder resource(@Nullable Output<String> resource) {
             this.resource = resource;
             return this;
         }
-
         public Builder resource(@Nullable String resource) {
             this.resource = Output.ofNullable(resource);
             return this;
-        }
-        public ServicePerimeterSpecIngressPolicyIngressFromSourceGetArgs build() {
+        }        public ServicePerimeterSpecIngressPolicyIngressFromSourceGetArgs build() {
             return new ServicePerimeterSpecIngressPolicyIngressFromSourceGetArgs(accessLevel, resource);
         }
     }

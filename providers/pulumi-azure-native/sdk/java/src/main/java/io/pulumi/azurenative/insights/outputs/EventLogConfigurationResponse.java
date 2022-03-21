@@ -55,12 +55,10 @@ public final class EventLogConfigurationResponse {
             this.filter = filter;
             return this;
         }
-
         public Builder logName(String logName) {
             this.logName = Objects.requireNonNull(logName);
             return this;
-        }
-        public EventLogConfigurationResponse build() {
+        }        public EventLogConfigurationResponse build() {
             return new EventLogConfigurationResponse(filter, logName);
         }
     }

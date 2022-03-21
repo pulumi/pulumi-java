@@ -191,47 +191,44 @@ public final class ServicesPropertiesResponse {
             this.accessPolicies = accessPolicies;
             return this;
         }
-
+        public Builder accessPolicies(ServiceAccessPolicyEntryResponse... accessPolicies) {
+            return accessPolicies(List.of(accessPolicies));
+        }
         public Builder acrConfiguration(@Nullable ServiceAcrConfigurationInfoResponse acrConfiguration) {
             this.acrConfiguration = acrConfiguration;
             return this;
         }
-
         public Builder authenticationConfiguration(@Nullable ServiceAuthenticationConfigurationInfoResponse authenticationConfiguration) {
             this.authenticationConfiguration = authenticationConfiguration;
             return this;
         }
-
         public Builder corsConfiguration(@Nullable ServiceCorsConfigurationInfoResponse corsConfiguration) {
             this.corsConfiguration = corsConfiguration;
             return this;
         }
-
         public Builder cosmosDbConfiguration(@Nullable ServiceCosmosDbConfigurationInfoResponse cosmosDbConfiguration) {
             this.cosmosDbConfiguration = cosmosDbConfiguration;
             return this;
         }
-
         public Builder exportConfiguration(@Nullable ServiceExportConfigurationInfoResponse exportConfiguration) {
             this.exportConfiguration = exportConfiguration;
             return this;
         }
-
         public Builder privateEndpointConnections(@Nullable List<PrivateEndpointConnectionResponse> privateEndpointConnections) {
             this.privateEndpointConnections = privateEndpointConnections;
             return this;
         }
-
+        public Builder privateEndpointConnections(PrivateEndpointConnectionResponse... privateEndpointConnections) {
+            return privateEndpointConnections(List.of(privateEndpointConnections));
+        }
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder publicNetworkAccess(@Nullable String publicNetworkAccess) {
             this.publicNetworkAccess = publicNetworkAccess;
             return this;
-        }
-        public ServicesPropertiesResponse build() {
+        }        public ServicesPropertiesResponse build() {
             return new ServicesPropertiesResponse(accessPolicies, acrConfiguration, authenticationConfiguration, corsConfiguration, cosmosDbConfiguration, exportConfiguration, privateEndpointConnections, provisioningState, publicNetworkAccess);
         }
     }

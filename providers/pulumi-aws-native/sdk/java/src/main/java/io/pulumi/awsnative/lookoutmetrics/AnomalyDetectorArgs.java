@@ -125,52 +125,45 @@ public final class AnomalyDetectorArgs extends io.pulumi.resources.ResourceArgs 
             this.anomalyDetectorConfig = Objects.requireNonNull(anomalyDetectorConfig);
             return this;
         }
-
         public Builder anomalyDetectorConfig(AnomalyDetectorConfigArgs anomalyDetectorConfig) {
             this.anomalyDetectorConfig = Output.of(Objects.requireNonNull(anomalyDetectorConfig));
             return this;
         }
-
         public Builder anomalyDetectorDescription(@Nullable Output<String> anomalyDetectorDescription) {
             this.anomalyDetectorDescription = anomalyDetectorDescription;
             return this;
         }
-
         public Builder anomalyDetectorDescription(@Nullable String anomalyDetectorDescription) {
             this.anomalyDetectorDescription = Output.ofNullable(anomalyDetectorDescription);
             return this;
         }
-
         public Builder anomalyDetectorName(@Nullable Output<String> anomalyDetectorName) {
             this.anomalyDetectorName = anomalyDetectorName;
             return this;
         }
-
         public Builder anomalyDetectorName(@Nullable String anomalyDetectorName) {
             this.anomalyDetectorName = Output.ofNullable(anomalyDetectorName);
             return this;
         }
-
         public Builder kmsKeyArn(@Nullable Output<String> kmsKeyArn) {
             this.kmsKeyArn = kmsKeyArn;
             return this;
         }
-
         public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
             this.kmsKeyArn = Output.ofNullable(kmsKeyArn);
             return this;
         }
-
         public Builder metricSetList(Output<List<AnomalyDetectorMetricSetArgs>> metricSetList) {
             this.metricSetList = Objects.requireNonNull(metricSetList);
             return this;
         }
-
         public Builder metricSetList(List<AnomalyDetectorMetricSetArgs> metricSetList) {
             this.metricSetList = Output.of(Objects.requireNonNull(metricSetList));
             return this;
         }
-        public AnomalyDetectorArgs build() {
+        public Builder metricSetList(AnomalyDetectorMetricSetArgs... metricSetList) {
+            return metricSetList(List.of(metricSetList));
+        }        public AnomalyDetectorArgs build() {
             return new AnomalyDetectorArgs(anomalyDetectorConfig, anomalyDetectorDescription, anomalyDetectorName, kmsKeyArn, metricSetList);
         }
     }

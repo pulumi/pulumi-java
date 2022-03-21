@@ -130,52 +130,42 @@ public final class OpenShiftManagedClusterMasterPoolProfileArgs extends io.pulum
             this.count = Objects.requireNonNull(count);
             return this;
         }
-
         public Builder count(Integer count) {
             this.count = Output.of(Objects.requireNonNull(count));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder osType(@Nullable Output<Either<String,OSType>> osType) {
             this.osType = osType;
             return this;
         }
-
         public Builder osType(@Nullable Either<String,OSType> osType) {
             this.osType = Output.ofNullable(osType);
             return this;
         }
-
         public Builder subnetCidr(@Nullable Output<String> subnetCidr) {
             this.subnetCidr = subnetCidr;
             return this;
         }
-
         public Builder subnetCidr(@Nullable String subnetCidr) {
             this.subnetCidr = Output.ofNullable(subnetCidr);
             return this;
         }
-
         public Builder vmSize(Output<Either<String,OpenShiftContainerServiceVMSize>> vmSize) {
             this.vmSize = Objects.requireNonNull(vmSize);
             return this;
         }
-
         public Builder vmSize(Either<String,OpenShiftContainerServiceVMSize> vmSize) {
             this.vmSize = Output.of(Objects.requireNonNull(vmSize));
             return this;
-        }
-        public OpenShiftManagedClusterMasterPoolProfileArgs build() {
+        }        public OpenShiftManagedClusterMasterPoolProfileArgs build() {
             return new OpenShiftManagedClusterMasterPoolProfileArgs(count, name, osType, subnetCidr, vmSize);
         }
     }

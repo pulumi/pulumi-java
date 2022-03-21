@@ -54,8 +54,7 @@ public final class GetResourcePolicyArgs extends io.pulumi.resources.InvokeArgs 
         public Builder policyName(String policyName) {
             this.policyName = Objects.requireNonNull(policyName);
             return this;
-        }
-        public GetResourcePolicyArgs build() {
+        }        public GetResourcePolicyArgs build() {
             return new GetResourcePolicyArgs(policyName);
         }
     }

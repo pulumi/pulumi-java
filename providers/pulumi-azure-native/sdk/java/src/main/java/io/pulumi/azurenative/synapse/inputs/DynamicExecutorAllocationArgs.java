@@ -61,12 +61,10 @@ public final class DynamicExecutorAllocationArgs extends io.pulumi.resources.Res
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
-        }
-        public DynamicExecutorAllocationArgs build() {
+        }        public DynamicExecutorAllocationArgs build() {
             return new DynamicExecutorAllocationArgs(enabled);
         }
     }

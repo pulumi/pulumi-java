@@ -94,17 +94,14 @@ public final class SiteLimitsResponse extends io.pulumi.resources.InvokeArgs {
             this.maxDiskSizeInMb = maxDiskSizeInMb;
             return this;
         }
-
         public Builder maxMemoryInMb(@Nullable Double maxMemoryInMb) {
             this.maxMemoryInMb = maxMemoryInMb;
             return this;
         }
-
         public Builder maxPercentageCpu(@Nullable Double maxPercentageCpu) {
             this.maxPercentageCpu = maxPercentageCpu;
             return this;
-        }
-        public SiteLimitsResponse build() {
+        }        public SiteLimitsResponse build() {
             return new SiteLimitsResponse(maxDiskSizeInMb, maxMemoryInMb, maxPercentageCpu);
         }
     }

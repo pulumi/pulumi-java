@@ -103,22 +103,18 @@ public final class FlowAccessControlConfigurationResponse {
             this.actions = actions;
             return this;
         }
-
         public Builder contents(@Nullable FlowAccessControlConfigurationPolicyResponse contents) {
             this.contents = contents;
             return this;
         }
-
         public Builder triggers(@Nullable FlowAccessControlConfigurationPolicyResponse triggers) {
             this.triggers = triggers;
             return this;
         }
-
         public Builder workflowManagement(@Nullable FlowAccessControlConfigurationPolicyResponse workflowManagement) {
             this.workflowManagement = workflowManagement;
             return this;
-        }
-        public FlowAccessControlConfigurationResponse build() {
+        }        public FlowAccessControlConfigurationResponse build() {
             return new FlowAccessControlConfigurationResponse(actions, contents, triggers, workflowManagement);
         }
     }

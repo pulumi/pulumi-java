@@ -51,8 +51,7 @@ public final class NodePoolDefaultsResponse {
         public Builder nodeConfigDefaults(NodeConfigDefaultsResponse nodeConfigDefaults) {
             this.nodeConfigDefaults = Objects.requireNonNull(nodeConfigDefaults);
             return this;
-        }
-        public NodePoolDefaultsResponse build() {
+        }        public NodePoolDefaultsResponse build() {
             return new NodePoolDefaultsResponse(nodeConfigDefaults);
         }
     }

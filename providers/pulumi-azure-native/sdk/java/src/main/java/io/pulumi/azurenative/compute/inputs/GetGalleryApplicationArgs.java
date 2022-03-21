@@ -88,17 +88,14 @@ public final class GetGalleryApplicationArgs extends io.pulumi.resources.InvokeA
             this.galleryApplicationName = Objects.requireNonNull(galleryApplicationName);
             return this;
         }
-
         public Builder galleryName(String galleryName) {
             this.galleryName = Objects.requireNonNull(galleryName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetGalleryApplicationArgs build() {
+        }        public GetGalleryApplicationArgs build() {
             return new GetGalleryApplicationArgs(galleryApplicationName, galleryName, resourceGroupName);
         }
     }

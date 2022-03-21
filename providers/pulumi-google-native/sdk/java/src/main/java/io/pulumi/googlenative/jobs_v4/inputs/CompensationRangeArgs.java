@@ -78,22 +78,18 @@ public final class CompensationRangeArgs extends io.pulumi.resources.ResourceArg
             this.maxCompensation = maxCompensation;
             return this;
         }
-
         public Builder maxCompensation(@Nullable MoneyArgs maxCompensation) {
             this.maxCompensation = Output.ofNullable(maxCompensation);
             return this;
         }
-
         public Builder minCompensation(@Nullable Output<MoneyArgs> minCompensation) {
             this.minCompensation = minCompensation;
             return this;
         }
-
         public Builder minCompensation(@Nullable MoneyArgs minCompensation) {
             this.minCompensation = Output.ofNullable(minCompensation);
             return this;
-        }
-        public CompensationRangeArgs build() {
+        }        public CompensationRangeArgs build() {
             return new CompensationRangeArgs(maxCompensation, minCompensation);
         }
     }

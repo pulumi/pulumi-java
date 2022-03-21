@@ -92,17 +92,14 @@ public final class GetApisArgs extends io.pulumi.resources.InvokeArgs {
             this.name = name;
             return this;
         }
-
         public Builder protocolType(@Nullable String protocolType) {
             this.protocolType = protocolType;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
-        }
-        public GetApisArgs build() {
+        }        public GetApisArgs build() {
             return new GetApisArgs(name, protocolType, tags);
         }
     }

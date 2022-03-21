@@ -225,62 +225,56 @@ public final class GetStackResult {
             this.capabilities = Objects.requireNonNull(capabilities);
             return this;
         }
-
+        public Builder capabilities(String... capabilities) {
+            return capabilities(List.of(capabilities));
+        }
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder disableRollback(Boolean disableRollback) {
             this.disableRollback = Objects.requireNonNull(disableRollback);
             return this;
         }
-
         public Builder iamRoleArn(String iamRoleArn) {
             this.iamRoleArn = Objects.requireNonNull(iamRoleArn);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder notificationArns(List<String> notificationArns) {
             this.notificationArns = Objects.requireNonNull(notificationArns);
             return this;
         }
-
+        public Builder notificationArns(String... notificationArns) {
+            return notificationArns(List.of(notificationArns));
+        }
         public Builder outputs(Map<String,String> outputs) {
             this.outputs = Objects.requireNonNull(outputs);
             return this;
         }
-
         public Builder parameters(Map<String,String> parameters) {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
-
         public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
-
         public Builder templateBody(String templateBody) {
             this.templateBody = Objects.requireNonNull(templateBody);
             return this;
         }
-
         public Builder timeoutInMinutes(Integer timeoutInMinutes) {
             this.timeoutInMinutes = Objects.requireNonNull(timeoutInMinutes);
             return this;
-        }
-        public GetStackResult build() {
+        }        public GetStackResult build() {
             return new GetStackResult(capabilities, description, disableRollback, iamRoleArn, id, name, notificationArns, outputs, parameters, tags, templateBody, timeoutInMinutes);
         }
     }

@@ -101,22 +101,18 @@ public final class BigQueryIODetailsResponse {
             this.dataset = Objects.requireNonNull(dataset);
             return this;
         }
-
         public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
-
         public Builder query(String query) {
             this.query = Objects.requireNonNull(query);
             return this;
         }
-
         public Builder table(String table) {
             this.table = Objects.requireNonNull(table);
             return this;
-        }
-        public BigQueryIODetailsResponse build() {
+        }        public BigQueryIODetailsResponse build() {
             return new BigQueryIODetailsResponse(dataset, project, query, table);
         }
     }

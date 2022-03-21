@@ -128,27 +128,31 @@ public final class ConnectionMonitorTestGroupResponse extends io.pulumi.resource
             this.destinations = Objects.requireNonNull(destinations);
             return this;
         }
-
+        public Builder destinations(String... destinations) {
+            return destinations(List.of(destinations));
+        }
         public Builder disable(@Nullable Boolean disable) {
             this.disable = disable;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder sources(List<String> sources) {
             this.sources = Objects.requireNonNull(sources);
             return this;
         }
-
+        public Builder sources(String... sources) {
+            return sources(List.of(sources));
+        }
         public Builder testConfigurations(List<String> testConfigurations) {
             this.testConfigurations = Objects.requireNonNull(testConfigurations);
             return this;
         }
-        public ConnectionMonitorTestGroupResponse build() {
+        public Builder testConfigurations(String... testConfigurations) {
+            return testConfigurations(List.of(testConfigurations));
+        }        public ConnectionMonitorTestGroupResponse build() {
             return new ConnectionMonitorTestGroupResponse(destinations, disable, name, sources, testConfigurations);
         }
     }

@@ -90,32 +90,26 @@ public final class TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationGe
             this.authorizationConfig = Objects.requireNonNull(authorizationConfig);
             return this;
         }
-
         public Builder authorizationConfig(TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationAuthorizationConfigGetArgs authorizationConfig) {
             this.authorizationConfig = Output.of(Objects.requireNonNull(authorizationConfig));
             return this;
         }
-
         public Builder fileSystemId(Output<String> fileSystemId) {
             this.fileSystemId = Objects.requireNonNull(fileSystemId);
             return this;
         }
-
         public Builder fileSystemId(String fileSystemId) {
             this.fileSystemId = Output.of(Objects.requireNonNull(fileSystemId));
             return this;
         }
-
         public Builder rootDirectory(Output<String> rootDirectory) {
             this.rootDirectory = Objects.requireNonNull(rootDirectory);
             return this;
         }
-
         public Builder rootDirectory(String rootDirectory) {
             this.rootDirectory = Output.of(Objects.requireNonNull(rootDirectory));
             return this;
-        }
-        public TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationGetArgs build() {
+        }        public TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationGetArgs build() {
             return new TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationGetArgs(authorizationConfig, fileSystemId, rootDirectory);
         }
     }

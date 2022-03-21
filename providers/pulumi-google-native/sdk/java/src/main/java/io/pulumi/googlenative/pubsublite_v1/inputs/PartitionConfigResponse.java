@@ -77,12 +77,10 @@ public final class PartitionConfigResponse extends io.pulumi.resources.InvokeArg
             this.capacity = Objects.requireNonNull(capacity);
             return this;
         }
-
         public Builder count(String count) {
             this.count = Objects.requireNonNull(count);
             return this;
-        }
-        public PartitionConfigResponse build() {
+        }        public PartitionConfigResponse build() {
             return new PartitionConfigResponse(capacity, count);
         }
     }

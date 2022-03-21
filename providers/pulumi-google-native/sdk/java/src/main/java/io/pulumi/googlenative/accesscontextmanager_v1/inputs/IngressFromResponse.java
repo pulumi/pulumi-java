@@ -94,17 +94,20 @@ public final class IngressFromResponse extends io.pulumi.resources.InvokeArgs {
             this.identities = Objects.requireNonNull(identities);
             return this;
         }
-
+        public Builder identities(String... identities) {
+            return identities(List.of(identities));
+        }
         public Builder identityType(String identityType) {
             this.identityType = Objects.requireNonNull(identityType);
             return this;
         }
-
         public Builder sources(List<IngressSourceResponse> sources) {
             this.sources = Objects.requireNonNull(sources);
             return this;
         }
-        public IngressFromResponse build() {
+        public Builder sources(IngressSourceResponse... sources) {
+            return sources(List.of(sources));
+        }        public IngressFromResponse build() {
             return new IngressFromResponse(identities, identityType, sources);
         }
     }

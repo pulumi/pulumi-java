@@ -76,22 +76,18 @@ public final class ProjectLocationArgs extends io.pulumi.resources.ResourceArgs 
             this.locationId = Objects.requireNonNull(locationId);
             return this;
         }
-
         public Builder locationId(String locationId) {
             this.locationId = Output.of(Objects.requireNonNull(locationId));
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
-        }
-        public ProjectLocationArgs build() {
+        }        public ProjectLocationArgs build() {
             return new ProjectLocationArgs(locationId, project);
         }
     }

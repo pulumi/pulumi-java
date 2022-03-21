@@ -157,37 +157,30 @@ public final class JobActionResponse {
             this.errorAction = errorAction;
             return this;
         }
-
         public Builder queueMessage(@Nullable StorageQueueMessageResponse queueMessage) {
             this.queueMessage = queueMessage;
             return this;
         }
-
         public Builder request(@Nullable HttpRequestResponse request) {
             this.request = request;
             return this;
         }
-
         public Builder retryPolicy(@Nullable RetryPolicyResponse retryPolicy) {
             this.retryPolicy = retryPolicy;
             return this;
         }
-
         public Builder serviceBusQueueMessage(@Nullable ServiceBusQueueMessageResponse serviceBusQueueMessage) {
             this.serviceBusQueueMessage = serviceBusQueueMessage;
             return this;
         }
-
         public Builder serviceBusTopicMessage(@Nullable ServiceBusTopicMessageResponse serviceBusTopicMessage) {
             this.serviceBusTopicMessage = serviceBusTopicMessage;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
-        }
-        public JobActionResponse build() {
+        }        public JobActionResponse build() {
             return new JobActionResponse(errorAction, queueMessage, request, retryPolicy, serviceBusQueueMessage, serviceBusTopicMessage, type);
         }
     }

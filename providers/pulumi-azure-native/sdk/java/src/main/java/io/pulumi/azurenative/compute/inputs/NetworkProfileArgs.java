@@ -99,32 +99,32 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
             this.networkApiVersion = networkApiVersion;
             return this;
         }
-
         public Builder networkApiVersion(@Nullable Either<String,NetworkApiVersion> networkApiVersion) {
             this.networkApiVersion = Output.ofNullable(networkApiVersion);
             return this;
         }
-
         public Builder networkInterfaceConfigurations(@Nullable Output<List<VirtualMachineNetworkInterfaceConfigurationArgs>> networkInterfaceConfigurations) {
             this.networkInterfaceConfigurations = networkInterfaceConfigurations;
             return this;
         }
-
         public Builder networkInterfaceConfigurations(@Nullable List<VirtualMachineNetworkInterfaceConfigurationArgs> networkInterfaceConfigurations) {
             this.networkInterfaceConfigurations = Output.ofNullable(networkInterfaceConfigurations);
             return this;
         }
-
+        public Builder networkInterfaceConfigurations(VirtualMachineNetworkInterfaceConfigurationArgs... networkInterfaceConfigurations) {
+            return networkInterfaceConfigurations(List.of(networkInterfaceConfigurations));
+        }
         public Builder networkInterfaces(@Nullable Output<List<NetworkInterfaceReferenceArgs>> networkInterfaces) {
             this.networkInterfaces = networkInterfaces;
             return this;
         }
-
         public Builder networkInterfaces(@Nullable List<NetworkInterfaceReferenceArgs> networkInterfaces) {
             this.networkInterfaces = Output.ofNullable(networkInterfaces);
             return this;
         }
-        public NetworkProfileArgs build() {
+        public Builder networkInterfaces(NetworkInterfaceReferenceArgs... networkInterfaces) {
+            return networkInterfaces(List.of(networkInterfaces));
+        }        public NetworkProfileArgs build() {
             return new NetworkProfileArgs(networkApiVersion, networkInterfaceConfigurations, networkInterfaces);
         }
     }

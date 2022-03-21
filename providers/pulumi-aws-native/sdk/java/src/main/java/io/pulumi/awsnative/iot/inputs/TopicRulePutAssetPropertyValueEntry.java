@@ -104,27 +104,25 @@ public final class TopicRulePutAssetPropertyValueEntry extends io.pulumi.resourc
             this.assetId = assetId;
             return this;
         }
-
         public Builder entryId(@Nullable String entryId) {
             this.entryId = entryId;
             return this;
         }
-
         public Builder propertyAlias(@Nullable String propertyAlias) {
             this.propertyAlias = propertyAlias;
             return this;
         }
-
         public Builder propertyId(@Nullable String propertyId) {
             this.propertyId = propertyId;
             return this;
         }
-
         public Builder propertyValues(List<TopicRuleAssetPropertyValue> propertyValues) {
             this.propertyValues = Objects.requireNonNull(propertyValues);
             return this;
         }
-        public TopicRulePutAssetPropertyValueEntry build() {
+        public Builder propertyValues(TopicRuleAssetPropertyValue... propertyValues) {
+            return propertyValues(List.of(propertyValues));
+        }        public TopicRulePutAssetPropertyValueEntry build() {
             return new TopicRulePutAssetPropertyValueEntry(assetId, entryId, propertyAlias, propertyId, propertyValues);
         }
     }

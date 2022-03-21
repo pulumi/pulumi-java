@@ -61,12 +61,10 @@ public final class PrivateLinkConnectionApprovalRequestArgs extends io.pulumi.re
             this.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
             return this;
         }
-
         public Builder privateLinkServiceConnectionState(@Nullable PrivateLinkConnectionStateArgs privateLinkServiceConnectionState) {
             this.privateLinkServiceConnectionState = Output.ofNullable(privateLinkServiceConnectionState);
             return this;
-        }
-        public PrivateLinkConnectionApprovalRequestArgs build() {
+        }        public PrivateLinkConnectionApprovalRequestArgs build() {
             return new PrivateLinkConnectionApprovalRequestArgs(privateLinkServiceConnectionState);
         }
     }

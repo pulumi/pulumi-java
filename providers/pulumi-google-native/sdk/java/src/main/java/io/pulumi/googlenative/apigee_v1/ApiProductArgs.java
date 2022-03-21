@@ -310,172 +310,153 @@ public final class ApiProductArgs extends io.pulumi.resources.ResourceArgs {
             this.apiResources = apiResources;
             return this;
         }
-
         public Builder apiResources(@Nullable List<String> apiResources) {
             this.apiResources = Output.ofNullable(apiResources);
             return this;
         }
-
+        public Builder apiResources(String... apiResources) {
+            return apiResources(List.of(apiResources));
+        }
         public Builder approvalType(@Nullable Output<String> approvalType) {
             this.approvalType = approvalType;
             return this;
         }
-
         public Builder approvalType(@Nullable String approvalType) {
             this.approvalType = Output.ofNullable(approvalType);
             return this;
         }
-
         public Builder attributes(@Nullable Output<List<GoogleCloudApigeeV1AttributeArgs>> attributes) {
             this.attributes = attributes;
             return this;
         }
-
         public Builder attributes(@Nullable List<GoogleCloudApigeeV1AttributeArgs> attributes) {
             this.attributes = Output.ofNullable(attributes);
             return this;
         }
-
+        public Builder attributes(GoogleCloudApigeeV1AttributeArgs... attributes) {
+            return attributes(List.of(attributes));
+        }
         public Builder createdAt(@Nullable Output<String> createdAt) {
             this.createdAt = createdAt;
             return this;
         }
-
         public Builder createdAt(@Nullable String createdAt) {
             this.createdAt = Output.ofNullable(createdAt);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder environments(@Nullable Output<List<String>> environments) {
             this.environments = environments;
             return this;
         }
-
         public Builder environments(@Nullable List<String> environments) {
             this.environments = Output.ofNullable(environments);
             return this;
         }
-
+        public Builder environments(String... environments) {
+            return environments(List.of(environments));
+        }
         public Builder graphqlOperationGroup(@Nullable Output<GoogleCloudApigeeV1GraphQLOperationGroupArgs> graphqlOperationGroup) {
             this.graphqlOperationGroup = graphqlOperationGroup;
             return this;
         }
-
         public Builder graphqlOperationGroup(@Nullable GoogleCloudApigeeV1GraphQLOperationGroupArgs graphqlOperationGroup) {
             this.graphqlOperationGroup = Output.ofNullable(graphqlOperationGroup);
             return this;
         }
-
         public Builder lastModifiedAt(@Nullable Output<String> lastModifiedAt) {
             this.lastModifiedAt = lastModifiedAt;
             return this;
         }
-
         public Builder lastModifiedAt(@Nullable String lastModifiedAt) {
             this.lastModifiedAt = Output.ofNullable(lastModifiedAt);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder operationGroup(@Nullable Output<GoogleCloudApigeeV1OperationGroupArgs> operationGroup) {
             this.operationGroup = operationGroup;
             return this;
         }
-
         public Builder operationGroup(@Nullable GoogleCloudApigeeV1OperationGroupArgs operationGroup) {
             this.operationGroup = Output.ofNullable(operationGroup);
             return this;
         }
-
         public Builder organizationId(Output<String> organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }
-
         public Builder organizationId(String organizationId) {
             this.organizationId = Output.of(Objects.requireNonNull(organizationId));
             return this;
         }
-
         public Builder proxies(@Nullable Output<List<String>> proxies) {
             this.proxies = proxies;
             return this;
         }
-
         public Builder proxies(@Nullable List<String> proxies) {
             this.proxies = Output.ofNullable(proxies);
             return this;
         }
-
+        public Builder proxies(String... proxies) {
+            return proxies(List.of(proxies));
+        }
         public Builder quota(@Nullable Output<String> quota) {
             this.quota = quota;
             return this;
         }
-
         public Builder quota(@Nullable String quota) {
             this.quota = Output.ofNullable(quota);
             return this;
         }
-
         public Builder quotaInterval(@Nullable Output<String> quotaInterval) {
             this.quotaInterval = quotaInterval;
             return this;
         }
-
         public Builder quotaInterval(@Nullable String quotaInterval) {
             this.quotaInterval = Output.ofNullable(quotaInterval);
             return this;
         }
-
         public Builder quotaTimeUnit(@Nullable Output<String> quotaTimeUnit) {
             this.quotaTimeUnit = quotaTimeUnit;
             return this;
         }
-
         public Builder quotaTimeUnit(@Nullable String quotaTimeUnit) {
             this.quotaTimeUnit = Output.ofNullable(quotaTimeUnit);
             return this;
         }
-
         public Builder scopes(@Nullable Output<List<String>> scopes) {
             this.scopes = scopes;
             return this;
         }
-
         public Builder scopes(@Nullable List<String> scopes) {
             this.scopes = Output.ofNullable(scopes);
             return this;
         }
-        public ApiProductArgs build() {
+        public Builder scopes(String... scopes) {
+            return scopes(List.of(scopes));
+        }        public ApiProductArgs build() {
             return new ApiProductArgs(apiResources, approvalType, attributes, createdAt, description, displayName, environments, graphqlOperationGroup, lastModifiedAt, name, operationGroup, organizationId, proxies, quota, quotaInterval, quotaTimeUnit, scopes);
         }
     }

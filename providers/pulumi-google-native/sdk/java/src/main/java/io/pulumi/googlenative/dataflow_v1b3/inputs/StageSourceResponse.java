@@ -108,22 +108,18 @@ public final class StageSourceResponse extends io.pulumi.resources.InvokeArgs {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder originalTransformOrCollection(String originalTransformOrCollection) {
             this.originalTransformOrCollection = Objects.requireNonNull(originalTransformOrCollection);
             return this;
         }
-
         public Builder sizeBytes(String sizeBytes) {
             this.sizeBytes = Objects.requireNonNull(sizeBytes);
             return this;
         }
-
         public Builder userName(String userName) {
             this.userName = Objects.requireNonNull(userName);
             return this;
-        }
-        public StageSourceResponse build() {
+        }        public StageSourceResponse build() {
             return new StageSourceResponse(name, originalTransformOrCollection, sizeBytes, userName);
         }
     }

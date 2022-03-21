@@ -156,72 +156,58 @@ public final class ServerAzureADAdministratorArgs extends io.pulumi.resources.Re
             this.administratorName = administratorName;
             return this;
         }
-
         public Builder administratorName(@Nullable String administratorName) {
             this.administratorName = Output.ofNullable(administratorName);
             return this;
         }
-
         public Builder administratorType(Output<Either<String,AdministratorType>> administratorType) {
             this.administratorType = Objects.requireNonNull(administratorType);
             return this;
         }
-
         public Builder administratorType(Either<String,AdministratorType> administratorType) {
             this.administratorType = Output.of(Objects.requireNonNull(administratorType));
             return this;
         }
-
         public Builder login(Output<String> login) {
             this.login = Objects.requireNonNull(login);
             return this;
         }
-
         public Builder login(String login) {
             this.login = Output.of(Objects.requireNonNull(login));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder serverName(Output<String> serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
         }
-
         public Builder serverName(String serverName) {
             this.serverName = Output.of(Objects.requireNonNull(serverName));
             return this;
         }
-
         public Builder sid(Output<String> sid) {
             this.sid = Objects.requireNonNull(sid);
             return this;
         }
-
         public Builder sid(String sid) {
             this.sid = Output.of(Objects.requireNonNull(sid));
             return this;
         }
-
         public Builder tenantId(@Nullable Output<String> tenantId) {
             this.tenantId = tenantId;
             return this;
         }
-
         public Builder tenantId(@Nullable String tenantId) {
             this.tenantId = Output.ofNullable(tenantId);
             return this;
-        }
-        public ServerAzureADAdministratorArgs build() {
+        }        public ServerAzureADAdministratorArgs build() {
             return new ServerAzureADAdministratorArgs(administratorName, administratorType, login, resourceGroupName, serverName, sid, tenantId);
         }
     }

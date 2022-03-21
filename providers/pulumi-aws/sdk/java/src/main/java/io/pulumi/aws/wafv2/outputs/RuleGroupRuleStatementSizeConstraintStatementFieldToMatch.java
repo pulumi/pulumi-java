@@ -157,37 +157,30 @@ public final class RuleGroupRuleStatementSizeConstraintStatementFieldToMatch {
             this.allQueryArguments = allQueryArguments;
             return this;
         }
-
         public Builder body(@Nullable RuleGroupRuleStatementSizeConstraintStatementFieldToMatchBody body) {
             this.body = body;
             return this;
         }
-
         public Builder method(@Nullable RuleGroupRuleStatementSizeConstraintStatementFieldToMatchMethod method) {
             this.method = method;
             return this;
         }
-
         public Builder queryString(@Nullable RuleGroupRuleStatementSizeConstraintStatementFieldToMatchQueryString queryString) {
             this.queryString = queryString;
             return this;
         }
-
         public Builder singleHeader(@Nullable RuleGroupRuleStatementSizeConstraintStatementFieldToMatchSingleHeader singleHeader) {
             this.singleHeader = singleHeader;
             return this;
         }
-
         public Builder singleQueryArgument(@Nullable RuleGroupRuleStatementSizeConstraintStatementFieldToMatchSingleQueryArgument singleQueryArgument) {
             this.singleQueryArgument = singleQueryArgument;
             return this;
         }
-
         public Builder uriPath(@Nullable RuleGroupRuleStatementSizeConstraintStatementFieldToMatchUriPath uriPath) {
             this.uriPath = uriPath;
             return this;
-        }
-        public RuleGroupRuleStatementSizeConstraintStatementFieldToMatch build() {
+        }        public RuleGroupRuleStatementSizeConstraintStatementFieldToMatch build() {
             return new RuleGroupRuleStatementSizeConstraintStatementFieldToMatch(allQueryArguments, body, method, queryString, singleHeader, singleQueryArgument, uriPath);
         }
     }

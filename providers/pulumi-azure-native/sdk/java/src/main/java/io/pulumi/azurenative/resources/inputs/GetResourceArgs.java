@@ -120,27 +120,22 @@ public final class GetResourceArgs extends io.pulumi.resources.InvokeArgs {
             this.parentResourcePath = Objects.requireNonNull(parentResourcePath);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceName(String resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
         }
-
         public Builder resourceProviderNamespace(String resourceProviderNamespace) {
             this.resourceProviderNamespace = Objects.requireNonNull(resourceProviderNamespace);
             return this;
         }
-
         public Builder resourceType(String resourceType) {
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
-        }
-        public GetResourceArgs build() {
+        }        public GetResourceArgs build() {
             return new GetResourceArgs(parentResourcePath, resourceGroupName, resourceName, resourceProviderNamespace, resourceType);
         }
     }

@@ -61,12 +61,13 @@ public final class AgentPermissionsPropertiesArgs extends io.pulumi.resources.Re
             this.principals = Objects.requireNonNull(principals);
             return this;
         }
-
         public Builder principals(List<String> principals) {
             this.principals = Output.of(Objects.requireNonNull(principals));
             return this;
         }
-        public AgentPermissionsPropertiesArgs build() {
+        public Builder principals(String... principals) {
+            return principals(List.of(principals));
+        }        public AgentPermissionsPropertiesArgs build() {
             return new AgentPermissionsPropertiesArgs(principals);
         }
     }

@@ -69,12 +69,10 @@ public final class GoogleCloudContactcenterinsightsV1ConversationCallMetadataRes
             this.agentChannel = Objects.requireNonNull(agentChannel);
             return this;
         }
-
         public Builder customerChannel(Integer customerChannel) {
             this.customerChannel = Objects.requireNonNull(customerChannel);
             return this;
-        }
-        public GoogleCloudContactcenterinsightsV1ConversationCallMetadataResponse build() {
+        }        public GoogleCloudContactcenterinsightsV1ConversationCallMetadataResponse build() {
             return new GoogleCloudContactcenterinsightsV1ConversationCallMetadataResponse(agentChannel, customerChannel);
         }
     }

@@ -74,22 +74,21 @@ public final class UserGroupMembershipArgs extends io.pulumi.resources.ResourceA
             this.groups = Objects.requireNonNull(groups);
             return this;
         }
-
         public Builder groups(List<String> groups) {
             this.groups = Output.of(Objects.requireNonNull(groups));
             return this;
         }
-
+        public Builder groups(String... groups) {
+            return groups(List.of(groups));
+        }
         public Builder user(Output<String> user) {
             this.user = Objects.requireNonNull(user);
             return this;
         }
-
         public Builder user(String user) {
             this.user = Output.of(Objects.requireNonNull(user));
             return this;
-        }
-        public UserGroupMembershipArgs build() {
+        }        public UserGroupMembershipArgs build() {
             return new UserGroupMembershipArgs(groups, user);
         }
     }

@@ -193,92 +193,77 @@ public final class JobDefinitionArgs extends io.pulumi.resources.ResourceArgs {
             this.containerProperties = containerProperties;
             return this;
         }
-
         public Builder containerProperties(@Nullable String containerProperties) {
             this.containerProperties = Output.ofNullable(containerProperties);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder parameters(@Nullable Output<Map<String,String>> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder parameters(@Nullable Map<String,String> parameters) {
             this.parameters = Output.ofNullable(parameters);
             return this;
         }
-
         public Builder platformCapabilities(@Nullable Output<List<String>> platformCapabilities) {
             this.platformCapabilities = platformCapabilities;
             return this;
         }
-
         public Builder platformCapabilities(@Nullable List<String> platformCapabilities) {
             this.platformCapabilities = Output.ofNullable(platformCapabilities);
             return this;
         }
-
+        public Builder platformCapabilities(String... platformCapabilities) {
+            return platformCapabilities(List.of(platformCapabilities));
+        }
         public Builder propagateTags(@Nullable Output<Boolean> propagateTags) {
             this.propagateTags = propagateTags;
             return this;
         }
-
         public Builder propagateTags(@Nullable Boolean propagateTags) {
             this.propagateTags = Output.ofNullable(propagateTags);
             return this;
         }
-
         public Builder retryStrategy(@Nullable Output<JobDefinitionRetryStrategyArgs> retryStrategy) {
             this.retryStrategy = retryStrategy;
             return this;
         }
-
         public Builder retryStrategy(@Nullable JobDefinitionRetryStrategyArgs retryStrategy) {
             this.retryStrategy = Output.ofNullable(retryStrategy);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder timeout(@Nullable Output<JobDefinitionTimeoutArgs> timeout) {
             this.timeout = timeout;
             return this;
         }
-
         public Builder timeout(@Nullable JobDefinitionTimeoutArgs timeout) {
             this.timeout = Output.ofNullable(timeout);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public JobDefinitionArgs build() {
+        }        public JobDefinitionArgs build() {
             return new JobDefinitionArgs(containerProperties, name, parameters, platformCapabilities, propagateTags, retryStrategy, tags, timeout, type);
         }
     }

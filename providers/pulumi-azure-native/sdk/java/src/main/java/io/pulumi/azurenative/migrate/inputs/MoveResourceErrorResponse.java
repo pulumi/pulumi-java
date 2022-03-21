@@ -60,8 +60,7 @@ public final class MoveResourceErrorResponse extends io.pulumi.resources.InvokeA
         public Builder properties(@Nullable MoveResourceErrorBodyResponse properties) {
             this.properties = properties;
             return this;
-        }
-        public MoveResourceErrorResponse build() {
+        }        public MoveResourceErrorResponse build() {
             return new MoveResourceErrorResponse(properties);
         }
     }

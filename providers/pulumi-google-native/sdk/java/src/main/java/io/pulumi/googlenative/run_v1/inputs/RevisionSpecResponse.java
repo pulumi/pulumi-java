@@ -158,37 +158,39 @@ public final class RevisionSpecResponse extends io.pulumi.resources.InvokeArgs {
             this.containerConcurrency = Objects.requireNonNull(containerConcurrency);
             return this;
         }
-
         public Builder containers(List<ContainerResponse> containers) {
             this.containers = Objects.requireNonNull(containers);
             return this;
         }
-
+        public Builder containers(ContainerResponse... containers) {
+            return containers(List.of(containers));
+        }
         public Builder enableServiceLinks(Boolean enableServiceLinks) {
             this.enableServiceLinks = Objects.requireNonNull(enableServiceLinks);
             return this;
         }
-
         public Builder imagePullSecrets(List<LocalObjectReferenceResponse> imagePullSecrets) {
             this.imagePullSecrets = Objects.requireNonNull(imagePullSecrets);
             return this;
         }
-
+        public Builder imagePullSecrets(LocalObjectReferenceResponse... imagePullSecrets) {
+            return imagePullSecrets(List.of(imagePullSecrets));
+        }
         public Builder serviceAccountName(String serviceAccountName) {
             this.serviceAccountName = Objects.requireNonNull(serviceAccountName);
             return this;
         }
-
         public Builder timeoutSeconds(Integer timeoutSeconds) {
             this.timeoutSeconds = Objects.requireNonNull(timeoutSeconds);
             return this;
         }
-
         public Builder volumes(List<VolumeResponse> volumes) {
             this.volumes = Objects.requireNonNull(volumes);
             return this;
         }
-        public RevisionSpecResponse build() {
+        public Builder volumes(VolumeResponse... volumes) {
+            return volumes(List.of(volumes));
+        }        public RevisionSpecResponse build() {
             return new RevisionSpecResponse(containerConcurrency, containers, enableServiceLinks, imagePullSecrets, serviceAccountName, timeoutSeconds, volumes);
         }
     }

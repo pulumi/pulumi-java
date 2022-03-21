@@ -71,12 +71,10 @@ public final class QosIpRangeResponse {
             this.endIP = endIP;
             return this;
         }
-
         public Builder startIP(@Nullable String startIP) {
             this.startIP = startIP;
             return this;
-        }
-        public QosIpRangeResponse build() {
+        }        public QosIpRangeResponse build() {
             return new QosIpRangeResponse(endIP, startIP);
         }
     }

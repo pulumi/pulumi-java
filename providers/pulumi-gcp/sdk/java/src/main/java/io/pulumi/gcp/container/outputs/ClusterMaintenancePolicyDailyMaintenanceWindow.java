@@ -55,12 +55,10 @@ public final class ClusterMaintenancePolicyDailyMaintenanceWindow {
             this.duration = duration;
             return this;
         }
-
         public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
-        }
-        public ClusterMaintenancePolicyDailyMaintenanceWindow build() {
+        }        public ClusterMaintenancePolicyDailyMaintenanceWindow build() {
             return new ClusterMaintenancePolicyDailyMaintenanceWindow(duration, startTime);
         }
     }

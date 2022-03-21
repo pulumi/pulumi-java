@@ -87,17 +87,14 @@ public final class TopicRuleErrorActionStepFunctions {
             this.executionNamePrefix = executionNamePrefix;
             return this;
         }
-
         public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public Builder stateMachineName(String stateMachineName) {
             this.stateMachineName = Objects.requireNonNull(stateMachineName);
             return this;
-        }
-        public TopicRuleErrorActionStepFunctions build() {
+        }        public TopicRuleErrorActionStepFunctions build() {
             return new TopicRuleErrorActionStepFunctions(executionNamePrefix, roleArn, stateMachineName);
         }
     }

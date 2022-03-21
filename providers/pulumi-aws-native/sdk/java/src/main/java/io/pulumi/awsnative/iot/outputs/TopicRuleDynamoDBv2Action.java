@@ -56,12 +56,10 @@ public final class TopicRuleDynamoDBv2Action {
             this.putItem = putItem;
             return this;
         }
-
         public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = roleArn;
             return this;
-        }
-        public TopicRuleDynamoDBv2Action build() {
+        }        public TopicRuleDynamoDBv2Action build() {
             return new TopicRuleDynamoDBv2Action(putItem, roleArn);
         }
     }

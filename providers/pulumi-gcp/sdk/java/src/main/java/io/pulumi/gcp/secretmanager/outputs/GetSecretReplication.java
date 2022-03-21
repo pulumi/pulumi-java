@@ -55,12 +55,13 @@ public final class GetSecretReplication {
             this.automatic = Objects.requireNonNull(automatic);
             return this;
         }
-
         public Builder userManageds(List<GetSecretReplicationUserManaged> userManageds) {
             this.userManageds = Objects.requireNonNull(userManageds);
             return this;
         }
-        public GetSecretReplication build() {
+        public Builder userManageds(GetSecretReplicationUserManaged... userManageds) {
+            return userManageds(List.of(userManageds));
+        }        public GetSecretReplication build() {
             return new GetSecretReplication(automatic, userManageds);
         }
     }

@@ -69,12 +69,10 @@ public final class EdifactAgreementContentResponse {
             this.receiveAgreement = Objects.requireNonNull(receiveAgreement);
             return this;
         }
-
         public Builder sendAgreement(EdifactOneWayAgreementResponse sendAgreement) {
             this.sendAgreement = Objects.requireNonNull(sendAgreement);
             return this;
-        }
-        public EdifactAgreementContentResponse build() {
+        }        public EdifactAgreementContentResponse build() {
             return new EdifactAgreementContentResponse(receiveAgreement, sendAgreement);
         }
     }

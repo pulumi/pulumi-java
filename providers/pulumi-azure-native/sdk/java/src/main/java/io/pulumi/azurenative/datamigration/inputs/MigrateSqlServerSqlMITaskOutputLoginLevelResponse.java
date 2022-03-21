@@ -187,47 +187,41 @@ public final class MigrateSqlServerSqlMITaskOutputLoginLevelResponse extends io.
             this.endedOn = Objects.requireNonNull(endedOn);
             return this;
         }
-
         public Builder exceptionsAndWarnings(List<ReportableExceptionResponse> exceptionsAndWarnings) {
             this.exceptionsAndWarnings = Objects.requireNonNull(exceptionsAndWarnings);
             return this;
         }
-
+        public Builder exceptionsAndWarnings(ReportableExceptionResponse... exceptionsAndWarnings) {
+            return exceptionsAndWarnings(List.of(exceptionsAndWarnings));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder loginName(String loginName) {
             this.loginName = Objects.requireNonNull(loginName);
             return this;
         }
-
         public Builder message(String message) {
             this.message = Objects.requireNonNull(message);
             return this;
         }
-
         public Builder resultType(String resultType) {
             this.resultType = Objects.requireNonNull(resultType);
             return this;
         }
-
         public Builder stage(String stage) {
             this.stage = Objects.requireNonNull(stage);
             return this;
         }
-
         public Builder startedOn(String startedOn) {
             this.startedOn = Objects.requireNonNull(startedOn);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
-        }
-        public MigrateSqlServerSqlMITaskOutputLoginLevelResponse build() {
+        }        public MigrateSqlServerSqlMITaskOutputLoginLevelResponse build() {
             return new MigrateSqlServerSqlMITaskOutputLoginLevelResponse(endedOn, exceptionsAndWarnings, id, loginName, message, resultType, stage, startedOn, state);
         }
     }

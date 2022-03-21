@@ -59,8 +59,7 @@ public final class ClusterNodeConfigWorkloadMetadataConfig {
         public Builder mode(String mode) {
             this.mode = Objects.requireNonNull(mode);
             return this;
-        }
-        public ClusterNodeConfigWorkloadMetadataConfig build() {
+        }        public ClusterNodeConfigWorkloadMetadataConfig build() {
             return new ClusterNodeConfigWorkloadMetadataConfig(mode);
         }
     }

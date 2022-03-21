@@ -152,37 +152,30 @@ public final class VirtualNodeSpecListenerHealthCheck {
             this.healthyThreshold = Objects.requireNonNull(healthyThreshold);
             return this;
         }
-
         public Builder intervalMillis(Integer intervalMillis) {
             this.intervalMillis = Objects.requireNonNull(intervalMillis);
             return this;
         }
-
         public Builder path(@Nullable String path) {
             this.path = path;
             return this;
         }
-
         public Builder port(@Nullable Integer port) {
             this.port = port;
             return this;
         }
-
         public Builder protocol(String protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
-
         public Builder timeoutMillis(Integer timeoutMillis) {
             this.timeoutMillis = Objects.requireNonNull(timeoutMillis);
             return this;
         }
-
         public Builder unhealthyThreshold(Integer unhealthyThreshold) {
             this.unhealthyThreshold = Objects.requireNonNull(unhealthyThreshold);
             return this;
-        }
-        public VirtualNodeSpecListenerHealthCheck build() {
+        }        public VirtualNodeSpecListenerHealthCheck build() {
             return new VirtualNodeSpecListenerHealthCheck(healthyThreshold, intervalMillis, path, port, protocol, timeoutMillis, unhealthyThreshold);
         }
     }

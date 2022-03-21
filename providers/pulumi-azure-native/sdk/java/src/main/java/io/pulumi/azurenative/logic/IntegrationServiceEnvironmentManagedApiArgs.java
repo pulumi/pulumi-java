@@ -157,72 +157,58 @@ public final class IntegrationServiceEnvironmentManagedApiArgs extends io.pulumi
             this.apiName = apiName;
             return this;
         }
-
         public Builder apiName(@Nullable String apiName) {
             this.apiName = Output.ofNullable(apiName);
             return this;
         }
-
         public Builder deploymentParameters(@Nullable Output<IntegrationServiceEnvironmentManagedApiDeploymentParametersArgs> deploymentParameters) {
             this.deploymentParameters = deploymentParameters;
             return this;
         }
-
         public Builder deploymentParameters(@Nullable IntegrationServiceEnvironmentManagedApiDeploymentParametersArgs deploymentParameters) {
             this.deploymentParameters = Output.ofNullable(deploymentParameters);
             return this;
         }
-
         public Builder integrationServiceEnvironment(@Nullable Output<ResourceReferenceArgs> integrationServiceEnvironment) {
             this.integrationServiceEnvironment = integrationServiceEnvironment;
             return this;
         }
-
         public Builder integrationServiceEnvironment(@Nullable ResourceReferenceArgs integrationServiceEnvironment) {
             this.integrationServiceEnvironment = Output.ofNullable(integrationServiceEnvironment);
             return this;
         }
-
         public Builder integrationServiceEnvironmentName(Output<String> integrationServiceEnvironmentName) {
             this.integrationServiceEnvironmentName = Objects.requireNonNull(integrationServiceEnvironmentName);
             return this;
         }
-
         public Builder integrationServiceEnvironmentName(String integrationServiceEnvironmentName) {
             this.integrationServiceEnvironmentName = Output.of(Objects.requireNonNull(integrationServiceEnvironmentName));
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder resourceGroup(Output<String> resourceGroup) {
             this.resourceGroup = Objects.requireNonNull(resourceGroup);
             return this;
         }
-
         public Builder resourceGroup(String resourceGroup) {
             this.resourceGroup = Output.of(Objects.requireNonNull(resourceGroup));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public IntegrationServiceEnvironmentManagedApiArgs build() {
+        }        public IntegrationServiceEnvironmentManagedApiArgs build() {
             return new IntegrationServiceEnvironmentManagedApiArgs(apiName, deploymentParameters, integrationServiceEnvironment, integrationServiceEnvironmentName, location, resourceGroup, tags);
         }
     }

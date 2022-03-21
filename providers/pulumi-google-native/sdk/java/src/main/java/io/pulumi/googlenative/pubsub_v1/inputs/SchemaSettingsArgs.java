@@ -79,22 +79,18 @@ public final class SchemaSettingsArgs extends io.pulumi.resources.ResourceArgs {
             this.encoding = encoding;
             return this;
         }
-
         public Builder encoding(@Nullable SchemaSettingsEncoding encoding) {
             this.encoding = Output.ofNullable(encoding);
             return this;
         }
-
         public Builder schema(Output<String> schema) {
             this.schema = Objects.requireNonNull(schema);
             return this;
         }
-
         public Builder schema(String schema) {
             this.schema = Output.of(Objects.requireNonNull(schema));
             return this;
-        }
-        public SchemaSettingsArgs build() {
+        }        public SchemaSettingsArgs build() {
             return new SchemaSettingsArgs(encoding, schema);
         }
     }

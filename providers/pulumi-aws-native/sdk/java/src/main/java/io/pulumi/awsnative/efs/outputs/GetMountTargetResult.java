@@ -56,12 +56,13 @@ public final class GetMountTargetResult {
             this.id = id;
             return this;
         }
-
         public Builder securityGroups(@Nullable List<String> securityGroups) {
             this.securityGroups = securityGroups;
             return this;
         }
-        public GetMountTargetResult build() {
+        public Builder securityGroups(String... securityGroups) {
+            return securityGroups(List.of(securityGroups));
+        }        public GetMountTargetResult build() {
             return new GetMountTargetResult(id, securityGroups);
         }
     }

@@ -185,47 +185,38 @@ public final class FlowSourceEncryption {
             this.algorithm = Objects.requireNonNull(algorithm);
             return this;
         }
-
         public Builder constantInitializationVector(@Nullable String constantInitializationVector) {
             this.constantInitializationVector = constantInitializationVector;
             return this;
         }
-
         public Builder deviceId(@Nullable String deviceId) {
             this.deviceId = deviceId;
             return this;
         }
-
         public Builder keyType(@Nullable FlowSourceEncryptionKeyType keyType) {
             this.keyType = keyType;
             return this;
         }
-
         public Builder region(@Nullable String region) {
             this.region = region;
             return this;
         }
-
         public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = resourceId;
             return this;
         }
-
         public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public Builder secretArn(@Nullable String secretArn) {
             this.secretArn = secretArn;
             return this;
         }
-
         public Builder url(@Nullable String url) {
             this.url = url;
             return this;
-        }
-        public FlowSourceEncryption build() {
+        }        public FlowSourceEncryption build() {
             return new FlowSourceEncryption(algorithm, constantInitializationVector, deviceId, keyType, region, resourceId, roleArn, secretArn, url);
         }
     }

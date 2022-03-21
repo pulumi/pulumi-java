@@ -123,52 +123,42 @@ public final class RouteResponseArgs extends io.pulumi.resources.ResourceArgs {
             this.apiId = Objects.requireNonNull(apiId);
             return this;
         }
-
         public Builder apiId(String apiId) {
             this.apiId = Output.of(Objects.requireNonNull(apiId));
             return this;
         }
-
         public Builder modelSelectionExpression(@Nullable Output<String> modelSelectionExpression) {
             this.modelSelectionExpression = modelSelectionExpression;
             return this;
         }
-
         public Builder modelSelectionExpression(@Nullable String modelSelectionExpression) {
             this.modelSelectionExpression = Output.ofNullable(modelSelectionExpression);
             return this;
         }
-
         public Builder responseModels(@Nullable Output<Map<String,String>> responseModels) {
             this.responseModels = responseModels;
             return this;
         }
-
         public Builder responseModels(@Nullable Map<String,String> responseModels) {
             this.responseModels = Output.ofNullable(responseModels);
             return this;
         }
-
         public Builder routeId(Output<String> routeId) {
             this.routeId = Objects.requireNonNull(routeId);
             return this;
         }
-
         public Builder routeId(String routeId) {
             this.routeId = Output.of(Objects.requireNonNull(routeId));
             return this;
         }
-
         public Builder routeResponseKey(Output<String> routeResponseKey) {
             this.routeResponseKey = Objects.requireNonNull(routeResponseKey);
             return this;
         }
-
         public Builder routeResponseKey(String routeResponseKey) {
             this.routeResponseKey = Output.of(Objects.requireNonNull(routeResponseKey));
             return this;
-        }
-        public RouteResponseArgs build() {
+        }        public RouteResponseArgs build() {
             return new RouteResponseArgs(apiId, modelSelectionExpression, responseModels, routeId, routeResponseKey);
         }
     }

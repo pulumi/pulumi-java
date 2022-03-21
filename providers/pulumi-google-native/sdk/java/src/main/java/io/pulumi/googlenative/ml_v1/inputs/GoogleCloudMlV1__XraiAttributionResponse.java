@@ -58,8 +58,7 @@ public final class GoogleCloudMlV1__XraiAttributionResponse extends io.pulumi.re
         public Builder numIntegralSteps(Integer numIntegralSteps) {
             this.numIntegralSteps = Objects.requireNonNull(numIntegralSteps);
             return this;
-        }
-        public GoogleCloudMlV1__XraiAttributionResponse build() {
+        }        public GoogleCloudMlV1__XraiAttributionResponse build() {
             return new GoogleCloudMlV1__XraiAttributionResponse(numIntegralSteps);
         }
     }

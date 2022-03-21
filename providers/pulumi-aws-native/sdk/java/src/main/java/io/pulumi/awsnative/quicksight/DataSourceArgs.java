@@ -219,122 +219,107 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
             this.alternateDataSourceParameters = alternateDataSourceParameters;
             return this;
         }
-
         public Builder alternateDataSourceParameters(@Nullable List<DataSourceParametersArgs> alternateDataSourceParameters) {
             this.alternateDataSourceParameters = Output.ofNullable(alternateDataSourceParameters);
             return this;
         }
-
+        public Builder alternateDataSourceParameters(DataSourceParametersArgs... alternateDataSourceParameters) {
+            return alternateDataSourceParameters(List.of(alternateDataSourceParameters));
+        }
         public Builder awsAccountId(@Nullable Output<String> awsAccountId) {
             this.awsAccountId = awsAccountId;
             return this;
         }
-
         public Builder awsAccountId(@Nullable String awsAccountId) {
             this.awsAccountId = Output.ofNullable(awsAccountId);
             return this;
         }
-
         public Builder credentials(@Nullable Output<DataSourceCredentialsArgs> credentials) {
             this.credentials = credentials;
             return this;
         }
-
         public Builder credentials(@Nullable DataSourceCredentialsArgs credentials) {
             this.credentials = Output.ofNullable(credentials);
             return this;
         }
-
         public Builder dataSourceId(@Nullable Output<String> dataSourceId) {
             this.dataSourceId = dataSourceId;
             return this;
         }
-
         public Builder dataSourceId(@Nullable String dataSourceId) {
             this.dataSourceId = Output.ofNullable(dataSourceId);
             return this;
         }
-
         public Builder dataSourceParameters(@Nullable Output<DataSourceParametersArgs> dataSourceParameters) {
             this.dataSourceParameters = dataSourceParameters;
             return this;
         }
-
         public Builder dataSourceParameters(@Nullable DataSourceParametersArgs dataSourceParameters) {
             this.dataSourceParameters = Output.ofNullable(dataSourceParameters);
             return this;
         }
-
         public Builder errorInfo(@Nullable Output<DataSourceErrorInfoArgs> errorInfo) {
             this.errorInfo = errorInfo;
             return this;
         }
-
         public Builder errorInfo(@Nullable DataSourceErrorInfoArgs errorInfo) {
             this.errorInfo = Output.ofNullable(errorInfo);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder permissions(@Nullable Output<List<DataSourceResourcePermissionArgs>> permissions) {
             this.permissions = permissions;
             return this;
         }
-
         public Builder permissions(@Nullable List<DataSourceResourcePermissionArgs> permissions) {
             this.permissions = Output.ofNullable(permissions);
             return this;
         }
-
+        public Builder permissions(DataSourceResourcePermissionArgs... permissions) {
+            return permissions(List.of(permissions));
+        }
         public Builder sslProperties(@Nullable Output<DataSourceSslPropertiesArgs> sslProperties) {
             this.sslProperties = sslProperties;
             return this;
         }
-
         public Builder sslProperties(@Nullable DataSourceSslPropertiesArgs sslProperties) {
             this.sslProperties = Output.ofNullable(sslProperties);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<DataSourceTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<DataSourceTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
+        public Builder tags(DataSourceTagArgs... tags) {
+            return tags(List.of(tags));
+        }
         public Builder type(@Nullable Output<DataSourceType> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable DataSourceType type) {
             this.type = Output.ofNullable(type);
             return this;
         }
-
         public Builder vpcConnectionProperties(@Nullable Output<DataSourceVpcConnectionPropertiesArgs> vpcConnectionProperties) {
             this.vpcConnectionProperties = vpcConnectionProperties;
             return this;
         }
-
         public Builder vpcConnectionProperties(@Nullable DataSourceVpcConnectionPropertiesArgs vpcConnectionProperties) {
             this.vpcConnectionProperties = Output.ofNullable(vpcConnectionProperties);
             return this;
-        }
-        public DataSourceArgs build() {
+        }        public DataSourceArgs build() {
             return new DataSourceArgs(alternateDataSourceParameters, awsAccountId, credentials, dataSourceId, dataSourceParameters, errorInfo, name, permissions, sslProperties, tags, type, vpcConnectionProperties);
         }
     }

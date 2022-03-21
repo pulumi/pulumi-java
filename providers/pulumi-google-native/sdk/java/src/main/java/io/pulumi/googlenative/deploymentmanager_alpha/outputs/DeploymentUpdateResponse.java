@@ -104,22 +104,21 @@ public final class DeploymentUpdateResponse {
             this.credential = Objects.requireNonNull(credential);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder labels(List<DeploymentUpdateLabelEntryResponse> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
+        public Builder labels(DeploymentUpdateLabelEntryResponse... labels) {
+            return labels(List.of(labels));
+        }
         public Builder manifest(String manifest) {
             this.manifest = Objects.requireNonNull(manifest);
             return this;
-        }
-        public DeploymentUpdateResponse build() {
+        }        public DeploymentUpdateResponse build() {
             return new DeploymentUpdateResponse(credential, description, labels, manifest);
         }
     }

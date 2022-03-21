@@ -147,62 +147,53 @@ public final class SubnetworkLogConfigArgs extends io.pulumi.resources.ResourceA
             this.aggregationInterval = aggregationInterval;
             return this;
         }
-
         public Builder aggregationInterval(@Nullable SubnetworkLogConfigAggregationInterval aggregationInterval) {
             this.aggregationInterval = Output.ofNullable(aggregationInterval);
             return this;
         }
-
         public Builder enable(@Nullable Output<Boolean> enable) {
             this.enable = enable;
             return this;
         }
-
         public Builder enable(@Nullable Boolean enable) {
             this.enable = Output.ofNullable(enable);
             return this;
         }
-
         public Builder filterExpr(@Nullable Output<String> filterExpr) {
             this.filterExpr = filterExpr;
             return this;
         }
-
         public Builder filterExpr(@Nullable String filterExpr) {
             this.filterExpr = Output.ofNullable(filterExpr);
             return this;
         }
-
         public Builder flowSampling(@Nullable Output<Double> flowSampling) {
             this.flowSampling = flowSampling;
             return this;
         }
-
         public Builder flowSampling(@Nullable Double flowSampling) {
             this.flowSampling = Output.ofNullable(flowSampling);
             return this;
         }
-
         public Builder metadata(@Nullable Output<SubnetworkLogConfigMetadata> metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder metadata(@Nullable SubnetworkLogConfigMetadata metadata) {
             this.metadata = Output.ofNullable(metadata);
             return this;
         }
-
         public Builder metadataFields(@Nullable Output<List<String>> metadataFields) {
             this.metadataFields = metadataFields;
             return this;
         }
-
         public Builder metadataFields(@Nullable List<String> metadataFields) {
             this.metadataFields = Output.ofNullable(metadataFields);
             return this;
         }
-        public SubnetworkLogConfigArgs build() {
+        public Builder metadataFields(String... metadataFields) {
+            return metadataFields(List.of(metadataFields));
+        }        public SubnetworkLogConfigArgs build() {
             return new SubnetworkLogConfigArgs(aggregationInterval, enable, filterExpr, flowSampling, metadata, metadataFields);
         }
     }

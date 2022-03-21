@@ -318,162 +318,136 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
             this.creationTimestamp = creationTimestamp;
             return this;
         }
-
         public Builder creationTimestamp(@Nullable String creationTimestamp) {
             this.creationTimestamp = Output.ofNullable(creationTimestamp);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder diskSizeGb(@Nullable Output<Integer> diskSizeGb) {
             this.diskSizeGb = diskSizeGb;
             return this;
         }
-
         public Builder diskSizeGb(@Nullable Integer diskSizeGb) {
             this.diskSizeGb = Output.ofNullable(diskSizeGb);
             return this;
         }
-
         public Builder labelFingerprint(@Nullable Output<String> labelFingerprint) {
             this.labelFingerprint = labelFingerprint;
             return this;
         }
-
         public Builder labelFingerprint(@Nullable String labelFingerprint) {
             this.labelFingerprint = Output.ofNullable(labelFingerprint);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder licenses(@Nullable Output<List<String>> licenses) {
             this.licenses = licenses;
             return this;
         }
-
         public Builder licenses(@Nullable List<String> licenses) {
             this.licenses = Output.ofNullable(licenses);
             return this;
         }
-
+        public Builder licenses(String... licenses) {
+            return licenses(List.of(licenses));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder selfLink(@Nullable Output<String> selfLink) {
             this.selfLink = selfLink;
             return this;
         }
-
         public Builder selfLink(@Nullable String selfLink) {
             this.selfLink = Output.ofNullable(selfLink);
             return this;
         }
-
         public Builder snapshotEncryptionKey(@Nullable Output<SnapshotSnapshotEncryptionKeyGetArgs> snapshotEncryptionKey) {
             this.snapshotEncryptionKey = snapshotEncryptionKey;
             return this;
         }
-
         public Builder snapshotEncryptionKey(@Nullable SnapshotSnapshotEncryptionKeyGetArgs snapshotEncryptionKey) {
             this.snapshotEncryptionKey = Output.ofNullable(snapshotEncryptionKey);
             return this;
         }
-
         public Builder snapshotId(@Nullable Output<Integer> snapshotId) {
             this.snapshotId = snapshotId;
             return this;
         }
-
         public Builder snapshotId(@Nullable Integer snapshotId) {
             this.snapshotId = Output.ofNullable(snapshotId);
             return this;
         }
-
         public Builder sourceDisk(@Nullable Output<String> sourceDisk) {
             this.sourceDisk = sourceDisk;
             return this;
         }
-
         public Builder sourceDisk(@Nullable String sourceDisk) {
             this.sourceDisk = Output.ofNullable(sourceDisk);
             return this;
         }
-
         public Builder sourceDiskEncryptionKey(@Nullable Output<SnapshotSourceDiskEncryptionKeyGetArgs> sourceDiskEncryptionKey) {
             this.sourceDiskEncryptionKey = sourceDiskEncryptionKey;
             return this;
         }
-
         public Builder sourceDiskEncryptionKey(@Nullable SnapshotSourceDiskEncryptionKeyGetArgs sourceDiskEncryptionKey) {
             this.sourceDiskEncryptionKey = Output.ofNullable(sourceDiskEncryptionKey);
             return this;
         }
-
         public Builder storageBytes(@Nullable Output<Integer> storageBytes) {
             this.storageBytes = storageBytes;
             return this;
         }
-
         public Builder storageBytes(@Nullable Integer storageBytes) {
             this.storageBytes = Output.ofNullable(storageBytes);
             return this;
         }
-
         public Builder storageLocations(@Nullable Output<List<String>> storageLocations) {
             this.storageLocations = storageLocations;
             return this;
         }
-
         public Builder storageLocations(@Nullable List<String> storageLocations) {
             this.storageLocations = Output.ofNullable(storageLocations);
             return this;
         }
-
+        public Builder storageLocations(String... storageLocations) {
+            return storageLocations(List.of(storageLocations));
+        }
         public Builder zone(@Nullable Output<String> zone) {
             this.zone = zone;
             return this;
         }
-
         public Builder zone(@Nullable String zone) {
             this.zone = Output.ofNullable(zone);
             return this;
-        }
-        public SnapshotState build() {
+        }        public SnapshotState build() {
             return new SnapshotState(creationTimestamp, description, diskSizeGb, labelFingerprint, labels, licenses, name, project, selfLink, snapshotEncryptionKey, snapshotId, sourceDisk, sourceDiskEncryptionKey, storageBytes, storageLocations, zone);
         }
     }

@@ -53,8 +53,7 @@ public final class LinuxOsInfoResponse {
         public Builder linuxOsState(@Nullable String linuxOsState) {
             this.linuxOsState = linuxOsState;
             return this;
-        }
-        public LinuxOsInfoResponse build() {
+        }        public LinuxOsInfoResponse build() {
             return new LinuxOsInfoResponse(linuxOsState);
         }
     }

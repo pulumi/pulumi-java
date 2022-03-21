@@ -66,22 +66,18 @@ public final class ClusterCreationRoleProviderArgs extends io.pulumi.resources.R
             this.profile = profile;
             return this;
         }
-
         public Builder profile(@Nullable String profile) {
             this.profile = Output.ofNullable(profile);
             return this;
         }
-
         public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
-
         public Builder region(@Nullable String region) {
             this.region = Output.ofNullable(region);
             return this;
-        }
-        public ClusterCreationRoleProviderArgs build() {
+        }        public ClusterCreationRoleProviderArgs build() {
             return new ClusterCreationRoleProviderArgs(profile, region);
         }
     }

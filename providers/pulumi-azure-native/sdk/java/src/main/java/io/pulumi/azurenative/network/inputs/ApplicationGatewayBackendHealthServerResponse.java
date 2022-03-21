@@ -111,22 +111,18 @@ public final class ApplicationGatewayBackendHealthServerResponse extends io.pulu
             this.address = address;
             return this;
         }
-
         public Builder health(@Nullable String health) {
             this.health = health;
             return this;
         }
-
         public Builder healthProbeLog(@Nullable String healthProbeLog) {
             this.healthProbeLog = healthProbeLog;
             return this;
         }
-
         public Builder ipConfiguration(@Nullable NetworkInterfaceIPConfigurationResponse ipConfiguration) {
             this.ipConfiguration = ipConfiguration;
             return this;
-        }
-        public ApplicationGatewayBackendHealthServerResponse build() {
+        }        public ApplicationGatewayBackendHealthServerResponse build() {
             return new ApplicationGatewayBackendHealthServerResponse(address, health, healthProbeLog, ipConfiguration);
         }
     }

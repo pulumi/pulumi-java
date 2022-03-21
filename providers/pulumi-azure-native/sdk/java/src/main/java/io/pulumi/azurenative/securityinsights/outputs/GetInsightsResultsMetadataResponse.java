@@ -72,12 +72,13 @@ public final class GetInsightsResultsMetadataResponse {
             this.errors = errors;
             return this;
         }
-
+        public Builder errors(GetInsightsErrorResponse... errors) {
+            return errors(List.of(errors));
+        }
         public Builder totalCount(Integer totalCount) {
             this.totalCount = Objects.requireNonNull(totalCount);
             return this;
-        }
-        public GetInsightsResultsMetadataResponse build() {
+        }        public GetInsightsResultsMetadataResponse build() {
             return new GetInsightsResultsMetadataResponse(errors, totalCount);
         }
     }

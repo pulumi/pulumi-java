@@ -220,57 +220,52 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGceClusterConfig
             this.internalIpOnly = internalIpOnly;
             return this;
         }
-
         public Builder metadata(@Nullable Map<String,String> metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder network(@Nullable String network) {
             this.network = network;
             return this;
         }
-
         public Builder nodeGroupAffinity(@Nullable WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigNodeGroupAffinity nodeGroupAffinity) {
             this.nodeGroupAffinity = nodeGroupAffinity;
             return this;
         }
-
         public Builder privateIpv6GoogleAccess(@Nullable String privateIpv6GoogleAccess) {
             this.privateIpv6GoogleAccess = privateIpv6GoogleAccess;
             return this;
         }
-
         public Builder reservationAffinity(@Nullable WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigReservationAffinity reservationAffinity) {
             this.reservationAffinity = reservationAffinity;
             return this;
         }
-
         public Builder serviceAccount(@Nullable String serviceAccount) {
             this.serviceAccount = serviceAccount;
             return this;
         }
-
         public Builder serviceAccountScopes(@Nullable List<String> serviceAccountScopes) {
             this.serviceAccountScopes = serviceAccountScopes;
             return this;
         }
-
+        public Builder serviceAccountScopes(String... serviceAccountScopes) {
+            return serviceAccountScopes(List.of(serviceAccountScopes));
+        }
         public Builder subnetwork(@Nullable String subnetwork) {
             this.subnetwork = subnetwork;
             return this;
         }
-
         public Builder tags(@Nullable List<String> tags) {
             this.tags = tags;
             return this;
         }
-
+        public Builder tags(String... tags) {
+            return tags(List.of(tags));
+        }
         public Builder zone(@Nullable String zone) {
             this.zone = zone;
             return this;
-        }
-        public WorkflowTemplatePlacementManagedClusterConfigGceClusterConfig build() {
+        }        public WorkflowTemplatePlacementManagedClusterConfigGceClusterConfig build() {
             return new WorkflowTemplatePlacementManagedClusterConfigGceClusterConfig(internalIpOnly, metadata, network, nodeGroupAffinity, privateIpv6GoogleAccess, reservationAffinity, serviceAccount, serviceAccountScopes, subnetwork, tags, zone);
         }
     }

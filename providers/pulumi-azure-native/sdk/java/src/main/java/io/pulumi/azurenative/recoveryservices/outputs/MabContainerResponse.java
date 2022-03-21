@@ -244,62 +244,53 @@ public final class MabContainerResponse {
             this.agentVersion = agentVersion;
             return this;
         }
-
         public Builder backupManagementType(@Nullable String backupManagementType) {
             this.backupManagementType = backupManagementType;
             return this;
         }
-
         public Builder canReRegister(@Nullable Boolean canReRegister) {
             this.canReRegister = canReRegister;
             return this;
         }
-
         public Builder containerHealthState(@Nullable String containerHealthState) {
             this.containerHealthState = containerHealthState;
             return this;
         }
-
         public Builder containerId(@Nullable Double containerId) {
             this.containerId = containerId;
             return this;
         }
-
         public Builder containerType(String containerType) {
             this.containerType = Objects.requireNonNull(containerType);
             return this;
         }
-
         public Builder extendedInfo(@Nullable MabContainerExtendedInfoResponse extendedInfo) {
             this.extendedInfo = extendedInfo;
             return this;
         }
-
         public Builder friendlyName(@Nullable String friendlyName) {
             this.friendlyName = friendlyName;
             return this;
         }
-
         public Builder healthStatus(@Nullable String healthStatus) {
             this.healthStatus = healthStatus;
             return this;
         }
-
         public Builder mabContainerHealthDetails(@Nullable List<MABContainerHealthDetailsResponse> mabContainerHealthDetails) {
             this.mabContainerHealthDetails = mabContainerHealthDetails;
             return this;
         }
-
+        public Builder mabContainerHealthDetails(MABContainerHealthDetailsResponse... mabContainerHealthDetails) {
+            return mabContainerHealthDetails(List.of(mabContainerHealthDetails));
+        }
         public Builder protectedItemCount(@Nullable Double protectedItemCount) {
             this.protectedItemCount = protectedItemCount;
             return this;
         }
-
         public Builder registrationStatus(@Nullable String registrationStatus) {
             this.registrationStatus = registrationStatus;
             return this;
-        }
-        public MabContainerResponse build() {
+        }        public MabContainerResponse build() {
             return new MabContainerResponse(agentVersion, backupManagementType, canReRegister, containerHealthState, containerId, containerType, extendedInfo, friendlyName, healthStatus, mabContainerHealthDetails, protectedItemCount, registrationStatus);
         }
     }

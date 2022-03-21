@@ -64,12 +64,10 @@ public final class GetDatastoreArgs extends io.pulumi.resources.InvokeArgs {
             this.datastoreId = Objects.requireNonNull(datastoreId);
             return this;
         }
-
         public Builder organizationId(String organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
-        }
-        public GetDatastoreArgs build() {
+        }        public GetDatastoreArgs build() {
             return new GetDatastoreArgs(datastoreId, organizationId);
         }
     }

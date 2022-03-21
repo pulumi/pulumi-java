@@ -107,42 +107,34 @@ public final class PipelineArtifactStoreArgs extends io.pulumi.resources.Resourc
             this.encryptionKey = encryptionKey;
             return this;
         }
-
         public Builder encryptionKey(@Nullable PipelineArtifactStoreEncryptionKeyArgs encryptionKey) {
             this.encryptionKey = Output.ofNullable(encryptionKey);
             return this;
         }
-
         public Builder location(Output<String> location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Output.of(Objects.requireNonNull(location));
             return this;
         }
-
         public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
-
         public Builder region(@Nullable String region) {
             this.region = Output.ofNullable(region);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public PipelineArtifactStoreArgs build() {
+        }        public PipelineArtifactStoreArgs build() {
             return new PipelineArtifactStoreArgs(encryptionKey, location, region, type);
         }
     }

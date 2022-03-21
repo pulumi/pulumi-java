@@ -53,8 +53,7 @@ public final class SqlWorkloadTypeUpdateSettingsResponse {
         public Builder sqlWorkloadType(@Nullable String sqlWorkloadType) {
             this.sqlWorkloadType = sqlWorkloadType;
             return this;
-        }
-        public SqlWorkloadTypeUpdateSettingsResponse build() {
+        }        public SqlWorkloadTypeUpdateSettingsResponse build() {
             return new SqlWorkloadTypeUpdateSettingsResponse(sqlWorkloadType);
         }
     }

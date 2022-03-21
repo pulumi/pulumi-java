@@ -92,32 +92,29 @@ public final class GetSamplingRuleResult {
             this.ruleARN = ruleARN;
             return this;
         }
-
         public Builder ruleName(@Nullable String ruleName) {
             this.ruleName = ruleName;
             return this;
         }
-
         public Builder samplingRule(@Nullable SamplingRule samplingRule) {
             this.samplingRule = samplingRule;
             return this;
         }
-
         public Builder samplingRuleRecord(@Nullable SamplingRuleRecord samplingRuleRecord) {
             this.samplingRuleRecord = samplingRuleRecord;
             return this;
         }
-
         public Builder samplingRuleUpdate(@Nullable SamplingRuleUpdate samplingRuleUpdate) {
             this.samplingRuleUpdate = samplingRuleUpdate;
             return this;
         }
-
         public Builder tags(@Nullable List<TagsItemProperties> tags) {
             this.tags = tags;
             return this;
         }
-        public GetSamplingRuleResult build() {
+        public Builder tags(TagsItemProperties... tags) {
+            return tags(List.of(tags));
+        }        public GetSamplingRuleResult build() {
             return new GetSamplingRuleResult(ruleARN, ruleName, samplingRule, samplingRuleRecord, samplingRuleUpdate, tags);
         }
     }

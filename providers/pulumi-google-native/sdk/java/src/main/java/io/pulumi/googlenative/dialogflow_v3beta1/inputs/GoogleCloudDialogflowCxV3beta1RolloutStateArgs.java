@@ -95,32 +95,26 @@ public final class GoogleCloudDialogflowCxV3beta1RolloutStateArgs extends io.pul
             this.startTime = startTime;
             return this;
         }
-
         public Builder startTime(@Nullable String startTime) {
             this.startTime = Output.ofNullable(startTime);
             return this;
         }
-
         public Builder step(@Nullable Output<String> step) {
             this.step = step;
             return this;
         }
-
         public Builder step(@Nullable String step) {
             this.step = Output.ofNullable(step);
             return this;
         }
-
         public Builder stepIndex(@Nullable Output<Integer> stepIndex) {
             this.stepIndex = stepIndex;
             return this;
         }
-
         public Builder stepIndex(@Nullable Integer stepIndex) {
             this.stepIndex = Output.ofNullable(stepIndex);
             return this;
-        }
-        public GoogleCloudDialogflowCxV3beta1RolloutStateArgs build() {
+        }        public GoogleCloudDialogflowCxV3beta1RolloutStateArgs build() {
             return new GoogleCloudDialogflowCxV3beta1RolloutStateArgs(startTime, step, stepIndex);
         }
     }

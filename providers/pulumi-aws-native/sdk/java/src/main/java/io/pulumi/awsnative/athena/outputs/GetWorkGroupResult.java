@@ -157,37 +157,33 @@ public final class GetWorkGroupResult {
             this.creationTime = creationTime;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder recursiveDeleteOption(@Nullable Boolean recursiveDeleteOption) {
             this.recursiveDeleteOption = recursiveDeleteOption;
             return this;
         }
-
         public Builder state(@Nullable WorkGroupState state) {
             this.state = state;
             return this;
         }
-
         public Builder tags(@Nullable List<WorkGroupTag> tags) {
             this.tags = tags;
             return this;
         }
-
+        public Builder tags(WorkGroupTag... tags) {
+            return tags(List.of(tags));
+        }
         public Builder workGroupConfiguration(@Nullable WorkGroupConfiguration workGroupConfiguration) {
             this.workGroupConfiguration = workGroupConfiguration;
             return this;
         }
-
         public Builder workGroupConfigurationUpdates(@Nullable WorkGroupConfigurationUpdates workGroupConfigurationUpdates) {
             this.workGroupConfigurationUpdates = workGroupConfigurationUpdates;
             return this;
-        }
-        public GetWorkGroupResult build() {
+        }        public GetWorkGroupResult build() {
             return new GetWorkGroupResult(creationTime, description, recursiveDeleteOption, state, tags, workGroupConfiguration, workGroupConfigurationUpdates);
         }
     }

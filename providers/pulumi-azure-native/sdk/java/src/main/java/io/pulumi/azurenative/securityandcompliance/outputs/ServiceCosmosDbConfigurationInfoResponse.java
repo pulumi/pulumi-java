@@ -72,12 +72,10 @@ public final class ServiceCosmosDbConfigurationInfoResponse {
             this.keyVaultKeyUri = keyVaultKeyUri;
             return this;
         }
-
         public Builder offerThroughput(@Nullable Double offerThroughput) {
             this.offerThroughput = offerThroughput;
             return this;
-        }
-        public ServiceCosmosDbConfigurationInfoResponse build() {
+        }        public ServiceCosmosDbConfigurationInfoResponse build() {
             return new ServiceCosmosDbConfigurationInfoResponse(keyVaultKeyUri, offerThroughput);
         }
     }

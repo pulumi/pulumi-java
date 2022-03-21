@@ -219,57 +219,46 @@ public final class GetPublishedBlueprintResult {
             this.blueprintName = blueprintName;
             return this;
         }
-
         public Builder changeNotes(@Nullable String changeNotes) {
             this.changeNotes = changeNotes;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder parameters(@Nullable Map<String,ParameterDefinitionResponse> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder resourceGroups(@Nullable Map<String,ResourceGroupDefinitionResponse> resourceGroups) {
             this.resourceGroups = resourceGroups;
             return this;
         }
-
         public Builder status(BlueprintStatusResponse status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder targetScope(@Nullable String targetScope) {
             this.targetScope = targetScope;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetPublishedBlueprintResult build() {
+        }        public GetPublishedBlueprintResult build() {
             return new GetPublishedBlueprintResult(blueprintName, changeNotes, description, displayName, id, name, parameters, resourceGroups, status, targetScope, type);
         }
     }

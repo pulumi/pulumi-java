@@ -143,32 +143,35 @@ public final class ResultsResponse extends io.pulumi.resources.InvokeArgs {
             this.artifactManifest = Objects.requireNonNull(artifactManifest);
             return this;
         }
-
         public Builder artifactTiming(TimeSpanResponse artifactTiming) {
             this.artifactTiming = Objects.requireNonNull(artifactTiming);
             return this;
         }
-
         public Builder buildStepImages(List<String> buildStepImages) {
             this.buildStepImages = Objects.requireNonNull(buildStepImages);
             return this;
         }
-
+        public Builder buildStepImages(String... buildStepImages) {
+            return buildStepImages(List.of(buildStepImages));
+        }
         public Builder buildStepOutputs(List<String> buildStepOutputs) {
             this.buildStepOutputs = Objects.requireNonNull(buildStepOutputs);
             return this;
         }
-
+        public Builder buildStepOutputs(String... buildStepOutputs) {
+            return buildStepOutputs(List.of(buildStepOutputs));
+        }
         public Builder images(List<BuiltImageResponse> images) {
             this.images = Objects.requireNonNull(images);
             return this;
         }
-
+        public Builder images(BuiltImageResponse... images) {
+            return images(List.of(images));
+        }
         public Builder numArtifacts(String numArtifacts) {
             this.numArtifacts = Objects.requireNonNull(numArtifacts);
             return this;
-        }
-        public ResultsResponse build() {
+        }        public ResultsResponse build() {
             return new ResultsResponse(artifactManifest, artifactTiming, buildStepImages, buildStepOutputs, images, numArtifacts);
         }
     }

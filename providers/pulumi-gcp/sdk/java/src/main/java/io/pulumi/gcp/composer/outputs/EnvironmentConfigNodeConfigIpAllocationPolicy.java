@@ -80,27 +80,22 @@ public final class EnvironmentConfigNodeConfigIpAllocationPolicy {
             this.clusterIpv4CidrBlock = clusterIpv4CidrBlock;
             return this;
         }
-
         public Builder clusterSecondaryRangeName(@Nullable String clusterSecondaryRangeName) {
             this.clusterSecondaryRangeName = clusterSecondaryRangeName;
             return this;
         }
-
         public Builder servicesIpv4CidrBlock(@Nullable String servicesIpv4CidrBlock) {
             this.servicesIpv4CidrBlock = servicesIpv4CidrBlock;
             return this;
         }
-
         public Builder servicesSecondaryRangeName(@Nullable String servicesSecondaryRangeName) {
             this.servicesSecondaryRangeName = servicesSecondaryRangeName;
             return this;
         }
-
         public Builder useIpAliases(@Nullable Boolean useIpAliases) {
             this.useIpAliases = useIpAliases;
             return this;
-        }
-        public EnvironmentConfigNodeConfigIpAllocationPolicy build() {
+        }        public EnvironmentConfigNodeConfigIpAllocationPolicy build() {
             return new EnvironmentConfigNodeConfigIpAllocationPolicy(clusterIpv4CidrBlock, clusterSecondaryRangeName, servicesIpv4CidrBlock, servicesSecondaryRangeName, useIpAliases);
         }
     }

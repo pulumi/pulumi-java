@@ -57,12 +57,10 @@ public final class MemberAccountAssociationState extends io.pulumi.resources.Res
             this.memberAccountId = memberAccountId;
             return this;
         }
-
         public Builder memberAccountId(@Nullable String memberAccountId) {
             this.memberAccountId = Output.ofNullable(memberAccountId);
             return this;
-        }
-        public MemberAccountAssociationState build() {
+        }        public MemberAccountAssociationState build() {
             return new MemberAccountAssociationState(memberAccountId);
         }
     }

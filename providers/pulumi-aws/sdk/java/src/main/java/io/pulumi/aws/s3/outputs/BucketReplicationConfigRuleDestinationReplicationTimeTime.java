@@ -51,8 +51,7 @@ public final class BucketReplicationConfigRuleDestinationReplicationTimeTime {
         public Builder minutes(Integer minutes) {
             this.minutes = Objects.requireNonNull(minutes);
             return this;
-        }
-        public BucketReplicationConfigRuleDestinationReplicationTimeTime build() {
+        }        public BucketReplicationConfigRuleDestinationReplicationTimeTime build() {
             return new BucketReplicationConfigRuleDestinationReplicationTimeTime(minutes);
         }
     }

@@ -131,17 +131,14 @@ public final class SubscriptionPushConfig {
             this.attributes = attributes;
             return this;
         }
-
         public Builder oidcToken(@Nullable SubscriptionPushConfigOidcToken oidcToken) {
             this.oidcToken = oidcToken;
             return this;
         }
-
         public Builder pushEndpoint(String pushEndpoint) {
             this.pushEndpoint = Objects.requireNonNull(pushEndpoint);
             return this;
-        }
-        public SubscriptionPushConfig build() {
+        }        public SubscriptionPushConfig build() {
             return new SubscriptionPushConfig(attributes, oidcToken, pushEndpoint);
         }
     }

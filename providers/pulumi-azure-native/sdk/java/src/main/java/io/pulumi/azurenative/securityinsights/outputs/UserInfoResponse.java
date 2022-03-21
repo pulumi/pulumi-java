@@ -87,17 +87,14 @@ public final class UserInfoResponse {
             this.email = Objects.requireNonNull(email);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder objectId(@Nullable String objectId) {
             this.objectId = objectId;
             return this;
-        }
-        public UserInfoResponse build() {
+        }        public UserInfoResponse build() {
             return new UserInfoResponse(email, name, objectId);
         }
     }

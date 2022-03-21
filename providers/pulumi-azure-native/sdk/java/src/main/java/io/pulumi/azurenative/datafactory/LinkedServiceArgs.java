@@ -209,42 +209,34 @@ public final class LinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
             this.factoryName = Objects.requireNonNull(factoryName);
             return this;
         }
-
         public Builder factoryName(String factoryName) {
             this.factoryName = Output.of(Objects.requireNonNull(factoryName));
             return this;
         }
-
         public Builder linkedServiceName(@Nullable Output<String> linkedServiceName) {
             this.linkedServiceName = linkedServiceName;
             return this;
         }
-
         public Builder linkedServiceName(@Nullable String linkedServiceName) {
             this.linkedServiceName = Output.ofNullable(linkedServiceName);
             return this;
         }
-
         public Builder properties(Output<Object> properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
-
         public Builder properties(Object properties) {
             this.properties = Output.of(Objects.requireNonNull(properties));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
-        }
-        public LinkedServiceArgs build() {
+        }        public LinkedServiceArgs build() {
             return new LinkedServiceArgs(factoryName, linkedServiceName, properties, resourceGroupName);
         }
     }

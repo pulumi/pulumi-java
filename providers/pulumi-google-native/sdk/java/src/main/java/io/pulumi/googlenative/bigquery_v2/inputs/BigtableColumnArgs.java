@@ -135,62 +135,50 @@ public final class BigtableColumnArgs extends io.pulumi.resources.ResourceArgs {
             this.encoding = encoding;
             return this;
         }
-
         public Builder encoding(@Nullable String encoding) {
             this.encoding = Output.ofNullable(encoding);
             return this;
         }
-
         public Builder fieldName(@Nullable Output<String> fieldName) {
             this.fieldName = fieldName;
             return this;
         }
-
         public Builder fieldName(@Nullable String fieldName) {
             this.fieldName = Output.ofNullable(fieldName);
             return this;
         }
-
         public Builder onlyReadLatest(@Nullable Output<Boolean> onlyReadLatest) {
             this.onlyReadLatest = onlyReadLatest;
             return this;
         }
-
         public Builder onlyReadLatest(@Nullable Boolean onlyReadLatest) {
             this.onlyReadLatest = Output.ofNullable(onlyReadLatest);
             return this;
         }
-
         public Builder qualifierEncoded(@Nullable Output<String> qualifierEncoded) {
             this.qualifierEncoded = qualifierEncoded;
             return this;
         }
-
         public Builder qualifierEncoded(@Nullable String qualifierEncoded) {
             this.qualifierEncoded = Output.ofNullable(qualifierEncoded);
             return this;
         }
-
         public Builder qualifierString(@Nullable Output<String> qualifierString) {
             this.qualifierString = qualifierString;
             return this;
         }
-
         public Builder qualifierString(@Nullable String qualifierString) {
             this.qualifierString = Output.ofNullable(qualifierString);
             return this;
         }
-
         public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public BigtableColumnArgs build() {
+        }        public BigtableColumnArgs build() {
             return new BigtableColumnArgs(encoding, fieldName, onlyReadLatest, qualifierEncoded, qualifierString, type);
         }
     }

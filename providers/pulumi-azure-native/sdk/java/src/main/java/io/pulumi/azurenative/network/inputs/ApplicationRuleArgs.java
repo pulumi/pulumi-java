@@ -242,122 +242,122 @@ public final class ApplicationRuleArgs extends io.pulumi.resources.ResourceArgs 
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder destinationAddresses(@Nullable Output<List<String>> destinationAddresses) {
             this.destinationAddresses = destinationAddresses;
             return this;
         }
-
         public Builder destinationAddresses(@Nullable List<String> destinationAddresses) {
             this.destinationAddresses = Output.ofNullable(destinationAddresses);
             return this;
         }
-
+        public Builder destinationAddresses(String... destinationAddresses) {
+            return destinationAddresses(List.of(destinationAddresses));
+        }
         public Builder fqdnTags(@Nullable Output<List<String>> fqdnTags) {
             this.fqdnTags = fqdnTags;
             return this;
         }
-
         public Builder fqdnTags(@Nullable List<String> fqdnTags) {
             this.fqdnTags = Output.ofNullable(fqdnTags);
             return this;
         }
-
+        public Builder fqdnTags(String... fqdnTags) {
+            return fqdnTags(List.of(fqdnTags));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder protocols(@Nullable Output<List<FirewallPolicyRuleApplicationProtocolArgs>> protocols) {
             this.protocols = protocols;
             return this;
         }
-
         public Builder protocols(@Nullable List<FirewallPolicyRuleApplicationProtocolArgs> protocols) {
             this.protocols = Output.ofNullable(protocols);
             return this;
         }
-
+        public Builder protocols(FirewallPolicyRuleApplicationProtocolArgs... protocols) {
+            return protocols(List.of(protocols));
+        }
         public Builder ruleType(Output<String> ruleType) {
             this.ruleType = Objects.requireNonNull(ruleType);
             return this;
         }
-
         public Builder ruleType(String ruleType) {
             this.ruleType = Output.of(Objects.requireNonNull(ruleType));
             return this;
         }
-
         public Builder sourceAddresses(@Nullable Output<List<String>> sourceAddresses) {
             this.sourceAddresses = sourceAddresses;
             return this;
         }
-
         public Builder sourceAddresses(@Nullable List<String> sourceAddresses) {
             this.sourceAddresses = Output.ofNullable(sourceAddresses);
             return this;
         }
-
+        public Builder sourceAddresses(String... sourceAddresses) {
+            return sourceAddresses(List.of(sourceAddresses));
+        }
         public Builder sourceIpGroups(@Nullable Output<List<String>> sourceIpGroups) {
             this.sourceIpGroups = sourceIpGroups;
             return this;
         }
-
         public Builder sourceIpGroups(@Nullable List<String> sourceIpGroups) {
             this.sourceIpGroups = Output.ofNullable(sourceIpGroups);
             return this;
         }
-
+        public Builder sourceIpGroups(String... sourceIpGroups) {
+            return sourceIpGroups(List.of(sourceIpGroups));
+        }
         public Builder targetFqdns(@Nullable Output<List<String>> targetFqdns) {
             this.targetFqdns = targetFqdns;
             return this;
         }
-
         public Builder targetFqdns(@Nullable List<String> targetFqdns) {
             this.targetFqdns = Output.ofNullable(targetFqdns);
             return this;
         }
-
+        public Builder targetFqdns(String... targetFqdns) {
+            return targetFqdns(List.of(targetFqdns));
+        }
         public Builder targetUrls(@Nullable Output<List<String>> targetUrls) {
             this.targetUrls = targetUrls;
             return this;
         }
-
         public Builder targetUrls(@Nullable List<String> targetUrls) {
             this.targetUrls = Output.ofNullable(targetUrls);
             return this;
         }
-
+        public Builder targetUrls(String... targetUrls) {
+            return targetUrls(List.of(targetUrls));
+        }
         public Builder terminateTLS(@Nullable Output<Boolean> terminateTLS) {
             this.terminateTLS = terminateTLS;
             return this;
         }
-
         public Builder terminateTLS(@Nullable Boolean terminateTLS) {
             this.terminateTLS = Output.ofNullable(terminateTLS);
             return this;
         }
-
         public Builder webCategories(@Nullable Output<List<String>> webCategories) {
             this.webCategories = webCategories;
             return this;
         }
-
         public Builder webCategories(@Nullable List<String> webCategories) {
             this.webCategories = Output.ofNullable(webCategories);
             return this;
         }
-        public ApplicationRuleArgs build() {
+        public Builder webCategories(String... webCategories) {
+            return webCategories(List.of(webCategories));
+        }        public ApplicationRuleArgs build() {
             return new ApplicationRuleArgs(description, destinationAddresses, fqdnTags, name, protocols, ruleType, sourceAddresses, sourceIpGroups, targetFqdns, targetUrls, terminateTLS, webCategories);
         }
     }

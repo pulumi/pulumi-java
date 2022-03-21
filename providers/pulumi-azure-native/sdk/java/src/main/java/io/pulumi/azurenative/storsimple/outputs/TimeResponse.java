@@ -85,17 +85,14 @@ public final class TimeResponse {
             this.hours = Objects.requireNonNull(hours);
             return this;
         }
-
         public Builder minutes(Integer minutes) {
             this.minutes = Objects.requireNonNull(minutes);
             return this;
         }
-
         public Builder seconds(Integer seconds) {
             this.seconds = Objects.requireNonNull(seconds);
             return this;
-        }
-        public TimeResponse build() {
+        }        public TimeResponse build() {
             return new TimeResponse(hours, minutes, seconds);
         }
     }

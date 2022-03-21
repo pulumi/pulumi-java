@@ -94,17 +94,14 @@ public final class GuestPoliciesRecipeArtifactGcs {
             this.bucket = bucket;
             return this;
         }
-
         public Builder generation(@Nullable Integer generation) {
             this.generation = generation;
             return this;
         }
-
         public Builder object(@Nullable String object) {
             this.object = object;
             return this;
-        }
-        public GuestPoliciesRecipeArtifactGcs build() {
+        }        public GuestPoliciesRecipeArtifactGcs build() {
             return new GuestPoliciesRecipeArtifactGcs(bucket, generation, object);
         }
     }

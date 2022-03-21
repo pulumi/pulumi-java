@@ -71,12 +71,10 @@ public final class BudgetFilterPropertiesResponse {
             this.dimensions = dimensions;
             return this;
         }
-
         public Builder tags(@Nullable BudgetComparisonExpressionResponse tags) {
             this.tags = tags;
             return this;
-        }
-        public BudgetFilterPropertiesResponse build() {
+        }        public BudgetFilterPropertiesResponse build() {
             return new BudgetFilterPropertiesResponse(dimensions, tags);
         }
     }

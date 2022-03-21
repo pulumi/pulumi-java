@@ -69,12 +69,10 @@ public final class StatusConditionResponse {
             this.canonicalCode = Objects.requireNonNull(canonicalCode);
             return this;
         }
-
         public Builder message(String message) {
             this.message = Objects.requireNonNull(message);
             return this;
-        }
-        public StatusConditionResponse build() {
+        }        public StatusConditionResponse build() {
             return new StatusConditionResponse(canonicalCode, message);
         }
     }

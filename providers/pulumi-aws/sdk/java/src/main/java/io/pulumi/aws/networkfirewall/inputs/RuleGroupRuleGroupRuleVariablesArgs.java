@@ -76,22 +76,24 @@ public final class RuleGroupRuleGroupRuleVariablesArgs extends io.pulumi.resourc
             this.ipSets = ipSets;
             return this;
         }
-
         public Builder ipSets(@Nullable List<RuleGroupRuleGroupRuleVariablesIpSetArgs> ipSets) {
             this.ipSets = Output.ofNullable(ipSets);
             return this;
         }
-
+        public Builder ipSets(RuleGroupRuleGroupRuleVariablesIpSetArgs... ipSets) {
+            return ipSets(List.of(ipSets));
+        }
         public Builder portSets(@Nullable Output<List<RuleGroupRuleGroupRuleVariablesPortSetArgs>> portSets) {
             this.portSets = portSets;
             return this;
         }
-
         public Builder portSets(@Nullable List<RuleGroupRuleGroupRuleVariablesPortSetArgs> portSets) {
             this.portSets = Output.ofNullable(portSets);
             return this;
         }
-        public RuleGroupRuleGroupRuleVariablesArgs build() {
+        public Builder portSets(RuleGroupRuleGroupRuleVariablesPortSetArgs... portSets) {
+            return portSets(List.of(portSets));
+        }        public RuleGroupRuleGroupRuleVariablesArgs build() {
             return new RuleGroupRuleGroupRuleVariablesArgs(ipSets, portSets);
         }
     }

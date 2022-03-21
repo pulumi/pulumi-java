@@ -61,12 +61,10 @@ public final class AccountEncryptionArgs extends io.pulumi.resources.ResourceArg
             this.keySource = keySource;
             return this;
         }
-
         public Builder keySource(@Nullable String keySource) {
             this.keySource = Output.ofNullable(keySource);
             return this;
-        }
-        public AccountEncryptionArgs build() {
+        }        public AccountEncryptionArgs build() {
             return new AccountEncryptionArgs(keySource);
         }
     }

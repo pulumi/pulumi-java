@@ -72,12 +72,10 @@ public final class ServiceAttachmentConsumerAcceptList {
             this.connectionLimit = Objects.requireNonNull(connectionLimit);
             return this;
         }
-
         public Builder projectIdOrNum(String projectIdOrNum) {
             this.projectIdOrNum = Objects.requireNonNull(projectIdOrNum);
             return this;
-        }
-        public ServiceAttachmentConsumerAcceptList build() {
+        }        public ServiceAttachmentConsumerAcceptList build() {
             return new ServiceAttachmentConsumerAcceptList(connectionLimit, projectIdOrNum);
         }
     }

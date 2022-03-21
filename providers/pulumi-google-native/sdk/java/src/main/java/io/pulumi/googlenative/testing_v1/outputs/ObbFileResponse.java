@@ -70,12 +70,10 @@ public final class ObbFileResponse {
             this.obb = Objects.requireNonNull(obb);
             return this;
         }
-
         public Builder obbFileName(String obbFileName) {
             this.obbFileName = Objects.requireNonNull(obbFileName);
             return this;
-        }
-        public ObbFileResponse build() {
+        }        public ObbFileResponse build() {
             return new ObbFileResponse(obb, obbFileName);
         }
     }

@@ -72,12 +72,10 @@ public final class SamplingSettingsResponse {
             this.percentage = percentage;
             return this;
         }
-
         public Builder samplingType(@Nullable String samplingType) {
             this.samplingType = samplingType;
             return this;
-        }
-        public SamplingSettingsResponse build() {
+        }        public SamplingSettingsResponse build() {
             return new SamplingSettingsResponse(percentage, samplingType);
         }
     }

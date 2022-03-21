@@ -207,122 +207,98 @@ public final class CVSSArgs extends io.pulumi.resources.ResourceArgs {
             this.attackComplexity = attackComplexity;
             return this;
         }
-
         public Builder attackComplexity(@Nullable CVSSAttackComplexity attackComplexity) {
             this.attackComplexity = Output.ofNullable(attackComplexity);
             return this;
         }
-
         public Builder attackVector(@Nullable Output<CVSSAttackVector> attackVector) {
             this.attackVector = attackVector;
             return this;
         }
-
         public Builder attackVector(@Nullable CVSSAttackVector attackVector) {
             this.attackVector = Output.ofNullable(attackVector);
             return this;
         }
-
         public Builder authentication(@Nullable Output<CVSSAuthentication> authentication) {
             this.authentication = authentication;
             return this;
         }
-
         public Builder authentication(@Nullable CVSSAuthentication authentication) {
             this.authentication = Output.ofNullable(authentication);
             return this;
         }
-
         public Builder availabilityImpact(@Nullable Output<CVSSAvailabilityImpact> availabilityImpact) {
             this.availabilityImpact = availabilityImpact;
             return this;
         }
-
         public Builder availabilityImpact(@Nullable CVSSAvailabilityImpact availabilityImpact) {
             this.availabilityImpact = Output.ofNullable(availabilityImpact);
             return this;
         }
-
         public Builder baseScore(@Nullable Output<Double> baseScore) {
             this.baseScore = baseScore;
             return this;
         }
-
         public Builder baseScore(@Nullable Double baseScore) {
             this.baseScore = Output.ofNullable(baseScore);
             return this;
         }
-
         public Builder confidentialityImpact(@Nullable Output<CVSSConfidentialityImpact> confidentialityImpact) {
             this.confidentialityImpact = confidentialityImpact;
             return this;
         }
-
         public Builder confidentialityImpact(@Nullable CVSSConfidentialityImpact confidentialityImpact) {
             this.confidentialityImpact = Output.ofNullable(confidentialityImpact);
             return this;
         }
-
         public Builder exploitabilityScore(@Nullable Output<Double> exploitabilityScore) {
             this.exploitabilityScore = exploitabilityScore;
             return this;
         }
-
         public Builder exploitabilityScore(@Nullable Double exploitabilityScore) {
             this.exploitabilityScore = Output.ofNullable(exploitabilityScore);
             return this;
         }
-
         public Builder impactScore(@Nullable Output<Double> impactScore) {
             this.impactScore = impactScore;
             return this;
         }
-
         public Builder impactScore(@Nullable Double impactScore) {
             this.impactScore = Output.ofNullable(impactScore);
             return this;
         }
-
         public Builder integrityImpact(@Nullable Output<CVSSIntegrityImpact> integrityImpact) {
             this.integrityImpact = integrityImpact;
             return this;
         }
-
         public Builder integrityImpact(@Nullable CVSSIntegrityImpact integrityImpact) {
             this.integrityImpact = Output.ofNullable(integrityImpact);
             return this;
         }
-
         public Builder privilegesRequired(@Nullable Output<CVSSPrivilegesRequired> privilegesRequired) {
             this.privilegesRequired = privilegesRequired;
             return this;
         }
-
         public Builder privilegesRequired(@Nullable CVSSPrivilegesRequired privilegesRequired) {
             this.privilegesRequired = Output.ofNullable(privilegesRequired);
             return this;
         }
-
         public Builder scope(@Nullable Output<CVSSScope> scope) {
             this.scope = scope;
             return this;
         }
-
         public Builder scope(@Nullable CVSSScope scope) {
             this.scope = Output.ofNullable(scope);
             return this;
         }
-
         public Builder userInteraction(@Nullable Output<CVSSUserInteraction> userInteraction) {
             this.userInteraction = userInteraction;
             return this;
         }
-
         public Builder userInteraction(@Nullable CVSSUserInteraction userInteraction) {
             this.userInteraction = Output.ofNullable(userInteraction);
             return this;
-        }
-        public CVSSArgs build() {
+        }        public CVSSArgs build() {
             return new CVSSArgs(attackComplexity, attackVector, authentication, availabilityImpact, baseScore, confidentialityImpact, exploitabilityScore, impactScore, integrityImpact, privilegesRequired, scope, userInteraction);
         }
     }

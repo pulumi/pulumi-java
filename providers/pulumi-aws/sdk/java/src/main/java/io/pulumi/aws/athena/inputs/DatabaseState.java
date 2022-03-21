@@ -108,42 +108,34 @@ public final class DatabaseState extends io.pulumi.resources.ResourceArgs {
             this.bucket = bucket;
             return this;
         }
-
         public Builder bucket(@Nullable String bucket) {
             this.bucket = Output.ofNullable(bucket);
             return this;
         }
-
         public Builder encryptionConfiguration(@Nullable Output<DatabaseEncryptionConfigurationGetArgs> encryptionConfiguration) {
             this.encryptionConfiguration = encryptionConfiguration;
             return this;
         }
-
         public Builder encryptionConfiguration(@Nullable DatabaseEncryptionConfigurationGetArgs encryptionConfiguration) {
             this.encryptionConfiguration = Output.ofNullable(encryptionConfiguration);
             return this;
         }
-
         public Builder forceDestroy(@Nullable Output<Boolean> forceDestroy) {
             this.forceDestroy = forceDestroy;
             return this;
         }
-
         public Builder forceDestroy(@Nullable Boolean forceDestroy) {
             this.forceDestroy = Output.ofNullable(forceDestroy);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
-        }
-        public DatabaseState build() {
+        }        public DatabaseState build() {
             return new DatabaseState(bucket, encryptionConfiguration, forceDestroy, name);
         }
     }

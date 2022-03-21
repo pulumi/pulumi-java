@@ -106,22 +106,18 @@ public final class ProjectBuildBatchConfig {
             this.combineArtifacts = combineArtifacts;
             return this;
         }
-
         public Builder restrictions(@Nullable ProjectBuildBatchConfigRestrictions restrictions) {
             this.restrictions = restrictions;
             return this;
         }
-
         public Builder serviceRole(String serviceRole) {
             this.serviceRole = Objects.requireNonNull(serviceRole);
             return this;
         }
-
         public Builder timeoutInMins(@Nullable Integer timeoutInMins) {
             this.timeoutInMins = timeoutInMins;
             return this;
-        }
-        public ProjectBuildBatchConfig build() {
+        }        public ProjectBuildBatchConfig build() {
             return new ProjectBuildBatchConfig(combineArtifacts, restrictions, serviceRole, timeoutInMins);
         }
     }

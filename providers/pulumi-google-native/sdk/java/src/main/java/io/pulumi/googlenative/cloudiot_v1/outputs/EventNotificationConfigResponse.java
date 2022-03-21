@@ -69,12 +69,10 @@ public final class EventNotificationConfigResponse {
             this.pubsubTopicName = Objects.requireNonNull(pubsubTopicName);
             return this;
         }
-
         public Builder subfolderMatches(String subfolderMatches) {
             this.subfolderMatches = Objects.requireNonNull(subfolderMatches);
             return this;
-        }
-        public EventNotificationConfigResponse build() {
+        }        public EventNotificationConfigResponse build() {
             return new EventNotificationConfigResponse(pubsubTopicName, subfolderMatches);
         }
     }

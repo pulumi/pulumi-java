@@ -266,72 +266,61 @@ public final class GetRegionAutoscalerResult {
             this.autoscalingPolicy = Objects.requireNonNull(autoscalingPolicy);
             return this;
         }
-
         public Builder creationTimestamp(String creationTimestamp) {
             this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder recommendedSize(Integer recommendedSize) {
             this.recommendedSize = Objects.requireNonNull(recommendedSize);
             return this;
         }
-
         public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
-
         public Builder scalingScheduleStatus(Map<String,String> scalingScheduleStatus) {
             this.scalingScheduleStatus = Objects.requireNonNull(scalingScheduleStatus);
             return this;
         }
-
         public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
-
         public Builder selfLinkWithId(String selfLinkWithId) {
             this.selfLinkWithId = Objects.requireNonNull(selfLinkWithId);
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder statusDetails(List<AutoscalerStatusDetailsResponse> statusDetails) {
             this.statusDetails = Objects.requireNonNull(statusDetails);
             return this;
         }
-
+        public Builder statusDetails(AutoscalerStatusDetailsResponse... statusDetails) {
+            return statusDetails(List.of(statusDetails));
+        }
         public Builder target(String target) {
             this.target = Objects.requireNonNull(target);
             return this;
         }
-
         public Builder zone(String zone) {
             this.zone = Objects.requireNonNull(zone);
             return this;
-        }
-        public GetRegionAutoscalerResult build() {
+        }        public GetRegionAutoscalerResult build() {
             return new GetRegionAutoscalerResult(autoscalingPolicy, creationTimestamp, description, kind, name, recommendedSize, region, scalingScheduleStatus, selfLink, selfLinkWithId, status, statusDetails, target, zone);
         }
     }

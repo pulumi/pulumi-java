@@ -201,52 +201,45 @@ public final class GetPrefixResult {
             this.errorMessage = Objects.requireNonNull(errorMessage);
             return this;
         }
-
         public Builder events(List<PeeringServicePrefixEventResponse> events) {
             this.events = Objects.requireNonNull(events);
             return this;
         }
-
+        public Builder events(PeeringServicePrefixEventResponse... events) {
+            return events(List.of(events));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder learnedType(String learnedType) {
             this.learnedType = Objects.requireNonNull(learnedType);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder peeringServicePrefixKey(@Nullable String peeringServicePrefixKey) {
             this.peeringServicePrefixKey = peeringServicePrefixKey;
             return this;
         }
-
         public Builder prefix(@Nullable String prefix) {
             this.prefix = prefix;
             return this;
         }
-
         public Builder prefixValidationState(String prefixValidationState) {
             this.prefixValidationState = Objects.requireNonNull(prefixValidationState);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetPrefixResult build() {
+        }        public GetPrefixResult build() {
             return new GetPrefixResult(errorMessage, events, id, learnedType, name, peeringServicePrefixKey, prefix, prefixValidationState, provisioningState, type);
         }
     }

@@ -182,82 +182,69 @@ public final class AssetItemArgs extends io.pulumi.resources.ResourceArgs {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder inputPorts(@Nullable Output<Map<String,InputPortArgs>> inputPorts) {
             this.inputPorts = inputPorts;
             return this;
         }
-
         public Builder inputPorts(@Nullable Map<String,InputPortArgs> inputPorts) {
             this.inputPorts = Output.ofNullable(inputPorts);
             return this;
         }
-
         public Builder locationInfo(Output<BlobLocationArgs> locationInfo) {
             this.locationInfo = Objects.requireNonNull(locationInfo);
             return this;
         }
-
         public Builder locationInfo(BlobLocationArgs locationInfo) {
             this.locationInfo = Output.of(Objects.requireNonNull(locationInfo));
             return this;
         }
-
         public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder metadata(@Nullable Map<String,String> metadata) {
             this.metadata = Output.ofNullable(metadata);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder outputPorts(@Nullable Output<Map<String,OutputPortArgs>> outputPorts) {
             this.outputPorts = outputPorts;
             return this;
         }
-
         public Builder outputPorts(@Nullable Map<String,OutputPortArgs> outputPorts) {
             this.outputPorts = Output.ofNullable(outputPorts);
             return this;
         }
-
         public Builder parameters(@Nullable Output<List<ModuleAssetParameterArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder parameters(@Nullable List<ModuleAssetParameterArgs> parameters) {
             this.parameters = Output.ofNullable(parameters);
             return this;
         }
-
+        public Builder parameters(ModuleAssetParameterArgs... parameters) {
+            return parameters(List.of(parameters));
+        }
         public Builder type(Output<Either<String,AssetType>> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(Either<String,AssetType> type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public AssetItemArgs build() {
+        }        public AssetItemArgs build() {
             return new AssetItemArgs(id, inputPorts, locationInfo, metadata, name, outputPorts, parameters, type);
         }
     }

@@ -110,22 +110,18 @@ public final class PublisherInfoResponse extends io.pulumi.resources.InvokeArgs 
             this.binaryName = binaryName;
             return this;
         }
-
         public Builder productName(@Nullable String productName) {
             this.productName = productName;
             return this;
         }
-
         public Builder publisherName(@Nullable String publisherName) {
             this.publisherName = publisherName;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = version;
             return this;
-        }
-        public PublisherInfoResponse build() {
+        }        public PublisherInfoResponse build() {
             return new PublisherInfoResponse(binaryName, productName, publisherName, version);
         }
     }

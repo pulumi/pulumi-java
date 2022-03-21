@@ -52,12 +52,10 @@ public final class SpotFleetInstanceIpv6AddressArgs extends io.pulumi.resources.
             this.ipv6Address = Objects.requireNonNull(ipv6Address);
             return this;
         }
-
         public Builder ipv6Address(String ipv6Address) {
             this.ipv6Address = Output.of(Objects.requireNonNull(ipv6Address));
             return this;
-        }
-        public SpotFleetInstanceIpv6AddressArgs build() {
+        }        public SpotFleetInstanceIpv6AddressArgs build() {
             return new SpotFleetInstanceIpv6AddressArgs(ipv6Address);
         }
     }

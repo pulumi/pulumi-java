@@ -87,17 +87,14 @@ public final class GetPublicTypeVersionResult {
             this.publicTypeArn = publicTypeArn;
             return this;
         }
-
         public Builder publisherId(@Nullable String publisherId) {
             this.publisherId = publisherId;
             return this;
         }
-
         public Builder typeVersionArn(@Nullable String typeVersionArn) {
             this.typeVersionArn = typeVersionArn;
             return this;
-        }
-        public GetPublicTypeVersionResult build() {
+        }        public GetPublicTypeVersionResult build() {
             return new GetPublicTypeVersionResult(publicTypeArn, publisherId, typeVersionArn);
         }
     }

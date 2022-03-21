@@ -88,17 +88,14 @@ public final class ListManagedClusterAccessProfileArgs extends io.pulumi.resourc
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceName(String resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
         }
-
         public Builder roleName(String roleName) {
             this.roleName = Objects.requireNonNull(roleName);
             return this;
-        }
-        public ListManagedClusterAccessProfileArgs build() {
+        }        public ListManagedClusterAccessProfileArgs build() {
             return new ListManagedClusterAccessProfileArgs(resourceGroupName, resourceName, roleName);
         }
     }

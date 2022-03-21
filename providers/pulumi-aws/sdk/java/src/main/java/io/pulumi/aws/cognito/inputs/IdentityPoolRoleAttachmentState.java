@@ -93,32 +93,29 @@ public final class IdentityPoolRoleAttachmentState extends io.pulumi.resources.R
             this.identityPoolId = identityPoolId;
             return this;
         }
-
         public Builder identityPoolId(@Nullable String identityPoolId) {
             this.identityPoolId = Output.ofNullable(identityPoolId);
             return this;
         }
-
         public Builder roleMappings(@Nullable Output<List<IdentityPoolRoleAttachmentRoleMappingGetArgs>> roleMappings) {
             this.roleMappings = roleMappings;
             return this;
         }
-
         public Builder roleMappings(@Nullable List<IdentityPoolRoleAttachmentRoleMappingGetArgs> roleMappings) {
             this.roleMappings = Output.ofNullable(roleMappings);
             return this;
         }
-
+        public Builder roleMappings(IdentityPoolRoleAttachmentRoleMappingGetArgs... roleMappings) {
+            return roleMappings(List.of(roleMappings));
+        }
         public Builder roles(@Nullable Output<Map<String,String>> roles) {
             this.roles = roles;
             return this;
         }
-
         public Builder roles(@Nullable Map<String,String> roles) {
             this.roles = Output.ofNullable(roles);
             return this;
-        }
-        public IdentityPoolRoleAttachmentState build() {
+        }        public IdentityPoolRoleAttachmentState build() {
             return new IdentityPoolRoleAttachmentState(identityPoolId, roleMappings, roles);
         }
     }

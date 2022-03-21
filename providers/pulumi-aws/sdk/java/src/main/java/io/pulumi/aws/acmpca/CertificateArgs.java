@@ -123,52 +123,42 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
             this.certificateAuthorityArn = Objects.requireNonNull(certificateAuthorityArn);
             return this;
         }
-
         public Builder certificateAuthorityArn(String certificateAuthorityArn) {
             this.certificateAuthorityArn = Output.of(Objects.requireNonNull(certificateAuthorityArn));
             return this;
         }
-
         public Builder certificateSigningRequest(Output<String> certificateSigningRequest) {
             this.certificateSigningRequest = Objects.requireNonNull(certificateSigningRequest);
             return this;
         }
-
         public Builder certificateSigningRequest(String certificateSigningRequest) {
             this.certificateSigningRequest = Output.of(Objects.requireNonNull(certificateSigningRequest));
             return this;
         }
-
         public Builder signingAlgorithm(Output<String> signingAlgorithm) {
             this.signingAlgorithm = Objects.requireNonNull(signingAlgorithm);
             return this;
         }
-
         public Builder signingAlgorithm(String signingAlgorithm) {
             this.signingAlgorithm = Output.of(Objects.requireNonNull(signingAlgorithm));
             return this;
         }
-
         public Builder templateArn(@Nullable Output<String> templateArn) {
             this.templateArn = templateArn;
             return this;
         }
-
         public Builder templateArn(@Nullable String templateArn) {
             this.templateArn = Output.ofNullable(templateArn);
             return this;
         }
-
         public Builder validity(Output<CertificateValidityArgs> validity) {
             this.validity = Objects.requireNonNull(validity);
             return this;
         }
-
         public Builder validity(CertificateValidityArgs validity) {
             this.validity = Output.of(Objects.requireNonNull(validity));
             return this;
-        }
-        public CertificateArgs build() {
+        }        public CertificateArgs build() {
             return new CertificateArgs(certificateAuthorityArn, certificateSigningRequest, signingAlgorithm, templateArn, validity);
         }
     }

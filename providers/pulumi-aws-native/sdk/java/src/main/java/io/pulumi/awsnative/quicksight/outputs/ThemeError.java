@@ -64,12 +64,10 @@ public final class ThemeError {
             this.message = message;
             return this;
         }
-
         public Builder type(@Nullable ThemeErrorType type) {
             this.type = type;
             return this;
-        }
-        public ThemeError build() {
+        }        public ThemeError build() {
             return new ThemeError(message, type);
         }
     }

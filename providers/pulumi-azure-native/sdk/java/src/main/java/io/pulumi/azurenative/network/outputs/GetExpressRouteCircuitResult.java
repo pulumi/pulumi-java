@@ -385,107 +385,92 @@ public final class GetExpressRouteCircuitResult {
             this.allowClassicOperations = allowClassicOperations;
             return this;
         }
-
         public Builder authorizations(@Nullable List<ExpressRouteCircuitAuthorizationResponse> authorizations) {
             this.authorizations = authorizations;
             return this;
         }
-
+        public Builder authorizations(ExpressRouteCircuitAuthorizationResponse... authorizations) {
+            return authorizations(List.of(authorizations));
+        }
         public Builder bandwidthInGbps(@Nullable Double bandwidthInGbps) {
             this.bandwidthInGbps = bandwidthInGbps;
             return this;
         }
-
         public Builder circuitProvisioningState(@Nullable String circuitProvisioningState) {
             this.circuitProvisioningState = circuitProvisioningState;
             return this;
         }
-
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder expressRoutePort(@Nullable SubResourceResponse expressRoutePort) {
             this.expressRoutePort = expressRoutePort;
             return this;
         }
-
         public Builder gatewayManagerEtag(@Nullable String gatewayManagerEtag) {
             this.gatewayManagerEtag = gatewayManagerEtag;
             return this;
         }
-
         public Builder globalReachEnabled(@Nullable Boolean globalReachEnabled) {
             this.globalReachEnabled = globalReachEnabled;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder peerings(@Nullable List<ExpressRouteCircuitPeeringResponse> peerings) {
             this.peerings = peerings;
             return this;
         }
-
+        public Builder peerings(ExpressRouteCircuitPeeringResponse... peerings) {
+            return peerings(List.of(peerings));
+        }
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder serviceKey(@Nullable String serviceKey) {
             this.serviceKey = serviceKey;
             return this;
         }
-
         public Builder serviceProviderNotes(@Nullable String serviceProviderNotes) {
             this.serviceProviderNotes = serviceProviderNotes;
             return this;
         }
-
         public Builder serviceProviderProperties(@Nullable ExpressRouteCircuitServiceProviderPropertiesResponse serviceProviderProperties) {
             this.serviceProviderProperties = serviceProviderProperties;
             return this;
         }
-
         public Builder serviceProviderProvisioningState(@Nullable String serviceProviderProvisioningState) {
             this.serviceProviderProvisioningState = serviceProviderProvisioningState;
             return this;
         }
-
         public Builder sku(@Nullable ExpressRouteCircuitSkuResponse sku) {
             this.sku = sku;
             return this;
         }
-
         public Builder stag(Integer stag) {
             this.stag = Objects.requireNonNull(stag);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetExpressRouteCircuitResult build() {
+        }        public GetExpressRouteCircuitResult build() {
             return new GetExpressRouteCircuitResult(allowClassicOperations, authorizations, bandwidthInGbps, circuitProvisioningState, etag, expressRoutePort, gatewayManagerEtag, globalReachEnabled, id, location, name, peerings, provisioningState, serviceKey, serviceProviderNotes, serviceProviderProperties, serviceProviderProvisioningState, sku, stag, tags, type);
         }
     }

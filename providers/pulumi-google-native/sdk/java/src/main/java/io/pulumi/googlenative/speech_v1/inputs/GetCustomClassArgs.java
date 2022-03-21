@@ -78,17 +78,14 @@ public final class GetCustomClassArgs extends io.pulumi.resources.InvokeArgs {
             this.customClassId = Objects.requireNonNull(customClassId);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetCustomClassArgs build() {
+        }        public GetCustomClassArgs build() {
             return new GetCustomClassArgs(customClassId, location, project);
         }
     }

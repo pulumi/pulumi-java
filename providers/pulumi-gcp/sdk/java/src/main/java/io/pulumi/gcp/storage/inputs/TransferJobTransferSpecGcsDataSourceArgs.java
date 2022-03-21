@@ -74,22 +74,18 @@ public final class TransferJobTransferSpecGcsDataSourceArgs extends io.pulumi.re
             this.bucketName = Objects.requireNonNull(bucketName);
             return this;
         }
-
         public Builder bucketName(String bucketName) {
             this.bucketName = Output.of(Objects.requireNonNull(bucketName));
             return this;
         }
-
         public Builder path(@Nullable Output<String> path) {
             this.path = path;
             return this;
         }
-
         public Builder path(@Nullable String path) {
             this.path = Output.ofNullable(path);
             return this;
-        }
-        public TransferJobTransferSpecGcsDataSourceArgs build() {
+        }        public TransferJobTransferSpecGcsDataSourceArgs build() {
             return new TransferJobTransferSpecGcsDataSourceArgs(bucketName, path);
         }
     }

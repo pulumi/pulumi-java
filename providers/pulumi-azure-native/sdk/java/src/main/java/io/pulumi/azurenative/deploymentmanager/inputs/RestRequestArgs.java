@@ -97,32 +97,26 @@ public final class RestRequestArgs extends io.pulumi.resources.ResourceArgs {
             this.authentication = Objects.requireNonNull(authentication);
             return this;
         }
-
         public Builder authentication(Either<ApiKeyAuthenticationArgs,RolloutIdentityAuthenticationArgs> authentication) {
             this.authentication = Output.of(Objects.requireNonNull(authentication));
             return this;
         }
-
         public Builder method(Output<RestRequestMethod> method) {
             this.method = Objects.requireNonNull(method);
             return this;
         }
-
         public Builder method(RestRequestMethod method) {
             this.method = Output.of(Objects.requireNonNull(method));
             return this;
         }
-
         public Builder uri(Output<String> uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public Builder uri(String uri) {
             this.uri = Output.of(Objects.requireNonNull(uri));
             return this;
-        }
-        public RestRequestArgs build() {
+        }        public RestRequestArgs build() {
             return new RestRequestArgs(authentication, method, uri);
         }
     }

@@ -119,27 +119,22 @@ public final class DocumentationPartLocation {
             this.method = method;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder path(@Nullable String path) {
             this.path = path;
             return this;
         }
-
         public Builder statusCode(@Nullable String statusCode) {
             this.statusCode = statusCode;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public DocumentationPartLocation build() {
+        }        public DocumentationPartLocation build() {
             return new DocumentationPartLocation(method, name, path, statusCode, type);
         }
     }

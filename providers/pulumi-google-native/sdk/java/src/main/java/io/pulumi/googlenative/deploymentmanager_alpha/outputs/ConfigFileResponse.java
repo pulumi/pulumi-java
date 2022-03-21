@@ -51,8 +51,7 @@ public final class ConfigFileResponse {
         public Builder content(String content) {
             this.content = Objects.requireNonNull(content);
             return this;
-        }
-        public ConfigFileResponse build() {
+        }        public ConfigFileResponse build() {
             return new ConfigFileResponse(content);
         }
     }

@@ -62,12 +62,13 @@ public final class AggregationRuleArgs extends io.pulumi.resources.ResourceArgs 
             this.clusterRoleSelectors = clusterRoleSelectors;
             return this;
         }
-
         public Builder clusterRoleSelectors(@Nullable List<LabelSelectorArgs> clusterRoleSelectors) {
             this.clusterRoleSelectors = Output.ofNullable(clusterRoleSelectors);
             return this;
         }
-        public AggregationRuleArgs build() {
+        public Builder clusterRoleSelectors(LabelSelectorArgs... clusterRoleSelectors) {
+            return clusterRoleSelectors(List.of(clusterRoleSelectors));
+        }        public AggregationRuleArgs build() {
             return new AggregationRuleArgs(clusterRoleSelectors);
         }
     }

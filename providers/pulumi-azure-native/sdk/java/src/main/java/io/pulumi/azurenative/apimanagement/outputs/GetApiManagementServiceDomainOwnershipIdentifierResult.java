@@ -51,8 +51,7 @@ public final class GetApiManagementServiceDomainOwnershipIdentifierResult {
         public Builder domainOwnershipIdentifier(String domainOwnershipIdentifier) {
             this.domainOwnershipIdentifier = Objects.requireNonNull(domainOwnershipIdentifier);
             return this;
-        }
-        public GetApiManagementServiceDomainOwnershipIdentifierResult build() {
+        }        public GetApiManagementServiceDomainOwnershipIdentifierResult build() {
             return new GetApiManagementServiceDomainOwnershipIdentifierResult(domainOwnershipIdentifier);
         }
     }

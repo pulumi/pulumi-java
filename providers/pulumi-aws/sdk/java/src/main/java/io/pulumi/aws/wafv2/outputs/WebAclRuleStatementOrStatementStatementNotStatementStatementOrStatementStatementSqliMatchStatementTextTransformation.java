@@ -70,12 +70,10 @@ public final class WebAclRuleStatementOrStatementStatementNotStatementStatementO
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public WebAclRuleStatementOrStatementStatementNotStatementStatementOrStatementStatementSqliMatchStatementTextTransformation build() {
+        }        public WebAclRuleStatementOrStatementStatementNotStatementStatementOrStatementStatementSqliMatchStatementTextTransformation build() {
             return new WebAclRuleStatementOrStatementStatementNotStatementStatementOrStatementStatementSqliMatchStatementTextTransformation(priority, type);
         }
     }

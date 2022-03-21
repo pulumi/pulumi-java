@@ -115,42 +115,37 @@ public final class LastAccessTimeTrackingPolicyArgs extends io.pulumi.resources.
             this.blobType = blobType;
             return this;
         }
-
         public Builder blobType(@Nullable List<String> blobType) {
             this.blobType = Output.ofNullable(blobType);
             return this;
         }
-
+        public Builder blobType(String... blobType) {
+            return blobType(List.of(blobType));
+        }
         public Builder enable(Output<Boolean> enable) {
             this.enable = Objects.requireNonNull(enable);
             return this;
         }
-
         public Builder enable(Boolean enable) {
             this.enable = Output.of(Objects.requireNonNull(enable));
             return this;
         }
-
         public Builder name(@Nullable Output<Either<String,Name>> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable Either<String,Name> name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder trackingGranularityInDays(@Nullable Output<Integer> trackingGranularityInDays) {
             this.trackingGranularityInDays = trackingGranularityInDays;
             return this;
         }
-
         public Builder trackingGranularityInDays(@Nullable Integer trackingGranularityInDays) {
             this.trackingGranularityInDays = Output.ofNullable(trackingGranularityInDays);
             return this;
-        }
-        public LastAccessTimeTrackingPolicyArgs build() {
+        }        public LastAccessTimeTrackingPolicyArgs build() {
             return new LastAccessTimeTrackingPolicyArgs(blobType, enable, name, trackingGranularityInDays);
         }
     }

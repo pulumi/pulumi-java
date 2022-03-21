@@ -95,32 +95,26 @@ public final class ResourceLimitsArgs extends io.pulumi.resources.ResourceArgs {
             this.cpu = cpu;
             return this;
         }
-
         public Builder cpu(@Nullable Double cpu) {
             this.cpu = Output.ofNullable(cpu);
             return this;
         }
-
         public Builder gpu(@Nullable Output<GpuResourceArgs> gpu) {
             this.gpu = gpu;
             return this;
         }
-
         public Builder gpu(@Nullable GpuResourceArgs gpu) {
             this.gpu = Output.ofNullable(gpu);
             return this;
         }
-
         public Builder memoryInGB(@Nullable Output<Double> memoryInGB) {
             this.memoryInGB = memoryInGB;
             return this;
         }
-
         public Builder memoryInGB(@Nullable Double memoryInGB) {
             this.memoryInGB = Output.ofNullable(memoryInGB);
             return this;
-        }
-        public ResourceLimitsArgs build() {
+        }        public ResourceLimitsArgs build() {
             return new ResourceLimitsArgs(cpu, gpu, memoryInGB);
         }
     }

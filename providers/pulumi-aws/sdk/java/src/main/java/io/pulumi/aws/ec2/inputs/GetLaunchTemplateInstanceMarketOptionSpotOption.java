@@ -101,27 +101,22 @@ public final class GetLaunchTemplateInstanceMarketOptionSpotOption extends io.pu
             this.blockDurationMinutes = Objects.requireNonNull(blockDurationMinutes);
             return this;
         }
-
         public Builder instanceInterruptionBehavior(String instanceInterruptionBehavior) {
             this.instanceInterruptionBehavior = Objects.requireNonNull(instanceInterruptionBehavior);
             return this;
         }
-
         public Builder maxPrice(String maxPrice) {
             this.maxPrice = Objects.requireNonNull(maxPrice);
             return this;
         }
-
         public Builder spotInstanceType(String spotInstanceType) {
             this.spotInstanceType = Objects.requireNonNull(spotInstanceType);
             return this;
         }
-
         public Builder validUntil(String validUntil) {
             this.validUntil = Objects.requireNonNull(validUntil);
             return this;
-        }
-        public GetLaunchTemplateInstanceMarketOptionSpotOption build() {
+        }        public GetLaunchTemplateInstanceMarketOptionSpotOption build() {
             return new GetLaunchTemplateInstanceMarketOptionSpotOption(blockDurationMinutes, instanceInterruptionBehavior, maxPrice, spotInstanceType, validUntil);
         }
     }

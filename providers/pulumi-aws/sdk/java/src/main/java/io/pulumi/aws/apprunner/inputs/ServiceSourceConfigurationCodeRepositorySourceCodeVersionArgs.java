@@ -73,22 +73,18 @@ public final class ServiceSourceConfigurationCodeRepositorySourceCodeVersionArgs
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
-
         public Builder value(Output<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Output.of(Objects.requireNonNull(value));
             return this;
-        }
-        public ServiceSourceConfigurationCodeRepositorySourceCodeVersionArgs build() {
+        }        public ServiceSourceConfigurationCodeRepositorySourceCodeVersionArgs build() {
             return new ServiceSourceConfigurationCodeRepositorySourceCodeVersionArgs(type, value);
         }
     }

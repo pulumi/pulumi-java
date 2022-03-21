@@ -71,12 +71,13 @@ public final class ServiceSpecResponse {
             this.template = Objects.requireNonNull(template);
             return this;
         }
-
         public Builder traffic(List<TrafficTargetResponse> traffic) {
             this.traffic = Objects.requireNonNull(traffic);
             return this;
         }
-        public ServiceSpecResponse build() {
+        public Builder traffic(TrafficTargetResponse... traffic) {
+            return traffic(List.of(traffic));
+        }        public ServiceSpecResponse build() {
             return new ServiceSpecResponse(template, traffic);
         }
     }

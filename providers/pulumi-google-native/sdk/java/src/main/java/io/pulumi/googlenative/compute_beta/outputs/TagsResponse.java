@@ -70,12 +70,13 @@ public final class TagsResponse {
             this.fingerprint = Objects.requireNonNull(fingerprint);
             return this;
         }
-
         public Builder items(List<String> items) {
             this.items = Objects.requireNonNull(items);
             return this;
         }
-        public TagsResponse build() {
+        public Builder items(String... items) {
+            return items(List.of(items));
+        }        public TagsResponse build() {
             return new TagsResponse(fingerprint, items);
         }
     }

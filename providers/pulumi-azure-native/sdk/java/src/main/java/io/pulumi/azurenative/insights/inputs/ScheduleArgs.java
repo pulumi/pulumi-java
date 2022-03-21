@@ -77,22 +77,18 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
             this.frequencyInMinutes = Objects.requireNonNull(frequencyInMinutes);
             return this;
         }
-
         public Builder frequencyInMinutes(Integer frequencyInMinutes) {
             this.frequencyInMinutes = Output.of(Objects.requireNonNull(frequencyInMinutes));
             return this;
         }
-
         public Builder timeWindowInMinutes(Output<Integer> timeWindowInMinutes) {
             this.timeWindowInMinutes = Objects.requireNonNull(timeWindowInMinutes);
             return this;
         }
-
         public Builder timeWindowInMinutes(Integer timeWindowInMinutes) {
             this.timeWindowInMinutes = Output.of(Objects.requireNonNull(timeWindowInMinutes));
             return this;
-        }
-        public ScheduleArgs build() {
+        }        public ScheduleArgs build() {
             return new ScheduleArgs(frequencyInMinutes, timeWindowInMinutes);
         }
     }

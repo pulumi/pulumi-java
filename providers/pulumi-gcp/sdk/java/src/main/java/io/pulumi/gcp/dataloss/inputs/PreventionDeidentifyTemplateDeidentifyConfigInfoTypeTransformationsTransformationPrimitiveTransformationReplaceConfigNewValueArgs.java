@@ -179,82 +179,66 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
             this.booleanValue = booleanValue;
             return this;
         }
-
         public Builder booleanValue(@Nullable Boolean booleanValue) {
             this.booleanValue = Output.ofNullable(booleanValue);
             return this;
         }
-
         public Builder dateValue(@Nullable Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValueDateValueArgs> dateValue) {
             this.dateValue = dateValue;
             return this;
         }
-
         public Builder dateValue(@Nullable PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValueDateValueArgs dateValue) {
             this.dateValue = Output.ofNullable(dateValue);
             return this;
         }
-
         public Builder dayOfWeekValue(@Nullable Output<String> dayOfWeekValue) {
             this.dayOfWeekValue = dayOfWeekValue;
             return this;
         }
-
         public Builder dayOfWeekValue(@Nullable String dayOfWeekValue) {
             this.dayOfWeekValue = Output.ofNullable(dayOfWeekValue);
             return this;
         }
-
         public Builder floatValue(@Nullable Output<Double> floatValue) {
             this.floatValue = floatValue;
             return this;
         }
-
         public Builder floatValue(@Nullable Double floatValue) {
             this.floatValue = Output.ofNullable(floatValue);
             return this;
         }
-
         public Builder integerValue(@Nullable Output<Integer> integerValue) {
             this.integerValue = integerValue;
             return this;
         }
-
         public Builder integerValue(@Nullable Integer integerValue) {
             this.integerValue = Output.ofNullable(integerValue);
             return this;
         }
-
         public Builder stringValue(@Nullable Output<String> stringValue) {
             this.stringValue = stringValue;
             return this;
         }
-
         public Builder stringValue(@Nullable String stringValue) {
             this.stringValue = Output.ofNullable(stringValue);
             return this;
         }
-
         public Builder timeValue(@Nullable Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValueTimeValueArgs> timeValue) {
             this.timeValue = timeValue;
             return this;
         }
-
         public Builder timeValue(@Nullable PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValueTimeValueArgs timeValue) {
             this.timeValue = Output.ofNullable(timeValue);
             return this;
         }
-
         public Builder timestampValue(@Nullable Output<String> timestampValue) {
             this.timestampValue = timestampValue;
             return this;
         }
-
         public Builder timestampValue(@Nullable String timestampValue) {
             this.timestampValue = Output.ofNullable(timestampValue);
             return this;
-        }
-        public PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValueArgs build() {
+        }        public PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValueArgs build() {
             return new PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValueArgs(booleanValue, dateValue, dayOfWeekValue, floatValue, integerValue, stringValue, timeValue, timestampValue);
         }
     }

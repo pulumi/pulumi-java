@@ -89,32 +89,26 @@ public final class SchemaVersionMetadataArgs extends io.pulumi.resources.Resourc
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder key(String key) {
             this.key = Output.of(Objects.requireNonNull(key));
             return this;
         }
-
         public Builder schemaVersionId(Output<String> schemaVersionId) {
             this.schemaVersionId = Objects.requireNonNull(schemaVersionId);
             return this;
         }
-
         public Builder schemaVersionId(String schemaVersionId) {
             this.schemaVersionId = Output.of(Objects.requireNonNull(schemaVersionId));
             return this;
         }
-
         public Builder value(Output<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Output.of(Objects.requireNonNull(value));
             return this;
-        }
-        public SchemaVersionMetadataArgs build() {
+        }        public SchemaVersionMetadataArgs build() {
             return new SchemaVersionMetadataArgs(key, schemaVersionId, value);
         }
     }

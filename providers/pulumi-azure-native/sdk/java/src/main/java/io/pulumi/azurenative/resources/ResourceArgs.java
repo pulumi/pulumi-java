@@ -255,132 +255,106 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
             this.identity = identity;
             return this;
         }
-
         public Builder identity(@Nullable IdentityArgs identity) {
             this.identity = Output.ofNullable(identity);
             return this;
         }
-
         public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder managedBy(@Nullable Output<String> managedBy) {
             this.managedBy = managedBy;
             return this;
         }
-
         public Builder managedBy(@Nullable String managedBy) {
             this.managedBy = Output.ofNullable(managedBy);
             return this;
         }
-
         public Builder parentResourcePath(Output<String> parentResourcePath) {
             this.parentResourcePath = Objects.requireNonNull(parentResourcePath);
             return this;
         }
-
         public Builder parentResourcePath(String parentResourcePath) {
             this.parentResourcePath = Output.of(Objects.requireNonNull(parentResourcePath));
             return this;
         }
-
         public Builder plan(@Nullable Output<PlanArgs> plan) {
             this.plan = plan;
             return this;
         }
-
         public Builder plan(@Nullable PlanArgs plan) {
             this.plan = Output.ofNullable(plan);
             return this;
         }
-
         public Builder properties(@Nullable Output<Object> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder properties(@Nullable Object properties) {
             this.properties = Output.ofNullable(properties);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder resourceName(@Nullable Output<String> resourceName) {
             this.resourceName = resourceName;
             return this;
         }
-
         public Builder resourceName(@Nullable String resourceName) {
             this.resourceName = Output.ofNullable(resourceName);
             return this;
         }
-
         public Builder resourceProviderNamespace(Output<String> resourceProviderNamespace) {
             this.resourceProviderNamespace = Objects.requireNonNull(resourceProviderNamespace);
             return this;
         }
-
         public Builder resourceProviderNamespace(String resourceProviderNamespace) {
             this.resourceProviderNamespace = Output.of(Objects.requireNonNull(resourceProviderNamespace));
             return this;
         }
-
         public Builder resourceType(Output<String> resourceType) {
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
         }
-
         public Builder resourceType(String resourceType) {
             this.resourceType = Output.of(Objects.requireNonNull(resourceType));
             return this;
         }
-
         public Builder sku(@Nullable Output<SkuArgs> sku) {
             this.sku = sku;
             return this;
         }
-
         public Builder sku(@Nullable SkuArgs sku) {
             this.sku = Output.ofNullable(sku);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public ResourceArgs build() {
+        }        public ResourceArgs build() {
             return new ResourceArgs(identity, kind, location, managedBy, parentResourcePath, plan, properties, resourceGroupName, resourceName, resourceProviderNamespace, resourceType, sku, tags);
         }
     }

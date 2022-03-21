@@ -78,12 +78,10 @@ public final class LinkedWorkspacePropsResponse extends io.pulumi.resources.Invo
             this.linkedWorkspaceResourceId = linkedWorkspaceResourceId;
             return this;
         }
-
         public Builder userAssignedIdentityResourceId(@Nullable String userAssignedIdentityResourceId) {
             this.userAssignedIdentityResourceId = userAssignedIdentityResourceId;
             return this;
-        }
-        public LinkedWorkspacePropsResponse build() {
+        }        public LinkedWorkspacePropsResponse build() {
             return new LinkedWorkspacePropsResponse(linkedWorkspaceResourceId, userAssignedIdentityResourceId);
         }
     }

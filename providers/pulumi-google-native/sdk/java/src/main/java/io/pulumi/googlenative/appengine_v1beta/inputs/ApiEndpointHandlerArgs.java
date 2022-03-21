@@ -61,12 +61,10 @@ public final class ApiEndpointHandlerArgs extends io.pulumi.resources.ResourceAr
             this.scriptPath = scriptPath;
             return this;
         }
-
         public Builder scriptPath(@Nullable String scriptPath) {
             this.scriptPath = Output.ofNullable(scriptPath);
             return this;
-        }
-        public ApiEndpointHandlerArgs build() {
+        }        public ApiEndpointHandlerArgs build() {
             return new ApiEndpointHandlerArgs(scriptPath);
         }
     }

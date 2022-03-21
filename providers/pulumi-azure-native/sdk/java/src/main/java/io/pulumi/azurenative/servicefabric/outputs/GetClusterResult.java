@@ -573,152 +573,140 @@ public final class GetClusterResult {
             this.addOnFeatures = addOnFeatures;
             return this;
         }
-
+        public Builder addOnFeatures(String... addOnFeatures) {
+            return addOnFeatures(List.of(addOnFeatures));
+        }
         public Builder applicationTypeVersionsCleanupPolicy(@Nullable ApplicationTypeVersionsCleanupPolicyResponse applicationTypeVersionsCleanupPolicy) {
             this.applicationTypeVersionsCleanupPolicy = applicationTypeVersionsCleanupPolicy;
             return this;
         }
-
         public Builder availableClusterVersions(List<ClusterVersionDetailsResponse> availableClusterVersions) {
             this.availableClusterVersions = Objects.requireNonNull(availableClusterVersions);
             return this;
         }
-
+        public Builder availableClusterVersions(ClusterVersionDetailsResponse... availableClusterVersions) {
+            return availableClusterVersions(List.of(availableClusterVersions));
+        }
         public Builder azureActiveDirectory(@Nullable AzureActiveDirectoryResponse azureActiveDirectory) {
             this.azureActiveDirectory = azureActiveDirectory;
             return this;
         }
-
         public Builder certificate(@Nullable CertificateDescriptionResponse certificate) {
             this.certificate = certificate;
             return this;
         }
-
         public Builder certificateCommonNames(@Nullable ServerCertificateCommonNamesResponse certificateCommonNames) {
             this.certificateCommonNames = certificateCommonNames;
             return this;
         }
-
         public Builder clientCertificateCommonNames(@Nullable List<ClientCertificateCommonNameResponse> clientCertificateCommonNames) {
             this.clientCertificateCommonNames = clientCertificateCommonNames;
             return this;
         }
-
+        public Builder clientCertificateCommonNames(ClientCertificateCommonNameResponse... clientCertificateCommonNames) {
+            return clientCertificateCommonNames(List.of(clientCertificateCommonNames));
+        }
         public Builder clientCertificateThumbprints(@Nullable List<ClientCertificateThumbprintResponse> clientCertificateThumbprints) {
             this.clientCertificateThumbprints = clientCertificateThumbprints;
             return this;
         }
-
+        public Builder clientCertificateThumbprints(ClientCertificateThumbprintResponse... clientCertificateThumbprints) {
+            return clientCertificateThumbprints(List.of(clientCertificateThumbprints));
+        }
         public Builder clusterCodeVersion(@Nullable String clusterCodeVersion) {
             this.clusterCodeVersion = clusterCodeVersion;
             return this;
         }
-
         public Builder clusterEndpoint(String clusterEndpoint) {
             this.clusterEndpoint = Objects.requireNonNull(clusterEndpoint);
             return this;
         }
-
         public Builder clusterId(String clusterId) {
             this.clusterId = Objects.requireNonNull(clusterId);
             return this;
         }
-
         public Builder clusterState(String clusterState) {
             this.clusterState = Objects.requireNonNull(clusterState);
             return this;
         }
-
         public Builder diagnosticsStorageAccountConfig(@Nullable DiagnosticsStorageAccountConfigResponse diagnosticsStorageAccountConfig) {
             this.diagnosticsStorageAccountConfig = diagnosticsStorageAccountConfig;
             return this;
         }
-
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder eventStoreServiceEnabled(@Nullable Boolean eventStoreServiceEnabled) {
             this.eventStoreServiceEnabled = eventStoreServiceEnabled;
             return this;
         }
-
         public Builder fabricSettings(@Nullable List<SettingsSectionDescriptionResponse> fabricSettings) {
             this.fabricSettings = fabricSettings;
             return this;
         }
-
+        public Builder fabricSettings(SettingsSectionDescriptionResponse... fabricSettings) {
+            return fabricSettings(List.of(fabricSettings));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder managementEndpoint(String managementEndpoint) {
             this.managementEndpoint = Objects.requireNonNull(managementEndpoint);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder nodeTypes(List<NodeTypeDescriptionResponse> nodeTypes) {
             this.nodeTypes = Objects.requireNonNull(nodeTypes);
             return this;
         }
-
+        public Builder nodeTypes(NodeTypeDescriptionResponse... nodeTypes) {
+            return nodeTypes(List.of(nodeTypes));
+        }
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder reliabilityLevel(@Nullable String reliabilityLevel) {
             this.reliabilityLevel = reliabilityLevel;
             return this;
         }
-
         public Builder reverseProxyCertificate(@Nullable CertificateDescriptionResponse reverseProxyCertificate) {
             this.reverseProxyCertificate = reverseProxyCertificate;
             return this;
         }
-
         public Builder reverseProxyCertificateCommonNames(@Nullable ServerCertificateCommonNamesResponse reverseProxyCertificateCommonNames) {
             this.reverseProxyCertificateCommonNames = reverseProxyCertificateCommonNames;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder upgradeDescription(@Nullable ClusterUpgradePolicyResponse upgradeDescription) {
             this.upgradeDescription = upgradeDescription;
             return this;
         }
-
         public Builder upgradeMode(@Nullable String upgradeMode) {
             this.upgradeMode = upgradeMode;
             return this;
         }
-
         public Builder vmImage(@Nullable String vmImage) {
             this.vmImage = vmImage;
             return this;
-        }
-        public GetClusterResult build() {
+        }        public GetClusterResult build() {
             return new GetClusterResult(addOnFeatures, applicationTypeVersionsCleanupPolicy, availableClusterVersions, azureActiveDirectory, certificate, certificateCommonNames, clientCertificateCommonNames, clientCertificateThumbprints, clusterCodeVersion, clusterEndpoint, clusterId, clusterState, diagnosticsStorageAccountConfig, etag, eventStoreServiceEnabled, fabricSettings, id, location, managementEndpoint, name, nodeTypes, provisioningState, reliabilityLevel, reverseProxyCertificate, reverseProxyCertificateCommonNames, tags, type, upgradeDescription, upgradeMode, vmImage);
         }
     }

@@ -103,42 +103,37 @@ public final class GcpUserAccessBindingArgs extends io.pulumi.resources.Resource
             this.accessLevels = Objects.requireNonNull(accessLevels);
             return this;
         }
-
         public Builder accessLevels(List<String> accessLevels) {
             this.accessLevels = Output.of(Objects.requireNonNull(accessLevels));
             return this;
         }
-
+        public Builder accessLevels(String... accessLevels) {
+            return accessLevels(List.of(accessLevels));
+        }
         public Builder groupKey(Output<String> groupKey) {
             this.groupKey = Objects.requireNonNull(groupKey);
             return this;
         }
-
         public Builder groupKey(String groupKey) {
             this.groupKey = Output.of(Objects.requireNonNull(groupKey));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder organizationId(Output<String> organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }
-
         public Builder organizationId(String organizationId) {
             this.organizationId = Output.of(Objects.requireNonNull(organizationId));
             return this;
-        }
-        public GcpUserAccessBindingArgs build() {
+        }        public GcpUserAccessBindingArgs build() {
             return new GcpUserAccessBindingArgs(accessLevels, groupKey, name, organizationId);
         }
     }

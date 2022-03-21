@@ -74,22 +74,18 @@ public final class ImageBuilderDomainJoinInfoGetArgs extends io.pulumi.resources
             this.directoryName = directoryName;
             return this;
         }
-
         public Builder directoryName(@Nullable String directoryName) {
             this.directoryName = Output.ofNullable(directoryName);
             return this;
         }
-
         public Builder organizationalUnitDistinguishedName(@Nullable Output<String> organizationalUnitDistinguishedName) {
             this.organizationalUnitDistinguishedName = organizationalUnitDistinguishedName;
             return this;
         }
-
         public Builder organizationalUnitDistinguishedName(@Nullable String organizationalUnitDistinguishedName) {
             this.organizationalUnitDistinguishedName = Output.ofNullable(organizationalUnitDistinguishedName);
             return this;
-        }
-        public ImageBuilderDomainJoinInfoGetArgs build() {
+        }        public ImageBuilderDomainJoinInfoGetArgs build() {
             return new ImageBuilderDomainJoinInfoGetArgs(directoryName, organizationalUnitDistinguishedName);
         }
     }

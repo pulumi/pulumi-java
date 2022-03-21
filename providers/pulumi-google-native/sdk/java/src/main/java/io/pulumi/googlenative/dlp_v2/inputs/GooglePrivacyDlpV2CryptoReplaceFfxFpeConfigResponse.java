@@ -144,32 +144,26 @@ public final class GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigResponse extends i
             this.commonAlphabet = Objects.requireNonNull(commonAlphabet);
             return this;
         }
-
         public Builder context(GooglePrivacyDlpV2FieldIdResponse context) {
             this.context = Objects.requireNonNull(context);
             return this;
         }
-
         public Builder cryptoKey(GooglePrivacyDlpV2CryptoKeyResponse cryptoKey) {
             this.cryptoKey = Objects.requireNonNull(cryptoKey);
             return this;
         }
-
         public Builder customAlphabet(String customAlphabet) {
             this.customAlphabet = Objects.requireNonNull(customAlphabet);
             return this;
         }
-
         public Builder radix(Integer radix) {
             this.radix = Objects.requireNonNull(radix);
             return this;
         }
-
         public Builder surrogateInfoType(GooglePrivacyDlpV2InfoTypeResponse surrogateInfoType) {
             this.surrogateInfoType = Objects.requireNonNull(surrogateInfoType);
             return this;
-        }
-        public GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigResponse build() {
+        }        public GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigResponse build() {
             return new GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigResponse(commonAlphabet, context, cryptoKey, customAlphabet, radix, surrogateInfoType);
         }
     }

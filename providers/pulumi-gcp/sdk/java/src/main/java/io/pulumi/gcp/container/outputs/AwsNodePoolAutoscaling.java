@@ -69,12 +69,10 @@ public final class AwsNodePoolAutoscaling {
             this.maxNodeCount = Objects.requireNonNull(maxNodeCount);
             return this;
         }
-
         public Builder minNodeCount(Integer minNodeCount) {
             this.minNodeCount = Objects.requireNonNull(minNodeCount);
             return this;
-        }
-        public AwsNodePoolAutoscaling build() {
+        }        public AwsNodePoolAutoscaling build() {
             return new AwsNodePoolAutoscaling(maxNodeCount, minNodeCount);
         }
     }

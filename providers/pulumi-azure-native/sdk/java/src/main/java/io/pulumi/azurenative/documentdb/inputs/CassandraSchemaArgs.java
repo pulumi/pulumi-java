@@ -97,32 +97,35 @@ public final class CassandraSchemaArgs extends io.pulumi.resources.ResourceArgs 
             this.clusterKeys = clusterKeys;
             return this;
         }
-
         public Builder clusterKeys(@Nullable List<ClusterKeyArgs> clusterKeys) {
             this.clusterKeys = Output.ofNullable(clusterKeys);
             return this;
         }
-
+        public Builder clusterKeys(ClusterKeyArgs... clusterKeys) {
+            return clusterKeys(List.of(clusterKeys));
+        }
         public Builder columns(@Nullable Output<List<ColumnArgs>> columns) {
             this.columns = columns;
             return this;
         }
-
         public Builder columns(@Nullable List<ColumnArgs> columns) {
             this.columns = Output.ofNullable(columns);
             return this;
         }
-
+        public Builder columns(ColumnArgs... columns) {
+            return columns(List.of(columns));
+        }
         public Builder partitionKeys(@Nullable Output<List<CassandraPartitionKeyArgs>> partitionKeys) {
             this.partitionKeys = partitionKeys;
             return this;
         }
-
         public Builder partitionKeys(@Nullable List<CassandraPartitionKeyArgs> partitionKeys) {
             this.partitionKeys = Output.ofNullable(partitionKeys);
             return this;
         }
-        public CassandraSchemaArgs build() {
+        public Builder partitionKeys(CassandraPartitionKeyArgs... partitionKeys) {
+            return partitionKeys(List.of(partitionKeys));
+        }        public CassandraSchemaArgs build() {
             return new CassandraSchemaArgs(clusterKeys, columns, partitionKeys);
         }
     }

@@ -184,102 +184,82 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
             this.address = address;
             return this;
         }
-
         public Builder address(@Nullable String address) {
             this.address = Output.ofNullable(address);
             return this;
         }
-
         public Builder endpointId(Output<String> endpointId) {
             this.endpointId = Objects.requireNonNull(endpointId);
             return this;
         }
-
         public Builder endpointId(String endpointId) {
             this.endpointId = Output.of(Objects.requireNonNull(endpointId));
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder metadata(@Nullable Map<String,String> metadata) {
             this.metadata = Output.ofNullable(metadata);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder namespaceId(Output<String> namespaceId) {
             this.namespaceId = Objects.requireNonNull(namespaceId);
             return this;
         }
-
         public Builder namespaceId(String namespaceId) {
             this.namespaceId = Output.of(Objects.requireNonNull(namespaceId));
             return this;
         }
-
         public Builder network(@Nullable Output<String> network) {
             this.network = network;
             return this;
         }
-
         public Builder network(@Nullable String network) {
             this.network = Output.ofNullable(network);
             return this;
         }
-
         public Builder port(@Nullable Output<Integer> port) {
             this.port = port;
             return this;
         }
-
         public Builder port(@Nullable Integer port) {
             this.port = Output.ofNullable(port);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder serviceId(Output<String> serviceId) {
             this.serviceId = Objects.requireNonNull(serviceId);
             return this;
         }
-
         public Builder serviceId(String serviceId) {
             this.serviceId = Output.of(Objects.requireNonNull(serviceId));
             return this;
-        }
-        public EndpointArgs build() {
+        }        public EndpointArgs build() {
             return new EndpointArgs(address, endpointId, location, metadata, name, namespaceId, network, port, project, serviceId);
         }
     }

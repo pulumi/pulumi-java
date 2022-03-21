@@ -155,37 +155,30 @@ public final class GetOriginAccessIdentityResult {
             this.callerReference = Objects.requireNonNull(callerReference);
             return this;
         }
-
         public Builder cloudfrontAccessIdentityPath(String cloudfrontAccessIdentityPath) {
             this.cloudfrontAccessIdentityPath = Objects.requireNonNull(cloudfrontAccessIdentityPath);
             return this;
         }
-
         public Builder comment(String comment) {
             this.comment = Objects.requireNonNull(comment);
             return this;
         }
-
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder iamArn(String iamArn) {
             this.iamArn = Objects.requireNonNull(iamArn);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder s3CanonicalUserId(String s3CanonicalUserId) {
             this.s3CanonicalUserId = Objects.requireNonNull(s3CanonicalUserId);
             return this;
-        }
-        public GetOriginAccessIdentityResult build() {
+        }        public GetOriginAccessIdentityResult build() {
             return new GetOriginAccessIdentityResult(callerReference, cloudfrontAccessIdentityPath, comment, etag, iamArn, id, s3CanonicalUserId);
         }
     }

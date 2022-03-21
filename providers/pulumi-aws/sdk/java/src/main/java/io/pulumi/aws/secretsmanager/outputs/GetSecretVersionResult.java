@@ -144,42 +144,37 @@ public final class GetSecretVersionResult {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder secretBinary(String secretBinary) {
             this.secretBinary = Objects.requireNonNull(secretBinary);
             return this;
         }
-
         public Builder secretId(String secretId) {
             this.secretId = Objects.requireNonNull(secretId);
             return this;
         }
-
         public Builder secretString(String secretString) {
             this.secretString = Objects.requireNonNull(secretString);
             return this;
         }
-
         public Builder versionId(String versionId) {
             this.versionId = Objects.requireNonNull(versionId);
             return this;
         }
-
         public Builder versionStage(@Nullable String versionStage) {
             this.versionStage = versionStage;
             return this;
         }
-
         public Builder versionStages(List<String> versionStages) {
             this.versionStages = Objects.requireNonNull(versionStages);
             return this;
         }
-        public GetSecretVersionResult build() {
+        public Builder versionStages(String... versionStages) {
+            return versionStages(List.of(versionStages));
+        }        public GetSecretVersionResult build() {
             return new GetSecretVersionResult(arn, id, secretBinary, secretId, secretString, versionId, versionStage, versionStages);
         }
     }

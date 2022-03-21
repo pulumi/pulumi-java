@@ -106,22 +106,21 @@ public final class ParameterDefinitionsValueResponse {
             this.allowedValues = allowedValues;
             return this;
         }
-
+        public Builder allowedValues(Object... allowedValues) {
+            return allowedValues(List.of(allowedValues));
+        }
         public Builder defaultValue(@Nullable Object defaultValue) {
             this.defaultValue = defaultValue;
             return this;
         }
-
         public Builder metadata(@Nullable ParameterDefinitionsValueResponseMetadata metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
-        }
-        public ParameterDefinitionsValueResponse build() {
+        }        public ParameterDefinitionsValueResponse build() {
             return new ParameterDefinitionsValueResponse(allowedValues, defaultValue, metadata, type);
         }
     }

@@ -93,17 +93,14 @@ public final class SSISExecutionCredentialResponse extends io.pulumi.resources.I
             this.domain = Objects.requireNonNull(domain);
             return this;
         }
-
         public Builder password(SecureStringResponse password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
-
         public Builder userName(Object userName) {
             this.userName = Objects.requireNonNull(userName);
             return this;
-        }
-        public SSISExecutionCredentialResponse build() {
+        }        public SSISExecutionCredentialResponse build() {
             return new SSISExecutionCredentialResponse(domain, password, userName);
         }
     }

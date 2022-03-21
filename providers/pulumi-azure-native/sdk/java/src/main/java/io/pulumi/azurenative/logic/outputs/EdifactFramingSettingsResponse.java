@@ -216,57 +216,46 @@ public final class EdifactFramingSettingsResponse {
             this.characterEncoding = characterEncoding;
             return this;
         }
-
         public Builder characterSet(String characterSet) {
             this.characterSet = Objects.requireNonNull(characterSet);
             return this;
         }
-
         public Builder componentSeparator(Integer componentSeparator) {
             this.componentSeparator = Objects.requireNonNull(componentSeparator);
             return this;
         }
-
         public Builder dataElementSeparator(Integer dataElementSeparator) {
             this.dataElementSeparator = Objects.requireNonNull(dataElementSeparator);
             return this;
         }
-
         public Builder decimalPointIndicator(String decimalPointIndicator) {
             this.decimalPointIndicator = Objects.requireNonNull(decimalPointIndicator);
             return this;
         }
-
         public Builder protocolVersion(Integer protocolVersion) {
             this.protocolVersion = Objects.requireNonNull(protocolVersion);
             return this;
         }
-
         public Builder releaseIndicator(Integer releaseIndicator) {
             this.releaseIndicator = Objects.requireNonNull(releaseIndicator);
             return this;
         }
-
         public Builder repetitionSeparator(Integer repetitionSeparator) {
             this.repetitionSeparator = Objects.requireNonNull(repetitionSeparator);
             return this;
         }
-
         public Builder segmentTerminator(Integer segmentTerminator) {
             this.segmentTerminator = Objects.requireNonNull(segmentTerminator);
             return this;
         }
-
         public Builder segmentTerminatorSuffix(String segmentTerminatorSuffix) {
             this.segmentTerminatorSuffix = Objects.requireNonNull(segmentTerminatorSuffix);
             return this;
         }
-
         public Builder serviceCodeListDirectoryVersion(@Nullable String serviceCodeListDirectoryVersion) {
             this.serviceCodeListDirectoryVersion = serviceCodeListDirectoryVersion;
             return this;
-        }
-        public EdifactFramingSettingsResponse build() {
+        }        public EdifactFramingSettingsResponse build() {
             return new EdifactFramingSettingsResponse(characterEncoding, characterSet, componentSeparator, dataElementSeparator, decimalPointIndicator, protocolVersion, releaseIndicator, repetitionSeparator, segmentTerminator, segmentTerminatorSuffix, serviceCodeListDirectoryVersion);
         }
     }

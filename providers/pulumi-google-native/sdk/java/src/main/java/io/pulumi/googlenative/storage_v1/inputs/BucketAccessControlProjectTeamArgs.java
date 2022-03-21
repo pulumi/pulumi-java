@@ -78,22 +78,18 @@ public final class BucketAccessControlProjectTeamArgs extends io.pulumi.resource
             this.projectNumber = projectNumber;
             return this;
         }
-
         public Builder projectNumber(@Nullable String projectNumber) {
             this.projectNumber = Output.ofNullable(projectNumber);
             return this;
         }
-
         public Builder team(@Nullable Output<String> team) {
             this.team = team;
             return this;
         }
-
         public Builder team(@Nullable String team) {
             this.team = Output.ofNullable(team);
             return this;
-        }
-        public BucketAccessControlProjectTeamArgs build() {
+        }        public BucketAccessControlProjectTeamArgs build() {
             return new BucketAccessControlProjectTeamArgs(projectNumber, team);
         }
     }

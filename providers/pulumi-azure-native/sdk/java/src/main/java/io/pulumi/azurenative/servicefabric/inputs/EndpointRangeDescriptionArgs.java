@@ -77,22 +77,18 @@ public final class EndpointRangeDescriptionArgs extends io.pulumi.resources.Reso
             this.endPort = Objects.requireNonNull(endPort);
             return this;
         }
-
         public Builder endPort(Integer endPort) {
             this.endPort = Output.of(Objects.requireNonNull(endPort));
             return this;
         }
-
         public Builder startPort(Output<Integer> startPort) {
             this.startPort = Objects.requireNonNull(startPort);
             return this;
         }
-
         public Builder startPort(Integer startPort) {
             this.startPort = Output.of(Objects.requireNonNull(startPort));
             return this;
-        }
-        public EndpointRangeDescriptionArgs build() {
+        }        public EndpointRangeDescriptionArgs build() {
             return new EndpointRangeDescriptionArgs(endPort, startPort);
         }
     }

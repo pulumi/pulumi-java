@@ -52,12 +52,10 @@ public final class MembershipEndpointGkeClusterArgs extends io.pulumi.resources.
             this.resourceLink = Objects.requireNonNull(resourceLink);
             return this;
         }
-
         public Builder resourceLink(String resourceLink) {
             this.resourceLink = Output.of(Objects.requireNonNull(resourceLink));
             return this;
-        }
-        public MembershipEndpointGkeClusterArgs build() {
+        }        public MembershipEndpointGkeClusterArgs build() {
             return new MembershipEndpointGkeClusterArgs(resourceLink);
         }
     }

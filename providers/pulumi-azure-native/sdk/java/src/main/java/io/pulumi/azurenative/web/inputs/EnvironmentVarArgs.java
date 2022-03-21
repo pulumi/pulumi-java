@@ -94,32 +94,26 @@ public final class EnvironmentVarArgs extends io.pulumi.resources.ResourceArgs {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder secretRef(@Nullable Output<String> secretRef) {
             this.secretRef = secretRef;
             return this;
         }
-
         public Builder secretRef(@Nullable String secretRef) {
             this.secretRef = Output.ofNullable(secretRef);
             return this;
         }
-
         public Builder value(@Nullable Output<String> value) {
             this.value = value;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = Output.ofNullable(value);
             return this;
-        }
-        public EnvironmentVarArgs build() {
+        }        public EnvironmentVarArgs build() {
             return new EnvironmentVarArgs(name, secretRef, value);
         }
     }

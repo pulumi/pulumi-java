@@ -55,12 +55,10 @@ public final class SpotFleetAcceleratorTotalMemoryMiBRequest {
             this.max = max;
             return this;
         }
-
         public Builder min(@Nullable Integer min) {
             this.min = min;
             return this;
-        }
-        public SpotFleetAcceleratorTotalMemoryMiBRequest build() {
+        }        public SpotFleetAcceleratorTotalMemoryMiBRequest build() {
             return new SpotFleetAcceleratorTotalMemoryMiBRequest(max, min);
         }
     }

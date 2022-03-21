@@ -202,52 +202,42 @@ public final class GetIntegrationAccountCertificateResult {
             this.changedTime = Objects.requireNonNull(changedTime);
             return this;
         }
-
         public Builder createdTime(String createdTime) {
             this.createdTime = Objects.requireNonNull(createdTime);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder key(@Nullable KeyVaultKeyReferenceResponse key) {
             this.key = key;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder metadata(@Nullable Object metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder publicCertificate(@Nullable String publicCertificate) {
             this.publicCertificate = publicCertificate;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetIntegrationAccountCertificateResult build() {
+        }        public GetIntegrationAccountCertificateResult build() {
             return new GetIntegrationAccountCertificateResult(changedTime, createdTime, id, key, location, metadata, name, publicCertificate, tags, type);
         }
     }

@@ -225,57 +225,46 @@ public final class WebAclRuleStatementManagedRuleGroupStatementScopeDownStatemen
             this.andStatement = andStatement;
             return this;
         }
-
         public Builder byteMatchStatement(@Nullable WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementByteMatchStatement byteMatchStatement) {
             this.byteMatchStatement = byteMatchStatement;
             return this;
         }
-
         public Builder geoMatchStatement(@Nullable WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementGeoMatchStatement geoMatchStatement) {
             this.geoMatchStatement = geoMatchStatement;
             return this;
         }
-
         public Builder ipSetReferenceStatement(@Nullable WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementIpSetReferenceStatement ipSetReferenceStatement) {
             this.ipSetReferenceStatement = ipSetReferenceStatement;
             return this;
         }
-
         public Builder labelMatchStatement(@Nullable WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementLabelMatchStatement labelMatchStatement) {
             this.labelMatchStatement = labelMatchStatement;
             return this;
         }
-
         public Builder notStatement(@Nullable WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementNotStatement notStatement) {
             this.notStatement = notStatement;
             return this;
         }
-
         public Builder orStatement(@Nullable WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementOrStatement orStatement) {
             this.orStatement = orStatement;
             return this;
         }
-
         public Builder regexPatternSetReferenceStatement(@Nullable WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementRegexPatternSetReferenceStatement regexPatternSetReferenceStatement) {
             this.regexPatternSetReferenceStatement = regexPatternSetReferenceStatement;
             return this;
         }
-
         public Builder sizeConstraintStatement(@Nullable WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementSizeConstraintStatement sizeConstraintStatement) {
             this.sizeConstraintStatement = sizeConstraintStatement;
             return this;
         }
-
         public Builder sqliMatchStatement(@Nullable WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementSqliMatchStatement sqliMatchStatement) {
             this.sqliMatchStatement = sqliMatchStatement;
             return this;
         }
-
         public Builder xssMatchStatement(@Nullable WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementXssMatchStatement xssMatchStatement) {
             this.xssMatchStatement = xssMatchStatement;
             return this;
-        }
-        public WebAclRuleStatementManagedRuleGroupStatementScopeDownStatement build() {
+        }        public WebAclRuleStatementManagedRuleGroupStatementScopeDownStatement build() {
             return new WebAclRuleStatementManagedRuleGroupStatementScopeDownStatement(andStatement, byteMatchStatement, geoMatchStatement, ipSetReferenceStatement, labelMatchStatement, notStatement, orStatement, regexPatternSetReferenceStatement, sizeConstraintStatement, sqliMatchStatement, xssMatchStatement);
         }
     }

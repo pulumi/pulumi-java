@@ -309,87 +309,88 @@ public final class ContainerResponse {
             this.args = Objects.requireNonNull(args);
             return this;
         }
-
+        public Builder args(String... args) {
+            return args(List.of(args));
+        }
         public Builder command(List<String> command) {
             this.command = Objects.requireNonNull(command);
             return this;
         }
-
+        public Builder command(String... command) {
+            return command(List.of(command));
+        }
         public Builder env(List<EnvVarResponse> env) {
             this.env = Objects.requireNonNull(env);
             return this;
         }
-
+        public Builder env(EnvVarResponse... env) {
+            return env(List.of(env));
+        }
         public Builder envFrom(List<EnvFromSourceResponse> envFrom) {
             this.envFrom = Objects.requireNonNull(envFrom);
             return this;
         }
-
+        public Builder envFrom(EnvFromSourceResponse... envFrom) {
+            return envFrom(List.of(envFrom));
+        }
         public Builder image(String image) {
             this.image = Objects.requireNonNull(image);
             return this;
         }
-
         public Builder imagePullPolicy(String imagePullPolicy) {
             this.imagePullPolicy = Objects.requireNonNull(imagePullPolicy);
             return this;
         }
-
         public Builder livenessProbe(ProbeResponse livenessProbe) {
             this.livenessProbe = Objects.requireNonNull(livenessProbe);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder ports(List<ContainerPortResponse> ports) {
             this.ports = Objects.requireNonNull(ports);
             return this;
         }
-
+        public Builder ports(ContainerPortResponse... ports) {
+            return ports(List.of(ports));
+        }
         public Builder readinessProbe(ProbeResponse readinessProbe) {
             this.readinessProbe = Objects.requireNonNull(readinessProbe);
             return this;
         }
-
         public Builder resources(ResourceRequirementsResponse resources) {
             this.resources = Objects.requireNonNull(resources);
             return this;
         }
-
         public Builder securityContext(SecurityContextResponse securityContext) {
             this.securityContext = Objects.requireNonNull(securityContext);
             return this;
         }
-
         public Builder startupProbe(ProbeResponse startupProbe) {
             this.startupProbe = Objects.requireNonNull(startupProbe);
             return this;
         }
-
         public Builder terminationMessagePath(String terminationMessagePath) {
             this.terminationMessagePath = Objects.requireNonNull(terminationMessagePath);
             return this;
         }
-
         public Builder terminationMessagePolicy(String terminationMessagePolicy) {
             this.terminationMessagePolicy = Objects.requireNonNull(terminationMessagePolicy);
             return this;
         }
-
         public Builder volumeMounts(List<VolumeMountResponse> volumeMounts) {
             this.volumeMounts = Objects.requireNonNull(volumeMounts);
             return this;
         }
-
+        public Builder volumeMounts(VolumeMountResponse... volumeMounts) {
+            return volumeMounts(List.of(volumeMounts));
+        }
         public Builder workingDir(String workingDir) {
             this.workingDir = Objects.requireNonNull(workingDir);
             return this;
-        }
-        public ContainerResponse build() {
+        }        public ContainerResponse build() {
             return new ContainerResponse(args, command, env, envFrom, image, imagePullPolicy, livenessProbe, name, ports, readinessProbe, resources, securityContext, startupProbe, terminationMessagePath, terminationMessagePolicy, volumeMounts, workingDir);
         }
     }

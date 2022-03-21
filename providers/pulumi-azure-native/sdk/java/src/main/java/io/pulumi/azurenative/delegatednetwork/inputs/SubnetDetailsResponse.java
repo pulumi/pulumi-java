@@ -60,8 +60,7 @@ public final class SubnetDetailsResponse extends io.pulumi.resources.InvokeArgs 
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
-        }
-        public SubnetDetailsResponse build() {
+        }        public SubnetDetailsResponse build() {
             return new SubnetDetailsResponse(id);
         }
     }

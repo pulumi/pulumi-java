@@ -214,57 +214,46 @@ public final class OutlierDetectionResponse {
             this.baseEjectionTime = Objects.requireNonNull(baseEjectionTime);
             return this;
         }
-
         public Builder consecutiveErrors(Integer consecutiveErrors) {
             this.consecutiveErrors = Objects.requireNonNull(consecutiveErrors);
             return this;
         }
-
         public Builder consecutiveGatewayFailure(Integer consecutiveGatewayFailure) {
             this.consecutiveGatewayFailure = Objects.requireNonNull(consecutiveGatewayFailure);
             return this;
         }
-
         public Builder enforcingConsecutiveErrors(Integer enforcingConsecutiveErrors) {
             this.enforcingConsecutiveErrors = Objects.requireNonNull(enforcingConsecutiveErrors);
             return this;
         }
-
         public Builder enforcingConsecutiveGatewayFailure(Integer enforcingConsecutiveGatewayFailure) {
             this.enforcingConsecutiveGatewayFailure = Objects.requireNonNull(enforcingConsecutiveGatewayFailure);
             return this;
         }
-
         public Builder enforcingSuccessRate(Integer enforcingSuccessRate) {
             this.enforcingSuccessRate = Objects.requireNonNull(enforcingSuccessRate);
             return this;
         }
-
         public Builder interval(DurationResponse interval) {
             this.interval = Objects.requireNonNull(interval);
             return this;
         }
-
         public Builder maxEjectionPercent(Integer maxEjectionPercent) {
             this.maxEjectionPercent = Objects.requireNonNull(maxEjectionPercent);
             return this;
         }
-
         public Builder successRateMinimumHosts(Integer successRateMinimumHosts) {
             this.successRateMinimumHosts = Objects.requireNonNull(successRateMinimumHosts);
             return this;
         }
-
         public Builder successRateRequestVolume(Integer successRateRequestVolume) {
             this.successRateRequestVolume = Objects.requireNonNull(successRateRequestVolume);
             return this;
         }
-
         public Builder successRateStdevFactor(Integer successRateStdevFactor) {
             this.successRateStdevFactor = Objects.requireNonNull(successRateStdevFactor);
             return this;
-        }
-        public OutlierDetectionResponse build() {
+        }        public OutlierDetectionResponse build() {
             return new OutlierDetectionResponse(baseEjectionTime, consecutiveErrors, consecutiveGatewayFailure, enforcingConsecutiveErrors, enforcingConsecutiveGatewayFailure, enforcingSuccessRate, interval, maxEjectionPercent, successRateMinimumHosts, successRateRequestVolume, successRateStdevFactor);
         }
     }

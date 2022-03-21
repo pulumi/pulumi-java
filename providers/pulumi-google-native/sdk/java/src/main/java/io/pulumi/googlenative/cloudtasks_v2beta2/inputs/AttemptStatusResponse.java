@@ -109,22 +109,18 @@ public final class AttemptStatusResponse extends io.pulumi.resources.InvokeArgs 
             this.dispatchTime = Objects.requireNonNull(dispatchTime);
             return this;
         }
-
         public Builder responseStatus(StatusResponse responseStatus) {
             this.responseStatus = Objects.requireNonNull(responseStatus);
             return this;
         }
-
         public Builder responseTime(String responseTime) {
             this.responseTime = Objects.requireNonNull(responseTime);
             return this;
         }
-
         public Builder scheduleTime(String scheduleTime) {
             this.scheduleTime = Objects.requireNonNull(scheduleTime);
             return this;
-        }
-        public AttemptStatusResponse build() {
+        }        public AttemptStatusResponse build() {
             return new AttemptStatusResponse(dispatchTime, responseStatus, responseTime, scheduleTime);
         }
     }

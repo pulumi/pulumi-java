@@ -222,112 +222,90 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
             this.advancedSchedule = advancedSchedule;
             return this;
         }
-
         public Builder advancedSchedule(@Nullable AdvancedScheduleArgs advancedSchedule) {
             this.advancedSchedule = Output.ofNullable(advancedSchedule);
             return this;
         }
-
         public Builder automationAccountName(Output<String> automationAccountName) {
             this.automationAccountName = Objects.requireNonNull(automationAccountName);
             return this;
         }
-
         public Builder automationAccountName(String automationAccountName) {
             this.automationAccountName = Output.of(Objects.requireNonNull(automationAccountName));
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder expiryTime(@Nullable Output<String> expiryTime) {
             this.expiryTime = expiryTime;
             return this;
         }
-
         public Builder expiryTime(@Nullable String expiryTime) {
             this.expiryTime = Output.ofNullable(expiryTime);
             return this;
         }
-
         public Builder frequency(Output<Either<String,ScheduleFrequency>> frequency) {
             this.frequency = Objects.requireNonNull(frequency);
             return this;
         }
-
         public Builder frequency(Either<String,ScheduleFrequency> frequency) {
             this.frequency = Output.of(Objects.requireNonNull(frequency));
             return this;
         }
-
         public Builder interval(@Nullable Output<Object> interval) {
             this.interval = interval;
             return this;
         }
-
         public Builder interval(@Nullable Object interval) {
             this.interval = Output.ofNullable(interval);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder scheduleName(@Nullable Output<String> scheduleName) {
             this.scheduleName = scheduleName;
             return this;
         }
-
         public Builder scheduleName(@Nullable String scheduleName) {
             this.scheduleName = Output.ofNullable(scheduleName);
             return this;
         }
-
         public Builder startTime(Output<String> startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public Builder startTime(String startTime) {
             this.startTime = Output.of(Objects.requireNonNull(startTime));
             return this;
         }
-
         public Builder timeZone(@Nullable Output<String> timeZone) {
             this.timeZone = timeZone;
             return this;
         }
-
         public Builder timeZone(@Nullable String timeZone) {
             this.timeZone = Output.ofNullable(timeZone);
             return this;
-        }
-        public ScheduleArgs build() {
+        }        public ScheduleArgs build() {
             return new ScheduleArgs(advancedSchedule, automationAccountName, description, expiryTime, frequency, interval, name, resourceGroupName, scheduleName, startTime, timeZone);
         }
     }

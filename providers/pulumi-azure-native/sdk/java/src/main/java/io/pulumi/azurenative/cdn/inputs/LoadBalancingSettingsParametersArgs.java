@@ -94,32 +94,26 @@ public final class LoadBalancingSettingsParametersArgs extends io.pulumi.resourc
             this.additionalLatencyInMilliseconds = additionalLatencyInMilliseconds;
             return this;
         }
-
         public Builder additionalLatencyInMilliseconds(@Nullable Integer additionalLatencyInMilliseconds) {
             this.additionalLatencyInMilliseconds = Output.ofNullable(additionalLatencyInMilliseconds);
             return this;
         }
-
         public Builder sampleSize(@Nullable Output<Integer> sampleSize) {
             this.sampleSize = sampleSize;
             return this;
         }
-
         public Builder sampleSize(@Nullable Integer sampleSize) {
             this.sampleSize = Output.ofNullable(sampleSize);
             return this;
         }
-
         public Builder successfulSamplesRequired(@Nullable Output<Integer> successfulSamplesRequired) {
             this.successfulSamplesRequired = successfulSamplesRequired;
             return this;
         }
-
         public Builder successfulSamplesRequired(@Nullable Integer successfulSamplesRequired) {
             this.successfulSamplesRequired = Output.ofNullable(successfulSamplesRequired);
             return this;
-        }
-        public LoadBalancingSettingsParametersArgs build() {
+        }        public LoadBalancingSettingsParametersArgs build() {
             return new LoadBalancingSettingsParametersArgs(additionalLatencyInMilliseconds, sampleSize, successfulSamplesRequired);
         }
     }

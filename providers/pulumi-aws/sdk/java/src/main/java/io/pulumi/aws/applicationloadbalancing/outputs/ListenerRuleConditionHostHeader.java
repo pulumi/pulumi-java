@@ -53,7 +53,9 @@ public final class ListenerRuleConditionHostHeader {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-        public ListenerRuleConditionHostHeader build() {
+        public Builder values(String... values) {
+            return values(List.of(values));
+        }        public ListenerRuleConditionHostHeader build() {
             return new ListenerRuleConditionHostHeader(values);
         }
     }

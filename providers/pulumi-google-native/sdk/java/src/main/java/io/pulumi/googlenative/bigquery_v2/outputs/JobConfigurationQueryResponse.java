@@ -418,117 +418,106 @@ public final class JobConfigurationQueryResponse {
             this.allowLargeResults = Objects.requireNonNull(allowLargeResults);
             return this;
         }
-
         public Builder clustering(ClusteringResponse clustering) {
             this.clustering = Objects.requireNonNull(clustering);
             return this;
         }
-
         public Builder connectionProperties(List<ConnectionPropertyResponse> connectionProperties) {
             this.connectionProperties = Objects.requireNonNull(connectionProperties);
             return this;
         }
-
+        public Builder connectionProperties(ConnectionPropertyResponse... connectionProperties) {
+            return connectionProperties(List.of(connectionProperties));
+        }
         public Builder createDisposition(String createDisposition) {
             this.createDisposition = Objects.requireNonNull(createDisposition);
             return this;
         }
-
         public Builder createSession(Boolean createSession) {
             this.createSession = Objects.requireNonNull(createSession);
             return this;
         }
-
         public Builder defaultDataset(DatasetReferenceResponse defaultDataset) {
             this.defaultDataset = Objects.requireNonNull(defaultDataset);
             return this;
         }
-
         public Builder destinationEncryptionConfiguration(EncryptionConfigurationResponse destinationEncryptionConfiguration) {
             this.destinationEncryptionConfiguration = Objects.requireNonNull(destinationEncryptionConfiguration);
             return this;
         }
-
         public Builder destinationTable(TableReferenceResponse destinationTable) {
             this.destinationTable = Objects.requireNonNull(destinationTable);
             return this;
         }
-
         public Builder flattenResults(Boolean flattenResults) {
             this.flattenResults = Objects.requireNonNull(flattenResults);
             return this;
         }
-
         public Builder maximumBillingTier(Integer maximumBillingTier) {
             this.maximumBillingTier = Objects.requireNonNull(maximumBillingTier);
             return this;
         }
-
         public Builder maximumBytesBilled(String maximumBytesBilled) {
             this.maximumBytesBilled = Objects.requireNonNull(maximumBytesBilled);
             return this;
         }
-
         public Builder parameterMode(String parameterMode) {
             this.parameterMode = Objects.requireNonNull(parameterMode);
             return this;
         }
-
         public Builder priority(String priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
-
         public Builder query(String query) {
             this.query = Objects.requireNonNull(query);
             return this;
         }
-
         public Builder queryParameters(List<QueryParameterResponse> queryParameters) {
             this.queryParameters = Objects.requireNonNull(queryParameters);
             return this;
         }
-
+        public Builder queryParameters(QueryParameterResponse... queryParameters) {
+            return queryParameters(List.of(queryParameters));
+        }
         public Builder rangePartitioning(RangePartitioningResponse rangePartitioning) {
             this.rangePartitioning = Objects.requireNonNull(rangePartitioning);
             return this;
         }
-
         public Builder schemaUpdateOptions(List<String> schemaUpdateOptions) {
             this.schemaUpdateOptions = Objects.requireNonNull(schemaUpdateOptions);
             return this;
         }
-
+        public Builder schemaUpdateOptions(String... schemaUpdateOptions) {
+            return schemaUpdateOptions(List.of(schemaUpdateOptions));
+        }
         public Builder tableDefinitions(Map<String,String> tableDefinitions) {
             this.tableDefinitions = Objects.requireNonNull(tableDefinitions);
             return this;
         }
-
         public Builder timePartitioning(TimePartitioningResponse timePartitioning) {
             this.timePartitioning = Objects.requireNonNull(timePartitioning);
             return this;
         }
-
         public Builder useLegacySql(Boolean useLegacySql) {
             this.useLegacySql = Objects.requireNonNull(useLegacySql);
             return this;
         }
-
         public Builder useQueryCache(Boolean useQueryCache) {
             this.useQueryCache = Objects.requireNonNull(useQueryCache);
             return this;
         }
-
         public Builder userDefinedFunctionResources(List<UserDefinedFunctionResourceResponse> userDefinedFunctionResources) {
             this.userDefinedFunctionResources = Objects.requireNonNull(userDefinedFunctionResources);
             return this;
         }
-
+        public Builder userDefinedFunctionResources(UserDefinedFunctionResourceResponse... userDefinedFunctionResources) {
+            return userDefinedFunctionResources(List.of(userDefinedFunctionResources));
+        }
         public Builder writeDisposition(String writeDisposition) {
             this.writeDisposition = Objects.requireNonNull(writeDisposition);
             return this;
-        }
-        public JobConfigurationQueryResponse build() {
+        }        public JobConfigurationQueryResponse build() {
             return new JobConfigurationQueryResponse(allowLargeResults, clustering, connectionProperties, createDisposition, createSession, defaultDataset, destinationEncryptionConfiguration, destinationTable, flattenResults, maximumBillingTier, maximumBytesBilled, parameterMode, priority, query, queryParameters, rangePartitioning, schemaUpdateOptions, tableDefinitions, timePartitioning, useLegacySql, useQueryCache, userDefinedFunctionResources, writeDisposition);
         }
     }

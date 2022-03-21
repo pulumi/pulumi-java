@@ -90,32 +90,26 @@ public final class ResourceManagementPrivateLinkArgs extends io.pulumi.resources
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder rmplName(@Nullable Output<String> rmplName) {
             this.rmplName = rmplName;
             return this;
         }
-
         public Builder rmplName(@Nullable String rmplName) {
             this.rmplName = Output.ofNullable(rmplName);
             return this;
-        }
-        public ResourceManagementPrivateLinkArgs build() {
+        }        public ResourceManagementPrivateLinkArgs build() {
             return new ResourceManagementPrivateLinkArgs(location, resourceGroupName, rmplName);
         }
     }

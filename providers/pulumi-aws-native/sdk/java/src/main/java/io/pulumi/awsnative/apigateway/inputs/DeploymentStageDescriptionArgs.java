@@ -355,192 +355,160 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
             this.accessLogSetting = accessLogSetting;
             return this;
         }
-
         public Builder accessLogSetting(@Nullable DeploymentAccessLogSettingArgs accessLogSetting) {
             this.accessLogSetting = Output.ofNullable(accessLogSetting);
             return this;
         }
-
         public Builder cacheClusterEnabled(@Nullable Output<Boolean> cacheClusterEnabled) {
             this.cacheClusterEnabled = cacheClusterEnabled;
             return this;
         }
-
         public Builder cacheClusterEnabled(@Nullable Boolean cacheClusterEnabled) {
             this.cacheClusterEnabled = Output.ofNullable(cacheClusterEnabled);
             return this;
         }
-
         public Builder cacheClusterSize(@Nullable Output<String> cacheClusterSize) {
             this.cacheClusterSize = cacheClusterSize;
             return this;
         }
-
         public Builder cacheClusterSize(@Nullable String cacheClusterSize) {
             this.cacheClusterSize = Output.ofNullable(cacheClusterSize);
             return this;
         }
-
         public Builder cacheDataEncrypted(@Nullable Output<Boolean> cacheDataEncrypted) {
             this.cacheDataEncrypted = cacheDataEncrypted;
             return this;
         }
-
         public Builder cacheDataEncrypted(@Nullable Boolean cacheDataEncrypted) {
             this.cacheDataEncrypted = Output.ofNullable(cacheDataEncrypted);
             return this;
         }
-
         public Builder cacheTtlInSeconds(@Nullable Output<Integer> cacheTtlInSeconds) {
             this.cacheTtlInSeconds = cacheTtlInSeconds;
             return this;
         }
-
         public Builder cacheTtlInSeconds(@Nullable Integer cacheTtlInSeconds) {
             this.cacheTtlInSeconds = Output.ofNullable(cacheTtlInSeconds);
             return this;
         }
-
         public Builder cachingEnabled(@Nullable Output<Boolean> cachingEnabled) {
             this.cachingEnabled = cachingEnabled;
             return this;
         }
-
         public Builder cachingEnabled(@Nullable Boolean cachingEnabled) {
             this.cachingEnabled = Output.ofNullable(cachingEnabled);
             return this;
         }
-
         public Builder canarySetting(@Nullable Output<DeploymentCanarySettingArgs> canarySetting) {
             this.canarySetting = canarySetting;
             return this;
         }
-
         public Builder canarySetting(@Nullable DeploymentCanarySettingArgs canarySetting) {
             this.canarySetting = Output.ofNullable(canarySetting);
             return this;
         }
-
         public Builder clientCertificateId(@Nullable Output<String> clientCertificateId) {
             this.clientCertificateId = clientCertificateId;
             return this;
         }
-
         public Builder clientCertificateId(@Nullable String clientCertificateId) {
             this.clientCertificateId = Output.ofNullable(clientCertificateId);
             return this;
         }
-
         public Builder dataTraceEnabled(@Nullable Output<Boolean> dataTraceEnabled) {
             this.dataTraceEnabled = dataTraceEnabled;
             return this;
         }
-
         public Builder dataTraceEnabled(@Nullable Boolean dataTraceEnabled) {
             this.dataTraceEnabled = Output.ofNullable(dataTraceEnabled);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder documentationVersion(@Nullable Output<String> documentationVersion) {
             this.documentationVersion = documentationVersion;
             return this;
         }
-
         public Builder documentationVersion(@Nullable String documentationVersion) {
             this.documentationVersion = Output.ofNullable(documentationVersion);
             return this;
         }
-
         public Builder loggingLevel(@Nullable Output<String> loggingLevel) {
             this.loggingLevel = loggingLevel;
             return this;
         }
-
         public Builder loggingLevel(@Nullable String loggingLevel) {
             this.loggingLevel = Output.ofNullable(loggingLevel);
             return this;
         }
-
         public Builder methodSettings(@Nullable Output<List<DeploymentMethodSettingArgs>> methodSettings) {
             this.methodSettings = methodSettings;
             return this;
         }
-
         public Builder methodSettings(@Nullable List<DeploymentMethodSettingArgs> methodSettings) {
             this.methodSettings = Output.ofNullable(methodSettings);
             return this;
         }
-
+        public Builder methodSettings(DeploymentMethodSettingArgs... methodSettings) {
+            return methodSettings(List.of(methodSettings));
+        }
         public Builder metricsEnabled(@Nullable Output<Boolean> metricsEnabled) {
             this.metricsEnabled = metricsEnabled;
             return this;
         }
-
         public Builder metricsEnabled(@Nullable Boolean metricsEnabled) {
             this.metricsEnabled = Output.ofNullable(metricsEnabled);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<DeploymentTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<DeploymentTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
+        public Builder tags(DeploymentTagArgs... tags) {
+            return tags(List.of(tags));
+        }
         public Builder throttlingBurstLimit(@Nullable Output<Integer> throttlingBurstLimit) {
             this.throttlingBurstLimit = throttlingBurstLimit;
             return this;
         }
-
         public Builder throttlingBurstLimit(@Nullable Integer throttlingBurstLimit) {
             this.throttlingBurstLimit = Output.ofNullable(throttlingBurstLimit);
             return this;
         }
-
         public Builder throttlingRateLimit(@Nullable Output<Double> throttlingRateLimit) {
             this.throttlingRateLimit = throttlingRateLimit;
             return this;
         }
-
         public Builder throttlingRateLimit(@Nullable Double throttlingRateLimit) {
             this.throttlingRateLimit = Output.ofNullable(throttlingRateLimit);
             return this;
         }
-
         public Builder tracingEnabled(@Nullable Output<Boolean> tracingEnabled) {
             this.tracingEnabled = tracingEnabled;
             return this;
         }
-
         public Builder tracingEnabled(@Nullable Boolean tracingEnabled) {
             this.tracingEnabled = Output.ofNullable(tracingEnabled);
             return this;
         }
-
         public Builder variables(@Nullable Output<Object> variables) {
             this.variables = variables;
             return this;
         }
-
         public Builder variables(@Nullable Object variables) {
             this.variables = Output.ofNullable(variables);
             return this;
-        }
-        public DeploymentStageDescriptionArgs build() {
+        }        public DeploymentStageDescriptionArgs build() {
             return new DeploymentStageDescriptionArgs(accessLogSetting, cacheClusterEnabled, cacheClusterSize, cacheDataEncrypted, cacheTtlInSeconds, cachingEnabled, canarySetting, clientCertificateId, dataTraceEnabled, description, documentationVersion, loggingLevel, methodSettings, metricsEnabled, tags, throttlingBurstLimit, throttlingRateLimit, tracingEnabled, variables);
         }
     }

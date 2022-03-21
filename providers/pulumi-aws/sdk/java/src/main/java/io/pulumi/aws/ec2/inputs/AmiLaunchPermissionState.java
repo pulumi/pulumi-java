@@ -74,22 +74,18 @@ public final class AmiLaunchPermissionState extends io.pulumi.resources.Resource
             this.accountId = accountId;
             return this;
         }
-
         public Builder accountId(@Nullable String accountId) {
             this.accountId = Output.ofNullable(accountId);
             return this;
         }
-
         public Builder imageId(@Nullable Output<String> imageId) {
             this.imageId = imageId;
             return this;
         }
-
         public Builder imageId(@Nullable String imageId) {
             this.imageId = Output.ofNullable(imageId);
             return this;
-        }
-        public AmiLaunchPermissionState build() {
+        }        public AmiLaunchPermissionState build() {
             return new AmiLaunchPermissionState(accountId, imageId);
         }
     }

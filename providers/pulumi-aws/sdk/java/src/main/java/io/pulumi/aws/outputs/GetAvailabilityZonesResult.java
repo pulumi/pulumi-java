@@ -138,47 +138,56 @@ public final class GetAvailabilityZonesResult {
             this.allAvailabilityZones = allAvailabilityZones;
             return this;
         }
-
         public Builder excludeNames(@Nullable List<String> excludeNames) {
             this.excludeNames = excludeNames;
             return this;
         }
-
+        public Builder excludeNames(String... excludeNames) {
+            return excludeNames(List.of(excludeNames));
+        }
         public Builder excludeZoneIds(@Nullable List<String> excludeZoneIds) {
             this.excludeZoneIds = excludeZoneIds;
             return this;
         }
-
+        public Builder excludeZoneIds(String... excludeZoneIds) {
+            return excludeZoneIds(List.of(excludeZoneIds));
+        }
         public Builder filters(@Nullable List<GetAvailabilityZonesFilter> filters) {
             this.filters = filters;
             return this;
         }
-
+        public Builder filters(GetAvailabilityZonesFilter... filters) {
+            return filters(List.of(filters));
+        }
         public Builder groupNames(List<String> groupNames) {
             this.groupNames = Objects.requireNonNull(groupNames);
             return this;
         }
-
+        public Builder groupNames(String... groupNames) {
+            return groupNames(List.of(groupNames));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder names(List<String> names) {
             this.names = Objects.requireNonNull(names);
             return this;
         }
-
+        public Builder names(String... names) {
+            return names(List.of(names));
+        }
         public Builder state(@Nullable String state) {
             this.state = state;
             return this;
         }
-
         public Builder zoneIds(List<String> zoneIds) {
             this.zoneIds = Objects.requireNonNull(zoneIds);
             return this;
         }
-        public GetAvailabilityZonesResult build() {
+        public Builder zoneIds(String... zoneIds) {
+            return zoneIds(List.of(zoneIds));
+        }        public GetAvailabilityZonesResult build() {
             return new GetAvailabilityZonesResult(allAvailabilityZones, excludeNames, excludeZoneIds, filters, groupNames, id, names, state, zoneIds);
         }
     }

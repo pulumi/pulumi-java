@@ -147,62 +147,50 @@ public final class InboundSamlConfigState extends io.pulumi.resources.ResourceAr
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
         }
-
         public Builder idpConfig(@Nullable Output<InboundSamlConfigIdpConfigGetArgs> idpConfig) {
             this.idpConfig = idpConfig;
             return this;
         }
-
         public Builder idpConfig(@Nullable InboundSamlConfigIdpConfigGetArgs idpConfig) {
             this.idpConfig = Output.ofNullable(idpConfig);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder spConfig(@Nullable Output<InboundSamlConfigSpConfigGetArgs> spConfig) {
             this.spConfig = spConfig;
             return this;
         }
-
         public Builder spConfig(@Nullable InboundSamlConfigSpConfigGetArgs spConfig) {
             this.spConfig = Output.ofNullable(spConfig);
             return this;
-        }
-        public InboundSamlConfigState build() {
+        }        public InboundSamlConfigState build() {
             return new InboundSamlConfigState(displayName, enabled, idpConfig, name, project, spConfig);
         }
     }

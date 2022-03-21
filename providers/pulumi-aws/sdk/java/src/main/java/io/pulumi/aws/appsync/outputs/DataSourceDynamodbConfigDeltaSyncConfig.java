@@ -64,17 +64,14 @@ public final class DataSourceDynamodbConfigDeltaSyncConfig {
             this.baseTableTtl = baseTableTtl;
             return this;
         }
-
         public Builder deltaSyncTableName(String deltaSyncTableName) {
             this.deltaSyncTableName = Objects.requireNonNull(deltaSyncTableName);
             return this;
         }
-
         public Builder deltaSyncTableTtl(@Nullable Integer deltaSyncTableTtl) {
             this.deltaSyncTableTtl = deltaSyncTableTtl;
             return this;
-        }
-        public DataSourceDynamodbConfigDeltaSyncConfig build() {
+        }        public DataSourceDynamodbConfigDeltaSyncConfig build() {
             return new DataSourceDynamodbConfigDeltaSyncConfig(baseTableTtl, deltaSyncTableName, deltaSyncTableTtl);
         }
     }

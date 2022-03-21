@@ -184,47 +184,38 @@ public final class GetIncidentRelationResult {
             this.etag = etag;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder relatedResourceId(String relatedResourceId) {
             this.relatedResourceId = Objects.requireNonNull(relatedResourceId);
             return this;
         }
-
         public Builder relatedResourceKind(String relatedResourceKind) {
             this.relatedResourceKind = Objects.requireNonNull(relatedResourceKind);
             return this;
         }
-
         public Builder relatedResourceName(String relatedResourceName) {
             this.relatedResourceName = Objects.requireNonNull(relatedResourceName);
             return this;
         }
-
         public Builder relatedResourceType(String relatedResourceType) {
             this.relatedResourceType = Objects.requireNonNull(relatedResourceType);
             return this;
         }
-
         public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetIncidentRelationResult build() {
+        }        public GetIncidentRelationResult build() {
             return new GetIncidentRelationResult(etag, id, name, relatedResourceId, relatedResourceKind, relatedResourceName, relatedResourceType, systemData, type);
         }
     }

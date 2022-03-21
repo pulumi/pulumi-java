@@ -50,8 +50,7 @@ public final class GetClusterPodSecurityPolicyConfig extends io.pulumi.resources
         public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
-        }
-        public GetClusterPodSecurityPolicyConfig build() {
+        }        public GetClusterPodSecurityPolicyConfig build() {
             return new GetClusterPodSecurityPolicyConfig(enabled);
         }
     }

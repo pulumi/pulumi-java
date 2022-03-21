@@ -176,42 +176,34 @@ public final class AzureMySqlSinkResponse extends io.pulumi.resources.InvokeArgs
             this.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
-
         public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
             this.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
-
         public Builder preCopyScript(@Nullable Object preCopyScript) {
             this.preCopyScript = preCopyScript;
             return this;
         }
-
         public Builder sinkRetryCount(@Nullable Object sinkRetryCount) {
             this.sinkRetryCount = sinkRetryCount;
             return this;
         }
-
         public Builder sinkRetryWait(@Nullable Object sinkRetryWait) {
             this.sinkRetryWait = sinkRetryWait;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder writeBatchSize(@Nullable Object writeBatchSize) {
             this.writeBatchSize = writeBatchSize;
             return this;
         }
-
         public Builder writeBatchTimeout(@Nullable Object writeBatchTimeout) {
             this.writeBatchTimeout = writeBatchTimeout;
             return this;
-        }
-        public AzureMySqlSinkResponse build() {
+        }        public AzureMySqlSinkResponse build() {
             return new AzureMySqlSinkResponse(disableMetricsCollection, maxConcurrentConnections, preCopyScript, sinkRetryCount, sinkRetryWait, type, writeBatchSize, writeBatchTimeout);
         }
     }

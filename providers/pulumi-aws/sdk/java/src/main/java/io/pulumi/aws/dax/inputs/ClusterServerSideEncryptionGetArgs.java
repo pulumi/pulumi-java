@@ -57,12 +57,10 @@ public final class ClusterServerSideEncryptionGetArgs extends io.pulumi.resource
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
-        }
-        public ClusterServerSideEncryptionGetArgs build() {
+        }        public ClusterServerSideEncryptionGetArgs build() {
             return new ClusterServerSideEncryptionGetArgs(enabled);
         }
     }

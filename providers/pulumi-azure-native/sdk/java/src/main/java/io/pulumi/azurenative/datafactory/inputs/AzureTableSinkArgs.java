@@ -224,112 +224,90 @@ public final class AzureTableSinkArgs extends io.pulumi.resources.ResourceArgs {
             this.azureTableDefaultPartitionKeyValue = azureTableDefaultPartitionKeyValue;
             return this;
         }
-
         public Builder azureTableDefaultPartitionKeyValue(@Nullable Object azureTableDefaultPartitionKeyValue) {
             this.azureTableDefaultPartitionKeyValue = Output.ofNullable(azureTableDefaultPartitionKeyValue);
             return this;
         }
-
         public Builder azureTableInsertType(@Nullable Output<Object> azureTableInsertType) {
             this.azureTableInsertType = azureTableInsertType;
             return this;
         }
-
         public Builder azureTableInsertType(@Nullable Object azureTableInsertType) {
             this.azureTableInsertType = Output.ofNullable(azureTableInsertType);
             return this;
         }
-
         public Builder azureTablePartitionKeyName(@Nullable Output<Object> azureTablePartitionKeyName) {
             this.azureTablePartitionKeyName = azureTablePartitionKeyName;
             return this;
         }
-
         public Builder azureTablePartitionKeyName(@Nullable Object azureTablePartitionKeyName) {
             this.azureTablePartitionKeyName = Output.ofNullable(azureTablePartitionKeyName);
             return this;
         }
-
         public Builder azureTableRowKeyName(@Nullable Output<Object> azureTableRowKeyName) {
             this.azureTableRowKeyName = azureTableRowKeyName;
             return this;
         }
-
         public Builder azureTableRowKeyName(@Nullable Object azureTableRowKeyName) {
             this.azureTableRowKeyName = Output.ofNullable(azureTableRowKeyName);
             return this;
         }
-
         public Builder disableMetricsCollection(@Nullable Output<Object> disableMetricsCollection) {
             this.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
-
         public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
             this.disableMetricsCollection = Output.ofNullable(disableMetricsCollection);
             return this;
         }
-
         public Builder maxConcurrentConnections(@Nullable Output<Object> maxConcurrentConnections) {
             this.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
-
         public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
             this.maxConcurrentConnections = Output.ofNullable(maxConcurrentConnections);
             return this;
         }
-
         public Builder sinkRetryCount(@Nullable Output<Object> sinkRetryCount) {
             this.sinkRetryCount = sinkRetryCount;
             return this;
         }
-
         public Builder sinkRetryCount(@Nullable Object sinkRetryCount) {
             this.sinkRetryCount = Output.ofNullable(sinkRetryCount);
             return this;
         }
-
         public Builder sinkRetryWait(@Nullable Output<Object> sinkRetryWait) {
             this.sinkRetryWait = sinkRetryWait;
             return this;
         }
-
         public Builder sinkRetryWait(@Nullable Object sinkRetryWait) {
             this.sinkRetryWait = Output.ofNullable(sinkRetryWait);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
-
         public Builder writeBatchSize(@Nullable Output<Object> writeBatchSize) {
             this.writeBatchSize = writeBatchSize;
             return this;
         }
-
         public Builder writeBatchSize(@Nullable Object writeBatchSize) {
             this.writeBatchSize = Output.ofNullable(writeBatchSize);
             return this;
         }
-
         public Builder writeBatchTimeout(@Nullable Output<Object> writeBatchTimeout) {
             this.writeBatchTimeout = writeBatchTimeout;
             return this;
         }
-
         public Builder writeBatchTimeout(@Nullable Object writeBatchTimeout) {
             this.writeBatchTimeout = Output.ofNullable(writeBatchTimeout);
             return this;
-        }
-        public AzureTableSinkArgs build() {
+        }        public AzureTableSinkArgs build() {
             return new AzureTableSinkArgs(azureTableDefaultPartitionKeyValue, azureTableInsertType, azureTablePartitionKeyName, azureTableRowKeyName, disableMetricsCollection, maxConcurrentConnections, sinkRetryCount, sinkRetryWait, type, writeBatchSize, writeBatchTimeout);
         }
     }

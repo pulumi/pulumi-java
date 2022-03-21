@@ -88,17 +88,14 @@ public final class GetPartnerTopicEventSubscriptionFullUrlArgs extends io.pulumi
             this.eventSubscriptionName = Objects.requireNonNull(eventSubscriptionName);
             return this;
         }
-
         public Builder partnerTopicName(String partnerTopicName) {
             this.partnerTopicName = Objects.requireNonNull(partnerTopicName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetPartnerTopicEventSubscriptionFullUrlArgs build() {
+        }        public GetPartnerTopicEventSubscriptionFullUrlArgs build() {
             return new GetPartnerTopicEventSubscriptionFullUrlArgs(eventSubscriptionName, partnerTopicName, resourceGroupName);
         }
     }

@@ -170,42 +170,43 @@ public final class NotificationResponse {
             this.contactEmails = Objects.requireNonNull(contactEmails);
             return this;
         }
-
+        public Builder contactEmails(String... contactEmails) {
+            return contactEmails(List.of(contactEmails));
+        }
         public Builder contactGroups(@Nullable List<String> contactGroups) {
             this.contactGroups = contactGroups;
             return this;
         }
-
+        public Builder contactGroups(String... contactGroups) {
+            return contactGroups(List.of(contactGroups));
+        }
         public Builder contactRoles(@Nullable List<String> contactRoles) {
             this.contactRoles = contactRoles;
             return this;
         }
-
+        public Builder contactRoles(String... contactRoles) {
+            return contactRoles(List.of(contactRoles));
+        }
         public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public Builder locale(@Nullable String locale) {
             this.locale = locale;
             return this;
         }
-
         public Builder operator(String operator) {
             this.operator = Objects.requireNonNull(operator);
             return this;
         }
-
         public Builder threshold(Double threshold) {
             this.threshold = Objects.requireNonNull(threshold);
             return this;
         }
-
         public Builder thresholdType(@Nullable String thresholdType) {
             this.thresholdType = thresholdType;
             return this;
-        }
-        public NotificationResponse build() {
+        }        public NotificationResponse build() {
             return new NotificationResponse(contactEmails, contactGroups, contactRoles, enabled, locale, operator, threshold, thresholdType);
         }
     }

@@ -99,22 +99,24 @@ public final class TrailEventSelector {
             this.dataResources = dataResources;
             return this;
         }
-
+        public Builder dataResources(TrailDataResource... dataResources) {
+            return dataResources(List.of(dataResources));
+        }
         public Builder excludeManagementEventSources(@Nullable List<String> excludeManagementEventSources) {
             this.excludeManagementEventSources = excludeManagementEventSources;
             return this;
         }
-
+        public Builder excludeManagementEventSources(String... excludeManagementEventSources) {
+            return excludeManagementEventSources(List.of(excludeManagementEventSources));
+        }
         public Builder includeManagementEvents(@Nullable Boolean includeManagementEvents) {
             this.includeManagementEvents = includeManagementEvents;
             return this;
         }
-
         public Builder readWriteType(@Nullable TrailEventSelectorReadWriteType readWriteType) {
             this.readWriteType = readWriteType;
             return this;
-        }
-        public TrailEventSelector build() {
+        }        public TrailEventSelector build() {
             return new TrailEventSelector(dataResources, excludeManagementEventSources, includeManagementEvents, readWriteType);
         }
     }

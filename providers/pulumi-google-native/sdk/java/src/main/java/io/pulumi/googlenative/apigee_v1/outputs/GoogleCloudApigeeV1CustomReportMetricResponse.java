@@ -69,12 +69,10 @@ public final class GoogleCloudApigeeV1CustomReportMetricResponse {
             this.function = Objects.requireNonNull(function);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public GoogleCloudApigeeV1CustomReportMetricResponse build() {
+        }        public GoogleCloudApigeeV1CustomReportMetricResponse build() {
             return new GoogleCloudApigeeV1CustomReportMetricResponse(function, name);
         }
     }

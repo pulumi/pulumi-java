@@ -90,22 +90,18 @@ public final class GetLoadBalancerAccessLogs extends io.pulumi.resources.InvokeA
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
-
         public Builder bucketPrefix(String bucketPrefix) {
             this.bucketPrefix = Objects.requireNonNull(bucketPrefix);
             return this;
         }
-
         public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public Builder interval(Integer interval) {
             this.interval = Objects.requireNonNull(interval);
             return this;
-        }
-        public GetLoadBalancerAccessLogs build() {
+        }        public GetLoadBalancerAccessLogs build() {
             return new GetLoadBalancerAccessLogs(bucket, bucketPrefix, enabled, interval);
         }
     }

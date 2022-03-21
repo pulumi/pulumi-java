@@ -90,17 +90,17 @@ public final class RuleGroupRuleActionBlockCustomResponse {
             this.customResponseBodyKey = customResponseBodyKey;
             return this;
         }
-
         public Builder responseCode(Integer responseCode) {
             this.responseCode = Objects.requireNonNull(responseCode);
             return this;
         }
-
         public Builder responseHeaders(@Nullable List<RuleGroupRuleActionBlockCustomResponseResponseHeader> responseHeaders) {
             this.responseHeaders = responseHeaders;
             return this;
         }
-        public RuleGroupRuleActionBlockCustomResponse build() {
+        public Builder responseHeaders(RuleGroupRuleActionBlockCustomResponseResponseHeader... responseHeaders) {
+            return responseHeaders(List.of(responseHeaders));
+        }        public RuleGroupRuleActionBlockCustomResponse build() {
             return new RuleGroupRuleActionBlockCustomResponse(customResponseBodyKey, responseCode, responseHeaders);
         }
     }

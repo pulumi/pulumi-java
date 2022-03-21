@@ -76,12 +76,10 @@ public final class GoogleMonitoringV3RangeResponse extends io.pulumi.resources.I
             this.max = Objects.requireNonNull(max);
             return this;
         }
-
         public Builder min(Double min) {
             this.min = Objects.requireNonNull(min);
             return this;
-        }
-        public GoogleMonitoringV3RangeResponse build() {
+        }        public GoogleMonitoringV3RangeResponse build() {
             return new GoogleMonitoringV3RangeResponse(max, min);
         }
     }

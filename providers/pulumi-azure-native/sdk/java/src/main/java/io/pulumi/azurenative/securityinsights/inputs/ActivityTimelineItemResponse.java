@@ -173,42 +173,34 @@ public final class ActivityTimelineItemResponse extends io.pulumi.resources.Invo
             this.bucketEndTimeUTC = Objects.requireNonNull(bucketEndTimeUTC);
             return this;
         }
-
         public Builder bucketStartTimeUTC(String bucketStartTimeUTC) {
             this.bucketStartTimeUTC = Objects.requireNonNull(bucketStartTimeUTC);
             return this;
         }
-
         public Builder content(String content) {
             this.content = Objects.requireNonNull(content);
             return this;
         }
-
         public Builder firstActivityTimeUTC(String firstActivityTimeUTC) {
             this.firstActivityTimeUTC = Objects.requireNonNull(firstActivityTimeUTC);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder lastActivityTimeUTC(String lastActivityTimeUTC) {
             this.lastActivityTimeUTC = Objects.requireNonNull(lastActivityTimeUTC);
             return this;
         }
-
         public Builder queryId(String queryId) {
             this.queryId = Objects.requireNonNull(queryId);
             return this;
         }
-
         public Builder title(String title) {
             this.title = Objects.requireNonNull(title);
             return this;
-        }
-        public ActivityTimelineItemResponse build() {
+        }        public ActivityTimelineItemResponse build() {
             return new ActivityTimelineItemResponse(bucketEndTimeUTC, bucketStartTimeUTC, content, firstActivityTimeUTC, kind, lastActivityTimeUTC, queryId, title);
         }
     }

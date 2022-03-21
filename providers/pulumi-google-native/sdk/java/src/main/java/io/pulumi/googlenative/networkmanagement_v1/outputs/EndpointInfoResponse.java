@@ -150,37 +150,30 @@ public final class EndpointInfoResponse {
             this.destinationIp = Objects.requireNonNull(destinationIp);
             return this;
         }
-
         public Builder destinationNetworkUri(String destinationNetworkUri) {
             this.destinationNetworkUri = Objects.requireNonNull(destinationNetworkUri);
             return this;
         }
-
         public Builder destinationPort(Integer destinationPort) {
             this.destinationPort = Objects.requireNonNull(destinationPort);
             return this;
         }
-
         public Builder protocol(String protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
-
         public Builder sourceIp(String sourceIp) {
             this.sourceIp = Objects.requireNonNull(sourceIp);
             return this;
         }
-
         public Builder sourceNetworkUri(String sourceNetworkUri) {
             this.sourceNetworkUri = Objects.requireNonNull(sourceNetworkUri);
             return this;
         }
-
         public Builder sourcePort(Integer sourcePort) {
             this.sourcePort = Objects.requireNonNull(sourcePort);
             return this;
-        }
-        public EndpointInfoResponse build() {
+        }        public EndpointInfoResponse build() {
             return new EndpointInfoResponse(destinationIp, destinationNetworkUri, destinationPort, protocol, sourceIp, sourceNetworkUri, sourcePort);
         }
     }

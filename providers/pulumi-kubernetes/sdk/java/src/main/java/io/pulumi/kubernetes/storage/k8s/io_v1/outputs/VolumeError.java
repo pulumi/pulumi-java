@@ -71,12 +71,10 @@ public final class VolumeError {
             this.message = message;
             return this;
         }
-
         public Builder time(@Nullable String time) {
             this.time = time;
             return this;
-        }
-        public VolumeError build() {
+        }        public VolumeError build() {
             return new VolumeError(message, time);
         }
     }

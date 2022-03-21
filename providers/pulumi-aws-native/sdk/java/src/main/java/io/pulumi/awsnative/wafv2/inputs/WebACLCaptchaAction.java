@@ -56,8 +56,7 @@ public final class WebACLCaptchaAction extends io.pulumi.resources.InvokeArgs {
         public Builder customRequestHandling(@Nullable WebACLCustomRequestHandling customRequestHandling) {
             this.customRequestHandling = customRequestHandling;
             return this;
-        }
-        public WebACLCaptchaAction build() {
+        }        public WebACLCaptchaAction build() {
             return new WebACLCaptchaAction(customRequestHandling);
         }
     }

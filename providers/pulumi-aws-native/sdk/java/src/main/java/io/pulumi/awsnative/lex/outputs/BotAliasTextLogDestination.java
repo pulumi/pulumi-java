@@ -45,8 +45,7 @@ public final class BotAliasTextLogDestination {
         public Builder cloudWatch(@Nullable BotAliasCloudWatchLogGroupLogDestination cloudWatch) {
             this.cloudWatch = cloudWatch;
             return this;
-        }
-        public BotAliasTextLogDestination build() {
+        }        public BotAliasTextLogDestination build() {
             return new BotAliasTextLogDestination(cloudWatch);
         }
     }

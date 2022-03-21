@@ -104,22 +104,21 @@ public final class MetricAbsenceResponse {
             this.aggregations = Objects.requireNonNull(aggregations);
             return this;
         }
-
+        public Builder aggregations(AggregationResponse... aggregations) {
+            return aggregations(List.of(aggregations));
+        }
         public Builder duration(String duration) {
             this.duration = Objects.requireNonNull(duration);
             return this;
         }
-
         public Builder filter(String filter) {
             this.filter = Objects.requireNonNull(filter);
             return this;
         }
-
         public Builder trigger(TriggerResponse trigger) {
             this.trigger = Objects.requireNonNull(trigger);
             return this;
-        }
-        public MetricAbsenceResponse build() {
+        }        public MetricAbsenceResponse build() {
             return new MetricAbsenceResponse(aggregations, duration, filter, trigger);
         }
     }

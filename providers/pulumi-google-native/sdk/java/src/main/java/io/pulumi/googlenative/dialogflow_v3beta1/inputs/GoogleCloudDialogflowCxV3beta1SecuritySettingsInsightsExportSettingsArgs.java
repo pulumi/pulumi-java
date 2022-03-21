@@ -61,12 +61,10 @@ public final class GoogleCloudDialogflowCxV3beta1SecuritySettingsInsightsExportS
             this.enableInsightsExport = enableInsightsExport;
             return this;
         }
-
         public Builder enableInsightsExport(@Nullable Boolean enableInsightsExport) {
             this.enableInsightsExport = Output.ofNullable(enableInsightsExport);
             return this;
-        }
-        public GoogleCloudDialogflowCxV3beta1SecuritySettingsInsightsExportSettingsArgs build() {
+        }        public GoogleCloudDialogflowCxV3beta1SecuritySettingsInsightsExportSettingsArgs build() {
             return new GoogleCloudDialogflowCxV3beta1SecuritySettingsInsightsExportSettingsArgs(enableInsightsExport);
         }
     }

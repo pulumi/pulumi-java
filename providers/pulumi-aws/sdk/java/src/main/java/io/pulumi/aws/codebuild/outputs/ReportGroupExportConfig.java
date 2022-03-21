@@ -72,12 +72,10 @@ public final class ReportGroupExportConfig {
             this.s3Destination = s3Destination;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public ReportGroupExportConfig build() {
+        }        public ReportGroupExportConfig build() {
             return new ReportGroupExportConfig(s3Destination, type);
         }
     }

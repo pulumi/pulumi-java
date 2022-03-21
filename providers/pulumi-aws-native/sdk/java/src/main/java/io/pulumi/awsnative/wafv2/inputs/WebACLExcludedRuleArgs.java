@@ -56,12 +56,10 @@ public final class WebACLExcludedRuleArgs extends io.pulumi.resources.ResourceAr
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
-        }
-        public WebACLExcludedRuleArgs build() {
+        }        public WebACLExcludedRuleArgs build() {
             return new WebACLExcludedRuleArgs(name);
         }
     }

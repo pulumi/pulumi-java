@@ -137,32 +137,26 @@ public final class GetLinkedServiceResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder identity(@Nullable IdentityResponse identity) {
             this.identity = identity;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder properties(LinkedServicePropsResponse properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetLinkedServiceResult build() {
+        }        public GetLinkedServiceResult build() {
             return new GetLinkedServiceResult(id, identity, location, name, properties, type);
         }
     }

@@ -97,32 +97,29 @@ public final class KeyUsageArgs extends io.pulumi.resources.ResourceArgs {
             this.baseKeyUsage = baseKeyUsage;
             return this;
         }
-
         public Builder baseKeyUsage(@Nullable KeyUsageOptionsArgs baseKeyUsage) {
             this.baseKeyUsage = Output.ofNullable(baseKeyUsage);
             return this;
         }
-
         public Builder extendedKeyUsage(@Nullable Output<ExtendedKeyUsageOptionsArgs> extendedKeyUsage) {
             this.extendedKeyUsage = extendedKeyUsage;
             return this;
         }
-
         public Builder extendedKeyUsage(@Nullable ExtendedKeyUsageOptionsArgs extendedKeyUsage) {
             this.extendedKeyUsage = Output.ofNullable(extendedKeyUsage);
             return this;
         }
-
         public Builder unknownExtendedKeyUsages(@Nullable Output<List<ObjectIdArgs>> unknownExtendedKeyUsages) {
             this.unknownExtendedKeyUsages = unknownExtendedKeyUsages;
             return this;
         }
-
         public Builder unknownExtendedKeyUsages(@Nullable List<ObjectIdArgs> unknownExtendedKeyUsages) {
             this.unknownExtendedKeyUsages = Output.ofNullable(unknownExtendedKeyUsages);
             return this;
         }
-        public KeyUsageArgs build() {
+        public Builder unknownExtendedKeyUsages(ObjectIdArgs... unknownExtendedKeyUsages) {
+            return unknownExtendedKeyUsages(List.of(unknownExtendedKeyUsages));
+        }        public KeyUsageArgs build() {
             return new KeyUsageArgs(baseKeyUsage, extendedKeyUsage, unknownExtendedKeyUsages);
         }
     }

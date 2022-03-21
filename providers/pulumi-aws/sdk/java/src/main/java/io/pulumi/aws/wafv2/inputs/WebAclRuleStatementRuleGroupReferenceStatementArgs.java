@@ -76,22 +76,21 @@ public final class WebAclRuleStatementRuleGroupReferenceStatementArgs extends io
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder arn(String arn) {
             this.arn = Output.of(Objects.requireNonNull(arn));
             return this;
         }
-
         public Builder excludedRules(@Nullable Output<List<WebAclRuleStatementRuleGroupReferenceStatementExcludedRuleArgs>> excludedRules) {
             this.excludedRules = excludedRules;
             return this;
         }
-
         public Builder excludedRules(@Nullable List<WebAclRuleStatementRuleGroupReferenceStatementExcludedRuleArgs> excludedRules) {
             this.excludedRules = Output.ofNullable(excludedRules);
             return this;
         }
-        public WebAclRuleStatementRuleGroupReferenceStatementArgs build() {
+        public Builder excludedRules(WebAclRuleStatementRuleGroupReferenceStatementExcludedRuleArgs... excludedRules) {
+            return excludedRules(List.of(excludedRules));
+        }        public WebAclRuleStatementRuleGroupReferenceStatementArgs build() {
             return new WebAclRuleStatementRuleGroupReferenceStatementArgs(arn, excludedRules);
         }
     }

@@ -104,22 +104,18 @@ public final class GetDatabaseBlobAuditingPolicyArgs extends io.pulumi.resources
             this.blobAuditingPolicyName = Objects.requireNonNull(blobAuditingPolicyName);
             return this;
         }
-
         public Builder databaseName(String databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder serverName(String serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
-        }
-        public GetDatabaseBlobAuditingPolicyArgs build() {
+        }        public GetDatabaseBlobAuditingPolicyArgs build() {
             return new GetDatabaseBlobAuditingPolicyArgs(blobAuditingPolicyName, databaseName, resourceGroupName, serverName);
         }
     }

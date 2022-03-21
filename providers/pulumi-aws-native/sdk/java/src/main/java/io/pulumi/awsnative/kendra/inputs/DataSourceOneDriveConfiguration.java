@@ -130,37 +130,39 @@ public final class DataSourceOneDriveConfiguration extends io.pulumi.resources.I
             this.disableLocalGroups = disableLocalGroups;
             return this;
         }
-
         public Builder exclusionPatterns(@Nullable List<String> exclusionPatterns) {
             this.exclusionPatterns = exclusionPatterns;
             return this;
         }
-
+        public Builder exclusionPatterns(String... exclusionPatterns) {
+            return exclusionPatterns(List.of(exclusionPatterns));
+        }
         public Builder fieldMappings(@Nullable List<DataSourceToIndexFieldMapping> fieldMappings) {
             this.fieldMappings = fieldMappings;
             return this;
         }
-
+        public Builder fieldMappings(DataSourceToIndexFieldMapping... fieldMappings) {
+            return fieldMappings(List.of(fieldMappings));
+        }
         public Builder inclusionPatterns(@Nullable List<String> inclusionPatterns) {
             this.inclusionPatterns = inclusionPatterns;
             return this;
         }
-
+        public Builder inclusionPatterns(String... inclusionPatterns) {
+            return inclusionPatterns(List.of(inclusionPatterns));
+        }
         public Builder oneDriveUsers(DataSourceOneDriveUsers oneDriveUsers) {
             this.oneDriveUsers = Objects.requireNonNull(oneDriveUsers);
             return this;
         }
-
         public Builder secretArn(String secretArn) {
             this.secretArn = Objects.requireNonNull(secretArn);
             return this;
         }
-
         public Builder tenantDomain(String tenantDomain) {
             this.tenantDomain = Objects.requireNonNull(tenantDomain);
             return this;
-        }
-        public DataSourceOneDriveConfiguration build() {
+        }        public DataSourceOneDriveConfiguration build() {
             return new DataSourceOneDriveConfiguration(disableLocalGroups, exclusionPatterns, fieldMappings, inclusionPatterns, oneDriveUsers, secretArn, tenantDomain);
         }
     }

@@ -69,12 +69,10 @@ public final class UserTag {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public UserTag build() {
+        }        public UserTag build() {
             return new UserTag(key, value);
         }
     }

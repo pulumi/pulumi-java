@@ -72,12 +72,10 @@ public final class AdvancedScheduleMonthlyOccurrenceResponse {
             this.day = day;
             return this;
         }
-
         public Builder occurrence(@Nullable Integer occurrence) {
             this.occurrence = occurrence;
             return this;
-        }
-        public AdvancedScheduleMonthlyOccurrenceResponse build() {
+        }        public AdvancedScheduleMonthlyOccurrenceResponse build() {
             return new AdvancedScheduleMonthlyOccurrenceResponse(day, occurrence);
         }
     }

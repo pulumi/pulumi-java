@@ -56,12 +56,10 @@ public final class ClusterClusterConfigAutoscalingConfigGetArgs extends io.pulum
             this.policyUri = Objects.requireNonNull(policyUri);
             return this;
         }
-
         public Builder policyUri(String policyUri) {
             this.policyUri = Output.of(Objects.requireNonNull(policyUri));
             return this;
-        }
-        public ClusterClusterConfigAutoscalingConfigGetArgs build() {
+        }        public ClusterClusterConfigAutoscalingConfigGetArgs build() {
             return new ClusterClusterConfigAutoscalingConfigGetArgs(policyUri);
         }
     }

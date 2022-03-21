@@ -87,17 +87,14 @@ public final class ExpressRouteCircuitSkuResponse {
             this.family = family;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder tier(@Nullable String tier) {
             this.tier = tier;
             return this;
-        }
-        public ExpressRouteCircuitSkuResponse build() {
+        }        public ExpressRouteCircuitSkuResponse build() {
             return new ExpressRouteCircuitSkuResponse(family, name, tier);
         }
     }

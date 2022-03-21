@@ -97,42 +97,34 @@ public final class DatasetInputArgs extends io.pulumi.resources.ResourceArgs {
             this.dataCatalogInputDefinition = dataCatalogInputDefinition;
             return this;
         }
-
         public Builder dataCatalogInputDefinition(@Nullable DatasetDataCatalogInputDefinitionArgs dataCatalogInputDefinition) {
             this.dataCatalogInputDefinition = Output.ofNullable(dataCatalogInputDefinition);
             return this;
         }
-
         public Builder databaseInputDefinition(@Nullable Output<DatasetDatabaseInputDefinitionArgs> databaseInputDefinition) {
             this.databaseInputDefinition = databaseInputDefinition;
             return this;
         }
-
         public Builder databaseInputDefinition(@Nullable DatasetDatabaseInputDefinitionArgs databaseInputDefinition) {
             this.databaseInputDefinition = Output.ofNullable(databaseInputDefinition);
             return this;
         }
-
         public Builder metadata(@Nullable Output<DatasetMetadataArgs> metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder metadata(@Nullable DatasetMetadataArgs metadata) {
             this.metadata = Output.ofNullable(metadata);
             return this;
         }
-
         public Builder s3InputDefinition(@Nullable Output<DatasetS3LocationArgs> s3InputDefinition) {
             this.s3InputDefinition = s3InputDefinition;
             return this;
         }
-
         public Builder s3InputDefinition(@Nullable DatasetS3LocationArgs s3InputDefinition) {
             this.s3InputDefinition = Output.ofNullable(s3InputDefinition);
             return this;
-        }
-        public DatasetInputArgs build() {
+        }        public DatasetInputArgs build() {
             return new DatasetInputArgs(dataCatalogInputDefinition, databaseInputDefinition, metadata, s3InputDefinition);
         }
     }

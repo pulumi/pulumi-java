@@ -83,27 +83,22 @@ public final class IntegrationSourceConnectorProperties {
             this.marketo = marketo;
             return this;
         }
-
         public Builder s3(@Nullable IntegrationS3SourceProperties s3) {
             this.s3 = s3;
             return this;
         }
-
         public Builder salesforce(@Nullable IntegrationSalesforceSourceProperties salesforce) {
             this.salesforce = salesforce;
             return this;
         }
-
         public Builder serviceNow(@Nullable IntegrationServiceNowSourceProperties serviceNow) {
             this.serviceNow = serviceNow;
             return this;
         }
-
         public Builder zendesk(@Nullable IntegrationZendeskSourceProperties zendesk) {
             this.zendesk = zendesk;
             return this;
-        }
-        public IntegrationSourceConnectorProperties build() {
+        }        public IntegrationSourceConnectorProperties build() {
             return new IntegrationSourceConnectorProperties(marketo, s3, salesforce, serviceNow, zendesk);
         }
     }

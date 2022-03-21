@@ -240,67 +240,54 @@ public final class GetSensitivityLabelResult {
             this.columnName = Objects.requireNonNull(columnName);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder informationType(@Nullable String informationType) {
             this.informationType = informationType;
             return this;
         }
-
         public Builder informationTypeId(@Nullable String informationTypeId) {
             this.informationTypeId = informationTypeId;
             return this;
         }
-
         public Builder isDisabled(Boolean isDisabled) {
             this.isDisabled = Objects.requireNonNull(isDisabled);
             return this;
         }
-
         public Builder labelId(@Nullable String labelId) {
             this.labelId = labelId;
             return this;
         }
-
         public Builder labelName(@Nullable String labelName) {
             this.labelName = labelName;
             return this;
         }
-
         public Builder managedBy(String managedBy) {
             this.managedBy = Objects.requireNonNull(managedBy);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder rank(@Nullable String rank) {
             this.rank = rank;
             return this;
         }
-
         public Builder schemaName(String schemaName) {
             this.schemaName = Objects.requireNonNull(schemaName);
             return this;
         }
-
         public Builder tableName(String tableName) {
             this.tableName = Objects.requireNonNull(tableName);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetSensitivityLabelResult build() {
+        }        public GetSensitivityLabelResult build() {
             return new GetSensitivityLabelResult(columnName, id, informationType, informationTypeId, isDisabled, labelId, labelName, managedBy, name, rank, schemaName, tableName, type);
         }
     }

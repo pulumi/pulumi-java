@@ -66,17 +66,17 @@ public final class GetTopicRuleResult {
             this.arn = arn;
             return this;
         }
-
         public Builder tags(@Nullable List<TopicRuleTag> tags) {
             this.tags = tags;
             return this;
         }
-
+        public Builder tags(TopicRuleTag... tags) {
+            return tags(List.of(tags));
+        }
         public Builder topicRulePayload(@Nullable TopicRulePayload topicRulePayload) {
             this.topicRulePayload = topicRulePayload;
             return this;
-        }
-        public GetTopicRuleResult build() {
+        }        public GetTopicRuleResult build() {
             return new GetTopicRuleResult(arn, tags, topicRulePayload);
         }
     }

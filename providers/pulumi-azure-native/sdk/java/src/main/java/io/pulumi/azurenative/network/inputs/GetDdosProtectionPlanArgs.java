@@ -72,12 +72,10 @@ public final class GetDdosProtectionPlanArgs extends io.pulumi.resources.InvokeA
             this.ddosProtectionPlanName = Objects.requireNonNull(ddosProtectionPlanName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetDdosProtectionPlanArgs build() {
+        }        public GetDdosProtectionPlanArgs build() {
             return new GetDdosProtectionPlanArgs(ddosProtectionPlanName, resourceGroupName);
         }
     }

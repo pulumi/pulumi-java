@@ -76,12 +76,10 @@ public final class URLMapDefaultRouteActionTimeout {
             this.nanos = nanos;
             return this;
         }
-
         public Builder seconds(@Nullable String seconds) {
             this.seconds = seconds;
             return this;
-        }
-        public URLMapDefaultRouteActionTimeout build() {
+        }        public URLMapDefaultRouteActionTimeout build() {
             return new URLMapDefaultRouteActionTimeout(nanos, seconds);
         }
     }

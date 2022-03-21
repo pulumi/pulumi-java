@@ -122,52 +122,42 @@ public final class UserPoolEmailConfigurationGetArgs extends io.pulumi.resources
             this.configurationSet = configurationSet;
             return this;
         }
-
         public Builder configurationSet(@Nullable String configurationSet) {
             this.configurationSet = Output.ofNullable(configurationSet);
             return this;
         }
-
         public Builder emailSendingAccount(@Nullable Output<String> emailSendingAccount) {
             this.emailSendingAccount = emailSendingAccount;
             return this;
         }
-
         public Builder emailSendingAccount(@Nullable String emailSendingAccount) {
             this.emailSendingAccount = Output.ofNullable(emailSendingAccount);
             return this;
         }
-
         public Builder fromEmailAddress(@Nullable Output<String> fromEmailAddress) {
             this.fromEmailAddress = fromEmailAddress;
             return this;
         }
-
         public Builder fromEmailAddress(@Nullable String fromEmailAddress) {
             this.fromEmailAddress = Output.ofNullable(fromEmailAddress);
             return this;
         }
-
         public Builder replyToEmailAddress(@Nullable Output<String> replyToEmailAddress) {
             this.replyToEmailAddress = replyToEmailAddress;
             return this;
         }
-
         public Builder replyToEmailAddress(@Nullable String replyToEmailAddress) {
             this.replyToEmailAddress = Output.ofNullable(replyToEmailAddress);
             return this;
         }
-
         public Builder sourceArn(@Nullable Output<String> sourceArn) {
             this.sourceArn = sourceArn;
             return this;
         }
-
         public Builder sourceArn(@Nullable String sourceArn) {
             this.sourceArn = Output.ofNullable(sourceArn);
             return this;
-        }
-        public UserPoolEmailConfigurationGetArgs build() {
+        }        public UserPoolEmailConfigurationGetArgs build() {
             return new UserPoolEmailConfigurationGetArgs(configurationSet, emailSendingAccount, fromEmailAddress, replyToEmailAddress, sourceArn);
         }
     }

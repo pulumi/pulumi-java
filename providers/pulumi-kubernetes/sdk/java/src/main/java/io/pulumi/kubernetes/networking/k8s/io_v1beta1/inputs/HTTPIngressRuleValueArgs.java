@@ -61,12 +61,13 @@ public final class HTTPIngressRuleValueArgs extends io.pulumi.resources.Resource
             this.paths = Objects.requireNonNull(paths);
             return this;
         }
-
         public Builder paths(List<HTTPIngressPathArgs> paths) {
             this.paths = Output.of(Objects.requireNonNull(paths));
             return this;
         }
-        public HTTPIngressRuleValueArgs build() {
+        public Builder paths(HTTPIngressPathArgs... paths) {
+            return paths(List.of(paths));
+        }        public HTTPIngressRuleValueArgs build() {
             return new HTTPIngressRuleValueArgs(paths);
         }
     }

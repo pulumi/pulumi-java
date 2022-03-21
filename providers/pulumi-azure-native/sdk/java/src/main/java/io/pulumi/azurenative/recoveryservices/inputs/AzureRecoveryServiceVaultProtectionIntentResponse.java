@@ -143,32 +143,26 @@ public final class AzureRecoveryServiceVaultProtectionIntentResponse extends io.
             this.backupManagementType = backupManagementType;
             return this;
         }
-
         public Builder itemId(@Nullable String itemId) {
             this.itemId = itemId;
             return this;
         }
-
         public Builder policyId(@Nullable String policyId) {
             this.policyId = policyId;
             return this;
         }
-
         public Builder protectionIntentItemType(String protectionIntentItemType) {
             this.protectionIntentItemType = Objects.requireNonNull(protectionIntentItemType);
             return this;
         }
-
         public Builder protectionState(@Nullable String protectionState) {
             this.protectionState = protectionState;
             return this;
         }
-
         public Builder sourceResourceId(@Nullable String sourceResourceId) {
             this.sourceResourceId = sourceResourceId;
             return this;
-        }
-        public AzureRecoveryServiceVaultProtectionIntentResponse build() {
+        }        public AzureRecoveryServiceVaultProtectionIntentResponse build() {
             return new AzureRecoveryServiceVaultProtectionIntentResponse(backupManagementType, itemId, policyId, protectionIntentItemType, protectionState, sourceResourceId);
         }
     }

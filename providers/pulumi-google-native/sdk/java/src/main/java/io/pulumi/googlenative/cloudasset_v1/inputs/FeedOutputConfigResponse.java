@@ -58,8 +58,7 @@ public final class FeedOutputConfigResponse extends io.pulumi.resources.InvokeAr
         public Builder pubsubDestination(PubsubDestinationResponse pubsubDestination) {
             this.pubsubDestination = Objects.requireNonNull(pubsubDestination);
             return this;
-        }
-        public FeedOutputConfigResponse build() {
+        }        public FeedOutputConfigResponse build() {
             return new FeedOutputConfigResponse(pubsubDestination);
         }
     }

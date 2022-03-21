@@ -71,12 +71,10 @@ public final class PolicySecurityServicePolicyData {
             this.managedServiceData = managedServiceData;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public PolicySecurityServicePolicyData build() {
+        }        public PolicySecurityServicePolicyData build() {
             return new PolicySecurityServicePolicyData(managedServiceData, type);
         }
     }

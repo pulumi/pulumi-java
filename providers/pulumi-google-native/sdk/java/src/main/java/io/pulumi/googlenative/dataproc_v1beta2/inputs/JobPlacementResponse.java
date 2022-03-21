@@ -93,17 +93,14 @@ public final class JobPlacementResponse extends io.pulumi.resources.InvokeArgs {
             this.clusterLabels = Objects.requireNonNull(clusterLabels);
             return this;
         }
-
         public Builder clusterName(String clusterName) {
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
-
         public Builder clusterUuid(String clusterUuid) {
             this.clusterUuid = Objects.requireNonNull(clusterUuid);
             return this;
-        }
-        public JobPlacementResponse build() {
+        }        public JobPlacementResponse build() {
             return new JobPlacementResponse(clusterLabels, clusterName, clusterUuid);
         }
     }

@@ -106,22 +106,18 @@ public final class StaticDeliveryAttributeMappingResponse {
             this.isSecret = isSecret;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public StaticDeliveryAttributeMappingResponse build() {
+        }        public StaticDeliveryAttributeMappingResponse build() {
             return new StaticDeliveryAttributeMappingResponse(isSecret, name, type, value);
         }
     }

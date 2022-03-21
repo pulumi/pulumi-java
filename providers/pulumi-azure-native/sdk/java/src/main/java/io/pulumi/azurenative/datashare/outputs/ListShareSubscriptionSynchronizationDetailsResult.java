@@ -73,12 +73,13 @@ public final class ListShareSubscriptionSynchronizationDetailsResult {
             this.nextLink = nextLink;
             return this;
         }
-
         public Builder value(List<SynchronizationDetailsResponse> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-        public ListShareSubscriptionSynchronizationDetailsResult build() {
+        public Builder value(SynchronizationDetailsResponse... value) {
+            return value(List.of(value));
+        }        public ListShareSubscriptionSynchronizationDetailsResult build() {
             return new ListShareSubscriptionSynchronizationDetailsResult(nextLink, value);
         }
     }

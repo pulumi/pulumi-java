@@ -223,57 +223,46 @@ public final class GetEventChannelResult {
             this.destination = destination;
             return this;
         }
-
         public Builder expirationTimeIfNotActivatedUtc(@Nullable String expirationTimeIfNotActivatedUtc) {
             this.expirationTimeIfNotActivatedUtc = expirationTimeIfNotActivatedUtc;
             return this;
         }
-
         public Builder filter(@Nullable EventChannelFilterResponse filter) {
             this.filter = filter;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder partnerTopicFriendlyDescription(@Nullable String partnerTopicFriendlyDescription) {
             this.partnerTopicFriendlyDescription = partnerTopicFriendlyDescription;
             return this;
         }
-
         public Builder partnerTopicReadinessState(String partnerTopicReadinessState) {
             this.partnerTopicReadinessState = Objects.requireNonNull(partnerTopicReadinessState);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder source(@Nullable EventChannelSourceResponse source) {
             this.source = source;
             return this;
         }
-
         public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetEventChannelResult build() {
+        }        public GetEventChannelResult build() {
             return new GetEventChannelResult(destination, expirationTimeIfNotActivatedUtc, filter, id, name, partnerTopicFriendlyDescription, partnerTopicReadinessState, provisioningState, source, systemData, type);
         }
     }

@@ -78,22 +78,18 @@ public final class GitHubClientSecretArgs extends io.pulumi.resources.ResourceAr
             this.byoaSecretAkvUrl = byoaSecretAkvUrl;
             return this;
         }
-
         public Builder byoaSecretAkvUrl(@Nullable String byoaSecretAkvUrl) {
             this.byoaSecretAkvUrl = Output.ofNullable(byoaSecretAkvUrl);
             return this;
         }
-
         public Builder byoaSecretName(@Nullable Output<String> byoaSecretName) {
             this.byoaSecretName = byoaSecretName;
             return this;
         }
-
         public Builder byoaSecretName(@Nullable String byoaSecretName) {
             this.byoaSecretName = Output.ofNullable(byoaSecretName);
             return this;
-        }
-        public GitHubClientSecretArgs build() {
+        }        public GitHubClientSecretArgs build() {
             return new GitHubClientSecretArgs(byoaSecretAkvUrl, byoaSecretName);
         }
     }

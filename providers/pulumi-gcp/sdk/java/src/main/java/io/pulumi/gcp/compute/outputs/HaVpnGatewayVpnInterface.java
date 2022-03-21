@@ -100,17 +100,14 @@ public final class HaVpnGatewayVpnInterface {
             this.id = id;
             return this;
         }
-
         public Builder interconnectAttachment(@Nullable String interconnectAttachment) {
             this.interconnectAttachment = interconnectAttachment;
             return this;
         }
-
         public Builder ipAddress(@Nullable String ipAddress) {
             this.ipAddress = ipAddress;
             return this;
-        }
-        public HaVpnGatewayVpnInterface build() {
+        }        public HaVpnGatewayVpnInterface build() {
             return new HaVpnGatewayVpnInterface(id, interconnectAttachment, ipAddress);
         }
     }

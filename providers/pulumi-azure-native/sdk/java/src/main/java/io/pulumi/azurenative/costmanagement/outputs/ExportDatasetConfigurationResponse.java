@@ -54,7 +54,9 @@ public final class ExportDatasetConfigurationResponse {
             this.columns = columns;
             return this;
         }
-        public ExportDatasetConfigurationResponse build() {
+        public Builder columns(String... columns) {
+            return columns(List.of(columns));
+        }        public ExportDatasetConfigurationResponse build() {
             return new ExportDatasetConfigurationResponse(columns);
         }
     }

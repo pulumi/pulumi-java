@@ -120,27 +120,22 @@ public final class ListTenantAccessSecretsResult {
             this.enabled = enabled;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder primaryKey(@Nullable String primaryKey) {
             this.primaryKey = primaryKey;
             return this;
         }
-
         public Builder principalId(@Nullable String principalId) {
             this.principalId = principalId;
             return this;
         }
-
         public Builder secondaryKey(@Nullable String secondaryKey) {
             this.secondaryKey = secondaryKey;
             return this;
-        }
-        public ListTenantAccessSecretsResult build() {
+        }        public ListTenantAccessSecretsResult build() {
             return new ListTenantAccessSecretsResult(enabled, id, primaryKey, principalId, secondaryKey);
         }
     }

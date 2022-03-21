@@ -91,32 +91,29 @@ public final class NetworkAssociationArgs extends io.pulumi.resources.ResourceAr
             this.clientVpnEndpointId = Objects.requireNonNull(clientVpnEndpointId);
             return this;
         }
-
         public Builder clientVpnEndpointId(String clientVpnEndpointId) {
             this.clientVpnEndpointId = Output.of(Objects.requireNonNull(clientVpnEndpointId));
             return this;
         }
-
         public Builder securityGroups(@Nullable Output<List<String>> securityGroups) {
             this.securityGroups = securityGroups;
             return this;
         }
-
         public Builder securityGroups(@Nullable List<String> securityGroups) {
             this.securityGroups = Output.ofNullable(securityGroups);
             return this;
         }
-
+        public Builder securityGroups(String... securityGroups) {
+            return securityGroups(List.of(securityGroups));
+        }
         public Builder subnetId(Output<String> subnetId) {
             this.subnetId = Objects.requireNonNull(subnetId);
             return this;
         }
-
         public Builder subnetId(String subnetId) {
             this.subnetId = Output.of(Objects.requireNonNull(subnetId));
             return this;
-        }
-        public NetworkAssociationArgs build() {
+        }        public NetworkAssociationArgs build() {
             return new NetworkAssociationArgs(clientVpnEndpointId, securityGroups, subnetId);
         }
     }

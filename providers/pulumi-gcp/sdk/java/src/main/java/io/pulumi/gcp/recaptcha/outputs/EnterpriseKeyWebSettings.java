@@ -121,27 +121,25 @@ public final class EnterpriseKeyWebSettings {
             this.allowAllDomains = allowAllDomains;
             return this;
         }
-
         public Builder allowAmpTraffic(@Nullable Boolean allowAmpTraffic) {
             this.allowAmpTraffic = allowAmpTraffic;
             return this;
         }
-
         public Builder allowedDomains(@Nullable List<String> allowedDomains) {
             this.allowedDomains = allowedDomains;
             return this;
         }
-
+        public Builder allowedDomains(String... allowedDomains) {
+            return allowedDomains(List.of(allowedDomains));
+        }
         public Builder challengeSecurityPreference(@Nullable String challengeSecurityPreference) {
             this.challengeSecurityPreference = challengeSecurityPreference;
             return this;
         }
-
         public Builder integrationType(String integrationType) {
             this.integrationType = Objects.requireNonNull(integrationType);
             return this;
-        }
-        public EnterpriseKeyWebSettings build() {
+        }        public EnterpriseKeyWebSettings build() {
             return new EnterpriseKeyWebSettings(allowAllDomains, allowAmpTraffic, allowedDomains, challengeSecurityPreference, integrationType);
         }
     }

@@ -53,8 +53,7 @@ public final class AvroSerializationResponse {
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public AvroSerializationResponse build() {
+        }        public AvroSerializationResponse build() {
             return new AvroSerializationResponse(type);
         }
     }

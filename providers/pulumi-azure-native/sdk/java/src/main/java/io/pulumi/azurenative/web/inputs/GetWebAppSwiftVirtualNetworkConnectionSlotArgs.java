@@ -88,17 +88,14 @@ public final class GetWebAppSwiftVirtualNetworkConnectionSlotArgs extends io.pul
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder slot(String slot) {
             this.slot = Objects.requireNonNull(slot);
             return this;
-        }
-        public GetWebAppSwiftVirtualNetworkConnectionSlotArgs build() {
+        }        public GetWebAppSwiftVirtualNetworkConnectionSlotArgs build() {
             return new GetWebAppSwiftVirtualNetworkConnectionSlotArgs(name, resourceGroupName, slot);
         }
     }

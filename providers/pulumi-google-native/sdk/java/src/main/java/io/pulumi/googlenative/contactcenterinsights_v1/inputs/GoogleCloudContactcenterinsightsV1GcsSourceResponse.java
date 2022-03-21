@@ -76,12 +76,10 @@ public final class GoogleCloudContactcenterinsightsV1GcsSourceResponse extends i
             this.audioUri = Objects.requireNonNull(audioUri);
             return this;
         }
-
         public Builder transcriptUri(String transcriptUri) {
             this.transcriptUri = Objects.requireNonNull(transcriptUri);
             return this;
-        }
-        public GoogleCloudContactcenterinsightsV1GcsSourceResponse build() {
+        }        public GoogleCloudContactcenterinsightsV1GcsSourceResponse build() {
             return new GoogleCloudContactcenterinsightsV1GcsSourceResponse(audioUri, transcriptUri);
         }
     }

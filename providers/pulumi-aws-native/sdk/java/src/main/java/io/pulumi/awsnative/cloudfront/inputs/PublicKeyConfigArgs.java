@@ -90,42 +90,34 @@ public final class PublicKeyConfigArgs extends io.pulumi.resources.ResourceArgs 
             this.callerReference = Objects.requireNonNull(callerReference);
             return this;
         }
-
         public Builder callerReference(String callerReference) {
             this.callerReference = Output.of(Objects.requireNonNull(callerReference));
             return this;
         }
-
         public Builder comment(@Nullable Output<String> comment) {
             this.comment = comment;
             return this;
         }
-
         public Builder comment(@Nullable String comment) {
             this.comment = Output.ofNullable(comment);
             return this;
         }
-
         public Builder encodedKey(Output<String> encodedKey) {
             this.encodedKey = Objects.requireNonNull(encodedKey);
             return this;
         }
-
         public Builder encodedKey(String encodedKey) {
             this.encodedKey = Output.of(Objects.requireNonNull(encodedKey));
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
-        }
-        public PublicKeyConfigArgs build() {
+        }        public PublicKeyConfigArgs build() {
             return new PublicKeyConfigArgs(callerReference, comment, encodedKey, name);
         }
     }

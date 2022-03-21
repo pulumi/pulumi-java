@@ -88,17 +88,14 @@ public final class GetOuContainerArgs extends io.pulumi.resources.InvokeArgs {
             this.domainServiceName = Objects.requireNonNull(domainServiceName);
             return this;
         }
-
         public Builder ouContainerName(String ouContainerName) {
             this.ouContainerName = Objects.requireNonNull(ouContainerName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetOuContainerArgs build() {
+        }        public GetOuContainerArgs build() {
             return new GetOuContainerArgs(domainServiceName, ouContainerName, resourceGroupName);
         }
     }

@@ -80,12 +80,13 @@ public final class BuildpacksGroupPropertiesResponse extends io.pulumi.resources
             this.buildpacks = buildpacks;
             return this;
         }
-
+        public Builder buildpacks(BuildpackPropertiesResponse... buildpacks) {
+            return buildpacks(List.of(buildpacks));
+        }
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
-        }
-        public BuildpacksGroupPropertiesResponse build() {
+        }        public BuildpacksGroupPropertiesResponse build() {
             return new BuildpacksGroupPropertiesResponse(buildpacks, name);
         }
     }

@@ -58,8 +58,7 @@ public final class PoolOptionResponse extends io.pulumi.resources.InvokeArgs {
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public PoolOptionResponse build() {
+        }        public PoolOptionResponse build() {
             return new PoolOptionResponse(name);
         }
     }

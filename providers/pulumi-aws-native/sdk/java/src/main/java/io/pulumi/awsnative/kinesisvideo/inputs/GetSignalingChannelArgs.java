@@ -54,8 +54,7 @@ public final class GetSignalingChannelArgs extends io.pulumi.resources.InvokeArg
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public GetSignalingChannelArgs build() {
+        }        public GetSignalingChannelArgs build() {
             return new GetSignalingChannelArgs(name);
         }
     }

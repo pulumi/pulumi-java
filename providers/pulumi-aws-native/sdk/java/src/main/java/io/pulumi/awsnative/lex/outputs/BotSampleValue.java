@@ -51,8 +51,7 @@ public final class BotSampleValue {
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public BotSampleValue build() {
+        }        public BotSampleValue build() {
             return new BotSampleValue(value);
         }
     }

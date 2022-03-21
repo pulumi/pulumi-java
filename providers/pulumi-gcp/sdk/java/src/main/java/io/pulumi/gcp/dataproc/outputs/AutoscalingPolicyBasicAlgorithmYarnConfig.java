@@ -162,27 +162,22 @@ public final class AutoscalingPolicyBasicAlgorithmYarnConfig {
             this.gracefulDecommissionTimeout = Objects.requireNonNull(gracefulDecommissionTimeout);
             return this;
         }
-
         public Builder scaleDownFactor(Double scaleDownFactor) {
             this.scaleDownFactor = Objects.requireNonNull(scaleDownFactor);
             return this;
         }
-
         public Builder scaleDownMinWorkerFraction(@Nullable Double scaleDownMinWorkerFraction) {
             this.scaleDownMinWorkerFraction = scaleDownMinWorkerFraction;
             return this;
         }
-
         public Builder scaleUpFactor(Double scaleUpFactor) {
             this.scaleUpFactor = Objects.requireNonNull(scaleUpFactor);
             return this;
         }
-
         public Builder scaleUpMinWorkerFraction(@Nullable Double scaleUpMinWorkerFraction) {
             this.scaleUpMinWorkerFraction = scaleUpMinWorkerFraction;
             return this;
-        }
-        public AutoscalingPolicyBasicAlgorithmYarnConfig build() {
+        }        public AutoscalingPolicyBasicAlgorithmYarnConfig build() {
             return new AutoscalingPolicyBasicAlgorithmYarnConfig(gracefulDecommissionTimeout, scaleDownFactor, scaleDownMinWorkerFraction, scaleUpFactor, scaleUpMinWorkerFraction);
         }
     }

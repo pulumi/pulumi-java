@@ -258,132 +258,106 @@ public final class EndpointVariantArgs extends io.pulumi.resources.ResourceArgs 
             this.computeType = Objects.requireNonNull(computeType);
             return this;
         }
-
         public Builder computeType(String computeType) {
             this.computeType = Output.of(Objects.requireNonNull(computeType));
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder environmentImageRequest(@Nullable Output<CreateServiceRequestEnvironmentImageRequestArgs> environmentImageRequest) {
             this.environmentImageRequest = environmentImageRequest;
             return this;
         }
-
         public Builder environmentImageRequest(@Nullable CreateServiceRequestEnvironmentImageRequestArgs environmentImageRequest) {
             this.environmentImageRequest = Output.ofNullable(environmentImageRequest);
             return this;
         }
-
         public Builder isDefault(@Nullable Output<Boolean> isDefault) {
             this.isDefault = isDefault;
             return this;
         }
-
         public Builder isDefault(@Nullable Boolean isDefault) {
             this.isDefault = Output.ofNullable(isDefault);
             return this;
         }
-
         public Builder keys(@Nullable Output<CreateServiceRequestKeysArgs> keys) {
             this.keys = keys;
             return this;
         }
-
         public Builder keys(@Nullable CreateServiceRequestKeysArgs keys) {
             this.keys = Output.ofNullable(keys);
             return this;
         }
-
         public Builder kvTags(@Nullable Output<Map<String,String>> kvTags) {
             this.kvTags = kvTags;
             return this;
         }
-
         public Builder kvTags(@Nullable Map<String,String> kvTags) {
             this.kvTags = Output.ofNullable(kvTags);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder properties(@Nullable Output<Map<String,String>> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder properties(@Nullable Map<String,String> properties) {
             this.properties = Output.ofNullable(properties);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder serviceName(@Nullable Output<String> serviceName) {
             this.serviceName = serviceName;
             return this;
         }
-
         public Builder serviceName(@Nullable String serviceName) {
             this.serviceName = Output.ofNullable(serviceName);
             return this;
         }
-
         public Builder trafficPercentile(@Nullable Output<Double> trafficPercentile) {
             this.trafficPercentile = trafficPercentile;
             return this;
         }
-
         public Builder trafficPercentile(@Nullable Double trafficPercentile) {
             this.trafficPercentile = Output.ofNullable(trafficPercentile);
             return this;
         }
-
         public Builder type(@Nullable Output<Either<String,VariantType>> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable Either<String,VariantType> type) {
             this.type = Output.ofNullable(type);
             return this;
         }
-
         public Builder workspaceName(Output<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
-
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
             return this;
-        }
-        public EndpointVariantArgs build() {
+        }        public EndpointVariantArgs build() {
             return new EndpointVariantArgs(computeType, description, environmentImageRequest, isDefault, keys, kvTags, location, properties, resourceGroupName, serviceName, trafficPercentile, type, workspaceName);
         }
     }

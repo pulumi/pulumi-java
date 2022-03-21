@@ -76,22 +76,21 @@ public final class WebAclRuleStatementRateBasedStatementScopeDownStatementAndSta
             this.countryCodes = Objects.requireNonNull(countryCodes);
             return this;
         }
-
         public Builder countryCodes(List<String> countryCodes) {
             this.countryCodes = Output.of(Objects.requireNonNull(countryCodes));
             return this;
         }
-
+        public Builder countryCodes(String... countryCodes) {
+            return countryCodes(List.of(countryCodes));
+        }
         public Builder forwardedIpConfig(@Nullable Output<WebAclRuleStatementRateBasedStatementScopeDownStatementAndStatementStatementOrStatementStatementGeoMatchStatementForwardedIpConfigArgs> forwardedIpConfig) {
             this.forwardedIpConfig = forwardedIpConfig;
             return this;
         }
-
         public Builder forwardedIpConfig(@Nullable WebAclRuleStatementRateBasedStatementScopeDownStatementAndStatementStatementOrStatementStatementGeoMatchStatementForwardedIpConfigArgs forwardedIpConfig) {
             this.forwardedIpConfig = Output.ofNullable(forwardedIpConfig);
             return this;
-        }
-        public WebAclRuleStatementRateBasedStatementScopeDownStatementAndStatementStatementOrStatementStatementGeoMatchStatementArgs build() {
+        }        public WebAclRuleStatementRateBasedStatementScopeDownStatementAndStatementStatementOrStatementStatementGeoMatchStatementArgs build() {
             return new WebAclRuleStatementRateBasedStatementScopeDownStatementAndStatementStatementOrStatementStatementGeoMatchStatementArgs(countryCodes, forwardedIpConfig);
         }
     }

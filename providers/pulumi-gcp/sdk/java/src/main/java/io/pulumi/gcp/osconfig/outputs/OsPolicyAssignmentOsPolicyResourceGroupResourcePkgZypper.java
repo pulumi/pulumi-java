@@ -51,8 +51,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgZypper {
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public OsPolicyAssignmentOsPolicyResourceGroupResourcePkgZypper build() {
+        }        public OsPolicyAssignmentOsPolicyResourceGroupResourcePkgZypper build() {
             return new OsPolicyAssignmentOsPolicyResourceGroupResourcePkgZypper(name);
         }
     }

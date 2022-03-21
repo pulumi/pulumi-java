@@ -75,22 +75,24 @@ public final class FleetVpcConfigGetArgs extends io.pulumi.resources.ResourceArg
             this.securityGroupIds = securityGroupIds;
             return this;
         }
-
         public Builder securityGroupIds(@Nullable List<String> securityGroupIds) {
             this.securityGroupIds = Output.ofNullable(securityGroupIds);
             return this;
         }
-
+        public Builder securityGroupIds(String... securityGroupIds) {
+            return securityGroupIds(List.of(securityGroupIds));
+        }
         public Builder subnetIds(@Nullable Output<List<String>> subnetIds) {
             this.subnetIds = subnetIds;
             return this;
         }
-
         public Builder subnetIds(@Nullable List<String> subnetIds) {
             this.subnetIds = Output.ofNullable(subnetIds);
             return this;
         }
-        public FleetVpcConfigGetArgs build() {
+        public Builder subnetIds(String... subnetIds) {
+            return subnetIds(List.of(subnetIds));
+        }        public FleetVpcConfigGetArgs build() {
             return new FleetVpcConfigGetArgs(securityGroupIds, subnetIds);
         }
     }

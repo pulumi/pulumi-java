@@ -115,42 +115,34 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleQueryParameterMatchG
             this.exactMatch = exactMatch;
             return this;
         }
-
         public Builder exactMatch(@Nullable String exactMatch) {
             this.exactMatch = Output.ofNullable(exactMatch);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder presentMatch(@Nullable Output<Boolean> presentMatch) {
             this.presentMatch = presentMatch;
             return this;
         }
-
         public Builder presentMatch(@Nullable Boolean presentMatch) {
             this.presentMatch = Output.ofNullable(presentMatch);
             return this;
         }
-
         public Builder regexMatch(@Nullable Output<String> regexMatch) {
             this.regexMatch = regexMatch;
             return this;
         }
-
         public Builder regexMatch(@Nullable String regexMatch) {
             this.regexMatch = Output.ofNullable(regexMatch);
             return this;
-        }
-        public RegionUrlMapPathMatcherRouteRuleMatchRuleQueryParameterMatchGetArgs build() {
+        }        public RegionUrlMapPathMatcherRouteRuleMatchRuleQueryParameterMatchGetArgs build() {
             return new RegionUrlMapPathMatcherRouteRuleMatchRuleQueryParameterMatchGetArgs(exactMatch, name, presentMatch, regexMatch);
         }
     }

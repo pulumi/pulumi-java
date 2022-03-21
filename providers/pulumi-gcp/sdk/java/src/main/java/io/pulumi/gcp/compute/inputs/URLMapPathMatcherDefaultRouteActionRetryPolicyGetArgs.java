@@ -110,32 +110,29 @@ public final class URLMapPathMatcherDefaultRouteActionRetryPolicyGetArgs extends
             this.numRetries = numRetries;
             return this;
         }
-
         public Builder numRetries(@Nullable Integer numRetries) {
             this.numRetries = Output.ofNullable(numRetries);
             return this;
         }
-
         public Builder perTryTimeout(@Nullable Output<URLMapPathMatcherDefaultRouteActionRetryPolicyPerTryTimeoutGetArgs> perTryTimeout) {
             this.perTryTimeout = perTryTimeout;
             return this;
         }
-
         public Builder perTryTimeout(@Nullable URLMapPathMatcherDefaultRouteActionRetryPolicyPerTryTimeoutGetArgs perTryTimeout) {
             this.perTryTimeout = Output.ofNullable(perTryTimeout);
             return this;
         }
-
         public Builder retryConditions(@Nullable Output<List<String>> retryConditions) {
             this.retryConditions = retryConditions;
             return this;
         }
-
         public Builder retryConditions(@Nullable List<String> retryConditions) {
             this.retryConditions = Output.ofNullable(retryConditions);
             return this;
         }
-        public URLMapPathMatcherDefaultRouteActionRetryPolicyGetArgs build() {
+        public Builder retryConditions(String... retryConditions) {
+            return retryConditions(List.of(retryConditions));
+        }        public URLMapPathMatcherDefaultRouteActionRetryPolicyGetArgs build() {
             return new URLMapPathMatcherDefaultRouteActionRetryPolicyGetArgs(numRetries, perTryTimeout, retryConditions);
         }
     }

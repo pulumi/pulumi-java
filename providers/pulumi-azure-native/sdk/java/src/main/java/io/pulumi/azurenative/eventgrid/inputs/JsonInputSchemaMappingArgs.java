@@ -161,72 +161,58 @@ public final class JsonInputSchemaMappingArgs extends io.pulumi.resources.Resour
             this.dataVersion = dataVersion;
             return this;
         }
-
         public Builder dataVersion(@Nullable JsonFieldWithDefaultArgs dataVersion) {
             this.dataVersion = Output.ofNullable(dataVersion);
             return this;
         }
-
         public Builder eventTime(@Nullable Output<JsonFieldArgs> eventTime) {
             this.eventTime = eventTime;
             return this;
         }
-
         public Builder eventTime(@Nullable JsonFieldArgs eventTime) {
             this.eventTime = Output.ofNullable(eventTime);
             return this;
         }
-
         public Builder eventType(@Nullable Output<JsonFieldWithDefaultArgs> eventType) {
             this.eventType = eventType;
             return this;
         }
-
         public Builder eventType(@Nullable JsonFieldWithDefaultArgs eventType) {
             this.eventType = Output.ofNullable(eventType);
             return this;
         }
-
         public Builder id(@Nullable Output<JsonFieldArgs> id) {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable JsonFieldArgs id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder inputSchemaMappingType(Output<String> inputSchemaMappingType) {
             this.inputSchemaMappingType = Objects.requireNonNull(inputSchemaMappingType);
             return this;
         }
-
         public Builder inputSchemaMappingType(String inputSchemaMappingType) {
             this.inputSchemaMappingType = Output.of(Objects.requireNonNull(inputSchemaMappingType));
             return this;
         }
-
         public Builder subject(@Nullable Output<JsonFieldWithDefaultArgs> subject) {
             this.subject = subject;
             return this;
         }
-
         public Builder subject(@Nullable JsonFieldWithDefaultArgs subject) {
             this.subject = Output.ofNullable(subject);
             return this;
         }
-
         public Builder topic(@Nullable Output<JsonFieldArgs> topic) {
             this.topic = topic;
             return this;
         }
-
         public Builder topic(@Nullable JsonFieldArgs topic) {
             this.topic = Output.ofNullable(topic);
             return this;
-        }
-        public JsonInputSchemaMappingArgs build() {
+        }        public JsonInputSchemaMappingArgs build() {
             return new JsonInputSchemaMappingArgs(dataVersion, eventTime, eventType, id, inputSchemaMappingType, subject, topic);
         }
     }

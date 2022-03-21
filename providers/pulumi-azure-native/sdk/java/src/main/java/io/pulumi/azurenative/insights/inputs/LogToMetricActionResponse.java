@@ -79,12 +79,13 @@ public final class LogToMetricActionResponse extends io.pulumi.resources.InvokeA
             this.criteria = Objects.requireNonNull(criteria);
             return this;
         }
-
+        public Builder criteria(CriteriaResponse... criteria) {
+            return criteria(List.of(criteria));
+        }
         public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
-        }
-        public LogToMetricActionResponse build() {
+        }        public LogToMetricActionResponse build() {
             return new LogToMetricActionResponse(criteria, odataType);
         }
     }

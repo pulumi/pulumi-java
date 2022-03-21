@@ -53,7 +53,9 @@ public final class NodeSelector {
             this.nodeSelectorTerms = Objects.requireNonNull(nodeSelectorTerms);
             return this;
         }
-        public NodeSelector build() {
+        public Builder nodeSelectorTerms(NodeSelectorTerm... nodeSelectorTerms) {
+            return nodeSelectorTerms(List.of(nodeSelectorTerms));
+        }        public NodeSelector build() {
             return new NodeSelector(nodeSelectorTerms);
         }
     }

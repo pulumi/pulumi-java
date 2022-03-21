@@ -174,82 +174,66 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
             this.cloudwatchLogGroupArn = cloudwatchLogGroupArn;
             return this;
         }
-
         public Builder cloudwatchLogGroupArn(@Nullable String cloudwatchLogGroupArn) {
             this.cloudwatchLogGroupArn = Output.ofNullable(cloudwatchLogGroupArn);
             return this;
         }
-
         public Builder destinationLocationArn(Output<String> destinationLocationArn) {
             this.destinationLocationArn = Objects.requireNonNull(destinationLocationArn);
             return this;
         }
-
         public Builder destinationLocationArn(String destinationLocationArn) {
             this.destinationLocationArn = Output.of(Objects.requireNonNull(destinationLocationArn));
             return this;
         }
-
         public Builder excludes(@Nullable Output<TaskExcludesArgs> excludes) {
             this.excludes = excludes;
             return this;
         }
-
         public Builder excludes(@Nullable TaskExcludesArgs excludes) {
             this.excludes = Output.ofNullable(excludes);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder options(@Nullable Output<TaskOptionsArgs> options) {
             this.options = options;
             return this;
         }
-
         public Builder options(@Nullable TaskOptionsArgs options) {
             this.options = Output.ofNullable(options);
             return this;
         }
-
         public Builder schedule(@Nullable Output<TaskScheduleArgs> schedule) {
             this.schedule = schedule;
             return this;
         }
-
         public Builder schedule(@Nullable TaskScheduleArgs schedule) {
             this.schedule = Output.ofNullable(schedule);
             return this;
         }
-
         public Builder sourceLocationArn(Output<String> sourceLocationArn) {
             this.sourceLocationArn = Objects.requireNonNull(sourceLocationArn);
             return this;
         }
-
         public Builder sourceLocationArn(String sourceLocationArn) {
             this.sourceLocationArn = Output.of(Objects.requireNonNull(sourceLocationArn));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public TaskArgs build() {
+        }        public TaskArgs build() {
             return new TaskArgs(cloudwatchLogGroupArn, destinationLocationArn, excludes, name, options, schedule, sourceLocationArn, tags);
         }
     }

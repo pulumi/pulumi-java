@@ -87,17 +87,14 @@ public final class GetTransitGatewayMulticastDomainAssociationResult {
             this.resourceId = resourceId;
             return this;
         }
-
         public Builder resourceType(@Nullable String resourceType) {
             this.resourceType = resourceType;
             return this;
         }
-
         public Builder state(@Nullable String state) {
             this.state = state;
             return this;
-        }
-        public GetTransitGatewayMulticastDomainAssociationResult build() {
+        }        public GetTransitGatewayMulticastDomainAssociationResult build() {
             return new GetTransitGatewayMulticastDomainAssociationResult(resourceId, resourceType, state);
         }
     }

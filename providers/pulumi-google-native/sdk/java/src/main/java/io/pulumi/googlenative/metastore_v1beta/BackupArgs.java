@@ -134,72 +134,58 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
             this.backupId = Objects.requireNonNull(backupId);
             return this;
         }
-
         public Builder backupId(String backupId) {
             this.backupId = Output.of(Objects.requireNonNull(backupId));
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder requestId(@Nullable Output<String> requestId) {
             this.requestId = requestId;
             return this;
         }
-
         public Builder requestId(@Nullable String requestId) {
             this.requestId = Output.ofNullable(requestId);
             return this;
         }
-
         public Builder serviceId(Output<String> serviceId) {
             this.serviceId = Objects.requireNonNull(serviceId);
             return this;
         }
-
         public Builder serviceId(String serviceId) {
             this.serviceId = Output.of(Objects.requireNonNull(serviceId));
             return this;
-        }
-        public BackupArgs build() {
+        }        public BackupArgs build() {
             return new BackupArgs(backupId, description, location, name, project, requestId, serviceId);
         }
     }

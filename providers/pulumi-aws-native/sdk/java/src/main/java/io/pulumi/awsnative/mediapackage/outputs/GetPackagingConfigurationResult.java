@@ -157,37 +157,33 @@ public final class GetPackagingConfigurationResult {
             this.arn = arn;
             return this;
         }
-
         public Builder cmafPackage(@Nullable PackagingConfigurationCmafPackage cmafPackage) {
             this.cmafPackage = cmafPackage;
             return this;
         }
-
         public Builder dashPackage(@Nullable PackagingConfigurationDashPackage dashPackage) {
             this.dashPackage = dashPackage;
             return this;
         }
-
         public Builder hlsPackage(@Nullable PackagingConfigurationHlsPackage hlsPackage) {
             this.hlsPackage = hlsPackage;
             return this;
         }
-
         public Builder mssPackage(@Nullable PackagingConfigurationMssPackage mssPackage) {
             this.mssPackage = mssPackage;
             return this;
         }
-
         public Builder packagingGroupId(@Nullable String packagingGroupId) {
             this.packagingGroupId = packagingGroupId;
             return this;
         }
-
         public Builder tags(@Nullable List<PackagingConfigurationTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetPackagingConfigurationResult build() {
+        public Builder tags(PackagingConfigurationTag... tags) {
+            return tags(List.of(tags));
+        }        public GetPackagingConfigurationResult build() {
             return new GetPackagingConfigurationResult(arn, cmafPackage, dashPackage, hlsPackage, mssPackage, packagingGroupId, tags);
         }
     }

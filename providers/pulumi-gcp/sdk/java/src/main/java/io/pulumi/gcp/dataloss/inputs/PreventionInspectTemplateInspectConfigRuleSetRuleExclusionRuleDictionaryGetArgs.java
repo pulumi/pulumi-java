@@ -77,22 +77,18 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRul
             this.cloudStoragePath = cloudStoragePath;
             return this;
         }
-
         public Builder cloudStoragePath(@Nullable PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionaryCloudStoragePathGetArgs cloudStoragePath) {
             this.cloudStoragePath = Output.ofNullable(cloudStoragePath);
             return this;
         }
-
         public Builder wordList(@Nullable Output<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionaryWordListGetArgs> wordList) {
             this.wordList = wordList;
             return this;
         }
-
         public Builder wordList(@Nullable PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionaryWordListGetArgs wordList) {
             this.wordList = Output.ofNullable(wordList);
             return this;
-        }
-        public PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionaryGetArgs build() {
+        }        public PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionaryGetArgs build() {
             return new PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionaryGetArgs(cloudStoragePath, wordList);
         }
     }

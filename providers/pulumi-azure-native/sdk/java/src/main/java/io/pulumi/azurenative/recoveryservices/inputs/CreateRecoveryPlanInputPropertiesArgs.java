@@ -131,52 +131,48 @@ public final class CreateRecoveryPlanInputPropertiesArgs extends io.pulumi.resou
             this.failoverDeploymentModel = failoverDeploymentModel;
             return this;
         }
-
         public Builder failoverDeploymentModel(@Nullable Either<String,FailoverDeploymentModel> failoverDeploymentModel) {
             this.failoverDeploymentModel = Output.ofNullable(failoverDeploymentModel);
             return this;
         }
-
         public Builder groups(Output<List<RecoveryPlanGroupArgs>> groups) {
             this.groups = Objects.requireNonNull(groups);
             return this;
         }
-
         public Builder groups(List<RecoveryPlanGroupArgs> groups) {
             this.groups = Output.of(Objects.requireNonNull(groups));
             return this;
         }
-
+        public Builder groups(RecoveryPlanGroupArgs... groups) {
+            return groups(List.of(groups));
+        }
         public Builder primaryFabricId(Output<String> primaryFabricId) {
             this.primaryFabricId = Objects.requireNonNull(primaryFabricId);
             return this;
         }
-
         public Builder primaryFabricId(String primaryFabricId) {
             this.primaryFabricId = Output.of(Objects.requireNonNull(primaryFabricId));
             return this;
         }
-
         public Builder providerSpecificInput(@Nullable Output<List<RecoveryPlanA2AInputArgs>> providerSpecificInput) {
             this.providerSpecificInput = providerSpecificInput;
             return this;
         }
-
         public Builder providerSpecificInput(@Nullable List<RecoveryPlanA2AInputArgs> providerSpecificInput) {
             this.providerSpecificInput = Output.ofNullable(providerSpecificInput);
             return this;
         }
-
+        public Builder providerSpecificInput(RecoveryPlanA2AInputArgs... providerSpecificInput) {
+            return providerSpecificInput(List.of(providerSpecificInput));
+        }
         public Builder recoveryFabricId(Output<String> recoveryFabricId) {
             this.recoveryFabricId = Objects.requireNonNull(recoveryFabricId);
             return this;
         }
-
         public Builder recoveryFabricId(String recoveryFabricId) {
             this.recoveryFabricId = Output.of(Objects.requireNonNull(recoveryFabricId));
             return this;
-        }
-        public CreateRecoveryPlanInputPropertiesArgs build() {
+        }        public CreateRecoveryPlanInputPropertiesArgs build() {
             return new CreateRecoveryPlanInputPropertiesArgs(failoverDeploymentModel, groups, primaryFabricId, providerSpecificInput, recoveryFabricId);
         }
     }

@@ -72,12 +72,10 @@ public final class GetHyperVSiteArgs extends io.pulumi.resources.InvokeArgs {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder siteName(String siteName) {
             this.siteName = Objects.requireNonNull(siteName);
             return this;
-        }
-        public GetHyperVSiteArgs build() {
+        }        public GetHyperVSiteArgs build() {
             return new GetHyperVSiteArgs(resourceGroupName, siteName);
         }
     }

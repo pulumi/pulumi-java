@@ -95,32 +95,26 @@ public final class ObjectMetricSourceArgs extends io.pulumi.resources.ResourceAr
             this.describedObject = Objects.requireNonNull(describedObject);
             return this;
         }
-
         public Builder describedObject(CrossVersionObjectReferenceArgs describedObject) {
             this.describedObject = Output.of(Objects.requireNonNull(describedObject));
             return this;
         }
-
         public Builder metric(Output<MetricIdentifierArgs> metric) {
             this.metric = Objects.requireNonNull(metric);
             return this;
         }
-
         public Builder metric(MetricIdentifierArgs metric) {
             this.metric = Output.of(Objects.requireNonNull(metric));
             return this;
         }
-
         public Builder target(Output<MetricTargetArgs> target) {
             this.target = Objects.requireNonNull(target);
             return this;
         }
-
         public Builder target(MetricTargetArgs target) {
             this.target = Output.of(Objects.requireNonNull(target));
             return this;
-        }
-        public ObjectMetricSourceArgs build() {
+        }        public ObjectMetricSourceArgs build() {
             return new ObjectMetricSourceArgs(describedObject, metric, target);
         }
     }

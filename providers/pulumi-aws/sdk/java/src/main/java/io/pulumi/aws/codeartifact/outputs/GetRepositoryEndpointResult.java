@@ -101,32 +101,26 @@ public final class GetRepositoryEndpointResult {
             this.domain = Objects.requireNonNull(domain);
             return this;
         }
-
         public Builder domainOwner(String domainOwner) {
             this.domainOwner = Objects.requireNonNull(domainOwner);
             return this;
         }
-
         public Builder format(String format) {
             this.format = Objects.requireNonNull(format);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder repository(String repository) {
             this.repository = Objects.requireNonNull(repository);
             return this;
         }
-
         public Builder repositoryEndpoint(String repositoryEndpoint) {
             this.repositoryEndpoint = Objects.requireNonNull(repositoryEndpoint);
             return this;
-        }
-        public GetRepositoryEndpointResult build() {
+        }        public GetRepositoryEndpointResult build() {
             return new GetRepositoryEndpointResult(domain, domainOwner, format, id, repository, repositoryEndpoint);
         }
     }

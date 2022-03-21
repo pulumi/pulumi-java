@@ -111,22 +111,18 @@ public final class ApplicationApplicationConfigurationFlinkApplicationConfigurat
             this.checkpointInterval = checkpointInterval;
             return this;
         }
-
         public Builder checkpointingEnabled(@Nullable Boolean checkpointingEnabled) {
             this.checkpointingEnabled = checkpointingEnabled;
             return this;
         }
-
         public Builder configurationType(String configurationType) {
             this.configurationType = Objects.requireNonNull(configurationType);
             return this;
         }
-
         public Builder minPauseBetweenCheckpoints(@Nullable Integer minPauseBetweenCheckpoints) {
             this.minPauseBetweenCheckpoints = minPauseBetweenCheckpoints;
             return this;
-        }
-        public ApplicationApplicationConfigurationFlinkApplicationConfigurationCheckpointConfiguration build() {
+        }        public ApplicationApplicationConfigurationFlinkApplicationConfigurationCheckpointConfiguration build() {
             return new ApplicationApplicationConfigurationFlinkApplicationConfigurationCheckpointConfiguration(checkpointInterval, checkpointingEnabled, configurationType, minPauseBetweenCheckpoints);
         }
     }

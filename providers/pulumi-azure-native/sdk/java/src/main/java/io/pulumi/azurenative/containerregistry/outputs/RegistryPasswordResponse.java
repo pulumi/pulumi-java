@@ -71,12 +71,10 @@ public final class RegistryPasswordResponse {
             this.name = name;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public RegistryPasswordResponse build() {
+        }        public RegistryPasswordResponse build() {
             return new RegistryPasswordResponse(name, value);
         }
     }

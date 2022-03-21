@@ -60,12 +60,10 @@ public final class WaitStepAttributesArgs extends io.pulumi.resources.ResourceAr
             this.duration = Objects.requireNonNull(duration);
             return this;
         }
-
         public Builder duration(String duration) {
             this.duration = Output.of(Objects.requireNonNull(duration));
             return this;
-        }
-        public WaitStepAttributesArgs build() {
+        }        public WaitStepAttributesArgs build() {
             return new WaitStepAttributesArgs(duration);
         }
     }

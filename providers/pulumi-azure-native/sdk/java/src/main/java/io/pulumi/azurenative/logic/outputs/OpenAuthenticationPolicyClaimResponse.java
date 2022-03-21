@@ -71,12 +71,10 @@ public final class OpenAuthenticationPolicyClaimResponse {
             this.name = name;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public OpenAuthenticationPolicyClaimResponse build() {
+        }        public OpenAuthenticationPolicyClaimResponse build() {
             return new OpenAuthenticationPolicyClaimResponse(name, value);
         }
     }

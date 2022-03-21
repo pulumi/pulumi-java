@@ -51,8 +51,7 @@ public final class WebAclRuleStatementRateBasedStatementScopeDownStatementOrStat
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementOrStatementStatementSizeConstraintStatementFieldToMatchSingleHeader build() {
+        }        public WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementOrStatementStatementSizeConstraintStatementFieldToMatchSingleHeader build() {
             return new WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementOrStatementStatementSizeConstraintStatementFieldToMatchSingleHeader(name);
         }
     }

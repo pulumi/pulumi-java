@@ -136,32 +136,32 @@ public final class RepositoryCatalogData {
             this.aboutText = aboutText;
             return this;
         }
-
         public Builder architectures(@Nullable List<String> architectures) {
             this.architectures = architectures;
             return this;
         }
-
+        public Builder architectures(String... architectures) {
+            return architectures(List.of(architectures));
+        }
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder logoImageBlob(@Nullable String logoImageBlob) {
             this.logoImageBlob = logoImageBlob;
             return this;
         }
-
         public Builder operatingSystems(@Nullable List<String> operatingSystems) {
             this.operatingSystems = operatingSystems;
             return this;
         }
-
+        public Builder operatingSystems(String... operatingSystems) {
+            return operatingSystems(List.of(operatingSystems));
+        }
         public Builder usageText(@Nullable String usageText) {
             this.usageText = usageText;
             return this;
-        }
-        public RepositoryCatalogData build() {
+        }        public RepositoryCatalogData build() {
             return new RepositoryCatalogData(aboutText, architectures, description, logoImageBlob, operatingSystems, usageText);
         }
     }

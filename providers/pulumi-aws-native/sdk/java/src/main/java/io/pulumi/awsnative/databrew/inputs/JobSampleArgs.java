@@ -71,22 +71,18 @@ public final class JobSampleArgs extends io.pulumi.resources.ResourceArgs {
             this.mode = mode;
             return this;
         }
-
         public Builder mode(@Nullable JobSampleMode mode) {
             this.mode = Output.ofNullable(mode);
             return this;
         }
-
         public Builder size(@Nullable Output<Integer> size) {
             this.size = size;
             return this;
         }
-
         public Builder size(@Nullable Integer size) {
             this.size = Output.ofNullable(size);
             return this;
-        }
-        public JobSampleArgs build() {
+        }        public JobSampleArgs build() {
             return new JobSampleArgs(mode, size);
         }
     }

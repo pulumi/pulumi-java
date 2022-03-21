@@ -122,52 +122,42 @@ public final class OrganizationAccountArgs extends io.pulumi.resources.ResourceA
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder email(@Nullable Output<String> email) {
             this.email = email;
             return this;
         }
-
         public Builder email(@Nullable String email) {
             this.email = Output.ofNullable(email);
             return this;
         }
-
         public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = Output.ofNullable(status);
             return this;
-        }
-        public OrganizationAccountArgs build() {
+        }        public OrganizationAccountArgs build() {
             return new OrganizationAccountArgs(arn, email, id, name, status);
         }
     }

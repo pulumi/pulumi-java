@@ -62,12 +62,13 @@ public final class StorageProfileArgs extends io.pulumi.resources.ResourceArgs {
             this.disks = disks;
             return this;
         }
-
         public Builder disks(@Nullable List<VirtualDiskArgs> disks) {
             this.disks = Output.ofNullable(disks);
             return this;
         }
-        public StorageProfileArgs build() {
+        public Builder disks(VirtualDiskArgs... disks) {
+            return disks(List.of(disks));
+        }        public StorageProfileArgs build() {
             return new StorageProfileArgs(disks);
         }
     }

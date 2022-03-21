@@ -75,22 +75,18 @@ public final class SortOptionsArgs extends io.pulumi.resources.ResourceArgs {
             this.operatorName = operatorName;
             return this;
         }
-
         public Builder operatorName(@Nullable String operatorName) {
             this.operatorName = Output.ofNullable(operatorName);
             return this;
         }
-
         public Builder sortOrder(@Nullable Output<SortOptionsSortOrder> sortOrder) {
             this.sortOrder = sortOrder;
             return this;
         }
-
         public Builder sortOrder(@Nullable SortOptionsSortOrder sortOrder) {
             this.sortOrder = Output.ofNullable(sortOrder);
             return this;
-        }
-        public SortOptionsArgs build() {
+        }        public SortOptionsArgs build() {
             return new SortOptionsArgs(operatorName, sortOrder);
         }
     }

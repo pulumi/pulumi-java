@@ -90,17 +90,17 @@ public final class MultiRegionAccessPointDetails {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder publicAccessBlock(@Nullable MultiRegionAccessPointDetailsPublicAccessBlock publicAccessBlock) {
             this.publicAccessBlock = publicAccessBlock;
             return this;
         }
-
         public Builder regions(List<MultiRegionAccessPointDetailsRegion> regions) {
             this.regions = Objects.requireNonNull(regions);
             return this;
         }
-        public MultiRegionAccessPointDetails build() {
+        public Builder regions(MultiRegionAccessPointDetailsRegion... regions) {
+            return regions(List.of(regions));
+        }        public MultiRegionAccessPointDetails build() {
             return new MultiRegionAccessPointDetails(name, publicAccessBlock, regions);
         }
     }

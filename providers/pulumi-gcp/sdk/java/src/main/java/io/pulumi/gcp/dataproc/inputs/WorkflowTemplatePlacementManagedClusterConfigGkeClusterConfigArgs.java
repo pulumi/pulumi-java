@@ -57,12 +57,10 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfig
             this.namespacedGkeDeploymentTarget = namespacedGkeDeploymentTarget;
             return this;
         }
-
         public Builder namespacedGkeDeploymentTarget(@Nullable WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigNamespacedGkeDeploymentTargetArgs namespacedGkeDeploymentTarget) {
             this.namespacedGkeDeploymentTarget = Output.ofNullable(namespacedGkeDeploymentTarget);
             return this;
-        }
-        public WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigArgs build() {
+        }        public WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigArgs build() {
             return new WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigArgs(namespacedGkeDeploymentTarget);
         }
     }

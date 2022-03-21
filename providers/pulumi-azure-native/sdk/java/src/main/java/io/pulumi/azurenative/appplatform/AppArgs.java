@@ -140,62 +140,50 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
             this.appName = appName;
             return this;
         }
-
         public Builder appName(@Nullable String appName) {
             this.appName = Output.ofNullable(appName);
             return this;
         }
-
         public Builder identity(@Nullable Output<ManagedIdentityPropertiesArgs> identity) {
             this.identity = identity;
             return this;
         }
-
         public Builder identity(@Nullable ManagedIdentityPropertiesArgs identity) {
             this.identity = Output.ofNullable(identity);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder properties(@Nullable Output<AppResourcePropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder properties(@Nullable AppResourcePropertiesArgs properties) {
             this.properties = Output.ofNullable(properties);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder serviceName(Output<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
-
         public Builder serviceName(String serviceName) {
             this.serviceName = Output.of(Objects.requireNonNull(serviceName));
             return this;
-        }
-        public AppArgs build() {
+        }        public AppArgs build() {
             return new AppArgs(appName, identity, location, properties, resourceGroupName, serviceName);
         }
     }

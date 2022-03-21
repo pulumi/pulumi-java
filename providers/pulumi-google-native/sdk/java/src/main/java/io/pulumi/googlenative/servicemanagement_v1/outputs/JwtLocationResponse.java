@@ -85,17 +85,14 @@ public final class JwtLocationResponse {
             this.header = Objects.requireNonNull(header);
             return this;
         }
-
         public Builder query(String query) {
             this.query = Objects.requireNonNull(query);
             return this;
         }
-
         public Builder valuePrefix(String valuePrefix) {
             this.valuePrefix = Objects.requireNonNull(valuePrefix);
             return this;
-        }
-        public JwtLocationResponse build() {
+        }        public JwtLocationResponse build() {
             return new JwtLocationResponse(header, query, valuePrefix);
         }
     }

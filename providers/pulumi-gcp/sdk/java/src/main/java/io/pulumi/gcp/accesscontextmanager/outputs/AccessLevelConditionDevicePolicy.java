@@ -152,32 +152,35 @@ public final class AccessLevelConditionDevicePolicy {
             this.allowedDeviceManagementLevels = allowedDeviceManagementLevels;
             return this;
         }
-
+        public Builder allowedDeviceManagementLevels(String... allowedDeviceManagementLevels) {
+            return allowedDeviceManagementLevels(List.of(allowedDeviceManagementLevels));
+        }
         public Builder allowedEncryptionStatuses(@Nullable List<String> allowedEncryptionStatuses) {
             this.allowedEncryptionStatuses = allowedEncryptionStatuses;
             return this;
         }
-
+        public Builder allowedEncryptionStatuses(String... allowedEncryptionStatuses) {
+            return allowedEncryptionStatuses(List.of(allowedEncryptionStatuses));
+        }
         public Builder osConstraints(@Nullable List<AccessLevelConditionDevicePolicyOsConstraint> osConstraints) {
             this.osConstraints = osConstraints;
             return this;
         }
-
+        public Builder osConstraints(AccessLevelConditionDevicePolicyOsConstraint... osConstraints) {
+            return osConstraints(List.of(osConstraints));
+        }
         public Builder requireAdminApproval(@Nullable Boolean requireAdminApproval) {
             this.requireAdminApproval = requireAdminApproval;
             return this;
         }
-
         public Builder requireCorpOwned(@Nullable Boolean requireCorpOwned) {
             this.requireCorpOwned = requireCorpOwned;
             return this;
         }
-
         public Builder requireScreenLock(@Nullable Boolean requireScreenLock) {
             this.requireScreenLock = requireScreenLock;
             return this;
-        }
-        public AccessLevelConditionDevicePolicy build() {
+        }        public AccessLevelConditionDevicePolicy build() {
             return new AccessLevelConditionDevicePolicy(allowedDeviceManagementLevels, allowedEncryptionStatuses, osConstraints, requireAdminApproval, requireCorpOwned, requireScreenLock);
         }
     }

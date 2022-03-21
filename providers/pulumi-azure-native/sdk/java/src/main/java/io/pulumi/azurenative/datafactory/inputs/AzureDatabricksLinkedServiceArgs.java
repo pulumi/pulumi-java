@@ -440,242 +440,197 @@ public final class AzureDatabricksLinkedServiceArgs extends io.pulumi.resources.
             this.accessToken = accessToken;
             return this;
         }
-
         public Builder accessToken(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> accessToken) {
             this.accessToken = Output.ofNullable(accessToken);
             return this;
         }
-
         public Builder annotations(@Nullable Output<List<Object>> annotations) {
             this.annotations = annotations;
             return this;
         }
-
         public Builder annotations(@Nullable List<Object> annotations) {
             this.annotations = Output.ofNullable(annotations);
             return this;
         }
-
+        public Builder annotations(Object... annotations) {
+            return annotations(List.of(annotations));
+        }
         public Builder authentication(@Nullable Output<Object> authentication) {
             this.authentication = authentication;
             return this;
         }
-
         public Builder authentication(@Nullable Object authentication) {
             this.authentication = Output.ofNullable(authentication);
             return this;
         }
-
         public Builder connectVia(@Nullable Output<IntegrationRuntimeReferenceArgs> connectVia) {
             this.connectVia = connectVia;
             return this;
         }
-
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceArgs connectVia) {
             this.connectVia = Output.ofNullable(connectVia);
             return this;
         }
-
         public Builder credential(@Nullable Output<CredentialReferenceArgs> credential) {
             this.credential = credential;
             return this;
         }
-
         public Builder credential(@Nullable CredentialReferenceArgs credential) {
             this.credential = Output.ofNullable(credential);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder domain(Output<Object> domain) {
             this.domain = Objects.requireNonNull(domain);
             return this;
         }
-
         public Builder domain(Object domain) {
             this.domain = Output.of(Objects.requireNonNull(domain));
             return this;
         }
-
         public Builder encryptedCredential(@Nullable Output<Object> encryptedCredential) {
             this.encryptedCredential = encryptedCredential;
             return this;
         }
-
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
             this.encryptedCredential = Output.ofNullable(encryptedCredential);
             return this;
         }
-
         public Builder existingClusterId(@Nullable Output<Object> existingClusterId) {
             this.existingClusterId = existingClusterId;
             return this;
         }
-
         public Builder existingClusterId(@Nullable Object existingClusterId) {
             this.existingClusterId = Output.ofNullable(existingClusterId);
             return this;
         }
-
         public Builder instancePoolId(@Nullable Output<Object> instancePoolId) {
             this.instancePoolId = instancePoolId;
             return this;
         }
-
         public Builder instancePoolId(@Nullable Object instancePoolId) {
             this.instancePoolId = Output.ofNullable(instancePoolId);
             return this;
         }
-
         public Builder newClusterCustomTags(@Nullable Output<Map<String,Object>> newClusterCustomTags) {
             this.newClusterCustomTags = newClusterCustomTags;
             return this;
         }
-
         public Builder newClusterCustomTags(@Nullable Map<String,Object> newClusterCustomTags) {
             this.newClusterCustomTags = Output.ofNullable(newClusterCustomTags);
             return this;
         }
-
         public Builder newClusterDriverNodeType(@Nullable Output<Object> newClusterDriverNodeType) {
             this.newClusterDriverNodeType = newClusterDriverNodeType;
             return this;
         }
-
         public Builder newClusterDriverNodeType(@Nullable Object newClusterDriverNodeType) {
             this.newClusterDriverNodeType = Output.ofNullable(newClusterDriverNodeType);
             return this;
         }
-
         public Builder newClusterEnableElasticDisk(@Nullable Output<Object> newClusterEnableElasticDisk) {
             this.newClusterEnableElasticDisk = newClusterEnableElasticDisk;
             return this;
         }
-
         public Builder newClusterEnableElasticDisk(@Nullable Object newClusterEnableElasticDisk) {
             this.newClusterEnableElasticDisk = Output.ofNullable(newClusterEnableElasticDisk);
             return this;
         }
-
         public Builder newClusterInitScripts(@Nullable Output<Object> newClusterInitScripts) {
             this.newClusterInitScripts = newClusterInitScripts;
             return this;
         }
-
         public Builder newClusterInitScripts(@Nullable Object newClusterInitScripts) {
             this.newClusterInitScripts = Output.ofNullable(newClusterInitScripts);
             return this;
         }
-
         public Builder newClusterLogDestination(@Nullable Output<Object> newClusterLogDestination) {
             this.newClusterLogDestination = newClusterLogDestination;
             return this;
         }
-
         public Builder newClusterLogDestination(@Nullable Object newClusterLogDestination) {
             this.newClusterLogDestination = Output.ofNullable(newClusterLogDestination);
             return this;
         }
-
         public Builder newClusterNodeType(@Nullable Output<Object> newClusterNodeType) {
             this.newClusterNodeType = newClusterNodeType;
             return this;
         }
-
         public Builder newClusterNodeType(@Nullable Object newClusterNodeType) {
             this.newClusterNodeType = Output.ofNullable(newClusterNodeType);
             return this;
         }
-
         public Builder newClusterNumOfWorker(@Nullable Output<Object> newClusterNumOfWorker) {
             this.newClusterNumOfWorker = newClusterNumOfWorker;
             return this;
         }
-
         public Builder newClusterNumOfWorker(@Nullable Object newClusterNumOfWorker) {
             this.newClusterNumOfWorker = Output.ofNullable(newClusterNumOfWorker);
             return this;
         }
-
         public Builder newClusterSparkConf(@Nullable Output<Map<String,Object>> newClusterSparkConf) {
             this.newClusterSparkConf = newClusterSparkConf;
             return this;
         }
-
         public Builder newClusterSparkConf(@Nullable Map<String,Object> newClusterSparkConf) {
             this.newClusterSparkConf = Output.ofNullable(newClusterSparkConf);
             return this;
         }
-
         public Builder newClusterSparkEnvVars(@Nullable Output<Map<String,Object>> newClusterSparkEnvVars) {
             this.newClusterSparkEnvVars = newClusterSparkEnvVars;
             return this;
         }
-
         public Builder newClusterSparkEnvVars(@Nullable Map<String,Object> newClusterSparkEnvVars) {
             this.newClusterSparkEnvVars = Output.ofNullable(newClusterSparkEnvVars);
             return this;
         }
-
         public Builder newClusterVersion(@Nullable Output<Object> newClusterVersion) {
             this.newClusterVersion = newClusterVersion;
             return this;
         }
-
         public Builder newClusterVersion(@Nullable Object newClusterVersion) {
             this.newClusterVersion = Output.ofNullable(newClusterVersion);
             return this;
         }
-
         public Builder parameters(@Nullable Output<Map<String,ParameterSpecificationArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder parameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
             this.parameters = Output.ofNullable(parameters);
             return this;
         }
-
         public Builder policyId(@Nullable Output<Object> policyId) {
             this.policyId = policyId;
             return this;
         }
-
         public Builder policyId(@Nullable Object policyId) {
             this.policyId = Output.ofNullable(policyId);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
-
         public Builder workspaceResourceId(@Nullable Output<Object> workspaceResourceId) {
             this.workspaceResourceId = workspaceResourceId;
             return this;
         }
-
         public Builder workspaceResourceId(@Nullable Object workspaceResourceId) {
             this.workspaceResourceId = Output.ofNullable(workspaceResourceId);
             return this;
-        }
-        public AzureDatabricksLinkedServiceArgs build() {
+        }        public AzureDatabricksLinkedServiceArgs build() {
             return new AzureDatabricksLinkedServiceArgs(accessToken, annotations, authentication, connectVia, credential, description, domain, encryptedCredential, existingClusterId, instancePoolId, newClusterCustomTags, newClusterDriverNodeType, newClusterEnableElasticDisk, newClusterInitScripts, newClusterLogDestination, newClusterNodeType, newClusterNumOfWorker, newClusterSparkConf, newClusterSparkEnvVars, newClusterVersion, parameters, policyId, type, workspaceResourceId);
         }
     }

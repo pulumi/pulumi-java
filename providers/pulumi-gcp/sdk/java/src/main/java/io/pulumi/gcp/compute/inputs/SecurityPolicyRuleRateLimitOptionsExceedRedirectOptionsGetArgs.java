@@ -66,22 +66,18 @@ public final class SecurityPolicyRuleRateLimitOptionsExceedRedirectOptionsGetArg
             this.target = target;
             return this;
         }
-
         public Builder target(@Nullable String target) {
             this.target = Output.ofNullable(target);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public SecurityPolicyRuleRateLimitOptionsExceedRedirectOptionsGetArgs build() {
+        }        public SecurityPolicyRuleRateLimitOptionsExceedRedirectOptionsGetArgs build() {
             return new SecurityPolicyRuleRateLimitOptionsExceedRedirectOptionsGetArgs(target, type);
         }
     }

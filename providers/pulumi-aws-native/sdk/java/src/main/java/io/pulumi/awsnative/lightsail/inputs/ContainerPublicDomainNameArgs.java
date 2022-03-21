@@ -75,22 +75,21 @@ public final class ContainerPublicDomainNameArgs extends io.pulumi.resources.Res
             this.certificateName = certificateName;
             return this;
         }
-
         public Builder certificateName(@Nullable String certificateName) {
             this.certificateName = Output.ofNullable(certificateName);
             return this;
         }
-
         public Builder domainNames(@Nullable Output<List<String>> domainNames) {
             this.domainNames = domainNames;
             return this;
         }
-
         public Builder domainNames(@Nullable List<String> domainNames) {
             this.domainNames = Output.ofNullable(domainNames);
             return this;
         }
-        public ContainerPublicDomainNameArgs build() {
+        public Builder domainNames(String... domainNames) {
+            return domainNames(List.of(domainNames));
+        }        public ContainerPublicDomainNameArgs build() {
             return new ContainerPublicDomainNameArgs(certificateName, domainNames);
         }
     }

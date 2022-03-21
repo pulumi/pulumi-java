@@ -45,8 +45,7 @@ public final class SpotFleetSpotMaintenanceStrategies {
         public Builder capacityRebalance(@Nullable SpotFleetSpotCapacityRebalance capacityRebalance) {
             this.capacityRebalance = capacityRebalance;
             return this;
-        }
-        public SpotFleetSpotMaintenanceStrategies build() {
+        }        public SpotFleetSpotMaintenanceStrategies build() {
             return new SpotFleetSpotMaintenanceStrategies(capacityRebalance);
         }
     }

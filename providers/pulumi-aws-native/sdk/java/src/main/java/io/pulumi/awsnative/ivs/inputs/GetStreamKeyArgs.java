@@ -54,8 +54,7 @@ public final class GetStreamKeyArgs extends io.pulumi.resources.InvokeArgs {
         public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
-        }
-        public GetStreamKeyArgs build() {
+        }        public GetStreamKeyArgs build() {
             return new GetStreamKeyArgs(arn);
         }
     }

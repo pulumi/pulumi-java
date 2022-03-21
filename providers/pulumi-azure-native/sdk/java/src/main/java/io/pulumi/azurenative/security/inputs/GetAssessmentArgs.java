@@ -90,17 +90,14 @@ public final class GetAssessmentArgs extends io.pulumi.resources.InvokeArgs {
             this.assessmentName = Objects.requireNonNull(assessmentName);
             return this;
         }
-
         public Builder expand(@Nullable String expand) {
             this.expand = expand;
             return this;
         }
-
         public Builder resourceId(String resourceId) {
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
-        }
-        public GetAssessmentArgs build() {
+        }        public GetAssessmentArgs build() {
             return new GetAssessmentArgs(assessmentName, expand, resourceId);
         }
     }

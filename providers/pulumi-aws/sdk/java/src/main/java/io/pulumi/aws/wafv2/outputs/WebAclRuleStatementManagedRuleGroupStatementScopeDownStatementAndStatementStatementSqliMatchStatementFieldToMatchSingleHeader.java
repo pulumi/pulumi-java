@@ -51,8 +51,7 @@ public final class WebAclRuleStatementManagedRuleGroupStatementScopeDownStatemen
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementAndStatementStatementSqliMatchStatementFieldToMatchSingleHeader build() {
+        }        public WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementAndStatementStatementSqliMatchStatementFieldToMatchSingleHeader build() {
             return new WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementAndStatementStatementSqliMatchStatementFieldToMatchSingleHeader(name);
         }
     }

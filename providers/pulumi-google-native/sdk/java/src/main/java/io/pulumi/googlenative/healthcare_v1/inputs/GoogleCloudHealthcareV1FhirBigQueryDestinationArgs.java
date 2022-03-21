@@ -113,42 +113,34 @@ public final class GoogleCloudHealthcareV1FhirBigQueryDestinationArgs extends io
             this.datasetUri = datasetUri;
             return this;
         }
-
         public Builder datasetUri(@Nullable String datasetUri) {
             this.datasetUri = Output.ofNullable(datasetUri);
             return this;
         }
-
         public Builder force(@Nullable Output<Boolean> force) {
             this.force = force;
             return this;
         }
-
         public Builder force(@Nullable Boolean force) {
             this.force = Output.ofNullable(force);
             return this;
         }
-
         public Builder schemaConfig(@Nullable Output<SchemaConfigArgs> schemaConfig) {
             this.schemaConfig = schemaConfig;
             return this;
         }
-
         public Builder schemaConfig(@Nullable SchemaConfigArgs schemaConfig) {
             this.schemaConfig = Output.ofNullable(schemaConfig);
             return this;
         }
-
         public Builder writeDisposition(@Nullable Output<GoogleCloudHealthcareV1FhirBigQueryDestinationWriteDisposition> writeDisposition) {
             this.writeDisposition = writeDisposition;
             return this;
         }
-
         public Builder writeDisposition(@Nullable GoogleCloudHealthcareV1FhirBigQueryDestinationWriteDisposition writeDisposition) {
             this.writeDisposition = Output.ofNullable(writeDisposition);
             return this;
-        }
-        public GoogleCloudHealthcareV1FhirBigQueryDestinationArgs build() {
+        }        public GoogleCloudHealthcareV1FhirBigQueryDestinationArgs build() {
             return new GoogleCloudHealthcareV1FhirBigQueryDestinationArgs(datasetUri, force, schemaConfig, writeDisposition);
         }
     }

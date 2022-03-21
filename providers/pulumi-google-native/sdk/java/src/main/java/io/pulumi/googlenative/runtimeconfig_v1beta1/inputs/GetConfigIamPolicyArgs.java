@@ -78,17 +78,14 @@ public final class GetConfigIamPolicyArgs extends io.pulumi.resources.InvokeArgs
             this.configId = Objects.requireNonNull(configId);
             return this;
         }
-
         public Builder optionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
             this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetConfigIamPolicyArgs build() {
+        }        public GetConfigIamPolicyArgs build() {
             return new GetConfigIamPolicyArgs(configId, optionsRequestedPolicyVersion, project);
         }
     }

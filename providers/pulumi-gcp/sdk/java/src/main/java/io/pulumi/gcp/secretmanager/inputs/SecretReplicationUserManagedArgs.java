@@ -58,12 +58,13 @@ public final class SecretReplicationUserManagedArgs extends io.pulumi.resources.
             this.replicas = Objects.requireNonNull(replicas);
             return this;
         }
-
         public Builder replicas(List<SecretReplicationUserManagedReplicaArgs> replicas) {
             this.replicas = Output.of(Objects.requireNonNull(replicas));
             return this;
         }
-        public SecretReplicationUserManagedArgs build() {
+        public Builder replicas(SecretReplicationUserManagedReplicaArgs... replicas) {
+            return replicas(List.of(replicas));
+        }        public SecretReplicationUserManagedArgs build() {
             return new SecretReplicationUserManagedArgs(replicas);
         }
     }

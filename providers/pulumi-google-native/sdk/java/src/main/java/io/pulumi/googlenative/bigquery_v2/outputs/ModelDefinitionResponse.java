@@ -71,12 +71,13 @@ public final class ModelDefinitionResponse {
             this.modelOptions = Objects.requireNonNull(modelOptions);
             return this;
         }
-
         public Builder trainingRuns(List<BqmlTrainingRunResponse> trainingRuns) {
             this.trainingRuns = Objects.requireNonNull(trainingRuns);
             return this;
         }
-        public ModelDefinitionResponse build() {
+        public Builder trainingRuns(BqmlTrainingRunResponse... trainingRuns) {
+            return trainingRuns(List.of(trainingRuns));
+        }        public ModelDefinitionResponse build() {
             return new ModelDefinitionResponse(modelOptions, trainingRuns);
         }
     }

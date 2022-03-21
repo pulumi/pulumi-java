@@ -94,17 +94,14 @@ public final class AssetFileEncryptionMetadataResponse extends io.pulumi.resourc
             this.assetFileId = Objects.requireNonNull(assetFileId);
             return this;
         }
-
         public Builder assetFileName(@Nullable String assetFileName) {
             this.assetFileName = assetFileName;
             return this;
         }
-
         public Builder initializationVector(@Nullable String initializationVector) {
             this.initializationVector = initializationVector;
             return this;
-        }
-        public AssetFileEncryptionMetadataResponse build() {
+        }        public AssetFileEncryptionMetadataResponse build() {
             return new AssetFileEncryptionMetadataResponse(assetFileId, assetFileName, initializationVector);
         }
     }

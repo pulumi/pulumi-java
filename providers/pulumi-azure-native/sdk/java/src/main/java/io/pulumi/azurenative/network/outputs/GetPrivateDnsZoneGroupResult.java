@@ -121,27 +121,25 @@ public final class GetPrivateDnsZoneGroupResult {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder privateDnsZoneConfigs(@Nullable List<PrivateDnsZoneConfigResponse> privateDnsZoneConfigs) {
             this.privateDnsZoneConfigs = privateDnsZoneConfigs;
             return this;
         }
-
+        public Builder privateDnsZoneConfigs(PrivateDnsZoneConfigResponse... privateDnsZoneConfigs) {
+            return privateDnsZoneConfigs(List.of(privateDnsZoneConfigs));
+        }
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
-        }
-        public GetPrivateDnsZoneGroupResult build() {
+        }        public GetPrivateDnsZoneGroupResult build() {
             return new GetPrivateDnsZoneGroupResult(etag, id, name, privateDnsZoneConfigs, provisioningState);
         }
     }

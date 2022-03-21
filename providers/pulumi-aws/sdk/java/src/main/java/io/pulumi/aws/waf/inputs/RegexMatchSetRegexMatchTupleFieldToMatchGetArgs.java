@@ -78,22 +78,18 @@ public final class RegexMatchSetRegexMatchTupleFieldToMatchGetArgs extends io.pu
             this.data = data;
             return this;
         }
-
         public Builder data(@Nullable String data) {
             this.data = Output.ofNullable(data);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public RegexMatchSetRegexMatchTupleFieldToMatchGetArgs build() {
+        }        public RegexMatchSetRegexMatchTupleFieldToMatchGetArgs build() {
             return new RegexMatchSetRegexMatchTupleFieldToMatchGetArgs(data, type);
         }
     }

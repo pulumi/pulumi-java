@@ -66,12 +66,10 @@ public final class GetTargetTcpProxyArgs extends io.pulumi.resources.InvokeArgs 
             this.project = project;
             return this;
         }
-
         public Builder targetTcpProxy(String targetTcpProxy) {
             this.targetTcpProxy = Objects.requireNonNull(targetTcpProxy);
             return this;
-        }
-        public GetTargetTcpProxyArgs build() {
+        }        public GetTargetTcpProxyArgs build() {
             return new GetTargetTcpProxyArgs(project, targetTcpProxy);
         }
     }

@@ -103,32 +103,26 @@ public final class GetResourceResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder identifier(String identifier) {
             this.identifier = Objects.requireNonNull(identifier);
             return this;
         }
-
         public Builder properties(String properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
-
         public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = roleArn;
             return this;
         }
-
         public Builder typeName(String typeName) {
             this.typeName = Objects.requireNonNull(typeName);
             return this;
         }
-
         public Builder typeVersionId(@Nullable String typeVersionId) {
             this.typeVersionId = typeVersionId;
             return this;
-        }
-        public GetResourceResult build() {
+        }        public GetResourceResult build() {
             return new GetResourceResult(id, identifier, properties, roleArn, typeName, typeVersionId);
         }
     }

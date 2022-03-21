@@ -78,22 +78,18 @@ public final class PrivateLinkServiceConnectionStateArgs extends io.pulumi.resou
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = Output.ofNullable(status);
             return this;
-        }
-        public PrivateLinkServiceConnectionStateArgs build() {
+        }        public PrivateLinkServiceConnectionStateArgs build() {
             return new PrivateLinkServiceConnectionStateArgs(description, status);
         }
     }

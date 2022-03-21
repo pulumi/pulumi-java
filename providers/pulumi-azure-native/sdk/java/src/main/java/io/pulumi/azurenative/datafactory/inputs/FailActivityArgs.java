@@ -163,72 +163,64 @@ public final class FailActivityArgs extends io.pulumi.resources.ResourceArgs {
             this.dependsOn = dependsOn;
             return this;
         }
-
         public Builder dependsOn(@Nullable List<ActivityDependencyArgs> dependsOn) {
             this.dependsOn = Output.ofNullable(dependsOn);
             return this;
         }
-
+        public Builder dependsOn(ActivityDependencyArgs... dependsOn) {
+            return dependsOn(List.of(dependsOn));
+        }
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder errorCode(Output<Object> errorCode) {
             this.errorCode = Objects.requireNonNull(errorCode);
             return this;
         }
-
         public Builder errorCode(Object errorCode) {
             this.errorCode = Output.of(Objects.requireNonNull(errorCode));
             return this;
         }
-
         public Builder message(Output<Object> message) {
             this.message = Objects.requireNonNull(message);
             return this;
         }
-
         public Builder message(Object message) {
             this.message = Output.of(Objects.requireNonNull(message));
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
-
         public Builder userProperties(@Nullable Output<List<UserPropertyArgs>> userProperties) {
             this.userProperties = userProperties;
             return this;
         }
-
         public Builder userProperties(@Nullable List<UserPropertyArgs> userProperties) {
             this.userProperties = Output.ofNullable(userProperties);
             return this;
         }
-        public FailActivityArgs build() {
+        public Builder userProperties(UserPropertyArgs... userProperties) {
+            return userProperties(List.of(userProperties));
+        }        public FailActivityArgs build() {
             return new FailActivityArgs(dependsOn, description, errorCode, message, name, type, userProperties);
         }
     }

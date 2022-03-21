@@ -114,17 +114,14 @@ public final class ClusterHealthPolicyResponse {
             this.applicationHealthPolicies = applicationHealthPolicies;
             return this;
         }
-
         public Builder maxPercentUnhealthyApplications(@Nullable Integer maxPercentUnhealthyApplications) {
             this.maxPercentUnhealthyApplications = maxPercentUnhealthyApplications;
             return this;
         }
-
         public Builder maxPercentUnhealthyNodes(@Nullable Integer maxPercentUnhealthyNodes) {
             this.maxPercentUnhealthyNodes = maxPercentUnhealthyNodes;
             return this;
-        }
-        public ClusterHealthPolicyResponse build() {
+        }        public ClusterHealthPolicyResponse build() {
             return new ClusterHealthPolicyResponse(applicationHealthPolicies, maxPercentUnhealthyApplications, maxPercentUnhealthyNodes);
         }
     }

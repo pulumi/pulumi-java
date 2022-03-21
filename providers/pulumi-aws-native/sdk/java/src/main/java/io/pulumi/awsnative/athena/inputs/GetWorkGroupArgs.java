@@ -54,8 +54,7 @@ public final class GetWorkGroupArgs extends io.pulumi.resources.InvokeArgs {
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public GetWorkGroupArgs build() {
+        }        public GetWorkGroupArgs build() {
             return new GetWorkGroupArgs(name);
         }
     }

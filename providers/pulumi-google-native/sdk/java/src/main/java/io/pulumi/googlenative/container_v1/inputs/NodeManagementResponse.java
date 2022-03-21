@@ -93,17 +93,14 @@ public final class NodeManagementResponse extends io.pulumi.resources.InvokeArgs
             this.autoRepair = Objects.requireNonNull(autoRepair);
             return this;
         }
-
         public Builder autoUpgrade(Boolean autoUpgrade) {
             this.autoUpgrade = Objects.requireNonNull(autoUpgrade);
             return this;
         }
-
         public Builder upgradeOptions(AutoUpgradeOptionsResponse upgradeOptions) {
             this.upgradeOptions = Objects.requireNonNull(upgradeOptions);
             return this;
-        }
-        public NodeManagementResponse build() {
+        }        public NodeManagementResponse build() {
             return new NodeManagementResponse(autoRepair, autoUpgrade, upgradeOptions);
         }
     }

@@ -78,17 +78,14 @@ public final class GetProductArgs extends io.pulumi.resources.InvokeArgs {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder productId(String productId) {
             this.productId = Objects.requireNonNull(productId);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetProductArgs build() {
+        }        public GetProductArgs build() {
             return new GetProductArgs(location, productId, project);
         }
     }

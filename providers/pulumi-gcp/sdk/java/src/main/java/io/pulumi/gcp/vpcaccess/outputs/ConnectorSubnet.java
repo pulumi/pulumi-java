@@ -73,12 +73,10 @@ public final class ConnectorSubnet {
             this.name = name;
             return this;
         }
-
         public Builder projectId(@Nullable String projectId) {
             this.projectId = projectId;
             return this;
-        }
-        public ConnectorSubnet build() {
+        }        public ConnectorSubnet build() {
             return new ConnectorSubnet(name, projectId);
         }
     }

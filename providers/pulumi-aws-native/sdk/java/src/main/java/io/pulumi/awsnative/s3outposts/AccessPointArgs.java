@@ -108,42 +108,34 @@ public final class AccessPointArgs extends io.pulumi.resources.ResourceArgs {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
-
         public Builder bucket(String bucket) {
             this.bucket = Output.of(Objects.requireNonNull(bucket));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder policy(@Nullable Output<Object> policy) {
             this.policy = policy;
             return this;
         }
-
         public Builder policy(@Nullable Object policy) {
             this.policy = Output.ofNullable(policy);
             return this;
         }
-
         public Builder vpcConfiguration(Output<AccessPointVpcConfigurationArgs> vpcConfiguration) {
             this.vpcConfiguration = Objects.requireNonNull(vpcConfiguration);
             return this;
         }
-
         public Builder vpcConfiguration(AccessPointVpcConfigurationArgs vpcConfiguration) {
             this.vpcConfiguration = Output.of(Objects.requireNonNull(vpcConfiguration));
             return this;
-        }
-        public AccessPointArgs build() {
+        }        public AccessPointArgs build() {
             return new AccessPointArgs(bucket, name, policy, vpcConfiguration);
         }
     }

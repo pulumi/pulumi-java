@@ -80,22 +80,21 @@ public final class ContainerImageArgs extends io.pulumi.resources.ResourceArgs {
             this.names = Objects.requireNonNull(names);
             return this;
         }
-
         public Builder names(List<String> names) {
             this.names = Output.of(Objects.requireNonNull(names));
             return this;
         }
-
+        public Builder names(String... names) {
+            return names(List.of(names));
+        }
         public Builder sizeBytes(@Nullable Output<Integer> sizeBytes) {
             this.sizeBytes = sizeBytes;
             return this;
         }
-
         public Builder sizeBytes(@Nullable Integer sizeBytes) {
             this.sizeBytes = Output.ofNullable(sizeBytes);
             return this;
-        }
-        public ContainerImageArgs build() {
+        }        public ContainerImageArgs build() {
             return new ContainerImageArgs(names, sizeBytes);
         }
     }

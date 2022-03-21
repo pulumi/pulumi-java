@@ -105,22 +105,18 @@ public final class PngLayerResponse {
             this.height = height;
             return this;
         }
-
         public Builder label(@Nullable String label) {
             this.label = label;
             return this;
         }
-
         public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public Builder width(@Nullable String width) {
             this.width = width;
             return this;
-        }
-        public PngLayerResponse build() {
+        }        public PngLayerResponse build() {
             return new PngLayerResponse(height, label, odataType, width);
         }
     }

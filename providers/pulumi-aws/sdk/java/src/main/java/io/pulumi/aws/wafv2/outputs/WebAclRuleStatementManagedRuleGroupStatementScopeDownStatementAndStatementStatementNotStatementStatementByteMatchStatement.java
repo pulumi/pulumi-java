@@ -106,22 +106,21 @@ public final class WebAclRuleStatementManagedRuleGroupStatementScopeDownStatemen
             this.fieldToMatch = fieldToMatch;
             return this;
         }
-
         public Builder positionalConstraint(String positionalConstraint) {
             this.positionalConstraint = Objects.requireNonNull(positionalConstraint);
             return this;
         }
-
         public Builder searchString(String searchString) {
             this.searchString = Objects.requireNonNull(searchString);
             return this;
         }
-
         public Builder textTransformations(List<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementAndStatementStatementNotStatementStatementByteMatchStatementTextTransformation> textTransformations) {
             this.textTransformations = Objects.requireNonNull(textTransformations);
             return this;
         }
-        public WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementAndStatementStatementNotStatementStatementByteMatchStatement build() {
+        public Builder textTransformations(WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementAndStatementStatementNotStatementStatementByteMatchStatementTextTransformation... textTransformations) {
+            return textTransformations(List.of(textTransformations));
+        }        public WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementAndStatementStatementNotStatementStatementByteMatchStatement build() {
             return new WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementAndStatementStatementNotStatementStatementByteMatchStatement(fieldToMatch, positionalConstraint, searchString, textTransformations);
         }
     }

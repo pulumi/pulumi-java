@@ -113,42 +113,46 @@ public final class URLMapPathMatcherRouteRuleHeaderActionArgs extends io.pulumi.
             this.requestHeadersToAdds = requestHeadersToAdds;
             return this;
         }
-
         public Builder requestHeadersToAdds(@Nullable List<URLMapPathMatcherRouteRuleHeaderActionRequestHeadersToAddArgs> requestHeadersToAdds) {
             this.requestHeadersToAdds = Output.ofNullable(requestHeadersToAdds);
             return this;
         }
-
+        public Builder requestHeadersToAdds(URLMapPathMatcherRouteRuleHeaderActionRequestHeadersToAddArgs... requestHeadersToAdds) {
+            return requestHeadersToAdds(List.of(requestHeadersToAdds));
+        }
         public Builder requestHeadersToRemoves(@Nullable Output<List<String>> requestHeadersToRemoves) {
             this.requestHeadersToRemoves = requestHeadersToRemoves;
             return this;
         }
-
         public Builder requestHeadersToRemoves(@Nullable List<String> requestHeadersToRemoves) {
             this.requestHeadersToRemoves = Output.ofNullable(requestHeadersToRemoves);
             return this;
         }
-
+        public Builder requestHeadersToRemoves(String... requestHeadersToRemoves) {
+            return requestHeadersToRemoves(List.of(requestHeadersToRemoves));
+        }
         public Builder responseHeadersToAdds(@Nullable Output<List<URLMapPathMatcherRouteRuleHeaderActionResponseHeadersToAddArgs>> responseHeadersToAdds) {
             this.responseHeadersToAdds = responseHeadersToAdds;
             return this;
         }
-
         public Builder responseHeadersToAdds(@Nullable List<URLMapPathMatcherRouteRuleHeaderActionResponseHeadersToAddArgs> responseHeadersToAdds) {
             this.responseHeadersToAdds = Output.ofNullable(responseHeadersToAdds);
             return this;
         }
-
+        public Builder responseHeadersToAdds(URLMapPathMatcherRouteRuleHeaderActionResponseHeadersToAddArgs... responseHeadersToAdds) {
+            return responseHeadersToAdds(List.of(responseHeadersToAdds));
+        }
         public Builder responseHeadersToRemoves(@Nullable Output<List<String>> responseHeadersToRemoves) {
             this.responseHeadersToRemoves = responseHeadersToRemoves;
             return this;
         }
-
         public Builder responseHeadersToRemoves(@Nullable List<String> responseHeadersToRemoves) {
             this.responseHeadersToRemoves = Output.ofNullable(responseHeadersToRemoves);
             return this;
         }
-        public URLMapPathMatcherRouteRuleHeaderActionArgs build() {
+        public Builder responseHeadersToRemoves(String... responseHeadersToRemoves) {
+            return responseHeadersToRemoves(List.of(responseHeadersToRemoves));
+        }        public URLMapPathMatcherRouteRuleHeaderActionArgs build() {
             return new URLMapPathMatcherRouteRuleHeaderActionArgs(requestHeadersToAdds, requestHeadersToRemoves, responseHeadersToAdds, responseHeadersToRemoves);
         }
     }

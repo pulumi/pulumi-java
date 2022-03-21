@@ -79,22 +79,18 @@ public final class BuildTypeArgs extends io.pulumi.resources.ResourceArgs {
             this.builderVersion = builderVersion;
             return this;
         }
-
         public Builder builderVersion(@Nullable String builderVersion) {
             this.builderVersion = Output.ofNullable(builderVersion);
             return this;
         }
-
         public Builder signature(@Nullable Output<BuildSignatureArgs> signature) {
             this.signature = signature;
             return this;
         }
-
         public Builder signature(@Nullable BuildSignatureArgs signature) {
             this.signature = Output.ofNullable(signature);
             return this;
-        }
-        public BuildTypeArgs build() {
+        }        public BuildTypeArgs build() {
             return new BuildTypeArgs(builderVersion, signature);
         }
     }

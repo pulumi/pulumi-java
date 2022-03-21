@@ -194,57 +194,52 @@ public final class DetectorRule extends io.pulumi.resources.InvokeArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder createdTime(@Nullable String createdTime) {
             this.createdTime = createdTime;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder detectorId(@Nullable String detectorId) {
             this.detectorId = detectorId;
             return this;
         }
-
         public Builder expression(@Nullable String expression) {
             this.expression = expression;
             return this;
         }
-
         public Builder language(@Nullable DetectorRuleLanguage language) {
             this.language = language;
             return this;
         }
-
         public Builder lastUpdatedTime(@Nullable String lastUpdatedTime) {
             this.lastUpdatedTime = lastUpdatedTime;
             return this;
         }
-
         public Builder outcomes(@Nullable List<DetectorOutcome> outcomes) {
             this.outcomes = outcomes;
             return this;
         }
-
+        public Builder outcomes(DetectorOutcome... outcomes) {
+            return outcomes(List.of(outcomes));
+        }
         public Builder ruleId(@Nullable String ruleId) {
             this.ruleId = ruleId;
             return this;
         }
-
         public Builder ruleVersion(@Nullable String ruleVersion) {
             this.ruleVersion = ruleVersion;
             return this;
         }
-
         public Builder tags(@Nullable List<DetectorTag> tags) {
             this.tags = tags;
             return this;
         }
-        public DetectorRule build() {
+        public Builder tags(DetectorTag... tags) {
+            return tags(List.of(tags));
+        }        public DetectorRule build() {
             return new DetectorRule(arn, createdTime, description, detectorId, expression, language, lastUpdatedTime, outcomes, ruleId, ruleVersion, tags);
         }
     }

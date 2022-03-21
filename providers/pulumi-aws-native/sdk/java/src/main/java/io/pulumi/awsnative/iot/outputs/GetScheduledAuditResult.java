@@ -139,32 +139,32 @@ public final class GetScheduledAuditResult {
             this.dayOfMonth = dayOfMonth;
             return this;
         }
-
         public Builder dayOfWeek(@Nullable ScheduledAuditDayOfWeek dayOfWeek) {
             this.dayOfWeek = dayOfWeek;
             return this;
         }
-
         public Builder frequency(@Nullable ScheduledAuditFrequency frequency) {
             this.frequency = frequency;
             return this;
         }
-
         public Builder scheduledAuditArn(@Nullable String scheduledAuditArn) {
             this.scheduledAuditArn = scheduledAuditArn;
             return this;
         }
-
         public Builder tags(@Nullable List<ScheduledAuditTag> tags) {
             this.tags = tags;
             return this;
         }
-
+        public Builder tags(ScheduledAuditTag... tags) {
+            return tags(List.of(tags));
+        }
         public Builder targetCheckNames(@Nullable List<String> targetCheckNames) {
             this.targetCheckNames = targetCheckNames;
             return this;
         }
-        public GetScheduledAuditResult build() {
+        public Builder targetCheckNames(String... targetCheckNames) {
+            return targetCheckNames(List.of(targetCheckNames));
+        }        public GetScheduledAuditResult build() {
             return new GetScheduledAuditResult(dayOfMonth, dayOfWeek, frequency, scheduledAuditArn, tags, targetCheckNames);
         }
     }

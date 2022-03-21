@@ -80,22 +80,21 @@ public final class GoogleIamV1AuditConfigArgs extends io.pulumi.resources.Resour
             this.auditLogConfigs = auditLogConfigs;
             return this;
         }
-
         public Builder auditLogConfigs(@Nullable List<GoogleIamV1AuditLogConfigArgs> auditLogConfigs) {
             this.auditLogConfigs = Output.ofNullable(auditLogConfigs);
             return this;
         }
-
+        public Builder auditLogConfigs(GoogleIamV1AuditLogConfigArgs... auditLogConfigs) {
+            return auditLogConfigs(List.of(auditLogConfigs));
+        }
         public Builder service(@Nullable Output<String> service) {
             this.service = service;
             return this;
         }
-
         public Builder service(@Nullable String service) {
             this.service = Output.ofNullable(service);
             return this;
-        }
-        public GoogleIamV1AuditConfigArgs build() {
+        }        public GoogleIamV1AuditConfigArgs build() {
             return new GoogleIamV1AuditConfigArgs(auditLogConfigs, service);
         }
     }

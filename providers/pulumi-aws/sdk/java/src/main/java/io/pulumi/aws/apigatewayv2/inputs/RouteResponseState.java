@@ -123,52 +123,42 @@ public final class RouteResponseState extends io.pulumi.resources.ResourceArgs {
             this.apiId = apiId;
             return this;
         }
-
         public Builder apiId(@Nullable String apiId) {
             this.apiId = Output.ofNullable(apiId);
             return this;
         }
-
         public Builder modelSelectionExpression(@Nullable Output<String> modelSelectionExpression) {
             this.modelSelectionExpression = modelSelectionExpression;
             return this;
         }
-
         public Builder modelSelectionExpression(@Nullable String modelSelectionExpression) {
             this.modelSelectionExpression = Output.ofNullable(modelSelectionExpression);
             return this;
         }
-
         public Builder responseModels(@Nullable Output<Map<String,String>> responseModels) {
             this.responseModels = responseModels;
             return this;
         }
-
         public Builder responseModels(@Nullable Map<String,String> responseModels) {
             this.responseModels = Output.ofNullable(responseModels);
             return this;
         }
-
         public Builder routeId(@Nullable Output<String> routeId) {
             this.routeId = routeId;
             return this;
         }
-
         public Builder routeId(@Nullable String routeId) {
             this.routeId = Output.ofNullable(routeId);
             return this;
         }
-
         public Builder routeResponseKey(@Nullable Output<String> routeResponseKey) {
             this.routeResponseKey = routeResponseKey;
             return this;
         }
-
         public Builder routeResponseKey(@Nullable String routeResponseKey) {
             this.routeResponseKey = Output.ofNullable(routeResponseKey);
             return this;
-        }
-        public RouteResponseState build() {
+        }        public RouteResponseState build() {
             return new RouteResponseState(apiId, modelSelectionExpression, responseModels, routeId, routeResponseKey);
         }
     }

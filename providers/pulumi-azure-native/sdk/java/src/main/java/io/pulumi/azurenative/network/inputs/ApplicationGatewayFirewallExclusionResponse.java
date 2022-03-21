@@ -92,17 +92,14 @@ public final class ApplicationGatewayFirewallExclusionResponse extends io.pulumi
             this.matchVariable = Objects.requireNonNull(matchVariable);
             return this;
         }
-
         public Builder selector(String selector) {
             this.selector = Objects.requireNonNull(selector);
             return this;
         }
-
         public Builder selectorMatchOperator(String selectorMatchOperator) {
             this.selectorMatchOperator = Objects.requireNonNull(selectorMatchOperator);
             return this;
-        }
-        public ApplicationGatewayFirewallExclusionResponse build() {
+        }        public ApplicationGatewayFirewallExclusionResponse build() {
             return new ApplicationGatewayFirewallExclusionResponse(matchVariable, selector, selectorMatchOperator);
         }
     }

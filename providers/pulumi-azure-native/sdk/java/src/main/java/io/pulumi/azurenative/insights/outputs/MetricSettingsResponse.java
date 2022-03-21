@@ -105,22 +105,18 @@ public final class MetricSettingsResponse {
             this.category = category;
             return this;
         }
-
         public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public Builder retentionPolicy(@Nullable RetentionPolicyResponse retentionPolicy) {
             this.retentionPolicy = retentionPolicy;
             return this;
         }
-
         public Builder timeGrain(@Nullable String timeGrain) {
             this.timeGrain = timeGrain;
             return this;
-        }
-        public MetricSettingsResponse build() {
+        }        public MetricSettingsResponse build() {
             return new MetricSettingsResponse(category, enabled, retentionPolicy, timeGrain);
         }
     }

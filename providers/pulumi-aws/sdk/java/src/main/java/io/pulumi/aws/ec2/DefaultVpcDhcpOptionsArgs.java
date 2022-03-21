@@ -108,42 +108,37 @@ public final class DefaultVpcDhcpOptionsArgs extends io.pulumi.resources.Resourc
             this.netbiosNameServers = netbiosNameServers;
             return this;
         }
-
         public Builder netbiosNameServers(@Nullable List<String> netbiosNameServers) {
             this.netbiosNameServers = Output.ofNullable(netbiosNameServers);
             return this;
         }
-
+        public Builder netbiosNameServers(String... netbiosNameServers) {
+            return netbiosNameServers(List.of(netbiosNameServers));
+        }
         public Builder netbiosNodeType(@Nullable Output<String> netbiosNodeType) {
             this.netbiosNodeType = netbiosNodeType;
             return this;
         }
-
         public Builder netbiosNodeType(@Nullable String netbiosNodeType) {
             this.netbiosNodeType = Output.ofNullable(netbiosNodeType);
             return this;
         }
-
         public Builder ownerId(@Nullable Output<String> ownerId) {
             this.ownerId = ownerId;
             return this;
         }
-
         public Builder ownerId(@Nullable String ownerId) {
             this.ownerId = Output.ofNullable(ownerId);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public DefaultVpcDhcpOptionsArgs build() {
+        }        public DefaultVpcDhcpOptionsArgs build() {
             return new DefaultVpcDhcpOptionsArgs(netbiosNameServers, netbiosNodeType, ownerId, tags);
         }
     }

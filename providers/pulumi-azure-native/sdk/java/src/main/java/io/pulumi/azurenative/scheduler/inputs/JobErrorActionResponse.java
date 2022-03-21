@@ -143,32 +143,26 @@ public final class JobErrorActionResponse extends io.pulumi.resources.InvokeArgs
             this.queueMessage = queueMessage;
             return this;
         }
-
         public Builder request(@Nullable HttpRequestResponse request) {
             this.request = request;
             return this;
         }
-
         public Builder retryPolicy(@Nullable RetryPolicyResponse retryPolicy) {
             this.retryPolicy = retryPolicy;
             return this;
         }
-
         public Builder serviceBusQueueMessage(@Nullable ServiceBusQueueMessageResponse serviceBusQueueMessage) {
             this.serviceBusQueueMessage = serviceBusQueueMessage;
             return this;
         }
-
         public Builder serviceBusTopicMessage(@Nullable ServiceBusTopicMessageResponse serviceBusTopicMessage) {
             this.serviceBusTopicMessage = serviceBusTopicMessage;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
-        }
-        public JobErrorActionResponse build() {
+        }        public JobErrorActionResponse build() {
             return new JobErrorActionResponse(queueMessage, request, retryPolicy, serviceBusQueueMessage, serviceBusTopicMessage, type);
         }
     }

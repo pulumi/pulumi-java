@@ -119,42 +119,40 @@ public final class AlertRuleAnyOfOrLeafConditionArgs extends io.pulumi.resources
             this.anyOf = anyOf;
             return this;
         }
-
         public Builder anyOf(@Nullable List<AlertRuleLeafConditionArgs> anyOf) {
             this.anyOf = Output.ofNullable(anyOf);
             return this;
         }
-
+        public Builder anyOf(AlertRuleLeafConditionArgs... anyOf) {
+            return anyOf(List.of(anyOf));
+        }
         public Builder containsAny(@Nullable Output<List<String>> containsAny) {
             this.containsAny = containsAny;
             return this;
         }
-
         public Builder containsAny(@Nullable List<String> containsAny) {
             this.containsAny = Output.ofNullable(containsAny);
             return this;
         }
-
+        public Builder containsAny(String... containsAny) {
+            return containsAny(List.of(containsAny));
+        }
         public Builder equals(@Nullable Output<String> equals) {
             this.equals = equals;
             return this;
         }
-
         public Builder equals(@Nullable String equals) {
             this.equals = Output.ofNullable(equals);
             return this;
         }
-
         public Builder field(@Nullable Output<String> field) {
             this.field = field;
             return this;
         }
-
         public Builder field(@Nullable String field) {
             this.field = Output.ofNullable(field);
             return this;
-        }
-        public AlertRuleAnyOfOrLeafConditionArgs build() {
+        }        public AlertRuleAnyOfOrLeafConditionArgs build() {
             return new AlertRuleAnyOfOrLeafConditionArgs(anyOf, containsAny, equals, field);
         }
     }

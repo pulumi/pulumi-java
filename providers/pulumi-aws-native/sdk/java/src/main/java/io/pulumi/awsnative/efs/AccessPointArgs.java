@@ -122,52 +122,45 @@ public final class AccessPointArgs extends io.pulumi.resources.ResourceArgs {
             this.accessPointTags = accessPointTags;
             return this;
         }
-
         public Builder accessPointTags(@Nullable List<AccessPointTagArgs> accessPointTags) {
             this.accessPointTags = Output.ofNullable(accessPointTags);
             return this;
         }
-
+        public Builder accessPointTags(AccessPointTagArgs... accessPointTags) {
+            return accessPointTags(List.of(accessPointTags));
+        }
         public Builder clientToken(@Nullable Output<String> clientToken) {
             this.clientToken = clientToken;
             return this;
         }
-
         public Builder clientToken(@Nullable String clientToken) {
             this.clientToken = Output.ofNullable(clientToken);
             return this;
         }
-
         public Builder fileSystemId(Output<String> fileSystemId) {
             this.fileSystemId = Objects.requireNonNull(fileSystemId);
             return this;
         }
-
         public Builder fileSystemId(String fileSystemId) {
             this.fileSystemId = Output.of(Objects.requireNonNull(fileSystemId));
             return this;
         }
-
         public Builder posixUser(@Nullable Output<AccessPointPosixUserArgs> posixUser) {
             this.posixUser = posixUser;
             return this;
         }
-
         public Builder posixUser(@Nullable AccessPointPosixUserArgs posixUser) {
             this.posixUser = Output.ofNullable(posixUser);
             return this;
         }
-
         public Builder rootDirectory(@Nullable Output<AccessPointRootDirectoryArgs> rootDirectory) {
             this.rootDirectory = rootDirectory;
             return this;
         }
-
         public Builder rootDirectory(@Nullable AccessPointRootDirectoryArgs rootDirectory) {
             this.rootDirectory = Output.ofNullable(rootDirectory);
             return this;
-        }
-        public AccessPointArgs build() {
+        }        public AccessPointArgs build() {
             return new AccessPointArgs(accessPointTags, clientToken, fileSystemId, posixUser, rootDirectory);
         }
     }

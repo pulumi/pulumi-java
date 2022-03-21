@@ -123,52 +123,42 @@ public final class AuthorizationRuleState extends io.pulumi.resources.ResourceAr
             this.accessGroupId = accessGroupId;
             return this;
         }
-
         public Builder accessGroupId(@Nullable String accessGroupId) {
             this.accessGroupId = Output.ofNullable(accessGroupId);
             return this;
         }
-
         public Builder authorizeAllGroups(@Nullable Output<Boolean> authorizeAllGroups) {
             this.authorizeAllGroups = authorizeAllGroups;
             return this;
         }
-
         public Builder authorizeAllGroups(@Nullable Boolean authorizeAllGroups) {
             this.authorizeAllGroups = Output.ofNullable(authorizeAllGroups);
             return this;
         }
-
         public Builder clientVpnEndpointId(@Nullable Output<String> clientVpnEndpointId) {
             this.clientVpnEndpointId = clientVpnEndpointId;
             return this;
         }
-
         public Builder clientVpnEndpointId(@Nullable String clientVpnEndpointId) {
             this.clientVpnEndpointId = Output.ofNullable(clientVpnEndpointId);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder targetNetworkCidr(@Nullable Output<String> targetNetworkCidr) {
             this.targetNetworkCidr = targetNetworkCidr;
             return this;
         }
-
         public Builder targetNetworkCidr(@Nullable String targetNetworkCidr) {
             this.targetNetworkCidr = Output.ofNullable(targetNetworkCidr);
             return this;
-        }
-        public AuthorizationRuleState build() {
+        }        public AuthorizationRuleState build() {
             return new AuthorizationRuleState(accessGroupId, authorizeAllGroups, clientVpnEndpointId, description, targetNetworkCidr);
         }
     }

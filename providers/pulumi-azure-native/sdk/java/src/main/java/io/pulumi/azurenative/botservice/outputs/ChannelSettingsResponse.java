@@ -186,47 +186,41 @@ public final class ChannelSettingsResponse {
             this.botIconUrl = botIconUrl;
             return this;
         }
-
         public Builder botId(@Nullable String botId) {
             this.botId = botId;
             return this;
         }
-
         public Builder channelDisplayName(@Nullable String channelDisplayName) {
             this.channelDisplayName = channelDisplayName;
             return this;
         }
-
         public Builder channelId(@Nullable String channelId) {
             this.channelId = channelId;
             return this;
         }
-
         public Builder disableLocalAuth(@Nullable Boolean disableLocalAuth) {
             this.disableLocalAuth = disableLocalAuth;
             return this;
         }
-
         public Builder extensionKey1(@Nullable String extensionKey1) {
             this.extensionKey1 = extensionKey1;
             return this;
         }
-
         public Builder extensionKey2(@Nullable String extensionKey2) {
             this.extensionKey2 = extensionKey2;
             return this;
         }
-
         public Builder isEnabled(@Nullable Boolean isEnabled) {
             this.isEnabled = isEnabled;
             return this;
         }
-
         public Builder sites(@Nullable List<SiteResponse> sites) {
             this.sites = sites;
             return this;
         }
-        public ChannelSettingsResponse build() {
+        public Builder sites(SiteResponse... sites) {
+            return sites(List.of(sites));
+        }        public ChannelSettingsResponse build() {
             return new ChannelSettingsResponse(botIconUrl, botId, channelDisplayName, channelId, disableLocalAuth, extensionKey1, extensionKey2, isEnabled, sites);
         }
     }

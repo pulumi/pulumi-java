@@ -92,42 +92,37 @@ public final class ComponentChildArgs extends io.pulumi.resources.ResourceArgs {
             this.children = children;
             return this;
         }
-
         public Builder children(@Nullable List<ComponentChildArgs> children) {
             this.children = Output.ofNullable(children);
             return this;
         }
-
+        public Builder children(ComponentChildArgs... children) {
+            return children(List.of(children));
+        }
         public Builder componentType(Output<String> componentType) {
             this.componentType = Objects.requireNonNull(componentType);
             return this;
         }
-
         public Builder componentType(String componentType) {
             this.componentType = Output.of(Objects.requireNonNull(componentType));
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder properties(Output<ComponentPropertiesArgs> properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
-
         public Builder properties(ComponentPropertiesArgs properties) {
             this.properties = Output.of(Objects.requireNonNull(properties));
             return this;
-        }
-        public ComponentChildArgs build() {
+        }        public ComponentChildArgs build() {
             return new ComponentChildArgs(children, componentType, name, properties);
         }
     }

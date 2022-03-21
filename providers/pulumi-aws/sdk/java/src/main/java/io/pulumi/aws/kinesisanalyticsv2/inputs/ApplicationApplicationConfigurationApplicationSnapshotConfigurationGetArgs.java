@@ -56,12 +56,10 @@ public final class ApplicationApplicationConfigurationApplicationSnapshotConfigu
             this.snapshotsEnabled = Objects.requireNonNull(snapshotsEnabled);
             return this;
         }
-
         public Builder snapshotsEnabled(Boolean snapshotsEnabled) {
             this.snapshotsEnabled = Output.of(Objects.requireNonNull(snapshotsEnabled));
             return this;
-        }
-        public ApplicationApplicationConfigurationApplicationSnapshotConfigurationGetArgs build() {
+        }        public ApplicationApplicationConfigurationApplicationSnapshotConfigurationGetArgs build() {
             return new ApplicationApplicationConfigurationApplicationSnapshotConfigurationGetArgs(snapshotsEnabled);
         }
     }

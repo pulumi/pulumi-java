@@ -78,22 +78,18 @@ public final class ImageTemplateSharedImageVersionSourceArgs extends io.pulumi.r
             this.imageVersionId = Objects.requireNonNull(imageVersionId);
             return this;
         }
-
         public Builder imageVersionId(String imageVersionId) {
             this.imageVersionId = Output.of(Objects.requireNonNull(imageVersionId));
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public ImageTemplateSharedImageVersionSourceArgs build() {
+        }        public ImageTemplateSharedImageVersionSourceArgs build() {
             return new ImageTemplateSharedImageVersionSourceArgs(imageVersionId, type);
         }
     }

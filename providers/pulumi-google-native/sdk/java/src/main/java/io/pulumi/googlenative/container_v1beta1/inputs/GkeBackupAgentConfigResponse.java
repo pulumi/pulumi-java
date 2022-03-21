@@ -58,8 +58,7 @@ public final class GkeBackupAgentConfigResponse extends io.pulumi.resources.Invo
         public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
-        }
-        public GkeBackupAgentConfigResponse build() {
+        }        public GkeBackupAgentConfigResponse build() {
             return new GkeBackupAgentConfigResponse(enabled);
         }
     }

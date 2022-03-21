@@ -112,42 +112,34 @@ public final class LinuxConfigurationArgs extends io.pulumi.resources.ResourceAr
             this.disablePasswordAuthentication = disablePasswordAuthentication;
             return this;
         }
-
         public Builder disablePasswordAuthentication(@Nullable Boolean disablePasswordAuthentication) {
             this.disablePasswordAuthentication = Output.ofNullable(disablePasswordAuthentication);
             return this;
         }
-
         public Builder patchSettings(@Nullable Output<LinuxPatchSettingsArgs> patchSettings) {
             this.patchSettings = patchSettings;
             return this;
         }
-
         public Builder patchSettings(@Nullable LinuxPatchSettingsArgs patchSettings) {
             this.patchSettings = Output.ofNullable(patchSettings);
             return this;
         }
-
         public Builder provisionVMAgent(@Nullable Output<Boolean> provisionVMAgent) {
             this.provisionVMAgent = provisionVMAgent;
             return this;
         }
-
         public Builder provisionVMAgent(@Nullable Boolean provisionVMAgent) {
             this.provisionVMAgent = Output.ofNullable(provisionVMAgent);
             return this;
         }
-
         public Builder ssh(@Nullable Output<SshConfigurationArgs> ssh) {
             this.ssh = ssh;
             return this;
         }
-
         public Builder ssh(@Nullable SshConfigurationArgs ssh) {
             this.ssh = Output.ofNullable(ssh);
             return this;
-        }
-        public LinuxConfigurationArgs build() {
+        }        public LinuxConfigurationArgs build() {
             return new LinuxConfigurationArgs(disablePasswordAuthentication, patchSettings, provisionVMAgent, ssh);
         }
     }

@@ -78,12 +78,10 @@ public final class RecommendedMachineConfigurationResponse extends io.pulumi.res
             this.memory = memory;
             return this;
         }
-
         public Builder vCPUs(@Nullable ResourceRangeResponse vCPUs) {
             this.vCPUs = vCPUs;
             return this;
-        }
-        public RecommendedMachineConfigurationResponse build() {
+        }        public RecommendedMachineConfigurationResponse build() {
             return new RecommendedMachineConfigurationResponse(memory, vCPUs);
         }
     }

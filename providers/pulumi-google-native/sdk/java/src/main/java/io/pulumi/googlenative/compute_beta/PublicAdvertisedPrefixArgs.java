@@ -147,72 +147,58 @@ public final class PublicAdvertisedPrefixArgs extends io.pulumi.resources.Resour
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder dnsVerificationIp(@Nullable Output<String> dnsVerificationIp) {
             this.dnsVerificationIp = dnsVerificationIp;
             return this;
         }
-
         public Builder dnsVerificationIp(@Nullable String dnsVerificationIp) {
             this.dnsVerificationIp = Output.ofNullable(dnsVerificationIp);
             return this;
         }
-
         public Builder ipCidrRange(@Nullable Output<String> ipCidrRange) {
             this.ipCidrRange = ipCidrRange;
             return this;
         }
-
         public Builder ipCidrRange(@Nullable String ipCidrRange) {
             this.ipCidrRange = Output.ofNullable(ipCidrRange);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder requestId(@Nullable Output<String> requestId) {
             this.requestId = requestId;
             return this;
         }
-
         public Builder requestId(@Nullable String requestId) {
             this.requestId = Output.ofNullable(requestId);
             return this;
         }
-
         public Builder status(@Nullable Output<PublicAdvertisedPrefixStatus> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable PublicAdvertisedPrefixStatus status) {
             this.status = Output.ofNullable(status);
             return this;
-        }
-        public PublicAdvertisedPrefixArgs build() {
+        }        public PublicAdvertisedPrefixArgs build() {
             return new PublicAdvertisedPrefixArgs(description, dnsVerificationIp, ipCidrRange, name, project, requestId, status);
         }
     }

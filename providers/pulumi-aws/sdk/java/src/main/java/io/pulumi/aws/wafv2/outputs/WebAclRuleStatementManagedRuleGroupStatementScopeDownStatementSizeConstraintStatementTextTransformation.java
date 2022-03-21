@@ -70,12 +70,10 @@ public final class WebAclRuleStatementManagedRuleGroupStatementScopeDownStatemen
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementSizeConstraintStatementTextTransformation build() {
+        }        public WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementSizeConstraintStatementTextTransformation build() {
             return new WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementSizeConstraintStatementTextTransformation(priority, type);
         }
     }

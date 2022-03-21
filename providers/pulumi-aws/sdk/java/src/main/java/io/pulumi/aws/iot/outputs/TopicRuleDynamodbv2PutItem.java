@@ -51,8 +51,7 @@ public final class TopicRuleDynamodbv2PutItem {
         public Builder tableName(String tableName) {
             this.tableName = Objects.requireNonNull(tableName);
             return this;
-        }
-        public TopicRuleDynamodbv2PutItem build() {
+        }        public TopicRuleDynamodbv2PutItem build() {
             return new TopicRuleDynamodbv2PutItem(tableName);
         }
     }

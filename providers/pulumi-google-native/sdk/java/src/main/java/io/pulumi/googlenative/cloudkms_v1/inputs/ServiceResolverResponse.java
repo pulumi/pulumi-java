@@ -110,22 +110,21 @@ public final class ServiceResolverResponse extends io.pulumi.resources.InvokeArg
             this.endpointFilter = Objects.requireNonNull(endpointFilter);
             return this;
         }
-
         public Builder hostname(String hostname) {
             this.hostname = Objects.requireNonNull(hostname);
             return this;
         }
-
         public Builder serverCertificates(List<CertificateResponse> serverCertificates) {
             this.serverCertificates = Objects.requireNonNull(serverCertificates);
             return this;
         }
-
+        public Builder serverCertificates(CertificateResponse... serverCertificates) {
+            return serverCertificates(List.of(serverCertificates));
+        }
         public Builder serviceDirectoryService(String serviceDirectoryService) {
             this.serviceDirectoryService = Objects.requireNonNull(serviceDirectoryService);
             return this;
-        }
-        public ServiceResolverResponse build() {
+        }        public ServiceResolverResponse build() {
             return new ServiceResolverResponse(endpointFilter, hostname, serverCertificates, serviceDirectoryService);
         }
     }

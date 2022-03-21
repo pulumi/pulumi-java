@@ -95,17 +95,14 @@ public final class UserProfileSharingSettings extends io.pulumi.resources.Invoke
             this.notebookOutputOption = notebookOutputOption;
             return this;
         }
-
         public Builder s3KmsKeyId(@Nullable String s3KmsKeyId) {
             this.s3KmsKeyId = s3KmsKeyId;
             return this;
         }
-
         public Builder s3OutputPath(@Nullable String s3OutputPath) {
             this.s3OutputPath = s3OutputPath;
             return this;
-        }
-        public UserProfileSharingSettings build() {
+        }        public UserProfileSharingSettings build() {
             return new UserProfileSharingSettings(notebookOutputOption, s3KmsKeyId, s3OutputPath);
         }
     }

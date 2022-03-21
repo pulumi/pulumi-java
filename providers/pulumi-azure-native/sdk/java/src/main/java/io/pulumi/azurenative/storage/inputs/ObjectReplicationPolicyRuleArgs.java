@@ -111,42 +111,34 @@ public final class ObjectReplicationPolicyRuleArgs extends io.pulumi.resources.R
             this.destinationContainer = Objects.requireNonNull(destinationContainer);
             return this;
         }
-
         public Builder destinationContainer(String destinationContainer) {
             this.destinationContainer = Output.of(Objects.requireNonNull(destinationContainer));
             return this;
         }
-
         public Builder filters(@Nullable Output<ObjectReplicationPolicyFilterArgs> filters) {
             this.filters = filters;
             return this;
         }
-
         public Builder filters(@Nullable ObjectReplicationPolicyFilterArgs filters) {
             this.filters = Output.ofNullable(filters);
             return this;
         }
-
         public Builder ruleId(@Nullable Output<String> ruleId) {
             this.ruleId = ruleId;
             return this;
         }
-
         public Builder ruleId(@Nullable String ruleId) {
             this.ruleId = Output.ofNullable(ruleId);
             return this;
         }
-
         public Builder sourceContainer(Output<String> sourceContainer) {
             this.sourceContainer = Objects.requireNonNull(sourceContainer);
             return this;
         }
-
         public Builder sourceContainer(String sourceContainer) {
             this.sourceContainer = Output.of(Objects.requireNonNull(sourceContainer));
             return this;
-        }
-        public ObjectReplicationPolicyRuleArgs build() {
+        }        public ObjectReplicationPolicyRuleArgs build() {
             return new ObjectReplicationPolicyRuleArgs(destinationContainer, filters, ruleId, sourceContainer);
         }
     }

@@ -71,17 +71,14 @@ public final class ContainerRegistryResponse {
             this.password = Objects.requireNonNull(password);
             return this;
         }
-
         public Builder registryServer(@Nullable String registryServer) {
             this.registryServer = registryServer;
             return this;
         }
-
         public Builder userName(String userName) {
             this.userName = Objects.requireNonNull(userName);
             return this;
-        }
-        public ContainerRegistryResponse build() {
+        }        public ContainerRegistryResponse build() {
             return new ContainerRegistryResponse(password, registryServer, userName);
         }
     }

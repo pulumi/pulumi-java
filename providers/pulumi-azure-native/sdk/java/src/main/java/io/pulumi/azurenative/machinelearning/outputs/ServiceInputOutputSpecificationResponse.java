@@ -105,22 +105,18 @@ public final class ServiceInputOutputSpecificationResponse {
             this.description = description;
             return this;
         }
-
         public Builder properties(Map<String,TableSpecificationResponse> properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
-
         public Builder title(@Nullable String title) {
             this.title = title;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public ServiceInputOutputSpecificationResponse build() {
+        }        public ServiceInputOutputSpecificationResponse build() {
             return new ServiceInputOutputSpecificationResponse(description, properties, title, type);
         }
     }

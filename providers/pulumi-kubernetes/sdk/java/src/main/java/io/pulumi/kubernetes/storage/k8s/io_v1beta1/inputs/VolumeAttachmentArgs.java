@@ -131,52 +131,42 @@ public final class VolumeAttachmentArgs extends io.pulumi.resources.ResourceArgs
             this.apiVersion = apiVersion;
             return this;
         }
-
         public Builder apiVersion(@Nullable String apiVersion) {
             this.apiVersion = Output.ofNullable(apiVersion);
             return this;
         }
-
         public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder metadata(@Nullable Output<ObjectMetaArgs> metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder metadata(@Nullable ObjectMetaArgs metadata) {
             this.metadata = Output.ofNullable(metadata);
             return this;
         }
-
         public Builder spec(Output<VolumeAttachmentSpecArgs> spec) {
             this.spec = Objects.requireNonNull(spec);
             return this;
         }
-
         public Builder spec(VolumeAttachmentSpecArgs spec) {
             this.spec = Output.of(Objects.requireNonNull(spec));
             return this;
         }
-
         public Builder status(@Nullable Output<VolumeAttachmentStatusArgs> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable VolumeAttachmentStatusArgs status) {
             this.status = Output.ofNullable(status);
             return this;
-        }
-        public VolumeAttachmentArgs build() {
+        }        public VolumeAttachmentArgs build() {
             return new VolumeAttachmentArgs(apiVersion, kind, metadata, spec, status);
         }
     }

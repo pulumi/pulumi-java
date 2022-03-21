@@ -71,12 +71,10 @@ public final class DeploymentConfigTrafficRoutingConfigTimeBasedCanary {
             this.interval = interval;
             return this;
         }
-
         public Builder percentage(@Nullable Integer percentage) {
             this.percentage = percentage;
             return this;
-        }
-        public DeploymentConfigTrafficRoutingConfigTimeBasedCanary build() {
+        }        public DeploymentConfigTrafficRoutingConfigTimeBasedCanary build() {
             return new DeploymentConfigTrafficRoutingConfigTimeBasedCanary(interval, percentage);
         }
     }

@@ -108,42 +108,34 @@ public final class ConfigurationProfileArgs extends io.pulumi.resources.Resource
             this.identity = identity;
             return this;
         }
-
         public Builder identity(@Nullable ResourceIdentityArgs identity) {
             this.identity = Output.ofNullable(identity);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder profileName(@Nullable Output<String> profileName) {
             this.profileName = profileName;
             return this;
         }
-
         public Builder profileName(@Nullable String profileName) {
             this.profileName = Output.ofNullable(profileName);
             return this;
         }
-
         public Builder properties(@Nullable Output<ConfigurationProfileResourcePropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder properties(@Nullable ConfigurationProfileResourcePropertiesArgs properties) {
             this.properties = Output.ofNullable(properties);
             return this;
-        }
-        public ConfigurationProfileArgs build() {
+        }        public ConfigurationProfileArgs build() {
             return new ConfigurationProfileArgs(identity, location, profileName, properties);
         }
     }

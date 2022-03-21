@@ -192,92 +192,74 @@ public final class FileShareArgs extends io.pulumi.resources.ResourceArgs {
             this.accessTier = accessTier;
             return this;
         }
-
         public Builder accessTier(@Nullable Either<String,ShareAccessTier> accessTier) {
             this.accessTier = Output.ofNullable(accessTier);
             return this;
         }
-
         public Builder accountName(Output<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder accountName(String accountName) {
             this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
-
         public Builder enabledProtocols(@Nullable Output<Either<String,EnabledProtocols>> enabledProtocols) {
             this.enabledProtocols = enabledProtocols;
             return this;
         }
-
         public Builder enabledProtocols(@Nullable Either<String,EnabledProtocols> enabledProtocols) {
             this.enabledProtocols = Output.ofNullable(enabledProtocols);
             return this;
         }
-
         public Builder expand(@Nullable Output<String> expand) {
             this.expand = expand;
             return this;
         }
-
         public Builder expand(@Nullable String expand) {
             this.expand = Output.ofNullable(expand);
             return this;
         }
-
         public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder metadata(@Nullable Map<String,String> metadata) {
             this.metadata = Output.ofNullable(metadata);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder rootSquash(@Nullable Output<Either<String,RootSquashType>> rootSquash) {
             this.rootSquash = rootSquash;
             return this;
         }
-
         public Builder rootSquash(@Nullable Either<String,RootSquashType> rootSquash) {
             this.rootSquash = Output.ofNullable(rootSquash);
             return this;
         }
-
         public Builder shareName(@Nullable Output<String> shareName) {
             this.shareName = shareName;
             return this;
         }
-
         public Builder shareName(@Nullable String shareName) {
             this.shareName = Output.ofNullable(shareName);
             return this;
         }
-
         public Builder shareQuota(@Nullable Output<Integer> shareQuota) {
             this.shareQuota = shareQuota;
             return this;
         }
-
         public Builder shareQuota(@Nullable Integer shareQuota) {
             this.shareQuota = Output.ofNullable(shareQuota);
             return this;
-        }
-        public FileShareArgs build() {
+        }        public FileShareArgs build() {
             return new FileShareArgs(accessTier, accountName, enabledProtocols, expand, metadata, resourceGroupName, rootSquash, shareName, shareQuota);
         }
     }

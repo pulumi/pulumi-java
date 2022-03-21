@@ -74,22 +74,21 @@ public final class GetDistributionResult {
             this.distributionConfig = distributionConfig;
             return this;
         }
-
         public Builder domainName(@Nullable String domainName) {
             this.domainName = domainName;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder tags(@Nullable List<DistributionTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetDistributionResult build() {
+        public Builder tags(DistributionTag... tags) {
+            return tags(List.of(tags));
+        }        public GetDistributionResult build() {
             return new GetDistributionResult(distributionConfig, domainName, id, tags);
         }
     }

@@ -57,12 +57,13 @@ public final class WebACLGeoMatchStatement {
             this.countryCodes = countryCodes;
             return this;
         }
-
+        public Builder countryCodes(String... countryCodes) {
+            return countryCodes(List.of(countryCodes));
+        }
         public Builder forwardedIPConfig(@Nullable WebACLForwardedIPConfiguration forwardedIPConfig) {
             this.forwardedIPConfig = forwardedIPConfig;
             return this;
-        }
-        public WebACLGeoMatchStatement build() {
+        }        public WebACLGeoMatchStatement build() {
             return new WebACLGeoMatchStatement(countryCodes, forwardedIPConfig);
         }
     }

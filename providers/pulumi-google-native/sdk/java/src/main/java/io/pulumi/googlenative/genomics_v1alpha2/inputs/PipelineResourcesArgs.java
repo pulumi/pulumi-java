@@ -195,92 +195,80 @@ public final class PipelineResourcesArgs extends io.pulumi.resources.ResourceArg
             this.acceleratorCount = acceleratorCount;
             return this;
         }
-
         public Builder acceleratorCount(@Nullable String acceleratorCount) {
             this.acceleratorCount = Output.ofNullable(acceleratorCount);
             return this;
         }
-
         public Builder acceleratorType(@Nullable Output<String> acceleratorType) {
             this.acceleratorType = acceleratorType;
             return this;
         }
-
         public Builder acceleratorType(@Nullable String acceleratorType) {
             this.acceleratorType = Output.ofNullable(acceleratorType);
             return this;
         }
-
         public Builder bootDiskSizeGb(@Nullable Output<Integer> bootDiskSizeGb) {
             this.bootDiskSizeGb = bootDiskSizeGb;
             return this;
         }
-
         public Builder bootDiskSizeGb(@Nullable Integer bootDiskSizeGb) {
             this.bootDiskSizeGb = Output.ofNullable(bootDiskSizeGb);
             return this;
         }
-
         public Builder disks(@Nullable Output<List<DiskArgs>> disks) {
             this.disks = disks;
             return this;
         }
-
         public Builder disks(@Nullable List<DiskArgs> disks) {
             this.disks = Output.ofNullable(disks);
             return this;
         }
-
+        public Builder disks(DiskArgs... disks) {
+            return disks(List.of(disks));
+        }
         public Builder minimumCpuCores(@Nullable Output<Integer> minimumCpuCores) {
             this.minimumCpuCores = minimumCpuCores;
             return this;
         }
-
         public Builder minimumCpuCores(@Nullable Integer minimumCpuCores) {
             this.minimumCpuCores = Output.ofNullable(minimumCpuCores);
             return this;
         }
-
         public Builder minimumRamGb(@Nullable Output<Double> minimumRamGb) {
             this.minimumRamGb = minimumRamGb;
             return this;
         }
-
         public Builder minimumRamGb(@Nullable Double minimumRamGb) {
             this.minimumRamGb = Output.ofNullable(minimumRamGb);
             return this;
         }
-
         public Builder noAddress(@Nullable Output<Boolean> noAddress) {
             this.noAddress = noAddress;
             return this;
         }
-
         public Builder noAddress(@Nullable Boolean noAddress) {
             this.noAddress = Output.ofNullable(noAddress);
             return this;
         }
-
         public Builder preemptible(@Nullable Output<Boolean> preemptible) {
             this.preemptible = preemptible;
             return this;
         }
-
         public Builder preemptible(@Nullable Boolean preemptible) {
             this.preemptible = Output.ofNullable(preemptible);
             return this;
         }
-
         public Builder zones(@Nullable Output<List<String>> zones) {
             this.zones = zones;
             return this;
         }
-
         public Builder zones(@Nullable List<String> zones) {
             this.zones = Output.ofNullable(zones);
             return this;
         }
-        public PipelineResourcesArgs build() {
+        public Builder zones(String... zones) {
+            return zones(List.of(zones));
+        }        public PipelineResourcesArgs build() {
             return new PipelineResourcesArgs(acceleratorCount, acceleratorType, bootDiskSizeGb, disks, minimumCpuCores, minimumRamGb, noAddress, preemptible, zones);
         }
     }

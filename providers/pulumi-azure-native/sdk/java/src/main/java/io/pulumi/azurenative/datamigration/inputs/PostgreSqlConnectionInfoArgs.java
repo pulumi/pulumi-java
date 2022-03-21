@@ -144,62 +144,50 @@ public final class PostgreSqlConnectionInfoArgs extends io.pulumi.resources.Reso
             this.databaseName = databaseName;
             return this;
         }
-
         public Builder databaseName(@Nullable String databaseName) {
             this.databaseName = Output.ofNullable(databaseName);
             return this;
         }
-
         public Builder password(@Nullable Output<String> password) {
             this.password = password;
             return this;
         }
-
         public Builder password(@Nullable String password) {
             this.password = Output.ofNullable(password);
             return this;
         }
-
         public Builder port(Output<Integer> port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
-
         public Builder port(Integer port) {
             this.port = Output.of(Objects.requireNonNull(port));
             return this;
         }
-
         public Builder serverName(Output<String> serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
         }
-
         public Builder serverName(String serverName) {
             this.serverName = Output.of(Objects.requireNonNull(serverName));
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
-
         public Builder userName(@Nullable Output<String> userName) {
             this.userName = userName;
             return this;
         }
-
         public Builder userName(@Nullable String userName) {
             this.userName = Output.ofNullable(userName);
             return this;
-        }
-        public PostgreSqlConnectionInfoArgs build() {
+        }        public PostgreSqlConnectionInfoArgs build() {
             return new PostgreSqlConnectionInfoArgs(databaseName, password, port, serverName, type, userName);
         }
     }

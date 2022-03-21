@@ -54,12 +54,13 @@ public final class FeatureStateArgs extends io.pulumi.resources.ResourceArgs {
             this.states = states;
             return this;
         }
-
         public Builder states(@Nullable List<FeatureStateStateArgs> states) {
             this.states = Output.ofNullable(states);
             return this;
         }
-        public FeatureStateArgs build() {
+        public Builder states(FeatureStateStateArgs... states) {
+            return states(List.of(states));
+        }        public FeatureStateArgs build() {
             return new FeatureStateArgs(states);
         }
     }

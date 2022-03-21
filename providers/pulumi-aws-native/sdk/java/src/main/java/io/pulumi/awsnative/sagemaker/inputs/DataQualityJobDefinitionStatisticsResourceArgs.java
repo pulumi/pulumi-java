@@ -61,12 +61,10 @@ public final class DataQualityJobDefinitionStatisticsResourceArgs extends io.pul
             this.s3Uri = s3Uri;
             return this;
         }
-
         public Builder s3Uri(@Nullable String s3Uri) {
             this.s3Uri = Output.ofNullable(s3Uri);
             return this;
-        }
-        public DataQualityJobDefinitionStatisticsResourceArgs build() {
+        }        public DataQualityJobDefinitionStatisticsResourceArgs build() {
             return new DataQualityJobDefinitionStatisticsResourceArgs(s3Uri);
         }
     }

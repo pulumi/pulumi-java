@@ -92,32 +92,26 @@ public final class ParameterGroupParameterGetArgs extends io.pulumi.resources.Re
             this.applyMethod = applyMethod;
             return this;
         }
-
         public Builder applyMethod(@Nullable String applyMethod) {
             this.applyMethod = Output.ofNullable(applyMethod);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder value(Output<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Output.of(Objects.requireNonNull(value));
             return this;
-        }
-        public ParameterGroupParameterGetArgs build() {
+        }        public ParameterGroupParameterGetArgs build() {
             return new ParameterGroupParameterGetArgs(applyMethod, name, value);
         }
     }

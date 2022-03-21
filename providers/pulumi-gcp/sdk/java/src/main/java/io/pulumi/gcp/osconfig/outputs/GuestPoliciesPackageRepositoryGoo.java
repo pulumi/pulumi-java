@@ -75,12 +75,10 @@ public final class GuestPoliciesPackageRepositoryGoo {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder url(String url) {
             this.url = Objects.requireNonNull(url);
             return this;
-        }
-        public GuestPoliciesPackageRepositoryGoo build() {
+        }        public GuestPoliciesPackageRepositoryGoo build() {
             return new GuestPoliciesPackageRepositoryGoo(name, url);
         }
     }

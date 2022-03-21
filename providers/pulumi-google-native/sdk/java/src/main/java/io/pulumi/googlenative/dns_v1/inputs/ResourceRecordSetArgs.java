@@ -157,72 +157,64 @@ public final class ResourceRecordSetArgs extends io.pulumi.resources.ResourceArg
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder routingPolicy(@Nullable Output<RRSetRoutingPolicyArgs> routingPolicy) {
             this.routingPolicy = routingPolicy;
             return this;
         }
-
         public Builder routingPolicy(@Nullable RRSetRoutingPolicyArgs routingPolicy) {
             this.routingPolicy = Output.ofNullable(routingPolicy);
             return this;
         }
-
         public Builder rrdatas(@Nullable Output<List<String>> rrdatas) {
             this.rrdatas = rrdatas;
             return this;
         }
-
         public Builder rrdatas(@Nullable List<String> rrdatas) {
             this.rrdatas = Output.ofNullable(rrdatas);
             return this;
         }
-
+        public Builder rrdatas(String... rrdatas) {
+            return rrdatas(List.of(rrdatas));
+        }
         public Builder signatureRrdatas(@Nullable Output<List<String>> signatureRrdatas) {
             this.signatureRrdatas = signatureRrdatas;
             return this;
         }
-
         public Builder signatureRrdatas(@Nullable List<String> signatureRrdatas) {
             this.signatureRrdatas = Output.ofNullable(signatureRrdatas);
             return this;
         }
-
+        public Builder signatureRrdatas(String... signatureRrdatas) {
+            return signatureRrdatas(List.of(signatureRrdatas));
+        }
         public Builder ttl(@Nullable Output<Integer> ttl) {
             this.ttl = ttl;
             return this;
         }
-
         public Builder ttl(@Nullable Integer ttl) {
             this.ttl = Output.ofNullable(ttl);
             return this;
         }
-
         public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public ResourceRecordSetArgs build() {
+        }        public ResourceRecordSetArgs build() {
             return new ResourceRecordSetArgs(kind, name, routingPolicy, rrdatas, signatureRrdatas, ttl, type);
         }
     }

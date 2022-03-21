@@ -81,22 +81,18 @@ public final class DeinterlaceArgs extends io.pulumi.resources.ResourceArgs {
             this.mode = mode;
             return this;
         }
-
         public Builder mode(@Nullable Either<String,DeinterlaceMode> mode) {
             this.mode = Output.ofNullable(mode);
             return this;
         }
-
         public Builder parity(@Nullable Output<Either<String,DeinterlaceParity>> parity) {
             this.parity = parity;
             return this;
         }
-
         public Builder parity(@Nullable Either<String,DeinterlaceParity> parity) {
             this.parity = Output.ofNullable(parity);
             return this;
-        }
-        public DeinterlaceArgs build() {
+        }        public DeinterlaceArgs build() {
             return new DeinterlaceArgs(mode, parity);
         }
     }

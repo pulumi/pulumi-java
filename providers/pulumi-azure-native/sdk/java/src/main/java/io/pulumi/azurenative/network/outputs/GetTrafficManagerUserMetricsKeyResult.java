@@ -103,22 +103,18 @@ public final class GetTrafficManagerUserMetricsKeyResult {
             this.id = id;
             return this;
         }
-
         public Builder key(@Nullable String key) {
             this.key = key;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
-        }
-        public GetTrafficManagerUserMetricsKeyResult build() {
+        }        public GetTrafficManagerUserMetricsKeyResult build() {
             return new GetTrafficManagerUserMetricsKeyResult(id, key, name, type);
         }
     }

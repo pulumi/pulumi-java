@@ -80,22 +80,24 @@ public final class AuthenticationArgs extends io.pulumi.resources.ResourceArgs {
             this.providers = providers;
             return this;
         }
-
         public Builder providers(@Nullable List<AuthProviderArgs> providers) {
             this.providers = Output.ofNullable(providers);
             return this;
         }
-
+        public Builder providers(AuthProviderArgs... providers) {
+            return providers(List.of(providers));
+        }
         public Builder rules(@Nullable Output<List<AuthenticationRuleArgs>> rules) {
             this.rules = rules;
             return this;
         }
-
         public Builder rules(@Nullable List<AuthenticationRuleArgs> rules) {
             this.rules = Output.ofNullable(rules);
             return this;
         }
-        public AuthenticationArgs build() {
+        public Builder rules(AuthenticationRuleArgs... rules) {
+            return rules(List.of(rules));
+        }        public AuthenticationArgs build() {
             return new AuthenticationArgs(providers, rules);
         }
     }

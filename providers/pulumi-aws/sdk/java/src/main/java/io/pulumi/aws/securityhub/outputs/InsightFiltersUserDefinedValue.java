@@ -85,17 +85,14 @@ public final class InsightFiltersUserDefinedValue {
             this.comparison = Objects.requireNonNull(comparison);
             return this;
         }
-
         public Builder key(String key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public InsightFiltersUserDefinedValue build() {
+        }        public InsightFiltersUserDefinedValue build() {
             return new InsightFiltersUserDefinedValue(comparison, key, value);
         }
     }

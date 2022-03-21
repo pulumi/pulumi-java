@@ -46,7 +46,9 @@ public final class DatastorePartitions {
             this.partitions = partitions;
             return this;
         }
-        public DatastorePartitions build() {
+        public Builder partitions(DatastorePartition... partitions) {
+            return partitions(List.of(partitions));
+        }        public DatastorePartitions build() {
             return new DatastorePartitions(partitions);
         }
     }

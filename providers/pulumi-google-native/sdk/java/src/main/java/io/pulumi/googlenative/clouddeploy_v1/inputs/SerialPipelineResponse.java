@@ -60,7 +60,9 @@ public final class SerialPipelineResponse extends io.pulumi.resources.InvokeArgs
             this.stages = Objects.requireNonNull(stages);
             return this;
         }
-        public SerialPipelineResponse build() {
+        public Builder stages(StageResponse... stages) {
+            return stages(List.of(stages));
+        }        public SerialPipelineResponse build() {
             return new SerialPipelineResponse(stages);
         }
     }

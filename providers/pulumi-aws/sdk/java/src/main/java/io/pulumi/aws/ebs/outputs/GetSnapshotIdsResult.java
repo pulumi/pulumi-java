@@ -96,27 +96,34 @@ public final class GetSnapshotIdsResult {
             this.filters = filters;
             return this;
         }
-
+        public Builder filters(GetSnapshotIdsFilter... filters) {
+            return filters(List.of(filters));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder ids(List<String> ids) {
             this.ids = Objects.requireNonNull(ids);
             return this;
         }
-
+        public Builder ids(String... ids) {
+            return ids(List.of(ids));
+        }
         public Builder owners(@Nullable List<String> owners) {
             this.owners = owners;
             return this;
         }
-
+        public Builder owners(String... owners) {
+            return owners(List.of(owners));
+        }
         public Builder restorableByUserIds(@Nullable List<String> restorableByUserIds) {
             this.restorableByUserIds = restorableByUserIds;
             return this;
         }
-        public GetSnapshotIdsResult build() {
+        public Builder restorableByUserIds(String... restorableByUserIds) {
+            return restorableByUserIds(List.of(restorableByUserIds));
+        }        public GetSnapshotIdsResult build() {
             return new GetSnapshotIdsResult(filters, id, ids, owners, restorableByUserIds);
         }
     }

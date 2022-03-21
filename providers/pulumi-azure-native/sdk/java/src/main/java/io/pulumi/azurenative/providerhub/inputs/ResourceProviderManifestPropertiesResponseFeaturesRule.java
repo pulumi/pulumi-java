@@ -50,8 +50,7 @@ public final class ResourceProviderManifestPropertiesResponseFeaturesRule extend
         public Builder requiredFeaturesPolicy(String requiredFeaturesPolicy) {
             this.requiredFeaturesPolicy = Objects.requireNonNull(requiredFeaturesPolicy);
             return this;
-        }
-        public ResourceProviderManifestPropertiesResponseFeaturesRule build() {
+        }        public ResourceProviderManifestPropertiesResponseFeaturesRule build() {
             return new ResourceProviderManifestPropertiesResponseFeaturesRule(requiredFeaturesPolicy);
         }
     }

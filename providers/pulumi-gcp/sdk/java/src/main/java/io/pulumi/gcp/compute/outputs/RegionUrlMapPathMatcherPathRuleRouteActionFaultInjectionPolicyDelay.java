@@ -76,12 +76,10 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolic
             this.fixedDelay = Objects.requireNonNull(fixedDelay);
             return this;
         }
-
         public Builder percentage(Double percentage) {
             this.percentage = Objects.requireNonNull(percentage);
             return this;
-        }
-        public RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelay build() {
+        }        public RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelay build() {
             return new RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelay(fixedDelay, percentage);
         }
     }

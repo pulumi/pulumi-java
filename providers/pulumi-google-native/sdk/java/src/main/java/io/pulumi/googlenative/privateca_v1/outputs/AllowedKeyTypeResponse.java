@@ -70,12 +70,10 @@ public final class AllowedKeyTypeResponse {
             this.ellipticCurve = Objects.requireNonNull(ellipticCurve);
             return this;
         }
-
         public Builder rsa(RsaKeyTypeResponse rsa) {
             this.rsa = Objects.requireNonNull(rsa);
             return this;
-        }
-        public AllowedKeyTypeResponse build() {
+        }        public AllowedKeyTypeResponse build() {
             return new AllowedKeyTypeResponse(ellipticCurve, rsa);
         }
     }

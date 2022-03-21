@@ -199,52 +199,48 @@ public final class FirewallInfoResponse {
             this.action = Objects.requireNonNull(action);
             return this;
         }
-
         public Builder direction(String direction) {
             this.direction = Objects.requireNonNull(direction);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder firewallRuleType(String firewallRuleType) {
             this.firewallRuleType = Objects.requireNonNull(firewallRuleType);
             return this;
         }
-
         public Builder networkUri(String networkUri) {
             this.networkUri = Objects.requireNonNull(networkUri);
             return this;
         }
-
         public Builder policy(String policy) {
             this.policy = Objects.requireNonNull(policy);
             return this;
         }
-
         public Builder priority(Integer priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
-
         public Builder targetServiceAccounts(List<String> targetServiceAccounts) {
             this.targetServiceAccounts = Objects.requireNonNull(targetServiceAccounts);
             return this;
         }
-
+        public Builder targetServiceAccounts(String... targetServiceAccounts) {
+            return targetServiceAccounts(List.of(targetServiceAccounts));
+        }
         public Builder targetTags(List<String> targetTags) {
             this.targetTags = Objects.requireNonNull(targetTags);
             return this;
         }
-
+        public Builder targetTags(String... targetTags) {
+            return targetTags(List.of(targetTags));
+        }
         public Builder uri(String uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
-        }
-        public FirewallInfoResponse build() {
+        }        public FirewallInfoResponse build() {
             return new FirewallInfoResponse(action, direction, displayName, firewallRuleType, networkUri, policy, priority, targetServiceAccounts, targetTags, uri);
         }
     }

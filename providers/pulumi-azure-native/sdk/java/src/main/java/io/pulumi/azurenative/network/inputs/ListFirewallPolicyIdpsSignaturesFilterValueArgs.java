@@ -90,17 +90,14 @@ public final class ListFirewallPolicyIdpsSignaturesFilterValueArgs extends io.pu
             this.filterName = filterName;
             return this;
         }
-
         public Builder firewallPolicyName(String firewallPolicyName) {
             this.firewallPolicyName = Objects.requireNonNull(firewallPolicyName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public ListFirewallPolicyIdpsSignaturesFilterValueArgs build() {
+        }        public ListFirewallPolicyIdpsSignaturesFilterValueArgs build() {
             return new ListFirewallPolicyIdpsSignaturesFilterValueArgs(filterName, firewallPolicyName, resourceGroupName);
         }
     }

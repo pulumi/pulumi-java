@@ -101,42 +101,37 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
             this.projectDescription = projectDescription;
             return this;
         }
-
         public Builder projectDescription(@Nullable String projectDescription) {
             this.projectDescription = Output.ofNullable(projectDescription);
             return this;
         }
-
         public Builder projectName(@Nullable Output<String> projectName) {
             this.projectName = projectName;
             return this;
         }
-
         public Builder projectName(@Nullable String projectName) {
             this.projectName = Output.ofNullable(projectName);
             return this;
         }
-
         public Builder serviceCatalogProvisioningDetails(Output<ServiceCatalogProvisioningDetailsPropertiesArgs> serviceCatalogProvisioningDetails) {
             this.serviceCatalogProvisioningDetails = Objects.requireNonNull(serviceCatalogProvisioningDetails);
             return this;
         }
-
         public Builder serviceCatalogProvisioningDetails(ServiceCatalogProvisioningDetailsPropertiesArgs serviceCatalogProvisioningDetails) {
             this.serviceCatalogProvisioningDetails = Output.of(Objects.requireNonNull(serviceCatalogProvisioningDetails));
             return this;
         }
-
         public Builder tags(@Nullable Output<List<ProjectTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<ProjectTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public ProjectArgs build() {
+        public Builder tags(ProjectTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public ProjectArgs build() {
             return new ProjectArgs(projectDescription, projectName, serviceCatalogProvisioningDetails, tags);
         }
     }

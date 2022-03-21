@@ -174,42 +174,34 @@ public final class WebAclRuleStatementManagedRuleGroupStatementScopeDownStatemen
             this.byteMatchStatement = byteMatchStatement;
             return this;
         }
-
         public Builder geoMatchStatement(@Nullable WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementOrStatementStatementOrStatementStatementGeoMatchStatement geoMatchStatement) {
             this.geoMatchStatement = geoMatchStatement;
             return this;
         }
-
         public Builder ipSetReferenceStatement(@Nullable WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementOrStatementStatementOrStatementStatementIpSetReferenceStatement ipSetReferenceStatement) {
             this.ipSetReferenceStatement = ipSetReferenceStatement;
             return this;
         }
-
         public Builder labelMatchStatement(@Nullable WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementOrStatementStatementOrStatementStatementLabelMatchStatement labelMatchStatement) {
             this.labelMatchStatement = labelMatchStatement;
             return this;
         }
-
         public Builder regexPatternSetReferenceStatement(@Nullable WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementOrStatementStatementOrStatementStatementRegexPatternSetReferenceStatement regexPatternSetReferenceStatement) {
             this.regexPatternSetReferenceStatement = regexPatternSetReferenceStatement;
             return this;
         }
-
         public Builder sizeConstraintStatement(@Nullable WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementOrStatementStatementOrStatementStatementSizeConstraintStatement sizeConstraintStatement) {
             this.sizeConstraintStatement = sizeConstraintStatement;
             return this;
         }
-
         public Builder sqliMatchStatement(@Nullable WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementOrStatementStatementOrStatementStatementSqliMatchStatement sqliMatchStatement) {
             this.sqliMatchStatement = sqliMatchStatement;
             return this;
         }
-
         public Builder xssMatchStatement(@Nullable WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementOrStatementStatementOrStatementStatementXssMatchStatement xssMatchStatement) {
             this.xssMatchStatement = xssMatchStatement;
             return this;
-        }
-        public WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementOrStatementStatementOrStatementStatement build() {
+        }        public WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementOrStatementStatementOrStatementStatement build() {
             return new WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementOrStatementStatementOrStatementStatement(byteMatchStatement, geoMatchStatement, ipSetReferenceStatement, labelMatchStatement, regexPatternSetReferenceStatement, sizeConstraintStatement, sqliMatchStatement, xssMatchStatement);
         }
     }

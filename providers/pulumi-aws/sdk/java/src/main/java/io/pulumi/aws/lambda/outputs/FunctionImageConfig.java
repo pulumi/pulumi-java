@@ -88,17 +88,20 @@ public final class FunctionImageConfig {
             this.commands = commands;
             return this;
         }
-
+        public Builder commands(String... commands) {
+            return commands(List.of(commands));
+        }
         public Builder entryPoints(@Nullable List<String> entryPoints) {
             this.entryPoints = entryPoints;
             return this;
         }
-
+        public Builder entryPoints(String... entryPoints) {
+            return entryPoints(List.of(entryPoints));
+        }
         public Builder workingDirectory(@Nullable String workingDirectory) {
             this.workingDirectory = workingDirectory;
             return this;
-        }
-        public FunctionImageConfig build() {
+        }        public FunctionImageConfig build() {
             return new FunctionImageConfig(commands, entryPoints, workingDirectory);
         }
     }

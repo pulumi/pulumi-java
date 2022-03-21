@@ -88,17 +88,14 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateFi
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
-
         public Builder generation(@Nullable Integer generation) {
             this.generation = generation;
             return this;
         }
-
         public Builder object(String object) {
             this.object = Objects.requireNonNull(object);
             return this;
-        }
-        public OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateFileGcs build() {
+        }        public OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateFileGcs build() {
             return new OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateFileGcs(bucket, generation, object);
         }
     }

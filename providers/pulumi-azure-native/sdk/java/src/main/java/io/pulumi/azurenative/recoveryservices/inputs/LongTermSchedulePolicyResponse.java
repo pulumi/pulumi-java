@@ -59,8 +59,7 @@ public final class LongTermSchedulePolicyResponse extends io.pulumi.resources.In
         public Builder schedulePolicyType(String schedulePolicyType) {
             this.schedulePolicyType = Objects.requireNonNull(schedulePolicyType);
             return this;
-        }
-        public LongTermSchedulePolicyResponse build() {
+        }        public LongTermSchedulePolicyResponse build() {
             return new LongTermSchedulePolicyResponse(schedulePolicyType);
         }
     }

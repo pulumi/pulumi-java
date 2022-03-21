@@ -112,42 +112,34 @@ public final class BotWaitAndContinueSpecificationArgs extends io.pulumi.resourc
             this.continueResponse = Objects.requireNonNull(continueResponse);
             return this;
         }
-
         public Builder continueResponse(BotResponseSpecificationArgs continueResponse) {
             this.continueResponse = Output.of(Objects.requireNonNull(continueResponse));
             return this;
         }
-
         public Builder isActive(@Nullable Output<Boolean> isActive) {
             this.isActive = isActive;
             return this;
         }
-
         public Builder isActive(@Nullable Boolean isActive) {
             this.isActive = Output.ofNullable(isActive);
             return this;
         }
-
         public Builder stillWaitingResponse(@Nullable Output<BotStillWaitingResponseSpecificationArgs> stillWaitingResponse) {
             this.stillWaitingResponse = stillWaitingResponse;
             return this;
         }
-
         public Builder stillWaitingResponse(@Nullable BotStillWaitingResponseSpecificationArgs stillWaitingResponse) {
             this.stillWaitingResponse = Output.ofNullable(stillWaitingResponse);
             return this;
         }
-
         public Builder waitingResponse(Output<BotResponseSpecificationArgs> waitingResponse) {
             this.waitingResponse = Objects.requireNonNull(waitingResponse);
             return this;
         }
-
         public Builder waitingResponse(BotResponseSpecificationArgs waitingResponse) {
             this.waitingResponse = Output.of(Objects.requireNonNull(waitingResponse));
             return this;
-        }
-        public BotWaitAndContinueSpecificationArgs build() {
+        }        public BotWaitAndContinueSpecificationArgs build() {
             return new BotWaitAndContinueSpecificationArgs(continueResponse, isActive, stillWaitingResponse, waitingResponse);
         }
     }

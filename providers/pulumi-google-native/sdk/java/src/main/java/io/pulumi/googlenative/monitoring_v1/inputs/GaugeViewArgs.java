@@ -78,22 +78,18 @@ public final class GaugeViewArgs extends io.pulumi.resources.ResourceArgs {
             this.lowerBound = lowerBound;
             return this;
         }
-
         public Builder lowerBound(@Nullable Double lowerBound) {
             this.lowerBound = Output.ofNullable(lowerBound);
             return this;
         }
-
         public Builder upperBound(@Nullable Output<Double> upperBound) {
             this.upperBound = upperBound;
             return this;
         }
-
         public Builder upperBound(@Nullable Double upperBound) {
             this.upperBound = Output.ofNullable(upperBound);
             return this;
-        }
-        public GaugeViewArgs build() {
+        }        public GaugeViewArgs build() {
             return new GaugeViewArgs(lowerBound, upperBound);
         }
     }

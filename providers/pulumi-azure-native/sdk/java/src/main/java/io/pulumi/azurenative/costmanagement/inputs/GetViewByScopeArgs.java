@@ -72,12 +72,10 @@ public final class GetViewByScopeArgs extends io.pulumi.resources.InvokeArgs {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
-
         public Builder viewName(String viewName) {
             this.viewName = Objects.requireNonNull(viewName);
             return this;
-        }
-        public GetViewByScopeArgs build() {
+        }        public GetViewByScopeArgs build() {
             return new GetViewByScopeArgs(scope, viewName);
         }
     }

@@ -93,17 +93,17 @@ public final class MetricDimensionResponse extends io.pulumi.resources.InvokeArg
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder operator(String operator) {
             this.operator = Objects.requireNonNull(operator);
             return this;
         }
-
         public Builder values(List<String> values) {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-        public MetricDimensionResponse build() {
+        public Builder values(String... values) {
+            return values(List.of(values));
+        }        public MetricDimensionResponse build() {
             return new MetricDimensionResponse(name, operator, values);
         }
     }

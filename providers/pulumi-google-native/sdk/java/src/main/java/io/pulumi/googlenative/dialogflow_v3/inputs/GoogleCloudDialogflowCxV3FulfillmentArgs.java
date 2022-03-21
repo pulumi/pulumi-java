@@ -147,62 +147,59 @@ public final class GoogleCloudDialogflowCxV3FulfillmentArgs extends io.pulumi.re
             this.conditionalCases = conditionalCases;
             return this;
         }
-
         public Builder conditionalCases(@Nullable List<GoogleCloudDialogflowCxV3FulfillmentConditionalCasesArgs> conditionalCases) {
             this.conditionalCases = Output.ofNullable(conditionalCases);
             return this;
         }
-
+        public Builder conditionalCases(GoogleCloudDialogflowCxV3FulfillmentConditionalCasesArgs... conditionalCases) {
+            return conditionalCases(List.of(conditionalCases));
+        }
         public Builder messages(@Nullable Output<List<GoogleCloudDialogflowCxV3ResponseMessageArgs>> messages) {
             this.messages = messages;
             return this;
         }
-
         public Builder messages(@Nullable List<GoogleCloudDialogflowCxV3ResponseMessageArgs> messages) {
             this.messages = Output.ofNullable(messages);
             return this;
         }
-
+        public Builder messages(GoogleCloudDialogflowCxV3ResponseMessageArgs... messages) {
+            return messages(List.of(messages));
+        }
         public Builder returnPartialResponses(@Nullable Output<Boolean> returnPartialResponses) {
             this.returnPartialResponses = returnPartialResponses;
             return this;
         }
-
         public Builder returnPartialResponses(@Nullable Boolean returnPartialResponses) {
             this.returnPartialResponses = Output.ofNullable(returnPartialResponses);
             return this;
         }
-
         public Builder setParameterActions(@Nullable Output<List<GoogleCloudDialogflowCxV3FulfillmentSetParameterActionArgs>> setParameterActions) {
             this.setParameterActions = setParameterActions;
             return this;
         }
-
         public Builder setParameterActions(@Nullable List<GoogleCloudDialogflowCxV3FulfillmentSetParameterActionArgs> setParameterActions) {
             this.setParameterActions = Output.ofNullable(setParameterActions);
             return this;
         }
-
+        public Builder setParameterActions(GoogleCloudDialogflowCxV3FulfillmentSetParameterActionArgs... setParameterActions) {
+            return setParameterActions(List.of(setParameterActions));
+        }
         public Builder tag(@Nullable Output<String> tag) {
             this.tag = tag;
             return this;
         }
-
         public Builder tag(@Nullable String tag) {
             this.tag = Output.ofNullable(tag);
             return this;
         }
-
         public Builder webhook(@Nullable Output<String> webhook) {
             this.webhook = webhook;
             return this;
         }
-
         public Builder webhook(@Nullable String webhook) {
             this.webhook = Output.ofNullable(webhook);
             return this;
-        }
-        public GoogleCloudDialogflowCxV3FulfillmentArgs build() {
+        }        public GoogleCloudDialogflowCxV3FulfillmentArgs build() {
             return new GoogleCloudDialogflowCxV3FulfillmentArgs(conditionalCases, messages, returnPartialResponses, setParameterActions, tag, webhook);
         }
     }

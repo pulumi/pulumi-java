@@ -174,82 +174,66 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
             this.accountName = accountName;
             return this;
         }
-
         public Builder accountName(@Nullable String accountName) {
             this.accountName = Output.ofNullable(accountName);
             return this;
         }
-
         public Builder identity(@Nullable Output<IdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
-
         public Builder identity(@Nullable IdentityArgs identity) {
             this.identity = Output.ofNullable(identity);
             return this;
         }
-
         public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder properties(@Nullable Output<CognitiveServicesAccountPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder properties(@Nullable CognitiveServicesAccountPropertiesArgs properties) {
             this.properties = Output.ofNullable(properties);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder sku(@Nullable Output<SkuArgs> sku) {
             this.sku = sku;
             return this;
         }
-
         public Builder sku(@Nullable SkuArgs sku) {
             this.sku = Output.ofNullable(sku);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public AccountArgs build() {
+        }        public AccountArgs build() {
             return new AccountArgs(accountName, identity, kind, location, properties, resourceGroupName, sku, tags);
         }
     }

@@ -53,8 +53,7 @@ public final class GetAliasResult {
         public Builder targetKeyId(@Nullable String targetKeyId) {
             this.targetKeyId = targetKeyId;
             return this;
-        }
-        public GetAliasResult build() {
+        }        public GetAliasResult build() {
             return new GetAliasResult(targetKeyId);
         }
     }

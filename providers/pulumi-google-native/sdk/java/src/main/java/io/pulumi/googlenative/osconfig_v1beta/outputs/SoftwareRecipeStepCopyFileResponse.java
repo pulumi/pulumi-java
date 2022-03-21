@@ -102,22 +102,18 @@ public final class SoftwareRecipeStepCopyFileResponse {
             this.artifactId = Objects.requireNonNull(artifactId);
             return this;
         }
-
         public Builder destination(String destination) {
             this.destination = Objects.requireNonNull(destination);
             return this;
         }
-
         public Builder overwrite(Boolean overwrite) {
             this.overwrite = Objects.requireNonNull(overwrite);
             return this;
         }
-
         public Builder permissions(String permissions) {
             this.permissions = Objects.requireNonNull(permissions);
             return this;
-        }
-        public SoftwareRecipeStepCopyFileResponse build() {
+        }        public SoftwareRecipeStepCopyFileResponse build() {
             return new SoftwareRecipeStepCopyFileResponse(artifactId, destination, overwrite, permissions);
         }
     }

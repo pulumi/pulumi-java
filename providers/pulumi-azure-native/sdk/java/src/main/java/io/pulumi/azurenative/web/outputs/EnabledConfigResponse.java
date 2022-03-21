@@ -53,8 +53,7 @@ public final class EnabledConfigResponse {
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
-        }
-        public EnabledConfigResponse build() {
+        }        public EnabledConfigResponse build() {
             return new EnabledConfigResponse(enabled);
         }
     }

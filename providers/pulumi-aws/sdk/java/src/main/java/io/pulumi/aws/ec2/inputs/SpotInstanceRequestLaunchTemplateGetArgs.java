@@ -90,32 +90,26 @@ public final class SpotInstanceRequestLaunchTemplateGetArgs extends io.pulumi.re
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = Output.ofNullable(version);
             return this;
-        }
-        public SpotInstanceRequestLaunchTemplateGetArgs build() {
+        }        public SpotInstanceRequestLaunchTemplateGetArgs build() {
             return new SpotInstanceRequestLaunchTemplateGetArgs(id, name, version);
         }
     }

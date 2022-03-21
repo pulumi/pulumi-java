@@ -160,72 +160,58 @@ public final class ApplicationApplicationConfigurationGetArgs extends io.pulumi.
             this.applicationCodeConfiguration = Objects.requireNonNull(applicationCodeConfiguration);
             return this;
         }
-
         public Builder applicationCodeConfiguration(ApplicationApplicationConfigurationApplicationCodeConfigurationGetArgs applicationCodeConfiguration) {
             this.applicationCodeConfiguration = Output.of(Objects.requireNonNull(applicationCodeConfiguration));
             return this;
         }
-
         public Builder applicationSnapshotConfiguration(@Nullable Output<ApplicationApplicationConfigurationApplicationSnapshotConfigurationGetArgs> applicationSnapshotConfiguration) {
             this.applicationSnapshotConfiguration = applicationSnapshotConfiguration;
             return this;
         }
-
         public Builder applicationSnapshotConfiguration(@Nullable ApplicationApplicationConfigurationApplicationSnapshotConfigurationGetArgs applicationSnapshotConfiguration) {
             this.applicationSnapshotConfiguration = Output.ofNullable(applicationSnapshotConfiguration);
             return this;
         }
-
         public Builder environmentProperties(@Nullable Output<ApplicationApplicationConfigurationEnvironmentPropertiesGetArgs> environmentProperties) {
             this.environmentProperties = environmentProperties;
             return this;
         }
-
         public Builder environmentProperties(@Nullable ApplicationApplicationConfigurationEnvironmentPropertiesGetArgs environmentProperties) {
             this.environmentProperties = Output.ofNullable(environmentProperties);
             return this;
         }
-
         public Builder flinkApplicationConfiguration(@Nullable Output<ApplicationApplicationConfigurationFlinkApplicationConfigurationGetArgs> flinkApplicationConfiguration) {
             this.flinkApplicationConfiguration = flinkApplicationConfiguration;
             return this;
         }
-
         public Builder flinkApplicationConfiguration(@Nullable ApplicationApplicationConfigurationFlinkApplicationConfigurationGetArgs flinkApplicationConfiguration) {
             this.flinkApplicationConfiguration = Output.ofNullable(flinkApplicationConfiguration);
             return this;
         }
-
         public Builder runConfiguration(@Nullable Output<ApplicationApplicationConfigurationRunConfigurationGetArgs> runConfiguration) {
             this.runConfiguration = runConfiguration;
             return this;
         }
-
         public Builder runConfiguration(@Nullable ApplicationApplicationConfigurationRunConfigurationGetArgs runConfiguration) {
             this.runConfiguration = Output.ofNullable(runConfiguration);
             return this;
         }
-
         public Builder sqlApplicationConfiguration(@Nullable Output<ApplicationApplicationConfigurationSqlApplicationConfigurationGetArgs> sqlApplicationConfiguration) {
             this.sqlApplicationConfiguration = sqlApplicationConfiguration;
             return this;
         }
-
         public Builder sqlApplicationConfiguration(@Nullable ApplicationApplicationConfigurationSqlApplicationConfigurationGetArgs sqlApplicationConfiguration) {
             this.sqlApplicationConfiguration = Output.ofNullable(sqlApplicationConfiguration);
             return this;
         }
-
         public Builder vpcConfiguration(@Nullable Output<ApplicationApplicationConfigurationVpcConfigurationGetArgs> vpcConfiguration) {
             this.vpcConfiguration = vpcConfiguration;
             return this;
         }
-
         public Builder vpcConfiguration(@Nullable ApplicationApplicationConfigurationVpcConfigurationGetArgs vpcConfiguration) {
             this.vpcConfiguration = Output.ofNullable(vpcConfiguration);
             return this;
-        }
-        public ApplicationApplicationConfigurationGetArgs build() {
+        }        public ApplicationApplicationConfigurationGetArgs build() {
             return new ApplicationApplicationConfigurationGetArgs(applicationCodeConfiguration, applicationSnapshotConfiguration, environmentProperties, flinkApplicationConfiguration, runConfiguration, sqlApplicationConfiguration, vpcConfiguration);
         }
     }

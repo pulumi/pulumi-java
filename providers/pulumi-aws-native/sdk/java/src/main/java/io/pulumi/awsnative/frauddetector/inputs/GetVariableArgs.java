@@ -54,8 +54,7 @@ public final class GetVariableArgs extends io.pulumi.resources.InvokeArgs {
         public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
-        }
-        public GetVariableArgs build() {
+        }        public GetVariableArgs build() {
             return new GetVariableArgs(arn);
         }
     }

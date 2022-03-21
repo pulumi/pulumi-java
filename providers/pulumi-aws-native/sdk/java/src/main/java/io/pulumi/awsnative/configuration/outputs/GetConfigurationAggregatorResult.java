@@ -91,22 +91,24 @@ public final class GetConfigurationAggregatorResult {
             this.accountAggregationSources = accountAggregationSources;
             return this;
         }
-
+        public Builder accountAggregationSources(ConfigurationAggregatorAccountAggregationSource... accountAggregationSources) {
+            return accountAggregationSources(List.of(accountAggregationSources));
+        }
         public Builder configurationAggregatorArn(@Nullable String configurationAggregatorArn) {
             this.configurationAggregatorArn = configurationAggregatorArn;
             return this;
         }
-
         public Builder organizationAggregationSource(@Nullable ConfigurationAggregatorOrganizationAggregationSource organizationAggregationSource) {
             this.organizationAggregationSource = organizationAggregationSource;
             return this;
         }
-
         public Builder tags(@Nullable List<ConfigurationAggregatorTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetConfigurationAggregatorResult build() {
+        public Builder tags(ConfigurationAggregatorTag... tags) {
+            return tags(List.of(tags));
+        }        public GetConfigurationAggregatorResult build() {
             return new GetConfigurationAggregatorResult(accountAggregationSources, configurationAggregatorArn, organizationAggregationSource, tags);
         }
     }

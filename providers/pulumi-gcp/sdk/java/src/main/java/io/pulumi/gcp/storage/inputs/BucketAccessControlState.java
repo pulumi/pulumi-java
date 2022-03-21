@@ -137,52 +137,42 @@ public final class BucketAccessControlState extends io.pulumi.resources.Resource
             this.bucket = bucket;
             return this;
         }
-
         public Builder bucket(@Nullable String bucket) {
             this.bucket = Output.ofNullable(bucket);
             return this;
         }
-
         public Builder domain(@Nullable Output<String> domain) {
             this.domain = domain;
             return this;
         }
-
         public Builder domain(@Nullable String domain) {
             this.domain = Output.ofNullable(domain);
             return this;
         }
-
         public Builder email(@Nullable Output<String> email) {
             this.email = email;
             return this;
         }
-
         public Builder email(@Nullable String email) {
             this.email = Output.ofNullable(email);
             return this;
         }
-
         public Builder entity(@Nullable Output<String> entity) {
             this.entity = entity;
             return this;
         }
-
         public Builder entity(@Nullable String entity) {
             this.entity = Output.ofNullable(entity);
             return this;
         }
-
         public Builder role(@Nullable Output<String> role) {
             this.role = role;
             return this;
         }
-
         public Builder role(@Nullable String role) {
             this.role = Output.ofNullable(role);
             return this;
-        }
-        public BucketAccessControlState build() {
+        }        public BucketAccessControlState build() {
             return new BucketAccessControlState(bucket, domain, email, entity, role);
         }
     }

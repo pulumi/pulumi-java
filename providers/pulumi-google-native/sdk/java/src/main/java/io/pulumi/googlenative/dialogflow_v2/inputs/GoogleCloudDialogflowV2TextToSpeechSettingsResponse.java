@@ -111,22 +111,18 @@ public final class GoogleCloudDialogflowV2TextToSpeechSettingsResponse extends i
             this.enableTextToSpeech = Objects.requireNonNull(enableTextToSpeech);
             return this;
         }
-
         public Builder outputAudioEncoding(String outputAudioEncoding) {
             this.outputAudioEncoding = Objects.requireNonNull(outputAudioEncoding);
             return this;
         }
-
         public Builder sampleRateHertz(Integer sampleRateHertz) {
             this.sampleRateHertz = Objects.requireNonNull(sampleRateHertz);
             return this;
         }
-
         public Builder synthesizeSpeechConfigs(Map<String,String> synthesizeSpeechConfigs) {
             this.synthesizeSpeechConfigs = Objects.requireNonNull(synthesizeSpeechConfigs);
             return this;
-        }
-        public GoogleCloudDialogflowV2TextToSpeechSettingsResponse build() {
+        }        public GoogleCloudDialogflowV2TextToSpeechSettingsResponse build() {
             return new GoogleCloudDialogflowV2TextToSpeechSettingsResponse(enableTextToSpeech, outputAudioEncoding, sampleRateHertz, synthesizeSpeechConfigs);
         }
     }

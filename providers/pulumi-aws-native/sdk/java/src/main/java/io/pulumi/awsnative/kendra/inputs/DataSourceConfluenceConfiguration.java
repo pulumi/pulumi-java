@@ -169,52 +169,48 @@ public final class DataSourceConfluenceConfiguration extends io.pulumi.resources
             this.attachmentConfiguration = attachmentConfiguration;
             return this;
         }
-
         public Builder blogConfiguration(@Nullable DataSourceConfluenceBlogConfiguration blogConfiguration) {
             this.blogConfiguration = blogConfiguration;
             return this;
         }
-
         public Builder exclusionPatterns(@Nullable List<String> exclusionPatterns) {
             this.exclusionPatterns = exclusionPatterns;
             return this;
         }
-
+        public Builder exclusionPatterns(String... exclusionPatterns) {
+            return exclusionPatterns(List.of(exclusionPatterns));
+        }
         public Builder inclusionPatterns(@Nullable List<String> inclusionPatterns) {
             this.inclusionPatterns = inclusionPatterns;
             return this;
         }
-
+        public Builder inclusionPatterns(String... inclusionPatterns) {
+            return inclusionPatterns(List.of(inclusionPatterns));
+        }
         public Builder pageConfiguration(@Nullable DataSourceConfluencePageConfiguration pageConfiguration) {
             this.pageConfiguration = pageConfiguration;
             return this;
         }
-
         public Builder secretArn(String secretArn) {
             this.secretArn = Objects.requireNonNull(secretArn);
             return this;
         }
-
         public Builder serverUrl(String serverUrl) {
             this.serverUrl = Objects.requireNonNull(serverUrl);
             return this;
         }
-
         public Builder spaceConfiguration(@Nullable DataSourceConfluenceSpaceConfiguration spaceConfiguration) {
             this.spaceConfiguration = spaceConfiguration;
             return this;
         }
-
         public Builder version(DataSourceConfluenceVersion version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public Builder vpcConfiguration(@Nullable DataSourceVpcConfiguration vpcConfiguration) {
             this.vpcConfiguration = vpcConfiguration;
             return this;
-        }
-        public DataSourceConfluenceConfiguration build() {
+        }        public DataSourceConfluenceConfiguration build() {
             return new DataSourceConfluenceConfiguration(attachmentConfiguration, blogConfiguration, exclusionPatterns, inclusionPatterns, pageConfiguration, secretArn, serverUrl, spaceConfiguration, version, vpcConfiguration);
         }
     }

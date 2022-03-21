@@ -96,17 +96,20 @@ public final class PredictionResponseSystemGeneratedEntities extends io.pulumi.r
             this.generatedInteractionTypes = generatedInteractionTypes;
             return this;
         }
-
+        public Builder generatedInteractionTypes(String... generatedInteractionTypes) {
+            return generatedInteractionTypes(List.of(generatedInteractionTypes));
+        }
         public Builder generatedKpis(@Nullable Map<String,String> generatedKpis) {
             this.generatedKpis = generatedKpis;
             return this;
         }
-
         public Builder generatedLinks(@Nullable List<String> generatedLinks) {
             this.generatedLinks = generatedLinks;
             return this;
         }
-        public PredictionResponseSystemGeneratedEntities build() {
+        public Builder generatedLinks(String... generatedLinks) {
+            return generatedLinks(List.of(generatedLinks));
+        }        public PredictionResponseSystemGeneratedEntities build() {
             return new PredictionResponseSystemGeneratedEntities(generatedInteractionTypes, generatedKpis, generatedLinks);
         }
     }

@@ -75,22 +75,18 @@ public final class SecurityScanConfigAuthenticationGoogleAccountGetArgs extends 
             this.password = Objects.requireNonNull(password);
             return this;
         }
-
         public Builder password(String password) {
             this.password = Output.of(Objects.requireNonNull(password));
             return this;
         }
-
         public Builder username(Output<String> username) {
             this.username = Objects.requireNonNull(username);
             return this;
         }
-
         public Builder username(String username) {
             this.username = Output.of(Objects.requireNonNull(username));
             return this;
-        }
-        public SecurityScanConfigAuthenticationGoogleAccountGetArgs build() {
+        }        public SecurityScanConfigAuthenticationGoogleAccountGetArgs build() {
             return new SecurityScanConfigAuthenticationGoogleAccountGetArgs(password, username);
         }
     }

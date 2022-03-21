@@ -111,22 +111,18 @@ public final class DailyScheduleResponse extends io.pulumi.resources.InvokeArgs 
             this.hour = hour;
             return this;
         }
-
         public Builder minute(@Nullable Integer minute) {
             this.minute = minute;
             return this;
         }
-
         public Builder snapshotsToKeep(@Nullable Integer snapshotsToKeep) {
             this.snapshotsToKeep = snapshotsToKeep;
             return this;
         }
-
         public Builder usedBytes(@Nullable Double usedBytes) {
             this.usedBytes = usedBytes;
             return this;
-        }
-        public DailyScheduleResponse build() {
+        }        public DailyScheduleResponse build() {
             return new DailyScheduleResponse(hour, minute, snapshotsToKeep, usedBytes);
         }
     }

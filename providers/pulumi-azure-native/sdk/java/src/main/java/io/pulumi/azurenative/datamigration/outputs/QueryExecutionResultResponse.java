@@ -103,22 +103,18 @@ public final class QueryExecutionResultResponse {
             this.queryText = Objects.requireNonNull(queryText);
             return this;
         }
-
         public Builder sourceResult(ExecutionStatisticsResponse sourceResult) {
             this.sourceResult = Objects.requireNonNull(sourceResult);
             return this;
         }
-
         public Builder statementsInBatch(Double statementsInBatch) {
             this.statementsInBatch = Objects.requireNonNull(statementsInBatch);
             return this;
         }
-
         public Builder targetResult(ExecutionStatisticsResponse targetResult) {
             this.targetResult = Objects.requireNonNull(targetResult);
             return this;
-        }
-        public QueryExecutionResultResponse build() {
+        }        public QueryExecutionResultResponse build() {
             return new QueryExecutionResultResponse(queryText, sourceResult, statementsInBatch, targetResult);
         }
     }

@@ -101,22 +101,18 @@ public final class PersistenceConfigResponse {
             this.persistenceMode = Objects.requireNonNull(persistenceMode);
             return this;
         }
-
         public Builder rdbNextSnapshotTime(String rdbNextSnapshotTime) {
             this.rdbNextSnapshotTime = Objects.requireNonNull(rdbNextSnapshotTime);
             return this;
         }
-
         public Builder rdbSnapshotPeriod(String rdbSnapshotPeriod) {
             this.rdbSnapshotPeriod = Objects.requireNonNull(rdbSnapshotPeriod);
             return this;
         }
-
         public Builder rdbSnapshotStartTime(String rdbSnapshotStartTime) {
             this.rdbSnapshotStartTime = Objects.requireNonNull(rdbSnapshotStartTime);
             return this;
-        }
-        public PersistenceConfigResponse build() {
+        }        public PersistenceConfigResponse build() {
             return new PersistenceConfigResponse(persistenceMode, rdbNextSnapshotTime, rdbSnapshotPeriod, rdbSnapshotStartTime);
         }
     }

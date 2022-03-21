@@ -92,32 +92,26 @@ public final class BudgetActionDefinitionGetArgs extends io.pulumi.resources.Res
             this.iamActionDefinition = iamActionDefinition;
             return this;
         }
-
         public Builder iamActionDefinition(@Nullable BudgetActionDefinitionIamActionDefinitionGetArgs iamActionDefinition) {
             this.iamActionDefinition = Output.ofNullable(iamActionDefinition);
             return this;
         }
-
         public Builder scpActionDefinition(@Nullable Output<BudgetActionDefinitionScpActionDefinitionGetArgs> scpActionDefinition) {
             this.scpActionDefinition = scpActionDefinition;
             return this;
         }
-
         public Builder scpActionDefinition(@Nullable BudgetActionDefinitionScpActionDefinitionGetArgs scpActionDefinition) {
             this.scpActionDefinition = Output.ofNullable(scpActionDefinition);
             return this;
         }
-
         public Builder ssmActionDefinition(@Nullable Output<BudgetActionDefinitionSsmActionDefinitionGetArgs> ssmActionDefinition) {
             this.ssmActionDefinition = ssmActionDefinition;
             return this;
         }
-
         public Builder ssmActionDefinition(@Nullable BudgetActionDefinitionSsmActionDefinitionGetArgs ssmActionDefinition) {
             this.ssmActionDefinition = Output.ofNullable(ssmActionDefinition);
             return this;
-        }
-        public BudgetActionDefinitionGetArgs build() {
+        }        public BudgetActionDefinitionGetArgs build() {
             return new BudgetActionDefinitionGetArgs(iamActionDefinition, scpActionDefinition, ssmActionDefinition);
         }
     }

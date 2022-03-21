@@ -70,12 +70,10 @@ public final class CatalogTableStorageDescriptorSortColumn {
             this.column = Objects.requireNonNull(column);
             return this;
         }
-
         public Builder sortOrder(Integer sortOrder) {
             this.sortOrder = Objects.requireNonNull(sortOrder);
             return this;
-        }
-        public CatalogTableStorageDescriptorSortColumn build() {
+        }        public CatalogTableStorageDescriptorSortColumn build() {
             return new CatalogTableStorageDescriptorSortColumn(column, sortOrder);
         }
     }

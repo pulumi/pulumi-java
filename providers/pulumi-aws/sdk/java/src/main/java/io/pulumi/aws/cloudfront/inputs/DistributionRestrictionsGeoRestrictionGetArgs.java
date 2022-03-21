@@ -79,22 +79,21 @@ public final class DistributionRestrictionsGeoRestrictionGetArgs extends io.pulu
             this.locations = locations;
             return this;
         }
-
         public Builder locations(@Nullable List<String> locations) {
             this.locations = Output.ofNullable(locations);
             return this;
         }
-
+        public Builder locations(String... locations) {
+            return locations(List.of(locations));
+        }
         public Builder restrictionType(Output<String> restrictionType) {
             this.restrictionType = Objects.requireNonNull(restrictionType);
             return this;
         }
-
         public Builder restrictionType(String restrictionType) {
             this.restrictionType = Output.of(Objects.requireNonNull(restrictionType));
             return this;
-        }
-        public DistributionRestrictionsGeoRestrictionGetArgs build() {
+        }        public DistributionRestrictionsGeoRestrictionGetArgs build() {
             return new DistributionRestrictionsGeoRestrictionGetArgs(locations, restrictionType);
         }
     }

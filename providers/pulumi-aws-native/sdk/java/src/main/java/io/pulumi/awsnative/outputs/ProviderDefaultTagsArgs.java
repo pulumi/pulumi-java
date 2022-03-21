@@ -54,8 +54,7 @@ public final class ProviderDefaultTagsArgs {
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
-        }
-        public ProviderDefaultTagsArgs build() {
+        }        public ProviderDefaultTagsArgs build() {
             return new ProviderDefaultTagsArgs(tags);
         }
     }

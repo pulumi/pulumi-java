@@ -71,12 +71,10 @@ public final class SchemaRegistry {
             this.arn = arn;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
-        }
-        public SchemaRegistry build() {
+        }        public SchemaRegistry build() {
             return new SchemaRegistry(arn, name);
         }
     }

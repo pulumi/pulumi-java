@@ -177,42 +177,37 @@ public final class AzureTableOutputDataSourceResponse extends io.pulumi.resource
             this.accountKey = accountKey;
             return this;
         }
-
         public Builder accountName(@Nullable String accountName) {
             this.accountName = accountName;
             return this;
         }
-
         public Builder batchSize(@Nullable Integer batchSize) {
             this.batchSize = batchSize;
             return this;
         }
-
         public Builder columnsToRemove(@Nullable List<String> columnsToRemove) {
             this.columnsToRemove = columnsToRemove;
             return this;
         }
-
+        public Builder columnsToRemove(String... columnsToRemove) {
+            return columnsToRemove(List.of(columnsToRemove));
+        }
         public Builder partitionKey(@Nullable String partitionKey) {
             this.partitionKey = partitionKey;
             return this;
         }
-
         public Builder rowKey(@Nullable String rowKey) {
             this.rowKey = rowKey;
             return this;
         }
-
         public Builder table(@Nullable String table) {
             this.table = table;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public AzureTableOutputDataSourceResponse build() {
+        }        public AzureTableOutputDataSourceResponse build() {
             return new AzureTableOutputDataSourceResponse(accountKey, accountName, batchSize, columnsToRemove, partitionKey, rowKey, table, type);
         }
     }

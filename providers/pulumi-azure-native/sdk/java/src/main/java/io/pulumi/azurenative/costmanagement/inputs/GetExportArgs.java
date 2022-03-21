@@ -90,17 +90,14 @@ public final class GetExportArgs extends io.pulumi.resources.InvokeArgs {
             this.expand = expand;
             return this;
         }
-
         public Builder exportName(String exportName) {
             this.exportName = Objects.requireNonNull(exportName);
             return this;
         }
-
         public Builder scope(String scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
-        }
-        public GetExportArgs build() {
+        }        public GetExportArgs build() {
             return new GetExportArgs(expand, exportName, scope);
         }
     }

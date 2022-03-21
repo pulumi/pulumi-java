@@ -80,22 +80,21 @@ public final class OracleTableArgs extends io.pulumi.resources.ResourceArgs {
             this.oracleColumns = oracleColumns;
             return this;
         }
-
         public Builder oracleColumns(@Nullable List<OracleColumnArgs> oracleColumns) {
             this.oracleColumns = Output.ofNullable(oracleColumns);
             return this;
         }
-
+        public Builder oracleColumns(OracleColumnArgs... oracleColumns) {
+            return oracleColumns(List.of(oracleColumns));
+        }
         public Builder table(@Nullable Output<String> table) {
             this.table = table;
             return this;
         }
-
         public Builder table(@Nullable String table) {
             this.table = Output.ofNullable(table);
             return this;
-        }
-        public OracleTableArgs build() {
+        }        public OracleTableArgs build() {
             return new OracleTableArgs(oracleColumns, table);
         }
     }

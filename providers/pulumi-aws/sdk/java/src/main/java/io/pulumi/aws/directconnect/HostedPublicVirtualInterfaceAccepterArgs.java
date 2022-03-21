@@ -75,22 +75,18 @@ public final class HostedPublicVirtualInterfaceAccepterArgs extends io.pulumi.re
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder virtualInterfaceId(Output<String> virtualInterfaceId) {
             this.virtualInterfaceId = Objects.requireNonNull(virtualInterfaceId);
             return this;
         }
-
         public Builder virtualInterfaceId(String virtualInterfaceId) {
             this.virtualInterfaceId = Output.of(Objects.requireNonNull(virtualInterfaceId));
             return this;
-        }
-        public HostedPublicVirtualInterfaceAccepterArgs build() {
+        }        public HostedPublicVirtualInterfaceAccepterArgs build() {
             return new HostedPublicVirtualInterfaceAccepterArgs(tags, virtualInterfaceId);
         }
     }

@@ -54,12 +54,13 @@ public final class OriginRequestPolicyQueryStringsConfigQueryStringsArgs extends
             this.items = items;
             return this;
         }
-
         public Builder items(@Nullable List<String> items) {
             this.items = Output.ofNullable(items);
             return this;
         }
-        public OriginRequestPolicyQueryStringsConfigQueryStringsArgs build() {
+        public Builder items(String... items) {
+            return items(List.of(items));
+        }        public OriginRequestPolicyQueryStringsConfigQueryStringsArgs build() {
             return new OriginRequestPolicyQueryStringsConfigQueryStringsArgs(items);
         }
     }

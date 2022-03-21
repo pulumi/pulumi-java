@@ -78,32 +78,26 @@ public final class ChannelCustomerManagedS3Args extends io.pulumi.resources.Reso
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
-
         public Builder bucket(String bucket) {
             this.bucket = Output.of(Objects.requireNonNull(bucket));
             return this;
         }
-
         public Builder keyPrefix(@Nullable Output<String> keyPrefix) {
             this.keyPrefix = keyPrefix;
             return this;
         }
-
         public Builder keyPrefix(@Nullable String keyPrefix) {
             this.keyPrefix = Output.ofNullable(keyPrefix);
             return this;
         }
-
         public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public Builder roleArn(String roleArn) {
             this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
-        }
-        public ChannelCustomerManagedS3Args build() {
+        }        public ChannelCustomerManagedS3Args build() {
             return new ChannelCustomerManagedS3Args(bucket, keyPrefix, roleArn);
         }
     }

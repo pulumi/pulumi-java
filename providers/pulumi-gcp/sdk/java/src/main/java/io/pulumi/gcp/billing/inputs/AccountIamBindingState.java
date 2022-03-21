@@ -104,52 +104,45 @@ public final class AccountIamBindingState extends io.pulumi.resources.ResourceAr
             this.billingAccountId = billingAccountId;
             return this;
         }
-
         public Builder billingAccountId(@Nullable String billingAccountId) {
             this.billingAccountId = Output.ofNullable(billingAccountId);
             return this;
         }
-
         public Builder condition(@Nullable Output<AccountIamBindingConditionGetArgs> condition) {
             this.condition = condition;
             return this;
         }
-
         public Builder condition(@Nullable AccountIamBindingConditionGetArgs condition) {
             this.condition = Output.ofNullable(condition);
             return this;
         }
-
         public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
-
         public Builder etag(@Nullable String etag) {
             this.etag = Output.ofNullable(etag);
             return this;
         }
-
         public Builder members(@Nullable Output<List<String>> members) {
             this.members = members;
             return this;
         }
-
         public Builder members(@Nullable List<String> members) {
             this.members = Output.ofNullable(members);
             return this;
         }
-
+        public Builder members(String... members) {
+            return members(List.of(members));
+        }
         public Builder role(@Nullable Output<String> role) {
             this.role = role;
             return this;
         }
-
         public Builder role(@Nullable String role) {
             this.role = Output.ofNullable(role);
             return this;
-        }
-        public AccountIamBindingState build() {
+        }        public AccountIamBindingState build() {
             return new AccountIamBindingState(billingAccountId, condition, etag, members, role);
         }
     }

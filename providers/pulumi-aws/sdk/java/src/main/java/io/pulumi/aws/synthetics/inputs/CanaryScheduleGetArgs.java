@@ -75,22 +75,18 @@ public final class CanaryScheduleGetArgs extends io.pulumi.resources.ResourceArg
             this.durationInSeconds = durationInSeconds;
             return this;
         }
-
         public Builder durationInSeconds(@Nullable Integer durationInSeconds) {
             this.durationInSeconds = Output.ofNullable(durationInSeconds);
             return this;
         }
-
         public Builder expression(Output<String> expression) {
             this.expression = Objects.requireNonNull(expression);
             return this;
         }
-
         public Builder expression(String expression) {
             this.expression = Output.of(Objects.requireNonNull(expression));
             return this;
-        }
-        public CanaryScheduleGetArgs build() {
+        }        public CanaryScheduleGetArgs build() {
             return new CanaryScheduleGetArgs(durationInSeconds, expression);
         }
     }

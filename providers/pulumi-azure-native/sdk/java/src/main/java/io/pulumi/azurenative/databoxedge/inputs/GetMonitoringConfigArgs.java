@@ -88,17 +88,14 @@ public final class GetMonitoringConfigArgs extends io.pulumi.resources.InvokeArg
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder roleName(String roleName) {
             this.roleName = Objects.requireNonNull(roleName);
             return this;
-        }
-        public GetMonitoringConfigArgs build() {
+        }        public GetMonitoringConfigArgs build() {
             return new GetMonitoringConfigArgs(deviceName, resourceGroupName, roleName);
         }
     }

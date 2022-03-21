@@ -88,17 +88,14 @@ public final class AzureMachineLearningWebServiceInputColumnResponse {
             this.dataType = dataType;
             return this;
         }
-
         public Builder mapTo(@Nullable Integer mapTo) {
             this.mapTo = mapTo;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
-        }
-        public AzureMachineLearningWebServiceInputColumnResponse build() {
+        }        public AzureMachineLearningWebServiceInputColumnResponse build() {
             return new AzureMachineLearningWebServiceInputColumnResponse(dataType, mapTo, name);
         }
     }

@@ -111,42 +111,34 @@ public final class ExternalMetricStatusArgs extends io.pulumi.resources.Resource
             this.currentAverageValue = currentAverageValue;
             return this;
         }
-
         public Builder currentAverageValue(@Nullable String currentAverageValue) {
             this.currentAverageValue = Output.ofNullable(currentAverageValue);
             return this;
         }
-
         public Builder currentValue(Output<String> currentValue) {
             this.currentValue = Objects.requireNonNull(currentValue);
             return this;
         }
-
         public Builder currentValue(String currentValue) {
             this.currentValue = Output.of(Objects.requireNonNull(currentValue));
             return this;
         }
-
         public Builder metricName(Output<String> metricName) {
             this.metricName = Objects.requireNonNull(metricName);
             return this;
         }
-
         public Builder metricName(String metricName) {
             this.metricName = Output.of(Objects.requireNonNull(metricName));
             return this;
         }
-
         public Builder metricSelector(@Nullable Output<LabelSelectorArgs> metricSelector) {
             this.metricSelector = metricSelector;
             return this;
         }
-
         public Builder metricSelector(@Nullable LabelSelectorArgs metricSelector) {
             this.metricSelector = Output.ofNullable(metricSelector);
             return this;
-        }
-        public ExternalMetricStatusArgs build() {
+        }        public ExternalMetricStatusArgs build() {
             return new ExternalMetricStatusArgs(currentAverageValue, currentValue, metricName, metricSelector);
         }
     }

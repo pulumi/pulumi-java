@@ -53,8 +53,7 @@ public final class DatasetMetadata {
         public Builder sourceArn(@Nullable String sourceArn) {
             this.sourceArn = sourceArn;
             return this;
-        }
-        public DatasetMetadata build() {
+        }        public DatasetMetadata build() {
             return new DatasetMetadata(sourceArn);
         }
     }

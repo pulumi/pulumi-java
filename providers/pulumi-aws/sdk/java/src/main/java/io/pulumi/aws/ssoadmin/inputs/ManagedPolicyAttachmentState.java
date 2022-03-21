@@ -106,42 +106,34 @@ public final class ManagedPolicyAttachmentState extends io.pulumi.resources.Reso
             this.instanceArn = instanceArn;
             return this;
         }
-
         public Builder instanceArn(@Nullable String instanceArn) {
             this.instanceArn = Output.ofNullable(instanceArn);
             return this;
         }
-
         public Builder managedPolicyArn(@Nullable Output<String> managedPolicyArn) {
             this.managedPolicyArn = managedPolicyArn;
             return this;
         }
-
         public Builder managedPolicyArn(@Nullable String managedPolicyArn) {
             this.managedPolicyArn = Output.ofNullable(managedPolicyArn);
             return this;
         }
-
         public Builder managedPolicyName(@Nullable Output<String> managedPolicyName) {
             this.managedPolicyName = managedPolicyName;
             return this;
         }
-
         public Builder managedPolicyName(@Nullable String managedPolicyName) {
             this.managedPolicyName = Output.ofNullable(managedPolicyName);
             return this;
         }
-
         public Builder permissionSetArn(@Nullable Output<String> permissionSetArn) {
             this.permissionSetArn = permissionSetArn;
             return this;
         }
-
         public Builder permissionSetArn(@Nullable String permissionSetArn) {
             this.permissionSetArn = Output.ofNullable(permissionSetArn);
             return this;
-        }
-        public ManagedPolicyAttachmentState build() {
+        }        public ManagedPolicyAttachmentState build() {
             return new ManagedPolicyAttachmentState(instanceArn, managedPolicyArn, managedPolicyName, permissionSetArn);
         }
     }

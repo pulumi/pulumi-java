@@ -78,17 +78,14 @@ public final class GetInspectTemplateArgs extends io.pulumi.resources.InvokeArgs
             this.inspectTemplateId = Objects.requireNonNull(inspectTemplateId);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetInspectTemplateArgs build() {
+        }        public GetInspectTemplateArgs build() {
             return new GetInspectTemplateArgs(inspectTemplateId, location, project);
         }
     }

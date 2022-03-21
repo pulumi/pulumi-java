@@ -77,12 +77,10 @@ public final class SqlServerResourceSettingsResponse extends io.pulumi.resources
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
         }
-
         public Builder targetResourceName(String targetResourceName) {
             this.targetResourceName = Objects.requireNonNull(targetResourceName);
             return this;
-        }
-        public SqlServerResourceSettingsResponse build() {
+        }        public SqlServerResourceSettingsResponse build() {
             return new SqlServerResourceSettingsResponse(resourceType, targetResourceName);
         }
     }

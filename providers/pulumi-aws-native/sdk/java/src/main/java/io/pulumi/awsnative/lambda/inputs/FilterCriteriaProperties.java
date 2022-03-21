@@ -62,7 +62,9 @@ public final class FilterCriteriaProperties extends io.pulumi.resources.InvokeAr
             this.filters = filters;
             return this;
         }
-        public FilterCriteriaProperties build() {
+        public Builder filters(EventSourceMappingFilter... filters) {
+            return filters(List.of(filters));
+        }        public FilterCriteriaProperties build() {
             return new FilterCriteriaProperties(filters);
         }
     }

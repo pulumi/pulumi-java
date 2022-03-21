@@ -69,12 +69,10 @@ public final class CompensationRangeResponse {
             this.maxCompensation = Objects.requireNonNull(maxCompensation);
             return this;
         }
-
         public Builder minCompensation(MoneyResponse minCompensation) {
             this.minCompensation = Objects.requireNonNull(minCompensation);
             return this;
-        }
-        public CompensationRangeResponse build() {
+        }        public CompensationRangeResponse build() {
             return new CompensationRangeResponse(maxCompensation, minCompensation);
         }
     }

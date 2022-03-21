@@ -238,122 +238,101 @@ public final class BudgetActionState extends io.pulumi.resources.ResourceArgs {
             this.accountId = accountId;
             return this;
         }
-
         public Builder accountId(@Nullable String accountId) {
             this.accountId = Output.ofNullable(accountId);
             return this;
         }
-
         public Builder actionId(@Nullable Output<String> actionId) {
             this.actionId = actionId;
             return this;
         }
-
         public Builder actionId(@Nullable String actionId) {
             this.actionId = Output.ofNullable(actionId);
             return this;
         }
-
         public Builder actionThreshold(@Nullable Output<BudgetActionActionThresholdGetArgs> actionThreshold) {
             this.actionThreshold = actionThreshold;
             return this;
         }
-
         public Builder actionThreshold(@Nullable BudgetActionActionThresholdGetArgs actionThreshold) {
             this.actionThreshold = Output.ofNullable(actionThreshold);
             return this;
         }
-
         public Builder actionType(@Nullable Output<String> actionType) {
             this.actionType = actionType;
             return this;
         }
-
         public Builder actionType(@Nullable String actionType) {
             this.actionType = Output.ofNullable(actionType);
             return this;
         }
-
         public Builder approvalModel(@Nullable Output<String> approvalModel) {
             this.approvalModel = approvalModel;
             return this;
         }
-
         public Builder approvalModel(@Nullable String approvalModel) {
             this.approvalModel = Output.ofNullable(approvalModel);
             return this;
         }
-
         public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder budgetName(@Nullable Output<String> budgetName) {
             this.budgetName = budgetName;
             return this;
         }
-
         public Builder budgetName(@Nullable String budgetName) {
             this.budgetName = Output.ofNullable(budgetName);
             return this;
         }
-
         public Builder definition(@Nullable Output<BudgetActionDefinitionGetArgs> definition) {
             this.definition = definition;
             return this;
         }
-
         public Builder definition(@Nullable BudgetActionDefinitionGetArgs definition) {
             this.definition = Output.ofNullable(definition);
             return this;
         }
-
         public Builder executionRoleArn(@Nullable Output<String> executionRoleArn) {
             this.executionRoleArn = executionRoleArn;
             return this;
         }
-
         public Builder executionRoleArn(@Nullable String executionRoleArn) {
             this.executionRoleArn = Output.ofNullable(executionRoleArn);
             return this;
         }
-
         public Builder notificationType(@Nullable Output<String> notificationType) {
             this.notificationType = notificationType;
             return this;
         }
-
         public Builder notificationType(@Nullable String notificationType) {
             this.notificationType = Output.ofNullable(notificationType);
             return this;
         }
-
         public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = Output.ofNullable(status);
             return this;
         }
-
         public Builder subscribers(@Nullable Output<List<BudgetActionSubscriberGetArgs>> subscribers) {
             this.subscribers = subscribers;
             return this;
         }
-
         public Builder subscribers(@Nullable List<BudgetActionSubscriberGetArgs> subscribers) {
             this.subscribers = Output.ofNullable(subscribers);
             return this;
         }
-        public BudgetActionState build() {
+        public Builder subscribers(BudgetActionSubscriberGetArgs... subscribers) {
+            return subscribers(List.of(subscribers));
+        }        public BudgetActionState build() {
             return new BudgetActionState(accountId, actionId, actionThreshold, actionType, approvalModel, arn, budgetName, definition, executionRoleArn, notificationType, status, subscribers);
         }
     }

@@ -60,8 +60,7 @@ public final class VICredentialResponse extends io.pulumi.resources.InvokeArgs {
         public Builder username(@Nullable String username) {
             this.username = username;
             return this;
-        }
-        public VICredentialResponse build() {
+        }        public VICredentialResponse build() {
             return new VICredentialResponse(username);
         }
     }

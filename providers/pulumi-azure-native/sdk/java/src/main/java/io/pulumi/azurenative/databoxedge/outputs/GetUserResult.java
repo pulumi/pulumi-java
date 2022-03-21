@@ -155,37 +155,33 @@ public final class GetUserResult {
             this.encryptedPassword = encryptedPassword;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder shareAccessRights(List<ShareAccessRightResponse> shareAccessRights) {
             this.shareAccessRights = Objects.requireNonNull(shareAccessRights);
             return this;
         }
-
+        public Builder shareAccessRights(ShareAccessRightResponse... shareAccessRights) {
+            return shareAccessRights(List.of(shareAccessRights));
+        }
         public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder userType(String userType) {
             this.userType = Objects.requireNonNull(userType);
             return this;
-        }
-        public GetUserResult build() {
+        }        public GetUserResult build() {
             return new GetUserResult(encryptedPassword, id, name, shareAccessRights, systemData, type, userType);
         }
     }

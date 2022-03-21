@@ -51,8 +51,7 @@ public final class IosTestLoopResponse {
         public Builder bundleId(String bundleId) {
             this.bundleId = Objects.requireNonNull(bundleId);
             return this;
-        }
-        public IosTestLoopResponse build() {
+        }        public IosTestLoopResponse build() {
             return new IosTestLoopResponse(bundleId);
         }
     }

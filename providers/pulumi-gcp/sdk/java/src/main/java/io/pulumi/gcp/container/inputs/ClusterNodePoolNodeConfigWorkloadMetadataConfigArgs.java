@@ -60,12 +60,10 @@ public final class ClusterNodePoolNodeConfigWorkloadMetadataConfigArgs extends i
             this.mode = Objects.requireNonNull(mode);
             return this;
         }
-
         public Builder mode(String mode) {
             this.mode = Output.of(Objects.requireNonNull(mode));
             return this;
-        }
-        public ClusterNodePoolNodeConfigWorkloadMetadataConfigArgs build() {
+        }        public ClusterNodePoolNodeConfigWorkloadMetadataConfigArgs build() {
             return new ClusterNodePoolNodeConfigWorkloadMetadataConfigArgs(mode);
         }
     }

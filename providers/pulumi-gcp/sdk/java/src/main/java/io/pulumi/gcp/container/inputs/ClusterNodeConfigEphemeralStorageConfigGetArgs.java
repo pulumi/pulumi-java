@@ -56,12 +56,10 @@ public final class ClusterNodeConfigEphemeralStorageConfigGetArgs extends io.pul
             this.localSsdCount = Objects.requireNonNull(localSsdCount);
             return this;
         }
-
         public Builder localSsdCount(Integer localSsdCount) {
             this.localSsdCount = Output.of(Objects.requireNonNull(localSsdCount));
             return this;
-        }
-        public ClusterNodeConfigEphemeralStorageConfigGetArgs build() {
+        }        public ClusterNodeConfigEphemeralStorageConfigGetArgs build() {
             return new ClusterNodeConfigEphemeralStorageConfigGetArgs(localSsdCount);
         }
     }

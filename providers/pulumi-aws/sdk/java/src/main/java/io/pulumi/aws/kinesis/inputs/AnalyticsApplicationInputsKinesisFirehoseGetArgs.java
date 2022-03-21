@@ -73,22 +73,18 @@ public final class AnalyticsApplicationInputsKinesisFirehoseGetArgs extends io.p
             this.resourceArn = Objects.requireNonNull(resourceArn);
             return this;
         }
-
         public Builder resourceArn(String resourceArn) {
             this.resourceArn = Output.of(Objects.requireNonNull(resourceArn));
             return this;
         }
-
         public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public Builder roleArn(String roleArn) {
             this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
-        }
-        public AnalyticsApplicationInputsKinesisFirehoseGetArgs build() {
+        }        public AnalyticsApplicationInputsKinesisFirehoseGetArgs build() {
             return new AnalyticsApplicationInputsKinesisFirehoseGetArgs(resourceArn, roleArn);
         }
     }

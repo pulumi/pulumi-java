@@ -115,42 +115,34 @@ public final class ExportDefinitionArgs extends io.pulumi.resources.ResourceArgs
             this.dataSet = dataSet;
             return this;
         }
-
         public Builder dataSet(@Nullable ExportDatasetArgs dataSet) {
             this.dataSet = Output.ofNullable(dataSet);
             return this;
         }
-
         public Builder timePeriod(@Nullable Output<ExportTimePeriodArgs> timePeriod) {
             this.timePeriod = timePeriod;
             return this;
         }
-
         public Builder timePeriod(@Nullable ExportTimePeriodArgs timePeriod) {
             this.timePeriod = Output.ofNullable(timePeriod);
             return this;
         }
-
         public Builder timeframe(Output<Either<String,TimeframeType>> timeframe) {
             this.timeframe = Objects.requireNonNull(timeframe);
             return this;
         }
-
         public Builder timeframe(Either<String,TimeframeType> timeframe) {
             this.timeframe = Output.of(Objects.requireNonNull(timeframe));
             return this;
         }
-
         public Builder type(Output<Either<String,ExportType>> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(Either<String,ExportType> type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public ExportDefinitionArgs build() {
+        }        public ExportDefinitionArgs build() {
             return new ExportDefinitionArgs(dataSet, timePeriod, timeframe, type);
         }
     }

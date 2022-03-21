@@ -45,8 +45,7 @@ public final class TopicRuleLambdaAction {
         public Builder functionArn(@Nullable String functionArn) {
             this.functionArn = functionArn;
             return this;
-        }
-        public TopicRuleLambdaAction build() {
+        }        public TopicRuleLambdaAction build() {
             return new TopicRuleLambdaAction(functionArn);
         }
     }

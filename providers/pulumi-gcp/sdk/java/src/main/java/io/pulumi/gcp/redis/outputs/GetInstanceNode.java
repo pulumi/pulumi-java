@@ -53,12 +53,10 @@ public final class GetInstanceNode {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder zone(String zone) {
             this.zone = Objects.requireNonNull(zone);
             return this;
-        }
-        public GetInstanceNode build() {
+        }        public GetInstanceNode build() {
             return new GetInstanceNode(id, zone);
         }
     }

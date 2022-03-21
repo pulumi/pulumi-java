@@ -54,8 +54,7 @@ public final class GetDataIntegrationArgs extends io.pulumi.resources.InvokeArgs
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
-        }
-        public GetDataIntegrationArgs build() {
+        }        public GetDataIntegrationArgs build() {
             return new GetDataIntegrationArgs(id);
         }
     }

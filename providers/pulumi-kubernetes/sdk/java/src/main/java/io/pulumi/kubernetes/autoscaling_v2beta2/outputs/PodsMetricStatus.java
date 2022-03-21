@@ -70,12 +70,10 @@ public final class PodsMetricStatus {
             this.current = Objects.requireNonNull(current);
             return this;
         }
-
         public Builder metric(MetricIdentifier metric) {
             this.metric = Objects.requireNonNull(metric);
             return this;
-        }
-        public PodsMetricStatus build() {
+        }        public PodsMetricStatus build() {
             return new PodsMetricStatus(current, metric);
         }
     }

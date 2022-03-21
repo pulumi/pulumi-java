@@ -90,17 +90,14 @@ public final class GetDocumentArgs extends io.pulumi.resources.InvokeArgs {
             this.documentFormat = documentFormat;
             return this;
         }
-
         public Builder documentVersion(@Nullable String documentVersion) {
             this.documentVersion = documentVersion;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public GetDocumentArgs build() {
+        }        public GetDocumentArgs build() {
             return new GetDocumentArgs(documentFormat, documentVersion, name);
         }
     }

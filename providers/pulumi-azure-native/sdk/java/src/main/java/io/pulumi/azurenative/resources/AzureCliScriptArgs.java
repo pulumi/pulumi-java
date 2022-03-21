@@ -339,182 +339,152 @@ public final class AzureCliScriptArgs extends io.pulumi.resources.ResourceArgs {
             this.arguments = arguments;
             return this;
         }
-
         public Builder arguments(@Nullable String arguments) {
             this.arguments = Output.ofNullable(arguments);
             return this;
         }
-
         public Builder azCliVersion(Output<String> azCliVersion) {
             this.azCliVersion = Objects.requireNonNull(azCliVersion);
             return this;
         }
-
         public Builder azCliVersion(String azCliVersion) {
             this.azCliVersion = Output.of(Objects.requireNonNull(azCliVersion));
             return this;
         }
-
         public Builder cleanupPreference(@Nullable Output<Either<String,CleanupOptions>> cleanupPreference) {
             this.cleanupPreference = cleanupPreference;
             return this;
         }
-
         public Builder cleanupPreference(@Nullable Either<String,CleanupOptions> cleanupPreference) {
             this.cleanupPreference = Output.ofNullable(cleanupPreference);
             return this;
         }
-
         public Builder containerSettings(@Nullable Output<ContainerConfigurationArgs> containerSettings) {
             this.containerSettings = containerSettings;
             return this;
         }
-
         public Builder containerSettings(@Nullable ContainerConfigurationArgs containerSettings) {
             this.containerSettings = Output.ofNullable(containerSettings);
             return this;
         }
-
         public Builder environmentVariables(@Nullable Output<List<EnvironmentVariableArgs>> environmentVariables) {
             this.environmentVariables = environmentVariables;
             return this;
         }
-
         public Builder environmentVariables(@Nullable List<EnvironmentVariableArgs> environmentVariables) {
             this.environmentVariables = Output.ofNullable(environmentVariables);
             return this;
         }
-
+        public Builder environmentVariables(EnvironmentVariableArgs... environmentVariables) {
+            return environmentVariables(List.of(environmentVariables));
+        }
         public Builder forceUpdateTag(@Nullable Output<String> forceUpdateTag) {
             this.forceUpdateTag = forceUpdateTag;
             return this;
         }
-
         public Builder forceUpdateTag(@Nullable String forceUpdateTag) {
             this.forceUpdateTag = Output.ofNullable(forceUpdateTag);
             return this;
         }
-
         public Builder identity(@Nullable Output<ManagedServiceIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
-
         public Builder identity(@Nullable ManagedServiceIdentityArgs identity) {
             this.identity = Output.ofNullable(identity);
             return this;
         }
-
         public Builder kind(Output<String> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder primaryScriptUri(@Nullable Output<String> primaryScriptUri) {
             this.primaryScriptUri = primaryScriptUri;
             return this;
         }
-
         public Builder primaryScriptUri(@Nullable String primaryScriptUri) {
             this.primaryScriptUri = Output.ofNullable(primaryScriptUri);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder retentionInterval(Output<String> retentionInterval) {
             this.retentionInterval = Objects.requireNonNull(retentionInterval);
             return this;
         }
-
         public Builder retentionInterval(String retentionInterval) {
             this.retentionInterval = Output.of(Objects.requireNonNull(retentionInterval));
             return this;
         }
-
         public Builder scriptContent(@Nullable Output<String> scriptContent) {
             this.scriptContent = scriptContent;
             return this;
         }
-
         public Builder scriptContent(@Nullable String scriptContent) {
             this.scriptContent = Output.ofNullable(scriptContent);
             return this;
         }
-
         public Builder scriptName(@Nullable Output<String> scriptName) {
             this.scriptName = scriptName;
             return this;
         }
-
         public Builder scriptName(@Nullable String scriptName) {
             this.scriptName = Output.ofNullable(scriptName);
             return this;
         }
-
         public Builder storageAccountSettings(@Nullable Output<StorageAccountConfigurationArgs> storageAccountSettings) {
             this.storageAccountSettings = storageAccountSettings;
             return this;
         }
-
         public Builder storageAccountSettings(@Nullable StorageAccountConfigurationArgs storageAccountSettings) {
             this.storageAccountSettings = Output.ofNullable(storageAccountSettings);
             return this;
         }
-
         public Builder supportingScriptUris(@Nullable Output<List<String>> supportingScriptUris) {
             this.supportingScriptUris = supportingScriptUris;
             return this;
         }
-
         public Builder supportingScriptUris(@Nullable List<String> supportingScriptUris) {
             this.supportingScriptUris = Output.ofNullable(supportingScriptUris);
             return this;
         }
-
+        public Builder supportingScriptUris(String... supportingScriptUris) {
+            return supportingScriptUris(List.of(supportingScriptUris));
+        }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder timeout(@Nullable Output<String> timeout) {
             this.timeout = timeout;
             return this;
         }
-
         public Builder timeout(@Nullable String timeout) {
             this.timeout = Output.ofNullable(timeout);
             return this;
-        }
-        public AzureCliScriptArgs build() {
+        }        public AzureCliScriptArgs build() {
             return new AzureCliScriptArgs(arguments, azCliVersion, cleanupPreference, containerSettings, environmentVariables, forceUpdateTag, identity, kind, location, primaryScriptUri, resourceGroupName, retentionInterval, scriptContent, scriptName, storageAccountSettings, supportingScriptUris, tags, timeout);
         }
     }

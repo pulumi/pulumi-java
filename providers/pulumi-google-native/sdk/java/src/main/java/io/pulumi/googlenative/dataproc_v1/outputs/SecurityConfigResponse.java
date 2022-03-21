@@ -70,12 +70,10 @@ public final class SecurityConfigResponse {
             this.identityConfig = Objects.requireNonNull(identityConfig);
             return this;
         }
-
         public Builder kerberosConfig(KerberosConfigResponse kerberosConfig) {
             this.kerberosConfig = Objects.requireNonNull(kerberosConfig);
             return this;
-        }
-        public SecurityConfigResponse build() {
+        }        public SecurityConfigResponse build() {
             return new SecurityConfigResponse(identityConfig, kerberosConfig);
         }
     }

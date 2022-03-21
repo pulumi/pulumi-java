@@ -170,42 +170,34 @@ public final class GetIntegrationAccountResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder integrationServiceEnvironment(@Nullable ResourceReferenceResponse integrationServiceEnvironment) {
             this.integrationServiceEnvironment = integrationServiceEnvironment;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder sku(@Nullable IntegrationAccountSkuResponse sku) {
             this.sku = sku;
             return this;
         }
-
         public Builder state(@Nullable String state) {
             this.state = state;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetIntegrationAccountResult build() {
+        }        public GetIntegrationAccountResult build() {
             return new GetIntegrationAccountResult(id, integrationServiceEnvironment, location, name, sku, state, tags, type);
         }
     }

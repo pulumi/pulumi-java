@@ -80,22 +80,21 @@ public final class GoogleCloudRecaptchaenterpriseV1IOSKeySettingsArgs extends io
             this.allowAllBundleIds = allowAllBundleIds;
             return this;
         }
-
         public Builder allowAllBundleIds(@Nullable Boolean allowAllBundleIds) {
             this.allowAllBundleIds = Output.ofNullable(allowAllBundleIds);
             return this;
         }
-
         public Builder allowedBundleIds(@Nullable Output<List<String>> allowedBundleIds) {
             this.allowedBundleIds = allowedBundleIds;
             return this;
         }
-
         public Builder allowedBundleIds(@Nullable List<String> allowedBundleIds) {
             this.allowedBundleIds = Output.ofNullable(allowedBundleIds);
             return this;
         }
-        public GoogleCloudRecaptchaenterpriseV1IOSKeySettingsArgs build() {
+        public Builder allowedBundleIds(String... allowedBundleIds) {
+            return allowedBundleIds(List.of(allowedBundleIds));
+        }        public GoogleCloudRecaptchaenterpriseV1IOSKeySettingsArgs build() {
             return new GoogleCloudRecaptchaenterpriseV1IOSKeySettingsArgs(allowAllBundleIds, allowedBundleIds);
         }
     }

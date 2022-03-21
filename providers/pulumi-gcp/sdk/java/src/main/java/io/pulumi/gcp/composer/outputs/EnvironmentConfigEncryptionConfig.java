@@ -43,8 +43,7 @@ public final class EnvironmentConfigEncryptionConfig {
         public Builder kmsKeyName(String kmsKeyName) {
             this.kmsKeyName = Objects.requireNonNull(kmsKeyName);
             return this;
-        }
-        public EnvironmentConfigEncryptionConfig build() {
+        }        public EnvironmentConfigEncryptionConfig build() {
             return new EnvironmentConfigEncryptionConfig(kmsKeyName);
         }
     }

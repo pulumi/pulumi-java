@@ -79,12 +79,16 @@ public final class NetworkACLResponse extends io.pulumi.resources.InvokeArgs {
             this.allow = allow;
             return this;
         }
-
+        public Builder allow(String... allow) {
+            return allow(List.of(allow));
+        }
         public Builder deny(@Nullable List<String> deny) {
             this.deny = deny;
             return this;
         }
-        public NetworkACLResponse build() {
+        public Builder deny(String... deny) {
+            return deny(List.of(deny));
+        }        public NetworkACLResponse build() {
             return new NetworkACLResponse(allow, deny);
         }
     }

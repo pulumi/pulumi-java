@@ -75,12 +75,10 @@ public final class UptimeCheckConfigContentMatcher {
             this.content = Objects.requireNonNull(content);
             return this;
         }
-
         public Builder matcher(@Nullable String matcher) {
             this.matcher = matcher;
             return this;
-        }
-        public UptimeCheckConfigContentMatcher build() {
+        }        public UptimeCheckConfigContentMatcher build() {
             return new UptimeCheckConfigContentMatcher(content, matcher);
         }
     }

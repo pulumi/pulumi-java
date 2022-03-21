@@ -79,32 +79,29 @@ public final class BudgetsActionSsmActionDefinitionArgs extends io.pulumi.resour
             this.instanceIds = Objects.requireNonNull(instanceIds);
             return this;
         }
-
         public Builder instanceIds(List<String> instanceIds) {
             this.instanceIds = Output.of(Objects.requireNonNull(instanceIds));
             return this;
         }
-
+        public Builder instanceIds(String... instanceIds) {
+            return instanceIds(List.of(instanceIds));
+        }
         public Builder region(Output<String> region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
-
         public Builder region(String region) {
             this.region = Output.of(Objects.requireNonNull(region));
             return this;
         }
-
         public Builder subtype(Output<BudgetsActionSsmActionDefinitionSubtype> subtype) {
             this.subtype = Objects.requireNonNull(subtype);
             return this;
         }
-
         public Builder subtype(BudgetsActionSsmActionDefinitionSubtype subtype) {
             this.subtype = Output.of(Objects.requireNonNull(subtype));
             return this;
-        }
-        public BudgetsActionSsmActionDefinitionArgs build() {
+        }        public BudgetsActionSsmActionDefinitionArgs build() {
             return new BudgetsActionSsmActionDefinitionArgs(instanceIds, region, subtype);
         }
     }

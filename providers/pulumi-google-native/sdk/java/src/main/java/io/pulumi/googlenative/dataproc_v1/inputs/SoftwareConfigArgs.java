@@ -97,32 +97,29 @@ public final class SoftwareConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.imageVersion = imageVersion;
             return this;
         }
-
         public Builder imageVersion(@Nullable String imageVersion) {
             this.imageVersion = Output.ofNullable(imageVersion);
             return this;
         }
-
         public Builder optionalComponents(@Nullable Output<List<SoftwareConfigOptionalComponentsItem>> optionalComponents) {
             this.optionalComponents = optionalComponents;
             return this;
         }
-
         public Builder optionalComponents(@Nullable List<SoftwareConfigOptionalComponentsItem> optionalComponents) {
             this.optionalComponents = Output.ofNullable(optionalComponents);
             return this;
         }
-
+        public Builder optionalComponents(SoftwareConfigOptionalComponentsItem... optionalComponents) {
+            return optionalComponents(List.of(optionalComponents));
+        }
         public Builder properties(@Nullable Output<Map<String,String>> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder properties(@Nullable Map<String,String> properties) {
             this.properties = Output.ofNullable(properties);
             return this;
-        }
-        public SoftwareConfigArgs build() {
+        }        public SoftwareConfigArgs build() {
             return new SoftwareConfigArgs(imageVersion, optionalComponents, properties);
         }
     }

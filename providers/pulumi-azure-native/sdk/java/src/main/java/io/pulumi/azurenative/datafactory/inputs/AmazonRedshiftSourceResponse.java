@@ -193,47 +193,38 @@ public final class AmazonRedshiftSourceResponse extends io.pulumi.resources.Invo
             this.additionalColumns = additionalColumns;
             return this;
         }
-
         public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
             this.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
-
         public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
             this.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
-
         public Builder query(@Nullable Object query) {
             this.query = query;
             return this;
         }
-
         public Builder queryTimeout(@Nullable Object queryTimeout) {
             this.queryTimeout = queryTimeout;
             return this;
         }
-
         public Builder redshiftUnloadSettings(@Nullable RedshiftUnloadSettingsResponse redshiftUnloadSettings) {
             this.redshiftUnloadSettings = redshiftUnloadSettings;
             return this;
         }
-
         public Builder sourceRetryCount(@Nullable Object sourceRetryCount) {
             this.sourceRetryCount = sourceRetryCount;
             return this;
         }
-
         public Builder sourceRetryWait(@Nullable Object sourceRetryWait) {
             this.sourceRetryWait = sourceRetryWait;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public AmazonRedshiftSourceResponse build() {
+        }        public AmazonRedshiftSourceResponse build() {
             return new AmazonRedshiftSourceResponse(additionalColumns, disableMetricsCollection, maxConcurrentConnections, query, queryTimeout, redshiftUnloadSettings, sourceRetryCount, sourceRetryWait, type);
         }
     }

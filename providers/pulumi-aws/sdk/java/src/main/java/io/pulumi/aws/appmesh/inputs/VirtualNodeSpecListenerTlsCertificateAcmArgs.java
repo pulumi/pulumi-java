@@ -56,12 +56,10 @@ public final class VirtualNodeSpecListenerTlsCertificateAcmArgs extends io.pulum
             this.certificateArn = Objects.requireNonNull(certificateArn);
             return this;
         }
-
         public Builder certificateArn(String certificateArn) {
             this.certificateArn = Output.of(Objects.requireNonNull(certificateArn));
             return this;
-        }
-        public VirtualNodeSpecListenerTlsCertificateAcmArgs build() {
+        }        public VirtualNodeSpecListenerTlsCertificateAcmArgs build() {
             return new VirtualNodeSpecListenerTlsCertificateAcmArgs(certificateArn);
         }
     }

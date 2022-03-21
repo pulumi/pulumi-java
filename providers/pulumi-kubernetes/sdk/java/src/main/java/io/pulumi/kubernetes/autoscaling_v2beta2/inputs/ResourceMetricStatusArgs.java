@@ -78,22 +78,18 @@ public final class ResourceMetricStatusArgs extends io.pulumi.resources.Resource
             this.current = Objects.requireNonNull(current);
             return this;
         }
-
         public Builder current(MetricValueStatusArgs current) {
             this.current = Output.of(Objects.requireNonNull(current));
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
-        }
-        public ResourceMetricStatusArgs build() {
+        }        public ResourceMetricStatusArgs build() {
             return new ResourceMetricStatusArgs(current, name);
         }
     }

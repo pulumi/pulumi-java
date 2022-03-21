@@ -504,142 +504,132 @@ public final class JobStatistics2Response extends io.pulumi.resources.InvokeArgs
             this.biEngineStatistics = Objects.requireNonNull(biEngineStatistics);
             return this;
         }
-
         public Builder billingTier(Integer billingTier) {
             this.billingTier = Objects.requireNonNull(billingTier);
             return this;
         }
-
         public Builder cacheHit(Boolean cacheHit) {
             this.cacheHit = Objects.requireNonNull(cacheHit);
             return this;
         }
-
         public Builder ddlAffectedRowAccessPolicyCount(String ddlAffectedRowAccessPolicyCount) {
             this.ddlAffectedRowAccessPolicyCount = Objects.requireNonNull(ddlAffectedRowAccessPolicyCount);
             return this;
         }
-
         public Builder ddlDestinationTable(TableReferenceResponse ddlDestinationTable) {
             this.ddlDestinationTable = Objects.requireNonNull(ddlDestinationTable);
             return this;
         }
-
         public Builder ddlOperationPerformed(String ddlOperationPerformed) {
             this.ddlOperationPerformed = Objects.requireNonNull(ddlOperationPerformed);
             return this;
         }
-
         public Builder ddlTargetDataset(DatasetReferenceResponse ddlTargetDataset) {
             this.ddlTargetDataset = Objects.requireNonNull(ddlTargetDataset);
             return this;
         }
-
         public Builder ddlTargetRoutine(RoutineReferenceResponse ddlTargetRoutine) {
             this.ddlTargetRoutine = Objects.requireNonNull(ddlTargetRoutine);
             return this;
         }
-
         public Builder ddlTargetRowAccessPolicy(RowAccessPolicyReferenceResponse ddlTargetRowAccessPolicy) {
             this.ddlTargetRowAccessPolicy = Objects.requireNonNull(ddlTargetRowAccessPolicy);
             return this;
         }
-
         public Builder ddlTargetTable(TableReferenceResponse ddlTargetTable) {
             this.ddlTargetTable = Objects.requireNonNull(ddlTargetTable);
             return this;
         }
-
         public Builder dmlStats(DmlStatisticsResponse dmlStats) {
             this.dmlStats = Objects.requireNonNull(dmlStats);
             return this;
         }
-
         public Builder estimatedBytesProcessed(String estimatedBytesProcessed) {
             this.estimatedBytesProcessed = Objects.requireNonNull(estimatedBytesProcessed);
             return this;
         }
-
         public Builder mlStatistics(MlStatisticsResponse mlStatistics) {
             this.mlStatistics = Objects.requireNonNull(mlStatistics);
             return this;
         }
-
         public Builder modelTraining(BigQueryModelTrainingResponse modelTraining) {
             this.modelTraining = Objects.requireNonNull(modelTraining);
             return this;
         }
-
         public Builder numDmlAffectedRows(String numDmlAffectedRows) {
             this.numDmlAffectedRows = Objects.requireNonNull(numDmlAffectedRows);
             return this;
         }
-
         public Builder queryPlan(List<ExplainQueryStageResponse> queryPlan) {
             this.queryPlan = Objects.requireNonNull(queryPlan);
             return this;
         }
-
+        public Builder queryPlan(ExplainQueryStageResponse... queryPlan) {
+            return queryPlan(List.of(queryPlan));
+        }
         public Builder referencedRoutines(List<RoutineReferenceResponse> referencedRoutines) {
             this.referencedRoutines = Objects.requireNonNull(referencedRoutines);
             return this;
         }
-
+        public Builder referencedRoutines(RoutineReferenceResponse... referencedRoutines) {
+            return referencedRoutines(List.of(referencedRoutines));
+        }
         public Builder referencedTables(List<TableReferenceResponse> referencedTables) {
             this.referencedTables = Objects.requireNonNull(referencedTables);
             return this;
         }
-
+        public Builder referencedTables(TableReferenceResponse... referencedTables) {
+            return referencedTables(List.of(referencedTables));
+        }
         public Builder reservationUsage(List<JobStatistics2ReservationUsageItemResponse> reservationUsage) {
             this.reservationUsage = Objects.requireNonNull(reservationUsage);
             return this;
         }
-
+        public Builder reservationUsage(JobStatistics2ReservationUsageItemResponse... reservationUsage) {
+            return reservationUsage(List.of(reservationUsage));
+        }
         public Builder schema(TableSchemaResponse schema) {
             this.schema = Objects.requireNonNull(schema);
             return this;
         }
-
         public Builder statementType(String statementType) {
             this.statementType = Objects.requireNonNull(statementType);
             return this;
         }
-
         public Builder timeline(List<QueryTimelineSampleResponse> timeline) {
             this.timeline = Objects.requireNonNull(timeline);
             return this;
         }
-
+        public Builder timeline(QueryTimelineSampleResponse... timeline) {
+            return timeline(List.of(timeline));
+        }
         public Builder totalBytesBilled(String totalBytesBilled) {
             this.totalBytesBilled = Objects.requireNonNull(totalBytesBilled);
             return this;
         }
-
         public Builder totalBytesProcessed(String totalBytesProcessed) {
             this.totalBytesProcessed = Objects.requireNonNull(totalBytesProcessed);
             return this;
         }
-
         public Builder totalBytesProcessedAccuracy(String totalBytesProcessedAccuracy) {
             this.totalBytesProcessedAccuracy = Objects.requireNonNull(totalBytesProcessedAccuracy);
             return this;
         }
-
         public Builder totalPartitionsProcessed(String totalPartitionsProcessed) {
             this.totalPartitionsProcessed = Objects.requireNonNull(totalPartitionsProcessed);
             return this;
         }
-
         public Builder totalSlotMs(String totalSlotMs) {
             this.totalSlotMs = Objects.requireNonNull(totalSlotMs);
             return this;
         }
-
         public Builder undeclaredQueryParameters(List<QueryParameterResponse> undeclaredQueryParameters) {
             this.undeclaredQueryParameters = Objects.requireNonNull(undeclaredQueryParameters);
             return this;
         }
-        public JobStatistics2Response build() {
+        public Builder undeclaredQueryParameters(QueryParameterResponse... undeclaredQueryParameters) {
+            return undeclaredQueryParameters(List.of(undeclaredQueryParameters));
+        }        public JobStatistics2Response build() {
             return new JobStatistics2Response(biEngineStatistics, billingTier, cacheHit, ddlAffectedRowAccessPolicyCount, ddlDestinationTable, ddlOperationPerformed, ddlTargetDataset, ddlTargetRoutine, ddlTargetRowAccessPolicy, ddlTargetTable, dmlStats, estimatedBytesProcessed, mlStatistics, modelTraining, numDmlAffectedRows, queryPlan, referencedRoutines, referencedTables, reservationUsage, schema, statementType, timeline, totalBytesBilled, totalBytesProcessed, totalBytesProcessedAccuracy, totalPartitionsProcessed, totalSlotMs, undeclaredQueryParameters);
         }
     }

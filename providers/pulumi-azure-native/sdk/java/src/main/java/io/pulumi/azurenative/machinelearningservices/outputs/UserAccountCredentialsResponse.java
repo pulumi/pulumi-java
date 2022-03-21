@@ -87,17 +87,14 @@ public final class UserAccountCredentialsResponse {
             this.adminUserName = Objects.requireNonNull(adminUserName);
             return this;
         }
-
         public Builder adminUserPassword(@Nullable String adminUserPassword) {
             this.adminUserPassword = adminUserPassword;
             return this;
         }
-
         public Builder adminUserSshPublicKey(@Nullable String adminUserSshPublicKey) {
             this.adminUserSshPublicKey = adminUserSshPublicKey;
             return this;
-        }
-        public UserAccountCredentialsResponse build() {
+        }        public UserAccountCredentialsResponse build() {
             return new UserAccountCredentialsResponse(adminUserName, adminUserPassword, adminUserSshPublicKey);
         }
     }

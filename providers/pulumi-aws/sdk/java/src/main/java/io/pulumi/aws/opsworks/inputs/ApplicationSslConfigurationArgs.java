@@ -90,32 +90,26 @@ public final class ApplicationSslConfigurationArgs extends io.pulumi.resources.R
             this.certificate = Objects.requireNonNull(certificate);
             return this;
         }
-
         public Builder certificate(String certificate) {
             this.certificate = Output.of(Objects.requireNonNull(certificate));
             return this;
         }
-
         public Builder chain(@Nullable Output<String> chain) {
             this.chain = chain;
             return this;
         }
-
         public Builder chain(@Nullable String chain) {
             this.chain = Output.ofNullable(chain);
             return this;
         }
-
         public Builder privateKey(Output<String> privateKey) {
             this.privateKey = Objects.requireNonNull(privateKey);
             return this;
         }
-
         public Builder privateKey(String privateKey) {
             this.privateKey = Output.of(Objects.requireNonNull(privateKey));
             return this;
-        }
-        public ApplicationSslConfigurationArgs build() {
+        }        public ApplicationSslConfigurationArgs build() {
             return new ApplicationSslConfigurationArgs(certificate, chain, privateKey);
         }
     }

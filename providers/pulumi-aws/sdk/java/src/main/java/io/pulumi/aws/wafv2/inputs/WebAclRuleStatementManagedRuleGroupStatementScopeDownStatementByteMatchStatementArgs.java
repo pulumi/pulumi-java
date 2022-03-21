@@ -109,42 +109,37 @@ public final class WebAclRuleStatementManagedRuleGroupStatementScopeDownStatemen
             this.fieldToMatch = fieldToMatch;
             return this;
         }
-
         public Builder fieldToMatch(@Nullable WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementByteMatchStatementFieldToMatchArgs fieldToMatch) {
             this.fieldToMatch = Output.ofNullable(fieldToMatch);
             return this;
         }
-
         public Builder positionalConstraint(Output<String> positionalConstraint) {
             this.positionalConstraint = Objects.requireNonNull(positionalConstraint);
             return this;
         }
-
         public Builder positionalConstraint(String positionalConstraint) {
             this.positionalConstraint = Output.of(Objects.requireNonNull(positionalConstraint));
             return this;
         }
-
         public Builder searchString(Output<String> searchString) {
             this.searchString = Objects.requireNonNull(searchString);
             return this;
         }
-
         public Builder searchString(String searchString) {
             this.searchString = Output.of(Objects.requireNonNull(searchString));
             return this;
         }
-
         public Builder textTransformations(Output<List<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementByteMatchStatementTextTransformationArgs>> textTransformations) {
             this.textTransformations = Objects.requireNonNull(textTransformations);
             return this;
         }
-
         public Builder textTransformations(List<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementByteMatchStatementTextTransformationArgs> textTransformations) {
             this.textTransformations = Output.of(Objects.requireNonNull(textTransformations));
             return this;
         }
-        public WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementByteMatchStatementArgs build() {
+        public Builder textTransformations(WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementByteMatchStatementTextTransformationArgs... textTransformations) {
+            return textTransformations(List.of(textTransformations));
+        }        public WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementByteMatchStatementArgs build() {
             return new WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementByteMatchStatementArgs(fieldToMatch, positionalConstraint, searchString, textTransformations);
         }
     }

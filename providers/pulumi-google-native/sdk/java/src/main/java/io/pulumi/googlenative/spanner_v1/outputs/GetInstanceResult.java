@@ -151,37 +151,30 @@ public final class GetInstanceResult {
             this.config = Objects.requireNonNull(config);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder nodeCount(Integer nodeCount) {
             this.nodeCount = Objects.requireNonNull(nodeCount);
             return this;
         }
-
         public Builder processingUnits(Integer processingUnits) {
             this.processingUnits = Objects.requireNonNull(processingUnits);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
-        }
-        public GetInstanceResult build() {
+        }        public GetInstanceResult build() {
             return new GetInstanceResult(config, displayName, labels, name, nodeCount, processingUnits, state);
         }
     }

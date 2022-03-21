@@ -74,22 +74,18 @@ public final class BucketPolicyArgs extends io.pulumi.resources.ResourceArgs {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
-
         public Builder bucket(String bucket) {
             this.bucket = Output.of(Objects.requireNonNull(bucket));
             return this;
         }
-
         public Builder policyDocument(Output<Object> policyDocument) {
             this.policyDocument = Objects.requireNonNull(policyDocument);
             return this;
         }
-
         public Builder policyDocument(Object policyDocument) {
             this.policyDocument = Output.of(Objects.requireNonNull(policyDocument));
             return this;
-        }
-        public BucketPolicyArgs build() {
+        }        public BucketPolicyArgs build() {
             return new BucketPolicyArgs(bucket, policyDocument);
         }
     }

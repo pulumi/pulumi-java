@@ -95,32 +95,26 @@ public final class RadiusServerArgs extends io.pulumi.resources.ResourceArgs {
             this.radiusServerAddress = Objects.requireNonNull(radiusServerAddress);
             return this;
         }
-
         public Builder radiusServerAddress(String radiusServerAddress) {
             this.radiusServerAddress = Output.of(Objects.requireNonNull(radiusServerAddress));
             return this;
         }
-
         public Builder radiusServerScore(@Nullable Output<Double> radiusServerScore) {
             this.radiusServerScore = radiusServerScore;
             return this;
         }
-
         public Builder radiusServerScore(@Nullable Double radiusServerScore) {
             this.radiusServerScore = Output.ofNullable(radiusServerScore);
             return this;
         }
-
         public Builder radiusServerSecret(@Nullable Output<String> radiusServerSecret) {
             this.radiusServerSecret = radiusServerSecret;
             return this;
         }
-
         public Builder radiusServerSecret(@Nullable String radiusServerSecret) {
             this.radiusServerSecret = Output.ofNullable(radiusServerSecret);
             return this;
-        }
-        public RadiusServerArgs build() {
+        }        public RadiusServerArgs build() {
             return new RadiusServerArgs(radiusServerAddress, radiusServerScore, radiusServerSecret);
         }
     }

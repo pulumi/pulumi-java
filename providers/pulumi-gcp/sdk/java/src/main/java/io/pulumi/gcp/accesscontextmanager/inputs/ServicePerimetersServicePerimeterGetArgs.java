@@ -224,92 +224,74 @@ public final class ServicePerimetersServicePerimeterGetArgs extends io.pulumi.re
             this.createTime = createTime;
             return this;
         }
-
         public Builder createTime(@Nullable String createTime) {
             this.createTime = Output.ofNullable(createTime);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder perimeterType(@Nullable Output<String> perimeterType) {
             this.perimeterType = perimeterType;
             return this;
         }
-
         public Builder perimeterType(@Nullable String perimeterType) {
             this.perimeterType = Output.ofNullable(perimeterType);
             return this;
         }
-
         public Builder spec(@Nullable Output<ServicePerimetersServicePerimeterSpecGetArgs> spec) {
             this.spec = spec;
             return this;
         }
-
         public Builder spec(@Nullable ServicePerimetersServicePerimeterSpecGetArgs spec) {
             this.spec = Output.ofNullable(spec);
             return this;
         }
-
         public Builder status(@Nullable Output<ServicePerimetersServicePerimeterStatusGetArgs> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable ServicePerimetersServicePerimeterStatusGetArgs status) {
             this.status = Output.ofNullable(status);
             return this;
         }
-
         public Builder title(Output<String> title) {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public Builder title(String title) {
             this.title = Output.of(Objects.requireNonNull(title));
             return this;
         }
-
         public Builder updateTime(@Nullable Output<String> updateTime) {
             this.updateTime = updateTime;
             return this;
         }
-
         public Builder updateTime(@Nullable String updateTime) {
             this.updateTime = Output.ofNullable(updateTime);
             return this;
         }
-
         public Builder useExplicitDryRunSpec(@Nullable Output<Boolean> useExplicitDryRunSpec) {
             this.useExplicitDryRunSpec = useExplicitDryRunSpec;
             return this;
         }
-
         public Builder useExplicitDryRunSpec(@Nullable Boolean useExplicitDryRunSpec) {
             this.useExplicitDryRunSpec = Output.ofNullable(useExplicitDryRunSpec);
             return this;
-        }
-        public ServicePerimetersServicePerimeterGetArgs build() {
+        }        public ServicePerimetersServicePerimeterGetArgs build() {
             return new ServicePerimetersServicePerimeterGetArgs(createTime, description, name, perimeterType, spec, status, title, updateTime, useExplicitDryRunSpec);
         }
     }

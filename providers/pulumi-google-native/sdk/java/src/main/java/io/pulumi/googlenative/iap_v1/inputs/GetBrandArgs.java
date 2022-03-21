@@ -66,12 +66,10 @@ public final class GetBrandArgs extends io.pulumi.resources.InvokeArgs {
             this.brandId = Objects.requireNonNull(brandId);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetBrandArgs build() {
+        }        public GetBrandArgs build() {
             return new GetBrandArgs(brandId, project);
         }
     }

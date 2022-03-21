@@ -126,27 +126,22 @@ public final class DataStoreResponse extends io.pulumi.resources.InvokeArgs {
             this.capacity = capacity;
             return this;
         }
-
         public Builder freeSpace(@Nullable String freeSpace) {
             this.freeSpace = freeSpace;
             return this;
         }
-
         public Builder symbolicName(@Nullable String symbolicName) {
             this.symbolicName = symbolicName;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }
-
         public Builder uuid(@Nullable String uuid) {
             this.uuid = uuid;
             return this;
-        }
-        public DataStoreResponse build() {
+        }        public DataStoreResponse build() {
             return new DataStoreResponse(capacity, freeSpace, symbolicName, type, uuid);
         }
     }

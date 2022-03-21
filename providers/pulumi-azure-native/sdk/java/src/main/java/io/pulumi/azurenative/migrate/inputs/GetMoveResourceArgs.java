@@ -88,17 +88,14 @@ public final class GetMoveResourceArgs extends io.pulumi.resources.InvokeArgs {
             this.moveCollectionName = Objects.requireNonNull(moveCollectionName);
             return this;
         }
-
         public Builder moveResourceName(String moveResourceName) {
             this.moveResourceName = Objects.requireNonNull(moveResourceName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetMoveResourceArgs build() {
+        }        public GetMoveResourceArgs build() {
             return new GetMoveResourceArgs(moveCollectionName, moveResourceName, resourceGroupName);
         }
     }

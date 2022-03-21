@@ -78,32 +78,26 @@ public final class FeatureStateStateArgs extends io.pulumi.resources.ResourceArg
             this.code = code;
             return this;
         }
-
         public Builder code(@Nullable String code) {
             this.code = Output.ofNullable(code);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder updateTime(@Nullable Output<String> updateTime) {
             this.updateTime = updateTime;
             return this;
         }
-
         public Builder updateTime(@Nullable String updateTime) {
             this.updateTime = Output.ofNullable(updateTime);
             return this;
-        }
-        public FeatureStateStateArgs build() {
+        }        public FeatureStateStateArgs build() {
             return new FeatureStateStateArgs(code, description, updateTime);
         }
     }

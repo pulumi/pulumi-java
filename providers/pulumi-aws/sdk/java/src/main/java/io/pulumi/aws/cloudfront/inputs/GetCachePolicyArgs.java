@@ -74,12 +74,10 @@ public final class GetCachePolicyArgs extends io.pulumi.resources.InvokeArgs {
             this.id = id;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
-        }
-        public GetCachePolicyArgs build() {
+        }        public GetCachePolicyArgs build() {
             return new GetCachePolicyArgs(id, name);
         }
     }

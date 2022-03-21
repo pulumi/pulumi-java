@@ -111,42 +111,43 @@ public final class InitialStateConfigArgs extends io.pulumi.resources.ResourceAr
             this.dbs = dbs;
             return this;
         }
-
         public Builder dbs(@Nullable List<FileContentBufferArgs> dbs) {
             this.dbs = Output.ofNullable(dbs);
             return this;
         }
-
+        public Builder dbs(FileContentBufferArgs... dbs) {
+            return dbs(List.of(dbs));
+        }
         public Builder dbxs(@Nullable Output<List<FileContentBufferArgs>> dbxs) {
             this.dbxs = dbxs;
             return this;
         }
-
         public Builder dbxs(@Nullable List<FileContentBufferArgs> dbxs) {
             this.dbxs = Output.ofNullable(dbxs);
             return this;
         }
-
+        public Builder dbxs(FileContentBufferArgs... dbxs) {
+            return dbxs(List.of(dbxs));
+        }
         public Builder keks(@Nullable Output<List<FileContentBufferArgs>> keks) {
             this.keks = keks;
             return this;
         }
-
         public Builder keks(@Nullable List<FileContentBufferArgs> keks) {
             this.keks = Output.ofNullable(keks);
             return this;
         }
-
+        public Builder keks(FileContentBufferArgs... keks) {
+            return keks(List.of(keks));
+        }
         public Builder pk(@Nullable Output<FileContentBufferArgs> pk) {
             this.pk = pk;
             return this;
         }
-
         public Builder pk(@Nullable FileContentBufferArgs pk) {
             this.pk = Output.ofNullable(pk);
             return this;
-        }
-        public InitialStateConfigArgs build() {
+        }        public InitialStateConfigArgs build() {
             return new InitialStateConfigArgs(dbs, dbxs, keks, pk);
         }
     }

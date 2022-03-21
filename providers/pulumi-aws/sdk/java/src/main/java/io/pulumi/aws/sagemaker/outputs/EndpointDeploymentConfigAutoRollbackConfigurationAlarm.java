@@ -51,8 +51,7 @@ public final class EndpointDeploymentConfigAutoRollbackConfigurationAlarm {
         public Builder alarmName(String alarmName) {
             this.alarmName = Objects.requireNonNull(alarmName);
             return this;
-        }
-        public EndpointDeploymentConfigAutoRollbackConfigurationAlarm build() {
+        }        public EndpointDeploymentConfigAutoRollbackConfigurationAlarm build() {
             return new EndpointDeploymentConfigAutoRollbackConfigurationAlarm(alarmName);
         }
     }

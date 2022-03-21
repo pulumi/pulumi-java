@@ -95,32 +95,26 @@ public final class AutoScalePropertiesArgs extends io.pulumi.resources.ResourceA
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
         }
-
         public Builder maxNodeCount(@Nullable Output<Integer> maxNodeCount) {
             this.maxNodeCount = maxNodeCount;
             return this;
         }
-
         public Builder maxNodeCount(@Nullable Integer maxNodeCount) {
             this.maxNodeCount = Output.ofNullable(maxNodeCount);
             return this;
         }
-
         public Builder minNodeCount(@Nullable Output<Integer> minNodeCount) {
             this.minNodeCount = minNodeCount;
             return this;
         }
-
         public Builder minNodeCount(@Nullable Integer minNodeCount) {
             this.minNodeCount = Output.ofNullable(minNodeCount);
             return this;
-        }
-        public AutoScalePropertiesArgs build() {
+        }        public AutoScalePropertiesArgs build() {
             return new AutoScalePropertiesArgs(enabled, maxNodeCount, minNodeCount);
         }
     }

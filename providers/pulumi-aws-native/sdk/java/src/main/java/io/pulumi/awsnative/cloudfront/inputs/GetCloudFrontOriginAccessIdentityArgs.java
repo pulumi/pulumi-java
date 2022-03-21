@@ -50,8 +50,7 @@ public final class GetCloudFrontOriginAccessIdentityArgs extends io.pulumi.resou
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
-        }
-        public GetCloudFrontOriginAccessIdentityArgs build() {
+        }        public GetCloudFrontOriginAccessIdentityArgs build() {
             return new GetCloudFrontOriginAccessIdentityArgs(id);
         }
     }

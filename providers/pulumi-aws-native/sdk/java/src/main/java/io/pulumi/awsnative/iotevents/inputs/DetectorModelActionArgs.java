@@ -214,132 +214,106 @@ public final class DetectorModelActionArgs extends io.pulumi.resources.ResourceA
             this.clearTimer = clearTimer;
             return this;
         }
-
         public Builder clearTimer(@Nullable DetectorModelClearTimerArgs clearTimer) {
             this.clearTimer = Output.ofNullable(clearTimer);
             return this;
         }
-
         public Builder dynamoDB(@Nullable Output<DetectorModelDynamoDBArgs> dynamoDB) {
             this.dynamoDB = dynamoDB;
             return this;
         }
-
         public Builder dynamoDB(@Nullable DetectorModelDynamoDBArgs dynamoDB) {
             this.dynamoDB = Output.ofNullable(dynamoDB);
             return this;
         }
-
         public Builder dynamoDBv2(@Nullable Output<DetectorModelDynamoDBv2Args> dynamoDBv2) {
             this.dynamoDBv2 = dynamoDBv2;
             return this;
         }
-
         public Builder dynamoDBv2(@Nullable DetectorModelDynamoDBv2Args dynamoDBv2) {
             this.dynamoDBv2 = Output.ofNullable(dynamoDBv2);
             return this;
         }
-
         public Builder firehose(@Nullable Output<DetectorModelFirehoseArgs> firehose) {
             this.firehose = firehose;
             return this;
         }
-
         public Builder firehose(@Nullable DetectorModelFirehoseArgs firehose) {
             this.firehose = Output.ofNullable(firehose);
             return this;
         }
-
         public Builder iotEvents(@Nullable Output<DetectorModelIotEventsArgs> iotEvents) {
             this.iotEvents = iotEvents;
             return this;
         }
-
         public Builder iotEvents(@Nullable DetectorModelIotEventsArgs iotEvents) {
             this.iotEvents = Output.ofNullable(iotEvents);
             return this;
         }
-
         public Builder iotSiteWise(@Nullable Output<DetectorModelIotSiteWiseArgs> iotSiteWise) {
             this.iotSiteWise = iotSiteWise;
             return this;
         }
-
         public Builder iotSiteWise(@Nullable DetectorModelIotSiteWiseArgs iotSiteWise) {
             this.iotSiteWise = Output.ofNullable(iotSiteWise);
             return this;
         }
-
         public Builder iotTopicPublish(@Nullable Output<DetectorModelIotTopicPublishArgs> iotTopicPublish) {
             this.iotTopicPublish = iotTopicPublish;
             return this;
         }
-
         public Builder iotTopicPublish(@Nullable DetectorModelIotTopicPublishArgs iotTopicPublish) {
             this.iotTopicPublish = Output.ofNullable(iotTopicPublish);
             return this;
         }
-
         public Builder lambda(@Nullable Output<DetectorModelLambdaArgs> lambda) {
             this.lambda = lambda;
             return this;
         }
-
         public Builder lambda(@Nullable DetectorModelLambdaArgs lambda) {
             this.lambda = Output.ofNullable(lambda);
             return this;
         }
-
         public Builder resetTimer(@Nullable Output<DetectorModelResetTimerArgs> resetTimer) {
             this.resetTimer = resetTimer;
             return this;
         }
-
         public Builder resetTimer(@Nullable DetectorModelResetTimerArgs resetTimer) {
             this.resetTimer = Output.ofNullable(resetTimer);
             return this;
         }
-
         public Builder setTimer(@Nullable Output<DetectorModelSetTimerArgs> setTimer) {
             this.setTimer = setTimer;
             return this;
         }
-
         public Builder setTimer(@Nullable DetectorModelSetTimerArgs setTimer) {
             this.setTimer = Output.ofNullable(setTimer);
             return this;
         }
-
         public Builder setVariable(@Nullable Output<DetectorModelSetVariableArgs> setVariable) {
             this.setVariable = setVariable;
             return this;
         }
-
         public Builder setVariable(@Nullable DetectorModelSetVariableArgs setVariable) {
             this.setVariable = Output.ofNullable(setVariable);
             return this;
         }
-
         public Builder sns(@Nullable Output<DetectorModelSnsArgs> sns) {
             this.sns = sns;
             return this;
         }
-
         public Builder sns(@Nullable DetectorModelSnsArgs sns) {
             this.sns = Output.ofNullable(sns);
             return this;
         }
-
         public Builder sqs(@Nullable Output<DetectorModelSqsArgs> sqs) {
             this.sqs = sqs;
             return this;
         }
-
         public Builder sqs(@Nullable DetectorModelSqsArgs sqs) {
             this.sqs = Output.ofNullable(sqs);
             return this;
-        }
-        public DetectorModelActionArgs build() {
+        }        public DetectorModelActionArgs build() {
             return new DetectorModelActionArgs(clearTimer, dynamoDB, dynamoDBv2, firehose, iotEvents, iotSiteWise, iotTopicPublish, lambda, resetTimer, setTimer, setVariable, sns, sqs);
         }
     }

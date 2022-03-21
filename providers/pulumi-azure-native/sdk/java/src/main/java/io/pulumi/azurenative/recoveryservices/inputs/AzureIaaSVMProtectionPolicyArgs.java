@@ -164,72 +164,58 @@ public final class AzureIaaSVMProtectionPolicyArgs extends io.pulumi.resources.R
             this.backupManagementType = Objects.requireNonNull(backupManagementType);
             return this;
         }
-
         public Builder backupManagementType(String backupManagementType) {
             this.backupManagementType = Output.of(Objects.requireNonNull(backupManagementType));
             return this;
         }
-
         public Builder instantRPDetails(@Nullable Output<InstantRPAdditionalDetailsArgs> instantRPDetails) {
             this.instantRPDetails = instantRPDetails;
             return this;
         }
-
         public Builder instantRPDetails(@Nullable InstantRPAdditionalDetailsArgs instantRPDetails) {
             this.instantRPDetails = Output.ofNullable(instantRPDetails);
             return this;
         }
-
         public Builder instantRpRetentionRangeInDays(@Nullable Output<Integer> instantRpRetentionRangeInDays) {
             this.instantRpRetentionRangeInDays = instantRpRetentionRangeInDays;
             return this;
         }
-
         public Builder instantRpRetentionRangeInDays(@Nullable Integer instantRpRetentionRangeInDays) {
             this.instantRpRetentionRangeInDays = Output.ofNullable(instantRpRetentionRangeInDays);
             return this;
         }
-
         public Builder protectedItemsCount(@Nullable Output<Integer> protectedItemsCount) {
             this.protectedItemsCount = protectedItemsCount;
             return this;
         }
-
         public Builder protectedItemsCount(@Nullable Integer protectedItemsCount) {
             this.protectedItemsCount = Output.ofNullable(protectedItemsCount);
             return this;
         }
-
         public Builder retentionPolicy(@Nullable Output<Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs>> retentionPolicy) {
             this.retentionPolicy = retentionPolicy;
             return this;
         }
-
         public Builder retentionPolicy(@Nullable Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs> retentionPolicy) {
             this.retentionPolicy = Output.ofNullable(retentionPolicy);
             return this;
         }
-
         public Builder schedulePolicy(@Nullable Output<Object> schedulePolicy) {
             this.schedulePolicy = schedulePolicy;
             return this;
         }
-
         public Builder schedulePolicy(@Nullable Object schedulePolicy) {
             this.schedulePolicy = Output.ofNullable(schedulePolicy);
             return this;
         }
-
         public Builder timeZone(@Nullable Output<String> timeZone) {
             this.timeZone = timeZone;
             return this;
         }
-
         public Builder timeZone(@Nullable String timeZone) {
             this.timeZone = Output.ofNullable(timeZone);
             return this;
-        }
-        public AzureIaaSVMProtectionPolicyArgs build() {
+        }        public AzureIaaSVMProtectionPolicyArgs build() {
             return new AzureIaaSVMProtectionPolicyArgs(backupManagementType, instantRPDetails, instantRpRetentionRangeInDays, protectedItemsCount, retentionPolicy, schedulePolicy, timeZone);
         }
     }

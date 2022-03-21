@@ -157,72 +157,58 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
             this.auditStreamArn = auditStreamArn;
             return this;
         }
-
         public Builder auditStreamArn(@Nullable String auditStreamArn) {
             this.auditStreamArn = Output.ofNullable(auditStreamArn);
             return this;
         }
-
         public Builder deviceCaCertificate(@Nullable Output<String> deviceCaCertificate) {
             this.deviceCaCertificate = deviceCaCertificate;
             return this;
         }
-
         public Builder deviceCaCertificate(@Nullable String deviceCaCertificate) {
             this.deviceCaCertificate = Output.ofNullable(deviceCaCertificate);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder identityProvider(@Nullable Output<FleetIdentityProviderArgs> identityProvider) {
             this.identityProvider = identityProvider;
             return this;
         }
-
         public Builder identityProvider(@Nullable FleetIdentityProviderArgs identityProvider) {
             this.identityProvider = Output.ofNullable(identityProvider);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder network(@Nullable Output<FleetNetworkArgs> network) {
             this.network = network;
             return this;
         }
-
         public Builder network(@Nullable FleetNetworkArgs network) {
             this.network = Output.ofNullable(network);
             return this;
         }
-
         public Builder optimizeForEndUserLocation(@Nullable Output<Boolean> optimizeForEndUserLocation) {
             this.optimizeForEndUserLocation = optimizeForEndUserLocation;
             return this;
         }
-
         public Builder optimizeForEndUserLocation(@Nullable Boolean optimizeForEndUserLocation) {
             this.optimizeForEndUserLocation = Output.ofNullable(optimizeForEndUserLocation);
             return this;
-        }
-        public FleetArgs build() {
+        }        public FleetArgs build() {
             return new FleetArgs(auditStreamArn, deviceCaCertificate, displayName, identityProvider, name, network, optimizeForEndUserLocation);
         }
     }

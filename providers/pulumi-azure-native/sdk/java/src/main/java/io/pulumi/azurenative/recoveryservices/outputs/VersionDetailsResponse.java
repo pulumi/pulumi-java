@@ -87,17 +87,14 @@ public final class VersionDetailsResponse {
             this.expiryDate = expiryDate;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = version;
             return this;
-        }
-        public VersionDetailsResponse build() {
+        }        public VersionDetailsResponse build() {
             return new VersionDetailsResponse(expiryDate, status, version);
         }
     }

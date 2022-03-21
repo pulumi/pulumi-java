@@ -57,12 +57,10 @@ public final class PacketMirroringMirroredResourceInfoInstanceInfoArgs extends i
             this.url = url;
             return this;
         }
-
         public Builder url(@Nullable String url) {
             this.url = Output.ofNullable(url);
             return this;
-        }
-        public PacketMirroringMirroredResourceInfoInstanceInfoArgs build() {
+        }        public PacketMirroringMirroredResourceInfoInstanceInfoArgs build() {
             return new PacketMirroringMirroredResourceInfoInstanceInfoArgs(url);
         }
     }

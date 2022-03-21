@@ -70,12 +70,10 @@ public final class ContactChannelTargetInfo {
             this.channelId = Objects.requireNonNull(channelId);
             return this;
         }
-
         public Builder retryIntervalInMinutes(Integer retryIntervalInMinutes) {
             this.retryIntervalInMinutes = Objects.requireNonNull(retryIntervalInMinutes);
             return this;
-        }
-        public ContactChannelTargetInfo build() {
+        }        public ContactChannelTargetInfo build() {
             return new ContactChannelTargetInfo(channelId, retryIntervalInMinutes);
         }
     }

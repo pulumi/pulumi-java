@@ -53,12 +53,10 @@ public final class ObjectTypeTag {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public ObjectTypeTag build() {
+        }        public ObjectTypeTag build() {
             return new ObjectTypeTag(key, value);
         }
     }

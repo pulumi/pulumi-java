@@ -71,12 +71,10 @@ public final class EnvironmentMonitor {
             this.alarmArn = Objects.requireNonNull(alarmArn);
             return this;
         }
-
         public Builder alarmRoleArn(@Nullable String alarmRoleArn) {
             this.alarmRoleArn = alarmRoleArn;
             return this;
-        }
-        public EnvironmentMonitor build() {
+        }        public EnvironmentMonitor build() {
             return new EnvironmentMonitor(alarmArn, alarmRoleArn);
         }
     }

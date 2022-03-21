@@ -73,12 +73,13 @@ public final class CronJobStatus {
             this.active = active;
             return this;
         }
-
+        public Builder active(ObjectReference... active) {
+            return active(List.of(active));
+        }
         public Builder lastScheduleTime(@Nullable String lastScheduleTime) {
             this.lastScheduleTime = lastScheduleTime;
             return this;
-        }
-        public CronJobStatus build() {
+        }        public CronJobStatus build() {
             return new CronJobStatus(active, lastScheduleTime);
         }
     }

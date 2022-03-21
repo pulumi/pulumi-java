@@ -457,127 +457,120 @@ public final class InstancePropertiesResponse extends io.pulumi.resources.Invoke
             this.advancedMachineFeatures = Objects.requireNonNull(advancedMachineFeatures);
             return this;
         }
-
         public Builder canIpForward(Boolean canIpForward) {
             this.canIpForward = Objects.requireNonNull(canIpForward);
             return this;
         }
-
         public Builder confidentialInstanceConfig(ConfidentialInstanceConfigResponse confidentialInstanceConfig) {
             this.confidentialInstanceConfig = Objects.requireNonNull(confidentialInstanceConfig);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder disks(List<AttachedDiskResponse> disks) {
             this.disks = Objects.requireNonNull(disks);
             return this;
         }
-
+        public Builder disks(AttachedDiskResponse... disks) {
+            return disks(List.of(disks));
+        }
         public Builder displayDevice(DisplayDeviceResponse displayDevice) {
             this.displayDevice = Objects.requireNonNull(displayDevice);
             return this;
         }
-
         public Builder guestAccelerators(List<AcceleratorConfigResponse> guestAccelerators) {
             this.guestAccelerators = Objects.requireNonNull(guestAccelerators);
             return this;
         }
-
+        public Builder guestAccelerators(AcceleratorConfigResponse... guestAccelerators) {
+            return guestAccelerators(List.of(guestAccelerators));
+        }
         public Builder keyRevocationActionType(String keyRevocationActionType) {
             this.keyRevocationActionType = Objects.requireNonNull(keyRevocationActionType);
             return this;
         }
-
         public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder machineType(String machineType) {
             this.machineType = Objects.requireNonNull(machineType);
             return this;
         }
-
         public Builder metadata(MetadataResponse metadata) {
             this.metadata = Objects.requireNonNull(metadata);
             return this;
         }
-
         public Builder minCpuPlatform(String minCpuPlatform) {
             this.minCpuPlatform = Objects.requireNonNull(minCpuPlatform);
             return this;
         }
-
         public Builder networkInterfaces(List<NetworkInterfaceResponse> networkInterfaces) {
             this.networkInterfaces = Objects.requireNonNull(networkInterfaces);
             return this;
         }
-
+        public Builder networkInterfaces(NetworkInterfaceResponse... networkInterfaces) {
+            return networkInterfaces(List.of(networkInterfaces));
+        }
         public Builder networkPerformanceConfig(NetworkPerformanceConfigResponse networkPerformanceConfig) {
             this.networkPerformanceConfig = Objects.requireNonNull(networkPerformanceConfig);
             return this;
         }
-
         public Builder postKeyRevocationActionType(String postKeyRevocationActionType) {
             this.postKeyRevocationActionType = Objects.requireNonNull(postKeyRevocationActionType);
             return this;
         }
-
         public Builder privateIpv6GoogleAccess(String privateIpv6GoogleAccess) {
             this.privateIpv6GoogleAccess = Objects.requireNonNull(privateIpv6GoogleAccess);
             return this;
         }
-
         public Builder reservationAffinity(ReservationAffinityResponse reservationAffinity) {
             this.reservationAffinity = Objects.requireNonNull(reservationAffinity);
             return this;
         }
-
         public Builder resourceManagerTags(Map<String,String> resourceManagerTags) {
             this.resourceManagerTags = Objects.requireNonNull(resourceManagerTags);
             return this;
         }
-
         public Builder resourcePolicies(List<String> resourcePolicies) {
             this.resourcePolicies = Objects.requireNonNull(resourcePolicies);
             return this;
         }
-
+        public Builder resourcePolicies(String... resourcePolicies) {
+            return resourcePolicies(List.of(resourcePolicies));
+        }
         public Builder scheduling(SchedulingResponse scheduling) {
             this.scheduling = Objects.requireNonNull(scheduling);
             return this;
         }
-
         public Builder secureTags(List<String> secureTags) {
             this.secureTags = Objects.requireNonNull(secureTags);
             return this;
         }
-
+        public Builder secureTags(String... secureTags) {
+            return secureTags(List.of(secureTags));
+        }
         public Builder serviceAccounts(List<ServiceAccountResponse> serviceAccounts) {
             this.serviceAccounts = Objects.requireNonNull(serviceAccounts);
             return this;
         }
-
+        public Builder serviceAccounts(ServiceAccountResponse... serviceAccounts) {
+            return serviceAccounts(List.of(serviceAccounts));
+        }
         public Builder shieldedInstanceConfig(ShieldedInstanceConfigResponse shieldedInstanceConfig) {
             this.shieldedInstanceConfig = Objects.requireNonNull(shieldedInstanceConfig);
             return this;
         }
-
         public Builder shieldedVmConfig(ShieldedVmConfigResponse shieldedVmConfig) {
             this.shieldedVmConfig = Objects.requireNonNull(shieldedVmConfig);
             return this;
         }
-
         public Builder tags(TagsResponse tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
-        }
-        public InstancePropertiesResponse build() {
+        }        public InstancePropertiesResponse build() {
             return new InstancePropertiesResponse(advancedMachineFeatures, canIpForward, confidentialInstanceConfig, description, disks, displayDevice, guestAccelerators, keyRevocationActionType, labels, machineType, metadata, minCpuPlatform, networkInterfaces, networkPerformanceConfig, postKeyRevocationActionType, privateIpv6GoogleAccess, reservationAffinity, resourceManagerTags, resourcePolicies, scheduling, secureTags, serviceAccounts, shieldedInstanceConfig, shieldedVmConfig, tags);
         }
     }

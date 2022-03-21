@@ -107,42 +107,34 @@ public final class StorageArgs extends io.pulumi.resources.ResourceArgs {
             this.properties = properties;
             return this;
         }
-
         public Builder properties(@Nullable StorageAccountArgs properties) {
             this.properties = Output.ofNullable(properties);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder serviceName(Output<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
-
         public Builder serviceName(String serviceName) {
             this.serviceName = Output.of(Objects.requireNonNull(serviceName));
             return this;
         }
-
         public Builder storageName(@Nullable Output<String> storageName) {
             this.storageName = storageName;
             return this;
         }
-
         public Builder storageName(@Nullable String storageName) {
             this.storageName = Output.ofNullable(storageName);
             return this;
-        }
-        public StorageArgs build() {
+        }        public StorageArgs build() {
             return new StorageArgs(properties, resourceGroupName, serviceName, storageName);
         }
     }

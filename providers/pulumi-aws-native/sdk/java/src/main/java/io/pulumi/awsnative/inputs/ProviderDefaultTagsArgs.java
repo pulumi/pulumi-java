@@ -62,12 +62,10 @@ public final class ProviderDefaultTagsArgs extends io.pulumi.resources.ResourceA
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public ProviderDefaultTagsArgs build() {
+        }        public ProviderDefaultTagsArgs build() {
             return new ProviderDefaultTagsArgs(tags);
         }
     }

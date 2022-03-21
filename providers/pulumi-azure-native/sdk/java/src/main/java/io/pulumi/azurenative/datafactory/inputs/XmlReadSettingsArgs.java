@@ -147,62 +147,50 @@ public final class XmlReadSettingsArgs extends io.pulumi.resources.ResourceArgs 
             this.compressionProperties = compressionProperties;
             return this;
         }
-
         public Builder compressionProperties(@Nullable Object compressionProperties) {
             this.compressionProperties = Output.ofNullable(compressionProperties);
             return this;
         }
-
         public Builder detectDataType(@Nullable Output<Object> detectDataType) {
             this.detectDataType = detectDataType;
             return this;
         }
-
         public Builder detectDataType(@Nullable Object detectDataType) {
             this.detectDataType = Output.ofNullable(detectDataType);
             return this;
         }
-
         public Builder namespacePrefixes(@Nullable Output<Object> namespacePrefixes) {
             this.namespacePrefixes = namespacePrefixes;
             return this;
         }
-
         public Builder namespacePrefixes(@Nullable Object namespacePrefixes) {
             this.namespacePrefixes = Output.ofNullable(namespacePrefixes);
             return this;
         }
-
         public Builder namespaces(@Nullable Output<Object> namespaces) {
             this.namespaces = namespaces;
             return this;
         }
-
         public Builder namespaces(@Nullable Object namespaces) {
             this.namespaces = Output.ofNullable(namespaces);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
-
         public Builder validationMode(@Nullable Output<Object> validationMode) {
             this.validationMode = validationMode;
             return this;
         }
-
         public Builder validationMode(@Nullable Object validationMode) {
             this.validationMode = Output.ofNullable(validationMode);
             return this;
-        }
-        public XmlReadSettingsArgs build() {
+        }        public XmlReadSettingsArgs build() {
             return new XmlReadSettingsArgs(compressionProperties, detectDataType, namespacePrefixes, namespaces, type, validationMode);
         }
     }

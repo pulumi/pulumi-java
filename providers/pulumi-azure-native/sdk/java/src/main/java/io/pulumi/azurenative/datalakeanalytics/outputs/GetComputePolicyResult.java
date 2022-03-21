@@ -150,37 +150,30 @@ public final class GetComputePolicyResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder maxDegreeOfParallelismPerJob(Integer maxDegreeOfParallelismPerJob) {
             this.maxDegreeOfParallelismPerJob = Objects.requireNonNull(maxDegreeOfParallelismPerJob);
             return this;
         }
-
         public Builder minPriorityPerJob(Integer minPriorityPerJob) {
             this.minPriorityPerJob = Objects.requireNonNull(minPriorityPerJob);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder objectId(String objectId) {
             this.objectId = Objects.requireNonNull(objectId);
             return this;
         }
-
         public Builder objectType(String objectType) {
             this.objectType = Objects.requireNonNull(objectType);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetComputePolicyResult build() {
+        }        public GetComputePolicyResult build() {
             return new GetComputePolicyResult(id, maxDegreeOfParallelismPerJob, minPriorityPerJob, name, objectId, objectType, type);
         }
     }

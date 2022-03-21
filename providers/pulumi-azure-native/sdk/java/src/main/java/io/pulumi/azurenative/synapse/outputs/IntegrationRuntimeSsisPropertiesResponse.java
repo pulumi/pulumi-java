@@ -143,32 +143,29 @@ public final class IntegrationRuntimeSsisPropertiesResponse {
             this.catalogInfo = catalogInfo;
             return this;
         }
-
         public Builder customSetupScriptProperties(@Nullable IntegrationRuntimeCustomSetupScriptPropertiesResponse customSetupScriptProperties) {
             this.customSetupScriptProperties = customSetupScriptProperties;
             return this;
         }
-
         public Builder dataProxyProperties(@Nullable IntegrationRuntimeDataProxyPropertiesResponse dataProxyProperties) {
             this.dataProxyProperties = dataProxyProperties;
             return this;
         }
-
         public Builder edition(@Nullable String edition) {
             this.edition = edition;
             return this;
         }
-
         public Builder expressCustomSetupProperties(@Nullable List<Object> expressCustomSetupProperties) {
             this.expressCustomSetupProperties = expressCustomSetupProperties;
             return this;
         }
-
+        public Builder expressCustomSetupProperties(Object... expressCustomSetupProperties) {
+            return expressCustomSetupProperties(List.of(expressCustomSetupProperties));
+        }
         public Builder licenseType(@Nullable String licenseType) {
             this.licenseType = licenseType;
             return this;
-        }
-        public IntegrationRuntimeSsisPropertiesResponse build() {
+        }        public IntegrationRuntimeSsisPropertiesResponse build() {
             return new IntegrationRuntimeSsisPropertiesResponse(catalogInfo, customSetupScriptProperties, dataProxyProperties, edition, expressCustomSetupProperties, licenseType);
         }
     }

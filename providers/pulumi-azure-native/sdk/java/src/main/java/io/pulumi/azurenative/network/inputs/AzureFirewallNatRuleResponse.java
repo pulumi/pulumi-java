@@ -207,52 +207,57 @@ public final class AzureFirewallNatRuleResponse extends io.pulumi.resources.Invo
             this.description = description;
             return this;
         }
-
         public Builder destinationAddresses(@Nullable List<String> destinationAddresses) {
             this.destinationAddresses = destinationAddresses;
             return this;
         }
-
+        public Builder destinationAddresses(String... destinationAddresses) {
+            return destinationAddresses(List.of(destinationAddresses));
+        }
         public Builder destinationPorts(@Nullable List<String> destinationPorts) {
             this.destinationPorts = destinationPorts;
             return this;
         }
-
+        public Builder destinationPorts(String... destinationPorts) {
+            return destinationPorts(List.of(destinationPorts));
+        }
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder protocols(@Nullable List<String> protocols) {
             this.protocols = protocols;
             return this;
         }
-
+        public Builder protocols(String... protocols) {
+            return protocols(List.of(protocols));
+        }
         public Builder sourceAddresses(@Nullable List<String> sourceAddresses) {
             this.sourceAddresses = sourceAddresses;
             return this;
         }
-
+        public Builder sourceAddresses(String... sourceAddresses) {
+            return sourceAddresses(List.of(sourceAddresses));
+        }
         public Builder sourceIpGroups(@Nullable List<String> sourceIpGroups) {
             this.sourceIpGroups = sourceIpGroups;
             return this;
         }
-
+        public Builder sourceIpGroups(String... sourceIpGroups) {
+            return sourceIpGroups(List.of(sourceIpGroups));
+        }
         public Builder translatedAddress(@Nullable String translatedAddress) {
             this.translatedAddress = translatedAddress;
             return this;
         }
-
         public Builder translatedFqdn(@Nullable String translatedFqdn) {
             this.translatedFqdn = translatedFqdn;
             return this;
         }
-
         public Builder translatedPort(@Nullable String translatedPort) {
             this.translatedPort = translatedPort;
             return this;
-        }
-        public AzureFirewallNatRuleResponse build() {
+        }        public AzureFirewallNatRuleResponse build() {
             return new AzureFirewallNatRuleResponse(description, destinationAddresses, destinationPorts, name, protocols, sourceAddresses, sourceIpGroups, translatedAddress, translatedFqdn, translatedPort);
         }
     }

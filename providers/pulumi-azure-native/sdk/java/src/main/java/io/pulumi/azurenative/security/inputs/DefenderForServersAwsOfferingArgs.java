@@ -97,32 +97,26 @@ public final class DefenderForServersAwsOfferingArgs extends io.pulumi.resources
             this.arcAutoProvisioning = arcAutoProvisioning;
             return this;
         }
-
         public Builder arcAutoProvisioning(@Nullable DefenderForServersAwsOfferingArcAutoProvisioningArgs arcAutoProvisioning) {
             this.arcAutoProvisioning = Output.ofNullable(arcAutoProvisioning);
             return this;
         }
-
         public Builder defenderForServers(@Nullable Output<DefenderForServersAwsOfferingDefenderForServersArgs> defenderForServers) {
             this.defenderForServers = defenderForServers;
             return this;
         }
-
         public Builder defenderForServers(@Nullable DefenderForServersAwsOfferingDefenderForServersArgs defenderForServers) {
             this.defenderForServers = Output.ofNullable(defenderForServers);
             return this;
         }
-
         public Builder offeringType(Output<String> offeringType) {
             this.offeringType = Objects.requireNonNull(offeringType);
             return this;
         }
-
         public Builder offeringType(String offeringType) {
             this.offeringType = Output.of(Objects.requireNonNull(offeringType));
             return this;
-        }
-        public DefenderForServersAwsOfferingArgs build() {
+        }        public DefenderForServersAwsOfferingArgs build() {
             return new DefenderForServersAwsOfferingArgs(arcAutoProvisioning, defenderForServers, offeringType);
         }
     }

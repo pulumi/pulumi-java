@@ -91,17 +91,14 @@ public final class GetZonesArgs extends io.pulumi.resources.InvokeArgs {
             this.project = project;
             return this;
         }
-
         public Builder region(@Nullable String region) {
             this.region = region;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = status;
             return this;
-        }
-        public GetZonesArgs build() {
+        }        public GetZonesArgs build() {
             return new GetZonesArgs(project, region, status);
         }
     }

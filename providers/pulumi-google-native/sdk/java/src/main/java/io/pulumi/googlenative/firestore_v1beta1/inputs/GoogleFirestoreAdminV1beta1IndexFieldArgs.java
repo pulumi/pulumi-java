@@ -79,22 +79,18 @@ public final class GoogleFirestoreAdminV1beta1IndexFieldArgs extends io.pulumi.r
             this.fieldPath = fieldPath;
             return this;
         }
-
         public Builder fieldPath(@Nullable String fieldPath) {
             this.fieldPath = Output.ofNullable(fieldPath);
             return this;
         }
-
         public Builder mode(@Nullable Output<GoogleFirestoreAdminV1beta1IndexFieldMode> mode) {
             this.mode = mode;
             return this;
         }
-
         public Builder mode(@Nullable GoogleFirestoreAdminV1beta1IndexFieldMode mode) {
             this.mode = Output.ofNullable(mode);
             return this;
-        }
-        public GoogleFirestoreAdminV1beta1IndexFieldArgs build() {
+        }        public GoogleFirestoreAdminV1beta1IndexFieldArgs build() {
             return new GoogleFirestoreAdminV1beta1IndexFieldArgs(fieldPath, mode);
         }
     }

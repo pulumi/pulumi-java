@@ -106,22 +106,18 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
             this.enabled = enabled;
             return this;
         }
-
         public Builder inputFormatConfiguration(FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfiguration inputFormatConfiguration) {
             this.inputFormatConfiguration = Objects.requireNonNull(inputFormatConfiguration);
             return this;
         }
-
         public Builder outputFormatConfiguration(FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfiguration outputFormatConfiguration) {
             this.outputFormatConfiguration = Objects.requireNonNull(outputFormatConfiguration);
             return this;
         }
-
         public Builder schemaConfiguration(FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationSchemaConfiguration schemaConfiguration) {
             this.schemaConfiguration = Objects.requireNonNull(schemaConfiguration);
             return this;
-        }
-        public FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfiguration build() {
+        }        public FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfiguration build() {
             return new FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfiguration(enabled, inputFormatConfiguration, outputFormatConfiguration, schemaConfiguration);
         }
     }

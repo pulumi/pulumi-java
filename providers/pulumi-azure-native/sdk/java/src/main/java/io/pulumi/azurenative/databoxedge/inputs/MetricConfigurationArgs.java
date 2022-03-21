@@ -112,42 +112,37 @@ public final class MetricConfigurationArgs extends io.pulumi.resources.ResourceA
             this.counterSets = Objects.requireNonNull(counterSets);
             return this;
         }
-
         public Builder counterSets(List<MetricCounterSetArgs> counterSets) {
             this.counterSets = Output.of(Objects.requireNonNull(counterSets));
             return this;
         }
-
+        public Builder counterSets(MetricCounterSetArgs... counterSets) {
+            return counterSets(List.of(counterSets));
+        }
         public Builder mdmAccount(@Nullable Output<String> mdmAccount) {
             this.mdmAccount = mdmAccount;
             return this;
         }
-
         public Builder mdmAccount(@Nullable String mdmAccount) {
             this.mdmAccount = Output.ofNullable(mdmAccount);
             return this;
         }
-
         public Builder metricNameSpace(@Nullable Output<String> metricNameSpace) {
             this.metricNameSpace = metricNameSpace;
             return this;
         }
-
         public Builder metricNameSpace(@Nullable String metricNameSpace) {
             this.metricNameSpace = Output.ofNullable(metricNameSpace);
             return this;
         }
-
         public Builder resourceId(Output<String> resourceId) {
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
         }
-
         public Builder resourceId(String resourceId) {
             this.resourceId = Output.of(Objects.requireNonNull(resourceId));
             return this;
-        }
-        public MetricConfigurationArgs build() {
+        }        public MetricConfigurationArgs build() {
             return new MetricConfigurationArgs(counterSets, mdmAccount, metricNameSpace, resourceId);
         }
     }

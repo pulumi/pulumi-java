@@ -76,22 +76,21 @@ public final class WebAclRuleStatementNotStatementStatementOrStatementStatementN
             this.fieldToMatch = fieldToMatch;
             return this;
         }
-
         public Builder fieldToMatch(@Nullable WebAclRuleStatementNotStatementStatementOrStatementStatementNotStatementStatementSqliMatchStatementFieldToMatchGetArgs fieldToMatch) {
             this.fieldToMatch = Output.ofNullable(fieldToMatch);
             return this;
         }
-
         public Builder textTransformations(Output<List<WebAclRuleStatementNotStatementStatementOrStatementStatementNotStatementStatementSqliMatchStatementTextTransformationGetArgs>> textTransformations) {
             this.textTransformations = Objects.requireNonNull(textTransformations);
             return this;
         }
-
         public Builder textTransformations(List<WebAclRuleStatementNotStatementStatementOrStatementStatementNotStatementStatementSqliMatchStatementTextTransformationGetArgs> textTransformations) {
             this.textTransformations = Output.of(Objects.requireNonNull(textTransformations));
             return this;
         }
-        public WebAclRuleStatementNotStatementStatementOrStatementStatementNotStatementStatementSqliMatchStatementGetArgs build() {
+        public Builder textTransformations(WebAclRuleStatementNotStatementStatementOrStatementStatementNotStatementStatementSqliMatchStatementTextTransformationGetArgs... textTransformations) {
+            return textTransformations(List.of(textTransformations));
+        }        public WebAclRuleStatementNotStatementStatementOrStatementStatementNotStatementStatementSqliMatchStatementGetArgs build() {
             return new WebAclRuleStatementNotStatementStatementOrStatementStatementNotStatementStatementSqliMatchStatementGetArgs(fieldToMatch, textTransformations);
         }
     }

@@ -141,62 +141,50 @@ public final class ResponseHeadersPolicyArgs extends io.pulumi.resources.Resourc
             this.comment = comment;
             return this;
         }
-
         public Builder comment(@Nullable String comment) {
             this.comment = Output.ofNullable(comment);
             return this;
         }
-
         public Builder corsConfig(@Nullable Output<ResponseHeadersPolicyCorsConfigArgs> corsConfig) {
             this.corsConfig = corsConfig;
             return this;
         }
-
         public Builder corsConfig(@Nullable ResponseHeadersPolicyCorsConfigArgs corsConfig) {
             this.corsConfig = Output.ofNullable(corsConfig);
             return this;
         }
-
         public Builder customHeadersConfig(@Nullable Output<ResponseHeadersPolicyCustomHeadersConfigArgs> customHeadersConfig) {
             this.customHeadersConfig = customHeadersConfig;
             return this;
         }
-
         public Builder customHeadersConfig(@Nullable ResponseHeadersPolicyCustomHeadersConfigArgs customHeadersConfig) {
             this.customHeadersConfig = Output.ofNullable(customHeadersConfig);
             return this;
         }
-
         public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
-
         public Builder etag(@Nullable String etag) {
             this.etag = Output.ofNullable(etag);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder securityHeadersConfig(@Nullable Output<ResponseHeadersPolicySecurityHeadersConfigArgs> securityHeadersConfig) {
             this.securityHeadersConfig = securityHeadersConfig;
             return this;
         }
-
         public Builder securityHeadersConfig(@Nullable ResponseHeadersPolicySecurityHeadersConfigArgs securityHeadersConfig) {
             this.securityHeadersConfig = Output.ofNullable(securityHeadersConfig);
             return this;
-        }
-        public ResponseHeadersPolicyArgs build() {
+        }        public ResponseHeadersPolicyArgs build() {
             return new ResponseHeadersPolicyArgs(comment, corsConfig, customHeadersConfig, etag, name, securityHeadersConfig);
         }
     }

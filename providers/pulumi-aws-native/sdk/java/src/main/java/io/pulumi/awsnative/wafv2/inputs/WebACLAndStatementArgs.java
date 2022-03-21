@@ -53,12 +53,13 @@ public final class WebACLAndStatementArgs extends io.pulumi.resources.ResourceAr
             this.statements = Objects.requireNonNull(statements);
             return this;
         }
-
         public Builder statements(List<WebACLStatementArgs> statements) {
             this.statements = Output.of(Objects.requireNonNull(statements));
             return this;
         }
-        public WebACLAndStatementArgs build() {
+        public Builder statements(WebACLStatementArgs... statements) {
+            return statements(List.of(statements));
+        }        public WebACLAndStatementArgs build() {
             return new WebACLAndStatementArgs(statements);
         }
     }

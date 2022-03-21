@@ -87,17 +87,14 @@ public final class IAMBindingCondition {
             this.description = description;
             return this;
         }
-
         public Builder expression(String expression) {
             this.expression = Objects.requireNonNull(expression);
             return this;
         }
-
         public Builder title(String title) {
             this.title = Objects.requireNonNull(title);
             return this;
-        }
-        public IAMBindingCondition build() {
+        }        public IAMBindingCondition build() {
             return new IAMBindingCondition(description, expression, title);
         }
     }

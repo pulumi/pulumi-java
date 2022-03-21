@@ -108,22 +108,21 @@ public final class CxFlowTransitionRouteTriggerFulfillment {
             this.messages = messages;
             return this;
         }
-
+        public Builder messages(CxFlowTransitionRouteTriggerFulfillmentMessage... messages) {
+            return messages(List.of(messages));
+        }
         public Builder returnPartialResponses(@Nullable Boolean returnPartialResponses) {
             this.returnPartialResponses = returnPartialResponses;
             return this;
         }
-
         public Builder tag(@Nullable String tag) {
             this.tag = tag;
             return this;
         }
-
         public Builder webhook(@Nullable String webhook) {
             this.webhook = webhook;
             return this;
-        }
-        public CxFlowTransitionRouteTriggerFulfillment build() {
+        }        public CxFlowTransitionRouteTriggerFulfillment build() {
             return new CxFlowTransitionRouteTriggerFulfillment(messages, returnPartialResponses, tag, webhook);
         }
     }

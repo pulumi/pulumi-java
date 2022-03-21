@@ -74,22 +74,18 @@ public final class DatasetCreateRequestQueryArgs extends io.pulumi.resources.Res
             this.datastoreName = datastoreName;
             return this;
         }
-
         public Builder datastoreName(@Nullable String datastoreName) {
             this.datastoreName = Output.ofNullable(datastoreName);
             return this;
         }
-
         public Builder query(@Nullable Output<String> query) {
             this.query = query;
             return this;
         }
-
         public Builder query(@Nullable String query) {
             this.query = Output.ofNullable(query);
             return this;
-        }
-        public DatasetCreateRequestQueryArgs build() {
+        }        public DatasetCreateRequestQueryArgs build() {
             return new DatasetCreateRequestQueryArgs(datastoreName, query);
         }
     }

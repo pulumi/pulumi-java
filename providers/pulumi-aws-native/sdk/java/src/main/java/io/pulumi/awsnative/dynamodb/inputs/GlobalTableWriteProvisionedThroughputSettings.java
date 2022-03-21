@@ -52,8 +52,7 @@ public final class GlobalTableWriteProvisionedThroughputSettings extends io.pulu
         public Builder writeCapacityAutoScalingSettings(@Nullable GlobalTableCapacityAutoScalingSettings writeCapacityAutoScalingSettings) {
             this.writeCapacityAutoScalingSettings = writeCapacityAutoScalingSettings;
             return this;
-        }
-        public GlobalTableWriteProvisionedThroughputSettings build() {
+        }        public GlobalTableWriteProvisionedThroughputSettings build() {
             return new GlobalTableWriteProvisionedThroughputSettings(writeCapacityAutoScalingSettings);
         }
     }

@@ -78,22 +78,18 @@ public final class ResourceGroupValueArgs extends io.pulumi.resources.ResourceAr
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
-        }
-        public ResourceGroupValueArgs build() {
+        }        public ResourceGroupValueArgs build() {
             return new ResourceGroupValueArgs(location, name);
         }
     }

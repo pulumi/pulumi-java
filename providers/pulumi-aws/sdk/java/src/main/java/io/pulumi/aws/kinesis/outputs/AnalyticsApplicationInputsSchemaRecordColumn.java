@@ -87,17 +87,14 @@ public final class AnalyticsApplicationInputsSchemaRecordColumn {
             this.mapping = mapping;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder sqlType(String sqlType) {
             this.sqlType = Objects.requireNonNull(sqlType);
             return this;
-        }
-        public AnalyticsApplicationInputsSchemaRecordColumn build() {
+        }        public AnalyticsApplicationInputsSchemaRecordColumn build() {
             return new AnalyticsApplicationInputsSchemaRecordColumn(mapping, name, sqlType);
         }
     }

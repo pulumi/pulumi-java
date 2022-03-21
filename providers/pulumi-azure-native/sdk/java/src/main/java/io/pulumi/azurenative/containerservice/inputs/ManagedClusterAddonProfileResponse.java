@@ -97,17 +97,14 @@ public final class ManagedClusterAddonProfileResponse extends io.pulumi.resource
             this.config = config;
             return this;
         }
-
         public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public Builder identity(ManagedClusterAddonProfileResponseIdentity identity) {
             this.identity = Objects.requireNonNull(identity);
             return this;
-        }
-        public ManagedClusterAddonProfileResponse build() {
+        }        public ManagedClusterAddonProfileResponse build() {
             return new ManagedClusterAddonProfileResponse(config, enabled, identity);
         }
     }

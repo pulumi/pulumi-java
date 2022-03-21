@@ -50,8 +50,7 @@ public final class GetResourceDataSyncArgs extends io.pulumi.resources.InvokeArg
         public Builder syncName(String syncName) {
             this.syncName = Objects.requireNonNull(syncName);
             return this;
-        }
-        public GetResourceDataSyncArgs build() {
+        }        public GetResourceDataSyncArgs build() {
             return new GetResourceDataSyncArgs(syncName);
         }
     }

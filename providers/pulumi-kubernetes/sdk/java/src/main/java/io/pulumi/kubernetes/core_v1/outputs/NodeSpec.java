@@ -155,37 +155,36 @@ public final class NodeSpec {
             this.configSource = configSource;
             return this;
         }
-
         public Builder externalID(@Nullable String externalID) {
             this.externalID = externalID;
             return this;
         }
-
         public Builder podCIDR(@Nullable String podCIDR) {
             this.podCIDR = podCIDR;
             return this;
         }
-
         public Builder podCIDRs(@Nullable List<String> podCIDRs) {
             this.podCIDRs = podCIDRs;
             return this;
         }
-
+        public Builder podCIDRs(String... podCIDRs) {
+            return podCIDRs(List.of(podCIDRs));
+        }
         public Builder providerID(@Nullable String providerID) {
             this.providerID = providerID;
             return this;
         }
-
         public Builder taints(@Nullable List<Taint> taints) {
             this.taints = taints;
             return this;
         }
-
+        public Builder taints(Taint... taints) {
+            return taints(List.of(taints));
+        }
         public Builder unschedulable(@Nullable Boolean unschedulable) {
             this.unschedulable = unschedulable;
             return this;
-        }
-        public NodeSpec build() {
+        }        public NodeSpec build() {
             return new NodeSpec(configSource, externalID, podCIDR, podCIDRs, providerID, taints, unschedulable);
         }
     }

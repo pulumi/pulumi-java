@@ -115,42 +115,37 @@ public final class ManagedZoneDnssecConfigArgs extends io.pulumi.resources.Resou
             this.defaultKeySpecs = defaultKeySpecs;
             return this;
         }
-
         public Builder defaultKeySpecs(@Nullable List<ManagedZoneDnssecConfigDefaultKeySpecArgs> defaultKeySpecs) {
             this.defaultKeySpecs = Output.ofNullable(defaultKeySpecs);
             return this;
         }
-
+        public Builder defaultKeySpecs(ManagedZoneDnssecConfigDefaultKeySpecArgs... defaultKeySpecs) {
+            return defaultKeySpecs(List.of(defaultKeySpecs));
+        }
         public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder nonExistence(@Nullable Output<String> nonExistence) {
             this.nonExistence = nonExistence;
             return this;
         }
-
         public Builder nonExistence(@Nullable String nonExistence) {
             this.nonExistence = Output.ofNullable(nonExistence);
             return this;
         }
-
         public Builder state(@Nullable Output<String> state) {
             this.state = state;
             return this;
         }
-
         public Builder state(@Nullable String state) {
             this.state = Output.ofNullable(state);
             return this;
-        }
-        public ManagedZoneDnssecConfigArgs build() {
+        }        public ManagedZoneDnssecConfigArgs build() {
             return new ManagedZoneDnssecConfigArgs(defaultKeySpecs, kind, nonExistence, state);
         }
     }

@@ -54,12 +54,16 @@ public final class AnomalyDetectorVpcConfiguration {
             this.securityGroupIdList = Objects.requireNonNull(securityGroupIdList);
             return this;
         }
-
+        public Builder securityGroupIdList(String... securityGroupIdList) {
+            return securityGroupIdList(List.of(securityGroupIdList));
+        }
         public Builder subnetIdList(List<String> subnetIdList) {
             this.subnetIdList = Objects.requireNonNull(subnetIdList);
             return this;
         }
-        public AnomalyDetectorVpcConfiguration build() {
+        public Builder subnetIdList(String... subnetIdList) {
+            return subnetIdList(List.of(subnetIdList));
+        }        public AnomalyDetectorVpcConfiguration build() {
             return new AnomalyDetectorVpcConfiguration(securityGroupIdList, subnetIdList);
         }
     }

@@ -53,8 +53,7 @@ public final class SetupScriptsResponse {
         public Builder scripts(@Nullable ScriptsToExecuteResponse scripts) {
             this.scripts = scripts;
             return this;
-        }
-        public SetupScriptsResponse build() {
+        }        public SetupScriptsResponse build() {
             return new SetupScriptsResponse(scripts);
         }
     }

@@ -310,82 +310,75 @@ public final class OrderItemDetailsResponse extends io.pulumi.resources.InvokeAr
             this.cancellationReason = Objects.requireNonNull(cancellationReason);
             return this;
         }
-
         public Builder cancellationStatus(String cancellationStatus) {
             this.cancellationStatus = Objects.requireNonNull(cancellationStatus);
             return this;
         }
-
         public Builder currentStage(StageDetailsResponse currentStage) {
             this.currentStage = Objects.requireNonNull(currentStage);
             return this;
         }
-
         public Builder deletionStatus(String deletionStatus) {
             this.deletionStatus = Objects.requireNonNull(deletionStatus);
             return this;
         }
-
         public Builder error(ErrorDetailResponse error) {
             this.error = Objects.requireNonNull(error);
             return this;
         }
-
         public Builder forwardShippingDetails(ForwardShippingDetailsResponse forwardShippingDetails) {
             this.forwardShippingDetails = Objects.requireNonNull(forwardShippingDetails);
             return this;
         }
-
         public Builder managementRpDetails(ResourceProviderDetailsResponse managementRpDetails) {
             this.managementRpDetails = Objects.requireNonNull(managementRpDetails);
             return this;
         }
-
         public Builder managementRpDetailsList(List<ResourceProviderDetailsResponse> managementRpDetailsList) {
             this.managementRpDetailsList = Objects.requireNonNull(managementRpDetailsList);
             return this;
         }
-
+        public Builder managementRpDetailsList(ResourceProviderDetailsResponse... managementRpDetailsList) {
+            return managementRpDetailsList(List.of(managementRpDetailsList));
+        }
         public Builder notificationEmailList(@Nullable List<String> notificationEmailList) {
             this.notificationEmailList = notificationEmailList;
             return this;
         }
-
+        public Builder notificationEmailList(String... notificationEmailList) {
+            return notificationEmailList(List.of(notificationEmailList));
+        }
         public Builder orderItemStageHistory(List<StageDetailsResponse> orderItemStageHistory) {
             this.orderItemStageHistory = Objects.requireNonNull(orderItemStageHistory);
             return this;
         }
-
+        public Builder orderItemStageHistory(StageDetailsResponse... orderItemStageHistory) {
+            return orderItemStageHistory(List.of(orderItemStageHistory));
+        }
         public Builder orderItemType(String orderItemType) {
             this.orderItemType = Objects.requireNonNull(orderItemType);
             return this;
         }
-
         public Builder preferences(@Nullable PreferencesResponse preferences) {
             this.preferences = preferences;
             return this;
         }
-
         public Builder productDetails(ProductDetailsResponse productDetails) {
             this.productDetails = Objects.requireNonNull(productDetails);
             return this;
         }
-
         public Builder returnReason(String returnReason) {
             this.returnReason = Objects.requireNonNull(returnReason);
             return this;
         }
-
         public Builder returnStatus(String returnStatus) {
             this.returnStatus = Objects.requireNonNull(returnStatus);
             return this;
         }
-
         public Builder reverseShippingDetails(ReverseShippingDetailsResponse reverseShippingDetails) {
             this.reverseShippingDetails = Objects.requireNonNull(reverseShippingDetails);
             return this;
-        }
-        public OrderItemDetailsResponse build() {
+        }        public OrderItemDetailsResponse build() {
             return new OrderItemDetailsResponse(cancellationReason, cancellationStatus, currentStage, deletionStatus, error, forwardShippingDetails, managementRpDetails, managementRpDetailsList, notificationEmailList, orderItemStageHistory, orderItemType, preferences, productDetails, returnReason, returnStatus, reverseShippingDetails);
         }
     }

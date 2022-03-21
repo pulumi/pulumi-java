@@ -51,8 +51,7 @@ public final class WebAclRuleStatementAndStatementStatementNotStatementStatement
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public WebAclRuleStatementAndStatementStatementNotStatementStatementNotStatementStatementSizeConstraintStatementFieldToMatchSingleHeader build() {
+        }        public WebAclRuleStatementAndStatementStatementNotStatementStatementNotStatementStatementSizeConstraintStatementFieldToMatchSingleHeader build() {
             return new WebAclRuleStatementAndStatementStatementNotStatementStatementNotStatementStatementSizeConstraintStatementFieldToMatchSingleHeader(name);
         }
     }

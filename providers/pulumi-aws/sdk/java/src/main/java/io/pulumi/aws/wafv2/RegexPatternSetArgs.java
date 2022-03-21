@@ -125,52 +125,45 @@ public final class RegexPatternSetArgs extends io.pulumi.resources.ResourceArgs 
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder regularExpressions(@Nullable Output<List<RegexPatternSetRegularExpressionArgs>> regularExpressions) {
             this.regularExpressions = regularExpressions;
             return this;
         }
-
         public Builder regularExpressions(@Nullable List<RegexPatternSetRegularExpressionArgs> regularExpressions) {
             this.regularExpressions = Output.ofNullable(regularExpressions);
             return this;
         }
-
+        public Builder regularExpressions(RegexPatternSetRegularExpressionArgs... regularExpressions) {
+            return regularExpressions(List.of(regularExpressions));
+        }
         public Builder scope(Output<String> scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
-
         public Builder scope(String scope) {
             this.scope = Output.of(Objects.requireNonNull(scope));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public RegexPatternSetArgs build() {
+        }        public RegexPatternSetArgs build() {
             return new RegexPatternSetArgs(description, name, regularExpressions, scope, tags);
         }
     }

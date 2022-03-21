@@ -86,17 +86,14 @@ public final class LocalDiskResponse {
             this.diskCount = Objects.requireNonNull(diskCount);
             return this;
         }
-
         public Builder diskSizeGb(Integer diskSizeGb) {
             this.diskSizeGb = Objects.requireNonNull(diskSizeGb);
             return this;
         }
-
         public Builder diskType(String diskType) {
             this.diskType = Objects.requireNonNull(diskType);
             return this;
-        }
-        public LocalDiskResponse build() {
+        }        public LocalDiskResponse build() {
             return new LocalDiskResponse(diskCount, diskSizeGb, diskType);
         }
     }

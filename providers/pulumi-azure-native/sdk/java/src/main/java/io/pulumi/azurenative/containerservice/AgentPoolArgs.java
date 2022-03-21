@@ -620,352 +620,288 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
             this.agentPoolName = agentPoolName;
             return this;
         }
-
         public Builder agentPoolName(@Nullable String agentPoolName) {
             this.agentPoolName = Output.ofNullable(agentPoolName);
             return this;
         }
-
         public Builder availabilityZones(@Nullable Output<List<String>> availabilityZones) {
             this.availabilityZones = availabilityZones;
             return this;
         }
-
         public Builder availabilityZones(@Nullable List<String> availabilityZones) {
             this.availabilityZones = Output.ofNullable(availabilityZones);
             return this;
         }
-
+        public Builder availabilityZones(String... availabilityZones) {
+            return availabilityZones(List.of(availabilityZones));
+        }
         public Builder count(@Nullable Output<Integer> count) {
             this.count = count;
             return this;
         }
-
         public Builder count(@Nullable Integer count) {
             this.count = Output.ofNullable(count);
             return this;
         }
-
         public Builder enableAutoScaling(@Nullable Output<Boolean> enableAutoScaling) {
             this.enableAutoScaling = enableAutoScaling;
             return this;
         }
-
         public Builder enableAutoScaling(@Nullable Boolean enableAutoScaling) {
             this.enableAutoScaling = Output.ofNullable(enableAutoScaling);
             return this;
         }
-
         public Builder enableEncryptionAtHost(@Nullable Output<Boolean> enableEncryptionAtHost) {
             this.enableEncryptionAtHost = enableEncryptionAtHost;
             return this;
         }
-
         public Builder enableEncryptionAtHost(@Nullable Boolean enableEncryptionAtHost) {
             this.enableEncryptionAtHost = Output.ofNullable(enableEncryptionAtHost);
             return this;
         }
-
         public Builder enableFIPS(@Nullable Output<Boolean> enableFIPS) {
             this.enableFIPS = enableFIPS;
             return this;
         }
-
         public Builder enableFIPS(@Nullable Boolean enableFIPS) {
             this.enableFIPS = Output.ofNullable(enableFIPS);
             return this;
         }
-
         public Builder enableNodePublicIP(@Nullable Output<Boolean> enableNodePublicIP) {
             this.enableNodePublicIP = enableNodePublicIP;
             return this;
         }
-
         public Builder enableNodePublicIP(@Nullable Boolean enableNodePublicIP) {
             this.enableNodePublicIP = Output.ofNullable(enableNodePublicIP);
             return this;
         }
-
         public Builder gpuInstanceProfile(@Nullable Output<Either<String,GPUInstanceProfile>> gpuInstanceProfile) {
             this.gpuInstanceProfile = gpuInstanceProfile;
             return this;
         }
-
         public Builder gpuInstanceProfile(@Nullable Either<String,GPUInstanceProfile> gpuInstanceProfile) {
             this.gpuInstanceProfile = Output.ofNullable(gpuInstanceProfile);
             return this;
         }
-
         public Builder kubeletConfig(@Nullable Output<KubeletConfigArgs> kubeletConfig) {
             this.kubeletConfig = kubeletConfig;
             return this;
         }
-
         public Builder kubeletConfig(@Nullable KubeletConfigArgs kubeletConfig) {
             this.kubeletConfig = Output.ofNullable(kubeletConfig);
             return this;
         }
-
         public Builder kubeletDiskType(@Nullable Output<Either<String,KubeletDiskType>> kubeletDiskType) {
             this.kubeletDiskType = kubeletDiskType;
             return this;
         }
-
         public Builder kubeletDiskType(@Nullable Either<String,KubeletDiskType> kubeletDiskType) {
             this.kubeletDiskType = Output.ofNullable(kubeletDiskType);
             return this;
         }
-
         public Builder linuxOSConfig(@Nullable Output<LinuxOSConfigArgs> linuxOSConfig) {
             this.linuxOSConfig = linuxOSConfig;
             return this;
         }
-
         public Builder linuxOSConfig(@Nullable LinuxOSConfigArgs linuxOSConfig) {
             this.linuxOSConfig = Output.ofNullable(linuxOSConfig);
             return this;
         }
-
         public Builder maxCount(@Nullable Output<Integer> maxCount) {
             this.maxCount = maxCount;
             return this;
         }
-
         public Builder maxCount(@Nullable Integer maxCount) {
             this.maxCount = Output.ofNullable(maxCount);
             return this;
         }
-
         public Builder maxPods(@Nullable Output<Integer> maxPods) {
             this.maxPods = maxPods;
             return this;
         }
-
         public Builder maxPods(@Nullable Integer maxPods) {
             this.maxPods = Output.ofNullable(maxPods);
             return this;
         }
-
         public Builder minCount(@Nullable Output<Integer> minCount) {
             this.minCount = minCount;
             return this;
         }
-
         public Builder minCount(@Nullable Integer minCount) {
             this.minCount = Output.ofNullable(minCount);
             return this;
         }
-
         public Builder mode(@Nullable Output<Either<String,AgentPoolMode>> mode) {
             this.mode = mode;
             return this;
         }
-
         public Builder mode(@Nullable Either<String,AgentPoolMode> mode) {
             this.mode = Output.ofNullable(mode);
             return this;
         }
-
         public Builder nodeLabels(@Nullable Output<Map<String,String>> nodeLabels) {
             this.nodeLabels = nodeLabels;
             return this;
         }
-
         public Builder nodeLabels(@Nullable Map<String,String> nodeLabels) {
             this.nodeLabels = Output.ofNullable(nodeLabels);
             return this;
         }
-
         public Builder nodePublicIPPrefixID(@Nullable Output<String> nodePublicIPPrefixID) {
             this.nodePublicIPPrefixID = nodePublicIPPrefixID;
             return this;
         }
-
         public Builder nodePublicIPPrefixID(@Nullable String nodePublicIPPrefixID) {
             this.nodePublicIPPrefixID = Output.ofNullable(nodePublicIPPrefixID);
             return this;
         }
-
         public Builder nodeTaints(@Nullable Output<List<String>> nodeTaints) {
             this.nodeTaints = nodeTaints;
             return this;
         }
-
         public Builder nodeTaints(@Nullable List<String> nodeTaints) {
             this.nodeTaints = Output.ofNullable(nodeTaints);
             return this;
         }
-
+        public Builder nodeTaints(String... nodeTaints) {
+            return nodeTaints(List.of(nodeTaints));
+        }
         public Builder orchestratorVersion(@Nullable Output<String> orchestratorVersion) {
             this.orchestratorVersion = orchestratorVersion;
             return this;
         }
-
         public Builder orchestratorVersion(@Nullable String orchestratorVersion) {
             this.orchestratorVersion = Output.ofNullable(orchestratorVersion);
             return this;
         }
-
         public Builder osDiskSizeGB(@Nullable Output<Integer> osDiskSizeGB) {
             this.osDiskSizeGB = osDiskSizeGB;
             return this;
         }
-
         public Builder osDiskSizeGB(@Nullable Integer osDiskSizeGB) {
             this.osDiskSizeGB = Output.ofNullable(osDiskSizeGB);
             return this;
         }
-
         public Builder osDiskType(@Nullable Output<Either<String,OSDiskType>> osDiskType) {
             this.osDiskType = osDiskType;
             return this;
         }
-
         public Builder osDiskType(@Nullable Either<String,OSDiskType> osDiskType) {
             this.osDiskType = Output.ofNullable(osDiskType);
             return this;
         }
-
         public Builder osSKU(@Nullable Output<Either<String,OSSKU>> osSKU) {
             this.osSKU = osSKU;
             return this;
         }
-
         public Builder osSKU(@Nullable Either<String,OSSKU> osSKU) {
             this.osSKU = Output.ofNullable(osSKU);
             return this;
         }
-
         public Builder osType(@Nullable Output<Either<String,OSType>> osType) {
             this.osType = osType;
             return this;
         }
-
         public Builder osType(@Nullable Either<String,OSType> osType) {
             this.osType = Output.ofNullable(osType);
             return this;
         }
-
         public Builder podSubnetID(@Nullable Output<String> podSubnetID) {
             this.podSubnetID = podSubnetID;
             return this;
         }
-
         public Builder podSubnetID(@Nullable String podSubnetID) {
             this.podSubnetID = Output.ofNullable(podSubnetID);
             return this;
         }
-
         public Builder proximityPlacementGroupID(@Nullable Output<String> proximityPlacementGroupID) {
             this.proximityPlacementGroupID = proximityPlacementGroupID;
             return this;
         }
-
         public Builder proximityPlacementGroupID(@Nullable String proximityPlacementGroupID) {
             this.proximityPlacementGroupID = Output.ofNullable(proximityPlacementGroupID);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder resourceName(Output<String> resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
         }
-
         public Builder resourceName(String resourceName) {
             this.resourceName = Output.of(Objects.requireNonNull(resourceName));
             return this;
         }
-
         public Builder scaleSetEvictionPolicy(@Nullable Output<Either<String,ScaleSetEvictionPolicy>> scaleSetEvictionPolicy) {
             this.scaleSetEvictionPolicy = scaleSetEvictionPolicy;
             return this;
         }
-
         public Builder scaleSetEvictionPolicy(@Nullable Either<String,ScaleSetEvictionPolicy> scaleSetEvictionPolicy) {
             this.scaleSetEvictionPolicy = Output.ofNullable(scaleSetEvictionPolicy);
             return this;
         }
-
         public Builder scaleSetPriority(@Nullable Output<Either<String,ScaleSetPriority>> scaleSetPriority) {
             this.scaleSetPriority = scaleSetPriority;
             return this;
         }
-
         public Builder scaleSetPriority(@Nullable Either<String,ScaleSetPriority> scaleSetPriority) {
             this.scaleSetPriority = Output.ofNullable(scaleSetPriority);
             return this;
         }
-
         public Builder spotMaxPrice(@Nullable Output<Double> spotMaxPrice) {
             this.spotMaxPrice = spotMaxPrice;
             return this;
         }
-
         public Builder spotMaxPrice(@Nullable Double spotMaxPrice) {
             this.spotMaxPrice = Output.ofNullable(spotMaxPrice);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder type(@Nullable Output<Either<String,AgentPoolType>> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable Either<String,AgentPoolType> type) {
             this.type = Output.ofNullable(type);
             return this;
         }
-
         public Builder upgradeSettings(@Nullable Output<AgentPoolUpgradeSettingsArgs> upgradeSettings) {
             this.upgradeSettings = upgradeSettings;
             return this;
         }
-
         public Builder upgradeSettings(@Nullable AgentPoolUpgradeSettingsArgs upgradeSettings) {
             this.upgradeSettings = Output.ofNullable(upgradeSettings);
             return this;
         }
-
         public Builder vmSize(@Nullable Output<String> vmSize) {
             this.vmSize = vmSize;
             return this;
         }
-
         public Builder vmSize(@Nullable String vmSize) {
             this.vmSize = Output.ofNullable(vmSize);
             return this;
         }
-
         public Builder vnetSubnetID(@Nullable Output<String> vnetSubnetID) {
             this.vnetSubnetID = vnetSubnetID;
             return this;
         }
-
         public Builder vnetSubnetID(@Nullable String vnetSubnetID) {
             this.vnetSubnetID = Output.ofNullable(vnetSubnetID);
             return this;
-        }
-        public AgentPoolArgs build() {
+        }        public AgentPoolArgs build() {
             return new AgentPoolArgs(agentPoolName, availabilityZones, count, enableAutoScaling, enableEncryptionAtHost, enableFIPS, enableNodePublicIP, gpuInstanceProfile, kubeletConfig, kubeletDiskType, linuxOSConfig, maxCount, maxPods, minCount, mode, nodeLabels, nodePublicIPPrefixID, nodeTaints, orchestratorVersion, osDiskSizeGB, osDiskType, osSKU, osType, podSubnetID, proximityPlacementGroupID, resourceGroupName, resourceName, scaleSetEvictionPolicy, scaleSetPriority, spotMaxPrice, tags, type, upgradeSettings, vmSize, vnetSubnetID);
         }
     }

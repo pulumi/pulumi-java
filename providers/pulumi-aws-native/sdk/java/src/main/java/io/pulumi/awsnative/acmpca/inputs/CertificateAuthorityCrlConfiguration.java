@@ -108,27 +108,22 @@ public final class CertificateAuthorityCrlConfiguration extends io.pulumi.resour
             this.customCname = customCname;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
-
         public Builder expirationInDays(@Nullable Integer expirationInDays) {
             this.expirationInDays = expirationInDays;
             return this;
         }
-
         public Builder s3BucketName(@Nullable String s3BucketName) {
             this.s3BucketName = s3BucketName;
             return this;
         }
-
         public Builder s3ObjectAcl(@Nullable String s3ObjectAcl) {
             this.s3ObjectAcl = s3ObjectAcl;
             return this;
-        }
-        public CertificateAuthorityCrlConfiguration build() {
+        }        public CertificateAuthorityCrlConfiguration build() {
             return new CertificateAuthorityCrlConfiguration(customCname, enabled, expirationInDays, s3BucketName, s3ObjectAcl);
         }
     }

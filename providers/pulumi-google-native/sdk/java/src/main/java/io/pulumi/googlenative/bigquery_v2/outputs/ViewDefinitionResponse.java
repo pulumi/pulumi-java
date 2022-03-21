@@ -104,22 +104,21 @@ public final class ViewDefinitionResponse {
             this.query = Objects.requireNonNull(query);
             return this;
         }
-
         public Builder useExplicitColumnNames(Boolean useExplicitColumnNames) {
             this.useExplicitColumnNames = Objects.requireNonNull(useExplicitColumnNames);
             return this;
         }
-
         public Builder useLegacySql(Boolean useLegacySql) {
             this.useLegacySql = Objects.requireNonNull(useLegacySql);
             return this;
         }
-
         public Builder userDefinedFunctionResources(List<UserDefinedFunctionResourceResponse> userDefinedFunctionResources) {
             this.userDefinedFunctionResources = Objects.requireNonNull(userDefinedFunctionResources);
             return this;
         }
-        public ViewDefinitionResponse build() {
+        public Builder userDefinedFunctionResources(UserDefinedFunctionResourceResponse... userDefinedFunctionResources) {
+            return userDefinedFunctionResources(List.of(userDefinedFunctionResources));
+        }        public ViewDefinitionResponse build() {
             return new ViewDefinitionResponse(query, useExplicitColumnNames, useLegacySql, userDefinedFunctionResources);
         }
     }

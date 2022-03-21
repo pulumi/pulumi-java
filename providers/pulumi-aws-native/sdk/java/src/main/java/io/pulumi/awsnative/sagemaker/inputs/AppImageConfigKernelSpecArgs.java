@@ -74,22 +74,18 @@ public final class AppImageConfigKernelSpecArgs extends io.pulumi.resources.Reso
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
-        }
-        public AppImageConfigKernelSpecArgs build() {
+        }        public AppImageConfigKernelSpecArgs build() {
             return new AppImageConfigKernelSpecArgs(displayName, name);
         }
     }

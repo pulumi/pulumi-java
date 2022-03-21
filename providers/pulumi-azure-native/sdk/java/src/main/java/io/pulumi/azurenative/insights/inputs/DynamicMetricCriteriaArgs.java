@@ -231,112 +231,93 @@ public final class DynamicMetricCriteriaArgs extends io.pulumi.resources.Resourc
             this.alertSensitivity = Objects.requireNonNull(alertSensitivity);
             return this;
         }
-
         public Builder alertSensitivity(Either<String,DynamicThresholdSensitivity> alertSensitivity) {
             this.alertSensitivity = Output.of(Objects.requireNonNull(alertSensitivity));
             return this;
         }
-
         public Builder criterionType(Output<String> criterionType) {
             this.criterionType = Objects.requireNonNull(criterionType);
             return this;
         }
-
         public Builder criterionType(String criterionType) {
             this.criterionType = Output.of(Objects.requireNonNull(criterionType));
             return this;
         }
-
         public Builder dimensions(@Nullable Output<List<MetricDimensionArgs>> dimensions) {
             this.dimensions = dimensions;
             return this;
         }
-
         public Builder dimensions(@Nullable List<MetricDimensionArgs> dimensions) {
             this.dimensions = Output.ofNullable(dimensions);
             return this;
         }
-
+        public Builder dimensions(MetricDimensionArgs... dimensions) {
+            return dimensions(List.of(dimensions));
+        }
         public Builder failingPeriods(Output<DynamicThresholdFailingPeriodsArgs> failingPeriods) {
             this.failingPeriods = Objects.requireNonNull(failingPeriods);
             return this;
         }
-
         public Builder failingPeriods(DynamicThresholdFailingPeriodsArgs failingPeriods) {
             this.failingPeriods = Output.of(Objects.requireNonNull(failingPeriods));
             return this;
         }
-
         public Builder ignoreDataBefore(@Nullable Output<String> ignoreDataBefore) {
             this.ignoreDataBefore = ignoreDataBefore;
             return this;
         }
-
         public Builder ignoreDataBefore(@Nullable String ignoreDataBefore) {
             this.ignoreDataBefore = Output.ofNullable(ignoreDataBefore);
             return this;
         }
-
         public Builder metricName(Output<String> metricName) {
             this.metricName = Objects.requireNonNull(metricName);
             return this;
         }
-
         public Builder metricName(String metricName) {
             this.metricName = Output.of(Objects.requireNonNull(metricName));
             return this;
         }
-
         public Builder metricNamespace(@Nullable Output<String> metricNamespace) {
             this.metricNamespace = metricNamespace;
             return this;
         }
-
         public Builder metricNamespace(@Nullable String metricNamespace) {
             this.metricNamespace = Output.ofNullable(metricNamespace);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder operator(Output<Either<String,DynamicThresholdOperator>> operator) {
             this.operator = Objects.requireNonNull(operator);
             return this;
         }
-
         public Builder operator(Either<String,DynamicThresholdOperator> operator) {
             this.operator = Output.of(Objects.requireNonNull(operator));
             return this;
         }
-
         public Builder skipMetricValidation(@Nullable Output<Boolean> skipMetricValidation) {
             this.skipMetricValidation = skipMetricValidation;
             return this;
         }
-
         public Builder skipMetricValidation(@Nullable Boolean skipMetricValidation) {
             this.skipMetricValidation = Output.ofNullable(skipMetricValidation);
             return this;
         }
-
         public Builder timeAggregation(Output<Either<String,AggregationTypeEnum>> timeAggregation) {
             this.timeAggregation = Objects.requireNonNull(timeAggregation);
             return this;
         }
-
         public Builder timeAggregation(Either<String,AggregationTypeEnum> timeAggregation) {
             this.timeAggregation = Output.of(Objects.requireNonNull(timeAggregation));
             return this;
-        }
-        public DynamicMetricCriteriaArgs build() {
+        }        public DynamicMetricCriteriaArgs build() {
             return new DynamicMetricCriteriaArgs(alertSensitivity, criterionType, dimensions, failingPeriods, ignoreDataBefore, metricName, metricNamespace, name, operator, skipMetricValidation, timeAggregation);
         }
     }

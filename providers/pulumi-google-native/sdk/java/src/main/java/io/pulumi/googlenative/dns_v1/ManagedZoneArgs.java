@@ -340,192 +340,157 @@ public final class ManagedZoneArgs extends io.pulumi.resources.ResourceArgs {
             this.clientOperationId = clientOperationId;
             return this;
         }
-
         public Builder clientOperationId(@Nullable String clientOperationId) {
             this.clientOperationId = Output.ofNullable(clientOperationId);
             return this;
         }
-
         public Builder cloudLoggingConfig(@Nullable Output<ManagedZoneCloudLoggingConfigArgs> cloudLoggingConfig) {
             this.cloudLoggingConfig = cloudLoggingConfig;
             return this;
         }
-
         public Builder cloudLoggingConfig(@Nullable ManagedZoneCloudLoggingConfigArgs cloudLoggingConfig) {
             this.cloudLoggingConfig = Output.ofNullable(cloudLoggingConfig);
             return this;
         }
-
         public Builder creationTime(@Nullable Output<String> creationTime) {
             this.creationTime = creationTime;
             return this;
         }
-
         public Builder creationTime(@Nullable String creationTime) {
             this.creationTime = Output.ofNullable(creationTime);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder dnsName(@Nullable Output<String> dnsName) {
             this.dnsName = dnsName;
             return this;
         }
-
         public Builder dnsName(@Nullable String dnsName) {
             this.dnsName = Output.ofNullable(dnsName);
             return this;
         }
-
         public Builder dnssecConfig(@Nullable Output<ManagedZoneDnsSecConfigArgs> dnssecConfig) {
             this.dnssecConfig = dnssecConfig;
             return this;
         }
-
         public Builder dnssecConfig(@Nullable ManagedZoneDnsSecConfigArgs dnssecConfig) {
             this.dnssecConfig = Output.ofNullable(dnssecConfig);
             return this;
         }
-
         public Builder forwardingConfig(@Nullable Output<ManagedZoneForwardingConfigArgs> forwardingConfig) {
             this.forwardingConfig = forwardingConfig;
             return this;
         }
-
         public Builder forwardingConfig(@Nullable ManagedZoneForwardingConfigArgs forwardingConfig) {
             this.forwardingConfig = Output.ofNullable(forwardingConfig);
             return this;
         }
-
         public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder nameServerSet(@Nullable Output<String> nameServerSet) {
             this.nameServerSet = nameServerSet;
             return this;
         }
-
         public Builder nameServerSet(@Nullable String nameServerSet) {
             this.nameServerSet = Output.ofNullable(nameServerSet);
             return this;
         }
-
         public Builder nameServers(@Nullable Output<List<String>> nameServers) {
             this.nameServers = nameServers;
             return this;
         }
-
         public Builder nameServers(@Nullable List<String> nameServers) {
             this.nameServers = Output.ofNullable(nameServers);
             return this;
         }
-
+        public Builder nameServers(String... nameServers) {
+            return nameServers(List.of(nameServers));
+        }
         public Builder peeringConfig(@Nullable Output<ManagedZonePeeringConfigArgs> peeringConfig) {
             this.peeringConfig = peeringConfig;
             return this;
         }
-
         public Builder peeringConfig(@Nullable ManagedZonePeeringConfigArgs peeringConfig) {
             this.peeringConfig = Output.ofNullable(peeringConfig);
             return this;
         }
-
         public Builder privateVisibilityConfig(@Nullable Output<ManagedZonePrivateVisibilityConfigArgs> privateVisibilityConfig) {
             this.privateVisibilityConfig = privateVisibilityConfig;
             return this;
         }
-
         public Builder privateVisibilityConfig(@Nullable ManagedZonePrivateVisibilityConfigArgs privateVisibilityConfig) {
             this.privateVisibilityConfig = Output.ofNullable(privateVisibilityConfig);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder reverseLookupConfig(@Nullable Output<ManagedZoneReverseLookupConfigArgs> reverseLookupConfig) {
             this.reverseLookupConfig = reverseLookupConfig;
             return this;
         }
-
         public Builder reverseLookupConfig(@Nullable ManagedZoneReverseLookupConfigArgs reverseLookupConfig) {
             this.reverseLookupConfig = Output.ofNullable(reverseLookupConfig);
             return this;
         }
-
         public Builder serviceDirectoryConfig(@Nullable Output<ManagedZoneServiceDirectoryConfigArgs> serviceDirectoryConfig) {
             this.serviceDirectoryConfig = serviceDirectoryConfig;
             return this;
         }
-
         public Builder serviceDirectoryConfig(@Nullable ManagedZoneServiceDirectoryConfigArgs serviceDirectoryConfig) {
             this.serviceDirectoryConfig = Output.ofNullable(serviceDirectoryConfig);
             return this;
         }
-
         public Builder visibility(@Nullable Output<ManagedZoneVisibility> visibility) {
             this.visibility = visibility;
             return this;
         }
-
         public Builder visibility(@Nullable ManagedZoneVisibility visibility) {
             this.visibility = Output.ofNullable(visibility);
             return this;
-        }
-        public ManagedZoneArgs build() {
+        }        public ManagedZoneArgs build() {
             return new ManagedZoneArgs(clientOperationId, cloudLoggingConfig, creationTime, description, dnsName, dnssecConfig, forwardingConfig, id, kind, labels, name, nameServerSet, nameServers, peeringConfig, privateVisibilityConfig, project, reverseLookupConfig, serviceDirectoryConfig, visibility);
         }
     }

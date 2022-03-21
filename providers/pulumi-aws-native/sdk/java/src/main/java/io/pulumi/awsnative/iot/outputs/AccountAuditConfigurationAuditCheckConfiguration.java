@@ -53,8 +53,7 @@ public final class AccountAuditConfigurationAuditCheckConfiguration {
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
-        }
-        public AccountAuditConfigurationAuditCheckConfiguration build() {
+        }        public AccountAuditConfigurationAuditCheckConfiguration build() {
             return new AccountAuditConfigurationAuditCheckConfiguration(enabled);
         }
     }

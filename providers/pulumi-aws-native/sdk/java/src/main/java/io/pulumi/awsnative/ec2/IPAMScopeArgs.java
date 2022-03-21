@@ -88,32 +88,29 @@ public final class IPAMScopeArgs extends io.pulumi.resources.ResourceArgs {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder ipamId(Output<String> ipamId) {
             this.ipamId = Objects.requireNonNull(ipamId);
             return this;
         }
-
         public Builder ipamId(String ipamId) {
             this.ipamId = Output.of(Objects.requireNonNull(ipamId));
             return this;
         }
-
         public Builder tags(@Nullable Output<List<IPAMScopeTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<IPAMScopeTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public IPAMScopeArgs build() {
+        public Builder tags(IPAMScopeTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public IPAMScopeArgs build() {
             return new IPAMScopeArgs(description, ipamId, tags);
         }
     }

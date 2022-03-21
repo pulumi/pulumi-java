@@ -51,8 +51,7 @@ public final class GatewayRouteSpecGrpcRouteAction {
         public Builder target(GatewayRouteSpecGrpcRouteActionTarget target) {
             this.target = Objects.requireNonNull(target);
             return this;
-        }
-        public GatewayRouteSpecGrpcRouteAction build() {
+        }        public GatewayRouteSpecGrpcRouteAction build() {
             return new GatewayRouteSpecGrpcRouteAction(target);
         }
     }

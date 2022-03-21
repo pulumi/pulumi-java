@@ -114,42 +114,37 @@ public final class DaprArgs extends io.pulumi.resources.ResourceArgs {
             this.appId = appId;
             return this;
         }
-
         public Builder appId(@Nullable String appId) {
             this.appId = Output.ofNullable(appId);
             return this;
         }
-
         public Builder appPort(@Nullable Output<Integer> appPort) {
             this.appPort = appPort;
             return this;
         }
-
         public Builder appPort(@Nullable Integer appPort) {
             this.appPort = Output.ofNullable(appPort);
             return this;
         }
-
         public Builder components(@Nullable Output<List<DaprComponentArgs>> components) {
             this.components = components;
             return this;
         }
-
         public Builder components(@Nullable List<DaprComponentArgs> components) {
             this.components = Output.ofNullable(components);
             return this;
         }
-
+        public Builder components(DaprComponentArgs... components) {
+            return components(List.of(components));
+        }
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
-        }
-        public DaprArgs build() {
+        }        public DaprArgs build() {
             return new DaprArgs(appId, appPort, components, enabled);
         }
     }

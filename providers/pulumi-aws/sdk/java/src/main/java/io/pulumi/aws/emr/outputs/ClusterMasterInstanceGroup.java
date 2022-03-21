@@ -138,32 +138,29 @@ public final class ClusterMasterInstanceGroup {
             this.bidPrice = bidPrice;
             return this;
         }
-
         public Builder ebsConfigs(@Nullable List<ClusterMasterInstanceGroupEbsConfig> ebsConfigs) {
             this.ebsConfigs = ebsConfigs;
             return this;
         }
-
+        public Builder ebsConfigs(ClusterMasterInstanceGroupEbsConfig... ebsConfigs) {
+            return ebsConfigs(List.of(ebsConfigs));
+        }
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder instanceCount(@Nullable Integer instanceCount) {
             this.instanceCount = instanceCount;
             return this;
         }
-
         public Builder instanceType(String instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
-        }
-        public ClusterMasterInstanceGroup build() {
+        }        public ClusterMasterInstanceGroup build() {
             return new ClusterMasterInstanceGroup(bidPrice, ebsConfigs, id, instanceCount, instanceType, name);
         }
     }

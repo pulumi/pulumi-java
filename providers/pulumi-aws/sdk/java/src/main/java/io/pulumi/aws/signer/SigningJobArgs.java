@@ -109,42 +109,34 @@ public final class SigningJobArgs extends io.pulumi.resources.ResourceArgs {
             this.destination = Objects.requireNonNull(destination);
             return this;
         }
-
         public Builder destination(SigningJobDestinationArgs destination) {
             this.destination = Output.of(Objects.requireNonNull(destination));
             return this;
         }
-
         public Builder ignoreSigningJobFailure(@Nullable Output<Boolean> ignoreSigningJobFailure) {
             this.ignoreSigningJobFailure = ignoreSigningJobFailure;
             return this;
         }
-
         public Builder ignoreSigningJobFailure(@Nullable Boolean ignoreSigningJobFailure) {
             this.ignoreSigningJobFailure = Output.ofNullable(ignoreSigningJobFailure);
             return this;
         }
-
         public Builder profileName(Output<String> profileName) {
             this.profileName = Objects.requireNonNull(profileName);
             return this;
         }
-
         public Builder profileName(String profileName) {
             this.profileName = Output.of(Objects.requireNonNull(profileName));
             return this;
         }
-
         public Builder source(Output<SigningJobSourceArgs> source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }
-
         public Builder source(SigningJobSourceArgs source) {
             this.source = Output.of(Objects.requireNonNull(source));
             return this;
-        }
-        public SigningJobArgs build() {
+        }        public SigningJobArgs build() {
             return new SigningJobArgs(destination, ignoreSigningJobFailure, profileName, source);
         }
     }

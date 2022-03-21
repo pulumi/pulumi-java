@@ -56,12 +56,10 @@ public final class VirtualGatewaySpecListenerTlsValidationTrustSdsArgs extends i
             this.secretName = Objects.requireNonNull(secretName);
             return this;
         }
-
         public Builder secretName(String secretName) {
             this.secretName = Output.of(Objects.requireNonNull(secretName));
             return this;
-        }
-        public VirtualGatewaySpecListenerTlsValidationTrustSdsArgs build() {
+        }        public VirtualGatewaySpecListenerTlsValidationTrustSdsArgs build() {
             return new VirtualGatewaySpecListenerTlsValidationTrustSdsArgs(secretName);
         }
     }

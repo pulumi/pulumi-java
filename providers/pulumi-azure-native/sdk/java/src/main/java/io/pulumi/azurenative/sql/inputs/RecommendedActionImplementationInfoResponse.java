@@ -76,12 +76,10 @@ public final class RecommendedActionImplementationInfoResponse extends io.pulumi
             this.method = Objects.requireNonNull(method);
             return this;
         }
-
         public Builder script(String script) {
             this.script = Objects.requireNonNull(script);
             return this;
-        }
-        public RecommendedActionImplementationInfoResponse build() {
+        }        public RecommendedActionImplementationInfoResponse build() {
             return new RecommendedActionImplementationInfoResponse(method, script);
         }
     }

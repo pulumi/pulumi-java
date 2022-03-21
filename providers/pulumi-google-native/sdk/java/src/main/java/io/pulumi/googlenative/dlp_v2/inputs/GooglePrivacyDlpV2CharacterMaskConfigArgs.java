@@ -114,42 +114,37 @@ public final class GooglePrivacyDlpV2CharacterMaskConfigArgs extends io.pulumi.r
             this.charactersToIgnore = charactersToIgnore;
             return this;
         }
-
         public Builder charactersToIgnore(@Nullable List<GooglePrivacyDlpV2CharsToIgnoreArgs> charactersToIgnore) {
             this.charactersToIgnore = Output.ofNullable(charactersToIgnore);
             return this;
         }
-
+        public Builder charactersToIgnore(GooglePrivacyDlpV2CharsToIgnoreArgs... charactersToIgnore) {
+            return charactersToIgnore(List.of(charactersToIgnore));
+        }
         public Builder maskingCharacter(@Nullable Output<String> maskingCharacter) {
             this.maskingCharacter = maskingCharacter;
             return this;
         }
-
         public Builder maskingCharacter(@Nullable String maskingCharacter) {
             this.maskingCharacter = Output.ofNullable(maskingCharacter);
             return this;
         }
-
         public Builder numberToMask(@Nullable Output<Integer> numberToMask) {
             this.numberToMask = numberToMask;
             return this;
         }
-
         public Builder numberToMask(@Nullable Integer numberToMask) {
             this.numberToMask = Output.ofNullable(numberToMask);
             return this;
         }
-
         public Builder reverseOrder(@Nullable Output<Boolean> reverseOrder) {
             this.reverseOrder = reverseOrder;
             return this;
         }
-
         public Builder reverseOrder(@Nullable Boolean reverseOrder) {
             this.reverseOrder = Output.ofNullable(reverseOrder);
             return this;
-        }
-        public GooglePrivacyDlpV2CharacterMaskConfigArgs build() {
+        }        public GooglePrivacyDlpV2CharacterMaskConfigArgs build() {
             return new GooglePrivacyDlpV2CharacterMaskConfigArgs(charactersToIgnore, maskingCharacter, numberToMask, reverseOrder);
         }
     }

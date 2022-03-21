@@ -146,62 +146,50 @@ public final class DeploymentSettingsArgs extends io.pulumi.resources.ResourceAr
             this.cpu = cpu;
             return this;
         }
-
         public Builder cpu(@Nullable Integer cpu) {
             this.cpu = Output.ofNullable(cpu);
             return this;
         }
-
         public Builder environmentVariables(@Nullable Output<Map<String,String>> environmentVariables) {
             this.environmentVariables = environmentVariables;
             return this;
         }
-
         public Builder environmentVariables(@Nullable Map<String,String> environmentVariables) {
             this.environmentVariables = Output.ofNullable(environmentVariables);
             return this;
         }
-
         public Builder jvmOptions(@Nullable Output<String> jvmOptions) {
             this.jvmOptions = jvmOptions;
             return this;
         }
-
         public Builder jvmOptions(@Nullable String jvmOptions) {
             this.jvmOptions = Output.ofNullable(jvmOptions);
             return this;
         }
-
         public Builder memoryInGB(@Nullable Output<Integer> memoryInGB) {
             this.memoryInGB = memoryInGB;
             return this;
         }
-
         public Builder memoryInGB(@Nullable Integer memoryInGB) {
             this.memoryInGB = Output.ofNullable(memoryInGB);
             return this;
         }
-
         public Builder netCoreMainEntryPath(@Nullable Output<String> netCoreMainEntryPath) {
             this.netCoreMainEntryPath = netCoreMainEntryPath;
             return this;
         }
-
         public Builder netCoreMainEntryPath(@Nullable String netCoreMainEntryPath) {
             this.netCoreMainEntryPath = Output.ofNullable(netCoreMainEntryPath);
             return this;
         }
-
         public Builder runtimeVersion(@Nullable Output<Either<String,RuntimeVersion>> runtimeVersion) {
             this.runtimeVersion = runtimeVersion;
             return this;
         }
-
         public Builder runtimeVersion(@Nullable Either<String,RuntimeVersion> runtimeVersion) {
             this.runtimeVersion = Output.ofNullable(runtimeVersion);
             return this;
-        }
-        public DeploymentSettingsArgs build() {
+        }        public DeploymentSettingsArgs build() {
             return new DeploymentSettingsArgs(cpu, environmentVariables, jvmOptions, memoryInGB, netCoreMainEntryPath, runtimeVersion);
         }
     }

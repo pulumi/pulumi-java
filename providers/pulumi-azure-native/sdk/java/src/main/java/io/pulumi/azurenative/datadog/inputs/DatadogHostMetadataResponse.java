@@ -84,17 +84,14 @@ public final class DatadogHostMetadataResponse extends io.pulumi.resources.Invok
             this.agentVersion = agentVersion;
             return this;
         }
-
         public Builder installMethod(@Nullable DatadogInstallMethodResponse installMethod) {
             this.installMethod = installMethod;
             return this;
         }
-
         public Builder logsAgent(@Nullable DatadogLogsAgentResponse logsAgent) {
             this.logsAgent = logsAgent;
             return this;
-        }
-        public DatadogHostMetadataResponse build() {
+        }        public DatadogHostMetadataResponse build() {
             return new DatadogHostMetadataResponse(agentVersion, installMethod, logsAgent);
         }
     }

@@ -88,17 +88,14 @@ public final class GetBlobContainerArgs extends io.pulumi.resources.InvokeArgs {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder containerName(String containerName) {
             this.containerName = Objects.requireNonNull(containerName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetBlobContainerArgs build() {
+        }        public GetBlobContainerArgs build() {
             return new GetBlobContainerArgs(accountName, containerName, resourceGroupName);
         }
     }

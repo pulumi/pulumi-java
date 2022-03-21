@@ -71,12 +71,10 @@ public final class GetCertificateAuthorityActivationResult {
             this.completeCertificateChain = completeCertificateChain;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = status;
             return this;
-        }
-        public GetCertificateAuthorityActivationResult build() {
+        }        public GetCertificateAuthorityActivationResult build() {
             return new GetCertificateAuthorityActivationResult(completeCertificateChain, status);
         }
     }

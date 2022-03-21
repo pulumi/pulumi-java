@@ -80,22 +80,21 @@ public final class CronJobStatusArgs extends io.pulumi.resources.ResourceArgs {
             this.active = active;
             return this;
         }
-
         public Builder active(@Nullable List<ObjectReferenceArgs> active) {
             this.active = Output.ofNullable(active);
             return this;
         }
-
+        public Builder active(ObjectReferenceArgs... active) {
+            return active(List.of(active));
+        }
         public Builder lastScheduleTime(@Nullable Output<String> lastScheduleTime) {
             this.lastScheduleTime = lastScheduleTime;
             return this;
         }
-
         public Builder lastScheduleTime(@Nullable String lastScheduleTime) {
             this.lastScheduleTime = Output.ofNullable(lastScheduleTime);
             return this;
-        }
-        public CronJobStatusArgs build() {
+        }        public CronJobStatusArgs build() {
             return new CronJobStatusArgs(active, lastScheduleTime);
         }
     }

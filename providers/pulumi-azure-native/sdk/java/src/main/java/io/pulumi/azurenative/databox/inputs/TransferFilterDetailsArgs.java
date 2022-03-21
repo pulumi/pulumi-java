@@ -116,42 +116,37 @@ public final class TransferFilterDetailsArgs extends io.pulumi.resources.Resourc
             this.azureFileFilterDetails = azureFileFilterDetails;
             return this;
         }
-
         public Builder azureFileFilterDetails(@Nullable AzureFileFilterDetailsArgs azureFileFilterDetails) {
             this.azureFileFilterDetails = Output.ofNullable(azureFileFilterDetails);
             return this;
         }
-
         public Builder blobFilterDetails(@Nullable Output<BlobFilterDetailsArgs> blobFilterDetails) {
             this.blobFilterDetails = blobFilterDetails;
             return this;
         }
-
         public Builder blobFilterDetails(@Nullable BlobFilterDetailsArgs blobFilterDetails) {
             this.blobFilterDetails = Output.ofNullable(blobFilterDetails);
             return this;
         }
-
         public Builder dataAccountType(Output<Either<String,DataAccountType>> dataAccountType) {
             this.dataAccountType = Objects.requireNonNull(dataAccountType);
             return this;
         }
-
         public Builder dataAccountType(Either<String,DataAccountType> dataAccountType) {
             this.dataAccountType = Output.of(Objects.requireNonNull(dataAccountType));
             return this;
         }
-
         public Builder filterFileDetails(@Nullable Output<List<FilterFileDetailsArgs>> filterFileDetails) {
             this.filterFileDetails = filterFileDetails;
             return this;
         }
-
         public Builder filterFileDetails(@Nullable List<FilterFileDetailsArgs> filterFileDetails) {
             this.filterFileDetails = Output.ofNullable(filterFileDetails);
             return this;
         }
-        public TransferFilterDetailsArgs build() {
+        public Builder filterFileDetails(FilterFileDetailsArgs... filterFileDetails) {
+            return filterFileDetails(List.of(filterFileDetails));
+        }        public TransferFilterDetailsArgs build() {
             return new TransferFilterDetailsArgs(azureFileFilterDetails, blobFilterDetails, dataAccountType, filterFileDetails);
         }
     }

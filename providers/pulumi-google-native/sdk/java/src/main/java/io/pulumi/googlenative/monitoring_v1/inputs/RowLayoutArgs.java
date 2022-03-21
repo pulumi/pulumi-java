@@ -62,12 +62,13 @@ public final class RowLayoutArgs extends io.pulumi.resources.ResourceArgs {
             this.rows = rows;
             return this;
         }
-
         public Builder rows(@Nullable List<RowArgs> rows) {
             this.rows = Output.ofNullable(rows);
             return this;
         }
-        public RowLayoutArgs build() {
+        public Builder rows(RowArgs... rows) {
+            return rows(List.of(rows));
+        }        public RowLayoutArgs build() {
             return new RowLayoutArgs(rows);
         }
     }

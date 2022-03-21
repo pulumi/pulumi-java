@@ -91,12 +91,10 @@ public final class GroupMembershipMemberKey {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder namespace(@Nullable String namespace) {
             this.namespace = namespace;
             return this;
-        }
-        public GroupMembershipMemberKey build() {
+        }        public GroupMembershipMemberKey build() {
             return new GroupMembershipMemberKey(id, namespace);
         }
     }

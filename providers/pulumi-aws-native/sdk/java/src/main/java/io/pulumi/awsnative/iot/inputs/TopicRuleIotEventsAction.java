@@ -91,22 +91,18 @@ public final class TopicRuleIotEventsAction extends io.pulumi.resources.InvokeAr
             this.batchMode = batchMode;
             return this;
         }
-
         public Builder inputName(String inputName) {
             this.inputName = Objects.requireNonNull(inputName);
             return this;
         }
-
         public Builder messageId(@Nullable String messageId) {
             this.messageId = messageId;
             return this;
         }
-
         public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
-        }
-        public TopicRuleIotEventsAction build() {
+        }        public TopicRuleIotEventsAction build() {
             return new TopicRuleIotEventsAction(batchMode, inputName, messageId, roleArn);
         }
     }

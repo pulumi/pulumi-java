@@ -137,32 +137,29 @@ public final class GetManagementLockAtSubscriptionLevelResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder level(String level) {
             this.level = Objects.requireNonNull(level);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder notes(@Nullable String notes) {
             this.notes = notes;
             return this;
         }
-
         public Builder owners(@Nullable List<ManagementLockOwnerResponse> owners) {
             this.owners = owners;
             return this;
         }
-
+        public Builder owners(ManagementLockOwnerResponse... owners) {
+            return owners(List.of(owners));
+        }
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetManagementLockAtSubscriptionLevelResult build() {
+        }        public GetManagementLockAtSubscriptionLevelResult build() {
             return new GetManagementLockAtSubscriptionLevelResult(id, level, name, notes, owners, type);
         }
     }

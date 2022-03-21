@@ -207,52 +207,72 @@ public final class FirewallPolicyRuleMatcherResponse extends io.pulumi.resources
             this.destAddressGroups = Objects.requireNonNull(destAddressGroups);
             return this;
         }
-
+        public Builder destAddressGroups(String... destAddressGroups) {
+            return destAddressGroups(List.of(destAddressGroups));
+        }
         public Builder destFqdns(List<String> destFqdns) {
             this.destFqdns = Objects.requireNonNull(destFqdns);
             return this;
         }
-
+        public Builder destFqdns(String... destFqdns) {
+            return destFqdns(List.of(destFqdns));
+        }
         public Builder destIpRanges(List<String> destIpRanges) {
             this.destIpRanges = Objects.requireNonNull(destIpRanges);
             return this;
         }
-
+        public Builder destIpRanges(String... destIpRanges) {
+            return destIpRanges(List.of(destIpRanges));
+        }
         public Builder destRegionCodes(List<String> destRegionCodes) {
             this.destRegionCodes = Objects.requireNonNull(destRegionCodes);
             return this;
         }
-
+        public Builder destRegionCodes(String... destRegionCodes) {
+            return destRegionCodes(List.of(destRegionCodes));
+        }
         public Builder layer4Configs(List<FirewallPolicyRuleMatcherLayer4ConfigResponse> layer4Configs) {
             this.layer4Configs = Objects.requireNonNull(layer4Configs);
             return this;
         }
-
+        public Builder layer4Configs(FirewallPolicyRuleMatcherLayer4ConfigResponse... layer4Configs) {
+            return layer4Configs(List.of(layer4Configs));
+        }
         public Builder srcAddressGroups(List<String> srcAddressGroups) {
             this.srcAddressGroups = Objects.requireNonNull(srcAddressGroups);
             return this;
         }
-
+        public Builder srcAddressGroups(String... srcAddressGroups) {
+            return srcAddressGroups(List.of(srcAddressGroups));
+        }
         public Builder srcFqdns(List<String> srcFqdns) {
             this.srcFqdns = Objects.requireNonNull(srcFqdns);
             return this;
         }
-
+        public Builder srcFqdns(String... srcFqdns) {
+            return srcFqdns(List.of(srcFqdns));
+        }
         public Builder srcIpRanges(List<String> srcIpRanges) {
             this.srcIpRanges = Objects.requireNonNull(srcIpRanges);
             return this;
         }
-
+        public Builder srcIpRanges(String... srcIpRanges) {
+            return srcIpRanges(List.of(srcIpRanges));
+        }
         public Builder srcRegionCodes(List<String> srcRegionCodes) {
             this.srcRegionCodes = Objects.requireNonNull(srcRegionCodes);
             return this;
         }
-
+        public Builder srcRegionCodes(String... srcRegionCodes) {
+            return srcRegionCodes(List.of(srcRegionCodes));
+        }
         public Builder srcSecureTags(List<FirewallPolicyRuleSecureTagResponse> srcSecureTags) {
             this.srcSecureTags = Objects.requireNonNull(srcSecureTags);
             return this;
         }
-        public FirewallPolicyRuleMatcherResponse build() {
+        public Builder srcSecureTags(FirewallPolicyRuleSecureTagResponse... srcSecureTags) {
+            return srcSecureTags(List.of(srcSecureTags));
+        }        public FirewallPolicyRuleMatcherResponse build() {
             return new FirewallPolicyRuleMatcherResponse(destAddressGroups, destFqdns, destIpRanges, destRegionCodes, layer4Configs, srcAddressGroups, srcFqdns, srcIpRanges, srcRegionCodes, srcSecureTags);
         }
     }

@@ -174,82 +174,66 @@ public final class ScheduledTriggerArgs extends io.pulumi.resources.ResourceArgs
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder accountName(String accountName) {
             this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
-
         public Builder kind(Output<String> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
-
         public Builder recurrenceInterval(Output<Either<String,RecurrenceInterval>> recurrenceInterval) {
             this.recurrenceInterval = Objects.requireNonNull(recurrenceInterval);
             return this;
         }
-
         public Builder recurrenceInterval(Either<String,RecurrenceInterval> recurrenceInterval) {
             this.recurrenceInterval = Output.of(Objects.requireNonNull(recurrenceInterval));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder shareSubscriptionName(Output<String> shareSubscriptionName) {
             this.shareSubscriptionName = Objects.requireNonNull(shareSubscriptionName);
             return this;
         }
-
         public Builder shareSubscriptionName(String shareSubscriptionName) {
             this.shareSubscriptionName = Output.of(Objects.requireNonNull(shareSubscriptionName));
             return this;
         }
-
         public Builder synchronizationMode(@Nullable Output<Either<String,SynchronizationMode>> synchronizationMode) {
             this.synchronizationMode = synchronizationMode;
             return this;
         }
-
         public Builder synchronizationMode(@Nullable Either<String,SynchronizationMode> synchronizationMode) {
             this.synchronizationMode = Output.ofNullable(synchronizationMode);
             return this;
         }
-
         public Builder synchronizationTime(Output<String> synchronizationTime) {
             this.synchronizationTime = Objects.requireNonNull(synchronizationTime);
             return this;
         }
-
         public Builder synchronizationTime(String synchronizationTime) {
             this.synchronizationTime = Output.of(Objects.requireNonNull(synchronizationTime));
             return this;
         }
-
         public Builder triggerName(@Nullable Output<String> triggerName) {
             this.triggerName = triggerName;
             return this;
         }
-
         public Builder triggerName(@Nullable String triggerName) {
             this.triggerName = Output.ofNullable(triggerName);
             return this;
-        }
-        public ScheduledTriggerArgs build() {
+        }        public ScheduledTriggerArgs build() {
             return new ScheduledTriggerArgs(accountName, kind, recurrenceInterval, resourceGroupName, shareSubscriptionName, synchronizationMode, synchronizationTime, triggerName);
         }
     }

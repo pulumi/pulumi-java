@@ -45,8 +45,7 @@ public final class RuleGroupCaptchaConfig {
         public Builder immunityTimeProperty(@Nullable RuleGroupImmunityTimeProperty immunityTimeProperty) {
             this.immunityTimeProperty = immunityTimeProperty;
             return this;
-        }
-        public RuleGroupCaptchaConfig build() {
+        }        public RuleGroupCaptchaConfig build() {
             return new RuleGroupCaptchaConfig(immunityTimeProperty);
         }
     }

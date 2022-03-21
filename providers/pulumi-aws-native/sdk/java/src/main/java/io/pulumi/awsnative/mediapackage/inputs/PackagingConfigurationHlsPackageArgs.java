@@ -106,42 +106,37 @@ public final class PackagingConfigurationHlsPackageArgs extends io.pulumi.resour
             this.encryption = encryption;
             return this;
         }
-
         public Builder encryption(@Nullable PackagingConfigurationHlsEncryptionArgs encryption) {
             this.encryption = Output.ofNullable(encryption);
             return this;
         }
-
         public Builder hlsManifests(Output<List<PackagingConfigurationHlsManifestArgs>> hlsManifests) {
             this.hlsManifests = Objects.requireNonNull(hlsManifests);
             return this;
         }
-
         public Builder hlsManifests(List<PackagingConfigurationHlsManifestArgs> hlsManifests) {
             this.hlsManifests = Output.of(Objects.requireNonNull(hlsManifests));
             return this;
         }
-
+        public Builder hlsManifests(PackagingConfigurationHlsManifestArgs... hlsManifests) {
+            return hlsManifests(List.of(hlsManifests));
+        }
         public Builder segmentDurationSeconds(@Nullable Output<Integer> segmentDurationSeconds) {
             this.segmentDurationSeconds = segmentDurationSeconds;
             return this;
         }
-
         public Builder segmentDurationSeconds(@Nullable Integer segmentDurationSeconds) {
             this.segmentDurationSeconds = Output.ofNullable(segmentDurationSeconds);
             return this;
         }
-
         public Builder useAudioRenditionGroup(@Nullable Output<Boolean> useAudioRenditionGroup) {
             this.useAudioRenditionGroup = useAudioRenditionGroup;
             return this;
         }
-
         public Builder useAudioRenditionGroup(@Nullable Boolean useAudioRenditionGroup) {
             this.useAudioRenditionGroup = Output.ofNullable(useAudioRenditionGroup);
             return this;
-        }
-        public PackagingConfigurationHlsPackageArgs build() {
+        }        public PackagingConfigurationHlsPackageArgs build() {
             return new PackagingConfigurationHlsPackageArgs(encryption, hlsManifests, segmentDurationSeconds, useAudioRenditionGroup);
         }
     }

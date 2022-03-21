@@ -70,12 +70,13 @@ public final class WebACLXssMatchStatement extends io.pulumi.resources.InvokeArg
             this.fieldToMatch = Objects.requireNonNull(fieldToMatch);
             return this;
         }
-
         public Builder textTransformations(List<WebACLTextTransformation> textTransformations) {
             this.textTransformations = Objects.requireNonNull(textTransformations);
             return this;
         }
-        public WebACLXssMatchStatement build() {
+        public Builder textTransformations(WebACLTextTransformation... textTransformations) {
+            return textTransformations(List.of(textTransformations));
+        }        public WebACLXssMatchStatement build() {
             return new WebACLXssMatchStatement(fieldToMatch, textTransformations);
         }
     }

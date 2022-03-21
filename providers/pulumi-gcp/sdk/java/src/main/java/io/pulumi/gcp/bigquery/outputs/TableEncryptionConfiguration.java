@@ -79,12 +79,10 @@ public final class TableEncryptionConfiguration {
             this.kmsKeyName = Objects.requireNonNull(kmsKeyName);
             return this;
         }
-
         public Builder kmsKeyVersion(@Nullable String kmsKeyVersion) {
             this.kmsKeyVersion = kmsKeyVersion;
             return this;
-        }
-        public TableEncryptionConfiguration build() {
+        }        public TableEncryptionConfiguration build() {
             return new TableEncryptionConfiguration(kmsKeyName, kmsKeyVersion);
         }
     }

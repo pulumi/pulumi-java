@@ -73,22 +73,18 @@ public final class ApplicationUserAssignedIdentityArgs extends io.pulumi.resourc
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder principalId(Output<String> principalId) {
             this.principalId = Objects.requireNonNull(principalId);
             return this;
         }
-
         public Builder principalId(String principalId) {
             this.principalId = Output.of(Objects.requireNonNull(principalId));
             return this;
-        }
-        public ApplicationUserAssignedIdentityArgs build() {
+        }        public ApplicationUserAssignedIdentityArgs build() {
             return new ApplicationUserAssignedIdentityArgs(name, principalId);
         }
     }

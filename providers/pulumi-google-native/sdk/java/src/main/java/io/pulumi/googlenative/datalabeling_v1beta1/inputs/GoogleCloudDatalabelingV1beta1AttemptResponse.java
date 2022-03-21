@@ -74,12 +74,13 @@ public final class GoogleCloudDatalabelingV1beta1AttemptResponse extends io.pulu
             this.attemptTime = Objects.requireNonNull(attemptTime);
             return this;
         }
-
         public Builder partialFailures(List<GoogleRpcStatusResponse> partialFailures) {
             this.partialFailures = Objects.requireNonNull(partialFailures);
             return this;
         }
-        public GoogleCloudDatalabelingV1beta1AttemptResponse build() {
+        public Builder partialFailures(GoogleRpcStatusResponse... partialFailures) {
+            return partialFailures(List.of(partialFailures));
+        }        public GoogleCloudDatalabelingV1beta1AttemptResponse build() {
             return new GoogleCloudDatalabelingV1beta1AttemptResponse(attemptTime, partialFailures);
         }
     }

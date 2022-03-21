@@ -112,27 +112,37 @@ public final class CertificateCertificateDescriptionSubjectDescriptionSubjectAlt
             this.customSans = customSans;
             return this;
         }
-
+        public Builder customSans(CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSan... customSans) {
+            return customSans(List.of(customSans));
+        }
         public Builder dnsNames(@Nullable List<String> dnsNames) {
             this.dnsNames = dnsNames;
             return this;
         }
-
+        public Builder dnsNames(String... dnsNames) {
+            return dnsNames(List.of(dnsNames));
+        }
         public Builder emailAddresses(@Nullable List<String> emailAddresses) {
             this.emailAddresses = emailAddresses;
             return this;
         }
-
+        public Builder emailAddresses(String... emailAddresses) {
+            return emailAddresses(List.of(emailAddresses));
+        }
         public Builder ipAddresses(@Nullable List<String> ipAddresses) {
             this.ipAddresses = ipAddresses;
             return this;
         }
-
+        public Builder ipAddresses(String... ipAddresses) {
+            return ipAddresses(List.of(ipAddresses));
+        }
         public Builder uris(@Nullable List<String> uris) {
             this.uris = uris;
             return this;
         }
-        public CertificateCertificateDescriptionSubjectDescriptionSubjectAltName build() {
+        public Builder uris(String... uris) {
+            return uris(List.of(uris));
+        }        public CertificateCertificateDescriptionSubjectDescriptionSubjectAltName build() {
             return new CertificateCertificateDescriptionSubjectDescriptionSubjectAltName(customSans, dnsNames, emailAddresses, ipAddresses, uris);
         }
     }

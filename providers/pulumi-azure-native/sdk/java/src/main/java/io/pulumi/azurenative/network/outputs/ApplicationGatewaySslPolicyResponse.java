@@ -120,27 +120,28 @@ public final class ApplicationGatewaySslPolicyResponse {
             this.cipherSuites = cipherSuites;
             return this;
         }
-
+        public Builder cipherSuites(String... cipherSuites) {
+            return cipherSuites(List.of(cipherSuites));
+        }
         public Builder disabledSslProtocols(@Nullable List<String> disabledSslProtocols) {
             this.disabledSslProtocols = disabledSslProtocols;
             return this;
         }
-
+        public Builder disabledSslProtocols(String... disabledSslProtocols) {
+            return disabledSslProtocols(List.of(disabledSslProtocols));
+        }
         public Builder minProtocolVersion(@Nullable String minProtocolVersion) {
             this.minProtocolVersion = minProtocolVersion;
             return this;
         }
-
         public Builder policyName(@Nullable String policyName) {
             this.policyName = policyName;
             return this;
         }
-
         public Builder policyType(@Nullable String policyType) {
             this.policyType = policyType;
             return this;
-        }
-        public ApplicationGatewaySslPolicyResponse build() {
+        }        public ApplicationGatewaySslPolicyResponse build() {
             return new ApplicationGatewaySslPolicyResponse(cipherSuites, disabledSslProtocols, minProtocolVersion, policyName, policyType);
         }
     }

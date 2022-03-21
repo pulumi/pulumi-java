@@ -73,22 +73,18 @@ public final class UserPoolLambdaConfigCustomSmsSenderGetArgs extends io.pulumi.
             this.lambdaArn = Objects.requireNonNull(lambdaArn);
             return this;
         }
-
         public Builder lambdaArn(String lambdaArn) {
             this.lambdaArn = Output.of(Objects.requireNonNull(lambdaArn));
             return this;
         }
-
         public Builder lambdaVersion(Output<String> lambdaVersion) {
             this.lambdaVersion = Objects.requireNonNull(lambdaVersion);
             return this;
         }
-
         public Builder lambdaVersion(String lambdaVersion) {
             this.lambdaVersion = Output.of(Objects.requireNonNull(lambdaVersion));
             return this;
-        }
-        public UserPoolLambdaConfigCustomSmsSenderGetArgs build() {
+        }        public UserPoolLambdaConfigCustomSmsSenderGetArgs build() {
             return new UserPoolLambdaConfigCustomSmsSenderGetArgs(lambdaArn, lambdaVersion);
         }
     }

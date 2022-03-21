@@ -74,12 +74,10 @@ public final class DeviceCredential {
             this.expirationTime = expirationTime;
             return this;
         }
-
         public Builder publicKey(DeviceCredentialPublicKey publicKey) {
             this.publicKey = Objects.requireNonNull(publicKey);
             return this;
-        }
-        public DeviceCredential build() {
+        }        public DeviceCredential build() {
             return new DeviceCredential(expirationTime, publicKey);
         }
     }

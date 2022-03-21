@@ -113,52 +113,48 @@ public final class DBProxyTargetGroupArgs extends io.pulumi.resources.ResourceAr
             this.connectionPoolConfigurationInfo = connectionPoolConfigurationInfo;
             return this;
         }
-
         public Builder connectionPoolConfigurationInfo(@Nullable DBProxyTargetGroupConnectionPoolConfigurationInfoFormatArgs connectionPoolConfigurationInfo) {
             this.connectionPoolConfigurationInfo = Output.ofNullable(connectionPoolConfigurationInfo);
             return this;
         }
-
         public Builder dBClusterIdentifiers(@Nullable Output<List<String>> dBClusterIdentifiers) {
             this.dBClusterIdentifiers = dBClusterIdentifiers;
             return this;
         }
-
         public Builder dBClusterIdentifiers(@Nullable List<String> dBClusterIdentifiers) {
             this.dBClusterIdentifiers = Output.ofNullable(dBClusterIdentifiers);
             return this;
         }
-
+        public Builder dBClusterIdentifiers(String... dBClusterIdentifiers) {
+            return dBClusterIdentifiers(List.of(dBClusterIdentifiers));
+        }
         public Builder dBInstanceIdentifiers(@Nullable Output<List<String>> dBInstanceIdentifiers) {
             this.dBInstanceIdentifiers = dBInstanceIdentifiers;
             return this;
         }
-
         public Builder dBInstanceIdentifiers(@Nullable List<String> dBInstanceIdentifiers) {
             this.dBInstanceIdentifiers = Output.ofNullable(dBInstanceIdentifiers);
             return this;
         }
-
+        public Builder dBInstanceIdentifiers(String... dBInstanceIdentifiers) {
+            return dBInstanceIdentifiers(List.of(dBInstanceIdentifiers));
+        }
         public Builder dBProxyName(Output<String> dBProxyName) {
             this.dBProxyName = Objects.requireNonNull(dBProxyName);
             return this;
         }
-
         public Builder dBProxyName(String dBProxyName) {
             this.dBProxyName = Output.of(Objects.requireNonNull(dBProxyName));
             return this;
         }
-
         public Builder targetGroupName(Output<DBProxyTargetGroupTargetGroupName> targetGroupName) {
             this.targetGroupName = Objects.requireNonNull(targetGroupName);
             return this;
         }
-
         public Builder targetGroupName(DBProxyTargetGroupTargetGroupName targetGroupName) {
             this.targetGroupName = Output.of(Objects.requireNonNull(targetGroupName));
             return this;
-        }
-        public DBProxyTargetGroupArgs build() {
+        }        public DBProxyTargetGroupArgs build() {
             return new DBProxyTargetGroupArgs(connectionPoolConfigurationInfo, dBClusterIdentifiers, dBInstanceIdentifiers, dBProxyName, targetGroupName);
         }
     }

@@ -51,8 +51,7 @@ public final class WebAclRuleStatementNotStatementStatementOrStatementStatementS
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public WebAclRuleStatementNotStatementStatementOrStatementStatementSqliMatchStatementFieldToMatchSingleQueryArgument build() {
+        }        public WebAclRuleStatementNotStatementStatementOrStatementStatementSqliMatchStatementFieldToMatchSingleQueryArgument build() {
             return new WebAclRuleStatementNotStatementStatementOrStatementStatementSqliMatchStatementFieldToMatchSingleQueryArgument(name);
         }
     }

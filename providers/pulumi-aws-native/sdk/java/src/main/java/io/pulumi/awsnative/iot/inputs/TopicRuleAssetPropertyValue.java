@@ -80,17 +80,14 @@ public final class TopicRuleAssetPropertyValue extends io.pulumi.resources.Invok
             this.quality = quality;
             return this;
         }
-
         public Builder timestamp(TopicRuleAssetPropertyTimestamp timestamp) {
             this.timestamp = Objects.requireNonNull(timestamp);
             return this;
         }
-
         public Builder value(TopicRuleAssetPropertyVariant value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public TopicRuleAssetPropertyValue build() {
+        }        public TopicRuleAssetPropertyValue build() {
             return new TopicRuleAssetPropertyValue(quality, timestamp, value);
         }
     }

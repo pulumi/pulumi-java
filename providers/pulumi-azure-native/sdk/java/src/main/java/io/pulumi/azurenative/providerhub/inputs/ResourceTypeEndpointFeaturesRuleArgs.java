@@ -54,12 +54,10 @@ public final class ResourceTypeEndpointFeaturesRuleArgs extends io.pulumi.resour
             this.requiredFeaturesPolicy = Objects.requireNonNull(requiredFeaturesPolicy);
             return this;
         }
-
         public Builder requiredFeaturesPolicy(Either<String,FeaturesPolicy> requiredFeaturesPolicy) {
             this.requiredFeaturesPolicy = Output.of(Objects.requireNonNull(requiredFeaturesPolicy));
             return this;
-        }
-        public ResourceTypeEndpointFeaturesRuleArgs build() {
+        }        public ResourceTypeEndpointFeaturesRuleArgs build() {
             return new ResourceTypeEndpointFeaturesRuleArgs(requiredFeaturesPolicy);
         }
     }

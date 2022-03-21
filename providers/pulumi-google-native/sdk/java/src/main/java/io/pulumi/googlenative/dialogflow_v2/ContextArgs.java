@@ -152,82 +152,66 @@ public final class ContextArgs extends io.pulumi.resources.ResourceArgs {
             this.environmentId = Objects.requireNonNull(environmentId);
             return this;
         }
-
         public Builder environmentId(String environmentId) {
             this.environmentId = Output.of(Objects.requireNonNull(environmentId));
             return this;
         }
-
         public Builder lifespanCount(@Nullable Output<Integer> lifespanCount) {
             this.lifespanCount = lifespanCount;
             return this;
         }
-
         public Builder lifespanCount(@Nullable Integer lifespanCount) {
             this.lifespanCount = Output.ofNullable(lifespanCount);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder parameters(@Nullable Output<Map<String,String>> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder parameters(@Nullable Map<String,String> parameters) {
             this.parameters = Output.ofNullable(parameters);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder sessionId(Output<String> sessionId) {
             this.sessionId = Objects.requireNonNull(sessionId);
             return this;
         }
-
         public Builder sessionId(String sessionId) {
             this.sessionId = Output.of(Objects.requireNonNull(sessionId));
             return this;
         }
-
         public Builder userId(Output<String> userId) {
             this.userId = Objects.requireNonNull(userId);
             return this;
         }
-
         public Builder userId(String userId) {
             this.userId = Output.of(Objects.requireNonNull(userId));
             return this;
-        }
-        public ContextArgs build() {
+        }        public ContextArgs build() {
             return new ContextArgs(environmentId, lifespanCount, location, name, parameters, project, sessionId, userId);
         }
     }

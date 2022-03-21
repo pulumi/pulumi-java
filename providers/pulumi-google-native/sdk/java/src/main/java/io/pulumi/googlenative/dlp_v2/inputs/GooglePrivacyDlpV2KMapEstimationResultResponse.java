@@ -60,7 +60,9 @@ public final class GooglePrivacyDlpV2KMapEstimationResultResponse extends io.pul
             this.kMapEstimationHistogram = Objects.requireNonNull(kMapEstimationHistogram);
             return this;
         }
-        public GooglePrivacyDlpV2KMapEstimationResultResponse build() {
+        public Builder kMapEstimationHistogram(GooglePrivacyDlpV2KMapEstimationHistogramBucketResponse... kMapEstimationHistogram) {
+            return kMapEstimationHistogram(List.of(kMapEstimationHistogram));
+        }        public GooglePrivacyDlpV2KMapEstimationResultResponse build() {
             return new GooglePrivacyDlpV2KMapEstimationResultResponse(kMapEstimationHistogram);
         }
     }

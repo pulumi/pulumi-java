@@ -75,22 +75,18 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
             this.orcSerDe = orcSerDe;
             return this;
         }
-
         public Builder orcSerDe(@Nullable FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializerOrcSerDeArgs orcSerDe) {
             this.orcSerDe = Output.ofNullable(orcSerDe);
             return this;
         }
-
         public Builder parquetSerDe(@Nullable Output<FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializerParquetSerDeArgs> parquetSerDe) {
             this.parquetSerDe = parquetSerDe;
             return this;
         }
-
         public Builder parquetSerDe(@Nullable FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializerParquetSerDeArgs parquetSerDe) {
             this.parquetSerDe = Output.ofNullable(parquetSerDe);
             return this;
-        }
-        public FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializerArgs build() {
+        }        public FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializerArgs build() {
             return new FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializerArgs(orcSerDe, parquetSerDe);
         }
     }

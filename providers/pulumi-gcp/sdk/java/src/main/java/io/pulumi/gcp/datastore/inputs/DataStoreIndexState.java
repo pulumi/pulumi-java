@@ -128,52 +128,45 @@ public final class DataStoreIndexState extends io.pulumi.resources.ResourceArgs 
             this.ancestor = ancestor;
             return this;
         }
-
         public Builder ancestor(@Nullable String ancestor) {
             this.ancestor = Output.ofNullable(ancestor);
             return this;
         }
-
         public Builder indexId(@Nullable Output<String> indexId) {
             this.indexId = indexId;
             return this;
         }
-
         public Builder indexId(@Nullable String indexId) {
             this.indexId = Output.ofNullable(indexId);
             return this;
         }
-
         public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder properties(@Nullable Output<List<DataStoreIndexPropertyGetArgs>> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder properties(@Nullable List<DataStoreIndexPropertyGetArgs> properties) {
             this.properties = Output.ofNullable(properties);
             return this;
         }
-        public DataStoreIndexState build() {
+        public Builder properties(DataStoreIndexPropertyGetArgs... properties) {
+            return properties(List.of(properties));
+        }        public DataStoreIndexState build() {
             return new DataStoreIndexState(ancestor, indexId, kind, project, properties);
         }
     }

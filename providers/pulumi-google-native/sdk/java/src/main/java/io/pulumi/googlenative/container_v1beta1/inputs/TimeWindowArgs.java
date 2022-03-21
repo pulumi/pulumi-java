@@ -95,32 +95,26 @@ public final class TimeWindowArgs extends io.pulumi.resources.ResourceArgs {
             this.endTime = endTime;
             return this;
         }
-
         public Builder endTime(@Nullable String endTime) {
             this.endTime = Output.ofNullable(endTime);
             return this;
         }
-
         public Builder maintenanceExclusionOptions(@Nullable Output<MaintenanceExclusionOptionsArgs> maintenanceExclusionOptions) {
             this.maintenanceExclusionOptions = maintenanceExclusionOptions;
             return this;
         }
-
         public Builder maintenanceExclusionOptions(@Nullable MaintenanceExclusionOptionsArgs maintenanceExclusionOptions) {
             this.maintenanceExclusionOptions = Output.ofNullable(maintenanceExclusionOptions);
             return this;
         }
-
         public Builder startTime(@Nullable Output<String> startTime) {
             this.startTime = startTime;
             return this;
         }
-
         public Builder startTime(@Nullable String startTime) {
             this.startTime = Output.ofNullable(startTime);
             return this;
-        }
-        public TimeWindowArgs build() {
+        }        public TimeWindowArgs build() {
             return new TimeWindowArgs(endTime, maintenanceExclusionOptions, startTime);
         }
     }

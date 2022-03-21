@@ -135,32 +135,26 @@ public final class GetDeploymentResult {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder properties(DeploymentPropertiesResponse properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
-
         public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetDeploymentResult build() {
+        }        public GetDeploymentResult build() {
             return new GetDeploymentResult(etag, id, name, properties, systemData, type);
         }
     }

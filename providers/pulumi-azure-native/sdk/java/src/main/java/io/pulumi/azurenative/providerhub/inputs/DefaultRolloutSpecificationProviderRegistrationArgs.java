@@ -53,12 +53,10 @@ public final class DefaultRolloutSpecificationProviderRegistrationArgs extends i
             this.properties = properties;
             return this;
         }
-
         public Builder properties(@Nullable ProviderRegistrationPropertiesArgs properties) {
             this.properties = Output.ofNullable(properties);
             return this;
-        }
-        public DefaultRolloutSpecificationProviderRegistrationArgs build() {
+        }        public DefaultRolloutSpecificationProviderRegistrationArgs build() {
             return new DefaultRolloutSpecificationProviderRegistrationArgs(properties);
         }
     }

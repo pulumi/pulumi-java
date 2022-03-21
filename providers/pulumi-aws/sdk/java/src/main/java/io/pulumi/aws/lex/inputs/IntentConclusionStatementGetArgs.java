@@ -80,22 +80,21 @@ public final class IntentConclusionStatementGetArgs extends io.pulumi.resources.
             this.messages = Objects.requireNonNull(messages);
             return this;
         }
-
         public Builder messages(List<IntentConclusionStatementMessageGetArgs> messages) {
             this.messages = Output.of(Objects.requireNonNull(messages));
             return this;
         }
-
+        public Builder messages(IntentConclusionStatementMessageGetArgs... messages) {
+            return messages(List.of(messages));
+        }
         public Builder responseCard(@Nullable Output<String> responseCard) {
             this.responseCard = responseCard;
             return this;
         }
-
         public Builder responseCard(@Nullable String responseCard) {
             this.responseCard = Output.ofNullable(responseCard);
             return this;
-        }
-        public IntentConclusionStatementGetArgs build() {
+        }        public IntentConclusionStatementGetArgs build() {
             return new IntentConclusionStatementGetArgs(messages, responseCard);
         }
     }

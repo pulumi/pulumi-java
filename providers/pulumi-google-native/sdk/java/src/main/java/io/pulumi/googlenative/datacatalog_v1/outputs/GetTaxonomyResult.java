@@ -136,32 +136,29 @@ public final class GetTaxonomyResult {
             this.activatedPolicyTypes = Objects.requireNonNull(activatedPolicyTypes);
             return this;
         }
-
+        public Builder activatedPolicyTypes(String... activatedPolicyTypes) {
+            return activatedPolicyTypes(List.of(activatedPolicyTypes));
+        }
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder policyTagCount(Integer policyTagCount) {
             this.policyTagCount = Objects.requireNonNull(policyTagCount);
             return this;
         }
-
         public Builder taxonomyTimestamps(GoogleCloudDatacatalogV1SystemTimestampsResponse taxonomyTimestamps) {
             this.taxonomyTimestamps = Objects.requireNonNull(taxonomyTimestamps);
             return this;
-        }
-        public GetTaxonomyResult build() {
+        }        public GetTaxonomyResult build() {
             return new GetTaxonomyResult(activatedPolicyTypes, description, displayName, name, policyTagCount, taxonomyTimestamps);
         }
     }

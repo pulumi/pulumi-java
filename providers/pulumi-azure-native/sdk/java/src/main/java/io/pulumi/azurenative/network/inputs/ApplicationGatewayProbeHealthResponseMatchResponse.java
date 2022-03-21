@@ -79,12 +79,13 @@ public final class ApplicationGatewayProbeHealthResponseMatchResponse extends io
             this.body = body;
             return this;
         }
-
         public Builder statusCodes(@Nullable List<String> statusCodes) {
             this.statusCodes = statusCodes;
             return this;
         }
-        public ApplicationGatewayProbeHealthResponseMatchResponse build() {
+        public Builder statusCodes(String... statusCodes) {
+            return statusCodes(List.of(statusCodes));
+        }        public ApplicationGatewayProbeHealthResponseMatchResponse build() {
             return new ApplicationGatewayProbeHealthResponseMatchResponse(body, statusCodes);
         }
     }

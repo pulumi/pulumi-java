@@ -129,27 +129,25 @@ public final class FlexibleAppVersionNetwork {
             this.forwardedPorts = forwardedPorts;
             return this;
         }
-
+        public Builder forwardedPorts(String... forwardedPorts) {
+            return forwardedPorts(List.of(forwardedPorts));
+        }
         public Builder instanceTag(@Nullable String instanceTag) {
             this.instanceTag = instanceTag;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder sessionAffinity(@Nullable Boolean sessionAffinity) {
             this.sessionAffinity = sessionAffinity;
             return this;
         }
-
         public Builder subnetwork(@Nullable String subnetwork) {
             this.subnetwork = subnetwork;
             return this;
-        }
-        public FlexibleAppVersionNetwork build() {
+        }        public FlexibleAppVersionNetwork build() {
             return new FlexibleAppVersionNetwork(forwardedPorts, instanceTag, name, sessionAffinity, subnetwork);
         }
     }

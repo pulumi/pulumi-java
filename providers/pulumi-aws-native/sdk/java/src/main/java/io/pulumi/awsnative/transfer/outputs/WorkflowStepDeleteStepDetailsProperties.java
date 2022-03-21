@@ -53,8 +53,7 @@ public final class WorkflowStepDeleteStepDetailsProperties {
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
-        }
-        public WorkflowStepDeleteStepDetailsProperties build() {
+        }        public WorkflowStepDeleteStepDetailsProperties build() {
             return new WorkflowStepDeleteStepDetailsProperties(name);
         }
     }

@@ -144,62 +144,50 @@ public final class CxPageFormParameterArgs extends io.pulumi.resources.ResourceA
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder entityType(@Nullable Output<String> entityType) {
             this.entityType = entityType;
             return this;
         }
-
         public Builder entityType(@Nullable String entityType) {
             this.entityType = Output.ofNullable(entityType);
             return this;
         }
-
         public Builder fillBehavior(@Nullable Output<CxPageFormParameterFillBehaviorArgs> fillBehavior) {
             this.fillBehavior = fillBehavior;
             return this;
         }
-
         public Builder fillBehavior(@Nullable CxPageFormParameterFillBehaviorArgs fillBehavior) {
             this.fillBehavior = Output.ofNullable(fillBehavior);
             return this;
         }
-
         public Builder isList(@Nullable Output<Boolean> isList) {
             this.isList = isList;
             return this;
         }
-
         public Builder isList(@Nullable Boolean isList) {
             this.isList = Output.ofNullable(isList);
             return this;
         }
-
         public Builder redact(@Nullable Output<Boolean> redact) {
             this.redact = redact;
             return this;
         }
-
         public Builder redact(@Nullable Boolean redact) {
             this.redact = Output.ofNullable(redact);
             return this;
         }
-
         public Builder required(@Nullable Output<Boolean> required) {
             this.required = required;
             return this;
         }
-
         public Builder required(@Nullable Boolean required) {
             this.required = Output.ofNullable(required);
             return this;
-        }
-        public CxPageFormParameterArgs build() {
+        }        public CxPageFormParameterArgs build() {
             return new CxPageFormParameterArgs(displayName, entityType, fillBehavior, isList, redact, required);
         }
     }

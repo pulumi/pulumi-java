@@ -72,12 +72,10 @@ public final class JobMaxRecurrenceResponse {
             this.frequency = frequency;
             return this;
         }
-
         public Builder interval(@Nullable Integer interval) {
             this.interval = interval;
             return this;
-        }
-        public JobMaxRecurrenceResponse build() {
+        }        public JobMaxRecurrenceResponse build() {
             return new JobMaxRecurrenceResponse(frequency, interval);
         }
     }

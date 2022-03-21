@@ -103,22 +103,18 @@ public final class GetImageResult {
             this.arn = arn;
             return this;
         }
-
         public Builder containerRecipeArn(@Nullable String containerRecipeArn) {
             this.containerRecipeArn = containerRecipeArn;
             return this;
         }
-
         public Builder imageId(@Nullable String imageId) {
             this.imageId = imageId;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
-        }
-        public GetImageResult build() {
+        }        public GetImageResult build() {
             return new GetImageResult(arn, containerRecipeArn, imageId, name);
         }
     }

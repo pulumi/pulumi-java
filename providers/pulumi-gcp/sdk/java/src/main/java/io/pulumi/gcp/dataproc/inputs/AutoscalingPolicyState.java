@@ -164,72 +164,58 @@ public final class AutoscalingPolicyState extends io.pulumi.resources.ResourceAr
             this.basicAlgorithm = basicAlgorithm;
             return this;
         }
-
         public Builder basicAlgorithm(@Nullable AutoscalingPolicyBasicAlgorithmGetArgs basicAlgorithm) {
             this.basicAlgorithm = Output.ofNullable(basicAlgorithm);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder policyId(@Nullable Output<String> policyId) {
             this.policyId = policyId;
             return this;
         }
-
         public Builder policyId(@Nullable String policyId) {
             this.policyId = Output.ofNullable(policyId);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder secondaryWorkerConfig(@Nullable Output<AutoscalingPolicySecondaryWorkerConfigGetArgs> secondaryWorkerConfig) {
             this.secondaryWorkerConfig = secondaryWorkerConfig;
             return this;
         }
-
         public Builder secondaryWorkerConfig(@Nullable AutoscalingPolicySecondaryWorkerConfigGetArgs secondaryWorkerConfig) {
             this.secondaryWorkerConfig = Output.ofNullable(secondaryWorkerConfig);
             return this;
         }
-
         public Builder workerConfig(@Nullable Output<AutoscalingPolicyWorkerConfigGetArgs> workerConfig) {
             this.workerConfig = workerConfig;
             return this;
         }
-
         public Builder workerConfig(@Nullable AutoscalingPolicyWorkerConfigGetArgs workerConfig) {
             this.workerConfig = Output.ofNullable(workerConfig);
             return this;
-        }
-        public AutoscalingPolicyState build() {
+        }        public AutoscalingPolicyState build() {
             return new AutoscalingPolicyState(basicAlgorithm, location, name, policyId, project, secondaryWorkerConfig, workerConfig);
         }
     }

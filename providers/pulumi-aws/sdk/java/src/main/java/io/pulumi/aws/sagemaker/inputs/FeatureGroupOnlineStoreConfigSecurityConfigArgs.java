@@ -57,12 +57,10 @@ public final class FeatureGroupOnlineStoreConfigSecurityConfigArgs extends io.pu
             this.kmsKeyId = kmsKeyId;
             return this;
         }
-
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = Output.ofNullable(kmsKeyId);
             return this;
-        }
-        public FeatureGroupOnlineStoreConfigSecurityConfigArgs build() {
+        }        public FeatureGroupOnlineStoreConfigSecurityConfigArgs build() {
             return new FeatureGroupOnlineStoreConfigSecurityConfigArgs(kmsKeyId);
         }
     }

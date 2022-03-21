@@ -78,22 +78,18 @@ public final class RotationArgs extends io.pulumi.resources.ResourceArgs {
             this.nextRotationTime = nextRotationTime;
             return this;
         }
-
         public Builder nextRotationTime(@Nullable String nextRotationTime) {
             this.nextRotationTime = Output.ofNullable(nextRotationTime);
             return this;
         }
-
         public Builder rotationPeriod(@Nullable Output<String> rotationPeriod) {
             this.rotationPeriod = rotationPeriod;
             return this;
         }
-
         public Builder rotationPeriod(@Nullable String rotationPeriod) {
             this.rotationPeriod = Output.ofNullable(rotationPeriod);
             return this;
-        }
-        public RotationArgs build() {
+        }        public RotationArgs build() {
             return new RotationArgs(nextRotationTime, rotationPeriod);
         }
     }

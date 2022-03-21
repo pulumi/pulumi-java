@@ -127,52 +127,42 @@ public final class InsightsConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.queryInsightsEnabled = queryInsightsEnabled;
             return this;
         }
-
         public Builder queryInsightsEnabled(@Nullable Boolean queryInsightsEnabled) {
             this.queryInsightsEnabled = Output.ofNullable(queryInsightsEnabled);
             return this;
         }
-
         public Builder queryPlansPerMinute(@Nullable Output<Integer> queryPlansPerMinute) {
             this.queryPlansPerMinute = queryPlansPerMinute;
             return this;
         }
-
         public Builder queryPlansPerMinute(@Nullable Integer queryPlansPerMinute) {
             this.queryPlansPerMinute = Output.ofNullable(queryPlansPerMinute);
             return this;
         }
-
         public Builder queryStringLength(@Nullable Output<Integer> queryStringLength) {
             this.queryStringLength = queryStringLength;
             return this;
         }
-
         public Builder queryStringLength(@Nullable Integer queryStringLength) {
             this.queryStringLength = Output.ofNullable(queryStringLength);
             return this;
         }
-
         public Builder recordApplicationTags(@Nullable Output<Boolean> recordApplicationTags) {
             this.recordApplicationTags = recordApplicationTags;
             return this;
         }
-
         public Builder recordApplicationTags(@Nullable Boolean recordApplicationTags) {
             this.recordApplicationTags = Output.ofNullable(recordApplicationTags);
             return this;
         }
-
         public Builder recordClientAddress(@Nullable Output<Boolean> recordClientAddress) {
             this.recordClientAddress = recordClientAddress;
             return this;
         }
-
         public Builder recordClientAddress(@Nullable Boolean recordClientAddress) {
             this.recordClientAddress = Output.ofNullable(recordClientAddress);
             return this;
-        }
-        public InsightsConfigArgs build() {
+        }        public InsightsConfigArgs build() {
             return new InsightsConfigArgs(queryInsightsEnabled, queryPlansPerMinute, queryStringLength, recordApplicationTags, recordClientAddress);
         }
     }

@@ -143,62 +143,56 @@ public final class ClusterMasterInstanceFleetInstanceTypeConfigArgs extends io.p
             this.bidPrice = bidPrice;
             return this;
         }
-
         public Builder bidPrice(@Nullable String bidPrice) {
             this.bidPrice = Output.ofNullable(bidPrice);
             return this;
         }
-
         public Builder bidPriceAsPercentageOfOnDemandPrice(@Nullable Output<Double> bidPriceAsPercentageOfOnDemandPrice) {
             this.bidPriceAsPercentageOfOnDemandPrice = bidPriceAsPercentageOfOnDemandPrice;
             return this;
         }
-
         public Builder bidPriceAsPercentageOfOnDemandPrice(@Nullable Double bidPriceAsPercentageOfOnDemandPrice) {
             this.bidPriceAsPercentageOfOnDemandPrice = Output.ofNullable(bidPriceAsPercentageOfOnDemandPrice);
             return this;
         }
-
         public Builder configurations(@Nullable Output<List<ClusterMasterInstanceFleetInstanceTypeConfigConfigurationArgs>> configurations) {
             this.configurations = configurations;
             return this;
         }
-
         public Builder configurations(@Nullable List<ClusterMasterInstanceFleetInstanceTypeConfigConfigurationArgs> configurations) {
             this.configurations = Output.ofNullable(configurations);
             return this;
         }
-
+        public Builder configurations(ClusterMasterInstanceFleetInstanceTypeConfigConfigurationArgs... configurations) {
+            return configurations(List.of(configurations));
+        }
         public Builder ebsConfigs(@Nullable Output<List<ClusterMasterInstanceFleetInstanceTypeConfigEbsConfigArgs>> ebsConfigs) {
             this.ebsConfigs = ebsConfigs;
             return this;
         }
-
         public Builder ebsConfigs(@Nullable List<ClusterMasterInstanceFleetInstanceTypeConfigEbsConfigArgs> ebsConfigs) {
             this.ebsConfigs = Output.ofNullable(ebsConfigs);
             return this;
         }
-
+        public Builder ebsConfigs(ClusterMasterInstanceFleetInstanceTypeConfigEbsConfigArgs... ebsConfigs) {
+            return ebsConfigs(List.of(ebsConfigs));
+        }
         public Builder instanceType(Output<String> instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
-
         public Builder instanceType(String instanceType) {
             this.instanceType = Output.of(Objects.requireNonNull(instanceType));
             return this;
         }
-
         public Builder weightedCapacity(@Nullable Output<Integer> weightedCapacity) {
             this.weightedCapacity = weightedCapacity;
             return this;
         }
-
         public Builder weightedCapacity(@Nullable Integer weightedCapacity) {
             this.weightedCapacity = Output.ofNullable(weightedCapacity);
             return this;
-        }
-        public ClusterMasterInstanceFleetInstanceTypeConfigArgs build() {
+        }        public ClusterMasterInstanceFleetInstanceTypeConfigArgs build() {
             return new ClusterMasterInstanceFleetInstanceTypeConfigArgs(bidPrice, bidPriceAsPercentageOfOnDemandPrice, configurations, ebsConfigs, instanceType, weightedCapacity);
         }
     }

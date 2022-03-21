@@ -78,22 +78,18 @@ public final class FirewallPolicyCertificateAuthorityArgs extends io.pulumi.reso
             this.keyVaultSecretId = keyVaultSecretId;
             return this;
         }
-
         public Builder keyVaultSecretId(@Nullable String keyVaultSecretId) {
             this.keyVaultSecretId = Output.ofNullable(keyVaultSecretId);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
-        }
-        public FirewallPolicyCertificateAuthorityArgs build() {
+        }        public FirewallPolicyCertificateAuthorityArgs build() {
             return new FirewallPolicyCertificateAuthorityArgs(keyVaultSecretId, name);
         }
     }

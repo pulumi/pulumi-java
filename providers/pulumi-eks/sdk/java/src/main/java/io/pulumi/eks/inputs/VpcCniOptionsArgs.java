@@ -394,202 +394,162 @@ public final class VpcCniOptionsArgs extends io.pulumi.resources.ResourceArgs {
             this.cniConfigureRpfilter = cniConfigureRpfilter;
             return this;
         }
-
         public Builder cniConfigureRpfilter(@Nullable Boolean cniConfigureRpfilter) {
             this.cniConfigureRpfilter = Output.ofNullable(cniConfigureRpfilter);
             return this;
         }
-
         public Builder cniCustomNetworkCfg(@Nullable Output<Boolean> cniCustomNetworkCfg) {
             this.cniCustomNetworkCfg = cniCustomNetworkCfg;
             return this;
         }
-
         public Builder cniCustomNetworkCfg(@Nullable Boolean cniCustomNetworkCfg) {
             this.cniCustomNetworkCfg = Output.ofNullable(cniCustomNetworkCfg);
             return this;
         }
-
         public Builder cniExternalSnat(@Nullable Output<Boolean> cniExternalSnat) {
             this.cniExternalSnat = cniExternalSnat;
             return this;
         }
-
         public Builder cniExternalSnat(@Nullable Boolean cniExternalSnat) {
             this.cniExternalSnat = Output.ofNullable(cniExternalSnat);
             return this;
         }
-
         public Builder customNetworkConfig(@Nullable Output<Boolean> customNetworkConfig) {
             this.customNetworkConfig = customNetworkConfig;
             return this;
         }
-
         public Builder customNetworkConfig(@Nullable Boolean customNetworkConfig) {
             this.customNetworkConfig = Output.ofNullable(customNetworkConfig);
             return this;
         }
-
         public Builder disableTcpEarlyDemux(@Nullable Output<Boolean> disableTcpEarlyDemux) {
             this.disableTcpEarlyDemux = disableTcpEarlyDemux;
             return this;
         }
-
         public Builder disableTcpEarlyDemux(@Nullable Boolean disableTcpEarlyDemux) {
             this.disableTcpEarlyDemux = Output.ofNullable(disableTcpEarlyDemux);
             return this;
         }
-
         public Builder enablePodEni(@Nullable Output<Boolean> enablePodEni) {
             this.enablePodEni = enablePodEni;
             return this;
         }
-
         public Builder enablePodEni(@Nullable Boolean enablePodEni) {
             this.enablePodEni = Output.ofNullable(enablePodEni);
             return this;
         }
-
         public Builder enablePrefixDelegation(@Nullable Output<Boolean> enablePrefixDelegation) {
             this.enablePrefixDelegation = enablePrefixDelegation;
             return this;
         }
-
         public Builder enablePrefixDelegation(@Nullable Boolean enablePrefixDelegation) {
             this.enablePrefixDelegation = Output.ofNullable(enablePrefixDelegation);
             return this;
         }
-
         public Builder eniConfigLabelDef(@Nullable Output<String> eniConfigLabelDef) {
             this.eniConfigLabelDef = eniConfigLabelDef;
             return this;
         }
-
         public Builder eniConfigLabelDef(@Nullable String eniConfigLabelDef) {
             this.eniConfigLabelDef = Output.ofNullable(eniConfigLabelDef);
             return this;
         }
-
         public Builder eniMtu(@Nullable Output<Integer> eniMtu) {
             this.eniMtu = eniMtu;
             return this;
         }
-
         public Builder eniMtu(@Nullable Integer eniMtu) {
             this.eniMtu = Output.ofNullable(eniMtu);
             return this;
         }
-
         public Builder externalSnat(@Nullable Output<Boolean> externalSnat) {
             this.externalSnat = externalSnat;
             return this;
         }
-
         public Builder externalSnat(@Nullable Boolean externalSnat) {
             this.externalSnat = Output.ofNullable(externalSnat);
             return this;
         }
-
         public Builder image(@Nullable Output<String> image) {
             this.image = image;
             return this;
         }
-
         public Builder image(@Nullable String image) {
             this.image = Output.ofNullable(image);
             return this;
         }
-
         public Builder initImage(@Nullable Output<String> initImage) {
             this.initImage = initImage;
             return this;
         }
-
         public Builder initImage(@Nullable String initImage) {
             this.initImage = Output.ofNullable(initImage);
             return this;
         }
-
         public Builder logFile(@Nullable Output<String> logFile) {
             this.logFile = logFile;
             return this;
         }
-
         public Builder logFile(@Nullable String logFile) {
             this.logFile = Output.ofNullable(logFile);
             return this;
         }
-
         public Builder logLevel(@Nullable Output<String> logLevel) {
             this.logLevel = logLevel;
             return this;
         }
-
         public Builder logLevel(@Nullable String logLevel) {
             this.logLevel = Output.ofNullable(logLevel);
             return this;
         }
-
         public Builder nodePortSupport(@Nullable Output<Boolean> nodePortSupport) {
             this.nodePortSupport = nodePortSupport;
             return this;
         }
-
         public Builder nodePortSupport(@Nullable Boolean nodePortSupport) {
             this.nodePortSupport = Output.ofNullable(nodePortSupport);
             return this;
         }
-
         public Builder securityContextPrivileged(@Nullable Output<Boolean> securityContextPrivileged) {
             this.securityContextPrivileged = securityContextPrivileged;
             return this;
         }
-
         public Builder securityContextPrivileged(@Nullable Boolean securityContextPrivileged) {
             this.securityContextPrivileged = Output.ofNullable(securityContextPrivileged);
             return this;
         }
-
         public Builder vethPrefix(@Nullable Output<String> vethPrefix) {
             this.vethPrefix = vethPrefix;
             return this;
         }
-
         public Builder vethPrefix(@Nullable String vethPrefix) {
             this.vethPrefix = Output.ofNullable(vethPrefix);
             return this;
         }
-
         public Builder warmEniTarget(@Nullable Output<Integer> warmEniTarget) {
             this.warmEniTarget = warmEniTarget;
             return this;
         }
-
         public Builder warmEniTarget(@Nullable Integer warmEniTarget) {
             this.warmEniTarget = Output.ofNullable(warmEniTarget);
             return this;
         }
-
         public Builder warmIpTarget(@Nullable Output<Integer> warmIpTarget) {
             this.warmIpTarget = warmIpTarget;
             return this;
         }
-
         public Builder warmIpTarget(@Nullable Integer warmIpTarget) {
             this.warmIpTarget = Output.ofNullable(warmIpTarget);
             return this;
         }
-
         public Builder warmPrefixTarget(@Nullable Output<Integer> warmPrefixTarget) {
             this.warmPrefixTarget = warmPrefixTarget;
             return this;
         }
-
         public Builder warmPrefixTarget(@Nullable Integer warmPrefixTarget) {
             this.warmPrefixTarget = Output.ofNullable(warmPrefixTarget);
             return this;
-        }
-        public VpcCniOptionsArgs build() {
+        }        public VpcCniOptionsArgs build() {
             return new VpcCniOptionsArgs(cniConfigureRpfilter, cniCustomNetworkCfg, cniExternalSnat, customNetworkConfig, disableTcpEarlyDemux, enablePodEni, enablePrefixDelegation, eniConfigLabelDef, eniMtu, externalSnat, image, initImage, logFile, logLevel, nodePortSupport, securityContextPrivileged, vethPrefix, warmEniTarget, warmIpTarget, warmPrefixTarget);
         }
     }

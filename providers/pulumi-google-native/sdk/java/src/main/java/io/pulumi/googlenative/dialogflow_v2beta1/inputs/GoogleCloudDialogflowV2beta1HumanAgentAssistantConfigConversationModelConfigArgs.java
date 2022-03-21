@@ -61,12 +61,10 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversa
             this.model = model;
             return this;
         }
-
         public Builder model(@Nullable String model) {
             this.model = Output.ofNullable(model);
             return this;
-        }
-        public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversationModelConfigArgs build() {
+        }        public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversationModelConfigArgs build() {
             return new GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversationModelConfigArgs(model);
         }
     }

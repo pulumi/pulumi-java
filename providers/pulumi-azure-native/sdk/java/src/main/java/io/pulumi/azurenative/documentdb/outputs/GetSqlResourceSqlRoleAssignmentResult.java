@@ -135,32 +135,26 @@ public final class GetSqlResourceSqlRoleAssignmentResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder principalId(@Nullable String principalId) {
             this.principalId = principalId;
             return this;
         }
-
         public Builder roleDefinitionId(@Nullable String roleDefinitionId) {
             this.roleDefinitionId = roleDefinitionId;
             return this;
         }
-
         public Builder scope(@Nullable String scope) {
             this.scope = scope;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetSqlResourceSqlRoleAssignmentResult build() {
+        }        public GetSqlResourceSqlRoleAssignmentResult build() {
             return new GetSqlResourceSqlRoleAssignmentResult(id, name, principalId, roleDefinitionId, scope, type);
         }
     }

@@ -57,12 +57,13 @@ public final class WorkflowTemplateParameterValidationRegexGetArgs extends io.pu
             this.regexes = Objects.requireNonNull(regexes);
             return this;
         }
-
         public Builder regexes(List<String> regexes) {
             this.regexes = Output.of(Objects.requireNonNull(regexes));
             return this;
         }
-        public WorkflowTemplateParameterValidationRegexGetArgs build() {
+        public Builder regexes(String... regexes) {
+            return regexes(List.of(regexes));
+        }        public WorkflowTemplateParameterValidationRegexGetArgs build() {
             return new WorkflowTemplateParameterValidationRegexGetArgs(regexes);
         }
     }

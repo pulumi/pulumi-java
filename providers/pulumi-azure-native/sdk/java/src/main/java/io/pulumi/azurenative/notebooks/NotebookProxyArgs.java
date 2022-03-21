@@ -171,82 +171,66 @@ public final class NotebookProxyArgs extends io.pulumi.resources.ResourceArgs {
             this.hostname = hostname;
             return this;
         }
-
         public Builder hostname(@Nullable String hostname) {
             this.hostname = Output.ofNullable(hostname);
             return this;
         }
-
         public Builder publicDns(@Nullable Output<String> publicDns) {
             this.publicDns = publicDns;
             return this;
         }
-
         public Builder publicDns(@Nullable String publicDns) {
             this.publicDns = Output.ofNullable(publicDns);
             return this;
         }
-
         public Builder publicNetworkAccess(@Nullable Output<String> publicNetworkAccess) {
             this.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
-
         public Builder publicNetworkAccess(@Nullable String publicNetworkAccess) {
             this.publicNetworkAccess = Output.ofNullable(publicNetworkAccess);
             return this;
         }
-
         public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
-
         public Builder region(@Nullable String region) {
             this.region = Output.ofNullable(region);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder resourceName(@Nullable Output<String> resourceName) {
             this.resourceName = resourceName;
             return this;
         }
-
         public Builder resourceName(@Nullable String resourceName) {
             this.resourceName = Output.ofNullable(resourceName);
             return this;
         }
-
         public Builder secondaryAppId(@Nullable Output<String> secondaryAppId) {
             this.secondaryAppId = secondaryAppId;
             return this;
         }
-
         public Builder secondaryAppId(@Nullable String secondaryAppId) {
             this.secondaryAppId = Output.ofNullable(secondaryAppId);
             return this;
         }
-
         public Builder systemData(@Nullable Output<NotebookResourceSystemDataArgs> systemData) {
             this.systemData = systemData;
             return this;
         }
-
         public Builder systemData(@Nullable NotebookResourceSystemDataArgs systemData) {
             this.systemData = Output.ofNullable(systemData);
             return this;
-        }
-        public NotebookProxyArgs build() {
+        }        public NotebookProxyArgs build() {
             return new NotebookProxyArgs(hostname, publicDns, publicNetworkAccess, region, resourceGroupName, resourceName, secondaryAppId, systemData);
         }
     }

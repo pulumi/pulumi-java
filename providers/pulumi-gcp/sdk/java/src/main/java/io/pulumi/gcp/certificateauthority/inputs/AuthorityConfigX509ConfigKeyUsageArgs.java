@@ -96,32 +96,29 @@ public final class AuthorityConfigX509ConfigKeyUsageArgs extends io.pulumi.resou
             this.baseKeyUsage = Objects.requireNonNull(baseKeyUsage);
             return this;
         }
-
         public Builder baseKeyUsage(AuthorityConfigX509ConfigKeyUsageBaseKeyUsageArgs baseKeyUsage) {
             this.baseKeyUsage = Output.of(Objects.requireNonNull(baseKeyUsage));
             return this;
         }
-
         public Builder extendedKeyUsage(Output<AuthorityConfigX509ConfigKeyUsageExtendedKeyUsageArgs> extendedKeyUsage) {
             this.extendedKeyUsage = Objects.requireNonNull(extendedKeyUsage);
             return this;
         }
-
         public Builder extendedKeyUsage(AuthorityConfigX509ConfigKeyUsageExtendedKeyUsageArgs extendedKeyUsage) {
             this.extendedKeyUsage = Output.of(Objects.requireNonNull(extendedKeyUsage));
             return this;
         }
-
         public Builder unknownExtendedKeyUsages(@Nullable Output<List<AuthorityConfigX509ConfigKeyUsageUnknownExtendedKeyUsageArgs>> unknownExtendedKeyUsages) {
             this.unknownExtendedKeyUsages = unknownExtendedKeyUsages;
             return this;
         }
-
         public Builder unknownExtendedKeyUsages(@Nullable List<AuthorityConfigX509ConfigKeyUsageUnknownExtendedKeyUsageArgs> unknownExtendedKeyUsages) {
             this.unknownExtendedKeyUsages = Output.ofNullable(unknownExtendedKeyUsages);
             return this;
         }
-        public AuthorityConfigX509ConfigKeyUsageArgs build() {
+        public Builder unknownExtendedKeyUsages(AuthorityConfigX509ConfigKeyUsageUnknownExtendedKeyUsageArgs... unknownExtendedKeyUsages) {
+            return unknownExtendedKeyUsages(List.of(unknownExtendedKeyUsages));
+        }        public AuthorityConfigX509ConfigKeyUsageArgs build() {
             return new AuthorityConfigX509ConfigKeyUsageArgs(baseKeyUsage, extendedKeyUsage, unknownExtendedKeyUsages);
         }
     }

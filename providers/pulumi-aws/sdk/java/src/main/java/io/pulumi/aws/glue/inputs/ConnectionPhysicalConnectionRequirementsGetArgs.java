@@ -91,32 +91,29 @@ public final class ConnectionPhysicalConnectionRequirementsGetArgs extends io.pu
             this.availabilityZone = availabilityZone;
             return this;
         }
-
         public Builder availabilityZone(@Nullable String availabilityZone) {
             this.availabilityZone = Output.ofNullable(availabilityZone);
             return this;
         }
-
         public Builder securityGroupIdLists(@Nullable Output<List<String>> securityGroupIdLists) {
             this.securityGroupIdLists = securityGroupIdLists;
             return this;
         }
-
         public Builder securityGroupIdLists(@Nullable List<String> securityGroupIdLists) {
             this.securityGroupIdLists = Output.ofNullable(securityGroupIdLists);
             return this;
         }
-
+        public Builder securityGroupIdLists(String... securityGroupIdLists) {
+            return securityGroupIdLists(List.of(securityGroupIdLists));
+        }
         public Builder subnetId(@Nullable Output<String> subnetId) {
             this.subnetId = subnetId;
             return this;
         }
-
         public Builder subnetId(@Nullable String subnetId) {
             this.subnetId = Output.ofNullable(subnetId);
             return this;
-        }
-        public ConnectionPhysicalConnectionRequirementsGetArgs build() {
+        }        public ConnectionPhysicalConnectionRequirementsGetArgs build() {
             return new ConnectionPhysicalConnectionRequirementsGetArgs(availabilityZone, securityGroupIdLists, subnetId);
         }
     }

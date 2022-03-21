@@ -94,32 +94,26 @@ public final class FhirStoreIamPolicyState extends io.pulumi.resources.ResourceA
             this.etag = etag;
             return this;
         }
-
         public Builder etag(@Nullable String etag) {
             this.etag = Output.ofNullable(etag);
             return this;
         }
-
         public Builder fhirStoreId(@Nullable Output<String> fhirStoreId) {
             this.fhirStoreId = fhirStoreId;
             return this;
         }
-
         public Builder fhirStoreId(@Nullable String fhirStoreId) {
             this.fhirStoreId = Output.ofNullable(fhirStoreId);
             return this;
         }
-
         public Builder policyData(@Nullable Output<String> policyData) {
             this.policyData = policyData;
             return this;
         }
-
         public Builder policyData(@Nullable String policyData) {
             this.policyData = Output.ofNullable(policyData);
             return this;
-        }
-        public FhirStoreIamPolicyState build() {
+        }        public FhirStoreIamPolicyState build() {
             return new FhirStoreIamPolicyState(etag, fhirStoreId, policyData);
         }
     }

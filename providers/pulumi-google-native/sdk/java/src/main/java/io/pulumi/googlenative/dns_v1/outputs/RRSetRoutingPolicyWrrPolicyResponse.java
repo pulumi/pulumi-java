@@ -55,12 +55,13 @@ public final class RRSetRoutingPolicyWrrPolicyResponse {
             this.items = Objects.requireNonNull(items);
             return this;
         }
-
+        public Builder items(RRSetRoutingPolicyWrrPolicyWrrPolicyItemResponse... items) {
+            return items(List.of(items));
+        }
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
-        }
-        public RRSetRoutingPolicyWrrPolicyResponse build() {
+        }        public RRSetRoutingPolicyWrrPolicyResponse build() {
             return new RRSetRoutingPolicyWrrPolicyResponse(items, kind);
         }
     }

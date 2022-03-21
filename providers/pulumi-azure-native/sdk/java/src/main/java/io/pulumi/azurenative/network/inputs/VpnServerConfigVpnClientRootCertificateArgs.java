@@ -78,22 +78,18 @@ public final class VpnServerConfigVpnClientRootCertificateArgs extends io.pulumi
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder publicCertData(@Nullable Output<String> publicCertData) {
             this.publicCertData = publicCertData;
             return this;
         }
-
         public Builder publicCertData(@Nullable String publicCertData) {
             this.publicCertData = Output.ofNullable(publicCertData);
             return this;
-        }
-        public VpnServerConfigVpnClientRootCertificateArgs build() {
+        }        public VpnServerConfigVpnClientRootCertificateArgs build() {
             return new VpnServerConfigVpnClientRootCertificateArgs(name, publicCertData);
         }
     }

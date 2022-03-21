@@ -93,17 +93,14 @@ public final class GoogleCloudDialogflowCxV3RolloutStateResponse extends io.pulu
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public Builder step(String step) {
             this.step = Objects.requireNonNull(step);
             return this;
         }
-
         public Builder stepIndex(Integer stepIndex) {
             this.stepIndex = Objects.requireNonNull(stepIndex);
             return this;
-        }
-        public GoogleCloudDialogflowCxV3RolloutStateResponse build() {
+        }        public GoogleCloudDialogflowCxV3RolloutStateResponse build() {
             return new GoogleCloudDialogflowCxV3RolloutStateResponse(startTime, step, stepIndex);
         }
     }

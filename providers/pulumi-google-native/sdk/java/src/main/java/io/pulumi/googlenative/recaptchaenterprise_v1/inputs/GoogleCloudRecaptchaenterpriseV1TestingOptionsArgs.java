@@ -79,22 +79,18 @@ public final class GoogleCloudRecaptchaenterpriseV1TestingOptionsArgs extends io
             this.testingChallenge = testingChallenge;
             return this;
         }
-
         public Builder testingChallenge(@Nullable GoogleCloudRecaptchaenterpriseV1TestingOptionsTestingChallenge testingChallenge) {
             this.testingChallenge = Output.ofNullable(testingChallenge);
             return this;
         }
-
         public Builder testingScore(@Nullable Output<Double> testingScore) {
             this.testingScore = testingScore;
             return this;
         }
-
         public Builder testingScore(@Nullable Double testingScore) {
             this.testingScore = Output.ofNullable(testingScore);
             return this;
-        }
-        public GoogleCloudRecaptchaenterpriseV1TestingOptionsArgs build() {
+        }        public GoogleCloudRecaptchaenterpriseV1TestingOptionsArgs build() {
             return new GoogleCloudRecaptchaenterpriseV1TestingOptionsArgs(testingChallenge, testingScore);
         }
     }

@@ -130,52 +130,48 @@ public final class GetBackendBucketResult {
             this.bucketName = Objects.requireNonNull(bucketName);
             return this;
         }
-
         public Builder cdnPolicies(List<GetBackendBucketCdnPolicy> cdnPolicies) {
             this.cdnPolicies = Objects.requireNonNull(cdnPolicies);
             return this;
         }
-
+        public Builder cdnPolicies(GetBackendBucketCdnPolicy... cdnPolicies) {
+            return cdnPolicies(List.of(cdnPolicies));
+        }
         public Builder creationTimestamp(String creationTimestamp) {
             this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
             return this;
         }
-
         public Builder customResponseHeaders(List<String> customResponseHeaders) {
             this.customResponseHeaders = Objects.requireNonNull(customResponseHeaders);
             return this;
         }
-
+        public Builder customResponseHeaders(String... customResponseHeaders) {
+            return customResponseHeaders(List.of(customResponseHeaders));
+        }
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder enableCdn(Boolean enableCdn) {
             this.enableCdn = Objects.requireNonNull(enableCdn);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
-        }
-        public GetBackendBucketResult build() {
+        }        public GetBackendBucketResult build() {
             return new GetBackendBucketResult(bucketName, cdnPolicies, creationTimestamp, customResponseHeaders, description, enableCdn, id, name, project, selfLink);
         }
     }

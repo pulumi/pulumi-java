@@ -61,12 +61,10 @@ public final class EndpointRefArgs extends io.pulumi.resources.ResourceArgs {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
-        }
-        public EndpointRefArgs build() {
+        }        public EndpointRefArgs build() {
             return new EndpointRefArgs(name);
         }
     }

@@ -154,37 +154,30 @@ public final class GetOfficeDataConnectorResult {
             this.dataTypes = dataTypes;
             return this;
         }
-
         public Builder etag(@Nullable String etag) {
             this.etag = etag;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder tenantId(@Nullable String tenantId) {
             this.tenantId = tenantId;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetOfficeDataConnectorResult build() {
+        }        public GetOfficeDataConnectorResult build() {
             return new GetOfficeDataConnectorResult(dataTypes, etag, id, kind, name, tenantId, type);
         }
     }

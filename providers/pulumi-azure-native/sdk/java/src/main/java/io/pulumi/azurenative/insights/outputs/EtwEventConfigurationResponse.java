@@ -64,17 +64,14 @@ public final class EtwEventConfigurationResponse {
             this.filter = filter;
             return this;
         }
-
         public Builder id(Integer id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public EtwEventConfigurationResponse build() {
+        }        public EtwEventConfigurationResponse build() {
             return new EtwEventConfigurationResponse(filter, id, name);
         }
     }

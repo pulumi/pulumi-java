@@ -172,82 +172,69 @@ public final class SubscriptionDiagnosticSettingArgs extends io.pulumi.resources
             this.eventHubAuthorizationRuleId = eventHubAuthorizationRuleId;
             return this;
         }
-
         public Builder eventHubAuthorizationRuleId(@Nullable String eventHubAuthorizationRuleId) {
             this.eventHubAuthorizationRuleId = Output.ofNullable(eventHubAuthorizationRuleId);
             return this;
         }
-
         public Builder eventHubName(@Nullable Output<String> eventHubName) {
             this.eventHubName = eventHubName;
             return this;
         }
-
         public Builder eventHubName(@Nullable String eventHubName) {
             this.eventHubName = Output.ofNullable(eventHubName);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder logs(@Nullable Output<List<SubscriptionLogSettingsArgs>> logs) {
             this.logs = logs;
             return this;
         }
-
         public Builder logs(@Nullable List<SubscriptionLogSettingsArgs> logs) {
             this.logs = Output.ofNullable(logs);
             return this;
         }
-
+        public Builder logs(SubscriptionLogSettingsArgs... logs) {
+            return logs(List.of(logs));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder serviceBusRuleId(@Nullable Output<String> serviceBusRuleId) {
             this.serviceBusRuleId = serviceBusRuleId;
             return this;
         }
-
         public Builder serviceBusRuleId(@Nullable String serviceBusRuleId) {
             this.serviceBusRuleId = Output.ofNullable(serviceBusRuleId);
             return this;
         }
-
         public Builder storageAccountId(@Nullable Output<String> storageAccountId) {
             this.storageAccountId = storageAccountId;
             return this;
         }
-
         public Builder storageAccountId(@Nullable String storageAccountId) {
             this.storageAccountId = Output.ofNullable(storageAccountId);
             return this;
         }
-
         public Builder workspaceId(@Nullable Output<String> workspaceId) {
             this.workspaceId = workspaceId;
             return this;
         }
-
         public Builder workspaceId(@Nullable String workspaceId) {
             this.workspaceId = Output.ofNullable(workspaceId);
             return this;
-        }
-        public SubscriptionDiagnosticSettingArgs build() {
+        }        public SubscriptionDiagnosticSettingArgs build() {
             return new SubscriptionDiagnosticSettingArgs(eventHubAuthorizationRuleId, eventHubName, location, logs, name, serviceBusRuleId, storageAccountId, workspaceId);
         }
     }

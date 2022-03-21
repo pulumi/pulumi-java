@@ -126,27 +126,22 @@ public final class PacketCaptureFilterResponse extends io.pulumi.resources.Invok
             this.localIPAddress = localIPAddress;
             return this;
         }
-
         public Builder localPort(@Nullable String localPort) {
             this.localPort = localPort;
             return this;
         }
-
         public Builder protocol(@Nullable String protocol) {
             this.protocol = protocol;
             return this;
         }
-
         public Builder remoteIPAddress(@Nullable String remoteIPAddress) {
             this.remoteIPAddress = remoteIPAddress;
             return this;
         }
-
         public Builder remotePort(@Nullable String remotePort) {
             this.remotePort = remotePort;
             return this;
-        }
-        public PacketCaptureFilterResponse build() {
+        }        public PacketCaptureFilterResponse build() {
             return new PacketCaptureFilterResponse(localIPAddress, localPort, protocol, remoteIPAddress, remotePort);
         }
     }

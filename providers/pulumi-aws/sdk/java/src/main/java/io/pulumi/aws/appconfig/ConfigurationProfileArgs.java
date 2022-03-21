@@ -157,72 +157,61 @@ public final class ConfigurationProfileArgs extends io.pulumi.resources.Resource
             this.applicationId = Objects.requireNonNull(applicationId);
             return this;
         }
-
         public Builder applicationId(String applicationId) {
             this.applicationId = Output.of(Objects.requireNonNull(applicationId));
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder locationUri(Output<String> locationUri) {
             this.locationUri = Objects.requireNonNull(locationUri);
             return this;
         }
-
         public Builder locationUri(String locationUri) {
             this.locationUri = Output.of(Objects.requireNonNull(locationUri));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder retrievalRoleArn(@Nullable Output<String> retrievalRoleArn) {
             this.retrievalRoleArn = retrievalRoleArn;
             return this;
         }
-
         public Builder retrievalRoleArn(@Nullable String retrievalRoleArn) {
             this.retrievalRoleArn = Output.ofNullable(retrievalRoleArn);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder validators(@Nullable Output<List<ConfigurationProfileValidatorArgs>> validators) {
             this.validators = validators;
             return this;
         }
-
         public Builder validators(@Nullable List<ConfigurationProfileValidatorArgs> validators) {
             this.validators = Output.ofNullable(validators);
             return this;
         }
-        public ConfigurationProfileArgs build() {
+        public Builder validators(ConfigurationProfileValidatorArgs... validators) {
+            return validators(List.of(validators));
+        }        public ConfigurationProfileArgs build() {
             return new ConfigurationProfileArgs(applicationId, description, locationUri, name, retrievalRoleArn, tags, validators);
         }
     }

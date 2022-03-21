@@ -105,22 +105,24 @@ public final class GetClientTlsPolicyIamPolicyResult {
             this.auditConfigs = Objects.requireNonNull(auditConfigs);
             return this;
         }
-
+        public Builder auditConfigs(GoogleIamV1AuditConfigResponse... auditConfigs) {
+            return auditConfigs(List.of(auditConfigs));
+        }
         public Builder bindings(List<GoogleIamV1BindingResponse> bindings) {
             this.bindings = Objects.requireNonNull(bindings);
             return this;
         }
-
+        public Builder bindings(GoogleIamV1BindingResponse... bindings) {
+            return bindings(List.of(bindings));
+        }
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder version(Integer version) {
             this.version = Objects.requireNonNull(version);
             return this;
-        }
-        public GetClientTlsPolicyIamPolicyResult build() {
+        }        public GetClientTlsPolicyIamPolicyResult build() {
             return new GetClientTlsPolicyIamPolicyResult(auditConfigs, bindings, etag, version);
         }
     }

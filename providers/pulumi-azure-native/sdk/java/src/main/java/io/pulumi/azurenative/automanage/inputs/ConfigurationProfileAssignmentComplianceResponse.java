@@ -58,8 +58,7 @@ public final class ConfigurationProfileAssignmentComplianceResponse extends io.p
         public Builder updateStatus(String updateStatus) {
             this.updateStatus = Objects.requireNonNull(updateStatus);
             return this;
-        }
-        public ConfigurationProfileAssignmentComplianceResponse build() {
+        }        public ConfigurationProfileAssignmentComplianceResponse build() {
             return new ConfigurationProfileAssignmentComplianceResponse(updateStatus);
         }
     }

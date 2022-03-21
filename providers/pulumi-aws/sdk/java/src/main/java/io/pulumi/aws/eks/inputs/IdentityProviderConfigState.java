@@ -140,62 +140,50 @@ public final class IdentityProviderConfigState extends io.pulumi.resources.Resou
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder clusterName(@Nullable Output<String> clusterName) {
             this.clusterName = clusterName;
             return this;
         }
-
         public Builder clusterName(@Nullable String clusterName) {
             this.clusterName = Output.ofNullable(clusterName);
             return this;
         }
-
         public Builder oidc(@Nullable Output<IdentityProviderConfigOidcGetArgs> oidc) {
             this.oidc = oidc;
             return this;
         }
-
         public Builder oidc(@Nullable IdentityProviderConfigOidcGetArgs oidc) {
             this.oidc = Output.ofNullable(oidc);
             return this;
         }
-
         public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = Output.ofNullable(status);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
-        }
-        public IdentityProviderConfigState build() {
+        }        public IdentityProviderConfigState build() {
             return new IdentityProviderConfigState(arn, clusterName, oidc, status, tags, tagsAll);
         }
     }

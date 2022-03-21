@@ -123,62 +123,50 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder instanceId(Output<String> instanceId) {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
-
         public Builder instanceId(String instanceId) {
             this.instanceId = Output.of(Objects.requireNonNull(instanceId));
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder snapshotId(Output<String> snapshotId) {
             this.snapshotId = Objects.requireNonNull(snapshotId);
             return this;
         }
-
         public Builder snapshotId(String snapshotId) {
             this.snapshotId = Output.of(Objects.requireNonNull(snapshotId));
             return this;
-        }
-        public SnapshotArgs build() {
+        }        public SnapshotArgs build() {
             return new SnapshotArgs(description, instanceId, labels, location, project, snapshotId);
         }
     }

@@ -72,12 +72,10 @@ public final class GetComponentArgs extends io.pulumi.resources.InvokeArgs {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceName(String resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
-        }
-        public GetComponentArgs build() {
+        }        public GetComponentArgs build() {
             return new GetComponentArgs(resourceGroupName, resourceName);
         }
     }

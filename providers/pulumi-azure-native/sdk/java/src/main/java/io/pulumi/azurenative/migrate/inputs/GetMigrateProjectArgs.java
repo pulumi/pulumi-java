@@ -72,12 +72,10 @@ public final class GetMigrateProjectArgs extends io.pulumi.resources.InvokeArgs 
             this.migrateProjectName = Objects.requireNonNull(migrateProjectName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetMigrateProjectArgs build() {
+        }        public GetMigrateProjectArgs build() {
             return new GetMigrateProjectArgs(migrateProjectName, resourceGroupName);
         }
     }

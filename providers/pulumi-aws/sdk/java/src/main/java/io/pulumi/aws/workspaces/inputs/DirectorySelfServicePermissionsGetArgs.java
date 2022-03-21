@@ -122,52 +122,42 @@ public final class DirectorySelfServicePermissionsGetArgs extends io.pulumi.reso
             this.changeComputeType = changeComputeType;
             return this;
         }
-
         public Builder changeComputeType(@Nullable Boolean changeComputeType) {
             this.changeComputeType = Output.ofNullable(changeComputeType);
             return this;
         }
-
         public Builder increaseVolumeSize(@Nullable Output<Boolean> increaseVolumeSize) {
             this.increaseVolumeSize = increaseVolumeSize;
             return this;
         }
-
         public Builder increaseVolumeSize(@Nullable Boolean increaseVolumeSize) {
             this.increaseVolumeSize = Output.ofNullable(increaseVolumeSize);
             return this;
         }
-
         public Builder rebuildWorkspace(@Nullable Output<Boolean> rebuildWorkspace) {
             this.rebuildWorkspace = rebuildWorkspace;
             return this;
         }
-
         public Builder rebuildWorkspace(@Nullable Boolean rebuildWorkspace) {
             this.rebuildWorkspace = Output.ofNullable(rebuildWorkspace);
             return this;
         }
-
         public Builder restartWorkspace(@Nullable Output<Boolean> restartWorkspace) {
             this.restartWorkspace = restartWorkspace;
             return this;
         }
-
         public Builder restartWorkspace(@Nullable Boolean restartWorkspace) {
             this.restartWorkspace = Output.ofNullable(restartWorkspace);
             return this;
         }
-
         public Builder switchRunningMode(@Nullable Output<Boolean> switchRunningMode) {
             this.switchRunningMode = switchRunningMode;
             return this;
         }
-
         public Builder switchRunningMode(@Nullable Boolean switchRunningMode) {
             this.switchRunningMode = Output.ofNullable(switchRunningMode);
             return this;
-        }
-        public DirectorySelfServicePermissionsGetArgs build() {
+        }        public DirectorySelfServicePermissionsGetArgs build() {
             return new DirectorySelfServicePermissionsGetArgs(changeComputeType, increaseVolumeSize, rebuildWorkspace, restartWorkspace, switchRunningMode);
         }
     }

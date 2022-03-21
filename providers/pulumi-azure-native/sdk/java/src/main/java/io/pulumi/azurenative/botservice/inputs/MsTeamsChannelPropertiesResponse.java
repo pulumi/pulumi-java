@@ -143,32 +143,26 @@ public final class MsTeamsChannelPropertiesResponse extends io.pulumi.resources.
             this.acceptedTerms = acceptedTerms;
             return this;
         }
-
         public Builder callingWebHook(@Nullable String callingWebHook) {
             this.callingWebHook = callingWebHook;
             return this;
         }
-
         public Builder deploymentEnvironment(@Nullable String deploymentEnvironment) {
             this.deploymentEnvironment = deploymentEnvironment;
             return this;
         }
-
         public Builder enableCalling(@Nullable Boolean enableCalling) {
             this.enableCalling = enableCalling;
             return this;
         }
-
         public Builder incomingCallRoute(@Nullable String incomingCallRoute) {
             this.incomingCallRoute = incomingCallRoute;
             return this;
         }
-
         public Builder isEnabled(Boolean isEnabled) {
             this.isEnabled = Objects.requireNonNull(isEnabled);
             return this;
-        }
-        public MsTeamsChannelPropertiesResponse build() {
+        }        public MsTeamsChannelPropertiesResponse build() {
             return new MsTeamsChannelPropertiesResponse(acceptedTerms, callingWebHook, deploymentEnvironment, enableCalling, incomingCallRoute, isEnabled);
         }
     }

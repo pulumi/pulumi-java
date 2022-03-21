@@ -155,72 +155,58 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder displayName(Output<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
-
         public Builder externalId(@Nullable Output<String> externalId) {
             this.externalId = externalId;
             return this;
         }
-
         public Builder externalId(@Nullable String externalId) {
             this.externalId = Output.ofNullable(externalId);
             return this;
         }
-
         public Builder groupId(@Nullable Output<String> groupId) {
             this.groupId = groupId;
             return this;
         }
-
         public Builder groupId(@Nullable String groupId) {
             this.groupId = Output.ofNullable(groupId);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder serviceName(Output<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
-
         public Builder serviceName(String serviceName) {
             this.serviceName = Output.of(Objects.requireNonNull(serviceName));
             return this;
         }
-
         public Builder type(@Nullable Output<GroupType> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable GroupType type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public GroupArgs build() {
+        }        public GroupArgs build() {
             return new GroupArgs(description, displayName, externalId, groupId, resourceGroupName, serviceName, type);
         }
     }

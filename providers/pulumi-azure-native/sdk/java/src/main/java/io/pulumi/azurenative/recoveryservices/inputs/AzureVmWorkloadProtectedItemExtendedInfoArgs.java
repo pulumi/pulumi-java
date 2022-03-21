@@ -95,32 +95,26 @@ public final class AzureVmWorkloadProtectedItemExtendedInfoArgs extends io.pulum
             this.oldestRecoveryPoint = oldestRecoveryPoint;
             return this;
         }
-
         public Builder oldestRecoveryPoint(@Nullable String oldestRecoveryPoint) {
             this.oldestRecoveryPoint = Output.ofNullable(oldestRecoveryPoint);
             return this;
         }
-
         public Builder policyState(@Nullable Output<String> policyState) {
             this.policyState = policyState;
             return this;
         }
-
         public Builder policyState(@Nullable String policyState) {
             this.policyState = Output.ofNullable(policyState);
             return this;
         }
-
         public Builder recoveryPointCount(@Nullable Output<Integer> recoveryPointCount) {
             this.recoveryPointCount = recoveryPointCount;
             return this;
         }
-
         public Builder recoveryPointCount(@Nullable Integer recoveryPointCount) {
             this.recoveryPointCount = Output.ofNullable(recoveryPointCount);
             return this;
-        }
-        public AzureVmWorkloadProtectedItemExtendedInfoArgs build() {
+        }        public AzureVmWorkloadProtectedItemExtendedInfoArgs build() {
             return new AzureVmWorkloadProtectedItemExtendedInfoArgs(oldestRecoveryPoint, policyState, recoveryPointCount);
         }
     }

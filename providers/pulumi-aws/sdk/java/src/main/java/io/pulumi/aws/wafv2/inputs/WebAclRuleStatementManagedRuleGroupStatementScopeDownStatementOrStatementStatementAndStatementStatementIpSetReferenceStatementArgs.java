@@ -75,22 +75,18 @@ public final class WebAclRuleStatementManagedRuleGroupStatementScopeDownStatemen
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder arn(String arn) {
             this.arn = Output.of(Objects.requireNonNull(arn));
             return this;
         }
-
         public Builder ipSetForwardedIpConfig(@Nullable Output<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementOrStatementStatementAndStatementStatementIpSetReferenceStatementIpSetForwardedIpConfigArgs> ipSetForwardedIpConfig) {
             this.ipSetForwardedIpConfig = ipSetForwardedIpConfig;
             return this;
         }
-
         public Builder ipSetForwardedIpConfig(@Nullable WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementOrStatementStatementAndStatementStatementIpSetReferenceStatementIpSetForwardedIpConfigArgs ipSetForwardedIpConfig) {
             this.ipSetForwardedIpConfig = Output.ofNullable(ipSetForwardedIpConfig);
             return this;
-        }
-        public WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementOrStatementStatementAndStatementStatementIpSetReferenceStatementArgs build() {
+        }        public WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementOrStatementStatementAndStatementStatementIpSetReferenceStatementArgs build() {
             return new WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementOrStatementStatementAndStatementStatementIpSetReferenceStatementArgs(arn, ipSetForwardedIpConfig);
         }
     }

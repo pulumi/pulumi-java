@@ -51,8 +51,7 @@ public final class SkuResponse {
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public SkuResponse build() {
+        }        public SkuResponse build() {
             return new SkuResponse(name);
         }
     }

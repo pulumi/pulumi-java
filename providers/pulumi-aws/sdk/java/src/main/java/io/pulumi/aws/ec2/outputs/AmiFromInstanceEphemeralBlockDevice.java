@@ -73,12 +73,10 @@ public final class AmiFromInstanceEphemeralBlockDevice {
             this.deviceName = deviceName;
             return this;
         }
-
         public Builder virtualName(@Nullable String virtualName) {
             this.virtualName = virtualName;
             return this;
-        }
-        public AmiFromInstanceEphemeralBlockDevice build() {
+        }        public AmiFromInstanceEphemeralBlockDevice build() {
             return new AmiFromInstanceEphemeralBlockDevice(deviceName, virtualName);
         }
     }

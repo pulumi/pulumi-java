@@ -140,32 +140,29 @@ public final class DomainDefaultUserSettings {
             this.executionRole = Objects.requireNonNull(executionRole);
             return this;
         }
-
         public Builder jupyterServerAppSettings(@Nullable DomainDefaultUserSettingsJupyterServerAppSettings jupyterServerAppSettings) {
             this.jupyterServerAppSettings = jupyterServerAppSettings;
             return this;
         }
-
         public Builder kernelGatewayAppSettings(@Nullable DomainDefaultUserSettingsKernelGatewayAppSettings kernelGatewayAppSettings) {
             this.kernelGatewayAppSettings = kernelGatewayAppSettings;
             return this;
         }
-
         public Builder securityGroups(@Nullable List<String> securityGroups) {
             this.securityGroups = securityGroups;
             return this;
         }
-
+        public Builder securityGroups(String... securityGroups) {
+            return securityGroups(List.of(securityGroups));
+        }
         public Builder sharingSettings(@Nullable DomainDefaultUserSettingsSharingSettings sharingSettings) {
             this.sharingSettings = sharingSettings;
             return this;
         }
-
         public Builder tensorBoardAppSettings(@Nullable DomainDefaultUserSettingsTensorBoardAppSettings tensorBoardAppSettings) {
             this.tensorBoardAppSettings = tensorBoardAppSettings;
             return this;
-        }
-        public DomainDefaultUserSettings build() {
+        }        public DomainDefaultUserSettings build() {
             return new DomainDefaultUserSettings(executionRole, jupyterServerAppSettings, kernelGatewayAppSettings, securityGroups, sharingSettings, tensorBoardAppSettings);
         }
     }

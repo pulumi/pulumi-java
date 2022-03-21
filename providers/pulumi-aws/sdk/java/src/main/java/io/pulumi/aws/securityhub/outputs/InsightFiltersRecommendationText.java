@@ -69,12 +69,10 @@ public final class InsightFiltersRecommendationText {
             this.comparison = Objects.requireNonNull(comparison);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public InsightFiltersRecommendationText build() {
+        }        public InsightFiltersRecommendationText build() {
             return new InsightFiltersRecommendationText(comparison, value);
         }
     }

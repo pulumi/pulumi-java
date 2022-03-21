@@ -51,8 +51,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigMetastoreConfig 
         public Builder dataprocMetastoreService(String dataprocMetastoreService) {
             this.dataprocMetastoreService = Objects.requireNonNull(dataprocMetastoreService);
             return this;
-        }
-        public WorkflowTemplatePlacementManagedClusterConfigMetastoreConfig build() {
+        }        public WorkflowTemplatePlacementManagedClusterConfigMetastoreConfig build() {
             return new WorkflowTemplatePlacementManagedClusterConfigMetastoreConfig(dataprocMetastoreService);
         }
     }

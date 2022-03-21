@@ -94,32 +94,26 @@ public final class CapabilityArgs extends io.pulumi.resources.ResourceArgs {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder reason(@Nullable Output<String> reason) {
             this.reason = reason;
             return this;
         }
-
         public Builder reason(@Nullable String reason) {
             this.reason = Output.ofNullable(reason);
             return this;
         }
-
         public Builder value(@Nullable Output<String> value) {
             this.value = value;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = Output.ofNullable(value);
             return this;
-        }
-        public CapabilityArgs build() {
+        }        public CapabilityArgs build() {
             return new CapabilityArgs(name, reason, value);
         }
     }

@@ -64,12 +64,13 @@ public final class ScaleInPolicyArgs extends io.pulumi.resources.ResourceArgs {
             this.rules = rules;
             return this;
         }
-
         public Builder rules(@Nullable List<Either<String,VirtualMachineScaleSetScaleInRules>> rules) {
             this.rules = Output.ofNullable(rules);
             return this;
         }
-        public ScaleInPolicyArgs build() {
+        public Builder rules(Either<String,VirtualMachineScaleSetScaleInRules>... rules) {
+            return rules(List.of(rules));
+        }        public ScaleInPolicyArgs build() {
             return new ScaleInPolicyArgs(rules);
         }
     }

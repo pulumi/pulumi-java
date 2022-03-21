@@ -78,22 +78,18 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigArgs ex
             this.email = Objects.requireNonNull(email);
             return this;
         }
-
         public Builder email(String email) {
             this.email = Output.of(Objects.requireNonNull(email));
             return this;
         }
-
         public Builder minAcceptableMeanAveragePrecision(Output<Double> minAcceptableMeanAveragePrecision) {
             this.minAcceptableMeanAveragePrecision = Objects.requireNonNull(minAcceptableMeanAveragePrecision);
             return this;
         }
-
         public Builder minAcceptableMeanAveragePrecision(Double minAcceptableMeanAveragePrecision) {
             this.minAcceptableMeanAveragePrecision = Output.of(Objects.requireNonNull(minAcceptableMeanAveragePrecision));
             return this;
-        }
-        public GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigArgs build() {
+        }        public GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigArgs build() {
             return new GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigArgs(email, minAcceptableMeanAveragePrecision);
         }
     }

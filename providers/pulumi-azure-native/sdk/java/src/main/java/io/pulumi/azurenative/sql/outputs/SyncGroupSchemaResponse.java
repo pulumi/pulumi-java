@@ -73,12 +73,13 @@ public final class SyncGroupSchemaResponse {
             this.masterSyncMemberName = masterSyncMemberName;
             return this;
         }
-
         public Builder tables(@Nullable List<SyncGroupSchemaTableResponse> tables) {
             this.tables = tables;
             return this;
         }
-        public SyncGroupSchemaResponse build() {
+        public Builder tables(SyncGroupSchemaTableResponse... tables) {
+            return tables(List.of(tables));
+        }        public SyncGroupSchemaResponse build() {
             return new SyncGroupSchemaResponse(masterSyncMemberName, tables);
         }
     }

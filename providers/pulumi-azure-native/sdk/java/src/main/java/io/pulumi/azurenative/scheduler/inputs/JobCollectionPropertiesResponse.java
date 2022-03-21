@@ -92,17 +92,14 @@ public final class JobCollectionPropertiesResponse extends io.pulumi.resources.I
             this.quota = quota;
             return this;
         }
-
         public Builder sku(@Nullable SkuResponse sku) {
             this.sku = sku;
             return this;
         }
-
         public Builder state(@Nullable String state) {
             this.state = state;
             return this;
-        }
-        public JobCollectionPropertiesResponse build() {
+        }        public JobCollectionPropertiesResponse build() {
             return new JobCollectionPropertiesResponse(quota, sku, state);
         }
     }

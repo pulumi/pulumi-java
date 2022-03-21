@@ -552,157 +552,171 @@ public final class GetLaunchTemplateResult {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder blockDeviceMappings(List<GetLaunchTemplateBlockDeviceMapping> blockDeviceMappings) {
             this.blockDeviceMappings = Objects.requireNonNull(blockDeviceMappings);
             return this;
         }
-
+        public Builder blockDeviceMappings(GetLaunchTemplateBlockDeviceMapping... blockDeviceMappings) {
+            return blockDeviceMappings(List.of(blockDeviceMappings));
+        }
         public Builder creditSpecifications(List<GetLaunchTemplateCreditSpecification> creditSpecifications) {
             this.creditSpecifications = Objects.requireNonNull(creditSpecifications);
             return this;
         }
-
+        public Builder creditSpecifications(GetLaunchTemplateCreditSpecification... creditSpecifications) {
+            return creditSpecifications(List.of(creditSpecifications));
+        }
         public Builder defaultVersion(Integer defaultVersion) {
             this.defaultVersion = Objects.requireNonNull(defaultVersion);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder disableApiTermination(Boolean disableApiTermination) {
             this.disableApiTermination = Objects.requireNonNull(disableApiTermination);
             return this;
         }
-
         public Builder ebsOptimized(String ebsOptimized) {
             this.ebsOptimized = Objects.requireNonNull(ebsOptimized);
             return this;
         }
-
         public Builder elasticGpuSpecifications(List<GetLaunchTemplateElasticGpuSpecification> elasticGpuSpecifications) {
             this.elasticGpuSpecifications = Objects.requireNonNull(elasticGpuSpecifications);
             return this;
         }
-
+        public Builder elasticGpuSpecifications(GetLaunchTemplateElasticGpuSpecification... elasticGpuSpecifications) {
+            return elasticGpuSpecifications(List.of(elasticGpuSpecifications));
+        }
         public Builder enclaveOptions(List<GetLaunchTemplateEnclaveOption> enclaveOptions) {
             this.enclaveOptions = Objects.requireNonNull(enclaveOptions);
             return this;
         }
-
+        public Builder enclaveOptions(GetLaunchTemplateEnclaveOption... enclaveOptions) {
+            return enclaveOptions(List.of(enclaveOptions));
+        }
         public Builder filters(@Nullable List<GetLaunchTemplateFilter> filters) {
             this.filters = filters;
             return this;
         }
-
+        public Builder filters(GetLaunchTemplateFilter... filters) {
+            return filters(List.of(filters));
+        }
         public Builder hibernationOptions(List<GetLaunchTemplateHibernationOption> hibernationOptions) {
             this.hibernationOptions = Objects.requireNonNull(hibernationOptions);
             return this;
         }
-
+        public Builder hibernationOptions(GetLaunchTemplateHibernationOption... hibernationOptions) {
+            return hibernationOptions(List.of(hibernationOptions));
+        }
         public Builder iamInstanceProfiles(List<GetLaunchTemplateIamInstanceProfile> iamInstanceProfiles) {
             this.iamInstanceProfiles = Objects.requireNonNull(iamInstanceProfiles);
             return this;
         }
-
+        public Builder iamInstanceProfiles(GetLaunchTemplateIamInstanceProfile... iamInstanceProfiles) {
+            return iamInstanceProfiles(List.of(iamInstanceProfiles));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder imageId(String imageId) {
             this.imageId = Objects.requireNonNull(imageId);
             return this;
         }
-
         public Builder instanceInitiatedShutdownBehavior(String instanceInitiatedShutdownBehavior) {
             this.instanceInitiatedShutdownBehavior = Objects.requireNonNull(instanceInitiatedShutdownBehavior);
             return this;
         }
-
         public Builder instanceMarketOptions(List<GetLaunchTemplateInstanceMarketOption> instanceMarketOptions) {
             this.instanceMarketOptions = Objects.requireNonNull(instanceMarketOptions);
             return this;
         }
-
+        public Builder instanceMarketOptions(GetLaunchTemplateInstanceMarketOption... instanceMarketOptions) {
+            return instanceMarketOptions(List.of(instanceMarketOptions));
+        }
         public Builder instanceType(String instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
-
         public Builder kernelId(String kernelId) {
             this.kernelId = Objects.requireNonNull(kernelId);
             return this;
         }
-
         public Builder keyName(String keyName) {
             this.keyName = Objects.requireNonNull(keyName);
             return this;
         }
-
         public Builder latestVersion(Integer latestVersion) {
             this.latestVersion = Objects.requireNonNull(latestVersion);
             return this;
         }
-
         public Builder metadataOptions(List<GetLaunchTemplateMetadataOption> metadataOptions) {
             this.metadataOptions = Objects.requireNonNull(metadataOptions);
             return this;
         }
-
+        public Builder metadataOptions(GetLaunchTemplateMetadataOption... metadataOptions) {
+            return metadataOptions(List.of(metadataOptions));
+        }
         public Builder monitorings(List<GetLaunchTemplateMonitoring> monitorings) {
             this.monitorings = Objects.requireNonNull(monitorings);
             return this;
         }
-
+        public Builder monitorings(GetLaunchTemplateMonitoring... monitorings) {
+            return monitorings(List.of(monitorings));
+        }
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder networkInterfaces(List<GetLaunchTemplateNetworkInterface> networkInterfaces) {
             this.networkInterfaces = Objects.requireNonNull(networkInterfaces);
             return this;
         }
-
+        public Builder networkInterfaces(GetLaunchTemplateNetworkInterface... networkInterfaces) {
+            return networkInterfaces(List.of(networkInterfaces));
+        }
         public Builder placements(List<GetLaunchTemplatePlacement> placements) {
             this.placements = Objects.requireNonNull(placements);
             return this;
         }
-
+        public Builder placements(GetLaunchTemplatePlacement... placements) {
+            return placements(List.of(placements));
+        }
         public Builder ramDiskId(String ramDiskId) {
             this.ramDiskId = Objects.requireNonNull(ramDiskId);
             return this;
         }
-
         public Builder securityGroupNames(List<String> securityGroupNames) {
             this.securityGroupNames = Objects.requireNonNull(securityGroupNames);
             return this;
         }
-
+        public Builder securityGroupNames(String... securityGroupNames) {
+            return securityGroupNames(List.of(securityGroupNames));
+        }
         public Builder tagSpecifications(List<GetLaunchTemplateTagSpecification> tagSpecifications) {
             this.tagSpecifications = Objects.requireNonNull(tagSpecifications);
             return this;
         }
-
+        public Builder tagSpecifications(GetLaunchTemplateTagSpecification... tagSpecifications) {
+            return tagSpecifications(List.of(tagSpecifications));
+        }
         public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
-
         public Builder userData(String userData) {
             this.userData = Objects.requireNonNull(userData);
             return this;
         }
-
         public Builder vpcSecurityGroupIds(List<String> vpcSecurityGroupIds) {
             this.vpcSecurityGroupIds = Objects.requireNonNull(vpcSecurityGroupIds);
             return this;
         }
-        public GetLaunchTemplateResult build() {
+        public Builder vpcSecurityGroupIds(String... vpcSecurityGroupIds) {
+            return vpcSecurityGroupIds(List.of(vpcSecurityGroupIds));
+        }        public GetLaunchTemplateResult build() {
             return new GetLaunchTemplateResult(arn, blockDeviceMappings, creditSpecifications, defaultVersion, description, disableApiTermination, ebsOptimized, elasticGpuSpecifications, enclaveOptions, filters, hibernationOptions, iamInstanceProfiles, id, imageId, instanceInitiatedShutdownBehavior, instanceMarketOptions, instanceType, kernelId, keyName, latestVersion, metadataOptions, monitorings, name, networkInterfaces, placements, ramDiskId, securityGroupNames, tagSpecifications, tags, userData, vpcSecurityGroupIds);
         }
     }

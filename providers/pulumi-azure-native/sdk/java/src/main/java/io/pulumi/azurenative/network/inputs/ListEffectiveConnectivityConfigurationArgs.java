@@ -90,17 +90,14 @@ public final class ListEffectiveConnectivityConfigurationArgs extends io.pulumi.
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder skipToken(@Nullable String skipToken) {
             this.skipToken = skipToken;
             return this;
         }
-
         public Builder virtualNetworkName(String virtualNetworkName) {
             this.virtualNetworkName = Objects.requireNonNull(virtualNetworkName);
             return this;
-        }
-        public ListEffectiveConnectivityConfigurationArgs build() {
+        }        public ListEffectiveConnectivityConfigurationArgs build() {
             return new ListEffectiveConnectivityConfigurationArgs(resourceGroupName, skipToken, virtualNetworkName);
         }
     }

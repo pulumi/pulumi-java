@@ -111,42 +111,34 @@ public final class GoogleCloudMlV1__PredictionOutputArgs extends io.pulumi.resou
             this.errorCount = errorCount;
             return this;
         }
-
         public Builder errorCount(@Nullable String errorCount) {
             this.errorCount = Output.ofNullable(errorCount);
             return this;
         }
-
         public Builder nodeHours(@Nullable Output<Double> nodeHours) {
             this.nodeHours = nodeHours;
             return this;
         }
-
         public Builder nodeHours(@Nullable Double nodeHours) {
             this.nodeHours = Output.ofNullable(nodeHours);
             return this;
         }
-
         public Builder outputPath(@Nullable Output<String> outputPath) {
             this.outputPath = outputPath;
             return this;
         }
-
         public Builder outputPath(@Nullable String outputPath) {
             this.outputPath = Output.ofNullable(outputPath);
             return this;
         }
-
         public Builder predictionCount(@Nullable Output<String> predictionCount) {
             this.predictionCount = predictionCount;
             return this;
         }
-
         public Builder predictionCount(@Nullable String predictionCount) {
             this.predictionCount = Output.ofNullable(predictionCount);
             return this;
-        }
-        public GoogleCloudMlV1__PredictionOutputArgs build() {
+        }        public GoogleCloudMlV1__PredictionOutputArgs build() {
             return new GoogleCloudMlV1__PredictionOutputArgs(errorCount, nodeHours, outputPath, predictionCount);
         }
     }

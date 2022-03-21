@@ -88,17 +88,14 @@ public final class DetectorModelSetTimer {
             this.durationExpression = durationExpression;
             return this;
         }
-
         public Builder seconds(@Nullable Integer seconds) {
             this.seconds = seconds;
             return this;
         }
-
         public Builder timerName(String timerName) {
             this.timerName = Objects.requireNonNull(timerName);
             return this;
-        }
-        public DetectorModelSetTimer build() {
+        }        public DetectorModelSetTimer build() {
             return new DetectorModelSetTimer(durationExpression, seconds, timerName);
         }
     }

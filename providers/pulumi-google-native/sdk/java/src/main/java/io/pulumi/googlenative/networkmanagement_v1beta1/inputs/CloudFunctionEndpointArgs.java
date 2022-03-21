@@ -61,12 +61,10 @@ public final class CloudFunctionEndpointArgs extends io.pulumi.resources.Resourc
             this.uri = uri;
             return this;
         }
-
         public Builder uri(@Nullable String uri) {
             this.uri = Output.ofNullable(uri);
             return this;
-        }
-        public CloudFunctionEndpointArgs build() {
+        }        public CloudFunctionEndpointArgs build() {
             return new CloudFunctionEndpointArgs(uri);
         }
     }

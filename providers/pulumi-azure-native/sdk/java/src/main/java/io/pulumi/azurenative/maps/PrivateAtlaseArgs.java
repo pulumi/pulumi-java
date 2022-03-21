@@ -123,52 +123,42 @@ public final class PrivateAtlaseArgs extends io.pulumi.resources.ResourceArgs {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder accountName(String accountName) {
             this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder privateAtlasName(@Nullable Output<String> privateAtlasName) {
             this.privateAtlasName = privateAtlasName;
             return this;
         }
-
         public Builder privateAtlasName(@Nullable String privateAtlasName) {
             this.privateAtlasName = Output.ofNullable(privateAtlasName);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public PrivateAtlaseArgs build() {
+        }        public PrivateAtlaseArgs build() {
             return new PrivateAtlaseArgs(accountName, location, privateAtlasName, resourceGroupName, tags);
         }
     }

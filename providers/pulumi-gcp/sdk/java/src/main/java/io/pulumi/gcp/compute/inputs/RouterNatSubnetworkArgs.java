@@ -97,32 +97,32 @@ public final class RouterNatSubnetworkArgs extends io.pulumi.resources.ResourceA
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder secondaryIpRangeNames(@Nullable Output<List<String>> secondaryIpRangeNames) {
             this.secondaryIpRangeNames = secondaryIpRangeNames;
             return this;
         }
-
         public Builder secondaryIpRangeNames(@Nullable List<String> secondaryIpRangeNames) {
             this.secondaryIpRangeNames = Output.ofNullable(secondaryIpRangeNames);
             return this;
         }
-
+        public Builder secondaryIpRangeNames(String... secondaryIpRangeNames) {
+            return secondaryIpRangeNames(List.of(secondaryIpRangeNames));
+        }
         public Builder sourceIpRangesToNats(Output<List<String>> sourceIpRangesToNats) {
             this.sourceIpRangesToNats = Objects.requireNonNull(sourceIpRangesToNats);
             return this;
         }
-
         public Builder sourceIpRangesToNats(List<String> sourceIpRangesToNats) {
             this.sourceIpRangesToNats = Output.of(Objects.requireNonNull(sourceIpRangesToNats));
             return this;
         }
-        public RouterNatSubnetworkArgs build() {
+        public Builder sourceIpRangesToNats(String... sourceIpRangesToNats) {
+            return sourceIpRangesToNats(List.of(sourceIpRangesToNats));
+        }        public RouterNatSubnetworkArgs build() {
             return new RouterNatSubnetworkArgs(name, secondaryIpRangeNames, sourceIpRangesToNats);
         }
     }

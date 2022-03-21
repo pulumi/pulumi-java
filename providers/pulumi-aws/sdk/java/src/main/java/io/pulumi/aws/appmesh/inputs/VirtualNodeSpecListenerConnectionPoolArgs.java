@@ -109,42 +109,34 @@ public final class VirtualNodeSpecListenerConnectionPoolArgs extends io.pulumi.r
             this.grpc = grpc;
             return this;
         }
-
         public Builder grpc(@Nullable VirtualNodeSpecListenerConnectionPoolGrpcArgs grpc) {
             this.grpc = Output.ofNullable(grpc);
             return this;
         }
-
         public Builder http(@Nullable Output<VirtualNodeSpecListenerConnectionPoolHttpArgs> http) {
             this.http = http;
             return this;
         }
-
         public Builder http(@Nullable VirtualNodeSpecListenerConnectionPoolHttpArgs http) {
             this.http = Output.ofNullable(http);
             return this;
         }
-
         public Builder http2(@Nullable Output<VirtualNodeSpecListenerConnectionPoolHttp2Args> http2) {
             this.http2 = http2;
             return this;
         }
-
         public Builder http2(@Nullable VirtualNodeSpecListenerConnectionPoolHttp2Args http2) {
             this.http2 = Output.ofNullable(http2);
             return this;
         }
-
         public Builder tcp(@Nullable Output<VirtualNodeSpecListenerConnectionPoolTcpArgs> tcp) {
             this.tcp = tcp;
             return this;
         }
-
         public Builder tcp(@Nullable VirtualNodeSpecListenerConnectionPoolTcpArgs tcp) {
             this.tcp = Output.ofNullable(tcp);
             return this;
-        }
-        public VirtualNodeSpecListenerConnectionPoolArgs build() {
+        }        public VirtualNodeSpecListenerConnectionPoolArgs build() {
             return new VirtualNodeSpecListenerConnectionPoolArgs(grpc, http, http2, tcp);
         }
     }

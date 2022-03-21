@@ -585,167 +585,140 @@ public final class GetVirtualMachineResult {
             this.additionalCapabilities = additionalCapabilities;
             return this;
         }
-
         public Builder availabilitySet(@Nullable SubResourceResponse availabilitySet) {
             this.availabilitySet = availabilitySet;
             return this;
         }
-
         public Builder billingProfile(@Nullable BillingProfileResponse billingProfile) {
             this.billingProfile = billingProfile;
             return this;
         }
-
         public Builder diagnosticsProfile(@Nullable DiagnosticsProfileResponse diagnosticsProfile) {
             this.diagnosticsProfile = diagnosticsProfile;
             return this;
         }
-
         public Builder evictionPolicy(@Nullable String evictionPolicy) {
             this.evictionPolicy = evictionPolicy;
             return this;
         }
-
         public Builder extendedLocation(@Nullable ExtendedLocationResponse extendedLocation) {
             this.extendedLocation = extendedLocation;
             return this;
         }
-
         public Builder extensionsTimeBudget(@Nullable String extensionsTimeBudget) {
             this.extensionsTimeBudget = extensionsTimeBudget;
             return this;
         }
-
         public Builder hardwareProfile(@Nullable HardwareProfileResponse hardwareProfile) {
             this.hardwareProfile = hardwareProfile;
             return this;
         }
-
         public Builder host(@Nullable SubResourceResponse host) {
             this.host = host;
             return this;
         }
-
         public Builder hostGroup(@Nullable SubResourceResponse hostGroup) {
             this.hostGroup = hostGroup;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder identity(@Nullable VirtualMachineIdentityResponse identity) {
             this.identity = identity;
             return this;
         }
-
         public Builder instanceView(VirtualMachineInstanceViewResponse instanceView) {
             this.instanceView = Objects.requireNonNull(instanceView);
             return this;
         }
-
         public Builder licenseType(@Nullable String licenseType) {
             this.licenseType = licenseType;
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder networkProfile(@Nullable NetworkProfileResponse networkProfile) {
             this.networkProfile = networkProfile;
             return this;
         }
-
         public Builder osProfile(@Nullable OSProfileResponse osProfile) {
             this.osProfile = osProfile;
             return this;
         }
-
         public Builder plan(@Nullable PlanResponse plan) {
             this.plan = plan;
             return this;
         }
-
         public Builder platformFaultDomain(@Nullable Integer platformFaultDomain) {
             this.platformFaultDomain = platformFaultDomain;
             return this;
         }
-
         public Builder priority(@Nullable String priority) {
             this.priority = priority;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder proximityPlacementGroup(@Nullable SubResourceResponse proximityPlacementGroup) {
             this.proximityPlacementGroup = proximityPlacementGroup;
             return this;
         }
-
         public Builder resources(List<VirtualMachineExtensionResponse> resources) {
             this.resources = Objects.requireNonNull(resources);
             return this;
         }
-
+        public Builder resources(VirtualMachineExtensionResponse... resources) {
+            return resources(List.of(resources));
+        }
         public Builder scheduledEventsProfile(@Nullable ScheduledEventsProfileResponse scheduledEventsProfile) {
             this.scheduledEventsProfile = scheduledEventsProfile;
             return this;
         }
-
         public Builder securityProfile(@Nullable SecurityProfileResponse securityProfile) {
             this.securityProfile = securityProfile;
             return this;
         }
-
         public Builder storageProfile(@Nullable StorageProfileResponse storageProfile) {
             this.storageProfile = storageProfile;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder userData(@Nullable String userData) {
             this.userData = userData;
             return this;
         }
-
         public Builder virtualMachineScaleSet(@Nullable SubResourceResponse virtualMachineScaleSet) {
             this.virtualMachineScaleSet = virtualMachineScaleSet;
             return this;
         }
-
         public Builder vmId(String vmId) {
             this.vmId = Objects.requireNonNull(vmId);
             return this;
         }
-
         public Builder zones(@Nullable List<String> zones) {
             this.zones = zones;
             return this;
         }
-        public GetVirtualMachineResult build() {
+        public Builder zones(String... zones) {
+            return zones(List.of(zones));
+        }        public GetVirtualMachineResult build() {
             return new GetVirtualMachineResult(additionalCapabilities, availabilitySet, billingProfile, diagnosticsProfile, evictionPolicy, extendedLocation, extensionsTimeBudget, hardwareProfile, host, hostGroup, id, identity, instanceView, licenseType, location, name, networkProfile, osProfile, plan, platformFaultDomain, priority, provisioningState, proximityPlacementGroup, resources, scheduledEventsProfile, securityProfile, storageProfile, tags, type, userData, virtualMachineScaleSet, vmId, zones);
         }
     }

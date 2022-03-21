@@ -93,32 +93,26 @@ public final class RegexMatchSetRegexMatchTupleArgs extends io.pulumi.resources.
             this.fieldToMatch = Objects.requireNonNull(fieldToMatch);
             return this;
         }
-
         public Builder fieldToMatch(RegexMatchSetRegexMatchTupleFieldToMatchArgs fieldToMatch) {
             this.fieldToMatch = Output.of(Objects.requireNonNull(fieldToMatch));
             return this;
         }
-
         public Builder regexPatternSetId(Output<String> regexPatternSetId) {
             this.regexPatternSetId = Objects.requireNonNull(regexPatternSetId);
             return this;
         }
-
         public Builder regexPatternSetId(String regexPatternSetId) {
             this.regexPatternSetId = Output.of(Objects.requireNonNull(regexPatternSetId));
             return this;
         }
-
         public Builder textTransformation(Output<String> textTransformation) {
             this.textTransformation = Objects.requireNonNull(textTransformation);
             return this;
         }
-
         public Builder textTransformation(String textTransformation) {
             this.textTransformation = Output.of(Objects.requireNonNull(textTransformation));
             return this;
-        }
-        public RegexMatchSetRegexMatchTupleArgs build() {
+        }        public RegexMatchSetRegexMatchTupleArgs build() {
             return new RegexMatchSetRegexMatchTupleArgs(fieldToMatch, regexPatternSetId, textTransformation);
         }
     }

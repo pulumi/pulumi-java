@@ -50,8 +50,7 @@ public final class GetLaunchTemplateCreditSpecification extends io.pulumi.resour
         public Builder cpuCredits(String cpuCredits) {
             this.cpuCredits = Objects.requireNonNull(cpuCredits);
             return this;
-        }
-        public GetLaunchTemplateCreditSpecification build() {
+        }        public GetLaunchTemplateCreditSpecification build() {
             return new GetLaunchTemplateCreditSpecification(cpuCredits);
         }
     }

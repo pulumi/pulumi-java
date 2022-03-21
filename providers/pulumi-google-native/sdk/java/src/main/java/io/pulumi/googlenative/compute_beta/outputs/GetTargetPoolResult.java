@@ -215,57 +215,52 @@ public final class GetTargetPoolResult {
             this.backupPool = Objects.requireNonNull(backupPool);
             return this;
         }
-
         public Builder creationTimestamp(String creationTimestamp) {
             this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder failoverRatio(Double failoverRatio) {
             this.failoverRatio = Objects.requireNonNull(failoverRatio);
             return this;
         }
-
         public Builder healthChecks(List<String> healthChecks) {
             this.healthChecks = Objects.requireNonNull(healthChecks);
             return this;
         }
-
+        public Builder healthChecks(String... healthChecks) {
+            return healthChecks(List.of(healthChecks));
+        }
         public Builder instances(List<String> instances) {
             this.instances = Objects.requireNonNull(instances);
             return this;
         }
-
+        public Builder instances(String... instances) {
+            return instances(List.of(instances));
+        }
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
-
         public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
-
         public Builder sessionAffinity(String sessionAffinity) {
             this.sessionAffinity = Objects.requireNonNull(sessionAffinity);
             return this;
-        }
-        public GetTargetPoolResult build() {
+        }        public GetTargetPoolResult build() {
             return new GetTargetPoolResult(backupPool, creationTimestamp, description, failoverRatio, healthChecks, instances, kind, name, region, selfLink, sessionAffinity);
         }
     }

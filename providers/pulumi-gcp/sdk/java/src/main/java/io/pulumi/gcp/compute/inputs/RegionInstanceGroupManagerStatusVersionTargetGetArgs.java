@@ -53,12 +53,10 @@ public final class RegionInstanceGroupManagerStatusVersionTargetGetArgs extends 
             this.isReached = isReached;
             return this;
         }
-
         public Builder isReached(@Nullable Boolean isReached) {
             this.isReached = Output.ofNullable(isReached);
             return this;
-        }
-        public RegionInstanceGroupManagerStatusVersionTargetGetArgs build() {
+        }        public RegionInstanceGroupManagerStatusVersionTargetGetArgs build() {
             return new RegionInstanceGroupManagerStatusVersionTargetGetArgs(isReached);
         }
     }

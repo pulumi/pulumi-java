@@ -105,42 +105,34 @@ public final class IndividualOutcomeArgs extends io.pulumi.resources.ResourceArg
             this.multistepNumber = multistepNumber;
             return this;
         }
-
         public Builder multistepNumber(@Nullable Integer multistepNumber) {
             this.multistepNumber = Output.ofNullable(multistepNumber);
             return this;
         }
-
         public Builder outcomeSummary(@Nullable Output<IndividualOutcomeOutcomeSummary> outcomeSummary) {
             this.outcomeSummary = outcomeSummary;
             return this;
         }
-
         public Builder outcomeSummary(@Nullable IndividualOutcomeOutcomeSummary outcomeSummary) {
             this.outcomeSummary = Output.ofNullable(outcomeSummary);
             return this;
         }
-
         public Builder runDuration(@Nullable Output<DurationArgs> runDuration) {
             this.runDuration = runDuration;
             return this;
         }
-
         public Builder runDuration(@Nullable DurationArgs runDuration) {
             this.runDuration = Output.ofNullable(runDuration);
             return this;
         }
-
         public Builder stepId(@Nullable Output<String> stepId) {
             this.stepId = stepId;
             return this;
         }
-
         public Builder stepId(@Nullable String stepId) {
             this.stepId = Output.ofNullable(stepId);
             return this;
-        }
-        public IndividualOutcomeArgs build() {
+        }        public IndividualOutcomeArgs build() {
             return new IndividualOutcomeArgs(multistepNumber, outcomeSummary, runDuration, stepId);
         }
     }

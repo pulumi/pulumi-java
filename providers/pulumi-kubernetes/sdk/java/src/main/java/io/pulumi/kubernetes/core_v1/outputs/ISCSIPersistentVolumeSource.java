@@ -219,57 +219,49 @@ public final class ISCSIPersistentVolumeSource {
             this.chapAuthDiscovery = chapAuthDiscovery;
             return this;
         }
-
         public Builder chapAuthSession(@Nullable Boolean chapAuthSession) {
             this.chapAuthSession = chapAuthSession;
             return this;
         }
-
         public Builder fsType(@Nullable String fsType) {
             this.fsType = fsType;
             return this;
         }
-
         public Builder initiatorName(@Nullable String initiatorName) {
             this.initiatorName = initiatorName;
             return this;
         }
-
         public Builder iqn(String iqn) {
             this.iqn = Objects.requireNonNull(iqn);
             return this;
         }
-
         public Builder iscsiInterface(@Nullable String iscsiInterface) {
             this.iscsiInterface = iscsiInterface;
             return this;
         }
-
         public Builder lun(Integer lun) {
             this.lun = Objects.requireNonNull(lun);
             return this;
         }
-
         public Builder portals(@Nullable List<String> portals) {
             this.portals = portals;
             return this;
         }
-
+        public Builder portals(String... portals) {
+            return portals(List.of(portals));
+        }
         public Builder readOnly(@Nullable Boolean readOnly) {
             this.readOnly = readOnly;
             return this;
         }
-
         public Builder secretRef(@Nullable SecretReference secretRef) {
             this.secretRef = secretRef;
             return this;
         }
-
         public Builder targetPortal(String targetPortal) {
             this.targetPortal = Objects.requireNonNull(targetPortal);
             return this;
-        }
-        public ISCSIPersistentVolumeSource build() {
+        }        public ISCSIPersistentVolumeSource build() {
             return new ISCSIPersistentVolumeSource(chapAuthDiscovery, chapAuthSession, fsType, initiatorName, iqn, iscsiInterface, lun, portals, readOnly, secretRef, targetPortal);
         }
     }

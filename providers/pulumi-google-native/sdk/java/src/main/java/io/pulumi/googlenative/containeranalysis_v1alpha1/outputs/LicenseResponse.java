@@ -69,12 +69,10 @@ public final class LicenseResponse {
             this.comments = Objects.requireNonNull(comments);
             return this;
         }
-
         public Builder expression(String expression) {
             this.expression = Objects.requireNonNull(expression);
             return this;
-        }
-        public LicenseResponse build() {
+        }        public LicenseResponse build() {
             return new LicenseResponse(comments, expression);
         }
     }

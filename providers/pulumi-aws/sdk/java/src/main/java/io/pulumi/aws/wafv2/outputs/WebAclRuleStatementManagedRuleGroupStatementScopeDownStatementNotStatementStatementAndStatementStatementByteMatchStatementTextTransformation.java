@@ -70,12 +70,10 @@ public final class WebAclRuleStatementManagedRuleGroupStatementScopeDownStatemen
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementNotStatementStatementAndStatementStatementByteMatchStatementTextTransformation build() {
+        }        public WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementNotStatementStatementAndStatementStatementByteMatchStatementTextTransformation build() {
             return new WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementNotStatementStatementAndStatementStatementByteMatchStatementTextTransformation(priority, type);
         }
     }

@@ -62,12 +62,13 @@ public final class DFPInstanceAdministratorsArgs extends io.pulumi.resources.Res
             this.members = members;
             return this;
         }
-
         public Builder members(@Nullable List<String> members) {
             this.members = Output.ofNullable(members);
             return this;
         }
-        public DFPInstanceAdministratorsArgs build() {
+        public Builder members(String... members) {
+            return members(List.of(members));
+        }        public DFPInstanceAdministratorsArgs build() {
             return new DFPInstanceAdministratorsArgs(members);
         }
     }

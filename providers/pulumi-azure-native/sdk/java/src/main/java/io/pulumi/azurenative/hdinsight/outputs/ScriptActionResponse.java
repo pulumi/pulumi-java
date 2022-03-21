@@ -85,17 +85,14 @@ public final class ScriptActionResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder parameters(String parameters) {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
-
         public Builder uri(String uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
-        }
-        public ScriptActionResponse build() {
+        }        public ScriptActionResponse build() {
             return new ScriptActionResponse(name, parameters, uri);
         }
     }

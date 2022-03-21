@@ -56,12 +56,10 @@ public final class WebAclRuleStatementRuleGroupReferenceStatementExcludedRuleGet
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
-        }
-        public WebAclRuleStatementRuleGroupReferenceStatementExcludedRuleGetArgs build() {
+        }        public WebAclRuleStatementRuleGroupReferenceStatementExcludedRuleGetArgs build() {
             return new WebAclRuleStatementRuleGroupReferenceStatementExcludedRuleGetArgs(name);
         }
     }

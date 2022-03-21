@@ -96,17 +96,14 @@ public final class KubernetesRoleResourcesResponse extends io.pulumi.resources.I
             this.compute = Objects.requireNonNull(compute);
             return this;
         }
-
         public Builder network(KubernetesRoleNetworkResponse network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }
-
         public Builder storage(@Nullable KubernetesRoleStorageResponse storage) {
             this.storage = storage;
             return this;
-        }
-        public KubernetesRoleResourcesResponse build() {
+        }        public KubernetesRoleResourcesResponse build() {
             return new KubernetesRoleResourcesResponse(compute, network, storage);
         }
     }

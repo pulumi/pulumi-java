@@ -58,12 +58,10 @@ public final class SloBasicSliLatencyArgs extends io.pulumi.resources.ResourceAr
             this.threshold = Objects.requireNonNull(threshold);
             return this;
         }
-
         public Builder threshold(String threshold) {
             this.threshold = Output.of(Objects.requireNonNull(threshold));
             return this;
-        }
-        public SloBasicSliLatencyArgs build() {
+        }        public SloBasicSliLatencyArgs build() {
             return new SloBasicSliLatencyArgs(threshold);
         }
     }

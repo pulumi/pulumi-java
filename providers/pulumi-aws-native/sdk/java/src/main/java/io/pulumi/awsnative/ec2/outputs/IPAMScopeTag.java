@@ -69,12 +69,10 @@ public final class IPAMScopeTag {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public IPAMScopeTag build() {
+        }        public IPAMScopeTag build() {
             return new IPAMScopeTag(key, value);
         }
     }

@@ -56,12 +56,10 @@ public final class FolderFeedFeedOutputConfigPubsubDestinationArgs extends io.pu
             this.topic = Objects.requireNonNull(topic);
             return this;
         }
-
         public Builder topic(String topic) {
             this.topic = Output.of(Objects.requireNonNull(topic));
             return this;
-        }
-        public FolderFeedFeedOutputConfigPubsubDestinationArgs build() {
+        }        public FolderFeedFeedOutputConfigPubsubDestinationArgs build() {
             return new FolderFeedFeedOutputConfigPubsubDestinationArgs(topic);
         }
     }

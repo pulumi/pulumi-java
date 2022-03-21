@@ -135,32 +135,29 @@ public final class NetworkResponse {
             this.forwardedPorts = Objects.requireNonNull(forwardedPorts);
             return this;
         }
-
+        public Builder forwardedPorts(String... forwardedPorts) {
+            return forwardedPorts(List.of(forwardedPorts));
+        }
         public Builder instanceIpMode(String instanceIpMode) {
             this.instanceIpMode = Objects.requireNonNull(instanceIpMode);
             return this;
         }
-
         public Builder instanceTag(String instanceTag) {
             this.instanceTag = Objects.requireNonNull(instanceTag);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder sessionAffinity(Boolean sessionAffinity) {
             this.sessionAffinity = Objects.requireNonNull(sessionAffinity);
             return this;
         }
-
         public Builder subnetworkName(String subnetworkName) {
             this.subnetworkName = Objects.requireNonNull(subnetworkName);
             return this;
-        }
-        public NetworkResponse build() {
+        }        public NetworkResponse build() {
             return new NetworkResponse(forwardedPorts, instanceIpMode, instanceTag, name, sessionAffinity, subnetworkName);
         }
     }

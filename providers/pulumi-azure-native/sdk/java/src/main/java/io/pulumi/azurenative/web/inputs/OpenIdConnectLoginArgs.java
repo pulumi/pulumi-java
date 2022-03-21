@@ -79,22 +79,21 @@ public final class OpenIdConnectLoginArgs extends io.pulumi.resources.ResourceAr
             this.nameClaimType = nameClaimType;
             return this;
         }
-
         public Builder nameClaimType(@Nullable String nameClaimType) {
             this.nameClaimType = Output.ofNullable(nameClaimType);
             return this;
         }
-
         public Builder scopes(@Nullable Output<List<String>> scopes) {
             this.scopes = scopes;
             return this;
         }
-
         public Builder scopes(@Nullable List<String> scopes) {
             this.scopes = Output.ofNullable(scopes);
             return this;
         }
-        public OpenIdConnectLoginArgs build() {
+        public Builder scopes(String... scopes) {
+            return scopes(List.of(scopes));
+        }        public OpenIdConnectLoginArgs build() {
             return new OpenIdConnectLoginArgs(nameClaimType, scopes);
         }
     }

@@ -94,32 +94,29 @@ public final class UserMappingArgs extends io.pulumi.resources.ResourceArgs {
             this.groups = Objects.requireNonNull(groups);
             return this;
         }
-
         public Builder groups(List<String> groups) {
             this.groups = Output.of(Objects.requireNonNull(groups));
             return this;
         }
-
+        public Builder groups(String... groups) {
+            return groups(List.of(groups));
+        }
         public Builder userArn(Output<String> userArn) {
             this.userArn = Objects.requireNonNull(userArn);
             return this;
         }
-
         public Builder userArn(String userArn) {
             this.userArn = Output.of(Objects.requireNonNull(userArn));
             return this;
         }
-
         public Builder username(Output<String> username) {
             this.username = Objects.requireNonNull(username);
             return this;
         }
-
         public Builder username(String username) {
             this.username = Output.of(Objects.requireNonNull(username));
             return this;
-        }
-        public UserMappingArgs build() {
+        }        public UserMappingArgs build() {
             return new UserMappingArgs(groups, userArn, username);
         }
     }

@@ -64,17 +64,14 @@ public final class CxVersionNluSetting {
             this.classificationThreshold = classificationThreshold;
             return this;
         }
-
         public Builder modelTrainingMode(@Nullable String modelTrainingMode) {
             this.modelTrainingMode = modelTrainingMode;
             return this;
         }
-
         public Builder modelType(@Nullable String modelType) {
             this.modelType = modelType;
             return this;
-        }
-        public CxVersionNluSetting build() {
+        }        public CxVersionNluSetting build() {
             return new CxVersionNluSetting(classificationThreshold, modelTrainingMode, modelType);
         }
     }

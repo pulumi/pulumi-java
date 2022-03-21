@@ -71,12 +71,16 @@ public final class FlowEndpointsResponse {
             this.accessEndpointIpAddresses = accessEndpointIpAddresses;
             return this;
         }
-
+        public Builder accessEndpointIpAddresses(IpAddressResponse... accessEndpointIpAddresses) {
+            return accessEndpointIpAddresses(List.of(accessEndpointIpAddresses));
+        }
         public Builder outgoingIpAddresses(@Nullable List<IpAddressResponse> outgoingIpAddresses) {
             this.outgoingIpAddresses = outgoingIpAddresses;
             return this;
         }
-        public FlowEndpointsResponse build() {
+        public Builder outgoingIpAddresses(IpAddressResponse... outgoingIpAddresses) {
+            return outgoingIpAddresses(List.of(outgoingIpAddresses));
+        }        public FlowEndpointsResponse build() {
             return new FlowEndpointsResponse(accessEndpointIpAddresses, outgoingIpAddresses);
         }
     }

@@ -67,22 +67,18 @@ public final class DeliveryStreamDeserializerArgs extends io.pulumi.resources.Re
             this.hiveJsonSerDe = hiveJsonSerDe;
             return this;
         }
-
         public Builder hiveJsonSerDe(@Nullable DeliveryStreamHiveJsonSerDeArgs hiveJsonSerDe) {
             this.hiveJsonSerDe = Output.ofNullable(hiveJsonSerDe);
             return this;
         }
-
         public Builder openXJsonSerDe(@Nullable Output<DeliveryStreamOpenXJsonSerDeArgs> openXJsonSerDe) {
             this.openXJsonSerDe = openXJsonSerDe;
             return this;
         }
-
         public Builder openXJsonSerDe(@Nullable DeliveryStreamOpenXJsonSerDeArgs openXJsonSerDe) {
             this.openXJsonSerDe = Output.ofNullable(openXJsonSerDe);
             return this;
-        }
-        public DeliveryStreamDeserializerArgs build() {
+        }        public DeliveryStreamDeserializerArgs build() {
             return new DeliveryStreamDeserializerArgs(hiveJsonSerDe, openXJsonSerDe);
         }
     }

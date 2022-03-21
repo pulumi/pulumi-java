@@ -86,17 +86,14 @@ public final class DataSourceParametersTeradata {
             this.database = Objects.requireNonNull(database);
             return this;
         }
-
         public Builder host(String host) {
             this.host = Objects.requireNonNull(host);
             return this;
         }
-
         public Builder port(Integer port) {
             this.port = Objects.requireNonNull(port);
             return this;
-        }
-        public DataSourceParametersTeradata build() {
+        }        public DataSourceParametersTeradata build() {
             return new DataSourceParametersTeradata(database, host, port);
         }
     }

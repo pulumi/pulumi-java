@@ -190,47 +190,38 @@ public final class ApplicationGatewaySslCertificateResponse extends io.pulumi.re
             this.data = data;
             return this;
         }
-
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder keyVaultSecretId(@Nullable String keyVaultSecretId) {
             this.keyVaultSecretId = keyVaultSecretId;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder password(@Nullable String password) {
             this.password = password;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder publicCertData(String publicCertData) {
             this.publicCertData = Objects.requireNonNull(publicCertData);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public ApplicationGatewaySslCertificateResponse build() {
+        }        public ApplicationGatewaySslCertificateResponse build() {
             return new ApplicationGatewaySslCertificateResponse(data, etag, id, keyVaultSecretId, name, password, provisioningState, publicCertData, type);
         }
     }

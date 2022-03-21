@@ -393,107 +393,86 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageResponse {
             this.basicCard = Objects.requireNonNull(basicCard);
             return this;
         }
-
         public Builder browseCarouselCard(GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardResponse browseCarouselCard) {
             this.browseCarouselCard = Objects.requireNonNull(browseCarouselCard);
             return this;
         }
-
         public Builder card(GoogleCloudDialogflowV2beta1IntentMessageCardResponse card) {
             this.card = Objects.requireNonNull(card);
             return this;
         }
-
         public Builder carouselSelect(GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectResponse carouselSelect) {
             this.carouselSelect = Objects.requireNonNull(carouselSelect);
             return this;
         }
-
         public Builder image(GoogleCloudDialogflowV2beta1IntentMessageImageResponse image) {
             this.image = Objects.requireNonNull(image);
             return this;
         }
-
         public Builder linkOutSuggestion(GoogleCloudDialogflowV2beta1IntentMessageLinkOutSuggestionResponse linkOutSuggestion) {
             this.linkOutSuggestion = Objects.requireNonNull(linkOutSuggestion);
             return this;
         }
-
         public Builder listSelect(GoogleCloudDialogflowV2beta1IntentMessageListSelectResponse listSelect) {
             this.listSelect = Objects.requireNonNull(listSelect);
             return this;
         }
-
         public Builder mediaContent(GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse mediaContent) {
             this.mediaContent = Objects.requireNonNull(mediaContent);
             return this;
         }
-
         public Builder payload(Map<String,String> payload) {
             this.payload = Objects.requireNonNull(payload);
             return this;
         }
-
         public Builder platform(String platform) {
             this.platform = Objects.requireNonNull(platform);
             return this;
         }
-
         public Builder quickReplies(GoogleCloudDialogflowV2beta1IntentMessageQuickRepliesResponse quickReplies) {
             this.quickReplies = Objects.requireNonNull(quickReplies);
             return this;
         }
-
         public Builder rbmCarouselRichCard(GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardResponse rbmCarouselRichCard) {
             this.rbmCarouselRichCard = Objects.requireNonNull(rbmCarouselRichCard);
             return this;
         }
-
         public Builder rbmStandaloneRichCard(GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardResponse rbmStandaloneRichCard) {
             this.rbmStandaloneRichCard = Objects.requireNonNull(rbmStandaloneRichCard);
             return this;
         }
-
         public Builder rbmText(GoogleCloudDialogflowV2beta1IntentMessageRbmTextResponse rbmText) {
             this.rbmText = Objects.requireNonNull(rbmText);
             return this;
         }
-
         public Builder simpleResponses(GoogleCloudDialogflowV2beta1IntentMessageSimpleResponsesResponse simpleResponses) {
             this.simpleResponses = Objects.requireNonNull(simpleResponses);
             return this;
         }
-
         public Builder suggestions(GoogleCloudDialogflowV2beta1IntentMessageSuggestionsResponse suggestions) {
             this.suggestions = Objects.requireNonNull(suggestions);
             return this;
         }
-
         public Builder tableCard(GoogleCloudDialogflowV2beta1IntentMessageTableCardResponse tableCard) {
             this.tableCard = Objects.requireNonNull(tableCard);
             return this;
         }
-
         public Builder telephonyPlayAudio(GoogleCloudDialogflowV2beta1IntentMessageTelephonyPlayAudioResponse telephonyPlayAudio) {
             this.telephonyPlayAudio = Objects.requireNonNull(telephonyPlayAudio);
             return this;
         }
-
         public Builder telephonySynthesizeSpeech(GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeSpeechResponse telephonySynthesizeSpeech) {
             this.telephonySynthesizeSpeech = Objects.requireNonNull(telephonySynthesizeSpeech);
             return this;
         }
-
         public Builder telephonyTransferCall(GoogleCloudDialogflowV2beta1IntentMessageTelephonyTransferCallResponse telephonyTransferCall) {
             this.telephonyTransferCall = Objects.requireNonNull(telephonyTransferCall);
             return this;
         }
-
         public Builder text(GoogleCloudDialogflowV2beta1IntentMessageTextResponse text) {
             this.text = Objects.requireNonNull(text);
             return this;
-        }
-        public GoogleCloudDialogflowV2beta1IntentMessageResponse build() {
+        }        public GoogleCloudDialogflowV2beta1IntentMessageResponse build() {
             return new GoogleCloudDialogflowV2beta1IntentMessageResponse(basicCard, browseCarouselCard, card, carouselSelect, image, linkOutSuggestion, listSelect, mediaContent, payload, platform, quickReplies, rbmCarouselRichCard, rbmStandaloneRichCard, rbmText, simpleResponses, suggestions, tableCard, telephonyPlayAudio, telephonySynthesizeSpeech, telephonyTransferCall, text);
         }
     }

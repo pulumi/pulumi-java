@@ -89,32 +89,26 @@ public final class EnvironmentConfigSoftwareConfig {
             this.airflowConfigOverrides = airflowConfigOverrides;
             return this;
         }
-
         public Builder envVariables(@Nullable Map<String,String> envVariables) {
             this.envVariables = envVariables;
             return this;
         }
-
         public Builder imageVersion(@Nullable String imageVersion) {
             this.imageVersion = imageVersion;
             return this;
         }
-
         public Builder pypiPackages(@Nullable Map<String,String> pypiPackages) {
             this.pypiPackages = pypiPackages;
             return this;
         }
-
         public Builder pythonVersion(@Nullable String pythonVersion) {
             this.pythonVersion = pythonVersion;
             return this;
         }
-
         public Builder schedulerCount(@Nullable Integer schedulerCount) {
             this.schedulerCount = schedulerCount;
             return this;
-        }
-        public EnvironmentConfigSoftwareConfig build() {
+        }        public EnvironmentConfigSoftwareConfig build() {
             return new EnvironmentConfigSoftwareConfig(airflowConfigOverrides, envVariables, imageVersion, pypiPackages, pythonVersion, schedulerCount);
         }
     }

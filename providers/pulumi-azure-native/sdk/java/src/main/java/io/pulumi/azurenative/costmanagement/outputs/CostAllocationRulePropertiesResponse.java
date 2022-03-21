@@ -120,27 +120,22 @@ public final class CostAllocationRulePropertiesResponse {
             this.createdDate = Objects.requireNonNull(createdDate);
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder details(CostAllocationRuleDetailsResponse details) {
             this.details = Objects.requireNonNull(details);
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder updatedDate(String updatedDate) {
             this.updatedDate = Objects.requireNonNull(updatedDate);
             return this;
-        }
-        public CostAllocationRulePropertiesResponse build() {
+        }        public CostAllocationRulePropertiesResponse build() {
             return new CostAllocationRulePropertiesResponse(createdDate, description, details, status, updatedDate);
         }
     }

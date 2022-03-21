@@ -91,32 +91,29 @@ public final class GetAuthorizerResult {
             this.arn = arn;
             return this;
         }
-
         public Builder authorizerFunctionArn(@Nullable String authorizerFunctionArn) {
             this.authorizerFunctionArn = authorizerFunctionArn;
             return this;
         }
-
         public Builder status(@Nullable AuthorizerStatus status) {
             this.status = status;
             return this;
         }
-
         public Builder tags(@Nullable List<AuthorizerTag> tags) {
             this.tags = tags;
             return this;
         }
-
+        public Builder tags(AuthorizerTag... tags) {
+            return tags(List.of(tags));
+        }
         public Builder tokenKeyName(@Nullable String tokenKeyName) {
             this.tokenKeyName = tokenKeyName;
             return this;
         }
-
         public Builder tokenSigningPublicKeys(@Nullable Object tokenSigningPublicKeys) {
             this.tokenSigningPublicKeys = tokenSigningPublicKeys;
             return this;
-        }
-        public GetAuthorizerResult build() {
+        }        public GetAuthorizerResult build() {
             return new GetAuthorizerResult(arn, authorizerFunctionArn, status, tags, tokenKeyName, tokenSigningPublicKeys);
         }
     }

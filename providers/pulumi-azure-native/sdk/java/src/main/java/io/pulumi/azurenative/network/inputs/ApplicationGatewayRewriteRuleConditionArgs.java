@@ -111,42 +111,34 @@ public final class ApplicationGatewayRewriteRuleConditionArgs extends io.pulumi.
             this.ignoreCase = ignoreCase;
             return this;
         }
-
         public Builder ignoreCase(@Nullable Boolean ignoreCase) {
             this.ignoreCase = Output.ofNullable(ignoreCase);
             return this;
         }
-
         public Builder negate(@Nullable Output<Boolean> negate) {
             this.negate = negate;
             return this;
         }
-
         public Builder negate(@Nullable Boolean negate) {
             this.negate = Output.ofNullable(negate);
             return this;
         }
-
         public Builder pattern(@Nullable Output<String> pattern) {
             this.pattern = pattern;
             return this;
         }
-
         public Builder pattern(@Nullable String pattern) {
             this.pattern = Output.ofNullable(pattern);
             return this;
         }
-
         public Builder variable(@Nullable Output<String> variable) {
             this.variable = variable;
             return this;
         }
-
         public Builder variable(@Nullable String variable) {
             this.variable = Output.ofNullable(variable);
             return this;
-        }
-        public ApplicationGatewayRewriteRuleConditionArgs build() {
+        }        public ApplicationGatewayRewriteRuleConditionArgs build() {
             return new ApplicationGatewayRewriteRuleConditionArgs(ignoreCase, negate, pattern, variable);
         }
     }

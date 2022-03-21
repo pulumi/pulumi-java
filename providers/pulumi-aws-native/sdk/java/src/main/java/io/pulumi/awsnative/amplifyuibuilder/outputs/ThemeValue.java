@@ -57,12 +57,13 @@ public final class ThemeValue {
             this.children = children;
             return this;
         }
-
+        public Builder children(ThemeValues... children) {
+            return children(List.of(children));
+        }
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public ThemeValue build() {
+        }        public ThemeValue build() {
             return new ThemeValue(children, value);
         }
     }

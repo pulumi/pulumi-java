@@ -56,12 +56,10 @@ public final class AnalyticsApplicationOutputSchemaArgs extends io.pulumi.resour
             this.recordFormatType = Objects.requireNonNull(recordFormatType);
             return this;
         }
-
         public Builder recordFormatType(String recordFormatType) {
             this.recordFormatType = Output.of(Objects.requireNonNull(recordFormatType));
             return this;
-        }
-        public AnalyticsApplicationOutputSchemaArgs build() {
+        }        public AnalyticsApplicationOutputSchemaArgs build() {
             return new AnalyticsApplicationOutputSchemaArgs(recordFormatType);
         }
     }

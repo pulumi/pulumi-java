@@ -93,22 +93,24 @@ public final class DistributionForwardedValues extends io.pulumi.resources.Invok
             this.cookies = cookies;
             return this;
         }
-
         public Builder headers(@Nullable List<String> headers) {
             this.headers = headers;
             return this;
         }
-
+        public Builder headers(String... headers) {
+            return headers(List.of(headers));
+        }
         public Builder queryString(Boolean queryString) {
             this.queryString = Objects.requireNonNull(queryString);
             return this;
         }
-
         public Builder queryStringCacheKeys(@Nullable List<String> queryStringCacheKeys) {
             this.queryStringCacheKeys = queryStringCacheKeys;
             return this;
         }
-        public DistributionForwardedValues build() {
+        public Builder queryStringCacheKeys(String... queryStringCacheKeys) {
+            return queryStringCacheKeys(List.of(queryStringCacheKeys));
+        }        public DistributionForwardedValues build() {
             return new DistributionForwardedValues(cookies, headers, queryString, queryStringCacheKeys);
         }
     }

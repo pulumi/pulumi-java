@@ -219,57 +219,49 @@ public final class GetPrivateStoreCollectionResult {
             this.allSubscriptions = allSubscriptions;
             return this;
         }
-
         public Builder claim(@Nullable String claim) {
             this.claim = claim;
             return this;
         }
-
         public Builder collectionId(String collectionId) {
             this.collectionId = Objects.requireNonNull(collectionId);
             return this;
         }
-
         public Builder collectionName(@Nullable String collectionName) {
             this.collectionName = collectionName;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder numberOfOffers(Double numberOfOffers) {
             this.numberOfOffers = Objects.requireNonNull(numberOfOffers);
             return this;
         }
-
         public Builder subscriptionsList(@Nullable List<String> subscriptionsList) {
             this.subscriptionsList = subscriptionsList;
             return this;
         }
-
+        public Builder subscriptionsList(String... subscriptionsList) {
+            return subscriptionsList(List.of(subscriptionsList));
+        }
         public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetPrivateStoreCollectionResult build() {
+        }        public GetPrivateStoreCollectionResult build() {
             return new GetPrivateStoreCollectionResult(allSubscriptions, claim, collectionId, collectionName, enabled, id, name, numberOfOffers, subscriptionsList, systemData, type);
         }
     }

@@ -85,17 +85,14 @@ public final class RuleGroupCustomResponseBody {
             this.content = Objects.requireNonNull(content);
             return this;
         }
-
         public Builder contentType(String contentType) {
             this.contentType = Objects.requireNonNull(contentType);
             return this;
         }
-
         public Builder key(String key) {
             this.key = Objects.requireNonNull(key);
             return this;
-        }
-        public RuleGroupCustomResponseBody build() {
+        }        public RuleGroupCustomResponseBody build() {
             return new RuleGroupCustomResponseBody(content, contentType, key);
         }
     }

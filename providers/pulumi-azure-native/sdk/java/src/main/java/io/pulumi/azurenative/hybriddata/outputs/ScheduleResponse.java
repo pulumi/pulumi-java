@@ -72,12 +72,13 @@ public final class ScheduleResponse {
             this.name = name;
             return this;
         }
-
         public Builder policyList(@Nullable List<String> policyList) {
             this.policyList = policyList;
             return this;
         }
-        public ScheduleResponse build() {
+        public Builder policyList(String... policyList) {
+            return policyList(List.of(policyList));
+        }        public ScheduleResponse build() {
             return new ScheduleResponse(name, policyList);
         }
     }

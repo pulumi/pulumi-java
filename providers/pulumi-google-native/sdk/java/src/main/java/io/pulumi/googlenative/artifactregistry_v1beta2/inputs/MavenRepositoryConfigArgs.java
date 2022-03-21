@@ -79,22 +79,18 @@ public final class MavenRepositoryConfigArgs extends io.pulumi.resources.Resourc
             this.allowSnapshotOverwrites = allowSnapshotOverwrites;
             return this;
         }
-
         public Builder allowSnapshotOverwrites(@Nullable Boolean allowSnapshotOverwrites) {
             this.allowSnapshotOverwrites = Output.ofNullable(allowSnapshotOverwrites);
             return this;
         }
-
         public Builder versionPolicy(@Nullable Output<MavenRepositoryConfigVersionPolicy> versionPolicy) {
             this.versionPolicy = versionPolicy;
             return this;
         }
-
         public Builder versionPolicy(@Nullable MavenRepositoryConfigVersionPolicy versionPolicy) {
             this.versionPolicy = Output.ofNullable(versionPolicy);
             return this;
-        }
-        public MavenRepositoryConfigArgs build() {
+        }        public MavenRepositoryConfigArgs build() {
             return new MavenRepositoryConfigArgs(allowSnapshotOverwrites, versionPolicy);
         }
     }

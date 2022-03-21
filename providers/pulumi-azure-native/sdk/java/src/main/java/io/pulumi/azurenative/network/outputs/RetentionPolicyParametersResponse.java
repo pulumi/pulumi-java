@@ -72,12 +72,10 @@ public final class RetentionPolicyParametersResponse {
             this.days = days;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
-        }
-        public RetentionPolicyParametersResponse build() {
+        }        public RetentionPolicyParametersResponse build() {
             return new RetentionPolicyParametersResponse(days, enabled);
         }
     }

@@ -91,22 +91,18 @@ public final class LoggingRuleResponse extends io.pulumi.resources.InvokeArgs {
             this.action = Objects.requireNonNull(action);
             return this;
         }
-
         public Builder detailLevel(String detailLevel) {
             this.detailLevel = Objects.requireNonNull(detailLevel);
             return this;
         }
-
         public Builder direction(String direction) {
             this.direction = Objects.requireNonNull(direction);
             return this;
         }
-
         public Builder hiddenPropertyPaths(@Nullable LoggingRuleResponseHiddenPropertyPaths hiddenPropertyPaths) {
             this.hiddenPropertyPaths = hiddenPropertyPaths;
             return this;
-        }
-        public LoggingRuleResponse build() {
+        }        public LoggingRuleResponse build() {
             return new LoggingRuleResponse(action, detailLevel, direction, hiddenPropertyPaths);
         }
     }

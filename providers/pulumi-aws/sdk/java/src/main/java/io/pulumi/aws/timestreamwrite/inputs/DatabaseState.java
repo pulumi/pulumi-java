@@ -140,62 +140,50 @@ public final class DatabaseState extends io.pulumi.resources.ResourceArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder databaseName(@Nullable Output<String> databaseName) {
             this.databaseName = databaseName;
             return this;
         }
-
         public Builder databaseName(@Nullable String databaseName) {
             this.databaseName = Output.ofNullable(databaseName);
             return this;
         }
-
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
-
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = Output.ofNullable(kmsKeyId);
             return this;
         }
-
         public Builder tableCount(@Nullable Output<Integer> tableCount) {
             this.tableCount = tableCount;
             return this;
         }
-
         public Builder tableCount(@Nullable Integer tableCount) {
             this.tableCount = Output.ofNullable(tableCount);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
-        }
-        public DatabaseState build() {
+        }        public DatabaseState build() {
             return new DatabaseState(arn, databaseName, kmsKeyId, tableCount, tags, tagsAll);
         }
     }

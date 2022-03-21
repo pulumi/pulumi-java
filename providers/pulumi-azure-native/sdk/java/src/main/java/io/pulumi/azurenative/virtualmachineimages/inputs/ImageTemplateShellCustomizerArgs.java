@@ -128,52 +128,45 @@ public final class ImageTemplateShellCustomizerArgs extends io.pulumi.resources.
             this.inline = inline;
             return this;
         }
-
         public Builder inline(@Nullable List<String> inline) {
             this.inline = Output.ofNullable(inline);
             return this;
         }
-
+        public Builder inline(String... inline) {
+            return inline(List.of(inline));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder scriptUri(@Nullable Output<String> scriptUri) {
             this.scriptUri = scriptUri;
             return this;
         }
-
         public Builder scriptUri(@Nullable String scriptUri) {
             this.scriptUri = Output.ofNullable(scriptUri);
             return this;
         }
-
         public Builder sha256Checksum(@Nullable Output<String> sha256Checksum) {
             this.sha256Checksum = sha256Checksum;
             return this;
         }
-
         public Builder sha256Checksum(@Nullable String sha256Checksum) {
             this.sha256Checksum = Output.ofNullable(sha256Checksum);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public ImageTemplateShellCustomizerArgs build() {
+        }        public ImageTemplateShellCustomizerArgs build() {
             return new ImageTemplateShellCustomizerArgs(inline, name, scriptUri, sha256Checksum, type);
         }
     }

@@ -57,12 +57,10 @@ public final class WebAclDefaultActionAllowGetArgs extends io.pulumi.resources.R
             this.customRequestHandling = customRequestHandling;
             return this;
         }
-
         public Builder customRequestHandling(@Nullable WebAclDefaultActionAllowCustomRequestHandlingGetArgs customRequestHandling) {
             this.customRequestHandling = Output.ofNullable(customRequestHandling);
             return this;
-        }
-        public WebAclDefaultActionAllowGetArgs build() {
+        }        public WebAclDefaultActionAllowGetArgs build() {
             return new WebAclDefaultActionAllowGetArgs(customRequestHandling);
         }
     }

@@ -55,12 +55,13 @@ public final class GetOriginRequestPolicyQueryStringsConfig {
             this.queryStringBehavior = Objects.requireNonNull(queryStringBehavior);
             return this;
         }
-
         public Builder queryStrings(List<GetOriginRequestPolicyQueryStringsConfigQueryString> queryStrings) {
             this.queryStrings = Objects.requireNonNull(queryStrings);
             return this;
         }
-        public GetOriginRequestPolicyQueryStringsConfig build() {
+        public Builder queryStrings(GetOriginRequestPolicyQueryStringsConfigQueryString... queryStrings) {
+            return queryStrings(List.of(queryStrings));
+        }        public GetOriginRequestPolicyQueryStringsConfig build() {
             return new GetOriginRequestPolicyQueryStringsConfig(queryStringBehavior, queryStrings);
         }
     }

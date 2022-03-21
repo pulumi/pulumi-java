@@ -114,22 +114,21 @@ public final class ApplicationGatewayRewriteRuleResponse extends io.pulumi.resou
             this.actionSet = actionSet;
             return this;
         }
-
         public Builder conditions(@Nullable List<ApplicationGatewayRewriteRuleConditionResponse> conditions) {
             this.conditions = conditions;
             return this;
         }
-
+        public Builder conditions(ApplicationGatewayRewriteRuleConditionResponse... conditions) {
+            return conditions(List.of(conditions));
+        }
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder ruleSequence(@Nullable Integer ruleSequence) {
             this.ruleSequence = ruleSequence;
             return this;
-        }
-        public ApplicationGatewayRewriteRuleResponse build() {
+        }        public ApplicationGatewayRewriteRuleResponse build() {
             return new ApplicationGatewayRewriteRuleResponse(actionSet, conditions, name, ruleSequence);
         }
     }

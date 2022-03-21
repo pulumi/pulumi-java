@@ -104,22 +104,18 @@ public final class GetImageArgs extends io.pulumi.resources.InvokeArgs {
             this.family = family;
             return this;
         }
-
         public Builder filter(@Nullable String filter) {
             this.filter = filter;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetImageArgs build() {
+        }        public GetImageArgs build() {
             return new GetImageArgs(family, filter, name, project);
         }
     }

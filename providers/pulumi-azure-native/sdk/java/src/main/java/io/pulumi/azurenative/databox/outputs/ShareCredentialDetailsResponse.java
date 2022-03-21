@@ -118,27 +118,25 @@ public final class ShareCredentialDetailsResponse {
             this.password = Objects.requireNonNull(password);
             return this;
         }
-
         public Builder shareName(String shareName) {
             this.shareName = Objects.requireNonNull(shareName);
             return this;
         }
-
         public Builder shareType(String shareType) {
             this.shareType = Objects.requireNonNull(shareType);
             return this;
         }
-
         public Builder supportedAccessProtocols(List<String> supportedAccessProtocols) {
             this.supportedAccessProtocols = Objects.requireNonNull(supportedAccessProtocols);
             return this;
         }
-
+        public Builder supportedAccessProtocols(String... supportedAccessProtocols) {
+            return supportedAccessProtocols(List.of(supportedAccessProtocols));
+        }
         public Builder userName(String userName) {
             this.userName = Objects.requireNonNull(userName);
             return this;
-        }
-        public ShareCredentialDetailsResponse build() {
+        }        public ShareCredentialDetailsResponse build() {
             return new ShareCredentialDetailsResponse(password, shareName, shareType, supportedAccessProtocols, userName);
         }
     }

@@ -78,12 +78,10 @@ public final class WaitStepPropertiesResponse extends io.pulumi.resources.Invoke
             this.attributes = Objects.requireNonNull(attributes);
             return this;
         }
-
         public Builder stepType(String stepType) {
             this.stepType = Objects.requireNonNull(stepType);
             return this;
-        }
-        public WaitStepPropertiesResponse build() {
+        }        public WaitStepPropertiesResponse build() {
             return new WaitStepPropertiesResponse(attributes, stepType);
         }
     }

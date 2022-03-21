@@ -90,32 +90,26 @@ public final class ServiceQuotaArgs extends io.pulumi.resources.ResourceArgs {
             this.quotaCode = Objects.requireNonNull(quotaCode);
             return this;
         }
-
         public Builder quotaCode(String quotaCode) {
             this.quotaCode = Output.of(Objects.requireNonNull(quotaCode));
             return this;
         }
-
         public Builder serviceCode(Output<String> serviceCode) {
             this.serviceCode = Objects.requireNonNull(serviceCode);
             return this;
         }
-
         public Builder serviceCode(String serviceCode) {
             this.serviceCode = Output.of(Objects.requireNonNull(serviceCode));
             return this;
         }
-
         public Builder value(Output<Double> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public Builder value(Double value) {
             this.value = Output.of(Objects.requireNonNull(value));
             return this;
-        }
-        public ServiceQuotaArgs build() {
+        }        public ServiceQuotaArgs build() {
             return new ServiceQuotaArgs(quotaCode, serviceCode, value);
         }
     }

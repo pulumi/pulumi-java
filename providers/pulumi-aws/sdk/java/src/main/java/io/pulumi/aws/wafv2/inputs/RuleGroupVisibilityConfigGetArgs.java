@@ -90,32 +90,26 @@ public final class RuleGroupVisibilityConfigGetArgs extends io.pulumi.resources.
             this.cloudwatchMetricsEnabled = Objects.requireNonNull(cloudwatchMetricsEnabled);
             return this;
         }
-
         public Builder cloudwatchMetricsEnabled(Boolean cloudwatchMetricsEnabled) {
             this.cloudwatchMetricsEnabled = Output.of(Objects.requireNonNull(cloudwatchMetricsEnabled));
             return this;
         }
-
         public Builder metricName(Output<String> metricName) {
             this.metricName = Objects.requireNonNull(metricName);
             return this;
         }
-
         public Builder metricName(String metricName) {
             this.metricName = Output.of(Objects.requireNonNull(metricName));
             return this;
         }
-
         public Builder sampledRequestsEnabled(Output<Boolean> sampledRequestsEnabled) {
             this.sampledRequestsEnabled = Objects.requireNonNull(sampledRequestsEnabled);
             return this;
         }
-
         public Builder sampledRequestsEnabled(Boolean sampledRequestsEnabled) {
             this.sampledRequestsEnabled = Output.of(Objects.requireNonNull(sampledRequestsEnabled));
             return this;
-        }
-        public RuleGroupVisibilityConfigGetArgs build() {
+        }        public RuleGroupVisibilityConfigGetArgs build() {
             return new RuleGroupVisibilityConfigGetArgs(cloudwatchMetricsEnabled, metricName, sampledRequestsEnabled);
         }
     }

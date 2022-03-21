@@ -127,52 +127,42 @@ public final class LoadBalancerBackendAddressArgs extends io.pulumi.resources.Re
             this.ipAddress = ipAddress;
             return this;
         }
-
         public Builder ipAddress(@Nullable String ipAddress) {
             this.ipAddress = Output.ofNullable(ipAddress);
             return this;
         }
-
         public Builder loadBalancerFrontendIPConfiguration(@Nullable Output<SubResourceArgs> loadBalancerFrontendIPConfiguration) {
             this.loadBalancerFrontendIPConfiguration = loadBalancerFrontendIPConfiguration;
             return this;
         }
-
         public Builder loadBalancerFrontendIPConfiguration(@Nullable SubResourceArgs loadBalancerFrontendIPConfiguration) {
             this.loadBalancerFrontendIPConfiguration = Output.ofNullable(loadBalancerFrontendIPConfiguration);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder subnet(@Nullable Output<SubResourceArgs> subnet) {
             this.subnet = subnet;
             return this;
         }
-
         public Builder subnet(@Nullable SubResourceArgs subnet) {
             this.subnet = Output.ofNullable(subnet);
             return this;
         }
-
         public Builder virtualNetwork(@Nullable Output<SubResourceArgs> virtualNetwork) {
             this.virtualNetwork = virtualNetwork;
             return this;
         }
-
         public Builder virtualNetwork(@Nullable SubResourceArgs virtualNetwork) {
             this.virtualNetwork = Output.ofNullable(virtualNetwork);
             return this;
-        }
-        public LoadBalancerBackendAddressArgs build() {
+        }        public LoadBalancerBackendAddressArgs build() {
             return new LoadBalancerBackendAddressArgs(ipAddress, loadBalancerFrontendIPConfiguration, name, subnet, virtualNetwork);
         }
     }

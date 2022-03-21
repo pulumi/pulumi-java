@@ -71,22 +71,18 @@ public final class GetTrackerResult {
             this.arn = arn;
             return this;
         }
-
         public Builder createTime(@Nullable String createTime) {
             this.createTime = createTime;
             return this;
         }
-
         public Builder trackerArn(@Nullable String trackerArn) {
             this.trackerArn = trackerArn;
             return this;
         }
-
         public Builder updateTime(@Nullable String updateTime) {
             this.updateTime = updateTime;
             return this;
-        }
-        public GetTrackerResult build() {
+        }        public GetTrackerResult build() {
             return new GetTrackerResult(arn, createTime, trackerArn, updateTime);
         }
     }

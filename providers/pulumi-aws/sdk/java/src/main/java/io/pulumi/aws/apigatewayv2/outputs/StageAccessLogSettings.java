@@ -69,12 +69,10 @@ public final class StageAccessLogSettings {
             this.destinationArn = Objects.requireNonNull(destinationArn);
             return this;
         }
-
         public Builder format(String format) {
             this.format = Objects.requireNonNull(format);
             return this;
-        }
-        public StageAccessLogSettings build() {
+        }        public StageAccessLogSettings build() {
             return new StageAccessLogSettings(destinationArn, format);
         }
     }

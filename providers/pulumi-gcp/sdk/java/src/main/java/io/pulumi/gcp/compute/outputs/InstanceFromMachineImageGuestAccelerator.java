@@ -54,12 +54,10 @@ public final class InstanceFromMachineImageGuestAccelerator {
             this.count = Objects.requireNonNull(count);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public InstanceFromMachineImageGuestAccelerator build() {
+        }        public InstanceFromMachineImageGuestAccelerator build() {
             return new InstanceFromMachineImageGuestAccelerator(count, type);
         }
     }

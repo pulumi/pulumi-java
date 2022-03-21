@@ -78,17 +78,14 @@ public final class GetReplayArgs extends io.pulumi.resources.InvokeArgs {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder replayId(String replayId) {
             this.replayId = Objects.requireNonNull(replayId);
             return this;
-        }
-        public GetReplayArgs build() {
+        }        public GetReplayArgs build() {
             return new GetReplayArgs(location, project, replayId);
         }
     }

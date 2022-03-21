@@ -90,17 +90,14 @@ public final class UserArtifactManageResponse extends io.pulumi.resources.Invoke
             this.install = Objects.requireNonNull(install);
             return this;
         }
-
         public Builder remove(String remove) {
             this.remove = Objects.requireNonNull(remove);
             return this;
         }
-
         public Builder update(@Nullable String update) {
             this.update = update;
             return this;
-        }
-        public UserArtifactManageResponse build() {
+        }        public UserArtifactManageResponse build() {
             return new UserArtifactManageResponse(install, remove, update);
         }
     }

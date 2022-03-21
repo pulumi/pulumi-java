@@ -101,22 +101,18 @@ public final class NetworkInterfaceResponse {
             this.privateIpAddress = Objects.requireNonNull(privateIpAddress);
             return this;
         }
-
         public Builder rdpAuthority(String rdpAuthority) {
             this.rdpAuthority = Objects.requireNonNull(rdpAuthority);
             return this;
         }
-
         public Builder sshAuthority(String sshAuthority) {
             this.sshAuthority = Objects.requireNonNull(sshAuthority);
             return this;
         }
-
         public Builder username(String username) {
             this.username = Objects.requireNonNull(username);
             return this;
-        }
-        public NetworkInterfaceResponse build() {
+        }        public NetworkInterfaceResponse build() {
             return new NetworkInterfaceResponse(privateIpAddress, rdpAuthority, sshAuthority, username);
         }
     }

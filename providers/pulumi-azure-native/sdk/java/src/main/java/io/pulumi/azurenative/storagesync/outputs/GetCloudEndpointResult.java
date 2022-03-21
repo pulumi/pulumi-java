@@ -231,62 +231,50 @@ public final class GetCloudEndpointResult {
             this.azureFileShareName = azureFileShareName;
             return this;
         }
-
         public Builder backupEnabled(String backupEnabled) {
             this.backupEnabled = Objects.requireNonNull(backupEnabled);
             return this;
         }
-
         public Builder friendlyName(@Nullable String friendlyName) {
             this.friendlyName = friendlyName;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder lastOperationName(@Nullable String lastOperationName) {
             this.lastOperationName = lastOperationName;
             return this;
         }
-
         public Builder lastWorkflowId(@Nullable String lastWorkflowId) {
             this.lastWorkflowId = lastWorkflowId;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder partnershipId(@Nullable String partnershipId) {
             this.partnershipId = partnershipId;
             return this;
         }
-
         public Builder provisioningState(@Nullable String provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
-
         public Builder storageAccountResourceId(@Nullable String storageAccountResourceId) {
             this.storageAccountResourceId = storageAccountResourceId;
             return this;
         }
-
         public Builder storageAccountTenantId(@Nullable String storageAccountTenantId) {
             this.storageAccountTenantId = storageAccountTenantId;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetCloudEndpointResult build() {
+        }        public GetCloudEndpointResult build() {
             return new GetCloudEndpointResult(azureFileShareName, backupEnabled, friendlyName, id, lastOperationName, lastWorkflowId, name, partnershipId, provisioningState, storageAccountResourceId, storageAccountTenantId, type);
         }
     }

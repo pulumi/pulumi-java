@@ -235,62 +235,50 @@ public final class GetBackendResult {
             this.credentials = credentials;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder properties(BackendPropertiesResponse properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
-
         public Builder protocol(String protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
-
         public Builder proxy(@Nullable BackendProxyContractResponse proxy) {
             this.proxy = proxy;
             return this;
         }
-
         public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = resourceId;
             return this;
         }
-
         public Builder title(@Nullable String title) {
             this.title = title;
             return this;
         }
-
         public Builder tls(@Nullable BackendTlsPropertiesResponse tls) {
             this.tls = tls;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder url(String url) {
             this.url = Objects.requireNonNull(url);
             return this;
-        }
-        public GetBackendResult build() {
+        }        public GetBackendResult build() {
             return new GetBackendResult(credentials, description, id, name, properties, protocol, proxy, resourceId, title, tls, type, url);
         }
     }

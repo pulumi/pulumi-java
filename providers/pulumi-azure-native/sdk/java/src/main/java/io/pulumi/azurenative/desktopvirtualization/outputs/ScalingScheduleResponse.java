@@ -330,92 +330,77 @@ public final class ScalingScheduleResponse {
             this.daysOfWeek = daysOfWeek;
             return this;
         }
-
+        public Builder daysOfWeek(String... daysOfWeek) {
+            return daysOfWeek(List.of(daysOfWeek));
+        }
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder offPeakLoadBalancingAlgorithm(@Nullable String offPeakLoadBalancingAlgorithm) {
             this.offPeakLoadBalancingAlgorithm = offPeakLoadBalancingAlgorithm;
             return this;
         }
-
         public Builder offPeakStartTime(@Nullable String offPeakStartTime) {
             this.offPeakStartTime = offPeakStartTime;
             return this;
         }
-
         public Builder peakLoadBalancingAlgorithm(@Nullable String peakLoadBalancingAlgorithm) {
             this.peakLoadBalancingAlgorithm = peakLoadBalancingAlgorithm;
             return this;
         }
-
         public Builder peakStartTime(@Nullable String peakStartTime) {
             this.peakStartTime = peakStartTime;
             return this;
         }
-
         public Builder rampDownCapacityThresholdPct(@Nullable Integer rampDownCapacityThresholdPct) {
             this.rampDownCapacityThresholdPct = rampDownCapacityThresholdPct;
             return this;
         }
-
         public Builder rampDownForceLogoffUsers(@Nullable Boolean rampDownForceLogoffUsers) {
             this.rampDownForceLogoffUsers = rampDownForceLogoffUsers;
             return this;
         }
-
         public Builder rampDownLoadBalancingAlgorithm(@Nullable String rampDownLoadBalancingAlgorithm) {
             this.rampDownLoadBalancingAlgorithm = rampDownLoadBalancingAlgorithm;
             return this;
         }
-
         public Builder rampDownMinimumHostsPct(@Nullable Integer rampDownMinimumHostsPct) {
             this.rampDownMinimumHostsPct = rampDownMinimumHostsPct;
             return this;
         }
-
         public Builder rampDownNotificationMessage(@Nullable String rampDownNotificationMessage) {
             this.rampDownNotificationMessage = rampDownNotificationMessage;
             return this;
         }
-
         public Builder rampDownStartTime(@Nullable String rampDownStartTime) {
             this.rampDownStartTime = rampDownStartTime;
             return this;
         }
-
         public Builder rampDownStopHostsWhen(@Nullable String rampDownStopHostsWhen) {
             this.rampDownStopHostsWhen = rampDownStopHostsWhen;
             return this;
         }
-
         public Builder rampDownWaitTimeMinutes(@Nullable Integer rampDownWaitTimeMinutes) {
             this.rampDownWaitTimeMinutes = rampDownWaitTimeMinutes;
             return this;
         }
-
         public Builder rampUpCapacityThresholdPct(@Nullable Integer rampUpCapacityThresholdPct) {
             this.rampUpCapacityThresholdPct = rampUpCapacityThresholdPct;
             return this;
         }
-
         public Builder rampUpLoadBalancingAlgorithm(@Nullable String rampUpLoadBalancingAlgorithm) {
             this.rampUpLoadBalancingAlgorithm = rampUpLoadBalancingAlgorithm;
             return this;
         }
-
         public Builder rampUpMinimumHostsPct(@Nullable Integer rampUpMinimumHostsPct) {
             this.rampUpMinimumHostsPct = rampUpMinimumHostsPct;
             return this;
         }
-
         public Builder rampUpStartTime(@Nullable String rampUpStartTime) {
             this.rampUpStartTime = rampUpStartTime;
             return this;
-        }
-        public ScalingScheduleResponse build() {
+        }        public ScalingScheduleResponse build() {
             return new ScalingScheduleResponse(daysOfWeek, name, offPeakLoadBalancingAlgorithm, offPeakStartTime, peakLoadBalancingAlgorithm, peakStartTime, rampDownCapacityThresholdPct, rampDownForceLogoffUsers, rampDownLoadBalancingAlgorithm, rampDownMinimumHostsPct, rampDownNotificationMessage, rampDownStartTime, rampDownStopHostsWhen, rampDownWaitTimeMinutes, rampUpCapacityThresholdPct, rampUpLoadBalancingAlgorithm, rampUpMinimumHostsPct, rampUpStartTime);
         }
     }

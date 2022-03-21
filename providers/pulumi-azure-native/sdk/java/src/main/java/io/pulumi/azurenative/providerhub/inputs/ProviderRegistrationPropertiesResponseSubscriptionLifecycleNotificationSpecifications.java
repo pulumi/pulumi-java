@@ -68,12 +68,13 @@ public final class ProviderRegistrationPropertiesResponseSubscriptionLifecycleNo
             this.softDeleteTTL = softDeleteTTL;
             return this;
         }
-
         public Builder subscriptionStateOverrideActions(@Nullable List<SubscriptionStateOverrideActionResponse> subscriptionStateOverrideActions) {
             this.subscriptionStateOverrideActions = subscriptionStateOverrideActions;
             return this;
         }
-        public ProviderRegistrationPropertiesResponseSubscriptionLifecycleNotificationSpecifications build() {
+        public Builder subscriptionStateOverrideActions(SubscriptionStateOverrideActionResponse... subscriptionStateOverrideActions) {
+            return subscriptionStateOverrideActions(List.of(subscriptionStateOverrideActions));
+        }        public ProviderRegistrationPropertiesResponseSubscriptionLifecycleNotificationSpecifications build() {
             return new ProviderRegistrationPropertiesResponseSubscriptionLifecycleNotificationSpecifications(softDeleteTTL, subscriptionStateOverrideActions);
         }
     }

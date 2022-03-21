@@ -65,17 +65,14 @@ public final class DefaultRolloutResponseProperties {
             this.provisioningState = provisioningState;
             return this;
         }
-
         public Builder specification(@Nullable DefaultRolloutPropertiesResponseSpecification specification) {
             this.specification = specification;
             return this;
         }
-
         public Builder status(@Nullable DefaultRolloutPropertiesResponseStatus status) {
             this.status = status;
             return this;
-        }
-        public DefaultRolloutResponseProperties build() {
+        }        public DefaultRolloutResponseProperties build() {
             return new DefaultRolloutResponseProperties(provisioningState, specification, status);
         }
     }

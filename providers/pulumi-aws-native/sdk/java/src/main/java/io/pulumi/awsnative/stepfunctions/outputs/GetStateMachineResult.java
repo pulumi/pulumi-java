@@ -108,42 +108,37 @@ public final class GetStateMachineResult {
             this.arn = arn;
             return this;
         }
-
         public Builder definitionString(@Nullable String definitionString) {
             this.definitionString = definitionString;
             return this;
         }
-
         public Builder loggingConfiguration(@Nullable StateMachineLoggingConfiguration loggingConfiguration) {
             this.loggingConfiguration = loggingConfiguration;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = roleArn;
             return this;
         }
-
         public Builder stateMachineType(@Nullable StateMachineType stateMachineType) {
             this.stateMachineType = stateMachineType;
             return this;
         }
-
         public Builder tags(@Nullable List<StateMachineTagsEntry> tags) {
             this.tags = tags;
             return this;
         }
-
+        public Builder tags(StateMachineTagsEntry... tags) {
+            return tags(List.of(tags));
+        }
         public Builder tracingConfiguration(@Nullable StateMachineTracingConfiguration tracingConfiguration) {
             this.tracingConfiguration = tracingConfiguration;
             return this;
-        }
-        public GetStateMachineResult build() {
+        }        public GetStateMachineResult build() {
             return new GetStateMachineResult(arn, definitionString, loggingConfiguration, name, roleArn, stateMachineType, tags, tracingConfiguration);
         }
     }

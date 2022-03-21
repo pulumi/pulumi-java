@@ -86,32 +86,26 @@ public final class AccountSettingDefaultState extends io.pulumi.resources.Resour
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder principalArn(@Nullable Output<String> principalArn) {
             this.principalArn = principalArn;
             return this;
         }
-
         public Builder principalArn(@Nullable String principalArn) {
             this.principalArn = Output.ofNullable(principalArn);
             return this;
         }
-
         public Builder value(@Nullable Output<String> value) {
             this.value = value;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = Output.ofNullable(value);
             return this;
-        }
-        public AccountSettingDefaultState build() {
+        }        public AccountSettingDefaultState build() {
             return new AccountSettingDefaultState(name, principalArn, value);
         }
     }

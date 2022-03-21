@@ -224,112 +224,96 @@ public final class EndpointGroupState extends io.pulumi.resources.ResourceArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder endpointConfigurations(@Nullable Output<List<EndpointGroupEndpointConfigurationGetArgs>> endpointConfigurations) {
             this.endpointConfigurations = endpointConfigurations;
             return this;
         }
-
         public Builder endpointConfigurations(@Nullable List<EndpointGroupEndpointConfigurationGetArgs> endpointConfigurations) {
             this.endpointConfigurations = Output.ofNullable(endpointConfigurations);
             return this;
         }
-
+        public Builder endpointConfigurations(EndpointGroupEndpointConfigurationGetArgs... endpointConfigurations) {
+            return endpointConfigurations(List.of(endpointConfigurations));
+        }
         public Builder endpointGroupRegion(@Nullable Output<String> endpointGroupRegion) {
             this.endpointGroupRegion = endpointGroupRegion;
             return this;
         }
-
         public Builder endpointGroupRegion(@Nullable String endpointGroupRegion) {
             this.endpointGroupRegion = Output.ofNullable(endpointGroupRegion);
             return this;
         }
-
         public Builder healthCheckIntervalSeconds(@Nullable Output<Integer> healthCheckIntervalSeconds) {
             this.healthCheckIntervalSeconds = healthCheckIntervalSeconds;
             return this;
         }
-
         public Builder healthCheckIntervalSeconds(@Nullable Integer healthCheckIntervalSeconds) {
             this.healthCheckIntervalSeconds = Output.ofNullable(healthCheckIntervalSeconds);
             return this;
         }
-
         public Builder healthCheckPath(@Nullable Output<String> healthCheckPath) {
             this.healthCheckPath = healthCheckPath;
             return this;
         }
-
         public Builder healthCheckPath(@Nullable String healthCheckPath) {
             this.healthCheckPath = Output.ofNullable(healthCheckPath);
             return this;
         }
-
         public Builder healthCheckPort(@Nullable Output<Integer> healthCheckPort) {
             this.healthCheckPort = healthCheckPort;
             return this;
         }
-
         public Builder healthCheckPort(@Nullable Integer healthCheckPort) {
             this.healthCheckPort = Output.ofNullable(healthCheckPort);
             return this;
         }
-
         public Builder healthCheckProtocol(@Nullable Output<String> healthCheckProtocol) {
             this.healthCheckProtocol = healthCheckProtocol;
             return this;
         }
-
         public Builder healthCheckProtocol(@Nullable String healthCheckProtocol) {
             this.healthCheckProtocol = Output.ofNullable(healthCheckProtocol);
             return this;
         }
-
         public Builder listenerArn(@Nullable Output<String> listenerArn) {
             this.listenerArn = listenerArn;
             return this;
         }
-
         public Builder listenerArn(@Nullable String listenerArn) {
             this.listenerArn = Output.ofNullable(listenerArn);
             return this;
         }
-
         public Builder portOverrides(@Nullable Output<List<EndpointGroupPortOverrideGetArgs>> portOverrides) {
             this.portOverrides = portOverrides;
             return this;
         }
-
         public Builder portOverrides(@Nullable List<EndpointGroupPortOverrideGetArgs> portOverrides) {
             this.portOverrides = Output.ofNullable(portOverrides);
             return this;
         }
-
+        public Builder portOverrides(EndpointGroupPortOverrideGetArgs... portOverrides) {
+            return portOverrides(List.of(portOverrides));
+        }
         public Builder thresholdCount(@Nullable Output<Integer> thresholdCount) {
             this.thresholdCount = thresholdCount;
             return this;
         }
-
         public Builder thresholdCount(@Nullable Integer thresholdCount) {
             this.thresholdCount = Output.ofNullable(thresholdCount);
             return this;
         }
-
         public Builder trafficDialPercentage(@Nullable Output<Double> trafficDialPercentage) {
             this.trafficDialPercentage = trafficDialPercentage;
             return this;
         }
-
         public Builder trafficDialPercentage(@Nullable Double trafficDialPercentage) {
             this.trafficDialPercentage = Output.ofNullable(trafficDialPercentage);
             return this;
-        }
-        public EndpointGroupState build() {
+        }        public EndpointGroupState build() {
             return new EndpointGroupState(arn, endpointConfigurations, endpointGroupRegion, healthCheckIntervalSeconds, healthCheckPath, healthCheckPort, healthCheckProtocol, listenerArn, portOverrides, thresholdCount, trafficDialPercentage);
         }
     }

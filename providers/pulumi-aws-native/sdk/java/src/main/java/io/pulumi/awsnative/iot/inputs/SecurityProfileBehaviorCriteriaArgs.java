@@ -150,72 +150,58 @@ public final class SecurityProfileBehaviorCriteriaArgs extends io.pulumi.resourc
             this.comparisonOperator = comparisonOperator;
             return this;
         }
-
         public Builder comparisonOperator(@Nullable SecurityProfileBehaviorCriteriaComparisonOperator comparisonOperator) {
             this.comparisonOperator = Output.ofNullable(comparisonOperator);
             return this;
         }
-
         public Builder consecutiveDatapointsToAlarm(@Nullable Output<Integer> consecutiveDatapointsToAlarm) {
             this.consecutiveDatapointsToAlarm = consecutiveDatapointsToAlarm;
             return this;
         }
-
         public Builder consecutiveDatapointsToAlarm(@Nullable Integer consecutiveDatapointsToAlarm) {
             this.consecutiveDatapointsToAlarm = Output.ofNullable(consecutiveDatapointsToAlarm);
             return this;
         }
-
         public Builder consecutiveDatapointsToClear(@Nullable Output<Integer> consecutiveDatapointsToClear) {
             this.consecutiveDatapointsToClear = consecutiveDatapointsToClear;
             return this;
         }
-
         public Builder consecutiveDatapointsToClear(@Nullable Integer consecutiveDatapointsToClear) {
             this.consecutiveDatapointsToClear = Output.ofNullable(consecutiveDatapointsToClear);
             return this;
         }
-
         public Builder durationSeconds(@Nullable Output<Integer> durationSeconds) {
             this.durationSeconds = durationSeconds;
             return this;
         }
-
         public Builder durationSeconds(@Nullable Integer durationSeconds) {
             this.durationSeconds = Output.ofNullable(durationSeconds);
             return this;
         }
-
         public Builder mlDetectionConfig(@Nullable Output<SecurityProfileMachineLearningDetectionConfigArgs> mlDetectionConfig) {
             this.mlDetectionConfig = mlDetectionConfig;
             return this;
         }
-
         public Builder mlDetectionConfig(@Nullable SecurityProfileMachineLearningDetectionConfigArgs mlDetectionConfig) {
             this.mlDetectionConfig = Output.ofNullable(mlDetectionConfig);
             return this;
         }
-
         public Builder statisticalThreshold(@Nullable Output<SecurityProfileStatisticalThresholdArgs> statisticalThreshold) {
             this.statisticalThreshold = statisticalThreshold;
             return this;
         }
-
         public Builder statisticalThreshold(@Nullable SecurityProfileStatisticalThresholdArgs statisticalThreshold) {
             this.statisticalThreshold = Output.ofNullable(statisticalThreshold);
             return this;
         }
-
         public Builder value(@Nullable Output<SecurityProfileMetricValueArgs> value) {
             this.value = value;
             return this;
         }
-
         public Builder value(@Nullable SecurityProfileMetricValueArgs value) {
             this.value = Output.ofNullable(value);
             return this;
-        }
-        public SecurityProfileBehaviorCriteriaArgs build() {
+        }        public SecurityProfileBehaviorCriteriaArgs build() {
             return new SecurityProfileBehaviorCriteriaArgs(comparisonOperator, consecutiveDatapointsToAlarm, consecutiveDatapointsToClear, durationSeconds, mlDetectionConfig, statisticalThreshold, value);
         }
     }

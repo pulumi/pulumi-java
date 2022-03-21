@@ -102,27 +102,22 @@ public final class GetCloneJobArgs extends io.pulumi.resources.InvokeArgs {
             this.cloneJobId = Objects.requireNonNull(cloneJobId);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder migratingVmId(String migratingVmId) {
             this.migratingVmId = Objects.requireNonNull(migratingVmId);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder sourceId(String sourceId) {
             this.sourceId = Objects.requireNonNull(sourceId);
             return this;
-        }
-        public GetCloneJobArgs build() {
+        }        public GetCloneJobArgs build() {
             return new GetCloneJobArgs(cloneJobId, location, migratingVmId, project, sourceId);
         }
     }

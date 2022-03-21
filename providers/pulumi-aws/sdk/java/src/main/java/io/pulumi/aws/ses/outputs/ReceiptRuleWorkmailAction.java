@@ -88,17 +88,14 @@ public final class ReceiptRuleWorkmailAction {
             this.organizationArn = Objects.requireNonNull(organizationArn);
             return this;
         }
-
         public Builder position(Integer position) {
             this.position = Objects.requireNonNull(position);
             return this;
         }
-
         public Builder topicArn(@Nullable String topicArn) {
             this.topicArn = topicArn;
             return this;
-        }
-        public ReceiptRuleWorkmailAction build() {
+        }        public ReceiptRuleWorkmailAction build() {
             return new ReceiptRuleWorkmailAction(organizationArn, position, topicArn);
         }
     }

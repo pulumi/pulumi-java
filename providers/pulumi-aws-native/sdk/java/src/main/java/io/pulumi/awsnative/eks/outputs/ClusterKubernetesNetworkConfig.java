@@ -88,17 +88,14 @@ public final class ClusterKubernetesNetworkConfig {
             this.ipFamily = ipFamily;
             return this;
         }
-
         public Builder serviceIpv4Cidr(@Nullable String serviceIpv4Cidr) {
             this.serviceIpv4Cidr = serviceIpv4Cidr;
             return this;
         }
-
         public Builder serviceIpv6Cidr(@Nullable String serviceIpv6Cidr) {
             this.serviceIpv6Cidr = serviceIpv6Cidr;
             return this;
-        }
-        public ClusterKubernetesNetworkConfig build() {
+        }        public ClusterKubernetesNetworkConfig build() {
             return new ClusterKubernetesNetworkConfig(ipFamily, serviceIpv4Cidr, serviceIpv6Cidr);
         }
     }

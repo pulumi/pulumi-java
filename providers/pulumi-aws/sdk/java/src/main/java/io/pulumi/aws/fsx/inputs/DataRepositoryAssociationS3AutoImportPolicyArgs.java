@@ -58,12 +58,13 @@ public final class DataRepositoryAssociationS3AutoImportPolicyArgs extends io.pu
             this.events = events;
             return this;
         }
-
         public Builder events(@Nullable List<String> events) {
             this.events = Output.ofNullable(events);
             return this;
         }
-        public DataRepositoryAssociationS3AutoImportPolicyArgs build() {
+        public Builder events(String... events) {
+            return events(List.of(events));
+        }        public DataRepositoryAssociationS3AutoImportPolicyArgs build() {
             return new DataRepositoryAssociationS3AutoImportPolicyArgs(events);
         }
     }

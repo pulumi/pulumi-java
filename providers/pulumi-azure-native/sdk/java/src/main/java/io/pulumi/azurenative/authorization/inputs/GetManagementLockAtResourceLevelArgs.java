@@ -136,32 +136,26 @@ public final class GetManagementLockAtResourceLevelArgs extends io.pulumi.resour
             this.lockName = Objects.requireNonNull(lockName);
             return this;
         }
-
         public Builder parentResourcePath(String parentResourcePath) {
             this.parentResourcePath = Objects.requireNonNull(parentResourcePath);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceName(String resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
         }
-
         public Builder resourceProviderNamespace(String resourceProviderNamespace) {
             this.resourceProviderNamespace = Objects.requireNonNull(resourceProviderNamespace);
             return this;
         }
-
         public Builder resourceType(String resourceType) {
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
-        }
-        public GetManagementLockAtResourceLevelArgs build() {
+        }        public GetManagementLockAtResourceLevelArgs build() {
             return new GetManagementLockAtResourceLevelArgs(lockName, parentResourcePath, resourceGroupName, resourceName, resourceProviderNamespace, resourceType);
         }
     }

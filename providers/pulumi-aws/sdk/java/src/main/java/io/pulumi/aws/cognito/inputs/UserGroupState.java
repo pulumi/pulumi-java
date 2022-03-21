@@ -123,52 +123,42 @@ public final class UserGroupState extends io.pulumi.resources.ResourceArgs {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder precedence(@Nullable Output<Integer> precedence) {
             this.precedence = precedence;
             return this;
         }
-
         public Builder precedence(@Nullable Integer precedence) {
             this.precedence = Output.ofNullable(precedence);
             return this;
         }
-
         public Builder roleArn(@Nullable Output<String> roleArn) {
             this.roleArn = roleArn;
             return this;
         }
-
         public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = Output.ofNullable(roleArn);
             return this;
         }
-
         public Builder userPoolId(@Nullable Output<String> userPoolId) {
             this.userPoolId = userPoolId;
             return this;
         }
-
         public Builder userPoolId(@Nullable String userPoolId) {
             this.userPoolId = Output.ofNullable(userPoolId);
             return this;
-        }
-        public UserGroupState build() {
+        }        public UserGroupState build() {
             return new UserGroupState(description, name, precedence, roleArn, userPoolId);
         }
     }

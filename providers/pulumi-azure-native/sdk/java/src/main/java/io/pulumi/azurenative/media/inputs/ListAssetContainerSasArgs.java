@@ -124,27 +124,22 @@ public final class ListAssetContainerSasArgs extends io.pulumi.resources.InvokeA
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder assetName(String assetName) {
             this.assetName = Objects.requireNonNull(assetName);
             return this;
         }
-
         public Builder expiryTime(@Nullable String expiryTime) {
             this.expiryTime = expiryTime;
             return this;
         }
-
         public Builder permissions(@Nullable Either<String,AssetContainerPermission> permissions) {
             this.permissions = permissions;
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public ListAssetContainerSasArgs build() {
+        }        public ListAssetContainerSasArgs build() {
             return new ListAssetContainerSasArgs(accountName, assetName, expiryTime, permissions, resourceGroupName);
         }
     }

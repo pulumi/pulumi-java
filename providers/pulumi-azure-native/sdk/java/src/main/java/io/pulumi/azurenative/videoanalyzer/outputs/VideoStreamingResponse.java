@@ -65,8 +65,7 @@ public final class VideoStreamingResponse {
         public Builder archiveBaseUrl(@Nullable String archiveBaseUrl) {
             this.archiveBaseUrl = archiveBaseUrl;
             return this;
-        }
-        public VideoStreamingResponse build() {
+        }        public VideoStreamingResponse build() {
             return new VideoStreamingResponse(archiveBaseUrl);
         }
     }

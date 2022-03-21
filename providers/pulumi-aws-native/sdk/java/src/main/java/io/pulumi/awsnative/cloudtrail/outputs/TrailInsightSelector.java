@@ -53,8 +53,7 @@ public final class TrailInsightSelector {
         public Builder insightType(@Nullable String insightType) {
             this.insightType = insightType;
             return this;
-        }
-        public TrailInsightSelector build() {
+        }        public TrailInsightSelector build() {
             return new TrailInsightSelector(insightType);
         }
     }

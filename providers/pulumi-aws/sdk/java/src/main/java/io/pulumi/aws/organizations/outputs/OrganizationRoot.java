@@ -105,22 +105,21 @@ public final class OrganizationRoot {
             this.arn = arn;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder policyTypes(@Nullable List<OrganizationRootPolicyType> policyTypes) {
             this.policyTypes = policyTypes;
             return this;
         }
-        public OrganizationRoot build() {
+        public Builder policyTypes(OrganizationRootPolicyType... policyTypes) {
+            return policyTypes(List.of(policyTypes));
+        }        public OrganizationRoot build() {
             return new OrganizationRoot(arn, id, name, policyTypes);
         }
     }

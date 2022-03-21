@@ -114,22 +114,21 @@ public final class TaggingCriteriaResponse extends io.pulumi.resources.InvokeArg
             this.criteria = criteria;
             return this;
         }
-
+        public Builder criteria(ScheduleBasedBackupCriteriaResponse... criteria) {
+            return criteria(List.of(criteria));
+        }
         public Builder isDefault(Boolean isDefault) {
             this.isDefault = Objects.requireNonNull(isDefault);
             return this;
         }
-
         public Builder tagInfo(RetentionTagResponse tagInfo) {
             this.tagInfo = Objects.requireNonNull(tagInfo);
             return this;
         }
-
         public Builder taggingPriority(Double taggingPriority) {
             this.taggingPriority = Objects.requireNonNull(taggingPriority);
             return this;
-        }
-        public TaggingCriteriaResponse build() {
+        }        public TaggingCriteriaResponse build() {
             return new TaggingCriteriaResponse(criteria, isDefault, tagInfo, taggingPriority);
         }
     }

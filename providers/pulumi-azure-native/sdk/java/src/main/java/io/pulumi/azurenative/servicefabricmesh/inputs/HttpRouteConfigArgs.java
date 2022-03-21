@@ -95,32 +95,26 @@ public final class HttpRouteConfigArgs extends io.pulumi.resources.ResourceArgs 
             this.destination = Objects.requireNonNull(destination);
             return this;
         }
-
         public Builder destination(GatewayDestinationArgs destination) {
             this.destination = Output.of(Objects.requireNonNull(destination));
             return this;
         }
-
         public Builder match(Output<HttpRouteMatchRuleArgs> match) {
             this.match = Objects.requireNonNull(match);
             return this;
         }
-
         public Builder match(HttpRouteMatchRuleArgs match) {
             this.match = Output.of(Objects.requireNonNull(match));
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
-        }
-        public HttpRouteConfigArgs build() {
+        }        public HttpRouteConfigArgs build() {
             return new HttpRouteConfigArgs(destination, match, name);
         }
     }

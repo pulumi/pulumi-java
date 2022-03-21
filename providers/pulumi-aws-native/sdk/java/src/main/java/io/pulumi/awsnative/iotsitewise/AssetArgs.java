@@ -118,52 +118,51 @@ public final class AssetArgs extends io.pulumi.resources.ResourceArgs {
             this.assetHierarchies = assetHierarchies;
             return this;
         }
-
         public Builder assetHierarchies(@Nullable List<AssetHierarchyArgs> assetHierarchies) {
             this.assetHierarchies = Output.ofNullable(assetHierarchies);
             return this;
         }
-
+        public Builder assetHierarchies(AssetHierarchyArgs... assetHierarchies) {
+            return assetHierarchies(List.of(assetHierarchies));
+        }
         public Builder assetModelId(Output<String> assetModelId) {
             this.assetModelId = Objects.requireNonNull(assetModelId);
             return this;
         }
-
         public Builder assetModelId(String assetModelId) {
             this.assetModelId = Output.of(Objects.requireNonNull(assetModelId));
             return this;
         }
-
         public Builder assetName(@Nullable Output<String> assetName) {
             this.assetName = assetName;
             return this;
         }
-
         public Builder assetName(@Nullable String assetName) {
             this.assetName = Output.ofNullable(assetName);
             return this;
         }
-
         public Builder assetProperties(@Nullable Output<List<AssetPropertyArgs>> assetProperties) {
             this.assetProperties = assetProperties;
             return this;
         }
-
         public Builder assetProperties(@Nullable List<AssetPropertyArgs> assetProperties) {
             this.assetProperties = Output.ofNullable(assetProperties);
             return this;
         }
-
+        public Builder assetProperties(AssetPropertyArgs... assetProperties) {
+            return assetProperties(List.of(assetProperties));
+        }
         public Builder tags(@Nullable Output<List<AssetTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<AssetTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public AssetArgs build() {
+        public Builder tags(AssetTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public AssetArgs build() {
             return new AssetArgs(assetHierarchies, assetModelId, assetName, assetProperties, tags);
         }
     }

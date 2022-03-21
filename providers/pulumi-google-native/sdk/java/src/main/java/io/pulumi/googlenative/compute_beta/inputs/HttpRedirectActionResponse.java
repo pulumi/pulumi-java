@@ -141,32 +141,26 @@ public final class HttpRedirectActionResponse extends io.pulumi.resources.Invoke
             this.hostRedirect = Objects.requireNonNull(hostRedirect);
             return this;
         }
-
         public Builder httpsRedirect(Boolean httpsRedirect) {
             this.httpsRedirect = Objects.requireNonNull(httpsRedirect);
             return this;
         }
-
         public Builder pathRedirect(String pathRedirect) {
             this.pathRedirect = Objects.requireNonNull(pathRedirect);
             return this;
         }
-
         public Builder prefixRedirect(String prefixRedirect) {
             this.prefixRedirect = Objects.requireNonNull(prefixRedirect);
             return this;
         }
-
         public Builder redirectResponseCode(String redirectResponseCode) {
             this.redirectResponseCode = Objects.requireNonNull(redirectResponseCode);
             return this;
         }
-
         public Builder stripQuery(Boolean stripQuery) {
             this.stripQuery = Objects.requireNonNull(stripQuery);
             return this;
-        }
-        public HttpRedirectActionResponse build() {
+        }        public HttpRedirectActionResponse build() {
             return new HttpRedirectActionResponse(hostRedirect, httpsRedirect, pathRedirect, prefixRedirect, redirectResponseCode, stripQuery);
         }
     }

@@ -56,7 +56,9 @@ public final class ResponsePolicyRuleLocalDataResponse extends io.pulumi.resourc
             this.localDatas = Objects.requireNonNull(localDatas);
             return this;
         }
-        public ResponsePolicyRuleLocalDataResponse build() {
+        public Builder localDatas(ResourceRecordSetResponse... localDatas) {
+            return localDatas(List.of(localDatas));
+        }        public ResponsePolicyRuleLocalDataResponse build() {
             return new ResponsePolicyRuleLocalDataResponse(localDatas);
         }
     }

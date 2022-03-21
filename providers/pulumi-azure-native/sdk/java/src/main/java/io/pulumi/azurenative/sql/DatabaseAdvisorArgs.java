@@ -123,52 +123,42 @@ public final class DatabaseAdvisorArgs extends io.pulumi.resources.ResourceArgs 
             this.advisorName = advisorName;
             return this;
         }
-
         public Builder advisorName(@Nullable String advisorName) {
             this.advisorName = Output.ofNullable(advisorName);
             return this;
         }
-
         public Builder autoExecuteStatus(Output<AutoExecuteStatus> autoExecuteStatus) {
             this.autoExecuteStatus = Objects.requireNonNull(autoExecuteStatus);
             return this;
         }
-
         public Builder autoExecuteStatus(AutoExecuteStatus autoExecuteStatus) {
             this.autoExecuteStatus = Output.of(Objects.requireNonNull(autoExecuteStatus));
             return this;
         }
-
         public Builder databaseName(Output<String> databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
-
         public Builder databaseName(String databaseName) {
             this.databaseName = Output.of(Objects.requireNonNull(databaseName));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder serverName(Output<String> serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
         }
-
         public Builder serverName(String serverName) {
             this.serverName = Output.of(Objects.requireNonNull(serverName));
             return this;
-        }
-        public DatabaseAdvisorArgs build() {
+        }        public DatabaseAdvisorArgs build() {
             return new DatabaseAdvisorArgs(advisorName, autoExecuteStatus, databaseName, resourceGroupName, serverName);
         }
     }

@@ -45,8 +45,7 @@ public final class DeliveryStreamRetryOptions {
         public Builder durationInSeconds(@Nullable Integer durationInSeconds) {
             this.durationInSeconds = durationInSeconds;
             return this;
-        }
-        public DeliveryStreamRetryOptions build() {
+        }        public DeliveryStreamRetryOptions build() {
             return new DeliveryStreamRetryOptions(durationInSeconds);
         }
     }

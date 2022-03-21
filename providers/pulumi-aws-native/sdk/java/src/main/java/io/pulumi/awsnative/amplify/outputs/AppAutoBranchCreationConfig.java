@@ -124,52 +124,48 @@ public final class AppAutoBranchCreationConfig {
             this.autoBranchCreationPatterns = autoBranchCreationPatterns;
             return this;
         }
-
+        public Builder autoBranchCreationPatterns(String... autoBranchCreationPatterns) {
+            return autoBranchCreationPatterns(List.of(autoBranchCreationPatterns));
+        }
         public Builder basicAuthConfig(@Nullable AppBasicAuthConfig basicAuthConfig) {
             this.basicAuthConfig = basicAuthConfig;
             return this;
         }
-
         public Builder buildSpec(@Nullable String buildSpec) {
             this.buildSpec = buildSpec;
             return this;
         }
-
         public Builder enableAutoBranchCreation(@Nullable Boolean enableAutoBranchCreation) {
             this.enableAutoBranchCreation = enableAutoBranchCreation;
             return this;
         }
-
         public Builder enableAutoBuild(@Nullable Boolean enableAutoBuild) {
             this.enableAutoBuild = enableAutoBuild;
             return this;
         }
-
         public Builder enablePerformanceMode(@Nullable Boolean enablePerformanceMode) {
             this.enablePerformanceMode = enablePerformanceMode;
             return this;
         }
-
         public Builder enablePullRequestPreview(@Nullable Boolean enablePullRequestPreview) {
             this.enablePullRequestPreview = enablePullRequestPreview;
             return this;
         }
-
         public Builder environmentVariables(@Nullable List<AppEnvironmentVariable> environmentVariables) {
             this.environmentVariables = environmentVariables;
             return this;
         }
-
+        public Builder environmentVariables(AppEnvironmentVariable... environmentVariables) {
+            return environmentVariables(List.of(environmentVariables));
+        }
         public Builder pullRequestEnvironmentName(@Nullable String pullRequestEnvironmentName) {
             this.pullRequestEnvironmentName = pullRequestEnvironmentName;
             return this;
         }
-
         public Builder stage(@Nullable AppAutoBranchCreationConfigStage stage) {
             this.stage = stage;
             return this;
-        }
-        public AppAutoBranchCreationConfig build() {
+        }        public AppAutoBranchCreationConfig build() {
             return new AppAutoBranchCreationConfig(autoBranchCreationPatterns, basicAuthConfig, buildSpec, enableAutoBranchCreation, enableAutoBuild, enablePerformanceMode, enablePullRequestPreview, environmentVariables, pullRequestEnvironmentName, stage);
         }
     }

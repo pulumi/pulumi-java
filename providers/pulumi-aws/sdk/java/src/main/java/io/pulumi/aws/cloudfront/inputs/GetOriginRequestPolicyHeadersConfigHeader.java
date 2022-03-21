@@ -52,7 +52,9 @@ public final class GetOriginRequestPolicyHeadersConfigHeader extends io.pulumi.r
             this.items = Objects.requireNonNull(items);
             return this;
         }
-        public GetOriginRequestPolicyHeadersConfigHeader build() {
+        public Builder items(String... items) {
+            return items(List.of(items));
+        }        public GetOriginRequestPolicyHeadersConfigHeader build() {
             return new GetOriginRequestPolicyHeadersConfigHeader(items);
         }
     }

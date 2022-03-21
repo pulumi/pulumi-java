@@ -160,72 +160,61 @@ public final class ResourceGroupDefinitionArgs extends io.pulumi.resources.Resou
             this.dependsOn = dependsOn;
             return this;
         }
-
         public Builder dependsOn(@Nullable List<String> dependsOn) {
             this.dependsOn = Output.ofNullable(dependsOn);
             return this;
         }
-
+        public Builder dependsOn(String... dependsOn) {
+            return dependsOn(List.of(dependsOn));
+        }
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder strongType(@Nullable Output<String> strongType) {
             this.strongType = strongType;
             return this;
         }
-
         public Builder strongType(@Nullable String strongType) {
             this.strongType = Output.ofNullable(strongType);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public ResourceGroupDefinitionArgs build() {
+        }        public ResourceGroupDefinitionArgs build() {
             return new ResourceGroupDefinitionArgs(dependsOn, description, displayName, location, name, strongType, tags);
         }
     }

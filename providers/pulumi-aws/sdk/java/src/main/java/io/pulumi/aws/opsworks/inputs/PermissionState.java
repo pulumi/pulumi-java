@@ -123,52 +123,42 @@ public final class PermissionState extends io.pulumi.resources.ResourceArgs {
             this.allowSsh = allowSsh;
             return this;
         }
-
         public Builder allowSsh(@Nullable Boolean allowSsh) {
             this.allowSsh = Output.ofNullable(allowSsh);
             return this;
         }
-
         public Builder allowSudo(@Nullable Output<Boolean> allowSudo) {
             this.allowSudo = allowSudo;
             return this;
         }
-
         public Builder allowSudo(@Nullable Boolean allowSudo) {
             this.allowSudo = Output.ofNullable(allowSudo);
             return this;
         }
-
         public Builder level(@Nullable Output<String> level) {
             this.level = level;
             return this;
         }
-
         public Builder level(@Nullable String level) {
             this.level = Output.ofNullable(level);
             return this;
         }
-
         public Builder stackId(@Nullable Output<String> stackId) {
             this.stackId = stackId;
             return this;
         }
-
         public Builder stackId(@Nullable String stackId) {
             this.stackId = Output.ofNullable(stackId);
             return this;
         }
-
         public Builder userArn(@Nullable Output<String> userArn) {
             this.userArn = userArn;
             return this;
         }
-
         public Builder userArn(@Nullable String userArn) {
             this.userArn = Output.ofNullable(userArn);
             return this;
-        }
-        public PermissionState build() {
+        }        public PermissionState build() {
             return new PermissionState(allowSsh, allowSudo, level, stackId, userArn);
         }
     }

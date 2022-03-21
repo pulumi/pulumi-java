@@ -53,8 +53,7 @@ public final class ServiceManagedResourcesSettingsResponse {
         public Builder cosmosDb(@Nullable CosmosDbSettingsResponse cosmosDb) {
             this.cosmosDb = cosmosDb;
             return this;
-        }
-        public ServiceManagedResourcesSettingsResponse build() {
+        }        public ServiceManagedResourcesSettingsResponse build() {
             return new ServiceManagedResourcesSettingsResponse(cosmosDb);
         }
     }

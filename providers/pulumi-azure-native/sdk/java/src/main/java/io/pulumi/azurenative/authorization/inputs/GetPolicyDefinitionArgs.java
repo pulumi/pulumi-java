@@ -54,8 +54,7 @@ public final class GetPolicyDefinitionArgs extends io.pulumi.resources.InvokeArg
         public Builder policyDefinitionName(String policyDefinitionName) {
             this.policyDefinitionName = Objects.requireNonNull(policyDefinitionName);
             return this;
-        }
-        public GetPolicyDefinitionArgs build() {
+        }        public GetPolicyDefinitionArgs build() {
             return new GetPolicyDefinitionArgs(policyDefinitionName);
         }
     }

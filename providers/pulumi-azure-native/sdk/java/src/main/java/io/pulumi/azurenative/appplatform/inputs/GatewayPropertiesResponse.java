@@ -214,52 +214,45 @@ public final class GatewayPropertiesResponse extends io.pulumi.resources.InvokeA
             this.apiMetadataProperties = apiMetadataProperties;
             return this;
         }
-
         public Builder corsProperties(@Nullable GatewayCorsPropertiesResponse corsProperties) {
             this.corsProperties = corsProperties;
             return this;
         }
-
         public Builder httpsOnly(@Nullable Boolean httpsOnly) {
             this.httpsOnly = httpsOnly;
             return this;
         }
-
         public Builder instances(List<GatewayInstanceResponse> instances) {
             this.instances = Objects.requireNonNull(instances);
             return this;
         }
-
+        public Builder instances(GatewayInstanceResponse... instances) {
+            return instances(List.of(instances));
+        }
         public Builder operatorProperties(GatewayOperatorPropertiesResponse operatorProperties) {
             this.operatorProperties = Objects.requireNonNull(operatorProperties);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder $public(@Nullable Boolean $public) {
             this.$public = $public;
             return this;
         }
-
         public Builder resourceRequests(@Nullable GatewayResourceRequestsResponse resourceRequests) {
             this.resourceRequests = resourceRequests;
             return this;
         }
-
         public Builder ssoProperties(@Nullable SsoPropertiesResponse ssoProperties) {
             this.ssoProperties = ssoProperties;
             return this;
         }
-
         public Builder url(String url) {
             this.url = Objects.requireNonNull(url);
             return this;
-        }
-        public GatewayPropertiesResponse build() {
+        }        public GatewayPropertiesResponse build() {
             return new GatewayPropertiesResponse(apiMetadataProperties, corsProperties, httpsOnly, instances, operatorProperties, provisioningState, $public, resourceRequests, ssoProperties, url);
         }
     }

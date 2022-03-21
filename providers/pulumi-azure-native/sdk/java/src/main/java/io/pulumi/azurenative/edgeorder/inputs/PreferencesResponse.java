@@ -114,22 +114,21 @@ public final class PreferencesResponse extends io.pulumi.resources.InvokeArgs {
             this.encryptionPreferences = encryptionPreferences;
             return this;
         }
-
         public Builder managementResourcePreferences(@Nullable ManagementResourcePreferencesResponse managementResourcePreferences) {
             this.managementResourcePreferences = managementResourcePreferences;
             return this;
         }
-
         public Builder notificationPreferences(@Nullable List<NotificationPreferenceResponse> notificationPreferences) {
             this.notificationPreferences = notificationPreferences;
             return this;
         }
-
+        public Builder notificationPreferences(NotificationPreferenceResponse... notificationPreferences) {
+            return notificationPreferences(List.of(notificationPreferences));
+        }
         public Builder transportPreferences(@Nullable TransportPreferencesResponse transportPreferences) {
             this.transportPreferences = transportPreferences;
             return this;
-        }
-        public PreferencesResponse build() {
+        }        public PreferencesResponse build() {
             return new PreferencesResponse(encryptionPreferences, managementResourcePreferences, notificationPreferences, transportPreferences);
         }
     }

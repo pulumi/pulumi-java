@@ -51,8 +51,7 @@ public final class ReplicaResponse {
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
-        }
-        public ReplicaResponse build() {
+        }        public ReplicaResponse build() {
             return new ReplicaResponse(location);
         }
     }

@@ -122,27 +122,25 @@ public final class ResponsePlanSsmAutomation {
             this.documentName = Objects.requireNonNull(documentName);
             return this;
         }
-
         public Builder documentVersion(@Nullable String documentVersion) {
             this.documentVersion = documentVersion;
             return this;
         }
-
         public Builder parameters(@Nullable List<ResponsePlanSsmParameter> parameters) {
             this.parameters = parameters;
             return this;
         }
-
+        public Builder parameters(ResponsePlanSsmParameter... parameters) {
+            return parameters(List.of(parameters));
+        }
         public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public Builder targetAccount(@Nullable ResponsePlanSsmAutomationTargetAccount targetAccount) {
             this.targetAccount = targetAccount;
             return this;
-        }
-        public ResponsePlanSsmAutomation build() {
+        }        public ResponsePlanSsmAutomation build() {
             return new ResponsePlanSsmAutomation(documentName, documentVersion, parameters, roleArn, targetAccount);
         }
     }

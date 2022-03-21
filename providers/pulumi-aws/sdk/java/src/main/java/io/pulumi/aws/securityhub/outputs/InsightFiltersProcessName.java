@@ -69,12 +69,10 @@ public final class InsightFiltersProcessName {
             this.comparison = Objects.requireNonNull(comparison);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public InsightFiltersProcessName build() {
+        }        public InsightFiltersProcessName build() {
             return new InsightFiltersProcessName(comparison, value);
         }
     }

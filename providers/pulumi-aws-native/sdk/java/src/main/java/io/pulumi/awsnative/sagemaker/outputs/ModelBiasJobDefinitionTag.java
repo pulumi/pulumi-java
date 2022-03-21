@@ -69,12 +69,10 @@ public final class ModelBiasJobDefinitionTag {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public ModelBiasJobDefinitionTag build() {
+        }        public ModelBiasJobDefinitionTag build() {
             return new ModelBiasJobDefinitionTag(key, value);
         }
     }

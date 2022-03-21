@@ -74,22 +74,18 @@ public final class RouterMd5AuthenticationKeyArgs extends io.pulumi.resources.Re
             this.key = key;
             return this;
         }
-
         public Builder key(@Nullable String key) {
             this.key = Output.ofNullable(key);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
-        }
-        public RouterMd5AuthenticationKeyArgs build() {
+        }        public RouterMd5AuthenticationKeyArgs build() {
             return new RouterMd5AuthenticationKeyArgs(key, name);
         }
     }

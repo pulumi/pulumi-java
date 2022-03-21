@@ -125,52 +125,42 @@ public final class FluidRelayServerArgs extends io.pulumi.resources.ResourceArgs
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder provisioningState(@Nullable Output<Either<String,ProvisioningState>> provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
-
         public Builder provisioningState(@Nullable Either<String,ProvisioningState> provisioningState) {
             this.provisioningState = Output.ofNullable(provisioningState);
             return this;
         }
-
         public Builder resourceGroup(Output<String> resourceGroup) {
             this.resourceGroup = Objects.requireNonNull(resourceGroup);
             return this;
         }
-
         public Builder resourceGroup(String resourceGroup) {
             this.resourceGroup = Output.of(Objects.requireNonNull(resourceGroup));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public FluidRelayServerArgs build() {
+        }        public FluidRelayServerArgs build() {
             return new FluidRelayServerArgs(location, name, provisioningState, resourceGroup, tags);
         }
     }

@@ -70,12 +70,10 @@ public final class ServiceDnsConfigDnsRecord {
             this.ttl = Objects.requireNonNull(ttl);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public ServiceDnsConfigDnsRecord build() {
+        }        public ServiceDnsConfigDnsRecord build() {
             return new ServiceDnsConfigDnsRecord(ttl, type);
         }
     }

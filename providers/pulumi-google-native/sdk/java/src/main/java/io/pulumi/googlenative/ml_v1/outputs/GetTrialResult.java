@@ -201,52 +201,48 @@ public final class GetTrialResult {
             this.clientId = Objects.requireNonNull(clientId);
             return this;
         }
-
         public Builder endTime(String endTime) {
             this.endTime = Objects.requireNonNull(endTime);
             return this;
         }
-
         public Builder finalMeasurement(GoogleCloudMlV1__MeasurementResponse finalMeasurement) {
             this.finalMeasurement = Objects.requireNonNull(finalMeasurement);
             return this;
         }
-
         public Builder infeasibleReason(String infeasibleReason) {
             this.infeasibleReason = Objects.requireNonNull(infeasibleReason);
             return this;
         }
-
         public Builder measurements(List<GoogleCloudMlV1__MeasurementResponse> measurements) {
             this.measurements = Objects.requireNonNull(measurements);
             return this;
         }
-
+        public Builder measurements(GoogleCloudMlV1__MeasurementResponse... measurements) {
+            return measurements(List.of(measurements));
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder parameters(List<GoogleCloudMlV1_Trial_ParameterResponse> parameters) {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
-
+        public Builder parameters(GoogleCloudMlV1_Trial_ParameterResponse... parameters) {
+            return parameters(List.of(parameters));
+        }
         public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder trialInfeasible(Boolean trialInfeasible) {
             this.trialInfeasible = Objects.requireNonNull(trialInfeasible);
             return this;
-        }
-        public GetTrialResult build() {
+        }        public GetTrialResult build() {
             return new GetTrialResult(clientId, endTime, finalMeasurement, infeasibleReason, measurements, name, parameters, startTime, state, trialInfeasible);
         }
     }

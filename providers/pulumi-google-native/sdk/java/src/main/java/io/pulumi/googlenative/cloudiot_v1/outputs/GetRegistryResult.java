@@ -155,37 +155,36 @@ public final class GetRegistryResult {
             this.credentials = Objects.requireNonNull(credentials);
             return this;
         }
-
+        public Builder credentials(RegistryCredentialResponse... credentials) {
+            return credentials(List.of(credentials));
+        }
         public Builder eventNotificationConfigs(List<EventNotificationConfigResponse> eventNotificationConfigs) {
             this.eventNotificationConfigs = Objects.requireNonNull(eventNotificationConfigs);
             return this;
         }
-
+        public Builder eventNotificationConfigs(EventNotificationConfigResponse... eventNotificationConfigs) {
+            return eventNotificationConfigs(List.of(eventNotificationConfigs));
+        }
         public Builder httpConfig(HttpConfigResponse httpConfig) {
             this.httpConfig = Objects.requireNonNull(httpConfig);
             return this;
         }
-
         public Builder logLevel(String logLevel) {
             this.logLevel = Objects.requireNonNull(logLevel);
             return this;
         }
-
         public Builder mqttConfig(MqttConfigResponse mqttConfig) {
             this.mqttConfig = Objects.requireNonNull(mqttConfig);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder stateNotificationConfig(StateNotificationConfigResponse stateNotificationConfig) {
             this.stateNotificationConfig = Objects.requireNonNull(stateNotificationConfig);
             return this;
-        }
-        public GetRegistryResult build() {
+        }        public GetRegistryResult build() {
             return new GetRegistryResult(credentials, eventNotificationConfigs, httpConfig, logLevel, mqttConfig, name, stateNotificationConfig);
         }
     }

@@ -89,17 +89,17 @@ public final class DistributionConfigurationDistributionContainerDistributionCon
             this.containerTags = containerTags;
             return this;
         }
-
+        public Builder containerTags(String... containerTags) {
+            return containerTags(List.of(containerTags));
+        }
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder targetRepository(@Nullable DistributionConfigurationTargetContainerRepository targetRepository) {
             this.targetRepository = targetRepository;
             return this;
-        }
-        public DistributionConfigurationDistributionContainerDistributionConfigurationProperties build() {
+        }        public DistributionConfigurationDistributionContainerDistributionConfigurationProperties build() {
             return new DistributionConfigurationDistributionContainerDistributionConfigurationProperties(containerTags, description, targetRepository);
         }
     }

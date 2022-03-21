@@ -72,12 +72,10 @@ public final class FlexibleAppVersionAutomaticScalingRequestUtilization {
             this.targetConcurrentRequests = targetConcurrentRequests;
             return this;
         }
-
         public Builder targetRequestCountPerSecond(@Nullable String targetRequestCountPerSecond) {
             this.targetRequestCountPerSecond = targetRequestCountPerSecond;
             return this;
-        }
-        public FlexibleAppVersionAutomaticScalingRequestUtilization build() {
+        }        public FlexibleAppVersionAutomaticScalingRequestUtilization build() {
             return new FlexibleAppVersionAutomaticScalingRequestUtilization(targetConcurrentRequests, targetRequestCountPerSecond);
         }
     }

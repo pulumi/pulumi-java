@@ -76,22 +76,18 @@ public final class SecretReplicationUserManagedReplicaArgs extends io.pulumi.res
             this.customerManagedEncryption = customerManagedEncryption;
             return this;
         }
-
         public Builder customerManagedEncryption(@Nullable SecretReplicationUserManagedReplicaCustomerManagedEncryptionArgs customerManagedEncryption) {
             this.customerManagedEncryption = Output.ofNullable(customerManagedEncryption);
             return this;
         }
-
         public Builder location(Output<String> location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Output.of(Objects.requireNonNull(location));
             return this;
-        }
-        public SecretReplicationUserManagedReplicaArgs build() {
+        }        public SecretReplicationUserManagedReplicaArgs build() {
             return new SecretReplicationUserManagedReplicaArgs(customerManagedEncryption, location);
         }
     }

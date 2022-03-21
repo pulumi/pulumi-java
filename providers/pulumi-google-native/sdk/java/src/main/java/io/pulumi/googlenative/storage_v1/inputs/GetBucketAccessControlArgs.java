@@ -90,22 +90,18 @@ public final class GetBucketAccessControlArgs extends io.pulumi.resources.Invoke
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
-
         public Builder entity(String entity) {
             this.entity = Objects.requireNonNull(entity);
             return this;
         }
-
         public Builder provisionalUserProject(@Nullable String provisionalUserProject) {
             this.provisionalUserProject = provisionalUserProject;
             return this;
         }
-
         public Builder userProject(@Nullable String userProject) {
             this.userProject = userProject;
             return this;
-        }
-        public GetBucketAccessControlArgs build() {
+        }        public GetBucketAccessControlArgs build() {
             return new GetBucketAccessControlArgs(bucket, entity, provisionalUserProject, userProject);
         }
     }

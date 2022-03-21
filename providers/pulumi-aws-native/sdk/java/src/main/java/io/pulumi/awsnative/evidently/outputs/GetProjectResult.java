@@ -82,22 +82,21 @@ public final class GetProjectResult {
             this.arn = arn;
             return this;
         }
-
         public Builder dataDelivery(@Nullable ProjectDataDeliveryObject dataDelivery) {
             this.dataDelivery = dataDelivery;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder tags(@Nullable List<ProjectTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetProjectResult build() {
+        public Builder tags(ProjectTag... tags) {
+            return tags(List.of(tags));
+        }        public GetProjectResult build() {
             return new GetProjectResult(arn, dataDelivery, description, tags);
         }
     }

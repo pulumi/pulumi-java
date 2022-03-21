@@ -126,52 +126,48 @@ public final class GameSessionQueueArgs extends io.pulumi.resources.ResourceArgs
             this.destinations = destinations;
             return this;
         }
-
         public Builder destinations(@Nullable List<String> destinations) {
             this.destinations = Output.ofNullable(destinations);
             return this;
         }
-
+        public Builder destinations(String... destinations) {
+            return destinations(List.of(destinations));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder playerLatencyPolicies(@Nullable Output<List<GameSessionQueuePlayerLatencyPolicyArgs>> playerLatencyPolicies) {
             this.playerLatencyPolicies = playerLatencyPolicies;
             return this;
         }
-
         public Builder playerLatencyPolicies(@Nullable List<GameSessionQueuePlayerLatencyPolicyArgs> playerLatencyPolicies) {
             this.playerLatencyPolicies = Output.ofNullable(playerLatencyPolicies);
             return this;
         }
-
+        public Builder playerLatencyPolicies(GameSessionQueuePlayerLatencyPolicyArgs... playerLatencyPolicies) {
+            return playerLatencyPolicies(List.of(playerLatencyPolicies));
+        }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder timeoutInSeconds(@Nullable Output<Integer> timeoutInSeconds) {
             this.timeoutInSeconds = timeoutInSeconds;
             return this;
         }
-
         public Builder timeoutInSeconds(@Nullable Integer timeoutInSeconds) {
             this.timeoutInSeconds = Output.ofNullable(timeoutInSeconds);
             return this;
-        }
-        public GameSessionQueueArgs build() {
+        }        public GameSessionQueueArgs build() {
             return new GameSessionQueueArgs(destinations, name, playerLatencyPolicies, tags, timeoutInSeconds);
         }
     }

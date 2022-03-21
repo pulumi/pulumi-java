@@ -94,17 +94,14 @@ public final class ConnStringInfoResponse extends io.pulumi.resources.InvokeArgs
             this.connectionString = connectionString;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
-        }
-        public ConnStringInfoResponse build() {
+        }        public ConnStringInfoResponse build() {
             return new ConnStringInfoResponse(connectionString, name, type);
         }
     }

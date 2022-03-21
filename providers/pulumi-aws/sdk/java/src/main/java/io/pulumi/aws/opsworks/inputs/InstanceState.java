@@ -703,452 +703,377 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
             this.agentVersion = agentVersion;
             return this;
         }
-
         public Builder agentVersion(@Nullable String agentVersion) {
             this.agentVersion = Output.ofNullable(agentVersion);
             return this;
         }
-
         public Builder amiId(@Nullable Output<String> amiId) {
             this.amiId = amiId;
             return this;
         }
-
         public Builder amiId(@Nullable String amiId) {
             this.amiId = Output.ofNullable(amiId);
             return this;
         }
-
         public Builder architecture(@Nullable Output<String> architecture) {
             this.architecture = architecture;
             return this;
         }
-
         public Builder architecture(@Nullable String architecture) {
             this.architecture = Output.ofNullable(architecture);
             return this;
         }
-
         public Builder autoScalingType(@Nullable Output<String> autoScalingType) {
             this.autoScalingType = autoScalingType;
             return this;
         }
-
         public Builder autoScalingType(@Nullable String autoScalingType) {
             this.autoScalingType = Output.ofNullable(autoScalingType);
             return this;
         }
-
         public Builder availabilityZone(@Nullable Output<String> availabilityZone) {
             this.availabilityZone = availabilityZone;
             return this;
         }
-
         public Builder availabilityZone(@Nullable String availabilityZone) {
             this.availabilityZone = Output.ofNullable(availabilityZone);
             return this;
         }
-
         public Builder createdAt(@Nullable Output<String> createdAt) {
             this.createdAt = createdAt;
             return this;
         }
-
         public Builder createdAt(@Nullable String createdAt) {
             this.createdAt = Output.ofNullable(createdAt);
             return this;
         }
-
         public Builder deleteEbs(@Nullable Output<Boolean> deleteEbs) {
             this.deleteEbs = deleteEbs;
             return this;
         }
-
         public Builder deleteEbs(@Nullable Boolean deleteEbs) {
             this.deleteEbs = Output.ofNullable(deleteEbs);
             return this;
         }
-
         public Builder deleteEip(@Nullable Output<Boolean> deleteEip) {
             this.deleteEip = deleteEip;
             return this;
         }
-
         public Builder deleteEip(@Nullable Boolean deleteEip) {
             this.deleteEip = Output.ofNullable(deleteEip);
             return this;
         }
-
         public Builder ebsBlockDevices(@Nullable Output<List<InstanceEbsBlockDeviceGetArgs>> ebsBlockDevices) {
             this.ebsBlockDevices = ebsBlockDevices;
             return this;
         }
-
         public Builder ebsBlockDevices(@Nullable List<InstanceEbsBlockDeviceGetArgs> ebsBlockDevices) {
             this.ebsBlockDevices = Output.ofNullable(ebsBlockDevices);
             return this;
         }
-
+        public Builder ebsBlockDevices(InstanceEbsBlockDeviceGetArgs... ebsBlockDevices) {
+            return ebsBlockDevices(List.of(ebsBlockDevices));
+        }
         public Builder ebsOptimized(@Nullable Output<Boolean> ebsOptimized) {
             this.ebsOptimized = ebsOptimized;
             return this;
         }
-
         public Builder ebsOptimized(@Nullable Boolean ebsOptimized) {
             this.ebsOptimized = Output.ofNullable(ebsOptimized);
             return this;
         }
-
         public Builder ec2InstanceId(@Nullable Output<String> ec2InstanceId) {
             this.ec2InstanceId = ec2InstanceId;
             return this;
         }
-
         public Builder ec2InstanceId(@Nullable String ec2InstanceId) {
             this.ec2InstanceId = Output.ofNullable(ec2InstanceId);
             return this;
         }
-
         public Builder ecsClusterArn(@Nullable Output<String> ecsClusterArn) {
             this.ecsClusterArn = ecsClusterArn;
             return this;
         }
-
         public Builder ecsClusterArn(@Nullable String ecsClusterArn) {
             this.ecsClusterArn = Output.ofNullable(ecsClusterArn);
             return this;
         }
-
         public Builder elasticIp(@Nullable Output<String> elasticIp) {
             this.elasticIp = elasticIp;
             return this;
         }
-
         public Builder elasticIp(@Nullable String elasticIp) {
             this.elasticIp = Output.ofNullable(elasticIp);
             return this;
         }
-
         public Builder ephemeralBlockDevices(@Nullable Output<List<InstanceEphemeralBlockDeviceGetArgs>> ephemeralBlockDevices) {
             this.ephemeralBlockDevices = ephemeralBlockDevices;
             return this;
         }
-
         public Builder ephemeralBlockDevices(@Nullable List<InstanceEphemeralBlockDeviceGetArgs> ephemeralBlockDevices) {
             this.ephemeralBlockDevices = Output.ofNullable(ephemeralBlockDevices);
             return this;
         }
-
+        public Builder ephemeralBlockDevices(InstanceEphemeralBlockDeviceGetArgs... ephemeralBlockDevices) {
+            return ephemeralBlockDevices(List.of(ephemeralBlockDevices));
+        }
         public Builder hostname(@Nullable Output<String> hostname) {
             this.hostname = hostname;
             return this;
         }
-
         public Builder hostname(@Nullable String hostname) {
             this.hostname = Output.ofNullable(hostname);
             return this;
         }
-
         public Builder infrastructureClass(@Nullable Output<String> infrastructureClass) {
             this.infrastructureClass = infrastructureClass;
             return this;
         }
-
         public Builder infrastructureClass(@Nullable String infrastructureClass) {
             this.infrastructureClass = Output.ofNullable(infrastructureClass);
             return this;
         }
-
         public Builder installUpdatesOnBoot(@Nullable Output<Boolean> installUpdatesOnBoot) {
             this.installUpdatesOnBoot = installUpdatesOnBoot;
             return this;
         }
-
         public Builder installUpdatesOnBoot(@Nullable Boolean installUpdatesOnBoot) {
             this.installUpdatesOnBoot = Output.ofNullable(installUpdatesOnBoot);
             return this;
         }
-
         public Builder instanceProfileArn(@Nullable Output<String> instanceProfileArn) {
             this.instanceProfileArn = instanceProfileArn;
             return this;
         }
-
         public Builder instanceProfileArn(@Nullable String instanceProfileArn) {
             this.instanceProfileArn = Output.ofNullable(instanceProfileArn);
             return this;
         }
-
         public Builder instanceType(@Nullable Output<String> instanceType) {
             this.instanceType = instanceType;
             return this;
         }
-
         public Builder instanceType(@Nullable String instanceType) {
             this.instanceType = Output.ofNullable(instanceType);
             return this;
         }
-
         public Builder lastServiceErrorId(@Nullable Output<String> lastServiceErrorId) {
             this.lastServiceErrorId = lastServiceErrorId;
             return this;
         }
-
         public Builder lastServiceErrorId(@Nullable String lastServiceErrorId) {
             this.lastServiceErrorId = Output.ofNullable(lastServiceErrorId);
             return this;
         }
-
         public Builder layerIds(@Nullable Output<List<String>> layerIds) {
             this.layerIds = layerIds;
             return this;
         }
-
         public Builder layerIds(@Nullable List<String> layerIds) {
             this.layerIds = Output.ofNullable(layerIds);
             return this;
         }
-
+        public Builder layerIds(String... layerIds) {
+            return layerIds(List.of(layerIds));
+        }
         public Builder os(@Nullable Output<String> os) {
             this.os = os;
             return this;
         }
-
         public Builder os(@Nullable String os) {
             this.os = Output.ofNullable(os);
             return this;
         }
-
         public Builder platform(@Nullable Output<String> platform) {
             this.platform = platform;
             return this;
         }
-
         public Builder platform(@Nullable String platform) {
             this.platform = Output.ofNullable(platform);
             return this;
         }
-
         public Builder privateDns(@Nullable Output<String> privateDns) {
             this.privateDns = privateDns;
             return this;
         }
-
         public Builder privateDns(@Nullable String privateDns) {
             this.privateDns = Output.ofNullable(privateDns);
             return this;
         }
-
         public Builder privateIp(@Nullable Output<String> privateIp) {
             this.privateIp = privateIp;
             return this;
         }
-
         public Builder privateIp(@Nullable String privateIp) {
             this.privateIp = Output.ofNullable(privateIp);
             return this;
         }
-
         public Builder publicDns(@Nullable Output<String> publicDns) {
             this.publicDns = publicDns;
             return this;
         }
-
         public Builder publicDns(@Nullable String publicDns) {
             this.publicDns = Output.ofNullable(publicDns);
             return this;
         }
-
         public Builder publicIp(@Nullable Output<String> publicIp) {
             this.publicIp = publicIp;
             return this;
         }
-
         public Builder publicIp(@Nullable String publicIp) {
             this.publicIp = Output.ofNullable(publicIp);
             return this;
         }
-
         public Builder registeredBy(@Nullable Output<String> registeredBy) {
             this.registeredBy = registeredBy;
             return this;
         }
-
         public Builder registeredBy(@Nullable String registeredBy) {
             this.registeredBy = Output.ofNullable(registeredBy);
             return this;
         }
-
         public Builder reportedAgentVersion(@Nullable Output<String> reportedAgentVersion) {
             this.reportedAgentVersion = reportedAgentVersion;
             return this;
         }
-
         public Builder reportedAgentVersion(@Nullable String reportedAgentVersion) {
             this.reportedAgentVersion = Output.ofNullable(reportedAgentVersion);
             return this;
         }
-
         public Builder reportedOsFamily(@Nullable Output<String> reportedOsFamily) {
             this.reportedOsFamily = reportedOsFamily;
             return this;
         }
-
         public Builder reportedOsFamily(@Nullable String reportedOsFamily) {
             this.reportedOsFamily = Output.ofNullable(reportedOsFamily);
             return this;
         }
-
         public Builder reportedOsName(@Nullable Output<String> reportedOsName) {
             this.reportedOsName = reportedOsName;
             return this;
         }
-
         public Builder reportedOsName(@Nullable String reportedOsName) {
             this.reportedOsName = Output.ofNullable(reportedOsName);
             return this;
         }
-
         public Builder reportedOsVersion(@Nullable Output<String> reportedOsVersion) {
             this.reportedOsVersion = reportedOsVersion;
             return this;
         }
-
         public Builder reportedOsVersion(@Nullable String reportedOsVersion) {
             this.reportedOsVersion = Output.ofNullable(reportedOsVersion);
             return this;
         }
-
         public Builder rootBlockDevices(@Nullable Output<List<InstanceRootBlockDeviceGetArgs>> rootBlockDevices) {
             this.rootBlockDevices = rootBlockDevices;
             return this;
         }
-
         public Builder rootBlockDevices(@Nullable List<InstanceRootBlockDeviceGetArgs> rootBlockDevices) {
             this.rootBlockDevices = Output.ofNullable(rootBlockDevices);
             return this;
         }
-
+        public Builder rootBlockDevices(InstanceRootBlockDeviceGetArgs... rootBlockDevices) {
+            return rootBlockDevices(List.of(rootBlockDevices));
+        }
         public Builder rootDeviceType(@Nullable Output<String> rootDeviceType) {
             this.rootDeviceType = rootDeviceType;
             return this;
         }
-
         public Builder rootDeviceType(@Nullable String rootDeviceType) {
             this.rootDeviceType = Output.ofNullable(rootDeviceType);
             return this;
         }
-
         public Builder rootDeviceVolumeId(@Nullable Output<String> rootDeviceVolumeId) {
             this.rootDeviceVolumeId = rootDeviceVolumeId;
             return this;
         }
-
         public Builder rootDeviceVolumeId(@Nullable String rootDeviceVolumeId) {
             this.rootDeviceVolumeId = Output.ofNullable(rootDeviceVolumeId);
             return this;
         }
-
         public Builder securityGroupIds(@Nullable Output<List<String>> securityGroupIds) {
             this.securityGroupIds = securityGroupIds;
             return this;
         }
-
         public Builder securityGroupIds(@Nullable List<String> securityGroupIds) {
             this.securityGroupIds = Output.ofNullable(securityGroupIds);
             return this;
         }
-
+        public Builder securityGroupIds(String... securityGroupIds) {
+            return securityGroupIds(List.of(securityGroupIds));
+        }
         public Builder sshHostDsaKeyFingerprint(@Nullable Output<String> sshHostDsaKeyFingerprint) {
             this.sshHostDsaKeyFingerprint = sshHostDsaKeyFingerprint;
             return this;
         }
-
         public Builder sshHostDsaKeyFingerprint(@Nullable String sshHostDsaKeyFingerprint) {
             this.sshHostDsaKeyFingerprint = Output.ofNullable(sshHostDsaKeyFingerprint);
             return this;
         }
-
         public Builder sshHostRsaKeyFingerprint(@Nullable Output<String> sshHostRsaKeyFingerprint) {
             this.sshHostRsaKeyFingerprint = sshHostRsaKeyFingerprint;
             return this;
         }
-
         public Builder sshHostRsaKeyFingerprint(@Nullable String sshHostRsaKeyFingerprint) {
             this.sshHostRsaKeyFingerprint = Output.ofNullable(sshHostRsaKeyFingerprint);
             return this;
         }
-
         public Builder sshKeyName(@Nullable Output<String> sshKeyName) {
             this.sshKeyName = sshKeyName;
             return this;
         }
-
         public Builder sshKeyName(@Nullable String sshKeyName) {
             this.sshKeyName = Output.ofNullable(sshKeyName);
             return this;
         }
-
         public Builder stackId(@Nullable Output<String> stackId) {
             this.stackId = stackId;
             return this;
         }
-
         public Builder stackId(@Nullable String stackId) {
             this.stackId = Output.ofNullable(stackId);
             return this;
         }
-
         public Builder state(@Nullable Output<String> state) {
             this.state = state;
             return this;
         }
-
         public Builder state(@Nullable String state) {
             this.state = Output.ofNullable(state);
             return this;
         }
-
         public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = Output.ofNullable(status);
             return this;
         }
-
         public Builder subnetId(@Nullable Output<String> subnetId) {
             this.subnetId = subnetId;
             return this;
         }
-
         public Builder subnetId(@Nullable String subnetId) {
             this.subnetId = Output.ofNullable(subnetId);
             return this;
         }
-
         public Builder tenancy(@Nullable Output<String> tenancy) {
             this.tenancy = tenancy;
             return this;
         }
-
         public Builder tenancy(@Nullable String tenancy) {
             this.tenancy = Output.ofNullable(tenancy);
             return this;
         }
-
         public Builder virtualizationType(@Nullable Output<String> virtualizationType) {
             this.virtualizationType = virtualizationType;
             return this;
         }
-
         public Builder virtualizationType(@Nullable String virtualizationType) {
             this.virtualizationType = Output.ofNullable(virtualizationType);
             return this;
-        }
-        public InstanceState build() {
+        }        public InstanceState build() {
             return new InstanceState(agentVersion, amiId, architecture, autoScalingType, availabilityZone, createdAt, deleteEbs, deleteEip, ebsBlockDevices, ebsOptimized, ec2InstanceId, ecsClusterArn, elasticIp, ephemeralBlockDevices, hostname, infrastructureClass, installUpdatesOnBoot, instanceProfileArn, instanceType, lastServiceErrorId, layerIds, os, platform, privateDns, privateIp, publicDns, publicIp, registeredBy, reportedAgentVersion, reportedOsFamily, reportedOsName, reportedOsVersion, rootBlockDevices, rootDeviceType, rootDeviceVolumeId, securityGroupIds, sshHostDsaKeyFingerprint, sshHostRsaKeyFingerprint, sshKeyName, stackId, state, status, subnetId, tenancy, virtualizationType);
         }
     }

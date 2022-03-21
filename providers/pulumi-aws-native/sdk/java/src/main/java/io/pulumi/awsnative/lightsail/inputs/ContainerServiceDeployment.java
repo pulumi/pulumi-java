@@ -80,12 +80,13 @@ public final class ContainerServiceDeployment extends io.pulumi.resources.Invoke
             this.containers = containers;
             return this;
         }
-
+        public Builder containers(Container... containers) {
+            return containers(List.of(containers));
+        }
         public Builder publicEndpoint(@Nullable ContainerPublicEndpoint publicEndpoint) {
             this.publicEndpoint = publicEndpoint;
             return this;
-        }
-        public ContainerServiceDeployment build() {
+        }        public ContainerServiceDeployment build() {
             return new ContainerServiceDeployment(containers, publicEndpoint);
         }
     }

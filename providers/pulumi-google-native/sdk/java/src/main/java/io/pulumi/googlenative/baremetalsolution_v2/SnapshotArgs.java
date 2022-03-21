@@ -142,72 +142,58 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder sizeBytes(@Nullable Output<String> sizeBytes) {
             this.sizeBytes = sizeBytes;
             return this;
         }
-
         public Builder sizeBytes(@Nullable String sizeBytes) {
             this.sizeBytes = Output.ofNullable(sizeBytes);
             return this;
         }
-
         public Builder storageVolume(@Nullable Output<String> storageVolume) {
             this.storageVolume = storageVolume;
             return this;
         }
-
         public Builder storageVolume(@Nullable String storageVolume) {
             this.storageVolume = Output.ofNullable(storageVolume);
             return this;
         }
-
         public Builder volumeId(Output<String> volumeId) {
             this.volumeId = Objects.requireNonNull(volumeId);
             return this;
         }
-
         public Builder volumeId(String volumeId) {
             this.volumeId = Output.of(Objects.requireNonNull(volumeId));
             return this;
-        }
-        public SnapshotArgs build() {
+        }        public SnapshotArgs build() {
             return new SnapshotArgs(description, id, location, project, sizeBytes, storageVolume, volumeId);
         }
     }

@@ -75,22 +75,18 @@ public final class FirewallPolicyFirewallPolicyStatefulRuleGroupReferenceArgs ex
             this.priority = priority;
             return this;
         }
-
         public Builder priority(@Nullable Integer priority) {
             this.priority = Output.ofNullable(priority);
             return this;
         }
-
         public Builder resourceArn(Output<String> resourceArn) {
             this.resourceArn = Objects.requireNonNull(resourceArn);
             return this;
         }
-
         public Builder resourceArn(String resourceArn) {
             this.resourceArn = Output.of(Objects.requireNonNull(resourceArn));
             return this;
-        }
-        public FirewallPolicyFirewallPolicyStatefulRuleGroupReferenceArgs build() {
+        }        public FirewallPolicyFirewallPolicyStatefulRuleGroupReferenceArgs build() {
             return new FirewallPolicyFirewallPolicyStatefulRuleGroupReferenceArgs(priority, resourceArn);
         }
     }

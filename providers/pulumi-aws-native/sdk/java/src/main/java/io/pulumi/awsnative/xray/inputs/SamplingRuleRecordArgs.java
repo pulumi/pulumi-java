@@ -87,32 +87,26 @@ public final class SamplingRuleRecordArgs extends io.pulumi.resources.ResourceAr
             this.createdAt = createdAt;
             return this;
         }
-
         public Builder createdAt(@Nullable String createdAt) {
             this.createdAt = Output.ofNullable(createdAt);
             return this;
         }
-
         public Builder modifiedAt(@Nullable Output<String> modifiedAt) {
             this.modifiedAt = modifiedAt;
             return this;
         }
-
         public Builder modifiedAt(@Nullable String modifiedAt) {
             this.modifiedAt = Output.ofNullable(modifiedAt);
             return this;
         }
-
         public Builder samplingRule(@Nullable Output<SamplingRuleArgs> samplingRule) {
             this.samplingRule = samplingRule;
             return this;
         }
-
         public Builder samplingRule(@Nullable SamplingRuleArgs samplingRule) {
             this.samplingRule = Output.ofNullable(samplingRule);
             return this;
-        }
-        public SamplingRuleRecordArgs build() {
+        }        public SamplingRuleRecordArgs build() {
             return new SamplingRuleRecordArgs(createdAt, modifiedAt, samplingRule);
         }
     }

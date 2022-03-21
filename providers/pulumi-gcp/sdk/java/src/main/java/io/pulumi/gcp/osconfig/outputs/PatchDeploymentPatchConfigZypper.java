@@ -139,32 +139,38 @@ public final class PatchDeploymentPatchConfigZypper {
             this.categories = categories;
             return this;
         }
-
+        public Builder categories(String... categories) {
+            return categories(List.of(categories));
+        }
         public Builder excludes(@Nullable List<String> excludes) {
             this.excludes = excludes;
             return this;
         }
-
+        public Builder excludes(String... excludes) {
+            return excludes(List.of(excludes));
+        }
         public Builder exclusivePatches(@Nullable List<String> exclusivePatches) {
             this.exclusivePatches = exclusivePatches;
             return this;
         }
-
+        public Builder exclusivePatches(String... exclusivePatches) {
+            return exclusivePatches(List.of(exclusivePatches));
+        }
         public Builder severities(@Nullable List<String> severities) {
             this.severities = severities;
             return this;
         }
-
+        public Builder severities(String... severities) {
+            return severities(List.of(severities));
+        }
         public Builder withOptional(@Nullable Boolean withOptional) {
             this.withOptional = withOptional;
             return this;
         }
-
         public Builder withUpdate(@Nullable Boolean withUpdate) {
             this.withUpdate = withUpdate;
             return this;
-        }
-        public PatchDeploymentPatchConfigZypper build() {
+        }        public PatchDeploymentPatchConfigZypper build() {
             return new PatchDeploymentPatchConfigZypper(categories, excludes, exclusivePatches, severities, withOptional, withUpdate);
         }
     }

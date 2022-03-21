@@ -96,32 +96,26 @@ public final class ImageTemplateVhdDistributorArgs extends io.pulumi.resources.R
             this.artifactTags = artifactTags;
             return this;
         }
-
         public Builder artifactTags(@Nullable Map<String,String> artifactTags) {
             this.artifactTags = Output.ofNullable(artifactTags);
             return this;
         }
-
         public Builder runOutputName(Output<String> runOutputName) {
             this.runOutputName = Objects.requireNonNull(runOutputName);
             return this;
         }
-
         public Builder runOutputName(String runOutputName) {
             this.runOutputName = Output.of(Objects.requireNonNull(runOutputName));
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public ImageTemplateVhdDistributorArgs build() {
+        }        public ImageTemplateVhdDistributorArgs build() {
             return new ImageTemplateVhdDistributorArgs(artifactTags, runOutputName, type);
         }
     }

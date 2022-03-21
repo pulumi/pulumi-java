@@ -66,12 +66,10 @@ public final class DeviceProfileTag extends io.pulumi.resources.InvokeArgs {
             this.key = key;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public DeviceProfileTag build() {
+        }        public DeviceProfileTag build() {
             return new DeviceProfileTag(key, value);
         }
     }

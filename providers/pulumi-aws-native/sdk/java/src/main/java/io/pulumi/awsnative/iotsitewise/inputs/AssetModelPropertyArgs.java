@@ -145,62 +145,50 @@ public final class AssetModelPropertyArgs extends io.pulumi.resources.ResourceAr
             this.dataType = Objects.requireNonNull(dataType);
             return this;
         }
-
         public Builder dataType(AssetModelDataType dataType) {
             this.dataType = Output.of(Objects.requireNonNull(dataType));
             return this;
         }
-
         public Builder dataTypeSpec(@Nullable Output<AssetModelDataTypeSpec> dataTypeSpec) {
             this.dataTypeSpec = dataTypeSpec;
             return this;
         }
-
         public Builder dataTypeSpec(@Nullable AssetModelDataTypeSpec dataTypeSpec) {
             this.dataTypeSpec = Output.ofNullable(dataTypeSpec);
             return this;
         }
-
         public Builder logicalId(Output<String> logicalId) {
             this.logicalId = Objects.requireNonNull(logicalId);
             return this;
         }
-
         public Builder logicalId(String logicalId) {
             this.logicalId = Output.of(Objects.requireNonNull(logicalId));
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder type(Output<AssetModelPropertyTypeArgs> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(AssetModelPropertyTypeArgs type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
-
         public Builder unit(@Nullable Output<String> unit) {
             this.unit = unit;
             return this;
         }
-
         public Builder unit(@Nullable String unit) {
             this.unit = Output.ofNullable(unit);
             return this;
-        }
-        public AssetModelPropertyArgs build() {
+        }        public AssetModelPropertyArgs build() {
             return new AssetModelPropertyArgs(dataType, dataTypeSpec, logicalId, name, type, unit);
         }
     }

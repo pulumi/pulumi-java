@@ -71,12 +71,16 @@ public final class GoogleCloudDatacatalogV1GcsFilesetSpecResponse {
             this.filePatterns = Objects.requireNonNull(filePatterns);
             return this;
         }
-
+        public Builder filePatterns(String... filePatterns) {
+            return filePatterns(List.of(filePatterns));
+        }
         public Builder sampleGcsFileSpecs(List<GoogleCloudDatacatalogV1GcsFileSpecResponse> sampleGcsFileSpecs) {
             this.sampleGcsFileSpecs = Objects.requireNonNull(sampleGcsFileSpecs);
             return this;
         }
-        public GoogleCloudDatacatalogV1GcsFilesetSpecResponse build() {
+        public Builder sampleGcsFileSpecs(GoogleCloudDatacatalogV1GcsFileSpecResponse... sampleGcsFileSpecs) {
+            return sampleGcsFileSpecs(List.of(sampleGcsFileSpecs));
+        }        public GoogleCloudDatacatalogV1GcsFilesetSpecResponse build() {
             return new GoogleCloudDatacatalogV1GcsFilesetSpecResponse(filePatterns, sampleGcsFileSpecs);
         }
     }

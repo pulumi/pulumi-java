@@ -64,17 +64,17 @@ public final class ResourceTypeExtensionResponse {
             this.endpointUri = endpointUri;
             return this;
         }
-
         public Builder extensionCategories(@Nullable List<String> extensionCategories) {
             this.extensionCategories = extensionCategories;
             return this;
         }
-
+        public Builder extensionCategories(String... extensionCategories) {
+            return extensionCategories(List.of(extensionCategories));
+        }
         public Builder timeout(@Nullable String timeout) {
             this.timeout = timeout;
             return this;
-        }
-        public ResourceTypeExtensionResponse build() {
+        }        public ResourceTypeExtensionResponse build() {
             return new ResourceTypeExtensionResponse(endpointUri, extensionCategories, timeout);
         }
     }

@@ -95,32 +95,26 @@ public final class ExpressRouteCircuitServiceProviderPropertiesArgs extends io.p
             this.bandwidthInMbps = bandwidthInMbps;
             return this;
         }
-
         public Builder bandwidthInMbps(@Nullable Integer bandwidthInMbps) {
             this.bandwidthInMbps = Output.ofNullable(bandwidthInMbps);
             return this;
         }
-
         public Builder peeringLocation(@Nullable Output<String> peeringLocation) {
             this.peeringLocation = peeringLocation;
             return this;
         }
-
         public Builder peeringLocation(@Nullable String peeringLocation) {
             this.peeringLocation = Output.ofNullable(peeringLocation);
             return this;
         }
-
         public Builder serviceProviderName(@Nullable Output<String> serviceProviderName) {
             this.serviceProviderName = serviceProviderName;
             return this;
         }
-
         public Builder serviceProviderName(@Nullable String serviceProviderName) {
             this.serviceProviderName = Output.ofNullable(serviceProviderName);
             return this;
-        }
-        public ExpressRouteCircuitServiceProviderPropertiesArgs build() {
+        }        public ExpressRouteCircuitServiceProviderPropertiesArgs build() {
             return new ExpressRouteCircuitServiceProviderPropertiesArgs(bandwidthInMbps, peeringLocation, serviceProviderName);
         }
     }

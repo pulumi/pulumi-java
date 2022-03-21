@@ -105,22 +105,18 @@ public final class SSISLogLocationResponse {
             this.accessCredential = accessCredential;
             return this;
         }
-
         public Builder logPath(Object logPath) {
             this.logPath = Objects.requireNonNull(logPath);
             return this;
         }
-
         public Builder logRefreshInterval(@Nullable Object logRefreshInterval) {
             this.logRefreshInterval = logRefreshInterval;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public SSISLogLocationResponse build() {
+        }        public SSISLogLocationResponse build() {
             return new SSISLogLocationResponse(accessCredential, logPath, logRefreshInterval, type);
         }
     }

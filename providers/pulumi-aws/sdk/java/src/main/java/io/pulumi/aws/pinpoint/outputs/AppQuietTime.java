@@ -71,12 +71,10 @@ public final class AppQuietTime {
             this.end = end;
             return this;
         }
-
         public Builder start(@Nullable String start) {
             this.start = start;
             return this;
-        }
-        public AppQuietTime build() {
+        }        public AppQuietTime build() {
             return new AppQuietTime(end, start);
         }
     }

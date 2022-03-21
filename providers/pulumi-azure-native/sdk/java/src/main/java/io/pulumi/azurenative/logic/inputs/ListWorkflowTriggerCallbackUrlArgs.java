@@ -88,17 +88,14 @@ public final class ListWorkflowTriggerCallbackUrlArgs extends io.pulumi.resource
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder triggerName(String triggerName) {
             this.triggerName = Objects.requireNonNull(triggerName);
             return this;
         }
-
         public Builder workflowName(String workflowName) {
             this.workflowName = Objects.requireNonNull(workflowName);
             return this;
-        }
-        public ListWorkflowTriggerCallbackUrlArgs build() {
+        }        public ListWorkflowTriggerCallbackUrlArgs build() {
             return new ListWorkflowTriggerCallbackUrlArgs(resourceGroupName, triggerName, workflowName);
         }
     }

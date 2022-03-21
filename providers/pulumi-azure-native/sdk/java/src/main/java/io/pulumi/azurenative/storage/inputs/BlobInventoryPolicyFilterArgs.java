@@ -112,42 +112,40 @@ public final class BlobInventoryPolicyFilterArgs extends io.pulumi.resources.Res
             this.blobTypes = Objects.requireNonNull(blobTypes);
             return this;
         }
-
         public Builder blobTypes(List<String> blobTypes) {
             this.blobTypes = Output.of(Objects.requireNonNull(blobTypes));
             return this;
         }
-
+        public Builder blobTypes(String... blobTypes) {
+            return blobTypes(List.of(blobTypes));
+        }
         public Builder includeBlobVersions(@Nullable Output<Boolean> includeBlobVersions) {
             this.includeBlobVersions = includeBlobVersions;
             return this;
         }
-
         public Builder includeBlobVersions(@Nullable Boolean includeBlobVersions) {
             this.includeBlobVersions = Output.ofNullable(includeBlobVersions);
             return this;
         }
-
         public Builder includeSnapshots(@Nullable Output<Boolean> includeSnapshots) {
             this.includeSnapshots = includeSnapshots;
             return this;
         }
-
         public Builder includeSnapshots(@Nullable Boolean includeSnapshots) {
             this.includeSnapshots = Output.ofNullable(includeSnapshots);
             return this;
         }
-
         public Builder prefixMatch(@Nullable Output<List<String>> prefixMatch) {
             this.prefixMatch = prefixMatch;
             return this;
         }
-
         public Builder prefixMatch(@Nullable List<String> prefixMatch) {
             this.prefixMatch = Output.ofNullable(prefixMatch);
             return this;
         }
-        public BlobInventoryPolicyFilterArgs build() {
+        public Builder prefixMatch(String... prefixMatch) {
+            return prefixMatch(List.of(prefixMatch));
+        }        public BlobInventoryPolicyFilterArgs build() {
             return new BlobInventoryPolicyFilterArgs(blobTypes, includeBlobVersions, includeSnapshots, prefixMatch);
         }
     }

@@ -87,17 +87,14 @@ public final class GetFunctionArgs extends io.pulumi.resources.InvokeArgs {
             this.functionName = Objects.requireNonNull(functionName);
             return this;
         }
-
         public Builder qualifier(@Nullable String qualifier) {
             this.qualifier = qualifier;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
-        }
-        public GetFunctionArgs build() {
+        }        public GetFunctionArgs build() {
             return new GetFunctionArgs(functionName, qualifier, tags);
         }
     }

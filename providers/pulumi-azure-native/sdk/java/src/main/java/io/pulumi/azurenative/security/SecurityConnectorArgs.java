@@ -195,92 +195,77 @@ public final class SecurityConnectorArgs extends io.pulumi.resources.ResourceArg
             this.cloudName = cloudName;
             return this;
         }
-
         public Builder cloudName(@Nullable Either<String,CloudName> cloudName) {
             this.cloudName = Output.ofNullable(cloudName);
             return this;
         }
-
         public Builder hierarchyIdentifier(@Nullable Output<String> hierarchyIdentifier) {
             this.hierarchyIdentifier = hierarchyIdentifier;
             return this;
         }
-
         public Builder hierarchyIdentifier(@Nullable String hierarchyIdentifier) {
             this.hierarchyIdentifier = Output.ofNullable(hierarchyIdentifier);
             return this;
         }
-
         public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder offerings(@Nullable Output<List<Object>> offerings) {
             this.offerings = offerings;
             return this;
         }
-
         public Builder offerings(@Nullable List<Object> offerings) {
             this.offerings = Output.ofNullable(offerings);
             return this;
         }
-
+        public Builder offerings(Object... offerings) {
+            return offerings(List.of(offerings));
+        }
         public Builder organizationalData(@Nullable Output<SecurityConnectorPropertiesOrganizationalDataArgs> organizationalData) {
             this.organizationalData = organizationalData;
             return this;
         }
-
         public Builder organizationalData(@Nullable SecurityConnectorPropertiesOrganizationalDataArgs organizationalData) {
             this.organizationalData = Output.ofNullable(organizationalData);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder securityConnectorName(@Nullable Output<String> securityConnectorName) {
             this.securityConnectorName = securityConnectorName;
             return this;
         }
-
         public Builder securityConnectorName(@Nullable String securityConnectorName) {
             this.securityConnectorName = Output.ofNullable(securityConnectorName);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public SecurityConnectorArgs build() {
+        }        public SecurityConnectorArgs build() {
             return new SecurityConnectorArgs(cloudName, hierarchyIdentifier, kind, location, offerings, organizationalData, resourceGroupName, securityConnectorName, tags);
         }
     }

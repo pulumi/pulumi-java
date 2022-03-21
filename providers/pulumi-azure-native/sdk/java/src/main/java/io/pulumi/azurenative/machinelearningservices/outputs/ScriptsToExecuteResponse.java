@@ -71,12 +71,10 @@ public final class ScriptsToExecuteResponse {
             this.creationScript = creationScript;
             return this;
         }
-
         public Builder startupScript(@Nullable ScriptReferenceResponse startupScript) {
             this.startupScript = startupScript;
             return this;
-        }
-        public ScriptsToExecuteResponse build() {
+        }        public ScriptsToExecuteResponse build() {
             return new ScriptsToExecuteResponse(creationScript, startupScript);
         }
     }

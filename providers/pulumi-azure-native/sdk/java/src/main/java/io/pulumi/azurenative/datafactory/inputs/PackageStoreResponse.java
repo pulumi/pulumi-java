@@ -77,12 +77,10 @@ public final class PackageStoreResponse extends io.pulumi.resources.InvokeArgs {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder packageStoreLinkedService(EntityReferenceResponse packageStoreLinkedService) {
             this.packageStoreLinkedService = Objects.requireNonNull(packageStoreLinkedService);
             return this;
-        }
-        public PackageStoreResponse build() {
+        }        public PackageStoreResponse build() {
             return new PackageStoreResponse(name, packageStoreLinkedService);
         }
     }

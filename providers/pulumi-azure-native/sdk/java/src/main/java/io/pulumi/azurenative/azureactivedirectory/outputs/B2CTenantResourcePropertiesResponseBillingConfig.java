@@ -71,12 +71,10 @@ public final class B2CTenantResourcePropertiesResponseBillingConfig {
             this.billingType = billingType;
             return this;
         }
-
         public Builder effectiveStartDateUtc(String effectiveStartDateUtc) {
             this.effectiveStartDateUtc = Objects.requireNonNull(effectiveStartDateUtc);
             return this;
-        }
-        public B2CTenantResourcePropertiesResponseBillingConfig build() {
+        }        public B2CTenantResourcePropertiesResponseBillingConfig build() {
             return new B2CTenantResourcePropertiesResponseBillingConfig(billingType, effectiveStartDateUtc);
         }
     }

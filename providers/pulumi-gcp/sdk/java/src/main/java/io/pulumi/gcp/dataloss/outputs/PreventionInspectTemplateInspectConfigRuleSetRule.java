@@ -76,12 +76,10 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRule {
             this.exclusionRule = exclusionRule;
             return this;
         }
-
         public Builder hotwordRule(@Nullable PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRule hotwordRule) {
             this.hotwordRule = hotwordRule;
             return this;
-        }
-        public PreventionInspectTemplateInspectConfigRuleSetRule build() {
+        }        public PreventionInspectTemplateInspectConfigRuleSetRule build() {
             return new PreventionInspectTemplateInspectConfigRuleSetRule(exclusionRule, hotwordRule);
         }
     }

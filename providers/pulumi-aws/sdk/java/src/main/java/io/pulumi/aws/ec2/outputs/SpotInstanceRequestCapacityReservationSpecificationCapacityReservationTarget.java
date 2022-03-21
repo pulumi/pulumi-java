@@ -53,8 +53,7 @@ public final class SpotInstanceRequestCapacityReservationSpecificationCapacityRe
         public Builder capacityReservationId(@Nullable String capacityReservationId) {
             this.capacityReservationId = capacityReservationId;
             return this;
-        }
-        public SpotInstanceRequestCapacityReservationSpecificationCapacityReservationTarget build() {
+        }        public SpotInstanceRequestCapacityReservationSpecificationCapacityReservationTarget build() {
             return new SpotInstanceRequestCapacityReservationSpecificationCapacityReservationTarget(capacityReservationId);
         }
     }

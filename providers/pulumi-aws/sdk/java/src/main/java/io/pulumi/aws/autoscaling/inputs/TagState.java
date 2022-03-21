@@ -75,22 +75,18 @@ public final class TagState extends io.pulumi.resources.ResourceArgs {
             this.autoscalingGroupName = autoscalingGroupName;
             return this;
         }
-
         public Builder autoscalingGroupName(@Nullable String autoscalingGroupName) {
             this.autoscalingGroupName = Output.ofNullable(autoscalingGroupName);
             return this;
         }
-
         public Builder tag(@Nullable Output<TagTagGetArgs> tag) {
             this.tag = tag;
             return this;
         }
-
         public Builder tag(@Nullable TagTagGetArgs tag) {
             this.tag = Output.ofNullable(tag);
             return this;
-        }
-        public TagState build() {
+        }        public TagState build() {
             return new TagState(autoscalingGroupName, tag);
         }
     }

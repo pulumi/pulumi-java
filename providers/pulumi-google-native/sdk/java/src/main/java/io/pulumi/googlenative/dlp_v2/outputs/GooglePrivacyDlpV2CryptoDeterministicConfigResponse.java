@@ -87,17 +87,14 @@ public final class GooglePrivacyDlpV2CryptoDeterministicConfigResponse {
             this.context = Objects.requireNonNull(context);
             return this;
         }
-
         public Builder cryptoKey(GooglePrivacyDlpV2CryptoKeyResponse cryptoKey) {
             this.cryptoKey = Objects.requireNonNull(cryptoKey);
             return this;
         }
-
         public Builder surrogateInfoType(GooglePrivacyDlpV2InfoTypeResponse surrogateInfoType) {
             this.surrogateInfoType = Objects.requireNonNull(surrogateInfoType);
             return this;
-        }
-        public GooglePrivacyDlpV2CryptoDeterministicConfigResponse build() {
+        }        public GooglePrivacyDlpV2CryptoDeterministicConfigResponse build() {
             return new GooglePrivacyDlpV2CryptoDeterministicConfigResponse(context, cryptoKey, surrogateInfoType);
         }
     }

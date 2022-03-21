@@ -43,8 +43,7 @@ public final class PackagingConfigurationCmafEncryption {
         public Builder spekeKeyProvider(PackagingConfigurationSpekeKeyProvider spekeKeyProvider) {
             this.spekeKeyProvider = Objects.requireNonNull(spekeKeyProvider);
             return this;
-        }
-        public PackagingConfigurationCmafEncryption build() {
+        }        public PackagingConfigurationCmafEncryption build() {
             return new PackagingConfigurationCmafEncryption(spekeKeyProvider);
         }
     }

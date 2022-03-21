@@ -106,42 +106,34 @@ public final class CodeContainerArgs extends io.pulumi.resources.ResourceArgs {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder properties(Output<io.pulumi.azurenative.machinelearningservices.inputs.CodeContainerArgs> properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
-
         public Builder properties(io.pulumi.azurenative.machinelearningservices.inputs.CodeContainerArgs properties) {
             this.properties = Output.of(Objects.requireNonNull(properties));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder workspaceName(Output<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
-
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
             return this;
-        }
-        public CodeContainerArgs build() {
+        }        public CodeContainerArgs build() {
             return new CodeContainerArgs(name, properties, resourceGroupName, workspaceName);
         }
     }

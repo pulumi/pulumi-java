@@ -113,22 +113,30 @@ public final class URLMapPathMatcherRouteRuleHeaderAction {
             this.requestHeadersToAdds = requestHeadersToAdds;
             return this;
         }
-
+        public Builder requestHeadersToAdds(URLMapPathMatcherRouteRuleHeaderActionRequestHeadersToAdd... requestHeadersToAdds) {
+            return requestHeadersToAdds(List.of(requestHeadersToAdds));
+        }
         public Builder requestHeadersToRemoves(@Nullable List<String> requestHeadersToRemoves) {
             this.requestHeadersToRemoves = requestHeadersToRemoves;
             return this;
         }
-
+        public Builder requestHeadersToRemoves(String... requestHeadersToRemoves) {
+            return requestHeadersToRemoves(List.of(requestHeadersToRemoves));
+        }
         public Builder responseHeadersToAdds(@Nullable List<URLMapPathMatcherRouteRuleHeaderActionResponseHeadersToAdd> responseHeadersToAdds) {
             this.responseHeadersToAdds = responseHeadersToAdds;
             return this;
         }
-
+        public Builder responseHeadersToAdds(URLMapPathMatcherRouteRuleHeaderActionResponseHeadersToAdd... responseHeadersToAdds) {
+            return responseHeadersToAdds(List.of(responseHeadersToAdds));
+        }
         public Builder responseHeadersToRemoves(@Nullable List<String> responseHeadersToRemoves) {
             this.responseHeadersToRemoves = responseHeadersToRemoves;
             return this;
         }
-        public URLMapPathMatcherRouteRuleHeaderAction build() {
+        public Builder responseHeadersToRemoves(String... responseHeadersToRemoves) {
+            return responseHeadersToRemoves(List.of(responseHeadersToRemoves));
+        }        public URLMapPathMatcherRouteRuleHeaderAction build() {
             return new URLMapPathMatcherRouteRuleHeaderAction(requestHeadersToAdds, requestHeadersToRemoves, responseHeadersToAdds, responseHeadersToRemoves);
         }
     }

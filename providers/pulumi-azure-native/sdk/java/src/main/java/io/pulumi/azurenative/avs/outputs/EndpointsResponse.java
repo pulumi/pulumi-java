@@ -85,17 +85,14 @@ public final class EndpointsResponse {
             this.hcxCloudManager = Objects.requireNonNull(hcxCloudManager);
             return this;
         }
-
         public Builder nsxtManager(String nsxtManager) {
             this.nsxtManager = Objects.requireNonNull(nsxtManager);
             return this;
         }
-
         public Builder vcsa(String vcsa) {
             this.vcsa = Objects.requireNonNull(vcsa);
             return this;
-        }
-        public EndpointsResponse build() {
+        }        public EndpointsResponse build() {
             return new EndpointsResponse(hcxCloudManager, nsxtManager, vcsa);
         }
     }

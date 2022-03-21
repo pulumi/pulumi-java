@@ -77,12 +77,10 @@ public final class BuildTypeResponse extends io.pulumi.resources.InvokeArgs {
             this.builderVersion = Objects.requireNonNull(builderVersion);
             return this;
         }
-
         public Builder signature(BuildSignatureResponse signature) {
             this.signature = Objects.requireNonNull(signature);
             return this;
-        }
-        public BuildTypeResponse build() {
+        }        public BuildTypeResponse build() {
             return new BuildTypeResponse(builderVersion, signature);
         }
     }

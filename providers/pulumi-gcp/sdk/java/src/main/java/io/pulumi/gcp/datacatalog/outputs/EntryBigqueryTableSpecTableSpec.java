@@ -45,8 +45,7 @@ public final class EntryBigqueryTableSpecTableSpec {
         public Builder groupedEntry(@Nullable String groupedEntry) {
             this.groupedEntry = groupedEntry;
             return this;
-        }
-        public EntryBigqueryTableSpecTableSpec build() {
+        }        public EntryBigqueryTableSpecTableSpec build() {
             return new EntryBigqueryTableSpecTableSpec(groupedEntry);
         }
     }

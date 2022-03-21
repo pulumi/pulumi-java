@@ -53,12 +53,10 @@ public final class IntegrationIncrementalPullConfigArgs extends io.pulumi.resour
             this.datetimeTypeFieldName = datetimeTypeFieldName;
             return this;
         }
-
         public Builder datetimeTypeFieldName(@Nullable String datetimeTypeFieldName) {
             this.datetimeTypeFieldName = Output.ofNullable(datetimeTypeFieldName);
             return this;
-        }
-        public IntegrationIncrementalPullConfigArgs build() {
+        }        public IntegrationIncrementalPullConfigArgs build() {
             return new IntegrationIncrementalPullConfigArgs(datetimeTypeFieldName);
         }
     }

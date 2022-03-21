@@ -72,12 +72,16 @@ public final class ListStreamingLocatorPathsResult {
             this.downloadPaths = downloadPaths;
             return this;
         }
-
+        public Builder downloadPaths(String... downloadPaths) {
+            return downloadPaths(List.of(downloadPaths));
+        }
         public Builder streamingPaths(@Nullable List<StreamingPathResponse> streamingPaths) {
             this.streamingPaths = streamingPaths;
             return this;
         }
-        public ListStreamingLocatorPathsResult build() {
+        public Builder streamingPaths(StreamingPathResponse... streamingPaths) {
+            return streamingPaths(List.of(streamingPaths));
+        }        public ListStreamingLocatorPathsResult build() {
             return new ListStreamingLocatorPathsResult(downloadPaths, streamingPaths);
         }
     }

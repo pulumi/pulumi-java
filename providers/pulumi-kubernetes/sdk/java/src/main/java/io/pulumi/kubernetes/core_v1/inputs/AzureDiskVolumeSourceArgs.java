@@ -143,62 +143,50 @@ public final class AzureDiskVolumeSourceArgs extends io.pulumi.resources.Resourc
             this.cachingMode = cachingMode;
             return this;
         }
-
         public Builder cachingMode(@Nullable String cachingMode) {
             this.cachingMode = Output.ofNullable(cachingMode);
             return this;
         }
-
         public Builder diskName(Output<String> diskName) {
             this.diskName = Objects.requireNonNull(diskName);
             return this;
         }
-
         public Builder diskName(String diskName) {
             this.diskName = Output.of(Objects.requireNonNull(diskName));
             return this;
         }
-
         public Builder diskURI(Output<String> diskURI) {
             this.diskURI = Objects.requireNonNull(diskURI);
             return this;
         }
-
         public Builder diskURI(String diskURI) {
             this.diskURI = Output.of(Objects.requireNonNull(diskURI));
             return this;
         }
-
         public Builder fsType(@Nullable Output<String> fsType) {
             this.fsType = fsType;
             return this;
         }
-
         public Builder fsType(@Nullable String fsType) {
             this.fsType = Output.ofNullable(fsType);
             return this;
         }
-
         public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder readOnly(@Nullable Output<Boolean> readOnly) {
             this.readOnly = readOnly;
             return this;
         }
-
         public Builder readOnly(@Nullable Boolean readOnly) {
             this.readOnly = Output.ofNullable(readOnly);
             return this;
-        }
-        public AzureDiskVolumeSourceArgs build() {
+        }        public AzureDiskVolumeSourceArgs build() {
             return new AzureDiskVolumeSourceArgs(cachingMode, diskName, diskURI, fsType, kind, readOnly);
         }
     }

@@ -55,12 +55,10 @@ public final class MissionProfileDataflowEdge {
             this.destination = destination;
             return this;
         }
-
         public Builder source(@Nullable String source) {
             this.source = source;
             return this;
-        }
-        public MissionProfileDataflowEdge build() {
+        }        public MissionProfileDataflowEdge build() {
             return new MissionProfileDataflowEdge(destination, source);
         }
     }

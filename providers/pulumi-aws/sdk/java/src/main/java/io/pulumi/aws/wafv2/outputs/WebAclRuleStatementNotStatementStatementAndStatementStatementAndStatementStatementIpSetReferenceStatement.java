@@ -72,12 +72,10 @@ public final class WebAclRuleStatementNotStatementStatementAndStatementStatement
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder ipSetForwardedIpConfig(@Nullable WebAclRuleStatementNotStatementStatementAndStatementStatementAndStatementStatementIpSetReferenceStatementIpSetForwardedIpConfig ipSetForwardedIpConfig) {
             this.ipSetForwardedIpConfig = ipSetForwardedIpConfig;
             return this;
-        }
-        public WebAclRuleStatementNotStatementStatementAndStatementStatementAndStatementStatementIpSetReferenceStatement build() {
+        }        public WebAclRuleStatementNotStatementStatementAndStatementStatementAndStatementStatementIpSetReferenceStatement build() {
             return new WebAclRuleStatementNotStatementStatementAndStatementStatementAndStatementStatementIpSetReferenceStatement(arn, ipSetForwardedIpConfig);
         }
     }

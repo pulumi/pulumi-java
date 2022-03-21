@@ -124,52 +124,42 @@ public final class SecurityContactArgs extends io.pulumi.resources.ResourceArgs 
             this.alertNotifications = alertNotifications;
             return this;
         }
-
         public Builder alertNotifications(@Nullable SecurityContactPropertiesAlertNotificationsArgs alertNotifications) {
             this.alertNotifications = Output.ofNullable(alertNotifications);
             return this;
         }
-
         public Builder emails(@Nullable Output<String> emails) {
             this.emails = emails;
             return this;
         }
-
         public Builder emails(@Nullable String emails) {
             this.emails = Output.ofNullable(emails);
             return this;
         }
-
         public Builder notificationsByRole(@Nullable Output<SecurityContactPropertiesNotificationsByRoleArgs> notificationsByRole) {
             this.notificationsByRole = notificationsByRole;
             return this;
         }
-
         public Builder notificationsByRole(@Nullable SecurityContactPropertiesNotificationsByRoleArgs notificationsByRole) {
             this.notificationsByRole = Output.ofNullable(notificationsByRole);
             return this;
         }
-
         public Builder phone(@Nullable Output<String> phone) {
             this.phone = phone;
             return this;
         }
-
         public Builder phone(@Nullable String phone) {
             this.phone = Output.ofNullable(phone);
             return this;
         }
-
         public Builder securityContactName(@Nullable Output<String> securityContactName) {
             this.securityContactName = securityContactName;
             return this;
         }
-
         public Builder securityContactName(@Nullable String securityContactName) {
             this.securityContactName = Output.ofNullable(securityContactName);
             return this;
-        }
-        public SecurityContactArgs build() {
+        }        public SecurityContactArgs build() {
             return new SecurityContactArgs(alertNotifications, emails, notificationsByRole, phone, securityContactName);
         }
     }

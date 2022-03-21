@@ -119,22 +119,18 @@ public final class ContentKeyPolicyOptionResponse extends io.pulumi.resources.In
             this.configuration = Objects.requireNonNull(configuration);
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder policyOptionId(String policyOptionId) {
             this.policyOptionId = Objects.requireNonNull(policyOptionId);
             return this;
         }
-
         public Builder restriction(Object restriction) {
             this.restriction = Objects.requireNonNull(restriction);
             return this;
-        }
-        public ContentKeyPolicyOptionResponse build() {
+        }        public ContentKeyPolicyOptionResponse build() {
             return new ContentKeyPolicyOptionResponse(configuration, name, policyOptionId, restriction);
         }
     }

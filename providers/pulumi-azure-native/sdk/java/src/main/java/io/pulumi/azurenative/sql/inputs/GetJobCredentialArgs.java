@@ -104,22 +104,18 @@ public final class GetJobCredentialArgs extends io.pulumi.resources.InvokeArgs {
             this.credentialName = Objects.requireNonNull(credentialName);
             return this;
         }
-
         public Builder jobAgentName(String jobAgentName) {
             this.jobAgentName = Objects.requireNonNull(jobAgentName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder serverName(String serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
-        }
-        public GetJobCredentialArgs build() {
+        }        public GetJobCredentialArgs build() {
             return new GetJobCredentialArgs(credentialName, jobAgentName, resourceGroupName, serverName);
         }
     }

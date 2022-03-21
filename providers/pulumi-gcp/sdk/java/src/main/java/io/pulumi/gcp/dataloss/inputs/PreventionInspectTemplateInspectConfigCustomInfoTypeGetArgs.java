@@ -153,62 +153,50 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoTypeGetArgs e
             this.dictionary = dictionary;
             return this;
         }
-
         public Builder dictionary(@Nullable PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryGetArgs dictionary) {
             this.dictionary = Output.ofNullable(dictionary);
             return this;
         }
-
         public Builder exclusionType(@Nullable Output<String> exclusionType) {
             this.exclusionType = exclusionType;
             return this;
         }
-
         public Builder exclusionType(@Nullable String exclusionType) {
             this.exclusionType = Output.ofNullable(exclusionType);
             return this;
         }
-
         public Builder infoType(Output<PreventionInspectTemplateInspectConfigCustomInfoTypeInfoTypeGetArgs> infoType) {
             this.infoType = Objects.requireNonNull(infoType);
             return this;
         }
-
         public Builder infoType(PreventionInspectTemplateInspectConfigCustomInfoTypeInfoTypeGetArgs infoType) {
             this.infoType = Output.of(Objects.requireNonNull(infoType));
             return this;
         }
-
         public Builder likelihood(@Nullable Output<String> likelihood) {
             this.likelihood = likelihood;
             return this;
         }
-
         public Builder likelihood(@Nullable String likelihood) {
             this.likelihood = Output.ofNullable(likelihood);
             return this;
         }
-
         public Builder regex(@Nullable Output<PreventionInspectTemplateInspectConfigCustomInfoTypeRegexGetArgs> regex) {
             this.regex = regex;
             return this;
         }
-
         public Builder regex(@Nullable PreventionInspectTemplateInspectConfigCustomInfoTypeRegexGetArgs regex) {
             this.regex = Output.ofNullable(regex);
             return this;
         }
-
         public Builder storedType(@Nullable Output<PreventionInspectTemplateInspectConfigCustomInfoTypeStoredTypeGetArgs> storedType) {
             this.storedType = storedType;
             return this;
         }
-
         public Builder storedType(@Nullable PreventionInspectTemplateInspectConfigCustomInfoTypeStoredTypeGetArgs storedType) {
             this.storedType = Output.ofNullable(storedType);
             return this;
-        }
-        public PreventionInspectTemplateInspectConfigCustomInfoTypeGetArgs build() {
+        }        public PreventionInspectTemplateInspectConfigCustomInfoTypeGetArgs build() {
             return new PreventionInspectTemplateInspectConfigCustomInfoTypeGetArgs(dictionary, exclusionType, infoType, likelihood, regex, storedType);
         }
     }

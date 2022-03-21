@@ -45,8 +45,7 @@ public final class ListMediaServiceEdgePoliciesResult {
         public Builder usageDataCollectionPolicy(@Nullable EdgeUsageDataCollectionPolicyResponse usageDataCollectionPolicy) {
             this.usageDataCollectionPolicy = usageDataCollectionPolicy;
             return this;
-        }
-        public ListMediaServiceEdgePoliciesResult build() {
+        }        public ListMediaServiceEdgePoliciesResult build() {
             return new ListMediaServiceEdgePoliciesResult(usageDataCollectionPolicy);
         }
     }

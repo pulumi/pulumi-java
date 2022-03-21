@@ -88,17 +88,14 @@ public final class GetTokenArgs extends io.pulumi.resources.InvokeArgs {
             this.registryName = Objects.requireNonNull(registryName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder tokenName(String tokenName) {
             this.tokenName = Objects.requireNonNull(tokenName);
             return this;
-        }
-        public GetTokenArgs build() {
+        }        public GetTokenArgs build() {
             return new GetTokenArgs(registryName, resourceGroupName, tokenName);
         }
     }

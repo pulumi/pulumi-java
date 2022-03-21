@@ -60,8 +60,7 @@ public final class StandardComponentPropertiesResponse extends io.pulumi.resourc
         public Builder key(@Nullable String key) {
             this.key = key;
             return this;
-        }
-        public StandardComponentPropertiesResponse build() {
+        }        public StandardComponentPropertiesResponse build() {
             return new StandardComponentPropertiesResponse(key);
         }
     }

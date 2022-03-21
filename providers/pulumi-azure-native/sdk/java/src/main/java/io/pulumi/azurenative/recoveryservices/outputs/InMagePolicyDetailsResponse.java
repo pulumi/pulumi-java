@@ -122,27 +122,22 @@ public final class InMagePolicyDetailsResponse {
             this.appConsistentFrequencyInMinutes = appConsistentFrequencyInMinutes;
             return this;
         }
-
         public Builder instanceType(String instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
-
         public Builder multiVmSyncStatus(@Nullable String multiVmSyncStatus) {
             this.multiVmSyncStatus = multiVmSyncStatus;
             return this;
         }
-
         public Builder recoveryPointHistory(@Nullable Integer recoveryPointHistory) {
             this.recoveryPointHistory = recoveryPointHistory;
             return this;
         }
-
         public Builder recoveryPointThresholdInMinutes(@Nullable Integer recoveryPointThresholdInMinutes) {
             this.recoveryPointThresholdInMinutes = recoveryPointThresholdInMinutes;
             return this;
-        }
-        public InMagePolicyDetailsResponse build() {
+        }        public InMagePolicyDetailsResponse build() {
             return new InMagePolicyDetailsResponse(appConsistentFrequencyInMinutes, instanceType, multiVmSyncStatus, recoveryPointHistory, recoveryPointThresholdInMinutes);
         }
     }

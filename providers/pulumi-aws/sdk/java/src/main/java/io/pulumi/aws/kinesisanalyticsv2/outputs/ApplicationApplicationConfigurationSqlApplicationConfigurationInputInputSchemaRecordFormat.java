@@ -70,12 +70,10 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
             this.mappingParameters = Objects.requireNonNull(mappingParameters);
             return this;
         }
-
         public Builder recordFormatType(String recordFormatType) {
             this.recordFormatType = Objects.requireNonNull(recordFormatType);
             return this;
-        }
-        public ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormat build() {
+        }        public ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormat build() {
             return new ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormat(mappingParameters, recordFormatType);
         }
     }

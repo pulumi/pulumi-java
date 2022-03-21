@@ -76,22 +76,21 @@ public final class WebAclRuleStatementOrStatementStatementAndStatementStatementX
             this.fieldToMatch = fieldToMatch;
             return this;
         }
-
         public Builder fieldToMatch(@Nullable WebAclRuleStatementOrStatementStatementAndStatementStatementXssMatchStatementFieldToMatchGetArgs fieldToMatch) {
             this.fieldToMatch = Output.ofNullable(fieldToMatch);
             return this;
         }
-
         public Builder textTransformations(Output<List<WebAclRuleStatementOrStatementStatementAndStatementStatementXssMatchStatementTextTransformationGetArgs>> textTransformations) {
             this.textTransformations = Objects.requireNonNull(textTransformations);
             return this;
         }
-
         public Builder textTransformations(List<WebAclRuleStatementOrStatementStatementAndStatementStatementXssMatchStatementTextTransformationGetArgs> textTransformations) {
             this.textTransformations = Output.of(Objects.requireNonNull(textTransformations));
             return this;
         }
-        public WebAclRuleStatementOrStatementStatementAndStatementStatementXssMatchStatementGetArgs build() {
+        public Builder textTransformations(WebAclRuleStatementOrStatementStatementAndStatementStatementXssMatchStatementTextTransformationGetArgs... textTransformations) {
+            return textTransformations(List.of(textTransformations));
+        }        public WebAclRuleStatementOrStatementStatementAndStatementStatementXssMatchStatementGetArgs build() {
             return new WebAclRuleStatementOrStatementStatementAndStatementStatementXssMatchStatementGetArgs(fieldToMatch, textTransformations);
         }
     }

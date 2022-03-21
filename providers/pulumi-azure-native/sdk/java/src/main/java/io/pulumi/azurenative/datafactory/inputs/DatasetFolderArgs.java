@@ -61,12 +61,10 @@ public final class DatasetFolderArgs extends io.pulumi.resources.ResourceArgs {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
-        }
-        public DatasetFolderArgs build() {
+        }        public DatasetFolderArgs build() {
             return new DatasetFolderArgs(name);
         }
     }

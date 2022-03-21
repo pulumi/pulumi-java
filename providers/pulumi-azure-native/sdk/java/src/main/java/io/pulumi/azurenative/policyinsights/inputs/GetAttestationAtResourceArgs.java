@@ -72,12 +72,10 @@ public final class GetAttestationAtResourceArgs extends io.pulumi.resources.Invo
             this.attestationName = Objects.requireNonNull(attestationName);
             return this;
         }
-
         public Builder resourceId(String resourceId) {
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
-        }
-        public GetAttestationAtResourceArgs build() {
+        }        public GetAttestationAtResourceArgs build() {
             return new GetAttestationAtResourceArgs(attestationName, resourceId);
         }
     }

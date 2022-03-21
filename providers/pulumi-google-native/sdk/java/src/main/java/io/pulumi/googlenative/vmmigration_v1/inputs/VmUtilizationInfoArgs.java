@@ -96,32 +96,26 @@ public final class VmUtilizationInfoArgs extends io.pulumi.resources.ResourceArg
             this.utilization = utilization;
             return this;
         }
-
         public Builder utilization(@Nullable VmUtilizationMetricsArgs utilization) {
             this.utilization = Output.ofNullable(utilization);
             return this;
         }
-
         public Builder vmId(@Nullable Output<String> vmId) {
             this.vmId = vmId;
             return this;
         }
-
         public Builder vmId(@Nullable String vmId) {
             this.vmId = Output.ofNullable(vmId);
             return this;
         }
-
         public Builder vmwareVmDetails(@Nullable Output<VmwareVmDetailsArgs> vmwareVmDetails) {
             this.vmwareVmDetails = vmwareVmDetails;
             return this;
         }
-
         public Builder vmwareVmDetails(@Nullable VmwareVmDetailsArgs vmwareVmDetails) {
             this.vmwareVmDetails = Output.ofNullable(vmwareVmDetails);
             return this;
-        }
-        public VmUtilizationInfoArgs build() {
+        }        public VmUtilizationInfoArgs build() {
             return new VmUtilizationInfoArgs(utilization, vmId, vmwareVmDetails);
         }
     }

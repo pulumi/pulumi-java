@@ -80,22 +80,18 @@ public final class ConnectionMonitorEndpointFilterItemArgs extends io.pulumi.res
             this.address = address;
             return this;
         }
-
         public Builder address(@Nullable String address) {
             this.address = Output.ofNullable(address);
             return this;
         }
-
         public Builder type(@Nullable Output<Either<String,ConnectionMonitorEndpointFilterItemType>> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable Either<String,ConnectionMonitorEndpointFilterItemType> type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public ConnectionMonitorEndpointFilterItemArgs build() {
+        }        public ConnectionMonitorEndpointFilterItemArgs build() {
             return new ConnectionMonitorEndpointFilterItemArgs(address, type);
         }
     }

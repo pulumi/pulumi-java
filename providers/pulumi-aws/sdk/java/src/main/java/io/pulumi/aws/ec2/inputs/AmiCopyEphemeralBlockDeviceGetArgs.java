@@ -75,22 +75,18 @@ public final class AmiCopyEphemeralBlockDeviceGetArgs extends io.pulumi.resource
             this.deviceName = deviceName;
             return this;
         }
-
         public Builder deviceName(@Nullable String deviceName) {
             this.deviceName = Output.ofNullable(deviceName);
             return this;
         }
-
         public Builder virtualName(@Nullable Output<String> virtualName) {
             this.virtualName = virtualName;
             return this;
         }
-
         public Builder virtualName(@Nullable String virtualName) {
             this.virtualName = Output.ofNullable(virtualName);
             return this;
-        }
-        public AmiCopyEphemeralBlockDeviceGetArgs build() {
+        }        public AmiCopyEphemeralBlockDeviceGetArgs build() {
             return new AmiCopyEphemeralBlockDeviceGetArgs(deviceName, virtualName);
         }
     }

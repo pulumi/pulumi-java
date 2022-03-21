@@ -76,22 +76,18 @@ public final class DashboardState extends io.pulumi.resources.ResourceArgs {
             this.dashboardJson = dashboardJson;
             return this;
         }
-
         public Builder dashboardJson(@Nullable String dashboardJson) {
             this.dashboardJson = Output.ofNullable(dashboardJson);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
-        }
-        public DashboardState build() {
+        }        public DashboardState build() {
             return new DashboardState(dashboardJson, project);
         }
     }

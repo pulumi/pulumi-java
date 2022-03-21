@@ -113,52 +113,45 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
             this.collectionGroupId = Objects.requireNonNull(collectionGroupId);
             return this;
         }
-
         public Builder collectionGroupId(String collectionGroupId) {
             this.collectionGroupId = Output.of(Objects.requireNonNull(collectionGroupId));
             return this;
         }
-
         public Builder databaseId(Output<String> databaseId) {
             this.databaseId = Objects.requireNonNull(databaseId);
             return this;
         }
-
         public Builder databaseId(String databaseId) {
             this.databaseId = Output.of(Objects.requireNonNull(databaseId));
             return this;
         }
-
         public Builder fields(@Nullable Output<List<GoogleFirestoreAdminV1beta2IndexFieldArgs>> fields) {
             this.fields = fields;
             return this;
         }
-
         public Builder fields(@Nullable List<GoogleFirestoreAdminV1beta2IndexFieldArgs> fields) {
             this.fields = Output.ofNullable(fields);
             return this;
         }
-
+        public Builder fields(GoogleFirestoreAdminV1beta2IndexFieldArgs... fields) {
+            return fields(List.of(fields));
+        }
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder queryScope(@Nullable Output<IndexQueryScope> queryScope) {
             this.queryScope = queryScope;
             return this;
         }
-
         public Builder queryScope(@Nullable IndexQueryScope queryScope) {
             this.queryScope = Output.ofNullable(queryScope);
             return this;
-        }
-        public IndexArgs build() {
+        }        public IndexArgs build() {
             return new IndexArgs(collectionGroupId, databaseId, fields, project, queryScope);
         }
     }

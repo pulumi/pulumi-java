@@ -61,12 +61,10 @@ public final class ClusterConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.clusterAutoscalingConfig = clusterAutoscalingConfig;
             return this;
         }
-
         public Builder clusterAutoscalingConfig(@Nullable ClusterAutoscalingConfigArgs clusterAutoscalingConfig) {
             this.clusterAutoscalingConfig = Output.ofNullable(clusterAutoscalingConfig);
             return this;
-        }
-        public ClusterConfigArgs build() {
+        }        public ClusterConfigArgs build() {
             return new ClusterConfigArgs(clusterAutoscalingConfig);
         }
     }

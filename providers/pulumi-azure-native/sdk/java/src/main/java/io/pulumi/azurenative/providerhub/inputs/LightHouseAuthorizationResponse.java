@@ -64,12 +64,10 @@ public final class LightHouseAuthorizationResponse extends io.pulumi.resources.I
             this.principalId = Objects.requireNonNull(principalId);
             return this;
         }
-
         public Builder roleDefinitionId(String roleDefinitionId) {
             this.roleDefinitionId = Objects.requireNonNull(roleDefinitionId);
             return this;
-        }
-        public LightHouseAuthorizationResponse build() {
+        }        public LightHouseAuthorizationResponse build() {
             return new LightHouseAuthorizationResponse(principalId, roleDefinitionId);
         }
     }

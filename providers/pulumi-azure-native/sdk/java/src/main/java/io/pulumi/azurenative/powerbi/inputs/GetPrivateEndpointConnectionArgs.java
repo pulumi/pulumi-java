@@ -88,17 +88,14 @@ public final class GetPrivateEndpointConnectionArgs extends io.pulumi.resources.
             this.azureResourceName = Objects.requireNonNull(azureResourceName);
             return this;
         }
-
         public Builder privateEndpointName(String privateEndpointName) {
             this.privateEndpointName = Objects.requireNonNull(privateEndpointName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetPrivateEndpointConnectionArgs build() {
+        }        public GetPrivateEndpointConnectionArgs build() {
             return new GetPrivateEndpointConnectionArgs(azureResourceName, privateEndpointName, resourceGroupName);
         }
     }

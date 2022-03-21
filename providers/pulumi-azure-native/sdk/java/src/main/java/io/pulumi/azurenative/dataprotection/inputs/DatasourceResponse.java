@@ -158,37 +158,30 @@ public final class DatasourceResponse extends io.pulumi.resources.InvokeArgs {
             this.datasourceType = datasourceType;
             return this;
         }
-
         public Builder objectType(@Nullable String objectType) {
             this.objectType = objectType;
             return this;
         }
-
         public Builder resourceID(String resourceID) {
             this.resourceID = Objects.requireNonNull(resourceID);
             return this;
         }
-
         public Builder resourceLocation(@Nullable String resourceLocation) {
             this.resourceLocation = resourceLocation;
             return this;
         }
-
         public Builder resourceName(@Nullable String resourceName) {
             this.resourceName = resourceName;
             return this;
         }
-
         public Builder resourceType(@Nullable String resourceType) {
             this.resourceType = resourceType;
             return this;
         }
-
         public Builder resourceUri(@Nullable String resourceUri) {
             this.resourceUri = resourceUri;
             return this;
-        }
-        public DatasourceResponse build() {
+        }        public DatasourceResponse build() {
             return new DatasourceResponse(datasourceType, objectType, resourceID, resourceLocation, resourceName, resourceType, resourceUri);
         }
     }

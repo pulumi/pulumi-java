@@ -118,27 +118,22 @@ public final class FieldResponse {
             this.maxOccurs = Objects.requireNonNull(maxOccurs);
             return this;
         }
-
         public Builder minOccurs(Integer minOccurs) {
             this.minOccurs = Objects.requireNonNull(minOccurs);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder table(String table) {
             this.table = Objects.requireNonNull(table);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public FieldResponse build() {
+        }        public FieldResponse build() {
             return new FieldResponse(maxOccurs, minOccurs, name, table, type);
         }
     }

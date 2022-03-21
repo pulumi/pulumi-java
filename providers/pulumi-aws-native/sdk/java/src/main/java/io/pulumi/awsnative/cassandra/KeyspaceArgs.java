@@ -72,22 +72,21 @@ public final class KeyspaceArgs extends io.pulumi.resources.ResourceArgs {
             this.keyspaceName = keyspaceName;
             return this;
         }
-
         public Builder keyspaceName(@Nullable String keyspaceName) {
             this.keyspaceName = Output.ofNullable(keyspaceName);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<KeyspaceTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<KeyspaceTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public KeyspaceArgs build() {
+        public Builder tags(KeyspaceTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public KeyspaceArgs build() {
             return new KeyspaceArgs(keyspaceName, tags);
         }
     }

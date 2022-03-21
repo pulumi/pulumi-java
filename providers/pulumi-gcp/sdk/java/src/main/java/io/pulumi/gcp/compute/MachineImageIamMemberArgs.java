@@ -123,52 +123,42 @@ public final class MachineImageIamMemberArgs extends io.pulumi.resources.Resourc
             this.condition = condition;
             return this;
         }
-
         public Builder condition(@Nullable MachineImageIamMemberConditionArgs condition) {
             this.condition = Output.ofNullable(condition);
             return this;
         }
-
         public Builder machineImage(Output<String> machineImage) {
             this.machineImage = Objects.requireNonNull(machineImage);
             return this;
         }
-
         public Builder machineImage(String machineImage) {
             this.machineImage = Output.of(Objects.requireNonNull(machineImage));
             return this;
         }
-
         public Builder member(Output<String> member) {
             this.member = Objects.requireNonNull(member);
             return this;
         }
-
         public Builder member(String member) {
             this.member = Output.of(Objects.requireNonNull(member));
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder role(Output<String> role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }
-
         public Builder role(String role) {
             this.role = Output.of(Objects.requireNonNull(role));
             return this;
-        }
-        public MachineImageIamMemberArgs build() {
+        }        public MachineImageIamMemberArgs build() {
             return new MachineImageIamMemberArgs(condition, machineImage, member, project, role);
         }
     }

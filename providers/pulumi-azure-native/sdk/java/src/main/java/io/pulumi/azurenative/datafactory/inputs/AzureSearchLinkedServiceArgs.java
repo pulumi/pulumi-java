@@ -183,82 +183,69 @@ public final class AzureSearchLinkedServiceArgs extends io.pulumi.resources.Reso
             this.annotations = annotations;
             return this;
         }
-
         public Builder annotations(@Nullable List<Object> annotations) {
             this.annotations = Output.ofNullable(annotations);
             return this;
         }
-
+        public Builder annotations(Object... annotations) {
+            return annotations(List.of(annotations));
+        }
         public Builder connectVia(@Nullable Output<IntegrationRuntimeReferenceArgs> connectVia) {
             this.connectVia = connectVia;
             return this;
         }
-
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceArgs connectVia) {
             this.connectVia = Output.ofNullable(connectVia);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder encryptedCredential(@Nullable Output<Object> encryptedCredential) {
             this.encryptedCredential = encryptedCredential;
             return this;
         }
-
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
             this.encryptedCredential = Output.ofNullable(encryptedCredential);
             return this;
         }
-
         public Builder key(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> key) {
             this.key = key;
             return this;
         }
-
         public Builder key(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> key) {
             this.key = Output.ofNullable(key);
             return this;
         }
-
         public Builder parameters(@Nullable Output<Map<String,ParameterSpecificationArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder parameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
             this.parameters = Output.ofNullable(parameters);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
-
         public Builder url(Output<Object> url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public Builder url(Object url) {
             this.url = Output.of(Objects.requireNonNull(url));
             return this;
-        }
-        public AzureSearchLinkedServiceArgs build() {
+        }        public AzureSearchLinkedServiceArgs build() {
             return new AzureSearchLinkedServiceArgs(annotations, connectVia, description, encryptedCredential, key, parameters, type, url);
         }
     }

@@ -117,52 +117,45 @@ public final class ConfigIamPolicyArgs extends io.pulumi.resources.ResourceArgs 
             this.bindings = bindings;
             return this;
         }
-
         public Builder bindings(@Nullable List<BindingArgs> bindings) {
             this.bindings = Output.ofNullable(bindings);
             return this;
         }
-
+        public Builder bindings(BindingArgs... bindings) {
+            return bindings(List.of(bindings));
+        }
         public Builder configId(Output<String> configId) {
             this.configId = Objects.requireNonNull(configId);
             return this;
         }
-
         public Builder configId(String configId) {
             this.configId = Output.of(Objects.requireNonNull(configId));
             return this;
         }
-
         public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
-
         public Builder etag(@Nullable String etag) {
             this.etag = Output.ofNullable(etag);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder version(@Nullable Output<Integer> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable Integer version) {
             this.version = Output.ofNullable(version);
             return this;
-        }
-        public ConfigIamPolicyArgs build() {
+        }        public ConfigIamPolicyArgs build() {
             return new ConfigIamPolicyArgs(bindings, configId, etag, project, version);
         }
     }

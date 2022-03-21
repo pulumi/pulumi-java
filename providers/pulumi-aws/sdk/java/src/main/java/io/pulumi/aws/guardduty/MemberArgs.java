@@ -139,62 +139,50 @@ public final class MemberArgs extends io.pulumi.resources.ResourceArgs {
             this.accountId = Objects.requireNonNull(accountId);
             return this;
         }
-
         public Builder accountId(String accountId) {
             this.accountId = Output.of(Objects.requireNonNull(accountId));
             return this;
         }
-
         public Builder detectorId(Output<String> detectorId) {
             this.detectorId = Objects.requireNonNull(detectorId);
             return this;
         }
-
         public Builder detectorId(String detectorId) {
             this.detectorId = Output.of(Objects.requireNonNull(detectorId));
             return this;
         }
-
         public Builder disableEmailNotification(@Nullable Output<Boolean> disableEmailNotification) {
             this.disableEmailNotification = disableEmailNotification;
             return this;
         }
-
         public Builder disableEmailNotification(@Nullable Boolean disableEmailNotification) {
             this.disableEmailNotification = Output.ofNullable(disableEmailNotification);
             return this;
         }
-
         public Builder email(Output<String> email) {
             this.email = Objects.requireNonNull(email);
             return this;
         }
-
         public Builder email(String email) {
             this.email = Output.of(Objects.requireNonNull(email));
             return this;
         }
-
         public Builder invitationMessage(@Nullable Output<String> invitationMessage) {
             this.invitationMessage = invitationMessage;
             return this;
         }
-
         public Builder invitationMessage(@Nullable String invitationMessage) {
             this.invitationMessage = Output.ofNullable(invitationMessage);
             return this;
         }
-
         public Builder invite(@Nullable Output<Boolean> invite) {
             this.invite = invite;
             return this;
         }
-
         public Builder invite(@Nullable Boolean invite) {
             this.invite = Output.ofNullable(invite);
             return this;
-        }
-        public MemberArgs build() {
+        }        public MemberArgs build() {
             return new MemberArgs(accountId, detectorId, disableEmailNotification, email, invitationMessage, invite);
         }
     }

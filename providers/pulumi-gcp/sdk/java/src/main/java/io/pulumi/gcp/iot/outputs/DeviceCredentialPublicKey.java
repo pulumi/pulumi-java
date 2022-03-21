@@ -71,12 +71,10 @@ public final class DeviceCredentialPublicKey {
             this.format = Objects.requireNonNull(format);
             return this;
         }
-
         public Builder key(String key) {
             this.key = Objects.requireNonNull(key);
             return this;
-        }
-        public DeviceCredentialPublicKey build() {
+        }        public DeviceCredentialPublicKey build() {
             return new DeviceCredentialPublicKey(format, key);
         }
     }

@@ -74,12 +74,10 @@ public final class GetDatabaseInstanceArgs extends io.pulumi.resources.InvokeArg
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetDatabaseInstanceArgs build() {
+        }        public GetDatabaseInstanceArgs build() {
             return new GetDatabaseInstanceArgs(name, project);
         }
     }

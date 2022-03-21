@@ -166,72 +166,58 @@ public final class EnvironmentSpecificationVersionArgs extends io.pulumi.resourc
             this.condaFile = condaFile;
             return this;
         }
-
         public Builder condaFile(@Nullable String condaFile) {
             this.condaFile = Output.ofNullable(condaFile);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder docker(@Nullable Output<Either<DockerBuildArgs,DockerImageArgs>> docker) {
             this.docker = docker;
             return this;
         }
-
         public Builder docker(@Nullable Either<DockerBuildArgs,DockerImageArgs> docker) {
             this.docker = Output.ofNullable(docker);
             return this;
         }
-
         public Builder inferenceContainerProperties(@Nullable Output<InferenceContainerPropertiesArgs> inferenceContainerProperties) {
             this.inferenceContainerProperties = inferenceContainerProperties;
             return this;
         }
-
         public Builder inferenceContainerProperties(@Nullable InferenceContainerPropertiesArgs inferenceContainerProperties) {
             this.inferenceContainerProperties = Output.ofNullable(inferenceContainerProperties);
             return this;
         }
-
         public Builder isAnonymous(@Nullable Output<Boolean> isAnonymous) {
             this.isAnonymous = isAnonymous;
             return this;
         }
-
         public Builder isAnonymous(@Nullable Boolean isAnonymous) {
             this.isAnonymous = Output.ofNullable(isAnonymous);
             return this;
         }
-
         public Builder properties(@Nullable Output<Map<String,String>> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder properties(@Nullable Map<String,String> properties) {
             this.properties = Output.ofNullable(properties);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public EnvironmentSpecificationVersionArgs build() {
+        }        public EnvironmentSpecificationVersionArgs build() {
             return new EnvironmentSpecificationVersionArgs(condaFile, description, docker, inferenceContainerProperties, isAnonymous, properties, tags);
         }
     }

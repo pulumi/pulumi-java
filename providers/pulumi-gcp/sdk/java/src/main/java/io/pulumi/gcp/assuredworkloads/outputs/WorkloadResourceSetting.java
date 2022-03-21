@@ -71,12 +71,10 @@ public final class WorkloadResourceSetting {
             this.resourceId = resourceId;
             return this;
         }
-
         public Builder resourceType(@Nullable String resourceType) {
             this.resourceType = resourceType;
             return this;
-        }
-        public WorkloadResourceSetting build() {
+        }        public WorkloadResourceSetting build() {
             return new WorkloadResourceSetting(resourceId, resourceType);
         }
     }

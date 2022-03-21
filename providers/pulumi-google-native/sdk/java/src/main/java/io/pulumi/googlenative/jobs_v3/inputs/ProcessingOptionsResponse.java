@@ -77,12 +77,10 @@ public final class ProcessingOptionsResponse extends io.pulumi.resources.InvokeA
             this.disableStreetAddressResolution = Objects.requireNonNull(disableStreetAddressResolution);
             return this;
         }
-
         public Builder htmlSanitization(String htmlSanitization) {
             this.htmlSanitization = Objects.requireNonNull(htmlSanitization);
             return this;
-        }
-        public ProcessingOptionsResponse build() {
+        }        public ProcessingOptionsResponse build() {
             return new ProcessingOptionsResponse(disableStreetAddressResolution, htmlSanitization);
         }
     }

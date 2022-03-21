@@ -75,12 +75,10 @@ public final class BucketServerSideEncryptionByDefault extends io.pulumi.resourc
             this.kMSMasterKeyID = kMSMasterKeyID;
             return this;
         }
-
         public Builder sSEAlgorithm(BucketServerSideEncryptionByDefaultSSEAlgorithm sSEAlgorithm) {
             this.sSEAlgorithm = Objects.requireNonNull(sSEAlgorithm);
             return this;
-        }
-        public BucketServerSideEncryptionByDefault build() {
+        }        public BucketServerSideEncryptionByDefault build() {
             return new BucketServerSideEncryptionByDefault(kMSMasterKeyID, sSEAlgorithm);
         }
     }

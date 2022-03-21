@@ -73,12 +73,13 @@ public final class EnterpriseKeyIosSettings {
             this.allowAllBundleIds = allowAllBundleIds;
             return this;
         }
-
         public Builder allowedBundleIds(@Nullable List<String> allowedBundleIds) {
             this.allowedBundleIds = allowedBundleIds;
             return this;
         }
-        public EnterpriseKeyIosSettings build() {
+        public Builder allowedBundleIds(String... allowedBundleIds) {
+            return allowedBundleIds(List.of(allowedBundleIds));
+        }        public EnterpriseKeyIosSettings build() {
             return new EnterpriseKeyIosSettings(allowAllBundleIds, allowedBundleIds);
         }
     }

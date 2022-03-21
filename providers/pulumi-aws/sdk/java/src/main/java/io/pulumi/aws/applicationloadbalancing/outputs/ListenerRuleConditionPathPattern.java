@@ -53,7 +53,9 @@ public final class ListenerRuleConditionPathPattern {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-        public ListenerRuleConditionPathPattern build() {
+        public Builder values(String... values) {
+            return values(List.of(values));
+        }        public ListenerRuleConditionPathPattern build() {
             return new ListenerRuleConditionPathPattern(values);
         }
     }

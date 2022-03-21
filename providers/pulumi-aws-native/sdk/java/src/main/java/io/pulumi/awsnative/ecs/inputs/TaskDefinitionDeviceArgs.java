@@ -79,32 +79,29 @@ public final class TaskDefinitionDeviceArgs extends io.pulumi.resources.Resource
             this.containerPath = containerPath;
             return this;
         }
-
         public Builder containerPath(@Nullable String containerPath) {
             this.containerPath = Output.ofNullable(containerPath);
             return this;
         }
-
         public Builder hostPath(@Nullable Output<String> hostPath) {
             this.hostPath = hostPath;
             return this;
         }
-
         public Builder hostPath(@Nullable String hostPath) {
             this.hostPath = Output.ofNullable(hostPath);
             return this;
         }
-
         public Builder permissions(@Nullable Output<List<String>> permissions) {
             this.permissions = permissions;
             return this;
         }
-
         public Builder permissions(@Nullable List<String> permissions) {
             this.permissions = Output.ofNullable(permissions);
             return this;
         }
-        public TaskDefinitionDeviceArgs build() {
+        public Builder permissions(String... permissions) {
+            return permissions(List.of(permissions));
+        }        public TaskDefinitionDeviceArgs build() {
             return new TaskDefinitionDeviceArgs(containerPath, hostPath, permissions);
         }
     }

@@ -70,12 +70,10 @@ public final class GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseCaseC
             this.additionalCases = Objects.requireNonNull(additionalCases);
             return this;
         }
-
         public Builder message(GoogleCloudDialogflowCxV3ResponseMessageResponse message) {
             this.message = Objects.requireNonNull(message);
             return this;
-        }
-        public GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseCaseContentResponse build() {
+        }        public GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseCaseContentResponse build() {
             return new GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseCaseContentResponse(additionalCases, message);
         }
     }

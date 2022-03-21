@@ -66,22 +66,18 @@ public final class DatastorePartitionArgs extends io.pulumi.resources.ResourceAr
             this.partition = partition;
             return this;
         }
-
         public Builder partition(@Nullable DatastorePartitionArgs partition) {
             this.partition = Output.ofNullable(partition);
             return this;
         }
-
         public Builder timestampPartition(@Nullable Output<DatastoreTimestampPartitionArgs> timestampPartition) {
             this.timestampPartition = timestampPartition;
             return this;
         }
-
         public Builder timestampPartition(@Nullable DatastoreTimestampPartitionArgs timestampPartition) {
             this.timestampPartition = Output.ofNullable(timestampPartition);
             return this;
-        }
-        public DatastorePartitionArgs build() {
+        }        public DatastorePartitionArgs build() {
             return new DatastorePartitionArgs(partition, timestampPartition);
         }
     }

@@ -227,107 +227,86 @@ public final class TopicRuleAction {
             this.cloudwatchAlarm = cloudwatchAlarm;
             return this;
         }
-
         public Builder cloudwatchLogs(@Nullable TopicRuleCloudwatchLogsAction cloudwatchLogs) {
             this.cloudwatchLogs = cloudwatchLogs;
             return this;
         }
-
         public Builder cloudwatchMetric(@Nullable TopicRuleCloudwatchMetricAction cloudwatchMetric) {
             this.cloudwatchMetric = cloudwatchMetric;
             return this;
         }
-
         public Builder dynamoDB(@Nullable TopicRuleDynamoDBAction dynamoDB) {
             this.dynamoDB = dynamoDB;
             return this;
         }
-
         public Builder dynamoDBv2(@Nullable TopicRuleDynamoDBv2Action dynamoDBv2) {
             this.dynamoDBv2 = dynamoDBv2;
             return this;
         }
-
         public Builder elasticsearch(@Nullable TopicRuleElasticsearchAction elasticsearch) {
             this.elasticsearch = elasticsearch;
             return this;
         }
-
         public Builder firehose(@Nullable TopicRuleFirehoseAction firehose) {
             this.firehose = firehose;
             return this;
         }
-
         public Builder http(@Nullable TopicRuleHttpAction http) {
             this.http = http;
             return this;
         }
-
         public Builder iotAnalytics(@Nullable TopicRuleIotAnalyticsAction iotAnalytics) {
             this.iotAnalytics = iotAnalytics;
             return this;
         }
-
         public Builder iotEvents(@Nullable TopicRuleIotEventsAction iotEvents) {
             this.iotEvents = iotEvents;
             return this;
         }
-
         public Builder iotSiteWise(@Nullable TopicRuleIotSiteWiseAction iotSiteWise) {
             this.iotSiteWise = iotSiteWise;
             return this;
         }
-
         public Builder kafka(@Nullable TopicRuleKafkaAction kafka) {
             this.kafka = kafka;
             return this;
         }
-
         public Builder kinesis(@Nullable TopicRuleKinesisAction kinesis) {
             this.kinesis = kinesis;
             return this;
         }
-
         public Builder lambda(@Nullable TopicRuleLambdaAction lambda) {
             this.lambda = lambda;
             return this;
         }
-
         public Builder openSearch(@Nullable TopicRuleOpenSearchAction openSearch) {
             this.openSearch = openSearch;
             return this;
         }
-
         public Builder republish(@Nullable TopicRuleRepublishAction republish) {
             this.republish = republish;
             return this;
         }
-
         public Builder s3(@Nullable TopicRuleS3Action s3) {
             this.s3 = s3;
             return this;
         }
-
         public Builder sns(@Nullable TopicRuleSnsAction sns) {
             this.sns = sns;
             return this;
         }
-
         public Builder sqs(@Nullable TopicRuleSqsAction sqs) {
             this.sqs = sqs;
             return this;
         }
-
         public Builder stepFunctions(@Nullable TopicRuleStepFunctionsAction stepFunctions) {
             this.stepFunctions = stepFunctions;
             return this;
         }
-
         public Builder timestream(@Nullable TopicRuleTimestreamAction timestream) {
             this.timestream = timestream;
             return this;
-        }
-        public TopicRuleAction build() {
+        }        public TopicRuleAction build() {
             return new TopicRuleAction(cloudwatchAlarm, cloudwatchLogs, cloudwatchMetric, dynamoDB, dynamoDBv2, elasticsearch, firehose, http, iotAnalytics, iotEvents, iotSiteWise, kafka, kinesis, lambda, openSearch, republish, s3, sns, sqs, stepFunctions, timestream);
         }
     }

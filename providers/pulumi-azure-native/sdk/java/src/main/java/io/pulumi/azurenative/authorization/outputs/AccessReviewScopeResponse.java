@@ -136,32 +136,26 @@ public final class AccessReviewScopeResponse {
             this.assignmentState = Objects.requireNonNull(assignmentState);
             return this;
         }
-
         public Builder expandNestedMemberships(@Nullable Boolean expandNestedMemberships) {
             this.expandNestedMemberships = expandNestedMemberships;
             return this;
         }
-
         public Builder inactiveDuration(@Nullable String inactiveDuration) {
             this.inactiveDuration = inactiveDuration;
             return this;
         }
-
         public Builder principalType(String principalType) {
             this.principalType = Objects.requireNonNull(principalType);
             return this;
         }
-
         public Builder resourceId(String resourceId) {
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
         }
-
         public Builder roleDefinitionId(String roleDefinitionId) {
             this.roleDefinitionId = Objects.requireNonNull(roleDefinitionId);
             return this;
-        }
-        public AccessReviewScopeResponse build() {
+        }        public AccessReviewScopeResponse build() {
             return new AccessReviewScopeResponse(assignmentState, expandNestedMemberships, inactiveDuration, principalType, resourceId, roleDefinitionId);
         }
     }

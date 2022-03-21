@@ -56,7 +56,9 @@ public final class AllowedConfigListResponse extends io.pulumi.resources.InvokeA
             this.allowedConfigValues = Objects.requireNonNull(allowedConfigValues);
             return this;
         }
-        public AllowedConfigListResponse build() {
+        public Builder allowedConfigValues(ReusableConfigWrapperResponse... allowedConfigValues) {
+            return allowedConfigValues(List.of(allowedConfigValues));
+        }        public AllowedConfigListResponse build() {
             return new AllowedConfigListResponse(allowedConfigValues);
         }
     }

@@ -254,132 +254,109 @@ public final class BudgetState extends io.pulumi.resources.ResourceArgs {
             this.accountId = accountId;
             return this;
         }
-
         public Builder accountId(@Nullable String accountId) {
             this.accountId = Output.ofNullable(accountId);
             return this;
         }
-
         public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder budgetType(@Nullable Output<String> budgetType) {
             this.budgetType = budgetType;
             return this;
         }
-
         public Builder budgetType(@Nullable String budgetType) {
             this.budgetType = Output.ofNullable(budgetType);
             return this;
         }
-
         public Builder costFilters(@Nullable Output<Map<String,String>> costFilters) {
             this.costFilters = costFilters;
             return this;
         }
-
         public Builder costFilters(@Nullable Map<String,String> costFilters) {
             this.costFilters = Output.ofNullable(costFilters);
             return this;
         }
-
         public Builder costTypes(@Nullable Output<BudgetCostTypesGetArgs> costTypes) {
             this.costTypes = costTypes;
             return this;
         }
-
         public Builder costTypes(@Nullable BudgetCostTypesGetArgs costTypes) {
             this.costTypes = Output.ofNullable(costTypes);
             return this;
         }
-
         public Builder limitAmount(@Nullable Output<String> limitAmount) {
             this.limitAmount = limitAmount;
             return this;
         }
-
         public Builder limitAmount(@Nullable String limitAmount) {
             this.limitAmount = Output.ofNullable(limitAmount);
             return this;
         }
-
         public Builder limitUnit(@Nullable Output<String> limitUnit) {
             this.limitUnit = limitUnit;
             return this;
         }
-
         public Builder limitUnit(@Nullable String limitUnit) {
             this.limitUnit = Output.ofNullable(limitUnit);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder namePrefix(@Nullable Output<String> namePrefix) {
             this.namePrefix = namePrefix;
             return this;
         }
-
         public Builder namePrefix(@Nullable String namePrefix) {
             this.namePrefix = Output.ofNullable(namePrefix);
             return this;
         }
-
         public Builder notifications(@Nullable Output<List<BudgetNotificationGetArgs>> notifications) {
             this.notifications = notifications;
             return this;
         }
-
         public Builder notifications(@Nullable List<BudgetNotificationGetArgs> notifications) {
             this.notifications = Output.ofNullable(notifications);
             return this;
         }
-
+        public Builder notifications(BudgetNotificationGetArgs... notifications) {
+            return notifications(List.of(notifications));
+        }
         public Builder timePeriodEnd(@Nullable Output<String> timePeriodEnd) {
             this.timePeriodEnd = timePeriodEnd;
             return this;
         }
-
         public Builder timePeriodEnd(@Nullable String timePeriodEnd) {
             this.timePeriodEnd = Output.ofNullable(timePeriodEnd);
             return this;
         }
-
         public Builder timePeriodStart(@Nullable Output<String> timePeriodStart) {
             this.timePeriodStart = timePeriodStart;
             return this;
         }
-
         public Builder timePeriodStart(@Nullable String timePeriodStart) {
             this.timePeriodStart = Output.ofNullable(timePeriodStart);
             return this;
         }
-
         public Builder timeUnit(@Nullable Output<String> timeUnit) {
             this.timeUnit = timeUnit;
             return this;
         }
-
         public Builder timeUnit(@Nullable String timeUnit) {
             this.timeUnit = Output.ofNullable(timeUnit);
             return this;
-        }
-        public BudgetState build() {
+        }        public BudgetState build() {
             return new BudgetState(accountId, arn, budgetType, costFilters, costTypes, limitAmount, limitUnit, name, namePrefix, notifications, timePeriodEnd, timePeriodStart, timeUnit);
         }
     }

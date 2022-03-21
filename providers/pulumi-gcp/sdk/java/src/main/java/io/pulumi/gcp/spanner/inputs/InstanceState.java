@@ -202,92 +202,74 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
             this.config = config;
             return this;
         }
-
         public Builder config(@Nullable String config) {
             this.config = Output.ofNullable(config);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder forceDestroy(@Nullable Output<Boolean> forceDestroy) {
             this.forceDestroy = forceDestroy;
             return this;
         }
-
         public Builder forceDestroy(@Nullable Boolean forceDestroy) {
             this.forceDestroy = Output.ofNullable(forceDestroy);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder numNodes(@Nullable Output<Integer> numNodes) {
             this.numNodes = numNodes;
             return this;
         }
-
         public Builder numNodes(@Nullable Integer numNodes) {
             this.numNodes = Output.ofNullable(numNodes);
             return this;
         }
-
         public Builder processingUnits(@Nullable Output<Integer> processingUnits) {
             this.processingUnits = processingUnits;
             return this;
         }
-
         public Builder processingUnits(@Nullable Integer processingUnits) {
             this.processingUnits = Output.ofNullable(processingUnits);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder state(@Nullable Output<String> state) {
             this.state = state;
             return this;
         }
-
         public Builder state(@Nullable String state) {
             this.state = Output.ofNullable(state);
             return this;
-        }
-        public InstanceState build() {
+        }        public InstanceState build() {
             return new InstanceState(config, displayName, forceDestroy, labels, name, numNodes, processingUnits, project, state);
         }
     }

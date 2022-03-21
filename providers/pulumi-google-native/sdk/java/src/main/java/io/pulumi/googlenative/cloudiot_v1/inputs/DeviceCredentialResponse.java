@@ -77,12 +77,10 @@ public final class DeviceCredentialResponse extends io.pulumi.resources.InvokeAr
             this.expirationTime = Objects.requireNonNull(expirationTime);
             return this;
         }
-
         public Builder publicKey(PublicKeyCredentialResponse publicKey) {
             this.publicKey = Objects.requireNonNull(publicKey);
             return this;
-        }
-        public DeviceCredentialResponse build() {
+        }        public DeviceCredentialResponse build() {
             return new DeviceCredentialResponse(expirationTime, publicKey);
         }
     }

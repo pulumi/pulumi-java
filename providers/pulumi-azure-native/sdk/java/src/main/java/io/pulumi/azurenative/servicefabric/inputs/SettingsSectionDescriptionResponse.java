@@ -78,12 +78,13 @@ public final class SettingsSectionDescriptionResponse extends io.pulumi.resource
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder parameters(List<SettingsParameterDescriptionResponse> parameters) {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
-        public SettingsSectionDescriptionResponse build() {
+        public Builder parameters(SettingsParameterDescriptionResponse... parameters) {
+            return parameters(List.of(parameters));
+        }        public SettingsSectionDescriptionResponse build() {
             return new SettingsSectionDescriptionResponse(name, parameters);
         }
     }

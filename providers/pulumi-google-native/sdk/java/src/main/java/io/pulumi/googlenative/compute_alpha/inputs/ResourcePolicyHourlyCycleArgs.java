@@ -79,22 +79,18 @@ public final class ResourcePolicyHourlyCycleArgs extends io.pulumi.resources.Res
             this.hoursInCycle = hoursInCycle;
             return this;
         }
-
         public Builder hoursInCycle(@Nullable Integer hoursInCycle) {
             this.hoursInCycle = Output.ofNullable(hoursInCycle);
             return this;
         }
-
         public Builder startTime(@Nullable Output<String> startTime) {
             this.startTime = startTime;
             return this;
         }
-
         public Builder startTime(@Nullable String startTime) {
             this.startTime = Output.ofNullable(startTime);
             return this;
-        }
-        public ResourcePolicyHourlyCycleArgs build() {
+        }        public ResourcePolicyHourlyCycleArgs build() {
             return new ResourcePolicyHourlyCycleArgs(hoursInCycle, startTime);
         }
     }

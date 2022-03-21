@@ -79,22 +79,18 @@ public final class IstioConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.auth = auth;
             return this;
         }
-
         public Builder auth(@Nullable IstioConfigAuth auth) {
             this.auth = Output.ofNullable(auth);
             return this;
         }
-
         public Builder disabled(@Nullable Output<Boolean> disabled) {
             this.disabled = disabled;
             return this;
         }
-
         public Builder disabled(@Nullable Boolean disabled) {
             this.disabled = Output.ofNullable(disabled);
             return this;
-        }
-        public IstioConfigArgs build() {
+        }        public IstioConfigArgs build() {
             return new IstioConfigArgs(auth, disabled);
         }
     }

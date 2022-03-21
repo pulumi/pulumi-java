@@ -220,112 +220,93 @@ public final class LocationFsxWindowsState extends io.pulumi.resources.ResourceA
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder creationTime(@Nullable Output<String> creationTime) {
             this.creationTime = creationTime;
             return this;
         }
-
         public Builder creationTime(@Nullable String creationTime) {
             this.creationTime = Output.ofNullable(creationTime);
             return this;
         }
-
         public Builder domain(@Nullable Output<String> domain) {
             this.domain = domain;
             return this;
         }
-
         public Builder domain(@Nullable String domain) {
             this.domain = Output.ofNullable(domain);
             return this;
         }
-
         public Builder fsxFilesystemArn(@Nullable Output<String> fsxFilesystemArn) {
             this.fsxFilesystemArn = fsxFilesystemArn;
             return this;
         }
-
         public Builder fsxFilesystemArn(@Nullable String fsxFilesystemArn) {
             this.fsxFilesystemArn = Output.ofNullable(fsxFilesystemArn);
             return this;
         }
-
         public Builder password(@Nullable Output<String> password) {
             this.password = password;
             return this;
         }
-
         public Builder password(@Nullable String password) {
             this.password = Output.ofNullable(password);
             return this;
         }
-
         public Builder securityGroupArns(@Nullable Output<List<String>> securityGroupArns) {
             this.securityGroupArns = securityGroupArns;
             return this;
         }
-
         public Builder securityGroupArns(@Nullable List<String> securityGroupArns) {
             this.securityGroupArns = Output.ofNullable(securityGroupArns);
             return this;
         }
-
+        public Builder securityGroupArns(String... securityGroupArns) {
+            return securityGroupArns(List.of(securityGroupArns));
+        }
         public Builder subdirectory(@Nullable Output<String> subdirectory) {
             this.subdirectory = subdirectory;
             return this;
         }
-
         public Builder subdirectory(@Nullable String subdirectory) {
             this.subdirectory = Output.ofNullable(subdirectory);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
-
         public Builder uri(@Nullable Output<String> uri) {
             this.uri = uri;
             return this;
         }
-
         public Builder uri(@Nullable String uri) {
             this.uri = Output.ofNullable(uri);
             return this;
         }
-
         public Builder user(@Nullable Output<String> user) {
             this.user = user;
             return this;
         }
-
         public Builder user(@Nullable String user) {
             this.user = Output.ofNullable(user);
             return this;
-        }
-        public LocationFsxWindowsState build() {
+        }        public LocationFsxWindowsState build() {
             return new LocationFsxWindowsState(arn, creationTime, domain, fsxFilesystemArn, password, securityGroupArns, subdirectory, tags, tagsAll, uri, user);
         }
     }

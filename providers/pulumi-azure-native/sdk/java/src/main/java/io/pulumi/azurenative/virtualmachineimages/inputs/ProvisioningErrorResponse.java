@@ -78,12 +78,10 @@ public final class ProvisioningErrorResponse extends io.pulumi.resources.InvokeA
             this.message = message;
             return this;
         }
-
         public Builder provisioningErrorCode(@Nullable String provisioningErrorCode) {
             this.provisioningErrorCode = provisioningErrorCode;
             return this;
-        }
-        public ProvisioningErrorResponse build() {
+        }        public ProvisioningErrorResponse build() {
             return new ProvisioningErrorResponse(message, provisioningErrorCode);
         }
     }

@@ -120,27 +120,22 @@ public final class GetJobStepArgs extends io.pulumi.resources.InvokeArgs {
             this.jobAgentName = Objects.requireNonNull(jobAgentName);
             return this;
         }
-
         public Builder jobName(String jobName) {
             this.jobName = Objects.requireNonNull(jobName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder serverName(String serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
         }
-
         public Builder stepName(String stepName) {
             this.stepName = Objects.requireNonNull(stepName);
             return this;
-        }
-        public GetJobStepArgs build() {
+        }        public GetJobStepArgs build() {
             return new GetJobStepArgs(jobAgentName, jobName, resourceGroupName, serverName, stepName);
         }
     }

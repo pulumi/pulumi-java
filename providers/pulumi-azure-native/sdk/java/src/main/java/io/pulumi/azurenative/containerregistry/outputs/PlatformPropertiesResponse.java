@@ -87,17 +87,14 @@ public final class PlatformPropertiesResponse {
             this.architecture = architecture;
             return this;
         }
-
         public Builder os(String os) {
             this.os = Objects.requireNonNull(os);
             return this;
         }
-
         public Builder variant(@Nullable String variant) {
             this.variant = variant;
             return this;
-        }
-        public PlatformPropertiesResponse build() {
+        }        public PlatformPropertiesResponse build() {
             return new PlatformPropertiesResponse(architecture, os, variant);
         }
     }

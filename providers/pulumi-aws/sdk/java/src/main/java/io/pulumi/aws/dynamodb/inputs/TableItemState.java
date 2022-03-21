@@ -107,42 +107,34 @@ public final class TableItemState extends io.pulumi.resources.ResourceArgs {
             this.hashKey = hashKey;
             return this;
         }
-
         public Builder hashKey(@Nullable String hashKey) {
             this.hashKey = Output.ofNullable(hashKey);
             return this;
         }
-
         public Builder item(@Nullable Output<String> item) {
             this.item = item;
             return this;
         }
-
         public Builder item(@Nullable String item) {
             this.item = Output.ofNullable(item);
             return this;
         }
-
         public Builder rangeKey(@Nullable Output<String> rangeKey) {
             this.rangeKey = rangeKey;
             return this;
         }
-
         public Builder rangeKey(@Nullable String rangeKey) {
             this.rangeKey = Output.ofNullable(rangeKey);
             return this;
         }
-
         public Builder tableName(@Nullable Output<String> tableName) {
             this.tableName = tableName;
             return this;
         }
-
         public Builder tableName(@Nullable String tableName) {
             this.tableName = Output.ofNullable(tableName);
             return this;
-        }
-        public TableItemState build() {
+        }        public TableItemState build() {
             return new TableItemState(hashKey, item, rangeKey, tableName);
         }
     }

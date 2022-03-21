@@ -74,12 +74,10 @@ public final class AutoUserSpecificationResponse extends io.pulumi.resources.Inv
             this.elevationLevel = elevationLevel;
             return this;
         }
-
         public Builder scope(@Nullable String scope) {
             this.scope = scope;
             return this;
-        }
-        public AutoUserSpecificationResponse build() {
+        }        public AutoUserSpecificationResponse build() {
             return new AutoUserSpecificationResponse(elevationLevel, scope);
         }
     }

@@ -71,12 +71,10 @@ public final class AssessmentReportsDestination extends io.pulumi.resources.Invo
             this.destination = destination;
             return this;
         }
-
         public Builder destinationType(@Nullable AssessmentReportDestinationType destinationType) {
             this.destinationType = destinationType;
             return this;
-        }
-        public AssessmentReportsDestination build() {
+        }        public AssessmentReportsDestination build() {
             return new AssessmentReportsDestination(destination, destinationType);
         }
     }

@@ -175,82 +175,69 @@ public final class WebApplicationFirewallPolicyArgs extends io.pulumi.resources.
             this.customRules = customRules;
             return this;
         }
-
         public Builder customRules(@Nullable List<WebApplicationFirewallCustomRuleArgs> customRules) {
             this.customRules = Output.ofNullable(customRules);
             return this;
         }
-
+        public Builder customRules(WebApplicationFirewallCustomRuleArgs... customRules) {
+            return customRules(List.of(customRules));
+        }
         public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder managedRules(Output<ManagedRulesDefinitionArgs> managedRules) {
             this.managedRules = Objects.requireNonNull(managedRules);
             return this;
         }
-
         public Builder managedRules(ManagedRulesDefinitionArgs managedRules) {
             this.managedRules = Output.of(Objects.requireNonNull(managedRules));
             return this;
         }
-
         public Builder policyName(@Nullable Output<String> policyName) {
             this.policyName = policyName;
             return this;
         }
-
         public Builder policyName(@Nullable String policyName) {
             this.policyName = Output.ofNullable(policyName);
             return this;
         }
-
         public Builder policySettings(@Nullable Output<PolicySettingsArgs> policySettings) {
             this.policySettings = policySettings;
             return this;
         }
-
         public Builder policySettings(@Nullable PolicySettingsArgs policySettings) {
             this.policySettings = Output.ofNullable(policySettings);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public WebApplicationFirewallPolicyArgs build() {
+        }        public WebApplicationFirewallPolicyArgs build() {
             return new WebApplicationFirewallPolicyArgs(customRules, id, location, managedRules, policyName, policySettings, resourceGroupName, tags);
         }
     }

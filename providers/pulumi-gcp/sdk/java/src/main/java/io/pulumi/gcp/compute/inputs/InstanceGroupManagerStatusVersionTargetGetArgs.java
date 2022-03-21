@@ -53,12 +53,10 @@ public final class InstanceGroupManagerStatusVersionTargetGetArgs extends io.pul
             this.isReached = isReached;
             return this;
         }
-
         public Builder isReached(@Nullable Boolean isReached) {
             this.isReached = Output.ofNullable(isReached);
             return this;
-        }
-        public InstanceGroupManagerStatusVersionTargetGetArgs build() {
+        }        public InstanceGroupManagerStatusVersionTargetGetArgs build() {
             return new InstanceGroupManagerStatusVersionTargetGetArgs(isReached);
         }
     }

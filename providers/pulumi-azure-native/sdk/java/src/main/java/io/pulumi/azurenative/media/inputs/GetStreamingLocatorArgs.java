@@ -88,17 +88,14 @@ public final class GetStreamingLocatorArgs extends io.pulumi.resources.InvokeArg
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder streamingLocatorName(String streamingLocatorName) {
             this.streamingLocatorName = Objects.requireNonNull(streamingLocatorName);
             return this;
-        }
-        public GetStreamingLocatorArgs build() {
+        }        public GetStreamingLocatorArgs build() {
             return new GetStreamingLocatorArgs(accountName, resourceGroupName, streamingLocatorName);
         }
     }

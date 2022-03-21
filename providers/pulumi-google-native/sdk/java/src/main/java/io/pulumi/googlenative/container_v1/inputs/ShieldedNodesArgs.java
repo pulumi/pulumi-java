@@ -61,12 +61,10 @@ public final class ShieldedNodesArgs extends io.pulumi.resources.ResourceArgs {
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
-        }
-        public ShieldedNodesArgs build() {
+        }        public ShieldedNodesArgs build() {
             return new ShieldedNodesArgs(enabled);
         }
     }

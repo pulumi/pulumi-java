@@ -53,12 +53,10 @@ public final class SomeOtherObjectArgs extends io.pulumi.resources.ResourceArgs 
             this.baz = baz;
             return this;
         }
-
         public Builder baz(@Nullable String baz) {
             this.baz = Output.ofNullable(baz);
             return this;
-        }
-        public SomeOtherObjectArgs build() {
+        }        public SomeOtherObjectArgs build() {
             return new SomeOtherObjectArgs(baz);
         }
     }

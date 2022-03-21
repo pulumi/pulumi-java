@@ -76,12 +76,10 @@ public final class RecommendedActionErrorInfoResponse extends io.pulumi.resource
             this.errorCode = Objects.requireNonNull(errorCode);
             return this;
         }
-
         public Builder isRetryable(String isRetryable) {
             this.isRetryable = Objects.requireNonNull(isRetryable);
             return this;
-        }
-        public RecommendedActionErrorInfoResponse build() {
+        }        public RecommendedActionErrorInfoResponse build() {
             return new RecommendedActionErrorInfoResponse(errorCode, isRetryable);
         }
     }

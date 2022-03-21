@@ -72,12 +72,10 @@ public final class ListKeyByAutomationAccountArgs extends io.pulumi.resources.In
             this.automationAccountName = Objects.requireNonNull(automationAccountName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public ListKeyByAutomationAccountArgs build() {
+        }        public ListKeyByAutomationAccountArgs build() {
             return new ListKeyByAutomationAccountArgs(automationAccountName, resourceGroupName);
         }
     }

@@ -160,72 +160,58 @@ public final class LaunchConfigurationBlockDeviceArgs extends io.pulumi.resource
             this.deleteOnTermination = deleteOnTermination;
             return this;
         }
-
         public Builder deleteOnTermination(@Nullable Boolean deleteOnTermination) {
             this.deleteOnTermination = Output.ofNullable(deleteOnTermination);
             return this;
         }
-
         public Builder encrypted(@Nullable Output<Boolean> encrypted) {
             this.encrypted = encrypted;
             return this;
         }
-
         public Builder encrypted(@Nullable Boolean encrypted) {
             this.encrypted = Output.ofNullable(encrypted);
             return this;
         }
-
         public Builder iops(@Nullable Output<Integer> iops) {
             this.iops = iops;
             return this;
         }
-
         public Builder iops(@Nullable Integer iops) {
             this.iops = Output.ofNullable(iops);
             return this;
         }
-
         public Builder snapshotId(@Nullable Output<String> snapshotId) {
             this.snapshotId = snapshotId;
             return this;
         }
-
         public Builder snapshotId(@Nullable String snapshotId) {
             this.snapshotId = Output.ofNullable(snapshotId);
             return this;
         }
-
         public Builder throughput(@Nullable Output<Integer> throughput) {
             this.throughput = throughput;
             return this;
         }
-
         public Builder throughput(@Nullable Integer throughput) {
             this.throughput = Output.ofNullable(throughput);
             return this;
         }
-
         public Builder volumeSize(@Nullable Output<Integer> volumeSize) {
             this.volumeSize = volumeSize;
             return this;
         }
-
         public Builder volumeSize(@Nullable Integer volumeSize) {
             this.volumeSize = Output.ofNullable(volumeSize);
             return this;
         }
-
         public Builder volumeType(@Nullable Output<String> volumeType) {
             this.volumeType = volumeType;
             return this;
         }
-
         public Builder volumeType(@Nullable String volumeType) {
             this.volumeType = Output.ofNullable(volumeType);
             return this;
-        }
-        public LaunchConfigurationBlockDeviceArgs build() {
+        }        public LaunchConfigurationBlockDeviceArgs build() {
             return new LaunchConfigurationBlockDeviceArgs(deleteOnTermination, encrypted, iops, snapshotId, throughput, volumeSize, volumeType);
         }
     }

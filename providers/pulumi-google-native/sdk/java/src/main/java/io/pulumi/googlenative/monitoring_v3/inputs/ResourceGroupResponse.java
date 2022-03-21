@@ -76,12 +76,10 @@ public final class ResourceGroupResponse extends io.pulumi.resources.InvokeArgs 
             this.groupId = Objects.requireNonNull(groupId);
             return this;
         }
-
         public Builder resourceType(String resourceType) {
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
-        }
-        public ResourceGroupResponse build() {
+        }        public ResourceGroupResponse build() {
             return new ResourceGroupResponse(groupId, resourceType);
         }
     }

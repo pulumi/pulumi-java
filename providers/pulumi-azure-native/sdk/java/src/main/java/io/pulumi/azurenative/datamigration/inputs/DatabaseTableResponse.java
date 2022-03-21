@@ -77,12 +77,10 @@ public final class DatabaseTableResponse extends io.pulumi.resources.InvokeArgs 
             this.hasRows = Objects.requireNonNull(hasRows);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public DatabaseTableResponse build() {
+        }        public DatabaseTableResponse build() {
             return new DatabaseTableResponse(hasRows, name);
         }
     }

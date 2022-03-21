@@ -54,7 +54,9 @@ public final class AggregationRule {
             this.clusterRoleSelectors = clusterRoleSelectors;
             return this;
         }
-        public AggregationRule build() {
+        public Builder clusterRoleSelectors(LabelSelector... clusterRoleSelectors) {
+            return clusterRoleSelectors(List.of(clusterRoleSelectors));
+        }        public AggregationRule build() {
             return new AggregationRule(clusterRoleSelectors);
         }
     }

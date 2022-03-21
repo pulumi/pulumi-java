@@ -58,8 +58,7 @@ public final class UniformShardingResponse extends io.pulumi.resources.InvokeArg
         public Builder numShards(Integer numShards) {
             this.numShards = Objects.requireNonNull(numShards);
             return this;
-        }
-        public UniformShardingResponse build() {
+        }        public UniformShardingResponse build() {
             return new UniformShardingResponse(numShards);
         }
     }

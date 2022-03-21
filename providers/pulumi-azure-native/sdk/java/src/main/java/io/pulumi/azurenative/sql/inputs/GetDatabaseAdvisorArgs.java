@@ -104,22 +104,18 @@ public final class GetDatabaseAdvisorArgs extends io.pulumi.resources.InvokeArgs
             this.advisorName = Objects.requireNonNull(advisorName);
             return this;
         }
-
         public Builder databaseName(String databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder serverName(String serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
-        }
-        public GetDatabaseAdvisorArgs build() {
+        }        public GetDatabaseAdvisorArgs build() {
             return new GetDatabaseAdvisorArgs(advisorName, databaseName, resourceGroupName, serverName);
         }
     }

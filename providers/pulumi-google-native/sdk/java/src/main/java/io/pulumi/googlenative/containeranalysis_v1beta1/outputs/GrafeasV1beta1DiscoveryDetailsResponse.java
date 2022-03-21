@@ -51,8 +51,7 @@ public final class GrafeasV1beta1DiscoveryDetailsResponse {
         public Builder discovered(DiscoveredResponse discovered) {
             this.discovered = Objects.requireNonNull(discovered);
             return this;
-        }
-        public GrafeasV1beta1DiscoveryDetailsResponse build() {
+        }        public GrafeasV1beta1DiscoveryDetailsResponse build() {
             return new GrafeasV1beta1DiscoveryDetailsResponse(discovered);
         }
     }

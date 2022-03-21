@@ -103,22 +103,21 @@ public final class GetSharedflowResult {
             this.latestRevisionId = Objects.requireNonNull(latestRevisionId);
             return this;
         }
-
         public Builder metaData(GoogleCloudApigeeV1EntityMetadataResponse metaData) {
             this.metaData = Objects.requireNonNull(metaData);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder revision(List<String> revision) {
             this.revision = Objects.requireNonNull(revision);
             return this;
         }
-        public GetSharedflowResult build() {
+        public Builder revision(String... revision) {
+            return revision(List.of(revision));
+        }        public GetSharedflowResult build() {
             return new GetSharedflowResult(latestRevisionId, metaData, name, revision);
         }
     }

@@ -139,62 +139,50 @@ public final class ReceiptRuleBounceActionArgs extends io.pulumi.resources.Resou
             this.message = Objects.requireNonNull(message);
             return this;
         }
-
         public Builder message(String message) {
             this.message = Output.of(Objects.requireNonNull(message));
             return this;
         }
-
         public Builder position(Output<Integer> position) {
             this.position = Objects.requireNonNull(position);
             return this;
         }
-
         public Builder position(Integer position) {
             this.position = Output.of(Objects.requireNonNull(position));
             return this;
         }
-
         public Builder sender(Output<String> sender) {
             this.sender = Objects.requireNonNull(sender);
             return this;
         }
-
         public Builder sender(String sender) {
             this.sender = Output.of(Objects.requireNonNull(sender));
             return this;
         }
-
         public Builder smtpReplyCode(Output<String> smtpReplyCode) {
             this.smtpReplyCode = Objects.requireNonNull(smtpReplyCode);
             return this;
         }
-
         public Builder smtpReplyCode(String smtpReplyCode) {
             this.smtpReplyCode = Output.of(Objects.requireNonNull(smtpReplyCode));
             return this;
         }
-
         public Builder statusCode(@Nullable Output<String> statusCode) {
             this.statusCode = statusCode;
             return this;
         }
-
         public Builder statusCode(@Nullable String statusCode) {
             this.statusCode = Output.ofNullable(statusCode);
             return this;
         }
-
         public Builder topicArn(@Nullable Output<String> topicArn) {
             this.topicArn = topicArn;
             return this;
         }
-
         public Builder topicArn(@Nullable String topicArn) {
             this.topicArn = Output.ofNullable(topicArn);
             return this;
-        }
-        public ReceiptRuleBounceActionArgs build() {
+        }        public ReceiptRuleBounceActionArgs build() {
             return new ReceiptRuleBounceActionArgs(message, position, sender, smtpReplyCode, statusCode, topicArn);
         }
     }

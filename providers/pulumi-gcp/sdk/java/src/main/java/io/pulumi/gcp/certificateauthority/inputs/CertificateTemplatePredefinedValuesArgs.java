@@ -127,52 +127,51 @@ public final class CertificateTemplatePredefinedValuesArgs extends io.pulumi.res
             this.additionalExtensions = additionalExtensions;
             return this;
         }
-
         public Builder additionalExtensions(@Nullable List<CertificateTemplatePredefinedValuesAdditionalExtensionArgs> additionalExtensions) {
             this.additionalExtensions = Output.ofNullable(additionalExtensions);
             return this;
         }
-
+        public Builder additionalExtensions(CertificateTemplatePredefinedValuesAdditionalExtensionArgs... additionalExtensions) {
+            return additionalExtensions(List.of(additionalExtensions));
+        }
         public Builder aiaOcspServers(@Nullable Output<List<String>> aiaOcspServers) {
             this.aiaOcspServers = aiaOcspServers;
             return this;
         }
-
         public Builder aiaOcspServers(@Nullable List<String> aiaOcspServers) {
             this.aiaOcspServers = Output.ofNullable(aiaOcspServers);
             return this;
         }
-
+        public Builder aiaOcspServers(String... aiaOcspServers) {
+            return aiaOcspServers(List.of(aiaOcspServers));
+        }
         public Builder caOptions(@Nullable Output<CertificateTemplatePredefinedValuesCaOptionsArgs> caOptions) {
             this.caOptions = caOptions;
             return this;
         }
-
         public Builder caOptions(@Nullable CertificateTemplatePredefinedValuesCaOptionsArgs caOptions) {
             this.caOptions = Output.ofNullable(caOptions);
             return this;
         }
-
         public Builder keyUsage(@Nullable Output<CertificateTemplatePredefinedValuesKeyUsageArgs> keyUsage) {
             this.keyUsage = keyUsage;
             return this;
         }
-
         public Builder keyUsage(@Nullable CertificateTemplatePredefinedValuesKeyUsageArgs keyUsage) {
             this.keyUsage = Output.ofNullable(keyUsage);
             return this;
         }
-
         public Builder policyIds(@Nullable Output<List<CertificateTemplatePredefinedValuesPolicyIdArgs>> policyIds) {
             this.policyIds = policyIds;
             return this;
         }
-
         public Builder policyIds(@Nullable List<CertificateTemplatePredefinedValuesPolicyIdArgs> policyIds) {
             this.policyIds = Output.ofNullable(policyIds);
             return this;
         }
-        public CertificateTemplatePredefinedValuesArgs build() {
+        public Builder policyIds(CertificateTemplatePredefinedValuesPolicyIdArgs... policyIds) {
+            return policyIds(List.of(policyIds));
+        }        public CertificateTemplatePredefinedValuesArgs build() {
             return new CertificateTemplatePredefinedValuesArgs(additionalExtensions, aiaOcspServers, caOptions, keyUsage, policyIds);
         }
     }

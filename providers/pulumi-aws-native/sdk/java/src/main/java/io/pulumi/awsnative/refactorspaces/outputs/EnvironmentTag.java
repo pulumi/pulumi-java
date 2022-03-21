@@ -69,12 +69,10 @@ public final class EnvironmentTag {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public EnvironmentTag build() {
+        }        public EnvironmentTag build() {
             return new EnvironmentTag(key, value);
         }
     }

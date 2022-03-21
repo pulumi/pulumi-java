@@ -60,7 +60,9 @@ public final class V2AndroidKeyRestrictionsResponse extends io.pulumi.resources.
             this.allowedApplications = Objects.requireNonNull(allowedApplications);
             return this;
         }
-        public V2AndroidKeyRestrictionsResponse build() {
+        public Builder allowedApplications(V2AndroidApplicationResponse... allowedApplications) {
+            return allowedApplications(List.of(allowedApplications));
+        }        public V2AndroidKeyRestrictionsResponse build() {
             return new V2AndroidKeyRestrictionsResponse(allowedApplications);
         }
     }

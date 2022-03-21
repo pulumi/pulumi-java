@@ -86,17 +86,14 @@ public final class GoogleCloudMlV1__SchedulingResponse {
             this.maxRunningTime = Objects.requireNonNull(maxRunningTime);
             return this;
         }
-
         public Builder maxWaitTime(String maxWaitTime) {
             this.maxWaitTime = Objects.requireNonNull(maxWaitTime);
             return this;
         }
-
         public Builder priority(Integer priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
-        }
-        public GoogleCloudMlV1__SchedulingResponse build() {
+        }        public GoogleCloudMlV1__SchedulingResponse build() {
             return new GoogleCloudMlV1__SchedulingResponse(maxRunningTime, maxWaitTime, priority);
         }
     }

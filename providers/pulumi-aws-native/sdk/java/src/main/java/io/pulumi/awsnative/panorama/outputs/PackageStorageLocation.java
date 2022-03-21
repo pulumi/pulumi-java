@@ -79,27 +79,22 @@ public final class PackageStorageLocation {
             this.binaryPrefixLocation = binaryPrefixLocation;
             return this;
         }
-
         public Builder bucket(@Nullable String bucket) {
             this.bucket = bucket;
             return this;
         }
-
         public Builder generatedPrefixLocation(@Nullable String generatedPrefixLocation) {
             this.generatedPrefixLocation = generatedPrefixLocation;
             return this;
         }
-
         public Builder manifestPrefixLocation(@Nullable String manifestPrefixLocation) {
             this.manifestPrefixLocation = manifestPrefixLocation;
             return this;
         }
-
         public Builder repoPrefixLocation(@Nullable String repoPrefixLocation) {
             this.repoPrefixLocation = repoPrefixLocation;
             return this;
-        }
-        public PackageStorageLocation build() {
+        }        public PackageStorageLocation build() {
             return new PackageStorageLocation(binaryPrefixLocation, bucket, generatedPrefixLocation, manifestPrefixLocation, repoPrefixLocation);
         }
     }

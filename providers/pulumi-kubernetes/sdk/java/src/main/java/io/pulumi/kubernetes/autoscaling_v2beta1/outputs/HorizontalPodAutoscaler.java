@@ -122,27 +122,22 @@ public final class HorizontalPodAutoscaler {
             this.apiVersion = apiVersion;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder metadata(@Nullable ObjectMeta metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder spec(@Nullable HorizontalPodAutoscalerSpec spec) {
             this.spec = spec;
             return this;
         }
-
         public Builder status(@Nullable HorizontalPodAutoscalerStatus status) {
             this.status = status;
             return this;
-        }
-        public HorizontalPodAutoscaler build() {
+        }        public HorizontalPodAutoscaler build() {
             return new HorizontalPodAutoscaler(apiVersion, kind, metadata, spec, status);
         }
     }

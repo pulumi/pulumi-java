@@ -162,72 +162,61 @@ public final class VirtualMachineScaleSetOSProfileArgs extends io.pulumi.resourc
             this.adminPassword = adminPassword;
             return this;
         }
-
         public Builder adminPassword(@Nullable String adminPassword) {
             this.adminPassword = Output.ofNullable(adminPassword);
             return this;
         }
-
         public Builder adminUsername(@Nullable Output<String> adminUsername) {
             this.adminUsername = adminUsername;
             return this;
         }
-
         public Builder adminUsername(@Nullable String adminUsername) {
             this.adminUsername = Output.ofNullable(adminUsername);
             return this;
         }
-
         public Builder computerNamePrefix(@Nullable Output<String> computerNamePrefix) {
             this.computerNamePrefix = computerNamePrefix;
             return this;
         }
-
         public Builder computerNamePrefix(@Nullable String computerNamePrefix) {
             this.computerNamePrefix = Output.ofNullable(computerNamePrefix);
             return this;
         }
-
         public Builder customData(@Nullable Output<String> customData) {
             this.customData = customData;
             return this;
         }
-
         public Builder customData(@Nullable String customData) {
             this.customData = Output.ofNullable(customData);
             return this;
         }
-
         public Builder linuxConfiguration(@Nullable Output<LinuxConfigurationArgs> linuxConfiguration) {
             this.linuxConfiguration = linuxConfiguration;
             return this;
         }
-
         public Builder linuxConfiguration(@Nullable LinuxConfigurationArgs linuxConfiguration) {
             this.linuxConfiguration = Output.ofNullable(linuxConfiguration);
             return this;
         }
-
         public Builder secrets(@Nullable Output<List<VaultSecretGroupArgs>> secrets) {
             this.secrets = secrets;
             return this;
         }
-
         public Builder secrets(@Nullable List<VaultSecretGroupArgs> secrets) {
             this.secrets = Output.ofNullable(secrets);
             return this;
         }
-
+        public Builder secrets(VaultSecretGroupArgs... secrets) {
+            return secrets(List.of(secrets));
+        }
         public Builder windowsConfiguration(@Nullable Output<WindowsConfigurationArgs> windowsConfiguration) {
             this.windowsConfiguration = windowsConfiguration;
             return this;
         }
-
         public Builder windowsConfiguration(@Nullable WindowsConfigurationArgs windowsConfiguration) {
             this.windowsConfiguration = Output.ofNullable(windowsConfiguration);
             return this;
-        }
-        public VirtualMachineScaleSetOSProfileArgs build() {
+        }        public VirtualMachineScaleSetOSProfileArgs build() {
             return new VirtualMachineScaleSetOSProfileArgs(adminPassword, adminUsername, computerNamePrefix, customData, linuxConfiguration, secrets, windowsConfiguration);
         }
     }

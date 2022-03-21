@@ -91,17 +91,14 @@ public final class MetricDescriptorLabel {
             this.description = description;
             return this;
         }
-
         public Builder key(String key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder valueType(@Nullable String valueType) {
             this.valueType = valueType;
             return this;
-        }
-        public MetricDescriptorLabel build() {
+        }        public MetricDescriptorLabel build() {
             return new MetricDescriptorLabel(description, key, valueType);
         }
     }

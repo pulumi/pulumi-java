@@ -77,12 +77,10 @@ public final class DeblockResponse extends io.pulumi.resources.InvokeArgs {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public Builder strength(Double strength) {
             this.strength = Objects.requireNonNull(strength);
             return this;
-        }
-        public DeblockResponse build() {
+        }        public DeblockResponse build() {
             return new DeblockResponse(enabled, strength);
         }
     }

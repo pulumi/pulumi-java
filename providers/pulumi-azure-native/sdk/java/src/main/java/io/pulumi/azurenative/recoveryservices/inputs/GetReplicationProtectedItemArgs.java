@@ -120,27 +120,22 @@ public final class GetReplicationProtectedItemArgs extends io.pulumi.resources.I
             this.fabricName = Objects.requireNonNull(fabricName);
             return this;
         }
-
         public Builder protectionContainerName(String protectionContainerName) {
             this.protectionContainerName = Objects.requireNonNull(protectionContainerName);
             return this;
         }
-
         public Builder replicatedProtectedItemName(String replicatedProtectedItemName) {
             this.replicatedProtectedItemName = Objects.requireNonNull(replicatedProtectedItemName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceName(String resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
-        }
-        public GetReplicationProtectedItemArgs build() {
+        }        public GetReplicationProtectedItemArgs build() {
             return new GetReplicationProtectedItemArgs(fabricName, protectionContainerName, replicatedProtectedItemName, resourceGroupName, resourceName);
         }
     }

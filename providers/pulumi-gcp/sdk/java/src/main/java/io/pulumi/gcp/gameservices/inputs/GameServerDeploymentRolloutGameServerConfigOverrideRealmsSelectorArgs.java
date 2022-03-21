@@ -58,12 +58,13 @@ public final class GameServerDeploymentRolloutGameServerConfigOverrideRealmsSele
             this.realms = realms;
             return this;
         }
-
         public Builder realms(@Nullable List<String> realms) {
             this.realms = Output.ofNullable(realms);
             return this;
         }
-        public GameServerDeploymentRolloutGameServerConfigOverrideRealmsSelectorArgs build() {
+        public Builder realms(String... realms) {
+            return realms(List.of(realms));
+        }        public GameServerDeploymentRolloutGameServerConfigOverrideRealmsSelectorArgs build() {
             return new GameServerDeploymentRolloutGameServerConfigOverrideRealmsSelectorArgs(realms);
         }
     }

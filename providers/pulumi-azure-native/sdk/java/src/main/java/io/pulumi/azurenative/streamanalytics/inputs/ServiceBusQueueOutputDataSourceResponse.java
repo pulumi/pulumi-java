@@ -144,32 +144,29 @@ public final class ServiceBusQueueOutputDataSourceResponse extends io.pulumi.res
             this.propertyColumns = propertyColumns;
             return this;
         }
-
+        public Builder propertyColumns(String... propertyColumns) {
+            return propertyColumns(List.of(propertyColumns));
+        }
         public Builder queueName(@Nullable String queueName) {
             this.queueName = queueName;
             return this;
         }
-
         public Builder serviceBusNamespace(@Nullable String serviceBusNamespace) {
             this.serviceBusNamespace = serviceBusNamespace;
             return this;
         }
-
         public Builder sharedAccessPolicyKey(@Nullable String sharedAccessPolicyKey) {
             this.sharedAccessPolicyKey = sharedAccessPolicyKey;
             return this;
         }
-
         public Builder sharedAccessPolicyName(@Nullable String sharedAccessPolicyName) {
             this.sharedAccessPolicyName = sharedAccessPolicyName;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public ServiceBusQueueOutputDataSourceResponse build() {
+        }        public ServiceBusQueueOutputDataSourceResponse build() {
             return new ServiceBusQueueOutputDataSourceResponse(propertyColumns, queueName, serviceBusNamespace, sharedAccessPolicyKey, sharedAccessPolicyName, type);
         }
     }

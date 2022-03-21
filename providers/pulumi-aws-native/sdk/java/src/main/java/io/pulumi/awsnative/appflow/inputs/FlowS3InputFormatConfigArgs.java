@@ -53,12 +53,10 @@ public final class FlowS3InputFormatConfigArgs extends io.pulumi.resources.Resou
             this.s3InputFileType = s3InputFileType;
             return this;
         }
-
         public Builder s3InputFileType(@Nullable FlowS3InputFormatConfigS3InputFileType s3InputFileType) {
             this.s3InputFileType = Output.ofNullable(s3InputFileType);
             return this;
-        }
-        public FlowS3InputFormatConfigArgs build() {
+        }        public FlowS3InputFormatConfigArgs build() {
             return new FlowS3InputFormatConfigArgs(s3InputFileType);
         }
     }

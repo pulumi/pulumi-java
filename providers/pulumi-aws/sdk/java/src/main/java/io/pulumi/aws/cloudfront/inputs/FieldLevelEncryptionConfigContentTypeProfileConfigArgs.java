@@ -74,22 +74,18 @@ public final class FieldLevelEncryptionConfigContentTypeProfileConfigArgs extend
             this.contentTypeProfiles = Objects.requireNonNull(contentTypeProfiles);
             return this;
         }
-
         public Builder contentTypeProfiles(FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesArgs contentTypeProfiles) {
             this.contentTypeProfiles = Output.of(Objects.requireNonNull(contentTypeProfiles));
             return this;
         }
-
         public Builder forwardWhenContentTypeIsUnknown(Output<Boolean> forwardWhenContentTypeIsUnknown) {
             this.forwardWhenContentTypeIsUnknown = Objects.requireNonNull(forwardWhenContentTypeIsUnknown);
             return this;
         }
-
         public Builder forwardWhenContentTypeIsUnknown(Boolean forwardWhenContentTypeIsUnknown) {
             this.forwardWhenContentTypeIsUnknown = Output.of(Objects.requireNonNull(forwardWhenContentTypeIsUnknown));
             return this;
-        }
-        public FieldLevelEncryptionConfigContentTypeProfileConfigArgs build() {
+        }        public FieldLevelEncryptionConfigContentTypeProfileConfigArgs build() {
             return new FieldLevelEncryptionConfigContentTypeProfileConfigArgs(contentTypeProfiles, forwardWhenContentTypeIsUnknown);
         }
     }

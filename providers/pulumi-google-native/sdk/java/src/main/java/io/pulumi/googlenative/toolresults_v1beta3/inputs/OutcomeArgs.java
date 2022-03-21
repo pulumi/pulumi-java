@@ -130,52 +130,42 @@ public final class OutcomeArgs extends io.pulumi.resources.ResourceArgs {
             this.failureDetail = failureDetail;
             return this;
         }
-
         public Builder failureDetail(@Nullable FailureDetailArgs failureDetail) {
             this.failureDetail = Output.ofNullable(failureDetail);
             return this;
         }
-
         public Builder inconclusiveDetail(@Nullable Output<InconclusiveDetailArgs> inconclusiveDetail) {
             this.inconclusiveDetail = inconclusiveDetail;
             return this;
         }
-
         public Builder inconclusiveDetail(@Nullable InconclusiveDetailArgs inconclusiveDetail) {
             this.inconclusiveDetail = Output.ofNullable(inconclusiveDetail);
             return this;
         }
-
         public Builder skippedDetail(@Nullable Output<SkippedDetailArgs> skippedDetail) {
             this.skippedDetail = skippedDetail;
             return this;
         }
-
         public Builder skippedDetail(@Nullable SkippedDetailArgs skippedDetail) {
             this.skippedDetail = Output.ofNullable(skippedDetail);
             return this;
         }
-
         public Builder successDetail(@Nullable Output<SuccessDetailArgs> successDetail) {
             this.successDetail = successDetail;
             return this;
         }
-
         public Builder successDetail(@Nullable SuccessDetailArgs successDetail) {
             this.successDetail = Output.ofNullable(successDetail);
             return this;
         }
-
         public Builder summary(@Nullable Output<OutcomeSummary> summary) {
             this.summary = summary;
             return this;
         }
-
         public Builder summary(@Nullable OutcomeSummary summary) {
             this.summary = Output.ofNullable(summary);
             return this;
-        }
-        public OutcomeArgs build() {
+        }        public OutcomeArgs build() {
             return new OutcomeArgs(failureDetail, inconclusiveDetail, skippedDetail, successDetail, summary);
         }
     }

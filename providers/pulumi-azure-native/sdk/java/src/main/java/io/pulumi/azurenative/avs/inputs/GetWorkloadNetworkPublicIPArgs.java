@@ -88,17 +88,14 @@ public final class GetWorkloadNetworkPublicIPArgs extends io.pulumi.resources.In
             this.privateCloudName = Objects.requireNonNull(privateCloudName);
             return this;
         }
-
         public Builder publicIPId(String publicIPId) {
             this.publicIPId = Objects.requireNonNull(publicIPId);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetWorkloadNetworkPublicIPArgs build() {
+        }        public GetWorkloadNetworkPublicIPArgs build() {
             return new GetWorkloadNetworkPublicIPArgs(privateCloudName, publicIPId, resourceGroupName);
         }
     }

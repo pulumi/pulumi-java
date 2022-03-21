@@ -60,8 +60,7 @@ public final class ConsoleProfileResponse extends io.pulumi.resources.InvokeArgs
         public Builder url(@Nullable String url) {
             this.url = url;
             return this;
-        }
-        public ConsoleProfileResponse build() {
+        }        public ConsoleProfileResponse build() {
             return new ConsoleProfileResponse(url);
         }
     }

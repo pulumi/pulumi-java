@@ -45,7 +45,9 @@ public final class GetOriginRequestPolicyCookiesConfigCookie {
             this.items = Objects.requireNonNull(items);
             return this;
         }
-        public GetOriginRequestPolicyCookiesConfigCookie build() {
+        public Builder items(String... items) {
+            return items(List.of(items));
+        }        public GetOriginRequestPolicyCookiesConfigCookie build() {
             return new GetOriginRequestPolicyCookiesConfigCookie(items);
         }
     }

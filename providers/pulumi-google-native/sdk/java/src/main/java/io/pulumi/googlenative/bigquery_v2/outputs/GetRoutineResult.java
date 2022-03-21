@@ -267,72 +267,64 @@ public final class GetRoutineResult {
             this.arguments = Objects.requireNonNull(arguments);
             return this;
         }
-
+        public Builder arguments(ArgumentResponse... arguments) {
+            return arguments(List.of(arguments));
+        }
         public Builder creationTime(String creationTime) {
             this.creationTime = Objects.requireNonNull(creationTime);
             return this;
         }
-
         public Builder definitionBody(String definitionBody) {
             this.definitionBody = Objects.requireNonNull(definitionBody);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder determinismLevel(String determinismLevel) {
             this.determinismLevel = Objects.requireNonNull(determinismLevel);
             return this;
         }
-
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder importedLibraries(List<String> importedLibraries) {
             this.importedLibraries = Objects.requireNonNull(importedLibraries);
             return this;
         }
-
+        public Builder importedLibraries(String... importedLibraries) {
+            return importedLibraries(List.of(importedLibraries));
+        }
         public Builder language(String language) {
             this.language = Objects.requireNonNull(language);
             return this;
         }
-
         public Builder lastModifiedTime(String lastModifiedTime) {
             this.lastModifiedTime = Objects.requireNonNull(lastModifiedTime);
             return this;
         }
-
         public Builder returnTableType(StandardSqlTableTypeResponse returnTableType) {
             this.returnTableType = Objects.requireNonNull(returnTableType);
             return this;
         }
-
         public Builder returnType(StandardSqlDataTypeResponse returnType) {
             this.returnType = Objects.requireNonNull(returnType);
             return this;
         }
-
         public Builder routineReference(RoutineReferenceResponse routineReference) {
             this.routineReference = Objects.requireNonNull(routineReference);
             return this;
         }
-
         public Builder routineType(String routineType) {
             this.routineType = Objects.requireNonNull(routineType);
             return this;
         }
-
         public Builder strictMode(Boolean strictMode) {
             this.strictMode = Objects.requireNonNull(strictMode);
             return this;
-        }
-        public GetRoutineResult build() {
+        }        public GetRoutineResult build() {
             return new GetRoutineResult(arguments, creationTime, definitionBody, description, determinismLevel, etag, importedLibraries, language, lastModifiedTime, returnTableType, returnType, routineReference, routineType, strictMode);
         }
     }

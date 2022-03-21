@@ -78,22 +78,18 @@ public final class MachineReferenceWithHintsArgs extends io.pulumi.resources.Res
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Output.of(Objects.requireNonNull(id));
             return this;
         }
-
         public Builder kind(Output<String> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
-        }
-        public MachineReferenceWithHintsArgs build() {
+        }        public MachineReferenceWithHintsArgs build() {
             return new MachineReferenceWithHintsArgs(id, kind);
         }
     }

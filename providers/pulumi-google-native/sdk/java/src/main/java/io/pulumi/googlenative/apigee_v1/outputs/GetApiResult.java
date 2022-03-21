@@ -120,27 +120,25 @@ public final class GetApiResult {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder latestRevisionId(String latestRevisionId) {
             this.latestRevisionId = Objects.requireNonNull(latestRevisionId);
             return this;
         }
-
         public Builder metaData(GoogleCloudApigeeV1EntityMetadataResponse metaData) {
             this.metaData = Objects.requireNonNull(metaData);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder revision(List<String> revision) {
             this.revision = Objects.requireNonNull(revision);
             return this;
         }
-        public GetApiResult build() {
+        public Builder revision(String... revision) {
+            return revision(List.of(revision));
+        }        public GetApiResult build() {
             return new GetApiResult(labels, latestRevisionId, metaData, name, revision);
         }
     }

@@ -106,42 +106,34 @@ public final class PublicKeyArgs extends io.pulumi.resources.ResourceArgs {
             this.comment = comment;
             return this;
         }
-
         public Builder comment(@Nullable String comment) {
             this.comment = Output.ofNullable(comment);
             return this;
         }
-
         public Builder encodedKey(Output<String> encodedKey) {
             this.encodedKey = Objects.requireNonNull(encodedKey);
             return this;
         }
-
         public Builder encodedKey(String encodedKey) {
             this.encodedKey = Output.of(Objects.requireNonNull(encodedKey));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder namePrefix(@Nullable Output<String> namePrefix) {
             this.namePrefix = namePrefix;
             return this;
         }
-
         public Builder namePrefix(@Nullable String namePrefix) {
             this.namePrefix = Output.ofNullable(namePrefix);
             return this;
-        }
-        public PublicKeyArgs build() {
+        }        public PublicKeyArgs build() {
             return new PublicKeyArgs(comment, encodedKey, name, namePrefix);
         }
     }

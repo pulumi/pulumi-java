@@ -77,22 +77,18 @@ public final class ServiceTemplateSpecVolumeGetArgs extends io.pulumi.resources.
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder secret(Output<ServiceTemplateSpecVolumeSecretGetArgs> secret) {
             this.secret = Objects.requireNonNull(secret);
             return this;
         }
-
         public Builder secret(ServiceTemplateSpecVolumeSecretGetArgs secret) {
             this.secret = Output.of(Objects.requireNonNull(secret));
             return this;
-        }
-        public ServiceTemplateSpecVolumeGetArgs build() {
+        }        public ServiceTemplateSpecVolumeGetArgs build() {
             return new ServiceTemplateSpecVolumeGetArgs(name, secret);
         }
     }

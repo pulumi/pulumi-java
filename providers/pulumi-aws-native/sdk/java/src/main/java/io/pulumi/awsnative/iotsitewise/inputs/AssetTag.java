@@ -64,12 +64,10 @@ public final class AssetTag extends io.pulumi.resources.InvokeArgs {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public AssetTag build() {
+        }        public AssetTag build() {
             return new AssetTag(key, value);
         }
     }

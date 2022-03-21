@@ -69,12 +69,10 @@ public final class FailureInfoResponse {
             this.detail = Objects.requireNonNull(detail);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public FailureInfoResponse build() {
+        }        public FailureInfoResponse build() {
             return new FailureInfoResponse(detail, type);
         }
     }

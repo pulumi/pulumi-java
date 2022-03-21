@@ -62,12 +62,10 @@ public final class SensitiveTextAnnotationArgs extends io.pulumi.resources.Resou
             this.details = details;
             return this;
         }
-
         public Builder details(@Nullable Map<String,String> details) {
             this.details = Output.ofNullable(details);
             return this;
-        }
-        public SensitiveTextAnnotationArgs build() {
+        }        public SensitiveTextAnnotationArgs build() {
             return new SensitiveTextAnnotationArgs(details);
         }
     }

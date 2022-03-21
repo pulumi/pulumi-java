@@ -77,22 +77,18 @@ public final class ServicePerimetersServicePerimeterStatusIngressPolicyIngressTo
             this.method = method;
             return this;
         }
-
         public Builder method(@Nullable String method) {
             this.method = Output.ofNullable(method);
             return this;
         }
-
         public Builder permission(@Nullable Output<String> permission) {
             this.permission = permission;
             return this;
         }
-
         public Builder permission(@Nullable String permission) {
             this.permission = Output.ofNullable(permission);
             return this;
-        }
-        public ServicePerimetersServicePerimeterStatusIngressPolicyIngressToOperationMethodSelectorGetArgs build() {
+        }        public ServicePerimetersServicePerimeterStatusIngressPolicyIngressToOperationMethodSelectorGetArgs build() {
             return new ServicePerimetersServicePerimeterStatusIngressPolicyIngressToOperationMethodSelectorGetArgs(method, permission);
         }
     }

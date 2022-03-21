@@ -62,12 +62,13 @@ public final class SharedAccessAuthorizationRulePropertiesArgs extends io.pulumi
             this.rights = rights;
             return this;
         }
-
         public Builder rights(@Nullable List<AccessRights> rights) {
             this.rights = Output.ofNullable(rights);
             return this;
         }
-        public SharedAccessAuthorizationRulePropertiesArgs build() {
+        public Builder rights(AccessRights... rights) {
+            return rights(List.of(rights));
+        }        public SharedAccessAuthorizationRulePropertiesArgs build() {
             return new SharedAccessAuthorizationRulePropertiesArgs(rights);
         }
     }

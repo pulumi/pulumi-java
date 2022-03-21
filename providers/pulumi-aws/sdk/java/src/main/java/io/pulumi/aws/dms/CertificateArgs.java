@@ -107,42 +107,34 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
             this.certificateId = Objects.requireNonNull(certificateId);
             return this;
         }
-
         public Builder certificateId(String certificateId) {
             this.certificateId = Output.of(Objects.requireNonNull(certificateId));
             return this;
         }
-
         public Builder certificatePem(@Nullable Output<String> certificatePem) {
             this.certificatePem = certificatePem;
             return this;
         }
-
         public Builder certificatePem(@Nullable String certificatePem) {
             this.certificatePem = Output.ofNullable(certificatePem);
             return this;
         }
-
         public Builder certificateWallet(@Nullable Output<String> certificateWallet) {
             this.certificateWallet = certificateWallet;
             return this;
         }
-
         public Builder certificateWallet(@Nullable String certificateWallet) {
             this.certificateWallet = Output.ofNullable(certificateWallet);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public CertificateArgs build() {
+        }        public CertificateArgs build() {
             return new CertificateArgs(certificateId, certificatePem, certificateWallet, tags);
         }
     }

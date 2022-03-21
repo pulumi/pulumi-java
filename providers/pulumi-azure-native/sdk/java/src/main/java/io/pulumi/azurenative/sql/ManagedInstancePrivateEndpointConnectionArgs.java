@@ -120,52 +120,42 @@ public final class ManagedInstancePrivateEndpointConnectionArgs extends io.pulum
             this.managedInstanceName = Objects.requireNonNull(managedInstanceName);
             return this;
         }
-
         public Builder managedInstanceName(String managedInstanceName) {
             this.managedInstanceName = Output.of(Objects.requireNonNull(managedInstanceName));
             return this;
         }
-
         public Builder privateEndpoint(@Nullable Output<ManagedInstancePrivateEndpointPropertyArgs> privateEndpoint) {
             this.privateEndpoint = privateEndpoint;
             return this;
         }
-
         public Builder privateEndpoint(@Nullable ManagedInstancePrivateEndpointPropertyArgs privateEndpoint) {
             this.privateEndpoint = Output.ofNullable(privateEndpoint);
             return this;
         }
-
         public Builder privateEndpointConnectionName(@Nullable Output<String> privateEndpointConnectionName) {
             this.privateEndpointConnectionName = privateEndpointConnectionName;
             return this;
         }
-
         public Builder privateEndpointConnectionName(@Nullable String privateEndpointConnectionName) {
             this.privateEndpointConnectionName = Output.ofNullable(privateEndpointConnectionName);
             return this;
         }
-
         public Builder privateLinkServiceConnectionState(@Nullable Output<ManagedInstancePrivateLinkServiceConnectionStatePropertyArgs> privateLinkServiceConnectionState) {
             this.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
             return this;
         }
-
         public Builder privateLinkServiceConnectionState(@Nullable ManagedInstancePrivateLinkServiceConnectionStatePropertyArgs privateLinkServiceConnectionState) {
             this.privateLinkServiceConnectionState = Output.ofNullable(privateLinkServiceConnectionState);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
-        }
-        public ManagedInstancePrivateEndpointConnectionArgs build() {
+        }        public ManagedInstancePrivateEndpointConnectionArgs build() {
             return new ManagedInstancePrivateEndpointConnectionArgs(managedInstanceName, privateEndpoint, privateEndpointConnectionName, privateLinkServiceConnectionState, resourceGroupName);
         }
     }

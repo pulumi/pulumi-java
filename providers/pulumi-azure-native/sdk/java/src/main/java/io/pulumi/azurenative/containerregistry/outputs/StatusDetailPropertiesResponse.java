@@ -117,27 +117,22 @@ public final class StatusDetailPropertiesResponse {
             this.code = Objects.requireNonNull(code);
             return this;
         }
-
         public Builder correlationId(String correlationId) {
             this.correlationId = Objects.requireNonNull(correlationId);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder timestamp(String timestamp) {
             this.timestamp = Objects.requireNonNull(timestamp);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public StatusDetailPropertiesResponse build() {
+        }        public StatusDetailPropertiesResponse build() {
             return new StatusDetailPropertiesResponse(code, correlationId, description, timestamp, type);
         }
     }

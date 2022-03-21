@@ -224,112 +224,102 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder groupSet(@Nullable Output<List<String>> groupSet) {
             this.groupSet = groupSet;
             return this;
         }
-
         public Builder groupSet(@Nullable List<String> groupSet) {
             this.groupSet = Output.ofNullable(groupSet);
             return this;
         }
-
+        public Builder groupSet(String... groupSet) {
+            return groupSet(List.of(groupSet));
+        }
         public Builder interfaceType(@Nullable Output<String> interfaceType) {
             this.interfaceType = interfaceType;
             return this;
         }
-
         public Builder interfaceType(@Nullable String interfaceType) {
             this.interfaceType = Output.ofNullable(interfaceType);
             return this;
         }
-
         public Builder ipv6AddressCount(@Nullable Output<Integer> ipv6AddressCount) {
             this.ipv6AddressCount = ipv6AddressCount;
             return this;
         }
-
         public Builder ipv6AddressCount(@Nullable Integer ipv6AddressCount) {
             this.ipv6AddressCount = Output.ofNullable(ipv6AddressCount);
             return this;
         }
-
         public Builder ipv6Addresses(@Nullable Output<List<NetworkInterfaceInstanceIpv6AddressArgs>> ipv6Addresses) {
             this.ipv6Addresses = ipv6Addresses;
             return this;
         }
-
         public Builder ipv6Addresses(@Nullable List<NetworkInterfaceInstanceIpv6AddressArgs> ipv6Addresses) {
             this.ipv6Addresses = Output.ofNullable(ipv6Addresses);
             return this;
         }
-
+        public Builder ipv6Addresses(NetworkInterfaceInstanceIpv6AddressArgs... ipv6Addresses) {
+            return ipv6Addresses(List.of(ipv6Addresses));
+        }
         public Builder privateIpAddress(@Nullable Output<String> privateIpAddress) {
             this.privateIpAddress = privateIpAddress;
             return this;
         }
-
         public Builder privateIpAddress(@Nullable String privateIpAddress) {
             this.privateIpAddress = Output.ofNullable(privateIpAddress);
             return this;
         }
-
         public Builder privateIpAddresses(@Nullable Output<List<NetworkInterfacePrivateIpAddressSpecificationArgs>> privateIpAddresses) {
             this.privateIpAddresses = privateIpAddresses;
             return this;
         }
-
         public Builder privateIpAddresses(@Nullable List<NetworkInterfacePrivateIpAddressSpecificationArgs> privateIpAddresses) {
             this.privateIpAddresses = Output.ofNullable(privateIpAddresses);
             return this;
         }
-
+        public Builder privateIpAddresses(NetworkInterfacePrivateIpAddressSpecificationArgs... privateIpAddresses) {
+            return privateIpAddresses(List.of(privateIpAddresses));
+        }
         public Builder secondaryPrivateIpAddressCount(@Nullable Output<Integer> secondaryPrivateIpAddressCount) {
             this.secondaryPrivateIpAddressCount = secondaryPrivateIpAddressCount;
             return this;
         }
-
         public Builder secondaryPrivateIpAddressCount(@Nullable Integer secondaryPrivateIpAddressCount) {
             this.secondaryPrivateIpAddressCount = Output.ofNullable(secondaryPrivateIpAddressCount);
             return this;
         }
-
         public Builder sourceDestCheck(@Nullable Output<Boolean> sourceDestCheck) {
             this.sourceDestCheck = sourceDestCheck;
             return this;
         }
-
         public Builder sourceDestCheck(@Nullable Boolean sourceDestCheck) {
             this.sourceDestCheck = Output.ofNullable(sourceDestCheck);
             return this;
         }
-
         public Builder subnetId(Output<String> subnetId) {
             this.subnetId = Objects.requireNonNull(subnetId);
             return this;
         }
-
         public Builder subnetId(String subnetId) {
             this.subnetId = Output.of(Objects.requireNonNull(subnetId));
             return this;
         }
-
         public Builder tags(@Nullable Output<List<NetworkInterfaceTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<NetworkInterfaceTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public NetworkInterfaceArgs build() {
+        public Builder tags(NetworkInterfaceTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public NetworkInterfaceArgs build() {
             return new NetworkInterfaceArgs(description, groupSet, interfaceType, ipv6AddressCount, ipv6Addresses, privateIpAddress, privateIpAddresses, secondaryPrivateIpAddressCount, sourceDestCheck, subnetId, tags);
         }
     }

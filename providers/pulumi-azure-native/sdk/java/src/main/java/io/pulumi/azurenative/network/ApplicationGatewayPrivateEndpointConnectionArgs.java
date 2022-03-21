@@ -139,62 +139,50 @@ public final class ApplicationGatewayPrivateEndpointConnectionArgs extends io.pu
             this.applicationGatewayName = Objects.requireNonNull(applicationGatewayName);
             return this;
         }
-
         public Builder applicationGatewayName(String applicationGatewayName) {
             this.applicationGatewayName = Output.of(Objects.requireNonNull(applicationGatewayName));
             return this;
         }
-
         public Builder connectionName(@Nullable Output<String> connectionName) {
             this.connectionName = connectionName;
             return this;
         }
-
         public Builder connectionName(@Nullable String connectionName) {
             this.connectionName = Output.ofNullable(connectionName);
             return this;
         }
-
         public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder privateLinkServiceConnectionState(@Nullable Output<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState) {
             this.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
             return this;
         }
-
         public Builder privateLinkServiceConnectionState(@Nullable PrivateLinkServiceConnectionStateArgs privateLinkServiceConnectionState) {
             this.privateLinkServiceConnectionState = Output.ofNullable(privateLinkServiceConnectionState);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
-        }
-        public ApplicationGatewayPrivateEndpointConnectionArgs build() {
+        }        public ApplicationGatewayPrivateEndpointConnectionArgs build() {
             return new ApplicationGatewayPrivateEndpointConnectionArgs(applicationGatewayName, connectionName, id, name, privateLinkServiceConnectionState, resourceGroupName);
         }
     }

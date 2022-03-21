@@ -75,22 +75,21 @@ public final class SpokeLinkedRouterApplianceInstancesGetArgs extends io.pulumi.
             this.instances = Objects.requireNonNull(instances);
             return this;
         }
-
         public Builder instances(List<SpokeLinkedRouterApplianceInstancesInstanceGetArgs> instances) {
             this.instances = Output.of(Objects.requireNonNull(instances));
             return this;
         }
-
+        public Builder instances(SpokeLinkedRouterApplianceInstancesInstanceGetArgs... instances) {
+            return instances(List.of(instances));
+        }
         public Builder siteToSiteDataTransfer(Output<Boolean> siteToSiteDataTransfer) {
             this.siteToSiteDataTransfer = Objects.requireNonNull(siteToSiteDataTransfer);
             return this;
         }
-
         public Builder siteToSiteDataTransfer(Boolean siteToSiteDataTransfer) {
             this.siteToSiteDataTransfer = Output.of(Objects.requireNonNull(siteToSiteDataTransfer));
             return this;
-        }
-        public SpokeLinkedRouterApplianceInstancesGetArgs build() {
+        }        public SpokeLinkedRouterApplianceInstancesGetArgs build() {
             return new SpokeLinkedRouterApplianceInstancesGetArgs(instances, siteToSiteDataTransfer);
         }
     }

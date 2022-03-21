@@ -77,22 +77,18 @@ public final class Hl7StoreIamPolicyArgs extends io.pulumi.resources.ResourceArg
             this.hl7V2StoreId = Objects.requireNonNull(hl7V2StoreId);
             return this;
         }
-
         public Builder hl7V2StoreId(String hl7V2StoreId) {
             this.hl7V2StoreId = Output.of(Objects.requireNonNull(hl7V2StoreId));
             return this;
         }
-
         public Builder policyData(Output<String> policyData) {
             this.policyData = Objects.requireNonNull(policyData);
             return this;
         }
-
         public Builder policyData(String policyData) {
             this.policyData = Output.of(Objects.requireNonNull(policyData));
             return this;
-        }
-        public Hl7StoreIamPolicyArgs build() {
+        }        public Hl7StoreIamPolicyArgs build() {
             return new Hl7StoreIamPolicyArgs(hl7V2StoreId, policyData);
         }
     }

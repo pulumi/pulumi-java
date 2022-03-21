@@ -127,27 +127,31 @@ public final class BasicSliResponse extends io.pulumi.resources.InvokeArgs {
             this.availability = Objects.requireNonNull(availability);
             return this;
         }
-
         public Builder latency(LatencyCriteriaResponse latency) {
             this.latency = Objects.requireNonNull(latency);
             return this;
         }
-
         public Builder location(List<String> location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
+        public Builder location(String... location) {
+            return location(List.of(location));
+        }
         public Builder method(List<String> method) {
             this.method = Objects.requireNonNull(method);
             return this;
         }
-
+        public Builder method(String... method) {
+            return method(List.of(method));
+        }
         public Builder version(List<String> version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-        public BasicSliResponse build() {
+        public Builder version(String... version) {
+            return version(List.of(version));
+        }        public BasicSliResponse build() {
             return new BasicSliResponse(availability, latency, location, method, version);
         }
     }

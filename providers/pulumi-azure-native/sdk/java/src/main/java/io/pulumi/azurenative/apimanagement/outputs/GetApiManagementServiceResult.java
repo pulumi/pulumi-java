@@ -577,167 +577,152 @@ public final class GetApiManagementServiceResult {
             this.additionalLocations = additionalLocations;
             return this;
         }
-
+        public Builder additionalLocations(AdditionalLocationResponse... additionalLocations) {
+            return additionalLocations(List.of(additionalLocations));
+        }
         public Builder apiVersionConstraint(@Nullable ApiVersionConstraintResponse apiVersionConstraint) {
             this.apiVersionConstraint = apiVersionConstraint;
             return this;
         }
-
         public Builder certificates(@Nullable List<CertificateConfigurationResponse> certificates) {
             this.certificates = certificates;
             return this;
         }
-
+        public Builder certificates(CertificateConfigurationResponse... certificates) {
+            return certificates(List.of(certificates));
+        }
         public Builder createdAtUtc(String createdAtUtc) {
             this.createdAtUtc = Objects.requireNonNull(createdAtUtc);
             return this;
         }
-
         public Builder customProperties(@Nullable Map<String,String> customProperties) {
             this.customProperties = customProperties;
             return this;
         }
-
         public Builder developerPortalUrl(String developerPortalUrl) {
             this.developerPortalUrl = Objects.requireNonNull(developerPortalUrl);
             return this;
         }
-
         public Builder disableGateway(@Nullable Boolean disableGateway) {
             this.disableGateway = disableGateway;
             return this;
         }
-
         public Builder enableClientCertificate(@Nullable Boolean enableClientCertificate) {
             this.enableClientCertificate = enableClientCertificate;
             return this;
         }
-
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder gatewayRegionalUrl(String gatewayRegionalUrl) {
             this.gatewayRegionalUrl = Objects.requireNonNull(gatewayRegionalUrl);
             return this;
         }
-
         public Builder gatewayUrl(String gatewayUrl) {
             this.gatewayUrl = Objects.requireNonNull(gatewayUrl);
             return this;
         }
-
         public Builder hostnameConfigurations(@Nullable List<HostnameConfigurationResponse> hostnameConfigurations) {
             this.hostnameConfigurations = hostnameConfigurations;
             return this;
         }
-
+        public Builder hostnameConfigurations(HostnameConfigurationResponse... hostnameConfigurations) {
+            return hostnameConfigurations(List.of(hostnameConfigurations));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder identity(@Nullable ApiManagementServiceIdentityResponse identity) {
             this.identity = identity;
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder managementApiUrl(String managementApiUrl) {
             this.managementApiUrl = Objects.requireNonNull(managementApiUrl);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder notificationSenderEmail(@Nullable String notificationSenderEmail) {
             this.notificationSenderEmail = notificationSenderEmail;
             return this;
         }
-
         public Builder portalUrl(String portalUrl) {
             this.portalUrl = Objects.requireNonNull(portalUrl);
             return this;
         }
-
         public Builder privateIPAddresses(List<String> privateIPAddresses) {
             this.privateIPAddresses = Objects.requireNonNull(privateIPAddresses);
             return this;
         }
-
+        public Builder privateIPAddresses(String... privateIPAddresses) {
+            return privateIPAddresses(List.of(privateIPAddresses));
+        }
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder publicIPAddresses(List<String> publicIPAddresses) {
             this.publicIPAddresses = Objects.requireNonNull(publicIPAddresses);
             return this;
         }
-
+        public Builder publicIPAddresses(String... publicIPAddresses) {
+            return publicIPAddresses(List.of(publicIPAddresses));
+        }
         public Builder publisherEmail(String publisherEmail) {
             this.publisherEmail = Objects.requireNonNull(publisherEmail);
             return this;
         }
-
         public Builder publisherName(String publisherName) {
             this.publisherName = Objects.requireNonNull(publisherName);
             return this;
         }
-
         public Builder restore(@Nullable Boolean restore) {
             this.restore = restore;
             return this;
         }
-
         public Builder scmUrl(String scmUrl) {
             this.scmUrl = Objects.requireNonNull(scmUrl);
             return this;
         }
-
         public Builder sku(ApiManagementServiceSkuPropertiesResponse sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder targetProvisioningState(String targetProvisioningState) {
             this.targetProvisioningState = Objects.requireNonNull(targetProvisioningState);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder virtualNetworkConfiguration(@Nullable VirtualNetworkConfigurationResponse virtualNetworkConfiguration) {
             this.virtualNetworkConfiguration = virtualNetworkConfiguration;
             return this;
         }
-
         public Builder virtualNetworkType(@Nullable String virtualNetworkType) {
             this.virtualNetworkType = virtualNetworkType;
             return this;
         }
-
         public Builder zones(@Nullable List<String> zones) {
             this.zones = zones;
             return this;
         }
-        public GetApiManagementServiceResult build() {
+        public Builder zones(String... zones) {
+            return zones(List.of(zones));
+        }        public GetApiManagementServiceResult build() {
             return new GetApiManagementServiceResult(additionalLocations, apiVersionConstraint, certificates, createdAtUtc, customProperties, developerPortalUrl, disableGateway, enableClientCertificate, etag, gatewayRegionalUrl, gatewayUrl, hostnameConfigurations, id, identity, location, managementApiUrl, name, notificationSenderEmail, portalUrl, privateIPAddresses, provisioningState, publicIPAddresses, publisherEmail, publisherName, restore, scmUrl, sku, tags, targetProvisioningState, type, virtualNetworkConfiguration, virtualNetworkType, zones);
         }
     }

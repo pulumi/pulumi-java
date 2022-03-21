@@ -157,37 +157,30 @@ public final class LivenessCheckResponse extends io.pulumi.resources.InvokeArgs 
             this.checkInterval = Objects.requireNonNull(checkInterval);
             return this;
         }
-
         public Builder failureThreshold(Integer failureThreshold) {
             this.failureThreshold = Objects.requireNonNull(failureThreshold);
             return this;
         }
-
         public Builder host(String host) {
             this.host = Objects.requireNonNull(host);
             return this;
         }
-
         public Builder initialDelay(String initialDelay) {
             this.initialDelay = Objects.requireNonNull(initialDelay);
             return this;
         }
-
         public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
-
         public Builder successThreshold(Integer successThreshold) {
             this.successThreshold = Objects.requireNonNull(successThreshold);
             return this;
         }
-
         public Builder timeout(String timeout) {
             this.timeout = Objects.requireNonNull(timeout);
             return this;
-        }
-        public LivenessCheckResponse build() {
+        }        public LivenessCheckResponse build() {
             return new LivenessCheckResponse(checkInterval, failureThreshold, host, initialDelay, path, successThreshold, timeout);
         }
     }

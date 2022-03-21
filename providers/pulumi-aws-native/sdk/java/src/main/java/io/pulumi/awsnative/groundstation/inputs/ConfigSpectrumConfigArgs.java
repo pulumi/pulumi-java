@@ -80,32 +80,26 @@ public final class ConfigSpectrumConfigArgs extends io.pulumi.resources.Resource
             this.bandwidth = bandwidth;
             return this;
         }
-
         public Builder bandwidth(@Nullable ConfigFrequencyBandwidthArgs bandwidth) {
             this.bandwidth = Output.ofNullable(bandwidth);
             return this;
         }
-
         public Builder centerFrequency(@Nullable Output<ConfigFrequencyArgs> centerFrequency) {
             this.centerFrequency = centerFrequency;
             return this;
         }
-
         public Builder centerFrequency(@Nullable ConfigFrequencyArgs centerFrequency) {
             this.centerFrequency = Output.ofNullable(centerFrequency);
             return this;
         }
-
         public Builder polarization(@Nullable Output<ConfigPolarization> polarization) {
             this.polarization = polarization;
             return this;
         }
-
         public Builder polarization(@Nullable ConfigPolarization polarization) {
             this.polarization = Output.ofNullable(polarization);
             return this;
-        }
-        public ConfigSpectrumConfigArgs build() {
+        }        public ConfigSpectrumConfigArgs build() {
             return new ConfigSpectrumConfigArgs(bandwidth, centerFrequency, polarization);
         }
     }

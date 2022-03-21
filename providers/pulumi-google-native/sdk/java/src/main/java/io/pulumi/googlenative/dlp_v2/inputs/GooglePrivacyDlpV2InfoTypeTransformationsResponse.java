@@ -60,7 +60,9 @@ public final class GooglePrivacyDlpV2InfoTypeTransformationsResponse extends io.
             this.transformations = Objects.requireNonNull(transformations);
             return this;
         }
-        public GooglePrivacyDlpV2InfoTypeTransformationsResponse build() {
+        public Builder transformations(GooglePrivacyDlpV2InfoTypeTransformationResponse... transformations) {
+            return transformations(List.of(transformations));
+        }        public GooglePrivacyDlpV2InfoTypeTransformationsResponse build() {
             return new GooglePrivacyDlpV2InfoTypeTransformationsResponse(transformations);
         }
     }

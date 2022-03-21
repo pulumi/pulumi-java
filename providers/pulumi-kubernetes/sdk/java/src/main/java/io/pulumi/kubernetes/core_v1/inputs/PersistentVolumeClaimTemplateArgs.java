@@ -79,22 +79,18 @@ public final class PersistentVolumeClaimTemplateArgs extends io.pulumi.resources
             this.metadata = metadata;
             return this;
         }
-
         public Builder metadata(@Nullable ObjectMetaArgs metadata) {
             this.metadata = Output.ofNullable(metadata);
             return this;
         }
-
         public Builder spec(Output<PersistentVolumeClaimSpecArgs> spec) {
             this.spec = Objects.requireNonNull(spec);
             return this;
         }
-
         public Builder spec(PersistentVolumeClaimSpecArgs spec) {
             this.spec = Output.of(Objects.requireNonNull(spec));
             return this;
-        }
-        public PersistentVolumeClaimTemplateArgs build() {
+        }        public PersistentVolumeClaimTemplateArgs build() {
             return new PersistentVolumeClaimTemplateArgs(metadata, spec);
         }
     }

@@ -138,62 +138,50 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
             this.clientVpnEndpointId = clientVpnEndpointId;
             return this;
         }
-
         public Builder clientVpnEndpointId(@Nullable String clientVpnEndpointId) {
             this.clientVpnEndpointId = Output.ofNullable(clientVpnEndpointId);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder destinationCidrBlock(@Nullable Output<String> destinationCidrBlock) {
             this.destinationCidrBlock = destinationCidrBlock;
             return this;
         }
-
         public Builder destinationCidrBlock(@Nullable String destinationCidrBlock) {
             this.destinationCidrBlock = Output.ofNullable(destinationCidrBlock);
             return this;
         }
-
         public Builder origin(@Nullable Output<String> origin) {
             this.origin = origin;
             return this;
         }
-
         public Builder origin(@Nullable String origin) {
             this.origin = Output.ofNullable(origin);
             return this;
         }
-
         public Builder targetVpcSubnetId(@Nullable Output<String> targetVpcSubnetId) {
             this.targetVpcSubnetId = targetVpcSubnetId;
             return this;
         }
-
         public Builder targetVpcSubnetId(@Nullable String targetVpcSubnetId) {
             this.targetVpcSubnetId = Output.ofNullable(targetVpcSubnetId);
             return this;
         }
-
         public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public RouteState build() {
+        }        public RouteState build() {
             return new RouteState(clientVpnEndpointId, description, destinationCidrBlock, origin, targetVpcSubnetId, type);
         }
     }

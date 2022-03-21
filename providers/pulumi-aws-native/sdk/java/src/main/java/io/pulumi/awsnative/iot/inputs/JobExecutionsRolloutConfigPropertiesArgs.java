@@ -79,22 +79,18 @@ public final class JobExecutionsRolloutConfigPropertiesArgs extends io.pulumi.re
             this.exponentialRolloutRate = exponentialRolloutRate;
             return this;
         }
-
         public Builder exponentialRolloutRate(@Nullable JobTemplateExponentialRolloutRateArgs exponentialRolloutRate) {
             this.exponentialRolloutRate = Output.ofNullable(exponentialRolloutRate);
             return this;
         }
-
         public Builder maximumPerMinute(@Nullable Output<Integer> maximumPerMinute) {
             this.maximumPerMinute = maximumPerMinute;
             return this;
         }
-
         public Builder maximumPerMinute(@Nullable Integer maximumPerMinute) {
             this.maximumPerMinute = Output.ofNullable(maximumPerMinute);
             return this;
-        }
-        public JobExecutionsRolloutConfigPropertiesArgs build() {
+        }        public JobExecutionsRolloutConfigPropertiesArgs build() {
             return new JobExecutionsRolloutConfigPropertiesArgs(exponentialRolloutRate, maximumPerMinute);
         }
     }

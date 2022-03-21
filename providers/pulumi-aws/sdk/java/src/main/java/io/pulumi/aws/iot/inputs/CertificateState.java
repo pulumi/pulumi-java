@@ -143,62 +143,50 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
             this.active = active;
             return this;
         }
-
         public Builder active(@Nullable Boolean active) {
             this.active = Output.ofNullable(active);
             return this;
         }
-
         public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder certificatePem(@Nullable Output<String> certificatePem) {
             this.certificatePem = certificatePem;
             return this;
         }
-
         public Builder certificatePem(@Nullable String certificatePem) {
             this.certificatePem = Output.ofNullable(certificatePem);
             return this;
         }
-
         public Builder csr(@Nullable Output<String> csr) {
             this.csr = csr;
             return this;
         }
-
         public Builder csr(@Nullable String csr) {
             this.csr = Output.ofNullable(csr);
             return this;
         }
-
         public Builder privateKey(@Nullable Output<String> privateKey) {
             this.privateKey = privateKey;
             return this;
         }
-
         public Builder privateKey(@Nullable String privateKey) {
             this.privateKey = Output.ofNullable(privateKey);
             return this;
         }
-
         public Builder publicKey(@Nullable Output<String> publicKey) {
             this.publicKey = publicKey;
             return this;
         }
-
         public Builder publicKey(@Nullable String publicKey) {
             this.publicKey = Output.ofNullable(publicKey);
             return this;
-        }
-        public CertificateState build() {
+        }        public CertificateState build() {
             return new CertificateState(active, arn, certificatePem, csr, privateKey, publicKey);
         }
     }

@@ -127,52 +127,42 @@ public final class CorsPolicyArgs extends io.pulumi.resources.ResourceArgs {
             this.allowedHeaders = allowedHeaders;
             return this;
         }
-
         public Builder allowedHeaders(@Nullable String allowedHeaders) {
             this.allowedHeaders = Output.ofNullable(allowedHeaders);
             return this;
         }
-
         public Builder allowedMethods(@Nullable Output<String> allowedMethods) {
             this.allowedMethods = allowedMethods;
             return this;
         }
-
         public Builder allowedMethods(@Nullable String allowedMethods) {
             this.allowedMethods = Output.ofNullable(allowedMethods);
             return this;
         }
-
         public Builder allowedOrigins(Output<String> allowedOrigins) {
             this.allowedOrigins = Objects.requireNonNull(allowedOrigins);
             return this;
         }
-
         public Builder allowedOrigins(String allowedOrigins) {
             this.allowedOrigins = Output.of(Objects.requireNonNull(allowedOrigins));
             return this;
         }
-
         public Builder exposedHeaders(@Nullable Output<String> exposedHeaders) {
             this.exposedHeaders = exposedHeaders;
             return this;
         }
-
         public Builder exposedHeaders(@Nullable String exposedHeaders) {
             this.exposedHeaders = Output.ofNullable(exposedHeaders);
             return this;
         }
-
         public Builder maxAgeInSeconds(@Nullable Output<Double> maxAgeInSeconds) {
             this.maxAgeInSeconds = maxAgeInSeconds;
             return this;
         }
-
         public Builder maxAgeInSeconds(@Nullable Double maxAgeInSeconds) {
             this.maxAgeInSeconds = Output.ofNullable(maxAgeInSeconds);
             return this;
-        }
-        public CorsPolicyArgs build() {
+        }        public CorsPolicyArgs build() {
             return new CorsPolicyArgs(allowedHeaders, allowedMethods, allowedOrigins, exposedHeaders, maxAgeInSeconds);
         }
     }

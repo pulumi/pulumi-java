@@ -140,62 +140,50 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder accountName(String accountName) {
             this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder shareKind(@Nullable Output<Either<String,ShareKind>> shareKind) {
             this.shareKind = shareKind;
             return this;
         }
-
         public Builder shareKind(@Nullable Either<String,ShareKind> shareKind) {
             this.shareKind = Output.ofNullable(shareKind);
             return this;
         }
-
         public Builder shareName(@Nullable Output<String> shareName) {
             this.shareName = shareName;
             return this;
         }
-
         public Builder shareName(@Nullable String shareName) {
             this.shareName = Output.ofNullable(shareName);
             return this;
         }
-
         public Builder terms(@Nullable Output<String> terms) {
             this.terms = terms;
             return this;
         }
-
         public Builder terms(@Nullable String terms) {
             this.terms = Output.ofNullable(terms);
             return this;
-        }
-        public ShareArgs build() {
+        }        public ShareArgs build() {
             return new ShareArgs(accountName, description, resourceGroupName, shareKind, shareName, terms);
         }
     }

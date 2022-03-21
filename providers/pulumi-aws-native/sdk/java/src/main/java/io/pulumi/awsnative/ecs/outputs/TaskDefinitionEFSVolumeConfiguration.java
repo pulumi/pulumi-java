@@ -82,27 +82,22 @@ public final class TaskDefinitionEFSVolumeConfiguration {
             this.authorizationConfig = authorizationConfig;
             return this;
         }
-
         public Builder filesystemId(String filesystemId) {
             this.filesystemId = Objects.requireNonNull(filesystemId);
             return this;
         }
-
         public Builder rootDirectory(@Nullable String rootDirectory) {
             this.rootDirectory = rootDirectory;
             return this;
         }
-
         public Builder transitEncryption(@Nullable TaskDefinitionEFSVolumeConfigurationTransitEncryption transitEncryption) {
             this.transitEncryption = transitEncryption;
             return this;
         }
-
         public Builder transitEncryptionPort(@Nullable Integer transitEncryptionPort) {
             this.transitEncryptionPort = transitEncryptionPort;
             return this;
-        }
-        public TaskDefinitionEFSVolumeConfiguration build() {
+        }        public TaskDefinitionEFSVolumeConfiguration build() {
             return new TaskDefinitionEFSVolumeConfiguration(authorizationConfig, filesystemId, rootDirectory, transitEncryption, transitEncryptionPort);
         }
     }

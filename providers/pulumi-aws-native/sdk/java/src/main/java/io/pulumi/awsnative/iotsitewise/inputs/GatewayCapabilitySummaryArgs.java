@@ -70,22 +70,18 @@ public final class GatewayCapabilitySummaryArgs extends io.pulumi.resources.Reso
             this.capabilityConfiguration = capabilityConfiguration;
             return this;
         }
-
         public Builder capabilityConfiguration(@Nullable String capabilityConfiguration) {
             this.capabilityConfiguration = Output.ofNullable(capabilityConfiguration);
             return this;
         }
-
         public Builder capabilityNamespace(Output<String> capabilityNamespace) {
             this.capabilityNamespace = Objects.requireNonNull(capabilityNamespace);
             return this;
         }
-
         public Builder capabilityNamespace(String capabilityNamespace) {
             this.capabilityNamespace = Output.of(Objects.requireNonNull(capabilityNamespace));
             return this;
-        }
-        public GatewayCapabilitySummaryArgs build() {
+        }        public GatewayCapabilitySummaryArgs build() {
             return new GatewayCapabilitySummaryArgs(capabilityConfiguration, capabilityNamespace);
         }
     }

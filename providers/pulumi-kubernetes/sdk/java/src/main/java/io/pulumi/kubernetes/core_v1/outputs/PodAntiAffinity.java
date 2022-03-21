@@ -72,12 +72,16 @@ public final class PodAntiAffinity {
             this.preferredDuringSchedulingIgnoredDuringExecution = preferredDuringSchedulingIgnoredDuringExecution;
             return this;
         }
-
+        public Builder preferredDuringSchedulingIgnoredDuringExecution(WeightedPodAffinityTerm... preferredDuringSchedulingIgnoredDuringExecution) {
+            return preferredDuringSchedulingIgnoredDuringExecution(List.of(preferredDuringSchedulingIgnoredDuringExecution));
+        }
         public Builder requiredDuringSchedulingIgnoredDuringExecution(@Nullable List<PodAffinityTerm> requiredDuringSchedulingIgnoredDuringExecution) {
             this.requiredDuringSchedulingIgnoredDuringExecution = requiredDuringSchedulingIgnoredDuringExecution;
             return this;
         }
-        public PodAntiAffinity build() {
+        public Builder requiredDuringSchedulingIgnoredDuringExecution(PodAffinityTerm... requiredDuringSchedulingIgnoredDuringExecution) {
+            return requiredDuringSchedulingIgnoredDuringExecution(List.of(requiredDuringSchedulingIgnoredDuringExecution));
+        }        public PodAntiAffinity build() {
             return new PodAntiAffinity(preferredDuringSchedulingIgnoredDuringExecution, requiredDuringSchedulingIgnoredDuringExecution);
         }
     }

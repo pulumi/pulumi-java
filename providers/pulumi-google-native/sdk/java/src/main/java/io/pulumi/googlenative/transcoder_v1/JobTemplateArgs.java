@@ -111,52 +111,42 @@ public final class JobTemplateArgs extends io.pulumi.resources.ResourceArgs {
             this.config = config;
             return this;
         }
-
         public Builder config(@Nullable JobConfigArgs config) {
             this.config = Output.ofNullable(config);
             return this;
         }
-
         public Builder jobTemplateId(Output<String> jobTemplateId) {
             this.jobTemplateId = Objects.requireNonNull(jobTemplateId);
             return this;
         }
-
         public Builder jobTemplateId(String jobTemplateId) {
             this.jobTemplateId = Output.of(Objects.requireNonNull(jobTemplateId));
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
-        }
-        public JobTemplateArgs build() {
+        }        public JobTemplateArgs build() {
             return new JobTemplateArgs(config, jobTemplateId, location, name, project);
         }
     }

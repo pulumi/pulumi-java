@@ -50,8 +50,7 @@ public final class GetSsmParameterStringArgs extends io.pulumi.resources.InvokeA
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public GetSsmParameterStringArgs build() {
+        }        public GetSsmParameterStringArgs build() {
             return new GetSsmParameterStringArgs(name);
         }
     }

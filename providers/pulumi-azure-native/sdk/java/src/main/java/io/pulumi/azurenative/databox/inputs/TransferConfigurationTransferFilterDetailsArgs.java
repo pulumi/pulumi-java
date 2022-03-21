@@ -61,12 +61,10 @@ public final class TransferConfigurationTransferFilterDetailsArgs extends io.pul
             this.include = include;
             return this;
         }
-
         public Builder include(@Nullable TransferFilterDetailsArgs include) {
             this.include = Output.ofNullable(include);
             return this;
-        }
-        public TransferConfigurationTransferFilterDetailsArgs build() {
+        }        public TransferConfigurationTransferFilterDetailsArgs build() {
             return new TransferConfigurationTransferFilterDetailsArgs(include);
         }
     }

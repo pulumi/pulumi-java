@@ -72,12 +72,10 @@ public final class GetEventSubscriptionDeliveryAttributesArgs extends io.pulumi.
             this.eventSubscriptionName = Objects.requireNonNull(eventSubscriptionName);
             return this;
         }
-
         public Builder scope(String scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
-        }
-        public GetEventSubscriptionDeliveryAttributesArgs build() {
+        }        public GetEventSubscriptionDeliveryAttributesArgs build() {
             return new GetEventSubscriptionDeliveryAttributesArgs(eventSubscriptionName, scope);
         }
     }

@@ -88,17 +88,14 @@ public final class EnvironmentContainerResponse {
             this.description = description;
             return this;
         }
-
         public Builder properties(@Nullable Map<String,String> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
-        }
-        public EnvironmentContainerResponse build() {
+        }        public EnvironmentContainerResponse build() {
             return new EnvironmentContainerResponse(description, properties, tags);
         }
     }

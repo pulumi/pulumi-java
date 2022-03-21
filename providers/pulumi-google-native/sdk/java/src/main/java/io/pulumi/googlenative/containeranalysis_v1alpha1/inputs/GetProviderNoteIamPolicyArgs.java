@@ -64,12 +64,10 @@ public final class GetProviderNoteIamPolicyArgs extends io.pulumi.resources.Invo
             this.noteId = Objects.requireNonNull(noteId);
             return this;
         }
-
         public Builder providerId(String providerId) {
             this.providerId = Objects.requireNonNull(providerId);
             return this;
-        }
-        public GetProviderNoteIamPolicyArgs build() {
+        }        public GetProviderNoteIamPolicyArgs build() {
             return new GetProviderNoteIamPolicyArgs(noteId, providerId);
         }
     }

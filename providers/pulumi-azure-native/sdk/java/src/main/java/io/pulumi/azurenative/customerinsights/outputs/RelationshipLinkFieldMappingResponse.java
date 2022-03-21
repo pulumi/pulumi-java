@@ -87,17 +87,14 @@ public final class RelationshipLinkFieldMappingResponse {
             this.interactionFieldName = Objects.requireNonNull(interactionFieldName);
             return this;
         }
-
         public Builder linkType(@Nullable String linkType) {
             this.linkType = linkType;
             return this;
         }
-
         public Builder relationshipFieldName(String relationshipFieldName) {
             this.relationshipFieldName = Objects.requireNonNull(relationshipFieldName);
             return this;
-        }
-        public RelationshipLinkFieldMappingResponse build() {
+        }        public RelationshipLinkFieldMappingResponse build() {
             return new RelationshipLinkFieldMappingResponse(interactionFieldName, linkType, relationshipFieldName);
         }
     }

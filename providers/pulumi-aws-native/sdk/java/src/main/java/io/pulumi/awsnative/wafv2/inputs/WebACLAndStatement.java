@@ -52,7 +52,9 @@ public final class WebACLAndStatement extends io.pulumi.resources.InvokeArgs {
             this.statements = Objects.requireNonNull(statements);
             return this;
         }
-        public WebACLAndStatement build() {
+        public Builder statements(WebACLStatement... statements) {
+            return statements(List.of(statements));
+        }        public WebACLAndStatement build() {
             return new WebACLAndStatement(statements);
         }
     }

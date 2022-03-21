@@ -145,32 +145,26 @@ public final class IamPolicyAnalysisQueryResponse extends io.pulumi.resources.In
             this.accessSelector = Objects.requireNonNull(accessSelector);
             return this;
         }
-
         public Builder conditionContext(ConditionContextResponse conditionContext) {
             this.conditionContext = Objects.requireNonNull(conditionContext);
             return this;
         }
-
         public Builder identitySelector(IdentitySelectorResponse identitySelector) {
             this.identitySelector = Objects.requireNonNull(identitySelector);
             return this;
         }
-
         public Builder options(OptionsResponse options) {
             this.options = Objects.requireNonNull(options);
             return this;
         }
-
         public Builder resourceSelector(ResourceSelectorResponse resourceSelector) {
             this.resourceSelector = Objects.requireNonNull(resourceSelector);
             return this;
         }
-
         public Builder scope(String scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
-        }
-        public IamPolicyAnalysisQueryResponse build() {
+        }        public IamPolicyAnalysisQueryResponse build() {
             return new IamPolicyAnalysisQueryResponse(accessSelector, conditionContext, identitySelector, options, resourceSelector, scope);
         }
     }

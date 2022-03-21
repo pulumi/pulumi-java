@@ -71,12 +71,10 @@ public final class GetCustomDataIdentifierResult {
             this.arn = arn;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
-        }
-        public GetCustomDataIdentifierResult build() {
+        }        public GetCustomDataIdentifierResult build() {
             return new GetCustomDataIdentifierResult(arn, id);
         }
     }

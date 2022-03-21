@@ -87,17 +87,17 @@ public final class GetSessionEntityTypeResult {
             this.entities = Objects.requireNonNull(entities);
             return this;
         }
-
+        public Builder entities(GoogleCloudDialogflowV2EntityTypeEntityResponse... entities) {
+            return entities(List.of(entities));
+        }
         public Builder entityOverrideMode(String entityOverrideMode) {
             this.entityOverrideMode = Objects.requireNonNull(entityOverrideMode);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public GetSessionEntityTypeResult build() {
+        }        public GetSessionEntityTypeResult build() {
             return new GetSessionEntityTypeResult(entities, entityOverrideMode, name);
         }
     }

@@ -120,27 +120,22 @@ public final class LoadBalancingRuleResponse {
             this.backendPort = Objects.requireNonNull(backendPort);
             return this;
         }
-
         public Builder frontendPort(Integer frontendPort) {
             this.frontendPort = Objects.requireNonNull(frontendPort);
             return this;
         }
-
         public Builder probeProtocol(String probeProtocol) {
             this.probeProtocol = Objects.requireNonNull(probeProtocol);
             return this;
         }
-
         public Builder probeRequestPath(@Nullable String probeRequestPath) {
             this.probeRequestPath = probeRequestPath;
             return this;
         }
-
         public Builder protocol(String protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
-        }
-        public LoadBalancingRuleResponse build() {
+        }        public LoadBalancingRuleResponse build() {
             return new LoadBalancingRuleResponse(backendPort, frontendPort, probeProtocol, probeRequestPath, protocol);
         }
     }

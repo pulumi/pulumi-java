@@ -96,32 +96,26 @@ public final class CommonFeatureSpecArgs extends io.pulumi.resources.ResourceArg
             this.appdevexperience = appdevexperience;
             return this;
         }
-
         public Builder appdevexperience(@Nullable AppDevExperienceFeatureSpecArgs appdevexperience) {
             this.appdevexperience = Output.ofNullable(appdevexperience);
             return this;
         }
-
         public Builder cloudauditlogging(@Nullable Output<CloudAuditLoggingFeatureSpecArgs> cloudauditlogging) {
             this.cloudauditlogging = cloudauditlogging;
             return this;
         }
-
         public Builder cloudauditlogging(@Nullable CloudAuditLoggingFeatureSpecArgs cloudauditlogging) {
             this.cloudauditlogging = Output.ofNullable(cloudauditlogging);
             return this;
         }
-
         public Builder multiclusteringress(@Nullable Output<MultiClusterIngressFeatureSpecArgs> multiclusteringress) {
             this.multiclusteringress = multiclusteringress;
             return this;
         }
-
         public Builder multiclusteringress(@Nullable MultiClusterIngressFeatureSpecArgs multiclusteringress) {
             this.multiclusteringress = Output.ofNullable(multiclusteringress);
             return this;
-        }
-        public CommonFeatureSpecArgs build() {
+        }        public CommonFeatureSpecArgs build() {
             return new CommonFeatureSpecArgs(appdevexperience, cloudauditlogging, multiclusteringress);
         }
     }

@@ -999,572 +999,518 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
             this.attach = attach;
             return this;
         }
-
         public Builder attach(@Nullable Boolean attach) {
             this.attach = Output.ofNullable(attach);
             return this;
         }
-
         public Builder capabilities(@Nullable Output<ContainerCapabilitiesArgs> capabilities) {
             this.capabilities = capabilities;
             return this;
         }
-
         public Builder capabilities(@Nullable ContainerCapabilitiesArgs capabilities) {
             this.capabilities = Output.ofNullable(capabilities);
             return this;
         }
-
         public Builder command(@Nullable Output<List<String>> command) {
             this.command = command;
             return this;
         }
-
         public Builder command(@Nullable List<String> command) {
             this.command = Output.ofNullable(command);
             return this;
         }
-
+        public Builder command(String... command) {
+            return command(List.of(command));
+        }
         public Builder cpuSet(@Nullable Output<String> cpuSet) {
             this.cpuSet = cpuSet;
             return this;
         }
-
         public Builder cpuSet(@Nullable String cpuSet) {
             this.cpuSet = Output.ofNullable(cpuSet);
             return this;
         }
-
         public Builder cpuShares(@Nullable Output<Integer> cpuShares) {
             this.cpuShares = cpuShares;
             return this;
         }
-
         public Builder cpuShares(@Nullable Integer cpuShares) {
             this.cpuShares = Output.ofNullable(cpuShares);
             return this;
         }
-
         public Builder destroyGraceSeconds(@Nullable Output<Integer> destroyGraceSeconds) {
             this.destroyGraceSeconds = destroyGraceSeconds;
             return this;
         }
-
         public Builder destroyGraceSeconds(@Nullable Integer destroyGraceSeconds) {
             this.destroyGraceSeconds = Output.ofNullable(destroyGraceSeconds);
             return this;
         }
-
         public Builder devices(@Nullable Output<List<ContainerDeviceArgs>> devices) {
             this.devices = devices;
             return this;
         }
-
         public Builder devices(@Nullable List<ContainerDeviceArgs> devices) {
             this.devices = Output.ofNullable(devices);
             return this;
         }
-
+        public Builder devices(ContainerDeviceArgs... devices) {
+            return devices(List.of(devices));
+        }
         public Builder dns(@Nullable Output<List<String>> dns) {
             this.dns = dns;
             return this;
         }
-
         public Builder dns(@Nullable List<String> dns) {
             this.dns = Output.ofNullable(dns);
             return this;
         }
-
+        public Builder dns(String... dns) {
+            return dns(List.of(dns));
+        }
         public Builder dnsOpts(@Nullable Output<List<String>> dnsOpts) {
             this.dnsOpts = dnsOpts;
             return this;
         }
-
         public Builder dnsOpts(@Nullable List<String> dnsOpts) {
             this.dnsOpts = Output.ofNullable(dnsOpts);
             return this;
         }
-
+        public Builder dnsOpts(String... dnsOpts) {
+            return dnsOpts(List.of(dnsOpts));
+        }
         public Builder dnsSearches(@Nullable Output<List<String>> dnsSearches) {
             this.dnsSearches = dnsSearches;
             return this;
         }
-
         public Builder dnsSearches(@Nullable List<String> dnsSearches) {
             this.dnsSearches = Output.ofNullable(dnsSearches);
             return this;
         }
-
+        public Builder dnsSearches(String... dnsSearches) {
+            return dnsSearches(List.of(dnsSearches));
+        }
         public Builder domainname(@Nullable Output<String> domainname) {
             this.domainname = domainname;
             return this;
         }
-
         public Builder domainname(@Nullable String domainname) {
             this.domainname = Output.ofNullable(domainname);
             return this;
         }
-
         public Builder entrypoints(@Nullable Output<List<String>> entrypoints) {
             this.entrypoints = entrypoints;
             return this;
         }
-
         public Builder entrypoints(@Nullable List<String> entrypoints) {
             this.entrypoints = Output.ofNullable(entrypoints);
             return this;
         }
-
+        public Builder entrypoints(String... entrypoints) {
+            return entrypoints(List.of(entrypoints));
+        }
         public Builder envs(@Nullable Output<List<String>> envs) {
             this.envs = envs;
             return this;
         }
-
         public Builder envs(@Nullable List<String> envs) {
             this.envs = Output.ofNullable(envs);
             return this;
         }
-
+        public Builder envs(String... envs) {
+            return envs(List.of(envs));
+        }
         public Builder groupAdds(@Nullable Output<List<String>> groupAdds) {
             this.groupAdds = groupAdds;
             return this;
         }
-
         public Builder groupAdds(@Nullable List<String> groupAdds) {
             this.groupAdds = Output.ofNullable(groupAdds);
             return this;
         }
-
+        public Builder groupAdds(String... groupAdds) {
+            return groupAdds(List.of(groupAdds));
+        }
         public Builder healthcheck(@Nullable Output<ContainerHealthcheckArgs> healthcheck) {
             this.healthcheck = healthcheck;
             return this;
         }
-
         public Builder healthcheck(@Nullable ContainerHealthcheckArgs healthcheck) {
             this.healthcheck = Output.ofNullable(healthcheck);
             return this;
         }
-
         public Builder hostname(@Nullable Output<String> hostname) {
             this.hostname = hostname;
             return this;
         }
-
         public Builder hostname(@Nullable String hostname) {
             this.hostname = Output.ofNullable(hostname);
             return this;
         }
-
         public Builder hosts(@Nullable Output<List<ContainerHostArgs>> hosts) {
             this.hosts = hosts;
             return this;
         }
-
         public Builder hosts(@Nullable List<ContainerHostArgs> hosts) {
             this.hosts = Output.ofNullable(hosts);
             return this;
         }
-
+        public Builder hosts(ContainerHostArgs... hosts) {
+            return hosts(List.of(hosts));
+        }
         public Builder image(Output<String> image) {
             this.image = Objects.requireNonNull(image);
             return this;
         }
-
         public Builder image(String image) {
             this.image = Output.of(Objects.requireNonNull(image));
             return this;
         }
-
         public Builder init(@Nullable Output<Boolean> init) {
             this.init = init;
             return this;
         }
-
         public Builder init(@Nullable Boolean init) {
             this.init = Output.ofNullable(init);
             return this;
         }
-
         public Builder ipcMode(@Nullable Output<String> ipcMode) {
             this.ipcMode = ipcMode;
             return this;
         }
-
         public Builder ipcMode(@Nullable String ipcMode) {
             this.ipcMode = Output.ofNullable(ipcMode);
             return this;
         }
-
         public Builder labels(@Nullable Output<List<ContainerLabelArgs>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable List<ContainerLabelArgs> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
+        public Builder labels(ContainerLabelArgs... labels) {
+            return labels(List.of(labels));
+        }
         public Builder links(@Nullable Output<List<String>> links) {
             this.links = links;
             return this;
         }
-
         public Builder links(@Nullable List<String> links) {
             this.links = Output.ofNullable(links);
             return this;
         }
-
+        public Builder links(String... links) {
+            return links(List.of(links));
+        }
         public Builder logDriver(@Nullable Output<String> logDriver) {
             this.logDriver = logDriver;
             return this;
         }
-
         public Builder logDriver(@Nullable String logDriver) {
             this.logDriver = Output.ofNullable(logDriver);
             return this;
         }
-
         public Builder logOpts(@Nullable Output<Map<String,Object>> logOpts) {
             this.logOpts = logOpts;
             return this;
         }
-
         public Builder logOpts(@Nullable Map<String,Object> logOpts) {
             this.logOpts = Output.ofNullable(logOpts);
             return this;
         }
-
         public Builder logs(@Nullable Output<Boolean> logs) {
             this.logs = logs;
             return this;
         }
-
         public Builder logs(@Nullable Boolean logs) {
             this.logs = Output.ofNullable(logs);
             return this;
         }
-
         public Builder maxRetryCount(@Nullable Output<Integer> maxRetryCount) {
             this.maxRetryCount = maxRetryCount;
             return this;
         }
-
         public Builder maxRetryCount(@Nullable Integer maxRetryCount) {
             this.maxRetryCount = Output.ofNullable(maxRetryCount);
             return this;
         }
-
         public Builder memory(@Nullable Output<Integer> memory) {
             this.memory = memory;
             return this;
         }
-
         public Builder memory(@Nullable Integer memory) {
             this.memory = Output.ofNullable(memory);
             return this;
         }
-
         public Builder memorySwap(@Nullable Output<Integer> memorySwap) {
             this.memorySwap = memorySwap;
             return this;
         }
-
         public Builder memorySwap(@Nullable Integer memorySwap) {
             this.memorySwap = Output.ofNullable(memorySwap);
             return this;
         }
-
         public Builder mounts(@Nullable Output<List<ContainerMountArgs>> mounts) {
             this.mounts = mounts;
             return this;
         }
-
         public Builder mounts(@Nullable List<ContainerMountArgs> mounts) {
             this.mounts = Output.ofNullable(mounts);
             return this;
         }
-
+        public Builder mounts(ContainerMountArgs... mounts) {
+            return mounts(List.of(mounts));
+        }
         public Builder mustRun(@Nullable Output<Boolean> mustRun) {
             this.mustRun = mustRun;
             return this;
         }
-
         public Builder mustRun(@Nullable Boolean mustRun) {
             this.mustRun = Output.ofNullable(mustRun);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder networkAliases(@Nullable Output<List<String>> networkAliases) {
             this.networkAliases = networkAliases;
             return this;
         }
-
         public Builder networkAliases(@Nullable List<String> networkAliases) {
             this.networkAliases = Output.ofNullable(networkAliases);
             return this;
         }
-
+        public Builder networkAliases(String... networkAliases) {
+            return networkAliases(List.of(networkAliases));
+        }
         public Builder networkMode(@Nullable Output<String> networkMode) {
             this.networkMode = networkMode;
             return this;
         }
-
         public Builder networkMode(@Nullable String networkMode) {
             this.networkMode = Output.ofNullable(networkMode);
             return this;
         }
-
         public Builder networks(@Nullable Output<List<String>> networks) {
             this.networks = networks;
             return this;
         }
-
         public Builder networks(@Nullable List<String> networks) {
             this.networks = Output.ofNullable(networks);
             return this;
         }
-
+        public Builder networks(String... networks) {
+            return networks(List.of(networks));
+        }
         public Builder networksAdvanced(@Nullable Output<List<ContainerNetworksAdvancedArgs>> networksAdvanced) {
             this.networksAdvanced = networksAdvanced;
             return this;
         }
-
         public Builder networksAdvanced(@Nullable List<ContainerNetworksAdvancedArgs> networksAdvanced) {
             this.networksAdvanced = Output.ofNullable(networksAdvanced);
             return this;
         }
-
+        public Builder networksAdvanced(ContainerNetworksAdvancedArgs... networksAdvanced) {
+            return networksAdvanced(List.of(networksAdvanced));
+        }
         public Builder pidMode(@Nullable Output<String> pidMode) {
             this.pidMode = pidMode;
             return this;
         }
-
         public Builder pidMode(@Nullable String pidMode) {
             this.pidMode = Output.ofNullable(pidMode);
             return this;
         }
-
         public Builder ports(@Nullable Output<List<ContainerPortArgs>> ports) {
             this.ports = ports;
             return this;
         }
-
         public Builder ports(@Nullable List<ContainerPortArgs> ports) {
             this.ports = Output.ofNullable(ports);
             return this;
         }
-
+        public Builder ports(ContainerPortArgs... ports) {
+            return ports(List.of(ports));
+        }
         public Builder privileged(@Nullable Output<Boolean> privileged) {
             this.privileged = privileged;
             return this;
         }
-
         public Builder privileged(@Nullable Boolean privileged) {
             this.privileged = Output.ofNullable(privileged);
             return this;
         }
-
         public Builder publishAllPorts(@Nullable Output<Boolean> publishAllPorts) {
             this.publishAllPorts = publishAllPorts;
             return this;
         }
-
         public Builder publishAllPorts(@Nullable Boolean publishAllPorts) {
             this.publishAllPorts = Output.ofNullable(publishAllPorts);
             return this;
         }
-
         public Builder readOnly(@Nullable Output<Boolean> readOnly) {
             this.readOnly = readOnly;
             return this;
         }
-
         public Builder readOnly(@Nullable Boolean readOnly) {
             this.readOnly = Output.ofNullable(readOnly);
             return this;
         }
-
         public Builder removeVolumes(@Nullable Output<Boolean> removeVolumes) {
             this.removeVolumes = removeVolumes;
             return this;
         }
-
         public Builder removeVolumes(@Nullable Boolean removeVolumes) {
             this.removeVolumes = Output.ofNullable(removeVolumes);
             return this;
         }
-
         public Builder restart(@Nullable Output<String> restart) {
             this.restart = restart;
             return this;
         }
-
         public Builder restart(@Nullable String restart) {
             this.restart = Output.ofNullable(restart);
             return this;
         }
-
         public Builder rm(@Nullable Output<Boolean> rm) {
             this.rm = rm;
             return this;
         }
-
         public Builder rm(@Nullable Boolean rm) {
             this.rm = Output.ofNullable(rm);
             return this;
         }
-
         public Builder securityOpts(@Nullable Output<List<String>> securityOpts) {
             this.securityOpts = securityOpts;
             return this;
         }
-
         public Builder securityOpts(@Nullable List<String> securityOpts) {
             this.securityOpts = Output.ofNullable(securityOpts);
             return this;
         }
-
+        public Builder securityOpts(String... securityOpts) {
+            return securityOpts(List.of(securityOpts));
+        }
         public Builder shmSize(@Nullable Output<Integer> shmSize) {
             this.shmSize = shmSize;
             return this;
         }
-
         public Builder shmSize(@Nullable Integer shmSize) {
             this.shmSize = Output.ofNullable(shmSize);
             return this;
         }
-
         public Builder start(@Nullable Output<Boolean> start) {
             this.start = start;
             return this;
         }
-
         public Builder start(@Nullable Boolean start) {
             this.start = Output.ofNullable(start);
             return this;
         }
-
         public Builder stdinOpen(@Nullable Output<Boolean> stdinOpen) {
             this.stdinOpen = stdinOpen;
             return this;
         }
-
         public Builder stdinOpen(@Nullable Boolean stdinOpen) {
             this.stdinOpen = Output.ofNullable(stdinOpen);
             return this;
         }
-
         public Builder storageOpts(@Nullable Output<Map<String,Object>> storageOpts) {
             this.storageOpts = storageOpts;
             return this;
         }
-
         public Builder storageOpts(@Nullable Map<String,Object> storageOpts) {
             this.storageOpts = Output.ofNullable(storageOpts);
             return this;
         }
-
         public Builder sysctls(@Nullable Output<Map<String,Object>> sysctls) {
             this.sysctls = sysctls;
             return this;
         }
-
         public Builder sysctls(@Nullable Map<String,Object> sysctls) {
             this.sysctls = Output.ofNullable(sysctls);
             return this;
         }
-
         public Builder tmpfs(@Nullable Output<Map<String,Object>> tmpfs) {
             this.tmpfs = tmpfs;
             return this;
         }
-
         public Builder tmpfs(@Nullable Map<String,Object> tmpfs) {
             this.tmpfs = Output.ofNullable(tmpfs);
             return this;
         }
-
         public Builder tty(@Nullable Output<Boolean> tty) {
             this.tty = tty;
             return this;
         }
-
         public Builder tty(@Nullable Boolean tty) {
             this.tty = Output.ofNullable(tty);
             return this;
         }
-
         public Builder ulimits(@Nullable Output<List<ContainerUlimitArgs>> ulimits) {
             this.ulimits = ulimits;
             return this;
         }
-
         public Builder ulimits(@Nullable List<ContainerUlimitArgs> ulimits) {
             this.ulimits = Output.ofNullable(ulimits);
             return this;
         }
-
+        public Builder ulimits(ContainerUlimitArgs... ulimits) {
+            return ulimits(List.of(ulimits));
+        }
         public Builder uploads(@Nullable Output<List<ContainerUploadArgs>> uploads) {
             this.uploads = uploads;
             return this;
         }
-
         public Builder uploads(@Nullable List<ContainerUploadArgs> uploads) {
             this.uploads = Output.ofNullable(uploads);
             return this;
         }
-
+        public Builder uploads(ContainerUploadArgs... uploads) {
+            return uploads(List.of(uploads));
+        }
         public Builder user(@Nullable Output<String> user) {
             this.user = user;
             return this;
         }
-
         public Builder user(@Nullable String user) {
             this.user = Output.ofNullable(user);
             return this;
         }
-
         public Builder usernsMode(@Nullable Output<String> usernsMode) {
             this.usernsMode = usernsMode;
             return this;
         }
-
         public Builder usernsMode(@Nullable String usernsMode) {
             this.usernsMode = Output.ofNullable(usernsMode);
             return this;
         }
-
         public Builder volumes(@Nullable Output<List<ContainerVolumeArgs>> volumes) {
             this.volumes = volumes;
             return this;
         }
-
         public Builder volumes(@Nullable List<ContainerVolumeArgs> volumes) {
             this.volumes = Output.ofNullable(volumes);
             return this;
         }
-
+        public Builder volumes(ContainerVolumeArgs... volumes) {
+            return volumes(List.of(volumes));
+        }
         public Builder workingDir(@Nullable Output<String> workingDir) {
             this.workingDir = workingDir;
             return this;
         }
-
         public Builder workingDir(@Nullable String workingDir) {
             this.workingDir = Output.ofNullable(workingDir);
             return this;
-        }
-        public ContainerArgs build() {
+        }        public ContainerArgs build() {
             return new ContainerArgs(attach, capabilities, command, cpuSet, cpuShares, destroyGraceSeconds, devices, dns, dnsOpts, dnsSearches, domainname, entrypoints, envs, groupAdds, healthcheck, hostname, hosts, image, init, ipcMode, labels, links, logDriver, logOpts, logs, maxRetryCount, memory, memorySwap, mounts, mustRun, name, networkAliases, networkMode, networks, networksAdvanced, pidMode, ports, privileged, publishAllPorts, readOnly, removeVolumes, restart, rm, securityOpts, shmSize, start, stdinOpen, storageOpts, sysctls, tmpfs, tty, ulimits, uploads, user, usernsMode, volumes, workingDir);
         }
     }

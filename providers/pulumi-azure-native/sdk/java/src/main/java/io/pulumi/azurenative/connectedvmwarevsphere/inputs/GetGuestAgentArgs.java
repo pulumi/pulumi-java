@@ -88,17 +88,14 @@ public final class GetGuestAgentArgs extends io.pulumi.resources.InvokeArgs {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder virtualMachineName(String virtualMachineName) {
             this.virtualMachineName = Objects.requireNonNull(virtualMachineName);
             return this;
-        }
-        public GetGuestAgentArgs build() {
+        }        public GetGuestAgentArgs build() {
             return new GetGuestAgentArgs(name, resourceGroupName, virtualMachineName);
         }
     }

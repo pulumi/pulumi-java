@@ -104,22 +104,18 @@ public final class ReferenceVmResponse {
             this.password = password;
             return this;
         }
-
         public Builder userName(String userName) {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }
-
         public Builder vmResourceId(String vmResourceId) {
             this.vmResourceId = Objects.requireNonNull(vmResourceId);
             return this;
         }
-
         public Builder vmStateDetails(VmStateDetailsResponse vmStateDetails) {
             this.vmStateDetails = Objects.requireNonNull(vmStateDetails);
             return this;
-        }
-        public ReferenceVmResponse build() {
+        }        public ReferenceVmResponse build() {
             return new ReferenceVmResponse(password, userName, vmResourceId, vmStateDetails);
         }
     }

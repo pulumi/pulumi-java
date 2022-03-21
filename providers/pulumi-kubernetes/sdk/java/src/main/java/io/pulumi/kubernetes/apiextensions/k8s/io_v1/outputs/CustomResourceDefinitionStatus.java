@@ -89,17 +89,20 @@ public final class CustomResourceDefinitionStatus {
             this.acceptedNames = Objects.requireNonNull(acceptedNames);
             return this;
         }
-
         public Builder conditions(@Nullable List<CustomResourceDefinitionCondition> conditions) {
             this.conditions = conditions;
             return this;
         }
-
+        public Builder conditions(CustomResourceDefinitionCondition... conditions) {
+            return conditions(List.of(conditions));
+        }
         public Builder storedVersions(List<String> storedVersions) {
             this.storedVersions = Objects.requireNonNull(storedVersions);
             return this;
         }
-        public CustomResourceDefinitionStatus build() {
+        public Builder storedVersions(String... storedVersions) {
+            return storedVersions(List.of(storedVersions));
+        }        public CustomResourceDefinitionStatus build() {
             return new CustomResourceDefinitionStatus(acceptedNames, conditions, storedVersions);
         }
     }

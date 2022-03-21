@@ -174,42 +174,34 @@ public final class RuleGroupRuleStatementAndStatementStatementOrStatementStateme
             this.byteMatchStatement = byteMatchStatement;
             return this;
         }
-
         public Builder geoMatchStatement(@Nullable RuleGroupRuleStatementAndStatementStatementOrStatementStatementGeoMatchStatement geoMatchStatement) {
             this.geoMatchStatement = geoMatchStatement;
             return this;
         }
-
         public Builder ipSetReferenceStatement(@Nullable RuleGroupRuleStatementAndStatementStatementOrStatementStatementIpSetReferenceStatement ipSetReferenceStatement) {
             this.ipSetReferenceStatement = ipSetReferenceStatement;
             return this;
         }
-
         public Builder labelMatchStatement(@Nullable RuleGroupRuleStatementAndStatementStatementOrStatementStatementLabelMatchStatement labelMatchStatement) {
             this.labelMatchStatement = labelMatchStatement;
             return this;
         }
-
         public Builder regexPatternSetReferenceStatement(@Nullable RuleGroupRuleStatementAndStatementStatementOrStatementStatementRegexPatternSetReferenceStatement regexPatternSetReferenceStatement) {
             this.regexPatternSetReferenceStatement = regexPatternSetReferenceStatement;
             return this;
         }
-
         public Builder sizeConstraintStatement(@Nullable RuleGroupRuleStatementAndStatementStatementOrStatementStatementSizeConstraintStatement sizeConstraintStatement) {
             this.sizeConstraintStatement = sizeConstraintStatement;
             return this;
         }
-
         public Builder sqliMatchStatement(@Nullable RuleGroupRuleStatementAndStatementStatementOrStatementStatementSqliMatchStatement sqliMatchStatement) {
             this.sqliMatchStatement = sqliMatchStatement;
             return this;
         }
-
         public Builder xssMatchStatement(@Nullable RuleGroupRuleStatementAndStatementStatementOrStatementStatementXssMatchStatement xssMatchStatement) {
             this.xssMatchStatement = xssMatchStatement;
             return this;
-        }
-        public RuleGroupRuleStatementAndStatementStatementOrStatementStatement build() {
+        }        public RuleGroupRuleStatementAndStatementStatementOrStatementStatement build() {
             return new RuleGroupRuleStatementAndStatementStatementOrStatementStatement(byteMatchStatement, geoMatchStatement, ipSetReferenceStatement, labelMatchStatement, regexPatternSetReferenceStatement, sizeConstraintStatement, sqliMatchStatement, xssMatchStatement);
         }
     }

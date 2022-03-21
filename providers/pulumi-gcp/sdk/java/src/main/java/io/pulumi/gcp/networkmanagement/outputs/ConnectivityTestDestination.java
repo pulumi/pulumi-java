@@ -140,27 +140,22 @@ public final class ConnectivityTestDestination {
             this.instance = instance;
             return this;
         }
-
         public Builder ipAddress(@Nullable String ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
-
         public Builder network(@Nullable String network) {
             this.network = network;
             return this;
         }
-
         public Builder port(@Nullable Integer port) {
             this.port = port;
             return this;
         }
-
         public Builder projectId(@Nullable String projectId) {
             this.projectId = projectId;
             return this;
-        }
-        public ConnectivityTestDestination build() {
+        }        public ConnectivityTestDestination build() {
             return new ConnectivityTestDestination(instance, ipAddress, network, port, projectId);
         }
     }

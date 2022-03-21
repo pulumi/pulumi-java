@@ -104,22 +104,18 @@ public final class EndpointAddress {
             this.hostname = hostname;
             return this;
         }
-
         public Builder ip(String ip) {
             this.ip = Objects.requireNonNull(ip);
             return this;
         }
-
         public Builder nodeName(@Nullable String nodeName) {
             this.nodeName = nodeName;
             return this;
         }
-
         public Builder targetRef(@Nullable ObjectReference targetRef) {
             this.targetRef = targetRef;
             return this;
-        }
-        public EndpointAddress build() {
+        }        public EndpointAddress build() {
             return new EndpointAddress(hostname, ip, nodeName, targetRef);
         }
     }

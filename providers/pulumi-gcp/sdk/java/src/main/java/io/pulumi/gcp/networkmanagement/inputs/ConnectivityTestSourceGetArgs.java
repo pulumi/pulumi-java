@@ -150,62 +150,50 @@ public final class ConnectivityTestSourceGetArgs extends io.pulumi.resources.Res
             this.instance = instance;
             return this;
         }
-
         public Builder instance(@Nullable String instance) {
             this.instance = Output.ofNullable(instance);
             return this;
         }
-
         public Builder ipAddress(@Nullable Output<String> ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
-
         public Builder ipAddress(@Nullable String ipAddress) {
             this.ipAddress = Output.ofNullable(ipAddress);
             return this;
         }
-
         public Builder network(@Nullable Output<String> network) {
             this.network = network;
             return this;
         }
-
         public Builder network(@Nullable String network) {
             this.network = Output.ofNullable(network);
             return this;
         }
-
         public Builder networkType(@Nullable Output<String> networkType) {
             this.networkType = networkType;
             return this;
         }
-
         public Builder networkType(@Nullable String networkType) {
             this.networkType = Output.ofNullable(networkType);
             return this;
         }
-
         public Builder port(@Nullable Output<Integer> port) {
             this.port = port;
             return this;
         }
-
         public Builder port(@Nullable Integer port) {
             this.port = Output.ofNullable(port);
             return this;
         }
-
         public Builder projectId(@Nullable Output<String> projectId) {
             this.projectId = projectId;
             return this;
         }
-
         public Builder projectId(@Nullable String projectId) {
             this.projectId = Output.ofNullable(projectId);
             return this;
-        }
-        public ConnectivityTestSourceGetArgs build() {
+        }        public ConnectivityTestSourceGetArgs build() {
             return new ConnectivityTestSourceGetArgs(instance, ipAddress, network, networkType, port, projectId);
         }
     }

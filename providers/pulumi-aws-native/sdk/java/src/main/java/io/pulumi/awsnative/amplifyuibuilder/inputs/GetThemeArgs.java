@@ -76,17 +76,14 @@ public final class GetThemeArgs extends io.pulumi.resources.InvokeArgs {
             this.appId = Objects.requireNonNull(appId);
             return this;
         }
-
         public Builder environmentName(String environmentName) {
             this.environmentName = Objects.requireNonNull(environmentName);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
-        }
-        public GetThemeArgs build() {
+        }        public GetThemeArgs build() {
             return new GetThemeArgs(appId, environmentName, id);
         }
     }

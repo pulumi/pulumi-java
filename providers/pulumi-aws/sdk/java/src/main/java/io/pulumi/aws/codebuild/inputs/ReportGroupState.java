@@ -173,82 +173,66 @@ public final class ReportGroupState extends io.pulumi.resources.ResourceArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder created(@Nullable Output<String> created) {
             this.created = created;
             return this;
         }
-
         public Builder created(@Nullable String created) {
             this.created = Output.ofNullable(created);
             return this;
         }
-
         public Builder deleteReports(@Nullable Output<Boolean> deleteReports) {
             this.deleteReports = deleteReports;
             return this;
         }
-
         public Builder deleteReports(@Nullable Boolean deleteReports) {
             this.deleteReports = Output.ofNullable(deleteReports);
             return this;
         }
-
         public Builder exportConfig(@Nullable Output<ReportGroupExportConfigGetArgs> exportConfig) {
             this.exportConfig = exportConfig;
             return this;
         }
-
         public Builder exportConfig(@Nullable ReportGroupExportConfigGetArgs exportConfig) {
             this.exportConfig = Output.ofNullable(exportConfig);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
-
         public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public ReportGroupState build() {
+        }        public ReportGroupState build() {
             return new ReportGroupState(arn, created, deleteReports, exportConfig, name, tags, tagsAll, type);
         }
     }

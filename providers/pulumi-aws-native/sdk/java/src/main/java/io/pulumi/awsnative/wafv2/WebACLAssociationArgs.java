@@ -65,22 +65,18 @@ public final class WebACLAssociationArgs extends io.pulumi.resources.ResourceArg
             this.resourceArn = Objects.requireNonNull(resourceArn);
             return this;
         }
-
         public Builder resourceArn(String resourceArn) {
             this.resourceArn = Output.of(Objects.requireNonNull(resourceArn));
             return this;
         }
-
         public Builder webACLArn(Output<String> webACLArn) {
             this.webACLArn = Objects.requireNonNull(webACLArn);
             return this;
         }
-
         public Builder webACLArn(String webACLArn) {
             this.webACLArn = Output.of(Objects.requireNonNull(webACLArn));
             return this;
-        }
-        public WebACLAssociationArgs build() {
+        }        public WebACLAssociationArgs build() {
             return new WebACLAssociationArgs(resourceArn, webACLArn);
         }
     }

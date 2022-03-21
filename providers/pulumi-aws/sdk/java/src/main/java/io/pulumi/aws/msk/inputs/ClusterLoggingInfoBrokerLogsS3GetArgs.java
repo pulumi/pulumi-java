@@ -91,32 +91,26 @@ public final class ClusterLoggingInfoBrokerLogsS3GetArgs extends io.pulumi.resou
             this.bucket = bucket;
             return this;
         }
-
         public Builder bucket(@Nullable String bucket) {
             this.bucket = Output.ofNullable(bucket);
             return this;
         }
-
         public Builder enabled(Output<Boolean> enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public Builder enabled(Boolean enabled) {
             this.enabled = Output.of(Objects.requireNonNull(enabled));
             return this;
         }
-
         public Builder prefix(@Nullable Output<String> prefix) {
             this.prefix = prefix;
             return this;
         }
-
         public Builder prefix(@Nullable String prefix) {
             this.prefix = Output.ofNullable(prefix);
             return this;
-        }
-        public ClusterLoggingInfoBrokerLogsS3GetArgs build() {
+        }        public ClusterLoggingInfoBrokerLogsS3GetArgs build() {
             return new ClusterLoggingInfoBrokerLogsS3GetArgs(bucket, enabled, prefix);
         }
     }

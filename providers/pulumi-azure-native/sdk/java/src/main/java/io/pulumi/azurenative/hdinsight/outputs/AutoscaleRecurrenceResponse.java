@@ -73,12 +73,13 @@ public final class AutoscaleRecurrenceResponse {
             this.schedule = schedule;
             return this;
         }
-
+        public Builder schedule(AutoscaleScheduleResponse... schedule) {
+            return schedule(List.of(schedule));
+        }
         public Builder timeZone(@Nullable String timeZone) {
             this.timeZone = timeZone;
             return this;
-        }
-        public AutoscaleRecurrenceResponse build() {
+        }        public AutoscaleRecurrenceResponse build() {
             return new AutoscaleRecurrenceResponse(schedule, timeZone);
         }
     }

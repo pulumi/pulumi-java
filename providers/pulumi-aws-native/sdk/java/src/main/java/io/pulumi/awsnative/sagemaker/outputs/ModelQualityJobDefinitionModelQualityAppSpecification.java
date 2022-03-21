@@ -146,37 +146,36 @@ public final class ModelQualityJobDefinitionModelQualityAppSpecification {
             this.containerArguments = containerArguments;
             return this;
         }
-
+        public Builder containerArguments(String... containerArguments) {
+            return containerArguments(List.of(containerArguments));
+        }
         public Builder containerEntrypoint(@Nullable List<String> containerEntrypoint) {
             this.containerEntrypoint = containerEntrypoint;
             return this;
         }
-
+        public Builder containerEntrypoint(String... containerEntrypoint) {
+            return containerEntrypoint(List.of(containerEntrypoint));
+        }
         public Builder environment(@Nullable Object environment) {
             this.environment = environment;
             return this;
         }
-
         public Builder imageUri(String imageUri) {
             this.imageUri = Objects.requireNonNull(imageUri);
             return this;
         }
-
         public Builder postAnalyticsProcessorSourceUri(@Nullable String postAnalyticsProcessorSourceUri) {
             this.postAnalyticsProcessorSourceUri = postAnalyticsProcessorSourceUri;
             return this;
         }
-
         public Builder problemType(ModelQualityJobDefinitionProblemType problemType) {
             this.problemType = Objects.requireNonNull(problemType);
             return this;
         }
-
         public Builder recordPreprocessorSourceUri(@Nullable String recordPreprocessorSourceUri) {
             this.recordPreprocessorSourceUri = recordPreprocessorSourceUri;
             return this;
-        }
-        public ModelQualityJobDefinitionModelQualityAppSpecification build() {
+        }        public ModelQualityJobDefinitionModelQualityAppSpecification build() {
             return new ModelQualityJobDefinitionModelQualityAppSpecification(containerArguments, containerEntrypoint, environment, imageUri, postAnalyticsProcessorSourceUri, problemType, recordPreprocessorSourceUri);
         }
     }

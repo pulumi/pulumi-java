@@ -186,47 +186,41 @@ public final class GetBastionHostResult {
             this.dnsName = dnsName;
             return this;
         }
-
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder ipConfigurations(@Nullable List<BastionHostIPConfigurationResponse> ipConfigurations) {
             this.ipConfigurations = ipConfigurations;
             return this;
         }
-
+        public Builder ipConfigurations(BastionHostIPConfigurationResponse... ipConfigurations) {
+            return ipConfigurations(List.of(ipConfigurations));
+        }
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetBastionHostResult build() {
+        }        public GetBastionHostResult build() {
             return new GetBastionHostResult(dnsName, etag, id, ipConfigurations, location, name, provisioningState, tags, type);
         }
     }

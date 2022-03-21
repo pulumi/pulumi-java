@@ -78,22 +78,18 @@ public final class VpnServerConfigRadiusClientRootCertificateArgs extends io.pul
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder thumbprint(@Nullable Output<String> thumbprint) {
             this.thumbprint = thumbprint;
             return this;
         }
-
         public Builder thumbprint(@Nullable String thumbprint) {
             this.thumbprint = Output.ofNullable(thumbprint);
             return this;
-        }
-        public VpnServerConfigRadiusClientRootCertificateArgs build() {
+        }        public VpnServerConfigRadiusClientRootCertificateArgs build() {
             return new VpnServerConfigRadiusClientRootCertificateArgs(name, thumbprint);
         }
     }

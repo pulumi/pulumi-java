@@ -51,8 +51,7 @@ public final class CommitmentPlanResponse {
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
-        }
-        public CommitmentPlanResponse build() {
+        }        public CommitmentPlanResponse build() {
             return new CommitmentPlanResponse(id);
         }
     }

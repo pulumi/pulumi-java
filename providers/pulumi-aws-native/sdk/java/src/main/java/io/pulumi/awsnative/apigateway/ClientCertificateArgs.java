@@ -76,22 +76,21 @@ public final class ClientCertificateArgs extends io.pulumi.resources.ResourceArg
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<ClientCertificateTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<ClientCertificateTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public ClientCertificateArgs build() {
+        public Builder tags(ClientCertificateTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public ClientCertificateArgs build() {
             return new ClientCertificateArgs(description, tags);
         }
     }

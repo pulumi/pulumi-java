@@ -142,62 +142,50 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
             this.creationData = creationData;
             return this;
         }
-
         public Builder creationData(@Nullable CreationDataArgs creationData) {
             this.creationData = Output.ofNullable(creationData);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder resourceName(@Nullable Output<String> resourceName) {
             this.resourceName = resourceName;
             return this;
         }
-
         public Builder resourceName(@Nullable String resourceName) {
             this.resourceName = Output.ofNullable(resourceName);
             return this;
         }
-
         public Builder snapshotType(@Nullable Output<Either<String,SnapshotType>> snapshotType) {
             this.snapshotType = snapshotType;
             return this;
         }
-
         public Builder snapshotType(@Nullable Either<String,SnapshotType> snapshotType) {
             this.snapshotType = Output.ofNullable(snapshotType);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public SnapshotArgs build() {
+        }        public SnapshotArgs build() {
             return new SnapshotArgs(creationData, location, resourceGroupName, resourceName, snapshotType, tags);
         }
     }

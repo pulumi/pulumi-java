@@ -65,12 +65,13 @@ public final class GetInstanceFilter extends io.pulumi.resources.InvokeArgs {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder values(List<String> values) {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-        public GetInstanceFilter build() {
+        public Builder values(String... values) {
+            return values(List.of(values));
+        }        public GetInstanceFilter build() {
             return new GetInstanceFilter(name, values);
         }
     }

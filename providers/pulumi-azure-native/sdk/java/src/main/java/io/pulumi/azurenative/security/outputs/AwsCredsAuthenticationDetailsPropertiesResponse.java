@@ -136,32 +136,29 @@ public final class AwsCredsAuthenticationDetailsPropertiesResponse {
             this.accountId = Objects.requireNonNull(accountId);
             return this;
         }
-
         public Builder authenticationProvisioningState(String authenticationProvisioningState) {
             this.authenticationProvisioningState = Objects.requireNonNull(authenticationProvisioningState);
             return this;
         }
-
         public Builder authenticationType(String authenticationType) {
             this.authenticationType = Objects.requireNonNull(authenticationType);
             return this;
         }
-
         public Builder awsAccessKeyId(String awsAccessKeyId) {
             this.awsAccessKeyId = Objects.requireNonNull(awsAccessKeyId);
             return this;
         }
-
         public Builder awsSecretAccessKey(String awsSecretAccessKey) {
             this.awsSecretAccessKey = Objects.requireNonNull(awsSecretAccessKey);
             return this;
         }
-
         public Builder grantedPermissions(List<String> grantedPermissions) {
             this.grantedPermissions = Objects.requireNonNull(grantedPermissions);
             return this;
         }
-        public AwsCredsAuthenticationDetailsPropertiesResponse build() {
+        public Builder grantedPermissions(String... grantedPermissions) {
+            return grantedPermissions(List.of(grantedPermissions));
+        }        public AwsCredsAuthenticationDetailsPropertiesResponse build() {
             return new AwsCredsAuthenticationDetailsPropertiesResponse(accountId, authenticationProvisioningState, authenticationType, awsAccessKeyId, awsSecretAccessKey, grantedPermissions);
         }
     }

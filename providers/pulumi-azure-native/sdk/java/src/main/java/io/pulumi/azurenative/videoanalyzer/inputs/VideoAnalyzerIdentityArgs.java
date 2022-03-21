@@ -80,22 +80,18 @@ public final class VideoAnalyzerIdentityArgs extends io.pulumi.resources.Resourc
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
-
         public Builder userAssignedIdentities(@Nullable Output<Map<String,Object>> userAssignedIdentities) {
             this.userAssignedIdentities = userAssignedIdentities;
             return this;
         }
-
         public Builder userAssignedIdentities(@Nullable Map<String,Object> userAssignedIdentities) {
             this.userAssignedIdentities = Output.ofNullable(userAssignedIdentities);
             return this;
-        }
-        public VideoAnalyzerIdentityArgs build() {
+        }        public VideoAnalyzerIdentityArgs build() {
             return new VideoAnalyzerIdentityArgs(type, userAssignedIdentities);
         }
     }

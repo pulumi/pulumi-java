@@ -43,8 +43,7 @@ public final class MonitoringScheduleMonitoringResources {
         public Builder clusterConfig(MonitoringScheduleClusterConfig clusterConfig) {
             this.clusterConfig = Objects.requireNonNull(clusterConfig);
             return this;
-        }
-        public MonitoringScheduleMonitoringResources build() {
+        }        public MonitoringScheduleMonitoringResources build() {
             return new MonitoringScheduleMonitoringResources(clusterConfig);
         }
     }

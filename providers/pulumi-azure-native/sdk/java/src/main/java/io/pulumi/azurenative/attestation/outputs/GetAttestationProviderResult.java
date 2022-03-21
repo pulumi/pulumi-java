@@ -203,52 +203,45 @@ public final class GetAttestationProviderResult {
             this.attestUri = attestUri;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder privateEndpointConnections(List<PrivateEndpointConnectionResponse> privateEndpointConnections) {
             this.privateEndpointConnections = Objects.requireNonNull(privateEndpointConnections);
             return this;
         }
-
+        public Builder privateEndpointConnections(PrivateEndpointConnectionResponse... privateEndpointConnections) {
+            return privateEndpointConnections(List.of(privateEndpointConnections));
+        }
         public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }
-
         public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder trustModel(@Nullable String trustModel) {
             this.trustModel = trustModel;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetAttestationProviderResult build() {
+        }        public GetAttestationProviderResult build() {
             return new GetAttestationProviderResult(attestUri, id, location, name, privateEndpointConnections, status, systemData, tags, trustModel, type);
         }
     }

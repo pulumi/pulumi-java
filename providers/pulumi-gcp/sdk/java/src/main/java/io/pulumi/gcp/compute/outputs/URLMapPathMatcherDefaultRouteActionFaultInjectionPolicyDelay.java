@@ -76,12 +76,10 @@ public final class URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelay 
             this.fixedDelay = fixedDelay;
             return this;
         }
-
         public Builder percentage(@Nullable Double percentage) {
             this.percentage = percentage;
             return this;
-        }
-        public URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelay build() {
+        }        public URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelay build() {
             return new URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelay(fixedDelay, percentage);
         }
     }

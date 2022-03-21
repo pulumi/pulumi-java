@@ -110,42 +110,34 @@ public final class SubjectArgs extends io.pulumi.resources.ResourceArgs {
             this.apiGroup = apiGroup;
             return this;
         }
-
         public Builder apiGroup(@Nullable String apiGroup) {
             this.apiGroup = Output.ofNullable(apiGroup);
             return this;
         }
-
         public Builder kind(Output<String> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder namespace(@Nullable Output<String> namespace) {
             this.namespace = namespace;
             return this;
         }
-
         public Builder namespace(@Nullable String namespace) {
             this.namespace = Output.ofNullable(namespace);
             return this;
-        }
-        public SubjectArgs build() {
+        }        public SubjectArgs build() {
             return new SubjectArgs(apiGroup, kind, name, namespace);
         }
     }

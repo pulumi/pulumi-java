@@ -54,7 +54,9 @@ public final class ManagedRuleSetListResponse {
             this.managedRuleSets = managedRuleSets;
             return this;
         }
-        public ManagedRuleSetListResponse build() {
+        public Builder managedRuleSets(ManagedRuleSetResponse... managedRuleSets) {
+            return managedRuleSets(List.of(managedRuleSets));
+        }        public ManagedRuleSetListResponse build() {
             return new ManagedRuleSetListResponse(managedRuleSets);
         }
     }

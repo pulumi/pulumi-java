@@ -92,32 +92,26 @@ public final class ServiceSourceConfigurationImageRepositoryGetArgs extends io.p
             this.imageConfiguration = imageConfiguration;
             return this;
         }
-
         public Builder imageConfiguration(@Nullable ServiceSourceConfigurationImageRepositoryImageConfigurationGetArgs imageConfiguration) {
             this.imageConfiguration = Output.ofNullable(imageConfiguration);
             return this;
         }
-
         public Builder imageIdentifier(Output<String> imageIdentifier) {
             this.imageIdentifier = Objects.requireNonNull(imageIdentifier);
             return this;
         }
-
         public Builder imageIdentifier(String imageIdentifier) {
             this.imageIdentifier = Output.of(Objects.requireNonNull(imageIdentifier));
             return this;
         }
-
         public Builder imageRepositoryType(Output<String> imageRepositoryType) {
             this.imageRepositoryType = Objects.requireNonNull(imageRepositoryType);
             return this;
         }
-
         public Builder imageRepositoryType(String imageRepositoryType) {
             this.imageRepositoryType = Output.of(Objects.requireNonNull(imageRepositoryType));
             return this;
-        }
-        public ServiceSourceConfigurationImageRepositoryGetArgs build() {
+        }        public ServiceSourceConfigurationImageRepositoryGetArgs build() {
             return new ServiceSourceConfigurationImageRepositoryGetArgs(imageConfiguration, imageIdentifier, imageRepositoryType);
         }
     }

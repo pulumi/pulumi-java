@@ -53,8 +53,7 @@ public final class VirtualGatewaySpecBackendDefaultsClientPolicy {
         public Builder tls(@Nullable VirtualGatewaySpecBackendDefaultsClientPolicyTls tls) {
             this.tls = tls;
             return this;
-        }
-        public VirtualGatewaySpecBackendDefaultsClientPolicy build() {
+        }        public VirtualGatewaySpecBackendDefaultsClientPolicy build() {
             return new VirtualGatewaySpecBackendDefaultsClientPolicy(tls);
         }
     }

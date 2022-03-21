@@ -69,12 +69,10 @@ public final class ImportFileResponse {
             this.content = Objects.requireNonNull(content);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public ImportFileResponse build() {
+        }        public ImportFileResponse build() {
             return new ImportFileResponse(content, name);
         }
     }

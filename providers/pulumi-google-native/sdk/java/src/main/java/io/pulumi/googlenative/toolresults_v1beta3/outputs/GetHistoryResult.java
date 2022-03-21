@@ -101,22 +101,18 @@ public final class GetHistoryResult {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder historyId(String historyId) {
             this.historyId = Objects.requireNonNull(historyId);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder testPlatform(String testPlatform) {
             this.testPlatform = Objects.requireNonNull(testPlatform);
             return this;
-        }
-        public GetHistoryResult build() {
+        }        public GetHistoryResult build() {
             return new GetHistoryResult(displayName, historyId, name, testPlatform);
         }
     }

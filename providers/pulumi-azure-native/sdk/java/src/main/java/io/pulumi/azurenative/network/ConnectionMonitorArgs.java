@@ -292,152 +292,134 @@ public final class ConnectionMonitorArgs extends io.pulumi.resources.ResourceArg
             this.autoStart = autoStart;
             return this;
         }
-
         public Builder autoStart(@Nullable Boolean autoStart) {
             this.autoStart = Output.ofNullable(autoStart);
             return this;
         }
-
         public Builder connectionMonitorName(@Nullable Output<String> connectionMonitorName) {
             this.connectionMonitorName = connectionMonitorName;
             return this;
         }
-
         public Builder connectionMonitorName(@Nullable String connectionMonitorName) {
             this.connectionMonitorName = Output.ofNullable(connectionMonitorName);
             return this;
         }
-
         public Builder destination(@Nullable Output<ConnectionMonitorDestinationArgs> destination) {
             this.destination = destination;
             return this;
         }
-
         public Builder destination(@Nullable ConnectionMonitorDestinationArgs destination) {
             this.destination = Output.ofNullable(destination);
             return this;
         }
-
         public Builder endpoints(@Nullable Output<List<ConnectionMonitorEndpointArgs>> endpoints) {
             this.endpoints = endpoints;
             return this;
         }
-
         public Builder endpoints(@Nullable List<ConnectionMonitorEndpointArgs> endpoints) {
             this.endpoints = Output.ofNullable(endpoints);
             return this;
         }
-
+        public Builder endpoints(ConnectionMonitorEndpointArgs... endpoints) {
+            return endpoints(List.of(endpoints));
+        }
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder migrate(@Nullable Output<String> migrate) {
             this.migrate = migrate;
             return this;
         }
-
         public Builder migrate(@Nullable String migrate) {
             this.migrate = Output.ofNullable(migrate);
             return this;
         }
-
         public Builder monitoringIntervalInSeconds(@Nullable Output<Integer> monitoringIntervalInSeconds) {
             this.monitoringIntervalInSeconds = monitoringIntervalInSeconds;
             return this;
         }
-
         public Builder monitoringIntervalInSeconds(@Nullable Integer monitoringIntervalInSeconds) {
             this.monitoringIntervalInSeconds = Output.ofNullable(monitoringIntervalInSeconds);
             return this;
         }
-
         public Builder networkWatcherName(Output<String> networkWatcherName) {
             this.networkWatcherName = Objects.requireNonNull(networkWatcherName);
             return this;
         }
-
         public Builder networkWatcherName(String networkWatcherName) {
             this.networkWatcherName = Output.of(Objects.requireNonNull(networkWatcherName));
             return this;
         }
-
         public Builder notes(@Nullable Output<String> notes) {
             this.notes = notes;
             return this;
         }
-
         public Builder notes(@Nullable String notes) {
             this.notes = Output.ofNullable(notes);
             return this;
         }
-
         public Builder outputs(@Nullable Output<List<ConnectionMonitorOutputArgs>> outputs) {
             this.outputs = outputs;
             return this;
         }
-
         public Builder outputs(@Nullable List<ConnectionMonitorOutputArgs> outputs) {
             this.outputs = Output.ofNullable(outputs);
             return this;
         }
-
+        public Builder outputs(ConnectionMonitorOutputArgs... outputs) {
+            return outputs(List.of(outputs));
+        }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder source(@Nullable Output<ConnectionMonitorSourceArgs> source) {
             this.source = source;
             return this;
         }
-
         public Builder source(@Nullable ConnectionMonitorSourceArgs source) {
             this.source = Output.ofNullable(source);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder testConfigurations(@Nullable Output<List<ConnectionMonitorTestConfigurationArgs>> testConfigurations) {
             this.testConfigurations = testConfigurations;
             return this;
         }
-
         public Builder testConfigurations(@Nullable List<ConnectionMonitorTestConfigurationArgs> testConfigurations) {
             this.testConfigurations = Output.ofNullable(testConfigurations);
             return this;
         }
-
+        public Builder testConfigurations(ConnectionMonitorTestConfigurationArgs... testConfigurations) {
+            return testConfigurations(List.of(testConfigurations));
+        }
         public Builder testGroups(@Nullable Output<List<ConnectionMonitorTestGroupArgs>> testGroups) {
             this.testGroups = testGroups;
             return this;
         }
-
         public Builder testGroups(@Nullable List<ConnectionMonitorTestGroupArgs> testGroups) {
             this.testGroups = Output.ofNullable(testGroups);
             return this;
         }
-        public ConnectionMonitorArgs build() {
+        public Builder testGroups(ConnectionMonitorTestGroupArgs... testGroups) {
+            return testGroups(List.of(testGroups));
+        }        public ConnectionMonitorArgs build() {
             return new ConnectionMonitorArgs(autoStart, connectionMonitorName, destination, endpoints, location, migrate, monitoringIntervalInSeconds, networkWatcherName, notes, outputs, resourceGroupName, source, tags, testConfigurations, testGroups);
         }
     }

@@ -71,12 +71,10 @@ public final class EncoderSystemPresetResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public EncoderSystemPresetResponse build() {
+        }        public EncoderSystemPresetResponse build() {
             return new EncoderSystemPresetResponse(name, type);
         }
     }

@@ -51,8 +51,7 @@ public final class BotSlotValueRegexFilter {
         public Builder pattern(String pattern) {
             this.pattern = Objects.requireNonNull(pattern);
             return this;
-        }
-        public BotSlotValueRegexFilter build() {
+        }        public BotSlotValueRegexFilter build() {
             return new BotSlotValueRegexFilter(pattern);
         }
     }

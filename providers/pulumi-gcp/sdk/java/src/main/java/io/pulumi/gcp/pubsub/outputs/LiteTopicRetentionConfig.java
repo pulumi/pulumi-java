@@ -81,12 +81,10 @@ public final class LiteTopicRetentionConfig {
             this.perPartitionBytes = Objects.requireNonNull(perPartitionBytes);
             return this;
         }
-
         public Builder period(@Nullable String period) {
             this.period = period;
             return this;
-        }
-        public LiteTopicRetentionConfig build() {
+        }        public LiteTopicRetentionConfig build() {
             return new LiteTopicRetentionConfig(perPartitionBytes, period);
         }
     }

@@ -69,12 +69,10 @@ public final class DeviceTag {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public DeviceTag build() {
+        }        public DeviceTag build() {
             return new DeviceTag(key, value);
         }
     }

@@ -73,17 +73,14 @@ public final class GetAccountAuditConfigurationResult {
             this.auditCheckConfigurations = auditCheckConfigurations;
             return this;
         }
-
         public Builder auditNotificationTargetConfigurations(@Nullable AccountAuditConfigurationAuditNotificationTargetConfigurations auditNotificationTargetConfigurations) {
             this.auditNotificationTargetConfigurations = auditNotificationTargetConfigurations;
             return this;
         }
-
         public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = roleArn;
             return this;
-        }
-        public GetAccountAuditConfigurationResult build() {
+        }        public GetAccountAuditConfigurationResult build() {
             return new GetAccountAuditConfigurationResult(auditCheckConfigurations, auditNotificationTargetConfigurations, roleArn);
         }
     }

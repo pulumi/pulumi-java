@@ -95,17 +95,14 @@ public final class AppImageConfigFileSystemConfig extends io.pulumi.resources.In
             this.defaultGid = defaultGid;
             return this;
         }
-
         public Builder defaultUid(@Nullable Integer defaultUid) {
             this.defaultUid = defaultUid;
             return this;
         }
-
         public Builder mountPath(@Nullable String mountPath) {
             this.mountPath = mountPath;
             return this;
-        }
-        public AppImageConfigFileSystemConfig build() {
+        }        public AppImageConfigFileSystemConfig build() {
             return new AppImageConfigFileSystemConfig(defaultGid, defaultUid, mountPath);
         }
     }

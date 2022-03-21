@@ -58,12 +58,10 @@ public final class WorkflowTemplateJobPysparkJobLoggingConfigArgs extends io.pul
             this.driverLogLevels = driverLogLevels;
             return this;
         }
-
         public Builder driverLogLevels(@Nullable Map<String,String> driverLogLevels) {
             this.driverLogLevels = Output.ofNullable(driverLogLevels);
             return this;
-        }
-        public WorkflowTemplateJobPysparkJobLoggingConfigArgs build() {
+        }        public WorkflowTemplateJobPysparkJobLoggingConfigArgs build() {
             return new WorkflowTemplateJobPysparkJobLoggingConfigArgs(driverLogLevels);
         }
     }

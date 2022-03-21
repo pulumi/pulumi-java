@@ -56,12 +56,10 @@ public final class ProjectSecondarySourceGitSubmodulesConfigArgs extends io.pulu
             this.fetchSubmodules = Objects.requireNonNull(fetchSubmodules);
             return this;
         }
-
         public Builder fetchSubmodules(Boolean fetchSubmodules) {
             this.fetchSubmodules = Output.of(Objects.requireNonNull(fetchSubmodules));
             return this;
-        }
-        public ProjectSecondarySourceGitSubmodulesConfigArgs build() {
+        }        public ProjectSecondarySourceGitSubmodulesConfigArgs build() {
             return new ProjectSecondarySourceGitSubmodulesConfigArgs(fetchSubmodules);
         }
     }

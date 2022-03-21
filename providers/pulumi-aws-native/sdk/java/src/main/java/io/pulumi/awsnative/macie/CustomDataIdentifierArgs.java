@@ -140,62 +140,56 @@ public final class CustomDataIdentifierArgs extends io.pulumi.resources.Resource
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder ignoreWords(@Nullable Output<List<String>> ignoreWords) {
             this.ignoreWords = ignoreWords;
             return this;
         }
-
         public Builder ignoreWords(@Nullable List<String> ignoreWords) {
             this.ignoreWords = Output.ofNullable(ignoreWords);
             return this;
         }
-
+        public Builder ignoreWords(String... ignoreWords) {
+            return ignoreWords(List.of(ignoreWords));
+        }
         public Builder keywords(@Nullable Output<List<String>> keywords) {
             this.keywords = keywords;
             return this;
         }
-
         public Builder keywords(@Nullable List<String> keywords) {
             this.keywords = Output.ofNullable(keywords);
             return this;
         }
-
+        public Builder keywords(String... keywords) {
+            return keywords(List.of(keywords));
+        }
         public Builder maximumMatchDistance(@Nullable Output<Integer> maximumMatchDistance) {
             this.maximumMatchDistance = maximumMatchDistance;
             return this;
         }
-
         public Builder maximumMatchDistance(@Nullable Integer maximumMatchDistance) {
             this.maximumMatchDistance = Output.ofNullable(maximumMatchDistance);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder regex(Output<String> regex) {
             this.regex = Objects.requireNonNull(regex);
             return this;
         }
-
         public Builder regex(String regex) {
             this.regex = Output.of(Objects.requireNonNull(regex));
             return this;
-        }
-        public CustomDataIdentifierArgs build() {
+        }        public CustomDataIdentifierArgs build() {
             return new CustomDataIdentifierArgs(description, ignoreWords, keywords, maximumMatchDistance, name, regex);
         }
     }

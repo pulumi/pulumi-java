@@ -159,72 +159,64 @@ public final class ListenerRuleState extends io.pulumi.resources.ResourceArgs {
             this.actions = actions;
             return this;
         }
-
         public Builder actions(@Nullable List<ListenerRuleActionGetArgs> actions) {
             this.actions = Output.ofNullable(actions);
             return this;
         }
-
+        public Builder actions(ListenerRuleActionGetArgs... actions) {
+            return actions(List.of(actions));
+        }
         public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder conditions(@Nullable Output<List<ListenerRuleConditionGetArgs>> conditions) {
             this.conditions = conditions;
             return this;
         }
-
         public Builder conditions(@Nullable List<ListenerRuleConditionGetArgs> conditions) {
             this.conditions = Output.ofNullable(conditions);
             return this;
         }
-
+        public Builder conditions(ListenerRuleConditionGetArgs... conditions) {
+            return conditions(List.of(conditions));
+        }
         public Builder listenerArn(@Nullable Output<String> listenerArn) {
             this.listenerArn = listenerArn;
             return this;
         }
-
         public Builder listenerArn(@Nullable String listenerArn) {
             this.listenerArn = Output.ofNullable(listenerArn);
             return this;
         }
-
         public Builder priority(@Nullable Output<Integer> priority) {
             this.priority = priority;
             return this;
         }
-
         public Builder priority(@Nullable Integer priority) {
             this.priority = Output.ofNullable(priority);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
-        }
-        public ListenerRuleState build() {
+        }        public ListenerRuleState build() {
             return new ListenerRuleState(actions, arn, conditions, listenerArn, priority, tags, tagsAll);
         }
     }

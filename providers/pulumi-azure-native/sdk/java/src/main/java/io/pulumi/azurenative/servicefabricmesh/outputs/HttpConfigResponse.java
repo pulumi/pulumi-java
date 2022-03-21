@@ -88,17 +88,17 @@ public final class HttpConfigResponse {
             this.hosts = Objects.requireNonNull(hosts);
             return this;
         }
-
+        public Builder hosts(HttpHostConfigResponse... hosts) {
+            return hosts(List.of(hosts));
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder port(Integer port) {
             this.port = Objects.requireNonNull(port);
             return this;
-        }
-        public HttpConfigResponse build() {
+        }        public HttpConfigResponse build() {
             return new HttpConfigResponse(hosts, name, port);
         }
     }

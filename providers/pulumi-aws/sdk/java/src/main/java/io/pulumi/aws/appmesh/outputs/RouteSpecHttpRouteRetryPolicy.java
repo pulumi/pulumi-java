@@ -109,22 +109,24 @@ public final class RouteSpecHttpRouteRetryPolicy {
             this.httpRetryEvents = httpRetryEvents;
             return this;
         }
-
+        public Builder httpRetryEvents(String... httpRetryEvents) {
+            return httpRetryEvents(List.of(httpRetryEvents));
+        }
         public Builder maxRetries(Integer maxRetries) {
             this.maxRetries = Objects.requireNonNull(maxRetries);
             return this;
         }
-
         public Builder perRetryTimeout(RouteSpecHttpRouteRetryPolicyPerRetryTimeout perRetryTimeout) {
             this.perRetryTimeout = Objects.requireNonNull(perRetryTimeout);
             return this;
         }
-
         public Builder tcpRetryEvents(@Nullable List<String> tcpRetryEvents) {
             this.tcpRetryEvents = tcpRetryEvents;
             return this;
         }
-        public RouteSpecHttpRouteRetryPolicy build() {
+        public Builder tcpRetryEvents(String... tcpRetryEvents) {
+            return tcpRetryEvents(List.of(tcpRetryEvents));
+        }        public RouteSpecHttpRouteRetryPolicy build() {
             return new RouteSpecHttpRouteRetryPolicy(httpRetryEvents, maxRetries, perRetryTimeout, tcpRetryEvents);
         }
     }

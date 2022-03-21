@@ -102,22 +102,18 @@ public final class IdentityAwareProxyResponse {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public Builder oauth2ClientId(String oauth2ClientId) {
             this.oauth2ClientId = Objects.requireNonNull(oauth2ClientId);
             return this;
         }
-
         public Builder oauth2ClientSecret(String oauth2ClientSecret) {
             this.oauth2ClientSecret = Objects.requireNonNull(oauth2ClientSecret);
             return this;
         }
-
         public Builder oauth2ClientSecretSha256(String oauth2ClientSecretSha256) {
             this.oauth2ClientSecretSha256 = Objects.requireNonNull(oauth2ClientSecretSha256);
             return this;
-        }
-        public IdentityAwareProxyResponse build() {
+        }        public IdentityAwareProxyResponse build() {
             return new IdentityAwareProxyResponse(enabled, oauth2ClientId, oauth2ClientSecret, oauth2ClientSecretSha256);
         }
     }

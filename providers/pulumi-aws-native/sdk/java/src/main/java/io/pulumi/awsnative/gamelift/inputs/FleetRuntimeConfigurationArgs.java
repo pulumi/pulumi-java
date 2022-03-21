@@ -100,32 +100,29 @@ public final class FleetRuntimeConfigurationArgs extends io.pulumi.resources.Res
             this.gameSessionActivationTimeoutSeconds = gameSessionActivationTimeoutSeconds;
             return this;
         }
-
         public Builder gameSessionActivationTimeoutSeconds(@Nullable Integer gameSessionActivationTimeoutSeconds) {
             this.gameSessionActivationTimeoutSeconds = Output.ofNullable(gameSessionActivationTimeoutSeconds);
             return this;
         }
-
         public Builder maxConcurrentGameSessionActivations(@Nullable Output<Integer> maxConcurrentGameSessionActivations) {
             this.maxConcurrentGameSessionActivations = maxConcurrentGameSessionActivations;
             return this;
         }
-
         public Builder maxConcurrentGameSessionActivations(@Nullable Integer maxConcurrentGameSessionActivations) {
             this.maxConcurrentGameSessionActivations = Output.ofNullable(maxConcurrentGameSessionActivations);
             return this;
         }
-
         public Builder serverProcesses(@Nullable Output<List<FleetServerProcessArgs>> serverProcesses) {
             this.serverProcesses = serverProcesses;
             return this;
         }
-
         public Builder serverProcesses(@Nullable List<FleetServerProcessArgs> serverProcesses) {
             this.serverProcesses = Output.ofNullable(serverProcesses);
             return this;
         }
-        public FleetRuntimeConfigurationArgs build() {
+        public Builder serverProcesses(FleetServerProcessArgs... serverProcesses) {
+            return serverProcesses(List.of(serverProcesses));
+        }        public FleetRuntimeConfigurationArgs build() {
             return new FleetRuntimeConfigurationArgs(gameSessionActivationTimeoutSeconds, maxConcurrentGameSessionActivations, serverProcesses);
         }
     }

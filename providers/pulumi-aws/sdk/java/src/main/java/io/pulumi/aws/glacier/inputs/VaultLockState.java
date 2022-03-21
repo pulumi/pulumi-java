@@ -107,42 +107,34 @@ public final class VaultLockState extends io.pulumi.resources.ResourceArgs {
             this.completeLock = completeLock;
             return this;
         }
-
         public Builder completeLock(@Nullable Boolean completeLock) {
             this.completeLock = Output.ofNullable(completeLock);
             return this;
         }
-
         public Builder ignoreDeletionError(@Nullable Output<Boolean> ignoreDeletionError) {
             this.ignoreDeletionError = ignoreDeletionError;
             return this;
         }
-
         public Builder ignoreDeletionError(@Nullable Boolean ignoreDeletionError) {
             this.ignoreDeletionError = Output.ofNullable(ignoreDeletionError);
             return this;
         }
-
         public Builder policy(@Nullable Output<String> policy) {
             this.policy = policy;
             return this;
         }
-
         public Builder policy(@Nullable String policy) {
             this.policy = Output.ofNullable(policy);
             return this;
         }
-
         public Builder vaultName(@Nullable Output<String> vaultName) {
             this.vaultName = vaultName;
             return this;
         }
-
         public Builder vaultName(@Nullable String vaultName) {
             this.vaultName = Output.ofNullable(vaultName);
             return this;
-        }
-        public VaultLockState build() {
+        }        public VaultLockState build() {
             return new VaultLockState(completeLock, ignoreDeletionError, policy, vaultName);
         }
     }

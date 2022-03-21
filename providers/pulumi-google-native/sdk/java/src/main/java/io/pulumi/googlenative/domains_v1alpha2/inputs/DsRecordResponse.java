@@ -109,22 +109,18 @@ public final class DsRecordResponse extends io.pulumi.resources.InvokeArgs {
             this.algorithm = Objects.requireNonNull(algorithm);
             return this;
         }
-
         public Builder digest(String digest) {
             this.digest = Objects.requireNonNull(digest);
             return this;
         }
-
         public Builder digestType(String digestType) {
             this.digestType = Objects.requireNonNull(digestType);
             return this;
         }
-
         public Builder keyTag(Integer keyTag) {
             this.keyTag = Objects.requireNonNull(keyTag);
             return this;
-        }
-        public DsRecordResponse build() {
+        }        public DsRecordResponse build() {
             return new DsRecordResponse(algorithm, digest, digestType, keyTag);
         }
     }

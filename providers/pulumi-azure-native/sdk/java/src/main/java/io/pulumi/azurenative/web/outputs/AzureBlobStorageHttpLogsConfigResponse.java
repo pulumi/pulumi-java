@@ -93,17 +93,14 @@ public final class AzureBlobStorageHttpLogsConfigResponse {
             this.enabled = enabled;
             return this;
         }
-
         public Builder retentionInDays(@Nullable Integer retentionInDays) {
             this.retentionInDays = retentionInDays;
             return this;
         }
-
         public Builder sasUrl(@Nullable String sasUrl) {
             this.sasUrl = sasUrl;
             return this;
-        }
-        public AzureBlobStorageHttpLogsConfigResponse build() {
+        }        public AzureBlobStorageHttpLogsConfigResponse build() {
             return new AzureBlobStorageHttpLogsConfigResponse(enabled, retentionInDays, sasUrl);
         }
     }

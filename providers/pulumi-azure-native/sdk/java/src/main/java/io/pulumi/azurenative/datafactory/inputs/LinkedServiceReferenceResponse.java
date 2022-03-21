@@ -96,17 +96,14 @@ public final class LinkedServiceReferenceResponse extends io.pulumi.resources.In
             this.parameters = parameters;
             return this;
         }
-
         public Builder referenceName(String referenceName) {
             this.referenceName = Objects.requireNonNull(referenceName);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public LinkedServiceReferenceResponse build() {
+        }        public LinkedServiceReferenceResponse build() {
             return new LinkedServiceReferenceResponse(parameters, referenceName, type);
         }
     }

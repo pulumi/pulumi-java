@@ -88,17 +88,14 @@ public final class DataDiskPropertiesResponse {
             this.attachNewDataDiskOptions = attachNewDataDiskOptions;
             return this;
         }
-
         public Builder existingLabDiskId(@Nullable String existingLabDiskId) {
             this.existingLabDiskId = existingLabDiskId;
             return this;
         }
-
         public Builder hostCaching(@Nullable String hostCaching) {
             this.hostCaching = hostCaching;
             return this;
-        }
-        public DataDiskPropertiesResponse build() {
+        }        public DataDiskPropertiesResponse build() {
             return new DataDiskPropertiesResponse(attachNewDataDiskOptions, existingLabDiskId, hostCaching);
         }
     }

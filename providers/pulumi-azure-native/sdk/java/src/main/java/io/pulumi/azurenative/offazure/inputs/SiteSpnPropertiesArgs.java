@@ -142,62 +142,50 @@ public final class SiteSpnPropertiesArgs extends io.pulumi.resources.ResourceArg
             this.aadAuthority = aadAuthority;
             return this;
         }
-
         public Builder aadAuthority(@Nullable String aadAuthority) {
             this.aadAuthority = Output.ofNullable(aadAuthority);
             return this;
         }
-
         public Builder applicationId(@Nullable Output<String> applicationId) {
             this.applicationId = applicationId;
             return this;
         }
-
         public Builder applicationId(@Nullable String applicationId) {
             this.applicationId = Output.ofNullable(applicationId);
             return this;
         }
-
         public Builder audience(@Nullable Output<String> audience) {
             this.audience = audience;
             return this;
         }
-
         public Builder audience(@Nullable String audience) {
             this.audience = Output.ofNullable(audience);
             return this;
         }
-
         public Builder objectId(@Nullable Output<String> objectId) {
             this.objectId = objectId;
             return this;
         }
-
         public Builder objectId(@Nullable String objectId) {
             this.objectId = Output.ofNullable(objectId);
             return this;
         }
-
         public Builder rawCertData(@Nullable Output<String> rawCertData) {
             this.rawCertData = rawCertData;
             return this;
         }
-
         public Builder rawCertData(@Nullable String rawCertData) {
             this.rawCertData = Output.ofNullable(rawCertData);
             return this;
         }
-
         public Builder tenantId(@Nullable Output<String> tenantId) {
             this.tenantId = tenantId;
             return this;
         }
-
         public Builder tenantId(@Nullable String tenantId) {
             this.tenantId = Output.ofNullable(tenantId);
             return this;
-        }
-        public SiteSpnPropertiesArgs build() {
+        }        public SiteSpnPropertiesArgs build() {
             return new SiteSpnPropertiesArgs(aadAuthority, applicationId, audience, objectId, rawCertData, tenantId);
         }
     }

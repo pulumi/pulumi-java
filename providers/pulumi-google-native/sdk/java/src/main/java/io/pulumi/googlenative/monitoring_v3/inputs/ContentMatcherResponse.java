@@ -76,12 +76,10 @@ public final class ContentMatcherResponse extends io.pulumi.resources.InvokeArgs
             this.content = Objects.requireNonNull(content);
             return this;
         }
-
         public Builder matcher(String matcher) {
             this.matcher = Objects.requireNonNull(matcher);
             return this;
-        }
-        public ContentMatcherResponse build() {
+        }        public ContentMatcherResponse build() {
             return new ContentMatcherResponse(content, matcher);
         }
     }

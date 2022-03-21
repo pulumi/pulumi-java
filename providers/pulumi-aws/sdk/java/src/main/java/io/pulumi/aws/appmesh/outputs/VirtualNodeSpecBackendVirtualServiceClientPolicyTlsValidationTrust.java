@@ -89,17 +89,14 @@ public final class VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidation
             this.acm = acm;
             return this;
         }
-
         public Builder file(@Nullable VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationTrustFile file) {
             this.file = file;
             return this;
         }
-
         public Builder sds(@Nullable VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationTrustSds sds) {
             this.sds = sds;
             return this;
-        }
-        public VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationTrust build() {
+        }        public VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationTrust build() {
             return new VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationTrust(acm, file, sds);
         }
     }

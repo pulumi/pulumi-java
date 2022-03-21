@@ -320,42 +320,40 @@ public final class AlertPolicyConditionConditionThreshold {
             this.aggregations = aggregations;
             return this;
         }
-
+        public Builder aggregations(AlertPolicyConditionConditionThresholdAggregation... aggregations) {
+            return aggregations(List.of(aggregations));
+        }
         public Builder comparison(String comparison) {
             this.comparison = Objects.requireNonNull(comparison);
             return this;
         }
-
         public Builder denominatorAggregations(@Nullable List<AlertPolicyConditionConditionThresholdDenominatorAggregation> denominatorAggregations) {
             this.denominatorAggregations = denominatorAggregations;
             return this;
         }
-
+        public Builder denominatorAggregations(AlertPolicyConditionConditionThresholdDenominatorAggregation... denominatorAggregations) {
+            return denominatorAggregations(List.of(denominatorAggregations));
+        }
         public Builder denominatorFilter(@Nullable String denominatorFilter) {
             this.denominatorFilter = denominatorFilter;
             return this;
         }
-
         public Builder duration(String duration) {
             this.duration = Objects.requireNonNull(duration);
             return this;
         }
-
         public Builder filter(@Nullable String filter) {
             this.filter = filter;
             return this;
         }
-
         public Builder thresholdValue(@Nullable Double thresholdValue) {
             this.thresholdValue = thresholdValue;
             return this;
         }
-
         public Builder trigger(@Nullable AlertPolicyConditionConditionThresholdTrigger trigger) {
             this.trigger = trigger;
             return this;
-        }
-        public AlertPolicyConditionConditionThreshold build() {
+        }        public AlertPolicyConditionConditionThreshold build() {
             return new AlertPolicyConditionConditionThreshold(aggregations, comparison, denominatorAggregations, denominatorFilter, duration, filter, thresholdValue, trigger);
         }
     }

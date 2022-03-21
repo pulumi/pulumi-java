@@ -50,8 +50,7 @@ public final class GetCertificateArgs extends io.pulumi.resources.InvokeArgs {
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
-        }
-        public GetCertificateArgs build() {
+        }        public GetCertificateArgs build() {
             return new GetCertificateArgs(id);
         }
     }

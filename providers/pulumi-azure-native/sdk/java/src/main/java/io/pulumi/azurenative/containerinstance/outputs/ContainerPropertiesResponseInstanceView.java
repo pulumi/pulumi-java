@@ -104,22 +104,21 @@ public final class ContainerPropertiesResponseInstanceView {
             this.currentState = Objects.requireNonNull(currentState);
             return this;
         }
-
         public Builder events(List<EventResponse> events) {
             this.events = Objects.requireNonNull(events);
             return this;
         }
-
+        public Builder events(EventResponse... events) {
+            return events(List.of(events));
+        }
         public Builder previousState(ContainerStateResponse previousState) {
             this.previousState = Objects.requireNonNull(previousState);
             return this;
         }
-
         public Builder restartCount(Integer restartCount) {
             this.restartCount = Objects.requireNonNull(restartCount);
             return this;
-        }
-        public ContainerPropertiesResponseInstanceView build() {
+        }        public ContainerPropertiesResponseInstanceView build() {
             return new ContainerPropertiesResponseInstanceView(currentState, events, previousState, restartCount);
         }
     }

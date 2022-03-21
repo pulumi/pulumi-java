@@ -89,32 +89,26 @@ public final class ClusterNodePoolNodeConfigTaintGetArgs extends io.pulumi.resou
             this.effect = Objects.requireNonNull(effect);
             return this;
         }
-
         public Builder effect(String effect) {
             this.effect = Output.of(Objects.requireNonNull(effect));
             return this;
         }
-
         public Builder key(Output<String> key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder key(String key) {
             this.key = Output.of(Objects.requireNonNull(key));
             return this;
         }
-
         public Builder value(Output<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Output.of(Objects.requireNonNull(value));
             return this;
-        }
-        public ClusterNodePoolNodeConfigTaintGetArgs build() {
+        }        public ClusterNodePoolNodeConfigTaintGetArgs build() {
             return new ClusterNodePoolNodeConfigTaintGetArgs(effect, key, value);
         }
     }

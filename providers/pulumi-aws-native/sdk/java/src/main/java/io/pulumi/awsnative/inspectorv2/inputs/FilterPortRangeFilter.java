@@ -66,12 +66,10 @@ public final class FilterPortRangeFilter extends io.pulumi.resources.InvokeArgs 
             this.beginInclusive = beginInclusive;
             return this;
         }
-
         public Builder endInclusive(@Nullable Integer endInclusive) {
             this.endInclusive = endInclusive;
             return this;
-        }
-        public FilterPortRangeFilter build() {
+        }        public FilterPortRangeFilter build() {
             return new FilterPortRangeFilter(beginInclusive, endInclusive);
         }
     }

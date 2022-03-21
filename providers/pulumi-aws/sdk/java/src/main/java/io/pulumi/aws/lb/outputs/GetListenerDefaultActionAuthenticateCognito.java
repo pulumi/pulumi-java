@@ -103,42 +103,34 @@ public final class GetListenerDefaultActionAuthenticateCognito {
             this.authenticationRequestExtraParams = Objects.requireNonNull(authenticationRequestExtraParams);
             return this;
         }
-
         public Builder onUnauthenticatedRequest(String onUnauthenticatedRequest) {
             this.onUnauthenticatedRequest = Objects.requireNonNull(onUnauthenticatedRequest);
             return this;
         }
-
         public Builder scope(String scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
-
         public Builder sessionCookieName(String sessionCookieName) {
             this.sessionCookieName = Objects.requireNonNull(sessionCookieName);
             return this;
         }
-
         public Builder sessionTimeout(Integer sessionTimeout) {
             this.sessionTimeout = Objects.requireNonNull(sessionTimeout);
             return this;
         }
-
         public Builder userPoolArn(String userPoolArn) {
             this.userPoolArn = Objects.requireNonNull(userPoolArn);
             return this;
         }
-
         public Builder userPoolClientId(String userPoolClientId) {
             this.userPoolClientId = Objects.requireNonNull(userPoolClientId);
             return this;
         }
-
         public Builder userPoolDomain(String userPoolDomain) {
             this.userPoolDomain = Objects.requireNonNull(userPoolDomain);
             return this;
-        }
-        public GetListenerDefaultActionAuthenticateCognito build() {
+        }        public GetListenerDefaultActionAuthenticateCognito build() {
             return new GetListenerDefaultActionAuthenticateCognito(authenticationRequestExtraParams, onUnauthenticatedRequest, scope, sessionCookieName, sessionTimeout, userPoolArn, userPoolClientId, userPoolDomain);
         }
     }

@@ -114,27 +114,22 @@ public final class CertificateSigningRequest {
             this.apiVersion = apiVersion;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder metadata(@Nullable ObjectMeta metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder spec(CertificateSigningRequestSpec spec) {
             this.spec = Objects.requireNonNull(spec);
             return this;
         }
-
         public Builder status(@Nullable CertificateSigningRequestStatus status) {
             this.status = status;
             return this;
-        }
-        public CertificateSigningRequest build() {
+        }        public CertificateSigningRequest build() {
             return new CertificateSigningRequest(apiVersion, kind, metadata, spec, status);
         }
     }

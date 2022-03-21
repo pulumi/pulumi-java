@@ -85,17 +85,14 @@ public final class AwsNodePoolConfigTaint {
             this.effect = Objects.requireNonNull(effect);
             return this;
         }
-
         public Builder key(String key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public AwsNodePoolConfigTaint build() {
+        }        public AwsNodePoolConfigTaint build() {
             return new AwsNodePoolConfigTaint(effect, key, value);
         }
     }

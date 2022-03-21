@@ -214,102 +214,88 @@ public final class CustomResourceDefinitionSpecArgs extends io.pulumi.resources.
             this.additionalPrinterColumns = additionalPrinterColumns;
             return this;
         }
-
         public Builder additionalPrinterColumns(@Nullable List<CustomResourceColumnDefinitionArgs> additionalPrinterColumns) {
             this.additionalPrinterColumns = Output.ofNullable(additionalPrinterColumns);
             return this;
         }
-
+        public Builder additionalPrinterColumns(CustomResourceColumnDefinitionArgs... additionalPrinterColumns) {
+            return additionalPrinterColumns(List.of(additionalPrinterColumns));
+        }
         public Builder conversion(@Nullable Output<CustomResourceConversionArgs> conversion) {
             this.conversion = conversion;
             return this;
         }
-
         public Builder conversion(@Nullable CustomResourceConversionArgs conversion) {
             this.conversion = Output.ofNullable(conversion);
             return this;
         }
-
         public Builder group(Output<String> group) {
             this.group = Objects.requireNonNull(group);
             return this;
         }
-
         public Builder group(String group) {
             this.group = Output.of(Objects.requireNonNull(group));
             return this;
         }
-
         public Builder names(Output<CustomResourceDefinitionNamesArgs> names) {
             this.names = Objects.requireNonNull(names);
             return this;
         }
-
         public Builder names(CustomResourceDefinitionNamesArgs names) {
             this.names = Output.of(Objects.requireNonNull(names));
             return this;
         }
-
         public Builder preserveUnknownFields(@Nullable Output<Boolean> preserveUnknownFields) {
             this.preserveUnknownFields = preserveUnknownFields;
             return this;
         }
-
         public Builder preserveUnknownFields(@Nullable Boolean preserveUnknownFields) {
             this.preserveUnknownFields = Output.ofNullable(preserveUnknownFields);
             return this;
         }
-
         public Builder scope(Output<String> scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
-
         public Builder scope(String scope) {
             this.scope = Output.of(Objects.requireNonNull(scope));
             return this;
         }
-
         public Builder subresources(@Nullable Output<CustomResourceSubresourcesArgs> subresources) {
             this.subresources = subresources;
             return this;
         }
-
         public Builder subresources(@Nullable CustomResourceSubresourcesArgs subresources) {
             this.subresources = Output.ofNullable(subresources);
             return this;
         }
-
         public Builder validation(@Nullable Output<CustomResourceValidationArgs> validation) {
             this.validation = validation;
             return this;
         }
-
         public Builder validation(@Nullable CustomResourceValidationArgs validation) {
             this.validation = Output.ofNullable(validation);
             return this;
         }
-
         public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = Output.ofNullable(version);
             return this;
         }
-
         public Builder versions(@Nullable Output<List<CustomResourceDefinitionVersionArgs>> versions) {
             this.versions = versions;
             return this;
         }
-
         public Builder versions(@Nullable List<CustomResourceDefinitionVersionArgs> versions) {
             this.versions = Output.ofNullable(versions);
             return this;
         }
-        public CustomResourceDefinitionSpecArgs build() {
+        public Builder versions(CustomResourceDefinitionVersionArgs... versions) {
+            return versions(List.of(versions));
+        }        public CustomResourceDefinitionSpecArgs build() {
             return new CustomResourceDefinitionSpecArgs(additionalPrinterColumns, conversion, group, names, preserveUnknownFields, scope, subresources, validation, version, versions);
         }
     }

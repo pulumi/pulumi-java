@@ -146,62 +146,50 @@ public final class GatewayPropertiesArgs extends io.pulumi.resources.ResourceArg
             this.apiMetadataProperties = apiMetadataProperties;
             return this;
         }
-
         public Builder apiMetadataProperties(@Nullable GatewayApiMetadataPropertiesArgs apiMetadataProperties) {
             this.apiMetadataProperties = Output.ofNullable(apiMetadataProperties);
             return this;
         }
-
         public Builder corsProperties(@Nullable Output<GatewayCorsPropertiesArgs> corsProperties) {
             this.corsProperties = corsProperties;
             return this;
         }
-
         public Builder corsProperties(@Nullable GatewayCorsPropertiesArgs corsProperties) {
             this.corsProperties = Output.ofNullable(corsProperties);
             return this;
         }
-
         public Builder httpsOnly(@Nullable Output<Boolean> httpsOnly) {
             this.httpsOnly = httpsOnly;
             return this;
         }
-
         public Builder httpsOnly(@Nullable Boolean httpsOnly) {
             this.httpsOnly = Output.ofNullable(httpsOnly);
             return this;
         }
-
         public Builder $public(@Nullable Output<Boolean> $public) {
             this.$public = $public;
             return this;
         }
-
         public Builder $public(@Nullable Boolean $public) {
             this.$public = Output.ofNullable($public);
             return this;
         }
-
         public Builder resourceRequests(@Nullable Output<GatewayResourceRequestsArgs> resourceRequests) {
             this.resourceRequests = resourceRequests;
             return this;
         }
-
         public Builder resourceRequests(@Nullable GatewayResourceRequestsArgs resourceRequests) {
             this.resourceRequests = Output.ofNullable(resourceRequests);
             return this;
         }
-
         public Builder ssoProperties(@Nullable Output<SsoPropertiesArgs> ssoProperties) {
             this.ssoProperties = ssoProperties;
             return this;
         }
-
         public Builder ssoProperties(@Nullable SsoPropertiesArgs ssoProperties) {
             this.ssoProperties = Output.ofNullable(ssoProperties);
             return this;
-        }
-        public GatewayPropertiesArgs build() {
+        }        public GatewayPropertiesArgs build() {
             return new GatewayPropertiesArgs(apiMetadataProperties, corsProperties, httpsOnly, $public, resourceRequests, ssoProperties);
         }
     }

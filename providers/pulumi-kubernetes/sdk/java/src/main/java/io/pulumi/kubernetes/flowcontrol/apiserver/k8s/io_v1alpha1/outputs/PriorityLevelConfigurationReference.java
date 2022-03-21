@@ -51,8 +51,7 @@ public final class PriorityLevelConfigurationReference {
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public PriorityLevelConfigurationReference build() {
+        }        public PriorityLevelConfigurationReference build() {
             return new PriorityLevelConfigurationReference(name);
         }
     }

@@ -96,32 +96,26 @@ public final class ModuleAssetParameterArgs extends io.pulumi.resources.Resource
             this.modeValuesInfo = modeValuesInfo;
             return this;
         }
-
         public Builder modeValuesInfo(@Nullable Map<String,ModeValueInfoArgs> modeValuesInfo) {
             this.modeValuesInfo = Output.ofNullable(modeValuesInfo);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder parameterType(@Nullable Output<String> parameterType) {
             this.parameterType = parameterType;
             return this;
         }
-
         public Builder parameterType(@Nullable String parameterType) {
             this.parameterType = Output.ofNullable(parameterType);
             return this;
-        }
-        public ModuleAssetParameterArgs build() {
+        }        public ModuleAssetParameterArgs build() {
             return new ModuleAssetParameterArgs(modeValuesInfo, name, parameterType);
         }
     }

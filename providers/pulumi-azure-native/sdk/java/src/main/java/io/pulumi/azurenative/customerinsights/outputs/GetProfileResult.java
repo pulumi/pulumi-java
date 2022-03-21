@@ -380,107 +380,92 @@ public final class GetProfileResult {
             this.apiEntitySetName = apiEntitySetName;
             return this;
         }
-
         public Builder attributes(@Nullable Map<String,List<String>> attributes) {
             this.attributes = attributes;
             return this;
         }
-
         public Builder description(@Nullable Map<String,String> description) {
             this.description = description;
             return this;
         }
-
         public Builder displayName(@Nullable Map<String,String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder entityType(@Nullable String entityType) {
             this.entityType = entityType;
             return this;
         }
-
         public Builder fields(@Nullable List<PropertyDefinitionResponse> fields) {
             this.fields = fields;
             return this;
         }
-
+        public Builder fields(PropertyDefinitionResponse... fields) {
+            return fields(List.of(fields));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder instancesCount(@Nullable Integer instancesCount) {
             this.instancesCount = instancesCount;
             return this;
         }
-
         public Builder largeImage(@Nullable String largeImage) {
             this.largeImage = largeImage;
             return this;
         }
-
         public Builder lastChangedUtc(String lastChangedUtc) {
             this.lastChangedUtc = Objects.requireNonNull(lastChangedUtc);
             return this;
         }
-
         public Builder localizedAttributes(@Nullable Map<String,Map<String,String>> localizedAttributes) {
             this.localizedAttributes = localizedAttributes;
             return this;
         }
-
         public Builder mediumImage(@Nullable String mediumImage) {
             this.mediumImage = mediumImage;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder schemaItemTypeLink(@Nullable String schemaItemTypeLink) {
             this.schemaItemTypeLink = schemaItemTypeLink;
             return this;
         }
-
         public Builder smallImage(@Nullable String smallImage) {
             this.smallImage = smallImage;
             return this;
         }
-
         public Builder strongIds(@Nullable List<StrongIdResponse> strongIds) {
             this.strongIds = strongIds;
             return this;
         }
-
+        public Builder strongIds(StrongIdResponse... strongIds) {
+            return strongIds(List.of(strongIds));
+        }
         public Builder tenantId(String tenantId) {
             this.tenantId = Objects.requireNonNull(tenantId);
             return this;
         }
-
         public Builder timestampFieldName(@Nullable String timestampFieldName) {
             this.timestampFieldName = timestampFieldName;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder typeName(@Nullable String typeName) {
             this.typeName = typeName;
             return this;
-        }
-        public GetProfileResult build() {
+        }        public GetProfileResult build() {
             return new GetProfileResult(apiEntitySetName, attributes, description, displayName, entityType, fields, id, instancesCount, largeImage, lastChangedUtc, localizedAttributes, mediumImage, name, provisioningState, schemaItemTypeLink, smallImage, strongIds, tenantId, timestampFieldName, type, typeName);
         }
     }

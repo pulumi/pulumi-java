@@ -176,42 +176,40 @@ public final class ExecutePipelineActivityResponse {
             this.dependsOn = dependsOn;
             return this;
         }
-
+        public Builder dependsOn(ActivityDependencyResponse... dependsOn) {
+            return dependsOn(List.of(dependsOn));
+        }
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder parameters(@Nullable Map<String,Object> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder pipeline(PipelineReferenceResponse pipeline) {
             this.pipeline = Objects.requireNonNull(pipeline);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder userProperties(@Nullable List<UserPropertyResponse> userProperties) {
             this.userProperties = userProperties;
             return this;
         }
-
+        public Builder userProperties(UserPropertyResponse... userProperties) {
+            return userProperties(List.of(userProperties));
+        }
         public Builder waitOnCompletion(@Nullable Boolean waitOnCompletion) {
             this.waitOnCompletion = waitOnCompletion;
             return this;
-        }
-        public ExecutePipelineActivityResponse build() {
+        }        public ExecutePipelineActivityResponse build() {
             return new ExecutePipelineActivityResponse(dependsOn, description, name, parameters, pipeline, type, userProperties, waitOnCompletion);
         }
     }

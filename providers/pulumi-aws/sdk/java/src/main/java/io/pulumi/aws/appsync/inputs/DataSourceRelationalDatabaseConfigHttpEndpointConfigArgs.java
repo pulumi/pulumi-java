@@ -122,52 +122,42 @@ public final class DataSourceRelationalDatabaseConfigHttpEndpointConfigArgs exte
             this.awsSecretStoreArn = Objects.requireNonNull(awsSecretStoreArn);
             return this;
         }
-
         public Builder awsSecretStoreArn(String awsSecretStoreArn) {
             this.awsSecretStoreArn = Output.of(Objects.requireNonNull(awsSecretStoreArn));
             return this;
         }
-
         public Builder databaseName(@Nullable Output<String> databaseName) {
             this.databaseName = databaseName;
             return this;
         }
-
         public Builder databaseName(@Nullable String databaseName) {
             this.databaseName = Output.ofNullable(databaseName);
             return this;
         }
-
         public Builder dbClusterIdentifier(Output<String> dbClusterIdentifier) {
             this.dbClusterIdentifier = Objects.requireNonNull(dbClusterIdentifier);
             return this;
         }
-
         public Builder dbClusterIdentifier(String dbClusterIdentifier) {
             this.dbClusterIdentifier = Output.of(Objects.requireNonNull(dbClusterIdentifier));
             return this;
         }
-
         public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
-
         public Builder region(@Nullable String region) {
             this.region = Output.ofNullable(region);
             return this;
         }
-
         public Builder schema(@Nullable Output<String> schema) {
             this.schema = schema;
             return this;
         }
-
         public Builder schema(@Nullable String schema) {
             this.schema = Output.ofNullable(schema);
             return this;
-        }
-        public DataSourceRelationalDatabaseConfigHttpEndpointConfigArgs build() {
+        }        public DataSourceRelationalDatabaseConfigHttpEndpointConfigArgs build() {
             return new DataSourceRelationalDatabaseConfigHttpEndpointConfigArgs(awsSecretStoreArn, databaseName, dbClusterIdentifier, region, schema);
         }
     }

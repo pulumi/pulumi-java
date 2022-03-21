@@ -53,7 +53,9 @@ public final class ColumnLayoutResponse {
             this.columns = Objects.requireNonNull(columns);
             return this;
         }
-        public ColumnLayoutResponse build() {
+        public Builder columns(ColumnResponse... columns) {
+            return columns(List.of(columns));
+        }        public ColumnLayoutResponse build() {
             return new ColumnLayoutResponse(columns);
         }
     }

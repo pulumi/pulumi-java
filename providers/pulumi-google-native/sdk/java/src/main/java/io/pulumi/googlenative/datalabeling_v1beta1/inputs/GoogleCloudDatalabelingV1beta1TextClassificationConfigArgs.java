@@ -96,32 +96,26 @@ public final class GoogleCloudDatalabelingV1beta1TextClassificationConfigArgs ex
             this.allowMultiLabel = allowMultiLabel;
             return this;
         }
-
         public Builder allowMultiLabel(@Nullable Boolean allowMultiLabel) {
             this.allowMultiLabel = Output.ofNullable(allowMultiLabel);
             return this;
         }
-
         public Builder annotationSpecSet(Output<String> annotationSpecSet) {
             this.annotationSpecSet = Objects.requireNonNull(annotationSpecSet);
             return this;
         }
-
         public Builder annotationSpecSet(String annotationSpecSet) {
             this.annotationSpecSet = Output.of(Objects.requireNonNull(annotationSpecSet));
             return this;
         }
-
         public Builder sentimentConfig(@Nullable Output<GoogleCloudDatalabelingV1beta1SentimentConfigArgs> sentimentConfig) {
             this.sentimentConfig = sentimentConfig;
             return this;
         }
-
         public Builder sentimentConfig(@Nullable GoogleCloudDatalabelingV1beta1SentimentConfigArgs sentimentConfig) {
             this.sentimentConfig = Output.ofNullable(sentimentConfig);
             return this;
-        }
-        public GoogleCloudDatalabelingV1beta1TextClassificationConfigArgs build() {
+        }        public GoogleCloudDatalabelingV1beta1TextClassificationConfigArgs build() {
             return new GoogleCloudDatalabelingV1beta1TextClassificationConfigArgs(allowMultiLabel, annotationSpecSet, sentimentConfig);
         }
     }

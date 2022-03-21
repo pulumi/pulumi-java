@@ -130,72 +130,58 @@ public final class CloneJobArgs extends io.pulumi.resources.ResourceArgs {
             this.cloneJobId = Objects.requireNonNull(cloneJobId);
             return this;
         }
-
         public Builder cloneJobId(String cloneJobId) {
             this.cloneJobId = Output.of(Objects.requireNonNull(cloneJobId));
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder migratingVmId(Output<String> migratingVmId) {
             this.migratingVmId = Objects.requireNonNull(migratingVmId);
             return this;
         }
-
         public Builder migratingVmId(String migratingVmId) {
             this.migratingVmId = Output.of(Objects.requireNonNull(migratingVmId));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder requestId(@Nullable Output<String> requestId) {
             this.requestId = requestId;
             return this;
         }
-
         public Builder requestId(@Nullable String requestId) {
             this.requestId = Output.ofNullable(requestId);
             return this;
         }
-
         public Builder sourceId(Output<String> sourceId) {
             this.sourceId = Objects.requireNonNull(sourceId);
             return this;
         }
-
         public Builder sourceId(String sourceId) {
             this.sourceId = Output.of(Objects.requireNonNull(sourceId));
             return this;
-        }
-        public CloneJobArgs build() {
+        }        public CloneJobArgs build() {
             return new CloneJobArgs(cloneJobId, location, migratingVmId, name, project, requestId, sourceId);
         }
     }

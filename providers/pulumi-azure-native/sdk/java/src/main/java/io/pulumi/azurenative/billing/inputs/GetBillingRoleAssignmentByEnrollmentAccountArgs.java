@@ -88,17 +88,14 @@ public final class GetBillingRoleAssignmentByEnrollmentAccountArgs extends io.pu
             this.billingAccountName = Objects.requireNonNull(billingAccountName);
             return this;
         }
-
         public Builder billingRoleAssignmentName(String billingRoleAssignmentName) {
             this.billingRoleAssignmentName = Objects.requireNonNull(billingRoleAssignmentName);
             return this;
         }
-
         public Builder enrollmentAccountName(String enrollmentAccountName) {
             this.enrollmentAccountName = Objects.requireNonNull(enrollmentAccountName);
             return this;
-        }
-        public GetBillingRoleAssignmentByEnrollmentAccountArgs build() {
+        }        public GetBillingRoleAssignmentByEnrollmentAccountArgs build() {
             return new GetBillingRoleAssignmentByEnrollmentAccountArgs(billingAccountName, billingRoleAssignmentName, enrollmentAccountName);
         }
     }

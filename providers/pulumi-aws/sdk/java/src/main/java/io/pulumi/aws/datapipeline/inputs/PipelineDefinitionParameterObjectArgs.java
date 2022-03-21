@@ -72,22 +72,21 @@ public final class PipelineDefinitionParameterObjectArgs extends io.pulumi.resou
             this.attributes = attributes;
             return this;
         }
-
         public Builder attributes(@Nullable List<PipelineDefinitionParameterObjectAttributeArgs> attributes) {
             this.attributes = Output.ofNullable(attributes);
             return this;
         }
-
+        public Builder attributes(PipelineDefinitionParameterObjectAttributeArgs... attributes) {
+            return attributes(List.of(attributes));
+        }
         public Builder id(Output<String> id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Output.of(Objects.requireNonNull(id));
             return this;
-        }
-        public PipelineDefinitionParameterObjectArgs build() {
+        }        public PipelineDefinitionParameterObjectArgs build() {
             return new PipelineDefinitionParameterObjectArgs(attributes, id);
         }
     }

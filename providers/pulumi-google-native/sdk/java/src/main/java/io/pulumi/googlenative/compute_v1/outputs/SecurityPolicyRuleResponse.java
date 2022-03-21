@@ -187,47 +187,38 @@ public final class SecurityPolicyRuleResponse {
             this.action = Objects.requireNonNull(action);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder headerAction(SecurityPolicyRuleHttpHeaderActionResponse headerAction) {
             this.headerAction = Objects.requireNonNull(headerAction);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder match(SecurityPolicyRuleMatcherResponse match) {
             this.match = Objects.requireNonNull(match);
             return this;
         }
-
         public Builder preview(Boolean preview) {
             this.preview = Objects.requireNonNull(preview);
             return this;
         }
-
         public Builder priority(Integer priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
-
         public Builder rateLimitOptions(SecurityPolicyRuleRateLimitOptionsResponse rateLimitOptions) {
             this.rateLimitOptions = Objects.requireNonNull(rateLimitOptions);
             return this;
         }
-
         public Builder redirectOptions(SecurityPolicyRuleRedirectOptionsResponse redirectOptions) {
             this.redirectOptions = Objects.requireNonNull(redirectOptions);
             return this;
-        }
-        public SecurityPolicyRuleResponse build() {
+        }        public SecurityPolicyRuleResponse build() {
             return new SecurityPolicyRuleResponse(action, description, headerAction, kind, match, preview, priority, rateLimitOptions, redirectOptions);
         }
     }

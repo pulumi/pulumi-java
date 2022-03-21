@@ -55,8 +55,7 @@ public final class AutoscalarAutoscalingPolicyLoadBalancingUtilization {
         public Builder target(Double target) {
             this.target = Objects.requireNonNull(target);
             return this;
-        }
-        public AutoscalarAutoscalingPolicyLoadBalancingUtilization build() {
+        }        public AutoscalarAutoscalingPolicyLoadBalancingUtilization build() {
             return new AutoscalarAutoscalingPolicyLoadBalancingUtilization(target);
         }
     }

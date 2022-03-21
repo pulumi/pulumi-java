@@ -92,42 +92,34 @@ public final class MapArgs extends io.pulumi.resources.ResourceArgs {
             this.configuration = Objects.requireNonNull(configuration);
             return this;
         }
-
         public Builder configuration(MapConfigurationArgs configuration) {
             this.configuration = Output.of(Objects.requireNonNull(configuration));
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder mapName(@Nullable Output<String> mapName) {
             this.mapName = mapName;
             return this;
         }
-
         public Builder mapName(@Nullable String mapName) {
             this.mapName = Output.ofNullable(mapName);
             return this;
         }
-
         public Builder pricingPlan(@Nullable Output<MapPricingPlan> pricingPlan) {
             this.pricingPlan = pricingPlan;
             return this;
         }
-
         public Builder pricingPlan(@Nullable MapPricingPlan pricingPlan) {
             this.pricingPlan = Output.ofNullable(pricingPlan);
             return this;
-        }
-        public MapArgs build() {
+        }        public MapArgs build() {
             return new MapArgs(configuration, description, mapName, pricingPlan);
         }
     }

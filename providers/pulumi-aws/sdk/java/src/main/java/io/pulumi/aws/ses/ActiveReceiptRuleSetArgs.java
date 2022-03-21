@@ -56,12 +56,10 @@ public final class ActiveReceiptRuleSetArgs extends io.pulumi.resources.Resource
             this.ruleSetName = Objects.requireNonNull(ruleSetName);
             return this;
         }
-
         public Builder ruleSetName(String ruleSetName) {
             this.ruleSetName = Output.of(Objects.requireNonNull(ruleSetName));
             return this;
-        }
-        public ActiveReceiptRuleSetArgs build() {
+        }        public ActiveReceiptRuleSetArgs build() {
             return new ActiveReceiptRuleSetArgs(ruleSetName);
         }
     }

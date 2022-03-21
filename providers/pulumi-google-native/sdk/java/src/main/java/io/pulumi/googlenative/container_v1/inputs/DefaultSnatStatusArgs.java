@@ -61,12 +61,10 @@ public final class DefaultSnatStatusArgs extends io.pulumi.resources.ResourceArg
             this.disabled = disabled;
             return this;
         }
-
         public Builder disabled(@Nullable Boolean disabled) {
             this.disabled = Output.ofNullable(disabled);
             return this;
-        }
-        public DefaultSnatStatusArgs build() {
+        }        public DefaultSnatStatusArgs build() {
             return new DefaultSnatStatusArgs(disabled);
         }
     }

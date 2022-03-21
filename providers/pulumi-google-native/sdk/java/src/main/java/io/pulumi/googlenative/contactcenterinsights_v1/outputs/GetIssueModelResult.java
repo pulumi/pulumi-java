@@ -151,37 +151,30 @@ public final class GetIssueModelResult {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder inputDataConfig(GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigResponse inputDataConfig) {
             this.inputDataConfig = Objects.requireNonNull(inputDataConfig);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder trainingStats(GoogleCloudContactcenterinsightsV1IssueModelLabelStatsResponse trainingStats) {
             this.trainingStats = Objects.requireNonNull(trainingStats);
             return this;
         }
-
         public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
-        }
-        public GetIssueModelResult build() {
+        }        public GetIssueModelResult build() {
             return new GetIssueModelResult(createTime, displayName, inputDataConfig, name, state, trainingStats, updateTime);
         }
     }

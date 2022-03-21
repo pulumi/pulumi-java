@@ -231,57 +231,49 @@ public final class AmazonS3LinkedServiceResponse extends io.pulumi.resources.Inv
             this.accessKeyId = accessKeyId;
             return this;
         }
-
         public Builder annotations(@Nullable List<Object> annotations) {
             this.annotations = annotations;
             return this;
         }
-
+        public Builder annotations(Object... annotations) {
+            return annotations(List.of(annotations));
+        }
         public Builder authenticationType(@Nullable Object authenticationType) {
             this.authenticationType = authenticationType;
             return this;
         }
-
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
             this.connectVia = connectVia;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
             this.encryptedCredential = encryptedCredential;
             return this;
         }
-
         public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder secretAccessKey(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> secretAccessKey) {
             this.secretAccessKey = secretAccessKey;
             return this;
         }
-
         public Builder serviceUrl(@Nullable Object serviceUrl) {
             this.serviceUrl = serviceUrl;
             return this;
         }
-
         public Builder sessionToken(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> sessionToken) {
             this.sessionToken = sessionToken;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public AmazonS3LinkedServiceResponse build() {
+        }        public AmazonS3LinkedServiceResponse build() {
             return new AmazonS3LinkedServiceResponse(accessKeyId, annotations, authenticationType, connectVia, description, encryptedCredential, parameters, secretAccessKey, serviceUrl, sessionToken, type);
         }
     }

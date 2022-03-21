@@ -104,22 +104,18 @@ public final class GetWebAppVnetConnectionSlotArgs extends io.pulumi.resources.I
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder slot(String slot) {
             this.slot = Objects.requireNonNull(slot);
             return this;
         }
-
         public Builder vnetName(String vnetName) {
             this.vnetName = Objects.requireNonNull(vnetName);
             return this;
-        }
-        public GetWebAppVnetConnectionSlotArgs build() {
+        }        public GetWebAppVnetConnectionSlotArgs build() {
             return new GetWebAppVnetConnectionSlotArgs(name, resourceGroupName, slot, vnetName);
         }
     }

@@ -91,17 +91,14 @@ public final class GetPortfolioArgs extends io.pulumi.resources.InvokeArgs {
             this.acceptLanguage = acceptLanguage;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
-        }
-        public GetPortfolioArgs build() {
+        }        public GetPortfolioArgs build() {
             return new GetPortfolioArgs(acceptLanguage, id, tags);
         }
     }

@@ -71,12 +71,10 @@ public final class ContentKeyPolicyWidevineConfigurationResponse {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public Builder widevineTemplate(String widevineTemplate) {
             this.widevineTemplate = Objects.requireNonNull(widevineTemplate);
             return this;
-        }
-        public ContentKeyPolicyWidevineConfigurationResponse build() {
+        }        public ContentKeyPolicyWidevineConfigurationResponse build() {
             return new ContentKeyPolicyWidevineConfigurationResponse(odataType, widevineTemplate);
         }
     }

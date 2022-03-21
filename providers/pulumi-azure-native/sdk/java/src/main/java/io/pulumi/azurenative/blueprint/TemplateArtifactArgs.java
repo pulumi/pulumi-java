@@ -207,102 +207,85 @@ public final class TemplateArtifactArgs extends io.pulumi.resources.ResourceArgs
             this.artifactName = artifactName;
             return this;
         }
-
         public Builder artifactName(@Nullable String artifactName) {
             this.artifactName = Output.ofNullable(artifactName);
             return this;
         }
-
         public Builder blueprintName(Output<String> blueprintName) {
             this.blueprintName = Objects.requireNonNull(blueprintName);
             return this;
         }
-
         public Builder blueprintName(String blueprintName) {
             this.blueprintName = Output.of(Objects.requireNonNull(blueprintName));
             return this;
         }
-
         public Builder dependsOn(@Nullable Output<List<String>> dependsOn) {
             this.dependsOn = dependsOn;
             return this;
         }
-
         public Builder dependsOn(@Nullable List<String> dependsOn) {
             this.dependsOn = Output.ofNullable(dependsOn);
             return this;
         }
-
+        public Builder dependsOn(String... dependsOn) {
+            return dependsOn(List.of(dependsOn));
+        }
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder kind(Output<String> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
-
         public Builder parameters(Output<Map<String,ParameterValueArgs>> parameters) {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
-
         public Builder parameters(Map<String,ParameterValueArgs> parameters) {
             this.parameters = Output.of(Objects.requireNonNull(parameters));
             return this;
         }
-
         public Builder resourceGroup(@Nullable Output<String> resourceGroup) {
             this.resourceGroup = resourceGroup;
             return this;
         }
-
         public Builder resourceGroup(@Nullable String resourceGroup) {
             this.resourceGroup = Output.ofNullable(resourceGroup);
             return this;
         }
-
         public Builder resourceScope(Output<String> resourceScope) {
             this.resourceScope = Objects.requireNonNull(resourceScope);
             return this;
         }
-
         public Builder resourceScope(String resourceScope) {
             this.resourceScope = Output.of(Objects.requireNonNull(resourceScope));
             return this;
         }
-
         public Builder template(Output<Object> template) {
             this.template = Objects.requireNonNull(template);
             return this;
         }
-
         public Builder template(Object template) {
             this.template = Output.of(Objects.requireNonNull(template));
             return this;
-        }
-        public TemplateArtifactArgs build() {
+        }        public TemplateArtifactArgs build() {
             return new TemplateArtifactArgs(artifactName, blueprintName, dependsOn, description, displayName, kind, parameters, resourceGroup, resourceScope, template);
         }
     }

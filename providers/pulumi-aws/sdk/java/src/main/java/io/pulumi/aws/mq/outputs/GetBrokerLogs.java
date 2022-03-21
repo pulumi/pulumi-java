@@ -53,12 +53,10 @@ public final class GetBrokerLogs {
             this.audit = Objects.requireNonNull(audit);
             return this;
         }
-
         public Builder general(Boolean general) {
             this.general = Objects.requireNonNull(general);
             return this;
-        }
-        public GetBrokerLogs build() {
+        }        public GetBrokerLogs build() {
             return new GetBrokerLogs(audit, general);
         }
     }

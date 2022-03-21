@@ -91,42 +91,34 @@ public final class DatasetS3DestinationConfigurationArgs extends io.pulumi.resou
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
-
         public Builder bucket(String bucket) {
             this.bucket = Output.of(Objects.requireNonNull(bucket));
             return this;
         }
-
         public Builder glueConfiguration(@Nullable Output<DatasetGlueConfigurationArgs> glueConfiguration) {
             this.glueConfiguration = glueConfiguration;
             return this;
         }
-
         public Builder glueConfiguration(@Nullable DatasetGlueConfigurationArgs glueConfiguration) {
             this.glueConfiguration = Output.ofNullable(glueConfiguration);
             return this;
         }
-
         public Builder key(Output<String> key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder key(String key) {
             this.key = Output.of(Objects.requireNonNull(key));
             return this;
         }
-
         public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public Builder roleArn(String roleArn) {
             this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
-        }
-        public DatasetS3DestinationConfigurationArgs build() {
+        }        public DatasetS3DestinationConfigurationArgs build() {
             return new DatasetS3DestinationConfigurationArgs(bucket, glueConfiguration, key, roleArn);
         }
     }

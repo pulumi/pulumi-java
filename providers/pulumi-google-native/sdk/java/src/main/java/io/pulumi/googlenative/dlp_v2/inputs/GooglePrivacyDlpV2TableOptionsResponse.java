@@ -60,7 +60,9 @@ public final class GooglePrivacyDlpV2TableOptionsResponse extends io.pulumi.reso
             this.identifyingFields = Objects.requireNonNull(identifyingFields);
             return this;
         }
-        public GooglePrivacyDlpV2TableOptionsResponse build() {
+        public Builder identifyingFields(GooglePrivacyDlpV2FieldIdResponse... identifyingFields) {
+            return identifyingFields(List.of(identifyingFields));
+        }        public GooglePrivacyDlpV2TableOptionsResponse build() {
             return new GooglePrivacyDlpV2TableOptionsResponse(identifyingFields);
         }
     }

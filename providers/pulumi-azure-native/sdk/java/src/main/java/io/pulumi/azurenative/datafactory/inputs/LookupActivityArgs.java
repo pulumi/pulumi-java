@@ -309,102 +309,88 @@ public final class LookupActivityArgs extends io.pulumi.resources.ResourceArgs {
             this.dataset = Objects.requireNonNull(dataset);
             return this;
         }
-
         public Builder dataset(DatasetReferenceArgs dataset) {
             this.dataset = Output.of(Objects.requireNonNull(dataset));
             return this;
         }
-
         public Builder dependsOn(@Nullable Output<List<ActivityDependencyArgs>> dependsOn) {
             this.dependsOn = dependsOn;
             return this;
         }
-
         public Builder dependsOn(@Nullable List<ActivityDependencyArgs> dependsOn) {
             this.dependsOn = Output.ofNullable(dependsOn);
             return this;
         }
-
+        public Builder dependsOn(ActivityDependencyArgs... dependsOn) {
+            return dependsOn(List.of(dependsOn));
+        }
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder firstRowOnly(@Nullable Output<Object> firstRowOnly) {
             this.firstRowOnly = firstRowOnly;
             return this;
         }
-
         public Builder firstRowOnly(@Nullable Object firstRowOnly) {
             this.firstRowOnly = Output.ofNullable(firstRowOnly);
             return this;
         }
-
         public Builder linkedServiceName(@Nullable Output<LinkedServiceReferenceArgs> linkedServiceName) {
             this.linkedServiceName = linkedServiceName;
             return this;
         }
-
         public Builder linkedServiceName(@Nullable LinkedServiceReferenceArgs linkedServiceName) {
             this.linkedServiceName = Output.ofNullable(linkedServiceName);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder policy(@Nullable Output<ActivityPolicyArgs> policy) {
             this.policy = policy;
             return this;
         }
-
         public Builder policy(@Nullable ActivityPolicyArgs policy) {
             this.policy = Output.ofNullable(policy);
             return this;
         }
-
         public Builder source(Output<Object> source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }
-
         public Builder source(Object source) {
             this.source = Output.of(Objects.requireNonNull(source));
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
-
         public Builder userProperties(@Nullable Output<List<UserPropertyArgs>> userProperties) {
             this.userProperties = userProperties;
             return this;
         }
-
         public Builder userProperties(@Nullable List<UserPropertyArgs> userProperties) {
             this.userProperties = Output.ofNullable(userProperties);
             return this;
         }
-        public LookupActivityArgs build() {
+        public Builder userProperties(UserPropertyArgs... userProperties) {
+            return userProperties(List.of(userProperties));
+        }        public LookupActivityArgs build() {
             return new LookupActivityArgs(dataset, dependsOn, description, firstRowOnly, linkedServiceName, name, policy, source, type, userProperties);
         }
     }

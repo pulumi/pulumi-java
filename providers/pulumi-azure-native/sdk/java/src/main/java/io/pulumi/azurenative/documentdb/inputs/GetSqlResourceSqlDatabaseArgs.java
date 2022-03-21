@@ -88,17 +88,14 @@ public final class GetSqlResourceSqlDatabaseArgs extends io.pulumi.resources.Inv
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder databaseName(String databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetSqlResourceSqlDatabaseArgs build() {
+        }        public GetSqlResourceSqlDatabaseArgs build() {
             return new GetSqlResourceSqlDatabaseArgs(accountName, databaseName, resourceGroupName);
         }
     }

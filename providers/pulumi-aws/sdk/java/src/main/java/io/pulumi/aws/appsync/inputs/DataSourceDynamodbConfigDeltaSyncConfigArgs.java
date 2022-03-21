@@ -79,32 +79,26 @@ public final class DataSourceDynamodbConfigDeltaSyncConfigArgs extends io.pulumi
             this.baseTableTtl = baseTableTtl;
             return this;
         }
-
         public Builder baseTableTtl(@Nullable Integer baseTableTtl) {
             this.baseTableTtl = Output.ofNullable(baseTableTtl);
             return this;
         }
-
         public Builder deltaSyncTableName(Output<String> deltaSyncTableName) {
             this.deltaSyncTableName = Objects.requireNonNull(deltaSyncTableName);
             return this;
         }
-
         public Builder deltaSyncTableName(String deltaSyncTableName) {
             this.deltaSyncTableName = Output.of(Objects.requireNonNull(deltaSyncTableName));
             return this;
         }
-
         public Builder deltaSyncTableTtl(@Nullable Output<Integer> deltaSyncTableTtl) {
             this.deltaSyncTableTtl = deltaSyncTableTtl;
             return this;
         }
-
         public Builder deltaSyncTableTtl(@Nullable Integer deltaSyncTableTtl) {
             this.deltaSyncTableTtl = Output.ofNullable(deltaSyncTableTtl);
             return this;
-        }
-        public DataSourceDynamodbConfigDeltaSyncConfigArgs build() {
+        }        public DataSourceDynamodbConfigDeltaSyncConfigArgs build() {
             return new DataSourceDynamodbConfigDeltaSyncConfigArgs(baseTableTtl, deltaSyncTableName, deltaSyncTableTtl);
         }
     }

@@ -50,8 +50,7 @@ public final class ManagedZoneReverseLookupConfigResponse extends io.pulumi.reso
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
-        }
-        public ManagedZoneReverseLookupConfigResponse build() {
+        }        public ManagedZoneReverseLookupConfigResponse build() {
             return new ManagedZoneReverseLookupConfigResponse(kind);
         }
     }

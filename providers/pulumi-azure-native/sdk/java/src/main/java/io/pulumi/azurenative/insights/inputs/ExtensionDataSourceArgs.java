@@ -133,52 +133,48 @@ public final class ExtensionDataSourceArgs extends io.pulumi.resources.ResourceA
             this.extensionName = Objects.requireNonNull(extensionName);
             return this;
         }
-
         public Builder extensionName(String extensionName) {
             this.extensionName = Output.of(Objects.requireNonNull(extensionName));
             return this;
         }
-
         public Builder extensionSettings(@Nullable Output<Object> extensionSettings) {
             this.extensionSettings = extensionSettings;
             return this;
         }
-
         public Builder extensionSettings(@Nullable Object extensionSettings) {
             this.extensionSettings = Output.ofNullable(extensionSettings);
             return this;
         }
-
         public Builder inputDataSources(@Nullable Output<List<String>> inputDataSources) {
             this.inputDataSources = inputDataSources;
             return this;
         }
-
         public Builder inputDataSources(@Nullable List<String> inputDataSources) {
             this.inputDataSources = Output.ofNullable(inputDataSources);
             return this;
         }
-
+        public Builder inputDataSources(String... inputDataSources) {
+            return inputDataSources(List.of(inputDataSources));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder streams(@Nullable Output<List<Either<String,KnownExtensionDataSourceStreams>>> streams) {
             this.streams = streams;
             return this;
         }
-
         public Builder streams(@Nullable List<Either<String,KnownExtensionDataSourceStreams>> streams) {
             this.streams = Output.ofNullable(streams);
             return this;
         }
-        public ExtensionDataSourceArgs build() {
+        public Builder streams(Either<String,KnownExtensionDataSourceStreams>... streams) {
+            return streams(List.of(streams));
+        }        public ExtensionDataSourceArgs build() {
             return new ExtensionDataSourceArgs(extensionName, extensionSettings, inputDataSources, name, streams);
         }
     }

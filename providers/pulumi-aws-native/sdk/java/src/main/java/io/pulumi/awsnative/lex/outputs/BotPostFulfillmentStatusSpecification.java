@@ -63,17 +63,14 @@ public final class BotPostFulfillmentStatusSpecification {
             this.failureResponse = failureResponse;
             return this;
         }
-
         public Builder successResponse(@Nullable BotResponseSpecification successResponse) {
             this.successResponse = successResponse;
             return this;
         }
-
         public Builder timeoutResponse(@Nullable BotResponseSpecification timeoutResponse) {
             this.timeoutResponse = timeoutResponse;
             return this;
-        }
-        public BotPostFulfillmentStatusSpecification build() {
+        }        public BotPostFulfillmentStatusSpecification build() {
             return new BotPostFulfillmentStatusSpecification(failureResponse, successResponse, timeoutResponse);
         }
     }

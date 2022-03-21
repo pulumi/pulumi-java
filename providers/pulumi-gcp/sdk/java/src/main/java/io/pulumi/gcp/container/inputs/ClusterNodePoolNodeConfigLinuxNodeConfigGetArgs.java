@@ -59,12 +59,10 @@ public final class ClusterNodePoolNodeConfigLinuxNodeConfigGetArgs extends io.pu
             this.sysctls = Objects.requireNonNull(sysctls);
             return this;
         }
-
         public Builder sysctls(Map<String,String> sysctls) {
             this.sysctls = Output.of(Objects.requireNonNull(sysctls));
             return this;
-        }
-        public ClusterNodePoolNodeConfigLinuxNodeConfigGetArgs build() {
+        }        public ClusterNodePoolNodeConfigLinuxNodeConfigGetArgs build() {
             return new ClusterNodePoolNodeConfigLinuxNodeConfigGetArgs(sysctls);
         }
     }

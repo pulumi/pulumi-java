@@ -103,22 +103,27 @@ public final class BudgetActionDefinitionIamActionDefinition {
             this.groups = groups;
             return this;
         }
-
+        public Builder groups(String... groups) {
+            return groups(List.of(groups));
+        }
         public Builder policyArn(String policyArn) {
             this.policyArn = Objects.requireNonNull(policyArn);
             return this;
         }
-
         public Builder roles(@Nullable List<String> roles) {
             this.roles = roles;
             return this;
         }
-
+        public Builder roles(String... roles) {
+            return roles(List.of(roles));
+        }
         public Builder users(@Nullable List<String> users) {
             this.users = users;
             return this;
         }
-        public BudgetActionDefinitionIamActionDefinition build() {
+        public Builder users(String... users) {
+            return users(List.of(users));
+        }        public BudgetActionDefinitionIamActionDefinition build() {
             return new BudgetActionDefinitionIamActionDefinition(groups, policyArn, roles, users);
         }
     }

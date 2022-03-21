@@ -105,22 +105,18 @@ public final class LimitRange {
             this.apiVersion = apiVersion;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder metadata(@Nullable ObjectMeta metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder spec(@Nullable LimitRangeSpec spec) {
             this.spec = spec;
             return this;
-        }
-        public LimitRange build() {
+        }        public LimitRange build() {
             return new LimitRange(apiVersion, kind, metadata, spec);
         }
     }

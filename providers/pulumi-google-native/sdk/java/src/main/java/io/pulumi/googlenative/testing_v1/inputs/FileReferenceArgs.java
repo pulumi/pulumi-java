@@ -61,12 +61,10 @@ public final class FileReferenceArgs extends io.pulumi.resources.ResourceArgs {
             this.gcsPath = gcsPath;
             return this;
         }
-
         public Builder gcsPath(@Nullable String gcsPath) {
             this.gcsPath = Output.ofNullable(gcsPath);
             return this;
-        }
-        public FileReferenceArgs build() {
+        }        public FileReferenceArgs build() {
             return new FileReferenceArgs(gcsPath);
         }
     }

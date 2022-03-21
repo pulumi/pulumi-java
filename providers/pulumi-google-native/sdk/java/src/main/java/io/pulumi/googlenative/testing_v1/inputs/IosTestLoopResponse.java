@@ -95,17 +95,17 @@ public final class IosTestLoopResponse extends io.pulumi.resources.InvokeArgs {
             this.appBundleId = Objects.requireNonNull(appBundleId);
             return this;
         }
-
         public Builder appIpa(FileReferenceResponse appIpa) {
             this.appIpa = Objects.requireNonNull(appIpa);
             return this;
         }
-
         public Builder scenarios(List<Integer> scenarios) {
             this.scenarios = Objects.requireNonNull(scenarios);
             return this;
         }
-        public IosTestLoopResponse build() {
+        public Builder scenarios(Integer... scenarios) {
+            return scenarios(List.of(scenarios));
+        }        public IosTestLoopResponse build() {
             return new IosTestLoopResponse(appBundleId, appIpa, scenarios);
         }
     }

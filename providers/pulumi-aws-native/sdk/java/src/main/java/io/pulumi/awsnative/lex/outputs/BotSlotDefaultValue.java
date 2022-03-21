@@ -51,8 +51,7 @@ public final class BotSlotDefaultValue {
         public Builder defaultValue(String defaultValue) {
             this.defaultValue = Objects.requireNonNull(defaultValue);
             return this;
-        }
-        public BotSlotDefaultValue build() {
+        }        public BotSlotDefaultValue build() {
             return new BotSlotDefaultValue(defaultValue);
         }
     }

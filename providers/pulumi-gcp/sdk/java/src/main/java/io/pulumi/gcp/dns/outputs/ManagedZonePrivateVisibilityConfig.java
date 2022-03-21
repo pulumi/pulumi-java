@@ -45,7 +45,9 @@ public final class ManagedZonePrivateVisibilityConfig {
             this.networks = Objects.requireNonNull(networks);
             return this;
         }
-        public ManagedZonePrivateVisibilityConfig build() {
+        public Builder networks(ManagedZonePrivateVisibilityConfigNetwork... networks) {
+            return networks(List.of(networks));
+        }        public ManagedZonePrivateVisibilityConfig build() {
             return new ManagedZonePrivateVisibilityConfig(networks);
         }
     }

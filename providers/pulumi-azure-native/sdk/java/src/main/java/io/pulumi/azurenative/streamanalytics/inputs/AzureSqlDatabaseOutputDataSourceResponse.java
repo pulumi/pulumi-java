@@ -143,32 +143,26 @@ public final class AzureSqlDatabaseOutputDataSourceResponse extends io.pulumi.re
             this.database = database;
             return this;
         }
-
         public Builder password(@Nullable String password) {
             this.password = password;
             return this;
         }
-
         public Builder server(@Nullable String server) {
             this.server = server;
             return this;
         }
-
         public Builder table(@Nullable String table) {
             this.table = table;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder user(@Nullable String user) {
             this.user = user;
             return this;
-        }
-        public AzureSqlDatabaseOutputDataSourceResponse build() {
+        }        public AzureSqlDatabaseOutputDataSourceResponse build() {
             return new AzureSqlDatabaseOutputDataSourceResponse(database, password, server, table, type, user);
         }
     }

@@ -75,22 +75,21 @@ public final class OntapFileSystemEndpointManagementArgs extends io.pulumi.resou
             this.dnsName = dnsName;
             return this;
         }
-
         public Builder dnsName(@Nullable String dnsName) {
             this.dnsName = Output.ofNullable(dnsName);
             return this;
         }
-
         public Builder ipAddresses(@Nullable Output<List<String>> ipAddresses) {
             this.ipAddresses = ipAddresses;
             return this;
         }
-
         public Builder ipAddresses(@Nullable List<String> ipAddresses) {
             this.ipAddresses = Output.ofNullable(ipAddresses);
             return this;
         }
-        public OntapFileSystemEndpointManagementArgs build() {
+        public Builder ipAddresses(String... ipAddresses) {
+            return ipAddresses(List.of(ipAddresses));
+        }        public OntapFileSystemEndpointManagementArgs build() {
             return new OntapFileSystemEndpointManagementArgs(dnsName, ipAddresses);
         }
     }

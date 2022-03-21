@@ -96,12 +96,16 @@ public final class EntryGcsFilesetSpec {
             this.filePatterns = Objects.requireNonNull(filePatterns);
             return this;
         }
-
+        public Builder filePatterns(String... filePatterns) {
+            return filePatterns(List.of(filePatterns));
+        }
         public Builder sampleGcsFileSpecs(@Nullable List<EntryGcsFilesetSpecSampleGcsFileSpec> sampleGcsFileSpecs) {
             this.sampleGcsFileSpecs = sampleGcsFileSpecs;
             return this;
         }
-        public EntryGcsFilesetSpec build() {
+        public Builder sampleGcsFileSpecs(EntryGcsFilesetSpecSampleGcsFileSpec... sampleGcsFileSpecs) {
+            return sampleGcsFileSpecs(List.of(sampleGcsFileSpecs));
+        }        public EntryGcsFilesetSpec build() {
             return new EntryGcsFilesetSpec(filePatterns, sampleGcsFileSpecs);
         }
     }

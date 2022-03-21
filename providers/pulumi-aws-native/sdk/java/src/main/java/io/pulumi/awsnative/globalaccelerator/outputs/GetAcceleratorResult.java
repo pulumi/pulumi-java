@@ -147,37 +147,36 @@ public final class GetAcceleratorResult {
             this.acceleratorArn = acceleratorArn;
             return this;
         }
-
         public Builder dnsName(@Nullable String dnsName) {
             this.dnsName = dnsName;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
-
         public Builder ipAddressType(@Nullable AcceleratorIpAddressType ipAddressType) {
             this.ipAddressType = ipAddressType;
             return this;
         }
-
         public Builder ipAddresses(@Nullable List<String> ipAddresses) {
             this.ipAddresses = ipAddresses;
             return this;
         }
-
+        public Builder ipAddresses(String... ipAddresses) {
+            return ipAddresses(List.of(ipAddresses));
+        }
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder tags(@Nullable List<AcceleratorTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetAcceleratorResult build() {
+        public Builder tags(AcceleratorTag... tags) {
+            return tags(List.of(tags));
+        }        public GetAcceleratorResult build() {
             return new GetAcceleratorResult(acceleratorArn, dnsName, enabled, ipAddressType, ipAddresses, name, tags);
         }
     }

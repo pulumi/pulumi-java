@@ -188,47 +188,41 @@ public final class OSProfileResponse {
             this.adminPassword = adminPassword;
             return this;
         }
-
         public Builder adminUsername(@Nullable String adminUsername) {
             this.adminUsername = adminUsername;
             return this;
         }
-
         public Builder allowExtensionOperations(@Nullable Boolean allowExtensionOperations) {
             this.allowExtensionOperations = allowExtensionOperations;
             return this;
         }
-
         public Builder computerName(@Nullable String computerName) {
             this.computerName = computerName;
             return this;
         }
-
         public Builder customData(@Nullable String customData) {
             this.customData = customData;
             return this;
         }
-
         public Builder linuxConfiguration(@Nullable LinuxConfigurationResponse linuxConfiguration) {
             this.linuxConfiguration = linuxConfiguration;
             return this;
         }
-
         public Builder requireGuestProvisionSignal(@Nullable Boolean requireGuestProvisionSignal) {
             this.requireGuestProvisionSignal = requireGuestProvisionSignal;
             return this;
         }
-
         public Builder secrets(@Nullable List<VaultSecretGroupResponse> secrets) {
             this.secrets = secrets;
             return this;
         }
-
+        public Builder secrets(VaultSecretGroupResponse... secrets) {
+            return secrets(List.of(secrets));
+        }
         public Builder windowsConfiguration(@Nullable WindowsConfigurationResponse windowsConfiguration) {
             this.windowsConfiguration = windowsConfiguration;
             return this;
-        }
-        public OSProfileResponse build() {
+        }        public OSProfileResponse build() {
             return new OSProfileResponse(adminPassword, adminUsername, allowExtensionOperations, computerName, customData, linuxConfiguration, requireGuestProvisionSignal, secrets, windowsConfiguration);
         }
     }

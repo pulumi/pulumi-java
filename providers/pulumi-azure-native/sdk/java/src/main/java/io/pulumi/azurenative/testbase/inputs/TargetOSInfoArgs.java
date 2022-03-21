@@ -78,22 +78,21 @@ public final class TargetOSInfoArgs extends io.pulumi.resources.ResourceArgs {
             this.osUpdateType = Objects.requireNonNull(osUpdateType);
             return this;
         }
-
         public Builder osUpdateType(String osUpdateType) {
             this.osUpdateType = Output.of(Objects.requireNonNull(osUpdateType));
             return this;
         }
-
         public Builder targetOSs(Output<List<String>> targetOSs) {
             this.targetOSs = Objects.requireNonNull(targetOSs);
             return this;
         }
-
         public Builder targetOSs(List<String> targetOSs) {
             this.targetOSs = Output.of(Objects.requireNonNull(targetOSs));
             return this;
         }
-        public TargetOSInfoArgs build() {
+        public Builder targetOSs(String... targetOSs) {
+            return targetOSs(List.of(targetOSs));
+        }        public TargetOSInfoArgs build() {
             return new TargetOSInfoArgs(osUpdateType, targetOSs);
         }
     }

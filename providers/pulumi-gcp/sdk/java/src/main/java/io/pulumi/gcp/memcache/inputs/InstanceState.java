@@ -297,152 +297,128 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
             this.authorizedNetwork = authorizedNetwork;
             return this;
         }
-
         public Builder authorizedNetwork(@Nullable String authorizedNetwork) {
             this.authorizedNetwork = Output.ofNullable(authorizedNetwork);
             return this;
         }
-
         public Builder createTime(@Nullable Output<String> createTime) {
             this.createTime = createTime;
             return this;
         }
-
         public Builder createTime(@Nullable String createTime) {
             this.createTime = Output.ofNullable(createTime);
             return this;
         }
-
         public Builder discoveryEndpoint(@Nullable Output<String> discoveryEndpoint) {
             this.discoveryEndpoint = discoveryEndpoint;
             return this;
         }
-
         public Builder discoveryEndpoint(@Nullable String discoveryEndpoint) {
             this.discoveryEndpoint = Output.ofNullable(discoveryEndpoint);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder memcacheFullVersion(@Nullable Output<String> memcacheFullVersion) {
             this.memcacheFullVersion = memcacheFullVersion;
             return this;
         }
-
         public Builder memcacheFullVersion(@Nullable String memcacheFullVersion) {
             this.memcacheFullVersion = Output.ofNullable(memcacheFullVersion);
             return this;
         }
-
         public Builder memcacheNodes(@Nullable Output<List<InstanceMemcacheNodeGetArgs>> memcacheNodes) {
             this.memcacheNodes = memcacheNodes;
             return this;
         }
-
         public Builder memcacheNodes(@Nullable List<InstanceMemcacheNodeGetArgs> memcacheNodes) {
             this.memcacheNodes = Output.ofNullable(memcacheNodes);
             return this;
         }
-
+        public Builder memcacheNodes(InstanceMemcacheNodeGetArgs... memcacheNodes) {
+            return memcacheNodes(List.of(memcacheNodes));
+        }
         public Builder memcacheParameters(@Nullable Output<InstanceMemcacheParametersGetArgs> memcacheParameters) {
             this.memcacheParameters = memcacheParameters;
             return this;
         }
-
         public Builder memcacheParameters(@Nullable InstanceMemcacheParametersGetArgs memcacheParameters) {
             this.memcacheParameters = Output.ofNullable(memcacheParameters);
             return this;
         }
-
         public Builder memcacheVersion(@Nullable Output<String> memcacheVersion) {
             this.memcacheVersion = memcacheVersion;
             return this;
         }
-
         public Builder memcacheVersion(@Nullable String memcacheVersion) {
             this.memcacheVersion = Output.ofNullable(memcacheVersion);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder nodeConfig(@Nullable Output<InstanceNodeConfigGetArgs> nodeConfig) {
             this.nodeConfig = nodeConfig;
             return this;
         }
-
         public Builder nodeConfig(@Nullable InstanceNodeConfigGetArgs nodeConfig) {
             this.nodeConfig = Output.ofNullable(nodeConfig);
             return this;
         }
-
         public Builder nodeCount(@Nullable Output<Integer> nodeCount) {
             this.nodeCount = nodeCount;
             return this;
         }
-
         public Builder nodeCount(@Nullable Integer nodeCount) {
             this.nodeCount = Output.ofNullable(nodeCount);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
-
         public Builder region(@Nullable String region) {
             this.region = Output.ofNullable(region);
             return this;
         }
-
         public Builder zones(@Nullable Output<List<String>> zones) {
             this.zones = zones;
             return this;
         }
-
         public Builder zones(@Nullable List<String> zones) {
             this.zones = Output.ofNullable(zones);
             return this;
         }
-        public InstanceState build() {
+        public Builder zones(String... zones) {
+            return zones(List.of(zones));
+        }        public InstanceState build() {
             return new InstanceState(authorizedNetwork, createTime, discoveryEndpoint, displayName, labels, memcacheFullVersion, memcacheNodes, memcacheParameters, memcacheVersion, name, nodeConfig, nodeCount, project, region, zones);
         }
     }

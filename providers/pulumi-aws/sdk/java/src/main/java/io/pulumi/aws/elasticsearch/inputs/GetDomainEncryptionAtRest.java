@@ -73,12 +73,10 @@ public final class GetDomainEncryptionAtRest extends io.pulumi.resources.InvokeA
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public Builder kmsKeyId(String kmsKeyId) {
             this.kmsKeyId = Objects.requireNonNull(kmsKeyId);
             return this;
-        }
-        public GetDomainEncryptionAtRest build() {
+        }        public GetDomainEncryptionAtRest build() {
             return new GetDomainEncryptionAtRest(enabled, kmsKeyId);
         }
     }

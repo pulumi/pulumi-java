@@ -113,22 +113,24 @@ public final class PerfCounterDataSourceResponse {
             this.counterSpecifiers = counterSpecifiers;
             return this;
         }
-
+        public Builder counterSpecifiers(String... counterSpecifiers) {
+            return counterSpecifiers(List.of(counterSpecifiers));
+        }
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder samplingFrequencyInSeconds(@Nullable Integer samplingFrequencyInSeconds) {
             this.samplingFrequencyInSeconds = samplingFrequencyInSeconds;
             return this;
         }
-
         public Builder streams(@Nullable List<String> streams) {
             this.streams = streams;
             return this;
         }
-        public PerfCounterDataSourceResponse build() {
+        public Builder streams(String... streams) {
+            return streams(List.of(streams));
+        }        public PerfCounterDataSourceResponse build() {
             return new PerfCounterDataSourceResponse(counterSpecifiers, name, samplingFrequencyInSeconds, streams);
         }
     }

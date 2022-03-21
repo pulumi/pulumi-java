@@ -384,107 +384,92 @@ public final class GetClusterResult {
             this.aCLName = aCLName;
             return this;
         }
-
         public Builder aRN(@Nullable String aRN) {
             this.aRN = aRN;
             return this;
         }
-
         public Builder autoMinorVersionUpgrade(@Nullable Boolean autoMinorVersionUpgrade) {
             this.autoMinorVersionUpgrade = autoMinorVersionUpgrade;
             return this;
         }
-
         public Builder clusterEndpoint(@Nullable ClusterEndpoint clusterEndpoint) {
             this.clusterEndpoint = clusterEndpoint;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder engineVersion(@Nullable String engineVersion) {
             this.engineVersion = engineVersion;
             return this;
         }
-
         public Builder finalSnapshotName(@Nullable String finalSnapshotName) {
             this.finalSnapshotName = finalSnapshotName;
             return this;
         }
-
         public Builder maintenanceWindow(@Nullable String maintenanceWindow) {
             this.maintenanceWindow = maintenanceWindow;
             return this;
         }
-
         public Builder nodeType(@Nullable String nodeType) {
             this.nodeType = nodeType;
             return this;
         }
-
         public Builder numReplicasPerShard(@Nullable Integer numReplicasPerShard) {
             this.numReplicasPerShard = numReplicasPerShard;
             return this;
         }
-
         public Builder numShards(@Nullable Integer numShards) {
             this.numShards = numShards;
             return this;
         }
-
         public Builder parameterGroupName(@Nullable String parameterGroupName) {
             this.parameterGroupName = parameterGroupName;
             return this;
         }
-
         public Builder parameterGroupStatus(@Nullable String parameterGroupStatus) {
             this.parameterGroupStatus = parameterGroupStatus;
             return this;
         }
-
         public Builder securityGroupIds(@Nullable List<String> securityGroupIds) {
             this.securityGroupIds = securityGroupIds;
             return this;
         }
-
+        public Builder securityGroupIds(String... securityGroupIds) {
+            return securityGroupIds(List.of(securityGroupIds));
+        }
         public Builder snapshotRetentionLimit(@Nullable Integer snapshotRetentionLimit) {
             this.snapshotRetentionLimit = snapshotRetentionLimit;
             return this;
         }
-
         public Builder snapshotWindow(@Nullable String snapshotWindow) {
             this.snapshotWindow = snapshotWindow;
             return this;
         }
-
         public Builder snsTopicArn(@Nullable String snsTopicArn) {
             this.snsTopicArn = snsTopicArn;
             return this;
         }
-
         public Builder snsTopicStatus(@Nullable String snsTopicStatus) {
             this.snsTopicStatus = snsTopicStatus;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }
-
         public Builder subnetGroupName(@Nullable String subnetGroupName) {
             this.subnetGroupName = subnetGroupName;
             return this;
         }
-
         public Builder tags(@Nullable List<ClusterTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetClusterResult build() {
+        public Builder tags(ClusterTag... tags) {
+            return tags(List.of(tags));
+        }        public GetClusterResult build() {
             return new GetClusterResult(aCLName, aRN, autoMinorVersionUpgrade, clusterEndpoint, description, engineVersion, finalSnapshotName, maintenanceWindow, nodeType, numReplicasPerShard, numShards, parameterGroupName, parameterGroupStatus, securityGroupIds, snapshotRetentionLimit, snapshotWindow, snsTopicArn, snsTopicStatus, status, subnetGroupName, tags);
         }
     }

@@ -131,32 +131,29 @@ public final class GetSchemaResult {
             this.arn = arn;
             return this;
         }
-
         public Builder checkpointVersion(@Nullable SchemaVersion checkpointVersion) {
             this.checkpointVersion = checkpointVersion;
             return this;
         }
-
         public Builder compatibility(@Nullable SchemaCompatibility compatibility) {
             this.compatibility = compatibility;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder initialSchemaVersionId(@Nullable String initialSchemaVersionId) {
             this.initialSchemaVersionId = initialSchemaVersionId;
             return this;
         }
-
         public Builder tags(@Nullable List<SchemaTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetSchemaResult build() {
+        public Builder tags(SchemaTag... tags) {
+            return tags(List.of(tags));
+        }        public GetSchemaResult build() {
             return new GetSchemaResult(arn, checkpointVersion, compatibility, description, initialSchemaVersionId, tags);
         }
     }

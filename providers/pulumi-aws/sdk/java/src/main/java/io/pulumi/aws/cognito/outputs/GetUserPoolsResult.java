@@ -94,22 +94,24 @@ public final class GetUserPoolsResult {
             this.arns = Objects.requireNonNull(arns);
             return this;
         }
-
+        public Builder arns(String... arns) {
+            return arns(List.of(arns));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder ids(List<String> ids) {
             this.ids = Objects.requireNonNull(ids);
             return this;
         }
-
+        public Builder ids(String... ids) {
+            return ids(List.of(ids));
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public GetUserPoolsResult build() {
+        }        public GetUserPoolsResult build() {
             return new GetUserPoolsResult(arns, id, ids, name);
         }
     }

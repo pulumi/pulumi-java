@@ -221,57 +221,61 @@ public final class ApplicationPropertiesResponse {
             this.applicationState = Objects.requireNonNull(applicationState);
             return this;
         }
-
         public Builder applicationType(@Nullable String applicationType) {
             this.applicationType = applicationType;
             return this;
         }
-
         public Builder computeProfile(@Nullable ComputeProfileResponse computeProfile) {
             this.computeProfile = computeProfile;
             return this;
         }
-
         public Builder createdDate(String createdDate) {
             this.createdDate = Objects.requireNonNull(createdDate);
             return this;
         }
-
         public Builder errors(@Nullable List<ErrorsResponse> errors) {
             this.errors = errors;
             return this;
         }
-
+        public Builder errors(ErrorsResponse... errors) {
+            return errors(List.of(errors));
+        }
         public Builder httpsEndpoints(@Nullable List<ApplicationGetHttpsEndpointResponse> httpsEndpoints) {
             this.httpsEndpoints = httpsEndpoints;
             return this;
         }
-
+        public Builder httpsEndpoints(ApplicationGetHttpsEndpointResponse... httpsEndpoints) {
+            return httpsEndpoints(List.of(httpsEndpoints));
+        }
         public Builder installScriptActions(@Nullable List<RuntimeScriptActionResponse> installScriptActions) {
             this.installScriptActions = installScriptActions;
             return this;
         }
-
+        public Builder installScriptActions(RuntimeScriptActionResponse... installScriptActions) {
+            return installScriptActions(List.of(installScriptActions));
+        }
         public Builder marketplaceIdentifier(String marketplaceIdentifier) {
             this.marketplaceIdentifier = Objects.requireNonNull(marketplaceIdentifier);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder sshEndpoints(@Nullable List<ApplicationGetEndpointResponse> sshEndpoints) {
             this.sshEndpoints = sshEndpoints;
             return this;
         }
-
+        public Builder sshEndpoints(ApplicationGetEndpointResponse... sshEndpoints) {
+            return sshEndpoints(List.of(sshEndpoints));
+        }
         public Builder uninstallScriptActions(@Nullable List<RuntimeScriptActionResponse> uninstallScriptActions) {
             this.uninstallScriptActions = uninstallScriptActions;
             return this;
         }
-        public ApplicationPropertiesResponse build() {
+        public Builder uninstallScriptActions(RuntimeScriptActionResponse... uninstallScriptActions) {
+            return uninstallScriptActions(List.of(uninstallScriptActions));
+        }        public ApplicationPropertiesResponse build() {
             return new ApplicationPropertiesResponse(applicationState, applicationType, computeProfile, createdDate, errors, httpsEndpoints, installScriptActions, marketplaceIdentifier, provisioningState, sshEndpoints, uninstallScriptActions);
         }
     }

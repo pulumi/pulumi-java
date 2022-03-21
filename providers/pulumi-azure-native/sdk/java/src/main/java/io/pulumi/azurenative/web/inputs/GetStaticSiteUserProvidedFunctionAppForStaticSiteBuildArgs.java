@@ -104,22 +104,18 @@ public final class GetStaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs ex
             this.environmentName = Objects.requireNonNull(environmentName);
             return this;
         }
-
         public Builder functionAppName(String functionAppName) {
             this.functionAppName = Objects.requireNonNull(functionAppName);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetStaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs build() {
+        }        public GetStaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs build() {
             return new GetStaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs(environmentName, functionAppName, name, resourceGroupName);
         }
     }

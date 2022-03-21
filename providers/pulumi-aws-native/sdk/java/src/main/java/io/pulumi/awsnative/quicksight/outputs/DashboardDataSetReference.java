@@ -69,12 +69,10 @@ public final class DashboardDataSetReference {
             this.dataSetArn = Objects.requireNonNull(dataSetArn);
             return this;
         }
-
         public Builder dataSetPlaceholder(String dataSetPlaceholder) {
             this.dataSetPlaceholder = Objects.requireNonNull(dataSetPlaceholder);
             return this;
-        }
-        public DashboardDataSetReference build() {
+        }        public DashboardDataSetReference build() {
             return new DashboardDataSetReference(dataSetArn, dataSetPlaceholder);
         }
     }

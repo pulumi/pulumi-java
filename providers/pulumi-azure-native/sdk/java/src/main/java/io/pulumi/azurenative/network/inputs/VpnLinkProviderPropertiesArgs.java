@@ -79,22 +79,18 @@ public final class VpnLinkProviderPropertiesArgs extends io.pulumi.resources.Res
             this.linkProviderName = linkProviderName;
             return this;
         }
-
         public Builder linkProviderName(@Nullable String linkProviderName) {
             this.linkProviderName = Output.ofNullable(linkProviderName);
             return this;
         }
-
         public Builder linkSpeedInMbps(@Nullable Output<Integer> linkSpeedInMbps) {
             this.linkSpeedInMbps = linkSpeedInMbps;
             return this;
         }
-
         public Builder linkSpeedInMbps(@Nullable Integer linkSpeedInMbps) {
             this.linkSpeedInMbps = Output.ofNullable(linkSpeedInMbps);
             return this;
-        }
-        public VpnLinkProviderPropertiesArgs build() {
+        }        public VpnLinkProviderPropertiesArgs build() {
             return new VpnLinkProviderPropertiesArgs(linkProviderName, linkSpeedInMbps);
         }
     }

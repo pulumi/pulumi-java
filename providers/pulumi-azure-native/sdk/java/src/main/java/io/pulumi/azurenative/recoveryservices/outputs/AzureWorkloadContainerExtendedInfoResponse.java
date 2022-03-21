@@ -90,17 +90,17 @@ public final class AzureWorkloadContainerExtendedInfoResponse {
             this.hostServerName = hostServerName;
             return this;
         }
-
         public Builder inquiryInfo(@Nullable InquiryInfoResponse inquiryInfo) {
             this.inquiryInfo = inquiryInfo;
             return this;
         }
-
         public Builder nodesList(@Nullable List<DistributedNodesInfoResponse> nodesList) {
             this.nodesList = nodesList;
             return this;
         }
-        public AzureWorkloadContainerExtendedInfoResponse build() {
+        public Builder nodesList(DistributedNodesInfoResponse... nodesList) {
+            return nodesList(List.of(nodesList));
+        }        public AzureWorkloadContainerExtendedInfoResponse build() {
             return new AzureWorkloadContainerExtendedInfoResponse(hostServerName, inquiryInfo, nodesList);
         }
     }

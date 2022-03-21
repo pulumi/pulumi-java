@@ -61,12 +61,10 @@ public final class SapHanaPartitionSettingsArgs extends io.pulumi.resources.Reso
             this.partitionColumnName = partitionColumnName;
             return this;
         }
-
         public Builder partitionColumnName(@Nullable Object partitionColumnName) {
             this.partitionColumnName = Output.ofNullable(partitionColumnName);
             return this;
-        }
-        public SapHanaPartitionSettingsArgs build() {
+        }        public SapHanaPartitionSettingsArgs build() {
             return new SapHanaPartitionSettingsArgs(partitionColumnName);
         }
     }

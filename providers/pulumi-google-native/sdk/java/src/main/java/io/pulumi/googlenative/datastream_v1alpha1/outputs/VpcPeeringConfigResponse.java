@@ -69,12 +69,10 @@ public final class VpcPeeringConfigResponse {
             this.subnet = Objects.requireNonNull(subnet);
             return this;
         }
-
         public Builder vpcName(String vpcName) {
             this.vpcName = Objects.requireNonNull(vpcName);
             return this;
-        }
-        public VpcPeeringConfigResponse build() {
+        }        public VpcPeeringConfigResponse build() {
             return new VpcPeeringConfigResponse(subnet, vpcName);
         }
     }

@@ -56,12 +56,10 @@ public final class NetworkInsightsAccessScopePathStatementRequest {
             this.packetHeaderStatement = packetHeaderStatement;
             return this;
         }
-
         public Builder resourceStatement(@Nullable NetworkInsightsAccessScopeResourceStatementRequest resourceStatement) {
             this.resourceStatement = resourceStatement;
             return this;
-        }
-        public NetworkInsightsAccessScopePathStatementRequest build() {
+        }        public NetworkInsightsAccessScopePathStatementRequest build() {
             return new NetworkInsightsAccessScopePathStatementRequest(packetHeaderStatement, resourceStatement);
         }
     }

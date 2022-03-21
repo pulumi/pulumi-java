@@ -79,22 +79,18 @@ public final class AuthenticatorGroupsConfigArgs extends io.pulumi.resources.Res
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
         }
-
         public Builder securityGroup(@Nullable Output<String> securityGroup) {
             this.securityGroup = securityGroup;
             return this;
         }
-
         public Builder securityGroup(@Nullable String securityGroup) {
             this.securityGroup = Output.ofNullable(securityGroup);
             return this;
-        }
-        public AuthenticatorGroupsConfigArgs build() {
+        }        public AuthenticatorGroupsConfigArgs build() {
             return new AuthenticatorGroupsConfigArgs(enabled, securityGroup);
         }
     }

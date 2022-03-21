@@ -96,32 +96,29 @@ public final class ScaleRuleMetricDimensionArgs extends io.pulumi.resources.Reso
             this.dimensionName = Objects.requireNonNull(dimensionName);
             return this;
         }
-
         public Builder dimensionName(String dimensionName) {
             this.dimensionName = Output.of(Objects.requireNonNull(dimensionName));
             return this;
         }
-
         public Builder operator(Output<Either<String,ScaleRuleMetricDimensionOperationType>> operator) {
             this.operator = Objects.requireNonNull(operator);
             return this;
         }
-
         public Builder operator(Either<String,ScaleRuleMetricDimensionOperationType> operator) {
             this.operator = Output.of(Objects.requireNonNull(operator));
             return this;
         }
-
         public Builder values(Output<List<String>> values) {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-
         public Builder values(List<String> values) {
             this.values = Output.of(Objects.requireNonNull(values));
             return this;
         }
-        public ScaleRuleMetricDimensionArgs build() {
+        public Builder values(String... values) {
+            return values(List.of(values));
+        }        public ScaleRuleMetricDimensionArgs build() {
             return new ScaleRuleMetricDimensionArgs(dimensionName, operator, values);
         }
     }

@@ -51,8 +51,7 @@ public final class PatchDeploymentPatchConfigGoo {
         public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
-        }
-        public PatchDeploymentPatchConfigGoo build() {
+        }        public PatchDeploymentPatchConfigGoo build() {
             return new PatchDeploymentPatchConfigGoo(enabled);
         }
     }

@@ -171,82 +171,66 @@ public final class ReadWriteDatabaseArgs extends io.pulumi.resources.ResourceArg
             this.databaseName = databaseName;
             return this;
         }
-
         public Builder databaseName(@Nullable String databaseName) {
             this.databaseName = Output.ofNullable(databaseName);
             return this;
         }
-
         public Builder hotCachePeriod(@Nullable Output<String> hotCachePeriod) {
             this.hotCachePeriod = hotCachePeriod;
             return this;
         }
-
         public Builder hotCachePeriod(@Nullable String hotCachePeriod) {
             this.hotCachePeriod = Output.ofNullable(hotCachePeriod);
             return this;
         }
-
         public Builder kind(Output<String> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
-
         public Builder kustoPoolName(Output<String> kustoPoolName) {
             this.kustoPoolName = Objects.requireNonNull(kustoPoolName);
             return this;
         }
-
         public Builder kustoPoolName(String kustoPoolName) {
             this.kustoPoolName = Output.of(Objects.requireNonNull(kustoPoolName));
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder softDeletePeriod(@Nullable Output<String> softDeletePeriod) {
             this.softDeletePeriod = softDeletePeriod;
             return this;
         }
-
         public Builder softDeletePeriod(@Nullable String softDeletePeriod) {
             this.softDeletePeriod = Output.ofNullable(softDeletePeriod);
             return this;
         }
-
         public Builder workspaceName(Output<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
-
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
             return this;
-        }
-        public ReadWriteDatabaseArgs build() {
+        }        public ReadWriteDatabaseArgs build() {
             return new ReadWriteDatabaseArgs(databaseName, hotCachePeriod, kind, kustoPoolName, location, resourceGroupName, softDeletePeriod, workspaceName);
         }
     }

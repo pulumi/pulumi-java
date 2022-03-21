@@ -54,8 +54,7 @@ public final class GetStackSetArgs extends io.pulumi.resources.InvokeArgs {
         public Builder stackSetId(String stackSetId) {
             this.stackSetId = Objects.requireNonNull(stackSetId);
             return this;
-        }
-        public GetStackSetArgs build() {
+        }        public GetStackSetArgs build() {
             return new GetStackSetArgs(stackSetId);
         }
     }

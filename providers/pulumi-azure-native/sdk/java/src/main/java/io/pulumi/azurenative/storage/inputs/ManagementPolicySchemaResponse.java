@@ -60,7 +60,9 @@ public final class ManagementPolicySchemaResponse extends io.pulumi.resources.In
             this.rules = Objects.requireNonNull(rules);
             return this;
         }
-        public ManagementPolicySchemaResponse build() {
+        public Builder rules(ManagementPolicyRuleResponse... rules) {
+            return rules(List.of(rules));
+        }        public ManagementPolicySchemaResponse build() {
             return new ManagementPolicySchemaResponse(rules);
         }
     }

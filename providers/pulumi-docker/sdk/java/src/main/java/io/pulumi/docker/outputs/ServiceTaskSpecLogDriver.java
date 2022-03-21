@@ -55,12 +55,10 @@ public final class ServiceTaskSpecLogDriver {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder options(@Nullable Map<String,String> options) {
             this.options = options;
             return this;
-        }
-        public ServiceTaskSpecLogDriver build() {
+        }        public ServiceTaskSpecLogDriver build() {
             return new ServiceTaskSpecLogDriver(name, options);
         }
     }

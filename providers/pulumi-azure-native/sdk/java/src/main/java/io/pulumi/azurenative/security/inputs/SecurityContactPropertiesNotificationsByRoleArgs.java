@@ -82,22 +82,21 @@ public final class SecurityContactPropertiesNotificationsByRoleArgs extends io.p
             this.roles = roles;
             return this;
         }
-
         public Builder roles(@Nullable List<Either<String,Roles>> roles) {
             this.roles = Output.ofNullable(roles);
             return this;
         }
-
+        public Builder roles(Either<String,Roles>... roles) {
+            return roles(List.of(roles));
+        }
         public Builder state(@Nullable Output<Either<String,State>> state) {
             this.state = state;
             return this;
         }
-
         public Builder state(@Nullable Either<String,State> state) {
             this.state = Output.ofNullable(state);
             return this;
-        }
-        public SecurityContactPropertiesNotificationsByRoleArgs build() {
+        }        public SecurityContactPropertiesNotificationsByRoleArgs build() {
             return new SecurityContactPropertiesNotificationsByRoleArgs(roles, state);
         }
     }

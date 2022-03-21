@@ -61,12 +61,10 @@ public final class EncryptionScopeKeyVaultPropertiesArgs extends io.pulumi.resou
             this.keyUri = keyUri;
             return this;
         }
-
         public Builder keyUri(@Nullable String keyUri) {
             this.keyUri = Output.ofNullable(keyUri);
             return this;
-        }
-        public EncryptionScopeKeyVaultPropertiesArgs build() {
+        }        public EncryptionScopeKeyVaultPropertiesArgs build() {
             return new EncryptionScopeKeyVaultPropertiesArgs(keyUri);
         }
     }

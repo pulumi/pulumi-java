@@ -71,12 +71,13 @@ public final class MysqlDatabaseResponse {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
-
         public Builder mysqlTables(List<MysqlTableResponse> mysqlTables) {
             this.mysqlTables = Objects.requireNonNull(mysqlTables);
             return this;
         }
-        public MysqlDatabaseResponse build() {
+        public Builder mysqlTables(MysqlTableResponse... mysqlTables) {
+            return mysqlTables(List.of(mysqlTables));
+        }        public MysqlDatabaseResponse build() {
             return new MysqlDatabaseResponse(databaseName, mysqlTables);
         }
     }

@@ -78,22 +78,18 @@ public final class PrivilegeResourceArgs extends io.pulumi.resources.ResourceArg
             this.collection = collection;
             return this;
         }
-
         public Builder collection(@Nullable String collection) {
             this.collection = Output.ofNullable(collection);
             return this;
         }
-
         public Builder db(@Nullable Output<String> db) {
             this.db = db;
             return this;
         }
-
         public Builder db(@Nullable String db) {
             this.db = Output.ofNullable(db);
             return this;
-        }
-        public PrivilegeResourceArgs build() {
+        }        public PrivilegeResourceArgs build() {
             return new PrivilegeResourceArgs(collection, db);
         }
     }

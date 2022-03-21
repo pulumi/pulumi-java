@@ -307,162 +307,130 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
             this.attestation = attestation;
             return this;
         }
-
         public Builder attestation(@Nullable DetailsArgs attestation) {
             this.attestation = Output.ofNullable(attestation);
             return this;
         }
-
         public Builder build(@Nullable Output<GrafeasV1beta1BuildDetailsArgs> build) {
             this.build = build;
             return this;
         }
-
         public Builder build(@Nullable GrafeasV1beta1BuildDetailsArgs build) {
             this.build = Output.ofNullable(build);
             return this;
         }
-
         public Builder deployment(@Nullable Output<GrafeasV1beta1DeploymentDetailsArgs> deployment) {
             this.deployment = deployment;
             return this;
         }
-
         public Builder deployment(@Nullable GrafeasV1beta1DeploymentDetailsArgs deployment) {
             this.deployment = Output.ofNullable(deployment);
             return this;
         }
-
         public Builder derivedImage(@Nullable Output<GrafeasV1beta1ImageDetailsArgs> derivedImage) {
             this.derivedImage = derivedImage;
             return this;
         }
-
         public Builder derivedImage(@Nullable GrafeasV1beta1ImageDetailsArgs derivedImage) {
             this.derivedImage = Output.ofNullable(derivedImage);
             return this;
         }
-
         public Builder discovered(@Nullable Output<GrafeasV1beta1DiscoveryDetailsArgs> discovered) {
             this.discovered = discovered;
             return this;
         }
-
         public Builder discovered(@Nullable GrafeasV1beta1DiscoveryDetailsArgs discovered) {
             this.discovered = Output.ofNullable(discovered);
             return this;
         }
-
         public Builder installation(@Nullable Output<GrafeasV1beta1PackageDetailsArgs> installation) {
             this.installation = installation;
             return this;
         }
-
         public Builder installation(@Nullable GrafeasV1beta1PackageDetailsArgs installation) {
             this.installation = Output.ofNullable(installation);
             return this;
         }
-
         public Builder intoto(@Nullable Output<GrafeasV1beta1IntotoDetailsArgs> intoto) {
             this.intoto = intoto;
             return this;
         }
-
         public Builder intoto(@Nullable GrafeasV1beta1IntotoDetailsArgs intoto) {
             this.intoto = Output.ofNullable(intoto);
             return this;
         }
-
         public Builder noteName(Output<String> noteName) {
             this.noteName = Objects.requireNonNull(noteName);
             return this;
         }
-
         public Builder noteName(String noteName) {
             this.noteName = Output.of(Objects.requireNonNull(noteName));
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder remediation(@Nullable Output<String> remediation) {
             this.remediation = remediation;
             return this;
         }
-
         public Builder remediation(@Nullable String remediation) {
             this.remediation = Output.ofNullable(remediation);
             return this;
         }
-
         public Builder resource(Output<ResourceArgs> resource) {
             this.resource = Objects.requireNonNull(resource);
             return this;
         }
-
         public Builder resource(ResourceArgs resource) {
             this.resource = Output.of(Objects.requireNonNull(resource));
             return this;
         }
-
         public Builder sbom(@Nullable Output<DocumentOccurrenceArgs> sbom) {
             this.sbom = sbom;
             return this;
         }
-
         public Builder sbom(@Nullable DocumentOccurrenceArgs sbom) {
             this.sbom = Output.ofNullable(sbom);
             return this;
         }
-
         public Builder spdxFile(@Nullable Output<FileOccurrenceArgs> spdxFile) {
             this.spdxFile = spdxFile;
             return this;
         }
-
         public Builder spdxFile(@Nullable FileOccurrenceArgs spdxFile) {
             this.spdxFile = Output.ofNullable(spdxFile);
             return this;
         }
-
         public Builder spdxPackage(@Nullable Output<PackageInfoOccurrenceArgs> spdxPackage) {
             this.spdxPackage = spdxPackage;
             return this;
         }
-
         public Builder spdxPackage(@Nullable PackageInfoOccurrenceArgs spdxPackage) {
             this.spdxPackage = Output.ofNullable(spdxPackage);
             return this;
         }
-
         public Builder spdxRelationship(@Nullable Output<RelationshipOccurrenceArgs> spdxRelationship) {
             this.spdxRelationship = spdxRelationship;
             return this;
         }
-
         public Builder spdxRelationship(@Nullable RelationshipOccurrenceArgs spdxRelationship) {
             this.spdxRelationship = Output.ofNullable(spdxRelationship);
             return this;
         }
-
         public Builder vulnerability(@Nullable Output<GrafeasV1beta1VulnerabilityDetailsArgs> vulnerability) {
             this.vulnerability = vulnerability;
             return this;
         }
-
         public Builder vulnerability(@Nullable GrafeasV1beta1VulnerabilityDetailsArgs vulnerability) {
             this.vulnerability = Output.ofNullable(vulnerability);
             return this;
-        }
-        public OccurrenceArgs build() {
+        }        public OccurrenceArgs build() {
             return new OccurrenceArgs(attestation, build, deployment, derivedImage, discovered, installation, intoto, noteName, project, remediation, resource, sbom, spdxFile, spdxPackage, spdxRelationship, vulnerability);
         }
     }

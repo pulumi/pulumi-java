@@ -108,22 +108,18 @@ public final class AssociatedWorkspaceResponse extends io.pulumi.resources.Invok
             this.associateDate = Objects.requireNonNull(associateDate);
             return this;
         }
-
         public Builder resourceId(String resourceId) {
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
         }
-
         public Builder workspaceId(String workspaceId) {
             this.workspaceId = Objects.requireNonNull(workspaceId);
             return this;
         }
-
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
-        }
-        public AssociatedWorkspaceResponse build() {
+        }        public AssociatedWorkspaceResponse build() {
             return new AssociatedWorkspaceResponse(associateDate, resourceId, workspaceId, workspaceName);
         }
     }

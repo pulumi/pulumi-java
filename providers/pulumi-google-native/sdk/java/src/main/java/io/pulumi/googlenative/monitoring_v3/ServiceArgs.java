@@ -246,132 +246,106 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             this.appEngine = appEngine;
             return this;
         }
-
         public Builder appEngine(@Nullable AppEngineArgs appEngine) {
             this.appEngine = Output.ofNullable(appEngine);
             return this;
         }
-
         public Builder cloudEndpoints(@Nullable Output<CloudEndpointsArgs> cloudEndpoints) {
             this.cloudEndpoints = cloudEndpoints;
             return this;
         }
-
         public Builder cloudEndpoints(@Nullable CloudEndpointsArgs cloudEndpoints) {
             this.cloudEndpoints = Output.ofNullable(cloudEndpoints);
             return this;
         }
-
         public Builder clusterIstio(@Nullable Output<ClusterIstioArgs> clusterIstio) {
             this.clusterIstio = clusterIstio;
             return this;
         }
-
         public Builder clusterIstio(@Nullable ClusterIstioArgs clusterIstio) {
             this.clusterIstio = Output.ofNullable(clusterIstio);
             return this;
         }
-
         public Builder custom(@Nullable Output<CustomArgs> custom) {
             this.custom = custom;
             return this;
         }
-
         public Builder custom(@Nullable CustomArgs custom) {
             this.custom = Output.ofNullable(custom);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder istioCanonicalService(@Nullable Output<IstioCanonicalServiceArgs> istioCanonicalService) {
             this.istioCanonicalService = istioCanonicalService;
             return this;
         }
-
         public Builder istioCanonicalService(@Nullable IstioCanonicalServiceArgs istioCanonicalService) {
             this.istioCanonicalService = Output.ofNullable(istioCanonicalService);
             return this;
         }
-
         public Builder meshIstio(@Nullable Output<MeshIstioArgs> meshIstio) {
             this.meshIstio = meshIstio;
             return this;
         }
-
         public Builder meshIstio(@Nullable MeshIstioArgs meshIstio) {
             this.meshIstio = Output.ofNullable(meshIstio);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder serviceId(@Nullable Output<String> serviceId) {
             this.serviceId = serviceId;
             return this;
         }
-
         public Builder serviceId(@Nullable String serviceId) {
             this.serviceId = Output.ofNullable(serviceId);
             return this;
         }
-
         public Builder telemetry(@Nullable Output<TelemetryArgs> telemetry) {
             this.telemetry = telemetry;
             return this;
         }
-
         public Builder telemetry(@Nullable TelemetryArgs telemetry) {
             this.telemetry = Output.ofNullable(telemetry);
             return this;
         }
-
         public Builder userLabels(@Nullable Output<Map<String,String>> userLabels) {
             this.userLabels = userLabels;
             return this;
         }
-
         public Builder userLabels(@Nullable Map<String,String> userLabels) {
             this.userLabels = Output.ofNullable(userLabels);
             return this;
         }
-
         public Builder v3Id(Output<String> v3Id) {
             this.v3Id = Objects.requireNonNull(v3Id);
             return this;
         }
-
         public Builder v3Id(String v3Id) {
             this.v3Id = Output.of(Objects.requireNonNull(v3Id));
             return this;
         }
-
         public Builder v3Id1(Output<String> v3Id1) {
             this.v3Id1 = Objects.requireNonNull(v3Id1);
             return this;
         }
-
         public Builder v3Id1(String v3Id1) {
             this.v3Id1 = Output.of(Objects.requireNonNull(v3Id1));
             return this;
-        }
-        public ServiceArgs build() {
+        }        public ServiceArgs build() {
             return new ServiceArgs(appEngine, cloudEndpoints, clusterIstio, custom, displayName, istioCanonicalService, meshIstio, name, serviceId, telemetry, userLabels, v3Id, v3Id1);
         }
     }

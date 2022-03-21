@@ -77,12 +77,10 @@ public final class MultiCloudClusterResponse extends io.pulumi.resources.InvokeA
             this.clusterMissing = Objects.requireNonNull(clusterMissing);
             return this;
         }
-
         public Builder resourceLink(String resourceLink) {
             this.resourceLink = Objects.requireNonNull(resourceLink);
             return this;
-        }
-        public MultiCloudClusterResponse build() {
+        }        public MultiCloudClusterResponse build() {
             return new MultiCloudClusterResponse(clusterMissing, resourceLink);
         }
     }

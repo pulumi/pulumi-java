@@ -74,22 +74,21 @@ public final class TopicRuleHttpAction {
             this.auth = auth;
             return this;
         }
-
         public Builder confirmationUrl(@Nullable String confirmationUrl) {
             this.confirmationUrl = confirmationUrl;
             return this;
         }
-
         public Builder headers(@Nullable List<TopicRuleHttpActionHeader> headers) {
             this.headers = headers;
             return this;
         }
-
+        public Builder headers(TopicRuleHttpActionHeader... headers) {
+            return headers(List.of(headers));
+        }
         public Builder url(String url) {
             this.url = Objects.requireNonNull(url);
             return this;
-        }
-        public TopicRuleHttpAction build() {
+        }        public TopicRuleHttpAction build() {
             return new TopicRuleHttpAction(auth, confirmationUrl, headers, url);
         }
     }

@@ -71,12 +71,10 @@ public final class AzureFirewallSkuResponse {
             this.name = name;
             return this;
         }
-
         public Builder tier(@Nullable String tier) {
             this.tier = tier;
             return this;
-        }
-        public AzureFirewallSkuResponse build() {
+        }        public AzureFirewallSkuResponse build() {
             return new AzureFirewallSkuResponse(name, tier);
         }
     }

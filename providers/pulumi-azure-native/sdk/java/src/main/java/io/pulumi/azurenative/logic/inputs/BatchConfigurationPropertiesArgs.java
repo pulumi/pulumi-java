@@ -124,52 +124,42 @@ public final class BatchConfigurationPropertiesArgs extends io.pulumi.resources.
             this.batchGroupName = Objects.requireNonNull(batchGroupName);
             return this;
         }
-
         public Builder batchGroupName(String batchGroupName) {
             this.batchGroupName = Output.of(Objects.requireNonNull(batchGroupName));
             return this;
         }
-
         public Builder changedTime(@Nullable Output<String> changedTime) {
             this.changedTime = changedTime;
             return this;
         }
-
         public Builder changedTime(@Nullable String changedTime) {
             this.changedTime = Output.ofNullable(changedTime);
             return this;
         }
-
         public Builder createdTime(@Nullable Output<String> createdTime) {
             this.createdTime = createdTime;
             return this;
         }
-
         public Builder createdTime(@Nullable String createdTime) {
             this.createdTime = Output.ofNullable(createdTime);
             return this;
         }
-
         public Builder metadata(@Nullable Output<Object> metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder metadata(@Nullable Object metadata) {
             this.metadata = Output.ofNullable(metadata);
             return this;
         }
-
         public Builder releaseCriteria(Output<BatchReleaseCriteriaArgs> releaseCriteria) {
             this.releaseCriteria = Objects.requireNonNull(releaseCriteria);
             return this;
         }
-
         public Builder releaseCriteria(BatchReleaseCriteriaArgs releaseCriteria) {
             this.releaseCriteria = Output.of(Objects.requireNonNull(releaseCriteria));
             return this;
-        }
-        public BatchConfigurationPropertiesArgs build() {
+        }        public BatchConfigurationPropertiesArgs build() {
             return new BatchConfigurationPropertiesArgs(batchGroupName, changedTime, createdTime, metadata, releaseCriteria);
         }
     }

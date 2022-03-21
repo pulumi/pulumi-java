@@ -62,7 +62,9 @@ public final class SharedPublicIpAddressConfigurationResponse extends io.pulumi.
             this.inboundNatRules = inboundNatRules;
             return this;
         }
-        public SharedPublicIpAddressConfigurationResponse build() {
+        public Builder inboundNatRules(InboundNatRuleResponse... inboundNatRules) {
+            return inboundNatRules(List.of(inboundNatRules));
+        }        public SharedPublicIpAddressConfigurationResponse build() {
             return new SharedPublicIpAddressConfigurationResponse(inboundNatRules);
         }
     }

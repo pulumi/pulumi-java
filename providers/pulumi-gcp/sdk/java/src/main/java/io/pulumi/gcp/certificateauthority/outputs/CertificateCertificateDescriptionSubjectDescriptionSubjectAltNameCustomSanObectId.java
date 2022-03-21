@@ -54,7 +54,9 @@ public final class CertificateCertificateDescriptionSubjectDescriptionSubjectAlt
             this.objectIdPaths = objectIdPaths;
             return this;
         }
-        public CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanObectId build() {
+        public Builder objectIdPaths(Integer... objectIdPaths) {
+            return objectIdPaths(List.of(objectIdPaths));
+        }        public CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanObectId build() {
             return new CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanObectId(objectIdPaths);
         }
     }

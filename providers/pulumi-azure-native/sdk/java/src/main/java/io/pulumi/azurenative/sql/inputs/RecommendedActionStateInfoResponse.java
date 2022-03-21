@@ -92,17 +92,14 @@ public final class RecommendedActionStateInfoResponse extends io.pulumi.resource
             this.actionInitiatedBy = Objects.requireNonNull(actionInitiatedBy);
             return this;
         }
-
         public Builder currentValue(String currentValue) {
             this.currentValue = Objects.requireNonNull(currentValue);
             return this;
         }
-
         public Builder lastModified(String lastModified) {
             this.lastModified = Objects.requireNonNull(lastModified);
             return this;
-        }
-        public RecommendedActionStateInfoResponse build() {
+        }        public RecommendedActionStateInfoResponse build() {
             return new RecommendedActionStateInfoResponse(actionInitiatedBy, currentValue, lastModified);
         }
     }

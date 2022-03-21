@@ -96,32 +96,26 @@ public final class VideoScaleArgs extends io.pulumi.resources.ResourceArgs {
             this.height = height;
             return this;
         }
-
         public Builder height(@Nullable String height) {
             this.height = Output.ofNullable(height);
             return this;
         }
-
         public Builder mode(@Nullable Output<Either<String,VideoScaleMode>> mode) {
             this.mode = mode;
             return this;
         }
-
         public Builder mode(@Nullable Either<String,VideoScaleMode> mode) {
             this.mode = Output.ofNullable(mode);
             return this;
         }
-
         public Builder width(@Nullable Output<String> width) {
             this.width = width;
             return this;
         }
-
         public Builder width(@Nullable String width) {
             this.width = Output.ofNullable(width);
             return this;
-        }
-        public VideoScaleArgs build() {
+        }        public VideoScaleArgs build() {
             return new VideoScaleArgs(height, mode, width);
         }
     }

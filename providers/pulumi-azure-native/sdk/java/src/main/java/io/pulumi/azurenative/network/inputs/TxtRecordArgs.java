@@ -62,12 +62,13 @@ public final class TxtRecordArgs extends io.pulumi.resources.ResourceArgs {
             this.value = value;
             return this;
         }
-
         public Builder value(@Nullable List<String> value) {
             this.value = Output.ofNullable(value);
             return this;
         }
-        public TxtRecordArgs build() {
+        public Builder value(String... value) {
+            return value(List.of(value));
+        }        public TxtRecordArgs build() {
             return new TxtRecordArgs(value);
         }
     }

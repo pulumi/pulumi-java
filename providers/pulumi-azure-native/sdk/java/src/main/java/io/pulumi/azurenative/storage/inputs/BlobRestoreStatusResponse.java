@@ -109,22 +109,18 @@ public final class BlobRestoreStatusResponse extends io.pulumi.resources.InvokeA
             this.failureReason = Objects.requireNonNull(failureReason);
             return this;
         }
-
         public Builder parameters(BlobRestoreParametersResponse parameters) {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
-
         public Builder restoreId(String restoreId) {
             this.restoreId = Objects.requireNonNull(restoreId);
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
-        }
-        public BlobRestoreStatusResponse build() {
+        }        public BlobRestoreStatusResponse build() {
             return new BlobRestoreStatusResponse(failureReason, parameters, restoreId, status);
         }
     }

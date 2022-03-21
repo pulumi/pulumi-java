@@ -106,22 +106,21 @@ public final class WebAclRuleStatementNotStatementStatementNotStatementStatement
             this.fieldToMatch = fieldToMatch;
             return this;
         }
-
         public Builder positionalConstraint(String positionalConstraint) {
             this.positionalConstraint = Objects.requireNonNull(positionalConstraint);
             return this;
         }
-
         public Builder searchString(String searchString) {
             this.searchString = Objects.requireNonNull(searchString);
             return this;
         }
-
         public Builder textTransformations(List<WebAclRuleStatementNotStatementStatementNotStatementStatementAndStatementStatementByteMatchStatementTextTransformation> textTransformations) {
             this.textTransformations = Objects.requireNonNull(textTransformations);
             return this;
         }
-        public WebAclRuleStatementNotStatementStatementNotStatementStatementAndStatementStatementByteMatchStatement build() {
+        public Builder textTransformations(WebAclRuleStatementNotStatementStatementNotStatementStatementAndStatementStatementByteMatchStatementTextTransformation... textTransformations) {
+            return textTransformations(List.of(textTransformations));
+        }        public WebAclRuleStatementNotStatementStatementNotStatementStatementAndStatementStatementByteMatchStatement build() {
             return new WebAclRuleStatementNotStatementStatementNotStatementStatementAndStatementStatementByteMatchStatement(fieldToMatch, positionalConstraint, searchString, textTransformations);
         }
     }

@@ -151,37 +151,30 @@ public final class SourceTriggerDescriptorResponse {
             this.branchName = branchName;
             return this;
         }
-
         public Builder commitId(@Nullable String commitId) {
             this.commitId = commitId;
             return this;
         }
-
         public Builder eventType(@Nullable String eventType) {
             this.eventType = eventType;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder providerType(@Nullable String providerType) {
             this.providerType = providerType;
             return this;
         }
-
         public Builder pullRequestId(@Nullable String pullRequestId) {
             this.pullRequestId = pullRequestId;
             return this;
         }
-
         public Builder repositoryUrl(@Nullable String repositoryUrl) {
             this.repositoryUrl = repositoryUrl;
             return this;
-        }
-        public SourceTriggerDescriptorResponse build() {
+        }        public SourceTriggerDescriptorResponse build() {
             return new SourceTriggerDescriptorResponse(branchName, commitId, eventType, id, providerType, pullRequestId, repositoryUrl);
         }
     }

@@ -104,22 +104,21 @@ public final class RuleScope {
             this.complianceResourceId = complianceResourceId;
             return this;
         }
-
         public Builder complianceResourceTypes(@Nullable List<String> complianceResourceTypes) {
             this.complianceResourceTypes = complianceResourceTypes;
             return this;
         }
-
+        public Builder complianceResourceTypes(String... complianceResourceTypes) {
+            return complianceResourceTypes(List.of(complianceResourceTypes));
+        }
         public Builder tagKey(@Nullable String tagKey) {
             this.tagKey = tagKey;
             return this;
         }
-
         public Builder tagValue(@Nullable String tagValue) {
             this.tagValue = tagValue;
             return this;
-        }
-        public RuleScope build() {
+        }        public RuleScope build() {
             return new RuleScope(complianceResourceId, complianceResourceTypes, tagKey, tagValue);
         }
     }

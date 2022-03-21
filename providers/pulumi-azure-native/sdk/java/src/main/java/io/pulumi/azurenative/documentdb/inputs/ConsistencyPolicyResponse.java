@@ -96,17 +96,14 @@ public final class ConsistencyPolicyResponse extends io.pulumi.resources.InvokeA
             this.defaultConsistencyLevel = Objects.requireNonNull(defaultConsistencyLevel);
             return this;
         }
-
         public Builder maxIntervalInSeconds(@Nullable Integer maxIntervalInSeconds) {
             this.maxIntervalInSeconds = maxIntervalInSeconds;
             return this;
         }
-
         public Builder maxStalenessPrefix(@Nullable Double maxStalenessPrefix) {
             this.maxStalenessPrefix = maxStalenessPrefix;
             return this;
-        }
-        public ConsistencyPolicyResponse build() {
+        }        public ConsistencyPolicyResponse build() {
             return new ConsistencyPolicyResponse(defaultConsistencyLevel, maxIntervalInSeconds, maxStalenessPrefix);
         }
     }

@@ -57,12 +57,10 @@ public final class EndpointConfigurationAsyncInferenceConfigClientConfigGetArgs 
             this.maxConcurrentInvocationsPerInstance = maxConcurrentInvocationsPerInstance;
             return this;
         }
-
         public Builder maxConcurrentInvocationsPerInstance(@Nullable Integer maxConcurrentInvocationsPerInstance) {
             this.maxConcurrentInvocationsPerInstance = Output.ofNullable(maxConcurrentInvocationsPerInstance);
             return this;
-        }
-        public EndpointConfigurationAsyncInferenceConfigClientConfigGetArgs build() {
+        }        public EndpointConfigurationAsyncInferenceConfigClientConfigGetArgs build() {
             return new EndpointConfigurationAsyncInferenceConfigClientConfigGetArgs(maxConcurrentInvocationsPerInstance);
         }
     }

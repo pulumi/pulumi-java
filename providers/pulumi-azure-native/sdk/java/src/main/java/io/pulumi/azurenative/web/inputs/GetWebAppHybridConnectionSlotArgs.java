@@ -120,27 +120,22 @@ public final class GetWebAppHybridConnectionSlotArgs extends io.pulumi.resources
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder namespaceName(String namespaceName) {
             this.namespaceName = Objects.requireNonNull(namespaceName);
             return this;
         }
-
         public Builder relayName(String relayName) {
             this.relayName = Objects.requireNonNull(relayName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder slot(String slot) {
             this.slot = Objects.requireNonNull(slot);
             return this;
-        }
-        public GetWebAppHybridConnectionSlotArgs build() {
+        }        public GetWebAppHybridConnectionSlotArgs build() {
             return new GetWebAppHybridConnectionSlotArgs(name, namespaceName, relayName, resourceGroupName, slot);
         }
     }

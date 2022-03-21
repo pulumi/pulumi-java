@@ -172,82 +172,66 @@ public final class InstanceGroupManagerUpdatePolicyGetArgs extends io.pulumi.res
             this.maxSurgeFixed = maxSurgeFixed;
             return this;
         }
-
         public Builder maxSurgeFixed(@Nullable Integer maxSurgeFixed) {
             this.maxSurgeFixed = Output.ofNullable(maxSurgeFixed);
             return this;
         }
-
         public Builder maxSurgePercent(@Nullable Output<Integer> maxSurgePercent) {
             this.maxSurgePercent = maxSurgePercent;
             return this;
         }
-
         public Builder maxSurgePercent(@Nullable Integer maxSurgePercent) {
             this.maxSurgePercent = Output.ofNullable(maxSurgePercent);
             return this;
         }
-
         public Builder maxUnavailableFixed(@Nullable Output<Integer> maxUnavailableFixed) {
             this.maxUnavailableFixed = maxUnavailableFixed;
             return this;
         }
-
         public Builder maxUnavailableFixed(@Nullable Integer maxUnavailableFixed) {
             this.maxUnavailableFixed = Output.ofNullable(maxUnavailableFixed);
             return this;
         }
-
         public Builder maxUnavailablePercent(@Nullable Output<Integer> maxUnavailablePercent) {
             this.maxUnavailablePercent = maxUnavailablePercent;
             return this;
         }
-
         public Builder maxUnavailablePercent(@Nullable Integer maxUnavailablePercent) {
             this.maxUnavailablePercent = Output.ofNullable(maxUnavailablePercent);
             return this;
         }
-
         public Builder minReadySec(@Nullable Output<Integer> minReadySec) {
             this.minReadySec = minReadySec;
             return this;
         }
-
         public Builder minReadySec(@Nullable Integer minReadySec) {
             this.minReadySec = Output.ofNullable(minReadySec);
             return this;
         }
-
         public Builder minimalAction(Output<String> minimalAction) {
             this.minimalAction = Objects.requireNonNull(minimalAction);
             return this;
         }
-
         public Builder minimalAction(String minimalAction) {
             this.minimalAction = Output.of(Objects.requireNonNull(minimalAction));
             return this;
         }
-
         public Builder replacementMethod(@Nullable Output<String> replacementMethod) {
             this.replacementMethod = replacementMethod;
             return this;
         }
-
         public Builder replacementMethod(@Nullable String replacementMethod) {
             this.replacementMethod = Output.ofNullable(replacementMethod);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public InstanceGroupManagerUpdatePolicyGetArgs build() {
+        }        public InstanceGroupManagerUpdatePolicyGetArgs build() {
             return new InstanceGroupManagerUpdatePolicyGetArgs(maxSurgeFixed, maxSurgePercent, maxUnavailableFixed, maxUnavailablePercent, minReadySec, minimalAction, replacementMethod, type);
         }
     }

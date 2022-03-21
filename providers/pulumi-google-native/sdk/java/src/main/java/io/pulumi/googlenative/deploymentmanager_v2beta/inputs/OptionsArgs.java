@@ -114,42 +114,40 @@ public final class OptionsArgs extends io.pulumi.resources.ResourceArgs {
             this.asyncOptions = asyncOptions;
             return this;
         }
-
         public Builder asyncOptions(@Nullable List<AsyncOptionsArgs> asyncOptions) {
             this.asyncOptions = Output.ofNullable(asyncOptions);
             return this;
         }
-
+        public Builder asyncOptions(AsyncOptionsArgs... asyncOptions) {
+            return asyncOptions(List.of(asyncOptions));
+        }
         public Builder inputMappings(@Nullable Output<List<InputMappingArgs>> inputMappings) {
             this.inputMappings = inputMappings;
             return this;
         }
-
         public Builder inputMappings(@Nullable List<InputMappingArgs> inputMappings) {
             this.inputMappings = Output.ofNullable(inputMappings);
             return this;
         }
-
+        public Builder inputMappings(InputMappingArgs... inputMappings) {
+            return inputMappings(List.of(inputMappings));
+        }
         public Builder validationOptions(@Nullable Output<ValidationOptionsArgs> validationOptions) {
             this.validationOptions = validationOptions;
             return this;
         }
-
         public Builder validationOptions(@Nullable ValidationOptionsArgs validationOptions) {
             this.validationOptions = Output.ofNullable(validationOptions);
             return this;
         }
-
         public Builder virtualProperties(@Nullable Output<String> virtualProperties) {
             this.virtualProperties = virtualProperties;
             return this;
         }
-
         public Builder virtualProperties(@Nullable String virtualProperties) {
             this.virtualProperties = Output.ofNullable(virtualProperties);
             return this;
-        }
-        public OptionsArgs build() {
+        }        public OptionsArgs build() {
             return new OptionsArgs(asyncOptions, inputMappings, validationOptions, virtualProperties);
         }
     }

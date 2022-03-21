@@ -71,12 +71,10 @@ public final class ExternalSubnetResponse {
             this.id = id;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
-        }
-        public ExternalSubnetResponse build() {
+        }        public ExternalSubnetResponse build() {
             return new ExternalSubnetResponse(id, name);
         }
     }

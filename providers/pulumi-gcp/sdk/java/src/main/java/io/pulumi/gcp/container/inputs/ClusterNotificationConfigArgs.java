@@ -56,12 +56,10 @@ public final class ClusterNotificationConfigArgs extends io.pulumi.resources.Res
             this.pubsub = Objects.requireNonNull(pubsub);
             return this;
         }
-
         public Builder pubsub(ClusterNotificationConfigPubsubArgs pubsub) {
             this.pubsub = Output.of(Objects.requireNonNull(pubsub));
             return this;
-        }
-        public ClusterNotificationConfigArgs build() {
+        }        public ClusterNotificationConfigArgs build() {
             return new ClusterNotificationConfigArgs(pubsub);
         }
     }

@@ -186,47 +186,41 @@ public final class GetTriggerResult {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder destination(DestinationResponse destination) {
             this.destination = Objects.requireNonNull(destination);
             return this;
         }
-
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder matchingCriteria(List<MatchingCriteriaResponse> matchingCriteria) {
             this.matchingCriteria = Objects.requireNonNull(matchingCriteria);
             return this;
         }
-
+        public Builder matchingCriteria(MatchingCriteriaResponse... matchingCriteria) {
+            return matchingCriteria(List.of(matchingCriteria));
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder serviceAccount(String serviceAccount) {
             this.serviceAccount = Objects.requireNonNull(serviceAccount);
             return this;
         }
-
         public Builder transport(TransportResponse transport) {
             this.transport = Objects.requireNonNull(transport);
             return this;
         }
-
         public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
-        }
-        public GetTriggerResult build() {
+        }        public GetTriggerResult build() {
             return new GetTriggerResult(createTime, destination, etag, labels, matchingCriteria, name, serviceAccount, transport, updateTime);
         }
     }

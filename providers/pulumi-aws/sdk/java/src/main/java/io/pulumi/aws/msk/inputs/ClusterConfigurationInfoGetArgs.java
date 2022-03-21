@@ -74,22 +74,18 @@ public final class ClusterConfigurationInfoGetArgs extends io.pulumi.resources.R
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder arn(String arn) {
             this.arn = Output.of(Objects.requireNonNull(arn));
             return this;
         }
-
         public Builder revision(Output<Integer> revision) {
             this.revision = Objects.requireNonNull(revision);
             return this;
         }
-
         public Builder revision(Integer revision) {
             this.revision = Output.of(Objects.requireNonNull(revision));
             return this;
-        }
-        public ClusterConfigurationInfoGetArgs build() {
+        }        public ClusterConfigurationInfoGetArgs build() {
             return new ClusterConfigurationInfoGetArgs(arn, revision);
         }
     }

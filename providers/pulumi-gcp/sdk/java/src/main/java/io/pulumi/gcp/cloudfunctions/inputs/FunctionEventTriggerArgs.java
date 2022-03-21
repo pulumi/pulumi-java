@@ -94,32 +94,26 @@ public final class FunctionEventTriggerArgs extends io.pulumi.resources.Resource
             this.eventType = Objects.requireNonNull(eventType);
             return this;
         }
-
         public Builder eventType(String eventType) {
             this.eventType = Output.of(Objects.requireNonNull(eventType));
             return this;
         }
-
         public Builder failurePolicy(@Nullable Output<FunctionEventTriggerFailurePolicyArgs> failurePolicy) {
             this.failurePolicy = failurePolicy;
             return this;
         }
-
         public Builder failurePolicy(@Nullable FunctionEventTriggerFailurePolicyArgs failurePolicy) {
             this.failurePolicy = Output.ofNullable(failurePolicy);
             return this;
         }
-
         public Builder resource(Output<String> resource) {
             this.resource = Objects.requireNonNull(resource);
             return this;
         }
-
         public Builder resource(String resource) {
             this.resource = Output.of(Objects.requireNonNull(resource));
             return this;
-        }
-        public FunctionEventTriggerArgs build() {
+        }        public FunctionEventTriggerArgs build() {
             return new FunctionEventTriggerArgs(eventType, failurePolicy, resource);
         }
     }

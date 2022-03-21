@@ -61,12 +61,10 @@ public final class ScriptHandlerArgs extends io.pulumi.resources.ResourceArgs {
             this.scriptPath = scriptPath;
             return this;
         }
-
         public Builder scriptPath(@Nullable String scriptPath) {
             this.scriptPath = Output.ofNullable(scriptPath);
             return this;
-        }
-        public ScriptHandlerArgs build() {
+        }        public ScriptHandlerArgs build() {
             return new ScriptHandlerArgs(scriptPath);
         }
     }

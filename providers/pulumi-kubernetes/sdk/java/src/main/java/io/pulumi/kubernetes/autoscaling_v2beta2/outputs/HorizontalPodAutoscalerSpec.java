@@ -123,27 +123,25 @@ public final class HorizontalPodAutoscalerSpec {
             this.behavior = behavior;
             return this;
         }
-
         public Builder maxReplicas(Integer maxReplicas) {
             this.maxReplicas = Objects.requireNonNull(maxReplicas);
             return this;
         }
-
         public Builder metrics(@Nullable List<MetricSpec> metrics) {
             this.metrics = metrics;
             return this;
         }
-
+        public Builder metrics(MetricSpec... metrics) {
+            return metrics(List.of(metrics));
+        }
         public Builder minReplicas(@Nullable Integer minReplicas) {
             this.minReplicas = minReplicas;
             return this;
         }
-
         public Builder scaleTargetRef(CrossVersionObjectReference scaleTargetRef) {
             this.scaleTargetRef = Objects.requireNonNull(scaleTargetRef);
             return this;
-        }
-        public HorizontalPodAutoscalerSpec build() {
+        }        public HorizontalPodAutoscalerSpec build() {
             return new HorizontalPodAutoscalerSpec(behavior, maxReplicas, metrics, minReplicas, scaleTargetRef);
         }
     }

@@ -201,102 +201,88 @@ public final class RegistryArgs extends io.pulumi.resources.ResourceArgs {
             this.credentials = credentials;
             return this;
         }
-
         public Builder credentials(@Nullable List<RegistryCredentialArgs> credentials) {
             this.credentials = Output.ofNullable(credentials);
             return this;
         }
-
+        public Builder credentials(RegistryCredentialArgs... credentials) {
+            return credentials(List.of(credentials));
+        }
         public Builder eventNotificationConfigs(@Nullable Output<List<EventNotificationConfigArgs>> eventNotificationConfigs) {
             this.eventNotificationConfigs = eventNotificationConfigs;
             return this;
         }
-
         public Builder eventNotificationConfigs(@Nullable List<EventNotificationConfigArgs> eventNotificationConfigs) {
             this.eventNotificationConfigs = Output.ofNullable(eventNotificationConfigs);
             return this;
         }
-
+        public Builder eventNotificationConfigs(EventNotificationConfigArgs... eventNotificationConfigs) {
+            return eventNotificationConfigs(List.of(eventNotificationConfigs));
+        }
         public Builder httpConfig(@Nullable Output<HttpConfigArgs> httpConfig) {
             this.httpConfig = httpConfig;
             return this;
         }
-
         public Builder httpConfig(@Nullable HttpConfigArgs httpConfig) {
             this.httpConfig = Output.ofNullable(httpConfig);
             return this;
         }
-
         public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder logLevel(@Nullable Output<RegistryLogLevel> logLevel) {
             this.logLevel = logLevel;
             return this;
         }
-
         public Builder logLevel(@Nullable RegistryLogLevel logLevel) {
             this.logLevel = Output.ofNullable(logLevel);
             return this;
         }
-
         public Builder mqttConfig(@Nullable Output<MqttConfigArgs> mqttConfig) {
             this.mqttConfig = mqttConfig;
             return this;
         }
-
         public Builder mqttConfig(@Nullable MqttConfigArgs mqttConfig) {
             this.mqttConfig = Output.ofNullable(mqttConfig);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder stateNotificationConfig(@Nullable Output<StateNotificationConfigArgs> stateNotificationConfig) {
             this.stateNotificationConfig = stateNotificationConfig;
             return this;
         }
-
         public Builder stateNotificationConfig(@Nullable StateNotificationConfigArgs stateNotificationConfig) {
             this.stateNotificationConfig = Output.ofNullable(stateNotificationConfig);
             return this;
-        }
-        public RegistryArgs build() {
+        }        public RegistryArgs build() {
             return new RegistryArgs(credentials, eventNotificationConfigs, httpConfig, id, location, logLevel, mqttConfig, name, project, stateNotificationConfig);
         }
     }

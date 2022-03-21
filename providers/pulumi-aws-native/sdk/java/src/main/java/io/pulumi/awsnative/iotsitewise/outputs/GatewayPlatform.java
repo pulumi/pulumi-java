@@ -72,12 +72,10 @@ public final class GatewayPlatform {
             this.greengrass = greengrass;
             return this;
         }
-
         public Builder greengrassV2(@Nullable GatewayGreengrassV2 greengrassV2) {
             this.greengrassV2 = greengrassV2;
             return this;
-        }
-        public GatewayPlatform build() {
+        }        public GatewayPlatform build() {
             return new GatewayPlatform(greengrass, greengrassV2);
         }
     }

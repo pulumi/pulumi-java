@@ -77,12 +77,16 @@ public final class GoogleCloudRetailV2AudienceResponse extends io.pulumi.resourc
             this.ageGroups = Objects.requireNonNull(ageGroups);
             return this;
         }
-
+        public Builder ageGroups(String... ageGroups) {
+            return ageGroups(List.of(ageGroups));
+        }
         public Builder genders(List<String> genders) {
             this.genders = Objects.requireNonNull(genders);
             return this;
         }
-        public GoogleCloudRetailV2AudienceResponse build() {
+        public Builder genders(String... genders) {
+            return genders(List.of(genders));
+        }        public GoogleCloudRetailV2AudienceResponse build() {
             return new GoogleCloudRetailV2AudienceResponse(ageGroups, genders);
         }
     }

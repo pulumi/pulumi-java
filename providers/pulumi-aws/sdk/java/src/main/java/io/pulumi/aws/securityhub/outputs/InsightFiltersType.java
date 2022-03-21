@@ -69,12 +69,10 @@ public final class InsightFiltersType {
             this.comparison = Objects.requireNonNull(comparison);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public InsightFiltersType build() {
+        }        public InsightFiltersType build() {
             return new InsightFiltersType(comparison, value);
         }
     }

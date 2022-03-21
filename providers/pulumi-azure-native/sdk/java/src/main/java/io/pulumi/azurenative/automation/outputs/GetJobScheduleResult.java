@@ -170,42 +170,34 @@ public final class GetJobScheduleResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder jobScheduleId(@Nullable String jobScheduleId) {
             this.jobScheduleId = jobScheduleId;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder parameters(@Nullable Map<String,String> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder runOn(@Nullable String runOn) {
             this.runOn = runOn;
             return this;
         }
-
         public Builder runbook(@Nullable RunbookAssociationPropertyResponse runbook) {
             this.runbook = runbook;
             return this;
         }
-
         public Builder schedule(@Nullable ScheduleAssociationPropertyResponse schedule) {
             this.schedule = schedule;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetJobScheduleResult build() {
+        }        public GetJobScheduleResult build() {
             return new GetJobScheduleResult(id, jobScheduleId, name, parameters, runOn, runbook, schedule, type);
         }
     }

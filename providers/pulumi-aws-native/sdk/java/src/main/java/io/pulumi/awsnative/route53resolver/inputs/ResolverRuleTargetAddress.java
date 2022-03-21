@@ -74,12 +74,10 @@ public final class ResolverRuleTargetAddress extends io.pulumi.resources.InvokeA
             this.ip = Objects.requireNonNull(ip);
             return this;
         }
-
         public Builder port(@Nullable String port) {
             this.port = port;
             return this;
-        }
-        public ResolverRuleTargetAddress build() {
+        }        public ResolverRuleTargetAddress build() {
             return new ResolverRuleTargetAddress(ip, port);
         }
     }

@@ -64,12 +64,10 @@ public final class JobValidationConfiguration {
             this.rulesetArn = Objects.requireNonNull(rulesetArn);
             return this;
         }
-
         public Builder validationMode(@Nullable JobValidationMode validationMode) {
             this.validationMode = validationMode;
             return this;
-        }
-        public JobValidationConfiguration build() {
+        }        public JobValidationConfiguration build() {
             return new JobValidationConfiguration(rulesetArn, validationMode);
         }
     }

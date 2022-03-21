@@ -65,8 +65,7 @@ public final class GameServerClusterConnectionInfoGkeClusterReference {
         public Builder cluster(String cluster) {
             this.cluster = Objects.requireNonNull(cluster);
             return this;
-        }
-        public GameServerClusterConnectionInfoGkeClusterReference build() {
+        }        public GameServerClusterConnectionInfoGkeClusterReference build() {
             return new GameServerClusterConnectionInfoGkeClusterReference(cluster);
         }
     }

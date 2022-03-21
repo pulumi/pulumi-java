@@ -71,12 +71,10 @@ public final class ListenerPortRange {
             this.fromPort = fromPort;
             return this;
         }
-
         public Builder toPort(@Nullable Integer toPort) {
             this.toPort = toPort;
             return this;
-        }
-        public ListenerPortRange build() {
+        }        public ListenerPortRange build() {
             return new ListenerPortRange(fromPort, toPort);
         }
     }

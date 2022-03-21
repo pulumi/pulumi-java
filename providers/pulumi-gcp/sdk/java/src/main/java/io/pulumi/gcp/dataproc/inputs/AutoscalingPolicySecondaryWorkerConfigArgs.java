@@ -103,32 +103,26 @@ public final class AutoscalingPolicySecondaryWorkerConfigArgs extends io.pulumi.
             this.maxInstances = maxInstances;
             return this;
         }
-
         public Builder maxInstances(@Nullable Integer maxInstances) {
             this.maxInstances = Output.ofNullable(maxInstances);
             return this;
         }
-
         public Builder minInstances(@Nullable Output<Integer> minInstances) {
             this.minInstances = minInstances;
             return this;
         }
-
         public Builder minInstances(@Nullable Integer minInstances) {
             this.minInstances = Output.ofNullable(minInstances);
             return this;
         }
-
         public Builder weight(@Nullable Output<Integer> weight) {
             this.weight = weight;
             return this;
         }
-
         public Builder weight(@Nullable Integer weight) {
             this.weight = Output.ofNullable(weight);
             return this;
-        }
-        public AutoscalingPolicySecondaryWorkerConfigArgs build() {
+        }        public AutoscalingPolicySecondaryWorkerConfigArgs build() {
             return new AutoscalingPolicySecondaryWorkerConfigArgs(maxInstances, minInstances, weight);
         }
     }

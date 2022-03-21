@@ -78,12 +78,10 @@ public final class UrlSigningActionResponse extends io.pulumi.resources.InvokeAr
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder parameters(UrlSigningActionParametersResponse parameters) {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
-        }
-        public UrlSigningActionResponse build() {
+        }        public UrlSigningActionResponse build() {
             return new UrlSigningActionResponse(name, parameters);
         }
     }

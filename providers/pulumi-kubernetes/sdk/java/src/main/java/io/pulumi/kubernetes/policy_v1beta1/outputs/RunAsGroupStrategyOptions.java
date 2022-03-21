@@ -72,12 +72,13 @@ public final class RunAsGroupStrategyOptions {
             this.ranges = ranges;
             return this;
         }
-
+        public Builder ranges(IDRange... ranges) {
+            return ranges(List.of(ranges));
+        }
         public Builder rule(String rule) {
             this.rule = Objects.requireNonNull(rule);
             return this;
-        }
-        public RunAsGroupStrategyOptions build() {
+        }        public RunAsGroupStrategyOptions build() {
             return new RunAsGroupStrategyOptions(ranges, rule);
         }
     }

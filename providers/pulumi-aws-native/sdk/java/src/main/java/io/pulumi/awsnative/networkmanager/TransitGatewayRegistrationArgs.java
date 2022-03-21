@@ -73,22 +73,18 @@ public final class TransitGatewayRegistrationArgs extends io.pulumi.resources.Re
             this.globalNetworkId = Objects.requireNonNull(globalNetworkId);
             return this;
         }
-
         public Builder globalNetworkId(String globalNetworkId) {
             this.globalNetworkId = Output.of(Objects.requireNonNull(globalNetworkId));
             return this;
         }
-
         public Builder transitGatewayArn(Output<String> transitGatewayArn) {
             this.transitGatewayArn = Objects.requireNonNull(transitGatewayArn);
             return this;
         }
-
         public Builder transitGatewayArn(String transitGatewayArn) {
             this.transitGatewayArn = Output.of(Objects.requireNonNull(transitGatewayArn));
             return this;
-        }
-        public TransitGatewayRegistrationArgs build() {
+        }        public TransitGatewayRegistrationArgs build() {
             return new TransitGatewayRegistrationArgs(globalNetworkId, transitGatewayArn);
         }
     }

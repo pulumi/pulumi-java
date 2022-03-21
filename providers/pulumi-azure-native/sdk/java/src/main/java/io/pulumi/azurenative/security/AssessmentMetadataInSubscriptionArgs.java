@@ -236,122 +236,104 @@ public final class AssessmentMetadataInSubscriptionArgs extends io.pulumi.resour
             this.assessmentMetadataName = assessmentMetadataName;
             return this;
         }
-
         public Builder assessmentMetadataName(@Nullable String assessmentMetadataName) {
             this.assessmentMetadataName = Output.ofNullable(assessmentMetadataName);
             return this;
         }
-
         public Builder assessmentType(Output<Either<String,AssessmentType>> assessmentType) {
             this.assessmentType = Objects.requireNonNull(assessmentType);
             return this;
         }
-
         public Builder assessmentType(Either<String,AssessmentType> assessmentType) {
             this.assessmentType = Output.of(Objects.requireNonNull(assessmentType));
             return this;
         }
-
         public Builder categories(@Nullable Output<List<Either<String,Categories>>> categories) {
             this.categories = categories;
             return this;
         }
-
         public Builder categories(@Nullable List<Either<String,Categories>> categories) {
             this.categories = Output.ofNullable(categories);
             return this;
         }
-
+        public Builder categories(Either<String,Categories>... categories) {
+            return categories(List.of(categories));
+        }
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder displayName(Output<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
-
         public Builder implementationEffort(@Nullable Output<Either<String,ImplementationEffort>> implementationEffort) {
             this.implementationEffort = implementationEffort;
             return this;
         }
-
         public Builder implementationEffort(@Nullable Either<String,ImplementationEffort> implementationEffort) {
             this.implementationEffort = Output.ofNullable(implementationEffort);
             return this;
         }
-
         public Builder partnerData(@Nullable Output<SecurityAssessmentMetadataPartnerDataArgs> partnerData) {
             this.partnerData = partnerData;
             return this;
         }
-
         public Builder partnerData(@Nullable SecurityAssessmentMetadataPartnerDataArgs partnerData) {
             this.partnerData = Output.ofNullable(partnerData);
             return this;
         }
-
         public Builder preview(@Nullable Output<Boolean> preview) {
             this.preview = preview;
             return this;
         }
-
         public Builder preview(@Nullable Boolean preview) {
             this.preview = Output.ofNullable(preview);
             return this;
         }
-
         public Builder remediationDescription(@Nullable Output<String> remediationDescription) {
             this.remediationDescription = remediationDescription;
             return this;
         }
-
         public Builder remediationDescription(@Nullable String remediationDescription) {
             this.remediationDescription = Output.ofNullable(remediationDescription);
             return this;
         }
-
         public Builder severity(Output<Either<String,Severity>> severity) {
             this.severity = Objects.requireNonNull(severity);
             return this;
         }
-
         public Builder severity(Either<String,Severity> severity) {
             this.severity = Output.of(Objects.requireNonNull(severity));
             return this;
         }
-
         public Builder threats(@Nullable Output<List<Either<String,Threats>>> threats) {
             this.threats = threats;
             return this;
         }
-
         public Builder threats(@Nullable List<Either<String,Threats>> threats) {
             this.threats = Output.ofNullable(threats);
             return this;
         }
-
+        public Builder threats(Either<String,Threats>... threats) {
+            return threats(List.of(threats));
+        }
         public Builder userImpact(@Nullable Output<Either<String,UserImpact>> userImpact) {
             this.userImpact = userImpact;
             return this;
         }
-
         public Builder userImpact(@Nullable Either<String,UserImpact> userImpact) {
             this.userImpact = Output.ofNullable(userImpact);
             return this;
-        }
-        public AssessmentMetadataInSubscriptionArgs build() {
+        }        public AssessmentMetadataInSubscriptionArgs build() {
             return new AssessmentMetadataInSubscriptionArgs(assessmentMetadataName, assessmentType, categories, description, displayName, implementationEffort, partnerData, preview, remediationDescription, severity, threats, userImpact);
         }
     }

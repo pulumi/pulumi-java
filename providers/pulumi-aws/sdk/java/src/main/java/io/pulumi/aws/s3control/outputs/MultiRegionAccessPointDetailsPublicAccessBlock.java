@@ -115,22 +115,18 @@ public final class MultiRegionAccessPointDetailsPublicAccessBlock {
             this.blockPublicAcls = blockPublicAcls;
             return this;
         }
-
         public Builder blockPublicPolicy(@Nullable Boolean blockPublicPolicy) {
             this.blockPublicPolicy = blockPublicPolicy;
             return this;
         }
-
         public Builder ignorePublicAcls(@Nullable Boolean ignorePublicAcls) {
             this.ignorePublicAcls = ignorePublicAcls;
             return this;
         }
-
         public Builder restrictPublicBuckets(@Nullable Boolean restrictPublicBuckets) {
             this.restrictPublicBuckets = restrictPublicBuckets;
             return this;
-        }
-        public MultiRegionAccessPointDetailsPublicAccessBlock build() {
+        }        public MultiRegionAccessPointDetailsPublicAccessBlock build() {
             return new MultiRegionAccessPointDetailsPublicAccessBlock(blockPublicAcls, blockPublicPolicy, ignorePublicAcls, restrictPublicBuckets);
         }
     }

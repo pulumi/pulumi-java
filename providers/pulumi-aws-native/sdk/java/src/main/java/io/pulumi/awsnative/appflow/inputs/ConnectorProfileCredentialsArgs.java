@@ -253,162 +253,130 @@ public final class ConnectorProfileCredentialsArgs extends io.pulumi.resources.R
             this.amplitude = amplitude;
             return this;
         }
-
         public Builder amplitude(@Nullable ConnectorProfileAmplitudeConnectorProfileCredentialsArgs amplitude) {
             this.amplitude = Output.ofNullable(amplitude);
             return this;
         }
-
         public Builder datadog(@Nullable Output<ConnectorProfileDatadogConnectorProfileCredentialsArgs> datadog) {
             this.datadog = datadog;
             return this;
         }
-
         public Builder datadog(@Nullable ConnectorProfileDatadogConnectorProfileCredentialsArgs datadog) {
             this.datadog = Output.ofNullable(datadog);
             return this;
         }
-
         public Builder dynatrace(@Nullable Output<ConnectorProfileDynatraceConnectorProfileCredentialsArgs> dynatrace) {
             this.dynatrace = dynatrace;
             return this;
         }
-
         public Builder dynatrace(@Nullable ConnectorProfileDynatraceConnectorProfileCredentialsArgs dynatrace) {
             this.dynatrace = Output.ofNullable(dynatrace);
             return this;
         }
-
         public Builder googleAnalytics(@Nullable Output<ConnectorProfileGoogleAnalyticsConnectorProfileCredentialsArgs> googleAnalytics) {
             this.googleAnalytics = googleAnalytics;
             return this;
         }
-
         public Builder googleAnalytics(@Nullable ConnectorProfileGoogleAnalyticsConnectorProfileCredentialsArgs googleAnalytics) {
             this.googleAnalytics = Output.ofNullable(googleAnalytics);
             return this;
         }
-
         public Builder inforNexus(@Nullable Output<ConnectorProfileInforNexusConnectorProfileCredentialsArgs> inforNexus) {
             this.inforNexus = inforNexus;
             return this;
         }
-
         public Builder inforNexus(@Nullable ConnectorProfileInforNexusConnectorProfileCredentialsArgs inforNexus) {
             this.inforNexus = Output.ofNullable(inforNexus);
             return this;
         }
-
         public Builder marketo(@Nullable Output<ConnectorProfileMarketoConnectorProfileCredentialsArgs> marketo) {
             this.marketo = marketo;
             return this;
         }
-
         public Builder marketo(@Nullable ConnectorProfileMarketoConnectorProfileCredentialsArgs marketo) {
             this.marketo = Output.ofNullable(marketo);
             return this;
         }
-
         public Builder redshift(@Nullable Output<ConnectorProfileRedshiftConnectorProfileCredentialsArgs> redshift) {
             this.redshift = redshift;
             return this;
         }
-
         public Builder redshift(@Nullable ConnectorProfileRedshiftConnectorProfileCredentialsArgs redshift) {
             this.redshift = Output.ofNullable(redshift);
             return this;
         }
-
         public Builder sAPOData(@Nullable Output<ConnectorProfileSAPODataConnectorProfileCredentialsArgs> sAPOData) {
             this.sAPOData = sAPOData;
             return this;
         }
-
         public Builder sAPOData(@Nullable ConnectorProfileSAPODataConnectorProfileCredentialsArgs sAPOData) {
             this.sAPOData = Output.ofNullable(sAPOData);
             return this;
         }
-
         public Builder salesforce(@Nullable Output<ConnectorProfileSalesforceConnectorProfileCredentialsArgs> salesforce) {
             this.salesforce = salesforce;
             return this;
         }
-
         public Builder salesforce(@Nullable ConnectorProfileSalesforceConnectorProfileCredentialsArgs salesforce) {
             this.salesforce = Output.ofNullable(salesforce);
             return this;
         }
-
         public Builder serviceNow(@Nullable Output<ConnectorProfileServiceNowConnectorProfileCredentialsArgs> serviceNow) {
             this.serviceNow = serviceNow;
             return this;
         }
-
         public Builder serviceNow(@Nullable ConnectorProfileServiceNowConnectorProfileCredentialsArgs serviceNow) {
             this.serviceNow = Output.ofNullable(serviceNow);
             return this;
         }
-
         public Builder singular(@Nullable Output<ConnectorProfileSingularConnectorProfileCredentialsArgs> singular) {
             this.singular = singular;
             return this;
         }
-
         public Builder singular(@Nullable ConnectorProfileSingularConnectorProfileCredentialsArgs singular) {
             this.singular = Output.ofNullable(singular);
             return this;
         }
-
         public Builder slack(@Nullable Output<ConnectorProfileSlackConnectorProfileCredentialsArgs> slack) {
             this.slack = slack;
             return this;
         }
-
         public Builder slack(@Nullable ConnectorProfileSlackConnectorProfileCredentialsArgs slack) {
             this.slack = Output.ofNullable(slack);
             return this;
         }
-
         public Builder snowflake(@Nullable Output<ConnectorProfileSnowflakeConnectorProfileCredentialsArgs> snowflake) {
             this.snowflake = snowflake;
             return this;
         }
-
         public Builder snowflake(@Nullable ConnectorProfileSnowflakeConnectorProfileCredentialsArgs snowflake) {
             this.snowflake = Output.ofNullable(snowflake);
             return this;
         }
-
         public Builder trendmicro(@Nullable Output<ConnectorProfileTrendmicroConnectorProfileCredentialsArgs> trendmicro) {
             this.trendmicro = trendmicro;
             return this;
         }
-
         public Builder trendmicro(@Nullable ConnectorProfileTrendmicroConnectorProfileCredentialsArgs trendmicro) {
             this.trendmicro = Output.ofNullable(trendmicro);
             return this;
         }
-
         public Builder veeva(@Nullable Output<ConnectorProfileVeevaConnectorProfileCredentialsArgs> veeva) {
             this.veeva = veeva;
             return this;
         }
-
         public Builder veeva(@Nullable ConnectorProfileVeevaConnectorProfileCredentialsArgs veeva) {
             this.veeva = Output.ofNullable(veeva);
             return this;
         }
-
         public Builder zendesk(@Nullable Output<ConnectorProfileZendeskConnectorProfileCredentialsArgs> zendesk) {
             this.zendesk = zendesk;
             return this;
         }
-
         public Builder zendesk(@Nullable ConnectorProfileZendeskConnectorProfileCredentialsArgs zendesk) {
             this.zendesk = Output.ofNullable(zendesk);
             return this;
-        }
-        public ConnectorProfileCredentialsArgs build() {
+        }        public ConnectorProfileCredentialsArgs build() {
             return new ConnectorProfileCredentialsArgs(amplitude, datadog, dynatrace, googleAnalytics, inforNexus, marketo, redshift, sAPOData, salesforce, serviceNow, singular, slack, snowflake, trendmicro, veeva, zendesk);
         }
     }

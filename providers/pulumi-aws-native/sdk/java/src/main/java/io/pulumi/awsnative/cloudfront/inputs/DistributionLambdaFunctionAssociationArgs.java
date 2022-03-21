@@ -79,32 +79,26 @@ public final class DistributionLambdaFunctionAssociationArgs extends io.pulumi.r
             this.eventType = eventType;
             return this;
         }
-
         public Builder eventType(@Nullable String eventType) {
             this.eventType = Output.ofNullable(eventType);
             return this;
         }
-
         public Builder includeBody(@Nullable Output<Boolean> includeBody) {
             this.includeBody = includeBody;
             return this;
         }
-
         public Builder includeBody(@Nullable Boolean includeBody) {
             this.includeBody = Output.ofNullable(includeBody);
             return this;
         }
-
         public Builder lambdaFunctionARN(@Nullable Output<String> lambdaFunctionARN) {
             this.lambdaFunctionARN = lambdaFunctionARN;
             return this;
         }
-
         public Builder lambdaFunctionARN(@Nullable String lambdaFunctionARN) {
             this.lambdaFunctionARN = Output.ofNullable(lambdaFunctionARN);
             return this;
-        }
-        public DistributionLambdaFunctionAssociationArgs build() {
+        }        public DistributionLambdaFunctionAssociationArgs build() {
             return new DistributionLambdaFunctionAssociationArgs(eventType, includeBody, lambdaFunctionARN);
         }
     }

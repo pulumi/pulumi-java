@@ -85,17 +85,14 @@ public final class GetAccessPolicyResult {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder parent(String parent) {
             this.parent = Objects.requireNonNull(parent);
             return this;
         }
-
         public Builder title(String title) {
             this.title = Objects.requireNonNull(title);
             return this;
-        }
-        public GetAccessPolicyResult build() {
+        }        public GetAccessPolicyResult build() {
             return new GetAccessPolicyResult(name, parent, title);
         }
     }

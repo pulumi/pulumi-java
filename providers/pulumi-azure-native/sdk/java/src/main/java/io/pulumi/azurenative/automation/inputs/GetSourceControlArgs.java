@@ -88,17 +88,14 @@ public final class GetSourceControlArgs extends io.pulumi.resources.InvokeArgs {
             this.automationAccountName = Objects.requireNonNull(automationAccountName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder sourceControlName(String sourceControlName) {
             this.sourceControlName = Objects.requireNonNull(sourceControlName);
             return this;
-        }
-        public GetSourceControlArgs build() {
+        }        public GetSourceControlArgs build() {
             return new GetSourceControlArgs(automationAccountName, resourceGroupName, sourceControlName);
         }
     }

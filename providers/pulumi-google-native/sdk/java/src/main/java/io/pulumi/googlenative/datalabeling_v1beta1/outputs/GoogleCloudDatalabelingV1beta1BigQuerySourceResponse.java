@@ -51,8 +51,7 @@ public final class GoogleCloudDatalabelingV1beta1BigQuerySourceResponse {
         public Builder inputUri(String inputUri) {
             this.inputUri = Objects.requireNonNull(inputUri);
             return this;
-        }
-        public GoogleCloudDatalabelingV1beta1BigQuerySourceResponse build() {
+        }        public GoogleCloudDatalabelingV1beta1BigQuerySourceResponse build() {
             return new GoogleCloudDatalabelingV1beta1BigQuerySourceResponse(inputUri);
         }
     }

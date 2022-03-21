@@ -104,22 +104,18 @@ public final class GetContainerArgs extends io.pulumi.resources.InvokeArgs {
             this.containerName = Objects.requireNonNull(containerName);
             return this;
         }
-
         public Builder deviceName(String deviceName) {
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder storageAccountName(String storageAccountName) {
             this.storageAccountName = Objects.requireNonNull(storageAccountName);
             return this;
-        }
-        public GetContainerArgs build() {
+        }        public GetContainerArgs build() {
             return new GetContainerArgs(containerName, deviceName, resourceGroupName, storageAccountName);
         }
     }

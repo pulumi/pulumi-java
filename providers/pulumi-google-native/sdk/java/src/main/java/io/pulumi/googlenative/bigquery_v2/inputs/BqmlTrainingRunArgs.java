@@ -109,42 +109,37 @@ public final class BqmlTrainingRunArgs extends io.pulumi.resources.ResourceArgs 
             this.iterationResults = iterationResults;
             return this;
         }
-
         public Builder iterationResults(@Nullable List<BqmlIterationResultArgs> iterationResults) {
             this.iterationResults = Output.ofNullable(iterationResults);
             return this;
         }
-
+        public Builder iterationResults(BqmlIterationResultArgs... iterationResults) {
+            return iterationResults(List.of(iterationResults));
+        }
         public Builder startTime(@Nullable Output<String> startTime) {
             this.startTime = startTime;
             return this;
         }
-
         public Builder startTime(@Nullable String startTime) {
             this.startTime = Output.ofNullable(startTime);
             return this;
         }
-
         public Builder state(@Nullable Output<String> state) {
             this.state = state;
             return this;
         }
-
         public Builder state(@Nullable String state) {
             this.state = Output.ofNullable(state);
             return this;
         }
-
         public Builder trainingOptions(@Nullable Output<BqmlTrainingRunTrainingOptionsArgs> trainingOptions) {
             this.trainingOptions = trainingOptions;
             return this;
         }
-
         public Builder trainingOptions(@Nullable BqmlTrainingRunTrainingOptionsArgs trainingOptions) {
             this.trainingOptions = Output.ofNullable(trainingOptions);
             return this;
-        }
-        public BqmlTrainingRunArgs build() {
+        }        public BqmlTrainingRunArgs build() {
             return new BqmlTrainingRunArgs(iterationResults, startTime, state, trainingOptions);
         }
     }

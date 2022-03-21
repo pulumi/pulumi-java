@@ -253,132 +253,106 @@ public final class VirtualMachineScaleSetVMExtensionArgs extends io.pulumi.resou
             this.autoUpgradeMinorVersion = autoUpgradeMinorVersion;
             return this;
         }
-
         public Builder autoUpgradeMinorVersion(@Nullable Boolean autoUpgradeMinorVersion) {
             this.autoUpgradeMinorVersion = Output.ofNullable(autoUpgradeMinorVersion);
             return this;
         }
-
         public Builder enableAutomaticUpgrade(@Nullable Output<Boolean> enableAutomaticUpgrade) {
             this.enableAutomaticUpgrade = enableAutomaticUpgrade;
             return this;
         }
-
         public Builder enableAutomaticUpgrade(@Nullable Boolean enableAutomaticUpgrade) {
             this.enableAutomaticUpgrade = Output.ofNullable(enableAutomaticUpgrade);
             return this;
         }
-
         public Builder forceUpdateTag(@Nullable Output<String> forceUpdateTag) {
             this.forceUpdateTag = forceUpdateTag;
             return this;
         }
-
         public Builder forceUpdateTag(@Nullable String forceUpdateTag) {
             this.forceUpdateTag = Output.ofNullable(forceUpdateTag);
             return this;
         }
-
         public Builder instanceId(Output<String> instanceId) {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
-
         public Builder instanceId(String instanceId) {
             this.instanceId = Output.of(Objects.requireNonNull(instanceId));
             return this;
         }
-
         public Builder instanceView(@Nullable Output<VirtualMachineExtensionInstanceViewArgs> instanceView) {
             this.instanceView = instanceView;
             return this;
         }
-
         public Builder instanceView(@Nullable VirtualMachineExtensionInstanceViewArgs instanceView) {
             this.instanceView = Output.ofNullable(instanceView);
             return this;
         }
-
         public Builder protectedSettings(@Nullable Output<Object> protectedSettings) {
             this.protectedSettings = protectedSettings;
             return this;
         }
-
         public Builder protectedSettings(@Nullable Object protectedSettings) {
             this.protectedSettings = Output.ofNullable(protectedSettings);
             return this;
         }
-
         public Builder publisher(@Nullable Output<String> publisher) {
             this.publisher = publisher;
             return this;
         }
-
         public Builder publisher(@Nullable String publisher) {
             this.publisher = Output.ofNullable(publisher);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder settings(@Nullable Output<Object> settings) {
             this.settings = settings;
             return this;
         }
-
         public Builder settings(@Nullable Object settings) {
             this.settings = Output.ofNullable(settings);
             return this;
         }
-
         public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = Output.ofNullable(type);
             return this;
         }
-
         public Builder typeHandlerVersion(@Nullable Output<String> typeHandlerVersion) {
             this.typeHandlerVersion = typeHandlerVersion;
             return this;
         }
-
         public Builder typeHandlerVersion(@Nullable String typeHandlerVersion) {
             this.typeHandlerVersion = Output.ofNullable(typeHandlerVersion);
             return this;
         }
-
         public Builder vmExtensionName(@Nullable Output<String> vmExtensionName) {
             this.vmExtensionName = vmExtensionName;
             return this;
         }
-
         public Builder vmExtensionName(@Nullable String vmExtensionName) {
             this.vmExtensionName = Output.ofNullable(vmExtensionName);
             return this;
         }
-
         public Builder vmScaleSetName(Output<String> vmScaleSetName) {
             this.vmScaleSetName = Objects.requireNonNull(vmScaleSetName);
             return this;
         }
-
         public Builder vmScaleSetName(String vmScaleSetName) {
             this.vmScaleSetName = Output.of(Objects.requireNonNull(vmScaleSetName));
             return this;
-        }
-        public VirtualMachineScaleSetVMExtensionArgs build() {
+        }        public VirtualMachineScaleSetVMExtensionArgs build() {
             return new VirtualMachineScaleSetVMExtensionArgs(autoUpgradeMinorVersion, enableAutomaticUpgrade, forceUpdateTag, instanceId, instanceView, protectedSettings, publisher, resourceGroupName, settings, type, typeHandlerVersion, vmExtensionName, vmScaleSetName);
         }
     }

@@ -94,17 +94,14 @@ public final class GoogleCloudRunOpV2VolumeResponse extends io.pulumi.resources.
             this.cloudSqlInstance = Objects.requireNonNull(cloudSqlInstance);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder secret(GoogleCloudRunOpV2SecretVolumeSourceResponse secret) {
             this.secret = Objects.requireNonNull(secret);
             return this;
-        }
-        public GoogleCloudRunOpV2VolumeResponse build() {
+        }        public GoogleCloudRunOpV2VolumeResponse build() {
             return new GoogleCloudRunOpV2VolumeResponse(cloudSqlInstance, name, secret);
         }
     }

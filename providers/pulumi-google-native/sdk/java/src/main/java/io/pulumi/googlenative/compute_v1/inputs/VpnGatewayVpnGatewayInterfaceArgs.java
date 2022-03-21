@@ -61,12 +61,10 @@ public final class VpnGatewayVpnGatewayInterfaceArgs extends io.pulumi.resources
             this.interconnectAttachment = interconnectAttachment;
             return this;
         }
-
         public Builder interconnectAttachment(@Nullable String interconnectAttachment) {
             this.interconnectAttachment = Output.ofNullable(interconnectAttachment);
             return this;
-        }
-        public VpnGatewayVpnGatewayInterfaceArgs build() {
+        }        public VpnGatewayVpnGatewayInterfaceArgs build() {
             return new VpnGatewayVpnGatewayInterfaceArgs(interconnectAttachment);
         }
     }

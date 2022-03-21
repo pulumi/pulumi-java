@@ -101,22 +101,18 @@ public final class ListDatabaseAccountKeysResult {
             this.primaryMasterKey = Objects.requireNonNull(primaryMasterKey);
             return this;
         }
-
         public Builder primaryReadonlyMasterKey(String primaryReadonlyMasterKey) {
             this.primaryReadonlyMasterKey = Objects.requireNonNull(primaryReadonlyMasterKey);
             return this;
         }
-
         public Builder secondaryMasterKey(String secondaryMasterKey) {
             this.secondaryMasterKey = Objects.requireNonNull(secondaryMasterKey);
             return this;
         }
-
         public Builder secondaryReadonlyMasterKey(String secondaryReadonlyMasterKey) {
             this.secondaryReadonlyMasterKey = Objects.requireNonNull(secondaryReadonlyMasterKey);
             return this;
-        }
-        public ListDatabaseAccountKeysResult build() {
+        }        public ListDatabaseAccountKeysResult build() {
             return new ListDatabaseAccountKeysResult(primaryMasterKey, primaryReadonlyMasterKey, secondaryMasterKey, secondaryReadonlyMasterKey);
         }
     }

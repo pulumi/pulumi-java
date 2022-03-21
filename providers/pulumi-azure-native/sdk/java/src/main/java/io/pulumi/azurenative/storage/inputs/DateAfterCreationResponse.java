@@ -58,8 +58,7 @@ public final class DateAfterCreationResponse extends io.pulumi.resources.InvokeA
         public Builder daysAfterCreationGreaterThan(Double daysAfterCreationGreaterThan) {
             this.daysAfterCreationGreaterThan = Objects.requireNonNull(daysAfterCreationGreaterThan);
             return this;
-        }
-        public DateAfterCreationResponse build() {
+        }        public DateAfterCreationResponse build() {
             return new DateAfterCreationResponse(daysAfterCreationGreaterThan);
         }
     }

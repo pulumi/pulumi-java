@@ -61,12 +61,10 @@ public final class ParameterValuesValueArgs extends io.pulumi.resources.Resource
             this.value = value;
             return this;
         }
-
         public Builder value(@Nullable Object value) {
             this.value = Output.ofNullable(value);
             return this;
-        }
-        public ParameterValuesValueArgs build() {
+        }        public ParameterValuesValueArgs build() {
             return new ParameterValuesValueArgs(value);
         }
     }

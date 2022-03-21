@@ -109,22 +109,21 @@ public final class AggregationResponse extends io.pulumi.resources.InvokeArgs {
             this.alignmentPeriod = Objects.requireNonNull(alignmentPeriod);
             return this;
         }
-
         public Builder crossSeriesReducer(String crossSeriesReducer) {
             this.crossSeriesReducer = Objects.requireNonNull(crossSeriesReducer);
             return this;
         }
-
         public Builder groupByFields(List<String> groupByFields) {
             this.groupByFields = Objects.requireNonNull(groupByFields);
             return this;
         }
-
+        public Builder groupByFields(String... groupByFields) {
+            return groupByFields(List.of(groupByFields));
+        }
         public Builder perSeriesAligner(String perSeriesAligner) {
             this.perSeriesAligner = Objects.requireNonNull(perSeriesAligner);
             return this;
-        }
-        public AggregationResponse build() {
+        }        public AggregationResponse build() {
             return new AggregationResponse(alignmentPeriod, crossSeriesReducer, groupByFields, perSeriesAligner);
         }
     }

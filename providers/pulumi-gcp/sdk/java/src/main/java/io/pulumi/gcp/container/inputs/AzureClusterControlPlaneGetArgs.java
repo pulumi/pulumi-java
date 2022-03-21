@@ -210,102 +210,85 @@ public final class AzureClusterControlPlaneGetArgs extends io.pulumi.resources.R
             this.databaseEncryption = databaseEncryption;
             return this;
         }
-
         public Builder databaseEncryption(@Nullable AzureClusterControlPlaneDatabaseEncryptionGetArgs databaseEncryption) {
             this.databaseEncryption = Output.ofNullable(databaseEncryption);
             return this;
         }
-
         public Builder mainVolume(@Nullable Output<AzureClusterControlPlaneMainVolumeGetArgs> mainVolume) {
             this.mainVolume = mainVolume;
             return this;
         }
-
         public Builder mainVolume(@Nullable AzureClusterControlPlaneMainVolumeGetArgs mainVolume) {
             this.mainVolume = Output.ofNullable(mainVolume);
             return this;
         }
-
         public Builder proxyConfig(@Nullable Output<AzureClusterControlPlaneProxyConfigGetArgs> proxyConfig) {
             this.proxyConfig = proxyConfig;
             return this;
         }
-
         public Builder proxyConfig(@Nullable AzureClusterControlPlaneProxyConfigGetArgs proxyConfig) {
             this.proxyConfig = Output.ofNullable(proxyConfig);
             return this;
         }
-
         public Builder replicaPlacements(@Nullable Output<List<AzureClusterControlPlaneReplicaPlacementGetArgs>> replicaPlacements) {
             this.replicaPlacements = replicaPlacements;
             return this;
         }
-
         public Builder replicaPlacements(@Nullable List<AzureClusterControlPlaneReplicaPlacementGetArgs> replicaPlacements) {
             this.replicaPlacements = Output.ofNullable(replicaPlacements);
             return this;
         }
-
+        public Builder replicaPlacements(AzureClusterControlPlaneReplicaPlacementGetArgs... replicaPlacements) {
+            return replicaPlacements(List.of(replicaPlacements));
+        }
         public Builder rootVolume(@Nullable Output<AzureClusterControlPlaneRootVolumeGetArgs> rootVolume) {
             this.rootVolume = rootVolume;
             return this;
         }
-
         public Builder rootVolume(@Nullable AzureClusterControlPlaneRootVolumeGetArgs rootVolume) {
             this.rootVolume = Output.ofNullable(rootVolume);
             return this;
         }
-
         public Builder sshConfig(Output<AzureClusterControlPlaneSshConfigGetArgs> sshConfig) {
             this.sshConfig = Objects.requireNonNull(sshConfig);
             return this;
         }
-
         public Builder sshConfig(AzureClusterControlPlaneSshConfigGetArgs sshConfig) {
             this.sshConfig = Output.of(Objects.requireNonNull(sshConfig));
             return this;
         }
-
         public Builder subnetId(Output<String> subnetId) {
             this.subnetId = Objects.requireNonNull(subnetId);
             return this;
         }
-
         public Builder subnetId(String subnetId) {
             this.subnetId = Output.of(Objects.requireNonNull(subnetId));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder version(Output<String> version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public Builder version(String version) {
             this.version = Output.of(Objects.requireNonNull(version));
             return this;
         }
-
         public Builder vmSize(@Nullable Output<String> vmSize) {
             this.vmSize = vmSize;
             return this;
         }
-
         public Builder vmSize(@Nullable String vmSize) {
             this.vmSize = Output.ofNullable(vmSize);
             return this;
-        }
-        public AzureClusterControlPlaneGetArgs build() {
+        }        public AzureClusterControlPlaneGetArgs build() {
             return new AzureClusterControlPlaneGetArgs(databaseEncryption, mainVolume, proxyConfig, replicaPlacements, rootVolume, sshConfig, subnetId, tags, version, vmSize);
         }
     }

@@ -114,42 +114,40 @@ public final class RoutingPropertiesArgs extends io.pulumi.resources.ResourceArg
             this.endpoints = endpoints;
             return this;
         }
-
         public Builder endpoints(@Nullable RoutingEndpointsArgs endpoints) {
             this.endpoints = Output.ofNullable(endpoints);
             return this;
         }
-
         public Builder enrichments(@Nullable Output<List<EnrichmentPropertiesArgs>> enrichments) {
             this.enrichments = enrichments;
             return this;
         }
-
         public Builder enrichments(@Nullable List<EnrichmentPropertiesArgs> enrichments) {
             this.enrichments = Output.ofNullable(enrichments);
             return this;
         }
-
+        public Builder enrichments(EnrichmentPropertiesArgs... enrichments) {
+            return enrichments(List.of(enrichments));
+        }
         public Builder fallbackRoute(@Nullable Output<FallbackRoutePropertiesArgs> fallbackRoute) {
             this.fallbackRoute = fallbackRoute;
             return this;
         }
-
         public Builder fallbackRoute(@Nullable FallbackRoutePropertiesArgs fallbackRoute) {
             this.fallbackRoute = Output.ofNullable(fallbackRoute);
             return this;
         }
-
         public Builder routes(@Nullable Output<List<RoutePropertiesArgs>> routes) {
             this.routes = routes;
             return this;
         }
-
         public Builder routes(@Nullable List<RoutePropertiesArgs> routes) {
             this.routes = Output.ofNullable(routes);
             return this;
         }
-        public RoutingPropertiesArgs build() {
+        public Builder routes(RoutePropertiesArgs... routes) {
+            return routes(List.of(routes));
+        }        public RoutingPropertiesArgs build() {
             return new RoutingPropertiesArgs(endpoints, enrichments, fallbackRoute, routes);
         }
     }

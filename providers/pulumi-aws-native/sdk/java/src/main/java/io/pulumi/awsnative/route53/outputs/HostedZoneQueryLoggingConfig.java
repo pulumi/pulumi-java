@@ -51,8 +51,7 @@ public final class HostedZoneQueryLoggingConfig {
         public Builder cloudWatchLogsLogGroupArn(String cloudWatchLogsLogGroupArn) {
             this.cloudWatchLogsLogGroupArn = Objects.requireNonNull(cloudWatchLogsLogGroupArn);
             return this;
-        }
-        public HostedZoneQueryLoggingConfig build() {
+        }        public HostedZoneQueryLoggingConfig build() {
             return new HostedZoneQueryLoggingConfig(cloudWatchLogsLogGroupArn);
         }
     }

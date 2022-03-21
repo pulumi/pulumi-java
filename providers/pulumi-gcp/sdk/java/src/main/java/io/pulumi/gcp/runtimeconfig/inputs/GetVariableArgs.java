@@ -91,17 +91,14 @@ public final class GetVariableArgs extends io.pulumi.resources.InvokeArgs {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder parent(String parent) {
             this.parent = Objects.requireNonNull(parent);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetVariableArgs build() {
+        }        public GetVariableArgs build() {
             return new GetVariableArgs(name, parent, project);
         }
     }

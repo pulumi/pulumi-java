@@ -141,32 +141,32 @@ public final class ObjectConditionsResponse extends io.pulumi.resources.InvokeAr
             this.excludePrefixes = Objects.requireNonNull(excludePrefixes);
             return this;
         }
-
+        public Builder excludePrefixes(String... excludePrefixes) {
+            return excludePrefixes(List.of(excludePrefixes));
+        }
         public Builder includePrefixes(List<String> includePrefixes) {
             this.includePrefixes = Objects.requireNonNull(includePrefixes);
             return this;
         }
-
+        public Builder includePrefixes(String... includePrefixes) {
+            return includePrefixes(List.of(includePrefixes));
+        }
         public Builder lastModifiedBefore(String lastModifiedBefore) {
             this.lastModifiedBefore = Objects.requireNonNull(lastModifiedBefore);
             return this;
         }
-
         public Builder lastModifiedSince(String lastModifiedSince) {
             this.lastModifiedSince = Objects.requireNonNull(lastModifiedSince);
             return this;
         }
-
         public Builder maxTimeElapsedSinceLastModification(String maxTimeElapsedSinceLastModification) {
             this.maxTimeElapsedSinceLastModification = Objects.requireNonNull(maxTimeElapsedSinceLastModification);
             return this;
         }
-
         public Builder minTimeElapsedSinceLastModification(String minTimeElapsedSinceLastModification) {
             this.minTimeElapsedSinceLastModification = Objects.requireNonNull(minTimeElapsedSinceLastModification);
             return this;
-        }
-        public ObjectConditionsResponse build() {
+        }        public ObjectConditionsResponse build() {
             return new ObjectConditionsResponse(excludePrefixes, includePrefixes, lastModifiedBefore, lastModifiedSince, maxTimeElapsedSinceLastModification, minTimeElapsedSinceLastModification);
         }
     }

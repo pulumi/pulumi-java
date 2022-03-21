@@ -107,42 +107,34 @@ public final class InstanceRestoreToPointInTimeGetArgs extends io.pulumi.resourc
             this.restoreTime = restoreTime;
             return this;
         }
-
         public Builder restoreTime(@Nullable String restoreTime) {
             this.restoreTime = Output.ofNullable(restoreTime);
             return this;
         }
-
         public Builder sourceDbInstanceIdentifier(@Nullable Output<String> sourceDbInstanceIdentifier) {
             this.sourceDbInstanceIdentifier = sourceDbInstanceIdentifier;
             return this;
         }
-
         public Builder sourceDbInstanceIdentifier(@Nullable String sourceDbInstanceIdentifier) {
             this.sourceDbInstanceIdentifier = Output.ofNullable(sourceDbInstanceIdentifier);
             return this;
         }
-
         public Builder sourceDbiResourceId(@Nullable Output<String> sourceDbiResourceId) {
             this.sourceDbiResourceId = sourceDbiResourceId;
             return this;
         }
-
         public Builder sourceDbiResourceId(@Nullable String sourceDbiResourceId) {
             this.sourceDbiResourceId = Output.ofNullable(sourceDbiResourceId);
             return this;
         }
-
         public Builder useLatestRestorableTime(@Nullable Output<Boolean> useLatestRestorableTime) {
             this.useLatestRestorableTime = useLatestRestorableTime;
             return this;
         }
-
         public Builder useLatestRestorableTime(@Nullable Boolean useLatestRestorableTime) {
             this.useLatestRestorableTime = Output.ofNullable(useLatestRestorableTime);
             return this;
-        }
-        public InstanceRestoreToPointInTimeGetArgs build() {
+        }        public InstanceRestoreToPointInTimeGetArgs build() {
             return new InstanceRestoreToPointInTimeGetArgs(restoreTime, sourceDbInstanceIdentifier, sourceDbiResourceId, useLatestRestorableTime);
         }
     }

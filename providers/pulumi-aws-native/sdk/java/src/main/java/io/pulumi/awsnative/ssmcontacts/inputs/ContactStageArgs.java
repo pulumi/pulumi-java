@@ -80,22 +80,21 @@ public final class ContactStageArgs extends io.pulumi.resources.ResourceArgs {
             this.durationInMinutes = Objects.requireNonNull(durationInMinutes);
             return this;
         }
-
         public Builder durationInMinutes(Integer durationInMinutes) {
             this.durationInMinutes = Output.of(Objects.requireNonNull(durationInMinutes));
             return this;
         }
-
         public Builder targets(@Nullable Output<List<ContactTargetsArgs>> targets) {
             this.targets = targets;
             return this;
         }
-
         public Builder targets(@Nullable List<ContactTargetsArgs> targets) {
             this.targets = Output.ofNullable(targets);
             return this;
         }
-        public ContactStageArgs build() {
+        public Builder targets(ContactTargetsArgs... targets) {
+            return targets(List.of(targets));
+        }        public ContactStageArgs build() {
             return new ContactStageArgs(durationInMinutes, targets);
         }
     }

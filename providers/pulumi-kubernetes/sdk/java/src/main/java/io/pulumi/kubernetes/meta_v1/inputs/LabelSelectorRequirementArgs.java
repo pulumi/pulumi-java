@@ -95,32 +95,29 @@ public final class LabelSelectorRequirementArgs extends io.pulumi.resources.Reso
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder key(String key) {
             this.key = Output.of(Objects.requireNonNull(key));
             return this;
         }
-
         public Builder operator(Output<String> operator) {
             this.operator = Objects.requireNonNull(operator);
             return this;
         }
-
         public Builder operator(String operator) {
             this.operator = Output.of(Objects.requireNonNull(operator));
             return this;
         }
-
         public Builder values(@Nullable Output<List<String>> values) {
             this.values = values;
             return this;
         }
-
         public Builder values(@Nullable List<String> values) {
             this.values = Output.ofNullable(values);
             return this;
         }
-        public LabelSelectorRequirementArgs build() {
+        public Builder values(String... values) {
+            return values(List.of(values));
+        }        public LabelSelectorRequirementArgs build() {
             return new LabelSelectorRequirementArgs(key, operator, values);
         }
     }

@@ -53,12 +53,10 @@ public final class PetArgs extends io.pulumi.resources.ResourceArgs {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
-        }
-        public PetArgs build() {
+        }        public PetArgs build() {
             return new PetArgs(name);
         }
     }

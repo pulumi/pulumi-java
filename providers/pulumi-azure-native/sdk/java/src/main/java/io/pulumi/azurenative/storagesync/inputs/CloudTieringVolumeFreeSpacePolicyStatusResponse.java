@@ -93,17 +93,14 @@ public final class CloudTieringVolumeFreeSpacePolicyStatusResponse extends io.pu
             this.currentVolumeFreeSpacePercent = Objects.requireNonNull(currentVolumeFreeSpacePercent);
             return this;
         }
-
         public Builder effectiveVolumeFreeSpacePolicy(Integer effectiveVolumeFreeSpacePolicy) {
             this.effectiveVolumeFreeSpacePolicy = Objects.requireNonNull(effectiveVolumeFreeSpacePolicy);
             return this;
         }
-
         public Builder lastUpdatedTimestamp(String lastUpdatedTimestamp) {
             this.lastUpdatedTimestamp = Objects.requireNonNull(lastUpdatedTimestamp);
             return this;
-        }
-        public CloudTieringVolumeFreeSpacePolicyStatusResponse build() {
+        }        public CloudTieringVolumeFreeSpacePolicyStatusResponse build() {
             return new CloudTieringVolumeFreeSpacePolicyStatusResponse(currentVolumeFreeSpacePercent, effectiveVolumeFreeSpacePolicy, lastUpdatedTimestamp);
         }
     }

@@ -69,12 +69,10 @@ public final class ExecStepResponse {
             this.linuxExecStepConfig = Objects.requireNonNull(linuxExecStepConfig);
             return this;
         }
-
         public Builder windowsExecStepConfig(ExecStepConfigResponse windowsExecStepConfig) {
             this.windowsExecStepConfig = Objects.requireNonNull(windowsExecStepConfig);
             return this;
-        }
-        public ExecStepResponse build() {
+        }        public ExecStepResponse build() {
             return new ExecStepResponse(linuxExecStepConfig, windowsExecStepConfig);
         }
     }

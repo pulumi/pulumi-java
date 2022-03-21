@@ -73,22 +73,18 @@ public final class WorkforceCognitoConfigGetArgs extends io.pulumi.resources.Res
             this.clientId = Objects.requireNonNull(clientId);
             return this;
         }
-
         public Builder clientId(String clientId) {
             this.clientId = Output.of(Objects.requireNonNull(clientId));
             return this;
         }
-
         public Builder userPool(Output<String> userPool) {
             this.userPool = Objects.requireNonNull(userPool);
             return this;
         }
-
         public Builder userPool(String userPool) {
             this.userPool = Output.of(Objects.requireNonNull(userPool));
             return this;
-        }
-        public WorkforceCognitoConfigGetArgs build() {
+        }        public WorkforceCognitoConfigGetArgs build() {
             return new WorkforceCognitoConfigGetArgs(clientId, userPool);
         }
     }

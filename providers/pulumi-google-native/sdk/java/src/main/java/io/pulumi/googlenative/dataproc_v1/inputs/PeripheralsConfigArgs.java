@@ -79,22 +79,18 @@ public final class PeripheralsConfigArgs extends io.pulumi.resources.ResourceArg
             this.metastoreService = metastoreService;
             return this;
         }
-
         public Builder metastoreService(@Nullable String metastoreService) {
             this.metastoreService = Output.ofNullable(metastoreService);
             return this;
         }
-
         public Builder sparkHistoryServerConfig(@Nullable Output<SparkHistoryServerConfigArgs> sparkHistoryServerConfig) {
             this.sparkHistoryServerConfig = sparkHistoryServerConfig;
             return this;
         }
-
         public Builder sparkHistoryServerConfig(@Nullable SparkHistoryServerConfigArgs sparkHistoryServerConfig) {
             this.sparkHistoryServerConfig = Output.ofNullable(sparkHistoryServerConfig);
             return this;
-        }
-        public PeripheralsConfigArgs build() {
+        }        public PeripheralsConfigArgs build() {
             return new PeripheralsConfigArgs(metastoreService, sparkHistoryServerConfig);
         }
     }

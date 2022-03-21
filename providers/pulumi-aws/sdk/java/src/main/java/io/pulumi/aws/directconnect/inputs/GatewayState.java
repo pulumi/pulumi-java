@@ -90,32 +90,26 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
             this.amazonSideAsn = amazonSideAsn;
             return this;
         }
-
         public Builder amazonSideAsn(@Nullable String amazonSideAsn) {
             this.amazonSideAsn = Output.ofNullable(amazonSideAsn);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder ownerAccountId(@Nullable Output<String> ownerAccountId) {
             this.ownerAccountId = ownerAccountId;
             return this;
         }
-
         public Builder ownerAccountId(@Nullable String ownerAccountId) {
             this.ownerAccountId = Output.ofNullable(ownerAccountId);
             return this;
-        }
-        public GatewayState build() {
+        }        public GatewayState build() {
             return new GatewayState(amazonSideAsn, name, ownerAccountId);
         }
     }

@@ -205,102 +205,88 @@ public final class DiagnosticSettingArgs extends io.pulumi.resources.ResourceArg
             this.eventHubAuthorizationRuleId = eventHubAuthorizationRuleId;
             return this;
         }
-
         public Builder eventHubAuthorizationRuleId(@Nullable String eventHubAuthorizationRuleId) {
             this.eventHubAuthorizationRuleId = Output.ofNullable(eventHubAuthorizationRuleId);
             return this;
         }
-
         public Builder eventHubName(@Nullable Output<String> eventHubName) {
             this.eventHubName = eventHubName;
             return this;
         }
-
         public Builder eventHubName(@Nullable String eventHubName) {
             this.eventHubName = Output.ofNullable(eventHubName);
             return this;
         }
-
         public Builder logAnalyticsDestinationType(@Nullable Output<String> logAnalyticsDestinationType) {
             this.logAnalyticsDestinationType = logAnalyticsDestinationType;
             return this;
         }
-
         public Builder logAnalyticsDestinationType(@Nullable String logAnalyticsDestinationType) {
             this.logAnalyticsDestinationType = Output.ofNullable(logAnalyticsDestinationType);
             return this;
         }
-
         public Builder logs(@Nullable Output<List<LogSettingsArgs>> logs) {
             this.logs = logs;
             return this;
         }
-
         public Builder logs(@Nullable List<LogSettingsArgs> logs) {
             this.logs = Output.ofNullable(logs);
             return this;
         }
-
+        public Builder logs(LogSettingsArgs... logs) {
+            return logs(List.of(logs));
+        }
         public Builder metrics(@Nullable Output<List<MetricSettingsArgs>> metrics) {
             this.metrics = metrics;
             return this;
         }
-
         public Builder metrics(@Nullable List<MetricSettingsArgs> metrics) {
             this.metrics = Output.ofNullable(metrics);
             return this;
         }
-
+        public Builder metrics(MetricSettingsArgs... metrics) {
+            return metrics(List.of(metrics));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder resourceUri(Output<String> resourceUri) {
             this.resourceUri = Objects.requireNonNull(resourceUri);
             return this;
         }
-
         public Builder resourceUri(String resourceUri) {
             this.resourceUri = Output.of(Objects.requireNonNull(resourceUri));
             return this;
         }
-
         public Builder serviceBusRuleId(@Nullable Output<String> serviceBusRuleId) {
             this.serviceBusRuleId = serviceBusRuleId;
             return this;
         }
-
         public Builder serviceBusRuleId(@Nullable String serviceBusRuleId) {
             this.serviceBusRuleId = Output.ofNullable(serviceBusRuleId);
             return this;
         }
-
         public Builder storageAccountId(@Nullable Output<String> storageAccountId) {
             this.storageAccountId = storageAccountId;
             return this;
         }
-
         public Builder storageAccountId(@Nullable String storageAccountId) {
             this.storageAccountId = Output.ofNullable(storageAccountId);
             return this;
         }
-
         public Builder workspaceId(@Nullable Output<String> workspaceId) {
             this.workspaceId = workspaceId;
             return this;
         }
-
         public Builder workspaceId(@Nullable String workspaceId) {
             this.workspaceId = Output.ofNullable(workspaceId);
             return this;
-        }
-        public DiagnosticSettingArgs build() {
+        }        public DiagnosticSettingArgs build() {
             return new DiagnosticSettingArgs(eventHubAuthorizationRuleId, eventHubName, logAnalyticsDestinationType, logs, metrics, name, resourceUri, serviceBusRuleId, storageAccountId, workspaceId);
         }
     }

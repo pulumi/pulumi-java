@@ -45,8 +45,7 @@ public final class ApplicationInstanceManifestOverridesPayload {
         public Builder payloadData(@Nullable String payloadData) {
             this.payloadData = payloadData;
             return this;
-        }
-        public ApplicationInstanceManifestOverridesPayload build() {
+        }        public ApplicationInstanceManifestOverridesPayload build() {
             return new ApplicationInstanceManifestOverridesPayload(payloadData);
         }
     }

@@ -85,17 +85,14 @@ public final class ToolResultsExecutionResponse {
             this.executionId = Objects.requireNonNull(executionId);
             return this;
         }
-
         public Builder historyId(String historyId) {
             this.historyId = Objects.requireNonNull(historyId);
             return this;
         }
-
         public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
-        }
-        public ToolResultsExecutionResponse build() {
+        }        public ToolResultsExecutionResponse build() {
             return new ToolResultsExecutionResponse(executionId, historyId, project);
         }
     }

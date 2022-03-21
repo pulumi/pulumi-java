@@ -119,27 +119,22 @@ public final class ListMediaServiceKeysResult {
             this.primaryAuthEndpoint = primaryAuthEndpoint;
             return this;
         }
-
         public Builder primaryKey(@Nullable String primaryKey) {
             this.primaryKey = primaryKey;
             return this;
         }
-
         public Builder scope(@Nullable String scope) {
             this.scope = scope;
             return this;
         }
-
         public Builder secondaryAuthEndpoint(@Nullable String secondaryAuthEndpoint) {
             this.secondaryAuthEndpoint = secondaryAuthEndpoint;
             return this;
         }
-
         public Builder secondaryKey(@Nullable String secondaryKey) {
             this.secondaryKey = secondaryKey;
             return this;
-        }
-        public ListMediaServiceKeysResult build() {
+        }        public ListMediaServiceKeysResult build() {
             return new ListMediaServiceKeysResult(primaryAuthEndpoint, primaryKey, scope, secondaryAuthEndpoint, secondaryKey);
         }
     }

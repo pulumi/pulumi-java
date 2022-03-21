@@ -79,22 +79,18 @@ public final class TopicSchemaSettingsGetArgs extends io.pulumi.resources.Resour
             this.encoding = encoding;
             return this;
         }
-
         public Builder encoding(@Nullable String encoding) {
             this.encoding = Output.ofNullable(encoding);
             return this;
         }
-
         public Builder schema(Output<String> schema) {
             this.schema = Objects.requireNonNull(schema);
             return this;
         }
-
         public Builder schema(String schema) {
             this.schema = Output.of(Objects.requireNonNull(schema));
             return this;
-        }
-        public TopicSchemaSettingsGetArgs build() {
+        }        public TopicSchemaSettingsGetArgs build() {
             return new TopicSchemaSettingsGetArgs(encoding, schema);
         }
     }

@@ -171,82 +171,66 @@ public final class LayerVersionPermissionState extends io.pulumi.resources.Resou
             this.action = action;
             return this;
         }
-
         public Builder action(@Nullable String action) {
             this.action = Output.ofNullable(action);
             return this;
         }
-
         public Builder layerName(@Nullable Output<String> layerName) {
             this.layerName = layerName;
             return this;
         }
-
         public Builder layerName(@Nullable String layerName) {
             this.layerName = Output.ofNullable(layerName);
             return this;
         }
-
         public Builder organizationId(@Nullable Output<String> organizationId) {
             this.organizationId = organizationId;
             return this;
         }
-
         public Builder organizationId(@Nullable String organizationId) {
             this.organizationId = Output.ofNullable(organizationId);
             return this;
         }
-
         public Builder policy(@Nullable Output<String> policy) {
             this.policy = policy;
             return this;
         }
-
         public Builder policy(@Nullable String policy) {
             this.policy = Output.ofNullable(policy);
             return this;
         }
-
         public Builder principal(@Nullable Output<String> principal) {
             this.principal = principal;
             return this;
         }
-
         public Builder principal(@Nullable String principal) {
             this.principal = Output.ofNullable(principal);
             return this;
         }
-
         public Builder revisionId(@Nullable Output<String> revisionId) {
             this.revisionId = revisionId;
             return this;
         }
-
         public Builder revisionId(@Nullable String revisionId) {
             this.revisionId = Output.ofNullable(revisionId);
             return this;
         }
-
         public Builder statementId(@Nullable Output<String> statementId) {
             this.statementId = statementId;
             return this;
         }
-
         public Builder statementId(@Nullable String statementId) {
             this.statementId = Output.ofNullable(statementId);
             return this;
         }
-
         public Builder versionNumber(@Nullable Output<Integer> versionNumber) {
             this.versionNumber = versionNumber;
             return this;
         }
-
         public Builder versionNumber(@Nullable Integer versionNumber) {
             this.versionNumber = Output.ofNullable(versionNumber);
             return this;
-        }
-        public LayerVersionPermissionState build() {
+        }        public LayerVersionPermissionState build() {
             return new LayerVersionPermissionState(action, layerName, organizationId, policy, principal, revisionId, statementId, versionNumber);
         }
     }

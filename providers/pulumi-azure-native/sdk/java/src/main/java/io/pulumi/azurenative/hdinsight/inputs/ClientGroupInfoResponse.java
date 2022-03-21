@@ -78,12 +78,10 @@ public final class ClientGroupInfoResponse extends io.pulumi.resources.InvokeArg
             this.groupId = groupId;
             return this;
         }
-
         public Builder groupName(@Nullable String groupName) {
             this.groupName = groupName;
             return this;
-        }
-        public ClientGroupInfoResponse build() {
+        }        public ClientGroupInfoResponse build() {
             return new ClientGroupInfoResponse(groupId, groupName);
         }
     }

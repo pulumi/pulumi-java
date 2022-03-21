@@ -88,17 +88,14 @@ public final class GetReplicationPolicyArgs extends io.pulumi.resources.InvokeAr
             this.policyName = Objects.requireNonNull(policyName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceName(String resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
-        }
-        public GetReplicationPolicyArgs build() {
+        }        public GetReplicationPolicyArgs build() {
             return new GetReplicationPolicyArgs(policyName, resourceGroupName, resourceName);
         }
     }

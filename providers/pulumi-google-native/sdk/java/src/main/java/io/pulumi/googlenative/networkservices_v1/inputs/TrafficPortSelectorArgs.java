@@ -62,12 +62,13 @@ public final class TrafficPortSelectorArgs extends io.pulumi.resources.ResourceA
             this.ports = ports;
             return this;
         }
-
         public Builder ports(@Nullable List<String> ports) {
             this.ports = Output.ofNullable(ports);
             return this;
         }
-        public TrafficPortSelectorArgs build() {
+        public Builder ports(String... ports) {
+            return ports(List.of(ports));
+        }        public TrafficPortSelectorArgs build() {
             return new TrafficPortSelectorArgs(ports);
         }
     }

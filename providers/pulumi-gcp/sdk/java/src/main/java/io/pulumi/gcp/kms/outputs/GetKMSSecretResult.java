@@ -95,27 +95,22 @@ public final class GetKMSSecretResult {
             this.additionalAuthenticatedData = additionalAuthenticatedData;
             return this;
         }
-
         public Builder ciphertext(String ciphertext) {
             this.ciphertext = Objects.requireNonNull(ciphertext);
             return this;
         }
-
         public Builder cryptoKey(String cryptoKey) {
             this.cryptoKey = Objects.requireNonNull(cryptoKey);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder plaintext(String plaintext) {
             this.plaintext = Objects.requireNonNull(plaintext);
             return this;
-        }
-        public GetKMSSecretResult build() {
+        }        public GetKMSSecretResult build() {
             return new GetKMSSecretResult(additionalAuthenticatedData, ciphertext, cryptoKey, id, plaintext);
         }
     }

@@ -60,8 +60,7 @@ public final class AccountEncryptionResponse extends io.pulumi.resources.InvokeA
         public Builder keySource(@Nullable String keySource) {
             this.keySource = keySource;
             return this;
-        }
-        public AccountEncryptionResponse build() {
+        }        public AccountEncryptionResponse build() {
             return new AccountEncryptionResponse(keySource);
         }
     }

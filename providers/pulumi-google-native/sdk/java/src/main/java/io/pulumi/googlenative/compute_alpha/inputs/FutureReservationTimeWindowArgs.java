@@ -83,32 +83,26 @@ public final class FutureReservationTimeWindowArgs extends io.pulumi.resources.R
             this.duration = duration;
             return this;
         }
-
         public Builder duration(@Nullable DurationArgs duration) {
             this.duration = Output.ofNullable(duration);
             return this;
         }
-
         public Builder endTime(@Nullable Output<String> endTime) {
             this.endTime = endTime;
             return this;
         }
-
         public Builder endTime(@Nullable String endTime) {
             this.endTime = Output.ofNullable(endTime);
             return this;
         }
-
         public Builder startTime(@Nullable Output<String> startTime) {
             this.startTime = startTime;
             return this;
         }
-
         public Builder startTime(@Nullable String startTime) {
             this.startTime = Output.ofNullable(startTime);
             return this;
-        }
-        public FutureReservationTimeWindowArgs build() {
+        }        public FutureReservationTimeWindowArgs build() {
             return new FutureReservationTimeWindowArgs(duration, endTime, startTime);
         }
     }

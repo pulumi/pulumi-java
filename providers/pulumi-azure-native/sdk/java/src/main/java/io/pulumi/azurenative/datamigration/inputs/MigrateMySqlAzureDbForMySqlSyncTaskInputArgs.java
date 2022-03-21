@@ -95,32 +95,29 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskInputArgs extends io.pulum
             this.selectedDatabases = Objects.requireNonNull(selectedDatabases);
             return this;
         }
-
         public Builder selectedDatabases(List<MigrateMySqlAzureDbForMySqlSyncDatabaseInputArgs> selectedDatabases) {
             this.selectedDatabases = Output.of(Objects.requireNonNull(selectedDatabases));
             return this;
         }
-
+        public Builder selectedDatabases(MigrateMySqlAzureDbForMySqlSyncDatabaseInputArgs... selectedDatabases) {
+            return selectedDatabases(List.of(selectedDatabases));
+        }
         public Builder sourceConnectionInfo(Output<MySqlConnectionInfoArgs> sourceConnectionInfo) {
             this.sourceConnectionInfo = Objects.requireNonNull(sourceConnectionInfo);
             return this;
         }
-
         public Builder sourceConnectionInfo(MySqlConnectionInfoArgs sourceConnectionInfo) {
             this.sourceConnectionInfo = Output.of(Objects.requireNonNull(sourceConnectionInfo));
             return this;
         }
-
         public Builder targetConnectionInfo(Output<MySqlConnectionInfoArgs> targetConnectionInfo) {
             this.targetConnectionInfo = Objects.requireNonNull(targetConnectionInfo);
             return this;
         }
-
         public Builder targetConnectionInfo(MySqlConnectionInfoArgs targetConnectionInfo) {
             this.targetConnectionInfo = Output.of(Objects.requireNonNull(targetConnectionInfo));
             return this;
-        }
-        public MigrateMySqlAzureDbForMySqlSyncTaskInputArgs build() {
+        }        public MigrateMySqlAzureDbForMySqlSyncTaskInputArgs build() {
             return new MigrateMySqlAzureDbForMySqlSyncTaskInputArgs(selectedDatabases, sourceConnectionInfo, targetConnectionInfo);
         }
     }

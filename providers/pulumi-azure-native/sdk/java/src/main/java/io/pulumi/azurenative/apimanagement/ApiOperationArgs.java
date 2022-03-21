@@ -238,122 +238,104 @@ public final class ApiOperationArgs extends io.pulumi.resources.ResourceArgs {
             this.apiId = Objects.requireNonNull(apiId);
             return this;
         }
-
         public Builder apiId(String apiId) {
             this.apiId = Output.of(Objects.requireNonNull(apiId));
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder displayName(Output<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
-
         public Builder method(Output<String> method) {
             this.method = Objects.requireNonNull(method);
             return this;
         }
-
         public Builder method(String method) {
             this.method = Output.of(Objects.requireNonNull(method));
             return this;
         }
-
         public Builder operationId(@Nullable Output<String> operationId) {
             this.operationId = operationId;
             return this;
         }
-
         public Builder operationId(@Nullable String operationId) {
             this.operationId = Output.ofNullable(operationId);
             return this;
         }
-
         public Builder policies(@Nullable Output<String> policies) {
             this.policies = policies;
             return this;
         }
-
         public Builder policies(@Nullable String policies) {
             this.policies = Output.ofNullable(policies);
             return this;
         }
-
         public Builder request(@Nullable Output<RequestContractArgs> request) {
             this.request = request;
             return this;
         }
-
         public Builder request(@Nullable RequestContractArgs request) {
             this.request = Output.ofNullable(request);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder responses(@Nullable Output<List<ResponseContractArgs>> responses) {
             this.responses = responses;
             return this;
         }
-
         public Builder responses(@Nullable List<ResponseContractArgs> responses) {
             this.responses = Output.ofNullable(responses);
             return this;
         }
-
+        public Builder responses(ResponseContractArgs... responses) {
+            return responses(List.of(responses));
+        }
         public Builder serviceName(Output<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
-
         public Builder serviceName(String serviceName) {
             this.serviceName = Output.of(Objects.requireNonNull(serviceName));
             return this;
         }
-
         public Builder templateParameters(@Nullable Output<List<ParameterContractArgs>> templateParameters) {
             this.templateParameters = templateParameters;
             return this;
         }
-
         public Builder templateParameters(@Nullable List<ParameterContractArgs> templateParameters) {
             this.templateParameters = Output.ofNullable(templateParameters);
             return this;
         }
-
+        public Builder templateParameters(ParameterContractArgs... templateParameters) {
+            return templateParameters(List.of(templateParameters));
+        }
         public Builder urlTemplate(Output<String> urlTemplate) {
             this.urlTemplate = Objects.requireNonNull(urlTemplate);
             return this;
         }
-
         public Builder urlTemplate(String urlTemplate) {
             this.urlTemplate = Output.of(Objects.requireNonNull(urlTemplate));
             return this;
-        }
-        public ApiOperationArgs build() {
+        }        public ApiOperationArgs build() {
             return new ApiOperationArgs(apiId, description, displayName, method, operationId, policies, request, resourceGroupName, responses, serviceName, templateParameters, urlTemplate);
         }
     }

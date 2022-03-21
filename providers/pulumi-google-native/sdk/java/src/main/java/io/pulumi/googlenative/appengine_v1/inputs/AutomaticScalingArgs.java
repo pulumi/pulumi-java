@@ -260,132 +260,106 @@ public final class AutomaticScalingArgs extends io.pulumi.resources.ResourceArgs
             this.coolDownPeriod = coolDownPeriod;
             return this;
         }
-
         public Builder coolDownPeriod(@Nullable String coolDownPeriod) {
             this.coolDownPeriod = Output.ofNullable(coolDownPeriod);
             return this;
         }
-
         public Builder cpuUtilization(@Nullable Output<CpuUtilizationArgs> cpuUtilization) {
             this.cpuUtilization = cpuUtilization;
             return this;
         }
-
         public Builder cpuUtilization(@Nullable CpuUtilizationArgs cpuUtilization) {
             this.cpuUtilization = Output.ofNullable(cpuUtilization);
             return this;
         }
-
         public Builder diskUtilization(@Nullable Output<DiskUtilizationArgs> diskUtilization) {
             this.diskUtilization = diskUtilization;
             return this;
         }
-
         public Builder diskUtilization(@Nullable DiskUtilizationArgs diskUtilization) {
             this.diskUtilization = Output.ofNullable(diskUtilization);
             return this;
         }
-
         public Builder maxConcurrentRequests(@Nullable Output<Integer> maxConcurrentRequests) {
             this.maxConcurrentRequests = maxConcurrentRequests;
             return this;
         }
-
         public Builder maxConcurrentRequests(@Nullable Integer maxConcurrentRequests) {
             this.maxConcurrentRequests = Output.ofNullable(maxConcurrentRequests);
             return this;
         }
-
         public Builder maxIdleInstances(@Nullable Output<Integer> maxIdleInstances) {
             this.maxIdleInstances = maxIdleInstances;
             return this;
         }
-
         public Builder maxIdleInstances(@Nullable Integer maxIdleInstances) {
             this.maxIdleInstances = Output.ofNullable(maxIdleInstances);
             return this;
         }
-
         public Builder maxPendingLatency(@Nullable Output<String> maxPendingLatency) {
             this.maxPendingLatency = maxPendingLatency;
             return this;
         }
-
         public Builder maxPendingLatency(@Nullable String maxPendingLatency) {
             this.maxPendingLatency = Output.ofNullable(maxPendingLatency);
             return this;
         }
-
         public Builder maxTotalInstances(@Nullable Output<Integer> maxTotalInstances) {
             this.maxTotalInstances = maxTotalInstances;
             return this;
         }
-
         public Builder maxTotalInstances(@Nullable Integer maxTotalInstances) {
             this.maxTotalInstances = Output.ofNullable(maxTotalInstances);
             return this;
         }
-
         public Builder minIdleInstances(@Nullable Output<Integer> minIdleInstances) {
             this.minIdleInstances = minIdleInstances;
             return this;
         }
-
         public Builder minIdleInstances(@Nullable Integer minIdleInstances) {
             this.minIdleInstances = Output.ofNullable(minIdleInstances);
             return this;
         }
-
         public Builder minPendingLatency(@Nullable Output<String> minPendingLatency) {
             this.minPendingLatency = minPendingLatency;
             return this;
         }
-
         public Builder minPendingLatency(@Nullable String minPendingLatency) {
             this.minPendingLatency = Output.ofNullable(minPendingLatency);
             return this;
         }
-
         public Builder minTotalInstances(@Nullable Output<Integer> minTotalInstances) {
             this.minTotalInstances = minTotalInstances;
             return this;
         }
-
         public Builder minTotalInstances(@Nullable Integer minTotalInstances) {
             this.minTotalInstances = Output.ofNullable(minTotalInstances);
             return this;
         }
-
         public Builder networkUtilization(@Nullable Output<NetworkUtilizationArgs> networkUtilization) {
             this.networkUtilization = networkUtilization;
             return this;
         }
-
         public Builder networkUtilization(@Nullable NetworkUtilizationArgs networkUtilization) {
             this.networkUtilization = Output.ofNullable(networkUtilization);
             return this;
         }
-
         public Builder requestUtilization(@Nullable Output<RequestUtilizationArgs> requestUtilization) {
             this.requestUtilization = requestUtilization;
             return this;
         }
-
         public Builder requestUtilization(@Nullable RequestUtilizationArgs requestUtilization) {
             this.requestUtilization = Output.ofNullable(requestUtilization);
             return this;
         }
-
         public Builder standardSchedulerSettings(@Nullable Output<StandardSchedulerSettingsArgs> standardSchedulerSettings) {
             this.standardSchedulerSettings = standardSchedulerSettings;
             return this;
         }
-
         public Builder standardSchedulerSettings(@Nullable StandardSchedulerSettingsArgs standardSchedulerSettings) {
             this.standardSchedulerSettings = Output.ofNullable(standardSchedulerSettings);
             return this;
-        }
-        public AutomaticScalingArgs build() {
+        }        public AutomaticScalingArgs build() {
             return new AutomaticScalingArgs(coolDownPeriod, cpuUtilization, diskUtilization, maxConcurrentRequests, maxIdleInstances, maxPendingLatency, maxTotalInstances, minIdleInstances, minPendingLatency, minTotalInstances, networkUtilization, requestUtilization, standardSchedulerSettings);
         }
     }

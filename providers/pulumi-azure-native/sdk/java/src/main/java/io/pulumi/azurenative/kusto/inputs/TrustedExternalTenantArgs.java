@@ -61,12 +61,10 @@ public final class TrustedExternalTenantArgs extends io.pulumi.resources.Resourc
             this.value = value;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = Output.ofNullable(value);
             return this;
-        }
-        public TrustedExternalTenantArgs build() {
+        }        public TrustedExternalTenantArgs build() {
             return new TrustedExternalTenantArgs(value);
         }
     }

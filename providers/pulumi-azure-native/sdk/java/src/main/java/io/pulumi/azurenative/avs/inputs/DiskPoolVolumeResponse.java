@@ -79,12 +79,13 @@ public final class DiskPoolVolumeResponse extends io.pulumi.resources.InvokeArgs
             this.endpoints = endpoints;
             return this;
         }
-
+        public Builder endpoints(String... endpoints) {
+            return endpoints(List.of(endpoints));
+        }
         public Builder lunName(@Nullable String lunName) {
             this.lunName = lunName;
             return this;
-        }
-        public DiskPoolVolumeResponse build() {
+        }        public DiskPoolVolumeResponse build() {
             return new DiskPoolVolumeResponse(endpoints, lunName);
         }
     }

@@ -263,132 +263,112 @@ public final class AmiArgs extends io.pulumi.resources.ResourceArgs {
             this.architecture = architecture;
             return this;
         }
-
         public Builder architecture(@Nullable String architecture) {
             this.architecture = Output.ofNullable(architecture);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder ebsBlockDevices(@Nullable Output<List<AmiEbsBlockDeviceArgs>> ebsBlockDevices) {
             this.ebsBlockDevices = ebsBlockDevices;
             return this;
         }
-
         public Builder ebsBlockDevices(@Nullable List<AmiEbsBlockDeviceArgs> ebsBlockDevices) {
             this.ebsBlockDevices = Output.ofNullable(ebsBlockDevices);
             return this;
         }
-
+        public Builder ebsBlockDevices(AmiEbsBlockDeviceArgs... ebsBlockDevices) {
+            return ebsBlockDevices(List.of(ebsBlockDevices));
+        }
         public Builder enaSupport(@Nullable Output<Boolean> enaSupport) {
             this.enaSupport = enaSupport;
             return this;
         }
-
         public Builder enaSupport(@Nullable Boolean enaSupport) {
             this.enaSupport = Output.ofNullable(enaSupport);
             return this;
         }
-
         public Builder ephemeralBlockDevices(@Nullable Output<List<AmiEphemeralBlockDeviceArgs>> ephemeralBlockDevices) {
             this.ephemeralBlockDevices = ephemeralBlockDevices;
             return this;
         }
-
         public Builder ephemeralBlockDevices(@Nullable List<AmiEphemeralBlockDeviceArgs> ephemeralBlockDevices) {
             this.ephemeralBlockDevices = Output.ofNullable(ephemeralBlockDevices);
             return this;
         }
-
+        public Builder ephemeralBlockDevices(AmiEphemeralBlockDeviceArgs... ephemeralBlockDevices) {
+            return ephemeralBlockDevices(List.of(ephemeralBlockDevices));
+        }
         public Builder imageLocation(@Nullable Output<String> imageLocation) {
             this.imageLocation = imageLocation;
             return this;
         }
-
         public Builder imageLocation(@Nullable String imageLocation) {
             this.imageLocation = Output.ofNullable(imageLocation);
             return this;
         }
-
         public Builder kernelId(@Nullable Output<String> kernelId) {
             this.kernelId = kernelId;
             return this;
         }
-
         public Builder kernelId(@Nullable String kernelId) {
             this.kernelId = Output.ofNullable(kernelId);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder ramdiskId(@Nullable Output<String> ramdiskId) {
             this.ramdiskId = ramdiskId;
             return this;
         }
-
         public Builder ramdiskId(@Nullable String ramdiskId) {
             this.ramdiskId = Output.ofNullable(ramdiskId);
             return this;
         }
-
         public Builder rootDeviceName(@Nullable Output<String> rootDeviceName) {
             this.rootDeviceName = rootDeviceName;
             return this;
         }
-
         public Builder rootDeviceName(@Nullable String rootDeviceName) {
             this.rootDeviceName = Output.ofNullable(rootDeviceName);
             return this;
         }
-
         public Builder sriovNetSupport(@Nullable Output<String> sriovNetSupport) {
             this.sriovNetSupport = sriovNetSupport;
             return this;
         }
-
         public Builder sriovNetSupport(@Nullable String sriovNetSupport) {
             this.sriovNetSupport = Output.ofNullable(sriovNetSupport);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder virtualizationType(@Nullable Output<String> virtualizationType) {
             this.virtualizationType = virtualizationType;
             return this;
         }
-
         public Builder virtualizationType(@Nullable String virtualizationType) {
             this.virtualizationType = Output.ofNullable(virtualizationType);
             return this;
-        }
-        public AmiArgs build() {
+        }        public AmiArgs build() {
             return new AmiArgs(architecture, description, ebsBlockDevices, enaSupport, ephemeralBlockDevices, imageLocation, kernelId, name, ramdiskId, rootDeviceName, sriovNetSupport, tags, virtualizationType);
         }
     }

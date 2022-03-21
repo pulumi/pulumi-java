@@ -71,12 +71,10 @@ public final class GetRegistryBuildSourceUploadUrlResult {
             this.relativePath = relativePath;
             return this;
         }
-
         public Builder uploadUrl(@Nullable String uploadUrl) {
             this.uploadUrl = uploadUrl;
             return this;
-        }
-        public GetRegistryBuildSourceUploadUrlResult build() {
+        }        public GetRegistryBuildSourceUploadUrlResult build() {
             return new GetRegistryBuildSourceUploadUrlResult(relativePath, uploadUrl);
         }
     }

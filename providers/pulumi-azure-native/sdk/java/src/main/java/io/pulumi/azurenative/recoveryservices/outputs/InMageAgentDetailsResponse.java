@@ -103,22 +103,18 @@ public final class InMageAgentDetailsResponse {
             this.agentExpiryDate = agentExpiryDate;
             return this;
         }
-
         public Builder agentUpdateStatus(@Nullable String agentUpdateStatus) {
             this.agentUpdateStatus = agentUpdateStatus;
             return this;
         }
-
         public Builder agentVersion(@Nullable String agentVersion) {
             this.agentVersion = agentVersion;
             return this;
         }
-
         public Builder postUpdateRebootStatus(@Nullable String postUpdateRebootStatus) {
             this.postUpdateRebootStatus = postUpdateRebootStatus;
             return this;
-        }
-        public InMageAgentDetailsResponse build() {
+        }        public InMageAgentDetailsResponse build() {
             return new InMageAgentDetailsResponse(agentExpiryDate, agentUpdateStatus, agentVersion, postUpdateRebootStatus);
         }
     }

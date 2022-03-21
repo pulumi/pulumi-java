@@ -103,22 +103,18 @@ public final class VsphereVirtualDiskVolumeSource {
             this.fsType = fsType;
             return this;
         }
-
         public Builder storagePolicyID(@Nullable String storagePolicyID) {
             this.storagePolicyID = storagePolicyID;
             return this;
         }
-
         public Builder storagePolicyName(@Nullable String storagePolicyName) {
             this.storagePolicyName = storagePolicyName;
             return this;
         }
-
         public Builder volumePath(String volumePath) {
             this.volumePath = Objects.requireNonNull(volumePath);
             return this;
-        }
-        public VsphereVirtualDiskVolumeSource build() {
+        }        public VsphereVirtualDiskVolumeSource build() {
             return new VsphereVirtualDiskVolumeSource(fsType, storagePolicyID, storagePolicyName, volumePath);
         }
     }

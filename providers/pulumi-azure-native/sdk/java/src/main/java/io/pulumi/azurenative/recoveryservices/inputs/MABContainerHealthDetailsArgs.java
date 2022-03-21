@@ -112,42 +112,37 @@ public final class MABContainerHealthDetailsArgs extends io.pulumi.resources.Res
             this.code = code;
             return this;
         }
-
         public Builder code(@Nullable Integer code) {
             this.code = Output.ofNullable(code);
             return this;
         }
-
         public Builder message(@Nullable Output<String> message) {
             this.message = message;
             return this;
         }
-
         public Builder message(@Nullable String message) {
             this.message = Output.ofNullable(message);
             return this;
         }
-
         public Builder recommendations(@Nullable Output<List<String>> recommendations) {
             this.recommendations = recommendations;
             return this;
         }
-
         public Builder recommendations(@Nullable List<String> recommendations) {
             this.recommendations = Output.ofNullable(recommendations);
             return this;
         }
-
+        public Builder recommendations(String... recommendations) {
+            return recommendations(List.of(recommendations));
+        }
         public Builder title(@Nullable Output<String> title) {
             this.title = title;
             return this;
         }
-
         public Builder title(@Nullable String title) {
             this.title = Output.ofNullable(title);
             return this;
-        }
-        public MABContainerHealthDetailsArgs build() {
+        }        public MABContainerHealthDetailsArgs build() {
             return new MABContainerHealthDetailsArgs(code, message, recommendations, title);
         }
     }

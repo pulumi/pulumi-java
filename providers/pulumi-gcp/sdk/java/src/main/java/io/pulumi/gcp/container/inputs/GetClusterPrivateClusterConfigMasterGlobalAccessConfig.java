@@ -50,8 +50,7 @@ public final class GetClusterPrivateClusterConfigMasterGlobalAccessConfig extend
         public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
-        }
-        public GetClusterPrivateClusterConfigMasterGlobalAccessConfig build() {
+        }        public GetClusterPrivateClusterConfigMasterGlobalAccessConfig build() {
             return new GetClusterPrivateClusterConfigMasterGlobalAccessConfig(enabled);
         }
     }

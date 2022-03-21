@@ -224,112 +224,99 @@ public final class SecurityGroupRuleState extends io.pulumi.resources.ResourceAr
             this.cidrBlocks = cidrBlocks;
             return this;
         }
-
         public Builder cidrBlocks(@Nullable List<String> cidrBlocks) {
             this.cidrBlocks = Output.ofNullable(cidrBlocks);
             return this;
         }
-
+        public Builder cidrBlocks(String... cidrBlocks) {
+            return cidrBlocks(List.of(cidrBlocks));
+        }
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder fromPort(@Nullable Output<Integer> fromPort) {
             this.fromPort = fromPort;
             return this;
         }
-
         public Builder fromPort(@Nullable Integer fromPort) {
             this.fromPort = Output.ofNullable(fromPort);
             return this;
         }
-
         public Builder ipv6CidrBlocks(@Nullable Output<List<String>> ipv6CidrBlocks) {
             this.ipv6CidrBlocks = ipv6CidrBlocks;
             return this;
         }
-
         public Builder ipv6CidrBlocks(@Nullable List<String> ipv6CidrBlocks) {
             this.ipv6CidrBlocks = Output.ofNullable(ipv6CidrBlocks);
             return this;
         }
-
+        public Builder ipv6CidrBlocks(String... ipv6CidrBlocks) {
+            return ipv6CidrBlocks(List.of(ipv6CidrBlocks));
+        }
         public Builder prefixListIds(@Nullable Output<List<String>> prefixListIds) {
             this.prefixListIds = prefixListIds;
             return this;
         }
-
         public Builder prefixListIds(@Nullable List<String> prefixListIds) {
             this.prefixListIds = Output.ofNullable(prefixListIds);
             return this;
         }
-
+        public Builder prefixListIds(String... prefixListIds) {
+            return prefixListIds(List.of(prefixListIds));
+        }
         public Builder protocol(@Nullable Output<Either<String,ProtocolType>> protocol) {
             this.protocol = protocol;
             return this;
         }
-
         public Builder protocol(@Nullable Either<String,ProtocolType> protocol) {
             this.protocol = Output.ofNullable(protocol);
             return this;
         }
-
         public Builder securityGroupId(@Nullable Output<String> securityGroupId) {
             this.securityGroupId = securityGroupId;
             return this;
         }
-
         public Builder securityGroupId(@Nullable String securityGroupId) {
             this.securityGroupId = Output.ofNullable(securityGroupId);
             return this;
         }
-
         public Builder self(@Nullable Output<Boolean> self) {
             this.self = self;
             return this;
         }
-
         public Builder self(@Nullable Boolean self) {
             this.self = Output.ofNullable(self);
             return this;
         }
-
         public Builder sourceSecurityGroupId(@Nullable Output<String> sourceSecurityGroupId) {
             this.sourceSecurityGroupId = sourceSecurityGroupId;
             return this;
         }
-
         public Builder sourceSecurityGroupId(@Nullable String sourceSecurityGroupId) {
             this.sourceSecurityGroupId = Output.ofNullable(sourceSecurityGroupId);
             return this;
         }
-
         public Builder toPort(@Nullable Output<Integer> toPort) {
             this.toPort = toPort;
             return this;
         }
-
         public Builder toPort(@Nullable Integer toPort) {
             this.toPort = Output.ofNullable(toPort);
             return this;
         }
-
         public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public SecurityGroupRuleState build() {
+        }        public SecurityGroupRuleState build() {
             return new SecurityGroupRuleState(cidrBlocks, description, fromPort, ipv6CidrBlocks, prefixListIds, protocol, securityGroupId, self, sourceSecurityGroupId, toPort, type);
         }
     }

@@ -55,12 +55,10 @@ public final class ServiceTreeInfoResponse {
             this.componentId = componentId;
             return this;
         }
-
         public Builder serviceId(@Nullable String serviceId) {
             this.serviceId = serviceId;
             return this;
-        }
-        public ServiceTreeInfoResponse build() {
+        }        public ServiceTreeInfoResponse build() {
             return new ServiceTreeInfoResponse(componentId, serviceId);
         }
     }

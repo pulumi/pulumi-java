@@ -239,62 +239,50 @@ public final class GetNotificationHubPnsCredentialsResult {
             this.admCredential = admCredential;
             return this;
         }
-
         public Builder apnsCredential(@Nullable ApnsCredentialResponse apnsCredential) {
             this.apnsCredential = apnsCredential;
             return this;
         }
-
         public Builder baiduCredential(@Nullable BaiduCredentialResponse baiduCredential) {
             this.baiduCredential = baiduCredential;
             return this;
         }
-
         public Builder gcmCredential(@Nullable GcmCredentialResponse gcmCredential) {
             this.gcmCredential = gcmCredential;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder mpnsCredential(@Nullable MpnsCredentialResponse mpnsCredential) {
             this.mpnsCredential = mpnsCredential;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder sku(@Nullable SkuResponse sku) {
             this.sku = sku;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder wnsCredential(@Nullable WnsCredentialResponse wnsCredential) {
             this.wnsCredential = wnsCredential;
             return this;
-        }
-        public GetNotificationHubPnsCredentialsResult build() {
+        }        public GetNotificationHubPnsCredentialsResult build() {
             return new GetNotificationHubPnsCredentialsResult(admCredential, apnsCredential, baiduCredential, gcmCredential, id, location, mpnsCredential, name, sku, tags, type, wnsCredential);
         }
     }

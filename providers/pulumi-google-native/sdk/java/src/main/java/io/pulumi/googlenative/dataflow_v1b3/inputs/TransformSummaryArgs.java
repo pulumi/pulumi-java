@@ -145,62 +145,59 @@ public final class TransformSummaryArgs extends io.pulumi.resources.ResourceArgs
             this.displayData = displayData;
             return this;
         }
-
         public Builder displayData(@Nullable List<DisplayDataArgs> displayData) {
             this.displayData = Output.ofNullable(displayData);
             return this;
         }
-
+        public Builder displayData(DisplayDataArgs... displayData) {
+            return displayData(List.of(displayData));
+        }
         public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder inputCollectionName(@Nullable Output<List<String>> inputCollectionName) {
             this.inputCollectionName = inputCollectionName;
             return this;
         }
-
         public Builder inputCollectionName(@Nullable List<String> inputCollectionName) {
             this.inputCollectionName = Output.ofNullable(inputCollectionName);
             return this;
         }
-
+        public Builder inputCollectionName(String... inputCollectionName) {
+            return inputCollectionName(List.of(inputCollectionName));
+        }
         public Builder kind(@Nullable Output<TransformSummaryKind> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable TransformSummaryKind kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder outputCollectionName(@Nullable Output<List<String>> outputCollectionName) {
             this.outputCollectionName = outputCollectionName;
             return this;
         }
-
         public Builder outputCollectionName(@Nullable List<String> outputCollectionName) {
             this.outputCollectionName = Output.ofNullable(outputCollectionName);
             return this;
         }
-        public TransformSummaryArgs build() {
+        public Builder outputCollectionName(String... outputCollectionName) {
+            return outputCollectionName(List.of(outputCollectionName));
+        }        public TransformSummaryArgs build() {
             return new TransformSummaryArgs(displayData, id, inputCollectionName, kind, name, outputCollectionName);
         }
     }

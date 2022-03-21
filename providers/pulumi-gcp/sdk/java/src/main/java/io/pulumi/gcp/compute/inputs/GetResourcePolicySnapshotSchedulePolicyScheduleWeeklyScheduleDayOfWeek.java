@@ -64,12 +64,10 @@ public final class GetResourcePolicySnapshotSchedulePolicyScheduleWeeklySchedule
             this.day = Objects.requireNonNull(day);
             return this;
         }
-
         public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
-        }
-        public GetResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeek build() {
+        }        public GetResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeek build() {
             return new GetResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeek(day, startTime);
         }
     }

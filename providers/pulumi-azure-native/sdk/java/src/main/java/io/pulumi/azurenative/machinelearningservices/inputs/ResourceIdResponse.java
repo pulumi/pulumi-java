@@ -58,8 +58,7 @@ public final class ResourceIdResponse extends io.pulumi.resources.InvokeArgs {
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
-        }
-        public ResourceIdResponse build() {
+        }        public ResourceIdResponse build() {
             return new ResourceIdResponse(id);
         }
     }

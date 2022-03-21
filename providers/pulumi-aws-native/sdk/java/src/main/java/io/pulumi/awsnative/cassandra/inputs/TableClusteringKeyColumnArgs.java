@@ -67,22 +67,18 @@ public final class TableClusteringKeyColumnArgs extends io.pulumi.resources.Reso
             this.column = Objects.requireNonNull(column);
             return this;
         }
-
         public Builder column(TableColumnArgs column) {
             this.column = Output.of(Objects.requireNonNull(column));
             return this;
         }
-
         public Builder orderBy(@Nullable Output<TableClusteringKeyColumnOrderBy> orderBy) {
             this.orderBy = orderBy;
             return this;
         }
-
         public Builder orderBy(@Nullable TableClusteringKeyColumnOrderBy orderBy) {
             this.orderBy = Output.ofNullable(orderBy);
             return this;
-        }
-        public TableClusteringKeyColumnArgs build() {
+        }        public TableClusteringKeyColumnArgs build() {
             return new TableClusteringKeyColumnArgs(column, orderBy);
         }
     }

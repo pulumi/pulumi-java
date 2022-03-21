@@ -89,17 +89,20 @@ public final class UserProfileUserSettingsKernelGatewayAppSettings {
             this.customImages = customImages;
             return this;
         }
-
+        public Builder customImages(UserProfileUserSettingsKernelGatewayAppSettingsCustomImage... customImages) {
+            return customImages(List.of(customImages));
+        }
         public Builder defaultResourceSpec(UserProfileUserSettingsKernelGatewayAppSettingsDefaultResourceSpec defaultResourceSpec) {
             this.defaultResourceSpec = Objects.requireNonNull(defaultResourceSpec);
             return this;
         }
-
         public Builder lifecycleConfigArns(@Nullable List<String> lifecycleConfigArns) {
             this.lifecycleConfigArns = lifecycleConfigArns;
             return this;
         }
-        public UserProfileUserSettingsKernelGatewayAppSettings build() {
+        public Builder lifecycleConfigArns(String... lifecycleConfigArns) {
+            return lifecycleConfigArns(List.of(lifecycleConfigArns));
+        }        public UserProfileUserSettingsKernelGatewayAppSettings build() {
             return new UserProfileUserSettingsKernelGatewayAppSettings(customImages, defaultResourceSpec, lifecycleConfigArns);
         }
     }

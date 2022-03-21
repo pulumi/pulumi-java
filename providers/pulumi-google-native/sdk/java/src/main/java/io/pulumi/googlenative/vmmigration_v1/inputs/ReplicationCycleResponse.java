@@ -77,12 +77,10 @@ public final class ReplicationCycleResponse extends io.pulumi.resources.InvokeAr
             this.progressPercent = Objects.requireNonNull(progressPercent);
             return this;
         }
-
         public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
-        }
-        public ReplicationCycleResponse build() {
+        }        public ReplicationCycleResponse build() {
             return new ReplicationCycleResponse(progressPercent, startTime);
         }
     }

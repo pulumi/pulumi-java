@@ -112,22 +112,21 @@ public final class PatchDeploymentPatchConfigPreStepLinuxExecStepConfig {
             this.allowedSuccessCodes = allowedSuccessCodes;
             return this;
         }
-
+        public Builder allowedSuccessCodes(Integer... allowedSuccessCodes) {
+            return allowedSuccessCodes(List.of(allowedSuccessCodes));
+        }
         public Builder gcsObject(@Nullable PatchDeploymentPatchConfigPreStepLinuxExecStepConfigGcsObject gcsObject) {
             this.gcsObject = gcsObject;
             return this;
         }
-
         public Builder interpreter(@Nullable String interpreter) {
             this.interpreter = interpreter;
             return this;
         }
-
         public Builder localPath(@Nullable String localPath) {
             this.localPath = localPath;
             return this;
-        }
-        public PatchDeploymentPatchConfigPreStepLinuxExecStepConfig build() {
+        }        public PatchDeploymentPatchConfigPreStepLinuxExecStepConfig build() {
             return new PatchDeploymentPatchConfigPreStepLinuxExecStepConfig(allowedSuccessCodes, gcsObject, interpreter, localPath);
         }
     }

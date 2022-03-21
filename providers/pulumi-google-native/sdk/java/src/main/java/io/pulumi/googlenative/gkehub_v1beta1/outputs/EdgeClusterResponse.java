@@ -51,8 +51,7 @@ public final class EdgeClusterResponse {
         public Builder resourceLink(String resourceLink) {
             this.resourceLink = Objects.requireNonNull(resourceLink);
             return this;
-        }
-        public EdgeClusterResponse build() {
+        }        public EdgeClusterResponse build() {
             return new EdgeClusterResponse(resourceLink);
         }
     }

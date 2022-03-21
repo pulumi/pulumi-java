@@ -127,62 +127,53 @@ public final class SafetyRuleArgs extends io.pulumi.resources.ResourceArgs {
             this.assertionRule = assertionRule;
             return this;
         }
-
         public Builder assertionRule(@Nullable SafetyRuleAssertionRuleArgs assertionRule) {
             this.assertionRule = Output.ofNullable(assertionRule);
             return this;
         }
-
         public Builder controlPanelArn(@Nullable Output<String> controlPanelArn) {
             this.controlPanelArn = controlPanelArn;
             return this;
         }
-
         public Builder controlPanelArn(@Nullable String controlPanelArn) {
             this.controlPanelArn = Output.ofNullable(controlPanelArn);
             return this;
         }
-
         public Builder gatingRule(@Nullable Output<SafetyRuleGatingRuleArgs> gatingRule) {
             this.gatingRule = gatingRule;
             return this;
         }
-
         public Builder gatingRule(@Nullable SafetyRuleGatingRuleArgs gatingRule) {
             this.gatingRule = Output.ofNullable(gatingRule);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder ruleConfig(@Nullable Output<SafetyRuleRuleConfigArgs> ruleConfig) {
             this.ruleConfig = ruleConfig;
             return this;
         }
-
         public Builder ruleConfig(@Nullable SafetyRuleRuleConfigArgs ruleConfig) {
             this.ruleConfig = Output.ofNullable(ruleConfig);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<SafetyRuleTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<SafetyRuleTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public SafetyRuleArgs build() {
+        public Builder tags(SafetyRuleTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public SafetyRuleArgs build() {
             return new SafetyRuleArgs(assertionRule, controlPanelArn, gatingRule, name, ruleConfig, tags);
         }
     }

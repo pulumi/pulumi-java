@@ -90,17 +90,14 @@ public final class GetMountTargetArgs extends io.pulumi.resources.InvokeArgs {
             this.accessPointId = accessPointId;
             return this;
         }
-
         public Builder fileSystemId(@Nullable String fileSystemId) {
             this.fileSystemId = fileSystemId;
             return this;
         }
-
         public Builder mountTargetId(@Nullable String mountTargetId) {
             this.mountTargetId = mountTargetId;
             return this;
-        }
-        public GetMountTargetArgs build() {
+        }        public GetMountTargetArgs build() {
             return new GetMountTargetArgs(accessPointId, fileSystemId, mountTargetId);
         }
     }

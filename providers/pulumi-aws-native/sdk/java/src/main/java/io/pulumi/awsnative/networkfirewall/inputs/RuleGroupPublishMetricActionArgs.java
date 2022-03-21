@@ -53,12 +53,13 @@ public final class RuleGroupPublishMetricActionArgs extends io.pulumi.resources.
             this.dimensions = Objects.requireNonNull(dimensions);
             return this;
         }
-
         public Builder dimensions(List<RuleGroupDimensionArgs> dimensions) {
             this.dimensions = Output.of(Objects.requireNonNull(dimensions));
             return this;
         }
-        public RuleGroupPublishMetricActionArgs build() {
+        public Builder dimensions(RuleGroupDimensionArgs... dimensions) {
+            return dimensions(List.of(dimensions));
+        }        public RuleGroupPublishMetricActionArgs build() {
             return new RuleGroupPublishMetricActionArgs(dimensions);
         }
     }

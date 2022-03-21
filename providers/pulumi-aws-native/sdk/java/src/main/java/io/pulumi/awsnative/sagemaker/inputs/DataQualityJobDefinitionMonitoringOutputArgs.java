@@ -56,12 +56,10 @@ public final class DataQualityJobDefinitionMonitoringOutputArgs extends io.pulum
             this.s3Output = Objects.requireNonNull(s3Output);
             return this;
         }
-
         public Builder s3Output(DataQualityJobDefinitionS3OutputArgs s3Output) {
             this.s3Output = Output.of(Objects.requireNonNull(s3Output));
             return this;
-        }
-        public DataQualityJobDefinitionMonitoringOutputArgs build() {
+        }        public DataQualityJobDefinitionMonitoringOutputArgs build() {
             return new DataQualityJobDefinitionMonitoringOutputArgs(s3Output);
         }
     }

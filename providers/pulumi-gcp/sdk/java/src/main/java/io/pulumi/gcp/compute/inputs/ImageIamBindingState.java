@@ -140,62 +140,53 @@ public final class ImageIamBindingState extends io.pulumi.resources.ResourceArgs
             this.condition = condition;
             return this;
         }
-
         public Builder condition(@Nullable ImageIamBindingConditionGetArgs condition) {
             this.condition = Output.ofNullable(condition);
             return this;
         }
-
         public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
-
         public Builder etag(@Nullable String etag) {
             this.etag = Output.ofNullable(etag);
             return this;
         }
-
         public Builder image(@Nullable Output<String> image) {
             this.image = image;
             return this;
         }
-
         public Builder image(@Nullable String image) {
             this.image = Output.ofNullable(image);
             return this;
         }
-
         public Builder members(@Nullable Output<List<String>> members) {
             this.members = members;
             return this;
         }
-
         public Builder members(@Nullable List<String> members) {
             this.members = Output.ofNullable(members);
             return this;
         }
-
+        public Builder members(String... members) {
+            return members(List.of(members));
+        }
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder role(@Nullable Output<String> role) {
             this.role = role;
             return this;
         }
-
         public Builder role(@Nullable String role) {
             this.role = Output.ofNullable(role);
             return this;
-        }
-        public ImageIamBindingState build() {
+        }        public ImageIamBindingState build() {
             return new ImageIamBindingState(condition, etag, image, members, project, role);
         }
     }

@@ -61,12 +61,10 @@ public final class GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsArg
             this.iouThreshold = iouThreshold;
             return this;
         }
-
         public Builder iouThreshold(@Nullable Double iouThreshold) {
             this.iouThreshold = Output.ofNullable(iouThreshold);
             return this;
-        }
-        public GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsArgs build() {
+        }        public GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsArgs build() {
             return new GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsArgs(iouThreshold);
         }
     }

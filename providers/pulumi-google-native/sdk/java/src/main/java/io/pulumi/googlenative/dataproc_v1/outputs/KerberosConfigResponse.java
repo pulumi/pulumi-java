@@ -279,77 +279,62 @@ public final class KerberosConfigResponse {
             this.crossRealmTrustAdminServer = Objects.requireNonNull(crossRealmTrustAdminServer);
             return this;
         }
-
         public Builder crossRealmTrustKdc(String crossRealmTrustKdc) {
             this.crossRealmTrustKdc = Objects.requireNonNull(crossRealmTrustKdc);
             return this;
         }
-
         public Builder crossRealmTrustRealm(String crossRealmTrustRealm) {
             this.crossRealmTrustRealm = Objects.requireNonNull(crossRealmTrustRealm);
             return this;
         }
-
         public Builder crossRealmTrustSharedPasswordUri(String crossRealmTrustSharedPasswordUri) {
             this.crossRealmTrustSharedPasswordUri = Objects.requireNonNull(crossRealmTrustSharedPasswordUri);
             return this;
         }
-
         public Builder enableKerberos(Boolean enableKerberos) {
             this.enableKerberos = Objects.requireNonNull(enableKerberos);
             return this;
         }
-
         public Builder kdcDbKeyUri(String kdcDbKeyUri) {
             this.kdcDbKeyUri = Objects.requireNonNull(kdcDbKeyUri);
             return this;
         }
-
         public Builder keyPasswordUri(String keyPasswordUri) {
             this.keyPasswordUri = Objects.requireNonNull(keyPasswordUri);
             return this;
         }
-
         public Builder keystorePasswordUri(String keystorePasswordUri) {
             this.keystorePasswordUri = Objects.requireNonNull(keystorePasswordUri);
             return this;
         }
-
         public Builder keystoreUri(String keystoreUri) {
             this.keystoreUri = Objects.requireNonNull(keystoreUri);
             return this;
         }
-
         public Builder kmsKeyUri(String kmsKeyUri) {
             this.kmsKeyUri = Objects.requireNonNull(kmsKeyUri);
             return this;
         }
-
         public Builder realm(String realm) {
             this.realm = Objects.requireNonNull(realm);
             return this;
         }
-
         public Builder rootPrincipalPasswordUri(String rootPrincipalPasswordUri) {
             this.rootPrincipalPasswordUri = Objects.requireNonNull(rootPrincipalPasswordUri);
             return this;
         }
-
         public Builder tgtLifetimeHours(Integer tgtLifetimeHours) {
             this.tgtLifetimeHours = Objects.requireNonNull(tgtLifetimeHours);
             return this;
         }
-
         public Builder truststorePasswordUri(String truststorePasswordUri) {
             this.truststorePasswordUri = Objects.requireNonNull(truststorePasswordUri);
             return this;
         }
-
         public Builder truststoreUri(String truststoreUri) {
             this.truststoreUri = Objects.requireNonNull(truststoreUri);
             return this;
-        }
-        public KerberosConfigResponse build() {
+        }        public KerberosConfigResponse build() {
             return new KerberosConfigResponse(crossRealmTrustAdminServer, crossRealmTrustKdc, crossRealmTrustRealm, crossRealmTrustSharedPasswordUri, enableKerberos, kdcDbKeyUri, keyPasswordUri, keystorePasswordUri, keystoreUri, kmsKeyUri, realm, rootPrincipalPasswordUri, tgtLifetimeHours, truststorePasswordUri, truststoreUri);
         }
     }

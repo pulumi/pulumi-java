@@ -154,72 +154,67 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
             this.accessRules = accessRules;
             return this;
         }
-
         public Builder accessRules(@Nullable BucketAccessRulesArgs accessRules) {
             this.accessRules = Output.ofNullable(accessRules);
             return this;
         }
-
         public Builder bucketName(@Nullable Output<String> bucketName) {
             this.bucketName = bucketName;
             return this;
         }
-
         public Builder bucketName(@Nullable String bucketName) {
             this.bucketName = Output.ofNullable(bucketName);
             return this;
         }
-
         public Builder bundleId(Output<String> bundleId) {
             this.bundleId = Objects.requireNonNull(bundleId);
             return this;
         }
-
         public Builder bundleId(String bundleId) {
             this.bundleId = Output.of(Objects.requireNonNull(bundleId));
             return this;
         }
-
         public Builder objectVersioning(@Nullable Output<Boolean> objectVersioning) {
             this.objectVersioning = objectVersioning;
             return this;
         }
-
         public Builder objectVersioning(@Nullable Boolean objectVersioning) {
             this.objectVersioning = Output.ofNullable(objectVersioning);
             return this;
         }
-
         public Builder readOnlyAccessAccounts(@Nullable Output<List<String>> readOnlyAccessAccounts) {
             this.readOnlyAccessAccounts = readOnlyAccessAccounts;
             return this;
         }
-
         public Builder readOnlyAccessAccounts(@Nullable List<String> readOnlyAccessAccounts) {
             this.readOnlyAccessAccounts = Output.ofNullable(readOnlyAccessAccounts);
             return this;
         }
-
+        public Builder readOnlyAccessAccounts(String... readOnlyAccessAccounts) {
+            return readOnlyAccessAccounts(List.of(readOnlyAccessAccounts));
+        }
         public Builder resourcesReceivingAccess(@Nullable Output<List<String>> resourcesReceivingAccess) {
             this.resourcesReceivingAccess = resourcesReceivingAccess;
             return this;
         }
-
         public Builder resourcesReceivingAccess(@Nullable List<String> resourcesReceivingAccess) {
             this.resourcesReceivingAccess = Output.ofNullable(resourcesReceivingAccess);
             return this;
         }
-
+        public Builder resourcesReceivingAccess(String... resourcesReceivingAccess) {
+            return resourcesReceivingAccess(List.of(resourcesReceivingAccess));
+        }
         public Builder tags(@Nullable Output<List<BucketTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<BucketTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public BucketArgs build() {
+        public Builder tags(BucketTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public BucketArgs build() {
             return new BucketArgs(accessRules, bucketName, bundleId, objectVersioning, readOnlyAccessAccounts, resourcesReceivingAccess, tags);
         }
     }

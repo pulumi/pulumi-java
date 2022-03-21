@@ -171,42 +171,40 @@ public final class PathMatcherResponse {
             this.defaultRouteAction = Objects.requireNonNull(defaultRouteAction);
             return this;
         }
-
         public Builder defaultService(String defaultService) {
             this.defaultService = Objects.requireNonNull(defaultService);
             return this;
         }
-
         public Builder defaultUrlRedirect(HttpRedirectActionResponse defaultUrlRedirect) {
             this.defaultUrlRedirect = Objects.requireNonNull(defaultUrlRedirect);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder headerAction(HttpHeaderActionResponse headerAction) {
             this.headerAction = Objects.requireNonNull(headerAction);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder pathRules(List<PathRuleResponse> pathRules) {
             this.pathRules = Objects.requireNonNull(pathRules);
             return this;
         }
-
+        public Builder pathRules(PathRuleResponse... pathRules) {
+            return pathRules(List.of(pathRules));
+        }
         public Builder routeRules(List<HttpRouteRuleResponse> routeRules) {
             this.routeRules = Objects.requireNonNull(routeRules);
             return this;
         }
-        public PathMatcherResponse build() {
+        public Builder routeRules(HttpRouteRuleResponse... routeRules) {
+            return routeRules(List.of(routeRules));
+        }        public PathMatcherResponse build() {
             return new PathMatcherResponse(defaultRouteAction, defaultService, defaultUrlRedirect, description, headerAction, name, pathRules, routeRules);
         }
     }

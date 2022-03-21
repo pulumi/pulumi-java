@@ -94,17 +94,14 @@ public final class AnimationResponse extends io.pulumi.resources.InvokeArgs {
             this.animationEnd = Objects.requireNonNull(animationEnd);
             return this;
         }
-
         public Builder animationFade(AnimationFadeResponse animationFade) {
             this.animationFade = Objects.requireNonNull(animationFade);
             return this;
         }
-
         public Builder animationStatic(AnimationStaticResponse animationStatic) {
             this.animationStatic = Objects.requireNonNull(animationStatic);
             return this;
-        }
-        public AnimationResponse build() {
+        }        public AnimationResponse build() {
             return new AnimationResponse(animationEnd, animationFade, animationStatic);
         }
     }

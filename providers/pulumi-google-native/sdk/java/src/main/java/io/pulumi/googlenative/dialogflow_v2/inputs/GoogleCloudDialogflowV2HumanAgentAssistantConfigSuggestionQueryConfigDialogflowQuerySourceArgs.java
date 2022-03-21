@@ -60,12 +60,10 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQue
             this.agent = Objects.requireNonNull(agent);
             return this;
         }
-
         public Builder agent(String agent) {
             this.agent = Output.of(Objects.requireNonNull(agent));
             return this;
-        }
-        public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigDialogflowQuerySourceArgs build() {
+        }        public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigDialogflowQuerySourceArgs build() {
             return new GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigDialogflowQuerySourceArgs(agent);
         }
     }

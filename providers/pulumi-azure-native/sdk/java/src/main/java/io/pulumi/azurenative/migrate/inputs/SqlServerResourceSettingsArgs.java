@@ -78,22 +78,18 @@ public final class SqlServerResourceSettingsArgs extends io.pulumi.resources.Res
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
         }
-
         public Builder resourceType(String resourceType) {
             this.resourceType = Output.of(Objects.requireNonNull(resourceType));
             return this;
         }
-
         public Builder targetResourceName(Output<String> targetResourceName) {
             this.targetResourceName = Objects.requireNonNull(targetResourceName);
             return this;
         }
-
         public Builder targetResourceName(String targetResourceName) {
             this.targetResourceName = Output.of(Objects.requireNonNull(targetResourceName));
             return this;
-        }
-        public SqlServerResourceSettingsArgs build() {
+        }        public SqlServerResourceSettingsArgs build() {
             return new SqlServerResourceSettingsArgs(resourceType, targetResourceName);
         }
     }

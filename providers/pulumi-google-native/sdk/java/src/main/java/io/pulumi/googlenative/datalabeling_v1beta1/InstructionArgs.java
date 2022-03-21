@@ -120,52 +120,42 @@ public final class InstructionArgs extends io.pulumi.resources.ResourceArgs {
             this.dataType = Objects.requireNonNull(dataType);
             return this;
         }
-
         public Builder dataType(InstructionDataType dataType) {
             this.dataType = Output.of(Objects.requireNonNull(dataType));
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder displayName(Output<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
-
         public Builder pdfInstruction(@Nullable Output<GoogleCloudDatalabelingV1beta1PdfInstructionArgs> pdfInstruction) {
             this.pdfInstruction = pdfInstruction;
             return this;
         }
-
         public Builder pdfInstruction(@Nullable GoogleCloudDatalabelingV1beta1PdfInstructionArgs pdfInstruction) {
             this.pdfInstruction = Output.ofNullable(pdfInstruction);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
-        }
-        public InstructionArgs build() {
+        }        public InstructionArgs build() {
             return new InstructionArgs(dataType, description, displayName, pdfInstruction, project);
         }
     }

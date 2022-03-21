@@ -73,12 +73,13 @@ public final class RuleGroupRuleStatementSqliMatchStatement {
             this.fieldToMatch = fieldToMatch;
             return this;
         }
-
         public Builder textTransformations(List<RuleGroupRuleStatementSqliMatchStatementTextTransformation> textTransformations) {
             this.textTransformations = Objects.requireNonNull(textTransformations);
             return this;
         }
-        public RuleGroupRuleStatementSqliMatchStatement build() {
+        public Builder textTransformations(RuleGroupRuleStatementSqliMatchStatementTextTransformation... textTransformations) {
+            return textTransformations(List.of(textTransformations));
+        }        public RuleGroupRuleStatementSqliMatchStatement build() {
             return new RuleGroupRuleStatementSqliMatchStatement(fieldToMatch, textTransformations);
         }
     }

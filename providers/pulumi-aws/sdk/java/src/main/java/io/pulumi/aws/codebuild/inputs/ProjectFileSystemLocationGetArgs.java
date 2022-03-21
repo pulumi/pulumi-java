@@ -122,52 +122,42 @@ public final class ProjectFileSystemLocationGetArgs extends io.pulumi.resources.
             this.identifier = identifier;
             return this;
         }
-
         public Builder identifier(@Nullable String identifier) {
             this.identifier = Output.ofNullable(identifier);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder mountOptions(@Nullable Output<String> mountOptions) {
             this.mountOptions = mountOptions;
             return this;
         }
-
         public Builder mountOptions(@Nullable String mountOptions) {
             this.mountOptions = Output.ofNullable(mountOptions);
             return this;
         }
-
         public Builder mountPoint(@Nullable Output<String> mountPoint) {
             this.mountPoint = mountPoint;
             return this;
         }
-
         public Builder mountPoint(@Nullable String mountPoint) {
             this.mountPoint = Output.ofNullable(mountPoint);
             return this;
         }
-
         public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public ProjectFileSystemLocationGetArgs build() {
+        }        public ProjectFileSystemLocationGetArgs build() {
             return new ProjectFileSystemLocationGetArgs(identifier, location, mountOptions, mountPoint, type);
         }
     }

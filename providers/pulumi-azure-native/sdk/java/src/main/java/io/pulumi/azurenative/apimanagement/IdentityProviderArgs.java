@@ -253,132 +253,109 @@ public final class IdentityProviderArgs extends io.pulumi.resources.ResourceArgs
             this.allowedTenants = allowedTenants;
             return this;
         }
-
         public Builder allowedTenants(@Nullable List<String> allowedTenants) {
             this.allowedTenants = Output.ofNullable(allowedTenants);
             return this;
         }
-
+        public Builder allowedTenants(String... allowedTenants) {
+            return allowedTenants(List.of(allowedTenants));
+        }
         public Builder authority(@Nullable Output<String> authority) {
             this.authority = authority;
             return this;
         }
-
         public Builder authority(@Nullable String authority) {
             this.authority = Output.ofNullable(authority);
             return this;
         }
-
         public Builder clientId(Output<String> clientId) {
             this.clientId = Objects.requireNonNull(clientId);
             return this;
         }
-
         public Builder clientId(String clientId) {
             this.clientId = Output.of(Objects.requireNonNull(clientId));
             return this;
         }
-
         public Builder clientSecret(Output<String> clientSecret) {
             this.clientSecret = Objects.requireNonNull(clientSecret);
             return this;
         }
-
         public Builder clientSecret(String clientSecret) {
             this.clientSecret = Output.of(Objects.requireNonNull(clientSecret));
             return this;
         }
-
         public Builder identityProviderName(@Nullable Output<String> identityProviderName) {
             this.identityProviderName = identityProviderName;
             return this;
         }
-
         public Builder identityProviderName(@Nullable String identityProviderName) {
             this.identityProviderName = Output.ofNullable(identityProviderName);
             return this;
         }
-
         public Builder passwordResetPolicyName(@Nullable Output<String> passwordResetPolicyName) {
             this.passwordResetPolicyName = passwordResetPolicyName;
             return this;
         }
-
         public Builder passwordResetPolicyName(@Nullable String passwordResetPolicyName) {
             this.passwordResetPolicyName = Output.ofNullable(passwordResetPolicyName);
             return this;
         }
-
         public Builder profileEditingPolicyName(@Nullable Output<String> profileEditingPolicyName) {
             this.profileEditingPolicyName = profileEditingPolicyName;
             return this;
         }
-
         public Builder profileEditingPolicyName(@Nullable String profileEditingPolicyName) {
             this.profileEditingPolicyName = Output.ofNullable(profileEditingPolicyName);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder serviceName(Output<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
-
         public Builder serviceName(String serviceName) {
             this.serviceName = Output.of(Objects.requireNonNull(serviceName));
             return this;
         }
-
         public Builder signinPolicyName(@Nullable Output<String> signinPolicyName) {
             this.signinPolicyName = signinPolicyName;
             return this;
         }
-
         public Builder signinPolicyName(@Nullable String signinPolicyName) {
             this.signinPolicyName = Output.ofNullable(signinPolicyName);
             return this;
         }
-
         public Builder signinTenant(@Nullable Output<String> signinTenant) {
             this.signinTenant = signinTenant;
             return this;
         }
-
         public Builder signinTenant(@Nullable String signinTenant) {
             this.signinTenant = Output.ofNullable(signinTenant);
             return this;
         }
-
         public Builder signupPolicyName(@Nullable Output<String> signupPolicyName) {
             this.signupPolicyName = signupPolicyName;
             return this;
         }
-
         public Builder signupPolicyName(@Nullable String signupPolicyName) {
             this.signupPolicyName = Output.ofNullable(signupPolicyName);
             return this;
         }
-
         public Builder type(@Nullable Output<Either<String,IdentityProviderType>> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable Either<String,IdentityProviderType> type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public IdentityProviderArgs build() {
+        }        public IdentityProviderArgs build() {
             return new IdentityProviderArgs(allowedTenants, authority, clientId, clientSecret, identityProviderName, passwordResetPolicyName, profileEditingPolicyName, resourceGroupName, serviceName, signinPolicyName, signinTenant, signupPolicyName, type);
         }
     }

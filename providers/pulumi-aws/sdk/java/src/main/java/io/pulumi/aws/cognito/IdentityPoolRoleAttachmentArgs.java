@@ -93,32 +93,29 @@ public final class IdentityPoolRoleAttachmentArgs extends io.pulumi.resources.Re
             this.identityPoolId = Objects.requireNonNull(identityPoolId);
             return this;
         }
-
         public Builder identityPoolId(String identityPoolId) {
             this.identityPoolId = Output.of(Objects.requireNonNull(identityPoolId));
             return this;
         }
-
         public Builder roleMappings(@Nullable Output<List<IdentityPoolRoleAttachmentRoleMappingArgs>> roleMappings) {
             this.roleMappings = roleMappings;
             return this;
         }
-
         public Builder roleMappings(@Nullable List<IdentityPoolRoleAttachmentRoleMappingArgs> roleMappings) {
             this.roleMappings = Output.ofNullable(roleMappings);
             return this;
         }
-
+        public Builder roleMappings(IdentityPoolRoleAttachmentRoleMappingArgs... roleMappings) {
+            return roleMappings(List.of(roleMappings));
+        }
         public Builder roles(Output<Map<String,String>> roles) {
             this.roles = Objects.requireNonNull(roles);
             return this;
         }
-
         public Builder roles(Map<String,String> roles) {
             this.roles = Output.of(Objects.requireNonNull(roles));
             return this;
-        }
-        public IdentityPoolRoleAttachmentArgs build() {
+        }        public IdentityPoolRoleAttachmentArgs build() {
             return new IdentityPoolRoleAttachmentArgs(identityPoolId, roleMappings, roles);
         }
     }

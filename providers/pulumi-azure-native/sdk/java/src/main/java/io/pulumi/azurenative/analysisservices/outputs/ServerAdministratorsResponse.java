@@ -54,7 +54,9 @@ public final class ServerAdministratorsResponse {
             this.members = members;
             return this;
         }
-        public ServerAdministratorsResponse build() {
+        public Builder members(String... members) {
+            return members(List.of(members));
+        }        public ServerAdministratorsResponse build() {
             return new ServerAdministratorsResponse(members);
         }
     }

@@ -60,12 +60,10 @@ public final class MonitoringScheduleScheduleConfigArgs extends io.pulumi.resour
             this.scheduleExpression = Objects.requireNonNull(scheduleExpression);
             return this;
         }
-
         public Builder scheduleExpression(String scheduleExpression) {
             this.scheduleExpression = Output.of(Objects.requireNonNull(scheduleExpression));
             return this;
-        }
-        public MonitoringScheduleScheduleConfigArgs build() {
+        }        public MonitoringScheduleScheduleConfigArgs build() {
             return new MonitoringScheduleScheduleConfigArgs(scheduleExpression);
         }
     }

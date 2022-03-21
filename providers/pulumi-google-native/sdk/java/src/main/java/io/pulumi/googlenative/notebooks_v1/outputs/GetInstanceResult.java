@@ -591,172 +591,153 @@ public final class GetInstanceResult {
             this.acceleratorConfig = Objects.requireNonNull(acceleratorConfig);
             return this;
         }
-
         public Builder bootDiskSizeGb(String bootDiskSizeGb) {
             this.bootDiskSizeGb = Objects.requireNonNull(bootDiskSizeGb);
             return this;
         }
-
         public Builder bootDiskType(String bootDiskType) {
             this.bootDiskType = Objects.requireNonNull(bootDiskType);
             return this;
         }
-
         public Builder containerImage(ContainerImageResponse containerImage) {
             this.containerImage = Objects.requireNonNull(containerImage);
             return this;
         }
-
         public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder customGpuDriverPath(String customGpuDriverPath) {
             this.customGpuDriverPath = Objects.requireNonNull(customGpuDriverPath);
             return this;
         }
-
         public Builder dataDiskSizeGb(String dataDiskSizeGb) {
             this.dataDiskSizeGb = Objects.requireNonNull(dataDiskSizeGb);
             return this;
         }
-
         public Builder dataDiskType(String dataDiskType) {
             this.dataDiskType = Objects.requireNonNull(dataDiskType);
             return this;
         }
-
         public Builder diskEncryption(String diskEncryption) {
             this.diskEncryption = Objects.requireNonNull(diskEncryption);
             return this;
         }
-
         public Builder disks(List<DiskResponse> disks) {
             this.disks = Objects.requireNonNull(disks);
             return this;
         }
-
+        public Builder disks(DiskResponse... disks) {
+            return disks(List.of(disks));
+        }
         public Builder installGpuDriver(Boolean installGpuDriver) {
             this.installGpuDriver = Objects.requireNonNull(installGpuDriver);
             return this;
         }
-
         public Builder instanceOwners(List<String> instanceOwners) {
             this.instanceOwners = Objects.requireNonNull(instanceOwners);
             return this;
         }
-
+        public Builder instanceOwners(String... instanceOwners) {
+            return instanceOwners(List.of(instanceOwners));
+        }
         public Builder kmsKey(String kmsKey) {
             this.kmsKey = Objects.requireNonNull(kmsKey);
             return this;
         }
-
         public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder machineType(String machineType) {
             this.machineType = Objects.requireNonNull(machineType);
             return this;
         }
-
         public Builder metadata(Map<String,String> metadata) {
             this.metadata = Objects.requireNonNull(metadata);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder network(String network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }
-
         public Builder nicType(String nicType) {
             this.nicType = Objects.requireNonNull(nicType);
             return this;
         }
-
         public Builder noProxyAccess(Boolean noProxyAccess) {
             this.noProxyAccess = Objects.requireNonNull(noProxyAccess);
             return this;
         }
-
         public Builder noPublicIp(Boolean noPublicIp) {
             this.noPublicIp = Objects.requireNonNull(noPublicIp);
             return this;
         }
-
         public Builder noRemoveDataDisk(Boolean noRemoveDataDisk) {
             this.noRemoveDataDisk = Objects.requireNonNull(noRemoveDataDisk);
             return this;
         }
-
         public Builder postStartupScript(String postStartupScript) {
             this.postStartupScript = Objects.requireNonNull(postStartupScript);
             return this;
         }
-
         public Builder proxyUri(String proxyUri) {
             this.proxyUri = Objects.requireNonNull(proxyUri);
             return this;
         }
-
         public Builder reservationAffinity(ReservationAffinityResponse reservationAffinity) {
             this.reservationAffinity = Objects.requireNonNull(reservationAffinity);
             return this;
         }
-
         public Builder serviceAccount(String serviceAccount) {
             this.serviceAccount = Objects.requireNonNull(serviceAccount);
             return this;
         }
-
         public Builder serviceAccountScopes(List<String> serviceAccountScopes) {
             this.serviceAccountScopes = Objects.requireNonNull(serviceAccountScopes);
             return this;
         }
-
+        public Builder serviceAccountScopes(String... serviceAccountScopes) {
+            return serviceAccountScopes(List.of(serviceAccountScopes));
+        }
         public Builder shieldedInstanceConfig(ShieldedInstanceConfigResponse shieldedInstanceConfig) {
             this.shieldedInstanceConfig = Objects.requireNonNull(shieldedInstanceConfig);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder subnet(String subnet) {
             this.subnet = Objects.requireNonNull(subnet);
             return this;
         }
-
         public Builder tags(List<String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
-
+        public Builder tags(String... tags) {
+            return tags(List.of(tags));
+        }
         public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public Builder upgradeHistory(List<UpgradeHistoryEntryResponse> upgradeHistory) {
             this.upgradeHistory = Objects.requireNonNull(upgradeHistory);
             return this;
         }
-
+        public Builder upgradeHistory(UpgradeHistoryEntryResponse... upgradeHistory) {
+            return upgradeHistory(List.of(upgradeHistory));
+        }
         public Builder vmImage(VmImageResponse vmImage) {
             this.vmImage = Objects.requireNonNull(vmImage);
             return this;
-        }
-        public GetInstanceResult build() {
+        }        public GetInstanceResult build() {
             return new GetInstanceResult(acceleratorConfig, bootDiskSizeGb, bootDiskType, containerImage, createTime, customGpuDriverPath, dataDiskSizeGb, dataDiskType, diskEncryption, disks, installGpuDriver, instanceOwners, kmsKey, labels, machineType, metadata, name, network, nicType, noProxyAccess, noPublicIp, noRemoveDataDisk, postStartupScript, proxyUri, reservationAffinity, serviceAccount, serviceAccountScopes, shieldedInstanceConfig, state, subnet, tags, updateTime, upgradeHistory, vmImage);
         }
     }

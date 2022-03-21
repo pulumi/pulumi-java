@@ -141,62 +141,53 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
             this.dataRetentionInHours = dataRetentionInHours;
             return this;
         }
-
         public Builder dataRetentionInHours(@Nullable Integer dataRetentionInHours) {
             this.dataRetentionInHours = Output.ofNullable(dataRetentionInHours);
             return this;
         }
-
         public Builder deviceName(@Nullable Output<String> deviceName) {
             this.deviceName = deviceName;
             return this;
         }
-
         public Builder deviceName(@Nullable String deviceName) {
             this.deviceName = Output.ofNullable(deviceName);
             return this;
         }
-
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
-
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = Output.ofNullable(kmsKeyId);
             return this;
         }
-
         public Builder mediaType(@Nullable Output<String> mediaType) {
             this.mediaType = mediaType;
             return this;
         }
-
         public Builder mediaType(@Nullable String mediaType) {
             this.mediaType = Output.ofNullable(mediaType);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<StreamTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<StreamTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public StreamArgs build() {
+        public Builder tags(StreamTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public StreamArgs build() {
             return new StreamArgs(dataRetentionInHours, deviceName, kmsKeyId, mediaType, name, tags);
         }
     }

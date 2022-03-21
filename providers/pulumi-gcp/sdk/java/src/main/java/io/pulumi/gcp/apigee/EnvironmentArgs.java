@@ -107,42 +107,34 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder orgId(Output<String> orgId) {
             this.orgId = Objects.requireNonNull(orgId);
             return this;
         }
-
         public Builder orgId(String orgId) {
             this.orgId = Output.of(Objects.requireNonNull(orgId));
             return this;
-        }
-        public EnvironmentArgs build() {
+        }        public EnvironmentArgs build() {
             return new EnvironmentArgs(description, displayName, name, orgId);
         }
     }

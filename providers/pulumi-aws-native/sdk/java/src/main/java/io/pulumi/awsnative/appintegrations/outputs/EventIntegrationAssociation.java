@@ -121,27 +121,25 @@ public final class EventIntegrationAssociation {
             this.clientAssociationMetadata = clientAssociationMetadata;
             return this;
         }
-
+        public Builder clientAssociationMetadata(EventIntegrationMetadata... clientAssociationMetadata) {
+            return clientAssociationMetadata(List.of(clientAssociationMetadata));
+        }
         public Builder clientId(@Nullable String clientId) {
             this.clientId = clientId;
             return this;
         }
-
         public Builder eventBridgeRuleName(@Nullable String eventBridgeRuleName) {
             this.eventBridgeRuleName = eventBridgeRuleName;
             return this;
         }
-
         public Builder eventIntegrationAssociationArn(@Nullable String eventIntegrationAssociationArn) {
             this.eventIntegrationAssociationArn = eventIntegrationAssociationArn;
             return this;
         }
-
         public Builder eventIntegrationAssociationId(@Nullable String eventIntegrationAssociationId) {
             this.eventIntegrationAssociationId = eventIntegrationAssociationId;
             return this;
-        }
-        public EventIntegrationAssociation build() {
+        }        public EventIntegrationAssociation build() {
             return new EventIntegrationAssociation(clientAssociationMetadata, clientId, eventBridgeRuleName, eventIntegrationAssociationArn, eventIntegrationAssociationId);
         }
     }

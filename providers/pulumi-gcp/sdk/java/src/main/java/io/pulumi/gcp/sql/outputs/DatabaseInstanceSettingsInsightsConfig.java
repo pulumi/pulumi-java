@@ -104,22 +104,18 @@ public final class DatabaseInstanceSettingsInsightsConfig {
             this.queryInsightsEnabled = queryInsightsEnabled;
             return this;
         }
-
         public Builder queryStringLength(@Nullable Integer queryStringLength) {
             this.queryStringLength = queryStringLength;
             return this;
         }
-
         public Builder recordApplicationTags(@Nullable Boolean recordApplicationTags) {
             this.recordApplicationTags = recordApplicationTags;
             return this;
         }
-
         public Builder recordClientAddress(@Nullable Boolean recordClientAddress) {
             this.recordClientAddress = recordClientAddress;
             return this;
-        }
-        public DatabaseInstanceSettingsInsightsConfig build() {
+        }        public DatabaseInstanceSettingsInsightsConfig build() {
             return new DatabaseInstanceSettingsInsightsConfig(queryInsightsEnabled, queryStringLength, recordApplicationTags, recordClientAddress);
         }
     }

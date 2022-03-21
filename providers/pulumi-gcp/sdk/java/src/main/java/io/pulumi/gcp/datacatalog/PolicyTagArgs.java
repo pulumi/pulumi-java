@@ -113,42 +113,34 @@ public final class PolicyTagArgs extends io.pulumi.resources.ResourceArgs {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder displayName(Output<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
-
         public Builder parentPolicyTag(@Nullable Output<String> parentPolicyTag) {
             this.parentPolicyTag = parentPolicyTag;
             return this;
         }
-
         public Builder parentPolicyTag(@Nullable String parentPolicyTag) {
             this.parentPolicyTag = Output.ofNullable(parentPolicyTag);
             return this;
         }
-
         public Builder taxonomy(Output<String> taxonomy) {
             this.taxonomy = Objects.requireNonNull(taxonomy);
             return this;
         }
-
         public Builder taxonomy(String taxonomy) {
             this.taxonomy = Output.of(Objects.requireNonNull(taxonomy));
             return this;
-        }
-        public PolicyTagArgs build() {
+        }        public PolicyTagArgs build() {
             return new PolicyTagArgs(description, displayName, parentPolicyTag, taxonomy);
         }
     }

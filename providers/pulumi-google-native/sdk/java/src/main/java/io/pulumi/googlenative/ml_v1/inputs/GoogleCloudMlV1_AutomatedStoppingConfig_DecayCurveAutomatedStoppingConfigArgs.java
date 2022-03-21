@@ -57,12 +57,10 @@ public final class GoogleCloudMlV1_AutomatedStoppingConfig_DecayCurveAutomatedSt
             this.useElapsedTime = useElapsedTime;
             return this;
         }
-
         public Builder useElapsedTime(@Nullable Boolean useElapsedTime) {
             this.useElapsedTime = Output.ofNullable(useElapsedTime);
             return this;
-        }
-        public GoogleCloudMlV1_AutomatedStoppingConfig_DecayCurveAutomatedStoppingConfigArgs build() {
+        }        public GoogleCloudMlV1_AutomatedStoppingConfig_DecayCurveAutomatedStoppingConfigArgs build() {
             return new GoogleCloudMlV1_AutomatedStoppingConfig_DecayCurveAutomatedStoppingConfigArgs(useElapsedTime);
         }
     }

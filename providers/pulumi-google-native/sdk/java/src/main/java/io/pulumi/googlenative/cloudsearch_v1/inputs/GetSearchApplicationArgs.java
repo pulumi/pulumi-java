@@ -66,12 +66,10 @@ public final class GetSearchApplicationArgs extends io.pulumi.resources.InvokeAr
             this.debugOptionsEnableDebugging = debugOptionsEnableDebugging;
             return this;
         }
-
         public Builder searchapplicationId(String searchapplicationId) {
             this.searchapplicationId = Objects.requireNonNull(searchapplicationId);
             return this;
-        }
-        public GetSearchApplicationArgs build() {
+        }        public GetSearchApplicationArgs build() {
             return new GetSearchApplicationArgs(debugOptionsEnableDebugging, searchapplicationId);
         }
     }

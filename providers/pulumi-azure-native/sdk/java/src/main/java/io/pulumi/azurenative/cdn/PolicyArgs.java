@@ -192,92 +192,74 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
             this.customRules = customRules;
             return this;
         }
-
         public Builder customRules(@Nullable CustomRuleListArgs customRules) {
             this.customRules = Output.ofNullable(customRules);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder managedRules(@Nullable Output<ManagedRuleSetListArgs> managedRules) {
             this.managedRules = managedRules;
             return this;
         }
-
         public Builder managedRules(@Nullable ManagedRuleSetListArgs managedRules) {
             this.managedRules = Output.ofNullable(managedRules);
             return this;
         }
-
         public Builder policyName(@Nullable Output<String> policyName) {
             this.policyName = policyName;
             return this;
         }
-
         public Builder policyName(@Nullable String policyName) {
             this.policyName = Output.ofNullable(policyName);
             return this;
         }
-
         public Builder policySettings(@Nullable Output<PolicySettingsArgs> policySettings) {
             this.policySettings = policySettings;
             return this;
         }
-
         public Builder policySettings(@Nullable PolicySettingsArgs policySettings) {
             this.policySettings = Output.ofNullable(policySettings);
             return this;
         }
-
         public Builder rateLimitRules(@Nullable Output<RateLimitRuleListArgs> rateLimitRules) {
             this.rateLimitRules = rateLimitRules;
             return this;
         }
-
         public Builder rateLimitRules(@Nullable RateLimitRuleListArgs rateLimitRules) {
             this.rateLimitRules = Output.ofNullable(rateLimitRules);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder sku(Output<SkuArgs> sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
-
         public Builder sku(SkuArgs sku) {
             this.sku = Output.of(Objects.requireNonNull(sku));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public PolicyArgs build() {
+        }        public PolicyArgs build() {
             return new PolicyArgs(customRules, location, managedRules, policyName, policySettings, rateLimitRules, resourceGroupName, sku, tags);
         }
     }

@@ -71,12 +71,10 @@ public final class StorageInsightStatusResponse {
             this.description = description;
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
-        }
-        public StorageInsightStatusResponse build() {
+        }        public StorageInsightStatusResponse build() {
             return new StorageInsightStatusResponse(description, state);
         }
     }

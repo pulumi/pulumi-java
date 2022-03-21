@@ -85,17 +85,14 @@ public final class IpFilterRuleResponse {
             this.action = Objects.requireNonNull(action);
             return this;
         }
-
         public Builder filterName(String filterName) {
             this.filterName = Objects.requireNonNull(filterName);
             return this;
         }
-
         public Builder ipMask(String ipMask) {
             this.ipMask = Objects.requireNonNull(ipMask);
             return this;
-        }
-        public IpFilterRuleResponse build() {
+        }        public IpFilterRuleResponse build() {
             return new IpFilterRuleResponse(action, filterName, ipMask);
         }
     }

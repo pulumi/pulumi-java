@@ -332,92 +332,77 @@ public final class GetServerResult {
             this.administratorLogin = administratorLogin;
             return this;
         }
-
         public Builder administrators(@Nullable ServerExternalAdministratorResponse administrators) {
             this.administrators = administrators;
             return this;
         }
-
         public Builder fullyQualifiedDomainName(String fullyQualifiedDomainName) {
             this.fullyQualifiedDomainName = Objects.requireNonNull(fullyQualifiedDomainName);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder identity(@Nullable ResourceIdentityResponse identity) {
             this.identity = identity;
             return this;
         }
-
         public Builder keyId(@Nullable String keyId) {
             this.keyId = keyId;
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder minimalTlsVersion(@Nullable String minimalTlsVersion) {
             this.minimalTlsVersion = minimalTlsVersion;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder primaryUserAssignedIdentityId(@Nullable String primaryUserAssignedIdentityId) {
             this.primaryUserAssignedIdentityId = primaryUserAssignedIdentityId;
             return this;
         }
-
         public Builder privateEndpointConnections(List<ServerPrivateEndpointConnectionResponse> privateEndpointConnections) {
             this.privateEndpointConnections = Objects.requireNonNull(privateEndpointConnections);
             return this;
         }
-
+        public Builder privateEndpointConnections(ServerPrivateEndpointConnectionResponse... privateEndpointConnections) {
+            return privateEndpointConnections(List.of(privateEndpointConnections));
+        }
         public Builder publicNetworkAccess(@Nullable String publicNetworkAccess) {
             this.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = version;
             return this;
         }
-
         public Builder workspaceFeature(String workspaceFeature) {
             this.workspaceFeature = Objects.requireNonNull(workspaceFeature);
             return this;
-        }
-        public GetServerResult build() {
+        }        public GetServerResult build() {
             return new GetServerResult(administratorLogin, administrators, fullyQualifiedDomainName, id, identity, keyId, kind, location, minimalTlsVersion, name, primaryUserAssignedIdentityId, privateEndpointConnections, publicNetworkAccess, state, tags, type, version, workspaceFeature);
         }
     }

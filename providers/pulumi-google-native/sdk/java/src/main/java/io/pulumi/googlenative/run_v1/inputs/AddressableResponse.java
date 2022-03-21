@@ -54,8 +54,7 @@ public final class AddressableResponse extends io.pulumi.resources.InvokeArgs {
         public Builder url(String url) {
             this.url = Objects.requireNonNull(url);
             return this;
-        }
-        public AddressableResponse build() {
+        }        public AddressableResponse build() {
             return new AddressableResponse(url);
         }
     }

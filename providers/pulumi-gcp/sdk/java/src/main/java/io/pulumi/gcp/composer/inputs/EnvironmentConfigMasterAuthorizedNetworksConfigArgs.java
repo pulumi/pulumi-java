@@ -68,22 +68,21 @@ public final class EnvironmentConfigMasterAuthorizedNetworksConfigArgs extends i
             this.cidrBlocks = cidrBlocks;
             return this;
         }
-
         public Builder cidrBlocks(@Nullable List<EnvironmentConfigMasterAuthorizedNetworksConfigCidrBlockArgs> cidrBlocks) {
             this.cidrBlocks = Output.ofNullable(cidrBlocks);
             return this;
         }
-
+        public Builder cidrBlocks(EnvironmentConfigMasterAuthorizedNetworksConfigCidrBlockArgs... cidrBlocks) {
+            return cidrBlocks(List.of(cidrBlocks));
+        }
         public Builder enabled(Output<Boolean> enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public Builder enabled(Boolean enabled) {
             this.enabled = Output.of(Objects.requireNonNull(enabled));
             return this;
-        }
-        public EnvironmentConfigMasterAuthorizedNetworksConfigArgs build() {
+        }        public EnvironmentConfigMasterAuthorizedNetworksConfigArgs build() {
             return new EnvironmentConfigMasterAuthorizedNetworksConfigArgs(cidrBlocks, enabled);
         }
     }

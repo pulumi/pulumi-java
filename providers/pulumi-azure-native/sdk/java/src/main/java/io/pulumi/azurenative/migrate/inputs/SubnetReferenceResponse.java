@@ -78,12 +78,10 @@ public final class SubnetReferenceResponse extends io.pulumi.resources.InvokeArg
             this.name = name;
             return this;
         }
-
         public Builder sourceArmResourceId(String sourceArmResourceId) {
             this.sourceArmResourceId = Objects.requireNonNull(sourceArmResourceId);
             return this;
-        }
-        public SubnetReferenceResponse build() {
+        }        public SubnetReferenceResponse build() {
             return new SubnetReferenceResponse(name, sourceArmResourceId);
         }
     }

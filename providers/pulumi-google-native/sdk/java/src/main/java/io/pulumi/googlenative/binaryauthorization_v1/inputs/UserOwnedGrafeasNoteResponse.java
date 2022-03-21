@@ -94,17 +94,17 @@ public final class UserOwnedGrafeasNoteResponse extends io.pulumi.resources.Invo
             this.delegationServiceAccountEmail = Objects.requireNonNull(delegationServiceAccountEmail);
             return this;
         }
-
         public Builder noteReference(String noteReference) {
             this.noteReference = Objects.requireNonNull(noteReference);
             return this;
         }
-
         public Builder publicKeys(List<AttestorPublicKeyResponse> publicKeys) {
             this.publicKeys = Objects.requireNonNull(publicKeys);
             return this;
         }
-        public UserOwnedGrafeasNoteResponse build() {
+        public Builder publicKeys(AttestorPublicKeyResponse... publicKeys) {
+            return publicKeys(List.of(publicKeys));
+        }        public UserOwnedGrafeasNoteResponse build() {
             return new UserOwnedGrafeasNoteResponse(delegationServiceAccountEmail, noteReference, publicKeys);
         }
     }

@@ -158,72 +158,61 @@ public final class ContactFlowArgs extends io.pulumi.resources.ResourceArgs {
             this.content = Objects.requireNonNull(content);
             return this;
         }
-
         public Builder content(String content) {
             this.content = Output.of(Objects.requireNonNull(content));
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder instanceArn(Output<String> instanceArn) {
             this.instanceArn = Objects.requireNonNull(instanceArn);
             return this;
         }
-
         public Builder instanceArn(String instanceArn) {
             this.instanceArn = Output.of(Objects.requireNonNull(instanceArn));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder state(@Nullable Output<ContactFlowState> state) {
             this.state = state;
             return this;
         }
-
         public Builder state(@Nullable ContactFlowState state) {
             this.state = Output.ofNullable(state);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<ContactFlowTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<ContactFlowTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
+        public Builder tags(ContactFlowTagArgs... tags) {
+            return tags(List.of(tags));
+        }
         public Builder type(@Nullable Output<ContactFlowType> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable ContactFlowType type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public ContactFlowArgs build() {
+        }        public ContactFlowArgs build() {
             return new ContactFlowArgs(content, description, instanceArn, name, state, tags, type);
         }
     }

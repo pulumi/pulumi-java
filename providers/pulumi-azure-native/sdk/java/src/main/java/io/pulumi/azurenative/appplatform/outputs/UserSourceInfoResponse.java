@@ -105,22 +105,18 @@ public final class UserSourceInfoResponse {
             this.artifactSelector = artifactSelector;
             return this;
         }
-
         public Builder relativePath(@Nullable String relativePath) {
             this.relativePath = relativePath;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = version;
             return this;
-        }
-        public UserSourceInfoResponse build() {
+        }        public UserSourceInfoResponse build() {
             return new UserSourceInfoResponse(artifactSelector, relativePath, type, version);
         }
     }

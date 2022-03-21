@@ -71,12 +71,10 @@ public final class ListSaasSubscriptionLevelAccessTokenResult {
             this.publisherOfferBaseUri = publisherOfferBaseUri;
             return this;
         }
-
         public Builder token(@Nullable String token) {
             this.token = token;
             return this;
-        }
-        public ListSaasSubscriptionLevelAccessTokenResult build() {
+        }        public ListSaasSubscriptionLevelAccessTokenResult build() {
             return new ListSaasSubscriptionLevelAccessTokenResult(publisherOfferBaseUri, token);
         }
     }

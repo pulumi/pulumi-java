@@ -88,17 +88,17 @@ public final class ReportDeliveryChannelProperties {
             this.formats = formats;
             return this;
         }
-
+        public Builder formats(String... formats) {
+            return formats(List.of(formats));
+        }
         public Builder s3BucketName(String s3BucketName) {
             this.s3BucketName = Objects.requireNonNull(s3BucketName);
             return this;
         }
-
         public Builder s3KeyPrefix(@Nullable String s3KeyPrefix) {
             this.s3KeyPrefix = s3KeyPrefix;
             return this;
-        }
-        public ReportDeliveryChannelProperties build() {
+        }        public ReportDeliveryChannelProperties build() {
             return new ReportDeliveryChannelProperties(formats, s3BucketName, s3KeyPrefix);
         }
     }

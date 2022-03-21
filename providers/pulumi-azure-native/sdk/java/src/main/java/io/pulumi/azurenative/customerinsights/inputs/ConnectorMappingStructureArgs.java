@@ -111,42 +111,34 @@ public final class ConnectorMappingStructureArgs extends io.pulumi.resources.Res
             this.columnName = Objects.requireNonNull(columnName);
             return this;
         }
-
         public Builder columnName(String columnName) {
             this.columnName = Output.of(Objects.requireNonNull(columnName));
             return this;
         }
-
         public Builder customFormatSpecifier(@Nullable Output<String> customFormatSpecifier) {
             this.customFormatSpecifier = customFormatSpecifier;
             return this;
         }
-
         public Builder customFormatSpecifier(@Nullable String customFormatSpecifier) {
             this.customFormatSpecifier = Output.ofNullable(customFormatSpecifier);
             return this;
         }
-
         public Builder isEncrypted(@Nullable Output<Boolean> isEncrypted) {
             this.isEncrypted = isEncrypted;
             return this;
         }
-
         public Builder isEncrypted(@Nullable Boolean isEncrypted) {
             this.isEncrypted = Output.ofNullable(isEncrypted);
             return this;
         }
-
         public Builder propertyName(Output<String> propertyName) {
             this.propertyName = Objects.requireNonNull(propertyName);
             return this;
         }
-
         public Builder propertyName(String propertyName) {
             this.propertyName = Output.of(Objects.requireNonNull(propertyName));
             return this;
-        }
-        public ConnectorMappingStructureArgs build() {
+        }        public ConnectorMappingStructureArgs build() {
             return new ConnectorMappingStructureArgs(columnName, customFormatSpecifier, isEncrypted, propertyName);
         }
     }

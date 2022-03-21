@@ -53,8 +53,7 @@ public final class QuotaInfoResponse {
         public Builder coresUsed(@Nullable Integer coresUsed) {
             this.coresUsed = coresUsed;
             return this;
-        }
-        public QuotaInfoResponse build() {
+        }        public QuotaInfoResponse build() {
             return new QuotaInfoResponse(coresUsed);
         }
     }

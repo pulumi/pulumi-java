@@ -79,22 +79,18 @@ public final class CustomCopyOptionArgs extends io.pulumi.resources.ResourceArgs
             this.duration = duration;
             return this;
         }
-
         public Builder duration(@Nullable String duration) {
             this.duration = Output.ofNullable(duration);
             return this;
         }
-
         public Builder objectType(Output<String> objectType) {
             this.objectType = Objects.requireNonNull(objectType);
             return this;
         }
-
         public Builder objectType(String objectType) {
             this.objectType = Output.of(Objects.requireNonNull(objectType));
             return this;
-        }
-        public CustomCopyOptionArgs build() {
+        }        public CustomCopyOptionArgs build() {
             return new CustomCopyOptionArgs(duration, objectType);
         }
     }

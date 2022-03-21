@@ -54,8 +54,7 @@ public final class GetResourceDefaultVersionArgs extends io.pulumi.resources.Inv
         public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
-        }
-        public GetResourceDefaultVersionArgs build() {
+        }        public GetResourceDefaultVersionArgs build() {
             return new GetResourceDefaultVersionArgs(arn);
         }
     }

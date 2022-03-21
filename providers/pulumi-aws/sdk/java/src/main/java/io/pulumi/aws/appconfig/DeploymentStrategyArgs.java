@@ -173,82 +173,66 @@ public final class DeploymentStrategyArgs extends io.pulumi.resources.ResourceAr
             this.deploymentDurationInMinutes = Objects.requireNonNull(deploymentDurationInMinutes);
             return this;
         }
-
         public Builder deploymentDurationInMinutes(Integer deploymentDurationInMinutes) {
             this.deploymentDurationInMinutes = Output.of(Objects.requireNonNull(deploymentDurationInMinutes));
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder finalBakeTimeInMinutes(@Nullable Output<Integer> finalBakeTimeInMinutes) {
             this.finalBakeTimeInMinutes = finalBakeTimeInMinutes;
             return this;
         }
-
         public Builder finalBakeTimeInMinutes(@Nullable Integer finalBakeTimeInMinutes) {
             this.finalBakeTimeInMinutes = Output.ofNullable(finalBakeTimeInMinutes);
             return this;
         }
-
         public Builder growthFactor(Output<Double> growthFactor) {
             this.growthFactor = Objects.requireNonNull(growthFactor);
             return this;
         }
-
         public Builder growthFactor(Double growthFactor) {
             this.growthFactor = Output.of(Objects.requireNonNull(growthFactor));
             return this;
         }
-
         public Builder growthType(@Nullable Output<String> growthType) {
             this.growthType = growthType;
             return this;
         }
-
         public Builder growthType(@Nullable String growthType) {
             this.growthType = Output.ofNullable(growthType);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder replicateTo(Output<String> replicateTo) {
             this.replicateTo = Objects.requireNonNull(replicateTo);
             return this;
         }
-
         public Builder replicateTo(String replicateTo) {
             this.replicateTo = Output.of(Objects.requireNonNull(replicateTo));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public DeploymentStrategyArgs build() {
+        }        public DeploymentStrategyArgs build() {
             return new DeploymentStrategyArgs(deploymentDurationInMinutes, description, finalBakeTimeInMinutes, growthFactor, growthType, name, replicateTo, tags);
         }
     }

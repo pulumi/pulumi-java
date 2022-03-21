@@ -92,17 +92,14 @@ public final class JwtClaimsResponse extends io.pulumi.resources.InvokeArgs {
             this.audience = Objects.requireNonNull(audience);
             return this;
         }
-
         public Builder issuer(String issuer) {
             this.issuer = Objects.requireNonNull(issuer);
             return this;
         }
-
         public Builder subject(String subject) {
             this.subject = Objects.requireNonNull(subject);
             return this;
-        }
-        public JwtClaimsResponse build() {
+        }        public JwtClaimsResponse build() {
             return new JwtClaimsResponse(audience, issuer, subject);
         }
     }

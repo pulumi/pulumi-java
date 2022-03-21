@@ -296,82 +296,66 @@ public final class GetSubscriptionResult {
             this.allowTracing = allowTracing;
             return this;
         }
-
         public Builder createdDate(String createdDate) {
             this.createdDate = Objects.requireNonNull(createdDate);
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder endDate(@Nullable String endDate) {
             this.endDate = endDate;
             return this;
         }
-
         public Builder expirationDate(@Nullable String expirationDate) {
             this.expirationDate = expirationDate;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder notificationDate(@Nullable String notificationDate) {
             this.notificationDate = notificationDate;
             return this;
         }
-
         public Builder ownerId(@Nullable String ownerId) {
             this.ownerId = ownerId;
             return this;
         }
-
         public Builder primaryKey(@Nullable String primaryKey) {
             this.primaryKey = primaryKey;
             return this;
         }
-
         public Builder scope(String scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
-
         public Builder secondaryKey(@Nullable String secondaryKey) {
             this.secondaryKey = secondaryKey;
             return this;
         }
-
         public Builder startDate(@Nullable String startDate) {
             this.startDate = startDate;
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder stateComment(@Nullable String stateComment) {
             this.stateComment = stateComment;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetSubscriptionResult build() {
+        }        public GetSubscriptionResult build() {
             return new GetSubscriptionResult(allowTracing, createdDate, displayName, endDate, expirationDate, id, name, notificationDate, ownerId, primaryKey, scope, secondaryKey, startDate, state, stateComment, type);
         }
     }

@@ -401,112 +401,93 @@ public final class GetDomainServiceResult {
             this.deploymentId = Objects.requireNonNull(deploymentId);
             return this;
         }
-
         public Builder domainConfigurationType(@Nullable String domainConfigurationType) {
             this.domainConfigurationType = domainConfigurationType;
             return this;
         }
-
         public Builder domainName(@Nullable String domainName) {
             this.domainName = domainName;
             return this;
         }
-
         public Builder domainSecuritySettings(@Nullable DomainSecuritySettingsResponse domainSecuritySettings) {
             this.domainSecuritySettings = domainSecuritySettings;
             return this;
         }
-
         public Builder etag(@Nullable String etag) {
             this.etag = etag;
             return this;
         }
-
         public Builder filteredSync(@Nullable String filteredSync) {
             this.filteredSync = filteredSync;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder ldapsSettings(@Nullable LdapsSettingsResponse ldapsSettings) {
             this.ldapsSettings = ldapsSettings;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder migrationProperties(MigrationPropertiesResponse migrationProperties) {
             this.migrationProperties = Objects.requireNonNull(migrationProperties);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder notificationSettings(@Nullable NotificationSettingsResponse notificationSettings) {
             this.notificationSettings = notificationSettings;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder replicaSets(@Nullable List<ReplicaSetResponse> replicaSets) {
             this.replicaSets = replicaSets;
             return this;
         }
-
+        public Builder replicaSets(ReplicaSetResponse... replicaSets) {
+            return replicaSets(List.of(replicaSets));
+        }
         public Builder resourceForestSettings(@Nullable ResourceForestSettingsResponse resourceForestSettings) {
             this.resourceForestSettings = resourceForestSettings;
             return this;
         }
-
         public Builder sku(@Nullable String sku) {
             this.sku = sku;
             return this;
         }
-
         public Builder syncOwner(String syncOwner) {
             this.syncOwner = Objects.requireNonNull(syncOwner);
             return this;
         }
-
         public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tenantId(String tenantId) {
             this.tenantId = Objects.requireNonNull(tenantId);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder version(Integer version) {
             this.version = Objects.requireNonNull(version);
             return this;
-        }
-        public GetDomainServiceResult build() {
+        }        public GetDomainServiceResult build() {
             return new GetDomainServiceResult(deploymentId, domainConfigurationType, domainName, domainSecuritySettings, etag, filteredSync, id, ldapsSettings, location, migrationProperties, name, notificationSettings, provisioningState, replicaSets, resourceForestSettings, sku, syncOwner, systemData, tags, tenantId, type, version);
         }
     }

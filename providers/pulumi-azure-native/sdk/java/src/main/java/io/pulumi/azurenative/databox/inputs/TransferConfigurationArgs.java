@@ -98,32 +98,26 @@ public final class TransferConfigurationArgs extends io.pulumi.resources.Resourc
             this.transferAllDetails = transferAllDetails;
             return this;
         }
-
         public Builder transferAllDetails(@Nullable TransferConfigurationTransferAllDetailsArgs transferAllDetails) {
             this.transferAllDetails = Output.ofNullable(transferAllDetails);
             return this;
         }
-
         public Builder transferConfigurationType(Output<Either<String,TransferConfigurationType>> transferConfigurationType) {
             this.transferConfigurationType = Objects.requireNonNull(transferConfigurationType);
             return this;
         }
-
         public Builder transferConfigurationType(Either<String,TransferConfigurationType> transferConfigurationType) {
             this.transferConfigurationType = Output.of(Objects.requireNonNull(transferConfigurationType));
             return this;
         }
-
         public Builder transferFilterDetails(@Nullable Output<TransferConfigurationTransferFilterDetailsArgs> transferFilterDetails) {
             this.transferFilterDetails = transferFilterDetails;
             return this;
         }
-
         public Builder transferFilterDetails(@Nullable TransferConfigurationTransferFilterDetailsArgs transferFilterDetails) {
             this.transferFilterDetails = Output.ofNullable(transferFilterDetails);
             return this;
-        }
-        public TransferConfigurationArgs build() {
+        }        public TransferConfigurationArgs build() {
             return new TransferConfigurationArgs(transferAllDetails, transferConfigurationType, transferFilterDetails);
         }
     }

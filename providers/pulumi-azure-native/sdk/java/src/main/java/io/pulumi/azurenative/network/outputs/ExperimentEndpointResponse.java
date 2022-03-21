@@ -71,12 +71,10 @@ public final class ExperimentEndpointResponse {
             this.endpoint = endpoint;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
-        }
-        public ExperimentEndpointResponse build() {
+        }        public ExperimentEndpointResponse build() {
             return new ExperimentEndpointResponse(endpoint, name);
         }
     }

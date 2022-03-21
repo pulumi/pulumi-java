@@ -54,8 +54,7 @@ public final class GetGroupArgs extends io.pulumi.resources.InvokeArgs {
         public Builder groupARN(String groupARN) {
             this.groupARN = Objects.requireNonNull(groupARN);
             return this;
-        }
-        public GetGroupArgs build() {
+        }        public GetGroupArgs build() {
             return new GetGroupArgs(groupARN);
         }
     }

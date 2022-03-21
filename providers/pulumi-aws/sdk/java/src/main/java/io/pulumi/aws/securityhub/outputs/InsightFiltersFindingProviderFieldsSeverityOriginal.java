@@ -69,12 +69,10 @@ public final class InsightFiltersFindingProviderFieldsSeverityOriginal {
             this.comparison = Objects.requireNonNull(comparison);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public InsightFiltersFindingProviderFieldsSeverityOriginal build() {
+        }        public InsightFiltersFindingProviderFieldsSeverityOriginal build() {
             return new InsightFiltersFindingProviderFieldsSeverityOriginal(comparison, value);
         }
     }

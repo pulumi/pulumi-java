@@ -73,12 +73,13 @@ public final class ClassificationJobS3JobDefinition {
             this.bucketDefinitions = bucketDefinitions;
             return this;
         }
-
+        public Builder bucketDefinitions(ClassificationJobS3JobDefinitionBucketDefinition... bucketDefinitions) {
+            return bucketDefinitions(List.of(bucketDefinitions));
+        }
         public Builder scoping(@Nullable ClassificationJobS3JobDefinitionScoping scoping) {
             this.scoping = scoping;
             return this;
-        }
-        public ClassificationJobS3JobDefinition build() {
+        }        public ClassificationJobS3JobDefinition build() {
             return new ClassificationJobS3JobDefinition(bucketDefinitions, scoping);
         }
     }

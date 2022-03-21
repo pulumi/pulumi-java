@@ -102,27 +102,22 @@ public final class CanaryCode extends io.pulumi.resources.InvokeArgs {
             this.handler = Objects.requireNonNull(handler);
             return this;
         }
-
         public Builder s3Bucket(@Nullable String s3Bucket) {
             this.s3Bucket = s3Bucket;
             return this;
         }
-
         public Builder s3Key(@Nullable String s3Key) {
             this.s3Key = s3Key;
             return this;
         }
-
         public Builder s3ObjectVersion(@Nullable String s3ObjectVersion) {
             this.s3ObjectVersion = s3ObjectVersion;
             return this;
         }
-
         public Builder script(@Nullable String script) {
             this.script = script;
             return this;
-        }
-        public CanaryCode build() {
+        }        public CanaryCode build() {
             return new CanaryCode(handler, s3Bucket, s3Key, s3ObjectVersion, script);
         }
     }

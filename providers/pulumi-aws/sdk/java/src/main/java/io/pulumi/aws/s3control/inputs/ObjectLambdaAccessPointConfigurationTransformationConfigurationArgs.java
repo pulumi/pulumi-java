@@ -75,22 +75,21 @@ public final class ObjectLambdaAccessPointConfigurationTransformationConfigurati
             this.actions = Objects.requireNonNull(actions);
             return this;
         }
-
         public Builder actions(List<String> actions) {
             this.actions = Output.of(Objects.requireNonNull(actions));
             return this;
         }
-
+        public Builder actions(String... actions) {
+            return actions(List.of(actions));
+        }
         public Builder contentTransformation(Output<ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationArgs> contentTransformation) {
             this.contentTransformation = Objects.requireNonNull(contentTransformation);
             return this;
         }
-
         public Builder contentTransformation(ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationArgs contentTransformation) {
             this.contentTransformation = Output.of(Objects.requireNonNull(contentTransformation));
             return this;
-        }
-        public ObjectLambdaAccessPointConfigurationTransformationConfigurationArgs build() {
+        }        public ObjectLambdaAccessPointConfigurationTransformationConfigurationArgs build() {
             return new ObjectLambdaAccessPointConfigurationTransformationConfigurationArgs(actions, contentTransformation);
         }
     }

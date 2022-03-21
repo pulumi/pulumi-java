@@ -121,27 +121,31 @@ public final class GetCachePolicyParametersInCacheKeyAndForwardedToOrigin {
             this.cookiesConfigs = Objects.requireNonNull(cookiesConfigs);
             return this;
         }
-
+        public Builder cookiesConfigs(GetCachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfig... cookiesConfigs) {
+            return cookiesConfigs(List.of(cookiesConfigs));
+        }
         public Builder enableAcceptEncodingBrotli(Boolean enableAcceptEncodingBrotli) {
             this.enableAcceptEncodingBrotli = Objects.requireNonNull(enableAcceptEncodingBrotli);
             return this;
         }
-
         public Builder enableAcceptEncodingGzip(Boolean enableAcceptEncodingGzip) {
             this.enableAcceptEncodingGzip = Objects.requireNonNull(enableAcceptEncodingGzip);
             return this;
         }
-
         public Builder headersConfigs(List<GetCachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfig> headersConfigs) {
             this.headersConfigs = Objects.requireNonNull(headersConfigs);
             return this;
         }
-
+        public Builder headersConfigs(GetCachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfig... headersConfigs) {
+            return headersConfigs(List.of(headersConfigs));
+        }
         public Builder queryStringsConfigs(List<GetCachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfig> queryStringsConfigs) {
             this.queryStringsConfigs = Objects.requireNonNull(queryStringsConfigs);
             return this;
         }
-        public GetCachePolicyParametersInCacheKeyAndForwardedToOrigin build() {
+        public Builder queryStringsConfigs(GetCachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfig... queryStringsConfigs) {
+            return queryStringsConfigs(List.of(queryStringsConfigs));
+        }        public GetCachePolicyParametersInCacheKeyAndForwardedToOrigin build() {
             return new GetCachePolicyParametersInCacheKeyAndForwardedToOrigin(cookiesConfigs, enableAcceptEncodingBrotli, enableAcceptEncodingGzip, headersConfigs, queryStringsConfigs);
         }
     }

@@ -171,82 +171,66 @@ public final class ArcAddonArgs extends io.pulumi.resources.ResourceArgs {
             this.addonName = addonName;
             return this;
         }
-
         public Builder addonName(@Nullable String addonName) {
             this.addonName = Output.ofNullable(addonName);
             return this;
         }
-
         public Builder deviceName(Output<String> deviceName) {
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }
-
         public Builder deviceName(String deviceName) {
             this.deviceName = Output.of(Objects.requireNonNull(deviceName));
             return this;
         }
-
         public Builder kind(Output<String> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder resourceLocation(Output<String> resourceLocation) {
             this.resourceLocation = Objects.requireNonNull(resourceLocation);
             return this;
         }
-
         public Builder resourceLocation(String resourceLocation) {
             this.resourceLocation = Output.of(Objects.requireNonNull(resourceLocation));
             return this;
         }
-
         public Builder resourceName(Output<String> resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
         }
-
         public Builder resourceName(String resourceName) {
             this.resourceName = Output.of(Objects.requireNonNull(resourceName));
             return this;
         }
-
         public Builder roleName(Output<String> roleName) {
             this.roleName = Objects.requireNonNull(roleName);
             return this;
         }
-
         public Builder roleName(String roleName) {
             this.roleName = Output.of(Objects.requireNonNull(roleName));
             return this;
         }
-
         public Builder subscriptionId(Output<String> subscriptionId) {
             this.subscriptionId = Objects.requireNonNull(subscriptionId);
             return this;
         }
-
         public Builder subscriptionId(String subscriptionId) {
             this.subscriptionId = Output.of(Objects.requireNonNull(subscriptionId));
             return this;
-        }
-        public ArcAddonArgs build() {
+        }        public ArcAddonArgs build() {
             return new ArcAddonArgs(addonName, deviceName, kind, resourceGroupName, resourceLocation, resourceName, roleName, subscriptionId);
         }
     }

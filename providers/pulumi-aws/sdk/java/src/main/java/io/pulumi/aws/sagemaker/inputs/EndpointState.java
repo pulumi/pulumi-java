@@ -140,62 +140,50 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder deploymentConfig(@Nullable Output<EndpointDeploymentConfigGetArgs> deploymentConfig) {
             this.deploymentConfig = deploymentConfig;
             return this;
         }
-
         public Builder deploymentConfig(@Nullable EndpointDeploymentConfigGetArgs deploymentConfig) {
             this.deploymentConfig = Output.ofNullable(deploymentConfig);
             return this;
         }
-
         public Builder endpointConfigName(@Nullable Output<String> endpointConfigName) {
             this.endpointConfigName = endpointConfigName;
             return this;
         }
-
         public Builder endpointConfigName(@Nullable String endpointConfigName) {
             this.endpointConfigName = Output.ofNullable(endpointConfigName);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
-        }
-        public EndpointState build() {
+        }        public EndpointState build() {
             return new EndpointState(arn, deploymentConfig, endpointConfigName, name, tags, tagsAll);
         }
     }

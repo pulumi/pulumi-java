@@ -160,37 +160,33 @@ public final class ManagedClusterAADProfileResponse extends io.pulumi.resources.
             this.adminGroupObjectIDs = adminGroupObjectIDs;
             return this;
         }
-
+        public Builder adminGroupObjectIDs(String... adminGroupObjectIDs) {
+            return adminGroupObjectIDs(List.of(adminGroupObjectIDs));
+        }
         public Builder clientAppID(@Nullable String clientAppID) {
             this.clientAppID = clientAppID;
             return this;
         }
-
         public Builder enableAzureRBAC(@Nullable Boolean enableAzureRBAC) {
             this.enableAzureRBAC = enableAzureRBAC;
             return this;
         }
-
         public Builder managed(@Nullable Boolean managed) {
             this.managed = managed;
             return this;
         }
-
         public Builder serverAppID(@Nullable String serverAppID) {
             this.serverAppID = serverAppID;
             return this;
         }
-
         public Builder serverAppSecret(@Nullable String serverAppSecret) {
             this.serverAppSecret = serverAppSecret;
             return this;
         }
-
         public Builder tenantID(@Nullable String tenantID) {
             this.tenantID = tenantID;
             return this;
-        }
-        public ManagedClusterAADProfileResponse build() {
+        }        public ManagedClusterAADProfileResponse build() {
             return new ManagedClusterAADProfileResponse(adminGroupObjectIDs, clientAppID, enableAzureRBAC, managed, serverAppID, serverAppSecret, tenantID);
         }
     }

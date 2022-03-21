@@ -53,8 +53,7 @@ public final class ProductPropertiesResponse {
         public Builder version(@Nullable String version) {
             this.version = version;
             return this;
-        }
-        public ProductPropertiesResponse build() {
+        }        public ProductPropertiesResponse build() {
             return new ProductPropertiesResponse(version);
         }
     }

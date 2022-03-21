@@ -78,17 +78,14 @@ public final class GetInstanceDatabaseIamPolicyArgs extends io.pulumi.resources.
             this.databaseId = Objects.requireNonNull(databaseId);
             return this;
         }
-
         public Builder instanceId(String instanceId) {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetInstanceDatabaseIamPolicyArgs build() {
+        }        public GetInstanceDatabaseIamPolicyArgs build() {
             return new GetInstanceDatabaseIamPolicyArgs(databaseId, instanceId, project);
         }
     }

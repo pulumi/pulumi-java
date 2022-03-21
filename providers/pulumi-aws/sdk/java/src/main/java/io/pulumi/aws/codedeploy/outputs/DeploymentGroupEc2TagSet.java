@@ -54,7 +54,9 @@ public final class DeploymentGroupEc2TagSet {
             this.ec2TagFilters = ec2TagFilters;
             return this;
         }
-        public DeploymentGroupEc2TagSet build() {
+        public Builder ec2TagFilters(DeploymentGroupEc2TagSetEc2TagFilter... ec2TagFilters) {
+            return ec2TagFilters(List.of(ec2TagFilters));
+        }        public DeploymentGroupEc2TagSet build() {
             return new DeploymentGroupEc2TagSet(ec2TagFilters);
         }
     }

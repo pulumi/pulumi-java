@@ -71,22 +71,18 @@ public final class ConnectorProfileConfigArgs extends io.pulumi.resources.Resour
             this.connectorProfileCredentials = Objects.requireNonNull(connectorProfileCredentials);
             return this;
         }
-
         public Builder connectorProfileCredentials(ConnectorProfileCredentialsArgs connectorProfileCredentials) {
             this.connectorProfileCredentials = Output.of(Objects.requireNonNull(connectorProfileCredentials));
             return this;
         }
-
         public Builder connectorProfileProperties(@Nullable Output<ConnectorProfilePropertiesArgs> connectorProfileProperties) {
             this.connectorProfileProperties = connectorProfileProperties;
             return this;
         }
-
         public Builder connectorProfileProperties(@Nullable ConnectorProfilePropertiesArgs connectorProfileProperties) {
             this.connectorProfileProperties = Output.ofNullable(connectorProfileProperties);
             return this;
-        }
-        public ConnectorProfileConfigArgs build() {
+        }        public ConnectorProfileConfigArgs build() {
             return new ConnectorProfileConfigArgs(connectorProfileCredentials, connectorProfileProperties);
         }
     }

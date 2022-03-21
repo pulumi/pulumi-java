@@ -382,107 +382,89 @@ public final class GetRunbookResult {
             this.creationTime = creationTime;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder draft(@Nullable RunbookDraftResponse draft) {
             this.draft = draft;
             return this;
         }
-
         public Builder etag(@Nullable String etag) {
             this.etag = etag;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder jobCount(@Nullable Integer jobCount) {
             this.jobCount = jobCount;
             return this;
         }
-
         public Builder lastModifiedBy(@Nullable String lastModifiedBy) {
             this.lastModifiedBy = lastModifiedBy;
             return this;
         }
-
         public Builder lastModifiedTime(@Nullable String lastModifiedTime) {
             this.lastModifiedTime = lastModifiedTime;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder logActivityTrace(@Nullable Integer logActivityTrace) {
             this.logActivityTrace = logActivityTrace;
             return this;
         }
-
         public Builder logProgress(@Nullable Boolean logProgress) {
             this.logProgress = logProgress;
             return this;
         }
-
         public Builder logVerbose(@Nullable Boolean logVerbose) {
             this.logVerbose = logVerbose;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder outputTypes(@Nullable List<String> outputTypes) {
             this.outputTypes = outputTypes;
             return this;
         }
-
+        public Builder outputTypes(String... outputTypes) {
+            return outputTypes(List.of(outputTypes));
+        }
         public Builder parameters(@Nullable Map<String,RunbookParameterResponse> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder provisioningState(@Nullable String provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
-
         public Builder publishContentLink(@Nullable ContentLinkResponse publishContentLink) {
             this.publishContentLink = publishContentLink;
             return this;
         }
-
         public Builder runbookType(@Nullable String runbookType) {
             this.runbookType = runbookType;
             return this;
         }
-
         public Builder state(@Nullable String state) {
             this.state = state;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetRunbookResult build() {
+        }        public GetRunbookResult build() {
             return new GetRunbookResult(creationTime, description, draft, etag, id, jobCount, lastModifiedBy, lastModifiedTime, location, logActivityTrace, logProgress, logVerbose, name, outputTypes, parameters, provisioningState, publishContentLink, runbookType, state, tags, type);
         }
     }

@@ -192,52 +192,45 @@ public final class GetScheduleResult {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder cronSchedule(String cronSchedule) {
             this.cronSchedule = Objects.requireNonNull(cronSchedule);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder executionTemplate(ExecutionTemplateResponse executionTemplate) {
             this.executionTemplate = Objects.requireNonNull(executionTemplate);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder recentExecutions(List<ExecutionResponse> recentExecutions) {
             this.recentExecutions = Objects.requireNonNull(recentExecutions);
             return this;
         }
-
+        public Builder recentExecutions(ExecutionResponse... recentExecutions) {
+            return recentExecutions(List.of(recentExecutions));
+        }
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder timeZone(String timeZone) {
             this.timeZone = Objects.requireNonNull(timeZone);
             return this;
         }
-
         public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
-        }
-        public GetScheduleResult build() {
+        }        public GetScheduleResult build() {
             return new GetScheduleResult(createTime, cronSchedule, description, displayName, executionTemplate, name, recentExecutions, state, timeZone, updateTime);
         }
     }

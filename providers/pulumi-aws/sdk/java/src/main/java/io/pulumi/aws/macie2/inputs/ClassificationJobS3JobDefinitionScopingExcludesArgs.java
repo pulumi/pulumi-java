@@ -58,12 +58,13 @@ public final class ClassificationJobS3JobDefinitionScopingExcludesArgs extends i
             this.ands = ands;
             return this;
         }
-
         public Builder ands(@Nullable List<ClassificationJobS3JobDefinitionScopingExcludesAndArgs> ands) {
             this.ands = Output.ofNullable(ands);
             return this;
         }
-        public ClassificationJobS3JobDefinitionScopingExcludesArgs build() {
+        public Builder ands(ClassificationJobS3JobDefinitionScopingExcludesAndArgs... ands) {
+            return ands(List.of(ands));
+        }        public ClassificationJobS3JobDefinitionScopingExcludesArgs build() {
             return new ClassificationJobS3JobDefinitionScopingExcludesArgs(ands);
         }
     }

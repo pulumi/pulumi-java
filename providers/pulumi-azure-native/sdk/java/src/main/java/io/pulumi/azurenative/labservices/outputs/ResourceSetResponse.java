@@ -71,12 +71,10 @@ public final class ResourceSetResponse {
             this.resourceSettingId = resourceSettingId;
             return this;
         }
-
         public Builder vmResourceId(@Nullable String vmResourceId) {
             this.vmResourceId = vmResourceId;
             return this;
-        }
-        public ResourceSetResponse build() {
+        }        public ResourceSetResponse build() {
             return new ResourceSetResponse(resourceSettingId, vmResourceId);
         }
     }

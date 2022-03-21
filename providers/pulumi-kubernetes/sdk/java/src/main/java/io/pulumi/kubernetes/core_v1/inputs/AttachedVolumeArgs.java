@@ -77,22 +77,18 @@ public final class AttachedVolumeArgs extends io.pulumi.resources.ResourceArgs {
             this.devicePath = Objects.requireNonNull(devicePath);
             return this;
         }
-
         public Builder devicePath(String devicePath) {
             this.devicePath = Output.of(Objects.requireNonNull(devicePath));
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
-        }
-        public AttachedVolumeArgs build() {
+        }        public AttachedVolumeArgs build() {
             return new AttachedVolumeArgs(devicePath, name);
         }
     }

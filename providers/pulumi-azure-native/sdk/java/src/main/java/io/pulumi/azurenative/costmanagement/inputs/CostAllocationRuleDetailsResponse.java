@@ -80,12 +80,16 @@ public final class CostAllocationRuleDetailsResponse extends io.pulumi.resources
             this.sourceResources = sourceResources;
             return this;
         }
-
+        public Builder sourceResources(SourceCostAllocationResourceResponse... sourceResources) {
+            return sourceResources(List.of(sourceResources));
+        }
         public Builder targetResources(@Nullable List<TargetCostAllocationResourceResponse> targetResources) {
             this.targetResources = targetResources;
             return this;
         }
-        public CostAllocationRuleDetailsResponse build() {
+        public Builder targetResources(TargetCostAllocationResourceResponse... targetResources) {
+            return targetResources(List.of(targetResources));
+        }        public CostAllocationRuleDetailsResponse build() {
             return new CostAllocationRuleDetailsResponse(sourceResources, targetResources);
         }
     }

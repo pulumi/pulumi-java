@@ -85,17 +85,14 @@ public final class OwaspCrsExclusionEntryResponse {
             this.matchVariable = Objects.requireNonNull(matchVariable);
             return this;
         }
-
         public Builder selector(String selector) {
             this.selector = Objects.requireNonNull(selector);
             return this;
         }
-
         public Builder selectorMatchOperator(String selectorMatchOperator) {
             this.selectorMatchOperator = Objects.requireNonNull(selectorMatchOperator);
             return this;
-        }
-        public OwaspCrsExclusionEntryResponse build() {
+        }        public OwaspCrsExclusionEntryResponse build() {
             return new OwaspCrsExclusionEntryResponse(matchVariable, selector, selectorMatchOperator);
         }
     }

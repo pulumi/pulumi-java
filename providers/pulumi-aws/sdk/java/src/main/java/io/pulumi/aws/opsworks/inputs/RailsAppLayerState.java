@@ -504,302 +504,266 @@ public final class RailsAppLayerState extends io.pulumi.resources.ResourceArgs {
             this.appServer = appServer;
             return this;
         }
-
         public Builder appServer(@Nullable String appServer) {
             this.appServer = Output.ofNullable(appServer);
             return this;
         }
-
         public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder autoAssignElasticIps(@Nullable Output<Boolean> autoAssignElasticIps) {
             this.autoAssignElasticIps = autoAssignElasticIps;
             return this;
         }
-
         public Builder autoAssignElasticIps(@Nullable Boolean autoAssignElasticIps) {
             this.autoAssignElasticIps = Output.ofNullable(autoAssignElasticIps);
             return this;
         }
-
         public Builder autoAssignPublicIps(@Nullable Output<Boolean> autoAssignPublicIps) {
             this.autoAssignPublicIps = autoAssignPublicIps;
             return this;
         }
-
         public Builder autoAssignPublicIps(@Nullable Boolean autoAssignPublicIps) {
             this.autoAssignPublicIps = Output.ofNullable(autoAssignPublicIps);
             return this;
         }
-
         public Builder autoHealing(@Nullable Output<Boolean> autoHealing) {
             this.autoHealing = autoHealing;
             return this;
         }
-
         public Builder autoHealing(@Nullable Boolean autoHealing) {
             this.autoHealing = Output.ofNullable(autoHealing);
             return this;
         }
-
         public Builder bundlerVersion(@Nullable Output<String> bundlerVersion) {
             this.bundlerVersion = bundlerVersion;
             return this;
         }
-
         public Builder bundlerVersion(@Nullable String bundlerVersion) {
             this.bundlerVersion = Output.ofNullable(bundlerVersion);
             return this;
         }
-
         public Builder cloudwatchConfiguration(@Nullable Output<RailsAppLayerCloudwatchConfigurationGetArgs> cloudwatchConfiguration) {
             this.cloudwatchConfiguration = cloudwatchConfiguration;
             return this;
         }
-
         public Builder cloudwatchConfiguration(@Nullable RailsAppLayerCloudwatchConfigurationGetArgs cloudwatchConfiguration) {
             this.cloudwatchConfiguration = Output.ofNullable(cloudwatchConfiguration);
             return this;
         }
-
         public Builder customConfigureRecipes(@Nullable Output<List<String>> customConfigureRecipes) {
             this.customConfigureRecipes = customConfigureRecipes;
             return this;
         }
-
         public Builder customConfigureRecipes(@Nullable List<String> customConfigureRecipes) {
             this.customConfigureRecipes = Output.ofNullable(customConfigureRecipes);
             return this;
         }
-
+        public Builder customConfigureRecipes(String... customConfigureRecipes) {
+            return customConfigureRecipes(List.of(customConfigureRecipes));
+        }
         public Builder customDeployRecipes(@Nullable Output<List<String>> customDeployRecipes) {
             this.customDeployRecipes = customDeployRecipes;
             return this;
         }
-
         public Builder customDeployRecipes(@Nullable List<String> customDeployRecipes) {
             this.customDeployRecipes = Output.ofNullable(customDeployRecipes);
             return this;
         }
-
+        public Builder customDeployRecipes(String... customDeployRecipes) {
+            return customDeployRecipes(List.of(customDeployRecipes));
+        }
         public Builder customInstanceProfileArn(@Nullable Output<String> customInstanceProfileArn) {
             this.customInstanceProfileArn = customInstanceProfileArn;
             return this;
         }
-
         public Builder customInstanceProfileArn(@Nullable String customInstanceProfileArn) {
             this.customInstanceProfileArn = Output.ofNullable(customInstanceProfileArn);
             return this;
         }
-
         public Builder customJson(@Nullable Output<String> customJson) {
             this.customJson = customJson;
             return this;
         }
-
         public Builder customJson(@Nullable String customJson) {
             this.customJson = Output.ofNullable(customJson);
             return this;
         }
-
         public Builder customSecurityGroupIds(@Nullable Output<List<String>> customSecurityGroupIds) {
             this.customSecurityGroupIds = customSecurityGroupIds;
             return this;
         }
-
         public Builder customSecurityGroupIds(@Nullable List<String> customSecurityGroupIds) {
             this.customSecurityGroupIds = Output.ofNullable(customSecurityGroupIds);
             return this;
         }
-
+        public Builder customSecurityGroupIds(String... customSecurityGroupIds) {
+            return customSecurityGroupIds(List.of(customSecurityGroupIds));
+        }
         public Builder customSetupRecipes(@Nullable Output<List<String>> customSetupRecipes) {
             this.customSetupRecipes = customSetupRecipes;
             return this;
         }
-
         public Builder customSetupRecipes(@Nullable List<String> customSetupRecipes) {
             this.customSetupRecipes = Output.ofNullable(customSetupRecipes);
             return this;
         }
-
+        public Builder customSetupRecipes(String... customSetupRecipes) {
+            return customSetupRecipes(List.of(customSetupRecipes));
+        }
         public Builder customShutdownRecipes(@Nullable Output<List<String>> customShutdownRecipes) {
             this.customShutdownRecipes = customShutdownRecipes;
             return this;
         }
-
         public Builder customShutdownRecipes(@Nullable List<String> customShutdownRecipes) {
             this.customShutdownRecipes = Output.ofNullable(customShutdownRecipes);
             return this;
         }
-
+        public Builder customShutdownRecipes(String... customShutdownRecipes) {
+            return customShutdownRecipes(List.of(customShutdownRecipes));
+        }
         public Builder customUndeployRecipes(@Nullable Output<List<String>> customUndeployRecipes) {
             this.customUndeployRecipes = customUndeployRecipes;
             return this;
         }
-
         public Builder customUndeployRecipes(@Nullable List<String> customUndeployRecipes) {
             this.customUndeployRecipes = Output.ofNullable(customUndeployRecipes);
             return this;
         }
-
+        public Builder customUndeployRecipes(String... customUndeployRecipes) {
+            return customUndeployRecipes(List.of(customUndeployRecipes));
+        }
         public Builder drainElbOnShutdown(@Nullable Output<Boolean> drainElbOnShutdown) {
             this.drainElbOnShutdown = drainElbOnShutdown;
             return this;
         }
-
         public Builder drainElbOnShutdown(@Nullable Boolean drainElbOnShutdown) {
             this.drainElbOnShutdown = Output.ofNullable(drainElbOnShutdown);
             return this;
         }
-
         public Builder ebsVolumes(@Nullable Output<List<RailsAppLayerEbsVolumeGetArgs>> ebsVolumes) {
             this.ebsVolumes = ebsVolumes;
             return this;
         }
-
         public Builder ebsVolumes(@Nullable List<RailsAppLayerEbsVolumeGetArgs> ebsVolumes) {
             this.ebsVolumes = Output.ofNullable(ebsVolumes);
             return this;
         }
-
+        public Builder ebsVolumes(RailsAppLayerEbsVolumeGetArgs... ebsVolumes) {
+            return ebsVolumes(List.of(ebsVolumes));
+        }
         public Builder elasticLoadBalancer(@Nullable Output<String> elasticLoadBalancer) {
             this.elasticLoadBalancer = elasticLoadBalancer;
             return this;
         }
-
         public Builder elasticLoadBalancer(@Nullable String elasticLoadBalancer) {
             this.elasticLoadBalancer = Output.ofNullable(elasticLoadBalancer);
             return this;
         }
-
         public Builder installUpdatesOnBoot(@Nullable Output<Boolean> installUpdatesOnBoot) {
             this.installUpdatesOnBoot = installUpdatesOnBoot;
             return this;
         }
-
         public Builder installUpdatesOnBoot(@Nullable Boolean installUpdatesOnBoot) {
             this.installUpdatesOnBoot = Output.ofNullable(installUpdatesOnBoot);
             return this;
         }
-
         public Builder instanceShutdownTimeout(@Nullable Output<Integer> instanceShutdownTimeout) {
             this.instanceShutdownTimeout = instanceShutdownTimeout;
             return this;
         }
-
         public Builder instanceShutdownTimeout(@Nullable Integer instanceShutdownTimeout) {
             this.instanceShutdownTimeout = Output.ofNullable(instanceShutdownTimeout);
             return this;
         }
-
         public Builder manageBundler(@Nullable Output<Boolean> manageBundler) {
             this.manageBundler = manageBundler;
             return this;
         }
-
         public Builder manageBundler(@Nullable Boolean manageBundler) {
             this.manageBundler = Output.ofNullable(manageBundler);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder passengerVersion(@Nullable Output<String> passengerVersion) {
             this.passengerVersion = passengerVersion;
             return this;
         }
-
         public Builder passengerVersion(@Nullable String passengerVersion) {
             this.passengerVersion = Output.ofNullable(passengerVersion);
             return this;
         }
-
         public Builder rubyVersion(@Nullable Output<String> rubyVersion) {
             this.rubyVersion = rubyVersion;
             return this;
         }
-
         public Builder rubyVersion(@Nullable String rubyVersion) {
             this.rubyVersion = Output.ofNullable(rubyVersion);
             return this;
         }
-
         public Builder rubygemsVersion(@Nullable Output<String> rubygemsVersion) {
             this.rubygemsVersion = rubygemsVersion;
             return this;
         }
-
         public Builder rubygemsVersion(@Nullable String rubygemsVersion) {
             this.rubygemsVersion = Output.ofNullable(rubygemsVersion);
             return this;
         }
-
         public Builder stackId(@Nullable Output<String> stackId) {
             this.stackId = stackId;
             return this;
         }
-
         public Builder stackId(@Nullable String stackId) {
             this.stackId = Output.ofNullable(stackId);
             return this;
         }
-
         public Builder systemPackages(@Nullable Output<List<String>> systemPackages) {
             this.systemPackages = systemPackages;
             return this;
         }
-
         public Builder systemPackages(@Nullable List<String> systemPackages) {
             this.systemPackages = Output.ofNullable(systemPackages);
             return this;
         }
-
+        public Builder systemPackages(String... systemPackages) {
+            return systemPackages(List.of(systemPackages));
+        }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
-
         public Builder useEbsOptimizedInstances(@Nullable Output<Boolean> useEbsOptimizedInstances) {
             this.useEbsOptimizedInstances = useEbsOptimizedInstances;
             return this;
         }
-
         public Builder useEbsOptimizedInstances(@Nullable Boolean useEbsOptimizedInstances) {
             this.useEbsOptimizedInstances = Output.ofNullable(useEbsOptimizedInstances);
             return this;
-        }
-        public RailsAppLayerState build() {
+        }        public RailsAppLayerState build() {
             return new RailsAppLayerState(appServer, arn, autoAssignElasticIps, autoAssignPublicIps, autoHealing, bundlerVersion, cloudwatchConfiguration, customConfigureRecipes, customDeployRecipes, customInstanceProfileArn, customJson, customSecurityGroupIds, customSetupRecipes, customShutdownRecipes, customUndeployRecipes, drainElbOnShutdown, ebsVolumes, elasticLoadBalancer, installUpdatesOnBoot, instanceShutdownTimeout, manageBundler, name, passengerVersion, rubyVersion, rubygemsVersion, stackId, systemPackages, tags, tagsAll, useEbsOptimizedInstances);
         }
     }

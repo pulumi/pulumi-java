@@ -107,42 +107,37 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
             this.network = network;
             return this;
         }
-
         public Builder network(@Nullable String network) {
             this.network = Output.ofNullable(network);
             return this;
         }
-
         public Builder peering(@Nullable Output<String> peering) {
             this.peering = peering;
             return this;
         }
-
         public Builder peering(@Nullable String peering) {
             this.peering = Output.ofNullable(peering);
             return this;
         }
-
         public Builder reservedPeeringRanges(@Nullable Output<List<String>> reservedPeeringRanges) {
             this.reservedPeeringRanges = reservedPeeringRanges;
             return this;
         }
-
         public Builder reservedPeeringRanges(@Nullable List<String> reservedPeeringRanges) {
             this.reservedPeeringRanges = Output.ofNullable(reservedPeeringRanges);
             return this;
         }
-
+        public Builder reservedPeeringRanges(String... reservedPeeringRanges) {
+            return reservedPeeringRanges(List.of(reservedPeeringRanges));
+        }
         public Builder service(@Nullable Output<String> service) {
             this.service = service;
             return this;
         }
-
         public Builder service(@Nullable String service) {
             this.service = Output.ofNullable(service);
             return this;
-        }
-        public ConnectionState build() {
+        }        public ConnectionState build() {
             return new ConnectionState(network, peering, reservedPeeringRanges, service);
         }
     }

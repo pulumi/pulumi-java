@@ -51,8 +51,7 @@ public final class ModelInferenceExecutionConfig {
         public Builder mode(String mode) {
             this.mode = Objects.requireNonNull(mode);
             return this;
-        }
-        public ModelInferenceExecutionConfig build() {
+        }        public ModelInferenceExecutionConfig build() {
             return new ModelInferenceExecutionConfig(mode);
         }
     }

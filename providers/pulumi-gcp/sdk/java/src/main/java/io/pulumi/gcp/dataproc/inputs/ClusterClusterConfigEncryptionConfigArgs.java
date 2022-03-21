@@ -57,12 +57,10 @@ public final class ClusterClusterConfigEncryptionConfigArgs extends io.pulumi.re
             this.kmsKeyName = Objects.requireNonNull(kmsKeyName);
             return this;
         }
-
         public Builder kmsKeyName(String kmsKeyName) {
             this.kmsKeyName = Output.of(Objects.requireNonNull(kmsKeyName));
             return this;
-        }
-        public ClusterClusterConfigEncryptionConfigArgs build() {
+        }        public ClusterClusterConfigEncryptionConfigArgs build() {
             return new ClusterClusterConfigEncryptionConfigArgs(kmsKeyName);
         }
     }

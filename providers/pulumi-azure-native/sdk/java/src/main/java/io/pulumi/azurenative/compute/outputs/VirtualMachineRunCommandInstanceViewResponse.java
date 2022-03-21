@@ -170,42 +170,37 @@ public final class VirtualMachineRunCommandInstanceViewResponse {
             this.endTime = endTime;
             return this;
         }
-
         public Builder error(@Nullable String error) {
             this.error = error;
             return this;
         }
-
         public Builder executionMessage(@Nullable String executionMessage) {
             this.executionMessage = executionMessage;
             return this;
         }
-
         public Builder executionState(@Nullable String executionState) {
             this.executionState = executionState;
             return this;
         }
-
         public Builder exitCode(@Nullable Integer exitCode) {
             this.exitCode = exitCode;
             return this;
         }
-
         public Builder output(@Nullable String output) {
             this.output = output;
             return this;
         }
-
         public Builder startTime(@Nullable String startTime) {
             this.startTime = startTime;
             return this;
         }
-
         public Builder statuses(@Nullable List<InstanceViewStatusResponse> statuses) {
             this.statuses = statuses;
             return this;
         }
-        public VirtualMachineRunCommandInstanceViewResponse build() {
+        public Builder statuses(InstanceViewStatusResponse... statuses) {
+            return statuses(List.of(statuses));
+        }        public VirtualMachineRunCommandInstanceViewResponse build() {
             return new VirtualMachineRunCommandInstanceViewResponse(endTime, error, executionMessage, executionState, exitCode, output, startTime, statuses);
         }
     }

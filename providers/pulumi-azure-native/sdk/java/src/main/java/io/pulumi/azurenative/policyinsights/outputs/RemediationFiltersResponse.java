@@ -54,7 +54,9 @@ public final class RemediationFiltersResponse {
             this.locations = locations;
             return this;
         }
-        public RemediationFiltersResponse build() {
+        public Builder locations(String... locations) {
+            return locations(List.of(locations));
+        }        public RemediationFiltersResponse build() {
             return new RemediationFiltersResponse(locations);
         }
     }

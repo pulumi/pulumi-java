@@ -90,17 +90,17 @@ public final class EncryptionSettingsCollectionResponse {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public Builder encryptionSettings(@Nullable List<EncryptionSettingsElementResponse> encryptionSettings) {
             this.encryptionSettings = encryptionSettings;
             return this;
         }
-
+        public Builder encryptionSettings(EncryptionSettingsElementResponse... encryptionSettings) {
+            return encryptionSettings(List.of(encryptionSettings));
+        }
         public Builder encryptionSettingsVersion(@Nullable String encryptionSettingsVersion) {
             this.encryptionSettingsVersion = encryptionSettingsVersion;
             return this;
-        }
-        public EncryptionSettingsCollectionResponse build() {
+        }        public EncryptionSettingsCollectionResponse build() {
             return new EncryptionSettingsCollectionResponse(enabled, encryptionSettings, encryptionSettingsVersion);
         }
     }

@@ -117,52 +117,45 @@ public final class ProviderNoteIamPolicyArgs extends io.pulumi.resources.Resourc
             this.bindings = bindings;
             return this;
         }
-
         public Builder bindings(@Nullable List<BindingArgs> bindings) {
             this.bindings = Output.ofNullable(bindings);
             return this;
         }
-
+        public Builder bindings(BindingArgs... bindings) {
+            return bindings(List.of(bindings));
+        }
         public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
-
         public Builder etag(@Nullable String etag) {
             this.etag = Output.ofNullable(etag);
             return this;
         }
-
         public Builder noteId(Output<String> noteId) {
             this.noteId = Objects.requireNonNull(noteId);
             return this;
         }
-
         public Builder noteId(String noteId) {
             this.noteId = Output.of(Objects.requireNonNull(noteId));
             return this;
         }
-
         public Builder providerId(Output<String> providerId) {
             this.providerId = Objects.requireNonNull(providerId);
             return this;
         }
-
         public Builder providerId(String providerId) {
             this.providerId = Output.of(Objects.requireNonNull(providerId));
             return this;
         }
-
         public Builder version(@Nullable Output<Integer> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable Integer version) {
             this.version = Output.ofNullable(version);
             return this;
-        }
-        public ProviderNoteIamPolicyArgs build() {
+        }        public ProviderNoteIamPolicyArgs build() {
             return new ProviderNoteIamPolicyArgs(bindings, etag, noteId, providerId, version);
         }
     }

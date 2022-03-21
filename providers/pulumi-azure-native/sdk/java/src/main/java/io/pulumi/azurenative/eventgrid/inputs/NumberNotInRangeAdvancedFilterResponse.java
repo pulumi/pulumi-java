@@ -97,17 +97,14 @@ public final class NumberNotInRangeAdvancedFilterResponse extends io.pulumi.reso
             this.key = key;
             return this;
         }
-
         public Builder operatorType(String operatorType) {
             this.operatorType = Objects.requireNonNull(operatorType);
             return this;
         }
-
         public Builder values(@Nullable List<List<Double>> values) {
             this.values = values;
             return this;
-        }
-        public NumberNotInRangeAdvancedFilterResponse build() {
+        }        public NumberNotInRangeAdvancedFilterResponse build() {
             return new NumberNotInRangeAdvancedFilterResponse(key, operatorType, values);
         }
     }

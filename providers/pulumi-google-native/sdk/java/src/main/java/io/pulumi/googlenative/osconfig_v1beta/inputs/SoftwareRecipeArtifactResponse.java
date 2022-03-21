@@ -94,17 +94,14 @@ public final class SoftwareRecipeArtifactResponse extends io.pulumi.resources.In
             this.allowInsecure = Objects.requireNonNull(allowInsecure);
             return this;
         }
-
         public Builder gcs(SoftwareRecipeArtifactGcsResponse gcs) {
             this.gcs = Objects.requireNonNull(gcs);
             return this;
         }
-
         public Builder remote(SoftwareRecipeArtifactRemoteResponse remote) {
             this.remote = Objects.requireNonNull(remote);
             return this;
-        }
-        public SoftwareRecipeArtifactResponse build() {
+        }        public SoftwareRecipeArtifactResponse build() {
             return new SoftwareRecipeArtifactResponse(allowInsecure, gcs, remote);
         }
     }

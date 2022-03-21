@@ -60,8 +60,7 @@ public final class EventSourceMappingOnFailure extends io.pulumi.resources.Invok
         public Builder destination(@Nullable String destination) {
             this.destination = destination;
             return this;
-        }
-        public EventSourceMappingOnFailure build() {
+        }        public EventSourceMappingOnFailure build() {
             return new EventSourceMappingOnFailure(destination);
         }
     }

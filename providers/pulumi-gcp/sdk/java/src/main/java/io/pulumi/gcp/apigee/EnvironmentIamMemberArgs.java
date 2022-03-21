@@ -113,52 +113,42 @@ public final class EnvironmentIamMemberArgs extends io.pulumi.resources.Resource
             this.condition = condition;
             return this;
         }
-
         public Builder condition(@Nullable EnvironmentIamMemberConditionArgs condition) {
             this.condition = Output.ofNullable(condition);
             return this;
         }
-
         public Builder envId(Output<String> envId) {
             this.envId = Objects.requireNonNull(envId);
             return this;
         }
-
         public Builder envId(String envId) {
             this.envId = Output.of(Objects.requireNonNull(envId));
             return this;
         }
-
         public Builder member(Output<String> member) {
             this.member = Objects.requireNonNull(member);
             return this;
         }
-
         public Builder member(String member) {
             this.member = Output.of(Objects.requireNonNull(member));
             return this;
         }
-
         public Builder orgId(Output<String> orgId) {
             this.orgId = Objects.requireNonNull(orgId);
             return this;
         }
-
         public Builder orgId(String orgId) {
             this.orgId = Output.of(Objects.requireNonNull(orgId));
             return this;
         }
-
         public Builder role(Output<String> role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }
-
         public Builder role(String role) {
             this.role = Output.of(Objects.requireNonNull(role));
             return this;
-        }
-        public EnvironmentIamMemberArgs build() {
+        }        public EnvironmentIamMemberArgs build() {
             return new EnvironmentIamMemberArgs(condition, envId, member, orgId, role);
         }
     }

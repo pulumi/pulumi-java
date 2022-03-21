@@ -131,52 +131,54 @@ public final class PodPresetSpecArgs extends io.pulumi.resources.ResourceArgs {
             this.env = env;
             return this;
         }
-
         public Builder env(@Nullable List<EnvVarArgs> env) {
             this.env = Output.ofNullable(env);
             return this;
         }
-
+        public Builder env(EnvVarArgs... env) {
+            return env(List.of(env));
+        }
         public Builder envFrom(@Nullable Output<List<EnvFromSourceArgs>> envFrom) {
             this.envFrom = envFrom;
             return this;
         }
-
         public Builder envFrom(@Nullable List<EnvFromSourceArgs> envFrom) {
             this.envFrom = Output.ofNullable(envFrom);
             return this;
         }
-
+        public Builder envFrom(EnvFromSourceArgs... envFrom) {
+            return envFrom(List.of(envFrom));
+        }
         public Builder selector(@Nullable Output<LabelSelectorArgs> selector) {
             this.selector = selector;
             return this;
         }
-
         public Builder selector(@Nullable LabelSelectorArgs selector) {
             this.selector = Output.ofNullable(selector);
             return this;
         }
-
         public Builder volumeMounts(@Nullable Output<List<VolumeMountArgs>> volumeMounts) {
             this.volumeMounts = volumeMounts;
             return this;
         }
-
         public Builder volumeMounts(@Nullable List<VolumeMountArgs> volumeMounts) {
             this.volumeMounts = Output.ofNullable(volumeMounts);
             return this;
         }
-
+        public Builder volumeMounts(VolumeMountArgs... volumeMounts) {
+            return volumeMounts(List.of(volumeMounts));
+        }
         public Builder volumes(@Nullable Output<List<VolumeArgs>> volumes) {
             this.volumes = volumes;
             return this;
         }
-
         public Builder volumes(@Nullable List<VolumeArgs> volumes) {
             this.volumes = Output.ofNullable(volumes);
             return this;
         }
-        public PodPresetSpecArgs build() {
+        public Builder volumes(VolumeArgs... volumes) {
+            return volumes(List.of(volumes));
+        }        public PodPresetSpecArgs build() {
             return new PodPresetSpecArgs(env, envFrom, selector, volumeMounts, volumes);
         }
     }

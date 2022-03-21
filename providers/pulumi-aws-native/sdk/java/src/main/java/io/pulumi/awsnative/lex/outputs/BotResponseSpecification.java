@@ -65,12 +65,13 @@ public final class BotResponseSpecification {
             this.allowInterrupt = allowInterrupt;
             return this;
         }
-
         public Builder messageGroupsList(List<BotMessageGroup> messageGroupsList) {
             this.messageGroupsList = Objects.requireNonNull(messageGroupsList);
             return this;
         }
-        public BotResponseSpecification build() {
+        public Builder messageGroupsList(BotMessageGroup... messageGroupsList) {
+            return messageGroupsList(List.of(messageGroupsList));
+        }        public BotResponseSpecification build() {
             return new BotResponseSpecification(allowInterrupt, messageGroupsList);
         }
     }

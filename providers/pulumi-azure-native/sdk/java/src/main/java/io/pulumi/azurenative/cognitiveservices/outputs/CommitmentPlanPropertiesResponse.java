@@ -137,32 +137,26 @@ public final class CommitmentPlanPropertiesResponse {
             this.autoRenew = autoRenew;
             return this;
         }
-
         public Builder current(@Nullable CommitmentPeriodResponse current) {
             this.current = current;
             return this;
         }
-
         public Builder hostingModel(@Nullable String hostingModel) {
             this.hostingModel = hostingModel;
             return this;
         }
-
         public Builder last(CommitmentPeriodResponse last) {
             this.last = Objects.requireNonNull(last);
             return this;
         }
-
         public Builder next(@Nullable CommitmentPeriodResponse next) {
             this.next = next;
             return this;
         }
-
         public Builder planType(@Nullable String planType) {
             this.planType = planType;
             return this;
-        }
-        public CommitmentPlanPropertiesResponse build() {
+        }        public CommitmentPlanPropertiesResponse build() {
             return new CommitmentPlanPropertiesResponse(autoRenew, current, hostingModel, last, next, planType);
         }
     }

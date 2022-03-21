@@ -110,22 +110,18 @@ public final class CacheConfigurationResponse extends io.pulumi.resources.Invoke
             this.cacheDuration = cacheDuration;
             return this;
         }
-
         public Builder dynamicCompression(@Nullable String dynamicCompression) {
             this.dynamicCompression = dynamicCompression;
             return this;
         }
-
         public Builder queryParameterStripDirective(@Nullable String queryParameterStripDirective) {
             this.queryParameterStripDirective = queryParameterStripDirective;
             return this;
         }
-
         public Builder queryParameters(@Nullable String queryParameters) {
             this.queryParameters = queryParameters;
             return this;
-        }
-        public CacheConfigurationResponse build() {
+        }        public CacheConfigurationResponse build() {
             return new CacheConfigurationResponse(cacheDuration, dynamicCompression, queryParameterStripDirective, queryParameters);
         }
     }

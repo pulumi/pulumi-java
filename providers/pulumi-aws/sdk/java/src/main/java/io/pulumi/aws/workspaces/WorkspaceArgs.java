@@ -173,82 +173,66 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
             this.bundleId = Objects.requireNonNull(bundleId);
             return this;
         }
-
         public Builder bundleId(String bundleId) {
             this.bundleId = Output.of(Objects.requireNonNull(bundleId));
             return this;
         }
-
         public Builder directoryId(Output<String> directoryId) {
             this.directoryId = Objects.requireNonNull(directoryId);
             return this;
         }
-
         public Builder directoryId(String directoryId) {
             this.directoryId = Output.of(Objects.requireNonNull(directoryId));
             return this;
         }
-
         public Builder rootVolumeEncryptionEnabled(@Nullable Output<Boolean> rootVolumeEncryptionEnabled) {
             this.rootVolumeEncryptionEnabled = rootVolumeEncryptionEnabled;
             return this;
         }
-
         public Builder rootVolumeEncryptionEnabled(@Nullable Boolean rootVolumeEncryptionEnabled) {
             this.rootVolumeEncryptionEnabled = Output.ofNullable(rootVolumeEncryptionEnabled);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder userName(Output<String> userName) {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }
-
         public Builder userName(String userName) {
             this.userName = Output.of(Objects.requireNonNull(userName));
             return this;
         }
-
         public Builder userVolumeEncryptionEnabled(@Nullable Output<Boolean> userVolumeEncryptionEnabled) {
             this.userVolumeEncryptionEnabled = userVolumeEncryptionEnabled;
             return this;
         }
-
         public Builder userVolumeEncryptionEnabled(@Nullable Boolean userVolumeEncryptionEnabled) {
             this.userVolumeEncryptionEnabled = Output.ofNullable(userVolumeEncryptionEnabled);
             return this;
         }
-
         public Builder volumeEncryptionKey(@Nullable Output<String> volumeEncryptionKey) {
             this.volumeEncryptionKey = volumeEncryptionKey;
             return this;
         }
-
         public Builder volumeEncryptionKey(@Nullable String volumeEncryptionKey) {
             this.volumeEncryptionKey = Output.ofNullable(volumeEncryptionKey);
             return this;
         }
-
         public Builder workspaceProperties(@Nullable Output<WorkspaceWorkspacePropertiesArgs> workspaceProperties) {
             this.workspaceProperties = workspaceProperties;
             return this;
         }
-
         public Builder workspaceProperties(@Nullable WorkspaceWorkspacePropertiesArgs workspaceProperties) {
             this.workspaceProperties = Output.ofNullable(workspaceProperties);
             return this;
-        }
-        public WorkspaceArgs build() {
+        }        public WorkspaceArgs build() {
             return new WorkspaceArgs(bundleId, directoryId, rootVolumeEncryptionEnabled, tags, userName, userVolumeEncryptionEnabled, volumeEncryptionKey, workspaceProperties);
         }
     }

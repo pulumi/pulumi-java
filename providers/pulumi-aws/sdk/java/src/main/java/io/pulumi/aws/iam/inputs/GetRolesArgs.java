@@ -76,12 +76,10 @@ public final class GetRolesArgs extends io.pulumi.resources.InvokeArgs {
             this.nameRegex = nameRegex;
             return this;
         }
-
         public Builder pathPrefix(@Nullable String pathPrefix) {
             this.pathPrefix = pathPrefix;
             return this;
-        }
-        public GetRolesArgs build() {
+        }        public GetRolesArgs build() {
             return new GetRolesArgs(nameRegex, pathPrefix);
         }
     }

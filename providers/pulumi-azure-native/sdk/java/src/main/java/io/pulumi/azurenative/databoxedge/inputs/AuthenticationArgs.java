@@ -61,12 +61,10 @@ public final class AuthenticationArgs extends io.pulumi.resources.ResourceArgs {
             this.symmetricKey = symmetricKey;
             return this;
         }
-
         public Builder symmetricKey(@Nullable SymmetricKeyArgs symmetricKey) {
             this.symmetricKey = Output.ofNullable(symmetricKey);
             return this;
-        }
-        public AuthenticationArgs build() {
+        }        public AuthenticationArgs build() {
             return new AuthenticationArgs(symmetricKey);
         }
     }

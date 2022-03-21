@@ -79,22 +79,21 @@ public final class ApplicationLogPatternSetArgs extends io.pulumi.resources.Reso
             this.logPatterns = Objects.requireNonNull(logPatterns);
             return this;
         }
-
         public Builder logPatterns(List<ApplicationLogPatternArgs> logPatterns) {
             this.logPatterns = Output.of(Objects.requireNonNull(logPatterns));
             return this;
         }
-
+        public Builder logPatterns(ApplicationLogPatternArgs... logPatterns) {
+            return logPatterns(List.of(logPatterns));
+        }
         public Builder patternSetName(Output<String> patternSetName) {
             this.patternSetName = Objects.requireNonNull(patternSetName);
             return this;
         }
-
         public Builder patternSetName(String patternSetName) {
             this.patternSetName = Output.of(Objects.requireNonNull(patternSetName));
             return this;
-        }
-        public ApplicationLogPatternSetArgs build() {
+        }        public ApplicationLogPatternSetArgs build() {
             return new ApplicationLogPatternSetArgs(logPatterns, patternSetName);
         }
     }

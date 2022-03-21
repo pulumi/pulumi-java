@@ -71,12 +71,10 @@ public final class ACIServiceResponseResponseDataCollection {
             this.eventHubEnabled = eventHubEnabled;
             return this;
         }
-
         public Builder storageEnabled(@Nullable Boolean storageEnabled) {
             this.storageEnabled = storageEnabled;
             return this;
-        }
-        public ACIServiceResponseResponseDataCollection build() {
+        }        public ACIServiceResponseResponseDataCollection build() {
             return new ACIServiceResponseResponseDataCollection(eventHubEnabled, storageEnabled);
         }
     }

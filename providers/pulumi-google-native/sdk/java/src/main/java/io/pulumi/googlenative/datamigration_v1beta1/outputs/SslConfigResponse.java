@@ -101,22 +101,18 @@ public final class SslConfigResponse {
             this.caCertificate = Objects.requireNonNull(caCertificate);
             return this;
         }
-
         public Builder clientCertificate(String clientCertificate) {
             this.clientCertificate = Objects.requireNonNull(clientCertificate);
             return this;
         }
-
         public Builder clientKey(String clientKey) {
             this.clientKey = Objects.requireNonNull(clientKey);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public SslConfigResponse build() {
+        }        public SslConfigResponse build() {
             return new SslConfigResponse(caCertificate, clientCertificate, clientKey, type);
         }
     }

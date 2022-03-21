@@ -107,42 +107,37 @@ public final class GetServerResult {
             this.arn = arn;
             return this;
         }
-
         public Builder backupRetentionCount(@Nullable Integer backupRetentionCount) {
             this.backupRetentionCount = backupRetentionCount;
             return this;
         }
-
         public Builder disableAutomatedBackup(@Nullable Boolean disableAutomatedBackup) {
             this.disableAutomatedBackup = disableAutomatedBackup;
             return this;
         }
-
         public Builder endpoint(@Nullable String endpoint) {
             this.endpoint = endpoint;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder preferredBackupWindow(@Nullable String preferredBackupWindow) {
             this.preferredBackupWindow = preferredBackupWindow;
             return this;
         }
-
         public Builder preferredMaintenanceWindow(@Nullable String preferredMaintenanceWindow) {
             this.preferredMaintenanceWindow = preferredMaintenanceWindow;
             return this;
         }
-
         public Builder tags(@Nullable List<ServerTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetServerResult build() {
+        public Builder tags(ServerTag... tags) {
+            return tags(List.of(tags));
+        }        public GetServerResult build() {
             return new GetServerResult(arn, backupRetentionCount, disableAutomatedBackup, endpoint, id, preferredBackupWindow, preferredMaintenanceWindow, tags);
         }
     }

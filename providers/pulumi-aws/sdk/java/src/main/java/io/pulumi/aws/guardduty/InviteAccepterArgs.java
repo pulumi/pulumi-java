@@ -73,22 +73,18 @@ public final class InviteAccepterArgs extends io.pulumi.resources.ResourceArgs {
             this.detectorId = Objects.requireNonNull(detectorId);
             return this;
         }
-
         public Builder detectorId(String detectorId) {
             this.detectorId = Output.of(Objects.requireNonNull(detectorId));
             return this;
         }
-
         public Builder masterAccountId(Output<String> masterAccountId) {
             this.masterAccountId = Objects.requireNonNull(masterAccountId);
             return this;
         }
-
         public Builder masterAccountId(String masterAccountId) {
             this.masterAccountId = Output.of(Objects.requireNonNull(masterAccountId));
             return this;
-        }
-        public InviteAccepterArgs build() {
+        }        public InviteAccepterArgs build() {
             return new InviteAccepterArgs(detectorId, masterAccountId);
         }
     }

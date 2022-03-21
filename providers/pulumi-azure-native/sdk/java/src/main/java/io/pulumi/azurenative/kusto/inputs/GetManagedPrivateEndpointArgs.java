@@ -88,17 +88,14 @@ public final class GetManagedPrivateEndpointArgs extends io.pulumi.resources.Inv
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
-
         public Builder managedPrivateEndpointName(String managedPrivateEndpointName) {
             this.managedPrivateEndpointName = Objects.requireNonNull(managedPrivateEndpointName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetManagedPrivateEndpointArgs build() {
+        }        public GetManagedPrivateEndpointArgs build() {
             return new GetManagedPrivateEndpointArgs(clusterName, managedPrivateEndpointName, resourceGroupName);
         }
     }

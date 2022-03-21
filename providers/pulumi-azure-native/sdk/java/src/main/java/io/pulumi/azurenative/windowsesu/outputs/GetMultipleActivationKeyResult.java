@@ -242,67 +242,54 @@ public final class GetMultipleActivationKeyResult {
             this.agreementNumber = agreementNumber;
             return this;
         }
-
         public Builder expirationDate(String expirationDate) {
             this.expirationDate = Objects.requireNonNull(expirationDate);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder installedServerNumber(@Nullable Integer installedServerNumber) {
             this.installedServerNumber = installedServerNumber;
             return this;
         }
-
         public Builder isEligible(@Nullable Boolean isEligible) {
             this.isEligible = isEligible;
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder multipleActivationKey(String multipleActivationKey) {
             this.multipleActivationKey = Objects.requireNonNull(multipleActivationKey);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder osType(@Nullable String osType) {
             this.osType = osType;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder supportType(@Nullable String supportType) {
             this.supportType = supportType;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetMultipleActivationKeyResult build() {
+        }        public GetMultipleActivationKeyResult build() {
             return new GetMultipleActivationKeyResult(agreementNumber, expirationDate, id, installedServerNumber, isEligible, location, multipleActivationKey, name, osType, provisioningState, supportType, tags, type);
         }
     }

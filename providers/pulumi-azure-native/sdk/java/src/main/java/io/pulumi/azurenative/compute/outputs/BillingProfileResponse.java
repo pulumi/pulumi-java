@@ -53,8 +53,7 @@ public final class BillingProfileResponse {
         public Builder maxPrice(@Nullable Double maxPrice) {
             this.maxPrice = maxPrice;
             return this;
-        }
-        public BillingProfileResponse build() {
+        }        public BillingProfileResponse build() {
             return new BillingProfileResponse(maxPrice);
         }
     }

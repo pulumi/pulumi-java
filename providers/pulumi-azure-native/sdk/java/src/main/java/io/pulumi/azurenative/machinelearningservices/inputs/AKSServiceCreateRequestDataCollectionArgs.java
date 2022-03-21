@@ -78,22 +78,18 @@ public final class AKSServiceCreateRequestDataCollectionArgs extends io.pulumi.r
             this.eventHubEnabled = eventHubEnabled;
             return this;
         }
-
         public Builder eventHubEnabled(@Nullable Boolean eventHubEnabled) {
             this.eventHubEnabled = Output.ofNullable(eventHubEnabled);
             return this;
         }
-
         public Builder storageEnabled(@Nullable Output<Boolean> storageEnabled) {
             this.storageEnabled = storageEnabled;
             return this;
         }
-
         public Builder storageEnabled(@Nullable Boolean storageEnabled) {
             this.storageEnabled = Output.ofNullable(storageEnabled);
             return this;
-        }
-        public AKSServiceCreateRequestDataCollectionArgs build() {
+        }        public AKSServiceCreateRequestDataCollectionArgs build() {
             return new AKSServiceCreateRequestDataCollectionArgs(eventHubEnabled, storageEnabled);
         }
     }

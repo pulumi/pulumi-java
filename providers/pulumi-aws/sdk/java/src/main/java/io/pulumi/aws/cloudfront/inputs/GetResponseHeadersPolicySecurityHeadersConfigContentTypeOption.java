@@ -54,8 +54,7 @@ public final class GetResponseHeadersPolicySecurityHeadersConfigContentTypeOptio
         public Builder override(Boolean override) {
             this.override = Objects.requireNonNull(override);
             return this;
-        }
-        public GetResponseHeadersPolicySecurityHeadersConfigContentTypeOption build() {
+        }        public GetResponseHeadersPolicySecurityHeadersConfigContentTypeOption build() {
             return new GetResponseHeadersPolicySecurityHeadersConfigContentTypeOption(override);
         }
     }

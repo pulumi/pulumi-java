@@ -143,62 +143,50 @@ public final class StatusCodesBasedTriggerArgs extends io.pulumi.resources.Resou
             this.count = count;
             return this;
         }
-
         public Builder count(@Nullable Integer count) {
             this.count = Output.ofNullable(count);
             return this;
         }
-
         public Builder path(@Nullable Output<String> path) {
             this.path = path;
             return this;
         }
-
         public Builder path(@Nullable String path) {
             this.path = Output.ofNullable(path);
             return this;
         }
-
         public Builder status(@Nullable Output<Integer> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable Integer status) {
             this.status = Output.ofNullable(status);
             return this;
         }
-
         public Builder subStatus(@Nullable Output<Integer> subStatus) {
             this.subStatus = subStatus;
             return this;
         }
-
         public Builder subStatus(@Nullable Integer subStatus) {
             this.subStatus = Output.ofNullable(subStatus);
             return this;
         }
-
         public Builder timeInterval(@Nullable Output<String> timeInterval) {
             this.timeInterval = timeInterval;
             return this;
         }
-
         public Builder timeInterval(@Nullable String timeInterval) {
             this.timeInterval = Output.ofNullable(timeInterval);
             return this;
         }
-
         public Builder win32Status(@Nullable Output<Integer> win32Status) {
             this.win32Status = win32Status;
             return this;
         }
-
         public Builder win32Status(@Nullable Integer win32Status) {
             this.win32Status = Output.ofNullable(win32Status);
             return this;
-        }
-        public StatusCodesBasedTriggerArgs build() {
+        }        public StatusCodesBasedTriggerArgs build() {
             return new StatusCodesBasedTriggerArgs(count, path, status, subStatus, timeInterval, win32Status);
         }
     }

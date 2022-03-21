@@ -53,8 +53,7 @@ public final class IpAddressRangeResponse {
         public Builder addressRange(@Nullable String addressRange) {
             this.addressRange = addressRange;
             return this;
-        }
-        public IpAddressRangeResponse build() {
+        }        public IpAddressRangeResponse build() {
             return new IpAddressRangeResponse(addressRange);
         }
     }

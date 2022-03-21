@@ -175,32 +175,32 @@ public final class RegionUrlMapPathMatcher {
             this.defaultService = defaultService;
             return this;
         }
-
         public Builder defaultUrlRedirect(@Nullable RegionUrlMapPathMatcherDefaultUrlRedirect defaultUrlRedirect) {
             this.defaultUrlRedirect = defaultUrlRedirect;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder pathRules(@Nullable List<RegionUrlMapPathMatcherPathRule> pathRules) {
             this.pathRules = pathRules;
             return this;
         }
-
+        public Builder pathRules(RegionUrlMapPathMatcherPathRule... pathRules) {
+            return pathRules(List.of(pathRules));
+        }
         public Builder routeRules(@Nullable List<RegionUrlMapPathMatcherRouteRule> routeRules) {
             this.routeRules = routeRules;
             return this;
         }
-        public RegionUrlMapPathMatcher build() {
+        public Builder routeRules(RegionUrlMapPathMatcherRouteRule... routeRules) {
+            return routeRules(List.of(routeRules));
+        }        public RegionUrlMapPathMatcher build() {
             return new RegionUrlMapPathMatcher(defaultService, defaultUrlRedirect, description, name, pathRules, routeRules);
         }
     }

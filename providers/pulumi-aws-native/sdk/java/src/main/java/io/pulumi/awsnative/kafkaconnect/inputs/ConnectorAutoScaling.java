@@ -118,27 +118,22 @@ public final class ConnectorAutoScaling extends io.pulumi.resources.InvokeArgs {
             this.maxWorkerCount = Objects.requireNonNull(maxWorkerCount);
             return this;
         }
-
         public Builder mcuCount(Integer mcuCount) {
             this.mcuCount = Objects.requireNonNull(mcuCount);
             return this;
         }
-
         public Builder minWorkerCount(Integer minWorkerCount) {
             this.minWorkerCount = Objects.requireNonNull(minWorkerCount);
             return this;
         }
-
         public Builder scaleInPolicy(ConnectorScaleInPolicy scaleInPolicy) {
             this.scaleInPolicy = Objects.requireNonNull(scaleInPolicy);
             return this;
         }
-
         public Builder scaleOutPolicy(ConnectorScaleOutPolicy scaleOutPolicy) {
             this.scaleOutPolicy = Objects.requireNonNull(scaleOutPolicy);
             return this;
-        }
-        public ConnectorAutoScaling build() {
+        }        public ConnectorAutoScaling build() {
             return new ConnectorAutoScaling(maxWorkerCount, mcuCount, minWorkerCount, scaleInPolicy, scaleOutPolicy);
         }
     }

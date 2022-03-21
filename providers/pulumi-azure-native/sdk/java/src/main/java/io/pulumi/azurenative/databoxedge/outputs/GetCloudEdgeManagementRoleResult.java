@@ -169,42 +169,34 @@ public final class GetCloudEdgeManagementRoleResult {
             this.edgeProfile = Objects.requireNonNull(edgeProfile);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder localManagementStatus(String localManagementStatus) {
             this.localManagementStatus = Objects.requireNonNull(localManagementStatus);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder roleStatus(String roleStatus) {
             this.roleStatus = Objects.requireNonNull(roleStatus);
             return this;
         }
-
         public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetCloudEdgeManagementRoleResult build() {
+        }        public GetCloudEdgeManagementRoleResult build() {
             return new GetCloudEdgeManagementRoleResult(edgeProfile, id, kind, localManagementStatus, name, roleStatus, systemData, type);
         }
     }

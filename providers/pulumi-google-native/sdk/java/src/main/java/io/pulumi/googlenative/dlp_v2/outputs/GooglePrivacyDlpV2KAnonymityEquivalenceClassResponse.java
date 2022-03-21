@@ -71,12 +71,13 @@ public final class GooglePrivacyDlpV2KAnonymityEquivalenceClassResponse {
             this.equivalenceClassSize = Objects.requireNonNull(equivalenceClassSize);
             return this;
         }
-
         public Builder quasiIdsValues(List<GooglePrivacyDlpV2ValueResponse> quasiIdsValues) {
             this.quasiIdsValues = Objects.requireNonNull(quasiIdsValues);
             return this;
         }
-        public GooglePrivacyDlpV2KAnonymityEquivalenceClassResponse build() {
+        public Builder quasiIdsValues(GooglePrivacyDlpV2ValueResponse... quasiIdsValues) {
+            return quasiIdsValues(List.of(quasiIdsValues));
+        }        public GooglePrivacyDlpV2KAnonymityEquivalenceClassResponse build() {
             return new GooglePrivacyDlpV2KAnonymityEquivalenceClassResponse(equivalenceClassSize, quasiIdsValues);
         }
     }

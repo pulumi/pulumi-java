@@ -120,27 +120,22 @@ public final class ReceiptRuleS3Action {
             this.bucketName = Objects.requireNonNull(bucketName);
             return this;
         }
-
         public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
             this.kmsKeyArn = kmsKeyArn;
             return this;
         }
-
         public Builder objectKeyPrefix(@Nullable String objectKeyPrefix) {
             this.objectKeyPrefix = objectKeyPrefix;
             return this;
         }
-
         public Builder position(Integer position) {
             this.position = Objects.requireNonNull(position);
             return this;
         }
-
         public Builder topicArn(@Nullable String topicArn) {
             this.topicArn = topicArn;
             return this;
-        }
-        public ReceiptRuleS3Action build() {
+        }        public ReceiptRuleS3Action build() {
             return new ReceiptRuleS3Action(bucketName, kmsKeyArn, objectKeyPrefix, position, topicArn);
         }
     }

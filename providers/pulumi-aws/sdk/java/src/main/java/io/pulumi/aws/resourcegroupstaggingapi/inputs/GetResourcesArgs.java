@@ -125,27 +125,31 @@ public final class GetResourcesArgs extends io.pulumi.resources.InvokeArgs {
             this.excludeCompliantResources = excludeCompliantResources;
             return this;
         }
-
         public Builder includeComplianceDetails(@Nullable Boolean includeComplianceDetails) {
             this.includeComplianceDetails = includeComplianceDetails;
             return this;
         }
-
         public Builder resourceArnLists(@Nullable List<String> resourceArnLists) {
             this.resourceArnLists = resourceArnLists;
             return this;
         }
-
+        public Builder resourceArnLists(String... resourceArnLists) {
+            return resourceArnLists(List.of(resourceArnLists));
+        }
         public Builder resourceTypeFilters(@Nullable List<String> resourceTypeFilters) {
             this.resourceTypeFilters = resourceTypeFilters;
             return this;
         }
-
+        public Builder resourceTypeFilters(String... resourceTypeFilters) {
+            return resourceTypeFilters(List.of(resourceTypeFilters));
+        }
         public Builder tagFilters(@Nullable List<GetResourcesTagFilter> tagFilters) {
             this.tagFilters = tagFilters;
             return this;
         }
-        public GetResourcesArgs build() {
+        public Builder tagFilters(GetResourcesTagFilter... tagFilters) {
+            return tagFilters(List.of(tagFilters));
+        }        public GetResourcesArgs build() {
             return new GetResourcesArgs(excludeCompliantResources, includeComplianceDetails, resourceArnLists, resourceTypeFilters, tagFilters);
         }
     }

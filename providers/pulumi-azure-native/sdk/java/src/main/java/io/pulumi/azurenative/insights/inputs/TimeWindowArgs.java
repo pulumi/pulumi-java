@@ -94,32 +94,26 @@ public final class TimeWindowArgs extends io.pulumi.resources.ResourceArgs {
             this.end = Objects.requireNonNull(end);
             return this;
         }
-
         public Builder end(String end) {
             this.end = Output.of(Objects.requireNonNull(end));
             return this;
         }
-
         public Builder start(Output<String> start) {
             this.start = Objects.requireNonNull(start);
             return this;
         }
-
         public Builder start(String start) {
             this.start = Output.of(Objects.requireNonNull(start));
             return this;
         }
-
         public Builder timeZone(@Nullable Output<String> timeZone) {
             this.timeZone = timeZone;
             return this;
         }
-
         public Builder timeZone(@Nullable String timeZone) {
             this.timeZone = Output.ofNullable(timeZone);
             return this;
-        }
-        public TimeWindowArgs build() {
+        }        public TimeWindowArgs build() {
             return new TimeWindowArgs(end, start, timeZone);
         }
     }

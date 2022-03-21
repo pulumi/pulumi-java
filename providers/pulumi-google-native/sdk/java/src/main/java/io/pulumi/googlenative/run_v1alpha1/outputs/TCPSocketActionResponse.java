@@ -70,12 +70,10 @@ public final class TCPSocketActionResponse {
             this.host = Objects.requireNonNull(host);
             return this;
         }
-
         public Builder port(Integer port) {
             this.port = Objects.requireNonNull(port);
             return this;
-        }
-        public TCPSocketActionResponse build() {
+        }        public TCPSocketActionResponse build() {
             return new TCPSocketActionResponse(host, port);
         }
     }

@@ -63,12 +63,10 @@ public final class ApplicationManagementPolicyArgs extends io.pulumi.resources.R
             this.mode = mode;
             return this;
         }
-
         public Builder mode(@Nullable Either<String,ApplicationManagementMode> mode) {
             this.mode = Output.ofNullable(mode);
             return this;
-        }
-        public ApplicationManagementPolicyArgs build() {
+        }        public ApplicationManagementPolicyArgs build() {
             return new ApplicationManagementPolicyArgs(mode);
         }
     }

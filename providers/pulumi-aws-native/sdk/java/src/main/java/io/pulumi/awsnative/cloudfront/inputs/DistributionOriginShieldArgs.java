@@ -67,22 +67,18 @@ public final class DistributionOriginShieldArgs extends io.pulumi.resources.Reso
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
         }
-
         public Builder originShieldRegion(@Nullable Output<String> originShieldRegion) {
             this.originShieldRegion = originShieldRegion;
             return this;
         }
-
         public Builder originShieldRegion(@Nullable String originShieldRegion) {
             this.originShieldRegion = Output.ofNullable(originShieldRegion);
             return this;
-        }
-        public DistributionOriginShieldArgs build() {
+        }        public DistributionOriginShieldArgs build() {
             return new DistributionOriginShieldArgs(enabled, originShieldRegion);
         }
     }

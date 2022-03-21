@@ -69,22 +69,18 @@ public final class IAMPolicyArgs extends io.pulumi.resources.ResourceArgs {
             this.orgId = Objects.requireNonNull(orgId);
             return this;
         }
-
         public Builder orgId(String orgId) {
             this.orgId = Output.of(Objects.requireNonNull(orgId));
             return this;
         }
-
         public Builder policyData(Output<String> policyData) {
             this.policyData = Objects.requireNonNull(policyData);
             return this;
         }
-
         public Builder policyData(String policyData) {
             this.policyData = Output.of(Objects.requireNonNull(policyData));
             return this;
-        }
-        public IAMPolicyArgs build() {
+        }        public IAMPolicyArgs build() {
             return new IAMPolicyArgs(orgId, policyData);
         }
     }

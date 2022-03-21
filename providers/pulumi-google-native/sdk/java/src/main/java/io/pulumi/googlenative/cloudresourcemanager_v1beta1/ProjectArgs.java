@@ -169,82 +169,66 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
             this.createTime = createTime;
             return this;
         }
-
         public Builder createTime(@Nullable String createTime) {
             this.createTime = Output.ofNullable(createTime);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder lifecycleState(@Nullable Output<ProjectLifecycleState> lifecycleState) {
             this.lifecycleState = lifecycleState;
             return this;
         }
-
         public Builder lifecycleState(@Nullable ProjectLifecycleState lifecycleState) {
             this.lifecycleState = Output.ofNullable(lifecycleState);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder parent(@Nullable Output<ResourceIdArgs> parent) {
             this.parent = parent;
             return this;
         }
-
         public Builder parent(@Nullable ResourceIdArgs parent) {
             this.parent = Output.ofNullable(parent);
             return this;
         }
-
         public Builder projectId(@Nullable Output<String> projectId) {
             this.projectId = projectId;
             return this;
         }
-
         public Builder projectId(@Nullable String projectId) {
             this.projectId = Output.ofNullable(projectId);
             return this;
         }
-
         public Builder projectNumber(@Nullable Output<String> projectNumber) {
             this.projectNumber = projectNumber;
             return this;
         }
-
         public Builder projectNumber(@Nullable String projectNumber) {
             this.projectNumber = Output.ofNullable(projectNumber);
             return this;
         }
-
         public Builder useLegacyStack(@Nullable Output<String> useLegacyStack) {
             this.useLegacyStack = useLegacyStack;
             return this;
         }
-
         public Builder useLegacyStack(@Nullable String useLegacyStack) {
             this.useLegacyStack = Output.ofNullable(useLegacyStack);
             return this;
-        }
-        public ProjectArgs build() {
+        }        public ProjectArgs build() {
             return new ProjectArgs(createTime, labels, lifecycleState, name, parent, projectId, projectNumber, useLegacyStack);
         }
     }

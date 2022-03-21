@@ -80,17 +80,17 @@ public final class PartitionIndexPartitionIndex {
             this.indexName = indexName;
             return this;
         }
-
         public Builder indexStatus(@Nullable String indexStatus) {
             this.indexStatus = indexStatus;
             return this;
         }
-
         public Builder keys(@Nullable List<String> keys) {
             this.keys = keys;
             return this;
         }
-        public PartitionIndexPartitionIndex build() {
+        public Builder keys(String... keys) {
+            return keys(List.of(keys));
+        }        public PartitionIndexPartitionIndex build() {
             return new PartitionIndexPartitionIndex(indexName, indexStatus, keys);
         }
     }

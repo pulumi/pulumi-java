@@ -56,8 +56,7 @@ public final class PipelineSourceTriggerDescriptorResponse extends io.pulumi.res
         public Builder timestamp(@Nullable String timestamp) {
             this.timestamp = timestamp;
             return this;
-        }
-        public PipelineSourceTriggerDescriptorResponse build() {
+        }        public PipelineSourceTriggerDescriptorResponse build() {
             return new PipelineSourceTriggerDescriptorResponse(timestamp);
         }
     }

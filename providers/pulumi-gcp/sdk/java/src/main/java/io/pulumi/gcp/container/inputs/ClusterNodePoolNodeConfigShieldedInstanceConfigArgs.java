@@ -74,22 +74,18 @@ public final class ClusterNodePoolNodeConfigShieldedInstanceConfigArgs extends i
             this.enableIntegrityMonitoring = enableIntegrityMonitoring;
             return this;
         }
-
         public Builder enableIntegrityMonitoring(@Nullable Boolean enableIntegrityMonitoring) {
             this.enableIntegrityMonitoring = Output.ofNullable(enableIntegrityMonitoring);
             return this;
         }
-
         public Builder enableSecureBoot(@Nullable Output<Boolean> enableSecureBoot) {
             this.enableSecureBoot = enableSecureBoot;
             return this;
         }
-
         public Builder enableSecureBoot(@Nullable Boolean enableSecureBoot) {
             this.enableSecureBoot = Output.ofNullable(enableSecureBoot);
             return this;
-        }
-        public ClusterNodePoolNodeConfigShieldedInstanceConfigArgs build() {
+        }        public ClusterNodePoolNodeConfigShieldedInstanceConfigArgs build() {
             return new ClusterNodePoolNodeConfigShieldedInstanceConfigArgs(enableIntegrityMonitoring, enableSecureBoot);
         }
     }

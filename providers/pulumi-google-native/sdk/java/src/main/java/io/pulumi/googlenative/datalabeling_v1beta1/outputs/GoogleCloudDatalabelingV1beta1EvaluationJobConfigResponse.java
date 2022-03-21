@@ -207,52 +207,42 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationJobConfigResponse {
             this.bigqueryImportKeys = Objects.requireNonNull(bigqueryImportKeys);
             return this;
         }
-
         public Builder boundingPolyConfig(GoogleCloudDatalabelingV1beta1BoundingPolyConfigResponse boundingPolyConfig) {
             this.boundingPolyConfig = Objects.requireNonNull(boundingPolyConfig);
             return this;
         }
-
         public Builder evaluationConfig(GoogleCloudDatalabelingV1beta1EvaluationConfigResponse evaluationConfig) {
             this.evaluationConfig = Objects.requireNonNull(evaluationConfig);
             return this;
         }
-
         public Builder evaluationJobAlertConfig(GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigResponse evaluationJobAlertConfig) {
             this.evaluationJobAlertConfig = Objects.requireNonNull(evaluationJobAlertConfig);
             return this;
         }
-
         public Builder exampleCount(Integer exampleCount) {
             this.exampleCount = Objects.requireNonNull(exampleCount);
             return this;
         }
-
         public Builder exampleSamplePercentage(Double exampleSamplePercentage) {
             this.exampleSamplePercentage = Objects.requireNonNull(exampleSamplePercentage);
             return this;
         }
-
         public Builder humanAnnotationConfig(GoogleCloudDatalabelingV1beta1HumanAnnotationConfigResponse humanAnnotationConfig) {
             this.humanAnnotationConfig = Objects.requireNonNull(humanAnnotationConfig);
             return this;
         }
-
         public Builder imageClassificationConfig(GoogleCloudDatalabelingV1beta1ImageClassificationConfigResponse imageClassificationConfig) {
             this.imageClassificationConfig = Objects.requireNonNull(imageClassificationConfig);
             return this;
         }
-
         public Builder inputConfig(GoogleCloudDatalabelingV1beta1InputConfigResponse inputConfig) {
             this.inputConfig = Objects.requireNonNull(inputConfig);
             return this;
         }
-
         public Builder textClassificationConfig(GoogleCloudDatalabelingV1beta1TextClassificationConfigResponse textClassificationConfig) {
             this.textClassificationConfig = Objects.requireNonNull(textClassificationConfig);
             return this;
-        }
-        public GoogleCloudDatalabelingV1beta1EvaluationJobConfigResponse build() {
+        }        public GoogleCloudDatalabelingV1beta1EvaluationJobConfigResponse build() {
             return new GoogleCloudDatalabelingV1beta1EvaluationJobConfigResponse(bigqueryImportKeys, boundingPolyConfig, evaluationConfig, evaluationJobAlertConfig, exampleCount, exampleSamplePercentage, humanAnnotationConfig, imageClassificationConfig, inputConfig, textClassificationConfig);
         }
     }

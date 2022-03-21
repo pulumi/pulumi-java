@@ -162,37 +162,30 @@ public final class TagTemplateField {
             this.description = description;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder fieldId(String fieldId) {
             this.fieldId = Objects.requireNonNull(fieldId);
             return this;
         }
-
         public Builder isRequired(@Nullable Boolean isRequired) {
             this.isRequired = isRequired;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder order(@Nullable Integer order) {
             this.order = order;
             return this;
         }
-
         public Builder type(TagTemplateFieldType type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public TagTemplateField build() {
+        }        public TagTemplateField build() {
             return new TagTemplateField(description, displayName, fieldId, isRequired, name, order, type);
         }
     }

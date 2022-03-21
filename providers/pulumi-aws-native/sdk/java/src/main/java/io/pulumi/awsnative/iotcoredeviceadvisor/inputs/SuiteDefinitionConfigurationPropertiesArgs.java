@@ -105,52 +105,45 @@ public final class SuiteDefinitionConfigurationPropertiesArgs extends io.pulumi.
             this.devicePermissionRoleArn = Objects.requireNonNull(devicePermissionRoleArn);
             return this;
         }
-
         public Builder devicePermissionRoleArn(String devicePermissionRoleArn) {
             this.devicePermissionRoleArn = Output.of(Objects.requireNonNull(devicePermissionRoleArn));
             return this;
         }
-
         public Builder devices(@Nullable Output<List<SuiteDefinitionDeviceUnderTestArgs>> devices) {
             this.devices = devices;
             return this;
         }
-
         public Builder devices(@Nullable List<SuiteDefinitionDeviceUnderTestArgs> devices) {
             this.devices = Output.ofNullable(devices);
             return this;
         }
-
+        public Builder devices(SuiteDefinitionDeviceUnderTestArgs... devices) {
+            return devices(List.of(devices));
+        }
         public Builder intendedForQualification(@Nullable Output<Boolean> intendedForQualification) {
             this.intendedForQualification = intendedForQualification;
             return this;
         }
-
         public Builder intendedForQualification(@Nullable Boolean intendedForQualification) {
             this.intendedForQualification = Output.ofNullable(intendedForQualification);
             return this;
         }
-
         public Builder rootGroup(Output<String> rootGroup) {
             this.rootGroup = Objects.requireNonNull(rootGroup);
             return this;
         }
-
         public Builder rootGroup(String rootGroup) {
             this.rootGroup = Output.of(Objects.requireNonNull(rootGroup));
             return this;
         }
-
         public Builder suiteDefinitionName(@Nullable Output<String> suiteDefinitionName) {
             this.suiteDefinitionName = suiteDefinitionName;
             return this;
         }
-
         public Builder suiteDefinitionName(@Nullable String suiteDefinitionName) {
             this.suiteDefinitionName = Output.ofNullable(suiteDefinitionName);
             return this;
-        }
-        public SuiteDefinitionConfigurationPropertiesArgs build() {
+        }        public SuiteDefinitionConfigurationPropertiesArgs build() {
             return new SuiteDefinitionConfigurationPropertiesArgs(devicePermissionRoleArn, devices, intendedForQualification, rootGroup, suiteDefinitionName);
         }
     }

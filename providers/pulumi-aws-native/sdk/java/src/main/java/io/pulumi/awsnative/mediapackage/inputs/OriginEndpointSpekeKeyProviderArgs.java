@@ -127,52 +127,45 @@ public final class OriginEndpointSpekeKeyProviderArgs extends io.pulumi.resource
             this.certificateArn = certificateArn;
             return this;
         }
-
         public Builder certificateArn(@Nullable String certificateArn) {
             this.certificateArn = Output.ofNullable(certificateArn);
             return this;
         }
-
         public Builder resourceId(Output<String> resourceId) {
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
         }
-
         public Builder resourceId(String resourceId) {
             this.resourceId = Output.of(Objects.requireNonNull(resourceId));
             return this;
         }
-
         public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public Builder roleArn(String roleArn) {
             this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
         }
-
         public Builder systemIds(Output<List<String>> systemIds) {
             this.systemIds = Objects.requireNonNull(systemIds);
             return this;
         }
-
         public Builder systemIds(List<String> systemIds) {
             this.systemIds = Output.of(Objects.requireNonNull(systemIds));
             return this;
         }
-
+        public Builder systemIds(String... systemIds) {
+            return systemIds(List.of(systemIds));
+        }
         public Builder url(Output<String> url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public Builder url(String url) {
             this.url = Output.of(Objects.requireNonNull(url));
             return this;
-        }
-        public OriginEndpointSpekeKeyProviderArgs build() {
+        }        public OriginEndpointSpekeKeyProviderArgs build() {
             return new OriginEndpointSpekeKeyProviderArgs(certificateArn, resourceId, roleArn, systemIds, url);
         }
     }

@@ -110,22 +110,18 @@ public final class GetInstanceTemplateArgs extends io.pulumi.resources.InvokeArg
             this.filter = filter;
             return this;
         }
-
         public Builder mostRecent(@Nullable Boolean mostRecent) {
             this.mostRecent = mostRecent;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
-        }
-        public GetInstanceTemplateArgs build() {
+        }        public GetInstanceTemplateArgs build() {
             return new GetInstanceTemplateArgs(filter, mostRecent, name, project);
         }
     }

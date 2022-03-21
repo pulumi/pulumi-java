@@ -74,22 +74,18 @@ public final class LicenseResourceRequirementsArgs extends io.pulumi.resources.R
             this.minGuestCpuCount = minGuestCpuCount;
             return this;
         }
-
         public Builder minGuestCpuCount(@Nullable Integer minGuestCpuCount) {
             this.minGuestCpuCount = Output.ofNullable(minGuestCpuCount);
             return this;
         }
-
         public Builder minMemoryMb(@Nullable Output<Integer> minMemoryMb) {
             this.minMemoryMb = minMemoryMb;
             return this;
         }
-
         public Builder minMemoryMb(@Nullable Integer minMemoryMb) {
             this.minMemoryMb = Output.ofNullable(minMemoryMb);
             return this;
-        }
-        public LicenseResourceRequirementsArgs build() {
+        }        public LicenseResourceRequirementsArgs build() {
             return new LicenseResourceRequirementsArgs(minGuestCpuCount, minMemoryMb);
         }
     }

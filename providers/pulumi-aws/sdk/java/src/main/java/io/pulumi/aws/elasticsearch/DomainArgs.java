@@ -307,157 +307,129 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
             this.accessPolicies = accessPolicies;
             return this;
         }
-
         public Builder advancedOptions(@Nullable Output<Map<String,String>> advancedOptions) {
             this.advancedOptions = advancedOptions;
             return this;
         }
-
         public Builder advancedOptions(@Nullable Map<String,String> advancedOptions) {
             this.advancedOptions = Output.ofNullable(advancedOptions);
             return this;
         }
-
         public Builder advancedSecurityOptions(@Nullable Output<DomainAdvancedSecurityOptionsArgs> advancedSecurityOptions) {
             this.advancedSecurityOptions = advancedSecurityOptions;
             return this;
         }
-
         public Builder advancedSecurityOptions(@Nullable DomainAdvancedSecurityOptionsArgs advancedSecurityOptions) {
             this.advancedSecurityOptions = Output.ofNullable(advancedSecurityOptions);
             return this;
         }
-
         public Builder autoTuneOptions(@Nullable Output<DomainAutoTuneOptionsArgs> autoTuneOptions) {
             this.autoTuneOptions = autoTuneOptions;
             return this;
         }
-
         public Builder autoTuneOptions(@Nullable DomainAutoTuneOptionsArgs autoTuneOptions) {
             this.autoTuneOptions = Output.ofNullable(autoTuneOptions);
             return this;
         }
-
         public Builder clusterConfig(@Nullable Output<DomainClusterConfigArgs> clusterConfig) {
             this.clusterConfig = clusterConfig;
             return this;
         }
-
         public Builder clusterConfig(@Nullable DomainClusterConfigArgs clusterConfig) {
             this.clusterConfig = Output.ofNullable(clusterConfig);
             return this;
         }
-
         public Builder cognitoOptions(@Nullable Output<DomainCognitoOptionsArgs> cognitoOptions) {
             this.cognitoOptions = cognitoOptions;
             return this;
         }
-
         public Builder cognitoOptions(@Nullable DomainCognitoOptionsArgs cognitoOptions) {
             this.cognitoOptions = Output.ofNullable(cognitoOptions);
             return this;
         }
-
         public Builder domainEndpointOptions(@Nullable Output<DomainDomainEndpointOptionsArgs> domainEndpointOptions) {
             this.domainEndpointOptions = domainEndpointOptions;
             return this;
         }
-
         public Builder domainEndpointOptions(@Nullable DomainDomainEndpointOptionsArgs domainEndpointOptions) {
             this.domainEndpointOptions = Output.ofNullable(domainEndpointOptions);
             return this;
         }
-
         public Builder domainName(@Nullable Output<String> domainName) {
             this.domainName = domainName;
             return this;
         }
-
         public Builder domainName(@Nullable String domainName) {
             this.domainName = Output.ofNullable(domainName);
             return this;
         }
-
         public Builder ebsOptions(@Nullable Output<DomainEbsOptionsArgs> ebsOptions) {
             this.ebsOptions = ebsOptions;
             return this;
         }
-
         public Builder ebsOptions(@Nullable DomainEbsOptionsArgs ebsOptions) {
             this.ebsOptions = Output.ofNullable(ebsOptions);
             return this;
         }
-
         public Builder elasticsearchVersion(@Nullable Output<String> elasticsearchVersion) {
             this.elasticsearchVersion = elasticsearchVersion;
             return this;
         }
-
         public Builder elasticsearchVersion(@Nullable String elasticsearchVersion) {
             this.elasticsearchVersion = Output.ofNullable(elasticsearchVersion);
             return this;
         }
-
         public Builder encryptAtRest(@Nullable Output<DomainEncryptAtRestArgs> encryptAtRest) {
             this.encryptAtRest = encryptAtRest;
             return this;
         }
-
         public Builder encryptAtRest(@Nullable DomainEncryptAtRestArgs encryptAtRest) {
             this.encryptAtRest = Output.ofNullable(encryptAtRest);
             return this;
         }
-
         public Builder logPublishingOptions(@Nullable Output<List<DomainLogPublishingOptionArgs>> logPublishingOptions) {
             this.logPublishingOptions = logPublishingOptions;
             return this;
         }
-
         public Builder logPublishingOptions(@Nullable List<DomainLogPublishingOptionArgs> logPublishingOptions) {
             this.logPublishingOptions = Output.ofNullable(logPublishingOptions);
             return this;
         }
-
+        public Builder logPublishingOptions(DomainLogPublishingOptionArgs... logPublishingOptions) {
+            return logPublishingOptions(List.of(logPublishingOptions));
+        }
         public Builder nodeToNodeEncryption(@Nullable Output<DomainNodeToNodeEncryptionArgs> nodeToNodeEncryption) {
             this.nodeToNodeEncryption = nodeToNodeEncryption;
             return this;
         }
-
         public Builder nodeToNodeEncryption(@Nullable DomainNodeToNodeEncryptionArgs nodeToNodeEncryption) {
             this.nodeToNodeEncryption = Output.ofNullable(nodeToNodeEncryption);
             return this;
         }
-
         public Builder snapshotOptions(@Nullable Output<DomainSnapshotOptionsArgs> snapshotOptions) {
             this.snapshotOptions = snapshotOptions;
             return this;
         }
-
         public Builder snapshotOptions(@Nullable DomainSnapshotOptionsArgs snapshotOptions) {
             this.snapshotOptions = Output.ofNullable(snapshotOptions);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder vpcOptions(@Nullable Output<DomainVpcOptionsArgs> vpcOptions) {
             this.vpcOptions = vpcOptions;
             return this;
         }
-
         public Builder vpcOptions(@Nullable DomainVpcOptionsArgs vpcOptions) {
             this.vpcOptions = Output.ofNullable(vpcOptions);
             return this;
-        }
-        public DomainArgs build() {
+        }        public DomainArgs build() {
             return new DomainArgs(accessPolicies, advancedOptions, advancedSecurityOptions, autoTuneOptions, clusterConfig, cognitoOptions, domainEndpointOptions, domainName, ebsOptions, elasticsearchVersion, encryptAtRest, logPublishingOptions, nodeToNodeEncryption, snapshotOptions, tags, vpcOptions);
         }
     }

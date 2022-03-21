@@ -99,32 +99,32 @@ public final class NetworkRuleSetArgs extends io.pulumi.resources.ResourceArgs {
             this.defaultAction = Objects.requireNonNull(defaultAction);
             return this;
         }
-
         public Builder defaultAction(Either<String,DefaultAction> defaultAction) {
             this.defaultAction = Output.of(Objects.requireNonNull(defaultAction));
             return this;
         }
-
         public Builder ipRules(@Nullable Output<List<IPRuleArgs>> ipRules) {
             this.ipRules = ipRules;
             return this;
         }
-
         public Builder ipRules(@Nullable List<IPRuleArgs> ipRules) {
             this.ipRules = Output.ofNullable(ipRules);
             return this;
         }
-
+        public Builder ipRules(IPRuleArgs... ipRules) {
+            return ipRules(List.of(ipRules));
+        }
         public Builder virtualNetworkRules(@Nullable Output<List<VirtualNetworkRuleArgs>> virtualNetworkRules) {
             this.virtualNetworkRules = virtualNetworkRules;
             return this;
         }
-
         public Builder virtualNetworkRules(@Nullable List<VirtualNetworkRuleArgs> virtualNetworkRules) {
             this.virtualNetworkRules = Output.ofNullable(virtualNetworkRules);
             return this;
         }
-        public NetworkRuleSetArgs build() {
+        public Builder virtualNetworkRules(VirtualNetworkRuleArgs... virtualNetworkRules) {
+            return virtualNetworkRules(List.of(virtualNetworkRules));
+        }        public NetworkRuleSetArgs build() {
             return new NetworkRuleSetArgs(defaultAction, ipRules, virtualNetworkRules);
         }
     }

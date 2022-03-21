@@ -90,32 +90,26 @@ public final class WindowsFileSystemAuditLogConfigurationArgs extends io.pulumi.
             this.auditLogDestination = auditLogDestination;
             return this;
         }
-
         public Builder auditLogDestination(@Nullable String auditLogDestination) {
             this.auditLogDestination = Output.ofNullable(auditLogDestination);
             return this;
         }
-
         public Builder fileAccessAuditLogLevel(@Nullable Output<String> fileAccessAuditLogLevel) {
             this.fileAccessAuditLogLevel = fileAccessAuditLogLevel;
             return this;
         }
-
         public Builder fileAccessAuditLogLevel(@Nullable String fileAccessAuditLogLevel) {
             this.fileAccessAuditLogLevel = Output.ofNullable(fileAccessAuditLogLevel);
             return this;
         }
-
         public Builder fileShareAccessAuditLogLevel(@Nullable Output<String> fileShareAccessAuditLogLevel) {
             this.fileShareAccessAuditLogLevel = fileShareAccessAuditLogLevel;
             return this;
         }
-
         public Builder fileShareAccessAuditLogLevel(@Nullable String fileShareAccessAuditLogLevel) {
             this.fileShareAccessAuditLogLevel = Output.ofNullable(fileShareAccessAuditLogLevel);
             return this;
-        }
-        public WindowsFileSystemAuditLogConfigurationArgs build() {
+        }        public WindowsFileSystemAuditLogConfigurationArgs build() {
             return new WindowsFileSystemAuditLogConfigurationArgs(auditLogDestination, fileAccessAuditLogLevel, fileShareAccessAuditLogLevel);
         }
     }

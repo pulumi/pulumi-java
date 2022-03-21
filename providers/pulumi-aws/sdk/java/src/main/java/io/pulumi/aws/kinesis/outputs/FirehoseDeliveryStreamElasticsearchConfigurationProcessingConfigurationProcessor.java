@@ -72,12 +72,13 @@ public final class FirehoseDeliveryStreamElasticsearchConfigurationProcessingCon
             this.parameters = parameters;
             return this;
         }
-
+        public Builder parameters(FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationProcessorParameter... parameters) {
+            return parameters(List.of(parameters));
+        }
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationProcessor build() {
+        }        public FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationProcessor build() {
             return new FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationProcessor(parameters, type);
         }
     }

@@ -187,92 +187,74 @@ public final class ScheduledActionArgs extends io.pulumi.resources.ResourceArgs 
             this.endTime = endTime;
             return this;
         }
-
         public Builder endTime(@Nullable String endTime) {
             this.endTime = Output.ofNullable(endTime);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder resourceId(Output<String> resourceId) {
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
         }
-
         public Builder resourceId(String resourceId) {
             this.resourceId = Output.of(Objects.requireNonNull(resourceId));
             return this;
         }
-
         public Builder scalableDimension(Output<String> scalableDimension) {
             this.scalableDimension = Objects.requireNonNull(scalableDimension);
             return this;
         }
-
         public Builder scalableDimension(String scalableDimension) {
             this.scalableDimension = Output.of(Objects.requireNonNull(scalableDimension));
             return this;
         }
-
         public Builder scalableTargetAction(Output<ScheduledActionScalableTargetActionArgs> scalableTargetAction) {
             this.scalableTargetAction = Objects.requireNonNull(scalableTargetAction);
             return this;
         }
-
         public Builder scalableTargetAction(ScheduledActionScalableTargetActionArgs scalableTargetAction) {
             this.scalableTargetAction = Output.of(Objects.requireNonNull(scalableTargetAction));
             return this;
         }
-
         public Builder schedule(Output<String> schedule) {
             this.schedule = Objects.requireNonNull(schedule);
             return this;
         }
-
         public Builder schedule(String schedule) {
             this.schedule = Output.of(Objects.requireNonNull(schedule));
             return this;
         }
-
         public Builder serviceNamespace(Output<String> serviceNamespace) {
             this.serviceNamespace = Objects.requireNonNull(serviceNamespace);
             return this;
         }
-
         public Builder serviceNamespace(String serviceNamespace) {
             this.serviceNamespace = Output.of(Objects.requireNonNull(serviceNamespace));
             return this;
         }
-
         public Builder startTime(@Nullable Output<String> startTime) {
             this.startTime = startTime;
             return this;
         }
-
         public Builder startTime(@Nullable String startTime) {
             this.startTime = Output.ofNullable(startTime);
             return this;
         }
-
         public Builder timezone(@Nullable Output<String> timezone) {
             this.timezone = timezone;
             return this;
         }
-
         public Builder timezone(@Nullable String timezone) {
             this.timezone = Output.ofNullable(timezone);
             return this;
-        }
-        public ScheduledActionArgs build() {
+        }        public ScheduledActionArgs build() {
             return new ScheduledActionArgs(endTime, name, resourceId, scalableDimension, scalableTargetAction, schedule, serviceNamespace, startTime, timezone);
         }
     }

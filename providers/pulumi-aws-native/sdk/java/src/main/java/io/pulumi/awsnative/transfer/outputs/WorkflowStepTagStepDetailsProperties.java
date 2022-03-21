@@ -73,12 +73,13 @@ public final class WorkflowStepTagStepDetailsProperties {
             this.name = name;
             return this;
         }
-
         public Builder tags(@Nullable List<WorkflowS3Tag> tags) {
             this.tags = tags;
             return this;
         }
-        public WorkflowStepTagStepDetailsProperties build() {
+        public Builder tags(WorkflowS3Tag... tags) {
+            return tags(List.of(tags));
+        }        public WorkflowStepTagStepDetailsProperties build() {
             return new WorkflowStepTagStepDetailsProperties(name, tags);
         }
     }

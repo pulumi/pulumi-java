@@ -72,12 +72,10 @@ public final class GetDiskEncryptionSetArgs extends io.pulumi.resources.InvokeAr
             this.diskEncryptionSetName = Objects.requireNonNull(diskEncryptionSetName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetDiskEncryptionSetArgs build() {
+        }        public GetDiskEncryptionSetArgs build() {
             return new GetDiskEncryptionSetArgs(diskEncryptionSetName, resourceGroupName);
         }
     }

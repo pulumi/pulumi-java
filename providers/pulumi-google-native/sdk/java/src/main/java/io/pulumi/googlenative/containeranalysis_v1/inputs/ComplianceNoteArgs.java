@@ -153,72 +153,61 @@ public final class ComplianceNoteArgs extends io.pulumi.resources.ResourceArgs {
             this.cisBenchmark = cisBenchmark;
             return this;
         }
-
         public Builder cisBenchmark(@Nullable CisBenchmarkArgs cisBenchmark) {
             this.cisBenchmark = Output.ofNullable(cisBenchmark);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder rationale(@Nullable Output<String> rationale) {
             this.rationale = rationale;
             return this;
         }
-
         public Builder rationale(@Nullable String rationale) {
             this.rationale = Output.ofNullable(rationale);
             return this;
         }
-
         public Builder remediation(@Nullable Output<String> remediation) {
             this.remediation = remediation;
             return this;
         }
-
         public Builder remediation(@Nullable String remediation) {
             this.remediation = Output.ofNullable(remediation);
             return this;
         }
-
         public Builder scanInstructions(@Nullable Output<String> scanInstructions) {
             this.scanInstructions = scanInstructions;
             return this;
         }
-
         public Builder scanInstructions(@Nullable String scanInstructions) {
             this.scanInstructions = Output.ofNullable(scanInstructions);
             return this;
         }
-
         public Builder title(@Nullable Output<String> title) {
             this.title = title;
             return this;
         }
-
         public Builder title(@Nullable String title) {
             this.title = Output.ofNullable(title);
             return this;
         }
-
         public Builder version(@Nullable Output<List<ComplianceVersionArgs>> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable List<ComplianceVersionArgs> version) {
             this.version = Output.ofNullable(version);
             return this;
         }
-        public ComplianceNoteArgs build() {
+        public Builder version(ComplianceVersionArgs... version) {
+            return version(List.of(version));
+        }        public ComplianceNoteArgs build() {
             return new ComplianceNoteArgs(cisBenchmark, description, rationale, remediation, scanInstructions, title, version);
         }
     }

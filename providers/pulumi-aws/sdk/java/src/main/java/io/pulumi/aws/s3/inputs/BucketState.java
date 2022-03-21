@@ -459,247 +459,210 @@ public final class BucketState extends io.pulumi.resources.ResourceArgs {
             this.accelerationStatus = accelerationStatus;
             return this;
         }
-
         public Builder accelerationStatus(@Nullable String accelerationStatus) {
             this.accelerationStatus = Output.ofNullable(accelerationStatus);
             return this;
         }
-
         public Builder acl(@Nullable Output<Either<String,CannedAcl>> acl) {
             this.acl = acl;
             return this;
         }
-
         public Builder acl(@Nullable Either<String,CannedAcl> acl) {
             this.acl = Output.ofNullable(acl);
             return this;
         }
-
         public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder bucket(@Nullable Output<String> bucket) {
             this.bucket = bucket;
             return this;
         }
-
         public Builder bucket(@Nullable String bucket) {
             this.bucket = Output.ofNullable(bucket);
             return this;
         }
-
         public Builder bucketDomainName(@Nullable Output<String> bucketDomainName) {
             this.bucketDomainName = bucketDomainName;
             return this;
         }
-
         public Builder bucketDomainName(@Nullable String bucketDomainName) {
             this.bucketDomainName = Output.ofNullable(bucketDomainName);
             return this;
         }
-
         public Builder bucketPrefix(@Nullable Output<String> bucketPrefix) {
             this.bucketPrefix = bucketPrefix;
             return this;
         }
-
         public Builder bucketPrefix(@Nullable String bucketPrefix) {
             this.bucketPrefix = Output.ofNullable(bucketPrefix);
             return this;
         }
-
         public Builder bucketRegionalDomainName(@Nullable Output<String> bucketRegionalDomainName) {
             this.bucketRegionalDomainName = bucketRegionalDomainName;
             return this;
         }
-
         public Builder bucketRegionalDomainName(@Nullable String bucketRegionalDomainName) {
             this.bucketRegionalDomainName = Output.ofNullable(bucketRegionalDomainName);
             return this;
         }
-
         public Builder corsRules(@Nullable Output<List<BucketCorsRuleGetArgs>> corsRules) {
             this.corsRules = corsRules;
             return this;
         }
-
         public Builder corsRules(@Nullable List<BucketCorsRuleGetArgs> corsRules) {
             this.corsRules = Output.ofNullable(corsRules);
             return this;
         }
-
+        public Builder corsRules(BucketCorsRuleGetArgs... corsRules) {
+            return corsRules(List.of(corsRules));
+        }
         public Builder forceDestroy(@Nullable Output<Boolean> forceDestroy) {
             this.forceDestroy = forceDestroy;
             return this;
         }
-
         public Builder forceDestroy(@Nullable Boolean forceDestroy) {
             this.forceDestroy = Output.ofNullable(forceDestroy);
             return this;
         }
-
         public Builder grants(@Nullable Output<List<BucketGrantGetArgs>> grants) {
             this.grants = grants;
             return this;
         }
-
         public Builder grants(@Nullable List<BucketGrantGetArgs> grants) {
             this.grants = Output.ofNullable(grants);
             return this;
         }
-
+        public Builder grants(BucketGrantGetArgs... grants) {
+            return grants(List.of(grants));
+        }
         public Builder hostedZoneId(@Nullable Output<String> hostedZoneId) {
             this.hostedZoneId = hostedZoneId;
             return this;
         }
-
         public Builder hostedZoneId(@Nullable String hostedZoneId) {
             this.hostedZoneId = Output.ofNullable(hostedZoneId);
             return this;
         }
-
         public Builder lifecycleRules(@Nullable Output<List<BucketLifecycleRuleGetArgs>> lifecycleRules) {
             this.lifecycleRules = lifecycleRules;
             return this;
         }
-
         public Builder lifecycleRules(@Nullable List<BucketLifecycleRuleGetArgs> lifecycleRules) {
             this.lifecycleRules = Output.ofNullable(lifecycleRules);
             return this;
         }
-
+        public Builder lifecycleRules(BucketLifecycleRuleGetArgs... lifecycleRules) {
+            return lifecycleRules(List.of(lifecycleRules));
+        }
         public Builder loggings(@Nullable Output<List<BucketLoggingGetArgs>> loggings) {
             this.loggings = loggings;
             return this;
         }
-
         public Builder loggings(@Nullable List<BucketLoggingGetArgs> loggings) {
             this.loggings = Output.ofNullable(loggings);
             return this;
         }
-
+        public Builder loggings(BucketLoggingGetArgs... loggings) {
+            return loggings(List.of(loggings));
+        }
         public Builder objectLockConfiguration(@Nullable Output<BucketObjectLockConfigurationGetArgs> objectLockConfiguration) {
             this.objectLockConfiguration = objectLockConfiguration;
             return this;
         }
-
         public Builder objectLockConfiguration(@Nullable BucketObjectLockConfigurationGetArgs objectLockConfiguration) {
             this.objectLockConfiguration = Output.ofNullable(objectLockConfiguration);
             return this;
         }
-
         public Builder policy(@Nullable Output<String> policy) {
             this.policy = policy;
             return this;
         }
-
         public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
-
         public Builder region(@Nullable String region) {
             this.region = Output.ofNullable(region);
             return this;
         }
-
         public Builder replicationConfiguration(@Nullable Output<BucketReplicationConfigurationGetArgs> replicationConfiguration) {
             this.replicationConfiguration = replicationConfiguration;
             return this;
         }
-
         public Builder replicationConfiguration(@Nullable BucketReplicationConfigurationGetArgs replicationConfiguration) {
             this.replicationConfiguration = Output.ofNullable(replicationConfiguration);
             return this;
         }
-
         public Builder requestPayer(@Nullable Output<String> requestPayer) {
             this.requestPayer = requestPayer;
             return this;
         }
-
         public Builder requestPayer(@Nullable String requestPayer) {
             this.requestPayer = Output.ofNullable(requestPayer);
             return this;
         }
-
         public Builder serverSideEncryptionConfiguration(@Nullable Output<BucketServerSideEncryptionConfigurationGetArgs> serverSideEncryptionConfiguration) {
             this.serverSideEncryptionConfiguration = serverSideEncryptionConfiguration;
             return this;
         }
-
         public Builder serverSideEncryptionConfiguration(@Nullable BucketServerSideEncryptionConfigurationGetArgs serverSideEncryptionConfiguration) {
             this.serverSideEncryptionConfiguration = Output.ofNullable(serverSideEncryptionConfiguration);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
-
         public Builder versioning(@Nullable Output<BucketVersioningGetArgs> versioning) {
             this.versioning = versioning;
             return this;
         }
-
         public Builder versioning(@Nullable BucketVersioningGetArgs versioning) {
             this.versioning = Output.ofNullable(versioning);
             return this;
         }
-
         public Builder website(@Nullable Output<BucketWebsiteGetArgs> website) {
             this.website = website;
             return this;
         }
-
         public Builder website(@Nullable BucketWebsiteGetArgs website) {
             this.website = Output.ofNullable(website);
             return this;
         }
-
         public Builder websiteDomain(@Nullable Output<String> websiteDomain) {
             this.websiteDomain = websiteDomain;
             return this;
         }
-
         public Builder websiteDomain(@Nullable String websiteDomain) {
             this.websiteDomain = Output.ofNullable(websiteDomain);
             return this;
         }
-
         public Builder websiteEndpoint(@Nullable Output<String> websiteEndpoint) {
             this.websiteEndpoint = websiteEndpoint;
             return this;
         }
-
         public Builder websiteEndpoint(@Nullable String websiteEndpoint) {
             this.websiteEndpoint = Output.ofNullable(websiteEndpoint);
             return this;
-        }
-        public BucketState build() {
+        }        public BucketState build() {
             return new BucketState(accelerationStatus, acl, arn, bucket, bucketDomainName, bucketPrefix, bucketRegionalDomainName, corsRules, forceDestroy, grants, hostedZoneId, lifecycleRules, loggings, objectLockConfiguration, policy, region, replicationConfiguration, requestPayer, serverSideEncryptionConfiguration, tags, tagsAll, versioning, website, websiteDomain, websiteEndpoint);
         }
     }

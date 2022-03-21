@@ -235,62 +235,56 @@ public final class GetVirtualRouterResult {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder hostedGateway(@Nullable SubResourceResponse hostedGateway) {
             this.hostedGateway = hostedGateway;
             return this;
         }
-
         public Builder hostedSubnet(@Nullable SubResourceResponse hostedSubnet) {
             this.hostedSubnet = hostedSubnet;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder peerings(List<SubResourceResponse> peerings) {
             this.peerings = Objects.requireNonNull(peerings);
             return this;
         }
-
+        public Builder peerings(SubResourceResponse... peerings) {
+            return peerings(List.of(peerings));
+        }
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder virtualRouterAsn(@Nullable Double virtualRouterAsn) {
             this.virtualRouterAsn = virtualRouterAsn;
             return this;
         }
-
         public Builder virtualRouterIps(@Nullable List<String> virtualRouterIps) {
             this.virtualRouterIps = virtualRouterIps;
             return this;
         }
-        public GetVirtualRouterResult build() {
+        public Builder virtualRouterIps(String... virtualRouterIps) {
+            return virtualRouterIps(List.of(virtualRouterIps));
+        }        public GetVirtualRouterResult build() {
             return new GetVirtualRouterResult(etag, hostedGateway, hostedSubnet, id, location, name, peerings, provisioningState, tags, type, virtualRouterAsn, virtualRouterIps);
         }
     }

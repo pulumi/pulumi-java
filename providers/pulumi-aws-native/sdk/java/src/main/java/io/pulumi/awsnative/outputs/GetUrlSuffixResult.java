@@ -43,8 +43,7 @@ public final class GetUrlSuffixResult {
         public Builder urlSuffix(String urlSuffix) {
             this.urlSuffix = Objects.requireNonNull(urlSuffix);
             return this;
-        }
-        public GetUrlSuffixResult build() {
+        }        public GetUrlSuffixResult build() {
             return new GetUrlSuffixResult(urlSuffix);
         }
     }

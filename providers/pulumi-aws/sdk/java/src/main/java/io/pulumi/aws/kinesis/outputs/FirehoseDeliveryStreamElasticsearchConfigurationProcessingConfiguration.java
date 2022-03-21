@@ -73,12 +73,13 @@ public final class FirehoseDeliveryStreamElasticsearchConfigurationProcessingCon
             this.enabled = enabled;
             return this;
         }
-
         public Builder processors(@Nullable List<FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationProcessor> processors) {
             this.processors = processors;
             return this;
         }
-        public FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfiguration build() {
+        public Builder processors(FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationProcessor... processors) {
+            return processors(List.of(processors));
+        }        public FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfiguration build() {
             return new FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfiguration(enabled, processors);
         }
     }

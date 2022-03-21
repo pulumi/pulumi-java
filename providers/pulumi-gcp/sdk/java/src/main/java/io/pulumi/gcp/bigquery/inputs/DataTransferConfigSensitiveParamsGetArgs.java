@@ -57,12 +57,10 @@ public final class DataTransferConfigSensitiveParamsGetArgs extends io.pulumi.re
             this.secretAccessKey = Objects.requireNonNull(secretAccessKey);
             return this;
         }
-
         public Builder secretAccessKey(String secretAccessKey) {
             this.secretAccessKey = Output.of(Objects.requireNonNull(secretAccessKey));
             return this;
-        }
-        public DataTransferConfigSensitiveParamsGetArgs build() {
+        }        public DataTransferConfigSensitiveParamsGetArgs build() {
             return new DataTransferConfigSensitiveParamsGetArgs(secretAccessKey);
         }
     }

@@ -129,27 +129,22 @@ public final class FlexibleAppVersionApiConfig {
             this.authFailAction = authFailAction;
             return this;
         }
-
         public Builder login(@Nullable String login) {
             this.login = login;
             return this;
         }
-
         public Builder script(String script) {
             this.script = Objects.requireNonNull(script);
             return this;
         }
-
         public Builder securityLevel(@Nullable String securityLevel) {
             this.securityLevel = securityLevel;
             return this;
         }
-
         public Builder url(@Nullable String url) {
             this.url = url;
             return this;
-        }
-        public FlexibleAppVersionApiConfig build() {
+        }        public FlexibleAppVersionApiConfig build() {
             return new FlexibleAppVersionApiConfig(authFailAction, login, script, securityLevel, url);
         }
     }

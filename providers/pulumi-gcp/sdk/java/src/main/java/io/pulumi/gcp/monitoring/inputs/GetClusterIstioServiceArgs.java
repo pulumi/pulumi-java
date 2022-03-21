@@ -127,27 +127,22 @@ public final class GetClusterIstioServiceArgs extends io.pulumi.resources.Invoke
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder serviceName(String serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
-
         public Builder serviceNamespace(String serviceNamespace) {
             this.serviceNamespace = Objects.requireNonNull(serviceNamespace);
             return this;
-        }
-        public GetClusterIstioServiceArgs build() {
+        }        public GetClusterIstioServiceArgs build() {
             return new GetClusterIstioServiceArgs(clusterName, location, project, serviceName, serviceNamespace);
         }
     }

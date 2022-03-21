@@ -128,37 +128,33 @@ public final class GetDatabaseInstanceSettingBackupConfiguration extends io.pulu
             this.backupRetentionSettings = Objects.requireNonNull(backupRetentionSettings);
             return this;
         }
-
+        public Builder backupRetentionSettings(GetDatabaseInstanceSettingBackupConfigurationBackupRetentionSetting... backupRetentionSettings) {
+            return backupRetentionSettings(List.of(backupRetentionSettings));
+        }
         public Builder binaryLogEnabled(Boolean binaryLogEnabled) {
             this.binaryLogEnabled = Objects.requireNonNull(binaryLogEnabled);
             return this;
         }
-
         public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder pointInTimeRecoveryEnabled(Boolean pointInTimeRecoveryEnabled) {
             this.pointInTimeRecoveryEnabled = Objects.requireNonNull(pointInTimeRecoveryEnabled);
             return this;
         }
-
         public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public Builder transactionLogRetentionDays(Integer transactionLogRetentionDays) {
             this.transactionLogRetentionDays = Objects.requireNonNull(transactionLogRetentionDays);
             return this;
-        }
-        public GetDatabaseInstanceSettingBackupConfiguration build() {
+        }        public GetDatabaseInstanceSettingBackupConfiguration build() {
             return new GetDatabaseInstanceSettingBackupConfiguration(backupRetentionSettings, binaryLogEnabled, enabled, location, pointInTimeRecoveryEnabled, startTime, transactionLogRetentionDays);
         }
     }

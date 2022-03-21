@@ -105,22 +105,18 @@ public final class DscConfigurationParameterResponse {
             this.defaultValue = defaultValue;
             return this;
         }
-
         public Builder isMandatory(@Nullable Boolean isMandatory) {
             this.isMandatory = isMandatory;
             return this;
         }
-
         public Builder position(@Nullable Integer position) {
             this.position = position;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
-        }
-        public DscConfigurationParameterResponse build() {
+        }        public DscConfigurationParameterResponse build() {
             return new DscConfigurationParameterResponse(defaultValue, isMandatory, position, type);
         }
     }

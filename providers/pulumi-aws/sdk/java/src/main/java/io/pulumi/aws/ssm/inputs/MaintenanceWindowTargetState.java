@@ -141,62 +141,53 @@ public final class MaintenanceWindowTargetState extends io.pulumi.resources.Reso
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder ownerInformation(@Nullable Output<String> ownerInformation) {
             this.ownerInformation = ownerInformation;
             return this;
         }
-
         public Builder ownerInformation(@Nullable String ownerInformation) {
             this.ownerInformation = Output.ofNullable(ownerInformation);
             return this;
         }
-
         public Builder resourceType(@Nullable Output<String> resourceType) {
             this.resourceType = resourceType;
             return this;
         }
-
         public Builder resourceType(@Nullable String resourceType) {
             this.resourceType = Output.ofNullable(resourceType);
             return this;
         }
-
         public Builder targets(@Nullable Output<List<MaintenanceWindowTargetTargetGetArgs>> targets) {
             this.targets = targets;
             return this;
         }
-
         public Builder targets(@Nullable List<MaintenanceWindowTargetTargetGetArgs> targets) {
             this.targets = Output.ofNullable(targets);
             return this;
         }
-
+        public Builder targets(MaintenanceWindowTargetTargetGetArgs... targets) {
+            return targets(List.of(targets));
+        }
         public Builder windowId(@Nullable Output<String> windowId) {
             this.windowId = windowId;
             return this;
         }
-
         public Builder windowId(@Nullable String windowId) {
             this.windowId = Output.ofNullable(windowId);
             return this;
-        }
-        public MaintenanceWindowTargetState build() {
+        }        public MaintenanceWindowTargetState build() {
             return new MaintenanceWindowTargetState(description, name, ownerInformation, resourceType, targets, windowId);
         }
     }

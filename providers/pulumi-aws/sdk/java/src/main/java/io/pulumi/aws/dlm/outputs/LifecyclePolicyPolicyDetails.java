@@ -88,17 +88,20 @@ public final class LifecyclePolicyPolicyDetails {
             this.resourceTypes = Objects.requireNonNull(resourceTypes);
             return this;
         }
-
+        public Builder resourceTypes(String... resourceTypes) {
+            return resourceTypes(List.of(resourceTypes));
+        }
         public Builder schedules(List<LifecyclePolicyPolicyDetailsSchedule> schedules) {
             this.schedules = Objects.requireNonNull(schedules);
             return this;
         }
-
+        public Builder schedules(LifecyclePolicyPolicyDetailsSchedule... schedules) {
+            return schedules(List.of(schedules));
+        }
         public Builder targetTags(Map<String,String> targetTags) {
             this.targetTags = Objects.requireNonNull(targetTags);
             return this;
-        }
-        public LifecyclePolicyPolicyDetails build() {
+        }        public LifecyclePolicyPolicyDetails build() {
             return new LifecyclePolicyPolicyDetails(resourceTypes, schedules, targetTags);
         }
     }

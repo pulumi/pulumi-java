@@ -96,32 +96,29 @@ public final class ReservationAffinityArgs extends io.pulumi.resources.ResourceA
             this.consumeReservationType = consumeReservationType;
             return this;
         }
-
         public Builder consumeReservationType(@Nullable ReservationAffinityConsumeReservationType consumeReservationType) {
             this.consumeReservationType = Output.ofNullable(consumeReservationType);
             return this;
         }
-
         public Builder key(@Nullable Output<String> key) {
             this.key = key;
             return this;
         }
-
         public Builder key(@Nullable String key) {
             this.key = Output.ofNullable(key);
             return this;
         }
-
         public Builder values(@Nullable Output<List<String>> values) {
             this.values = values;
             return this;
         }
-
         public Builder values(@Nullable List<String> values) {
             this.values = Output.ofNullable(values);
             return this;
         }
-        public ReservationAffinityArgs build() {
+        public Builder values(String... values) {
+            return values(List.of(values));
+        }        public ReservationAffinityArgs build() {
             return new ReservationAffinityArgs(consumeReservationType, key, values);
         }
     }

@@ -78,17 +78,14 @@ public final class GetRuntimeArgs extends io.pulumi.resources.InvokeArgs {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder runtimeId(String runtimeId) {
             this.runtimeId = Objects.requireNonNull(runtimeId);
             return this;
-        }
-        public GetRuntimeArgs build() {
+        }        public GetRuntimeArgs build() {
             return new GetRuntimeArgs(location, project, runtimeId);
         }
     }

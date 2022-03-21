@@ -540,157 +540,129 @@ public final class GetBucketObjectResult {
             this.acl = Objects.requireNonNull(acl);
             return this;
         }
-
+        public Builder acl(ObjectAccessControlResponse... acl) {
+            return acl(List.of(acl));
+        }
         public Builder bucket(String bucket) {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
-
         public Builder cacheControl(String cacheControl) {
             this.cacheControl = Objects.requireNonNull(cacheControl);
             return this;
         }
-
         public Builder componentCount(Integer componentCount) {
             this.componentCount = Objects.requireNonNull(componentCount);
             return this;
         }
-
         public Builder contentDisposition(String contentDisposition) {
             this.contentDisposition = Objects.requireNonNull(contentDisposition);
             return this;
         }
-
         public Builder contentEncoding(String contentEncoding) {
             this.contentEncoding = Objects.requireNonNull(contentEncoding);
             return this;
         }
-
         public Builder contentLanguage(String contentLanguage) {
             this.contentLanguage = Objects.requireNonNull(contentLanguage);
             return this;
         }
-
         public Builder contentType(String contentType) {
             this.contentType = Objects.requireNonNull(contentType);
             return this;
         }
-
         public Builder crc32c(String crc32c) {
             this.crc32c = Objects.requireNonNull(crc32c);
             return this;
         }
-
         public Builder customTime(String customTime) {
             this.customTime = Objects.requireNonNull(customTime);
             return this;
         }
-
         public Builder customerEncryption(BucketObjectCustomerEncryptionResponse customerEncryption) {
             this.customerEncryption = Objects.requireNonNull(customerEncryption);
             return this;
         }
-
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder eventBasedHold(Boolean eventBasedHold) {
             this.eventBasedHold = Objects.requireNonNull(eventBasedHold);
             return this;
         }
-
         public Builder generation(String generation) {
             this.generation = Objects.requireNonNull(generation);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder kmsKeyName(String kmsKeyName) {
             this.kmsKeyName = Objects.requireNonNull(kmsKeyName);
             return this;
         }
-
         public Builder md5Hash(String md5Hash) {
             this.md5Hash = Objects.requireNonNull(md5Hash);
             return this;
         }
-
         public Builder mediaLink(String mediaLink) {
             this.mediaLink = Objects.requireNonNull(mediaLink);
             return this;
         }
-
         public Builder metadata(Map<String,String> metadata) {
             this.metadata = Objects.requireNonNull(metadata);
             return this;
         }
-
         public Builder metageneration(String metageneration) {
             this.metageneration = Objects.requireNonNull(metageneration);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder owner(BucketObjectOwnerResponse owner) {
             this.owner = Objects.requireNonNull(owner);
             return this;
         }
-
         public Builder retentionExpirationTime(String retentionExpirationTime) {
             this.retentionExpirationTime = Objects.requireNonNull(retentionExpirationTime);
             return this;
         }
-
         public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
-
         public Builder size(String size) {
             this.size = Objects.requireNonNull(size);
             return this;
         }
-
         public Builder storageClass(String storageClass) {
             this.storageClass = Objects.requireNonNull(storageClass);
             return this;
         }
-
         public Builder temporaryHold(Boolean temporaryHold) {
             this.temporaryHold = Objects.requireNonNull(temporaryHold);
             return this;
         }
-
         public Builder timeCreated(String timeCreated) {
             this.timeCreated = Objects.requireNonNull(timeCreated);
             return this;
         }
-
         public Builder timeDeleted(String timeDeleted) {
             this.timeDeleted = Objects.requireNonNull(timeDeleted);
             return this;
         }
-
         public Builder timeStorageClassUpdated(String timeStorageClassUpdated) {
             this.timeStorageClassUpdated = Objects.requireNonNull(timeStorageClassUpdated);
             return this;
         }
-
         public Builder updated(String updated) {
             this.updated = Objects.requireNonNull(updated);
             return this;
-        }
-        public GetBucketObjectResult build() {
+        }        public GetBucketObjectResult build() {
             return new GetBucketObjectResult(acl, bucket, cacheControl, componentCount, contentDisposition, contentEncoding, contentLanguage, contentType, crc32c, customTime, customerEncryption, etag, eventBasedHold, generation, kind, kmsKeyName, md5Hash, mediaLink, metadata, metageneration, name, owner, retentionExpirationTime, selfLink, size, storageClass, temporaryHold, timeCreated, timeDeleted, timeStorageClassUpdated, updated);
         }
     }

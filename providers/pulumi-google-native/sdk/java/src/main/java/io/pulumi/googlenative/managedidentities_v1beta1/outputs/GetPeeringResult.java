@@ -166,42 +166,34 @@ public final class GetPeeringResult {
             this.authorizedNetwork = Objects.requireNonNull(authorizedNetwork);
             return this;
         }
-
         public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder domainResource(String domainResource) {
             this.domainResource = Objects.requireNonNull(domainResource);
             return this;
         }
-
         public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder statusMessage(String statusMessage) {
             this.statusMessage = Objects.requireNonNull(statusMessage);
             return this;
         }
-
         public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
-        }
-        public GetPeeringResult build() {
+        }        public GetPeeringResult build() {
             return new GetPeeringResult(authorizedNetwork, createTime, domainResource, labels, name, state, statusMessage, updateTime);
         }
     }

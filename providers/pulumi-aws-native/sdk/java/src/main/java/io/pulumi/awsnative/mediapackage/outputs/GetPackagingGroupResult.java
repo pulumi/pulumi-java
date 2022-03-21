@@ -105,22 +105,18 @@ public final class GetPackagingGroupResult {
             this.arn = arn;
             return this;
         }
-
         public Builder authorization(@Nullable PackagingGroupAuthorization authorization) {
             this.authorization = authorization;
             return this;
         }
-
         public Builder domainName(@Nullable String domainName) {
             this.domainName = domainName;
             return this;
         }
-
         public Builder egressAccessLogs(@Nullable PackagingGroupLogConfiguration egressAccessLogs) {
             this.egressAccessLogs = egressAccessLogs;
             return this;
-        }
-        public GetPackagingGroupResult build() {
+        }        public GetPackagingGroupResult build() {
             return new GetPackagingGroupResult(arn, authorization, domainName, egressAccessLogs);
         }
     }

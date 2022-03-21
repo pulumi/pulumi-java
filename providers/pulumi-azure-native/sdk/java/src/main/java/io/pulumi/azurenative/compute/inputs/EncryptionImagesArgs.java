@@ -80,22 +80,21 @@ public final class EncryptionImagesArgs extends io.pulumi.resources.ResourceArgs
             this.dataDiskImages = dataDiskImages;
             return this;
         }
-
         public Builder dataDiskImages(@Nullable List<DataDiskImageEncryptionArgs> dataDiskImages) {
             this.dataDiskImages = Output.ofNullable(dataDiskImages);
             return this;
         }
-
+        public Builder dataDiskImages(DataDiskImageEncryptionArgs... dataDiskImages) {
+            return dataDiskImages(List.of(dataDiskImages));
+        }
         public Builder osDiskImage(@Nullable Output<OSDiskImageEncryptionArgs> osDiskImage) {
             this.osDiskImage = osDiskImage;
             return this;
         }
-
         public Builder osDiskImage(@Nullable OSDiskImageEncryptionArgs osDiskImage) {
             this.osDiskImage = Output.ofNullable(osDiskImage);
             return this;
-        }
-        public EncryptionImagesArgs build() {
+        }        public EncryptionImagesArgs build() {
             return new EncryptionImagesArgs(dataDiskImages, osDiskImage);
         }
     }

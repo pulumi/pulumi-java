@@ -76,12 +76,10 @@ public final class ClientAccessRightResponse extends io.pulumi.resources.InvokeA
             this.accessPermission = Objects.requireNonNull(accessPermission);
             return this;
         }
-
         public Builder client(String client) {
             this.client = Objects.requireNonNull(client);
             return this;
-        }
-        public ClientAccessRightResponse build() {
+        }        public ClientAccessRightResponse build() {
             return new ClientAccessRightResponse(accessPermission, client);
         }
     }

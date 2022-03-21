@@ -143,32 +143,26 @@ public final class ContainerHealthCheckConfig extends io.pulumi.resources.Invoke
             this.healthyThreshold = healthyThreshold;
             return this;
         }
-
         public Builder intervalSeconds(@Nullable Integer intervalSeconds) {
             this.intervalSeconds = intervalSeconds;
             return this;
         }
-
         public Builder path(@Nullable String path) {
             this.path = path;
             return this;
         }
-
         public Builder successCodes(@Nullable String successCodes) {
             this.successCodes = successCodes;
             return this;
         }
-
         public Builder timeoutSeconds(@Nullable Integer timeoutSeconds) {
             this.timeoutSeconds = timeoutSeconds;
             return this;
         }
-
         public Builder unhealthyThreshold(@Nullable Integer unhealthyThreshold) {
             this.unhealthyThreshold = unhealthyThreshold;
             return this;
-        }
-        public ContainerHealthCheckConfig build() {
+        }        public ContainerHealthCheckConfig build() {
             return new ContainerHealthCheckConfig(healthyThreshold, intervalSeconds, path, successCodes, timeoutSeconds, unhealthyThreshold);
         }
     }

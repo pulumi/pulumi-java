@@ -78,32 +78,26 @@ public final class KeyRingArgs extends io.pulumi.resources.ResourceArgs {
             this.keyRingId = Objects.requireNonNull(keyRingId);
             return this;
         }
-
         public Builder keyRingId(String keyRingId) {
             this.keyRingId = Output.of(Objects.requireNonNull(keyRingId));
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
-        }
-        public KeyRingArgs build() {
+        }        public KeyRingArgs build() {
             return new KeyRingArgs(keyRingId, location, project);
         }
     }

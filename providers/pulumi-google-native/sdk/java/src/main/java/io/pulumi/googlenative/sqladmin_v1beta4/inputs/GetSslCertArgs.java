@@ -78,17 +78,14 @@ public final class GetSslCertArgs extends io.pulumi.resources.InvokeArgs {
             this.instance = Objects.requireNonNull(instance);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder sha1Fingerprint(String sha1Fingerprint) {
             this.sha1Fingerprint = Objects.requireNonNull(sha1Fingerprint);
             return this;
-        }
-        public GetSslCertArgs build() {
+        }        public GetSslCertArgs build() {
             return new GetSslCertArgs(instance, project, sha1Fingerprint);
         }
     }

@@ -53,7 +53,9 @@ public final class LoggingConfigurationLoggingConfiguration {
             this.logDestinationConfigs = Objects.requireNonNull(logDestinationConfigs);
             return this;
         }
-        public LoggingConfigurationLoggingConfiguration build() {
+        public Builder logDestinationConfigs(LoggingConfigurationLoggingConfigurationLogDestinationConfig... logDestinationConfigs) {
+            return logDestinationConfigs(List.of(logDestinationConfigs));
+        }        public LoggingConfigurationLoggingConfiguration build() {
             return new LoggingConfigurationLoggingConfiguration(logDestinationConfigs);
         }
     }

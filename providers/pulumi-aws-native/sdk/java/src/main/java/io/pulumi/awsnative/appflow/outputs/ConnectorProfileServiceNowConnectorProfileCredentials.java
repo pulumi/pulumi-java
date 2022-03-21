@@ -69,12 +69,10 @@ public final class ConnectorProfileServiceNowConnectorProfileCredentials {
             this.password = Objects.requireNonNull(password);
             return this;
         }
-
         public Builder username(String username) {
             this.username = Objects.requireNonNull(username);
             return this;
-        }
-        public ConnectorProfileServiceNowConnectorProfileCredentials build() {
+        }        public ConnectorProfileServiceNowConnectorProfileCredentials build() {
             return new ConnectorProfileServiceNowConnectorProfileCredentials(password, username);
         }
     }

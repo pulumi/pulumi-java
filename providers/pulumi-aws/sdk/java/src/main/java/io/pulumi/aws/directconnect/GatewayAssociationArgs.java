@@ -145,62 +145,53 @@ public final class GatewayAssociationArgs extends io.pulumi.resources.ResourceAr
             this.allowedPrefixes = allowedPrefixes;
             return this;
         }
-
         public Builder allowedPrefixes(@Nullable List<String> allowedPrefixes) {
             this.allowedPrefixes = Output.ofNullable(allowedPrefixes);
             return this;
         }
-
+        public Builder allowedPrefixes(String... allowedPrefixes) {
+            return allowedPrefixes(List.of(allowedPrefixes));
+        }
         public Builder associatedGatewayId(@Nullable Output<String> associatedGatewayId) {
             this.associatedGatewayId = associatedGatewayId;
             return this;
         }
-
         public Builder associatedGatewayId(@Nullable String associatedGatewayId) {
             this.associatedGatewayId = Output.ofNullable(associatedGatewayId);
             return this;
         }
-
         public Builder associatedGatewayOwnerAccountId(@Nullable Output<String> associatedGatewayOwnerAccountId) {
             this.associatedGatewayOwnerAccountId = associatedGatewayOwnerAccountId;
             return this;
         }
-
         public Builder associatedGatewayOwnerAccountId(@Nullable String associatedGatewayOwnerAccountId) {
             this.associatedGatewayOwnerAccountId = Output.ofNullable(associatedGatewayOwnerAccountId);
             return this;
         }
-
         public Builder dxGatewayId(Output<String> dxGatewayId) {
             this.dxGatewayId = Objects.requireNonNull(dxGatewayId);
             return this;
         }
-
         public Builder dxGatewayId(String dxGatewayId) {
             this.dxGatewayId = Output.of(Objects.requireNonNull(dxGatewayId));
             return this;
         }
-
         public Builder proposalId(@Nullable Output<String> proposalId) {
             this.proposalId = proposalId;
             return this;
         }
-
         public Builder proposalId(@Nullable String proposalId) {
             this.proposalId = Output.ofNullable(proposalId);
             return this;
         }
-
         public Builder vpnGatewayId(@Nullable Output<String> vpnGatewayId) {
             this.vpnGatewayId = vpnGatewayId;
             return this;
         }
-
         public Builder vpnGatewayId(@Nullable String vpnGatewayId) {
             this.vpnGatewayId = Output.ofNullable(vpnGatewayId);
             return this;
-        }
-        public GatewayAssociationArgs build() {
+        }        public GatewayAssociationArgs build() {
             return new GatewayAssociationArgs(allowedPrefixes, associatedGatewayId, associatedGatewayOwnerAccountId, dxGatewayId, proposalId, vpnGatewayId);
         }
     }

@@ -122,27 +122,22 @@ public final class GetApiPolicyArgs extends io.pulumi.resources.InvokeArgs {
             this.apiId = Objects.requireNonNull(apiId);
             return this;
         }
-
         public Builder format(@Nullable String format) {
             this.format = format;
             return this;
         }
-
         public Builder policyId(String policyId) {
             this.policyId = Objects.requireNonNull(policyId);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder serviceName(String serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
-        }
-        public GetApiPolicyArgs build() {
+        }        public GetApiPolicyArgs build() {
             return new GetApiPolicyArgs(apiId, format, policyId, resourceGroupName, serviceName);
         }
     }

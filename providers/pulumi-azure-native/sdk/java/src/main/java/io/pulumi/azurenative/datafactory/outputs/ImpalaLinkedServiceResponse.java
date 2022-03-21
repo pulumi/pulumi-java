@@ -305,82 +305,69 @@ public final class ImpalaLinkedServiceResponse {
             this.allowHostNameCNMismatch = allowHostNameCNMismatch;
             return this;
         }
-
         public Builder allowSelfSignedServerCert(@Nullable Object allowSelfSignedServerCert) {
             this.allowSelfSignedServerCert = allowSelfSignedServerCert;
             return this;
         }
-
         public Builder annotations(@Nullable List<Object> annotations) {
             this.annotations = annotations;
             return this;
         }
-
+        public Builder annotations(Object... annotations) {
+            return annotations(List.of(annotations));
+        }
         public Builder authenticationType(String authenticationType) {
             this.authenticationType = Objects.requireNonNull(authenticationType);
             return this;
         }
-
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
             this.connectVia = connectVia;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder enableSsl(@Nullable Object enableSsl) {
             this.enableSsl = enableSsl;
             return this;
         }
-
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
             this.encryptedCredential = encryptedCredential;
             return this;
         }
-
         public Builder host(Object host) {
             this.host = Objects.requireNonNull(host);
             return this;
         }
-
         public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder password(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password) {
             this.password = password;
             return this;
         }
-
         public Builder port(@Nullable Object port) {
             this.port = port;
             return this;
         }
-
         public Builder trustedCertPath(@Nullable Object trustedCertPath) {
             this.trustedCertPath = trustedCertPath;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder useSystemTrustStore(@Nullable Object useSystemTrustStore) {
             this.useSystemTrustStore = useSystemTrustStore;
             return this;
         }
-
         public Builder username(@Nullable Object username) {
             this.username = username;
             return this;
-        }
-        public ImpalaLinkedServiceResponse build() {
+        }        public ImpalaLinkedServiceResponse build() {
             return new ImpalaLinkedServiceResponse(allowHostNameCNMismatch, allowSelfSignedServerCert, annotations, authenticationType, connectVia, description, enableSsl, encryptedCredential, host, parameters, password, port, trustedCertPath, type, useSystemTrustStore, username);
         }
     }

@@ -90,22 +90,21 @@ public final class GetLaunchTemplateBlockDeviceMapping extends io.pulumi.resourc
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }
-
         public Builder ebs(List<GetLaunchTemplateBlockDeviceMappingEb> ebs) {
             this.ebs = Objects.requireNonNull(ebs);
             return this;
         }
-
+        public Builder ebs(GetLaunchTemplateBlockDeviceMappingEb... ebs) {
+            return ebs(List.of(ebs));
+        }
         public Builder noDevice(String noDevice) {
             this.noDevice = Objects.requireNonNull(noDevice);
             return this;
         }
-
         public Builder virtualName(String virtualName) {
             this.virtualName = Objects.requireNonNull(virtualName);
             return this;
-        }
-        public GetLaunchTemplateBlockDeviceMapping build() {
+        }        public GetLaunchTemplateBlockDeviceMapping build() {
             return new GetLaunchTemplateBlockDeviceMapping(deviceName, ebs, noDevice, virtualName);
         }
     }

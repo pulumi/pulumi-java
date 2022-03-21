@@ -215,57 +215,52 @@ public final class PostalAddressResponse {
             this.addressLines = Objects.requireNonNull(addressLines);
             return this;
         }
-
+        public Builder addressLines(String... addressLines) {
+            return addressLines(List.of(addressLines));
+        }
         public Builder administrativeArea(String administrativeArea) {
             this.administrativeArea = Objects.requireNonNull(administrativeArea);
             return this;
         }
-
         public Builder languageCode(String languageCode) {
             this.languageCode = Objects.requireNonNull(languageCode);
             return this;
         }
-
         public Builder locality(String locality) {
             this.locality = Objects.requireNonNull(locality);
             return this;
         }
-
         public Builder organization(String organization) {
             this.organization = Objects.requireNonNull(organization);
             return this;
         }
-
         public Builder postalCode(String postalCode) {
             this.postalCode = Objects.requireNonNull(postalCode);
             return this;
         }
-
         public Builder recipients(List<String> recipients) {
             this.recipients = Objects.requireNonNull(recipients);
             return this;
         }
-
+        public Builder recipients(String... recipients) {
+            return recipients(List.of(recipients));
+        }
         public Builder regionCode(String regionCode) {
             this.regionCode = Objects.requireNonNull(regionCode);
             return this;
         }
-
         public Builder revision(Integer revision) {
             this.revision = Objects.requireNonNull(revision);
             return this;
         }
-
         public Builder sortingCode(String sortingCode) {
             this.sortingCode = Objects.requireNonNull(sortingCode);
             return this;
         }
-
         public Builder sublocality(String sublocality) {
             this.sublocality = Objects.requireNonNull(sublocality);
             return this;
-        }
-        public PostalAddressResponse build() {
+        }        public PostalAddressResponse build() {
             return new PostalAddressResponse(addressLines, administrativeArea, languageCode, locality, organization, postalCode, recipients, regionCode, revision, sortingCode, sublocality);
         }
     }

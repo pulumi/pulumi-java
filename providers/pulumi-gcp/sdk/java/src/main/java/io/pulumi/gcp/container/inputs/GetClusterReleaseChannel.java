@@ -50,8 +50,7 @@ public final class GetClusterReleaseChannel extends io.pulumi.resources.InvokeAr
         public Builder channel(String channel) {
             this.channel = Objects.requireNonNull(channel);
             return this;
-        }
-        public GetClusterReleaseChannel build() {
+        }        public GetClusterReleaseChannel build() {
             return new GetClusterReleaseChannel(channel);
         }
     }

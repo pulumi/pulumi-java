@@ -52,8 +52,7 @@ public final class EventSourceMappingSelfManagedEventSource {
         public Builder endpoints(Map<String,String> endpoints) {
             this.endpoints = Objects.requireNonNull(endpoints);
             return this;
-        }
-        public EventSourceMappingSelfManagedEventSource build() {
+        }        public EventSourceMappingSelfManagedEventSource build() {
             return new EventSourceMappingSelfManagedEventSource(endpoints);
         }
     }

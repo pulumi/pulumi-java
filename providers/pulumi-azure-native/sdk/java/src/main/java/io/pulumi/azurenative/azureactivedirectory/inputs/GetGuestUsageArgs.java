@@ -72,12 +72,10 @@ public final class GetGuestUsageArgs extends io.pulumi.resources.InvokeArgs {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceName(String resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
-        }
-        public GetGuestUsageArgs build() {
+        }        public GetGuestUsageArgs build() {
             return new GetGuestUsageArgs(resourceGroupName, resourceName);
         }
     }

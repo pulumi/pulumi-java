@@ -107,22 +107,18 @@ public final class BucketWebsite {
             this.errorDocument = errorDocument;
             return this;
         }
-
         public Builder indexDocument(@Nullable String indexDocument) {
             this.indexDocument = indexDocument;
             return this;
         }
-
         public Builder redirectAllRequestsTo(@Nullable String redirectAllRequestsTo) {
             this.redirectAllRequestsTo = redirectAllRequestsTo;
             return this;
         }
-
         public Builder routingRules(@Nullable Either<String,List<String>> routingRules) {
             this.routingRules = routingRules;
             return this;
-        }
-        public BucketWebsite build() {
+        }        public BucketWebsite build() {
             return new BucketWebsite(errorDocument, indexDocument, redirectAllRequestsTo, routingRules);
         }
     }

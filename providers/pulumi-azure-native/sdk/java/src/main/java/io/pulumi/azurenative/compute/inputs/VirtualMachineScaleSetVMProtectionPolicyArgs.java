@@ -78,22 +78,18 @@ public final class VirtualMachineScaleSetVMProtectionPolicyArgs extends io.pulum
             this.protectFromScaleIn = protectFromScaleIn;
             return this;
         }
-
         public Builder protectFromScaleIn(@Nullable Boolean protectFromScaleIn) {
             this.protectFromScaleIn = Output.ofNullable(protectFromScaleIn);
             return this;
         }
-
         public Builder protectFromScaleSetActions(@Nullable Output<Boolean> protectFromScaleSetActions) {
             this.protectFromScaleSetActions = protectFromScaleSetActions;
             return this;
         }
-
         public Builder protectFromScaleSetActions(@Nullable Boolean protectFromScaleSetActions) {
             this.protectFromScaleSetActions = Output.ofNullable(protectFromScaleSetActions);
             return this;
-        }
-        public VirtualMachineScaleSetVMProtectionPolicyArgs build() {
+        }        public VirtualMachineScaleSetVMProtectionPolicyArgs build() {
             return new VirtualMachineScaleSetVMProtectionPolicyArgs(protectFromScaleIn, protectFromScaleSetActions);
         }
     }

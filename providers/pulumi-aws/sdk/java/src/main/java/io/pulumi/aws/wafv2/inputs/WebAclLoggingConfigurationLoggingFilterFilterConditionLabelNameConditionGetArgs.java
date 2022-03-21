@@ -56,12 +56,10 @@ public final class WebAclLoggingConfigurationLoggingFilterFilterConditionLabelNa
             this.labelName = Objects.requireNonNull(labelName);
             return this;
         }
-
         public Builder labelName(String labelName) {
             this.labelName = Output.of(Objects.requireNonNull(labelName));
             return this;
-        }
-        public WebAclLoggingConfigurationLoggingFilterFilterConditionLabelNameConditionGetArgs build() {
+        }        public WebAclLoggingConfigurationLoggingFilterFilterConditionLabelNameConditionGetArgs build() {
             return new WebAclLoggingConfigurationLoggingFilterFilterConditionLabelNameConditionGetArgs(labelName);
         }
     }

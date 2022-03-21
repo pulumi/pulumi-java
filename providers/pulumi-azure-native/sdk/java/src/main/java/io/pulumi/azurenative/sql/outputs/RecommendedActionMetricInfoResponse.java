@@ -118,27 +118,22 @@ public final class RecommendedActionMetricInfoResponse {
             this.metricName = Objects.requireNonNull(metricName);
             return this;
         }
-
         public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public Builder timeGrain(String timeGrain) {
             this.timeGrain = Objects.requireNonNull(timeGrain);
             return this;
         }
-
         public Builder unit(String unit) {
             this.unit = Objects.requireNonNull(unit);
             return this;
         }
-
         public Builder value(Double value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public RecommendedActionMetricInfoResponse build() {
+        }        public RecommendedActionMetricInfoResponse build() {
             return new RecommendedActionMetricInfoResponse(metricName, startTime, timeGrain, unit, value);
         }
     }

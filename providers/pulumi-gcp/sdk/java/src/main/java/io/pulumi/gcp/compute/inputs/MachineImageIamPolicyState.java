@@ -108,42 +108,34 @@ public final class MachineImageIamPolicyState extends io.pulumi.resources.Resour
             this.etag = etag;
             return this;
         }
-
         public Builder etag(@Nullable String etag) {
             this.etag = Output.ofNullable(etag);
             return this;
         }
-
         public Builder machineImage(@Nullable Output<String> machineImage) {
             this.machineImage = machineImage;
             return this;
         }
-
         public Builder machineImage(@Nullable String machineImage) {
             this.machineImage = Output.ofNullable(machineImage);
             return this;
         }
-
         public Builder policyData(@Nullable Output<String> policyData) {
             this.policyData = policyData;
             return this;
         }
-
         public Builder policyData(@Nullable String policyData) {
             this.policyData = Output.ofNullable(policyData);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
-        }
-        public MachineImageIamPolicyState build() {
+        }        public MachineImageIamPolicyState build() {
             return new MachineImageIamPolicyState(etag, machineImage, policyData, project);
         }
     }

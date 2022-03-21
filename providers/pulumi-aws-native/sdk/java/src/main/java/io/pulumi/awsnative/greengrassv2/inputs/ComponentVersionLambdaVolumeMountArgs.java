@@ -92,42 +92,34 @@ public final class ComponentVersionLambdaVolumeMountArgs extends io.pulumi.resou
             this.addGroupOwner = addGroupOwner;
             return this;
         }
-
         public Builder addGroupOwner(@Nullable Boolean addGroupOwner) {
             this.addGroupOwner = Output.ofNullable(addGroupOwner);
             return this;
         }
-
         public Builder destinationPath(@Nullable Output<String> destinationPath) {
             this.destinationPath = destinationPath;
             return this;
         }
-
         public Builder destinationPath(@Nullable String destinationPath) {
             this.destinationPath = Output.ofNullable(destinationPath);
             return this;
         }
-
         public Builder permission(@Nullable Output<ComponentVersionLambdaFilesystemPermission> permission) {
             this.permission = permission;
             return this;
         }
-
         public Builder permission(@Nullable ComponentVersionLambdaFilesystemPermission permission) {
             this.permission = Output.ofNullable(permission);
             return this;
         }
-
         public Builder sourcePath(@Nullable Output<String> sourcePath) {
             this.sourcePath = sourcePath;
             return this;
         }
-
         public Builder sourcePath(@Nullable String sourcePath) {
             this.sourcePath = Output.ofNullable(sourcePath);
             return this;
-        }
-        public ComponentVersionLambdaVolumeMountArgs build() {
+        }        public ComponentVersionLambdaVolumeMountArgs build() {
             return new ComponentVersionLambdaVolumeMountArgs(addGroupOwner, destinationPath, permission, sourcePath);
         }
     }

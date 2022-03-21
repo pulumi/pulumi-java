@@ -105,22 +105,24 @@ public final class GoogleCloudMlV1__StudyConfigResponse {
             this.algorithm = Objects.requireNonNull(algorithm);
             return this;
         }
-
         public Builder automatedStoppingConfig(GoogleCloudMlV1__AutomatedStoppingConfigResponse automatedStoppingConfig) {
             this.automatedStoppingConfig = Objects.requireNonNull(automatedStoppingConfig);
             return this;
         }
-
         public Builder metrics(List<GoogleCloudMlV1_StudyConfig_MetricSpecResponse> metrics) {
             this.metrics = Objects.requireNonNull(metrics);
             return this;
         }
-
+        public Builder metrics(GoogleCloudMlV1_StudyConfig_MetricSpecResponse... metrics) {
+            return metrics(List.of(metrics));
+        }
         public Builder parameters(List<GoogleCloudMlV1_StudyConfig_ParameterSpecResponse> parameters) {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
-        public GoogleCloudMlV1__StudyConfigResponse build() {
+        public Builder parameters(GoogleCloudMlV1_StudyConfig_ParameterSpecResponse... parameters) {
+            return parameters(List.of(parameters));
+        }        public GoogleCloudMlV1__StudyConfigResponse build() {
             return new GoogleCloudMlV1__StudyConfigResponse(algorithm, automatedStoppingConfig, metrics, parameters);
         }
     }

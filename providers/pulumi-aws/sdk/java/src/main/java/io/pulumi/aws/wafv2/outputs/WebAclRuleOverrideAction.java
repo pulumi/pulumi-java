@@ -72,12 +72,10 @@ public final class WebAclRuleOverrideAction {
             this.count = count;
             return this;
         }
-
         public Builder none(@Nullable WebAclRuleOverrideActionNone none) {
             this.none = none;
             return this;
-        }
-        public WebAclRuleOverrideAction build() {
+        }        public WebAclRuleOverrideAction build() {
             return new WebAclRuleOverrideAction(count, none);
         }
     }

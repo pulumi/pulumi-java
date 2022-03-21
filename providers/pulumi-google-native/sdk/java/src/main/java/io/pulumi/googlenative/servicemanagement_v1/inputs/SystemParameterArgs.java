@@ -94,32 +94,26 @@ public final class SystemParameterArgs extends io.pulumi.resources.ResourceArgs 
             this.httpHeader = httpHeader;
             return this;
         }
-
         public Builder httpHeader(@Nullable String httpHeader) {
             this.httpHeader = Output.ofNullable(httpHeader);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder urlQueryParameter(@Nullable Output<String> urlQueryParameter) {
             this.urlQueryParameter = urlQueryParameter;
             return this;
         }
-
         public Builder urlQueryParameter(@Nullable String urlQueryParameter) {
             this.urlQueryParameter = Output.ofNullable(urlQueryParameter);
             return this;
-        }
-        public SystemParameterArgs build() {
+        }        public SystemParameterArgs build() {
             return new SystemParameterArgs(httpHeader, name, urlQueryParameter);
         }
     }

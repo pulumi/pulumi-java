@@ -137,32 +137,29 @@ public final class ParameterContractResponse {
             this.defaultValue = defaultValue;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder required(@Nullable Boolean required) {
             this.required = required;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder values(@Nullable List<String> values) {
             this.values = values;
             return this;
         }
-        public ParameterContractResponse build() {
+        public Builder values(String... values) {
+            return values(List.of(values));
+        }        public ParameterContractResponse build() {
             return new ParameterContractResponse(defaultValue, description, name, required, type, values);
         }
     }

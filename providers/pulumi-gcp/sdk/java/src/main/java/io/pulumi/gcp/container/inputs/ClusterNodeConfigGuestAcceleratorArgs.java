@@ -91,32 +91,26 @@ public final class ClusterNodeConfigGuestAcceleratorArgs extends io.pulumi.resou
             this.count = Objects.requireNonNull(count);
             return this;
         }
-
         public Builder count(Integer count) {
             this.count = Output.of(Objects.requireNonNull(count));
             return this;
         }
-
         public Builder gpuPartitionSize(@Nullable Output<String> gpuPartitionSize) {
             this.gpuPartitionSize = gpuPartitionSize;
             return this;
         }
-
         public Builder gpuPartitionSize(@Nullable String gpuPartitionSize) {
             this.gpuPartitionSize = Output.ofNullable(gpuPartitionSize);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public ClusterNodeConfigGuestAcceleratorArgs build() {
+        }        public ClusterNodeConfigGuestAcceleratorArgs build() {
             return new ClusterNodeConfigGuestAcceleratorArgs(count, gpuPartitionSize, type);
         }
     }

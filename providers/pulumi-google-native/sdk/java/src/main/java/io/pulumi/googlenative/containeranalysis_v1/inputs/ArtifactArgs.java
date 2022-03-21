@@ -95,32 +95,29 @@ public final class ArtifactArgs extends io.pulumi.resources.ResourceArgs {
             this.checksum = checksum;
             return this;
         }
-
         public Builder checksum(@Nullable String checksum) {
             this.checksum = Output.ofNullable(checksum);
             return this;
         }
-
         public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder names(@Nullable Output<List<String>> names) {
             this.names = names;
             return this;
         }
-
         public Builder names(@Nullable List<String> names) {
             this.names = Output.ofNullable(names);
             return this;
         }
-        public ArtifactArgs build() {
+        public Builder names(String... names) {
+            return names(List.of(names));
+        }        public ArtifactArgs build() {
             return new ArtifactArgs(checksum, id, names);
         }
     }

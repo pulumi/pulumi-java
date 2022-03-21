@@ -150,72 +150,64 @@ public final class ModelIamPolicyArgs extends io.pulumi.resources.ResourceArgs {
             this.auditConfigs = auditConfigs;
             return this;
         }
-
         public Builder auditConfigs(@Nullable List<GoogleIamV1__AuditConfigArgs> auditConfigs) {
             this.auditConfigs = Output.ofNullable(auditConfigs);
             return this;
         }
-
+        public Builder auditConfigs(GoogleIamV1__AuditConfigArgs... auditConfigs) {
+            return auditConfigs(List.of(auditConfigs));
+        }
         public Builder bindings(@Nullable Output<List<GoogleIamV1__BindingArgs>> bindings) {
             this.bindings = bindings;
             return this;
         }
-
         public Builder bindings(@Nullable List<GoogleIamV1__BindingArgs> bindings) {
             this.bindings = Output.ofNullable(bindings);
             return this;
         }
-
+        public Builder bindings(GoogleIamV1__BindingArgs... bindings) {
+            return bindings(List.of(bindings));
+        }
         public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
-
         public Builder etag(@Nullable String etag) {
             this.etag = Output.ofNullable(etag);
             return this;
         }
-
         public Builder modelId(Output<String> modelId) {
             this.modelId = Objects.requireNonNull(modelId);
             return this;
         }
-
         public Builder modelId(String modelId) {
             this.modelId = Output.of(Objects.requireNonNull(modelId));
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder updateMask(@Nullable Output<String> updateMask) {
             this.updateMask = updateMask;
             return this;
         }
-
         public Builder updateMask(@Nullable String updateMask) {
             this.updateMask = Output.ofNullable(updateMask);
             return this;
         }
-
         public Builder version(@Nullable Output<Integer> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable Integer version) {
             this.version = Output.ofNullable(version);
             return this;
-        }
-        public ModelIamPolicyArgs build() {
+        }        public ModelIamPolicyArgs build() {
             return new ModelIamPolicyArgs(auditConfigs, bindings, etag, modelId, project, updateMask, version);
         }
     }

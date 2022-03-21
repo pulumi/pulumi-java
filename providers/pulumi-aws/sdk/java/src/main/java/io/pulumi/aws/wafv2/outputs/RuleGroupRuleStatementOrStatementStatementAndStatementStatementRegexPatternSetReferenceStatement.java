@@ -90,17 +90,17 @@ public final class RuleGroupRuleStatementOrStatementStatementAndStatementStateme
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder fieldToMatch(@Nullable RuleGroupRuleStatementOrStatementStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatch fieldToMatch) {
             this.fieldToMatch = fieldToMatch;
             return this;
         }
-
         public Builder textTransformations(List<RuleGroupRuleStatementOrStatementStatementAndStatementStatementRegexPatternSetReferenceStatementTextTransformation> textTransformations) {
             this.textTransformations = Objects.requireNonNull(textTransformations);
             return this;
         }
-        public RuleGroupRuleStatementOrStatementStatementAndStatementStatementRegexPatternSetReferenceStatement build() {
+        public Builder textTransformations(RuleGroupRuleStatementOrStatementStatementAndStatementStatementRegexPatternSetReferenceStatementTextTransformation... textTransformations) {
+            return textTransformations(List.of(textTransformations));
+        }        public RuleGroupRuleStatementOrStatementStatementAndStatementStatementRegexPatternSetReferenceStatement build() {
             return new RuleGroupRuleStatementOrStatementStatementAndStatementStatementRegexPatternSetReferenceStatement(arn, fieldToMatch, textTransformations);
         }
     }

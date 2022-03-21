@@ -76,12 +76,10 @@ public final class LocationS3Tag extends io.pulumi.resources.InvokeArgs {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public LocationS3Tag build() {
+        }        public LocationS3Tag build() {
             return new LocationS3Tag(key, value);
         }
     }

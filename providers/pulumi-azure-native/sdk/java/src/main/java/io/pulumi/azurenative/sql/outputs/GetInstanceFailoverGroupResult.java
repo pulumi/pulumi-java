@@ -188,47 +188,44 @@ public final class GetInstanceFailoverGroupResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder managedInstancePairs(List<ManagedInstancePairInfoResponse> managedInstancePairs) {
             this.managedInstancePairs = Objects.requireNonNull(managedInstancePairs);
             return this;
         }
-
+        public Builder managedInstancePairs(ManagedInstancePairInfoResponse... managedInstancePairs) {
+            return managedInstancePairs(List.of(managedInstancePairs));
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder partnerRegions(List<PartnerRegionInfoResponse> partnerRegions) {
             this.partnerRegions = Objects.requireNonNull(partnerRegions);
             return this;
         }
-
+        public Builder partnerRegions(PartnerRegionInfoResponse... partnerRegions) {
+            return partnerRegions(List.of(partnerRegions));
+        }
         public Builder readOnlyEndpoint(@Nullable InstanceFailoverGroupReadOnlyEndpointResponse readOnlyEndpoint) {
             this.readOnlyEndpoint = readOnlyEndpoint;
             return this;
         }
-
         public Builder readWriteEndpoint(InstanceFailoverGroupReadWriteEndpointResponse readWriteEndpoint) {
             this.readWriteEndpoint = Objects.requireNonNull(readWriteEndpoint);
             return this;
         }
-
         public Builder replicationRole(String replicationRole) {
             this.replicationRole = Objects.requireNonNull(replicationRole);
             return this;
         }
-
         public Builder replicationState(String replicationState) {
             this.replicationState = Objects.requireNonNull(replicationState);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetInstanceFailoverGroupResult build() {
+        }        public GetInstanceFailoverGroupResult build() {
             return new GetInstanceFailoverGroupResult(id, managedInstancePairs, name, partnerRegions, readOnlyEndpoint, readWriteEndpoint, replicationRole, replicationState, type);
         }
     }

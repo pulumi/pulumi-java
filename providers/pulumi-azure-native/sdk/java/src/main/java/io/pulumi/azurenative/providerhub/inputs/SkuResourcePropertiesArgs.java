@@ -70,22 +70,21 @@ public final class SkuResourcePropertiesArgs extends io.pulumi.resources.Resourc
             this.provisioningState = provisioningState;
             return this;
         }
-
         public Builder provisioningState(@Nullable Either<String,ProvisioningState> provisioningState) {
             this.provisioningState = Output.ofNullable(provisioningState);
             return this;
         }
-
         public Builder skuSettings(Output<List<SkuSettingArgs>> skuSettings) {
             this.skuSettings = Objects.requireNonNull(skuSettings);
             return this;
         }
-
         public Builder skuSettings(List<SkuSettingArgs> skuSettings) {
             this.skuSettings = Output.of(Objects.requireNonNull(skuSettings));
             return this;
         }
-        public SkuResourcePropertiesArgs build() {
+        public Builder skuSettings(SkuSettingArgs... skuSettings) {
+            return skuSettings(List.of(skuSettings));
+        }        public SkuResourcePropertiesArgs build() {
             return new SkuResourcePropertiesArgs(provisioningState, skuSettings);
         }
     }

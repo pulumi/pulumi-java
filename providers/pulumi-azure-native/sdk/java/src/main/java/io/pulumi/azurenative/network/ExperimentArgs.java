@@ -190,92 +190,74 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder enabledState(@Nullable Output<Either<String,State>> enabledState) {
             this.enabledState = enabledState;
             return this;
         }
-
         public Builder enabledState(@Nullable Either<String,State> enabledState) {
             this.enabledState = Output.ofNullable(enabledState);
             return this;
         }
-
         public Builder endpointA(@Nullable Output<ExperimentEndpointArgs> endpointA) {
             this.endpointA = endpointA;
             return this;
         }
-
         public Builder endpointA(@Nullable ExperimentEndpointArgs endpointA) {
             this.endpointA = Output.ofNullable(endpointA);
             return this;
         }
-
         public Builder endpointB(@Nullable Output<ExperimentEndpointArgs> endpointB) {
             this.endpointB = endpointB;
             return this;
         }
-
         public Builder endpointB(@Nullable ExperimentEndpointArgs endpointB) {
             this.endpointB = Output.ofNullable(endpointB);
             return this;
         }
-
         public Builder experimentName(@Nullable Output<String> experimentName) {
             this.experimentName = experimentName;
             return this;
         }
-
         public Builder experimentName(@Nullable String experimentName) {
             this.experimentName = Output.ofNullable(experimentName);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder profileName(Output<String> profileName) {
             this.profileName = Objects.requireNonNull(profileName);
             return this;
         }
-
         public Builder profileName(String profileName) {
             this.profileName = Output.of(Objects.requireNonNull(profileName));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public ExperimentArgs build() {
+        }        public ExperimentArgs build() {
             return new ExperimentArgs(description, enabledState, endpointA, endpointB, experimentName, location, profileName, resourceGroupName, tags);
         }
     }

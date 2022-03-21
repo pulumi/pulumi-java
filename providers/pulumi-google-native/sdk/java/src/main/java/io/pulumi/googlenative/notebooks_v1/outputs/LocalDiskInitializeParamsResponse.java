@@ -118,27 +118,22 @@ public final class LocalDiskInitializeParamsResponse {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder diskName(String diskName) {
             this.diskName = Objects.requireNonNull(diskName);
             return this;
         }
-
         public Builder diskSizeGb(String diskSizeGb) {
             this.diskSizeGb = Objects.requireNonNull(diskSizeGb);
             return this;
         }
-
         public Builder diskType(String diskType) {
             this.diskType = Objects.requireNonNull(diskType);
             return this;
         }
-
         public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
-        }
-        public LocalDiskInitializeParamsResponse build() {
+        }        public LocalDiskInitializeParamsResponse build() {
             return new LocalDiskInitializeParamsResponse(description, diskName, diskSizeGb, diskType, labels);
         }
     }

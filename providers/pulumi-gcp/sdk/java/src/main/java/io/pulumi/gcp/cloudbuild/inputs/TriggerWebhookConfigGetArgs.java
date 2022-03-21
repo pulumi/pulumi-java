@@ -77,22 +77,18 @@ public final class TriggerWebhookConfigGetArgs extends io.pulumi.resources.Resou
             this.secret = Objects.requireNonNull(secret);
             return this;
         }
-
         public Builder secret(String secret) {
             this.secret = Output.of(Objects.requireNonNull(secret));
             return this;
         }
-
         public Builder state(@Nullable Output<String> state) {
             this.state = state;
             return this;
         }
-
         public Builder state(@Nullable String state) {
             this.state = Output.ofNullable(state);
             return this;
-        }
-        public TriggerWebhookConfigGetArgs build() {
+        }        public TriggerWebhookConfigGetArgs build() {
             return new TriggerWebhookConfigGetArgs(secret, state);
         }
     }

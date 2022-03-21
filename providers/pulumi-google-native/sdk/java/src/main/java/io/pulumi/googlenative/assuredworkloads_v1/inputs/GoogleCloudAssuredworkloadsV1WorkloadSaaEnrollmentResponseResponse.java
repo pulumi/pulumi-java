@@ -77,12 +77,13 @@ public final class GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponseRes
             this.setupErrors = Objects.requireNonNull(setupErrors);
             return this;
         }
-
+        public Builder setupErrors(String... setupErrors) {
+            return setupErrors(List.of(setupErrors));
+        }
         public Builder setupStatus(String setupStatus) {
             this.setupStatus = Objects.requireNonNull(setupStatus);
             return this;
-        }
-        public GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponseResponse build() {
+        }        public GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponseResponse build() {
             return new GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponseResponse(setupErrors, setupStatus);
         }
     }

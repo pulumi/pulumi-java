@@ -136,32 +136,26 @@ public final class ConfigurationProfileAssignmentPropertiesResponse {
             this.accountId = accountId;
             return this;
         }
-
         public Builder compliance(@Nullable ConfigurationProfileAssignmentComplianceResponse compliance) {
             this.compliance = compliance;
             return this;
         }
-
         public Builder configurationProfile(@Nullable String configurationProfile) {
             this.configurationProfile = configurationProfile;
             return this;
         }
-
         public Builder configurationProfilePreferenceId(@Nullable String configurationProfilePreferenceId) {
             this.configurationProfilePreferenceId = configurationProfilePreferenceId;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder targetId(@Nullable String targetId) {
             this.targetId = targetId;
             return this;
-        }
-        public ConfigurationProfileAssignmentPropertiesResponse build() {
+        }        public ConfigurationProfileAssignmentPropertiesResponse build() {
             return new ConfigurationProfileAssignmentPropertiesResponse(accountId, compliance, configurationProfile, configurationProfilePreferenceId, provisioningState, targetId);
         }
     }

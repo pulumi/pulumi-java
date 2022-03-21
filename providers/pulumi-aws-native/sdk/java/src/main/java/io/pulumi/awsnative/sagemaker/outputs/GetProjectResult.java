@@ -105,27 +105,22 @@ public final class GetProjectResult {
             this.creationTime = creationTime;
             return this;
         }
-
         public Builder projectArn(@Nullable String projectArn) {
             this.projectArn = projectArn;
             return this;
         }
-
         public Builder projectId(@Nullable String projectId) {
             this.projectId = projectId;
             return this;
         }
-
         public Builder projectStatus(@Nullable ProjectStatus projectStatus) {
             this.projectStatus = projectStatus;
             return this;
         }
-
         public Builder serviceCatalogProvisionedProductDetails(@Nullable ServiceCatalogProvisionedProductDetailsProperties serviceCatalogProvisionedProductDetails) {
             this.serviceCatalogProvisionedProductDetails = serviceCatalogProvisionedProductDetails;
             return this;
-        }
-        public GetProjectResult build() {
+        }        public GetProjectResult build() {
             return new GetProjectResult(creationTime, projectArn, projectId, projectStatus, serviceCatalogProvisionedProductDetails);
         }
     }

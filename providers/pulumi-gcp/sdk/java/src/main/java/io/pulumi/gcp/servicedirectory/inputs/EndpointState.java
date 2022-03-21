@@ -161,72 +161,58 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
             this.address = address;
             return this;
         }
-
         public Builder address(@Nullable String address) {
             this.address = Output.ofNullable(address);
             return this;
         }
-
         public Builder endpointId(@Nullable Output<String> endpointId) {
             this.endpointId = endpointId;
             return this;
         }
-
         public Builder endpointId(@Nullable String endpointId) {
             this.endpointId = Output.ofNullable(endpointId);
             return this;
         }
-
         public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder metadata(@Nullable Map<String,String> metadata) {
             this.metadata = Output.ofNullable(metadata);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder network(@Nullable Output<String> network) {
             this.network = network;
             return this;
         }
-
         public Builder network(@Nullable String network) {
             this.network = Output.ofNullable(network);
             return this;
         }
-
         public Builder port(@Nullable Output<Integer> port) {
             this.port = port;
             return this;
         }
-
         public Builder port(@Nullable Integer port) {
             this.port = Output.ofNullable(port);
             return this;
         }
-
         public Builder service(@Nullable Output<String> service) {
             this.service = service;
             return this;
         }
-
         public Builder service(@Nullable String service) {
             this.service = Output.ofNullable(service);
             return this;
-        }
-        public EndpointState build() {
+        }        public EndpointState build() {
             return new EndpointState(address, endpointId, metadata, name, network, port, service);
         }
     }

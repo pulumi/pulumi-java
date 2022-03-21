@@ -73,22 +73,18 @@ public final class GetArchiveResult {
             this.arn = arn;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder eventPattern(@Nullable Object eventPattern) {
             this.eventPattern = eventPattern;
             return this;
         }
-
         public Builder retentionDays(@Nullable Integer retentionDays) {
             this.retentionDays = retentionDays;
             return this;
-        }
-        public GetArchiveResult build() {
+        }        public GetArchiveResult build() {
             return new GetArchiveResult(arn, description, eventPattern, retentionDays);
         }
     }

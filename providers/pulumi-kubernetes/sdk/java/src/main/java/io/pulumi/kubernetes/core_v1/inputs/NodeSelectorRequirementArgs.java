@@ -103,32 +103,29 @@ public final class NodeSelectorRequirementArgs extends io.pulumi.resources.Resou
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder key(String key) {
             this.key = Output.of(Objects.requireNonNull(key));
             return this;
         }
-
         public Builder operator(Output<String> operator) {
             this.operator = Objects.requireNonNull(operator);
             return this;
         }
-
         public Builder operator(String operator) {
             this.operator = Output.of(Objects.requireNonNull(operator));
             return this;
         }
-
         public Builder values(@Nullable Output<List<String>> values) {
             this.values = values;
             return this;
         }
-
         public Builder values(@Nullable List<String> values) {
             this.values = Output.ofNullable(values);
             return this;
         }
-        public NodeSelectorRequirementArgs build() {
+        public Builder values(String... values) {
+            return values(List.of(values));
+        }        public NodeSelectorRequirementArgs build() {
             return new NodeSelectorRequirementArgs(key, operator, values);
         }
     }

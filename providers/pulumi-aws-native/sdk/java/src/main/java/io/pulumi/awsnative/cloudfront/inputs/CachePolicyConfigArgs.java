@@ -116,62 +116,50 @@ public final class CachePolicyConfigArgs extends io.pulumi.resources.ResourceArg
             this.comment = comment;
             return this;
         }
-
         public Builder comment(@Nullable String comment) {
             this.comment = Output.ofNullable(comment);
             return this;
         }
-
         public Builder defaultTTL(Output<Double> defaultTTL) {
             this.defaultTTL = Objects.requireNonNull(defaultTTL);
             return this;
         }
-
         public Builder defaultTTL(Double defaultTTL) {
             this.defaultTTL = Output.of(Objects.requireNonNull(defaultTTL));
             return this;
         }
-
         public Builder maxTTL(Output<Double> maxTTL) {
             this.maxTTL = Objects.requireNonNull(maxTTL);
             return this;
         }
-
         public Builder maxTTL(Double maxTTL) {
             this.maxTTL = Output.of(Objects.requireNonNull(maxTTL));
             return this;
         }
-
         public Builder minTTL(Output<Double> minTTL) {
             this.minTTL = Objects.requireNonNull(minTTL);
             return this;
         }
-
         public Builder minTTL(Double minTTL) {
             this.minTTL = Output.of(Objects.requireNonNull(minTTL));
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder parametersInCacheKeyAndForwardedToOrigin(Output<CachePolicyParametersInCacheKeyAndForwardedToOriginArgs> parametersInCacheKeyAndForwardedToOrigin) {
             this.parametersInCacheKeyAndForwardedToOrigin = Objects.requireNonNull(parametersInCacheKeyAndForwardedToOrigin);
             return this;
         }
-
         public Builder parametersInCacheKeyAndForwardedToOrigin(CachePolicyParametersInCacheKeyAndForwardedToOriginArgs parametersInCacheKeyAndForwardedToOrigin) {
             this.parametersInCacheKeyAndForwardedToOrigin = Output.of(Objects.requireNonNull(parametersInCacheKeyAndForwardedToOrigin));
             return this;
-        }
-        public CachePolicyConfigArgs build() {
+        }        public CachePolicyConfigArgs build() {
             return new CachePolicyConfigArgs(comment, defaultTTL, maxTTL, minTTL, name, parametersInCacheKeyAndForwardedToOrigin);
         }
     }

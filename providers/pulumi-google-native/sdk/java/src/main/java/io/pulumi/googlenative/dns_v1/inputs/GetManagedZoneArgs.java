@@ -78,17 +78,14 @@ public final class GetManagedZoneArgs extends io.pulumi.resources.InvokeArgs {
             this.clientOperationId = clientOperationId;
             return this;
         }
-
         public Builder managedZone(String managedZone) {
             this.managedZone = Objects.requireNonNull(managedZone);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetManagedZoneArgs build() {
+        }        public GetManagedZoneArgs build() {
             return new GetManagedZoneArgs(clientOperationId, managedZone, project);
         }
     }

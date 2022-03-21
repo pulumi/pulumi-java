@@ -69,12 +69,10 @@ public final class MetricDescriptorMetadataResponse {
             this.ingestDelay = Objects.requireNonNull(ingestDelay);
             return this;
         }
-
         public Builder samplePeriod(String samplePeriod) {
             this.samplePeriod = Objects.requireNonNull(samplePeriod);
             return this;
-        }
-        public MetricDescriptorMetadataResponse build() {
+        }        public MetricDescriptorMetadataResponse build() {
             return new MetricDescriptorMetadataResponse(ingestDelay, samplePeriod);
         }
     }

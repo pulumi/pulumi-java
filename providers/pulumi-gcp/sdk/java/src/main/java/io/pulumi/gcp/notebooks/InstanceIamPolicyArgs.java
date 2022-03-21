@@ -108,42 +108,34 @@ public final class InstanceIamPolicyArgs extends io.pulumi.resources.ResourceArg
             this.instanceName = Objects.requireNonNull(instanceName);
             return this;
         }
-
         public Builder instanceName(String instanceName) {
             this.instanceName = Output.of(Objects.requireNonNull(instanceName));
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder policyData(Output<String> policyData) {
             this.policyData = Objects.requireNonNull(policyData);
             return this;
         }
-
         public Builder policyData(String policyData) {
             this.policyData = Output.of(Objects.requireNonNull(policyData));
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
-        }
-        public InstanceIamPolicyArgs build() {
+        }        public InstanceIamPolicyArgs build() {
             return new InstanceIamPolicyArgs(instanceName, location, policyData, project);
         }
     }

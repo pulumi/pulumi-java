@@ -77,27 +77,22 @@ public final class GetClusterClusterCertificates {
             this.awsHardwareCertificate = Objects.requireNonNull(awsHardwareCertificate);
             return this;
         }
-
         public Builder clusterCertificate(String clusterCertificate) {
             this.clusterCertificate = Objects.requireNonNull(clusterCertificate);
             return this;
         }
-
         public Builder clusterCsr(String clusterCsr) {
             this.clusterCsr = Objects.requireNonNull(clusterCsr);
             return this;
         }
-
         public Builder hsmCertificate(String hsmCertificate) {
             this.hsmCertificate = Objects.requireNonNull(hsmCertificate);
             return this;
         }
-
         public Builder manufacturerHardwareCertificate(String manufacturerHardwareCertificate) {
             this.manufacturerHardwareCertificate = Objects.requireNonNull(manufacturerHardwareCertificate);
             return this;
-        }
-        public GetClusterClusterCertificates build() {
+        }        public GetClusterClusterCertificates build() {
             return new GetClusterClusterCertificates(awsHardwareCertificate, clusterCertificate, clusterCsr, hsmCertificate, manufacturerHardwareCertificate);
         }
     }

@@ -273,77 +273,65 @@ public final class GetDomainNameResult {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder certificateArn(String certificateArn) {
             this.certificateArn = Objects.requireNonNull(certificateArn);
             return this;
         }
-
         public Builder certificateName(String certificateName) {
             this.certificateName = Objects.requireNonNull(certificateName);
             return this;
         }
-
         public Builder certificateUploadDate(String certificateUploadDate) {
             this.certificateUploadDate = Objects.requireNonNull(certificateUploadDate);
             return this;
         }
-
         public Builder cloudfrontDomainName(String cloudfrontDomainName) {
             this.cloudfrontDomainName = Objects.requireNonNull(cloudfrontDomainName);
             return this;
         }
-
         public Builder cloudfrontZoneId(String cloudfrontZoneId) {
             this.cloudfrontZoneId = Objects.requireNonNull(cloudfrontZoneId);
             return this;
         }
-
         public Builder domainName(String domainName) {
             this.domainName = Objects.requireNonNull(domainName);
             return this;
         }
-
         public Builder endpointConfigurations(List<GetDomainNameEndpointConfiguration> endpointConfigurations) {
             this.endpointConfigurations = Objects.requireNonNull(endpointConfigurations);
             return this;
         }
-
+        public Builder endpointConfigurations(GetDomainNameEndpointConfiguration... endpointConfigurations) {
+            return endpointConfigurations(List.of(endpointConfigurations));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder regionalCertificateArn(String regionalCertificateArn) {
             this.regionalCertificateArn = Objects.requireNonNull(regionalCertificateArn);
             return this;
         }
-
         public Builder regionalCertificateName(String regionalCertificateName) {
             this.regionalCertificateName = Objects.requireNonNull(regionalCertificateName);
             return this;
         }
-
         public Builder regionalDomainName(String regionalDomainName) {
             this.regionalDomainName = Objects.requireNonNull(regionalDomainName);
             return this;
         }
-
         public Builder regionalZoneId(String regionalZoneId) {
             this.regionalZoneId = Objects.requireNonNull(regionalZoneId);
             return this;
         }
-
         public Builder securityPolicy(String securityPolicy) {
             this.securityPolicy = Objects.requireNonNull(securityPolicy);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
-        }
-        public GetDomainNameResult build() {
+        }        public GetDomainNameResult build() {
             return new GetDomainNameResult(arn, certificateArn, certificateName, certificateUploadDate, cloudfrontDomainName, cloudfrontZoneId, domainName, endpointConfigurations, id, regionalCertificateArn, regionalCertificateName, regionalDomainName, regionalZoneId, securityPolicy, tags);
         }
     }

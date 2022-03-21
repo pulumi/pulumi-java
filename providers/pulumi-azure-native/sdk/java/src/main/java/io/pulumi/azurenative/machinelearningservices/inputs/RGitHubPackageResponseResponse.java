@@ -56,8 +56,7 @@ public final class RGitHubPackageResponseResponse extends io.pulumi.resources.In
         public Builder repository(@Nullable String repository) {
             this.repository = repository;
             return this;
-        }
-        public RGitHubPackageResponseResponse build() {
+        }        public RGitHubPackageResponseResponse build() {
             return new RGitHubPackageResponseResponse(repository);
         }
     }

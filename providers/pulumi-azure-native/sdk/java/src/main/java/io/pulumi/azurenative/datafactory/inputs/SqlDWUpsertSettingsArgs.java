@@ -78,22 +78,18 @@ public final class SqlDWUpsertSettingsArgs extends io.pulumi.resources.ResourceA
             this.interimSchemaName = interimSchemaName;
             return this;
         }
-
         public Builder interimSchemaName(@Nullable Object interimSchemaName) {
             this.interimSchemaName = Output.ofNullable(interimSchemaName);
             return this;
         }
-
         public Builder keys(@Nullable Output<Object> keys) {
             this.keys = keys;
             return this;
         }
-
         public Builder keys(@Nullable Object keys) {
             this.keys = Output.ofNullable(keys);
             return this;
-        }
-        public SqlDWUpsertSettingsArgs build() {
+        }        public SqlDWUpsertSettingsArgs build() {
             return new SqlDWUpsertSettingsArgs(interimSchemaName, keys);
         }
     }

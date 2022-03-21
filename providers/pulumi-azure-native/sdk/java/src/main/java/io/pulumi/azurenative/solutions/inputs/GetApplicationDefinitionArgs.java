@@ -72,12 +72,10 @@ public final class GetApplicationDefinitionArgs extends io.pulumi.resources.Invo
             this.applicationDefinitionName = Objects.requireNonNull(applicationDefinitionName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetApplicationDefinitionArgs build() {
+        }        public GetApplicationDefinitionArgs build() {
             return new GetApplicationDefinitionArgs(applicationDefinitionName, resourceGroupName);
         }
     }

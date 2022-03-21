@@ -103,22 +103,18 @@ public final class CanaryTimeline {
             this.created = created;
             return this;
         }
-
         public Builder lastModified(@Nullable String lastModified) {
             this.lastModified = lastModified;
             return this;
         }
-
         public Builder lastStarted(@Nullable String lastStarted) {
             this.lastStarted = lastStarted;
             return this;
         }
-
         public Builder lastStopped(@Nullable String lastStopped) {
             this.lastStopped = lastStopped;
             return this;
-        }
-        public CanaryTimeline build() {
+        }        public CanaryTimeline build() {
             return new CanaryTimeline(created, lastModified, lastStarted, lastStopped);
         }
     }

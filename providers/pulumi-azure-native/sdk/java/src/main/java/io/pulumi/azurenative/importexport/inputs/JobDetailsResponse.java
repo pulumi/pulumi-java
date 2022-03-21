@@ -345,92 +345,77 @@ public final class JobDetailsResponse extends io.pulumi.resources.InvokeArgs {
             this.backupDriveManifest = backupDriveManifest;
             return this;
         }
-
         public Builder cancelRequested(@Nullable Boolean cancelRequested) {
             this.cancelRequested = cancelRequested;
             return this;
         }
-
         public Builder deliveryPackage(@Nullable DeliveryPackageInformationResponse deliveryPackage) {
             this.deliveryPackage = deliveryPackage;
             return this;
         }
-
         public Builder diagnosticsPath(@Nullable String diagnosticsPath) {
             this.diagnosticsPath = diagnosticsPath;
             return this;
         }
-
         public Builder driveList(@Nullable List<DriveStatusResponse> driveList) {
             this.driveList = driveList;
             return this;
         }
-
+        public Builder driveList(DriveStatusResponse... driveList) {
+            return driveList(List.of(driveList));
+        }
         public Builder encryptionKey(@Nullable EncryptionKeyDetailsResponse encryptionKey) {
             this.encryptionKey = encryptionKey;
             return this;
         }
-
         public Builder export(@Nullable ExportResponse export) {
             this.export = export;
             return this;
         }
-
         public Builder incompleteBlobListUri(@Nullable String incompleteBlobListUri) {
             this.incompleteBlobListUri = incompleteBlobListUri;
             return this;
         }
-
         public Builder jobType(@Nullable String jobType) {
             this.jobType = jobType;
             return this;
         }
-
         public Builder logLevel(@Nullable String logLevel) {
             this.logLevel = logLevel;
             return this;
         }
-
         public Builder percentComplete(@Nullable Integer percentComplete) {
             this.percentComplete = percentComplete;
             return this;
         }
-
         public Builder provisioningState(@Nullable String provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
-
         public Builder returnAddress(@Nullable ReturnAddressResponse returnAddress) {
             this.returnAddress = returnAddress;
             return this;
         }
-
         public Builder returnPackage(@Nullable PackageInformationResponse returnPackage) {
             this.returnPackage = returnPackage;
             return this;
         }
-
         public Builder returnShipping(@Nullable ReturnShippingResponse returnShipping) {
             this.returnShipping = returnShipping;
             return this;
         }
-
         public Builder shippingInformation(@Nullable ShippingInformationResponse shippingInformation) {
             this.shippingInformation = shippingInformation;
             return this;
         }
-
         public Builder state(@Nullable String state) {
             this.state = state;
             return this;
         }
-
         public Builder storageAccountId(@Nullable String storageAccountId) {
             this.storageAccountId = storageAccountId;
             return this;
-        }
-        public JobDetailsResponse build() {
+        }        public JobDetailsResponse build() {
             return new JobDetailsResponse(backupDriveManifest, cancelRequested, deliveryPackage, diagnosticsPath, driveList, encryptionKey, export, incompleteBlobListUri, jobType, logLevel, percentComplete, provisioningState, returnAddress, returnPackage, returnShipping, shippingInformation, state, storageAccountId);
         }
     }

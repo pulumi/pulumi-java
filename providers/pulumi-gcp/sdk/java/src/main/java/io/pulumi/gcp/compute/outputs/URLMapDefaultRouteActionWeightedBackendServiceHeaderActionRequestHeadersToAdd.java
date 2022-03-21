@@ -90,17 +90,14 @@ public final class URLMapDefaultRouteActionWeightedBackendServiceHeaderActionReq
             this.headerName = headerName;
             return this;
         }
-
         public Builder headerValue(@Nullable String headerValue) {
             this.headerValue = headerValue;
             return this;
         }
-
         public Builder replace(@Nullable Boolean replace) {
             this.replace = replace;
             return this;
-        }
-        public URLMapDefaultRouteActionWeightedBackendServiceHeaderActionRequestHeadersToAdd build() {
+        }        public URLMapDefaultRouteActionWeightedBackendServiceHeaderActionRequestHeadersToAdd build() {
             return new URLMapDefaultRouteActionWeightedBackendServiceHeaderActionRequestHeadersToAdd(headerName, headerValue, replace);
         }
     }

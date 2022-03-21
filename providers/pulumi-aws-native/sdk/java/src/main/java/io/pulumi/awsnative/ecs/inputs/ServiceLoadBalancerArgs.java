@@ -91,42 +91,34 @@ public final class ServiceLoadBalancerArgs extends io.pulumi.resources.ResourceA
             this.containerName = containerName;
             return this;
         }
-
         public Builder containerName(@Nullable String containerName) {
             this.containerName = Output.ofNullable(containerName);
             return this;
         }
-
         public Builder containerPort(@Nullable Output<Integer> containerPort) {
             this.containerPort = containerPort;
             return this;
         }
-
         public Builder containerPort(@Nullable Integer containerPort) {
             this.containerPort = Output.ofNullable(containerPort);
             return this;
         }
-
         public Builder loadBalancerName(@Nullable Output<String> loadBalancerName) {
             this.loadBalancerName = loadBalancerName;
             return this;
         }
-
         public Builder loadBalancerName(@Nullable String loadBalancerName) {
             this.loadBalancerName = Output.ofNullable(loadBalancerName);
             return this;
         }
-
         public Builder targetGroupArn(@Nullable Output<String> targetGroupArn) {
             this.targetGroupArn = targetGroupArn;
             return this;
         }
-
         public Builder targetGroupArn(@Nullable String targetGroupArn) {
             this.targetGroupArn = Output.ofNullable(targetGroupArn);
             return this;
-        }
-        public ServiceLoadBalancerArgs build() {
+        }        public ServiceLoadBalancerArgs build() {
             return new ServiceLoadBalancerArgs(containerName, containerPort, loadBalancerName, targetGroupArn);
         }
     }

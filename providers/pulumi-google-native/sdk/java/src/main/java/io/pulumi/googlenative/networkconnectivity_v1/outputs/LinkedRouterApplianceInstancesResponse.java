@@ -71,12 +71,13 @@ public final class LinkedRouterApplianceInstancesResponse {
             this.instances = Objects.requireNonNull(instances);
             return this;
         }
-
+        public Builder instances(RouterApplianceInstanceResponse... instances) {
+            return instances(List.of(instances));
+        }
         public Builder siteToSiteDataTransfer(Boolean siteToSiteDataTransfer) {
             this.siteToSiteDataTransfer = Objects.requireNonNull(siteToSiteDataTransfer);
             return this;
-        }
-        public LinkedRouterApplianceInstancesResponse build() {
+        }        public LinkedRouterApplianceInstancesResponse build() {
             return new LinkedRouterApplianceInstancesResponse(instances, siteToSiteDataTransfer);
         }
     }

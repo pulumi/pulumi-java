@@ -65,22 +65,18 @@ public final class FunctionConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.comment = Objects.requireNonNull(comment);
             return this;
         }
-
         public Builder comment(String comment) {
             this.comment = Output.of(Objects.requireNonNull(comment));
             return this;
         }
-
         public Builder runtime(Output<String> runtime) {
             this.runtime = Objects.requireNonNull(runtime);
             return this;
         }
-
         public Builder runtime(String runtime) {
             this.runtime = Output.of(Objects.requireNonNull(runtime));
             return this;
-        }
-        public FunctionConfigArgs build() {
+        }        public FunctionConfigArgs build() {
             return new FunctionConfigArgs(comment, runtime);
         }
     }

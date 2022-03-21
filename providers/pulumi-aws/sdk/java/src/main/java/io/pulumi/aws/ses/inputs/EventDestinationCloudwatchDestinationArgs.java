@@ -89,32 +89,26 @@ public final class EventDestinationCloudwatchDestinationArgs extends io.pulumi.r
             this.defaultValue = Objects.requireNonNull(defaultValue);
             return this;
         }
-
         public Builder defaultValue(String defaultValue) {
             this.defaultValue = Output.of(Objects.requireNonNull(defaultValue));
             return this;
         }
-
         public Builder dimensionName(Output<String> dimensionName) {
             this.dimensionName = Objects.requireNonNull(dimensionName);
             return this;
         }
-
         public Builder dimensionName(String dimensionName) {
             this.dimensionName = Output.of(Objects.requireNonNull(dimensionName));
             return this;
         }
-
         public Builder valueSource(Output<String> valueSource) {
             this.valueSource = Objects.requireNonNull(valueSource);
             return this;
         }
-
         public Builder valueSource(String valueSource) {
             this.valueSource = Output.of(Objects.requireNonNull(valueSource));
             return this;
-        }
-        public EventDestinationCloudwatchDestinationArgs build() {
+        }        public EventDestinationCloudwatchDestinationArgs build() {
             return new EventDestinationCloudwatchDestinationArgs(defaultValue, dimensionName, valueSource);
         }
     }

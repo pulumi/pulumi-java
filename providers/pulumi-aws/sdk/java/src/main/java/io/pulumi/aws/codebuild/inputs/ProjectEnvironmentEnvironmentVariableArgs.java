@@ -90,32 +90,26 @@ public final class ProjectEnvironmentEnvironmentVariableArgs extends io.pulumi.r
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = Output.ofNullable(type);
             return this;
         }
-
         public Builder value(Output<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Output.of(Objects.requireNonNull(value));
             return this;
-        }
-        public ProjectEnvironmentEnvironmentVariableArgs build() {
+        }        public ProjectEnvironmentEnvironmentVariableArgs build() {
             return new ProjectEnvironmentEnvironmentVariableArgs(name, type, value);
         }
     }

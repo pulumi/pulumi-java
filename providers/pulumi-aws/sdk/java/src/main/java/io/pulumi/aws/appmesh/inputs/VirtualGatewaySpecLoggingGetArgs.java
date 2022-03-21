@@ -57,12 +57,10 @@ public final class VirtualGatewaySpecLoggingGetArgs extends io.pulumi.resources.
             this.accessLog = accessLog;
             return this;
         }
-
         public Builder accessLog(@Nullable VirtualGatewaySpecLoggingAccessLogGetArgs accessLog) {
             this.accessLog = Output.ofNullable(accessLog);
             return this;
-        }
-        public VirtualGatewaySpecLoggingGetArgs build() {
+        }        public VirtualGatewaySpecLoggingGetArgs build() {
             return new VirtualGatewaySpecLoggingGetArgs(accessLog);
         }
     }

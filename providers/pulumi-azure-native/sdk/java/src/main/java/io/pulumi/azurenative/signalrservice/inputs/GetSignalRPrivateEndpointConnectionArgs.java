@@ -88,17 +88,14 @@ public final class GetSignalRPrivateEndpointConnectionArgs extends io.pulumi.res
             this.privateEndpointConnectionName = Objects.requireNonNull(privateEndpointConnectionName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceName(String resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
-        }
-        public GetSignalRPrivateEndpointConnectionArgs build() {
+        }        public GetSignalRPrivateEndpointConnectionArgs build() {
             return new GetSignalRPrivateEndpointConnectionArgs(privateEndpointConnectionName, resourceGroupName, resourceName);
         }
     }

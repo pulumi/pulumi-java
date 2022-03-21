@@ -106,42 +106,34 @@ public final class AppCustomRuleGetArgs extends io.pulumi.resources.ResourceArgs
             this.condition = condition;
             return this;
         }
-
         public Builder condition(@Nullable String condition) {
             this.condition = Output.ofNullable(condition);
             return this;
         }
-
         public Builder source(Output<String> source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }
-
         public Builder source(String source) {
             this.source = Output.of(Objects.requireNonNull(source));
             return this;
         }
-
         public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = Output.ofNullable(status);
             return this;
         }
-
         public Builder target(Output<String> target) {
             this.target = Objects.requireNonNull(target);
             return this;
         }
-
         public Builder target(String target) {
             this.target = Output.of(Objects.requireNonNull(target));
             return this;
-        }
-        public AppCustomRuleGetArgs build() {
+        }        public AppCustomRuleGetArgs build() {
             return new AppCustomRuleGetArgs(condition, source, status, target);
         }
     }

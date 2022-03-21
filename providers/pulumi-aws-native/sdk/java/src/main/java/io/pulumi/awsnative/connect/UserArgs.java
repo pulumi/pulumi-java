@@ -206,102 +206,88 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
             this.directoryUserId = directoryUserId;
             return this;
         }
-
         public Builder directoryUserId(@Nullable String directoryUserId) {
             this.directoryUserId = Output.ofNullable(directoryUserId);
             return this;
         }
-
         public Builder hierarchyGroupArn(@Nullable Output<String> hierarchyGroupArn) {
             this.hierarchyGroupArn = hierarchyGroupArn;
             return this;
         }
-
         public Builder hierarchyGroupArn(@Nullable String hierarchyGroupArn) {
             this.hierarchyGroupArn = Output.ofNullable(hierarchyGroupArn);
             return this;
         }
-
         public Builder identityInfo(@Nullable Output<UserIdentityInfoArgs> identityInfo) {
             this.identityInfo = identityInfo;
             return this;
         }
-
         public Builder identityInfo(@Nullable UserIdentityInfoArgs identityInfo) {
             this.identityInfo = Output.ofNullable(identityInfo);
             return this;
         }
-
         public Builder instanceArn(Output<String> instanceArn) {
             this.instanceArn = Objects.requireNonNull(instanceArn);
             return this;
         }
-
         public Builder instanceArn(String instanceArn) {
             this.instanceArn = Output.of(Objects.requireNonNull(instanceArn));
             return this;
         }
-
         public Builder password(@Nullable Output<String> password) {
             this.password = password;
             return this;
         }
-
         public Builder password(@Nullable String password) {
             this.password = Output.ofNullable(password);
             return this;
         }
-
         public Builder phoneConfig(Output<UserPhoneConfigArgs> phoneConfig) {
             this.phoneConfig = Objects.requireNonNull(phoneConfig);
             return this;
         }
-
         public Builder phoneConfig(UserPhoneConfigArgs phoneConfig) {
             this.phoneConfig = Output.of(Objects.requireNonNull(phoneConfig));
             return this;
         }
-
         public Builder routingProfileArn(Output<String> routingProfileArn) {
             this.routingProfileArn = Objects.requireNonNull(routingProfileArn);
             return this;
         }
-
         public Builder routingProfileArn(String routingProfileArn) {
             this.routingProfileArn = Output.of(Objects.requireNonNull(routingProfileArn));
             return this;
         }
-
         public Builder securityProfileArns(Output<List<String>> securityProfileArns) {
             this.securityProfileArns = Objects.requireNonNull(securityProfileArns);
             return this;
         }
-
         public Builder securityProfileArns(List<String> securityProfileArns) {
             this.securityProfileArns = Output.of(Objects.requireNonNull(securityProfileArns));
             return this;
         }
-
+        public Builder securityProfileArns(String... securityProfileArns) {
+            return securityProfileArns(List.of(securityProfileArns));
+        }
         public Builder tags(@Nullable Output<List<UserTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<UserTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
+        public Builder tags(UserTagArgs... tags) {
+            return tags(List.of(tags));
+        }
         public Builder username(Output<String> username) {
             this.username = Objects.requireNonNull(username);
             return this;
         }
-
         public Builder username(String username) {
             this.username = Output.of(Objects.requireNonNull(username));
             return this;
-        }
-        public UserArgs build() {
+        }        public UserArgs build() {
             return new UserArgs(directoryUserId, hierarchyGroupArn, identityInfo, instanceArn, password, phoneConfig, routingProfileArn, securityProfileArns, tags, username);
         }
     }

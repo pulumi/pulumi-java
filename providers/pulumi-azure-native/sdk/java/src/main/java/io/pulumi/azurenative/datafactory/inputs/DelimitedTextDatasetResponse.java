@@ -354,92 +354,77 @@ public final class DelimitedTextDatasetResponse extends io.pulumi.resources.Invo
             this.annotations = annotations;
             return this;
         }
-
+        public Builder annotations(Object... annotations) {
+            return annotations(List.of(annotations));
+        }
         public Builder columnDelimiter(@Nullable Object columnDelimiter) {
             this.columnDelimiter = columnDelimiter;
             return this;
         }
-
         public Builder compressionCodec(@Nullable Object compressionCodec) {
             this.compressionCodec = compressionCodec;
             return this;
         }
-
         public Builder compressionLevel(@Nullable Object compressionLevel) {
             this.compressionLevel = compressionLevel;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder encodingName(@Nullable Object encodingName) {
             this.encodingName = encodingName;
             return this;
         }
-
         public Builder escapeChar(@Nullable Object escapeChar) {
             this.escapeChar = escapeChar;
             return this;
         }
-
         public Builder firstRowAsHeader(@Nullable Object firstRowAsHeader) {
             this.firstRowAsHeader = firstRowAsHeader;
             return this;
         }
-
         public Builder folder(@Nullable DatasetResponseFolder folder) {
             this.folder = folder;
             return this;
         }
-
         public Builder linkedServiceName(LinkedServiceReferenceResponse linkedServiceName) {
             this.linkedServiceName = Objects.requireNonNull(linkedServiceName);
             return this;
         }
-
         public Builder location(Object location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder nullValue(@Nullable Object nullValue) {
             this.nullValue = nullValue;
             return this;
         }
-
         public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder quoteChar(@Nullable Object quoteChar) {
             this.quoteChar = quoteChar;
             return this;
         }
-
         public Builder rowDelimiter(@Nullable Object rowDelimiter) {
             this.rowDelimiter = rowDelimiter;
             return this;
         }
-
         public Builder schema(@Nullable Object schema) {
             this.schema = schema;
             return this;
         }
-
         public Builder structure(@Nullable Object structure) {
             this.structure = structure;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public DelimitedTextDatasetResponse build() {
+        }        public DelimitedTextDatasetResponse build() {
             return new DelimitedTextDatasetResponse(annotations, columnDelimiter, compressionCodec, compressionLevel, description, encodingName, escapeChar, firstRowAsHeader, folder, linkedServiceName, location, nullValue, parameters, quoteChar, rowDelimiter, schema, structure, type);
         }
     }

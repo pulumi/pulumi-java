@@ -89,17 +89,14 @@ public final class InstanceVmImage {
             this.imageFamily = imageFamily;
             return this;
         }
-
         public Builder imageName(@Nullable String imageName) {
             this.imageName = imageName;
             return this;
         }
-
         public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
-        }
-        public InstanceVmImage build() {
+        }        public InstanceVmImage build() {
             return new InstanceVmImage(imageFamily, imageName, project);
         }
     }

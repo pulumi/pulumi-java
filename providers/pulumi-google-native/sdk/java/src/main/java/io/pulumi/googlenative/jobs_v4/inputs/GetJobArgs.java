@@ -78,17 +78,14 @@ public final class GetJobArgs extends io.pulumi.resources.InvokeArgs {
             this.jobId = Objects.requireNonNull(jobId);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder tenantId(String tenantId) {
             this.tenantId = Objects.requireNonNull(tenantId);
             return this;
-        }
-        public GetJobArgs build() {
+        }        public GetJobArgs build() {
             return new GetJobArgs(jobId, project, tenantId);
         }
     }

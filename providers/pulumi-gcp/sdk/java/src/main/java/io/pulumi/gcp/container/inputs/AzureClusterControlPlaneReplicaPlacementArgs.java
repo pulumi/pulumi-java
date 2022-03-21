@@ -73,22 +73,18 @@ public final class AzureClusterControlPlaneReplicaPlacementArgs extends io.pulum
             this.azureAvailabilityZone = Objects.requireNonNull(azureAvailabilityZone);
             return this;
         }
-
         public Builder azureAvailabilityZone(String azureAvailabilityZone) {
             this.azureAvailabilityZone = Output.of(Objects.requireNonNull(azureAvailabilityZone));
             return this;
         }
-
         public Builder subnetId(Output<String> subnetId) {
             this.subnetId = Objects.requireNonNull(subnetId);
             return this;
         }
-
         public Builder subnetId(String subnetId) {
             this.subnetId = Output.of(Objects.requireNonNull(subnetId));
             return this;
-        }
-        public AzureClusterControlPlaneReplicaPlacementArgs build() {
+        }        public AzureClusterControlPlaneReplicaPlacementArgs build() {
             return new AzureClusterControlPlaneReplicaPlacementArgs(azureAvailabilityZone, subnetId);
         }
     }

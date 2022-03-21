@@ -78,12 +78,10 @@ public final class WorkspaceKeyDetailsResponse extends io.pulumi.resources.Invok
             this.keyVaultUrl = keyVaultUrl;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
-        }
-        public WorkspaceKeyDetailsResponse build() {
+        }        public WorkspaceKeyDetailsResponse build() {
             return new WorkspaceKeyDetailsResponse(keyVaultUrl, name);
         }
     }

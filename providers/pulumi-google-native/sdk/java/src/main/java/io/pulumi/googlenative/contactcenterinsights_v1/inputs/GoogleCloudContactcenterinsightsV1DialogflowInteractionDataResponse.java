@@ -77,12 +77,10 @@ public final class GoogleCloudContactcenterinsightsV1DialogflowInteractionDataRe
             this.confidence = Objects.requireNonNull(confidence);
             return this;
         }
-
         public Builder dialogflowIntentId(String dialogflowIntentId) {
             this.dialogflowIntentId = Objects.requireNonNull(dialogflowIntentId);
             return this;
-        }
-        public GoogleCloudContactcenterinsightsV1DialogflowInteractionDataResponse build() {
+        }        public GoogleCloudContactcenterinsightsV1DialogflowInteractionDataResponse build() {
             return new GoogleCloudContactcenterinsightsV1DialogflowInteractionDataResponse(confidence, dialogflowIntentId);
         }
     }

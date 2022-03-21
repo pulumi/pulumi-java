@@ -56,12 +56,13 @@ public final class DefaultRolloutSpecificationResponseMediumTraffic {
             this.regions = regions;
             return this;
         }
-
+        public Builder regions(String... regions) {
+            return regions(List.of(regions));
+        }
         public Builder waitDuration(@Nullable String waitDuration) {
             this.waitDuration = waitDuration;
             return this;
-        }
-        public DefaultRolloutSpecificationResponseMediumTraffic build() {
+        }        public DefaultRolloutSpecificationResponseMediumTraffic build() {
             return new DefaultRolloutSpecificationResponseMediumTraffic(regions, waitDuration);
         }
     }

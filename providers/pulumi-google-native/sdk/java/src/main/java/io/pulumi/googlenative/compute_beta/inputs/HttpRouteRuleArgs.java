@@ -197,92 +197,83 @@ public final class HttpRouteRuleArgs extends io.pulumi.resources.ResourceArgs {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder headerAction(@Nullable Output<HttpHeaderActionArgs> headerAction) {
             this.headerAction = headerAction;
             return this;
         }
-
         public Builder headerAction(@Nullable HttpHeaderActionArgs headerAction) {
             this.headerAction = Output.ofNullable(headerAction);
             return this;
         }
-
         public Builder httpFilterConfigs(@Nullable Output<List<HttpFilterConfigArgs>> httpFilterConfigs) {
             this.httpFilterConfigs = httpFilterConfigs;
             return this;
         }
-
         public Builder httpFilterConfigs(@Nullable List<HttpFilterConfigArgs> httpFilterConfigs) {
             this.httpFilterConfigs = Output.ofNullable(httpFilterConfigs);
             return this;
         }
-
+        public Builder httpFilterConfigs(HttpFilterConfigArgs... httpFilterConfigs) {
+            return httpFilterConfigs(List.of(httpFilterConfigs));
+        }
         public Builder httpFilterMetadata(@Nullable Output<List<HttpFilterConfigArgs>> httpFilterMetadata) {
             this.httpFilterMetadata = httpFilterMetadata;
             return this;
         }
-
         public Builder httpFilterMetadata(@Nullable List<HttpFilterConfigArgs> httpFilterMetadata) {
             this.httpFilterMetadata = Output.ofNullable(httpFilterMetadata);
             return this;
         }
-
+        public Builder httpFilterMetadata(HttpFilterConfigArgs... httpFilterMetadata) {
+            return httpFilterMetadata(List.of(httpFilterMetadata));
+        }
         public Builder matchRules(@Nullable Output<List<HttpRouteRuleMatchArgs>> matchRules) {
             this.matchRules = matchRules;
             return this;
         }
-
         public Builder matchRules(@Nullable List<HttpRouteRuleMatchArgs> matchRules) {
             this.matchRules = Output.ofNullable(matchRules);
             return this;
         }
-
+        public Builder matchRules(HttpRouteRuleMatchArgs... matchRules) {
+            return matchRules(List.of(matchRules));
+        }
         public Builder priority(@Nullable Output<Integer> priority) {
             this.priority = priority;
             return this;
         }
-
         public Builder priority(@Nullable Integer priority) {
             this.priority = Output.ofNullable(priority);
             return this;
         }
-
         public Builder routeAction(@Nullable Output<HttpRouteActionArgs> routeAction) {
             this.routeAction = routeAction;
             return this;
         }
-
         public Builder routeAction(@Nullable HttpRouteActionArgs routeAction) {
             this.routeAction = Output.ofNullable(routeAction);
             return this;
         }
-
         public Builder service(@Nullable Output<String> service) {
             this.service = service;
             return this;
         }
-
         public Builder service(@Nullable String service) {
             this.service = Output.ofNullable(service);
             return this;
         }
-
         public Builder urlRedirect(@Nullable Output<HttpRedirectActionArgs> urlRedirect) {
             this.urlRedirect = urlRedirect;
             return this;
         }
-
         public Builder urlRedirect(@Nullable HttpRedirectActionArgs urlRedirect) {
             this.urlRedirect = Output.ofNullable(urlRedirect);
             return this;
-        }
-        public HttpRouteRuleArgs build() {
+        }        public HttpRouteRuleArgs build() {
             return new HttpRouteRuleArgs(description, headerAction, httpFilterConfigs, httpFilterMetadata, matchRules, priority, routeAction, service, urlRedirect);
         }
     }

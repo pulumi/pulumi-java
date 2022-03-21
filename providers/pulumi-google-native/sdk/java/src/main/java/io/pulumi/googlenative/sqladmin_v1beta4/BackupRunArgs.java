@@ -316,172 +316,138 @@ public final class BackupRunArgs extends io.pulumi.resources.ResourceArgs {
             this.backupKind = backupKind;
             return this;
         }
-
         public Builder backupKind(@Nullable BackupRunBackupKind backupKind) {
             this.backupKind = Output.ofNullable(backupKind);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder diskEncryptionConfiguration(@Nullable Output<DiskEncryptionConfigurationArgs> diskEncryptionConfiguration) {
             this.diskEncryptionConfiguration = diskEncryptionConfiguration;
             return this;
         }
-
         public Builder diskEncryptionConfiguration(@Nullable DiskEncryptionConfigurationArgs diskEncryptionConfiguration) {
             this.diskEncryptionConfiguration = Output.ofNullable(diskEncryptionConfiguration);
             return this;
         }
-
         public Builder diskEncryptionStatus(@Nullable Output<DiskEncryptionStatusArgs> diskEncryptionStatus) {
             this.diskEncryptionStatus = diskEncryptionStatus;
             return this;
         }
-
         public Builder diskEncryptionStatus(@Nullable DiskEncryptionStatusArgs diskEncryptionStatus) {
             this.diskEncryptionStatus = Output.ofNullable(diskEncryptionStatus);
             return this;
         }
-
         public Builder endTime(@Nullable Output<String> endTime) {
             this.endTime = endTime;
             return this;
         }
-
         public Builder endTime(@Nullable String endTime) {
             this.endTime = Output.ofNullable(endTime);
             return this;
         }
-
         public Builder enqueuedTime(@Nullable Output<String> enqueuedTime) {
             this.enqueuedTime = enqueuedTime;
             return this;
         }
-
         public Builder enqueuedTime(@Nullable String enqueuedTime) {
             this.enqueuedTime = Output.ofNullable(enqueuedTime);
             return this;
         }
-
         public Builder error(@Nullable Output<OperationErrorArgs> error) {
             this.error = error;
             return this;
         }
-
         public Builder error(@Nullable OperationErrorArgs error) {
             this.error = Output.ofNullable(error);
             return this;
         }
-
         public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder instance(Output<String> instance) {
             this.instance = Objects.requireNonNull(instance);
             return this;
         }
-
         public Builder instance(String instance) {
             this.instance = Output.of(Objects.requireNonNull(instance));
             return this;
         }
-
         public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder selfLink(@Nullable Output<String> selfLink) {
             this.selfLink = selfLink;
             return this;
         }
-
         public Builder selfLink(@Nullable String selfLink) {
             this.selfLink = Output.ofNullable(selfLink);
             return this;
         }
-
         public Builder startTime(@Nullable Output<String> startTime) {
             this.startTime = startTime;
             return this;
         }
-
         public Builder startTime(@Nullable String startTime) {
             this.startTime = Output.ofNullable(startTime);
             return this;
         }
-
         public Builder status(@Nullable Output<BackupRunStatus> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable BackupRunStatus status) {
             this.status = Output.ofNullable(status);
             return this;
         }
-
         public Builder type(@Nullable Output<BackupRunType> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable BackupRunType type) {
             this.type = Output.ofNullable(type);
             return this;
         }
-
         public Builder windowStartTime(@Nullable Output<String> windowStartTime) {
             this.windowStartTime = windowStartTime;
             return this;
         }
-
         public Builder windowStartTime(@Nullable String windowStartTime) {
             this.windowStartTime = Output.ofNullable(windowStartTime);
             return this;
-        }
-        public BackupRunArgs build() {
+        }        public BackupRunArgs build() {
             return new BackupRunArgs(backupKind, description, diskEncryptionConfiguration, diskEncryptionStatus, endTime, enqueuedTime, error, id, instance, kind, location, project, selfLink, startTime, status, type, windowStartTime);
         }
     }

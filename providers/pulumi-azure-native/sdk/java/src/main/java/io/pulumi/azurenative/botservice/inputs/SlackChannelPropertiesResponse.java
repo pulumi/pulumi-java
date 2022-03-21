@@ -207,52 +207,42 @@ public final class SlackChannelPropertiesResponse extends io.pulumi.resources.In
             this.clientId = clientId;
             return this;
         }
-
         public Builder clientSecret(@Nullable String clientSecret) {
             this.clientSecret = clientSecret;
             return this;
         }
-
         public Builder isEnabled(Boolean isEnabled) {
             this.isEnabled = Objects.requireNonNull(isEnabled);
             return this;
         }
-
         public Builder isValidated(Boolean isValidated) {
             this.isValidated = Objects.requireNonNull(isValidated);
             return this;
         }
-
         public Builder landingPageUrl(@Nullable String landingPageUrl) {
             this.landingPageUrl = landingPageUrl;
             return this;
         }
-
         public Builder lastSubmissionId(String lastSubmissionId) {
             this.lastSubmissionId = Objects.requireNonNull(lastSubmissionId);
             return this;
         }
-
         public Builder redirectAction(String redirectAction) {
             this.redirectAction = Objects.requireNonNull(redirectAction);
             return this;
         }
-
         public Builder registerBeforeOAuthFlow(Boolean registerBeforeOAuthFlow) {
             this.registerBeforeOAuthFlow = Objects.requireNonNull(registerBeforeOAuthFlow);
             return this;
         }
-
         public Builder signingSecret(@Nullable String signingSecret) {
             this.signingSecret = signingSecret;
             return this;
         }
-
         public Builder verificationToken(@Nullable String verificationToken) {
             this.verificationToken = verificationToken;
             return this;
-        }
-        public SlackChannelPropertiesResponse build() {
+        }        public SlackChannelPropertiesResponse build() {
             return new SlackChannelPropertiesResponse(clientId, clientSecret, isEnabled, isValidated, landingPageUrl, lastSubmissionId, redirectAction, registerBeforeOAuthFlow, signingSecret, verificationToken);
         }
     }

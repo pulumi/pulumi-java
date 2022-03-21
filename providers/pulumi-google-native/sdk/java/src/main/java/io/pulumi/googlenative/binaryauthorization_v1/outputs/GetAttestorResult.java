@@ -102,22 +102,18 @@ public final class GetAttestorResult {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public Builder userOwnedGrafeasNote(UserOwnedGrafeasNoteResponse userOwnedGrafeasNote) {
             this.userOwnedGrafeasNote = Objects.requireNonNull(userOwnedGrafeasNote);
             return this;
-        }
-        public GetAttestorResult build() {
+        }        public GetAttestorResult build() {
             return new GetAttestorResult(description, name, updateTime, userOwnedGrafeasNote);
         }
     }

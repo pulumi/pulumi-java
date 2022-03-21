@@ -117,27 +117,22 @@ public final class MountPointMapResponse {
             this.mountPoint = Objects.requireNonNull(mountPoint);
             return this;
         }
-
         public Builder mountType(String mountType) {
             this.mountType = Objects.requireNonNull(mountType);
             return this;
         }
-
         public Builder roleId(String roleId) {
             this.roleId = Objects.requireNonNull(roleId);
             return this;
         }
-
         public Builder roleType(String roleType) {
             this.roleType = Objects.requireNonNull(roleType);
             return this;
         }
-
         public Builder shareId(String shareId) {
             this.shareId = Objects.requireNonNull(shareId);
             return this;
-        }
-        public MountPointMapResponse build() {
+        }        public MountPointMapResponse build() {
             return new MountPointMapResponse(mountPoint, mountType, roleId, roleType, shareId);
         }
     }

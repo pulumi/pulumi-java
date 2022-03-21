@@ -53,7 +53,9 @@ public final class GooglePrivacyDlpV2LDiversityResultResponse {
             this.sensitiveValueFrequencyHistogramBuckets = Objects.requireNonNull(sensitiveValueFrequencyHistogramBuckets);
             return this;
         }
-        public GooglePrivacyDlpV2LDiversityResultResponse build() {
+        public Builder sensitiveValueFrequencyHistogramBuckets(GooglePrivacyDlpV2LDiversityHistogramBucketResponse... sensitiveValueFrequencyHistogramBuckets) {
+            return sensitiveValueFrequencyHistogramBuckets(List.of(sensitiveValueFrequencyHistogramBuckets));
+        }        public GooglePrivacyDlpV2LDiversityResultResponse build() {
             return new GooglePrivacyDlpV2LDiversityResultResponse(sensitiveValueFrequencyHistogramBuckets);
         }
     }

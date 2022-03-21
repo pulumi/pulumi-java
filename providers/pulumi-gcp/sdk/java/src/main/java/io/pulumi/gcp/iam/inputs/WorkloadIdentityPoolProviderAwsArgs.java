@@ -56,12 +56,10 @@ public final class WorkloadIdentityPoolProviderAwsArgs extends io.pulumi.resourc
             this.accountId = Objects.requireNonNull(accountId);
             return this;
         }
-
         public Builder accountId(String accountId) {
             this.accountId = Output.of(Objects.requireNonNull(accountId));
             return this;
-        }
-        public WorkloadIdentityPoolProviderAwsArgs build() {
+        }        public WorkloadIdentityPoolProviderAwsArgs build() {
             return new WorkloadIdentityPoolProviderAwsArgs(accountId);
         }
     }

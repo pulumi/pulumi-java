@@ -201,82 +201,75 @@ public final class CxPageArgs extends io.pulumi.resources.ResourceArgs {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
-
         public Builder entryFulfillment(@Nullable Output<CxPageEntryFulfillmentArgs> entryFulfillment) {
             this.entryFulfillment = entryFulfillment;
             return this;
         }
-
         public Builder entryFulfillment(@Nullable CxPageEntryFulfillmentArgs entryFulfillment) {
             this.entryFulfillment = Output.ofNullable(entryFulfillment);
             return this;
         }
-
         public Builder eventHandlers(@Nullable Output<List<CxPageEventHandlerArgs>> eventHandlers) {
             this.eventHandlers = eventHandlers;
             return this;
         }
-
         public Builder eventHandlers(@Nullable List<CxPageEventHandlerArgs> eventHandlers) {
             this.eventHandlers = Output.ofNullable(eventHandlers);
             return this;
         }
-
+        public Builder eventHandlers(CxPageEventHandlerArgs... eventHandlers) {
+            return eventHandlers(List.of(eventHandlers));
+        }
         public Builder form(@Nullable Output<CxPageFormArgs> form) {
             this.form = form;
             return this;
         }
-
         public Builder form(@Nullable CxPageFormArgs form) {
             this.form = Output.ofNullable(form);
             return this;
         }
-
         public Builder languageCode(@Nullable Output<String> languageCode) {
             this.languageCode = languageCode;
             return this;
         }
-
         public Builder languageCode(@Nullable String languageCode) {
             this.languageCode = Output.ofNullable(languageCode);
             return this;
         }
-
         public Builder parent(@Nullable Output<String> parent) {
             this.parent = parent;
             return this;
         }
-
         public Builder parent(@Nullable String parent) {
             this.parent = Output.ofNullable(parent);
             return this;
         }
-
         public Builder transitionRouteGroups(@Nullable Output<List<String>> transitionRouteGroups) {
             this.transitionRouteGroups = transitionRouteGroups;
             return this;
         }
-
         public Builder transitionRouteGroups(@Nullable List<String> transitionRouteGroups) {
             this.transitionRouteGroups = Output.ofNullable(transitionRouteGroups);
             return this;
         }
-
+        public Builder transitionRouteGroups(String... transitionRouteGroups) {
+            return transitionRouteGroups(List.of(transitionRouteGroups));
+        }
         public Builder transitionRoutes(@Nullable Output<List<CxPageTransitionRouteArgs>> transitionRoutes) {
             this.transitionRoutes = transitionRoutes;
             return this;
         }
-
         public Builder transitionRoutes(@Nullable List<CxPageTransitionRouteArgs> transitionRoutes) {
             this.transitionRoutes = Output.ofNullable(transitionRoutes);
             return this;
         }
-        public CxPageArgs build() {
+        public Builder transitionRoutes(CxPageTransitionRouteArgs... transitionRoutes) {
+            return transitionRoutes(List.of(transitionRoutes));
+        }        public CxPageArgs build() {
             return new CxPageArgs(displayName, entryFulfillment, eventHandlers, form, languageCode, parent, transitionRouteGroups, transitionRoutes);
         }
     }

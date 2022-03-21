@@ -76,22 +76,21 @@ public final class RuleGroupRuleStatementOrStatementStatementAndStatementStateme
             this.fieldToMatch = fieldToMatch;
             return this;
         }
-
         public Builder fieldToMatch(@Nullable RuleGroupRuleStatementOrStatementStatementAndStatementStatementXssMatchStatementFieldToMatchArgs fieldToMatch) {
             this.fieldToMatch = Output.ofNullable(fieldToMatch);
             return this;
         }
-
         public Builder textTransformations(Output<List<RuleGroupRuleStatementOrStatementStatementAndStatementStatementXssMatchStatementTextTransformationArgs>> textTransformations) {
             this.textTransformations = Objects.requireNonNull(textTransformations);
             return this;
         }
-
         public Builder textTransformations(List<RuleGroupRuleStatementOrStatementStatementAndStatementStatementXssMatchStatementTextTransformationArgs> textTransformations) {
             this.textTransformations = Output.of(Objects.requireNonNull(textTransformations));
             return this;
         }
-        public RuleGroupRuleStatementOrStatementStatementAndStatementStatementXssMatchStatementArgs build() {
+        public Builder textTransformations(RuleGroupRuleStatementOrStatementStatementAndStatementStatementXssMatchStatementTextTransformationArgs... textTransformations) {
+            return textTransformations(List.of(textTransformations));
+        }        public RuleGroupRuleStatementOrStatementStatementAndStatementStatementXssMatchStatementArgs build() {
             return new RuleGroupRuleStatementOrStatementStatementAndStatementStatementXssMatchStatementArgs(fieldToMatch, textTransformations);
         }
     }

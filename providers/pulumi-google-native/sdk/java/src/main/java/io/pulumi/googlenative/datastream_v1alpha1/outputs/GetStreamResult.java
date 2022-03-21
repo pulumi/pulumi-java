@@ -236,62 +236,53 @@ public final class GetStreamResult {
             this.backfillAll = Objects.requireNonNull(backfillAll);
             return this;
         }
-
         public Builder backfillNone(BackfillNoneStrategyResponse backfillNone) {
             this.backfillNone = Objects.requireNonNull(backfillNone);
             return this;
         }
-
         public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder customerManagedEncryptionKey(String customerManagedEncryptionKey) {
             this.customerManagedEncryptionKey = Objects.requireNonNull(customerManagedEncryptionKey);
             return this;
         }
-
         public Builder destinationConfig(DestinationConfigResponse destinationConfig) {
             this.destinationConfig = Objects.requireNonNull(destinationConfig);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder errors(List<ErrorResponse> errors) {
             this.errors = Objects.requireNonNull(errors);
             return this;
         }
-
+        public Builder errors(ErrorResponse... errors) {
+            return errors(List.of(errors));
+        }
         public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder sourceConfig(SourceConfigResponse sourceConfig) {
             this.sourceConfig = Objects.requireNonNull(sourceConfig);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
-        }
-        public GetStreamResult build() {
+        }        public GetStreamResult build() {
             return new GetStreamResult(backfillAll, backfillNone, createTime, customerManagedEncryptionKey, destinationConfig, displayName, errors, labels, name, sourceConfig, state, updateTime);
         }
     }

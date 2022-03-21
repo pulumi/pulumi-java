@@ -80,22 +80,24 @@ public final class CertificateExtensionConstraintsArgs extends io.pulumi.resourc
             this.additionalExtensions = additionalExtensions;
             return this;
         }
-
         public Builder additionalExtensions(@Nullable List<ObjectIdArgs> additionalExtensions) {
             this.additionalExtensions = Output.ofNullable(additionalExtensions);
             return this;
         }
-
+        public Builder additionalExtensions(ObjectIdArgs... additionalExtensions) {
+            return additionalExtensions(List.of(additionalExtensions));
+        }
         public Builder knownExtensions(@Nullable Output<List<CertificateExtensionConstraintsKnownExtensionsItem>> knownExtensions) {
             this.knownExtensions = knownExtensions;
             return this;
         }
-
         public Builder knownExtensions(@Nullable List<CertificateExtensionConstraintsKnownExtensionsItem> knownExtensions) {
             this.knownExtensions = Output.ofNullable(knownExtensions);
             return this;
         }
-        public CertificateExtensionConstraintsArgs build() {
+        public Builder knownExtensions(CertificateExtensionConstraintsKnownExtensionsItem... knownExtensions) {
+            return knownExtensions(List.of(knownExtensions));
+        }        public CertificateExtensionConstraintsArgs build() {
             return new CertificateExtensionConstraintsArgs(additionalExtensions, knownExtensions);
         }
     }

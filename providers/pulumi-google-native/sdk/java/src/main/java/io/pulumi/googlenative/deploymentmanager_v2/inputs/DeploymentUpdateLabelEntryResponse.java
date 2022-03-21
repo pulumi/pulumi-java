@@ -76,12 +76,10 @@ public final class DeploymentUpdateLabelEntryResponse extends io.pulumi.resource
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public DeploymentUpdateLabelEntryResponse build() {
+        }        public DeploymentUpdateLabelEntryResponse build() {
             return new DeploymentUpdateLabelEntryResponse(key, value);
         }
     }

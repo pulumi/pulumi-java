@@ -141,62 +141,50 @@ public final class WorkforceState extends io.pulumi.resources.ResourceArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder cognitoConfig(@Nullable Output<WorkforceCognitoConfigGetArgs> cognitoConfig) {
             this.cognitoConfig = cognitoConfig;
             return this;
         }
-
         public Builder cognitoConfig(@Nullable WorkforceCognitoConfigGetArgs cognitoConfig) {
             this.cognitoConfig = Output.ofNullable(cognitoConfig);
             return this;
         }
-
         public Builder oidcConfig(@Nullable Output<WorkforceOidcConfigGetArgs> oidcConfig) {
             this.oidcConfig = oidcConfig;
             return this;
         }
-
         public Builder oidcConfig(@Nullable WorkforceOidcConfigGetArgs oidcConfig) {
             this.oidcConfig = Output.ofNullable(oidcConfig);
             return this;
         }
-
         public Builder sourceIpConfig(@Nullable Output<WorkforceSourceIpConfigGetArgs> sourceIpConfig) {
             this.sourceIpConfig = sourceIpConfig;
             return this;
         }
-
         public Builder sourceIpConfig(@Nullable WorkforceSourceIpConfigGetArgs sourceIpConfig) {
             this.sourceIpConfig = Output.ofNullable(sourceIpConfig);
             return this;
         }
-
         public Builder subdomain(@Nullable Output<String> subdomain) {
             this.subdomain = subdomain;
             return this;
         }
-
         public Builder subdomain(@Nullable String subdomain) {
             this.subdomain = Output.ofNullable(subdomain);
             return this;
         }
-
         public Builder workforceName(@Nullable Output<String> workforceName) {
             this.workforceName = workforceName;
             return this;
         }
-
         public Builder workforceName(@Nullable String workforceName) {
             this.workforceName = Output.ofNullable(workforceName);
             return this;
-        }
-        public WorkforceState build() {
+        }        public WorkforceState build() {
             return new WorkforceState(arn, cognitoConfig, oidcConfig, sourceIpConfig, subdomain, workforceName);
         }
     }

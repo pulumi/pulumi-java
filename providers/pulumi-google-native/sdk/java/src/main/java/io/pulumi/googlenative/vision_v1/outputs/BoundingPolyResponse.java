@@ -71,12 +71,16 @@ public final class BoundingPolyResponse {
             this.normalizedVertices = Objects.requireNonNull(normalizedVertices);
             return this;
         }
-
+        public Builder normalizedVertices(NormalizedVertexResponse... normalizedVertices) {
+            return normalizedVertices(List.of(normalizedVertices));
+        }
         public Builder vertices(List<VertexResponse> vertices) {
             this.vertices = Objects.requireNonNull(vertices);
             return this;
         }
-        public BoundingPolyResponse build() {
+        public Builder vertices(VertexResponse... vertices) {
+            return vertices(List.of(vertices));
+        }        public BoundingPolyResponse build() {
             return new BoundingPolyResponse(normalizedVertices, vertices);
         }
     }

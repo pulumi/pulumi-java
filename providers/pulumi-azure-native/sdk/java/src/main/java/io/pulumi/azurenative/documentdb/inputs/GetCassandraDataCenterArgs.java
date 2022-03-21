@@ -88,17 +88,14 @@ public final class GetCassandraDataCenterArgs extends io.pulumi.resources.Invoke
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
-
         public Builder dataCenterName(String dataCenterName) {
             this.dataCenterName = Objects.requireNonNull(dataCenterName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetCassandraDataCenterArgs build() {
+        }        public GetCassandraDataCenterArgs build() {
             return new GetCassandraDataCenterArgs(clusterName, dataCenterName, resourceGroupName);
         }
     }

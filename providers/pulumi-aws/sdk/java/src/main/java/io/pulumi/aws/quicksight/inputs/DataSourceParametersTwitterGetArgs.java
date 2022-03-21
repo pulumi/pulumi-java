@@ -74,22 +74,18 @@ public final class DataSourceParametersTwitterGetArgs extends io.pulumi.resource
             this.maxRows = Objects.requireNonNull(maxRows);
             return this;
         }
-
         public Builder maxRows(Integer maxRows) {
             this.maxRows = Output.of(Objects.requireNonNull(maxRows));
             return this;
         }
-
         public Builder query(Output<String> query) {
             this.query = Objects.requireNonNull(query);
             return this;
         }
-
         public Builder query(String query) {
             this.query = Output.of(Objects.requireNonNull(query));
             return this;
-        }
-        public DataSourceParametersTwitterGetArgs build() {
+        }        public DataSourceParametersTwitterGetArgs build() {
             return new DataSourceParametersTwitterGetArgs(maxRows, query);
         }
     }

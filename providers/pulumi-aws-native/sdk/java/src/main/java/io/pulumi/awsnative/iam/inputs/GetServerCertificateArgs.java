@@ -50,8 +50,7 @@ public final class GetServerCertificateArgs extends io.pulumi.resources.InvokeAr
         public Builder serverCertificateName(String serverCertificateName) {
             this.serverCertificateName = Objects.requireNonNull(serverCertificateName);
             return this;
-        }
-        public GetServerCertificateArgs build() {
+        }        public GetServerCertificateArgs build() {
             return new GetServerCertificateArgs(serverCertificateName);
         }
     }

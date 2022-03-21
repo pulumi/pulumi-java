@@ -303,82 +303,72 @@ public final class GetOpenShiftManagedClusterResult {
             this.agentPoolProfiles = agentPoolProfiles;
             return this;
         }
-
+        public Builder agentPoolProfiles(OpenShiftManagedClusterAgentPoolProfileResponse... agentPoolProfiles) {
+            return agentPoolProfiles(List.of(agentPoolProfiles));
+        }
         public Builder authProfile(@Nullable OpenShiftManagedClusterAuthProfileResponse authProfile) {
             this.authProfile = authProfile;
             return this;
         }
-
         public Builder clusterVersion(String clusterVersion) {
             this.clusterVersion = Objects.requireNonNull(clusterVersion);
             return this;
         }
-
         public Builder fqdn(String fqdn) {
             this.fqdn = Objects.requireNonNull(fqdn);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder masterPoolProfile(@Nullable OpenShiftManagedClusterMasterPoolProfileResponse masterPoolProfile) {
             this.masterPoolProfile = masterPoolProfile;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder networkProfile(@Nullable NetworkProfileResponse networkProfile) {
             this.networkProfile = networkProfile;
             return this;
         }
-
         public Builder openShiftVersion(String openShiftVersion) {
             this.openShiftVersion = Objects.requireNonNull(openShiftVersion);
             return this;
         }
-
         public Builder plan(@Nullable PurchasePlanResponse plan) {
             this.plan = plan;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder publicHostname(String publicHostname) {
             this.publicHostname = Objects.requireNonNull(publicHostname);
             return this;
         }
-
         public Builder routerProfiles(@Nullable List<OpenShiftRouterProfileResponse> routerProfiles) {
             this.routerProfiles = routerProfiles;
             return this;
         }
-
+        public Builder routerProfiles(OpenShiftRouterProfileResponse... routerProfiles) {
+            return routerProfiles(List.of(routerProfiles));
+        }
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetOpenShiftManagedClusterResult build() {
+        }        public GetOpenShiftManagedClusterResult build() {
             return new GetOpenShiftManagedClusterResult(agentPoolProfiles, authProfile, clusterVersion, fqdn, id, location, masterPoolProfile, name, networkProfile, openShiftVersion, plan, provisioningState, publicHostname, routerProfiles, tags, type);
         }
     }

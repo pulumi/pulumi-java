@@ -124,52 +124,42 @@ public final class InstanceDetailsArgs extends io.pulumi.resources.ResourceArgs 
             this.administration = administration;
             return this;
         }
-
         public Builder administration(@Nullable DFPInstanceAdministratorsArgs administration) {
             this.administration = Output.ofNullable(administration);
             return this;
         }
-
         public Builder instanceName(@Nullable Output<String> instanceName) {
             this.instanceName = instanceName;
             return this;
         }
-
         public Builder instanceName(@Nullable String instanceName) {
             this.instanceName = Output.ofNullable(instanceName);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public InstanceDetailsArgs build() {
+        }        public InstanceDetailsArgs build() {
             return new InstanceDetailsArgs(administration, instanceName, location, resourceGroupName, tags);
         }
     }

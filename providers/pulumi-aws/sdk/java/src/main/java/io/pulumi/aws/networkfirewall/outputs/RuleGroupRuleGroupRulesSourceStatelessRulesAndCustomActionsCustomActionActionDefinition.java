@@ -51,8 +51,7 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCu
         public Builder publishMetricAction(RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionPublishMetricAction publishMetricAction) {
             this.publishMetricAction = Objects.requireNonNull(publishMetricAction);
             return this;
-        }
-        public RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinition build() {
+        }        public RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinition build() {
             return new RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinition(publishMetricAction);
         }
     }

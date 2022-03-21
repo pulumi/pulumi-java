@@ -116,62 +116,53 @@ public final class ServerCertificateArgs extends io.pulumi.resources.ResourceArg
             this.certificateBody = certificateBody;
             return this;
         }
-
         public Builder certificateBody(@Nullable String certificateBody) {
             this.certificateBody = Output.ofNullable(certificateBody);
             return this;
         }
-
         public Builder certificateChain(@Nullable Output<String> certificateChain) {
             this.certificateChain = certificateChain;
             return this;
         }
-
         public Builder certificateChain(@Nullable String certificateChain) {
             this.certificateChain = Output.ofNullable(certificateChain);
             return this;
         }
-
         public Builder path(@Nullable Output<String> path) {
             this.path = path;
             return this;
         }
-
         public Builder path(@Nullable String path) {
             this.path = Output.ofNullable(path);
             return this;
         }
-
         public Builder privateKey(@Nullable Output<String> privateKey) {
             this.privateKey = privateKey;
             return this;
         }
-
         public Builder privateKey(@Nullable String privateKey) {
             this.privateKey = Output.ofNullable(privateKey);
             return this;
         }
-
         public Builder serverCertificateName(@Nullable Output<String> serverCertificateName) {
             this.serverCertificateName = serverCertificateName;
             return this;
         }
-
         public Builder serverCertificateName(@Nullable String serverCertificateName) {
             this.serverCertificateName = Output.ofNullable(serverCertificateName);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<ServerCertificateTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<ServerCertificateTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public ServerCertificateArgs build() {
+        public Builder tags(ServerCertificateTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public ServerCertificateArgs build() {
             return new ServerCertificateArgs(certificateBody, certificateChain, path, privateKey, serverCertificateName, tags);
         }
     }

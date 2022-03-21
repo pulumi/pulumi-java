@@ -67,22 +67,18 @@ public final class GlobalTableTimeToLiveSpecificationArgs extends io.pulumi.reso
             this.attributeName = attributeName;
             return this;
         }
-
         public Builder attributeName(@Nullable String attributeName) {
             this.attributeName = Output.ofNullable(attributeName);
             return this;
         }
-
         public Builder enabled(Output<Boolean> enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public Builder enabled(Boolean enabled) {
             this.enabled = Output.of(Objects.requireNonNull(enabled));
             return this;
-        }
-        public GlobalTableTimeToLiveSpecificationArgs build() {
+        }        public GlobalTableTimeToLiveSpecificationArgs build() {
             return new GlobalTableTimeToLiveSpecificationArgs(attributeName, enabled);
         }
     }

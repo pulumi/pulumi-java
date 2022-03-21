@@ -93,17 +93,14 @@ public final class ApplicationUrlDispatchRulesDispatchRule {
             this.domain = domain;
             return this;
         }
-
         public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
-
         public Builder service(String service) {
             this.service = Objects.requireNonNull(service);
             return this;
-        }
-        public ApplicationUrlDispatchRulesDispatchRule build() {
+        }        public ApplicationUrlDispatchRulesDispatchRule build() {
             return new ApplicationUrlDispatchRulesDispatchRule(domain, path, service);
         }
     }

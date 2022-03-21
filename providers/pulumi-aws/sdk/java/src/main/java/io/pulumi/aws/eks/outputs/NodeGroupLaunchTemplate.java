@@ -87,17 +87,14 @@ public final class NodeGroupLaunchTemplate {
             this.id = id;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
-        }
-        public NodeGroupLaunchTemplate build() {
+        }        public NodeGroupLaunchTemplate build() {
             return new NodeGroupLaunchTemplate(id, name, version);
         }
     }

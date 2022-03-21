@@ -95,32 +95,26 @@ public final class StorageBlobDeadLetterDestinationArgs extends io.pulumi.resour
             this.blobContainerName = blobContainerName;
             return this;
         }
-
         public Builder blobContainerName(@Nullable String blobContainerName) {
             this.blobContainerName = Output.ofNullable(blobContainerName);
             return this;
         }
-
         public Builder endpointType(Output<String> endpointType) {
             this.endpointType = Objects.requireNonNull(endpointType);
             return this;
         }
-
         public Builder endpointType(String endpointType) {
             this.endpointType = Output.of(Objects.requireNonNull(endpointType));
             return this;
         }
-
         public Builder resourceId(@Nullable Output<String> resourceId) {
             this.resourceId = resourceId;
             return this;
         }
-
         public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = Output.ofNullable(resourceId);
             return this;
-        }
-        public StorageBlobDeadLetterDestinationArgs build() {
+        }        public StorageBlobDeadLetterDestinationArgs build() {
             return new StorageBlobDeadLetterDestinationArgs(blobContainerName, endpointType, resourceId);
         }
     }

@@ -128,52 +128,42 @@ public final class WindowsBasedSliArgs extends io.pulumi.resources.ResourceArgs 
             this.goodBadMetricFilter = goodBadMetricFilter;
             return this;
         }
-
         public Builder goodBadMetricFilter(@Nullable String goodBadMetricFilter) {
             this.goodBadMetricFilter = Output.ofNullable(goodBadMetricFilter);
             return this;
         }
-
         public Builder goodTotalRatioThreshold(@Nullable Output<PerformanceThresholdArgs> goodTotalRatioThreshold) {
             this.goodTotalRatioThreshold = goodTotalRatioThreshold;
             return this;
         }
-
         public Builder goodTotalRatioThreshold(@Nullable PerformanceThresholdArgs goodTotalRatioThreshold) {
             this.goodTotalRatioThreshold = Output.ofNullable(goodTotalRatioThreshold);
             return this;
         }
-
         public Builder metricMeanInRange(@Nullable Output<MetricRangeArgs> metricMeanInRange) {
             this.metricMeanInRange = metricMeanInRange;
             return this;
         }
-
         public Builder metricMeanInRange(@Nullable MetricRangeArgs metricMeanInRange) {
             this.metricMeanInRange = Output.ofNullable(metricMeanInRange);
             return this;
         }
-
         public Builder metricSumInRange(@Nullable Output<MetricRangeArgs> metricSumInRange) {
             this.metricSumInRange = metricSumInRange;
             return this;
         }
-
         public Builder metricSumInRange(@Nullable MetricRangeArgs metricSumInRange) {
             this.metricSumInRange = Output.ofNullable(metricSumInRange);
             return this;
         }
-
         public Builder windowPeriod(@Nullable Output<String> windowPeriod) {
             this.windowPeriod = windowPeriod;
             return this;
         }
-
         public Builder windowPeriod(@Nullable String windowPeriod) {
             this.windowPeriod = Output.ofNullable(windowPeriod);
             return this;
-        }
-        public WindowsBasedSliArgs build() {
+        }        public WindowsBasedSliArgs build() {
             return new WindowsBasedSliArgs(goodBadMetricFilter, goodTotalRatioThreshold, metricMeanInRange, metricSumInRange, windowPeriod);
         }
     }

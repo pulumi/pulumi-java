@@ -80,22 +80,18 @@ public final class ManagedRuleOverrideArgs extends io.pulumi.resources.ResourceA
             this.ruleId = Objects.requireNonNull(ruleId);
             return this;
         }
-
         public Builder ruleId(String ruleId) {
             this.ruleId = Output.of(Objects.requireNonNull(ruleId));
             return this;
         }
-
         public Builder state(@Nullable Output<Either<String,ManagedRuleEnabledState>> state) {
             this.state = state;
             return this;
         }
-
         public Builder state(@Nullable Either<String,ManagedRuleEnabledState> state) {
             this.state = Output.ofNullable(state);
             return this;
-        }
-        public ManagedRuleOverrideArgs build() {
+        }        public ManagedRuleOverrideArgs build() {
             return new ManagedRuleOverrideArgs(ruleId, state);
         }
     }

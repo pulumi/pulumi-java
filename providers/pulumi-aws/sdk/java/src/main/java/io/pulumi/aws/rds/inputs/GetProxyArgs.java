@@ -54,8 +54,7 @@ public final class GetProxyArgs extends io.pulumi.resources.InvokeArgs {
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public GetProxyArgs build() {
+        }        public GetProxyArgs build() {
             return new GetProxyArgs(name);
         }
     }

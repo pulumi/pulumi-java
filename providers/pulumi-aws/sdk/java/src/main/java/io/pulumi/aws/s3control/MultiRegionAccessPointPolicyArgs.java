@@ -71,22 +71,18 @@ public final class MultiRegionAccessPointPolicyArgs extends io.pulumi.resources.
             this.accountId = accountId;
             return this;
         }
-
         public Builder accountId(@Nullable String accountId) {
             this.accountId = Output.ofNullable(accountId);
             return this;
         }
-
         public Builder details(Output<MultiRegionAccessPointPolicyDetailsArgs> details) {
             this.details = Objects.requireNonNull(details);
             return this;
         }
-
         public Builder details(MultiRegionAccessPointPolicyDetailsArgs details) {
             this.details = Output.of(Objects.requireNonNull(details));
             return this;
-        }
-        public MultiRegionAccessPointPolicyArgs build() {
+        }        public MultiRegionAccessPointPolicyArgs build() {
             return new MultiRegionAccessPointPolicyArgs(accountId, details);
         }
     }

@@ -78,22 +78,18 @@ public final class HostPathVolumeSourceArgs extends io.pulumi.resources.Resource
             this.path = Objects.requireNonNull(path);
             return this;
         }
-
         public Builder path(String path) {
             this.path = Output.of(Objects.requireNonNull(path));
             return this;
         }
-
         public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public HostPathVolumeSourceArgs build() {
+        }        public HostPathVolumeSourceArgs build() {
             return new HostPathVolumeSourceArgs(path, type);
         }
     }

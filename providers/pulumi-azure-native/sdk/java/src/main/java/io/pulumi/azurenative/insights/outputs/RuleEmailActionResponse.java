@@ -91,17 +91,17 @@ public final class RuleEmailActionResponse {
             this.customEmails = customEmails;
             return this;
         }
-
+        public Builder customEmails(String... customEmails) {
+            return customEmails(List.of(customEmails));
+        }
         public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public Builder sendToServiceOwners(@Nullable Boolean sendToServiceOwners) {
             this.sendToServiceOwners = sendToServiceOwners;
             return this;
-        }
-        public RuleEmailActionResponse build() {
+        }        public RuleEmailActionResponse build() {
             return new RuleEmailActionResponse(customEmails, odataType, sendToServiceOwners);
         }
     }

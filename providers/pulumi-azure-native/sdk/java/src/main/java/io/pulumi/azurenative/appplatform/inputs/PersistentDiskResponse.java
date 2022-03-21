@@ -95,17 +95,14 @@ public final class PersistentDiskResponse extends io.pulumi.resources.InvokeArgs
             this.mountPath = mountPath;
             return this;
         }
-
         public Builder sizeInGB(@Nullable Integer sizeInGB) {
             this.sizeInGB = sizeInGB;
             return this;
         }
-
         public Builder usedInGB(Integer usedInGB) {
             this.usedInGB = Objects.requireNonNull(usedInGB);
             return this;
-        }
-        public PersistentDiskResponse build() {
+        }        public PersistentDiskResponse build() {
             return new PersistentDiskResponse(mountPath, sizeInGB, usedInGB);
         }
     }

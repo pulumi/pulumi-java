@@ -85,17 +85,14 @@ public final class TableRangePartitioningRange {
             this.end = Objects.requireNonNull(end);
             return this;
         }
-
         public Builder interval(Integer interval) {
             this.interval = Objects.requireNonNull(interval);
             return this;
         }
-
         public Builder start(Integer start) {
             this.start = Objects.requireNonNull(start);
             return this;
-        }
-        public TableRangePartitioningRange build() {
+        }        public TableRangePartitioningRange build() {
             return new TableRangePartitioningRange(end, interval, start);
         }
     }

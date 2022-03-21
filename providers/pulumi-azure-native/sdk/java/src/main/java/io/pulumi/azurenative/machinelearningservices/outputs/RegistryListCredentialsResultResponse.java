@@ -64,17 +64,17 @@ public final class RegistryListCredentialsResultResponse {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder passwords(@Nullable List<PasswordResponse> passwords) {
             this.passwords = passwords;
             return this;
         }
-
+        public Builder passwords(PasswordResponse... passwords) {
+            return passwords(List.of(passwords));
+        }
         public Builder username(String username) {
             this.username = Objects.requireNonNull(username);
             return this;
-        }
-        public RegistryListCredentialsResultResponse build() {
+        }        public RegistryListCredentialsResultResponse build() {
             return new RegistryListCredentialsResultResponse(location, passwords, username);
         }
     }

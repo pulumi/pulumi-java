@@ -66,22 +66,18 @@ public final class EventLogConfigurationArgs extends io.pulumi.resources.Resourc
             this.filter = filter;
             return this;
         }
-
         public Builder filter(@Nullable String filter) {
             this.filter = Output.ofNullable(filter);
             return this;
         }
-
         public Builder logName(Output<String> logName) {
             this.logName = Objects.requireNonNull(logName);
             return this;
         }
-
         public Builder logName(String logName) {
             this.logName = Output.of(Objects.requireNonNull(logName));
             return this;
-        }
-        public EventLogConfigurationArgs build() {
+        }        public EventLogConfigurationArgs build() {
             return new EventLogConfigurationArgs(filter, logName);
         }
     }

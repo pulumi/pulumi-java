@@ -387,212 +387,170 @@ public final class ACIServiceArgs extends io.pulumi.resources.ResourceArgs {
             this.appInsightsEnabled = appInsightsEnabled;
             return this;
         }
-
         public Builder appInsightsEnabled(@Nullable Boolean appInsightsEnabled) {
             this.appInsightsEnabled = Output.ofNullable(appInsightsEnabled);
             return this;
         }
-
         public Builder authEnabled(@Nullable Output<Boolean> authEnabled) {
             this.authEnabled = authEnabled;
             return this;
         }
-
         public Builder authEnabled(@Nullable Boolean authEnabled) {
             this.authEnabled = Output.ofNullable(authEnabled);
             return this;
         }
-
         public Builder cname(@Nullable Output<String> cname) {
             this.cname = cname;
             return this;
         }
-
         public Builder cname(@Nullable String cname) {
             this.cname = Output.ofNullable(cname);
             return this;
         }
-
         public Builder computeType(Output<String> computeType) {
             this.computeType = Objects.requireNonNull(computeType);
             return this;
         }
-
         public Builder computeType(String computeType) {
             this.computeType = Output.of(Objects.requireNonNull(computeType));
             return this;
         }
-
         public Builder containerResourceRequirements(@Nullable Output<ContainerResourceRequirementsArgs> containerResourceRequirements) {
             this.containerResourceRequirements = containerResourceRequirements;
             return this;
         }
-
         public Builder containerResourceRequirements(@Nullable ContainerResourceRequirementsArgs containerResourceRequirements) {
             this.containerResourceRequirements = Output.ofNullable(containerResourceRequirements);
             return this;
         }
-
         public Builder dataCollection(@Nullable Output<ACIServiceCreateRequestDataCollectionArgs> dataCollection) {
             this.dataCollection = dataCollection;
             return this;
         }
-
         public Builder dataCollection(@Nullable ACIServiceCreateRequestDataCollectionArgs dataCollection) {
             this.dataCollection = Output.ofNullable(dataCollection);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder dnsNameLabel(@Nullable Output<String> dnsNameLabel) {
             this.dnsNameLabel = dnsNameLabel;
             return this;
         }
-
         public Builder dnsNameLabel(@Nullable String dnsNameLabel) {
             this.dnsNameLabel = Output.ofNullable(dnsNameLabel);
             return this;
         }
-
         public Builder encryptionProperties(@Nullable Output<ACIServiceCreateRequestEncryptionPropertiesArgs> encryptionProperties) {
             this.encryptionProperties = encryptionProperties;
             return this;
         }
-
         public Builder encryptionProperties(@Nullable ACIServiceCreateRequestEncryptionPropertiesArgs encryptionProperties) {
             this.encryptionProperties = Output.ofNullable(encryptionProperties);
             return this;
         }
-
         public Builder environmentImageRequest(@Nullable Output<CreateServiceRequestEnvironmentImageRequestArgs> environmentImageRequest) {
             this.environmentImageRequest = environmentImageRequest;
             return this;
         }
-
         public Builder environmentImageRequest(@Nullable CreateServiceRequestEnvironmentImageRequestArgs environmentImageRequest) {
             this.environmentImageRequest = Output.ofNullable(environmentImageRequest);
             return this;
         }
-
         public Builder keys(@Nullable Output<CreateServiceRequestKeysArgs> keys) {
             this.keys = keys;
             return this;
         }
-
         public Builder keys(@Nullable CreateServiceRequestKeysArgs keys) {
             this.keys = Output.ofNullable(keys);
             return this;
         }
-
         public Builder kvTags(@Nullable Output<Map<String,String>> kvTags) {
             this.kvTags = kvTags;
             return this;
         }
-
         public Builder kvTags(@Nullable Map<String,String> kvTags) {
             this.kvTags = Output.ofNullable(kvTags);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder properties(@Nullable Output<Map<String,String>> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder properties(@Nullable Map<String,String> properties) {
             this.properties = Output.ofNullable(properties);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder serviceName(@Nullable Output<String> serviceName) {
             this.serviceName = serviceName;
             return this;
         }
-
         public Builder serviceName(@Nullable String serviceName) {
             this.serviceName = Output.ofNullable(serviceName);
             return this;
         }
-
         public Builder sslCertificate(@Nullable Output<String> sslCertificate) {
             this.sslCertificate = sslCertificate;
             return this;
         }
-
         public Builder sslCertificate(@Nullable String sslCertificate) {
             this.sslCertificate = Output.ofNullable(sslCertificate);
             return this;
         }
-
         public Builder sslEnabled(@Nullable Output<Boolean> sslEnabled) {
             this.sslEnabled = sslEnabled;
             return this;
         }
-
         public Builder sslEnabled(@Nullable Boolean sslEnabled) {
             this.sslEnabled = Output.ofNullable(sslEnabled);
             return this;
         }
-
         public Builder sslKey(@Nullable Output<String> sslKey) {
             this.sslKey = sslKey;
             return this;
         }
-
         public Builder sslKey(@Nullable String sslKey) {
             this.sslKey = Output.ofNullable(sslKey);
             return this;
         }
-
         public Builder vnetConfiguration(@Nullable Output<ACIServiceCreateRequestVnetConfigurationArgs> vnetConfiguration) {
             this.vnetConfiguration = vnetConfiguration;
             return this;
         }
-
         public Builder vnetConfiguration(@Nullable ACIServiceCreateRequestVnetConfigurationArgs vnetConfiguration) {
             this.vnetConfiguration = Output.ofNullable(vnetConfiguration);
             return this;
         }
-
         public Builder workspaceName(Output<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
-
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
             return this;
-        }
-        public ACIServiceArgs build() {
+        }        public ACIServiceArgs build() {
             return new ACIServiceArgs(appInsightsEnabled, authEnabled, cname, computeType, containerResourceRequirements, dataCollection, description, dnsNameLabel, encryptionProperties, environmentImageRequest, keys, kvTags, location, properties, resourceGroupName, serviceName, sslCertificate, sslEnabled, sslKey, vnetConfiguration, workspaceName);
         }
     }

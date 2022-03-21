@@ -157,37 +157,39 @@ public final class GetFlowResult {
             this.description = description;
             return this;
         }
-
         public Builder destinationFlowConfigList(@Nullable List<FlowDestinationFlowConfig> destinationFlowConfigList) {
             this.destinationFlowConfigList = destinationFlowConfigList;
             return this;
         }
-
+        public Builder destinationFlowConfigList(FlowDestinationFlowConfig... destinationFlowConfigList) {
+            return destinationFlowConfigList(List.of(destinationFlowConfigList));
+        }
         public Builder flowArn(@Nullable String flowArn) {
             this.flowArn = flowArn;
             return this;
         }
-
         public Builder sourceFlowConfig(@Nullable FlowSourceFlowConfig sourceFlowConfig) {
             this.sourceFlowConfig = sourceFlowConfig;
             return this;
         }
-
         public Builder tags(@Nullable List<FlowTag> tags) {
             this.tags = tags;
             return this;
         }
-
+        public Builder tags(FlowTag... tags) {
+            return tags(List.of(tags));
+        }
         public Builder tasks(@Nullable List<FlowTask> tasks) {
             this.tasks = tasks;
             return this;
         }
-
+        public Builder tasks(FlowTask... tasks) {
+            return tasks(List.of(tasks));
+        }
         public Builder triggerConfig(@Nullable FlowTriggerConfig triggerConfig) {
             this.triggerConfig = triggerConfig;
             return this;
-        }
-        public GetFlowResult build() {
+        }        public GetFlowResult build() {
             return new GetFlowResult(description, destinationFlowConfigList, flowArn, sourceFlowConfig, tags, tasks, triggerConfig);
         }
     }

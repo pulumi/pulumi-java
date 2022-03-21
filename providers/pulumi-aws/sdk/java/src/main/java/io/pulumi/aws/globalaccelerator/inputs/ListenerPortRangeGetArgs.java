@@ -74,22 +74,18 @@ public final class ListenerPortRangeGetArgs extends io.pulumi.resources.Resource
             this.fromPort = fromPort;
             return this;
         }
-
         public Builder fromPort(@Nullable Integer fromPort) {
             this.fromPort = Output.ofNullable(fromPort);
             return this;
         }
-
         public Builder toPort(@Nullable Output<Integer> toPort) {
             this.toPort = toPort;
             return this;
         }
-
         public Builder toPort(@Nullable Integer toPort) {
             this.toPort = Output.ofNullable(toPort);
             return this;
-        }
-        public ListenerPortRangeGetArgs build() {
+        }        public ListenerPortRangeGetArgs build() {
             return new ListenerPortRangeGetArgs(fromPort, toPort);
         }
     }

@@ -114,42 +114,34 @@ public final class SourceContextArgs extends io.pulumi.resources.ResourceArgs {
             this.cloudRepo = cloudRepo;
             return this;
         }
-
         public Builder cloudRepo(@Nullable CloudRepoSourceContextArgs cloudRepo) {
             this.cloudRepo = Output.ofNullable(cloudRepo);
             return this;
         }
-
         public Builder gerrit(@Nullable Output<GerritSourceContextArgs> gerrit) {
             this.gerrit = gerrit;
             return this;
         }
-
         public Builder gerrit(@Nullable GerritSourceContextArgs gerrit) {
             this.gerrit = Output.ofNullable(gerrit);
             return this;
         }
-
         public Builder git(@Nullable Output<GitSourceContextArgs> git) {
             this.git = git;
             return this;
         }
-
         public Builder git(@Nullable GitSourceContextArgs git) {
             this.git = Output.ofNullable(git);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
-        }
-        public SourceContextArgs build() {
+        }        public SourceContextArgs build() {
             return new SourceContextArgs(cloudRepo, gerrit, git, labels);
         }
     }

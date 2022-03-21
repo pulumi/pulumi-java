@@ -61,12 +61,10 @@ public final class ConfigurationProfileResourcePropertiesArgs extends io.pulumi.
             this.notifications = notifications;
             return this;
         }
-
         public Builder notifications(@Nullable NotificationSettingsArgs notifications) {
             this.notifications = Output.ofNullable(notifications);
             return this;
-        }
-        public ConfigurationProfileResourcePropertiesArgs build() {
+        }        public ConfigurationProfileResourcePropertiesArgs build() {
             return new ConfigurationProfileResourcePropertiesArgs(notifications);
         }
     }

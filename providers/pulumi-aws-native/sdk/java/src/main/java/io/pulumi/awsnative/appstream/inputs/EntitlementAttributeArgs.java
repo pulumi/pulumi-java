@@ -65,22 +65,18 @@ public final class EntitlementAttributeArgs extends io.pulumi.resources.Resource
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder value(Output<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Output.of(Objects.requireNonNull(value));
             return this;
-        }
-        public EntitlementAttributeArgs build() {
+        }        public EntitlementAttributeArgs build() {
             return new EntitlementAttributeArgs(name, value);
         }
     }

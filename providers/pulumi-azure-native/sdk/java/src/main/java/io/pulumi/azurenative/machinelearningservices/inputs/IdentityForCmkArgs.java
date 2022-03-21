@@ -60,12 +60,10 @@ public final class IdentityForCmkArgs extends io.pulumi.resources.ResourceArgs {
             this.userAssignedIdentity = Objects.requireNonNull(userAssignedIdentity);
             return this;
         }
-
         public Builder userAssignedIdentity(String userAssignedIdentity) {
             this.userAssignedIdentity = Output.of(Objects.requireNonNull(userAssignedIdentity));
             return this;
-        }
-        public IdentityForCmkArgs build() {
+        }        public IdentityForCmkArgs build() {
             return new IdentityForCmkArgs(userAssignedIdentity);
         }
     }

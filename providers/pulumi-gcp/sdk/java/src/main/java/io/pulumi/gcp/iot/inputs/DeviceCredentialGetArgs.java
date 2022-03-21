@@ -76,22 +76,18 @@ public final class DeviceCredentialGetArgs extends io.pulumi.resources.ResourceA
             this.expirationTime = expirationTime;
             return this;
         }
-
         public Builder expirationTime(@Nullable String expirationTime) {
             this.expirationTime = Output.ofNullable(expirationTime);
             return this;
         }
-
         public Builder publicKey(Output<DeviceCredentialPublicKeyGetArgs> publicKey) {
             this.publicKey = Objects.requireNonNull(publicKey);
             return this;
         }
-
         public Builder publicKey(DeviceCredentialPublicKeyGetArgs publicKey) {
             this.publicKey = Output.of(Objects.requireNonNull(publicKey));
             return this;
-        }
-        public DeviceCredentialGetArgs build() {
+        }        public DeviceCredentialGetArgs build() {
             return new DeviceCredentialGetArgs(expirationTime, publicKey);
         }
     }

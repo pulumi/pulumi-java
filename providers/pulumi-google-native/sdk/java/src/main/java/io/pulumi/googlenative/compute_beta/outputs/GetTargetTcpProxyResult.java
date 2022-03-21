@@ -166,42 +166,34 @@ public final class GetTargetTcpProxyResult {
             this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder proxyBind(Boolean proxyBind) {
             this.proxyBind = Objects.requireNonNull(proxyBind);
             return this;
         }
-
         public Builder proxyHeader(String proxyHeader) {
             this.proxyHeader = Objects.requireNonNull(proxyHeader);
             return this;
         }
-
         public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
-
         public Builder service(String service) {
             this.service = Objects.requireNonNull(service);
             return this;
-        }
-        public GetTargetTcpProxyResult build() {
+        }        public GetTargetTcpProxyResult build() {
             return new GetTargetTcpProxyResult(creationTimestamp, description, kind, name, proxyBind, proxyHeader, selfLink, service);
         }
     }

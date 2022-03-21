@@ -392,207 +392,178 @@ public final class LaunchConfigurationState extends io.pulumi.resources.Resource
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder associatePublicIpAddress(@Nullable Output<Boolean> associatePublicIpAddress) {
             this.associatePublicIpAddress = associatePublicIpAddress;
             return this;
         }
-
         public Builder associatePublicIpAddress(@Nullable Boolean associatePublicIpAddress) {
             this.associatePublicIpAddress = Output.ofNullable(associatePublicIpAddress);
             return this;
         }
-
         public Builder ebsBlockDevices(@Nullable Output<List<LaunchConfigurationEbsBlockDeviceGetArgs>> ebsBlockDevices) {
             this.ebsBlockDevices = ebsBlockDevices;
             return this;
         }
-
         public Builder ebsBlockDevices(@Nullable List<LaunchConfigurationEbsBlockDeviceGetArgs> ebsBlockDevices) {
             this.ebsBlockDevices = Output.ofNullable(ebsBlockDevices);
             return this;
         }
-
+        public Builder ebsBlockDevices(LaunchConfigurationEbsBlockDeviceGetArgs... ebsBlockDevices) {
+            return ebsBlockDevices(List.of(ebsBlockDevices));
+        }
         public Builder ebsOptimized(@Nullable Output<Boolean> ebsOptimized) {
             this.ebsOptimized = ebsOptimized;
             return this;
         }
-
         public Builder ebsOptimized(@Nullable Boolean ebsOptimized) {
             this.ebsOptimized = Output.ofNullable(ebsOptimized);
             return this;
         }
-
         public Builder enableMonitoring(@Nullable Output<Boolean> enableMonitoring) {
             this.enableMonitoring = enableMonitoring;
             return this;
         }
-
         public Builder enableMonitoring(@Nullable Boolean enableMonitoring) {
             this.enableMonitoring = Output.ofNullable(enableMonitoring);
             return this;
         }
-
         public Builder ephemeralBlockDevices(@Nullable Output<List<LaunchConfigurationEphemeralBlockDeviceGetArgs>> ephemeralBlockDevices) {
             this.ephemeralBlockDevices = ephemeralBlockDevices;
             return this;
         }
-
         public Builder ephemeralBlockDevices(@Nullable List<LaunchConfigurationEphemeralBlockDeviceGetArgs> ephemeralBlockDevices) {
             this.ephemeralBlockDevices = Output.ofNullable(ephemeralBlockDevices);
             return this;
         }
-
+        public Builder ephemeralBlockDevices(LaunchConfigurationEphemeralBlockDeviceGetArgs... ephemeralBlockDevices) {
+            return ephemeralBlockDevices(List.of(ephemeralBlockDevices));
+        }
         public Builder iamInstanceProfile(@Nullable Output<String> iamInstanceProfile) {
             this.iamInstanceProfile = iamInstanceProfile;
             return this;
         }
-
         public Builder imageId(@Nullable Output<String> imageId) {
             this.imageId = imageId;
             return this;
         }
-
         public Builder imageId(@Nullable String imageId) {
             this.imageId = Output.ofNullable(imageId);
             return this;
         }
-
         public Builder instanceType(@Nullable Output<String> instanceType) {
             this.instanceType = instanceType;
             return this;
         }
-
         public Builder instanceType(@Nullable String instanceType) {
             this.instanceType = Output.ofNullable(instanceType);
             return this;
         }
-
         public Builder keyName(@Nullable Output<String> keyName) {
             this.keyName = keyName;
             return this;
         }
-
         public Builder keyName(@Nullable String keyName) {
             this.keyName = Output.ofNullable(keyName);
             return this;
         }
-
         public Builder metadataOptions(@Nullable Output<LaunchConfigurationMetadataOptionsGetArgs> metadataOptions) {
             this.metadataOptions = metadataOptions;
             return this;
         }
-
         public Builder metadataOptions(@Nullable LaunchConfigurationMetadataOptionsGetArgs metadataOptions) {
             this.metadataOptions = Output.ofNullable(metadataOptions);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder namePrefix(@Nullable Output<String> namePrefix) {
             this.namePrefix = namePrefix;
             return this;
         }
-
         public Builder namePrefix(@Nullable String namePrefix) {
             this.namePrefix = Output.ofNullable(namePrefix);
             return this;
         }
-
         public Builder placementTenancy(@Nullable Output<String> placementTenancy) {
             this.placementTenancy = placementTenancy;
             return this;
         }
-
         public Builder placementTenancy(@Nullable String placementTenancy) {
             this.placementTenancy = Output.ofNullable(placementTenancy);
             return this;
         }
-
         public Builder rootBlockDevice(@Nullable Output<LaunchConfigurationRootBlockDeviceGetArgs> rootBlockDevice) {
             this.rootBlockDevice = rootBlockDevice;
             return this;
         }
-
         public Builder rootBlockDevice(@Nullable LaunchConfigurationRootBlockDeviceGetArgs rootBlockDevice) {
             this.rootBlockDevice = Output.ofNullable(rootBlockDevice);
             return this;
         }
-
         public Builder securityGroups(@Nullable Output<List<String>> securityGroups) {
             this.securityGroups = securityGroups;
             return this;
         }
-
         public Builder securityGroups(@Nullable List<String> securityGroups) {
             this.securityGroups = Output.ofNullable(securityGroups);
             return this;
         }
-
+        public Builder securityGroups(String... securityGroups) {
+            return securityGroups(List.of(securityGroups));
+        }
         public Builder spotPrice(@Nullable Output<String> spotPrice) {
             this.spotPrice = spotPrice;
             return this;
         }
-
         public Builder spotPrice(@Nullable String spotPrice) {
             this.spotPrice = Output.ofNullable(spotPrice);
             return this;
         }
-
         public Builder userData(@Nullable Output<String> userData) {
             this.userData = userData;
             return this;
         }
-
         public Builder userData(@Nullable String userData) {
             this.userData = Output.ofNullable(userData);
             return this;
         }
-
         public Builder userDataBase64(@Nullable Output<String> userDataBase64) {
             this.userDataBase64 = userDataBase64;
             return this;
         }
-
         public Builder userDataBase64(@Nullable String userDataBase64) {
             this.userDataBase64 = Output.ofNullable(userDataBase64);
             return this;
         }
-
         public Builder vpcClassicLinkId(@Nullable Output<String> vpcClassicLinkId) {
             this.vpcClassicLinkId = vpcClassicLinkId;
             return this;
         }
-
         public Builder vpcClassicLinkId(@Nullable String vpcClassicLinkId) {
             this.vpcClassicLinkId = Output.ofNullable(vpcClassicLinkId);
             return this;
         }
-
         public Builder vpcClassicLinkSecurityGroups(@Nullable Output<List<String>> vpcClassicLinkSecurityGroups) {
             this.vpcClassicLinkSecurityGroups = vpcClassicLinkSecurityGroups;
             return this;
         }
-
         public Builder vpcClassicLinkSecurityGroups(@Nullable List<String> vpcClassicLinkSecurityGroups) {
             this.vpcClassicLinkSecurityGroups = Output.ofNullable(vpcClassicLinkSecurityGroups);
             return this;
         }
-        public LaunchConfigurationState build() {
+        public Builder vpcClassicLinkSecurityGroups(String... vpcClassicLinkSecurityGroups) {
+            return vpcClassicLinkSecurityGroups(List.of(vpcClassicLinkSecurityGroups));
+        }        public LaunchConfigurationState build() {
             return new LaunchConfigurationState(arn, associatePublicIpAddress, ebsBlockDevices, ebsOptimized, enableMonitoring, ephemeralBlockDevices, iamInstanceProfile, imageId, instanceType, keyName, metadataOptions, name, namePrefix, placementTenancy, rootBlockDevice, securityGroups, spotPrice, userData, userDataBase64, vpcClassicLinkId, vpcClassicLinkSecurityGroups);
         }
     }

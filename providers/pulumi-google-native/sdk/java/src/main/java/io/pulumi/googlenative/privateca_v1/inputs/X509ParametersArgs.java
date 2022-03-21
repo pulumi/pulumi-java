@@ -131,52 +131,51 @@ public final class X509ParametersArgs extends io.pulumi.resources.ResourceArgs {
             this.additionalExtensions = additionalExtensions;
             return this;
         }
-
         public Builder additionalExtensions(@Nullable List<X509ExtensionArgs> additionalExtensions) {
             this.additionalExtensions = Output.ofNullable(additionalExtensions);
             return this;
         }
-
+        public Builder additionalExtensions(X509ExtensionArgs... additionalExtensions) {
+            return additionalExtensions(List.of(additionalExtensions));
+        }
         public Builder aiaOcspServers(@Nullable Output<List<String>> aiaOcspServers) {
             this.aiaOcspServers = aiaOcspServers;
             return this;
         }
-
         public Builder aiaOcspServers(@Nullable List<String> aiaOcspServers) {
             this.aiaOcspServers = Output.ofNullable(aiaOcspServers);
             return this;
         }
-
+        public Builder aiaOcspServers(String... aiaOcspServers) {
+            return aiaOcspServers(List.of(aiaOcspServers));
+        }
         public Builder caOptions(@Nullable Output<CaOptionsArgs> caOptions) {
             this.caOptions = caOptions;
             return this;
         }
-
         public Builder caOptions(@Nullable CaOptionsArgs caOptions) {
             this.caOptions = Output.ofNullable(caOptions);
             return this;
         }
-
         public Builder keyUsage(@Nullable Output<KeyUsageArgs> keyUsage) {
             this.keyUsage = keyUsage;
             return this;
         }
-
         public Builder keyUsage(@Nullable KeyUsageArgs keyUsage) {
             this.keyUsage = Output.ofNullable(keyUsage);
             return this;
         }
-
         public Builder policyIds(@Nullable Output<List<ObjectIdArgs>> policyIds) {
             this.policyIds = policyIds;
             return this;
         }
-
         public Builder policyIds(@Nullable List<ObjectIdArgs> policyIds) {
             this.policyIds = Output.ofNullable(policyIds);
             return this;
         }
-        public X509ParametersArgs build() {
+        public Builder policyIds(ObjectIdArgs... policyIds) {
+            return policyIds(List.of(policyIds));
+        }        public X509ParametersArgs build() {
             return new X509ParametersArgs(additionalExtensions, aiaOcspServers, caOptions, keyUsage, policyIds);
         }
     }

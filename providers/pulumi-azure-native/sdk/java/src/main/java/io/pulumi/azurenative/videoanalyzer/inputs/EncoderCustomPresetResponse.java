@@ -97,17 +97,14 @@ public final class EncoderCustomPresetResponse extends io.pulumi.resources.Invok
             this.audioEncoder = audioEncoder;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder videoEncoder(@Nullable VideoEncoderH264Response videoEncoder) {
             this.videoEncoder = videoEncoder;
             return this;
-        }
-        public EncoderCustomPresetResponse build() {
+        }        public EncoderCustomPresetResponse build() {
             return new EncoderCustomPresetResponse(audioEncoder, type, videoEncoder);
         }
     }

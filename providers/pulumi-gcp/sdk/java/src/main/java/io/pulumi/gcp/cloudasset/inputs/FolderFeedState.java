@@ -221,102 +221,88 @@ public final class FolderFeedState extends io.pulumi.resources.ResourceArgs {
             this.assetNames = assetNames;
             return this;
         }
-
         public Builder assetNames(@Nullable List<String> assetNames) {
             this.assetNames = Output.ofNullable(assetNames);
             return this;
         }
-
+        public Builder assetNames(String... assetNames) {
+            return assetNames(List.of(assetNames));
+        }
         public Builder assetTypes(@Nullable Output<List<String>> assetTypes) {
             this.assetTypes = assetTypes;
             return this;
         }
-
         public Builder assetTypes(@Nullable List<String> assetTypes) {
             this.assetTypes = Output.ofNullable(assetTypes);
             return this;
         }
-
+        public Builder assetTypes(String... assetTypes) {
+            return assetTypes(List.of(assetTypes));
+        }
         public Builder billingProject(@Nullable Output<String> billingProject) {
             this.billingProject = billingProject;
             return this;
         }
-
         public Builder billingProject(@Nullable String billingProject) {
             this.billingProject = Output.ofNullable(billingProject);
             return this;
         }
-
         public Builder condition(@Nullable Output<FolderFeedConditionGetArgs> condition) {
             this.condition = condition;
             return this;
         }
-
         public Builder condition(@Nullable FolderFeedConditionGetArgs condition) {
             this.condition = Output.ofNullable(condition);
             return this;
         }
-
         public Builder contentType(@Nullable Output<String> contentType) {
             this.contentType = contentType;
             return this;
         }
-
         public Builder contentType(@Nullable String contentType) {
             this.contentType = Output.ofNullable(contentType);
             return this;
         }
-
         public Builder feedId(@Nullable Output<String> feedId) {
             this.feedId = feedId;
             return this;
         }
-
         public Builder feedId(@Nullable String feedId) {
             this.feedId = Output.ofNullable(feedId);
             return this;
         }
-
         public Builder feedOutputConfig(@Nullable Output<FolderFeedFeedOutputConfigGetArgs> feedOutputConfig) {
             this.feedOutputConfig = feedOutputConfig;
             return this;
         }
-
         public Builder feedOutputConfig(@Nullable FolderFeedFeedOutputConfigGetArgs feedOutputConfig) {
             this.feedOutputConfig = Output.ofNullable(feedOutputConfig);
             return this;
         }
-
         public Builder folder(@Nullable Output<String> folder) {
             this.folder = folder;
             return this;
         }
-
         public Builder folder(@Nullable String folder) {
             this.folder = Output.ofNullable(folder);
             return this;
         }
-
         public Builder folderId(@Nullable Output<String> folderId) {
             this.folderId = folderId;
             return this;
         }
-
         public Builder folderId(@Nullable String folderId) {
             this.folderId = Output.ofNullable(folderId);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
-        }
-        public FolderFeedState build() {
+        }        public FolderFeedState build() {
             return new FolderFeedState(assetNames, assetTypes, billingProject, condition, contentType, feedId, feedOutputConfig, folder, folderId, name);
         }
     }

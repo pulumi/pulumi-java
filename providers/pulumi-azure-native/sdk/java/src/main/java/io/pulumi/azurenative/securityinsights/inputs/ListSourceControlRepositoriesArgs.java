@@ -88,17 +88,14 @@ public final class ListSourceControlRepositoriesArgs extends io.pulumi.resources
             this.operationalInsightsResourceProvider = Objects.requireNonNull(operationalInsightsResourceProvider);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
-        }
-        public ListSourceControlRepositoriesArgs build() {
+        }        public ListSourceControlRepositoriesArgs build() {
             return new ListSourceControlRepositoriesArgs(operationalInsightsResourceProvider, resourceGroupName, workspaceName);
         }
     }

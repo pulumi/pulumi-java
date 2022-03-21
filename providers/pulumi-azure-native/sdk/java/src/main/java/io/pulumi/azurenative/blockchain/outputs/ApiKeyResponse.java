@@ -71,12 +71,10 @@ public final class ApiKeyResponse {
             this.keyName = keyName;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public ApiKeyResponse build() {
+        }        public ApiKeyResponse build() {
             return new ApiKeyResponse(keyName, value);
         }
     }

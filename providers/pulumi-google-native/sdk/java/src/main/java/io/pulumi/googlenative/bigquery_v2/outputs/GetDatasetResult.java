@@ -324,92 +324,80 @@ public final class GetDatasetResult {
             this.access = Objects.requireNonNull(access);
             return this;
         }
-
+        public Builder access(DatasetAccessItemResponse... access) {
+            return access(List.of(access));
+        }
         public Builder creationTime(String creationTime) {
             this.creationTime = Objects.requireNonNull(creationTime);
             return this;
         }
-
         public Builder datasetReference(DatasetReferenceResponse datasetReference) {
             this.datasetReference = Objects.requireNonNull(datasetReference);
             return this;
         }
-
         public Builder defaultCollation(String defaultCollation) {
             this.defaultCollation = Objects.requireNonNull(defaultCollation);
             return this;
         }
-
         public Builder defaultEncryptionConfiguration(EncryptionConfigurationResponse defaultEncryptionConfiguration) {
             this.defaultEncryptionConfiguration = Objects.requireNonNull(defaultEncryptionConfiguration);
             return this;
         }
-
         public Builder defaultPartitionExpirationMs(String defaultPartitionExpirationMs) {
             this.defaultPartitionExpirationMs = Objects.requireNonNull(defaultPartitionExpirationMs);
             return this;
         }
-
         public Builder defaultTableExpirationMs(String defaultTableExpirationMs) {
             this.defaultTableExpirationMs = Objects.requireNonNull(defaultTableExpirationMs);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder friendlyName(String friendlyName) {
             this.friendlyName = Objects.requireNonNull(friendlyName);
             return this;
         }
-
         public Builder isCaseInsensitive(Boolean isCaseInsensitive) {
             this.isCaseInsensitive = Objects.requireNonNull(isCaseInsensitive);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder lastModifiedTime(String lastModifiedTime) {
             this.lastModifiedTime = Objects.requireNonNull(lastModifiedTime);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder satisfiesPZS(Boolean satisfiesPZS) {
             this.satisfiesPZS = Objects.requireNonNull(satisfiesPZS);
             return this;
         }
-
         public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
-
         public Builder tags(List<DatasetTagsItemResponse> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
-        public GetDatasetResult build() {
+        public Builder tags(DatasetTagsItemResponse... tags) {
+            return tags(List.of(tags));
+        }        public GetDatasetResult build() {
             return new GetDatasetResult(access, creationTime, datasetReference, defaultCollation, defaultEncryptionConfiguration, defaultPartitionExpirationMs, defaultTableExpirationMs, description, etag, friendlyName, isCaseInsensitive, kind, labels, lastModifiedTime, location, satisfiesPZS, selfLink, tags);
         }
     }

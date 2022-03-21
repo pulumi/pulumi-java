@@ -72,12 +72,10 @@ public final class ListManagerActivationKeyArgs extends io.pulumi.resources.Invo
             this.managerName = Objects.requireNonNull(managerName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public ListManagerActivationKeyArgs build() {
+        }        public ListManagerActivationKeyArgs build() {
             return new ListManagerActivationKeyArgs(managerName, resourceGroupName);
         }
     }

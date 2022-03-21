@@ -70,12 +70,13 @@ public final class GoogleIamV1AuditLogConfigResponse {
             this.exemptedMembers = Objects.requireNonNull(exemptedMembers);
             return this;
         }
-
+        public Builder exemptedMembers(String... exemptedMembers) {
+            return exemptedMembers(List.of(exemptedMembers));
+        }
         public Builder logType(String logType) {
             this.logType = Objects.requireNonNull(logType);
             return this;
-        }
-        public GoogleIamV1AuditLogConfigResponse build() {
+        }        public GoogleIamV1AuditLogConfigResponse build() {
             return new GoogleIamV1AuditLogConfigResponse(exemptedMembers, logType);
         }
     }

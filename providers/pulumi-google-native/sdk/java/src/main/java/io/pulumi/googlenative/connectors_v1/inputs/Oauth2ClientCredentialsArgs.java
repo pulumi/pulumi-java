@@ -79,22 +79,18 @@ public final class Oauth2ClientCredentialsArgs extends io.pulumi.resources.Resou
             this.clientId = clientId;
             return this;
         }
-
         public Builder clientId(@Nullable String clientId) {
             this.clientId = Output.ofNullable(clientId);
             return this;
         }
-
         public Builder clientSecret(@Nullable Output<SecretArgs> clientSecret) {
             this.clientSecret = clientSecret;
             return this;
         }
-
         public Builder clientSecret(@Nullable SecretArgs clientSecret) {
             this.clientSecret = Output.ofNullable(clientSecret);
             return this;
-        }
-        public Oauth2ClientCredentialsArgs build() {
+        }        public Oauth2ClientCredentialsArgs build() {
             return new Oauth2ClientCredentialsArgs(clientId, clientSecret);
         }
     }

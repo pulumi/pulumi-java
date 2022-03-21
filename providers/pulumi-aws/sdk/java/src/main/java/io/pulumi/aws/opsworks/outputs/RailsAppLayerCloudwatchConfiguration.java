@@ -57,12 +57,13 @@ public final class RailsAppLayerCloudwatchConfiguration {
             this.enabled = enabled;
             return this;
         }
-
         public Builder logStreams(@Nullable List<RailsAppLayerCloudwatchConfigurationLogStream> logStreams) {
             this.logStreams = logStreams;
             return this;
         }
-        public RailsAppLayerCloudwatchConfiguration build() {
+        public Builder logStreams(RailsAppLayerCloudwatchConfigurationLogStream... logStreams) {
+            return logStreams(List.of(logStreams));
+        }        public RailsAppLayerCloudwatchConfiguration build() {
             return new RailsAppLayerCloudwatchConfiguration(enabled, logStreams);
         }
     }

@@ -272,142 +272,123 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder certificateAuthorityArn(@Nullable Output<String> certificateAuthorityArn) {
             this.certificateAuthorityArn = certificateAuthorityArn;
             return this;
         }
-
         public Builder certificateAuthorityArn(@Nullable String certificateAuthorityArn) {
             this.certificateAuthorityArn = Output.ofNullable(certificateAuthorityArn);
             return this;
         }
-
         public Builder certificateBody(@Nullable Output<String> certificateBody) {
             this.certificateBody = certificateBody;
             return this;
         }
-
         public Builder certificateBody(@Nullable String certificateBody) {
             this.certificateBody = Output.ofNullable(certificateBody);
             return this;
         }
-
         public Builder certificateChain(@Nullable Output<String> certificateChain) {
             this.certificateChain = certificateChain;
             return this;
         }
-
         public Builder certificateChain(@Nullable String certificateChain) {
             this.certificateChain = Output.ofNullable(certificateChain);
             return this;
         }
-
         public Builder domainName(@Nullable Output<String> domainName) {
             this.domainName = domainName;
             return this;
         }
-
         public Builder domainName(@Nullable String domainName) {
             this.domainName = Output.ofNullable(domainName);
             return this;
         }
-
         public Builder domainValidationOptions(@Nullable Output<List<CertificateDomainValidationOptionGetArgs>> domainValidationOptions) {
             this.domainValidationOptions = domainValidationOptions;
             return this;
         }
-
         public Builder domainValidationOptions(@Nullable List<CertificateDomainValidationOptionGetArgs> domainValidationOptions) {
             this.domainValidationOptions = Output.ofNullable(domainValidationOptions);
             return this;
         }
-
+        public Builder domainValidationOptions(CertificateDomainValidationOptionGetArgs... domainValidationOptions) {
+            return domainValidationOptions(List.of(domainValidationOptions));
+        }
         public Builder options(@Nullable Output<CertificateOptionsGetArgs> options) {
             this.options = options;
             return this;
         }
-
         public Builder options(@Nullable CertificateOptionsGetArgs options) {
             this.options = Output.ofNullable(options);
             return this;
         }
-
         public Builder privateKey(@Nullable Output<String> privateKey) {
             this.privateKey = privateKey;
             return this;
         }
-
         public Builder privateKey(@Nullable String privateKey) {
             this.privateKey = Output.ofNullable(privateKey);
             return this;
         }
-
         public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = Output.ofNullable(status);
             return this;
         }
-
         public Builder subjectAlternativeNames(@Nullable Output<List<String>> subjectAlternativeNames) {
             this.subjectAlternativeNames = subjectAlternativeNames;
             return this;
         }
-
         public Builder subjectAlternativeNames(@Nullable List<String> subjectAlternativeNames) {
             this.subjectAlternativeNames = Output.ofNullable(subjectAlternativeNames);
             return this;
         }
-
+        public Builder subjectAlternativeNames(String... subjectAlternativeNames) {
+            return subjectAlternativeNames(List.of(subjectAlternativeNames));
+        }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
-
         public Builder validationEmails(@Nullable Output<List<String>> validationEmails) {
             this.validationEmails = validationEmails;
             return this;
         }
-
         public Builder validationEmails(@Nullable List<String> validationEmails) {
             this.validationEmails = Output.ofNullable(validationEmails);
             return this;
         }
-
+        public Builder validationEmails(String... validationEmails) {
+            return validationEmails(List.of(validationEmails));
+        }
         public Builder validationMethod(@Nullable Output<String> validationMethod) {
             this.validationMethod = validationMethod;
             return this;
         }
-
         public Builder validationMethod(@Nullable String validationMethod) {
             this.validationMethod = Output.ofNullable(validationMethod);
             return this;
-        }
-        public CertificateState build() {
+        }        public CertificateState build() {
             return new CertificateState(arn, certificateAuthorityArn, certificateBody, certificateChain, domainName, domainValidationOptions, options, privateKey, status, subjectAlternativeNames, tags, tagsAll, validationEmails, validationMethod);
         }
     }

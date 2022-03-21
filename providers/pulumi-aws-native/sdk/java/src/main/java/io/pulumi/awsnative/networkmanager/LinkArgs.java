@@ -157,72 +157,61 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
             this.bandwidth = Objects.requireNonNull(bandwidth);
             return this;
         }
-
         public Builder bandwidth(LinkBandwidthArgs bandwidth) {
             this.bandwidth = Output.of(Objects.requireNonNull(bandwidth));
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder globalNetworkId(Output<String> globalNetworkId) {
             this.globalNetworkId = Objects.requireNonNull(globalNetworkId);
             return this;
         }
-
         public Builder globalNetworkId(String globalNetworkId) {
             this.globalNetworkId = Output.of(Objects.requireNonNull(globalNetworkId));
             return this;
         }
-
         public Builder provider(@Nullable Output<String> provider) {
             this.provider = provider;
             return this;
         }
-
         public Builder provider(@Nullable String provider) {
             this.provider = Output.ofNullable(provider);
             return this;
         }
-
         public Builder siteId(Output<String> siteId) {
             this.siteId = Objects.requireNonNull(siteId);
             return this;
         }
-
         public Builder siteId(String siteId) {
             this.siteId = Output.of(Objects.requireNonNull(siteId));
             return this;
         }
-
         public Builder tags(@Nullable Output<List<LinkTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<LinkTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
+        public Builder tags(LinkTagArgs... tags) {
+            return tags(List.of(tags));
+        }
         public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public LinkArgs build() {
+        }        public LinkArgs build() {
             return new LinkArgs(bandwidth, description, globalNetworkId, provider, siteId, tags, type);
         }
     }

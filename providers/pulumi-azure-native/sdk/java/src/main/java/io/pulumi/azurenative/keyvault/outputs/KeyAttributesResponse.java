@@ -137,32 +137,26 @@ public final class KeyAttributesResponse {
             this.created = Objects.requireNonNull(created);
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
-
         public Builder expires(@Nullable Double expires) {
             this.expires = expires;
             return this;
         }
-
         public Builder notBefore(@Nullable Double notBefore) {
             this.notBefore = notBefore;
             return this;
         }
-
         public Builder recoveryLevel(String recoveryLevel) {
             this.recoveryLevel = Objects.requireNonNull(recoveryLevel);
             return this;
         }
-
         public Builder updated(Double updated) {
             this.updated = Objects.requireNonNull(updated);
             return this;
-        }
-        public KeyAttributesResponse build() {
+        }        public KeyAttributesResponse build() {
             return new KeyAttributesResponse(created, enabled, expires, notBefore, recoveryLevel, updated);
         }
     }

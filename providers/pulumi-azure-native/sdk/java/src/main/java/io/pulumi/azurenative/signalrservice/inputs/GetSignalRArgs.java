@@ -72,12 +72,10 @@ public final class GetSignalRArgs extends io.pulumi.resources.InvokeArgs {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceName(String resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
-        }
-        public GetSignalRArgs build() {
+        }        public GetSignalRArgs build() {
             return new GetSignalRArgs(resourceGroupName, resourceName);
         }
     }

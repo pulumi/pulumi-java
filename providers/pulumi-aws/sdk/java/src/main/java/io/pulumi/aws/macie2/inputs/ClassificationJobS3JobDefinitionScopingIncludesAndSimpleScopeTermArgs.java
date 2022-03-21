@@ -91,32 +91,29 @@ public final class ClassificationJobS3JobDefinitionScopingIncludesAndSimpleScope
             this.comparator = comparator;
             return this;
         }
-
         public Builder comparator(@Nullable String comparator) {
             this.comparator = Output.ofNullable(comparator);
             return this;
         }
-
         public Builder key(@Nullable Output<String> key) {
             this.key = key;
             return this;
         }
-
         public Builder key(@Nullable String key) {
             this.key = Output.ofNullable(key);
             return this;
         }
-
         public Builder values(@Nullable Output<List<String>> values) {
             this.values = values;
             return this;
         }
-
         public Builder values(@Nullable List<String> values) {
             this.values = Output.ofNullable(values);
             return this;
         }
-        public ClassificationJobS3JobDefinitionScopingIncludesAndSimpleScopeTermArgs build() {
+        public Builder values(String... values) {
+            return values(List.of(values));
+        }        public ClassificationJobS3JobDefinitionScopingIncludesAndSimpleScopeTermArgs build() {
             return new ClassificationJobS3JobDefinitionScopingIncludesAndSimpleScopeTermArgs(comparator, key, values);
         }
     }

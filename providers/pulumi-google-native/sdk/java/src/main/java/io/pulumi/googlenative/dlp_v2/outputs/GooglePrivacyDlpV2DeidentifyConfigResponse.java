@@ -87,17 +87,14 @@ public final class GooglePrivacyDlpV2DeidentifyConfigResponse {
             this.infoTypeTransformations = Objects.requireNonNull(infoTypeTransformations);
             return this;
         }
-
         public Builder recordTransformations(GooglePrivacyDlpV2RecordTransformationsResponse recordTransformations) {
             this.recordTransformations = Objects.requireNonNull(recordTransformations);
             return this;
         }
-
         public Builder transformationErrorHandling(GooglePrivacyDlpV2TransformationErrorHandlingResponse transformationErrorHandling) {
             this.transformationErrorHandling = Objects.requireNonNull(transformationErrorHandling);
             return this;
-        }
-        public GooglePrivacyDlpV2DeidentifyConfigResponse build() {
+        }        public GooglePrivacyDlpV2DeidentifyConfigResponse build() {
             return new GooglePrivacyDlpV2DeidentifyConfigResponse(infoTypeTransformations, recordTransformations, transformationErrorHandling);
         }
     }

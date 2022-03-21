@@ -161,72 +161,58 @@ public final class TagTemplateFieldGetArgs extends io.pulumi.resources.ResourceA
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder fieldId(Output<String> fieldId) {
             this.fieldId = Objects.requireNonNull(fieldId);
             return this;
         }
-
         public Builder fieldId(String fieldId) {
             this.fieldId = Output.of(Objects.requireNonNull(fieldId));
             return this;
         }
-
         public Builder isRequired(@Nullable Output<Boolean> isRequired) {
             this.isRequired = isRequired;
             return this;
         }
-
         public Builder isRequired(@Nullable Boolean isRequired) {
             this.isRequired = Output.ofNullable(isRequired);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder order(@Nullable Output<Integer> order) {
             this.order = order;
             return this;
         }
-
         public Builder order(@Nullable Integer order) {
             this.order = Output.ofNullable(order);
             return this;
         }
-
         public Builder type(Output<TagTemplateFieldTypeGetArgs> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(TagTemplateFieldTypeGetArgs type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public TagTemplateFieldGetArgs build() {
+        }        public TagTemplateFieldGetArgs build() {
             return new TagTemplateFieldGetArgs(description, displayName, fieldId, isRequired, name, order, type);
         }
     }

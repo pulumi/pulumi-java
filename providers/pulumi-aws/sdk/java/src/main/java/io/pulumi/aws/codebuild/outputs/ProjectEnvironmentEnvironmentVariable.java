@@ -87,17 +87,14 @@ public final class ProjectEnvironmentEnvironmentVariable {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public ProjectEnvironmentEnvironmentVariable build() {
+        }        public ProjectEnvironmentEnvironmentVariable build() {
             return new ProjectEnvironmentEnvironmentVariable(name, type, value);
         }
     }

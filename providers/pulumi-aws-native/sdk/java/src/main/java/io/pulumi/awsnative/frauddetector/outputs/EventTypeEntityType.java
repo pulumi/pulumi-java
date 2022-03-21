@@ -130,37 +130,33 @@ public final class EventTypeEntityType {
             this.arn = arn;
             return this;
         }
-
         public Builder createdTime(@Nullable String createdTime) {
             this.createdTime = createdTime;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder inline(@Nullable Boolean inline) {
             this.inline = inline;
             return this;
         }
-
         public Builder lastUpdatedTime(@Nullable String lastUpdatedTime) {
             this.lastUpdatedTime = lastUpdatedTime;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder tags(@Nullable List<EventTypeTag> tags) {
             this.tags = tags;
             return this;
         }
-        public EventTypeEntityType build() {
+        public Builder tags(EventTypeTag... tags) {
+            return tags(List.of(tags));
+        }        public EventTypeEntityType build() {
             return new EventTypeEntityType(arn, createdTime, description, inline, lastUpdatedTime, name, tags);
         }
     }

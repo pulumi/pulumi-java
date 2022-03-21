@@ -191,92 +191,77 @@ public final class NetworkFunctionArgs extends io.pulumi.resources.ResourceArgs 
             this.device = device;
             return this;
         }
-
         public Builder device(@Nullable SubResourceArgs device) {
             this.device = Output.ofNullable(device);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder managedApplicationParameters(@Nullable Output<Object> managedApplicationParameters) {
             this.managedApplicationParameters = managedApplicationParameters;
             return this;
         }
-
         public Builder managedApplicationParameters(@Nullable Object managedApplicationParameters) {
             this.managedApplicationParameters = Output.ofNullable(managedApplicationParameters);
             return this;
         }
-
         public Builder networkFunctionName(@Nullable Output<String> networkFunctionName) {
             this.networkFunctionName = networkFunctionName;
             return this;
         }
-
         public Builder networkFunctionName(@Nullable String networkFunctionName) {
             this.networkFunctionName = Output.ofNullable(networkFunctionName);
             return this;
         }
-
         public Builder networkFunctionUserConfigurations(@Nullable Output<List<NetworkFunctionUserConfigurationArgs>> networkFunctionUserConfigurations) {
             this.networkFunctionUserConfigurations = networkFunctionUserConfigurations;
             return this;
         }
-
         public Builder networkFunctionUserConfigurations(@Nullable List<NetworkFunctionUserConfigurationArgs> networkFunctionUserConfigurations) {
             this.networkFunctionUserConfigurations = Output.ofNullable(networkFunctionUserConfigurations);
             return this;
         }
-
+        public Builder networkFunctionUserConfigurations(NetworkFunctionUserConfigurationArgs... networkFunctionUserConfigurations) {
+            return networkFunctionUserConfigurations(List.of(networkFunctionUserConfigurations));
+        }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder skuName(@Nullable Output<String> skuName) {
             this.skuName = skuName;
             return this;
         }
-
         public Builder skuName(@Nullable String skuName) {
             this.skuName = Output.ofNullable(skuName);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder vendorName(@Nullable Output<String> vendorName) {
             this.vendorName = vendorName;
             return this;
         }
-
         public Builder vendorName(@Nullable String vendorName) {
             this.vendorName = Output.ofNullable(vendorName);
             return this;
-        }
-        public NetworkFunctionArgs build() {
+        }        public NetworkFunctionArgs build() {
             return new NetworkFunctionArgs(device, location, managedApplicationParameters, networkFunctionName, networkFunctionUserConfigurations, resourceGroupName, skuName, tags, vendorName);
         }
     }

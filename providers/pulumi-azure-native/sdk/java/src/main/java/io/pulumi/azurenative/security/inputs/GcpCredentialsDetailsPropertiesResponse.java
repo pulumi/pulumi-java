@@ -270,72 +270,61 @@ public final class GcpCredentialsDetailsPropertiesResponse extends io.pulumi.res
             this.authProviderX509CertUrl = Objects.requireNonNull(authProviderX509CertUrl);
             return this;
         }
-
         public Builder authUri(String authUri) {
             this.authUri = Objects.requireNonNull(authUri);
             return this;
         }
-
         public Builder authenticationProvisioningState(String authenticationProvisioningState) {
             this.authenticationProvisioningState = Objects.requireNonNull(authenticationProvisioningState);
             return this;
         }
-
         public Builder authenticationType(String authenticationType) {
             this.authenticationType = Objects.requireNonNull(authenticationType);
             return this;
         }
-
         public Builder clientEmail(String clientEmail) {
             this.clientEmail = Objects.requireNonNull(clientEmail);
             return this;
         }
-
         public Builder clientId(String clientId) {
             this.clientId = Objects.requireNonNull(clientId);
             return this;
         }
-
         public Builder clientX509CertUrl(String clientX509CertUrl) {
             this.clientX509CertUrl = Objects.requireNonNull(clientX509CertUrl);
             return this;
         }
-
         public Builder grantedPermissions(List<String> grantedPermissions) {
             this.grantedPermissions = Objects.requireNonNull(grantedPermissions);
             return this;
         }
-
+        public Builder grantedPermissions(String... grantedPermissions) {
+            return grantedPermissions(List.of(grantedPermissions));
+        }
         public Builder organizationId(String organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }
-
         public Builder privateKey(String privateKey) {
             this.privateKey = Objects.requireNonNull(privateKey);
             return this;
         }
-
         public Builder privateKeyId(String privateKeyId) {
             this.privateKeyId = Objects.requireNonNull(privateKeyId);
             return this;
         }
-
         public Builder projectId(String projectId) {
             this.projectId = Objects.requireNonNull(projectId);
             return this;
         }
-
         public Builder tokenUri(String tokenUri) {
             this.tokenUri = Objects.requireNonNull(tokenUri);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GcpCredentialsDetailsPropertiesResponse build() {
+        }        public GcpCredentialsDetailsPropertiesResponse build() {
             return new GcpCredentialsDetailsPropertiesResponse(authProviderX509CertUrl, authUri, authenticationProvisioningState, authenticationType, clientEmail, clientId, clientX509CertUrl, grantedPermissions, organizationId, privateKey, privateKeyId, projectId, tokenUri, type);
         }
     }

@@ -445,252 +445,205 @@ public final class StackState extends io.pulumi.resources.ResourceArgs {
             this.agentVersion = agentVersion;
             return this;
         }
-
         public Builder agentVersion(@Nullable String agentVersion) {
             this.agentVersion = Output.ofNullable(agentVersion);
             return this;
         }
-
         public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder berkshelfVersion(@Nullable Output<String> berkshelfVersion) {
             this.berkshelfVersion = berkshelfVersion;
             return this;
         }
-
         public Builder berkshelfVersion(@Nullable String berkshelfVersion) {
             this.berkshelfVersion = Output.ofNullable(berkshelfVersion);
             return this;
         }
-
         public Builder color(@Nullable Output<String> color) {
             this.color = color;
             return this;
         }
-
         public Builder color(@Nullable String color) {
             this.color = Output.ofNullable(color);
             return this;
         }
-
         public Builder configurationManagerName(@Nullable Output<String> configurationManagerName) {
             this.configurationManagerName = configurationManagerName;
             return this;
         }
-
         public Builder configurationManagerName(@Nullable String configurationManagerName) {
             this.configurationManagerName = Output.ofNullable(configurationManagerName);
             return this;
         }
-
         public Builder configurationManagerVersion(@Nullable Output<String> configurationManagerVersion) {
             this.configurationManagerVersion = configurationManagerVersion;
             return this;
         }
-
         public Builder configurationManagerVersion(@Nullable String configurationManagerVersion) {
             this.configurationManagerVersion = Output.ofNullable(configurationManagerVersion);
             return this;
         }
-
         public Builder customCookbooksSources(@Nullable Output<List<StackCustomCookbooksSourceGetArgs>> customCookbooksSources) {
             this.customCookbooksSources = customCookbooksSources;
             return this;
         }
-
         public Builder customCookbooksSources(@Nullable List<StackCustomCookbooksSourceGetArgs> customCookbooksSources) {
             this.customCookbooksSources = Output.ofNullable(customCookbooksSources);
             return this;
         }
-
+        public Builder customCookbooksSources(StackCustomCookbooksSourceGetArgs... customCookbooksSources) {
+            return customCookbooksSources(List.of(customCookbooksSources));
+        }
         public Builder customJson(@Nullable Output<String> customJson) {
             this.customJson = customJson;
             return this;
         }
-
         public Builder customJson(@Nullable String customJson) {
             this.customJson = Output.ofNullable(customJson);
             return this;
         }
-
         public Builder defaultAvailabilityZone(@Nullable Output<String> defaultAvailabilityZone) {
             this.defaultAvailabilityZone = defaultAvailabilityZone;
             return this;
         }
-
         public Builder defaultAvailabilityZone(@Nullable String defaultAvailabilityZone) {
             this.defaultAvailabilityZone = Output.ofNullable(defaultAvailabilityZone);
             return this;
         }
-
         public Builder defaultInstanceProfileArn(@Nullable Output<String> defaultInstanceProfileArn) {
             this.defaultInstanceProfileArn = defaultInstanceProfileArn;
             return this;
         }
-
         public Builder defaultInstanceProfileArn(@Nullable String defaultInstanceProfileArn) {
             this.defaultInstanceProfileArn = Output.ofNullable(defaultInstanceProfileArn);
             return this;
         }
-
         public Builder defaultOs(@Nullable Output<String> defaultOs) {
             this.defaultOs = defaultOs;
             return this;
         }
-
         public Builder defaultOs(@Nullable String defaultOs) {
             this.defaultOs = Output.ofNullable(defaultOs);
             return this;
         }
-
         public Builder defaultRootDeviceType(@Nullable Output<String> defaultRootDeviceType) {
             this.defaultRootDeviceType = defaultRootDeviceType;
             return this;
         }
-
         public Builder defaultRootDeviceType(@Nullable String defaultRootDeviceType) {
             this.defaultRootDeviceType = Output.ofNullable(defaultRootDeviceType);
             return this;
         }
-
         public Builder defaultSshKeyName(@Nullable Output<String> defaultSshKeyName) {
             this.defaultSshKeyName = defaultSshKeyName;
             return this;
         }
-
         public Builder defaultSshKeyName(@Nullable String defaultSshKeyName) {
             this.defaultSshKeyName = Output.ofNullable(defaultSshKeyName);
             return this;
         }
-
         public Builder defaultSubnetId(@Nullable Output<String> defaultSubnetId) {
             this.defaultSubnetId = defaultSubnetId;
             return this;
         }
-
         public Builder defaultSubnetId(@Nullable String defaultSubnetId) {
             this.defaultSubnetId = Output.ofNullable(defaultSubnetId);
             return this;
         }
-
         public Builder hostnameTheme(@Nullable Output<String> hostnameTheme) {
             this.hostnameTheme = hostnameTheme;
             return this;
         }
-
         public Builder hostnameTheme(@Nullable String hostnameTheme) {
             this.hostnameTheme = Output.ofNullable(hostnameTheme);
             return this;
         }
-
         public Builder manageBerkshelf(@Nullable Output<Boolean> manageBerkshelf) {
             this.manageBerkshelf = manageBerkshelf;
             return this;
         }
-
         public Builder manageBerkshelf(@Nullable Boolean manageBerkshelf) {
             this.manageBerkshelf = Output.ofNullable(manageBerkshelf);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
-
         public Builder region(@Nullable String region) {
             this.region = Output.ofNullable(region);
             return this;
         }
-
         public Builder serviceRoleArn(@Nullable Output<String> serviceRoleArn) {
             this.serviceRoleArn = serviceRoleArn;
             return this;
         }
-
         public Builder serviceRoleArn(@Nullable String serviceRoleArn) {
             this.serviceRoleArn = Output.ofNullable(serviceRoleArn);
             return this;
         }
-
         public Builder stackEndpoint(@Nullable Output<String> stackEndpoint) {
             this.stackEndpoint = stackEndpoint;
             return this;
         }
-
         public Builder stackEndpoint(@Nullable String stackEndpoint) {
             this.stackEndpoint = Output.ofNullable(stackEndpoint);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
-
         public Builder useCustomCookbooks(@Nullable Output<Boolean> useCustomCookbooks) {
             this.useCustomCookbooks = useCustomCookbooks;
             return this;
         }
-
         public Builder useCustomCookbooks(@Nullable Boolean useCustomCookbooks) {
             this.useCustomCookbooks = Output.ofNullable(useCustomCookbooks);
             return this;
         }
-
         public Builder useOpsworksSecurityGroups(@Nullable Output<Boolean> useOpsworksSecurityGroups) {
             this.useOpsworksSecurityGroups = useOpsworksSecurityGroups;
             return this;
         }
-
         public Builder useOpsworksSecurityGroups(@Nullable Boolean useOpsworksSecurityGroups) {
             this.useOpsworksSecurityGroups = Output.ofNullable(useOpsworksSecurityGroups);
             return this;
         }
-
         public Builder vpcId(@Nullable Output<String> vpcId) {
             this.vpcId = vpcId;
             return this;
         }
-
         public Builder vpcId(@Nullable String vpcId) {
             this.vpcId = Output.ofNullable(vpcId);
             return this;
-        }
-        public StackState build() {
+        }        public StackState build() {
             return new StackState(agentVersion, arn, berkshelfVersion, color, configurationManagerName, configurationManagerVersion, customCookbooksSources, customJson, defaultAvailabilityZone, defaultInstanceProfileArn, defaultOs, defaultRootDeviceType, defaultSshKeyName, defaultSubnetId, hostnameTheme, manageBerkshelf, name, region, serviceRoleArn, stackEndpoint, tags, tagsAll, useCustomCookbooks, useOpsworksSecurityGroups, vpcId);
         }
     }

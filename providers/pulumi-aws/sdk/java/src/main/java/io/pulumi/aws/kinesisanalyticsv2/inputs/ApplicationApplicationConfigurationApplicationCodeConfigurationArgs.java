@@ -75,22 +75,18 @@ public final class ApplicationApplicationConfigurationApplicationCodeConfigurati
             this.codeContent = codeContent;
             return this;
         }
-
         public Builder codeContent(@Nullable ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentArgs codeContent) {
             this.codeContent = Output.ofNullable(codeContent);
             return this;
         }
-
         public Builder codeContentType(Output<String> codeContentType) {
             this.codeContentType = Objects.requireNonNull(codeContentType);
             return this;
         }
-
         public Builder codeContentType(String codeContentType) {
             this.codeContentType = Output.of(Objects.requireNonNull(codeContentType));
             return this;
-        }
-        public ApplicationApplicationConfigurationApplicationCodeConfigurationArgs build() {
+        }        public ApplicationApplicationConfigurationApplicationCodeConfigurationArgs build() {
             return new ApplicationApplicationConfigurationApplicationCodeConfigurationArgs(codeContent, codeContentType);
         }
     }

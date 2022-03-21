@@ -53,12 +53,10 @@ public final class GetTopicSchemaSetting {
             this.encoding = Objects.requireNonNull(encoding);
             return this;
         }
-
         public Builder schema(String schema) {
             this.schema = Objects.requireNonNull(schema);
             return this;
-        }
-        public GetTopicSchemaSetting build() {
+        }        public GetTopicSchemaSetting build() {
             return new GetTopicSchemaSetting(encoding, schema);
         }
     }

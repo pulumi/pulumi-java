@@ -194,92 +194,80 @@ public final class DockerBuildStepArgs extends io.pulumi.resources.ResourceArgs 
             this.arguments = arguments;
             return this;
         }
-
         public Builder arguments(@Nullable List<ArgumentArgs> arguments) {
             this.arguments = Output.ofNullable(arguments);
             return this;
         }
-
+        public Builder arguments(ArgumentArgs... arguments) {
+            return arguments(List.of(arguments));
+        }
         public Builder contextAccessToken(@Nullable Output<String> contextAccessToken) {
             this.contextAccessToken = contextAccessToken;
             return this;
         }
-
         public Builder contextAccessToken(@Nullable String contextAccessToken) {
             this.contextAccessToken = Output.ofNullable(contextAccessToken);
             return this;
         }
-
         public Builder contextPath(@Nullable Output<String> contextPath) {
             this.contextPath = contextPath;
             return this;
         }
-
         public Builder contextPath(@Nullable String contextPath) {
             this.contextPath = Output.ofNullable(contextPath);
             return this;
         }
-
         public Builder dockerFilePath(Output<String> dockerFilePath) {
             this.dockerFilePath = Objects.requireNonNull(dockerFilePath);
             return this;
         }
-
         public Builder dockerFilePath(String dockerFilePath) {
             this.dockerFilePath = Output.of(Objects.requireNonNull(dockerFilePath));
             return this;
         }
-
         public Builder imageNames(@Nullable Output<List<String>> imageNames) {
             this.imageNames = imageNames;
             return this;
         }
-
         public Builder imageNames(@Nullable List<String> imageNames) {
             this.imageNames = Output.ofNullable(imageNames);
             return this;
         }
-
+        public Builder imageNames(String... imageNames) {
+            return imageNames(List.of(imageNames));
+        }
         public Builder isPushEnabled(@Nullable Output<Boolean> isPushEnabled) {
             this.isPushEnabled = isPushEnabled;
             return this;
         }
-
         public Builder isPushEnabled(@Nullable Boolean isPushEnabled) {
             this.isPushEnabled = Output.ofNullable(isPushEnabled);
             return this;
         }
-
         public Builder noCache(@Nullable Output<Boolean> noCache) {
             this.noCache = noCache;
             return this;
         }
-
         public Builder noCache(@Nullable Boolean noCache) {
             this.noCache = Output.ofNullable(noCache);
             return this;
         }
-
         public Builder target(@Nullable Output<String> target) {
             this.target = target;
             return this;
         }
-
         public Builder target(@Nullable String target) {
             this.target = Output.ofNullable(target);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public DockerBuildStepArgs build() {
+        }        public DockerBuildStepArgs build() {
             return new DockerBuildStepArgs(arguments, contextAccessToken, contextPath, dockerFilePath, imageNames, isPushEnabled, noCache, target, type);
         }
     }

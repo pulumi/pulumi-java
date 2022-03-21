@@ -88,17 +88,14 @@ public final class GetStaticSitePrivateEndpointConnectionArgs extends io.pulumi.
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder privateEndpointConnectionName(String privateEndpointConnectionName) {
             this.privateEndpointConnectionName = Objects.requireNonNull(privateEndpointConnectionName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetStaticSitePrivateEndpointConnectionArgs build() {
+        }        public GetStaticSitePrivateEndpointConnectionArgs build() {
             return new GetStaticSitePrivateEndpointConnectionArgs(name, privateEndpointConnectionName, resourceGroupName);
         }
     }

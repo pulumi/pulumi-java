@@ -302,77 +302,65 @@ public final class GetSystemTopicEventSubscriptionResult {
             this.deadLetterDestination = deadLetterDestination;
             return this;
         }
-
         public Builder deadLetterWithResourceIdentity(@Nullable DeadLetterWithResourceIdentityResponse deadLetterWithResourceIdentity) {
             this.deadLetterWithResourceIdentity = deadLetterWithResourceIdentity;
             return this;
         }
-
         public Builder deliveryWithResourceIdentity(@Nullable DeliveryWithResourceIdentityResponse deliveryWithResourceIdentity) {
             this.deliveryWithResourceIdentity = deliveryWithResourceIdentity;
             return this;
         }
-
         public Builder destination(@Nullable Object destination) {
             this.destination = destination;
             return this;
         }
-
         public Builder eventDeliverySchema(@Nullable String eventDeliverySchema) {
             this.eventDeliverySchema = eventDeliverySchema;
             return this;
         }
-
         public Builder expirationTimeUtc(@Nullable String expirationTimeUtc) {
             this.expirationTimeUtc = expirationTimeUtc;
             return this;
         }
-
         public Builder filter(@Nullable EventSubscriptionFilterResponse filter) {
             this.filter = filter;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder labels(@Nullable List<String> labels) {
             this.labels = labels;
             return this;
         }
-
+        public Builder labels(String... labels) {
+            return labels(List.of(labels));
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder retryPolicy(@Nullable RetryPolicyResponse retryPolicy) {
             this.retryPolicy = retryPolicy;
             return this;
         }
-
         public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public Builder topic(String topic) {
             this.topic = Objects.requireNonNull(topic);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetSystemTopicEventSubscriptionResult build() {
+        }        public GetSystemTopicEventSubscriptionResult build() {
             return new GetSystemTopicEventSubscriptionResult(deadLetterDestination, deadLetterWithResourceIdentity, deliveryWithResourceIdentity, destination, eventDeliverySchema, expirationTimeUtc, filter, id, labels, name, provisioningState, retryPolicy, systemData, topic, type);
         }
     }

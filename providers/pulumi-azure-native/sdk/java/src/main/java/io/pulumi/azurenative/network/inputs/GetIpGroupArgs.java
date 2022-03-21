@@ -90,17 +90,14 @@ public final class GetIpGroupArgs extends io.pulumi.resources.InvokeArgs {
             this.expand = expand;
             return this;
         }
-
         public Builder ipGroupsName(String ipGroupsName) {
             this.ipGroupsName = Objects.requireNonNull(ipGroupsName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetIpGroupArgs build() {
+        }        public GetIpGroupArgs build() {
             return new GetIpGroupArgs(expand, ipGroupsName, resourceGroupName);
         }
     }

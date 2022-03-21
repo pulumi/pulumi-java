@@ -78,12 +78,10 @@ public final class EndpointAccessVpcSecurityGroup extends io.pulumi.resources.In
             this.status = status;
             return this;
         }
-
         public Builder vpcSecurityGroupId(@Nullable String vpcSecurityGroupId) {
             this.vpcSecurityGroupId = vpcSecurityGroupId;
             return this;
-        }
-        public EndpointAccessVpcSecurityGroup build() {
+        }        public EndpointAccessVpcSecurityGroup build() {
             return new EndpointAccessVpcSecurityGroup(status, vpcSecurityGroupId);
         }
     }

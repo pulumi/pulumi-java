@@ -87,17 +87,14 @@ public final class MonitoredResourceResponse {
             this.id = id;
             return this;
         }
-
         public Builder reasonForLogsStatus(@Nullable String reasonForLogsStatus) {
             this.reasonForLogsStatus = reasonForLogsStatus;
             return this;
         }
-
         public Builder sendingLogs(@Nullable String sendingLogs) {
             this.sendingLogs = sendingLogs;
             return this;
-        }
-        public MonitoredResourceResponse build() {
+        }        public MonitoredResourceResponse build() {
             return new MonitoredResourceResponse(id, reasonForLogsStatus, sendingLogs);
         }
     }

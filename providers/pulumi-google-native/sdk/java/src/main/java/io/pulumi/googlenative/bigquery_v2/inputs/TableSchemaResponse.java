@@ -56,7 +56,9 @@ public final class TableSchemaResponse extends io.pulumi.resources.InvokeArgs {
             this.fields = Objects.requireNonNull(fields);
             return this;
         }
-        public TableSchemaResponse build() {
+        public Builder fields(TableFieldSchemaResponse... fields) {
+            return fields(List.of(fields));
+        }        public TableSchemaResponse build() {
             return new TableSchemaResponse(fields);
         }
     }

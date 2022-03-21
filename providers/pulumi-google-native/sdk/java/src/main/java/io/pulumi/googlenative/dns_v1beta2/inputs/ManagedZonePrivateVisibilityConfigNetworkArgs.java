@@ -70,22 +70,18 @@ public final class ManagedZonePrivateVisibilityConfigNetworkArgs extends io.pulu
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder networkUrl(@Nullable Output<String> networkUrl) {
             this.networkUrl = networkUrl;
             return this;
         }
-
         public Builder networkUrl(@Nullable String networkUrl) {
             this.networkUrl = Output.ofNullable(networkUrl);
             return this;
-        }
-        public ManagedZonePrivateVisibilityConfigNetworkArgs build() {
+        }        public ManagedZonePrivateVisibilityConfigNetworkArgs build() {
             return new ManagedZonePrivateVisibilityConfigNetworkArgs(kind, networkUrl);
         }
     }

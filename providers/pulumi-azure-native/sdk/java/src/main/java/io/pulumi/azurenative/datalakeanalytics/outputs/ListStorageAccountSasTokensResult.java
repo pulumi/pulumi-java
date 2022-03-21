@@ -71,12 +71,13 @@ public final class ListStorageAccountSasTokensResult {
             this.nextLink = Objects.requireNonNull(nextLink);
             return this;
         }
-
         public Builder value(List<SasTokenInformationResponse> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-        public ListStorageAccountSasTokensResult build() {
+        public Builder value(SasTokenInformationResponse... value) {
+            return value(List.of(value));
+        }        public ListStorageAccountSasTokensResult build() {
             return new ListStorageAccountSasTokensResult(nextLink, value);
         }
     }

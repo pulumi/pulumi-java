@@ -77,12 +77,13 @@ public final class GetLocalGatewayVirtualInterfaceGroupsArgs extends io.pulumi.r
             this.filters = filters;
             return this;
         }
-
+        public Builder filters(GetLocalGatewayVirtualInterfaceGroupsFilter... filters) {
+            return filters(List.of(filters));
+        }
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
-        }
-        public GetLocalGatewayVirtualInterfaceGroupsArgs build() {
+        }        public GetLocalGatewayVirtualInterfaceGroupsArgs build() {
             return new GetLocalGatewayVirtualInterfaceGroupsArgs(filters, tags);
         }
     }

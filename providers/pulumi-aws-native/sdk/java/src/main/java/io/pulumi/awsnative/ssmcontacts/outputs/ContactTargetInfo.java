@@ -70,12 +70,10 @@ public final class ContactTargetInfo {
             this.contactId = Objects.requireNonNull(contactId);
             return this;
         }
-
         public Builder isEssential(Boolean isEssential) {
             this.isEssential = Objects.requireNonNull(isEssential);
             return this;
-        }
-        public ContactTargetInfo build() {
+        }        public ContactTargetInfo build() {
             return new ContactTargetInfo(contactId, isEssential);
         }
     }

@@ -60,12 +60,10 @@ public final class FirstQualityArgs extends io.pulumi.resources.ResourceArgs {
             this.bitrate = Objects.requireNonNull(bitrate);
             return this;
         }
-
         public Builder bitrate(Integer bitrate) {
             this.bitrate = Output.of(Objects.requireNonNull(bitrate));
             return this;
-        }
-        public FirstQualityArgs build() {
+        }        public FirstQualityArgs build() {
             return new FirstQualityArgs(bitrate);
         }
     }

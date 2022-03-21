@@ -187,92 +187,80 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
             this.additionalGroupKeys = additionalGroupKeys;
             return this;
         }
-
         public Builder additionalGroupKeys(@Nullable List<EntityKeyArgs> additionalGroupKeys) {
             this.additionalGroupKeys = Output.ofNullable(additionalGroupKeys);
             return this;
         }
-
+        public Builder additionalGroupKeys(EntityKeyArgs... additionalGroupKeys) {
+            return additionalGroupKeys(List.of(additionalGroupKeys));
+        }
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder dynamicGroupMetadata(@Nullable Output<DynamicGroupMetadataArgs> dynamicGroupMetadata) {
             this.dynamicGroupMetadata = dynamicGroupMetadata;
             return this;
         }
-
         public Builder dynamicGroupMetadata(@Nullable DynamicGroupMetadataArgs dynamicGroupMetadata) {
             this.dynamicGroupMetadata = Output.ofNullable(dynamicGroupMetadata);
             return this;
         }
-
         public Builder groupKey(Output<EntityKeyArgs> groupKey) {
             this.groupKey = Objects.requireNonNull(groupKey);
             return this;
         }
-
         public Builder groupKey(EntityKeyArgs groupKey) {
             this.groupKey = Output.of(Objects.requireNonNull(groupKey));
             return this;
         }
-
         public Builder initialGroupConfig(Output<String> initialGroupConfig) {
             this.initialGroupConfig = Objects.requireNonNull(initialGroupConfig);
             return this;
         }
-
         public Builder initialGroupConfig(String initialGroupConfig) {
             this.initialGroupConfig = Output.of(Objects.requireNonNull(initialGroupConfig));
             return this;
         }
-
         public Builder labels(Output<Map<String,String>> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder labels(Map<String,String> labels) {
             this.labels = Output.of(Objects.requireNonNull(labels));
             return this;
         }
-
         public Builder parent(Output<String> parent) {
             this.parent = Objects.requireNonNull(parent);
             return this;
         }
-
         public Builder parent(String parent) {
             this.parent = Output.of(Objects.requireNonNull(parent));
             return this;
         }
-
         public Builder posixGroups(@Nullable Output<List<PosixGroupArgs>> posixGroups) {
             this.posixGroups = posixGroups;
             return this;
         }
-
         public Builder posixGroups(@Nullable List<PosixGroupArgs> posixGroups) {
             this.posixGroups = Output.ofNullable(posixGroups);
             return this;
         }
-        public GroupArgs build() {
+        public Builder posixGroups(PosixGroupArgs... posixGroups) {
+            return posixGroups(List.of(posixGroups));
+        }        public GroupArgs build() {
             return new GroupArgs(additionalGroupKeys, description, displayName, dynamicGroupMetadata, groupKey, initialGroupConfig, labels, parent, posixGroups);
         }
     }

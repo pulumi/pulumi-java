@@ -72,12 +72,10 @@ public final class GetUserPoolClientArgs extends io.pulumi.resources.InvokeArgs 
             this.clientId = Objects.requireNonNull(clientId);
             return this;
         }
-
         public Builder userPoolId(String userPoolId) {
             this.userPoolId = Objects.requireNonNull(userPoolId);
             return this;
-        }
-        public GetUserPoolClientArgs build() {
+        }        public GetUserPoolClientArgs build() {
             return new GetUserPoolClientArgs(clientId, userPoolId);
         }
     }

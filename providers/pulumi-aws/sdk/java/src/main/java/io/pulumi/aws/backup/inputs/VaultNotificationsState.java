@@ -107,42 +107,37 @@ public final class VaultNotificationsState extends io.pulumi.resources.ResourceA
             this.backupVaultArn = backupVaultArn;
             return this;
         }
-
         public Builder backupVaultArn(@Nullable String backupVaultArn) {
             this.backupVaultArn = Output.ofNullable(backupVaultArn);
             return this;
         }
-
         public Builder backupVaultEvents(@Nullable Output<List<String>> backupVaultEvents) {
             this.backupVaultEvents = backupVaultEvents;
             return this;
         }
-
         public Builder backupVaultEvents(@Nullable List<String> backupVaultEvents) {
             this.backupVaultEvents = Output.ofNullable(backupVaultEvents);
             return this;
         }
-
+        public Builder backupVaultEvents(String... backupVaultEvents) {
+            return backupVaultEvents(List.of(backupVaultEvents));
+        }
         public Builder backupVaultName(@Nullable Output<String> backupVaultName) {
             this.backupVaultName = backupVaultName;
             return this;
         }
-
         public Builder backupVaultName(@Nullable String backupVaultName) {
             this.backupVaultName = Output.ofNullable(backupVaultName);
             return this;
         }
-
         public Builder snsTopicArn(@Nullable Output<String> snsTopicArn) {
             this.snsTopicArn = snsTopicArn;
             return this;
         }
-
         public Builder snsTopicArn(@Nullable String snsTopicArn) {
             this.snsTopicArn = Output.ofNullable(snsTopicArn);
             return this;
-        }
-        public VaultNotificationsState build() {
+        }        public VaultNotificationsState build() {
             return new VaultNotificationsState(backupVaultArn, backupVaultEvents, backupVaultName, snsTopicArn);
         }
     }

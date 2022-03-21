@@ -180,92 +180,74 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
             this.autoscale = autoscale;
             return this;
         }
-
         public Builder autoscale(@Nullable GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleArgs autoscale) {
             this.autoscale = Output.ofNullable(autoscale);
             return this;
         }
-
         public Builder channel(@Nullable Output<String> channel) {
             this.channel = channel;
             return this;
         }
-
         public Builder channel(@Nullable String channel) {
             this.channel = Output.ofNullable(channel);
             return this;
         }
-
         public Builder instanceId(Output<String> instanceId) {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
-
         public Builder instanceId(String instanceId) {
             this.instanceId = Output.of(Objects.requireNonNull(instanceId));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder parent(@Nullable Output<String> parent) {
             this.parent = parent;
             return this;
         }
-
         public Builder parent(@Nullable String parent) {
             this.parent = Output.ofNullable(parent);
             return this;
         }
-
         public Builder poolId(@Nullable Output<String> poolId) {
             this.poolId = poolId;
             return this;
         }
-
         public Builder poolId(@Nullable String poolId) {
             this.poolId = Output.ofNullable(poolId);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder workerConfig(@Nullable Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArgs> workerConfig) {
             this.workerConfig = workerConfig;
             return this;
         }
-
         public Builder workerConfig(@Nullable GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArgs workerConfig) {
             this.workerConfig = Output.ofNullable(workerConfig);
             return this;
         }
-
         public Builder workerCount(@Nullable Output<String> workerCount) {
             this.workerCount = workerCount;
             return this;
         }
-
         public Builder workerCount(@Nullable String workerCount) {
             this.workerCount = Output.ofNullable(workerCount);
             return this;
-        }
-        public WorkerPoolArgs build() {
+        }        public WorkerPoolArgs build() {
             return new WorkerPoolArgs(autoscale, channel, instanceId, name, parent, poolId, project, workerConfig, workerCount);
         }
     }

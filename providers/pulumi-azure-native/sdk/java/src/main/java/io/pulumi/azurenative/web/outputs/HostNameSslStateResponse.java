@@ -136,32 +136,26 @@ public final class HostNameSslStateResponse {
             this.hostType = hostType;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder sslState(@Nullable String sslState) {
             this.sslState = sslState;
             return this;
         }
-
         public Builder thumbprint(@Nullable String thumbprint) {
             this.thumbprint = thumbprint;
             return this;
         }
-
         public Builder toUpdate(@Nullable Boolean toUpdate) {
             this.toUpdate = toUpdate;
             return this;
         }
-
         public Builder virtualIP(@Nullable String virtualIP) {
             this.virtualIP = virtualIP;
             return this;
-        }
-        public HostNameSslStateResponse build() {
+        }        public HostNameSslStateResponse build() {
             return new HostNameSslStateResponse(hostType, name, sslState, thumbprint, toUpdate, virtualIP);
         }
     }

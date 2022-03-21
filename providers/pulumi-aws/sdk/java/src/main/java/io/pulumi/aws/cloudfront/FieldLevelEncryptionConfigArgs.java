@@ -92,32 +92,26 @@ public final class FieldLevelEncryptionConfigArgs extends io.pulumi.resources.Re
             this.comment = comment;
             return this;
         }
-
         public Builder comment(@Nullable String comment) {
             this.comment = Output.ofNullable(comment);
             return this;
         }
-
         public Builder contentTypeProfileConfig(Output<FieldLevelEncryptionConfigContentTypeProfileConfigArgs> contentTypeProfileConfig) {
             this.contentTypeProfileConfig = Objects.requireNonNull(contentTypeProfileConfig);
             return this;
         }
-
         public Builder contentTypeProfileConfig(FieldLevelEncryptionConfigContentTypeProfileConfigArgs contentTypeProfileConfig) {
             this.contentTypeProfileConfig = Output.of(Objects.requireNonNull(contentTypeProfileConfig));
             return this;
         }
-
         public Builder queryArgProfileConfig(Output<FieldLevelEncryptionConfigQueryArgProfileConfigArgs> queryArgProfileConfig) {
             this.queryArgProfileConfig = Objects.requireNonNull(queryArgProfileConfig);
             return this;
         }
-
         public Builder queryArgProfileConfig(FieldLevelEncryptionConfigQueryArgProfileConfigArgs queryArgProfileConfig) {
             this.queryArgProfileConfig = Output.of(Objects.requireNonNull(queryArgProfileConfig));
             return this;
-        }
-        public FieldLevelEncryptionConfigArgs build() {
+        }        public FieldLevelEncryptionConfigArgs build() {
             return new FieldLevelEncryptionConfigArgs(comment, contentTypeProfileConfig, queryArgProfileConfig);
         }
     }

@@ -354,182 +354,149 @@ public final class DelimitedTextDatasetArgs extends io.pulumi.resources.Resource
             this.annotations = annotations;
             return this;
         }
-
         public Builder annotations(@Nullable List<Object> annotations) {
             this.annotations = Output.ofNullable(annotations);
             return this;
         }
-
+        public Builder annotations(Object... annotations) {
+            return annotations(List.of(annotations));
+        }
         public Builder columnDelimiter(@Nullable Output<Object> columnDelimiter) {
             this.columnDelimiter = columnDelimiter;
             return this;
         }
-
         public Builder columnDelimiter(@Nullable Object columnDelimiter) {
             this.columnDelimiter = Output.ofNullable(columnDelimiter);
             return this;
         }
-
         public Builder compressionCodec(@Nullable Output<Object> compressionCodec) {
             this.compressionCodec = compressionCodec;
             return this;
         }
-
         public Builder compressionCodec(@Nullable Object compressionCodec) {
             this.compressionCodec = Output.ofNullable(compressionCodec);
             return this;
         }
-
         public Builder compressionLevel(@Nullable Output<Object> compressionLevel) {
             this.compressionLevel = compressionLevel;
             return this;
         }
-
         public Builder compressionLevel(@Nullable Object compressionLevel) {
             this.compressionLevel = Output.ofNullable(compressionLevel);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder encodingName(@Nullable Output<Object> encodingName) {
             this.encodingName = encodingName;
             return this;
         }
-
         public Builder encodingName(@Nullable Object encodingName) {
             this.encodingName = Output.ofNullable(encodingName);
             return this;
         }
-
         public Builder escapeChar(@Nullable Output<Object> escapeChar) {
             this.escapeChar = escapeChar;
             return this;
         }
-
         public Builder escapeChar(@Nullable Object escapeChar) {
             this.escapeChar = Output.ofNullable(escapeChar);
             return this;
         }
-
         public Builder firstRowAsHeader(@Nullable Output<Object> firstRowAsHeader) {
             this.firstRowAsHeader = firstRowAsHeader;
             return this;
         }
-
         public Builder firstRowAsHeader(@Nullable Object firstRowAsHeader) {
             this.firstRowAsHeader = Output.ofNullable(firstRowAsHeader);
             return this;
         }
-
         public Builder folder(@Nullable Output<DatasetFolderArgs> folder) {
             this.folder = folder;
             return this;
         }
-
         public Builder folder(@Nullable DatasetFolderArgs folder) {
             this.folder = Output.ofNullable(folder);
             return this;
         }
-
         public Builder linkedServiceName(Output<LinkedServiceReferenceArgs> linkedServiceName) {
             this.linkedServiceName = Objects.requireNonNull(linkedServiceName);
             return this;
         }
-
         public Builder linkedServiceName(LinkedServiceReferenceArgs linkedServiceName) {
             this.linkedServiceName = Output.of(Objects.requireNonNull(linkedServiceName));
             return this;
         }
-
         public Builder location(Output<Object> location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder location(Object location) {
             this.location = Output.of(Objects.requireNonNull(location));
             return this;
         }
-
         public Builder nullValue(@Nullable Output<Object> nullValue) {
             this.nullValue = nullValue;
             return this;
         }
-
         public Builder nullValue(@Nullable Object nullValue) {
             this.nullValue = Output.ofNullable(nullValue);
             return this;
         }
-
         public Builder parameters(@Nullable Output<Map<String,ParameterSpecificationArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder parameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
             this.parameters = Output.ofNullable(parameters);
             return this;
         }
-
         public Builder quoteChar(@Nullable Output<Object> quoteChar) {
             this.quoteChar = quoteChar;
             return this;
         }
-
         public Builder quoteChar(@Nullable Object quoteChar) {
             this.quoteChar = Output.ofNullable(quoteChar);
             return this;
         }
-
         public Builder rowDelimiter(@Nullable Output<Object> rowDelimiter) {
             this.rowDelimiter = rowDelimiter;
             return this;
         }
-
         public Builder rowDelimiter(@Nullable Object rowDelimiter) {
             this.rowDelimiter = Output.ofNullable(rowDelimiter);
             return this;
         }
-
         public Builder schema(@Nullable Output<Object> schema) {
             this.schema = schema;
             return this;
         }
-
         public Builder schema(@Nullable Object schema) {
             this.schema = Output.ofNullable(schema);
             return this;
         }
-
         public Builder structure(@Nullable Output<Object> structure) {
             this.structure = structure;
             return this;
         }
-
         public Builder structure(@Nullable Object structure) {
             this.structure = Output.ofNullable(structure);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public DelimitedTextDatasetArgs build() {
+        }        public DelimitedTextDatasetArgs build() {
             return new DelimitedTextDatasetArgs(annotations, columnDelimiter, compressionCodec, compressionLevel, description, encodingName, escapeChar, firstRowAsHeader, folder, linkedServiceName, location, nullValue, parameters, quoteChar, rowDelimiter, schema, structure, type);
         }
     }

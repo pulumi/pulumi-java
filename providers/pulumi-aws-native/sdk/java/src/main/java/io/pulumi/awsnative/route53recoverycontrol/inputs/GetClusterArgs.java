@@ -54,8 +54,7 @@ public final class GetClusterArgs extends io.pulumi.resources.InvokeArgs {
         public Builder clusterArn(String clusterArn) {
             this.clusterArn = Objects.requireNonNull(clusterArn);
             return this;
-        }
-        public GetClusterArgs build() {
+        }        public GetClusterArgs build() {
             return new GetClusterArgs(clusterArn);
         }
     }

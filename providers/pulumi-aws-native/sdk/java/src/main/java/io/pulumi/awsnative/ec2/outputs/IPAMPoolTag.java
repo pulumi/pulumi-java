@@ -69,12 +69,10 @@ public final class IPAMPoolTag {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public IPAMPoolTag build() {
+        }        public IPAMPoolTag build() {
             return new IPAMPoolTag(key, value);
         }
     }

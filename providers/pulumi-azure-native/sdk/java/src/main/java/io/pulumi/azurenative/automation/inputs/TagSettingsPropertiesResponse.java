@@ -80,12 +80,10 @@ public final class TagSettingsPropertiesResponse extends io.pulumi.resources.Inv
             this.filterOperator = filterOperator;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,List<String>> tags) {
             this.tags = tags;
             return this;
-        }
-        public TagSettingsPropertiesResponse build() {
+        }        public TagSettingsPropertiesResponse build() {
             return new TagSettingsPropertiesResponse(filterOperator, tags);
         }
     }

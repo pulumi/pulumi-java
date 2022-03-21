@@ -62,12 +62,13 @@ public final class SourceInstanceParamsArgs extends io.pulumi.resources.Resource
             this.diskConfigs = diskConfigs;
             return this;
         }
-
         public Builder diskConfigs(@Nullable List<DiskInstantiationConfigArgs> diskConfigs) {
             this.diskConfigs = Output.ofNullable(diskConfigs);
             return this;
         }
-        public SourceInstanceParamsArgs build() {
+        public Builder diskConfigs(DiskInstantiationConfigArgs... diskConfigs) {
+            return diskConfigs(List.of(diskConfigs));
+        }        public SourceInstanceParamsArgs build() {
             return new SourceInstanceParamsArgs(diskConfigs);
         }
     }

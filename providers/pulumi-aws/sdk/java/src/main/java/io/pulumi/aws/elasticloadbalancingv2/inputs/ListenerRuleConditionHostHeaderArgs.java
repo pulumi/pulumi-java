@@ -57,12 +57,13 @@ public final class ListenerRuleConditionHostHeaderArgs extends io.pulumi.resourc
             this.values = Objects.requireNonNull(values);
             return this;
         }
-
         public Builder values(List<String> values) {
             this.values = Output.of(Objects.requireNonNull(values));
             return this;
         }
-        public ListenerRuleConditionHostHeaderArgs build() {
+        public Builder values(String... values) {
+            return values(List.of(values));
+        }        public ListenerRuleConditionHostHeaderArgs build() {
             return new ListenerRuleConditionHostHeaderArgs(values);
         }
     }

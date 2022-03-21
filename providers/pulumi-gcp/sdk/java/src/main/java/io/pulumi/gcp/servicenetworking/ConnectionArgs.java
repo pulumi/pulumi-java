@@ -94,32 +94,29 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
             this.network = Objects.requireNonNull(network);
             return this;
         }
-
         public Builder network(String network) {
             this.network = Output.of(Objects.requireNonNull(network));
             return this;
         }
-
         public Builder reservedPeeringRanges(Output<List<String>> reservedPeeringRanges) {
             this.reservedPeeringRanges = Objects.requireNonNull(reservedPeeringRanges);
             return this;
         }
-
         public Builder reservedPeeringRanges(List<String> reservedPeeringRanges) {
             this.reservedPeeringRanges = Output.of(Objects.requireNonNull(reservedPeeringRanges));
             return this;
         }
-
+        public Builder reservedPeeringRanges(String... reservedPeeringRanges) {
+            return reservedPeeringRanges(List.of(reservedPeeringRanges));
+        }
         public Builder service(Output<String> service) {
             this.service = Objects.requireNonNull(service);
             return this;
         }
-
         public Builder service(String service) {
             this.service = Output.of(Objects.requireNonNull(service));
             return this;
-        }
-        public ConnectionArgs build() {
+        }        public ConnectionArgs build() {
             return new ConnectionArgs(network, reservedPeeringRanges, service);
         }
     }

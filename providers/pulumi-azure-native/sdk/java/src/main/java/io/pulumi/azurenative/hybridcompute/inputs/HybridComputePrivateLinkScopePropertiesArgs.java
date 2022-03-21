@@ -63,12 +63,10 @@ public final class HybridComputePrivateLinkScopePropertiesArgs extends io.pulumi
             this.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
-
         public Builder publicNetworkAccess(@Nullable Either<String,PublicNetworkAccessType> publicNetworkAccess) {
             this.publicNetworkAccess = Output.ofNullable(publicNetworkAccess);
             return this;
-        }
-        public HybridComputePrivateLinkScopePropertiesArgs build() {
+        }        public HybridComputePrivateLinkScopePropertiesArgs build() {
             return new HybridComputePrivateLinkScopePropertiesArgs(publicNetworkAccess);
         }
     }

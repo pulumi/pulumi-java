@@ -56,7 +56,9 @@ public final class SecurityPolicyRuleMatcherConfigResponse extends io.pulumi.res
             this.srcIpRanges = Objects.requireNonNull(srcIpRanges);
             return this;
         }
-        public SecurityPolicyRuleMatcherConfigResponse build() {
+        public Builder srcIpRanges(String... srcIpRanges) {
+            return srcIpRanges(List.of(srcIpRanges));
+        }        public SecurityPolicyRuleMatcherConfigResponse build() {
             return new SecurityPolicyRuleMatcherConfigResponse(srcIpRanges);
         }
     }

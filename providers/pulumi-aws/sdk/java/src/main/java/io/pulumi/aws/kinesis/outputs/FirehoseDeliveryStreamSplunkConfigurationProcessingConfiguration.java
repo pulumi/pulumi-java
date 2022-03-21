@@ -73,12 +73,13 @@ public final class FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurat
             this.enabled = enabled;
             return this;
         }
-
         public Builder processors(@Nullable List<FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationProcessor> processors) {
             this.processors = processors;
             return this;
         }
-        public FirehoseDeliveryStreamSplunkConfigurationProcessingConfiguration build() {
+        public Builder processors(FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationProcessor... processors) {
+            return processors(List.of(processors));
+        }        public FirehoseDeliveryStreamSplunkConfigurationProcessingConfiguration build() {
             return new FirehoseDeliveryStreamSplunkConfigurationProcessingConfiguration(enabled, processors);
         }
     }

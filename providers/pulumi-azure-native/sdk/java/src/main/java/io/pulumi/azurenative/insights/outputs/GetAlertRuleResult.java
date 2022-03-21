@@ -241,62 +241,53 @@ public final class GetAlertRuleResult {
             this.action = action;
             return this;
         }
-
         public Builder actions(@Nullable List<Either<RuleEmailActionResponse,RuleWebhookActionResponse>> actions) {
             this.actions = actions;
             return this;
         }
-
+        public Builder actions(Either<RuleEmailActionResponse,RuleWebhookActionResponse>... actions) {
+            return actions(List.of(actions));
+        }
         public Builder condition(Object condition) {
             this.condition = Objects.requireNonNull(condition);
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder isEnabled(Boolean isEnabled) {
             this.isEnabled = Objects.requireNonNull(isEnabled);
             return this;
         }
-
         public Builder lastUpdatedTime(String lastUpdatedTime) {
             this.lastUpdatedTime = Objects.requireNonNull(lastUpdatedTime);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder provisioningState(@Nullable String provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetAlertRuleResult build() {
+        }        public GetAlertRuleResult build() {
             return new GetAlertRuleResult(action, actions, condition, description, id, isEnabled, lastUpdatedTime, location, name, provisioningState, tags, type);
         }
     }

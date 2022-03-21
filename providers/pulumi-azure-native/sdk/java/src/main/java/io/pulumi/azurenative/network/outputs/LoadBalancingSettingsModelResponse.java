@@ -152,37 +152,30 @@ public final class LoadBalancingSettingsModelResponse {
             this.additionalLatencyMilliseconds = additionalLatencyMilliseconds;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder resourceState(String resourceState) {
             this.resourceState = Objects.requireNonNull(resourceState);
             return this;
         }
-
         public Builder sampleSize(@Nullable Integer sampleSize) {
             this.sampleSize = sampleSize;
             return this;
         }
-
         public Builder successfulSamplesRequired(@Nullable Integer successfulSamplesRequired) {
             this.successfulSamplesRequired = successfulSamplesRequired;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public LoadBalancingSettingsModelResponse build() {
+        }        public LoadBalancingSettingsModelResponse build() {
             return new LoadBalancingSettingsModelResponse(additionalLatencyMilliseconds, id, name, resourceState, sampleSize, successfulSamplesRequired, type);
         }
     }

@@ -50,8 +50,7 @@ public final class RuleGroupLabel extends io.pulumi.resources.InvokeArgs {
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public RuleGroupLabel build() {
+        }        public RuleGroupLabel build() {
             return new RuleGroupLabel(name);
         }
     }

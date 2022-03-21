@@ -441,127 +441,114 @@ public final class GetSnapshotResult {
             this.autoCreated = Objects.requireNonNull(autoCreated);
             return this;
         }
-
         public Builder chainName(String chainName) {
             this.chainName = Objects.requireNonNull(chainName);
             return this;
         }
-
         public Builder creationTimestamp(String creationTimestamp) {
             this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder diskSizeGb(String diskSizeGb) {
             this.diskSizeGb = Objects.requireNonNull(diskSizeGb);
             return this;
         }
-
         public Builder downloadBytes(String downloadBytes) {
             this.downloadBytes = Objects.requireNonNull(downloadBytes);
             return this;
         }
-
         public Builder guestFlush(Boolean guestFlush) {
             this.guestFlush = Objects.requireNonNull(guestFlush);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder labelFingerprint(String labelFingerprint) {
             this.labelFingerprint = Objects.requireNonNull(labelFingerprint);
             return this;
         }
-
         public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder licenseCodes(List<String> licenseCodes) {
             this.licenseCodes = Objects.requireNonNull(licenseCodes);
             return this;
         }
-
+        public Builder licenseCodes(String... licenseCodes) {
+            return licenseCodes(List.of(licenseCodes));
+        }
         public Builder licenses(List<String> licenses) {
             this.licenses = Objects.requireNonNull(licenses);
             return this;
         }
-
+        public Builder licenses(String... licenses) {
+            return licenses(List.of(licenses));
+        }
         public Builder locationHint(String locationHint) {
             this.locationHint = Objects.requireNonNull(locationHint);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder satisfiesPzs(Boolean satisfiesPzs) {
             this.satisfiesPzs = Objects.requireNonNull(satisfiesPzs);
             return this;
         }
-
         public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
-
         public Builder snapshotEncryptionKey(CustomerEncryptionKeyResponse snapshotEncryptionKey) {
             this.snapshotEncryptionKey = Objects.requireNonNull(snapshotEncryptionKey);
             return this;
         }
-
         public Builder sourceDisk(String sourceDisk) {
             this.sourceDisk = Objects.requireNonNull(sourceDisk);
             return this;
         }
-
         public Builder sourceDiskEncryptionKey(CustomerEncryptionKeyResponse sourceDiskEncryptionKey) {
             this.sourceDiskEncryptionKey = Objects.requireNonNull(sourceDiskEncryptionKey);
             return this;
         }
-
         public Builder sourceDiskId(String sourceDiskId) {
             this.sourceDiskId = Objects.requireNonNull(sourceDiskId);
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder storageBytes(String storageBytes) {
             this.storageBytes = Objects.requireNonNull(storageBytes);
             return this;
         }
-
         public Builder storageBytesStatus(String storageBytesStatus) {
             this.storageBytesStatus = Objects.requireNonNull(storageBytesStatus);
             return this;
         }
-
         public Builder storageLocations(List<String> storageLocations) {
             this.storageLocations = Objects.requireNonNull(storageLocations);
             return this;
         }
-
+        public Builder storageLocations(String... storageLocations) {
+            return storageLocations(List.of(storageLocations));
+        }
         public Builder userLicenses(List<String> userLicenses) {
             this.userLicenses = Objects.requireNonNull(userLicenses);
             return this;
         }
-        public GetSnapshotResult build() {
+        public Builder userLicenses(String... userLicenses) {
+            return userLicenses(List.of(userLicenses));
+        }        public GetSnapshotResult build() {
             return new GetSnapshotResult(autoCreated, chainName, creationTimestamp, description, diskSizeGb, downloadBytes, guestFlush, kind, labelFingerprint, labels, licenseCodes, licenses, locationHint, name, satisfiesPzs, selfLink, snapshotEncryptionKey, sourceDisk, sourceDiskEncryptionKey, sourceDiskId, status, storageBytes, storageBytesStatus, storageLocations, userLicenses);
         }
     }

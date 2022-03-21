@@ -150,37 +150,30 @@ public final class ReadinessCheckResponse {
             this.appStartTimeout = Objects.requireNonNull(appStartTimeout);
             return this;
         }
-
         public Builder checkInterval(String checkInterval) {
             this.checkInterval = Objects.requireNonNull(checkInterval);
             return this;
         }
-
         public Builder failureThreshold(Integer failureThreshold) {
             this.failureThreshold = Objects.requireNonNull(failureThreshold);
             return this;
         }
-
         public Builder host(String host) {
             this.host = Objects.requireNonNull(host);
             return this;
         }
-
         public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
-
         public Builder successThreshold(Integer successThreshold) {
             this.successThreshold = Objects.requireNonNull(successThreshold);
             return this;
         }
-
         public Builder timeout(String timeout) {
             this.timeout = Objects.requireNonNull(timeout);
             return this;
-        }
-        public ReadinessCheckResponse build() {
+        }        public ReadinessCheckResponse build() {
             return new ReadinessCheckResponse(appStartTimeout, checkInterval, failureThreshold, host, path, successThreshold, timeout);
         }
     }

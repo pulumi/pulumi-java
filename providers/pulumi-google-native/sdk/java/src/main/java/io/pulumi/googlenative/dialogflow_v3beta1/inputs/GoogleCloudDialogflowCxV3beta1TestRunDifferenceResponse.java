@@ -76,12 +76,10 @@ public final class GoogleCloudDialogflowCxV3beta1TestRunDifferenceResponse exten
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GoogleCloudDialogflowCxV3beta1TestRunDifferenceResponse build() {
+        }        public GoogleCloudDialogflowCxV3beta1TestRunDifferenceResponse build() {
             return new GoogleCloudDialogflowCxV3beta1TestRunDifferenceResponse(description, type);
         }
     }

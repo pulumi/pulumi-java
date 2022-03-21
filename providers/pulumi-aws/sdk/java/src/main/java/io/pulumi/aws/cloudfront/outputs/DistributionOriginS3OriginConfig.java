@@ -53,8 +53,7 @@ public final class DistributionOriginS3OriginConfig {
         public Builder originAccessIdentity(String originAccessIdentity) {
             this.originAccessIdentity = Objects.requireNonNull(originAccessIdentity);
             return this;
-        }
-        public DistributionOriginS3OriginConfig build() {
+        }        public DistributionOriginS3OriginConfig build() {
             return new DistributionOriginS3OriginConfig(originAccessIdentity);
         }
     }

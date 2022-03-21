@@ -154,37 +154,36 @@ public final class ApplicationGatewayBackendAddressPoolResponse {
             this.backendAddresses = backendAddresses;
             return this;
         }
-
+        public Builder backendAddresses(ApplicationGatewayBackendAddressResponse... backendAddresses) {
+            return backendAddresses(List.of(backendAddresses));
+        }
         public Builder backendIPConfigurations(List<NetworkInterfaceIPConfigurationResponse> backendIPConfigurations) {
             this.backendIPConfigurations = Objects.requireNonNull(backendIPConfigurations);
             return this;
         }
-
+        public Builder backendIPConfigurations(NetworkInterfaceIPConfigurationResponse... backendIPConfigurations) {
+            return backendIPConfigurations(List.of(backendIPConfigurations));
+        }
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public ApplicationGatewayBackendAddressPoolResponse build() {
+        }        public ApplicationGatewayBackendAddressPoolResponse build() {
             return new ApplicationGatewayBackendAddressPoolResponse(backendAddresses, backendIPConfigurations, etag, id, name, provisioningState, type);
         }
     }

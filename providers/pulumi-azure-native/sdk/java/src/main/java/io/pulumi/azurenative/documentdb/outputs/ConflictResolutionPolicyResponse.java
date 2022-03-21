@@ -87,17 +87,14 @@ public final class ConflictResolutionPolicyResponse {
             this.conflictResolutionPath = conflictResolutionPath;
             return this;
         }
-
         public Builder conflictResolutionProcedure(@Nullable String conflictResolutionProcedure) {
             this.conflictResolutionProcedure = conflictResolutionProcedure;
             return this;
         }
-
         public Builder mode(@Nullable String mode) {
             this.mode = mode;
             return this;
-        }
-        public ConflictResolutionPolicyResponse build() {
+        }        public ConflictResolutionPolicyResponse build() {
             return new ConflictResolutionPolicyResponse(conflictResolutionPath, conflictResolutionProcedure, mode);
         }
     }

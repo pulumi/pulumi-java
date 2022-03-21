@@ -90,22 +90,18 @@ public final class GetEnvironmentArgs extends io.pulumi.resources.InvokeArgs {
             this.agentId = Objects.requireNonNull(agentId);
             return this;
         }
-
         public Builder environmentId(String environmentId) {
             this.environmentId = Objects.requireNonNull(environmentId);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetEnvironmentArgs build() {
+        }        public GetEnvironmentArgs build() {
             return new GetEnvironmentArgs(agentId, environmentId, location, project);
         }
     }

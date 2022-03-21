@@ -210,102 +210,82 @@ public final class ProbeArgs extends io.pulumi.resources.ResourceArgs {
             this.exec = exec;
             return this;
         }
-
         public Builder exec(@Nullable ExecActionArgs exec) {
             this.exec = Output.ofNullable(exec);
             return this;
         }
-
         public Builder failureThreshold(@Nullable Output<Integer> failureThreshold) {
             this.failureThreshold = failureThreshold;
             return this;
         }
-
         public Builder failureThreshold(@Nullable Integer failureThreshold) {
             this.failureThreshold = Output.ofNullable(failureThreshold);
             return this;
         }
-
         public Builder grpc(@Nullable Output<GRPCActionArgs> grpc) {
             this.grpc = grpc;
             return this;
         }
-
         public Builder grpc(@Nullable GRPCActionArgs grpc) {
             this.grpc = Output.ofNullable(grpc);
             return this;
         }
-
         public Builder httpGet(@Nullable Output<HTTPGetActionArgs> httpGet) {
             this.httpGet = httpGet;
             return this;
         }
-
         public Builder httpGet(@Nullable HTTPGetActionArgs httpGet) {
             this.httpGet = Output.ofNullable(httpGet);
             return this;
         }
-
         public Builder initialDelaySeconds(@Nullable Output<Integer> initialDelaySeconds) {
             this.initialDelaySeconds = initialDelaySeconds;
             return this;
         }
-
         public Builder initialDelaySeconds(@Nullable Integer initialDelaySeconds) {
             this.initialDelaySeconds = Output.ofNullable(initialDelaySeconds);
             return this;
         }
-
         public Builder periodSeconds(@Nullable Output<Integer> periodSeconds) {
             this.periodSeconds = periodSeconds;
             return this;
         }
-
         public Builder periodSeconds(@Nullable Integer periodSeconds) {
             this.periodSeconds = Output.ofNullable(periodSeconds);
             return this;
         }
-
         public Builder successThreshold(@Nullable Output<Integer> successThreshold) {
             this.successThreshold = successThreshold;
             return this;
         }
-
         public Builder successThreshold(@Nullable Integer successThreshold) {
             this.successThreshold = Output.ofNullable(successThreshold);
             return this;
         }
-
         public Builder tcpSocket(@Nullable Output<TCPSocketActionArgs> tcpSocket) {
             this.tcpSocket = tcpSocket;
             return this;
         }
-
         public Builder tcpSocket(@Nullable TCPSocketActionArgs tcpSocket) {
             this.tcpSocket = Output.ofNullable(tcpSocket);
             return this;
         }
-
         public Builder terminationGracePeriodSeconds(@Nullable Output<Integer> terminationGracePeriodSeconds) {
             this.terminationGracePeriodSeconds = terminationGracePeriodSeconds;
             return this;
         }
-
         public Builder terminationGracePeriodSeconds(@Nullable Integer terminationGracePeriodSeconds) {
             this.terminationGracePeriodSeconds = Output.ofNullable(terminationGracePeriodSeconds);
             return this;
         }
-
         public Builder timeoutSeconds(@Nullable Output<Integer> timeoutSeconds) {
             this.timeoutSeconds = timeoutSeconds;
             return this;
         }
-
         public Builder timeoutSeconds(@Nullable Integer timeoutSeconds) {
             this.timeoutSeconds = Output.ofNullable(timeoutSeconds);
             return this;
-        }
-        public ProbeArgs build() {
+        }        public ProbeArgs build() {
             return new ProbeArgs(exec, failureThreshold, grpc, httpGet, initialDelaySeconds, periodSeconds, successThreshold, tcpSocket, terminationGracePeriodSeconds, timeoutSeconds);
         }
     }

@@ -59,12 +59,10 @@ public final class AccessLevelsAccessLevelCustomArgs extends io.pulumi.resources
             this.expr = Objects.requireNonNull(expr);
             return this;
         }
-
         public Builder expr(AccessLevelsAccessLevelCustomExprArgs expr) {
             this.expr = Output.of(Objects.requireNonNull(expr));
             return this;
-        }
-        public AccessLevelsAccessLevelCustomArgs build() {
+        }        public AccessLevelsAccessLevelCustomArgs build() {
             return new AccessLevelsAccessLevelCustomArgs(expr);
         }
     }

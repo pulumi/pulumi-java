@@ -60,12 +60,10 @@ public final class IapTestServiceAccountInfoArgs extends io.pulumi.resources.Res
             this.targetAudienceClientId = Objects.requireNonNull(targetAudienceClientId);
             return this;
         }
-
         public Builder targetAudienceClientId(String targetAudienceClientId) {
             this.targetAudienceClientId = Output.of(Objects.requireNonNull(targetAudienceClientId));
             return this;
-        }
-        public IapTestServiceAccountInfoArgs build() {
+        }        public IapTestServiceAccountInfoArgs build() {
             return new IapTestServiceAccountInfoArgs(targetAudienceClientId);
         }
     }

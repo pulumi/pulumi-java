@@ -78,22 +78,18 @@ public final class VersionSourceArgs extends io.pulumi.resources.ResourceArgs {
             this.mshField = mshField;
             return this;
         }
-
         public Builder mshField(@Nullable String mshField) {
             this.mshField = Output.ofNullable(mshField);
             return this;
         }
-
         public Builder value(@Nullable Output<String> value) {
             this.value = value;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = Output.ofNullable(value);
             return this;
-        }
-        public VersionSourceArgs build() {
+        }        public VersionSourceArgs build() {
             return new VersionSourceArgs(mshField, value);
         }
     }

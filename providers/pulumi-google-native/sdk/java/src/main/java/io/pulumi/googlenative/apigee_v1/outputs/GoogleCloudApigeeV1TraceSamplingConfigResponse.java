@@ -70,12 +70,10 @@ public final class GoogleCloudApigeeV1TraceSamplingConfigResponse {
             this.sampler = Objects.requireNonNull(sampler);
             return this;
         }
-
         public Builder samplingRate(Double samplingRate) {
             this.samplingRate = Objects.requireNonNull(samplingRate);
             return this;
-        }
-        public GoogleCloudApigeeV1TraceSamplingConfigResponse build() {
+        }        public GoogleCloudApigeeV1TraceSamplingConfigResponse build() {
             return new GoogleCloudApigeeV1TraceSamplingConfigResponse(sampler, samplingRate);
         }
     }

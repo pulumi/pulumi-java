@@ -77,12 +77,10 @@ public final class GoogleCloudRunOpV2BinaryAuthorizationResponse extends io.pulu
             this.breakglassJustification = Objects.requireNonNull(breakglassJustification);
             return this;
         }
-
         public Builder useDefault(Boolean useDefault) {
             this.useDefault = Objects.requireNonNull(useDefault);
             return this;
-        }
-        public GoogleCloudRunOpV2BinaryAuthorizationResponse build() {
+        }        public GoogleCloudRunOpV2BinaryAuthorizationResponse build() {
             return new GoogleCloudRunOpV2BinaryAuthorizationResponse(breakglassJustification, useDefault);
         }
     }

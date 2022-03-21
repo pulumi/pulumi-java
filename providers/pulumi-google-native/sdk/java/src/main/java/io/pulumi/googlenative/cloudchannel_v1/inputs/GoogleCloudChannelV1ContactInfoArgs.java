@@ -126,52 +126,42 @@ public final class GoogleCloudChannelV1ContactInfoArgs extends io.pulumi.resourc
             this.email = email;
             return this;
         }
-
         public Builder email(@Nullable String email) {
             this.email = Output.ofNullable(email);
             return this;
         }
-
         public Builder firstName(@Nullable Output<String> firstName) {
             this.firstName = firstName;
             return this;
         }
-
         public Builder firstName(@Nullable String firstName) {
             this.firstName = Output.ofNullable(firstName);
             return this;
         }
-
         public Builder lastName(@Nullable Output<String> lastName) {
             this.lastName = lastName;
             return this;
         }
-
         public Builder lastName(@Nullable String lastName) {
             this.lastName = Output.ofNullable(lastName);
             return this;
         }
-
         public Builder phone(@Nullable Output<String> phone) {
             this.phone = phone;
             return this;
         }
-
         public Builder phone(@Nullable String phone) {
             this.phone = Output.ofNullable(phone);
             return this;
         }
-
         public Builder title(@Nullable Output<String> title) {
             this.title = title;
             return this;
         }
-
         public Builder title(@Nullable String title) {
             this.title = Output.ofNullable(title);
             return this;
-        }
-        public GoogleCloudChannelV1ContactInfoArgs build() {
+        }        public GoogleCloudChannelV1ContactInfoArgs build() {
             return new GoogleCloudChannelV1ContactInfoArgs(email, firstName, lastName, phone, title);
         }
     }

@@ -133,32 +133,29 @@ public final class ResizeOperationStatusResponse extends io.pulumi.resources.Inv
             this.errors = errors;
             return this;
         }
-
+        public Builder errors(ResizeErrorResponse... errors) {
+            return errors(List.of(errors));
+        }
         public Builder nodeDeallocationOption(@Nullable String nodeDeallocationOption) {
             this.nodeDeallocationOption = nodeDeallocationOption;
             return this;
         }
-
         public Builder resizeTimeout(@Nullable String resizeTimeout) {
             this.resizeTimeout = resizeTimeout;
             return this;
         }
-
         public Builder startTime(@Nullable String startTime) {
             this.startTime = startTime;
             return this;
         }
-
         public Builder targetDedicatedNodes(@Nullable Integer targetDedicatedNodes) {
             this.targetDedicatedNodes = targetDedicatedNodes;
             return this;
         }
-
         public Builder targetLowPriorityNodes(@Nullable Integer targetLowPriorityNodes) {
             this.targetLowPriorityNodes = targetLowPriorityNodes;
             return this;
-        }
-        public ResizeOperationStatusResponse build() {
+        }        public ResizeOperationStatusResponse build() {
             return new ResizeOperationStatusResponse(errors, nodeDeallocationOption, resizeTimeout, startTime, targetDedicatedNodes, targetLowPriorityNodes);
         }
     }

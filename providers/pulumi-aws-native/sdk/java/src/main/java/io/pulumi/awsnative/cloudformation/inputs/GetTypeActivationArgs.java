@@ -54,8 +54,7 @@ public final class GetTypeActivationArgs extends io.pulumi.resources.InvokeArgs 
         public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
-        }
-        public GetTypeActivationArgs build() {
+        }        public GetTypeActivationArgs build() {
             return new GetTypeActivationArgs(arn);
         }
     }

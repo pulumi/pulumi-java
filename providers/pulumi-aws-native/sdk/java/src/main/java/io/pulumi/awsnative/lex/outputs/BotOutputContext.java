@@ -62,17 +62,14 @@ public final class BotOutputContext {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder timeToLiveInSeconds(Integer timeToLiveInSeconds) {
             this.timeToLiveInSeconds = Objects.requireNonNull(timeToLiveInSeconds);
             return this;
         }
-
         public Builder turnsToLive(Integer turnsToLive) {
             this.turnsToLive = Objects.requireNonNull(turnsToLive);
             return this;
-        }
-        public BotOutputContext build() {
+        }        public BotOutputContext build() {
             return new BotOutputContext(name, timeToLiveInSeconds, turnsToLive);
         }
     }

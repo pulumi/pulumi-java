@@ -197,92 +197,77 @@ public final class SalesforceServiceCloudObjectDatasetArgs extends io.pulumi.res
             this.annotations = annotations;
             return this;
         }
-
         public Builder annotations(@Nullable List<Object> annotations) {
             this.annotations = Output.ofNullable(annotations);
             return this;
         }
-
+        public Builder annotations(Object... annotations) {
+            return annotations(List.of(annotations));
+        }
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder folder(@Nullable Output<DatasetFolderArgs> folder) {
             this.folder = folder;
             return this;
         }
-
         public Builder folder(@Nullable DatasetFolderArgs folder) {
             this.folder = Output.ofNullable(folder);
             return this;
         }
-
         public Builder linkedServiceName(Output<LinkedServiceReferenceArgs> linkedServiceName) {
             this.linkedServiceName = Objects.requireNonNull(linkedServiceName);
             return this;
         }
-
         public Builder linkedServiceName(LinkedServiceReferenceArgs linkedServiceName) {
             this.linkedServiceName = Output.of(Objects.requireNonNull(linkedServiceName));
             return this;
         }
-
         public Builder objectApiName(@Nullable Output<Object> objectApiName) {
             this.objectApiName = objectApiName;
             return this;
         }
-
         public Builder objectApiName(@Nullable Object objectApiName) {
             this.objectApiName = Output.ofNullable(objectApiName);
             return this;
         }
-
         public Builder parameters(@Nullable Output<Map<String,ParameterSpecificationArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder parameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
             this.parameters = Output.ofNullable(parameters);
             return this;
         }
-
         public Builder schema(@Nullable Output<Object> schema) {
             this.schema = schema;
             return this;
         }
-
         public Builder schema(@Nullable Object schema) {
             this.schema = Output.ofNullable(schema);
             return this;
         }
-
         public Builder structure(@Nullable Output<Object> structure) {
             this.structure = structure;
             return this;
         }
-
         public Builder structure(@Nullable Object structure) {
             this.structure = Output.ofNullable(structure);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public SalesforceServiceCloudObjectDatasetArgs build() {
+        }        public SalesforceServiceCloudObjectDatasetArgs build() {
             return new SalesforceServiceCloudObjectDatasetArgs(annotations, description, folder, linkedServiceName, objectApiName, parameters, schema, structure, type);
         }
     }

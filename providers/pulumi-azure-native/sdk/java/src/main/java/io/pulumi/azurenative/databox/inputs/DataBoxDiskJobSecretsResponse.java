@@ -146,32 +146,29 @@ public final class DataBoxDiskJobSecretsResponse extends io.pulumi.resources.Inv
             this.dcAccessSecurityCode = Objects.requireNonNull(dcAccessSecurityCode);
             return this;
         }
-
         public Builder diskSecrets(List<DiskSecretResponse> diskSecrets) {
             this.diskSecrets = Objects.requireNonNull(diskSecrets);
             return this;
         }
-
+        public Builder diskSecrets(DiskSecretResponse... diskSecrets) {
+            return diskSecrets(List.of(diskSecrets));
+        }
         public Builder error(CloudErrorResponse error) {
             this.error = Objects.requireNonNull(error);
             return this;
         }
-
         public Builder isPasskeyUserDefined(Boolean isPasskeyUserDefined) {
             this.isPasskeyUserDefined = Objects.requireNonNull(isPasskeyUserDefined);
             return this;
         }
-
         public Builder jobSecretsType(String jobSecretsType) {
             this.jobSecretsType = Objects.requireNonNull(jobSecretsType);
             return this;
         }
-
         public Builder passKey(String passKey) {
             this.passKey = Objects.requireNonNull(passKey);
             return this;
-        }
-        public DataBoxDiskJobSecretsResponse build() {
+        }        public DataBoxDiskJobSecretsResponse build() {
             return new DataBoxDiskJobSecretsResponse(dcAccessSecurityCode, diskSecrets, error, isPasskeyUserDefined, jobSecretsType, passKey);
         }
     }

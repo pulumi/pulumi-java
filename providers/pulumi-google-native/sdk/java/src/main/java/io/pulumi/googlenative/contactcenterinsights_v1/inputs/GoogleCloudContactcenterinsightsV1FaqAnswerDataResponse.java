@@ -142,32 +142,26 @@ public final class GoogleCloudContactcenterinsightsV1FaqAnswerDataResponse exten
             this.answer = Objects.requireNonNull(answer);
             return this;
         }
-
         public Builder confidenceScore(Double confidenceScore) {
             this.confidenceScore = Objects.requireNonNull(confidenceScore);
             return this;
         }
-
         public Builder metadata(Map<String,String> metadata) {
             this.metadata = Objects.requireNonNull(metadata);
             return this;
         }
-
         public Builder queryRecord(String queryRecord) {
             this.queryRecord = Objects.requireNonNull(queryRecord);
             return this;
         }
-
         public Builder question(String question) {
             this.question = Objects.requireNonNull(question);
             return this;
         }
-
         public Builder source(String source) {
             this.source = Objects.requireNonNull(source);
             return this;
-        }
-        public GoogleCloudContactcenterinsightsV1FaqAnswerDataResponse build() {
+        }        public GoogleCloudContactcenterinsightsV1FaqAnswerDataResponse build() {
             return new GoogleCloudContactcenterinsightsV1FaqAnswerDataResponse(answer, confidenceScore, metadata, queryRecord, question, source);
         }
     }

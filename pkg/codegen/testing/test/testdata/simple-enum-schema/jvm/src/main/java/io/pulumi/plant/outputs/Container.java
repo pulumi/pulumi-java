@@ -73,22 +73,18 @@ public final class Container {
             this.brightness = brightness;
             return this;
         }
-
         public Builder color(@Nullable String color) {
             this.color = color;
             return this;
         }
-
         public Builder material(@Nullable String material) {
             this.material = material;
             return this;
         }
-
         public Builder size(ContainerSize size) {
             this.size = Objects.requireNonNull(size);
             return this;
-        }
-        public Container build() {
+        }        public Container build() {
             return new Container(brightness, color, material, size);
         }
     }

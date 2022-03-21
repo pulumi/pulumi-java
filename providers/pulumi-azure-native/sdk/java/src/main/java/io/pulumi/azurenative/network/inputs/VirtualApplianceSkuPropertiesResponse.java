@@ -94,17 +94,14 @@ public final class VirtualApplianceSkuPropertiesResponse extends io.pulumi.resou
             this.bundledScaleUnit = bundledScaleUnit;
             return this;
         }
-
         public Builder marketPlaceVersion(@Nullable String marketPlaceVersion) {
             this.marketPlaceVersion = marketPlaceVersion;
             return this;
         }
-
         public Builder vendor(@Nullable String vendor) {
             this.vendor = vendor;
             return this;
-        }
-        public VirtualApplianceSkuPropertiesResponse build() {
+        }        public VirtualApplianceSkuPropertiesResponse build() {
             return new VirtualApplianceSkuPropertiesResponse(bundledScaleUnit, marketPlaceVersion, vendor);
         }
     }

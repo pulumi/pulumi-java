@@ -69,12 +69,10 @@ public final class ReportGroupingResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public ReportGroupingResponse build() {
+        }        public ReportGroupingResponse build() {
             return new ReportGroupingResponse(name, type);
         }
     }

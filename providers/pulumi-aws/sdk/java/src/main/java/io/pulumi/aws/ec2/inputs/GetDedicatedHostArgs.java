@@ -89,17 +89,17 @@ public final class GetDedicatedHostArgs extends io.pulumi.resources.InvokeArgs {
             this.filters = filters;
             return this;
         }
-
+        public Builder filters(GetDedicatedHostFilter... filters) {
+            return filters(List.of(filters));
+        }
         public Builder hostId(@Nullable String hostId) {
             this.hostId = hostId;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
-        }
-        public GetDedicatedHostArgs build() {
+        }        public GetDedicatedHostArgs build() {
             return new GetDedicatedHostArgs(filters, hostId, tags);
         }
     }

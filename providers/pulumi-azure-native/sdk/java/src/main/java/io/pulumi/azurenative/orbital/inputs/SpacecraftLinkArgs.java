@@ -113,42 +113,34 @@ public final class SpacecraftLinkArgs extends io.pulumi.resources.ResourceArgs {
             this.bandwidthMHz = Objects.requireNonNull(bandwidthMHz);
             return this;
         }
-
         public Builder bandwidthMHz(Double bandwidthMHz) {
             this.bandwidthMHz = Output.of(Objects.requireNonNull(bandwidthMHz));
             return this;
         }
-
         public Builder centerFrequencyMHz(Output<Double> centerFrequencyMHz) {
             this.centerFrequencyMHz = Objects.requireNonNull(centerFrequencyMHz);
             return this;
         }
-
         public Builder centerFrequencyMHz(Double centerFrequencyMHz) {
             this.centerFrequencyMHz = Output.of(Objects.requireNonNull(centerFrequencyMHz));
             return this;
         }
-
         public Builder direction(Output<Either<String,Direction>> direction) {
             this.direction = Objects.requireNonNull(direction);
             return this;
         }
-
         public Builder direction(Either<String,Direction> direction) {
             this.direction = Output.of(Objects.requireNonNull(direction));
             return this;
         }
-
         public Builder polarization(Output<Either<String,Polarization>> polarization) {
             this.polarization = Objects.requireNonNull(polarization);
             return this;
         }
-
         public Builder polarization(Either<String,Polarization> polarization) {
             this.polarization = Output.of(Objects.requireNonNull(polarization));
             return this;
-        }
-        public SpacecraftLinkArgs build() {
+        }        public SpacecraftLinkArgs build() {
             return new SpacecraftLinkArgs(bandwidthMHz, centerFrequencyMHz, direction, polarization);
         }
     }

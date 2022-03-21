@@ -90,17 +90,14 @@ public final class EdgeUsageDataEventHubResponse extends io.pulumi.resources.Inv
             this.name = name;
             return this;
         }
-
         public Builder namespace(@Nullable String namespace) {
             this.namespace = namespace;
             return this;
         }
-
         public Builder token(@Nullable String token) {
             this.token = token;
             return this;
-        }
-        public EdgeUsageDataEventHubResponse build() {
+        }        public EdgeUsageDataEventHubResponse build() {
             return new EdgeUsageDataEventHubResponse(name, namespace, token);
         }
     }

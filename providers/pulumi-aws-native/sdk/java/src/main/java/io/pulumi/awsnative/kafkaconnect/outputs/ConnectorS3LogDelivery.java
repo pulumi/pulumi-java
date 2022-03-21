@@ -88,17 +88,14 @@ public final class ConnectorS3LogDelivery {
             this.bucket = bucket;
             return this;
         }
-
         public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public Builder prefix(@Nullable String prefix) {
             this.prefix = prefix;
             return this;
-        }
-        public ConnectorS3LogDelivery build() {
+        }        public ConnectorS3LogDelivery build() {
             return new ConnectorS3LogDelivery(bucket, enabled, prefix);
         }
     }

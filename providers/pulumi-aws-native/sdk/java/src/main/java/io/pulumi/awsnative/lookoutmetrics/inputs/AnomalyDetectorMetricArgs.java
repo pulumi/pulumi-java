@@ -83,32 +83,26 @@ public final class AnomalyDetectorMetricArgs extends io.pulumi.resources.Resourc
             this.aggregationFunction = Objects.requireNonNull(aggregationFunction);
             return this;
         }
-
         public Builder aggregationFunction(AnomalyDetectorMetricAggregationFunction aggregationFunction) {
             this.aggregationFunction = Output.of(Objects.requireNonNull(aggregationFunction));
             return this;
         }
-
         public Builder metricName(Output<String> metricName) {
             this.metricName = Objects.requireNonNull(metricName);
             return this;
         }
-
         public Builder metricName(String metricName) {
             this.metricName = Output.of(Objects.requireNonNull(metricName));
             return this;
         }
-
         public Builder namespace(@Nullable Output<String> namespace) {
             this.namespace = namespace;
             return this;
         }
-
         public Builder namespace(@Nullable String namespace) {
             this.namespace = Output.ofNullable(namespace);
             return this;
-        }
-        public AnomalyDetectorMetricArgs build() {
+        }        public AnomalyDetectorMetricArgs build() {
             return new AnomalyDetectorMetricArgs(aggregationFunction, metricName, namespace);
         }
     }

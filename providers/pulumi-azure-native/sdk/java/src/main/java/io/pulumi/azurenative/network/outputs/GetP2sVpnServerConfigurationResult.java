@@ -254,67 +254,75 @@ public final class GetP2sVpnServerConfigurationResult {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder p2SVpnGateways(List<SubResourceResponse> p2SVpnGateways) {
             this.p2SVpnGateways = Objects.requireNonNull(p2SVpnGateways);
             return this;
         }
-
+        public Builder p2SVpnGateways(SubResourceResponse... p2SVpnGateways) {
+            return p2SVpnGateways(List.of(p2SVpnGateways));
+        }
         public Builder p2SVpnServerConfigRadiusClientRootCertificates(@Nullable List<P2SVpnServerConfigRadiusClientRootCertificateResponse> p2SVpnServerConfigRadiusClientRootCertificates) {
             this.p2SVpnServerConfigRadiusClientRootCertificates = p2SVpnServerConfigRadiusClientRootCertificates;
             return this;
         }
-
+        public Builder p2SVpnServerConfigRadiusClientRootCertificates(P2SVpnServerConfigRadiusClientRootCertificateResponse... p2SVpnServerConfigRadiusClientRootCertificates) {
+            return p2SVpnServerConfigRadiusClientRootCertificates(List.of(p2SVpnServerConfigRadiusClientRootCertificates));
+        }
         public Builder p2SVpnServerConfigRadiusServerRootCertificates(@Nullable List<P2SVpnServerConfigRadiusServerRootCertificateResponse> p2SVpnServerConfigRadiusServerRootCertificates) {
             this.p2SVpnServerConfigRadiusServerRootCertificates = p2SVpnServerConfigRadiusServerRootCertificates;
             return this;
         }
-
+        public Builder p2SVpnServerConfigRadiusServerRootCertificates(P2SVpnServerConfigRadiusServerRootCertificateResponse... p2SVpnServerConfigRadiusServerRootCertificates) {
+            return p2SVpnServerConfigRadiusServerRootCertificates(List.of(p2SVpnServerConfigRadiusServerRootCertificates));
+        }
         public Builder p2SVpnServerConfigVpnClientRevokedCertificates(@Nullable List<P2SVpnServerConfigVpnClientRevokedCertificateResponse> p2SVpnServerConfigVpnClientRevokedCertificates) {
             this.p2SVpnServerConfigVpnClientRevokedCertificates = p2SVpnServerConfigVpnClientRevokedCertificates;
             return this;
         }
-
+        public Builder p2SVpnServerConfigVpnClientRevokedCertificates(P2SVpnServerConfigVpnClientRevokedCertificateResponse... p2SVpnServerConfigVpnClientRevokedCertificates) {
+            return p2SVpnServerConfigVpnClientRevokedCertificates(List.of(p2SVpnServerConfigVpnClientRevokedCertificates));
+        }
         public Builder p2SVpnServerConfigVpnClientRootCertificates(@Nullable List<P2SVpnServerConfigVpnClientRootCertificateResponse> p2SVpnServerConfigVpnClientRootCertificates) {
             this.p2SVpnServerConfigVpnClientRootCertificates = p2SVpnServerConfigVpnClientRootCertificates;
             return this;
         }
-
+        public Builder p2SVpnServerConfigVpnClientRootCertificates(P2SVpnServerConfigVpnClientRootCertificateResponse... p2SVpnServerConfigVpnClientRootCertificates) {
+            return p2SVpnServerConfigVpnClientRootCertificates(List.of(p2SVpnServerConfigVpnClientRootCertificates));
+        }
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder radiusServerAddress(@Nullable String radiusServerAddress) {
             this.radiusServerAddress = radiusServerAddress;
             return this;
         }
-
         public Builder radiusServerSecret(@Nullable String radiusServerSecret) {
             this.radiusServerSecret = radiusServerSecret;
             return this;
         }
-
         public Builder vpnClientIpsecPolicies(@Nullable List<IpsecPolicyResponse> vpnClientIpsecPolicies) {
             this.vpnClientIpsecPolicies = vpnClientIpsecPolicies;
             return this;
         }
-
+        public Builder vpnClientIpsecPolicies(IpsecPolicyResponse... vpnClientIpsecPolicies) {
+            return vpnClientIpsecPolicies(List.of(vpnClientIpsecPolicies));
+        }
         public Builder vpnProtocols(@Nullable List<String> vpnProtocols) {
             this.vpnProtocols = vpnProtocols;
             return this;
         }
-        public GetP2sVpnServerConfigurationResult build() {
+        public Builder vpnProtocols(String... vpnProtocols) {
+            return vpnProtocols(List.of(vpnProtocols));
+        }        public GetP2sVpnServerConfigurationResult build() {
             return new GetP2sVpnServerConfigurationResult(etag, id, name, p2SVpnGateways, p2SVpnServerConfigRadiusClientRootCertificates, p2SVpnServerConfigRadiusServerRootCertificates, p2SVpnServerConfigVpnClientRevokedCertificates, p2SVpnServerConfigVpnClientRootCertificates, provisioningState, radiusServerAddress, radiusServerSecret, vpnClientIpsecPolicies, vpnProtocols);
         }
     }

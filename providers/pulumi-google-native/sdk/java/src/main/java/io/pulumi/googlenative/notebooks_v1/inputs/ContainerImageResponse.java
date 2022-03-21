@@ -76,12 +76,10 @@ public final class ContainerImageResponse extends io.pulumi.resources.InvokeArgs
             this.repository = Objects.requireNonNull(repository);
             return this;
         }
-
         public Builder tag(String tag) {
             this.tag = Objects.requireNonNull(tag);
             return this;
-        }
-        public ContainerImageResponse build() {
+        }        public ContainerImageResponse build() {
             return new ContainerImageResponse(repository, tag);
         }
     }

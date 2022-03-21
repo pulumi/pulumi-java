@@ -88,17 +88,14 @@ public final class GetHcxEnterpriseSiteArgs extends io.pulumi.resources.InvokeAr
             this.hcxEnterpriseSiteName = Objects.requireNonNull(hcxEnterpriseSiteName);
             return this;
         }
-
         public Builder privateCloudName(String privateCloudName) {
             this.privateCloudName = Objects.requireNonNull(privateCloudName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetHcxEnterpriseSiteArgs build() {
+        }        public GetHcxEnterpriseSiteArgs build() {
             return new GetHcxEnterpriseSiteArgs(hcxEnterpriseSiteName, privateCloudName, resourceGroupName);
         }
     }

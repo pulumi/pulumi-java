@@ -73,12 +73,10 @@ public final class InstanceGroupManagerAutoHealingPolicyResponse extends io.pulu
             this.healthCheck = Objects.requireNonNull(healthCheck);
             return this;
         }
-
         public Builder initialDelaySec(Integer initialDelaySec) {
             this.initialDelaySec = Objects.requireNonNull(initialDelaySec);
             return this;
-        }
-        public InstanceGroupManagerAutoHealingPolicyResponse build() {
+        }        public InstanceGroupManagerAutoHealingPolicyResponse build() {
             return new InstanceGroupManagerAutoHealingPolicyResponse(healthCheck, initialDelaySec);
         }
     }

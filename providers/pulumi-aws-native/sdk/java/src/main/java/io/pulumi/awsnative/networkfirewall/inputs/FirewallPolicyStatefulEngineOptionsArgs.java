@@ -53,12 +53,10 @@ public final class FirewallPolicyStatefulEngineOptionsArgs extends io.pulumi.res
             this.ruleOrder = ruleOrder;
             return this;
         }
-
         public Builder ruleOrder(@Nullable FirewallPolicyRuleOrder ruleOrder) {
             this.ruleOrder = Output.ofNullable(ruleOrder);
             return this;
-        }
-        public FirewallPolicyStatefulEngineOptionsArgs build() {
+        }        public FirewallPolicyStatefulEngineOptionsArgs build() {
             return new FirewallPolicyStatefulEngineOptionsArgs(ruleOrder);
         }
     }

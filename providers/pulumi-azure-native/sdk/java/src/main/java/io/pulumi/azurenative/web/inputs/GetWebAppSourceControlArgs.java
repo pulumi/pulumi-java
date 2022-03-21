@@ -72,12 +72,10 @@ public final class GetWebAppSourceControlArgs extends io.pulumi.resources.Invoke
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetWebAppSourceControlArgs build() {
+        }        public GetWebAppSourceControlArgs build() {
             return new GetWebAppSourceControlArgs(name, resourceGroupName);
         }
     }

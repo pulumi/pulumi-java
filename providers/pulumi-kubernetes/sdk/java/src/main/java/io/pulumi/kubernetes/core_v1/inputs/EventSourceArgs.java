@@ -78,22 +78,18 @@ public final class EventSourceArgs extends io.pulumi.resources.ResourceArgs {
             this.component = component;
             return this;
         }
-
         public Builder component(@Nullable String component) {
             this.component = Output.ofNullable(component);
             return this;
         }
-
         public Builder host(@Nullable Output<String> host) {
             this.host = host;
             return this;
         }
-
         public Builder host(@Nullable String host) {
             this.host = Output.ofNullable(host);
             return this;
-        }
-        public EventSourceArgs build() {
+        }        public EventSourceArgs build() {
             return new EventSourceArgs(component, host);
         }
     }

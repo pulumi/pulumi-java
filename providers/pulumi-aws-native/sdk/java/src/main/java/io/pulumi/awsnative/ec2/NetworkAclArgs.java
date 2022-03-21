@@ -76,22 +76,21 @@ public final class NetworkAclArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<NetworkAclTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
+        public Builder tags(NetworkAclTagArgs... tags) {
+            return tags(List.of(tags));
+        }
         public Builder vpcId(Output<String> vpcId) {
             this.vpcId = Objects.requireNonNull(vpcId);
             return this;
         }
-
         public Builder vpcId(String vpcId) {
             this.vpcId = Output.of(Objects.requireNonNull(vpcId));
             return this;
-        }
-        public NetworkAclArgs build() {
+        }        public NetworkAclArgs build() {
             return new NetworkAclArgs(tags, vpcId);
         }
     }

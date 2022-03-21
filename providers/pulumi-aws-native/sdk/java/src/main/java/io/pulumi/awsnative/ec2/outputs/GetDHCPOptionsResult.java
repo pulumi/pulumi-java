@@ -65,12 +65,13 @@ public final class GetDHCPOptionsResult {
             this.dhcpOptionsId = dhcpOptionsId;
             return this;
         }
-
         public Builder tags(@Nullable List<DHCPOptionsTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetDHCPOptionsResult build() {
+        public Builder tags(DHCPOptionsTag... tags) {
+            return tags(List.of(tags));
+        }        public GetDHCPOptionsResult build() {
             return new GetDHCPOptionsResult(dhcpOptionsId, tags);
         }
     }

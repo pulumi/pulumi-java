@@ -75,22 +75,18 @@ public final class TriggerTransportPubsubGetArgs extends io.pulumi.resources.Res
             this.subscription = subscription;
             return this;
         }
-
         public Builder subscription(@Nullable String subscription) {
             this.subscription = Output.ofNullable(subscription);
             return this;
         }
-
         public Builder topic(@Nullable Output<String> topic) {
             this.topic = topic;
             return this;
         }
-
         public Builder topic(@Nullable String topic) {
             this.topic = Output.ofNullable(topic);
             return this;
-        }
-        public TriggerTransportPubsubGetArgs build() {
+        }        public TriggerTransportPubsubGetArgs build() {
             return new TriggerTransportPubsubGetArgs(subscription, topic);
         }
     }

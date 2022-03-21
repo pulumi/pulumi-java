@@ -90,32 +90,26 @@ public final class UserPoolClientTokenValidityUnitsArgs extends io.pulumi.resour
             this.accessToken = accessToken;
             return this;
         }
-
         public Builder accessToken(@Nullable String accessToken) {
             this.accessToken = Output.ofNullable(accessToken);
             return this;
         }
-
         public Builder idToken(@Nullable Output<String> idToken) {
             this.idToken = idToken;
             return this;
         }
-
         public Builder idToken(@Nullable String idToken) {
             this.idToken = Output.ofNullable(idToken);
             return this;
         }
-
         public Builder refreshToken(@Nullable Output<String> refreshToken) {
             this.refreshToken = refreshToken;
             return this;
         }
-
         public Builder refreshToken(@Nullable String refreshToken) {
             this.refreshToken = Output.ofNullable(refreshToken);
             return this;
-        }
-        public UserPoolClientTokenValidityUnitsArgs build() {
+        }        public UserPoolClientTokenValidityUnitsArgs build() {
             return new UserPoolClientTokenValidityUnitsArgs(accessToken, idToken, refreshToken);
         }
     }

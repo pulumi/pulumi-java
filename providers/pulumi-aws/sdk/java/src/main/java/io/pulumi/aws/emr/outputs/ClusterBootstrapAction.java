@@ -87,17 +87,17 @@ public final class ClusterBootstrapAction {
             this.args = args;
             return this;
         }
-
+        public Builder args(String... args) {
+            return args(List.of(args));
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
-        }
-        public ClusterBootstrapAction build() {
+        }        public ClusterBootstrapAction build() {
             return new ClusterBootstrapAction(args, name, path);
         }
     }

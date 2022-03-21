@@ -69,12 +69,10 @@ public final class LatLngResponse {
             this.latitude = Objects.requireNonNull(latitude);
             return this;
         }
-
         public Builder longitude(Double longitude) {
             this.longitude = Objects.requireNonNull(longitude);
             return this;
-        }
-        public LatLngResponse build() {
+        }        public LatLngResponse build() {
             return new LatLngResponse(latitude, longitude);
         }
     }

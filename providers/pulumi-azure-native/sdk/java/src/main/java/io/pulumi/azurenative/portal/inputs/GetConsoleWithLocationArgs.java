@@ -72,12 +72,10 @@ public final class GetConsoleWithLocationArgs extends io.pulumi.resources.Invoke
             this.consoleName = Objects.requireNonNull(consoleName);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
-        }
-        public GetConsoleWithLocationArgs build() {
+        }        public GetConsoleWithLocationArgs build() {
             return new GetConsoleWithLocationArgs(consoleName, location);
         }
     }

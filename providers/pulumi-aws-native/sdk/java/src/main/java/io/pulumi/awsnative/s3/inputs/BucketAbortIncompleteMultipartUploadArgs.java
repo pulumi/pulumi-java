@@ -60,12 +60,10 @@ public final class BucketAbortIncompleteMultipartUploadArgs extends io.pulumi.re
             this.daysAfterInitiation = Objects.requireNonNull(daysAfterInitiation);
             return this;
         }
-
         public Builder daysAfterInitiation(Integer daysAfterInitiation) {
             this.daysAfterInitiation = Output.of(Objects.requireNonNull(daysAfterInitiation));
             return this;
-        }
-        public BucketAbortIncompleteMultipartUploadArgs build() {
+        }        public BucketAbortIncompleteMultipartUploadArgs build() {
             return new BucketAbortIncompleteMultipartUploadArgs(daysAfterInitiation);
         }
     }

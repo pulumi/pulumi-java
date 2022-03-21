@@ -127,52 +127,42 @@ public final class OpenShiftManagedClusterAADIdentityProviderArgs extends io.pul
             this.clientId = clientId;
             return this;
         }
-
         public Builder clientId(@Nullable String clientId) {
             this.clientId = Output.ofNullable(clientId);
             return this;
         }
-
         public Builder customerAdminGroupId(@Nullable Output<String> customerAdminGroupId) {
             this.customerAdminGroupId = customerAdminGroupId;
             return this;
         }
-
         public Builder customerAdminGroupId(@Nullable String customerAdminGroupId) {
             this.customerAdminGroupId = Output.ofNullable(customerAdminGroupId);
             return this;
         }
-
         public Builder kind(Output<String> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
-
         public Builder secret(@Nullable Output<String> secret) {
             this.secret = secret;
             return this;
         }
-
         public Builder secret(@Nullable String secret) {
             this.secret = Output.ofNullable(secret);
             return this;
         }
-
         public Builder tenantId(@Nullable Output<String> tenantId) {
             this.tenantId = tenantId;
             return this;
         }
-
         public Builder tenantId(@Nullable String tenantId) {
             this.tenantId = Output.ofNullable(tenantId);
             return this;
-        }
-        public OpenShiftManagedClusterAADIdentityProviderArgs build() {
+        }        public OpenShiftManagedClusterAADIdentityProviderArgs build() {
             return new OpenShiftManagedClusterAADIdentityProviderArgs(clientId, customerAdminGroupId, kind, secret, tenantId);
         }
     }

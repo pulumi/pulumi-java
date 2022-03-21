@@ -218,112 +218,93 @@ public final class OriginEndpointHlsPackageArgs extends io.pulumi.resources.Reso
             this.adMarkers = adMarkers;
             return this;
         }
-
         public Builder adMarkers(@Nullable OriginEndpointHlsPackageAdMarkers adMarkers) {
             this.adMarkers = Output.ofNullable(adMarkers);
             return this;
         }
-
         public Builder adTriggers(@Nullable Output<List<OriginEndpointHlsPackageAdTriggersItem>> adTriggers) {
             this.adTriggers = adTriggers;
             return this;
         }
-
         public Builder adTriggers(@Nullable List<OriginEndpointHlsPackageAdTriggersItem> adTriggers) {
             this.adTriggers = Output.ofNullable(adTriggers);
             return this;
         }
-
+        public Builder adTriggers(OriginEndpointHlsPackageAdTriggersItem... adTriggers) {
+            return adTriggers(List.of(adTriggers));
+        }
         public Builder adsOnDeliveryRestrictions(@Nullable Output<OriginEndpointAdsOnDeliveryRestrictions> adsOnDeliveryRestrictions) {
             this.adsOnDeliveryRestrictions = adsOnDeliveryRestrictions;
             return this;
         }
-
         public Builder adsOnDeliveryRestrictions(@Nullable OriginEndpointAdsOnDeliveryRestrictions adsOnDeliveryRestrictions) {
             this.adsOnDeliveryRestrictions = Output.ofNullable(adsOnDeliveryRestrictions);
             return this;
         }
-
         public Builder encryption(@Nullable Output<OriginEndpointHlsEncryptionArgs> encryption) {
             this.encryption = encryption;
             return this;
         }
-
         public Builder encryption(@Nullable OriginEndpointHlsEncryptionArgs encryption) {
             this.encryption = Output.ofNullable(encryption);
             return this;
         }
-
         public Builder includeIframeOnlyStream(@Nullable Output<Boolean> includeIframeOnlyStream) {
             this.includeIframeOnlyStream = includeIframeOnlyStream;
             return this;
         }
-
         public Builder includeIframeOnlyStream(@Nullable Boolean includeIframeOnlyStream) {
             this.includeIframeOnlyStream = Output.ofNullable(includeIframeOnlyStream);
             return this;
         }
-
         public Builder playlistType(@Nullable Output<OriginEndpointHlsPackagePlaylistType> playlistType) {
             this.playlistType = playlistType;
             return this;
         }
-
         public Builder playlistType(@Nullable OriginEndpointHlsPackagePlaylistType playlistType) {
             this.playlistType = Output.ofNullable(playlistType);
             return this;
         }
-
         public Builder playlistWindowSeconds(@Nullable Output<Integer> playlistWindowSeconds) {
             this.playlistWindowSeconds = playlistWindowSeconds;
             return this;
         }
-
         public Builder playlistWindowSeconds(@Nullable Integer playlistWindowSeconds) {
             this.playlistWindowSeconds = Output.ofNullable(playlistWindowSeconds);
             return this;
         }
-
         public Builder programDateTimeIntervalSeconds(@Nullable Output<Integer> programDateTimeIntervalSeconds) {
             this.programDateTimeIntervalSeconds = programDateTimeIntervalSeconds;
             return this;
         }
-
         public Builder programDateTimeIntervalSeconds(@Nullable Integer programDateTimeIntervalSeconds) {
             this.programDateTimeIntervalSeconds = Output.ofNullable(programDateTimeIntervalSeconds);
             return this;
         }
-
         public Builder segmentDurationSeconds(@Nullable Output<Integer> segmentDurationSeconds) {
             this.segmentDurationSeconds = segmentDurationSeconds;
             return this;
         }
-
         public Builder segmentDurationSeconds(@Nullable Integer segmentDurationSeconds) {
             this.segmentDurationSeconds = Output.ofNullable(segmentDurationSeconds);
             return this;
         }
-
         public Builder streamSelection(@Nullable Output<OriginEndpointStreamSelectionArgs> streamSelection) {
             this.streamSelection = streamSelection;
             return this;
         }
-
         public Builder streamSelection(@Nullable OriginEndpointStreamSelectionArgs streamSelection) {
             this.streamSelection = Output.ofNullable(streamSelection);
             return this;
         }
-
         public Builder useAudioRenditionGroup(@Nullable Output<Boolean> useAudioRenditionGroup) {
             this.useAudioRenditionGroup = useAudioRenditionGroup;
             return this;
         }
-
         public Builder useAudioRenditionGroup(@Nullable Boolean useAudioRenditionGroup) {
             this.useAudioRenditionGroup = Output.ofNullable(useAudioRenditionGroup);
             return this;
-        }
-        public OriginEndpointHlsPackageArgs build() {
+        }        public OriginEndpointHlsPackageArgs build() {
             return new OriginEndpointHlsPackageArgs(adMarkers, adTriggers, adsOnDeliveryRestrictions, encryption, includeIframeOnlyStream, playlistType, playlistWindowSeconds, programDateTimeIntervalSeconds, segmentDurationSeconds, streamSelection, useAudioRenditionGroup);
         }
     }

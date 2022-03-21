@@ -74,22 +74,18 @@ public final class OsPolicyAssignmentRolloutArgs extends io.pulumi.resources.Res
             this.disruptionBudget = Objects.requireNonNull(disruptionBudget);
             return this;
         }
-
         public Builder disruptionBudget(OsPolicyAssignmentRolloutDisruptionBudgetArgs disruptionBudget) {
             this.disruptionBudget = Output.of(Objects.requireNonNull(disruptionBudget));
             return this;
         }
-
         public Builder minWaitDuration(Output<String> minWaitDuration) {
             this.minWaitDuration = Objects.requireNonNull(minWaitDuration);
             return this;
         }
-
         public Builder minWaitDuration(String minWaitDuration) {
             this.minWaitDuration = Output.of(Objects.requireNonNull(minWaitDuration));
             return this;
-        }
-        public OsPolicyAssignmentRolloutArgs build() {
+        }        public OsPolicyAssignmentRolloutArgs build() {
             return new OsPolicyAssignmentRolloutArgs(disruptionBudget, minWaitDuration);
         }
     }

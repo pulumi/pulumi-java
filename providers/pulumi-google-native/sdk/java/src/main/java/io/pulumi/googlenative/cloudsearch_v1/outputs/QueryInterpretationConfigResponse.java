@@ -69,12 +69,10 @@ public final class QueryInterpretationConfigResponse {
             this.forceDisableSupplementalResults = Objects.requireNonNull(forceDisableSupplementalResults);
             return this;
         }
-
         public Builder forceVerbatimMode(Boolean forceVerbatimMode) {
             this.forceVerbatimMode = Objects.requireNonNull(forceVerbatimMode);
             return this;
-        }
-        public QueryInterpretationConfigResponse build() {
+        }        public QueryInterpretationConfigResponse build() {
             return new QueryInterpretationConfigResponse(forceDisableSupplementalResults, forceVerbatimMode);
         }
     }

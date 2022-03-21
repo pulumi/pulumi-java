@@ -75,22 +75,18 @@ public final class ConnectorProfileConnectorOAuthRequestArgs extends io.pulumi.r
             this.authCode = authCode;
             return this;
         }
-
         public Builder authCode(@Nullable String authCode) {
             this.authCode = Output.ofNullable(authCode);
             return this;
         }
-
         public Builder redirectUri(@Nullable Output<String> redirectUri) {
             this.redirectUri = redirectUri;
             return this;
         }
-
         public Builder redirectUri(@Nullable String redirectUri) {
             this.redirectUri = Output.ofNullable(redirectUri);
             return this;
-        }
-        public ConnectorProfileConnectorOAuthRequestArgs build() {
+        }        public ConnectorProfileConnectorOAuthRequestArgs build() {
             return new ConnectorProfileConnectorOAuthRequestArgs(authCode, redirectUri);
         }
     }

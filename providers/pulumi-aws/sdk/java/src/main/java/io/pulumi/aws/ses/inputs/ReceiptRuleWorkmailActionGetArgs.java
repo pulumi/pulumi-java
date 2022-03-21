@@ -91,32 +91,26 @@ public final class ReceiptRuleWorkmailActionGetArgs extends io.pulumi.resources.
             this.organizationArn = Objects.requireNonNull(organizationArn);
             return this;
         }
-
         public Builder organizationArn(String organizationArn) {
             this.organizationArn = Output.of(Objects.requireNonNull(organizationArn));
             return this;
         }
-
         public Builder position(Output<Integer> position) {
             this.position = Objects.requireNonNull(position);
             return this;
         }
-
         public Builder position(Integer position) {
             this.position = Output.of(Objects.requireNonNull(position));
             return this;
         }
-
         public Builder topicArn(@Nullable Output<String> topicArn) {
             this.topicArn = topicArn;
             return this;
         }
-
         public Builder topicArn(@Nullable String topicArn) {
             this.topicArn = Output.ofNullable(topicArn);
             return this;
-        }
-        public ReceiptRuleWorkmailActionGetArgs build() {
+        }        public ReceiptRuleWorkmailActionGetArgs build() {
             return new ReceiptRuleWorkmailActionGetArgs(organizationArn, position, topicArn);
         }
     }

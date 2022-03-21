@@ -86,17 +86,14 @@ public final class GoogleCloudContactcenterinsightsV1IssueModelLabelStatsRespons
             this.analyzedConversationsCount = Objects.requireNonNull(analyzedConversationsCount);
             return this;
         }
-
         public Builder issueStats(Map<String,String> issueStats) {
             this.issueStats = Objects.requireNonNull(issueStats);
             return this;
         }
-
         public Builder unclassifiedConversationsCount(String unclassifiedConversationsCount) {
             this.unclassifiedConversationsCount = Objects.requireNonNull(unclassifiedConversationsCount);
             return this;
-        }
-        public GoogleCloudContactcenterinsightsV1IssueModelLabelStatsResponse build() {
+        }        public GoogleCloudContactcenterinsightsV1IssueModelLabelStatsResponse build() {
             return new GoogleCloudContactcenterinsightsV1IssueModelLabelStatsResponse(analyzedConversationsCount, issueStats, unclassifiedConversationsCount);
         }
     }

@@ -77,22 +77,18 @@ public final class AccessLevelsAccessLevelBasicConditionDevicePolicyOsConstraint
             this.minimumVersion = minimumVersion;
             return this;
         }
-
         public Builder minimumVersion(@Nullable String minimumVersion) {
             this.minimumVersion = Output.ofNullable(minimumVersion);
             return this;
         }
-
         public Builder osType(Output<String> osType) {
             this.osType = Objects.requireNonNull(osType);
             return this;
         }
-
         public Builder osType(String osType) {
             this.osType = Output.of(Objects.requireNonNull(osType));
             return this;
-        }
-        public AccessLevelsAccessLevelBasicConditionDevicePolicyOsConstraintGetArgs build() {
+        }        public AccessLevelsAccessLevelBasicConditionDevicePolicyOsConstraintGetArgs build() {
             return new AccessLevelsAccessLevelBasicConditionDevicePolicyOsConstraintGetArgs(minimumVersion, osType);
         }
     }

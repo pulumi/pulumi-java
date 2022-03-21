@@ -110,42 +110,37 @@ public final class RuleGroupRuleStatementNotStatementStatementAndStatementStatem
             this.comparisonOperator = Objects.requireNonNull(comparisonOperator);
             return this;
         }
-
         public Builder comparisonOperator(String comparisonOperator) {
             this.comparisonOperator = Output.of(Objects.requireNonNull(comparisonOperator));
             return this;
         }
-
         public Builder fieldToMatch(@Nullable Output<RuleGroupRuleStatementNotStatementStatementAndStatementStatementSizeConstraintStatementFieldToMatchArgs> fieldToMatch) {
             this.fieldToMatch = fieldToMatch;
             return this;
         }
-
         public Builder fieldToMatch(@Nullable RuleGroupRuleStatementNotStatementStatementAndStatementStatementSizeConstraintStatementFieldToMatchArgs fieldToMatch) {
             this.fieldToMatch = Output.ofNullable(fieldToMatch);
             return this;
         }
-
         public Builder size(Output<Integer> size) {
             this.size = Objects.requireNonNull(size);
             return this;
         }
-
         public Builder size(Integer size) {
             this.size = Output.of(Objects.requireNonNull(size));
             return this;
         }
-
         public Builder textTransformations(Output<List<RuleGroupRuleStatementNotStatementStatementAndStatementStatementSizeConstraintStatementTextTransformationArgs>> textTransformations) {
             this.textTransformations = Objects.requireNonNull(textTransformations);
             return this;
         }
-
         public Builder textTransformations(List<RuleGroupRuleStatementNotStatementStatementAndStatementStatementSizeConstraintStatementTextTransformationArgs> textTransformations) {
             this.textTransformations = Output.of(Objects.requireNonNull(textTransformations));
             return this;
         }
-        public RuleGroupRuleStatementNotStatementStatementAndStatementStatementSizeConstraintStatementArgs build() {
+        public Builder textTransformations(RuleGroupRuleStatementNotStatementStatementAndStatementStatementSizeConstraintStatementTextTransformationArgs... textTransformations) {
+            return textTransformations(List.of(textTransformations));
+        }        public RuleGroupRuleStatementNotStatementStatementAndStatementStatementSizeConstraintStatementArgs build() {
             return new RuleGroupRuleStatementNotStatementStatementAndStatementStatementSizeConstraintStatementArgs(comparisonOperator, fieldToMatch, size, textTransformations);
         }
     }

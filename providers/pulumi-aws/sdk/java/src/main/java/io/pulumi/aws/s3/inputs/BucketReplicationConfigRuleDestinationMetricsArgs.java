@@ -75,22 +75,18 @@ public final class BucketReplicationConfigRuleDestinationMetricsArgs extends io.
             this.eventThreshold = eventThreshold;
             return this;
         }
-
         public Builder eventThreshold(@Nullable BucketReplicationConfigRuleDestinationMetricsEventThresholdArgs eventThreshold) {
             this.eventThreshold = Output.ofNullable(eventThreshold);
             return this;
         }
-
         public Builder status(Output<String> status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder status(String status) {
             this.status = Output.of(Objects.requireNonNull(status));
             return this;
-        }
-        public BucketReplicationConfigRuleDestinationMetricsArgs build() {
+        }        public BucketReplicationConfigRuleDestinationMetricsArgs build() {
             return new BucketReplicationConfigRuleDestinationMetricsArgs(eventThreshold, status);
         }
     }

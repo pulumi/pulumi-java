@@ -129,52 +129,42 @@ public final class ReplicationObjectArgs extends io.pulumi.resources.ResourceArg
             this.endpointType = endpointType;
             return this;
         }
-
         public Builder endpointType(@Nullable Either<String,EndpointType> endpointType) {
             this.endpointType = Output.ofNullable(endpointType);
             return this;
         }
-
         public Builder remoteVolumeRegion(@Nullable Output<String> remoteVolumeRegion) {
             this.remoteVolumeRegion = remoteVolumeRegion;
             return this;
         }
-
         public Builder remoteVolumeRegion(@Nullable String remoteVolumeRegion) {
             this.remoteVolumeRegion = Output.ofNullable(remoteVolumeRegion);
             return this;
         }
-
         public Builder remoteVolumeResourceId(Output<String> remoteVolumeResourceId) {
             this.remoteVolumeResourceId = Objects.requireNonNull(remoteVolumeResourceId);
             return this;
         }
-
         public Builder remoteVolumeResourceId(String remoteVolumeResourceId) {
             this.remoteVolumeResourceId = Output.of(Objects.requireNonNull(remoteVolumeResourceId));
             return this;
         }
-
         public Builder replicationId(@Nullable Output<String> replicationId) {
             this.replicationId = replicationId;
             return this;
         }
-
         public Builder replicationId(@Nullable String replicationId) {
             this.replicationId = Output.ofNullable(replicationId);
             return this;
         }
-
         public Builder replicationSchedule(Output<Either<String,ReplicationSchedule>> replicationSchedule) {
             this.replicationSchedule = Objects.requireNonNull(replicationSchedule);
             return this;
         }
-
         public Builder replicationSchedule(Either<String,ReplicationSchedule> replicationSchedule) {
             this.replicationSchedule = Output.of(Objects.requireNonNull(replicationSchedule));
             return this;
-        }
-        public ReplicationObjectArgs build() {
+        }        public ReplicationObjectArgs build() {
             return new ReplicationObjectArgs(endpointType, remoteVolumeRegion, remoteVolumeResourceId, replicationId, replicationSchedule);
         }
     }

@@ -69,12 +69,10 @@ public final class GoogleCloudDialogflowCxV3IntentTrainingPhrasePartResponse {
             this.parameterId = Objects.requireNonNull(parameterId);
             return this;
         }
-
         public Builder text(String text) {
             this.text = Objects.requireNonNull(text);
             return this;
-        }
-        public GoogleCloudDialogflowCxV3IntentTrainingPhrasePartResponse build() {
+        }        public GoogleCloudDialogflowCxV3IntentTrainingPhrasePartResponse build() {
             return new GoogleCloudDialogflowCxV3IntentTrainingPhrasePartResponse(parameterId, text);
         }
     }

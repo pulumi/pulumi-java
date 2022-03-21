@@ -56,12 +56,10 @@ public final class ScheduledActionTargetActionResumeClusterArgs extends io.pulum
             this.clusterIdentifier = Objects.requireNonNull(clusterIdentifier);
             return this;
         }
-
         public Builder clusterIdentifier(String clusterIdentifier) {
             this.clusterIdentifier = Output.of(Objects.requireNonNull(clusterIdentifier));
             return this;
-        }
-        public ScheduledActionTargetActionResumeClusterArgs build() {
+        }        public ScheduledActionTargetActionResumeClusterArgs build() {
             return new ScheduledActionTargetActionResumeClusterArgs(clusterIdentifier);
         }
     }

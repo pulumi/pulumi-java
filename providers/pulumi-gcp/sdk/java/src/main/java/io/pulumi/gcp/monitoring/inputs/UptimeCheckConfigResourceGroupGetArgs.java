@@ -75,22 +75,18 @@ public final class UptimeCheckConfigResourceGroupGetArgs extends io.pulumi.resou
             this.groupId = groupId;
             return this;
         }
-
         public Builder groupId(@Nullable String groupId) {
             this.groupId = Output.ofNullable(groupId);
             return this;
         }
-
         public Builder resourceType(@Nullable Output<String> resourceType) {
             this.resourceType = resourceType;
             return this;
         }
-
         public Builder resourceType(@Nullable String resourceType) {
             this.resourceType = Output.ofNullable(resourceType);
             return this;
-        }
-        public UptimeCheckConfigResourceGroupGetArgs build() {
+        }        public UptimeCheckConfigResourceGroupGetArgs build() {
             return new UptimeCheckConfigResourceGroupGetArgs(groupId, resourceType);
         }
     }

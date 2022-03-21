@@ -80,12 +80,16 @@ public final class KubernetesRoleStorageResponse extends io.pulumi.resources.Inv
             this.endpoints = endpoints;
             return this;
         }
-
+        public Builder endpoints(MountPointMapResponse... endpoints) {
+            return endpoints(List.of(endpoints));
+        }
         public Builder storageClasses(List<KubernetesRoleStorageClassInfoResponse> storageClasses) {
             this.storageClasses = Objects.requireNonNull(storageClasses);
             return this;
         }
-        public KubernetesRoleStorageResponse build() {
+        public Builder storageClasses(KubernetesRoleStorageClassInfoResponse... storageClasses) {
+            return storageClasses(List.of(storageClasses));
+        }        public KubernetesRoleStorageResponse build() {
             return new KubernetesRoleStorageResponse(endpoints, storageClasses);
         }
     }

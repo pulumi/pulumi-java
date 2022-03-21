@@ -118,27 +118,22 @@ public final class GetSiteResult {
             this.appId = Objects.requireNonNull(appId);
             return this;
         }
-
         public Builder defaultUrl(String defaultUrl) {
             this.defaultUrl = Objects.requireNonNull(defaultUrl);
             return this;
         }
-
         public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetSiteResult build() {
+        }        public GetSiteResult build() {
             return new GetSiteResult(appId, defaultUrl, labels, name, type);
         }
     }

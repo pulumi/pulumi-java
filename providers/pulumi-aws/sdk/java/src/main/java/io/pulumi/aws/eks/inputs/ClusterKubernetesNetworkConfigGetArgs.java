@@ -74,22 +74,18 @@ public final class ClusterKubernetesNetworkConfigGetArgs extends io.pulumi.resou
             this.ipFamily = ipFamily;
             return this;
         }
-
         public Builder ipFamily(@Nullable String ipFamily) {
             this.ipFamily = Output.ofNullable(ipFamily);
             return this;
         }
-
         public Builder serviceIpv4Cidr(@Nullable Output<String> serviceIpv4Cidr) {
             this.serviceIpv4Cidr = serviceIpv4Cidr;
             return this;
         }
-
         public Builder serviceIpv4Cidr(@Nullable String serviceIpv4Cidr) {
             this.serviceIpv4Cidr = Output.ofNullable(serviceIpv4Cidr);
             return this;
-        }
-        public ClusterKubernetesNetworkConfigGetArgs build() {
+        }        public ClusterKubernetesNetworkConfigGetArgs build() {
             return new ClusterKubernetesNetworkConfigGetArgs(ipFamily, serviceIpv4Cidr);
         }
     }

@@ -72,22 +72,18 @@ public final class TopicRuleS3Action {
             this.bucketName = Objects.requireNonNull(bucketName);
             return this;
         }
-
         public Builder cannedAcl(@Nullable TopicRuleCannedAccessControlList cannedAcl) {
             this.cannedAcl = cannedAcl;
             return this;
         }
-
         public Builder key(String key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
-        }
-        public TopicRuleS3Action build() {
+        }        public TopicRuleS3Action build() {
             return new TopicRuleS3Action(bucketName, cannedAcl, key, roleArn);
         }
     }

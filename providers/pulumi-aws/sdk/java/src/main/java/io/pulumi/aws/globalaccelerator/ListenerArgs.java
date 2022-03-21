@@ -108,42 +108,37 @@ public final class ListenerArgs extends io.pulumi.resources.ResourceArgs {
             this.acceleratorArn = Objects.requireNonNull(acceleratorArn);
             return this;
         }
-
         public Builder acceleratorArn(String acceleratorArn) {
             this.acceleratorArn = Output.of(Objects.requireNonNull(acceleratorArn));
             return this;
         }
-
         public Builder clientAffinity(@Nullable Output<String> clientAffinity) {
             this.clientAffinity = clientAffinity;
             return this;
         }
-
         public Builder clientAffinity(@Nullable String clientAffinity) {
             this.clientAffinity = Output.ofNullable(clientAffinity);
             return this;
         }
-
         public Builder portRanges(Output<List<ListenerPortRangeArgs>> portRanges) {
             this.portRanges = Objects.requireNonNull(portRanges);
             return this;
         }
-
         public Builder portRanges(List<ListenerPortRangeArgs> portRanges) {
             this.portRanges = Output.of(Objects.requireNonNull(portRanges));
             return this;
         }
-
+        public Builder portRanges(ListenerPortRangeArgs... portRanges) {
+            return portRanges(List.of(portRanges));
+        }
         public Builder protocol(Output<String> protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
-
         public Builder protocol(String protocol) {
             this.protocol = Output.of(Objects.requireNonNull(protocol));
             return this;
-        }
-        public ListenerArgs build() {
+        }        public ListenerArgs build() {
             return new ListenerArgs(acceleratorArn, clientAffinity, portRanges, protocol);
         }
     }

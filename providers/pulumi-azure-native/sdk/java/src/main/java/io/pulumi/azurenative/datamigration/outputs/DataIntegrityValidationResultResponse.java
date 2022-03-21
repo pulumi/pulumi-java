@@ -71,12 +71,10 @@ public final class DataIntegrityValidationResultResponse {
             this.failedObjects = Objects.requireNonNull(failedObjects);
             return this;
         }
-
         public Builder validationErrors(ValidationErrorResponse validationErrors) {
             this.validationErrors = Objects.requireNonNull(validationErrors);
             return this;
-        }
-        public DataIntegrityValidationResultResponse build() {
+        }        public DataIntegrityValidationResultResponse build() {
             return new DataIntegrityValidationResultResponse(failedObjects, validationErrors);
         }
     }

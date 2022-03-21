@@ -232,62 +232,50 @@ public final class GetCustomerResult {
             this.alternateEmail = Objects.requireNonNull(alternateEmail);
             return this;
         }
-
         public Builder channelPartnerId(String channelPartnerId) {
             this.channelPartnerId = Objects.requireNonNull(channelPartnerId);
             return this;
         }
-
         public Builder cloudIdentityId(String cloudIdentityId) {
             this.cloudIdentityId = Objects.requireNonNull(cloudIdentityId);
             return this;
         }
-
         public Builder cloudIdentityInfo(GoogleCloudChannelV1CloudIdentityInfoResponse cloudIdentityInfo) {
             this.cloudIdentityInfo = Objects.requireNonNull(cloudIdentityInfo);
             return this;
         }
-
         public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder domain(String domain) {
             this.domain = Objects.requireNonNull(domain);
             return this;
         }
-
         public Builder languageCode(String languageCode) {
             this.languageCode = Objects.requireNonNull(languageCode);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder orgDisplayName(String orgDisplayName) {
             this.orgDisplayName = Objects.requireNonNull(orgDisplayName);
             return this;
         }
-
         public Builder orgPostalAddress(GoogleTypePostalAddressResponse orgPostalAddress) {
             this.orgPostalAddress = Objects.requireNonNull(orgPostalAddress);
             return this;
         }
-
         public Builder primaryContactInfo(GoogleCloudChannelV1ContactInfoResponse primaryContactInfo) {
             this.primaryContactInfo = Objects.requireNonNull(primaryContactInfo);
             return this;
         }
-
         public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
-        }
-        public GetCustomerResult build() {
+        }        public GetCustomerResult build() {
             return new GetCustomerResult(alternateEmail, channelPartnerId, cloudIdentityId, cloudIdentityInfo, createTime, domain, languageCode, name, orgDisplayName, orgPostalAddress, primaryContactInfo, updateTime);
         }
     }

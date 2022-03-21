@@ -184,47 +184,38 @@ public final class NetworkInterfacePropertiesResponse {
             this.dnsName = dnsName;
             return this;
         }
-
         public Builder privateIpAddress(@Nullable String privateIpAddress) {
             this.privateIpAddress = privateIpAddress;
             return this;
         }
-
         public Builder publicIpAddress(@Nullable String publicIpAddress) {
             this.publicIpAddress = publicIpAddress;
             return this;
         }
-
         public Builder publicIpAddressId(@Nullable String publicIpAddressId) {
             this.publicIpAddressId = publicIpAddressId;
             return this;
         }
-
         public Builder rdpAuthority(@Nullable String rdpAuthority) {
             this.rdpAuthority = rdpAuthority;
             return this;
         }
-
         public Builder sharedPublicIpAddressConfiguration(@Nullable SharedPublicIpAddressConfigurationResponse sharedPublicIpAddressConfiguration) {
             this.sharedPublicIpAddressConfiguration = sharedPublicIpAddressConfiguration;
             return this;
         }
-
         public Builder sshAuthority(@Nullable String sshAuthority) {
             this.sshAuthority = sshAuthority;
             return this;
         }
-
         public Builder subnetId(@Nullable String subnetId) {
             this.subnetId = subnetId;
             return this;
         }
-
         public Builder virtualNetworkId(@Nullable String virtualNetworkId) {
             this.virtualNetworkId = virtualNetworkId;
             return this;
-        }
-        public NetworkInterfacePropertiesResponse build() {
+        }        public NetworkInterfacePropertiesResponse build() {
             return new NetworkInterfacePropertiesResponse(dnsName, privateIpAddress, publicIpAddress, publicIpAddressId, rdpAuthority, sharedPublicIpAddressConfiguration, sshAuthority, subnetId, virtualNetworkId);
         }
     }

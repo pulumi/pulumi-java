@@ -53,8 +53,7 @@ public final class VMResourcesResponse {
         public Builder vmResourceId(@Nullable String vmResourceId) {
             this.vmResourceId = vmResourceId;
             return this;
-        }
-        public VMResourcesResponse build() {
+        }        public VMResourcesResponse build() {
             return new VMResourcesResponse(vmResourceId);
         }
     }

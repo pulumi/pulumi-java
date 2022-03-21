@@ -73,12 +73,13 @@ public final class OpenAuthenticationAccessPolicyResponse {
             this.claims = claims;
             return this;
         }
-
+        public Builder claims(OpenAuthenticationPolicyClaimResponse... claims) {
+            return claims(List.of(claims));
+        }
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
-        }
-        public OpenAuthenticationAccessPolicyResponse build() {
+        }        public OpenAuthenticationAccessPolicyResponse build() {
             return new OpenAuthenticationAccessPolicyResponse(claims, type);
         }
     }

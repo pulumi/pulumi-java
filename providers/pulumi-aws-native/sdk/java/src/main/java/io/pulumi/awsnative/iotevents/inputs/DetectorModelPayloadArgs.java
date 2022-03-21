@@ -79,22 +79,18 @@ public final class DetectorModelPayloadArgs extends io.pulumi.resources.Resource
             this.contentExpression = Objects.requireNonNull(contentExpression);
             return this;
         }
-
         public Builder contentExpression(String contentExpression) {
             this.contentExpression = Output.of(Objects.requireNonNull(contentExpression));
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public DetectorModelPayloadArgs build() {
+        }        public DetectorModelPayloadArgs build() {
             return new DetectorModelPayloadArgs(contentExpression, type);
         }
     }

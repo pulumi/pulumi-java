@@ -56,12 +56,10 @@ public final class VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationSub
             this.match = Objects.requireNonNull(match);
             return this;
         }
-
         public Builder match(VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesMatchArgs match) {
             this.match = Output.of(Objects.requireNonNull(match));
             return this;
-        }
-        public VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesArgs build() {
+        }        public VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesArgs build() {
             return new VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesArgs(match);
         }
     }

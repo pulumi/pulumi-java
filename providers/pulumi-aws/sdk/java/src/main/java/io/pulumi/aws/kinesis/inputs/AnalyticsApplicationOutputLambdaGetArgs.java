@@ -73,22 +73,18 @@ public final class AnalyticsApplicationOutputLambdaGetArgs extends io.pulumi.res
             this.resourceArn = Objects.requireNonNull(resourceArn);
             return this;
         }
-
         public Builder resourceArn(String resourceArn) {
             this.resourceArn = Output.of(Objects.requireNonNull(resourceArn));
             return this;
         }
-
         public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public Builder roleArn(String roleArn) {
             this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
-        }
-        public AnalyticsApplicationOutputLambdaGetArgs build() {
+        }        public AnalyticsApplicationOutputLambdaGetArgs build() {
             return new AnalyticsApplicationOutputLambdaGetArgs(resourceArn, roleArn);
         }
     }

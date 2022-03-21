@@ -61,12 +61,10 @@ public final class PropertiesNetworkInjectionArgs extends io.pulumi.resources.Re
             this.virtualNetworks = virtualNetworks;
             return this;
         }
-
         public Builder virtualNetworks(@Nullable VirtualNetworkPropertiesListArgs virtualNetworks) {
             this.virtualNetworks = Output.ofNullable(virtualNetworks);
             return this;
-        }
-        public PropertiesNetworkInjectionArgs build() {
+        }        public PropertiesNetworkInjectionArgs build() {
             return new PropertiesNetworkInjectionArgs(virtualNetworks);
         }
     }

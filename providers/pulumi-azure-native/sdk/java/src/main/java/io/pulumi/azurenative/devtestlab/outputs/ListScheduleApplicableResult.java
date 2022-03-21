@@ -73,12 +73,13 @@ public final class ListScheduleApplicableResult {
             this.nextLink = nextLink;
             return this;
         }
-
         public Builder value(@Nullable List<ScheduleResponse> value) {
             this.value = value;
             return this;
         }
-        public ListScheduleApplicableResult build() {
+        public Builder value(ScheduleResponse... value) {
+            return value(List.of(value));
+        }        public ListScheduleApplicableResult build() {
             return new ListScheduleApplicableResult(nextLink, value);
         }
     }

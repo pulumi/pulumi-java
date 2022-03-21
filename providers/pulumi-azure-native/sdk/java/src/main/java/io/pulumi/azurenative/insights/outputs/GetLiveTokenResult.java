@@ -51,8 +51,7 @@ public final class GetLiveTokenResult {
         public Builder liveToken(String liveToken) {
             this.liveToken = Objects.requireNonNull(liveToken);
             return this;
-        }
-        public GetLiveTokenResult build() {
+        }        public GetLiveTokenResult build() {
             return new GetLiveTokenResult(liveToken);
         }
     }

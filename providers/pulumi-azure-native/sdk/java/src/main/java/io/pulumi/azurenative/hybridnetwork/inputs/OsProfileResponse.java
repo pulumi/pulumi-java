@@ -112,22 +112,18 @@ public final class OsProfileResponse extends io.pulumi.resources.InvokeArgs {
             this.adminUsername = adminUsername;
             return this;
         }
-
         public Builder customData(@Nullable String customData) {
             this.customData = customData;
             return this;
         }
-
         public Builder customDataRequired(@Nullable Boolean customDataRequired) {
             this.customDataRequired = customDataRequired;
             return this;
         }
-
         public Builder linuxConfiguration(@Nullable LinuxConfigurationResponse linuxConfiguration) {
             this.linuxConfiguration = linuxConfiguration;
             return this;
-        }
-        public OsProfileResponse build() {
+        }        public OsProfileResponse build() {
             return new OsProfileResponse(adminUsername, customData, customDataRequired, linuxConfiguration);
         }
     }

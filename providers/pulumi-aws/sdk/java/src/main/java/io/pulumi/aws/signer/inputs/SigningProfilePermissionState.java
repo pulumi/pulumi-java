@@ -138,62 +138,50 @@ public final class SigningProfilePermissionState extends io.pulumi.resources.Res
             this.action = action;
             return this;
         }
-
         public Builder action(@Nullable String action) {
             this.action = Output.ofNullable(action);
             return this;
         }
-
         public Builder principal(@Nullable Output<String> principal) {
             this.principal = principal;
             return this;
         }
-
         public Builder principal(@Nullable String principal) {
             this.principal = Output.ofNullable(principal);
             return this;
         }
-
         public Builder profileName(@Nullable Output<String> profileName) {
             this.profileName = profileName;
             return this;
         }
-
         public Builder profileName(@Nullable String profileName) {
             this.profileName = Output.ofNullable(profileName);
             return this;
         }
-
         public Builder profileVersion(@Nullable Output<String> profileVersion) {
             this.profileVersion = profileVersion;
             return this;
         }
-
         public Builder profileVersion(@Nullable String profileVersion) {
             this.profileVersion = Output.ofNullable(profileVersion);
             return this;
         }
-
         public Builder statementId(@Nullable Output<String> statementId) {
             this.statementId = statementId;
             return this;
         }
-
         public Builder statementId(@Nullable String statementId) {
             this.statementId = Output.ofNullable(statementId);
             return this;
         }
-
         public Builder statementIdPrefix(@Nullable Output<String> statementIdPrefix) {
             this.statementIdPrefix = statementIdPrefix;
             return this;
         }
-
         public Builder statementIdPrefix(@Nullable String statementIdPrefix) {
             this.statementIdPrefix = Output.ofNullable(statementIdPrefix);
             return this;
-        }
-        public SigningProfilePermissionState build() {
+        }        public SigningProfilePermissionState build() {
             return new SigningProfilePermissionState(action, principal, profileName, profileVersion, statementId, statementIdPrefix);
         }
     }

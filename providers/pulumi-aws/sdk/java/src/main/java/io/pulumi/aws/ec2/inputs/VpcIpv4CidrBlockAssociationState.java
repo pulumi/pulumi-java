@@ -107,42 +107,34 @@ public final class VpcIpv4CidrBlockAssociationState extends io.pulumi.resources.
             this.cidrBlock = cidrBlock;
             return this;
         }
-
         public Builder cidrBlock(@Nullable String cidrBlock) {
             this.cidrBlock = Output.ofNullable(cidrBlock);
             return this;
         }
-
         public Builder ipv4IpamPoolId(@Nullable Output<String> ipv4IpamPoolId) {
             this.ipv4IpamPoolId = ipv4IpamPoolId;
             return this;
         }
-
         public Builder ipv4IpamPoolId(@Nullable String ipv4IpamPoolId) {
             this.ipv4IpamPoolId = Output.ofNullable(ipv4IpamPoolId);
             return this;
         }
-
         public Builder ipv4NetmaskLength(@Nullable Output<Integer> ipv4NetmaskLength) {
             this.ipv4NetmaskLength = ipv4NetmaskLength;
             return this;
         }
-
         public Builder ipv4NetmaskLength(@Nullable Integer ipv4NetmaskLength) {
             this.ipv4NetmaskLength = Output.ofNullable(ipv4NetmaskLength);
             return this;
         }
-
         public Builder vpcId(@Nullable Output<String> vpcId) {
             this.vpcId = vpcId;
             return this;
         }
-
         public Builder vpcId(@Nullable String vpcId) {
             this.vpcId = Output.ofNullable(vpcId);
             return this;
-        }
-        public VpcIpv4CidrBlockAssociationState build() {
+        }        public VpcIpv4CidrBlockAssociationState build() {
             return new VpcIpv4CidrBlockAssociationState(cidrBlock, ipv4IpamPoolId, ipv4NetmaskLength, vpcId);
         }
     }

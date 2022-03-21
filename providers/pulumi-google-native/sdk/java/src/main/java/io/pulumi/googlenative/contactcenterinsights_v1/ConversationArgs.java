@@ -258,142 +258,114 @@ public final class ConversationArgs extends io.pulumi.resources.ResourceArgs {
             this.agentId = agentId;
             return this;
         }
-
         public Builder agentId(@Nullable String agentId) {
             this.agentId = Output.ofNullable(agentId);
             return this;
         }
-
         public Builder callMetadata(@Nullable Output<GoogleCloudContactcenterinsightsV1ConversationCallMetadataArgs> callMetadata) {
             this.callMetadata = callMetadata;
             return this;
         }
-
         public Builder callMetadata(@Nullable GoogleCloudContactcenterinsightsV1ConversationCallMetadataArgs callMetadata) {
             this.callMetadata = Output.ofNullable(callMetadata);
             return this;
         }
-
         public Builder conversationId(@Nullable Output<String> conversationId) {
             this.conversationId = conversationId;
             return this;
         }
-
         public Builder conversationId(@Nullable String conversationId) {
             this.conversationId = Output.ofNullable(conversationId);
             return this;
         }
-
         public Builder dataSource(@Nullable Output<GoogleCloudContactcenterinsightsV1ConversationDataSourceArgs> dataSource) {
             this.dataSource = dataSource;
             return this;
         }
-
         public Builder dataSource(@Nullable GoogleCloudContactcenterinsightsV1ConversationDataSourceArgs dataSource) {
             this.dataSource = Output.ofNullable(dataSource);
             return this;
         }
-
         public Builder expireTime(@Nullable Output<String> expireTime) {
             this.expireTime = expireTime;
             return this;
         }
-
         public Builder expireTime(@Nullable String expireTime) {
             this.expireTime = Output.ofNullable(expireTime);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder languageCode(@Nullable Output<String> languageCode) {
             this.languageCode = languageCode;
             return this;
         }
-
         public Builder languageCode(@Nullable String languageCode) {
             this.languageCode = Output.ofNullable(languageCode);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder medium(@Nullable Output<ConversationMedium> medium) {
             this.medium = medium;
             return this;
         }
-
         public Builder medium(@Nullable ConversationMedium medium) {
             this.medium = Output.ofNullable(medium);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder obfuscatedUserId(@Nullable Output<String> obfuscatedUserId) {
             this.obfuscatedUserId = obfuscatedUserId;
             return this;
         }
-
         public Builder obfuscatedUserId(@Nullable String obfuscatedUserId) {
             this.obfuscatedUserId = Output.ofNullable(obfuscatedUserId);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder startTime(@Nullable Output<String> startTime) {
             this.startTime = startTime;
             return this;
         }
-
         public Builder startTime(@Nullable String startTime) {
             this.startTime = Output.ofNullable(startTime);
             return this;
         }
-
         public Builder ttl(@Nullable Output<String> ttl) {
             this.ttl = ttl;
             return this;
         }
-
         public Builder ttl(@Nullable String ttl) {
             this.ttl = Output.ofNullable(ttl);
             return this;
-        }
-        public ConversationArgs build() {
+        }        public ConversationArgs build() {
             return new ConversationArgs(agentId, callMetadata, conversationId, dataSource, expireTime, labels, languageCode, location, medium, name, obfuscatedUserId, project, startTime, ttl);
         }
     }

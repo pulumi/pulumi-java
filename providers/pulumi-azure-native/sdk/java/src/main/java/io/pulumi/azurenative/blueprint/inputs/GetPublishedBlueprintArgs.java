@@ -88,17 +88,14 @@ public final class GetPublishedBlueprintArgs extends io.pulumi.resources.InvokeA
             this.blueprintName = Objects.requireNonNull(blueprintName);
             return this;
         }
-
         public Builder resourceScope(String resourceScope) {
             this.resourceScope = Objects.requireNonNull(resourceScope);
             return this;
         }
-
         public Builder versionId(String versionId) {
             this.versionId = Objects.requireNonNull(versionId);
             return this;
-        }
-        public GetPublishedBlueprintArgs build() {
+        }        public GetPublishedBlueprintArgs build() {
             return new GetPublishedBlueprintArgs(blueprintName, resourceScope, versionId);
         }
     }

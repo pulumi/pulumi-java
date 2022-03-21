@@ -51,8 +51,7 @@ public final class RuleGroupRuleStatementAndStatementStatementNotStatementStatem
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public RuleGroupRuleStatementAndStatementStatementNotStatementStatementByteMatchStatementFieldToMatchSingleHeader build() {
+        }        public RuleGroupRuleStatementAndStatementStatementNotStatementStatementByteMatchStatementFieldToMatchSingleHeader build() {
             return new RuleGroupRuleStatementAndStatementStatementNotStatementStatementByteMatchStatementFieldToMatchSingleHeader(name);
         }
     }

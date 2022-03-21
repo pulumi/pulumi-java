@@ -69,22 +69,18 @@ public final class ModelPackageGroupPolicyArgs extends io.pulumi.resources.Resou
             this.modelPackageGroupName = Objects.requireNonNull(modelPackageGroupName);
             return this;
         }
-
         public Builder modelPackageGroupName(String modelPackageGroupName) {
             this.modelPackageGroupName = Output.of(Objects.requireNonNull(modelPackageGroupName));
             return this;
         }
-
         public Builder resourcePolicy(Output<String> resourcePolicy) {
             this.resourcePolicy = Objects.requireNonNull(resourcePolicy);
             return this;
         }
-
         public Builder resourcePolicy(String resourcePolicy) {
             this.resourcePolicy = Output.of(Objects.requireNonNull(resourcePolicy));
             return this;
-        }
-        public ModelPackageGroupPolicyArgs build() {
+        }        public ModelPackageGroupPolicyArgs build() {
             return new ModelPackageGroupPolicyArgs(modelPackageGroupName, resourcePolicy);
         }
     }

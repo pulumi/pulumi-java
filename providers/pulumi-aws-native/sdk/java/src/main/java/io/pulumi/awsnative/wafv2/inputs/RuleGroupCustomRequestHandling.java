@@ -60,7 +60,9 @@ public final class RuleGroupCustomRequestHandling extends io.pulumi.resources.In
             this.insertHeaders = Objects.requireNonNull(insertHeaders);
             return this;
         }
-        public RuleGroupCustomRequestHandling build() {
+        public Builder insertHeaders(RuleGroupCustomHTTPHeader... insertHeaders) {
+            return insertHeaders(List.of(insertHeaders));
+        }        public RuleGroupCustomRequestHandling build() {
             return new RuleGroupCustomRequestHandling(insertHeaders);
         }
     }

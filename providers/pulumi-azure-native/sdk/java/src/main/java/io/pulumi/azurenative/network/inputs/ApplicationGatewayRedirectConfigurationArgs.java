@@ -211,102 +211,91 @@ public final class ApplicationGatewayRedirectConfigurationArgs extends io.pulumi
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder includePath(@Nullable Output<Boolean> includePath) {
             this.includePath = includePath;
             return this;
         }
-
         public Builder includePath(@Nullable Boolean includePath) {
             this.includePath = Output.ofNullable(includePath);
             return this;
         }
-
         public Builder includeQueryString(@Nullable Output<Boolean> includeQueryString) {
             this.includeQueryString = includeQueryString;
             return this;
         }
-
         public Builder includeQueryString(@Nullable Boolean includeQueryString) {
             this.includeQueryString = Output.ofNullable(includeQueryString);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder pathRules(@Nullable Output<List<SubResourceArgs>> pathRules) {
             this.pathRules = pathRules;
             return this;
         }
-
         public Builder pathRules(@Nullable List<SubResourceArgs> pathRules) {
             this.pathRules = Output.ofNullable(pathRules);
             return this;
         }
-
+        public Builder pathRules(SubResourceArgs... pathRules) {
+            return pathRules(List.of(pathRules));
+        }
         public Builder redirectType(@Nullable Output<Either<String,ApplicationGatewayRedirectType>> redirectType) {
             this.redirectType = redirectType;
             return this;
         }
-
         public Builder redirectType(@Nullable Either<String,ApplicationGatewayRedirectType> redirectType) {
             this.redirectType = Output.ofNullable(redirectType);
             return this;
         }
-
         public Builder requestRoutingRules(@Nullable Output<List<SubResourceArgs>> requestRoutingRules) {
             this.requestRoutingRules = requestRoutingRules;
             return this;
         }
-
         public Builder requestRoutingRules(@Nullable List<SubResourceArgs> requestRoutingRules) {
             this.requestRoutingRules = Output.ofNullable(requestRoutingRules);
             return this;
         }
-
+        public Builder requestRoutingRules(SubResourceArgs... requestRoutingRules) {
+            return requestRoutingRules(List.of(requestRoutingRules));
+        }
         public Builder targetListener(@Nullable Output<SubResourceArgs> targetListener) {
             this.targetListener = targetListener;
             return this;
         }
-
         public Builder targetListener(@Nullable SubResourceArgs targetListener) {
             this.targetListener = Output.ofNullable(targetListener);
             return this;
         }
-
         public Builder targetUrl(@Nullable Output<String> targetUrl) {
             this.targetUrl = targetUrl;
             return this;
         }
-
         public Builder targetUrl(@Nullable String targetUrl) {
             this.targetUrl = Output.ofNullable(targetUrl);
             return this;
         }
-
         public Builder urlPathMaps(@Nullable Output<List<SubResourceArgs>> urlPathMaps) {
             this.urlPathMaps = urlPathMaps;
             return this;
         }
-
         public Builder urlPathMaps(@Nullable List<SubResourceArgs> urlPathMaps) {
             this.urlPathMaps = Output.ofNullable(urlPathMaps);
             return this;
         }
-        public ApplicationGatewayRedirectConfigurationArgs build() {
+        public Builder urlPathMaps(SubResourceArgs... urlPathMaps) {
+            return urlPathMaps(List.of(urlPathMaps));
+        }        public ApplicationGatewayRedirectConfigurationArgs build() {
             return new ApplicationGatewayRedirectConfigurationArgs(id, includePath, includeQueryString, name, pathRules, redirectType, requestRoutingRules, targetListener, targetUrl, urlPathMaps);
         }
     }

@@ -509,282 +509,229 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
             this.additionalCapabilities = additionalCapabilities;
             return this;
         }
-
         public Builder additionalCapabilities(@Nullable AdditionalCapabilitiesArgs additionalCapabilities) {
             this.additionalCapabilities = Output.ofNullable(additionalCapabilities);
             return this;
         }
-
         public Builder availabilitySet(@Nullable Output<SubResourceArgs> availabilitySet) {
             this.availabilitySet = availabilitySet;
             return this;
         }
-
         public Builder availabilitySet(@Nullable SubResourceArgs availabilitySet) {
             this.availabilitySet = Output.ofNullable(availabilitySet);
             return this;
         }
-
         public Builder billingProfile(@Nullable Output<BillingProfileArgs> billingProfile) {
             this.billingProfile = billingProfile;
             return this;
         }
-
         public Builder billingProfile(@Nullable BillingProfileArgs billingProfile) {
             this.billingProfile = Output.ofNullable(billingProfile);
             return this;
         }
-
         public Builder diagnosticsProfile(@Nullable Output<DiagnosticsProfileArgs> diagnosticsProfile) {
             this.diagnosticsProfile = diagnosticsProfile;
             return this;
         }
-
         public Builder diagnosticsProfile(@Nullable DiagnosticsProfileArgs diagnosticsProfile) {
             this.diagnosticsProfile = Output.ofNullable(diagnosticsProfile);
             return this;
         }
-
         public Builder evictionPolicy(@Nullable Output<Either<String,VirtualMachineEvictionPolicyTypes>> evictionPolicy) {
             this.evictionPolicy = evictionPolicy;
             return this;
         }
-
         public Builder evictionPolicy(@Nullable Either<String,VirtualMachineEvictionPolicyTypes> evictionPolicy) {
             this.evictionPolicy = Output.ofNullable(evictionPolicy);
             return this;
         }
-
         public Builder extendedLocation(@Nullable Output<ExtendedLocationArgs> extendedLocation) {
             this.extendedLocation = extendedLocation;
             return this;
         }
-
         public Builder extendedLocation(@Nullable ExtendedLocationArgs extendedLocation) {
             this.extendedLocation = Output.ofNullable(extendedLocation);
             return this;
         }
-
         public Builder extensionsTimeBudget(@Nullable Output<String> extensionsTimeBudget) {
             this.extensionsTimeBudget = extensionsTimeBudget;
             return this;
         }
-
         public Builder extensionsTimeBudget(@Nullable String extensionsTimeBudget) {
             this.extensionsTimeBudget = Output.ofNullable(extensionsTimeBudget);
             return this;
         }
-
         public Builder hardwareProfile(@Nullable Output<HardwareProfileArgs> hardwareProfile) {
             this.hardwareProfile = hardwareProfile;
             return this;
         }
-
         public Builder hardwareProfile(@Nullable HardwareProfileArgs hardwareProfile) {
             this.hardwareProfile = Output.ofNullable(hardwareProfile);
             return this;
         }
-
         public Builder host(@Nullable Output<SubResourceArgs> host) {
             this.host = host;
             return this;
         }
-
         public Builder host(@Nullable SubResourceArgs host) {
             this.host = Output.ofNullable(host);
             return this;
         }
-
         public Builder hostGroup(@Nullable Output<SubResourceArgs> hostGroup) {
             this.hostGroup = hostGroup;
             return this;
         }
-
         public Builder hostGroup(@Nullable SubResourceArgs hostGroup) {
             this.hostGroup = Output.ofNullable(hostGroup);
             return this;
         }
-
         public Builder identity(@Nullable Output<VirtualMachineIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
-
         public Builder identity(@Nullable VirtualMachineIdentityArgs identity) {
             this.identity = Output.ofNullable(identity);
             return this;
         }
-
         public Builder licenseType(@Nullable Output<String> licenseType) {
             this.licenseType = licenseType;
             return this;
         }
-
         public Builder licenseType(@Nullable String licenseType) {
             this.licenseType = Output.ofNullable(licenseType);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder networkProfile(@Nullable Output<NetworkProfileArgs> networkProfile) {
             this.networkProfile = networkProfile;
             return this;
         }
-
         public Builder networkProfile(@Nullable NetworkProfileArgs networkProfile) {
             this.networkProfile = Output.ofNullable(networkProfile);
             return this;
         }
-
         public Builder osProfile(@Nullable Output<OSProfileArgs> osProfile) {
             this.osProfile = osProfile;
             return this;
         }
-
         public Builder osProfile(@Nullable OSProfileArgs osProfile) {
             this.osProfile = Output.ofNullable(osProfile);
             return this;
         }
-
         public Builder plan(@Nullable Output<PlanArgs> plan) {
             this.plan = plan;
             return this;
         }
-
         public Builder plan(@Nullable PlanArgs plan) {
             this.plan = Output.ofNullable(plan);
             return this;
         }
-
         public Builder platformFaultDomain(@Nullable Output<Integer> platformFaultDomain) {
             this.platformFaultDomain = platformFaultDomain;
             return this;
         }
-
         public Builder platformFaultDomain(@Nullable Integer platformFaultDomain) {
             this.platformFaultDomain = Output.ofNullable(platformFaultDomain);
             return this;
         }
-
         public Builder priority(@Nullable Output<Either<String,VirtualMachinePriorityTypes>> priority) {
             this.priority = priority;
             return this;
         }
-
         public Builder priority(@Nullable Either<String,VirtualMachinePriorityTypes> priority) {
             this.priority = Output.ofNullable(priority);
             return this;
         }
-
         public Builder proximityPlacementGroup(@Nullable Output<SubResourceArgs> proximityPlacementGroup) {
             this.proximityPlacementGroup = proximityPlacementGroup;
             return this;
         }
-
         public Builder proximityPlacementGroup(@Nullable SubResourceArgs proximityPlacementGroup) {
             this.proximityPlacementGroup = Output.ofNullable(proximityPlacementGroup);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder scheduledEventsProfile(@Nullable Output<ScheduledEventsProfileArgs> scheduledEventsProfile) {
             this.scheduledEventsProfile = scheduledEventsProfile;
             return this;
         }
-
         public Builder scheduledEventsProfile(@Nullable ScheduledEventsProfileArgs scheduledEventsProfile) {
             this.scheduledEventsProfile = Output.ofNullable(scheduledEventsProfile);
             return this;
         }
-
         public Builder securityProfile(@Nullable Output<SecurityProfileArgs> securityProfile) {
             this.securityProfile = securityProfile;
             return this;
         }
-
         public Builder securityProfile(@Nullable SecurityProfileArgs securityProfile) {
             this.securityProfile = Output.ofNullable(securityProfile);
             return this;
         }
-
         public Builder storageProfile(@Nullable Output<StorageProfileArgs> storageProfile) {
             this.storageProfile = storageProfile;
             return this;
         }
-
         public Builder storageProfile(@Nullable StorageProfileArgs storageProfile) {
             this.storageProfile = Output.ofNullable(storageProfile);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder userData(@Nullable Output<String> userData) {
             this.userData = userData;
             return this;
         }
-
         public Builder userData(@Nullable String userData) {
             this.userData = Output.ofNullable(userData);
             return this;
         }
-
         public Builder virtualMachineScaleSet(@Nullable Output<SubResourceArgs> virtualMachineScaleSet) {
             this.virtualMachineScaleSet = virtualMachineScaleSet;
             return this;
         }
-
         public Builder virtualMachineScaleSet(@Nullable SubResourceArgs virtualMachineScaleSet) {
             this.virtualMachineScaleSet = Output.ofNullable(virtualMachineScaleSet);
             return this;
         }
-
         public Builder vmName(@Nullable Output<String> vmName) {
             this.vmName = vmName;
             return this;
         }
-
         public Builder vmName(@Nullable String vmName) {
             this.vmName = Output.ofNullable(vmName);
             return this;
         }
-
         public Builder zones(@Nullable Output<List<String>> zones) {
             this.zones = zones;
             return this;
         }
-
         public Builder zones(@Nullable List<String> zones) {
             this.zones = Output.ofNullable(zones);
             return this;
         }
-        public VirtualMachineArgs build() {
+        public Builder zones(String... zones) {
+            return zones(List.of(zones));
+        }        public VirtualMachineArgs build() {
             return new VirtualMachineArgs(additionalCapabilities, availabilitySet, billingProfile, diagnosticsProfile, evictionPolicy, extendedLocation, extensionsTimeBudget, hardwareProfile, host, hostGroup, identity, licenseType, location, networkProfile, osProfile, plan, platformFaultDomain, priority, proximityPlacementGroup, resourceGroupName, scheduledEventsProfile, securityProfile, storageProfile, tags, userData, virtualMachineScaleSet, vmName, zones);
         }
     }

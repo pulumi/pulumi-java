@@ -76,12 +76,10 @@ public final class URLMapDefaultRouteActionFaultInjectionPolicyAbort {
             this.httpStatus = httpStatus;
             return this;
         }
-
         public Builder percentage(@Nullable Double percentage) {
             this.percentage = percentage;
             return this;
-        }
-        public URLMapDefaultRouteActionFaultInjectionPolicyAbort build() {
+        }        public URLMapDefaultRouteActionFaultInjectionPolicyAbort build() {
             return new URLMapDefaultRouteActionFaultInjectionPolicyAbort(httpStatus, percentage);
         }
     }

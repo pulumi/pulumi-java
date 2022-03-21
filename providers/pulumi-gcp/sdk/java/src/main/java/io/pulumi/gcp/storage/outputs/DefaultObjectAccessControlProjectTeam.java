@@ -55,12 +55,10 @@ public final class DefaultObjectAccessControlProjectTeam {
             this.projectNumber = projectNumber;
             return this;
         }
-
         public Builder team(@Nullable String team) {
             this.team = team;
             return this;
-        }
-        public DefaultObjectAccessControlProjectTeam build() {
+        }        public DefaultObjectAccessControlProjectTeam build() {
             return new DefaultObjectAccessControlProjectTeam(projectNumber, team);
         }
     }

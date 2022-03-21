@@ -85,17 +85,14 @@ public final class ConnectionStatusResponse {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
-        }
-        public ConnectionStatusResponse build() {
+        }        public ConnectionStatusResponse build() {
             return new ConnectionStatusResponse(description, state, status);
         }
     }

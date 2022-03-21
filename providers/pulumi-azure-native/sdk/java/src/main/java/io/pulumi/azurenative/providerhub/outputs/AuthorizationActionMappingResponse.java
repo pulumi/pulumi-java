@@ -55,12 +55,10 @@ public final class AuthorizationActionMappingResponse {
             this.desired = desired;
             return this;
         }
-
         public Builder original(@Nullable String original) {
             this.original = original;
             return this;
-        }
-        public AuthorizationActionMappingResponse build() {
+        }        public AuthorizationActionMappingResponse build() {
             return new AuthorizationActionMappingResponse(desired, original);
         }
     }

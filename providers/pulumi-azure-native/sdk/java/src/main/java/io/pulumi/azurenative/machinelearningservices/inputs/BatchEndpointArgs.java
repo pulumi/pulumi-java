@@ -132,52 +132,42 @@ public final class BatchEndpointArgs extends io.pulumi.resources.ResourceArgs {
             this.authMode = authMode;
             return this;
         }
-
         public Builder authMode(@Nullable Either<String,EndpointAuthMode> authMode) {
             this.authMode = Output.ofNullable(authMode);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder keys(@Nullable Output<EndpointAuthKeysArgs> keys) {
             this.keys = keys;
             return this;
         }
-
         public Builder keys(@Nullable EndpointAuthKeysArgs keys) {
             this.keys = Output.ofNullable(keys);
             return this;
         }
-
         public Builder properties(@Nullable Output<Map<String,String>> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder properties(@Nullable Map<String,String> properties) {
             this.properties = Output.ofNullable(properties);
             return this;
         }
-
         public Builder traffic(@Nullable Output<Map<String,Integer>> traffic) {
             this.traffic = traffic;
             return this;
         }
-
         public Builder traffic(@Nullable Map<String,Integer> traffic) {
             this.traffic = Output.ofNullable(traffic);
             return this;
-        }
-        public BatchEndpointArgs build() {
+        }        public BatchEndpointArgs build() {
             return new BatchEndpointArgs(authMode, description, keys, properties, traffic);
         }
     }

@@ -162,72 +162,58 @@ public final class AzureResourceProtectionIntentArgs extends io.pulumi.resources
             this.backupManagementType = backupManagementType;
             return this;
         }
-
         public Builder backupManagementType(@Nullable Either<String,BackupManagementType> backupManagementType) {
             this.backupManagementType = Output.ofNullable(backupManagementType);
             return this;
         }
-
         public Builder friendlyName(@Nullable Output<String> friendlyName) {
             this.friendlyName = friendlyName;
             return this;
         }
-
         public Builder friendlyName(@Nullable String friendlyName) {
             this.friendlyName = Output.ofNullable(friendlyName);
             return this;
         }
-
         public Builder itemId(@Nullable Output<String> itemId) {
             this.itemId = itemId;
             return this;
         }
-
         public Builder itemId(@Nullable String itemId) {
             this.itemId = Output.ofNullable(itemId);
             return this;
         }
-
         public Builder policyId(@Nullable Output<String> policyId) {
             this.policyId = policyId;
             return this;
         }
-
         public Builder policyId(@Nullable String policyId) {
             this.policyId = Output.ofNullable(policyId);
             return this;
         }
-
         public Builder protectionIntentItemType(Output<String> protectionIntentItemType) {
             this.protectionIntentItemType = Objects.requireNonNull(protectionIntentItemType);
             return this;
         }
-
         public Builder protectionIntentItemType(String protectionIntentItemType) {
             this.protectionIntentItemType = Output.of(Objects.requireNonNull(protectionIntentItemType));
             return this;
         }
-
         public Builder protectionState(@Nullable Output<Either<String,ProtectionStatus>> protectionState) {
             this.protectionState = protectionState;
             return this;
         }
-
         public Builder protectionState(@Nullable Either<String,ProtectionStatus> protectionState) {
             this.protectionState = Output.ofNullable(protectionState);
             return this;
         }
-
         public Builder sourceResourceId(@Nullable Output<String> sourceResourceId) {
             this.sourceResourceId = sourceResourceId;
             return this;
         }
-
         public Builder sourceResourceId(@Nullable String sourceResourceId) {
             this.sourceResourceId = Output.ofNullable(sourceResourceId);
             return this;
-        }
-        public AzureResourceProtectionIntentArgs build() {
+        }        public AzureResourceProtectionIntentArgs build() {
             return new AzureResourceProtectionIntentArgs(backupManagementType, friendlyName, itemId, policyId, protectionIntentItemType, protectionState, sourceResourceId);
         }
     }

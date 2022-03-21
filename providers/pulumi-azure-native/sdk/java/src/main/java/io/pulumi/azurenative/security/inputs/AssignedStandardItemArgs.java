@@ -61,12 +61,10 @@ public final class AssignedStandardItemArgs extends io.pulumi.resources.Resource
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
-        }
-        public AssignedStandardItemArgs build() {
+        }        public AssignedStandardItemArgs build() {
             return new AssignedStandardItemArgs(id);
         }
     }

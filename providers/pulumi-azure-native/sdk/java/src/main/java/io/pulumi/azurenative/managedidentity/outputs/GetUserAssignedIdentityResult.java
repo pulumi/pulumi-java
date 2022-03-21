@@ -167,42 +167,34 @@ public final class GetUserAssignedIdentityResult {
             this.clientId = Objects.requireNonNull(clientId);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder principalId(String principalId) {
             this.principalId = Objects.requireNonNull(principalId);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tenantId(String tenantId) {
             this.tenantId = Objects.requireNonNull(tenantId);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetUserAssignedIdentityResult build() {
+        }        public GetUserAssignedIdentityResult build() {
             return new GetUserAssignedIdentityResult(clientId, id, location, name, principalId, tags, tenantId, type);
         }
     }

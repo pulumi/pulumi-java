@@ -72,12 +72,10 @@ public final class GetLabAccountRegionalAvailabilityArgs extends io.pulumi.resou
             this.labAccountName = Objects.requireNonNull(labAccountName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetLabAccountRegionalAvailabilityArgs build() {
+        }        public GetLabAccountRegionalAvailabilityArgs build() {
             return new GetLabAccountRegionalAvailabilityArgs(labAccountName, resourceGroupName);
         }
     }

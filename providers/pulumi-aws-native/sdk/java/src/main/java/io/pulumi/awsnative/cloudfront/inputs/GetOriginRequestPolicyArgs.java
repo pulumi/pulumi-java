@@ -50,8 +50,7 @@ public final class GetOriginRequestPolicyArgs extends io.pulumi.resources.Invoke
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
-        }
-        public GetOriginRequestPolicyArgs build() {
+        }        public GetOriginRequestPolicyArgs build() {
             return new GetOriginRequestPolicyArgs(id);
         }
     }

@@ -90,32 +90,26 @@ public final class VpcEndpointConnectionAccepterState extends io.pulumi.resource
             this.vpcEndpointId = vpcEndpointId;
             return this;
         }
-
         public Builder vpcEndpointId(@Nullable String vpcEndpointId) {
             this.vpcEndpointId = Output.ofNullable(vpcEndpointId);
             return this;
         }
-
         public Builder vpcEndpointServiceId(@Nullable Output<String> vpcEndpointServiceId) {
             this.vpcEndpointServiceId = vpcEndpointServiceId;
             return this;
         }
-
         public Builder vpcEndpointServiceId(@Nullable String vpcEndpointServiceId) {
             this.vpcEndpointServiceId = Output.ofNullable(vpcEndpointServiceId);
             return this;
         }
-
         public Builder vpcEndpointState(@Nullable Output<String> vpcEndpointState) {
             this.vpcEndpointState = vpcEndpointState;
             return this;
         }
-
         public Builder vpcEndpointState(@Nullable String vpcEndpointState) {
             this.vpcEndpointState = Output.ofNullable(vpcEndpointState);
             return this;
-        }
-        public VpcEndpointConnectionAccepterState build() {
+        }        public VpcEndpointConnectionAccepterState build() {
             return new VpcEndpointConnectionAccepterState(vpcEndpointId, vpcEndpointServiceId, vpcEndpointState);
         }
     }

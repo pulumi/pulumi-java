@@ -53,7 +53,9 @@ public final class MTLSPolicyResponse {
             this.clientValidationCa = Objects.requireNonNull(clientValidationCa);
             return this;
         }
-        public MTLSPolicyResponse build() {
+        public Builder clientValidationCa(ValidationCAResponse... clientValidationCa) {
+            return clientValidationCa(List.of(clientValidationCa));
+        }        public MTLSPolicyResponse build() {
             return new MTLSPolicyResponse(clientValidationCa);
         }
     }

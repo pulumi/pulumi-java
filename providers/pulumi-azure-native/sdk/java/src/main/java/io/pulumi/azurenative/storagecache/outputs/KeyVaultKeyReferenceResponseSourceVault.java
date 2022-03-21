@@ -53,8 +53,7 @@ public final class KeyVaultKeyReferenceResponseSourceVault {
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
-        }
-        public KeyVaultKeyReferenceResponseSourceVault build() {
+        }        public KeyVaultKeyReferenceResponseSourceVault build() {
             return new KeyVaultKeyReferenceResponseSourceVault(id);
         }
     }

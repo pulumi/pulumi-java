@@ -77,12 +77,10 @@ public final class GoogleCloudRetailV2alphaConditionQueryTermResponse extends io
             this.fullMatch = Objects.requireNonNull(fullMatch);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public GoogleCloudRetailV2alphaConditionQueryTermResponse build() {
+        }        public GoogleCloudRetailV2alphaConditionQueryTermResponse build() {
             return new GoogleCloudRetailV2alphaConditionQueryTermResponse(fullMatch, value);
         }
     }

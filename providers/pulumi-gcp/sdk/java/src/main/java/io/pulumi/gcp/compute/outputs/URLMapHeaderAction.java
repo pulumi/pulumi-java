@@ -113,22 +113,30 @@ public final class URLMapHeaderAction {
             this.requestHeadersToAdds = requestHeadersToAdds;
             return this;
         }
-
+        public Builder requestHeadersToAdds(URLMapHeaderActionRequestHeadersToAdd... requestHeadersToAdds) {
+            return requestHeadersToAdds(List.of(requestHeadersToAdds));
+        }
         public Builder requestHeadersToRemoves(@Nullable List<String> requestHeadersToRemoves) {
             this.requestHeadersToRemoves = requestHeadersToRemoves;
             return this;
         }
-
+        public Builder requestHeadersToRemoves(String... requestHeadersToRemoves) {
+            return requestHeadersToRemoves(List.of(requestHeadersToRemoves));
+        }
         public Builder responseHeadersToAdds(@Nullable List<URLMapHeaderActionResponseHeadersToAdd> responseHeadersToAdds) {
             this.responseHeadersToAdds = responseHeadersToAdds;
             return this;
         }
-
+        public Builder responseHeadersToAdds(URLMapHeaderActionResponseHeadersToAdd... responseHeadersToAdds) {
+            return responseHeadersToAdds(List.of(responseHeadersToAdds));
+        }
         public Builder responseHeadersToRemoves(@Nullable List<String> responseHeadersToRemoves) {
             this.responseHeadersToRemoves = responseHeadersToRemoves;
             return this;
         }
-        public URLMapHeaderAction build() {
+        public Builder responseHeadersToRemoves(String... responseHeadersToRemoves) {
+            return responseHeadersToRemoves(List.of(responseHeadersToRemoves));
+        }        public URLMapHeaderAction build() {
             return new URLMapHeaderAction(requestHeadersToAdds, requestHeadersToRemoves, responseHeadersToAdds, responseHeadersToRemoves);
         }
     }

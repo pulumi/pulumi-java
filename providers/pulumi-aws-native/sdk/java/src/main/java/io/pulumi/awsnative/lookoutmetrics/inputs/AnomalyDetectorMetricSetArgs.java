@@ -180,92 +180,80 @@ public final class AnomalyDetectorMetricSetArgs extends io.pulumi.resources.Reso
             this.dimensionList = dimensionList;
             return this;
         }
-
         public Builder dimensionList(@Nullable List<String> dimensionList) {
             this.dimensionList = Output.ofNullable(dimensionList);
             return this;
         }
-
+        public Builder dimensionList(String... dimensionList) {
+            return dimensionList(List.of(dimensionList));
+        }
         public Builder metricList(Output<List<AnomalyDetectorMetricArgs>> metricList) {
             this.metricList = Objects.requireNonNull(metricList);
             return this;
         }
-
         public Builder metricList(List<AnomalyDetectorMetricArgs> metricList) {
             this.metricList = Output.of(Objects.requireNonNull(metricList));
             return this;
         }
-
+        public Builder metricList(AnomalyDetectorMetricArgs... metricList) {
+            return metricList(List.of(metricList));
+        }
         public Builder metricSetDescription(@Nullable Output<String> metricSetDescription) {
             this.metricSetDescription = metricSetDescription;
             return this;
         }
-
         public Builder metricSetDescription(@Nullable String metricSetDescription) {
             this.metricSetDescription = Output.ofNullable(metricSetDescription);
             return this;
         }
-
         public Builder metricSetFrequency(@Nullable Output<AnomalyDetectorMetricSetMetricSetFrequency> metricSetFrequency) {
             this.metricSetFrequency = metricSetFrequency;
             return this;
         }
-
         public Builder metricSetFrequency(@Nullable AnomalyDetectorMetricSetMetricSetFrequency metricSetFrequency) {
             this.metricSetFrequency = Output.ofNullable(metricSetFrequency);
             return this;
         }
-
         public Builder metricSetName(Output<String> metricSetName) {
             this.metricSetName = Objects.requireNonNull(metricSetName);
             return this;
         }
-
         public Builder metricSetName(String metricSetName) {
             this.metricSetName = Output.of(Objects.requireNonNull(metricSetName));
             return this;
         }
-
         public Builder metricSource(Output<AnomalyDetectorMetricSourceArgs> metricSource) {
             this.metricSource = Objects.requireNonNull(metricSource);
             return this;
         }
-
         public Builder metricSource(AnomalyDetectorMetricSourceArgs metricSource) {
             this.metricSource = Output.of(Objects.requireNonNull(metricSource));
             return this;
         }
-
         public Builder offset(@Nullable Output<Integer> offset) {
             this.offset = offset;
             return this;
         }
-
         public Builder offset(@Nullable Integer offset) {
             this.offset = Output.ofNullable(offset);
             return this;
         }
-
         public Builder timestampColumn(@Nullable Output<AnomalyDetectorTimestampColumnArgs> timestampColumn) {
             this.timestampColumn = timestampColumn;
             return this;
         }
-
         public Builder timestampColumn(@Nullable AnomalyDetectorTimestampColumnArgs timestampColumn) {
             this.timestampColumn = Output.ofNullable(timestampColumn);
             return this;
         }
-
         public Builder timezone(@Nullable Output<String> timezone) {
             this.timezone = timezone;
             return this;
         }
-
         public Builder timezone(@Nullable String timezone) {
             this.timezone = Output.ofNullable(timezone);
             return this;
-        }
-        public AnomalyDetectorMetricSetArgs build() {
+        }        public AnomalyDetectorMetricSetArgs build() {
             return new AnomalyDetectorMetricSetArgs(dimensionList, metricList, metricSetDescription, metricSetFrequency, metricSetName, metricSource, offset, timestampColumn, timezone);
         }
     }

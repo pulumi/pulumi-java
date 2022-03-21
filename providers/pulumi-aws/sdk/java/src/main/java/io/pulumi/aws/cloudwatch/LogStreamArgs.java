@@ -74,22 +74,18 @@ public final class LogStreamArgs extends io.pulumi.resources.ResourceArgs {
             this.logGroupName = Objects.requireNonNull(logGroupName);
             return this;
         }
-
         public Builder logGroupName(String logGroupName) {
             this.logGroupName = Output.of(Objects.requireNonNull(logGroupName));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
-        }
-        public LogStreamArgs build() {
+        }        public LogStreamArgs build() {
             return new LogStreamArgs(logGroupName, name);
         }
     }

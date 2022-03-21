@@ -79,22 +79,18 @@ public final class RecordingConfigurationThumbnailConfigurationArgs extends io.p
             this.recordingMode = Objects.requireNonNull(recordingMode);
             return this;
         }
-
         public Builder recordingMode(RecordingConfigurationThumbnailConfigurationRecordingMode recordingMode) {
             this.recordingMode = Output.of(Objects.requireNonNull(recordingMode));
             return this;
         }
-
         public Builder targetIntervalSeconds(@Nullable Output<Integer> targetIntervalSeconds) {
             this.targetIntervalSeconds = targetIntervalSeconds;
             return this;
         }
-
         public Builder targetIntervalSeconds(@Nullable Integer targetIntervalSeconds) {
             this.targetIntervalSeconds = Output.ofNullable(targetIntervalSeconds);
             return this;
-        }
-        public RecordingConfigurationThumbnailConfigurationArgs build() {
+        }        public RecordingConfigurationThumbnailConfigurationArgs build() {
             return new RecordingConfigurationThumbnailConfigurationArgs(recordingMode, targetIntervalSeconds);
         }
     }

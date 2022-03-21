@@ -56,12 +56,10 @@ public final class DomainSnapshotOptionsArgs extends io.pulumi.resources.Resourc
             this.automatedSnapshotStartHour = Objects.requireNonNull(automatedSnapshotStartHour);
             return this;
         }
-
         public Builder automatedSnapshotStartHour(Integer automatedSnapshotStartHour) {
             this.automatedSnapshotStartHour = Output.of(Objects.requireNonNull(automatedSnapshotStartHour));
             return this;
-        }
-        public DomainSnapshotOptionsArgs build() {
+        }        public DomainSnapshotOptionsArgs build() {
             return new DomainSnapshotOptionsArgs(automatedSnapshotStartHour);
         }
     }

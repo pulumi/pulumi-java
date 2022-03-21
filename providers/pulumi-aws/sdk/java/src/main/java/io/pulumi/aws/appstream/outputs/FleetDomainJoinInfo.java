@@ -71,12 +71,10 @@ public final class FleetDomainJoinInfo {
             this.directoryName = directoryName;
             return this;
         }
-
         public Builder organizationalUnitDistinguishedName(@Nullable String organizationalUnitDistinguishedName) {
             this.organizationalUnitDistinguishedName = organizationalUnitDistinguishedName;
             return this;
-        }
-        public FleetDomainJoinInfo build() {
+        }        public FleetDomainJoinInfo build() {
             return new FleetDomainJoinInfo(directoryName, organizationalUnitDistinguishedName);
         }
     }

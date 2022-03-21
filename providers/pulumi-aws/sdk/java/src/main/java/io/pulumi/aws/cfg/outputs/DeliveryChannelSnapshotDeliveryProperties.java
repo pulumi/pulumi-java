@@ -53,8 +53,7 @@ public final class DeliveryChannelSnapshotDeliveryProperties {
         public Builder deliveryFrequency(@Nullable String deliveryFrequency) {
             this.deliveryFrequency = deliveryFrequency;
             return this;
-        }
-        public DeliveryChannelSnapshotDeliveryProperties build() {
+        }        public DeliveryChannelSnapshotDeliveryProperties build() {
             return new DeliveryChannelSnapshotDeliveryProperties(deliveryFrequency);
         }
     }

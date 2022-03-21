@@ -134,17 +134,14 @@ public final class RegionBackendServiceConnectionTrackingPolicy {
             this.connectionPersistenceOnUnhealthyBackends = connectionPersistenceOnUnhealthyBackends;
             return this;
         }
-
         public Builder idleTimeoutSec(@Nullable Integer idleTimeoutSec) {
             this.idleTimeoutSec = idleTimeoutSec;
             return this;
         }
-
         public Builder trackingMode(@Nullable String trackingMode) {
             this.trackingMode = trackingMode;
             return this;
-        }
-        public RegionBackendServiceConnectionTrackingPolicy build() {
+        }        public RegionBackendServiceConnectionTrackingPolicy build() {
             return new RegionBackendServiceConnectionTrackingPolicy(connectionPersistenceOnUnhealthyBackends, idleTimeoutSec, trackingMode);
         }
     }

@@ -240,62 +240,53 @@ public final class OrderedJobResponse {
             this.hadoopJob = Objects.requireNonNull(hadoopJob);
             return this;
         }
-
         public Builder hiveJob(HiveJobResponse hiveJob) {
             this.hiveJob = Objects.requireNonNull(hiveJob);
             return this;
         }
-
         public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder pigJob(PigJobResponse pigJob) {
             this.pigJob = Objects.requireNonNull(pigJob);
             return this;
         }
-
         public Builder prerequisiteStepIds(List<String> prerequisiteStepIds) {
             this.prerequisiteStepIds = Objects.requireNonNull(prerequisiteStepIds);
             return this;
         }
-
+        public Builder prerequisiteStepIds(String... prerequisiteStepIds) {
+            return prerequisiteStepIds(List.of(prerequisiteStepIds));
+        }
         public Builder prestoJob(PrestoJobResponse prestoJob) {
             this.prestoJob = Objects.requireNonNull(prestoJob);
             return this;
         }
-
         public Builder pysparkJob(PySparkJobResponse pysparkJob) {
             this.pysparkJob = Objects.requireNonNull(pysparkJob);
             return this;
         }
-
         public Builder scheduling(JobSchedulingResponse scheduling) {
             this.scheduling = Objects.requireNonNull(scheduling);
             return this;
         }
-
         public Builder sparkJob(SparkJobResponse sparkJob) {
             this.sparkJob = Objects.requireNonNull(sparkJob);
             return this;
         }
-
         public Builder sparkRJob(SparkRJobResponse sparkRJob) {
             this.sparkRJob = Objects.requireNonNull(sparkRJob);
             return this;
         }
-
         public Builder sparkSqlJob(SparkSqlJobResponse sparkSqlJob) {
             this.sparkSqlJob = Objects.requireNonNull(sparkSqlJob);
             return this;
         }
-
         public Builder stepId(String stepId) {
             this.stepId = Objects.requireNonNull(stepId);
             return this;
-        }
-        public OrderedJobResponse build() {
+        }        public OrderedJobResponse build() {
             return new OrderedJobResponse(hadoopJob, hiveJob, labels, pigJob, prerequisiteStepIds, prestoJob, pysparkJob, scheduling, sparkJob, sparkRJob, sparkSqlJob, stepId);
         }
     }

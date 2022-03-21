@@ -74,22 +74,18 @@ public final class RuleGroupRuleStatementNotStatementStatementSqliMatchStatement
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
-
         public Builder priority(Integer priority) {
             this.priority = Output.of(Objects.requireNonNull(priority));
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public RuleGroupRuleStatementNotStatementStatementSqliMatchStatementTextTransformationArgs build() {
+        }        public RuleGroupRuleStatementNotStatementStatementSqliMatchStatementTextTransformationArgs build() {
             return new RuleGroupRuleStatementNotStatementStatementSqliMatchStatementTextTransformationArgs(priority, type);
         }
     }

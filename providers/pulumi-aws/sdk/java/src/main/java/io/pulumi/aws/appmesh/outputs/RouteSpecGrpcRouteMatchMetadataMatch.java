@@ -122,27 +122,22 @@ public final class RouteSpecGrpcRouteMatchMetadataMatch {
             this.exact = exact;
             return this;
         }
-
         public Builder prefix(@Nullable String prefix) {
             this.prefix = prefix;
             return this;
         }
-
         public Builder range(@Nullable RouteSpecGrpcRouteMatchMetadataMatchRange range) {
             this.range = range;
             return this;
         }
-
         public Builder regex(@Nullable String regex) {
             this.regex = regex;
             return this;
         }
-
         public Builder suffix(@Nullable String suffix) {
             this.suffix = suffix;
             return this;
-        }
-        public RouteSpecGrpcRouteMatchMetadataMatch build() {
+        }        public RouteSpecGrpcRouteMatchMetadataMatch build() {
             return new RouteSpecGrpcRouteMatchMetadataMatch(exact, prefix, range, regex, suffix);
         }
     }

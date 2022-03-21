@@ -115,42 +115,34 @@ public final class PerInstanceConfigPreservedStateDiskGetArgs extends io.pulumi.
             this.deleteRule = deleteRule;
             return this;
         }
-
         public Builder deleteRule(@Nullable String deleteRule) {
             this.deleteRule = Output.ofNullable(deleteRule);
             return this;
         }
-
         public Builder deviceName(Output<String> deviceName) {
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }
-
         public Builder deviceName(String deviceName) {
             this.deviceName = Output.of(Objects.requireNonNull(deviceName));
             return this;
         }
-
         public Builder mode(@Nullable Output<String> mode) {
             this.mode = mode;
             return this;
         }
-
         public Builder mode(@Nullable String mode) {
             this.mode = Output.ofNullable(mode);
             return this;
         }
-
         public Builder source(Output<String> source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }
-
         public Builder source(String source) {
             this.source = Output.of(Objects.requireNonNull(source));
             return this;
-        }
-        public PerInstanceConfigPreservedStateDiskGetArgs build() {
+        }        public PerInstanceConfigPreservedStateDiskGetArgs build() {
             return new PerInstanceConfigPreservedStateDiskGetArgs(deleteRule, deviceName, mode, source);
         }
     }

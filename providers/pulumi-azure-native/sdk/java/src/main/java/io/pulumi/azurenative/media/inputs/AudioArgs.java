@@ -128,52 +128,42 @@ public final class AudioArgs extends io.pulumi.resources.ResourceArgs {
             this.bitrate = bitrate;
             return this;
         }
-
         public Builder bitrate(@Nullable Integer bitrate) {
             this.bitrate = Output.ofNullable(bitrate);
             return this;
         }
-
         public Builder channels(@Nullable Output<Integer> channels) {
             this.channels = channels;
             return this;
         }
-
         public Builder channels(@Nullable Integer channels) {
             this.channels = Output.ofNullable(channels);
             return this;
         }
-
         public Builder label(@Nullable Output<String> label) {
             this.label = label;
             return this;
         }
-
         public Builder label(@Nullable String label) {
             this.label = Output.ofNullable(label);
             return this;
         }
-
         public Builder odataType(Output<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public Builder odataType(String odataType) {
             this.odataType = Output.of(Objects.requireNonNull(odataType));
             return this;
         }
-
         public Builder samplingRate(@Nullable Output<Integer> samplingRate) {
             this.samplingRate = samplingRate;
             return this;
         }
-
         public Builder samplingRate(@Nullable Integer samplingRate) {
             this.samplingRate = Output.ofNullable(samplingRate);
             return this;
-        }
-        public AudioArgs build() {
+        }        public AudioArgs build() {
             return new AudioArgs(bitrate, channels, label, odataType, samplingRate);
         }
     }

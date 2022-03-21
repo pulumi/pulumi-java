@@ -139,62 +139,50 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder accountName(String accountName) {
             this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
-
         public Builder allowUpdates(@Nullable Output<Boolean> allowUpdates) {
             this.allowUpdates = allowUpdates;
             return this;
         }
-
         public Builder allowUpdates(@Nullable Boolean allowUpdates) {
             this.allowUpdates = Output.ofNullable(allowUpdates);
             return this;
         }
-
         public Builder applicationName(@Nullable Output<String> applicationName) {
             this.applicationName = applicationName;
             return this;
         }
-
         public Builder applicationName(@Nullable String applicationName) {
             this.applicationName = Output.ofNullable(applicationName);
             return this;
         }
-
         public Builder defaultVersion(@Nullable Output<String> defaultVersion) {
             this.defaultVersion = defaultVersion;
             return this;
         }
-
         public Builder defaultVersion(@Nullable String defaultVersion) {
             this.defaultVersion = Output.ofNullable(defaultVersion);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
-        }
-        public ApplicationArgs build() {
+        }        public ApplicationArgs build() {
             return new ApplicationArgs(accountName, allowUpdates, applicationName, defaultVersion, displayName, resourceGroupName);
         }
     }

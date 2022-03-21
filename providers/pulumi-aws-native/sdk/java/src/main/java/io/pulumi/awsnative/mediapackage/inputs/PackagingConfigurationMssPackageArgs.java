@@ -89,32 +89,29 @@ public final class PackagingConfigurationMssPackageArgs extends io.pulumi.resour
             this.encryption = encryption;
             return this;
         }
-
         public Builder encryption(@Nullable PackagingConfigurationMssEncryptionArgs encryption) {
             this.encryption = Output.ofNullable(encryption);
             return this;
         }
-
         public Builder mssManifests(Output<List<PackagingConfigurationMssManifestArgs>> mssManifests) {
             this.mssManifests = Objects.requireNonNull(mssManifests);
             return this;
         }
-
         public Builder mssManifests(List<PackagingConfigurationMssManifestArgs> mssManifests) {
             this.mssManifests = Output.of(Objects.requireNonNull(mssManifests));
             return this;
         }
-
+        public Builder mssManifests(PackagingConfigurationMssManifestArgs... mssManifests) {
+            return mssManifests(List.of(mssManifests));
+        }
         public Builder segmentDurationSeconds(@Nullable Output<Integer> segmentDurationSeconds) {
             this.segmentDurationSeconds = segmentDurationSeconds;
             return this;
         }
-
         public Builder segmentDurationSeconds(@Nullable Integer segmentDurationSeconds) {
             this.segmentDurationSeconds = Output.ofNullable(segmentDurationSeconds);
             return this;
-        }
-        public PackagingConfigurationMssPackageArgs build() {
+        }        public PackagingConfigurationMssPackageArgs build() {
             return new PackagingConfigurationMssPackageArgs(encryption, mssManifests, segmentDurationSeconds);
         }
     }

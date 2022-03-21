@@ -112,42 +112,34 @@ public final class VirtualDiskArgs extends io.pulumi.resources.ResourceArgs {
             this.controllerId = Objects.requireNonNull(controllerId);
             return this;
         }
-
         public Builder controllerId(String controllerId) {
             this.controllerId = Output.of(Objects.requireNonNull(controllerId));
             return this;
         }
-
         public Builder independenceMode(Output<DiskIndependenceMode> independenceMode) {
             this.independenceMode = Objects.requireNonNull(independenceMode);
             return this;
         }
-
         public Builder independenceMode(DiskIndependenceMode independenceMode) {
             this.independenceMode = Output.of(Objects.requireNonNull(independenceMode));
             return this;
         }
-
         public Builder totalSize(Output<Integer> totalSize) {
             this.totalSize = Objects.requireNonNull(totalSize);
             return this;
         }
-
         public Builder totalSize(Integer totalSize) {
             this.totalSize = Output.of(Objects.requireNonNull(totalSize));
             return this;
         }
-
         public Builder virtualDiskId(@Nullable Output<String> virtualDiskId) {
             this.virtualDiskId = virtualDiskId;
             return this;
         }
-
         public Builder virtualDiskId(@Nullable String virtualDiskId) {
             this.virtualDiskId = Output.ofNullable(virtualDiskId);
             return this;
-        }
-        public VirtualDiskArgs build() {
+        }        public VirtualDiskArgs build() {
             return new VirtualDiskArgs(controllerId, independenceMode, totalSize, virtualDiskId);
         }
     }

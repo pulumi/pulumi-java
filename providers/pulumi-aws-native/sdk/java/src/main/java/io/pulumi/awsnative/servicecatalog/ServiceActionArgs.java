@@ -106,52 +106,45 @@ public final class ServiceActionArgs extends io.pulumi.resources.ResourceArgs {
             this.acceptLanguage = acceptLanguage;
             return this;
         }
-
         public Builder acceptLanguage(@Nullable ServiceActionAcceptLanguage acceptLanguage) {
             this.acceptLanguage = Output.ofNullable(acceptLanguage);
             return this;
         }
-
         public Builder definition(Output<List<ServiceActionDefinitionParameterArgs>> definition) {
             this.definition = Objects.requireNonNull(definition);
             return this;
         }
-
         public Builder definition(List<ServiceActionDefinitionParameterArgs> definition) {
             this.definition = Output.of(Objects.requireNonNull(definition));
             return this;
         }
-
+        public Builder definition(ServiceActionDefinitionParameterArgs... definition) {
+            return definition(List.of(definition));
+        }
         public Builder definitionType(Output<ServiceActionDefinitionType> definitionType) {
             this.definitionType = Objects.requireNonNull(definitionType);
             return this;
         }
-
         public Builder definitionType(ServiceActionDefinitionType definitionType) {
             this.definitionType = Output.of(Objects.requireNonNull(definitionType));
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
-        }
-        public ServiceActionArgs build() {
+        }        public ServiceActionArgs build() {
             return new ServiceActionArgs(acceptLanguage, definition, definitionType, description, name);
         }
     }

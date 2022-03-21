@@ -139,62 +139,56 @@ public final class RepositoryCatalogDataGetArgs extends io.pulumi.resources.Reso
             this.aboutText = aboutText;
             return this;
         }
-
         public Builder aboutText(@Nullable String aboutText) {
             this.aboutText = Output.ofNullable(aboutText);
             return this;
         }
-
         public Builder architectures(@Nullable Output<List<String>> architectures) {
             this.architectures = architectures;
             return this;
         }
-
         public Builder architectures(@Nullable List<String> architectures) {
             this.architectures = Output.ofNullable(architectures);
             return this;
         }
-
+        public Builder architectures(String... architectures) {
+            return architectures(List.of(architectures));
+        }
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder logoImageBlob(@Nullable Output<String> logoImageBlob) {
             this.logoImageBlob = logoImageBlob;
             return this;
         }
-
         public Builder logoImageBlob(@Nullable String logoImageBlob) {
             this.logoImageBlob = Output.ofNullable(logoImageBlob);
             return this;
         }
-
         public Builder operatingSystems(@Nullable Output<List<String>> operatingSystems) {
             this.operatingSystems = operatingSystems;
             return this;
         }
-
         public Builder operatingSystems(@Nullable List<String> operatingSystems) {
             this.operatingSystems = Output.ofNullable(operatingSystems);
             return this;
         }
-
+        public Builder operatingSystems(String... operatingSystems) {
+            return operatingSystems(List.of(operatingSystems));
+        }
         public Builder usageText(@Nullable Output<String> usageText) {
             this.usageText = usageText;
             return this;
         }
-
         public Builder usageText(@Nullable String usageText) {
             this.usageText = Output.ofNullable(usageText);
             return this;
-        }
-        public RepositoryCatalogDataGetArgs build() {
+        }        public RepositoryCatalogDataGetArgs build() {
             return new RepositoryCatalogDataGetArgs(aboutText, architectures, description, logoImageBlob, operatingSystems, usageText);
         }
     }

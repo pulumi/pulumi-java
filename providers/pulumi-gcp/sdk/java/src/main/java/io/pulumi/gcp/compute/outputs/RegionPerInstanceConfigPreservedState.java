@@ -75,12 +75,13 @@ public final class RegionPerInstanceConfigPreservedState {
             this.disks = disks;
             return this;
         }
-
+        public Builder disks(RegionPerInstanceConfigPreservedStateDisk... disks) {
+            return disks(List.of(disks));
+        }
         public Builder metadata(@Nullable Map<String,String> metadata) {
             this.metadata = metadata;
             return this;
-        }
-        public RegionPerInstanceConfigPreservedState build() {
+        }        public RegionPerInstanceConfigPreservedState build() {
             return new RegionPerInstanceConfigPreservedState(disks, metadata);
         }
     }

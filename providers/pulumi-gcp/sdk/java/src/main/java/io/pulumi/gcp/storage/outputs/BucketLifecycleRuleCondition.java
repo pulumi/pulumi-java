@@ -185,47 +185,41 @@ public final class BucketLifecycleRuleCondition {
             this.age = age;
             return this;
         }
-
         public Builder createdBefore(@Nullable String createdBefore) {
             this.createdBefore = createdBefore;
             return this;
         }
-
         public Builder customTimeBefore(@Nullable String customTimeBefore) {
             this.customTimeBefore = customTimeBefore;
             return this;
         }
-
         public Builder daysSinceCustomTime(@Nullable Integer daysSinceCustomTime) {
             this.daysSinceCustomTime = daysSinceCustomTime;
             return this;
         }
-
         public Builder daysSinceNoncurrentTime(@Nullable Integer daysSinceNoncurrentTime) {
             this.daysSinceNoncurrentTime = daysSinceNoncurrentTime;
             return this;
         }
-
         public Builder matchesStorageClasses(@Nullable List<String> matchesStorageClasses) {
             this.matchesStorageClasses = matchesStorageClasses;
             return this;
         }
-
+        public Builder matchesStorageClasses(String... matchesStorageClasses) {
+            return matchesStorageClasses(List.of(matchesStorageClasses));
+        }
         public Builder noncurrentTimeBefore(@Nullable String noncurrentTimeBefore) {
             this.noncurrentTimeBefore = noncurrentTimeBefore;
             return this;
         }
-
         public Builder numNewerVersions(@Nullable Integer numNewerVersions) {
             this.numNewerVersions = numNewerVersions;
             return this;
         }
-
         public Builder withState(@Nullable String withState) {
             this.withState = withState;
             return this;
-        }
-        public BucketLifecycleRuleCondition build() {
+        }        public BucketLifecycleRuleCondition build() {
             return new BucketLifecycleRuleCondition(age, createdBefore, customTimeBefore, daysSinceCustomTime, daysSinceNoncurrentTime, matchesStorageClasses, noncurrentTimeBefore, numNewerVersions, withState);
         }
     }

@@ -101,42 +101,34 @@ public final class MonitoringScheduleConfigArgs extends io.pulumi.resources.Reso
             this.monitoringJobDefinition = monitoringJobDefinition;
             return this;
         }
-
         public Builder monitoringJobDefinition(@Nullable MonitoringScheduleMonitoringJobDefinitionArgs monitoringJobDefinition) {
             this.monitoringJobDefinition = Output.ofNullable(monitoringJobDefinition);
             return this;
         }
-
         public Builder monitoringJobDefinitionName(@Nullable Output<String> monitoringJobDefinitionName) {
             this.monitoringJobDefinitionName = monitoringJobDefinitionName;
             return this;
         }
-
         public Builder monitoringJobDefinitionName(@Nullable String monitoringJobDefinitionName) {
             this.monitoringJobDefinitionName = Output.ofNullable(monitoringJobDefinitionName);
             return this;
         }
-
         public Builder monitoringType(@Nullable Output<MonitoringScheduleMonitoringType> monitoringType) {
             this.monitoringType = monitoringType;
             return this;
         }
-
         public Builder monitoringType(@Nullable MonitoringScheduleMonitoringType monitoringType) {
             this.monitoringType = Output.ofNullable(monitoringType);
             return this;
         }
-
         public Builder scheduleConfig(@Nullable Output<MonitoringScheduleScheduleConfigArgs> scheduleConfig) {
             this.scheduleConfig = scheduleConfig;
             return this;
         }
-
         public Builder scheduleConfig(@Nullable MonitoringScheduleScheduleConfigArgs scheduleConfig) {
             this.scheduleConfig = Output.ofNullable(scheduleConfig);
             return this;
-        }
-        public MonitoringScheduleConfigArgs build() {
+        }        public MonitoringScheduleConfigArgs build() {
             return new MonitoringScheduleConfigArgs(monitoringJobDefinition, monitoringJobDefinitionName, monitoringType, scheduleConfig);
         }
     }

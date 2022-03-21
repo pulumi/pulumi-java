@@ -103,22 +103,18 @@ public final class TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLoc
             this.bucketName = bucketName;
             return this;
         }
-
         public Builder encryptionOption(@Nullable String encryptionOption) {
             this.encryptionOption = encryptionOption;
             return this;
         }
-
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
-
         public Builder objectKeyPrefix(@Nullable String objectKeyPrefix) {
             this.objectKeyPrefix = objectKeyPrefix;
             return this;
-        }
-        public TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLocationS3Configuration build() {
+        }        public TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLocationS3Configuration build() {
             return new TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLocationS3Configuration(bucketName, encryptionOption, kmsKeyId, objectKeyPrefix);
         }
     }

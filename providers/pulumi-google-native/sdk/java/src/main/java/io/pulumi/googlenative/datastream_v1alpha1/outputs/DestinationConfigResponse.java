@@ -70,12 +70,10 @@ public final class DestinationConfigResponse {
             this.destinationConnectionProfileName = Objects.requireNonNull(destinationConnectionProfileName);
             return this;
         }
-
         public Builder gcsDestinationConfig(GcsDestinationConfigResponse gcsDestinationConfig) {
             this.gcsDestinationConfig = Objects.requireNonNull(gcsDestinationConfig);
             return this;
-        }
-        public DestinationConfigResponse build() {
+        }        public DestinationConfigResponse build() {
             return new DestinationConfigResponse(destinationConnectionProfileName, gcsDestinationConfig);
         }
     }

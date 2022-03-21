@@ -117,32 +117,26 @@ public final class NetworkInsightsAnalysisAnalysisAclRule extends io.pulumi.reso
             this.cidr = cidr;
             return this;
         }
-
         public Builder egress(@Nullable Boolean egress) {
             this.egress = egress;
             return this;
         }
-
         public Builder portRange(@Nullable NetworkInsightsAnalysisPortRange portRange) {
             this.portRange = portRange;
             return this;
         }
-
         public Builder protocol(@Nullable String protocol) {
             this.protocol = protocol;
             return this;
         }
-
         public Builder ruleAction(@Nullable String ruleAction) {
             this.ruleAction = ruleAction;
             return this;
         }
-
         public Builder ruleNumber(@Nullable Integer ruleNumber) {
             this.ruleNumber = ruleNumber;
             return this;
-        }
-        public NetworkInsightsAnalysisAnalysisAclRule build() {
+        }        public NetworkInsightsAnalysisAnalysisAclRule build() {
             return new NetworkInsightsAnalysisAnalysisAclRule(cidr, egress, portRange, protocol, ruleAction, ruleNumber);
         }
     }

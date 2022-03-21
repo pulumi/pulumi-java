@@ -313,112 +313,93 @@ public final class GetBucketObjectResult {
             this.bucket = bucket;
             return this;
         }
-
         public Builder cacheControl(String cacheControl) {
             this.cacheControl = Objects.requireNonNull(cacheControl);
             return this;
         }
-
         public Builder content(String content) {
             this.content = Objects.requireNonNull(content);
             return this;
         }
-
         public Builder contentDisposition(String contentDisposition) {
             this.contentDisposition = Objects.requireNonNull(contentDisposition);
             return this;
         }
-
         public Builder contentEncoding(String contentEncoding) {
             this.contentEncoding = Objects.requireNonNull(contentEncoding);
             return this;
         }
-
         public Builder contentLanguage(String contentLanguage) {
             this.contentLanguage = Objects.requireNonNull(contentLanguage);
             return this;
         }
-
         public Builder contentType(String contentType) {
             this.contentType = Objects.requireNonNull(contentType);
             return this;
         }
-
         public Builder crc32c(String crc32c) {
             this.crc32c = Objects.requireNonNull(crc32c);
             return this;
         }
-
         public Builder customerEncryptions(List<GetBucketObjectCustomerEncryption> customerEncryptions) {
             this.customerEncryptions = Objects.requireNonNull(customerEncryptions);
             return this;
         }
-
+        public Builder customerEncryptions(GetBucketObjectCustomerEncryption... customerEncryptions) {
+            return customerEncryptions(List.of(customerEncryptions));
+        }
         public Builder detectMd5hash(String detectMd5hash) {
             this.detectMd5hash = Objects.requireNonNull(detectMd5hash);
             return this;
         }
-
         public Builder eventBasedHold(Boolean eventBasedHold) {
             this.eventBasedHold = Objects.requireNonNull(eventBasedHold);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder kmsKeyName(String kmsKeyName) {
             this.kmsKeyName = Objects.requireNonNull(kmsKeyName);
             return this;
         }
-
         public Builder md5hash(String md5hash) {
             this.md5hash = Objects.requireNonNull(md5hash);
             return this;
         }
-
         public Builder mediaLink(String mediaLink) {
             this.mediaLink = Objects.requireNonNull(mediaLink);
             return this;
         }
-
         public Builder metadata(Map<String,String> metadata) {
             this.metadata = Objects.requireNonNull(metadata);
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder outputName(String outputName) {
             this.outputName = Objects.requireNonNull(outputName);
             return this;
         }
-
         public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
-
         public Builder source(String source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }
-
         public Builder storageClass(String storageClass) {
             this.storageClass = Objects.requireNonNull(storageClass);
             return this;
         }
-
         public Builder temporaryHold(Boolean temporaryHold) {
             this.temporaryHold = Objects.requireNonNull(temporaryHold);
             return this;
-        }
-        public GetBucketObjectResult build() {
+        }        public GetBucketObjectResult build() {
             return new GetBucketObjectResult(bucket, cacheControl, content, contentDisposition, contentEncoding, contentLanguage, contentType, crc32c, customerEncryptions, detectMd5hash, eventBasedHold, id, kmsKeyName, md5hash, mediaLink, metadata, name, outputName, selfLink, source, storageClass, temporaryHold);
         }
     }

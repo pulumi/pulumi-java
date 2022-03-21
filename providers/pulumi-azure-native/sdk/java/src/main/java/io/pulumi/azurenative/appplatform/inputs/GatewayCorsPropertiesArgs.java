@@ -145,62 +145,62 @@ public final class GatewayCorsPropertiesArgs extends io.pulumi.resources.Resourc
             this.allowCredentials = allowCredentials;
             return this;
         }
-
         public Builder allowCredentials(@Nullable Boolean allowCredentials) {
             this.allowCredentials = Output.ofNullable(allowCredentials);
             return this;
         }
-
         public Builder allowedHeaders(@Nullable Output<List<String>> allowedHeaders) {
             this.allowedHeaders = allowedHeaders;
             return this;
         }
-
         public Builder allowedHeaders(@Nullable List<String> allowedHeaders) {
             this.allowedHeaders = Output.ofNullable(allowedHeaders);
             return this;
         }
-
+        public Builder allowedHeaders(String... allowedHeaders) {
+            return allowedHeaders(List.of(allowedHeaders));
+        }
         public Builder allowedMethods(@Nullable Output<List<String>> allowedMethods) {
             this.allowedMethods = allowedMethods;
             return this;
         }
-
         public Builder allowedMethods(@Nullable List<String> allowedMethods) {
             this.allowedMethods = Output.ofNullable(allowedMethods);
             return this;
         }
-
+        public Builder allowedMethods(String... allowedMethods) {
+            return allowedMethods(List.of(allowedMethods));
+        }
         public Builder allowedOrigins(@Nullable Output<List<String>> allowedOrigins) {
             this.allowedOrigins = allowedOrigins;
             return this;
         }
-
         public Builder allowedOrigins(@Nullable List<String> allowedOrigins) {
             this.allowedOrigins = Output.ofNullable(allowedOrigins);
             return this;
         }
-
+        public Builder allowedOrigins(String... allowedOrigins) {
+            return allowedOrigins(List.of(allowedOrigins));
+        }
         public Builder exposedHeaders(@Nullable Output<List<String>> exposedHeaders) {
             this.exposedHeaders = exposedHeaders;
             return this;
         }
-
         public Builder exposedHeaders(@Nullable List<String> exposedHeaders) {
             this.exposedHeaders = Output.ofNullable(exposedHeaders);
             return this;
         }
-
+        public Builder exposedHeaders(String... exposedHeaders) {
+            return exposedHeaders(List.of(exposedHeaders));
+        }
         public Builder maxAge(@Nullable Output<Integer> maxAge) {
             this.maxAge = maxAge;
             return this;
         }
-
         public Builder maxAge(@Nullable Integer maxAge) {
             this.maxAge = Output.ofNullable(maxAge);
             return this;
-        }
-        public GatewayCorsPropertiesArgs build() {
+        }        public GatewayCorsPropertiesArgs build() {
             return new GatewayCorsPropertiesArgs(allowCredentials, allowedHeaders, allowedMethods, allowedOrigins, exposedHeaders, maxAge);
         }
     }

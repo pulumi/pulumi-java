@@ -53,8 +53,7 @@ public final class InputPortResponse {
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
-        }
-        public InputPortResponse build() {
+        }        public InputPortResponse build() {
             return new InputPortResponse(type);
         }
     }

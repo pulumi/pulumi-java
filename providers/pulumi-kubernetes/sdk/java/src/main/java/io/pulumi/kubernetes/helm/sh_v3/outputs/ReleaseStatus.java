@@ -152,37 +152,30 @@ public final class ReleaseStatus {
             this.appVersion = appVersion;
             return this;
         }
-
         public Builder chart(@Nullable String chart) {
             this.chart = chart;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder namespace(@Nullable String namespace) {
             this.namespace = namespace;
             return this;
         }
-
         public Builder revision(@Nullable Integer revision) {
             this.revision = revision;
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = version;
             return this;
-        }
-        public ReleaseStatus build() {
+        }        public ReleaseStatus build() {
             return new ReleaseStatus(appVersion, chart, name, namespace, revision, status, version);
         }
     }

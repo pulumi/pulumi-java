@@ -72,12 +72,10 @@ public final class ListWebAppBackupConfigurationArgs extends io.pulumi.resources
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public ListWebAppBackupConfigurationArgs build() {
+        }        public ListWebAppBackupConfigurationArgs build() {
             return new ListWebAppBackupConfigurationArgs(name, resourceGroupName);
         }
     }

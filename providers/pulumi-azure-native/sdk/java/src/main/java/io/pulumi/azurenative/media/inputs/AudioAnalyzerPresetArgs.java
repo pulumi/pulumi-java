@@ -114,42 +114,34 @@ public final class AudioAnalyzerPresetArgs extends io.pulumi.resources.ResourceA
             this.audioLanguage = audioLanguage;
             return this;
         }
-
         public Builder audioLanguage(@Nullable String audioLanguage) {
             this.audioLanguage = Output.ofNullable(audioLanguage);
             return this;
         }
-
         public Builder experimentalOptions(@Nullable Output<Map<String,String>> experimentalOptions) {
             this.experimentalOptions = experimentalOptions;
             return this;
         }
-
         public Builder experimentalOptions(@Nullable Map<String,String> experimentalOptions) {
             this.experimentalOptions = Output.ofNullable(experimentalOptions);
             return this;
         }
-
         public Builder mode(@Nullable Output<Either<String,AudioAnalysisMode>> mode) {
             this.mode = mode;
             return this;
         }
-
         public Builder mode(@Nullable Either<String,AudioAnalysisMode> mode) {
             this.mode = Output.ofNullable(mode);
             return this;
         }
-
         public Builder odataType(Output<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public Builder odataType(String odataType) {
             this.odataType = Output.of(Objects.requireNonNull(odataType));
             return this;
-        }
-        public AudioAnalyzerPresetArgs build() {
+        }        public AudioAnalyzerPresetArgs build() {
             return new AudioAnalyzerPresetArgs(audioLanguage, experimentalOptions, mode, odataType);
         }
     }

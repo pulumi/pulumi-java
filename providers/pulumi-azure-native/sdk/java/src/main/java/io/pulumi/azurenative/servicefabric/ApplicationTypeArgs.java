@@ -123,52 +123,42 @@ public final class ApplicationTypeArgs extends io.pulumi.resources.ResourceArgs 
             this.applicationTypeName = applicationTypeName;
             return this;
         }
-
         public Builder applicationTypeName(@Nullable String applicationTypeName) {
             this.applicationTypeName = Output.ofNullable(applicationTypeName);
             return this;
         }
-
         public Builder clusterName(Output<String> clusterName) {
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
-
         public Builder clusterName(String clusterName) {
             this.clusterName = Output.of(Objects.requireNonNull(clusterName));
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public ApplicationTypeArgs build() {
+        }        public ApplicationTypeArgs build() {
             return new ApplicationTypeArgs(applicationTypeName, clusterName, location, resourceGroupName, tags);
         }
     }

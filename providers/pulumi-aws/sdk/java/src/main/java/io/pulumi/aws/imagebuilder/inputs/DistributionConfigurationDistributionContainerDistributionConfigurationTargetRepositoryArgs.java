@@ -73,22 +73,18 @@ public final class DistributionConfigurationDistributionContainerDistributionCon
             this.repositoryName = Objects.requireNonNull(repositoryName);
             return this;
         }
-
         public Builder repositoryName(String repositoryName) {
             this.repositoryName = Output.of(Objects.requireNonNull(repositoryName));
             return this;
         }
-
         public Builder service(Output<String> service) {
             this.service = Objects.requireNonNull(service);
             return this;
         }
-
         public Builder service(String service) {
             this.service = Output.of(Objects.requireNonNull(service));
             return this;
-        }
-        public DistributionConfigurationDistributionContainerDistributionConfigurationTargetRepositoryArgs build() {
+        }        public DistributionConfigurationDistributionContainerDistributionConfigurationTargetRepositoryArgs build() {
             return new DistributionConfigurationDistributionContainerDistributionConfigurationTargetRepositoryArgs(repositoryName, service);
         }
     }

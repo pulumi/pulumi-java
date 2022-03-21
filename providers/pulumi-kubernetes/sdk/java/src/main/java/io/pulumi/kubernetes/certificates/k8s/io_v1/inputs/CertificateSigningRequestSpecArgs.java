@@ -223,82 +223,72 @@ public final class CertificateSigningRequestSpecArgs extends io.pulumi.resources
             this.expirationSeconds = expirationSeconds;
             return this;
         }
-
         public Builder expirationSeconds(@Nullable Integer expirationSeconds) {
             this.expirationSeconds = Output.ofNullable(expirationSeconds);
             return this;
         }
-
         public Builder extra(@Nullable Output<Map<String,List<String>>> extra) {
             this.extra = extra;
             return this;
         }
-
         public Builder extra(@Nullable Map<String,List<String>> extra) {
             this.extra = Output.ofNullable(extra);
             return this;
         }
-
         public Builder groups(@Nullable Output<List<String>> groups) {
             this.groups = groups;
             return this;
         }
-
         public Builder groups(@Nullable List<String> groups) {
             this.groups = Output.ofNullable(groups);
             return this;
         }
-
+        public Builder groups(String... groups) {
+            return groups(List.of(groups));
+        }
         public Builder request(Output<String> request) {
             this.request = Objects.requireNonNull(request);
             return this;
         }
-
         public Builder request(String request) {
             this.request = Output.of(Objects.requireNonNull(request));
             return this;
         }
-
         public Builder signerName(Output<String> signerName) {
             this.signerName = Objects.requireNonNull(signerName);
             return this;
         }
-
         public Builder signerName(String signerName) {
             this.signerName = Output.of(Objects.requireNonNull(signerName));
             return this;
         }
-
         public Builder uid(@Nullable Output<String> uid) {
             this.uid = uid;
             return this;
         }
-
         public Builder uid(@Nullable String uid) {
             this.uid = Output.ofNullable(uid);
             return this;
         }
-
         public Builder usages(@Nullable Output<List<String>> usages) {
             this.usages = usages;
             return this;
         }
-
         public Builder usages(@Nullable List<String> usages) {
             this.usages = Output.ofNullable(usages);
             return this;
         }
-
+        public Builder usages(String... usages) {
+            return usages(List.of(usages));
+        }
         public Builder username(@Nullable Output<String> username) {
             this.username = username;
             return this;
         }
-
         public Builder username(@Nullable String username) {
             this.username = Output.ofNullable(username);
             return this;
-        }
-        public CertificateSigningRequestSpecArgs build() {
+        }        public CertificateSigningRequestSpecArgs build() {
             return new CertificateSigningRequestSpecArgs(expirationSeconds, extra, groups, request, signerName, uid, usages, username);
         }
     }

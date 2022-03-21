@@ -88,17 +88,14 @@ public final class GroupMixedInstancesPolicyLaunchTemplateOverride {
             this.instanceType = instanceType;
             return this;
         }
-
         public Builder launchTemplateSpecification(@Nullable GroupMixedInstancesPolicyLaunchTemplateOverrideLaunchTemplateSpecification launchTemplateSpecification) {
             this.launchTemplateSpecification = launchTemplateSpecification;
             return this;
         }
-
         public Builder weightedCapacity(@Nullable String weightedCapacity) {
             this.weightedCapacity = weightedCapacity;
             return this;
-        }
-        public GroupMixedInstancesPolicyLaunchTemplateOverride build() {
+        }        public GroupMixedInstancesPolicyLaunchTemplateOverride build() {
             return new GroupMixedInstancesPolicyLaunchTemplateOverride(instanceType, launchTemplateSpecification, weightedCapacity);
         }
     }

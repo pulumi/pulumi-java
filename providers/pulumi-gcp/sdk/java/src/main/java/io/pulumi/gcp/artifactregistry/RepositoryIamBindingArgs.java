@@ -136,62 +136,53 @@ public final class RepositoryIamBindingArgs extends io.pulumi.resources.Resource
             this.condition = condition;
             return this;
         }
-
         public Builder condition(@Nullable RepositoryIamBindingConditionArgs condition) {
             this.condition = Output.ofNullable(condition);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder members(Output<List<String>> members) {
             this.members = Objects.requireNonNull(members);
             return this;
         }
-
         public Builder members(List<String> members) {
             this.members = Output.of(Objects.requireNonNull(members));
             return this;
         }
-
+        public Builder members(String... members) {
+            return members(List.of(members));
+        }
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder repository(Output<String> repository) {
             this.repository = Objects.requireNonNull(repository);
             return this;
         }
-
         public Builder repository(String repository) {
             this.repository = Output.of(Objects.requireNonNull(repository));
             return this;
         }
-
         public Builder role(Output<String> role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }
-
         public Builder role(String role) {
             this.role = Output.of(Objects.requireNonNull(role));
             return this;
-        }
-        public RepositoryIamBindingArgs build() {
+        }        public RepositoryIamBindingArgs build() {
             return new RepositoryIamBindingArgs(condition, location, members, project, repository, role);
         }
     }

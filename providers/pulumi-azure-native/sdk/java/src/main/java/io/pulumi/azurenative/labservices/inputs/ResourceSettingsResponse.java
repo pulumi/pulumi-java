@@ -144,32 +144,26 @@ public final class ResourceSettingsResponse extends io.pulumi.resources.InvokeAr
             this.cores = Objects.requireNonNull(cores);
             return this;
         }
-
         public Builder galleryImageResourceId(@Nullable String galleryImageResourceId) {
             this.galleryImageResourceId = galleryImageResourceId;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder imageName(String imageName) {
             this.imageName = Objects.requireNonNull(imageName);
             return this;
         }
-
         public Builder referenceVm(ReferenceVmResponse referenceVm) {
             this.referenceVm = Objects.requireNonNull(referenceVm);
             return this;
         }
-
         public Builder size(@Nullable String size) {
             this.size = size;
             return this;
-        }
-        public ResourceSettingsResponse build() {
+        }        public ResourceSettingsResponse build() {
             return new ResourceSettingsResponse(cores, galleryImageResourceId, id, imageName, referenceVm, size);
         }
     }

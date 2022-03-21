@@ -72,12 +72,10 @@ public final class GetSecurityConnectorArgs extends io.pulumi.resources.InvokeAr
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder securityConnectorName(String securityConnectorName) {
             this.securityConnectorName = Objects.requireNonNull(securityConnectorName);
             return this;
-        }
-        public GetSecurityConnectorArgs build() {
+        }        public GetSecurityConnectorArgs build() {
             return new GetSecurityConnectorArgs(resourceGroupName, securityConnectorName);
         }
     }

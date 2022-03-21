@@ -51,8 +51,7 @@ public final class RuleGroupRuleStatementSqliMatchStatementFieldToMatchSingleHea
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public RuleGroupRuleStatementSqliMatchStatementFieldToMatchSingleHeader build() {
+        }        public RuleGroupRuleStatementSqliMatchStatementFieldToMatchSingleHeader build() {
             return new RuleGroupRuleStatementSqliMatchStatementFieldToMatchSingleHeader(name);
         }
     }

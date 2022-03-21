@@ -126,52 +126,45 @@ public final class PatchBaselineApprovalRuleGetArgs extends io.pulumi.resources.
             this.approveAfterDays = approveAfterDays;
             return this;
         }
-
         public Builder approveAfterDays(@Nullable Integer approveAfterDays) {
             this.approveAfterDays = Output.ofNullable(approveAfterDays);
             return this;
         }
-
         public Builder approveUntilDate(@Nullable Output<String> approveUntilDate) {
             this.approveUntilDate = approveUntilDate;
             return this;
         }
-
         public Builder approveUntilDate(@Nullable String approveUntilDate) {
             this.approveUntilDate = Output.ofNullable(approveUntilDate);
             return this;
         }
-
         public Builder complianceLevel(@Nullable Output<String> complianceLevel) {
             this.complianceLevel = complianceLevel;
             return this;
         }
-
         public Builder complianceLevel(@Nullable String complianceLevel) {
             this.complianceLevel = Output.ofNullable(complianceLevel);
             return this;
         }
-
         public Builder enableNonSecurity(@Nullable Output<Boolean> enableNonSecurity) {
             this.enableNonSecurity = enableNonSecurity;
             return this;
         }
-
         public Builder enableNonSecurity(@Nullable Boolean enableNonSecurity) {
             this.enableNonSecurity = Output.ofNullable(enableNonSecurity);
             return this;
         }
-
         public Builder patchFilters(Output<List<PatchBaselineApprovalRulePatchFilterGetArgs>> patchFilters) {
             this.patchFilters = Objects.requireNonNull(patchFilters);
             return this;
         }
-
         public Builder patchFilters(List<PatchBaselineApprovalRulePatchFilterGetArgs> patchFilters) {
             this.patchFilters = Output.of(Objects.requireNonNull(patchFilters));
             return this;
         }
-        public PatchBaselineApprovalRuleGetArgs build() {
+        public Builder patchFilters(PatchBaselineApprovalRulePatchFilterGetArgs... patchFilters) {
+            return patchFilters(List.of(patchFilters));
+        }        public PatchBaselineApprovalRuleGetArgs build() {
             return new PatchBaselineApprovalRuleGetArgs(approveAfterDays, approveUntilDate, complianceLevel, enableNonSecurity, patchFilters);
         }
     }

@@ -105,22 +105,18 @@ public final class NetworkPolicy {
             this.apiVersion = apiVersion;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder metadata(@Nullable ObjectMeta metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder spec(@Nullable NetworkPolicySpec spec) {
             this.spec = spec;
             return this;
-        }
-        public NetworkPolicy build() {
+        }        public NetworkPolicy build() {
             return new NetworkPolicy(apiVersion, kind, metadata, spec);
         }
     }

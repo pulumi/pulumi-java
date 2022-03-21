@@ -92,17 +92,14 @@ public final class StatusResponse extends io.pulumi.resources.InvokeArgs {
             this.displayStatus = Objects.requireNonNull(displayStatus);
             return this;
         }
-
         public Builder message(String message) {
             this.message = Objects.requireNonNull(message);
             return this;
         }
-
         public Builder timestamp(String timestamp) {
             this.timestamp = Objects.requireNonNull(timestamp);
             return this;
-        }
-        public StatusResponse build() {
+        }        public StatusResponse build() {
             return new StatusResponse(displayStatus, message, timestamp);
         }
     }

@@ -60,8 +60,7 @@ public final class SapHanaPartitionSettingsResponse extends io.pulumi.resources.
         public Builder partitionColumnName(@Nullable Object partitionColumnName) {
             this.partitionColumnName = partitionColumnName;
             return this;
-        }
-        public SapHanaPartitionSettingsResponse build() {
+        }        public SapHanaPartitionSettingsResponse build() {
             return new SapHanaPartitionSettingsResponse(partitionColumnName);
         }
     }

@@ -205,102 +205,82 @@ public final class VideoStreamState extends io.pulumi.resources.ResourceArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder creationTime(@Nullable Output<String> creationTime) {
             this.creationTime = creationTime;
             return this;
         }
-
         public Builder creationTime(@Nullable String creationTime) {
             this.creationTime = Output.ofNullable(creationTime);
             return this;
         }
-
         public Builder dataRetentionInHours(@Nullable Output<Integer> dataRetentionInHours) {
             this.dataRetentionInHours = dataRetentionInHours;
             return this;
         }
-
         public Builder dataRetentionInHours(@Nullable Integer dataRetentionInHours) {
             this.dataRetentionInHours = Output.ofNullable(dataRetentionInHours);
             return this;
         }
-
         public Builder deviceName(@Nullable Output<String> deviceName) {
             this.deviceName = deviceName;
             return this;
         }
-
         public Builder deviceName(@Nullable String deviceName) {
             this.deviceName = Output.ofNullable(deviceName);
             return this;
         }
-
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
-
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = Output.ofNullable(kmsKeyId);
             return this;
         }
-
         public Builder mediaType(@Nullable Output<String> mediaType) {
             this.mediaType = mediaType;
             return this;
         }
-
         public Builder mediaType(@Nullable String mediaType) {
             this.mediaType = Output.ofNullable(mediaType);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
-
         public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = Output.ofNullable(version);
             return this;
-        }
-        public VideoStreamState build() {
+        }        public VideoStreamState build() {
             return new VideoStreamState(arn, creationTime, dataRetentionInHours, deviceName, kmsKeyId, mediaType, name, tags, tagsAll, version);
         }
     }

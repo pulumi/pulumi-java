@@ -124,52 +124,42 @@ public final class FunctionEventInvokeConfigArgs extends io.pulumi.resources.Res
             this.destinationConfig = destinationConfig;
             return this;
         }
-
         public Builder destinationConfig(@Nullable FunctionEventInvokeConfigDestinationConfigArgs destinationConfig) {
             this.destinationConfig = Output.ofNullable(destinationConfig);
             return this;
         }
-
         public Builder functionName(Output<String> functionName) {
             this.functionName = Objects.requireNonNull(functionName);
             return this;
         }
-
         public Builder functionName(String functionName) {
             this.functionName = Output.of(Objects.requireNonNull(functionName));
             return this;
         }
-
         public Builder maximumEventAgeInSeconds(@Nullable Output<Integer> maximumEventAgeInSeconds) {
             this.maximumEventAgeInSeconds = maximumEventAgeInSeconds;
             return this;
         }
-
         public Builder maximumEventAgeInSeconds(@Nullable Integer maximumEventAgeInSeconds) {
             this.maximumEventAgeInSeconds = Output.ofNullable(maximumEventAgeInSeconds);
             return this;
         }
-
         public Builder maximumRetryAttempts(@Nullable Output<Integer> maximumRetryAttempts) {
             this.maximumRetryAttempts = maximumRetryAttempts;
             return this;
         }
-
         public Builder maximumRetryAttempts(@Nullable Integer maximumRetryAttempts) {
             this.maximumRetryAttempts = Output.ofNullable(maximumRetryAttempts);
             return this;
         }
-
         public Builder qualifier(@Nullable Output<String> qualifier) {
             this.qualifier = qualifier;
             return this;
         }
-
         public Builder qualifier(@Nullable String qualifier) {
             this.qualifier = Output.ofNullable(qualifier);
             return this;
-        }
-        public FunctionEventInvokeConfigArgs build() {
+        }        public FunctionEventInvokeConfigArgs build() {
             return new FunctionEventInvokeConfigArgs(destinationConfig, functionName, maximumEventAgeInSeconds, maximumRetryAttempts, qualifier);
         }
     }

@@ -51,8 +51,7 @@ public final class BucketOwnershipControlsRule {
         public Builder objectOwnership(String objectOwnership) {
             this.objectOwnership = Objects.requireNonNull(objectOwnership);
             return this;
-        }
-        public BucketOwnershipControlsRule build() {
+        }        public BucketOwnershipControlsRule build() {
             return new BucketOwnershipControlsRule(objectOwnership);
         }
     }

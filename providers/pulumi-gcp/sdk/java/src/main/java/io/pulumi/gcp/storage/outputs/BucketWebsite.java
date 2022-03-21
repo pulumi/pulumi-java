@@ -75,12 +75,10 @@ public final class BucketWebsite {
             this.mainPageSuffix = mainPageSuffix;
             return this;
         }
-
         public Builder notFoundPage(@Nullable String notFoundPage) {
             this.notFoundPage = notFoundPage;
             return this;
-        }
-        public BucketWebsite build() {
+        }        public BucketWebsite build() {
             return new BucketWebsite(mainPageSuffix, notFoundPage);
         }
     }

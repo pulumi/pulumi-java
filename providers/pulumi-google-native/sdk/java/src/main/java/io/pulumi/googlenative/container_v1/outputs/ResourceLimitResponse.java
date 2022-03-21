@@ -85,17 +85,14 @@ public final class ResourceLimitResponse {
             this.maximum = Objects.requireNonNull(maximum);
             return this;
         }
-
         public Builder minimum(String minimum) {
             this.minimum = Objects.requireNonNull(minimum);
             return this;
         }
-
         public Builder resourceType(String resourceType) {
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
-        }
-        public ResourceLimitResponse build() {
+        }        public ResourceLimitResponse build() {
             return new ResourceLimitResponse(maximum, minimum, resourceType);
         }
     }

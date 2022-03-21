@@ -220,112 +220,96 @@ public final class RuleGroupState extends io.pulumi.resources.ResourceArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder capacity(@Nullable Output<Integer> capacity) {
             this.capacity = capacity;
             return this;
         }
-
         public Builder capacity(@Nullable Integer capacity) {
             this.capacity = Output.ofNullable(capacity);
             return this;
         }
-
         public Builder customResponseBodies(@Nullable Output<List<RuleGroupCustomResponseBodyGetArgs>> customResponseBodies) {
             this.customResponseBodies = customResponseBodies;
             return this;
         }
-
         public Builder customResponseBodies(@Nullable List<RuleGroupCustomResponseBodyGetArgs> customResponseBodies) {
             this.customResponseBodies = Output.ofNullable(customResponseBodies);
             return this;
         }
-
+        public Builder customResponseBodies(RuleGroupCustomResponseBodyGetArgs... customResponseBodies) {
+            return customResponseBodies(List.of(customResponseBodies));
+        }
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder lockToken(@Nullable Output<String> lockToken) {
             this.lockToken = lockToken;
             return this;
         }
-
         public Builder lockToken(@Nullable String lockToken) {
             this.lockToken = Output.ofNullable(lockToken);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder rules(@Nullable Output<List<RuleGroupRuleGetArgs>> rules) {
             this.rules = rules;
             return this;
         }
-
         public Builder rules(@Nullable List<RuleGroupRuleGetArgs> rules) {
             this.rules = Output.ofNullable(rules);
             return this;
         }
-
+        public Builder rules(RuleGroupRuleGetArgs... rules) {
+            return rules(List.of(rules));
+        }
         public Builder scope(@Nullable Output<String> scope) {
             this.scope = scope;
             return this;
         }
-
         public Builder scope(@Nullable String scope) {
             this.scope = Output.ofNullable(scope);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
-
         public Builder visibilityConfig(@Nullable Output<RuleGroupVisibilityConfigGetArgs> visibilityConfig) {
             this.visibilityConfig = visibilityConfig;
             return this;
         }
-
         public Builder visibilityConfig(@Nullable RuleGroupVisibilityConfigGetArgs visibilityConfig) {
             this.visibilityConfig = Output.ofNullable(visibilityConfig);
             return this;
-        }
-        public RuleGroupState build() {
+        }        public RuleGroupState build() {
             return new RuleGroupState(arn, capacity, customResponseBodies, description, lockToken, name, rules, scope, tags, tagsAll, visibilityConfig);
         }
     }

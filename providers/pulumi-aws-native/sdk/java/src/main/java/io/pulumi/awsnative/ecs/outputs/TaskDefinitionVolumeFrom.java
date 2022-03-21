@@ -56,12 +56,10 @@ public final class TaskDefinitionVolumeFrom {
             this.readOnly = readOnly;
             return this;
         }
-
         public Builder sourceContainer(@Nullable String sourceContainer) {
             this.sourceContainer = sourceContainer;
             return this;
-        }
-        public TaskDefinitionVolumeFrom build() {
+        }        public TaskDefinitionVolumeFrom build() {
             return new TaskDefinitionVolumeFrom(readOnly, sourceContainer);
         }
     }

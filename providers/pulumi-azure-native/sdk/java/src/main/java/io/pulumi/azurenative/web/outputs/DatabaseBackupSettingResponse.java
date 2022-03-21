@@ -97,22 +97,18 @@ public final class DatabaseBackupSettingResponse {
             this.connectionString = connectionString;
             return this;
         }
-
         public Builder connectionStringName(@Nullable String connectionStringName) {
             this.connectionStringName = connectionStringName;
             return this;
         }
-
         public Builder databaseType(String databaseType) {
             this.databaseType = Objects.requireNonNull(databaseType);
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
-        }
-        public DatabaseBackupSettingResponse build() {
+        }        public DatabaseBackupSettingResponse build() {
             return new DatabaseBackupSettingResponse(connectionString, connectionStringName, databaseType, name);
         }
     }

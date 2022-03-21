@@ -106,42 +106,34 @@ public final class PlanDataArgs extends io.pulumi.resources.ResourceArgs {
             this.billingCycle = billingCycle;
             return this;
         }
-
         public Builder billingCycle(@Nullable String billingCycle) {
             this.billingCycle = Output.ofNullable(billingCycle);
             return this;
         }
-
         public Builder effectiveDate(@Nullable Output<String> effectiveDate) {
             this.effectiveDate = effectiveDate;
             return this;
         }
-
         public Builder effectiveDate(@Nullable String effectiveDate) {
             this.effectiveDate = Output.ofNullable(effectiveDate);
             return this;
         }
-
         public Builder planDetails(@Nullable Output<String> planDetails) {
             this.planDetails = planDetails;
             return this;
         }
-
         public Builder planDetails(@Nullable String planDetails) {
             this.planDetails = Output.ofNullable(planDetails);
             return this;
         }
-
         public Builder usageType(@Nullable Output<String> usageType) {
             this.usageType = usageType;
             return this;
         }
-
         public Builder usageType(@Nullable String usageType) {
             this.usageType = Output.ofNullable(usageType);
             return this;
-        }
-        public PlanDataArgs build() {
+        }        public PlanDataArgs build() {
             return new PlanDataArgs(billingCycle, effectiveDate, planDetails, usageType);
         }
     }

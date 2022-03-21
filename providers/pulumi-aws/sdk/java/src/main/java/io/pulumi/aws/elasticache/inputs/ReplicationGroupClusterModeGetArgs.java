@@ -74,22 +74,18 @@ public final class ReplicationGroupClusterModeGetArgs extends io.pulumi.resource
             this.numNodeGroups = numNodeGroups;
             return this;
         }
-
         public Builder numNodeGroups(@Nullable Integer numNodeGroups) {
             this.numNodeGroups = Output.ofNullable(numNodeGroups);
             return this;
         }
-
         public Builder replicasPerNodeGroup(Output<Integer> replicasPerNodeGroup) {
             this.replicasPerNodeGroup = Objects.requireNonNull(replicasPerNodeGroup);
             return this;
         }
-
         public Builder replicasPerNodeGroup(Integer replicasPerNodeGroup) {
             this.replicasPerNodeGroup = Output.of(Objects.requireNonNull(replicasPerNodeGroup));
             return this;
-        }
-        public ReplicationGroupClusterModeGetArgs build() {
+        }        public ReplicationGroupClusterModeGetArgs build() {
             return new ReplicationGroupClusterModeGetArgs(numNodeGroups, replicasPerNodeGroup);
         }
     }

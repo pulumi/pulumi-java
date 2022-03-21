@@ -78,17 +78,14 @@ public final class GetMigrationJobArgs extends io.pulumi.resources.InvokeArgs {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder migrationJobId(String migrationJobId) {
             this.migrationJobId = Objects.requireNonNull(migrationJobId);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetMigrationJobArgs build() {
+        }        public GetMigrationJobArgs build() {
             return new GetMigrationJobArgs(location, migrationJobId, project);
         }
     }

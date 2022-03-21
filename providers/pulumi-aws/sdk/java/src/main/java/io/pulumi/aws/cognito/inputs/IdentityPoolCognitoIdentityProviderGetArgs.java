@@ -91,32 +91,26 @@ public final class IdentityPoolCognitoIdentityProviderGetArgs extends io.pulumi.
             this.clientId = clientId;
             return this;
         }
-
         public Builder clientId(@Nullable String clientId) {
             this.clientId = Output.ofNullable(clientId);
             return this;
         }
-
         public Builder providerName(@Nullable Output<String> providerName) {
             this.providerName = providerName;
             return this;
         }
-
         public Builder providerName(@Nullable String providerName) {
             this.providerName = Output.ofNullable(providerName);
             return this;
         }
-
         public Builder serverSideTokenCheck(@Nullable Output<Boolean> serverSideTokenCheck) {
             this.serverSideTokenCheck = serverSideTokenCheck;
             return this;
         }
-
         public Builder serverSideTokenCheck(@Nullable Boolean serverSideTokenCheck) {
             this.serverSideTokenCheck = Output.ofNullable(serverSideTokenCheck);
             return this;
-        }
-        public IdentityPoolCognitoIdentityProviderGetArgs build() {
+        }        public IdentityPoolCognitoIdentityProviderGetArgs build() {
             return new IdentityPoolCognitoIdentityProviderGetArgs(clientId, providerName, serverSideTokenCheck);
         }
     }

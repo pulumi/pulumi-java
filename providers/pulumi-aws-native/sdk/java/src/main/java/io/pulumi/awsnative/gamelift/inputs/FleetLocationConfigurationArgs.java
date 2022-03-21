@@ -71,22 +71,18 @@ public final class FleetLocationConfigurationArgs extends io.pulumi.resources.Re
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Output.of(Objects.requireNonNull(location));
             return this;
         }
-
         public Builder locationCapacity(@Nullable Output<FleetLocationCapacityArgs> locationCapacity) {
             this.locationCapacity = locationCapacity;
             return this;
         }
-
         public Builder locationCapacity(@Nullable FleetLocationCapacityArgs locationCapacity) {
             this.locationCapacity = Output.ofNullable(locationCapacity);
             return this;
-        }
-        public FleetLocationConfigurationArgs build() {
+        }        public FleetLocationConfigurationArgs build() {
             return new FleetLocationConfigurationArgs(location, locationCapacity);
         }
     }

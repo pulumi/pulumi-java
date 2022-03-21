@@ -104,42 +104,34 @@ public final class SecretIamPolicyState extends io.pulumi.resources.ResourceArgs
             this.etag = etag;
             return this;
         }
-
         public Builder etag(@Nullable String etag) {
             this.etag = Output.ofNullable(etag);
             return this;
         }
-
         public Builder policyData(@Nullable Output<String> policyData) {
             this.policyData = policyData;
             return this;
         }
-
         public Builder policyData(@Nullable String policyData) {
             this.policyData = Output.ofNullable(policyData);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder secretId(@Nullable Output<String> secretId) {
             this.secretId = secretId;
             return this;
         }
-
         public Builder secretId(@Nullable String secretId) {
             this.secretId = Output.ofNullable(secretId);
             return this;
-        }
-        public SecretIamPolicyState build() {
+        }        public SecretIamPolicyState build() {
             return new SecretIamPolicyState(etag, policyData, project, secretId);
         }
     }

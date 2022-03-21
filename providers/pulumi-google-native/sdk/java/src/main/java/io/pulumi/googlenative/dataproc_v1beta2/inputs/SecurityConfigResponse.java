@@ -58,8 +58,7 @@ public final class SecurityConfigResponse extends io.pulumi.resources.InvokeArgs
         public Builder kerberosConfig(KerberosConfigResponse kerberosConfig) {
             this.kerberosConfig = Objects.requireNonNull(kerberosConfig);
             return this;
-        }
-        public SecurityConfigResponse build() {
+        }        public SecurityConfigResponse build() {
             return new SecurityConfigResponse(kerberosConfig);
         }
     }

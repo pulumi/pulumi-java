@@ -53,8 +53,7 @@ public final class GetDiagnosticServiceTokenReadWriteResult {
         public Builder token(@Nullable String token) {
             this.token = token;
             return this;
-        }
-        public GetDiagnosticServiceTokenReadWriteResult build() {
+        }        public GetDiagnosticServiceTokenReadWriteResult build() {
             return new GetDiagnosticServiceTokenReadWriteResult(token);
         }
     }

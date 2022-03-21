@@ -132,52 +132,48 @@ public final class SimpleSchedulePolicyArgs extends io.pulumi.resources.Resource
             this.schedulePolicyType = Objects.requireNonNull(schedulePolicyType);
             return this;
         }
-
         public Builder schedulePolicyType(String schedulePolicyType) {
             this.schedulePolicyType = Output.of(Objects.requireNonNull(schedulePolicyType));
             return this;
         }
-
         public Builder scheduleRunDays(@Nullable Output<List<DayOfWeek>> scheduleRunDays) {
             this.scheduleRunDays = scheduleRunDays;
             return this;
         }
-
         public Builder scheduleRunDays(@Nullable List<DayOfWeek> scheduleRunDays) {
             this.scheduleRunDays = Output.ofNullable(scheduleRunDays);
             return this;
         }
-
+        public Builder scheduleRunDays(DayOfWeek... scheduleRunDays) {
+            return scheduleRunDays(List.of(scheduleRunDays));
+        }
         public Builder scheduleRunFrequency(@Nullable Output<Either<String,ScheduleRunType>> scheduleRunFrequency) {
             this.scheduleRunFrequency = scheduleRunFrequency;
             return this;
         }
-
         public Builder scheduleRunFrequency(@Nullable Either<String,ScheduleRunType> scheduleRunFrequency) {
             this.scheduleRunFrequency = Output.ofNullable(scheduleRunFrequency);
             return this;
         }
-
         public Builder scheduleRunTimes(@Nullable Output<List<String>> scheduleRunTimes) {
             this.scheduleRunTimes = scheduleRunTimes;
             return this;
         }
-
         public Builder scheduleRunTimes(@Nullable List<String> scheduleRunTimes) {
             this.scheduleRunTimes = Output.ofNullable(scheduleRunTimes);
             return this;
         }
-
+        public Builder scheduleRunTimes(String... scheduleRunTimes) {
+            return scheduleRunTimes(List.of(scheduleRunTimes));
+        }
         public Builder scheduleWeeklyFrequency(@Nullable Output<Integer> scheduleWeeklyFrequency) {
             this.scheduleWeeklyFrequency = scheduleWeeklyFrequency;
             return this;
         }
-
         public Builder scheduleWeeklyFrequency(@Nullable Integer scheduleWeeklyFrequency) {
             this.scheduleWeeklyFrequency = Output.ofNullable(scheduleWeeklyFrequency);
             return this;
-        }
-        public SimpleSchedulePolicyArgs build() {
+        }        public SimpleSchedulePolicyArgs build() {
             return new SimpleSchedulePolicyArgs(schedulePolicyType, scheduleRunDays, scheduleRunFrequency, scheduleRunTimes, scheduleWeeklyFrequency);
         }
     }

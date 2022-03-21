@@ -50,8 +50,7 @@ public final class GetResponseHeadersPolicyArgs extends io.pulumi.resources.Invo
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
-        }
-        public GetResponseHeadersPolicyArgs build() {
+        }        public GetResponseHeadersPolicyArgs build() {
             return new GetResponseHeadersPolicyArgs(id);
         }
     }

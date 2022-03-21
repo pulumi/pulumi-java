@@ -56,12 +56,10 @@ public final class DataflowEndpointGroupEndpointDetails {
             this.endpoint = endpoint;
             return this;
         }
-
         public Builder securityDetails(@Nullable DataflowEndpointGroupSecurityDetails securityDetails) {
             this.securityDetails = securityDetails;
             return this;
-        }
-        public DataflowEndpointGroupEndpointDetails build() {
+        }        public DataflowEndpointGroupEndpointDetails build() {
             return new DataflowEndpointGroupEndpointDetails(endpoint, securityDetails);
         }
     }

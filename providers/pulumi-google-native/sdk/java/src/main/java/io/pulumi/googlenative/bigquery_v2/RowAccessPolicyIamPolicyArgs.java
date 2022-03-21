@@ -174,92 +174,80 @@ public final class RowAccessPolicyIamPolicyArgs extends io.pulumi.resources.Reso
             this.auditConfigs = auditConfigs;
             return this;
         }
-
         public Builder auditConfigs(@Nullable List<AuditConfigArgs> auditConfigs) {
             this.auditConfigs = Output.ofNullable(auditConfigs);
             return this;
         }
-
+        public Builder auditConfigs(AuditConfigArgs... auditConfigs) {
+            return auditConfigs(List.of(auditConfigs));
+        }
         public Builder bindings(@Nullable Output<List<BindingArgs>> bindings) {
             this.bindings = bindings;
             return this;
         }
-
         public Builder bindings(@Nullable List<BindingArgs> bindings) {
             this.bindings = Output.ofNullable(bindings);
             return this;
         }
-
+        public Builder bindings(BindingArgs... bindings) {
+            return bindings(List.of(bindings));
+        }
         public Builder datasetId(Output<String> datasetId) {
             this.datasetId = Objects.requireNonNull(datasetId);
             return this;
         }
-
         public Builder datasetId(String datasetId) {
             this.datasetId = Output.of(Objects.requireNonNull(datasetId));
             return this;
         }
-
         public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
-
         public Builder etag(@Nullable String etag) {
             this.etag = Output.ofNullable(etag);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder rowAccessPolicyId(Output<String> rowAccessPolicyId) {
             this.rowAccessPolicyId = Objects.requireNonNull(rowAccessPolicyId);
             return this;
         }
-
         public Builder rowAccessPolicyId(String rowAccessPolicyId) {
             this.rowAccessPolicyId = Output.of(Objects.requireNonNull(rowAccessPolicyId));
             return this;
         }
-
         public Builder tableId(Output<String> tableId) {
             this.tableId = Objects.requireNonNull(tableId);
             return this;
         }
-
         public Builder tableId(String tableId) {
             this.tableId = Output.of(Objects.requireNonNull(tableId));
             return this;
         }
-
         public Builder updateMask(@Nullable Output<String> updateMask) {
             this.updateMask = updateMask;
             return this;
         }
-
         public Builder updateMask(@Nullable String updateMask) {
             this.updateMask = Output.ofNullable(updateMask);
             return this;
         }
-
         public Builder version(@Nullable Output<Integer> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable Integer version) {
             this.version = Output.ofNullable(version);
             return this;
-        }
-        public RowAccessPolicyIamPolicyArgs build() {
+        }        public RowAccessPolicyIamPolicyArgs build() {
             return new RowAccessPolicyIamPolicyArgs(auditConfigs, bindings, datasetId, etag, project, rowAccessPolicyId, tableId, updateMask, version);
         }
     }

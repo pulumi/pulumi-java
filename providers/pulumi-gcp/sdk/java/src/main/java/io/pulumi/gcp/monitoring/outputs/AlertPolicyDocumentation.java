@@ -79,12 +79,10 @@ public final class AlertPolicyDocumentation {
             this.content = content;
             return this;
         }
-
         public Builder mimeType(@Nullable String mimeType) {
             this.mimeType = mimeType;
             return this;
-        }
-        public AlertPolicyDocumentation build() {
+        }        public AlertPolicyDocumentation build() {
             return new AlertPolicyDocumentation(content, mimeType);
         }
     }

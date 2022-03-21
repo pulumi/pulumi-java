@@ -157,72 +157,61 @@ public final class AssessmentTemplateState extends io.pulumi.resources.ResourceA
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder duration(@Nullable Output<Integer> duration) {
             this.duration = duration;
             return this;
         }
-
         public Builder duration(@Nullable Integer duration) {
             this.duration = Output.ofNullable(duration);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder rulesPackageArns(@Nullable Output<List<String>> rulesPackageArns) {
             this.rulesPackageArns = rulesPackageArns;
             return this;
         }
-
         public Builder rulesPackageArns(@Nullable List<String> rulesPackageArns) {
             this.rulesPackageArns = Output.ofNullable(rulesPackageArns);
             return this;
         }
-
+        public Builder rulesPackageArns(String... rulesPackageArns) {
+            return rulesPackageArns(List.of(rulesPackageArns));
+        }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
-
         public Builder targetArn(@Nullable Output<String> targetArn) {
             this.targetArn = targetArn;
             return this;
         }
-
         public Builder targetArn(@Nullable String targetArn) {
             this.targetArn = Output.ofNullable(targetArn);
             return this;
-        }
-        public AssessmentTemplateState build() {
+        }        public AssessmentTemplateState build() {
             return new AssessmentTemplateState(arn, duration, name, rulesPackageArns, tags, tagsAll, targetArn);
         }
     }

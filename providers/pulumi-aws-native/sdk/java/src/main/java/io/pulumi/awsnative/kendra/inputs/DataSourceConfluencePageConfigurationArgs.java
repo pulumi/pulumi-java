@@ -54,12 +54,13 @@ public final class DataSourceConfluencePageConfigurationArgs extends io.pulumi.r
             this.pageFieldMappings = pageFieldMappings;
             return this;
         }
-
         public Builder pageFieldMappings(@Nullable List<DataSourceConfluencePageToIndexFieldMappingArgs> pageFieldMappings) {
             this.pageFieldMappings = Output.ofNullable(pageFieldMappings);
             return this;
         }
-        public DataSourceConfluencePageConfigurationArgs build() {
+        public Builder pageFieldMappings(DataSourceConfluencePageToIndexFieldMappingArgs... pageFieldMappings) {
+            return pageFieldMappings(List.of(pageFieldMappings));
+        }        public DataSourceConfluencePageConfigurationArgs build() {
             return new DataSourceConfluencePageConfigurationArgs(pageFieldMappings);
         }
     }

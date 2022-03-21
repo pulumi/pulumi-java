@@ -45,8 +45,7 @@ public final class RuleGroupRuleActionAllowProperties {
         public Builder customRequestHandling(@Nullable RuleGroupCustomRequestHandling customRequestHandling) {
             this.customRequestHandling = customRequestHandling;
             return this;
-        }
-        public RuleGroupRuleActionAllowProperties build() {
+        }        public RuleGroupRuleActionAllowProperties build() {
             return new RuleGroupRuleActionAllowProperties(customRequestHandling);
         }
     }

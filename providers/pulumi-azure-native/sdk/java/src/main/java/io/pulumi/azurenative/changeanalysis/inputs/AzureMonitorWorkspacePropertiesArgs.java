@@ -96,32 +96,26 @@ public final class AzureMonitorWorkspacePropertiesArgs extends io.pulumi.resourc
             this.includeChangeDetails = includeChangeDetails;
             return this;
         }
-
         public Builder includeChangeDetails(@Nullable Either<String,ChangeDetailsMode> includeChangeDetails) {
             this.includeChangeDetails = Output.ofNullable(includeChangeDetails);
             return this;
         }
-
         public Builder workspaceId(@Nullable Output<String> workspaceId) {
             this.workspaceId = workspaceId;
             return this;
         }
-
         public Builder workspaceId(@Nullable String workspaceId) {
             this.workspaceId = Output.ofNullable(workspaceId);
             return this;
         }
-
         public Builder workspaceResourceId(@Nullable Output<String> workspaceResourceId) {
             this.workspaceResourceId = workspaceResourceId;
             return this;
         }
-
         public Builder workspaceResourceId(@Nullable String workspaceResourceId) {
             this.workspaceResourceId = Output.ofNullable(workspaceResourceId);
             return this;
-        }
-        public AzureMonitorWorkspacePropertiesArgs build() {
+        }        public AzureMonitorWorkspacePropertiesArgs build() {
             return new AzureMonitorWorkspacePropertiesArgs(includeChangeDetails, workspaceId, workspaceResourceId);
         }
     }

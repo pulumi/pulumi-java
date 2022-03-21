@@ -53,8 +53,7 @@ public final class EventSourceMappingFilter {
         public Builder pattern(@Nullable String pattern) {
             this.pattern = pattern;
             return this;
-        }
-        public EventSourceMappingFilter build() {
+        }        public EventSourceMappingFilter build() {
             return new EventSourceMappingFilter(pattern);
         }
     }

@@ -87,17 +87,14 @@ public final class CrossVersionObjectReference {
             this.apiVersion = apiVersion;
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public CrossVersionObjectReference build() {
+        }        public CrossVersionObjectReference build() {
             return new CrossVersionObjectReference(apiVersion, kind, name);
         }
     }

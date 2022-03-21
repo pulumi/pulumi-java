@@ -107,22 +107,21 @@ public final class GetLaunchPathsSummary extends io.pulumi.resources.InvokeArgs 
             this.constraintSummaries = Objects.requireNonNull(constraintSummaries);
             return this;
         }
-
+        public Builder constraintSummaries(GetLaunchPathsSummaryConstraintSummary... constraintSummaries) {
+            return constraintSummaries(List.of(constraintSummaries));
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder pathId(String pathId) {
             this.pathId = Objects.requireNonNull(pathId);
             return this;
         }
-
         public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
-        }
-        public GetLaunchPathsSummary build() {
+        }        public GetLaunchPathsSummary build() {
             return new GetLaunchPathsSummary(constraintSummaries, name, pathId, tags);
         }
     }

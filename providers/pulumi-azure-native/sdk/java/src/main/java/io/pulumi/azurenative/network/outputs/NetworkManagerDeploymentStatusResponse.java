@@ -136,32 +136,29 @@ public final class NetworkManagerDeploymentStatusResponse {
             this.commitTime = commitTime;
             return this;
         }
-
         public Builder configurationIds(@Nullable List<String> configurationIds) {
             this.configurationIds = configurationIds;
             return this;
         }
-
+        public Builder configurationIds(String... configurationIds) {
+            return configurationIds(List.of(configurationIds));
+        }
         public Builder deploymentStatus(@Nullable String deploymentStatus) {
             this.deploymentStatus = deploymentStatus;
             return this;
         }
-
         public Builder deploymentType(@Nullable String deploymentType) {
             this.deploymentType = deploymentType;
             return this;
         }
-
         public Builder errorMessage(@Nullable String errorMessage) {
             this.errorMessage = errorMessage;
             return this;
         }
-
         public Builder region(@Nullable String region) {
             this.region = region;
             return this;
-        }
-        public NetworkManagerDeploymentStatusResponse build() {
+        }        public NetworkManagerDeploymentStatusResponse build() {
             return new NetworkManagerDeploymentStatusResponse(commitTime, configurationIds, deploymentStatus, deploymentType, errorMessage, region);
         }
     }

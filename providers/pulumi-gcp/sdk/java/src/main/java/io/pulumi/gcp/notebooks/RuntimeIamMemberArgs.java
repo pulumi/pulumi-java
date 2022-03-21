@@ -134,62 +134,50 @@ public final class RuntimeIamMemberArgs extends io.pulumi.resources.ResourceArgs
             this.condition = condition;
             return this;
         }
-
         public Builder condition(@Nullable RuntimeIamMemberConditionArgs condition) {
             this.condition = Output.ofNullable(condition);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder member(Output<String> member) {
             this.member = Objects.requireNonNull(member);
             return this;
         }
-
         public Builder member(String member) {
             this.member = Output.of(Objects.requireNonNull(member));
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder role(Output<String> role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }
-
         public Builder role(String role) {
             this.role = Output.of(Objects.requireNonNull(role));
             return this;
         }
-
         public Builder runtimeName(Output<String> runtimeName) {
             this.runtimeName = Objects.requireNonNull(runtimeName);
             return this;
         }
-
         public Builder runtimeName(String runtimeName) {
             this.runtimeName = Output.of(Objects.requireNonNull(runtimeName));
             return this;
-        }
-        public RuntimeIamMemberArgs build() {
+        }        public RuntimeIamMemberArgs build() {
             return new RuntimeIamMemberArgs(condition, location, member, project, role, runtimeName);
         }
     }

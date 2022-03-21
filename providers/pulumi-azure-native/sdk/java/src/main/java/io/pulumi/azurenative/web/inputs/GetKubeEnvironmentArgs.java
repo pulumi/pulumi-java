@@ -72,12 +72,10 @@ public final class GetKubeEnvironmentArgs extends io.pulumi.resources.InvokeArgs
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetKubeEnvironmentArgs build() {
+        }        public GetKubeEnvironmentArgs build() {
             return new GetKubeEnvironmentArgs(name, resourceGroupName);
         }
     }

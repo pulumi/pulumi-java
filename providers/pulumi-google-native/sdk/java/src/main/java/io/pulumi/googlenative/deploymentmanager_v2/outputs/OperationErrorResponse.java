@@ -53,7 +53,9 @@ public final class OperationErrorResponse {
             this.errors = Objects.requireNonNull(errors);
             return this;
         }
-        public OperationErrorResponse build() {
+        public Builder errors(OperationErrorErrorsItemResponse... errors) {
+            return errors(List.of(errors));
+        }        public OperationErrorResponse build() {
             return new OperationErrorResponse(errors);
         }
     }

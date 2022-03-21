@@ -85,17 +85,14 @@ public final class PgpSignedAttestationResponse {
             this.contentType = Objects.requireNonNull(contentType);
             return this;
         }
-
         public Builder pgpKeyId(String pgpKeyId) {
             this.pgpKeyId = Objects.requireNonNull(pgpKeyId);
             return this;
         }
-
         public Builder signature(String signature) {
             this.signature = Objects.requireNonNull(signature);
             return this;
-        }
-        public PgpSignedAttestationResponse build() {
+        }        public PgpSignedAttestationResponse build() {
             return new PgpSignedAttestationResponse(contentType, pgpKeyId, signature);
         }
     }

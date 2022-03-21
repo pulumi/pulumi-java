@@ -94,17 +94,14 @@ public final class EmailTemplateParametersContractPropertiesResponse extends io.
             this.description = description;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder title(@Nullable String title) {
             this.title = title;
             return this;
-        }
-        public EmailTemplateParametersContractPropertiesResponse build() {
+        }        public EmailTemplateParametersContractPropertiesResponse build() {
             return new EmailTemplateParametersContractPropertiesResponse(description, name, title);
         }
     }

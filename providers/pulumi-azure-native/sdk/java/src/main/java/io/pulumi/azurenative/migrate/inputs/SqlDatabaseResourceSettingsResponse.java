@@ -95,17 +95,14 @@ public final class SqlDatabaseResourceSettingsResponse extends io.pulumi.resourc
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
         }
-
         public Builder targetResourceName(String targetResourceName) {
             this.targetResourceName = Objects.requireNonNull(targetResourceName);
             return this;
         }
-
         public Builder zoneRedundant(@Nullable String zoneRedundant) {
             this.zoneRedundant = zoneRedundant;
             return this;
-        }
-        public SqlDatabaseResourceSettingsResponse build() {
+        }        public SqlDatabaseResourceSettingsResponse build() {
             return new SqlDatabaseResourceSettingsResponse(resourceType, targetResourceName, zoneRedundant);
         }
     }

@@ -81,32 +81,26 @@ public final class ThrottlingMetricArgs extends io.pulumi.resources.ResourceArgs
             this.interval = interval;
             return this;
         }
-
         public Builder interval(@Nullable String interval) {
             this.interval = Output.ofNullable(interval);
             return this;
         }
-
         public Builder limit(Output<Double> limit) {
             this.limit = Objects.requireNonNull(limit);
             return this;
         }
-
         public Builder limit(Double limit) {
             this.limit = Output.of(Objects.requireNonNull(limit));
             return this;
         }
-
         public Builder type(Output<Either<String,ThrottlingMetricType>> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(Either<String,ThrottlingMetricType> type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public ThrottlingMetricArgs build() {
+        }        public ThrottlingMetricArgs build() {
             return new ThrottlingMetricArgs(interval, limit, type);
         }
     }

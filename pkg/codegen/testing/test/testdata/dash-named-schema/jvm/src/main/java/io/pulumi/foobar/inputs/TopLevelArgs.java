@@ -53,12 +53,10 @@ public final class TopLevelArgs extends io.pulumi.resources.ResourceArgs {
             this.buzz = buzz;
             return this;
         }
-
         public Builder buzz(@Nullable String buzz) {
             this.buzz = Output.ofNullable(buzz);
             return this;
-        }
-        public TopLevelArgs build() {
+        }        public TopLevelArgs build() {
             return new TopLevelArgs(buzz);
         }
     }

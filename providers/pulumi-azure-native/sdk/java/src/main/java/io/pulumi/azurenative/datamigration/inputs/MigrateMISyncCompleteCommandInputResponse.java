@@ -58,8 +58,7 @@ public final class MigrateMISyncCompleteCommandInputResponse extends io.pulumi.r
         public Builder sourceDatabaseName(String sourceDatabaseName) {
             this.sourceDatabaseName = Objects.requireNonNull(sourceDatabaseName);
             return this;
-        }
-        public MigrateMISyncCompleteCommandInputResponse build() {
+        }        public MigrateMISyncCompleteCommandInputResponse build() {
             return new MigrateMISyncCompleteCommandInputResponse(sourceDatabaseName);
         }
     }

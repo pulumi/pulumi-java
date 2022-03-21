@@ -73,22 +73,18 @@ public final class CatalogDatabaseTargetDatabaseGetArgs extends io.pulumi.resour
             this.catalogId = Objects.requireNonNull(catalogId);
             return this;
         }
-
         public Builder catalogId(String catalogId) {
             this.catalogId = Output.of(Objects.requireNonNull(catalogId));
             return this;
         }
-
         public Builder databaseName(Output<String> databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
-
         public Builder databaseName(String databaseName) {
             this.databaseName = Output.of(Objects.requireNonNull(databaseName));
             return this;
-        }
-        public CatalogDatabaseTargetDatabaseGetArgs build() {
+        }        public CatalogDatabaseTargetDatabaseGetArgs build() {
             return new CatalogDatabaseTargetDatabaseGetArgs(catalogId, databaseName);
         }
     }

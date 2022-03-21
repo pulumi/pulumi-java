@@ -211,102 +211,82 @@ public final class CommandArgs extends io.pulumi.resources.ResourceArgs {
             this.action = Objects.requireNonNull(action);
             return this;
         }
-
         public Builder action(Either<String,Action> action) {
             this.action = Output.of(Objects.requireNonNull(action));
             return this;
         }
-
         public Builder alwaysRun(@Nullable Output<Boolean> alwaysRun) {
             this.alwaysRun = alwaysRun;
             return this;
         }
-
         public Builder alwaysRun(@Nullable Boolean alwaysRun) {
             this.alwaysRun = Output.ofNullable(alwaysRun);
             return this;
         }
-
         public Builder applyUpdateBefore(@Nullable Output<Boolean> applyUpdateBefore) {
             this.applyUpdateBefore = applyUpdateBefore;
             return this;
         }
-
         public Builder applyUpdateBefore(@Nullable Boolean applyUpdateBefore) {
             this.applyUpdateBefore = Output.ofNullable(applyUpdateBefore);
             return this;
         }
-
         public Builder content(Output<String> content) {
             this.content = Objects.requireNonNull(content);
             return this;
         }
-
         public Builder content(String content) {
             this.content = Output.of(Objects.requireNonNull(content));
             return this;
         }
-
         public Builder contentType(Output<Either<String,ContentType>> contentType) {
             this.contentType = Objects.requireNonNull(contentType);
             return this;
         }
-
         public Builder contentType(Either<String,ContentType> contentType) {
             this.contentType = Output.of(Objects.requireNonNull(contentType));
             return this;
         }
-
         public Builder maxRunTime(@Nullable Output<Integer> maxRunTime) {
             this.maxRunTime = maxRunTime;
             return this;
         }
-
         public Builder maxRunTime(@Nullable Integer maxRunTime) {
             this.maxRunTime = Output.ofNullable(maxRunTime);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder restartAfter(@Nullable Output<Boolean> restartAfter) {
             this.restartAfter = restartAfter;
             return this;
         }
-
         public Builder restartAfter(@Nullable Boolean restartAfter) {
             this.restartAfter = Output.ofNullable(restartAfter);
             return this;
         }
-
         public Builder runAsInteractive(@Nullable Output<Boolean> runAsInteractive) {
             this.runAsInteractive = runAsInteractive;
             return this;
         }
-
         public Builder runAsInteractive(@Nullable Boolean runAsInteractive) {
             this.runAsInteractive = Output.ofNullable(runAsInteractive);
             return this;
         }
-
         public Builder runElevated(@Nullable Output<Boolean> runElevated) {
             this.runElevated = runElevated;
             return this;
         }
-
         public Builder runElevated(@Nullable Boolean runElevated) {
             this.runElevated = Output.ofNullable(runElevated);
             return this;
-        }
-        public CommandArgs build() {
+        }        public CommandArgs build() {
             return new CommandArgs(action, alwaysRun, applyUpdateBefore, content, contentType, maxRunTime, name, restartAfter, runAsInteractive, runElevated);
         }
     }

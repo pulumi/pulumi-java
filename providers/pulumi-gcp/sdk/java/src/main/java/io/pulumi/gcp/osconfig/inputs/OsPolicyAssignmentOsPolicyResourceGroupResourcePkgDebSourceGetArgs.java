@@ -109,42 +109,34 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSourceGe
             this.allowInsecure = allowInsecure;
             return this;
         }
-
         public Builder allowInsecure(@Nullable Boolean allowInsecure) {
             this.allowInsecure = Output.ofNullable(allowInsecure);
             return this;
         }
-
         public Builder gcs(@Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSourceGcsGetArgs> gcs) {
             this.gcs = gcs;
             return this;
         }
-
         public Builder gcs(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSourceGcsGetArgs gcs) {
             this.gcs = Output.ofNullable(gcs);
             return this;
         }
-
         public Builder localPath(@Nullable Output<String> localPath) {
             this.localPath = localPath;
             return this;
         }
-
         public Builder localPath(@Nullable String localPath) {
             this.localPath = Output.ofNullable(localPath);
             return this;
         }
-
         public Builder remote(@Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSourceRemoteGetArgs> remote) {
             this.remote = remote;
             return this;
         }
-
         public Builder remote(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSourceRemoteGetArgs remote) {
             this.remote = Output.ofNullable(remote);
             return this;
-        }
-        public OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSourceGetArgs build() {
+        }        public OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSourceGetArgs build() {
             return new OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSourceGetArgs(allowInsecure, gcs, localPath, remote);
         }
     }

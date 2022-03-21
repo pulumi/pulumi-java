@@ -76,17 +76,14 @@ public final class GetRouteArgs extends io.pulumi.resources.InvokeArgs {
             this.applicationIdentifier = Objects.requireNonNull(applicationIdentifier);
             return this;
         }
-
         public Builder environmentIdentifier(String environmentIdentifier) {
             this.environmentIdentifier = Objects.requireNonNull(environmentIdentifier);
             return this;
         }
-
         public Builder routeIdentifier(String routeIdentifier) {
             this.routeIdentifier = Objects.requireNonNull(routeIdentifier);
             return this;
-        }
-        public GetRouteArgs build() {
+        }        public GetRouteArgs build() {
             return new GetRouteArgs(applicationIdentifier, environmentIdentifier, routeIdentifier);
         }
     }

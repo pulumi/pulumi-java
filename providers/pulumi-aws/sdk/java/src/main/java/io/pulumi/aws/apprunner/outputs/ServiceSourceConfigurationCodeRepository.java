@@ -89,17 +89,14 @@ public final class ServiceSourceConfigurationCodeRepository {
             this.codeConfiguration = codeConfiguration;
             return this;
         }
-
         public Builder repositoryUrl(String repositoryUrl) {
             this.repositoryUrl = Objects.requireNonNull(repositoryUrl);
             return this;
         }
-
         public Builder sourceCodeVersion(ServiceSourceConfigurationCodeRepositorySourceCodeVersion sourceCodeVersion) {
             this.sourceCodeVersion = Objects.requireNonNull(sourceCodeVersion);
             return this;
-        }
-        public ServiceSourceConfigurationCodeRepository build() {
+        }        public ServiceSourceConfigurationCodeRepository build() {
             return new ServiceSourceConfigurationCodeRepository(codeConfiguration, repositoryUrl, sourceCodeVersion);
         }
     }

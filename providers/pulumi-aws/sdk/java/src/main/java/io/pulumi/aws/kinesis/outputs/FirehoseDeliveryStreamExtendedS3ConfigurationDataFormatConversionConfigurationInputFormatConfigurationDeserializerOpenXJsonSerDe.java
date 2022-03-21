@@ -89,17 +89,14 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
             this.caseInsensitive = caseInsensitive;
             return this;
         }
-
         public Builder columnToJsonKeyMappings(@Nullable Map<String,String> columnToJsonKeyMappings) {
             this.columnToJsonKeyMappings = columnToJsonKeyMappings;
             return this;
         }
-
         public Builder convertDotsInJsonKeysToUnderscores(@Nullable Boolean convertDotsInJsonKeysToUnderscores) {
             this.convertDotsInJsonKeysToUnderscores = convertDotsInJsonKeysToUnderscores;
             return this;
-        }
-        public FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerOpenXJsonSerDe build() {
+        }        public FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerOpenXJsonSerDe build() {
             return new FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerOpenXJsonSerDe(caseInsensitive, columnToJsonKeyMappings, convertDotsInJsonKeysToUnderscores);
         }
     }

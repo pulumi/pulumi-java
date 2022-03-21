@@ -129,52 +129,42 @@ public final class IntegrationRuntimeSsisCatalogInfoArgs extends io.pulumi.resou
             this.catalogAdminPassword = catalogAdminPassword;
             return this;
         }
-
         public Builder catalogAdminPassword(@Nullable SecureStringArgs catalogAdminPassword) {
             this.catalogAdminPassword = Output.ofNullable(catalogAdminPassword);
             return this;
         }
-
         public Builder catalogAdminUserName(@Nullable Output<String> catalogAdminUserName) {
             this.catalogAdminUserName = catalogAdminUserName;
             return this;
         }
-
         public Builder catalogAdminUserName(@Nullable String catalogAdminUserName) {
             this.catalogAdminUserName = Output.ofNullable(catalogAdminUserName);
             return this;
         }
-
         public Builder catalogPricingTier(@Nullable Output<Either<String,IntegrationRuntimeSsisCatalogPricingTier>> catalogPricingTier) {
             this.catalogPricingTier = catalogPricingTier;
             return this;
         }
-
         public Builder catalogPricingTier(@Nullable Either<String,IntegrationRuntimeSsisCatalogPricingTier> catalogPricingTier) {
             this.catalogPricingTier = Output.ofNullable(catalogPricingTier);
             return this;
         }
-
         public Builder catalogServerEndpoint(@Nullable Output<String> catalogServerEndpoint) {
             this.catalogServerEndpoint = catalogServerEndpoint;
             return this;
         }
-
         public Builder catalogServerEndpoint(@Nullable String catalogServerEndpoint) {
             this.catalogServerEndpoint = Output.ofNullable(catalogServerEndpoint);
             return this;
         }
-
         public Builder dualStandbyPairName(@Nullable Output<String> dualStandbyPairName) {
             this.dualStandbyPairName = dualStandbyPairName;
             return this;
         }
-
         public Builder dualStandbyPairName(@Nullable String dualStandbyPairName) {
             this.dualStandbyPairName = Output.ofNullable(dualStandbyPairName);
             return this;
-        }
-        public IntegrationRuntimeSsisCatalogInfoArgs build() {
+        }        public IntegrationRuntimeSsisCatalogInfoArgs build() {
             return new IntegrationRuntimeSsisCatalogInfoArgs(catalogAdminPassword, catalogAdminUserName, catalogPricingTier, catalogServerEndpoint, dualStandbyPairName);
         }
     }

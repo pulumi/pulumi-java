@@ -54,8 +54,7 @@ public final class GetAlertsSuppressionRuleArgs extends io.pulumi.resources.Invo
         public Builder alertsSuppressionRuleName(String alertsSuppressionRuleName) {
             this.alertsSuppressionRuleName = Objects.requireNonNull(alertsSuppressionRuleName);
             return this;
-        }
-        public GetAlertsSuppressionRuleArgs build() {
+        }        public GetAlertsSuppressionRuleArgs build() {
             return new GetAlertsSuppressionRuleArgs(alertsSuppressionRuleName);
         }
     }

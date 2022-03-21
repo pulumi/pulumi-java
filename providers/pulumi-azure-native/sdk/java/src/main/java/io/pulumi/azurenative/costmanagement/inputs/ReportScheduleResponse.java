@@ -95,17 +95,14 @@ public final class ReportScheduleResponse extends io.pulumi.resources.InvokeArgs
             this.recurrence = Objects.requireNonNull(recurrence);
             return this;
         }
-
         public Builder recurrencePeriod(@Nullable ReportRecurrencePeriodResponse recurrencePeriod) {
             this.recurrencePeriod = recurrencePeriod;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = status;
             return this;
-        }
-        public ReportScheduleResponse build() {
+        }        public ReportScheduleResponse build() {
             return new ReportScheduleResponse(recurrence, recurrencePeriod, status);
         }
     }

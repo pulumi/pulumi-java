@@ -53,8 +53,7 @@ public final class HyperVSiteDetailsResponse {
         public Builder instanceType(String instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
-        }
-        public HyperVSiteDetailsResponse build() {
+        }        public HyperVSiteDetailsResponse build() {
             return new HyperVSiteDetailsResponse(instanceType);
         }
     }

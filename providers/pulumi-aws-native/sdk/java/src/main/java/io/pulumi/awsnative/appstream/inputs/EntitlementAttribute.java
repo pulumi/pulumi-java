@@ -64,12 +64,10 @@ public final class EntitlementAttribute extends io.pulumi.resources.InvokeArgs {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public EntitlementAttribute build() {
+        }        public EntitlementAttribute build() {
             return new EntitlementAttribute(name, value);
         }
     }

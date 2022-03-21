@@ -69,12 +69,10 @@ public final class JobReferenceResponse {
             this.jobId = Objects.requireNonNull(jobId);
             return this;
         }
-
         public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
-        }
-        public JobReferenceResponse build() {
+        }        public JobReferenceResponse build() {
             return new JobReferenceResponse(jobId, project);
         }
     }

@@ -340,182 +340,149 @@ public final class AwsClusterState extends io.pulumi.resources.ResourceArgs {
             this.annotations = annotations;
             return this;
         }
-
         public Builder annotations(@Nullable Map<String,String> annotations) {
             this.annotations = Output.ofNullable(annotations);
             return this;
         }
-
         public Builder authorization(@Nullable Output<AwsClusterAuthorizationGetArgs> authorization) {
             this.authorization = authorization;
             return this;
         }
-
         public Builder authorization(@Nullable AwsClusterAuthorizationGetArgs authorization) {
             this.authorization = Output.ofNullable(authorization);
             return this;
         }
-
         public Builder awsRegion(@Nullable Output<String> awsRegion) {
             this.awsRegion = awsRegion;
             return this;
         }
-
         public Builder awsRegion(@Nullable String awsRegion) {
             this.awsRegion = Output.ofNullable(awsRegion);
             return this;
         }
-
         public Builder controlPlane(@Nullable Output<AwsClusterControlPlaneGetArgs> controlPlane) {
             this.controlPlane = controlPlane;
             return this;
         }
-
         public Builder controlPlane(@Nullable AwsClusterControlPlaneGetArgs controlPlane) {
             this.controlPlane = Output.ofNullable(controlPlane);
             return this;
         }
-
         public Builder createTime(@Nullable Output<String> createTime) {
             this.createTime = createTime;
             return this;
         }
-
         public Builder createTime(@Nullable String createTime) {
             this.createTime = Output.ofNullable(createTime);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder endpoint(@Nullable Output<String> endpoint) {
             this.endpoint = endpoint;
             return this;
         }
-
         public Builder endpoint(@Nullable String endpoint) {
             this.endpoint = Output.ofNullable(endpoint);
             return this;
         }
-
         public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
-
         public Builder etag(@Nullable String etag) {
             this.etag = Output.ofNullable(etag);
             return this;
         }
-
         public Builder fleet(@Nullable Output<AwsClusterFleetGetArgs> fleet) {
             this.fleet = fleet;
             return this;
         }
-
         public Builder fleet(@Nullable AwsClusterFleetGetArgs fleet) {
             this.fleet = Output.ofNullable(fleet);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder networking(@Nullable Output<AwsClusterNetworkingGetArgs> networking) {
             this.networking = networking;
             return this;
         }
-
         public Builder networking(@Nullable AwsClusterNetworkingGetArgs networking) {
             this.networking = Output.ofNullable(networking);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder reconciling(@Nullable Output<Boolean> reconciling) {
             this.reconciling = reconciling;
             return this;
         }
-
         public Builder reconciling(@Nullable Boolean reconciling) {
             this.reconciling = Output.ofNullable(reconciling);
             return this;
         }
-
         public Builder state(@Nullable Output<String> state) {
             this.state = state;
             return this;
         }
-
         public Builder state(@Nullable String state) {
             this.state = Output.ofNullable(state);
             return this;
         }
-
         public Builder uid(@Nullable Output<String> uid) {
             this.uid = uid;
             return this;
         }
-
         public Builder uid(@Nullable String uid) {
             this.uid = Output.ofNullable(uid);
             return this;
         }
-
         public Builder updateTime(@Nullable Output<String> updateTime) {
             this.updateTime = updateTime;
             return this;
         }
-
         public Builder updateTime(@Nullable String updateTime) {
             this.updateTime = Output.ofNullable(updateTime);
             return this;
         }
-
         public Builder workloadIdentityConfigs(@Nullable Output<List<AwsClusterWorkloadIdentityConfigGetArgs>> workloadIdentityConfigs) {
             this.workloadIdentityConfigs = workloadIdentityConfigs;
             return this;
         }
-
         public Builder workloadIdentityConfigs(@Nullable List<AwsClusterWorkloadIdentityConfigGetArgs> workloadIdentityConfigs) {
             this.workloadIdentityConfigs = Output.ofNullable(workloadIdentityConfigs);
             return this;
         }
-        public AwsClusterState build() {
+        public Builder workloadIdentityConfigs(AwsClusterWorkloadIdentityConfigGetArgs... workloadIdentityConfigs) {
+            return workloadIdentityConfigs(List.of(workloadIdentityConfigs));
+        }        public AwsClusterState build() {
             return new AwsClusterState(annotations, authorization, awsRegion, controlPlane, createTime, description, endpoint, etag, fleet, location, name, networking, project, reconciling, state, uid, updateTime, workloadIdentityConfigs);
         }
     }

@@ -119,27 +119,25 @@ public final class GooglePrivacyDlpV2CategoricalStatsHistogramBucketResponse {
             this.bucketSize = Objects.requireNonNull(bucketSize);
             return this;
         }
-
         public Builder bucketValueCount(String bucketValueCount) {
             this.bucketValueCount = Objects.requireNonNull(bucketValueCount);
             return this;
         }
-
         public Builder bucketValues(List<GooglePrivacyDlpV2ValueFrequencyResponse> bucketValues) {
             this.bucketValues = Objects.requireNonNull(bucketValues);
             return this;
         }
-
+        public Builder bucketValues(GooglePrivacyDlpV2ValueFrequencyResponse... bucketValues) {
+            return bucketValues(List.of(bucketValues));
+        }
         public Builder valueFrequencyLowerBound(String valueFrequencyLowerBound) {
             this.valueFrequencyLowerBound = Objects.requireNonNull(valueFrequencyLowerBound);
             return this;
         }
-
         public Builder valueFrequencyUpperBound(String valueFrequencyUpperBound) {
             this.valueFrequencyUpperBound = Objects.requireNonNull(valueFrequencyUpperBound);
             return this;
-        }
-        public GooglePrivacyDlpV2CategoricalStatsHistogramBucketResponse build() {
+        }        public GooglePrivacyDlpV2CategoricalStatsHistogramBucketResponse build() {
             return new GooglePrivacyDlpV2CategoricalStatsHistogramBucketResponse(bucketSize, bucketValueCount, bucketValues, valueFrequencyLowerBound, valueFrequencyUpperBound);
         }
     }

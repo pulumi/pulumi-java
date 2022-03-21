@@ -112,42 +112,37 @@ public final class IAMBindingArgs extends io.pulumi.resources.ResourceArgs {
             this.condition = condition;
             return this;
         }
-
         public Builder condition(@Nullable IAMBindingConditionArgs condition) {
             this.condition = Output.ofNullable(condition);
             return this;
         }
-
         public Builder folder(Output<String> folder) {
             this.folder = Objects.requireNonNull(folder);
             return this;
         }
-
         public Builder folder(String folder) {
             this.folder = Output.of(Objects.requireNonNull(folder));
             return this;
         }
-
         public Builder members(Output<List<String>> members) {
             this.members = Objects.requireNonNull(members);
             return this;
         }
-
         public Builder members(List<String> members) {
             this.members = Output.of(Objects.requireNonNull(members));
             return this;
         }
-
+        public Builder members(String... members) {
+            return members(List.of(members));
+        }
         public Builder role(Output<String> role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }
-
         public Builder role(String role) {
             this.role = Output.of(Objects.requireNonNull(role));
             return this;
-        }
-        public IAMBindingArgs build() {
+        }        public IAMBindingArgs build() {
             return new IAMBindingArgs(condition, folder, members, role);
         }
     }

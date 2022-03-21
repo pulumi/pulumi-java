@@ -146,62 +146,53 @@ public final class PreventionJobTriggerArgs extends io.pulumi.resources.Resource
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder inspectJob(@Nullable Output<PreventionJobTriggerInspectJobArgs> inspectJob) {
             this.inspectJob = inspectJob;
             return this;
         }
-
         public Builder inspectJob(@Nullable PreventionJobTriggerInspectJobArgs inspectJob) {
             this.inspectJob = Output.ofNullable(inspectJob);
             return this;
         }
-
         public Builder parent(Output<String> parent) {
             this.parent = Objects.requireNonNull(parent);
             return this;
         }
-
         public Builder parent(String parent) {
             this.parent = Output.of(Objects.requireNonNull(parent));
             return this;
         }
-
         public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = Output.ofNullable(status);
             return this;
         }
-
         public Builder triggers(Output<List<PreventionJobTriggerTriggerArgs>> triggers) {
             this.triggers = Objects.requireNonNull(triggers);
             return this;
         }
-
         public Builder triggers(List<PreventionJobTriggerTriggerArgs> triggers) {
             this.triggers = Output.of(Objects.requireNonNull(triggers));
             return this;
         }
-        public PreventionJobTriggerArgs build() {
+        public Builder triggers(PreventionJobTriggerTriggerArgs... triggers) {
+            return triggers(List.of(triggers));
+        }        public PreventionJobTriggerArgs build() {
             return new PreventionJobTriggerArgs(description, displayName, inspectJob, parent, status, triggers);
         }
     }

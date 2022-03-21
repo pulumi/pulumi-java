@@ -111,42 +111,34 @@ public final class AuthorityConfigX509ConfigCaOptionsGetArgs extends io.pulumi.r
             this.isCa = Objects.requireNonNull(isCa);
             return this;
         }
-
         public Builder isCa(Boolean isCa) {
             this.isCa = Output.of(Objects.requireNonNull(isCa));
             return this;
         }
-
         public Builder maxIssuerPathLength(@Nullable Output<Integer> maxIssuerPathLength) {
             this.maxIssuerPathLength = maxIssuerPathLength;
             return this;
         }
-
         public Builder maxIssuerPathLength(@Nullable Integer maxIssuerPathLength) {
             this.maxIssuerPathLength = Output.ofNullable(maxIssuerPathLength);
             return this;
         }
-
         public Builder nonCa(@Nullable Output<Boolean> nonCa) {
             this.nonCa = nonCa;
             return this;
         }
-
         public Builder nonCa(@Nullable Boolean nonCa) {
             this.nonCa = Output.ofNullable(nonCa);
             return this;
         }
-
         public Builder zeroMaxIssuerPathLength(@Nullable Output<Boolean> zeroMaxIssuerPathLength) {
             this.zeroMaxIssuerPathLength = zeroMaxIssuerPathLength;
             return this;
         }
-
         public Builder zeroMaxIssuerPathLength(@Nullable Boolean zeroMaxIssuerPathLength) {
             this.zeroMaxIssuerPathLength = Output.ofNullable(zeroMaxIssuerPathLength);
             return this;
-        }
-        public AuthorityConfigX509ConfigCaOptionsGetArgs build() {
+        }        public AuthorityConfigX509ConfigCaOptionsGetArgs build() {
             return new AuthorityConfigX509ConfigCaOptionsGetArgs(isCa, maxIssuerPathLength, nonCa, zeroMaxIssuerPathLength);
         }
     }

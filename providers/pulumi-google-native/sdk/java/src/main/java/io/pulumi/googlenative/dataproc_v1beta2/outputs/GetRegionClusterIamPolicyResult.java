@@ -88,17 +88,17 @@ public final class GetRegionClusterIamPolicyResult {
             this.bindings = Objects.requireNonNull(bindings);
             return this;
         }
-
+        public Builder bindings(BindingResponse... bindings) {
+            return bindings(List.of(bindings));
+        }
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder version(Integer version) {
             this.version = Objects.requireNonNull(version);
             return this;
-        }
-        public GetRegionClusterIamPolicyResult build() {
+        }        public GetRegionClusterIamPolicyResult build() {
             return new GetRegionClusterIamPolicyResult(bindings, etag, version);
         }
     }

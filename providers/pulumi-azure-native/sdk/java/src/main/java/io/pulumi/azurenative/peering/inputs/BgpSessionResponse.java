@@ -223,57 +223,46 @@ public final class BgpSessionResponse extends io.pulumi.resources.InvokeArgs {
             this.maxPrefixesAdvertisedV4 = maxPrefixesAdvertisedV4;
             return this;
         }
-
         public Builder maxPrefixesAdvertisedV6(@Nullable Integer maxPrefixesAdvertisedV6) {
             this.maxPrefixesAdvertisedV6 = maxPrefixesAdvertisedV6;
             return this;
         }
-
         public Builder md5AuthenticationKey(@Nullable String md5AuthenticationKey) {
             this.md5AuthenticationKey = md5AuthenticationKey;
             return this;
         }
-
         public Builder microsoftSessionIPv4Address(@Nullable String microsoftSessionIPv4Address) {
             this.microsoftSessionIPv4Address = microsoftSessionIPv4Address;
             return this;
         }
-
         public Builder microsoftSessionIPv6Address(@Nullable String microsoftSessionIPv6Address) {
             this.microsoftSessionIPv6Address = microsoftSessionIPv6Address;
             return this;
         }
-
         public Builder peerSessionIPv4Address(@Nullable String peerSessionIPv4Address) {
             this.peerSessionIPv4Address = peerSessionIPv4Address;
             return this;
         }
-
         public Builder peerSessionIPv6Address(@Nullable String peerSessionIPv6Address) {
             this.peerSessionIPv6Address = peerSessionIPv6Address;
             return this;
         }
-
         public Builder sessionPrefixV4(@Nullable String sessionPrefixV4) {
             this.sessionPrefixV4 = sessionPrefixV4;
             return this;
         }
-
         public Builder sessionPrefixV6(@Nullable String sessionPrefixV6) {
             this.sessionPrefixV6 = sessionPrefixV6;
             return this;
         }
-
         public Builder sessionStateV4(String sessionStateV4) {
             this.sessionStateV4 = Objects.requireNonNull(sessionStateV4);
             return this;
         }
-
         public Builder sessionStateV6(String sessionStateV6) {
             this.sessionStateV6 = Objects.requireNonNull(sessionStateV6);
             return this;
-        }
-        public BgpSessionResponse build() {
+        }        public BgpSessionResponse build() {
             return new BgpSessionResponse(maxPrefixesAdvertisedV4, maxPrefixesAdvertisedV6, md5AuthenticationKey, microsoftSessionIPv4Address, microsoftSessionIPv6Address, peerSessionIPv4Address, peerSessionIPv6Address, sessionPrefixV4, sessionPrefixV6, sessionStateV4, sessionStateV6);
         }
     }

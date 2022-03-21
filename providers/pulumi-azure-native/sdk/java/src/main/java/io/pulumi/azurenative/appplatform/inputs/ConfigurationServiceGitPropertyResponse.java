@@ -62,7 +62,9 @@ public final class ConfigurationServiceGitPropertyResponse extends io.pulumi.res
             this.repositories = repositories;
             return this;
         }
-        public ConfigurationServiceGitPropertyResponse build() {
+        public Builder repositories(ConfigurationServiceGitRepositoryResponse... repositories) {
+            return repositories(List.of(repositories));
+        }        public ConfigurationServiceGitPropertyResponse build() {
             return new ConfigurationServiceGitPropertyResponse(repositories);
         }
     }

@@ -81,17 +81,17 @@ public final class SchedulingPolicyFairSharePolicy {
             this.computeReservation = computeReservation;
             return this;
         }
-
         public Builder shareDecaySeconds(@Nullable Integer shareDecaySeconds) {
             this.shareDecaySeconds = shareDecaySeconds;
             return this;
         }
-
         public Builder shareDistributions(@Nullable List<SchedulingPolicyFairSharePolicyShareDistribution> shareDistributions) {
             this.shareDistributions = shareDistributions;
             return this;
         }
-        public SchedulingPolicyFairSharePolicy build() {
+        public Builder shareDistributions(SchedulingPolicyFairSharePolicyShareDistribution... shareDistributions) {
+            return shareDistributions(List.of(shareDistributions));
+        }        public SchedulingPolicyFairSharePolicy build() {
             return new SchedulingPolicyFairSharePolicy(computeReservation, shareDecaySeconds, shareDistributions);
         }
     }

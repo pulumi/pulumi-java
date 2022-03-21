@@ -67,22 +67,18 @@ public final class AppLogsConfigurationArgs extends io.pulumi.resources.Resource
             this.destination = destination;
             return this;
         }
-
         public Builder destination(@Nullable String destination) {
             this.destination = Output.ofNullable(destination);
             return this;
         }
-
         public Builder logAnalyticsConfiguration(@Nullable Output<LogAnalyticsConfigurationArgs> logAnalyticsConfiguration) {
             this.logAnalyticsConfiguration = logAnalyticsConfiguration;
             return this;
         }
-
         public Builder logAnalyticsConfiguration(@Nullable LogAnalyticsConfigurationArgs logAnalyticsConfiguration) {
             this.logAnalyticsConfiguration = Output.ofNullable(logAnalyticsConfiguration);
             return this;
-        }
-        public AppLogsConfigurationArgs build() {
+        }        public AppLogsConfigurationArgs build() {
             return new AppLogsConfigurationArgs(destination, logAnalyticsConfiguration);
         }
     }

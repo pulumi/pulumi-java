@@ -88,17 +88,14 @@ public final class GetGroupArgs extends io.pulumi.resources.InvokeArgs {
             this.groupId = Objects.requireNonNull(groupId);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder serviceName(String serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
-        }
-        public GetGroupArgs build() {
+        }        public GetGroupArgs build() {
             return new GetGroupArgs(groupId, resourceGroupName, serviceName);
         }
     }

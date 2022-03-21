@@ -52,7 +52,9 @@ public final class BucketCorsConfiguration extends io.pulumi.resources.InvokeArg
             this.corsRules = Objects.requireNonNull(corsRules);
             return this;
         }
-        public BucketCorsConfiguration build() {
+        public Builder corsRules(BucketCorsRule... corsRules) {
+            return corsRules(List.of(corsRules));
+        }        public BucketCorsConfiguration build() {
             return new BucketCorsConfiguration(corsRules);
         }
     }

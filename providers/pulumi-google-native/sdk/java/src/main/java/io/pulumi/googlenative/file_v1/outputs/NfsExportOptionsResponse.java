@@ -118,27 +118,25 @@ public final class NfsExportOptionsResponse {
             this.accessMode = Objects.requireNonNull(accessMode);
             return this;
         }
-
         public Builder anonGid(String anonGid) {
             this.anonGid = Objects.requireNonNull(anonGid);
             return this;
         }
-
         public Builder anonUid(String anonUid) {
             this.anonUid = Objects.requireNonNull(anonUid);
             return this;
         }
-
         public Builder ipRanges(List<String> ipRanges) {
             this.ipRanges = Objects.requireNonNull(ipRanges);
             return this;
         }
-
+        public Builder ipRanges(String... ipRanges) {
+            return ipRanges(List.of(ipRanges));
+        }
         public Builder squashMode(String squashMode) {
             this.squashMode = Objects.requireNonNull(squashMode);
             return this;
-        }
-        public NfsExportOptionsResponse build() {
+        }        public NfsExportOptionsResponse build() {
             return new NfsExportOptionsResponse(accessMode, anonGid, anonUid, ipRanges, squashMode);
         }
     }

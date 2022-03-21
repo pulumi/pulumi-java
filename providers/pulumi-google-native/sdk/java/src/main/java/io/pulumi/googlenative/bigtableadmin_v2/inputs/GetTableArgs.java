@@ -90,22 +90,18 @@ public final class GetTableArgs extends io.pulumi.resources.InvokeArgs {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder tableId(String tableId) {
             this.tableId = Objects.requireNonNull(tableId);
             return this;
         }
-
         public Builder view(@Nullable String view) {
             this.view = view;
             return this;
-        }
-        public GetTableArgs build() {
+        }        public GetTableArgs build() {
             return new GetTableArgs(instanceId, project, tableId, view);
         }
     }

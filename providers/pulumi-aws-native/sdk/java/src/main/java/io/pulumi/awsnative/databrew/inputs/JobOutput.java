@@ -120,32 +120,29 @@ public final class JobOutput extends io.pulumi.resources.InvokeArgs {
             this.compressionFormat = compressionFormat;
             return this;
         }
-
         public Builder format(@Nullable JobOutputFormat format) {
             this.format = format;
             return this;
         }
-
         public Builder formatOptions(@Nullable JobOutputFormatOptions formatOptions) {
             this.formatOptions = formatOptions;
             return this;
         }
-
         public Builder location(JobS3Location location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder overwrite(@Nullable Boolean overwrite) {
             this.overwrite = overwrite;
             return this;
         }
-
         public Builder partitionColumns(@Nullable List<String> partitionColumns) {
             this.partitionColumns = partitionColumns;
             return this;
         }
-        public JobOutput build() {
+        public Builder partitionColumns(String... partitionColumns) {
+            return partitionColumns(List.of(partitionColumns));
+        }        public JobOutput build() {
             return new JobOutput(compressionFormat, format, formatOptions, location, overwrite, partitionColumns);
         }
     }

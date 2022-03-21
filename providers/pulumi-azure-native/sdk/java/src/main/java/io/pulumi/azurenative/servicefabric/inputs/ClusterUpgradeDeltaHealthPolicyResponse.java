@@ -119,22 +119,18 @@ public final class ClusterUpgradeDeltaHealthPolicyResponse extends io.pulumi.res
             this.applicationDeltaHealthPolicies = applicationDeltaHealthPolicies;
             return this;
         }
-
         public Builder maxPercentDeltaUnhealthyApplications(Integer maxPercentDeltaUnhealthyApplications) {
             this.maxPercentDeltaUnhealthyApplications = Objects.requireNonNull(maxPercentDeltaUnhealthyApplications);
             return this;
         }
-
         public Builder maxPercentDeltaUnhealthyNodes(Integer maxPercentDeltaUnhealthyNodes) {
             this.maxPercentDeltaUnhealthyNodes = Objects.requireNonNull(maxPercentDeltaUnhealthyNodes);
             return this;
         }
-
         public Builder maxPercentUpgradeDomainDeltaUnhealthyNodes(Integer maxPercentUpgradeDomainDeltaUnhealthyNodes) {
             this.maxPercentUpgradeDomainDeltaUnhealthyNodes = Objects.requireNonNull(maxPercentUpgradeDomainDeltaUnhealthyNodes);
             return this;
-        }
-        public ClusterUpgradeDeltaHealthPolicyResponse build() {
+        }        public ClusterUpgradeDeltaHealthPolicyResponse build() {
             return new ClusterUpgradeDeltaHealthPolicyResponse(applicationDeltaHealthPolicies, maxPercentDeltaUnhealthyApplications, maxPercentDeltaUnhealthyNodes, maxPercentUpgradeDomainDeltaUnhealthyNodes);
         }
     }

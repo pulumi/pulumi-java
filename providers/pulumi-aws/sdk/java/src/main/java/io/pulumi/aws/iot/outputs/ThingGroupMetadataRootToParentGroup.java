@@ -55,12 +55,10 @@ public final class ThingGroupMetadataRootToParentGroup {
             this.groupArn = groupArn;
             return this;
         }
-
         public Builder groupName(@Nullable String groupName) {
             this.groupName = groupName;
             return this;
-        }
-        public ThingGroupMetadataRootToParentGroup build() {
+        }        public ThingGroupMetadataRootToParentGroup build() {
             return new ThingGroupMetadataRootToParentGroup(groupArn, groupName);
         }
     }

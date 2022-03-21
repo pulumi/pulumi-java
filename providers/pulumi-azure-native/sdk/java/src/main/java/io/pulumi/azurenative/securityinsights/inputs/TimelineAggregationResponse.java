@@ -77,12 +77,10 @@ public final class TimelineAggregationResponse extends io.pulumi.resources.Invok
             this.count = Objects.requireNonNull(count);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
-        }
-        public TimelineAggregationResponse build() {
+        }        public TimelineAggregationResponse build() {
             return new TimelineAggregationResponse(count, kind);
         }
     }

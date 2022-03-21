@@ -62,12 +62,13 @@ public final class StorageProfileArgs extends io.pulumi.resources.ResourceArgs {
             this.storageaccounts = storageaccounts;
             return this;
         }
-
         public Builder storageaccounts(@Nullable List<StorageAccountArgs> storageaccounts) {
             this.storageaccounts = Output.ofNullable(storageaccounts);
             return this;
         }
-        public StorageProfileArgs build() {
+        public Builder storageaccounts(StorageAccountArgs... storageaccounts) {
+            return storageaccounts(List.of(storageaccounts));
+        }        public StorageProfileArgs build() {
             return new StorageProfileArgs(storageaccounts);
         }
     }

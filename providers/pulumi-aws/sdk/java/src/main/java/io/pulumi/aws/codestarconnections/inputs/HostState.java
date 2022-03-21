@@ -139,62 +139,50 @@ public final class HostState extends io.pulumi.resources.ResourceArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder providerEndpoint(@Nullable Output<String> providerEndpoint) {
             this.providerEndpoint = providerEndpoint;
             return this;
         }
-
         public Builder providerEndpoint(@Nullable String providerEndpoint) {
             this.providerEndpoint = Output.ofNullable(providerEndpoint);
             return this;
         }
-
         public Builder providerType(@Nullable Output<String> providerType) {
             this.providerType = providerType;
             return this;
         }
-
         public Builder providerType(@Nullable String providerType) {
             this.providerType = Output.ofNullable(providerType);
             return this;
         }
-
         public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = Output.ofNullable(status);
             return this;
         }
-
         public Builder vpcConfiguration(@Nullable Output<HostVpcConfigurationGetArgs> vpcConfiguration) {
             this.vpcConfiguration = vpcConfiguration;
             return this;
         }
-
         public Builder vpcConfiguration(@Nullable HostVpcConfigurationGetArgs vpcConfiguration) {
             this.vpcConfiguration = Output.ofNullable(vpcConfiguration);
             return this;
-        }
-        public HostState build() {
+        }        public HostState build() {
             return new HostState(arn, name, providerEndpoint, providerType, status, vpcConfiguration);
         }
     }

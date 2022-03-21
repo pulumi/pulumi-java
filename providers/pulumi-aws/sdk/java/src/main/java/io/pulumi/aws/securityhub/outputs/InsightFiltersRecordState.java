@@ -69,12 +69,10 @@ public final class InsightFiltersRecordState {
             this.comparison = Objects.requireNonNull(comparison);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public InsightFiltersRecordState build() {
+        }        public InsightFiltersRecordState build() {
             return new InsightFiltersRecordState(comparison, value);
         }
     }

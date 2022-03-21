@@ -119,62 +119,50 @@ public final class DataSourceDatabaseConfigurationArgs extends io.pulumi.resourc
             this.aclConfiguration = aclConfiguration;
             return this;
         }
-
         public Builder aclConfiguration(@Nullable DataSourceAclConfigurationArgs aclConfiguration) {
             this.aclConfiguration = Output.ofNullable(aclConfiguration);
             return this;
         }
-
         public Builder columnConfiguration(Output<DataSourceColumnConfigurationArgs> columnConfiguration) {
             this.columnConfiguration = Objects.requireNonNull(columnConfiguration);
             return this;
         }
-
         public Builder columnConfiguration(DataSourceColumnConfigurationArgs columnConfiguration) {
             this.columnConfiguration = Output.of(Objects.requireNonNull(columnConfiguration));
             return this;
         }
-
         public Builder connectionConfiguration(Output<DataSourceConnectionConfigurationArgs> connectionConfiguration) {
             this.connectionConfiguration = Objects.requireNonNull(connectionConfiguration);
             return this;
         }
-
         public Builder connectionConfiguration(DataSourceConnectionConfigurationArgs connectionConfiguration) {
             this.connectionConfiguration = Output.of(Objects.requireNonNull(connectionConfiguration));
             return this;
         }
-
         public Builder databaseEngineType(Output<DataSourceDatabaseEngineType> databaseEngineType) {
             this.databaseEngineType = Objects.requireNonNull(databaseEngineType);
             return this;
         }
-
         public Builder databaseEngineType(DataSourceDatabaseEngineType databaseEngineType) {
             this.databaseEngineType = Output.of(Objects.requireNonNull(databaseEngineType));
             return this;
         }
-
         public Builder sqlConfiguration(@Nullable Output<DataSourceSqlConfigurationArgs> sqlConfiguration) {
             this.sqlConfiguration = sqlConfiguration;
             return this;
         }
-
         public Builder sqlConfiguration(@Nullable DataSourceSqlConfigurationArgs sqlConfiguration) {
             this.sqlConfiguration = Output.ofNullable(sqlConfiguration);
             return this;
         }
-
         public Builder vpcConfiguration(@Nullable Output<DataSourceVpcConfigurationArgs> vpcConfiguration) {
             this.vpcConfiguration = vpcConfiguration;
             return this;
         }
-
         public Builder vpcConfiguration(@Nullable DataSourceVpcConfigurationArgs vpcConfiguration) {
             this.vpcConfiguration = Output.ofNullable(vpcConfiguration);
             return this;
-        }
-        public DataSourceDatabaseConfigurationArgs build() {
+        }        public DataSourceDatabaseConfigurationArgs build() {
             return new DataSourceDatabaseConfigurationArgs(aclConfiguration, columnConfiguration, connectionConfiguration, databaseEngineType, sqlConfiguration, vpcConfiguration);
         }
     }

@@ -126,52 +126,42 @@ public final class GoogleCloudApigeeV1QueryMetricArgs extends io.pulumi.resource
             this.alias = alias;
             return this;
         }
-
         public Builder alias(@Nullable String alias) {
             this.alias = Output.ofNullable(alias);
             return this;
         }
-
         public Builder function(@Nullable Output<String> function) {
             this.function = function;
             return this;
         }
-
         public Builder function(@Nullable String function) {
             this.function = Output.ofNullable(function);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder operator(@Nullable Output<String> operator) {
             this.operator = operator;
             return this;
         }
-
         public Builder operator(@Nullable String operator) {
             this.operator = Output.ofNullable(operator);
             return this;
         }
-
         public Builder value(@Nullable Output<String> value) {
             this.value = value;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = Output.ofNullable(value);
             return this;
-        }
-        public GoogleCloudApigeeV1QueryMetricArgs build() {
+        }        public GoogleCloudApigeeV1QueryMetricArgs build() {
             return new GoogleCloudApigeeV1QueryMetricArgs(alias, function, name, operator, value);
         }
     }

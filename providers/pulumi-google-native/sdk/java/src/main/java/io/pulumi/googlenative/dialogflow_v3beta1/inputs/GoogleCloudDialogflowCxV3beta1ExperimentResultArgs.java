@@ -80,22 +80,21 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentResultArgs extends io
             this.lastUpdateTime = lastUpdateTime;
             return this;
         }
-
         public Builder lastUpdateTime(@Nullable String lastUpdateTime) {
             this.lastUpdateTime = Output.ofNullable(lastUpdateTime);
             return this;
         }
-
         public Builder versionMetrics(@Nullable Output<List<GoogleCloudDialogflowCxV3beta1ExperimentResultVersionMetricsArgs>> versionMetrics) {
             this.versionMetrics = versionMetrics;
             return this;
         }
-
         public Builder versionMetrics(@Nullable List<GoogleCloudDialogflowCxV3beta1ExperimentResultVersionMetricsArgs> versionMetrics) {
             this.versionMetrics = Output.ofNullable(versionMetrics);
             return this;
         }
-        public GoogleCloudDialogflowCxV3beta1ExperimentResultArgs build() {
+        public Builder versionMetrics(GoogleCloudDialogflowCxV3beta1ExperimentResultVersionMetricsArgs... versionMetrics) {
+            return versionMetrics(List.of(versionMetrics));
+        }        public GoogleCloudDialogflowCxV3beta1ExperimentResultArgs build() {
             return new GoogleCloudDialogflowCxV3beta1ExperimentResultArgs(lastUpdateTime, versionMetrics);
         }
     }

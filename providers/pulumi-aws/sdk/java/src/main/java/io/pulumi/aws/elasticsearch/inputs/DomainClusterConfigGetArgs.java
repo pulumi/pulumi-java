@@ -205,102 +205,82 @@ public final class DomainClusterConfigGetArgs extends io.pulumi.resources.Resour
             this.dedicatedMasterCount = dedicatedMasterCount;
             return this;
         }
-
         public Builder dedicatedMasterCount(@Nullable Integer dedicatedMasterCount) {
             this.dedicatedMasterCount = Output.ofNullable(dedicatedMasterCount);
             return this;
         }
-
         public Builder dedicatedMasterEnabled(@Nullable Output<Boolean> dedicatedMasterEnabled) {
             this.dedicatedMasterEnabled = dedicatedMasterEnabled;
             return this;
         }
-
         public Builder dedicatedMasterEnabled(@Nullable Boolean dedicatedMasterEnabled) {
             this.dedicatedMasterEnabled = Output.ofNullable(dedicatedMasterEnabled);
             return this;
         }
-
         public Builder dedicatedMasterType(@Nullable Output<String> dedicatedMasterType) {
             this.dedicatedMasterType = dedicatedMasterType;
             return this;
         }
-
         public Builder dedicatedMasterType(@Nullable String dedicatedMasterType) {
             this.dedicatedMasterType = Output.ofNullable(dedicatedMasterType);
             return this;
         }
-
         public Builder instanceCount(@Nullable Output<Integer> instanceCount) {
             this.instanceCount = instanceCount;
             return this;
         }
-
         public Builder instanceCount(@Nullable Integer instanceCount) {
             this.instanceCount = Output.ofNullable(instanceCount);
             return this;
         }
-
         public Builder instanceType(@Nullable Output<String> instanceType) {
             this.instanceType = instanceType;
             return this;
         }
-
         public Builder instanceType(@Nullable String instanceType) {
             this.instanceType = Output.ofNullable(instanceType);
             return this;
         }
-
         public Builder warmCount(@Nullable Output<Integer> warmCount) {
             this.warmCount = warmCount;
             return this;
         }
-
         public Builder warmCount(@Nullable Integer warmCount) {
             this.warmCount = Output.ofNullable(warmCount);
             return this;
         }
-
         public Builder warmEnabled(@Nullable Output<Boolean> warmEnabled) {
             this.warmEnabled = warmEnabled;
             return this;
         }
-
         public Builder warmEnabled(@Nullable Boolean warmEnabled) {
             this.warmEnabled = Output.ofNullable(warmEnabled);
             return this;
         }
-
         public Builder warmType(@Nullable Output<String> warmType) {
             this.warmType = warmType;
             return this;
         }
-
         public Builder warmType(@Nullable String warmType) {
             this.warmType = Output.ofNullable(warmType);
             return this;
         }
-
         public Builder zoneAwarenessConfig(@Nullable Output<DomainClusterConfigZoneAwarenessConfigGetArgs> zoneAwarenessConfig) {
             this.zoneAwarenessConfig = zoneAwarenessConfig;
             return this;
         }
-
         public Builder zoneAwarenessConfig(@Nullable DomainClusterConfigZoneAwarenessConfigGetArgs zoneAwarenessConfig) {
             this.zoneAwarenessConfig = Output.ofNullable(zoneAwarenessConfig);
             return this;
         }
-
         public Builder zoneAwarenessEnabled(@Nullable Output<Boolean> zoneAwarenessEnabled) {
             this.zoneAwarenessEnabled = zoneAwarenessEnabled;
             return this;
         }
-
         public Builder zoneAwarenessEnabled(@Nullable Boolean zoneAwarenessEnabled) {
             this.zoneAwarenessEnabled = Output.ofNullable(zoneAwarenessEnabled);
             return this;
-        }
-        public DomainClusterConfigGetArgs build() {
+        }        public DomainClusterConfigGetArgs build() {
             return new DomainClusterConfigGetArgs(dedicatedMasterCount, dedicatedMasterEnabled, dedicatedMasterType, instanceCount, instanceType, warmCount, warmEnabled, warmType, zoneAwarenessConfig, zoneAwarenessEnabled);
         }
     }

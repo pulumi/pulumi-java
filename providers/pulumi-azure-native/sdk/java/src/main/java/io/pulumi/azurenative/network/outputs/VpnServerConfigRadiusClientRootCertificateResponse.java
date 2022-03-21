@@ -71,12 +71,10 @@ public final class VpnServerConfigRadiusClientRootCertificateResponse {
             this.name = name;
             return this;
         }
-
         public Builder thumbprint(@Nullable String thumbprint) {
             this.thumbprint = thumbprint;
             return this;
-        }
-        public VpnServerConfigRadiusClientRootCertificateResponse build() {
+        }        public VpnServerConfigRadiusClientRootCertificateResponse build() {
             return new VpnServerConfigRadiusClientRootCertificateResponse(name, thumbprint);
         }
     }

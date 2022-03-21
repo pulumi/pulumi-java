@@ -91,17 +91,14 @@ public final class AccountAuditConfigurationAuditNotificationTarget extends io.p
             this.enabled = enabled;
             return this;
         }
-
         public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = roleArn;
             return this;
         }
-
         public Builder targetArn(@Nullable String targetArn) {
             this.targetArn = targetArn;
             return this;
-        }
-        public AccountAuditConfigurationAuditNotificationTarget build() {
+        }        public AccountAuditConfigurationAuditNotificationTarget build() {
             return new AccountAuditConfigurationAuditNotificationTarget(enabled, roleArn, targetArn);
         }
     }

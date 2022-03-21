@@ -129,62 +129,53 @@ public final class WorkflowTemplateIamPolicyArgs extends io.pulumi.resources.Res
             this.bindings = bindings;
             return this;
         }
-
         public Builder bindings(@Nullable List<BindingArgs> bindings) {
             this.bindings = Output.ofNullable(bindings);
             return this;
         }
-
+        public Builder bindings(BindingArgs... bindings) {
+            return bindings(List.of(bindings));
+        }
         public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
-
         public Builder etag(@Nullable String etag) {
             this.etag = Output.ofNullable(etag);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder version(@Nullable Output<Integer> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable Integer version) {
             this.version = Output.ofNullable(version);
             return this;
         }
-
         public Builder workflowTemplateId(Output<String> workflowTemplateId) {
             this.workflowTemplateId = Objects.requireNonNull(workflowTemplateId);
             return this;
         }
-
         public Builder workflowTemplateId(String workflowTemplateId) {
             this.workflowTemplateId = Output.of(Objects.requireNonNull(workflowTemplateId));
             return this;
-        }
-        public WorkflowTemplateIamPolicyArgs build() {
+        }        public WorkflowTemplateIamPolicyArgs build() {
             return new WorkflowTemplateIamPolicyArgs(bindings, etag, location, project, version, workflowTemplateId);
         }
     }

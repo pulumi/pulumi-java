@@ -252,67 +252,57 @@ public final class GetBackupPolicyResult {
             this.dailyBackupsToKeep = dailyBackupsToKeep;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder monthlyBackupsToKeep(@Nullable Integer monthlyBackupsToKeep) {
             this.monthlyBackupsToKeep = monthlyBackupsToKeep;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder volumeBackups(@Nullable List<VolumeBackupsResponse> volumeBackups) {
             this.volumeBackups = volumeBackups;
             return this;
         }
-
+        public Builder volumeBackups(VolumeBackupsResponse... volumeBackups) {
+            return volumeBackups(List.of(volumeBackups));
+        }
         public Builder volumesAssigned(@Nullable Integer volumesAssigned) {
             this.volumesAssigned = volumesAssigned;
             return this;
         }
-
         public Builder weeklyBackupsToKeep(@Nullable Integer weeklyBackupsToKeep) {
             this.weeklyBackupsToKeep = weeklyBackupsToKeep;
             return this;
         }
-
         public Builder yearlyBackupsToKeep(@Nullable Integer yearlyBackupsToKeep) {
             this.yearlyBackupsToKeep = yearlyBackupsToKeep;
             return this;
-        }
-        public GetBackupPolicyResult build() {
+        }        public GetBackupPolicyResult build() {
             return new GetBackupPolicyResult(dailyBackupsToKeep, enabled, id, location, monthlyBackupsToKeep, name, provisioningState, tags, type, volumeBackups, volumesAssigned, weeklyBackupsToKeep, yearlyBackupsToKeep);
         }
     }

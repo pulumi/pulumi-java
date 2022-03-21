@@ -105,22 +105,21 @@ public final class DaprComponentResponse {
             this.metadata = metadata;
             return this;
         }
-
+        public Builder metadata(DaprMetadataResponse... metadata) {
+            return metadata(List.of(metadata));
+        }
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = version;
             return this;
-        }
-        public DaprComponentResponse build() {
+        }        public DaprComponentResponse build() {
             return new DaprComponentResponse(metadata, name, type, version);
         }
     }

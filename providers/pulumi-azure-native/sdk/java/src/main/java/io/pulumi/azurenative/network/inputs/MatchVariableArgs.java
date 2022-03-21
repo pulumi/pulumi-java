@@ -80,22 +80,18 @@ public final class MatchVariableArgs extends io.pulumi.resources.ResourceArgs {
             this.selector = selector;
             return this;
         }
-
         public Builder selector(@Nullable String selector) {
             this.selector = Output.ofNullable(selector);
             return this;
         }
-
         public Builder variableName(Output<Either<String,WebApplicationFirewallMatchVariable>> variableName) {
             this.variableName = Objects.requireNonNull(variableName);
             return this;
         }
-
         public Builder variableName(Either<String,WebApplicationFirewallMatchVariable> variableName) {
             this.variableName = Output.of(Objects.requireNonNull(variableName));
             return this;
-        }
-        public MatchVariableArgs build() {
+        }        public MatchVariableArgs build() {
             return new MatchVariableArgs(selector, variableName);
         }
     }

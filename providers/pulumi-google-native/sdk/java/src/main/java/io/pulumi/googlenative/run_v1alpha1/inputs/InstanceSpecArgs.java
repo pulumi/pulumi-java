@@ -145,62 +145,56 @@ public final class InstanceSpecArgs extends io.pulumi.resources.ResourceArgs {
             this.activeDeadlineSeconds = activeDeadlineSeconds;
             return this;
         }
-
         public Builder activeDeadlineSeconds(@Nullable String activeDeadlineSeconds) {
             this.activeDeadlineSeconds = Output.ofNullable(activeDeadlineSeconds);
             return this;
         }
-
         public Builder containers(@Nullable Output<List<ContainerArgs>> containers) {
             this.containers = containers;
             return this;
         }
-
         public Builder containers(@Nullable List<ContainerArgs> containers) {
             this.containers = Output.ofNullable(containers);
             return this;
         }
-
+        public Builder containers(ContainerArgs... containers) {
+            return containers(List.of(containers));
+        }
         public Builder restartPolicy(@Nullable Output<String> restartPolicy) {
             this.restartPolicy = restartPolicy;
             return this;
         }
-
         public Builder restartPolicy(@Nullable String restartPolicy) {
             this.restartPolicy = Output.ofNullable(restartPolicy);
             return this;
         }
-
         public Builder serviceAccountName(@Nullable Output<String> serviceAccountName) {
             this.serviceAccountName = serviceAccountName;
             return this;
         }
-
         public Builder serviceAccountName(@Nullable String serviceAccountName) {
             this.serviceAccountName = Output.ofNullable(serviceAccountName);
             return this;
         }
-
         public Builder terminationGracePeriodSeconds(@Nullable Output<String> terminationGracePeriodSeconds) {
             this.terminationGracePeriodSeconds = terminationGracePeriodSeconds;
             return this;
         }
-
         public Builder terminationGracePeriodSeconds(@Nullable String terminationGracePeriodSeconds) {
             this.terminationGracePeriodSeconds = Output.ofNullable(terminationGracePeriodSeconds);
             return this;
         }
-
         public Builder volumes(@Nullable Output<List<VolumeArgs>> volumes) {
             this.volumes = volumes;
             return this;
         }
-
         public Builder volumes(@Nullable List<VolumeArgs> volumes) {
             this.volumes = Output.ofNullable(volumes);
             return this;
         }
-        public InstanceSpecArgs build() {
+        public Builder volumes(VolumeArgs... volumes) {
+            return volumes(List.of(volumes));
+        }        public InstanceSpecArgs build() {
             return new InstanceSpecArgs(activeDeadlineSeconds, containers, restartPolicy, serviceAccountName, terminationGracePeriodSeconds, volumes);
         }
     }

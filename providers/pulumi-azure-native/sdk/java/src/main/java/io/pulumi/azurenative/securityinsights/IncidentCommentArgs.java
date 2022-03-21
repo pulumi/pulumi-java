@@ -138,62 +138,50 @@ public final class IncidentCommentArgs extends io.pulumi.resources.ResourceArgs 
             this.incidentCommentId = incidentCommentId;
             return this;
         }
-
         public Builder incidentCommentId(@Nullable String incidentCommentId) {
             this.incidentCommentId = Output.ofNullable(incidentCommentId);
             return this;
         }
-
         public Builder incidentId(Output<String> incidentId) {
             this.incidentId = Objects.requireNonNull(incidentId);
             return this;
         }
-
         public Builder incidentId(String incidentId) {
             this.incidentId = Output.of(Objects.requireNonNull(incidentId));
             return this;
         }
-
         public Builder message(Output<String> message) {
             this.message = Objects.requireNonNull(message);
             return this;
         }
-
         public Builder message(String message) {
             this.message = Output.of(Objects.requireNonNull(message));
             return this;
         }
-
         public Builder operationalInsightsResourceProvider(Output<String> operationalInsightsResourceProvider) {
             this.operationalInsightsResourceProvider = Objects.requireNonNull(operationalInsightsResourceProvider);
             return this;
         }
-
         public Builder operationalInsightsResourceProvider(String operationalInsightsResourceProvider) {
             this.operationalInsightsResourceProvider = Output.of(Objects.requireNonNull(operationalInsightsResourceProvider));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder workspaceName(Output<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
-
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
             return this;
-        }
-        public IncidentCommentArgs build() {
+        }        public IncidentCommentArgs build() {
             return new IncidentCommentArgs(incidentCommentId, incidentId, message, operationalInsightsResourceProvider, resourceGroupName, workspaceName);
         }
     }

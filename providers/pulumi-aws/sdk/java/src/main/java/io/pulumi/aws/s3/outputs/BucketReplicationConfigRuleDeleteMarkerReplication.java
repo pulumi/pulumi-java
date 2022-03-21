@@ -51,8 +51,7 @@ public final class BucketReplicationConfigRuleDeleteMarkerReplication {
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
-        }
-        public BucketReplicationConfigRuleDeleteMarkerReplication build() {
+        }        public BucketReplicationConfigRuleDeleteMarkerReplication build() {
             return new BucketReplicationConfigRuleDeleteMarkerReplication(status);
         }
     }

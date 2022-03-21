@@ -126,52 +126,42 @@ public final class AKSServiceCreateRequestLivenessProbeRequirementsArgs extends 
             this.failureThreshold = failureThreshold;
             return this;
         }
-
         public Builder failureThreshold(@Nullable Integer failureThreshold) {
             this.failureThreshold = Output.ofNullable(failureThreshold);
             return this;
         }
-
         public Builder initialDelaySeconds(@Nullable Output<Integer> initialDelaySeconds) {
             this.initialDelaySeconds = initialDelaySeconds;
             return this;
         }
-
         public Builder initialDelaySeconds(@Nullable Integer initialDelaySeconds) {
             this.initialDelaySeconds = Output.ofNullable(initialDelaySeconds);
             return this;
         }
-
         public Builder periodSeconds(@Nullable Output<Integer> periodSeconds) {
             this.periodSeconds = periodSeconds;
             return this;
         }
-
         public Builder periodSeconds(@Nullable Integer periodSeconds) {
             this.periodSeconds = Output.ofNullable(periodSeconds);
             return this;
         }
-
         public Builder successThreshold(@Nullable Output<Integer> successThreshold) {
             this.successThreshold = successThreshold;
             return this;
         }
-
         public Builder successThreshold(@Nullable Integer successThreshold) {
             this.successThreshold = Output.ofNullable(successThreshold);
             return this;
         }
-
         public Builder timeoutSeconds(@Nullable Output<Integer> timeoutSeconds) {
             this.timeoutSeconds = timeoutSeconds;
             return this;
         }
-
         public Builder timeoutSeconds(@Nullable Integer timeoutSeconds) {
             this.timeoutSeconds = Output.ofNullable(timeoutSeconds);
             return this;
-        }
-        public AKSServiceCreateRequestLivenessProbeRequirementsArgs build() {
+        }        public AKSServiceCreateRequestLivenessProbeRequirementsArgs build() {
             return new AKSServiceCreateRequestLivenessProbeRequirementsArgs(failureThreshold, initialDelaySeconds, periodSeconds, successThreshold, timeoutSeconds);
         }
     }

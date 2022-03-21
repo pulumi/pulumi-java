@@ -108,42 +108,34 @@ public final class FixedScaleSettingsArgs extends io.pulumi.resources.ResourceAr
             this.nodeDeallocationOption = nodeDeallocationOption;
             return this;
         }
-
         public Builder nodeDeallocationOption(@Nullable ComputeNodeDeallocationOption nodeDeallocationOption) {
             this.nodeDeallocationOption = Output.ofNullable(nodeDeallocationOption);
             return this;
         }
-
         public Builder resizeTimeout(@Nullable Output<String> resizeTimeout) {
             this.resizeTimeout = resizeTimeout;
             return this;
         }
-
         public Builder resizeTimeout(@Nullable String resizeTimeout) {
             this.resizeTimeout = Output.ofNullable(resizeTimeout);
             return this;
         }
-
         public Builder targetDedicatedNodes(@Nullable Output<Integer> targetDedicatedNodes) {
             this.targetDedicatedNodes = targetDedicatedNodes;
             return this;
         }
-
         public Builder targetDedicatedNodes(@Nullable Integer targetDedicatedNodes) {
             this.targetDedicatedNodes = Output.ofNullable(targetDedicatedNodes);
             return this;
         }
-
         public Builder targetLowPriorityNodes(@Nullable Output<Integer> targetLowPriorityNodes) {
             this.targetLowPriorityNodes = targetLowPriorityNodes;
             return this;
         }
-
         public Builder targetLowPriorityNodes(@Nullable Integer targetLowPriorityNodes) {
             this.targetLowPriorityNodes = Output.ofNullable(targetLowPriorityNodes);
             return this;
-        }
-        public FixedScaleSettingsArgs build() {
+        }        public FixedScaleSettingsArgs build() {
             return new FixedScaleSettingsArgs(nodeDeallocationOption, resizeTimeout, targetDedicatedNodes, targetLowPriorityNodes);
         }
     }

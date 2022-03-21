@@ -43,8 +43,7 @@ public final class ConnectorPlugin {
         public Builder customPlugin(ConnectorCustomPlugin customPlugin) {
             this.customPlugin = Objects.requireNonNull(customPlugin);
             return this;
-        }
-        public ConnectorPlugin build() {
+        }        public ConnectorPlugin build() {
             return new ConnectorPlugin(customPlugin);
         }
     }

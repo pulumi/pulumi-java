@@ -133,52 +133,45 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
             this.collection = Objects.requireNonNull(collection);
             return this;
         }
-
         public Builder collection(String collection) {
             this.collection = Output.of(Objects.requireNonNull(collection));
             return this;
         }
-
         public Builder database(@Nullable Output<String> database) {
             this.database = database;
             return this;
         }
-
         public Builder database(@Nullable String database) {
             this.database = Output.ofNullable(database);
             return this;
         }
-
         public Builder fields(Output<List<IndexFieldArgs>> fields) {
             this.fields = Objects.requireNonNull(fields);
             return this;
         }
-
         public Builder fields(List<IndexFieldArgs> fields) {
             this.fields = Output.of(Objects.requireNonNull(fields));
             return this;
         }
-
+        public Builder fields(IndexFieldArgs... fields) {
+            return fields(List.of(fields));
+        }
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder queryScope(@Nullable Output<String> queryScope) {
             this.queryScope = queryScope;
             return this;
         }
-
         public Builder queryScope(@Nullable String queryScope) {
             this.queryScope = Output.ofNullable(queryScope);
             return this;
-        }
-        public IndexArgs build() {
+        }        public IndexArgs build() {
             return new IndexArgs(collection, database, fields, project, queryScope);
         }
     }

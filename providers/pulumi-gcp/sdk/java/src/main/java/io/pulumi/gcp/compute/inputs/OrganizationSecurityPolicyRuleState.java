@@ -217,102 +217,88 @@ public final class OrganizationSecurityPolicyRuleState extends io.pulumi.resourc
             this.action = action;
             return this;
         }
-
         public Builder action(@Nullable String action) {
             this.action = Output.ofNullable(action);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder direction(@Nullable Output<String> direction) {
             this.direction = direction;
             return this;
         }
-
         public Builder direction(@Nullable String direction) {
             this.direction = Output.ofNullable(direction);
             return this;
         }
-
         public Builder enableLogging(@Nullable Output<Boolean> enableLogging) {
             this.enableLogging = enableLogging;
             return this;
         }
-
         public Builder enableLogging(@Nullable Boolean enableLogging) {
             this.enableLogging = Output.ofNullable(enableLogging);
             return this;
         }
-
         public Builder match(@Nullable Output<OrganizationSecurityPolicyRuleMatchGetArgs> match) {
             this.match = match;
             return this;
         }
-
         public Builder match(@Nullable OrganizationSecurityPolicyRuleMatchGetArgs match) {
             this.match = Output.ofNullable(match);
             return this;
         }
-
         public Builder policyId(@Nullable Output<String> policyId) {
             this.policyId = policyId;
             return this;
         }
-
         public Builder policyId(@Nullable String policyId) {
             this.policyId = Output.ofNullable(policyId);
             return this;
         }
-
         public Builder preview(@Nullable Output<Boolean> preview) {
             this.preview = preview;
             return this;
         }
-
         public Builder preview(@Nullable Boolean preview) {
             this.preview = Output.ofNullable(preview);
             return this;
         }
-
         public Builder priority(@Nullable Output<Integer> priority) {
             this.priority = priority;
             return this;
         }
-
         public Builder priority(@Nullable Integer priority) {
             this.priority = Output.ofNullable(priority);
             return this;
         }
-
         public Builder targetResources(@Nullable Output<List<String>> targetResources) {
             this.targetResources = targetResources;
             return this;
         }
-
         public Builder targetResources(@Nullable List<String> targetResources) {
             this.targetResources = Output.ofNullable(targetResources);
             return this;
         }
-
+        public Builder targetResources(String... targetResources) {
+            return targetResources(List.of(targetResources));
+        }
         public Builder targetServiceAccounts(@Nullable Output<List<String>> targetServiceAccounts) {
             this.targetServiceAccounts = targetServiceAccounts;
             return this;
         }
-
         public Builder targetServiceAccounts(@Nullable List<String> targetServiceAccounts) {
             this.targetServiceAccounts = Output.ofNullable(targetServiceAccounts);
             return this;
         }
-        public OrganizationSecurityPolicyRuleState build() {
+        public Builder targetServiceAccounts(String... targetServiceAccounts) {
+            return targetServiceAccounts(List.of(targetServiceAccounts));
+        }        public OrganizationSecurityPolicyRuleState build() {
             return new OrganizationSecurityPolicyRuleState(action, description, direction, enableLogging, match, policyId, preview, priority, targetResources, targetServiceAccounts);
         }
     }

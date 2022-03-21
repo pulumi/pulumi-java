@@ -100,32 +100,26 @@ public final class RegionNetworkEndpointGroupCloudRunArgs extends io.pulumi.reso
             this.service = service;
             return this;
         }
-
         public Builder service(@Nullable String service) {
             this.service = Output.ofNullable(service);
             return this;
         }
-
         public Builder tag(@Nullable Output<String> tag) {
             this.tag = tag;
             return this;
         }
-
         public Builder tag(@Nullable String tag) {
             this.tag = Output.ofNullable(tag);
             return this;
         }
-
         public Builder urlMask(@Nullable Output<String> urlMask) {
             this.urlMask = urlMask;
             return this;
         }
-
         public Builder urlMask(@Nullable String urlMask) {
             this.urlMask = Output.ofNullable(urlMask);
             return this;
-        }
-        public RegionNetworkEndpointGroupCloudRunArgs build() {
+        }        public RegionNetworkEndpointGroupCloudRunArgs build() {
             return new RegionNetworkEndpointGroupCloudRunArgs(service, tag, urlMask);
         }
     }

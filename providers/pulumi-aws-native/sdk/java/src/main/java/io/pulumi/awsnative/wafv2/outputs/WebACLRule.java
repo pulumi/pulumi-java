@@ -119,42 +119,37 @@ public final class WebACLRule {
             this.action = action;
             return this;
         }
-
         public Builder captchaConfig(@Nullable WebACLCaptchaConfig captchaConfig) {
             this.captchaConfig = captchaConfig;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder overrideAction(@Nullable WebACLOverrideAction overrideAction) {
             this.overrideAction = overrideAction;
             return this;
         }
-
         public Builder priority(Integer priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
-
         public Builder ruleLabels(@Nullable List<WebACLLabel> ruleLabels) {
             this.ruleLabels = ruleLabels;
             return this;
         }
-
+        public Builder ruleLabels(WebACLLabel... ruleLabels) {
+            return ruleLabels(List.of(ruleLabels));
+        }
         public Builder statement(WebACLStatement statement) {
             this.statement = Objects.requireNonNull(statement);
             return this;
         }
-
         public Builder visibilityConfig(WebACLVisibilityConfig visibilityConfig) {
             this.visibilityConfig = Objects.requireNonNull(visibilityConfig);
             return this;
-        }
-        public WebACLRule build() {
+        }        public WebACLRule build() {
             return new WebACLRule(action, captchaConfig, name, overrideAction, priority, ruleLabels, statement, visibilityConfig);
         }
     }

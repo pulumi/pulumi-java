@@ -91,22 +91,18 @@ public final class PipelineLambda extends io.pulumi.resources.InvokeArgs {
             this.batchSize = Objects.requireNonNull(batchSize);
             return this;
         }
-
         public Builder lambdaName(String lambdaName) {
             this.lambdaName = Objects.requireNonNull(lambdaName);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder next(@Nullable String next) {
             this.next = next;
             return this;
-        }
-        public PipelineLambda build() {
+        }        public PipelineLambda build() {
             return new PipelineLambda(batchSize, lambdaName, name, next);
         }
     }

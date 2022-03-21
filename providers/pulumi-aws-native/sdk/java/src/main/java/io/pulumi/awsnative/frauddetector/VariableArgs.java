@@ -159,72 +159,61 @@ public final class VariableArgs extends io.pulumi.resources.ResourceArgs {
             this.dataSource = Objects.requireNonNull(dataSource);
             return this;
         }
-
         public Builder dataSource(VariableDataSource dataSource) {
             this.dataSource = Output.of(Objects.requireNonNull(dataSource));
             return this;
         }
-
         public Builder dataType(Output<VariableDataType> dataType) {
             this.dataType = Objects.requireNonNull(dataType);
             return this;
         }
-
         public Builder dataType(VariableDataType dataType) {
             this.dataType = Output.of(Objects.requireNonNull(dataType));
             return this;
         }
-
         public Builder defaultValue(Output<String> defaultValue) {
             this.defaultValue = Objects.requireNonNull(defaultValue);
             return this;
         }
-
         public Builder defaultValue(String defaultValue) {
             this.defaultValue = Output.of(Objects.requireNonNull(defaultValue));
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<VariableTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<VariableTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
+        public Builder tags(VariableTagArgs... tags) {
+            return tags(List.of(tags));
+        }
         public Builder variableType(@Nullable Output<VariableType> variableType) {
             this.variableType = variableType;
             return this;
         }
-
         public Builder variableType(@Nullable VariableType variableType) {
             this.variableType = Output.ofNullable(variableType);
             return this;
-        }
-        public VariableArgs build() {
+        }        public VariableArgs build() {
             return new VariableArgs(dataSource, dataType, defaultValue, description, name, tags, variableType);
         }
     }

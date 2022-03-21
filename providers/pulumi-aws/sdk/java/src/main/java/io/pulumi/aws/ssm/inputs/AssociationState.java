@@ -271,142 +271,117 @@ public final class AssociationState extends io.pulumi.resources.ResourceArgs {
             this.applyOnlyAtCronInterval = applyOnlyAtCronInterval;
             return this;
         }
-
         public Builder applyOnlyAtCronInterval(@Nullable Boolean applyOnlyAtCronInterval) {
             this.applyOnlyAtCronInterval = Output.ofNullable(applyOnlyAtCronInterval);
             return this;
         }
-
         public Builder associationId(@Nullable Output<String> associationId) {
             this.associationId = associationId;
             return this;
         }
-
         public Builder associationId(@Nullable String associationId) {
             this.associationId = Output.ofNullable(associationId);
             return this;
         }
-
         public Builder associationName(@Nullable Output<String> associationName) {
             this.associationName = associationName;
             return this;
         }
-
         public Builder associationName(@Nullable String associationName) {
             this.associationName = Output.ofNullable(associationName);
             return this;
         }
-
         public Builder automationTargetParameterName(@Nullable Output<String> automationTargetParameterName) {
             this.automationTargetParameterName = automationTargetParameterName;
             return this;
         }
-
         public Builder automationTargetParameterName(@Nullable String automationTargetParameterName) {
             this.automationTargetParameterName = Output.ofNullable(automationTargetParameterName);
             return this;
         }
-
         public Builder complianceSeverity(@Nullable Output<String> complianceSeverity) {
             this.complianceSeverity = complianceSeverity;
             return this;
         }
-
         public Builder complianceSeverity(@Nullable String complianceSeverity) {
             this.complianceSeverity = Output.ofNullable(complianceSeverity);
             return this;
         }
-
         public Builder documentVersion(@Nullable Output<String> documentVersion) {
             this.documentVersion = documentVersion;
             return this;
         }
-
         public Builder documentVersion(@Nullable String documentVersion) {
             this.documentVersion = Output.ofNullable(documentVersion);
             return this;
         }
-
         public Builder instanceId(@Nullable Output<String> instanceId) {
             this.instanceId = instanceId;
             return this;
         }
-
         public Builder instanceId(@Nullable String instanceId) {
             this.instanceId = Output.ofNullable(instanceId);
             return this;
         }
-
         public Builder maxConcurrency(@Nullable Output<String> maxConcurrency) {
             this.maxConcurrency = maxConcurrency;
             return this;
         }
-
         public Builder maxConcurrency(@Nullable String maxConcurrency) {
             this.maxConcurrency = Output.ofNullable(maxConcurrency);
             return this;
         }
-
         public Builder maxErrors(@Nullable Output<String> maxErrors) {
             this.maxErrors = maxErrors;
             return this;
         }
-
         public Builder maxErrors(@Nullable String maxErrors) {
             this.maxErrors = Output.ofNullable(maxErrors);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder outputLocation(@Nullable Output<AssociationOutputLocationGetArgs> outputLocation) {
             this.outputLocation = outputLocation;
             return this;
         }
-
         public Builder outputLocation(@Nullable AssociationOutputLocationGetArgs outputLocation) {
             this.outputLocation = Output.ofNullable(outputLocation);
             return this;
         }
-
         public Builder parameters(@Nullable Output<Map<String,String>> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder parameters(@Nullable Map<String,String> parameters) {
             this.parameters = Output.ofNullable(parameters);
             return this;
         }
-
         public Builder scheduleExpression(@Nullable Output<String> scheduleExpression) {
             this.scheduleExpression = scheduleExpression;
             return this;
         }
-
         public Builder scheduleExpression(@Nullable String scheduleExpression) {
             this.scheduleExpression = Output.ofNullable(scheduleExpression);
             return this;
         }
-
         public Builder targets(@Nullable Output<List<AssociationTargetGetArgs>> targets) {
             this.targets = targets;
             return this;
         }
-
         public Builder targets(@Nullable List<AssociationTargetGetArgs> targets) {
             this.targets = Output.ofNullable(targets);
             return this;
         }
-        public AssociationState build() {
+        public Builder targets(AssociationTargetGetArgs... targets) {
+            return targets(List.of(targets));
+        }        public AssociationState build() {
             return new AssociationState(applyOnlyAtCronInterval, associationId, associationName, automationTargetParameterName, complianceSeverity, documentVersion, instanceId, maxConcurrency, maxErrors, name, outputLocation, parameters, scheduleExpression, targets);
         }
     }

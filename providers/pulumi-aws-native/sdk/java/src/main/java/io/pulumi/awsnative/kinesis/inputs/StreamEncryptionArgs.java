@@ -78,22 +78,18 @@ public final class StreamEncryptionArgs extends io.pulumi.resources.ResourceArgs
             this.encryptionType = Objects.requireNonNull(encryptionType);
             return this;
         }
-
         public Builder encryptionType(StreamEncryptionEncryptionType encryptionType) {
             this.encryptionType = Output.of(Objects.requireNonNull(encryptionType));
             return this;
         }
-
         public Builder keyId(Output<String> keyId) {
             this.keyId = Objects.requireNonNull(keyId);
             return this;
         }
-
         public Builder keyId(String keyId) {
             this.keyId = Output.of(Objects.requireNonNull(keyId));
             return this;
-        }
-        public StreamEncryptionArgs build() {
+        }        public StreamEncryptionArgs build() {
             return new StreamEncryptionArgs(encryptionType, keyId);
         }
     }

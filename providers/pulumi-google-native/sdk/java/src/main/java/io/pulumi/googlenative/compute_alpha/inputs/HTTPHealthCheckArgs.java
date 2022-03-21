@@ -174,82 +174,66 @@ public final class HTTPHealthCheckArgs extends io.pulumi.resources.ResourceArgs 
             this.host = host;
             return this;
         }
-
         public Builder host(@Nullable String host) {
             this.host = Output.ofNullable(host);
             return this;
         }
-
         public Builder port(@Nullable Output<Integer> port) {
             this.port = port;
             return this;
         }
-
         public Builder port(@Nullable Integer port) {
             this.port = Output.ofNullable(port);
             return this;
         }
-
         public Builder portName(@Nullable Output<String> portName) {
             this.portName = portName;
             return this;
         }
-
         public Builder portName(@Nullable String portName) {
             this.portName = Output.ofNullable(portName);
             return this;
         }
-
         public Builder portSpecification(@Nullable Output<HTTPHealthCheckPortSpecification> portSpecification) {
             this.portSpecification = portSpecification;
             return this;
         }
-
         public Builder portSpecification(@Nullable HTTPHealthCheckPortSpecification portSpecification) {
             this.portSpecification = Output.ofNullable(portSpecification);
             return this;
         }
-
         public Builder proxyHeader(@Nullable Output<HTTPHealthCheckProxyHeader> proxyHeader) {
             this.proxyHeader = proxyHeader;
             return this;
         }
-
         public Builder proxyHeader(@Nullable HTTPHealthCheckProxyHeader proxyHeader) {
             this.proxyHeader = Output.ofNullable(proxyHeader);
             return this;
         }
-
         public Builder requestPath(@Nullable Output<String> requestPath) {
             this.requestPath = requestPath;
             return this;
         }
-
         public Builder requestPath(@Nullable String requestPath) {
             this.requestPath = Output.ofNullable(requestPath);
             return this;
         }
-
         public Builder response(@Nullable Output<String> response) {
             this.response = response;
             return this;
         }
-
         public Builder response(@Nullable String response) {
             this.response = Output.ofNullable(response);
             return this;
         }
-
         public Builder weightReportMode(@Nullable Output<HTTPHealthCheckWeightReportMode> weightReportMode) {
             this.weightReportMode = weightReportMode;
             return this;
         }
-
         public Builder weightReportMode(@Nullable HTTPHealthCheckWeightReportMode weightReportMode) {
             this.weightReportMode = Output.ofNullable(weightReportMode);
             return this;
-        }
-        public HTTPHealthCheckArgs build() {
+        }        public HTTPHealthCheckArgs build() {
             return new HTTPHealthCheckArgs(host, port, portName, portSpecification, proxyHeader, requestPath, response, weightReportMode);
         }
     }

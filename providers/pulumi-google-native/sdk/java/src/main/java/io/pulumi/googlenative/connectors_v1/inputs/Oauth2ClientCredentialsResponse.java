@@ -77,12 +77,10 @@ public final class Oauth2ClientCredentialsResponse extends io.pulumi.resources.I
             this.clientId = Objects.requireNonNull(clientId);
             return this;
         }
-
         public Builder clientSecret(SecretResponse clientSecret) {
             this.clientSecret = Objects.requireNonNull(clientSecret);
             return this;
-        }
-        public Oauth2ClientCredentialsResponse build() {
+        }        public Oauth2ClientCredentialsResponse build() {
             return new Oauth2ClientCredentialsResponse(clientId, clientSecret);
         }
     }

@@ -124,52 +124,42 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder accountName(String accountName) {
             this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
-
         public Builder kind(Output<Either<String,TriggerKind>> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder kind(Either<String,TriggerKind> kind) {
             this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder shareSubscriptionName(Output<String> shareSubscriptionName) {
             this.shareSubscriptionName = Objects.requireNonNull(shareSubscriptionName);
             return this;
         }
-
         public Builder shareSubscriptionName(String shareSubscriptionName) {
             this.shareSubscriptionName = Output.of(Objects.requireNonNull(shareSubscriptionName));
             return this;
         }
-
         public Builder triggerName(@Nullable Output<String> triggerName) {
             this.triggerName = triggerName;
             return this;
         }
-
         public Builder triggerName(@Nullable String triggerName) {
             this.triggerName = Output.ofNullable(triggerName);
             return this;
-        }
-        public TriggerArgs build() {
+        }        public TriggerArgs build() {
             return new TriggerArgs(accountName, kind, resourceGroupName, shareSubscriptionName, triggerName);
         }
     }

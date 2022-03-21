@@ -70,12 +70,10 @@ public final class ConnectToTargetSqlMISyncTaskInputResponse {
             this.azureApp = Objects.requireNonNull(azureApp);
             return this;
         }
-
         public Builder targetConnectionInfo(MiSqlConnectionInfoResponse targetConnectionInfo) {
             this.targetConnectionInfo = Objects.requireNonNull(targetConnectionInfo);
             return this;
-        }
-        public ConnectToTargetSqlMISyncTaskInputResponse build() {
+        }        public ConnectToTargetSqlMISyncTaskInputResponse build() {
             return new ConnectToTargetSqlMISyncTaskInputResponse(azureApp, targetConnectionInfo);
         }
     }

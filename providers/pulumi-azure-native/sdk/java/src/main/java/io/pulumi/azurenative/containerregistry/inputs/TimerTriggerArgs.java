@@ -96,32 +96,26 @@ public final class TimerTriggerArgs extends io.pulumi.resources.ResourceArgs {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder schedule(Output<String> schedule) {
             this.schedule = Objects.requireNonNull(schedule);
             return this;
         }
-
         public Builder schedule(String schedule) {
             this.schedule = Output.of(Objects.requireNonNull(schedule));
             return this;
         }
-
         public Builder status(@Nullable Output<Either<String,TriggerStatus>> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable Either<String,TriggerStatus> status) {
             this.status = Output.ofNullable(status);
             return this;
-        }
-        public TimerTriggerArgs build() {
+        }        public TimerTriggerArgs build() {
             return new TimerTriggerArgs(name, schedule, status);
         }
     }

@@ -71,22 +71,18 @@ public final class CertificateAuthorityOcspConfigurationArgs extends io.pulumi.r
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
         }
-
         public Builder ocspCustomCname(@Nullable Output<String> ocspCustomCname) {
             this.ocspCustomCname = ocspCustomCname;
             return this;
         }
-
         public Builder ocspCustomCname(@Nullable String ocspCustomCname) {
             this.ocspCustomCname = Output.ofNullable(ocspCustomCname);
             return this;
-        }
-        public CertificateAuthorityOcspConfigurationArgs build() {
+        }        public CertificateAuthorityOcspConfigurationArgs build() {
             return new CertificateAuthorityOcspConfigurationArgs(enabled, ocspCustomCname);
         }
     }

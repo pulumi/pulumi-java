@@ -88,17 +88,14 @@ public final class GetFailoverGroupArgs extends io.pulumi.resources.InvokeArgs {
             this.failoverGroupName = Objects.requireNonNull(failoverGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder serverName(String serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
-        }
-        public GetFailoverGroupArgs build() {
+        }        public GetFailoverGroupArgs build() {
             return new GetFailoverGroupArgs(failoverGroupName, resourceGroupName, serverName);
         }
     }

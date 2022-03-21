@@ -262,67 +262,63 @@ public final class HDInsightPigActivityResponse extends io.pulumi.resources.Invo
             this.arguments = arguments;
             return this;
         }
-
         public Builder defines(@Nullable Map<String,Object> defines) {
             this.defines = defines;
             return this;
         }
-
         public Builder dependsOn(@Nullable List<ActivityDependencyResponse> dependsOn) {
             this.dependsOn = dependsOn;
             return this;
         }
-
+        public Builder dependsOn(ActivityDependencyResponse... dependsOn) {
+            return dependsOn(List.of(dependsOn));
+        }
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder getDebugInfo(@Nullable String getDebugInfo) {
             this.getDebugInfo = getDebugInfo;
             return this;
         }
-
         public Builder linkedServiceName(@Nullable LinkedServiceReferenceResponse linkedServiceName) {
             this.linkedServiceName = linkedServiceName;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder policy(@Nullable ActivityPolicyResponse policy) {
             this.policy = policy;
             return this;
         }
-
         public Builder scriptLinkedService(@Nullable LinkedServiceReferenceResponse scriptLinkedService) {
             this.scriptLinkedService = scriptLinkedService;
             return this;
         }
-
         public Builder scriptPath(@Nullable Object scriptPath) {
             this.scriptPath = scriptPath;
             return this;
         }
-
         public Builder storageLinkedServices(@Nullable List<LinkedServiceReferenceResponse> storageLinkedServices) {
             this.storageLinkedServices = storageLinkedServices;
             return this;
         }
-
+        public Builder storageLinkedServices(LinkedServiceReferenceResponse... storageLinkedServices) {
+            return storageLinkedServices(List.of(storageLinkedServices));
+        }
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder userProperties(@Nullable List<UserPropertyResponse> userProperties) {
             this.userProperties = userProperties;
             return this;
         }
-        public HDInsightPigActivityResponse build() {
+        public Builder userProperties(UserPropertyResponse... userProperties) {
+            return userProperties(List.of(userProperties));
+        }        public HDInsightPigActivityResponse build() {
             return new HDInsightPigActivityResponse(arguments, defines, dependsOn, description, getDebugInfo, linkedServiceName, name, policy, scriptLinkedService, scriptPath, storageLinkedServices, type, userProperties);
         }
     }

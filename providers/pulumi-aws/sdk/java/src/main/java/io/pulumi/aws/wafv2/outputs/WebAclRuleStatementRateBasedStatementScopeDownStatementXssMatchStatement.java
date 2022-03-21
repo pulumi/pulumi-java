@@ -73,12 +73,13 @@ public final class WebAclRuleStatementRateBasedStatementScopeDownStatementXssMat
             this.fieldToMatch = fieldToMatch;
             return this;
         }
-
         public Builder textTransformations(List<WebAclRuleStatementRateBasedStatementScopeDownStatementXssMatchStatementTextTransformation> textTransformations) {
             this.textTransformations = Objects.requireNonNull(textTransformations);
             return this;
         }
-        public WebAclRuleStatementRateBasedStatementScopeDownStatementXssMatchStatement build() {
+        public Builder textTransformations(WebAclRuleStatementRateBasedStatementScopeDownStatementXssMatchStatementTextTransformation... textTransformations) {
+            return textTransformations(List.of(textTransformations));
+        }        public WebAclRuleStatementRateBasedStatementScopeDownStatementXssMatchStatement build() {
             return new WebAclRuleStatementRateBasedStatementScopeDownStatementXssMatchStatement(fieldToMatch, textTransformations);
         }
     }

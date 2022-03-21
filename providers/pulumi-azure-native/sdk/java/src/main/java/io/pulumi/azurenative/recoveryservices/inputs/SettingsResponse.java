@@ -96,17 +96,14 @@ public final class SettingsResponse extends io.pulumi.resources.InvokeArgs {
             this.isCompression = isCompression;
             return this;
         }
-
         public Builder issqlcompression(@Nullable Boolean issqlcompression) {
             this.issqlcompression = issqlcompression;
             return this;
         }
-
         public Builder timeZone(@Nullable String timeZone) {
             this.timeZone = timeZone;
             return this;
-        }
-        public SettingsResponse build() {
+        }        public SettingsResponse build() {
             return new SettingsResponse(isCompression, issqlcompression, timeZone);
         }
     }

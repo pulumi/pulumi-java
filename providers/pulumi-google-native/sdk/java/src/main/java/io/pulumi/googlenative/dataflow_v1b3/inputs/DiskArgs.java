@@ -95,32 +95,26 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
             this.diskType = diskType;
             return this;
         }
-
         public Builder diskType(@Nullable String diskType) {
             this.diskType = Output.ofNullable(diskType);
             return this;
         }
-
         public Builder mountPoint(@Nullable Output<String> mountPoint) {
             this.mountPoint = mountPoint;
             return this;
         }
-
         public Builder mountPoint(@Nullable String mountPoint) {
             this.mountPoint = Output.ofNullable(mountPoint);
             return this;
         }
-
         public Builder sizeGb(@Nullable Output<Integer> sizeGb) {
             this.sizeGb = sizeGb;
             return this;
         }
-
         public Builder sizeGb(@Nullable Integer sizeGb) {
             this.sizeGb = Output.ofNullable(sizeGb);
             return this;
-        }
-        public DiskArgs build() {
+        }        public DiskArgs build() {
             return new DiskArgs(diskType, mountPoint, sizeGb);
         }
     }

@@ -109,42 +109,34 @@ public final class ThingTypeArgs extends io.pulumi.resources.ResourceArgs {
             this.deprecated = deprecated;
             return this;
         }
-
         public Builder deprecated(@Nullable Boolean deprecated) {
             this.deprecated = Output.ofNullable(deprecated);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder properties(@Nullable Output<ThingTypePropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder properties(@Nullable ThingTypePropertiesArgs properties) {
             this.properties = Output.ofNullable(properties);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public ThingTypeArgs build() {
+        }        public ThingTypeArgs build() {
             return new ThingTypeArgs(deprecated, name, properties, tags);
         }
     }

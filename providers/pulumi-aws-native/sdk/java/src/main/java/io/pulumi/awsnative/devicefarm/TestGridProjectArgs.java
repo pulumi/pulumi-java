@@ -93,42 +93,37 @@ public final class TestGridProjectArgs extends io.pulumi.resources.ResourceArgs 
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<TestGridProjectTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<TestGridProjectTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
+        public Builder tags(TestGridProjectTagArgs... tags) {
+            return tags(List.of(tags));
+        }
         public Builder vpcConfig(@Nullable Output<TestGridProjectVpcConfigArgs> vpcConfig) {
             this.vpcConfig = vpcConfig;
             return this;
         }
-
         public Builder vpcConfig(@Nullable TestGridProjectVpcConfigArgs vpcConfig) {
             this.vpcConfig = Output.ofNullable(vpcConfig);
             return this;
-        }
-        public TestGridProjectArgs build() {
+        }        public TestGridProjectArgs build() {
             return new TestGridProjectArgs(description, name, tags, vpcConfig);
         }
     }

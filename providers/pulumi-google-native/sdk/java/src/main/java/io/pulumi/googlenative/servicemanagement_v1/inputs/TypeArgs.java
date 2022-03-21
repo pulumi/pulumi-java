@@ -147,62 +147,59 @@ public final class TypeArgs extends io.pulumi.resources.ResourceArgs {
             this.fields = fields;
             return this;
         }
-
         public Builder fields(@Nullable List<FieldArgs> fields) {
             this.fields = Output.ofNullable(fields);
             return this;
         }
-
+        public Builder fields(FieldArgs... fields) {
+            return fields(List.of(fields));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder oneofs(@Nullable Output<List<String>> oneofs) {
             this.oneofs = oneofs;
             return this;
         }
-
         public Builder oneofs(@Nullable List<String> oneofs) {
             this.oneofs = Output.ofNullable(oneofs);
             return this;
         }
-
+        public Builder oneofs(String... oneofs) {
+            return oneofs(List.of(oneofs));
+        }
         public Builder options(@Nullable Output<List<OptionArgs>> options) {
             this.options = options;
             return this;
         }
-
         public Builder options(@Nullable List<OptionArgs> options) {
             this.options = Output.ofNullable(options);
             return this;
         }
-
+        public Builder options(OptionArgs... options) {
+            return options(List.of(options));
+        }
         public Builder sourceContext(@Nullable Output<SourceContextArgs> sourceContext) {
             this.sourceContext = sourceContext;
             return this;
         }
-
         public Builder sourceContext(@Nullable SourceContextArgs sourceContext) {
             this.sourceContext = Output.ofNullable(sourceContext);
             return this;
         }
-
         public Builder syntax(@Nullable Output<TypeSyntax> syntax) {
             this.syntax = syntax;
             return this;
         }
-
         public Builder syntax(@Nullable TypeSyntax syntax) {
             this.syntax = Output.ofNullable(syntax);
             return this;
-        }
-        public TypeArgs build() {
+        }        public TypeArgs build() {
             return new TypeArgs(fields, name, oneofs, options, sourceContext, syntax);
         }
     }

@@ -56,12 +56,10 @@ public final class TemplateSourceEntity {
             this.sourceAnalysis = sourceAnalysis;
             return this;
         }
-
         public Builder sourceTemplate(@Nullable TemplateSourceTemplate sourceTemplate) {
             this.sourceTemplate = sourceTemplate;
             return this;
-        }
-        public TemplateSourceEntity build() {
+        }        public TemplateSourceEntity build() {
             return new TemplateSourceEntity(sourceAnalysis, sourceTemplate);
         }
     }

@@ -74,22 +74,18 @@ public final class DatasetTagsItemArgs extends io.pulumi.resources.ResourceArgs 
             this.tagKey = tagKey;
             return this;
         }
-
         public Builder tagKey(@Nullable String tagKey) {
             this.tagKey = Output.ofNullable(tagKey);
             return this;
         }
-
         public Builder tagValue(@Nullable Output<String> tagValue) {
             this.tagValue = tagValue;
             return this;
         }
-
         public Builder tagValue(@Nullable String tagValue) {
             this.tagValue = Output.ofNullable(tagValue);
             return this;
-        }
-        public DatasetTagsItemArgs build() {
+        }        public DatasetTagsItemArgs build() {
             return new DatasetTagsItemArgs(tagKey, tagValue);
         }
     }

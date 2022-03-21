@@ -53,12 +53,10 @@ public final class GetDatabaseInstanceSettingLocationPreference {
             this.followGaeApplication = Objects.requireNonNull(followGaeApplication);
             return this;
         }
-
         public Builder zone(String zone) {
             this.zone = Objects.requireNonNull(zone);
             return this;
-        }
-        public GetDatabaseInstanceSettingLocationPreference build() {
+        }        public GetDatabaseInstanceSettingLocationPreference build() {
             return new GetDatabaseInstanceSettingLocationPreference(followGaeApplication, zone);
         }
     }

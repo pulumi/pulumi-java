@@ -108,42 +108,34 @@ public final class VpcAttachmentAccepterArgs extends io.pulumi.resources.Resourc
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder transitGatewayAttachmentId(Output<String> transitGatewayAttachmentId) {
             this.transitGatewayAttachmentId = Objects.requireNonNull(transitGatewayAttachmentId);
             return this;
         }
-
         public Builder transitGatewayAttachmentId(String transitGatewayAttachmentId) {
             this.transitGatewayAttachmentId = Output.of(Objects.requireNonNull(transitGatewayAttachmentId));
             return this;
         }
-
         public Builder transitGatewayDefaultRouteTableAssociation(@Nullable Output<Boolean> transitGatewayDefaultRouteTableAssociation) {
             this.transitGatewayDefaultRouteTableAssociation = transitGatewayDefaultRouteTableAssociation;
             return this;
         }
-
         public Builder transitGatewayDefaultRouteTableAssociation(@Nullable Boolean transitGatewayDefaultRouteTableAssociation) {
             this.transitGatewayDefaultRouteTableAssociation = Output.ofNullable(transitGatewayDefaultRouteTableAssociation);
             return this;
         }
-
         public Builder transitGatewayDefaultRouteTablePropagation(@Nullable Output<Boolean> transitGatewayDefaultRouteTablePropagation) {
             this.transitGatewayDefaultRouteTablePropagation = transitGatewayDefaultRouteTablePropagation;
             return this;
         }
-
         public Builder transitGatewayDefaultRouteTablePropagation(@Nullable Boolean transitGatewayDefaultRouteTablePropagation) {
             this.transitGatewayDefaultRouteTablePropagation = Output.ofNullable(transitGatewayDefaultRouteTablePropagation);
             return this;
-        }
-        public VpcAttachmentAccepterArgs build() {
+        }        public VpcAttachmentAccepterArgs build() {
             return new VpcAttachmentAccepterArgs(tags, transitGatewayAttachmentId, transitGatewayDefaultRouteTableAssociation, transitGatewayDefaultRouteTablePropagation);
         }
     }

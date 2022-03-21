@@ -120,22 +120,21 @@ public final class ClusterClusterAutoscalingAutoProvisioningDefaults {
             this.imageType = imageType;
             return this;
         }
-
         public Builder minCpuPlatform(@Nullable String minCpuPlatform) {
             this.minCpuPlatform = minCpuPlatform;
             return this;
         }
-
         public Builder oauthScopes(@Nullable List<String> oauthScopes) {
             this.oauthScopes = oauthScopes;
             return this;
         }
-
+        public Builder oauthScopes(String... oauthScopes) {
+            return oauthScopes(List.of(oauthScopes));
+        }
         public Builder serviceAccount(@Nullable String serviceAccount) {
             this.serviceAccount = serviceAccount;
             return this;
-        }
-        public ClusterClusterAutoscalingAutoProvisioningDefaults build() {
+        }        public ClusterClusterAutoscalingAutoProvisioningDefaults build() {
             return new ClusterClusterAutoscalingAutoProvisioningDefaults(imageType, minCpuPlatform, oauthScopes, serviceAccount);
         }
     }

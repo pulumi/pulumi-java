@@ -71,12 +71,10 @@ public final class ScalingPlanScalingInstructionPredefinedLoadMetricSpecificatio
             this.predefinedLoadMetricType = Objects.requireNonNull(predefinedLoadMetricType);
             return this;
         }
-
         public Builder resourceLabel(@Nullable String resourceLabel) {
             this.resourceLabel = resourceLabel;
             return this;
-        }
-        public ScalingPlanScalingInstructionPredefinedLoadMetricSpecification build() {
+        }        public ScalingPlanScalingInstructionPredefinedLoadMetricSpecification build() {
             return new ScalingPlanScalingInstructionPredefinedLoadMetricSpecification(predefinedLoadMetricType, resourceLabel);
         }
     }

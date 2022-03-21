@@ -155,37 +155,36 @@ public final class UpdateConfigurationResponse {
             this.azureVirtualMachines = azureVirtualMachines;
             return this;
         }
-
+        public Builder azureVirtualMachines(String... azureVirtualMachines) {
+            return azureVirtualMachines(List.of(azureVirtualMachines));
+        }
         public Builder duration(@Nullable String duration) {
             this.duration = duration;
             return this;
         }
-
         public Builder linux(@Nullable LinuxPropertiesResponse linux) {
             this.linux = linux;
             return this;
         }
-
         public Builder nonAzureComputerNames(@Nullable List<String> nonAzureComputerNames) {
             this.nonAzureComputerNames = nonAzureComputerNames;
             return this;
         }
-
+        public Builder nonAzureComputerNames(String... nonAzureComputerNames) {
+            return nonAzureComputerNames(List.of(nonAzureComputerNames));
+        }
         public Builder operatingSystem(String operatingSystem) {
             this.operatingSystem = Objects.requireNonNull(operatingSystem);
             return this;
         }
-
         public Builder targets(@Nullable TargetPropertiesResponse targets) {
             this.targets = targets;
             return this;
         }
-
         public Builder windows(@Nullable WindowsPropertiesResponse windows) {
             this.windows = windows;
             return this;
-        }
-        public UpdateConfigurationResponse build() {
+        }        public UpdateConfigurationResponse build() {
             return new UpdateConfigurationResponse(azureVirtualMachines, duration, linux, nonAzureComputerNames, operatingSystem, targets, windows);
         }
     }

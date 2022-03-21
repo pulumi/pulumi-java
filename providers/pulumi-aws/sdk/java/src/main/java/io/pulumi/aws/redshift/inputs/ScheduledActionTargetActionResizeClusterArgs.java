@@ -124,52 +124,42 @@ public final class ScheduledActionTargetActionResizeClusterArgs extends io.pulum
             this.classic = classic;
             return this;
         }
-
         public Builder classic(@Nullable Boolean classic) {
             this.classic = Output.ofNullable(classic);
             return this;
         }
-
         public Builder clusterIdentifier(Output<String> clusterIdentifier) {
             this.clusterIdentifier = Objects.requireNonNull(clusterIdentifier);
             return this;
         }
-
         public Builder clusterIdentifier(String clusterIdentifier) {
             this.clusterIdentifier = Output.of(Objects.requireNonNull(clusterIdentifier));
             return this;
         }
-
         public Builder clusterType(@Nullable Output<String> clusterType) {
             this.clusterType = clusterType;
             return this;
         }
-
         public Builder clusterType(@Nullable String clusterType) {
             this.clusterType = Output.ofNullable(clusterType);
             return this;
         }
-
         public Builder nodeType(@Nullable Output<String> nodeType) {
             this.nodeType = nodeType;
             return this;
         }
-
         public Builder nodeType(@Nullable String nodeType) {
             this.nodeType = Output.ofNullable(nodeType);
             return this;
         }
-
         public Builder numberOfNodes(@Nullable Output<Integer> numberOfNodes) {
             this.numberOfNodes = numberOfNodes;
             return this;
         }
-
         public Builder numberOfNodes(@Nullable Integer numberOfNodes) {
             this.numberOfNodes = Output.ofNullable(numberOfNodes);
             return this;
-        }
-        public ScheduledActionTargetActionResizeClusterArgs build() {
+        }        public ScheduledActionTargetActionResizeClusterArgs build() {
             return new ScheduledActionTargetActionResizeClusterArgs(classic, clusterIdentifier, clusterType, nodeType, numberOfNodes);
         }
     }

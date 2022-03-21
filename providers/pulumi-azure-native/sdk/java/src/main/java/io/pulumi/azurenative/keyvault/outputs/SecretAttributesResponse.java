@@ -120,27 +120,22 @@ public final class SecretAttributesResponse {
             this.created = Objects.requireNonNull(created);
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
-
         public Builder expires(@Nullable Integer expires) {
             this.expires = expires;
             return this;
         }
-
         public Builder notBefore(@Nullable Integer notBefore) {
             this.notBefore = notBefore;
             return this;
         }
-
         public Builder updated(Integer updated) {
             this.updated = Objects.requireNonNull(updated);
             return this;
-        }
-        public SecretAttributesResponse build() {
+        }        public SecretAttributesResponse build() {
             return new SecretAttributesResponse(created, enabled, expires, notBefore, updated);
         }
     }

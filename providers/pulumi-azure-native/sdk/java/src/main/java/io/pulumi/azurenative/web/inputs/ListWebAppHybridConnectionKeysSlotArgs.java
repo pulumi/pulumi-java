@@ -120,27 +120,22 @@ public final class ListWebAppHybridConnectionKeysSlotArgs extends io.pulumi.reso
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder namespaceName(String namespaceName) {
             this.namespaceName = Objects.requireNonNull(namespaceName);
             return this;
         }
-
         public Builder relayName(String relayName) {
             this.relayName = Objects.requireNonNull(relayName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder slot(String slot) {
             this.slot = Objects.requireNonNull(slot);
             return this;
-        }
-        public ListWebAppHybridConnectionKeysSlotArgs build() {
+        }        public ListWebAppHybridConnectionKeysSlotArgs build() {
             return new ListWebAppHybridConnectionKeysSlotArgs(name, namespaceName, relayName, resourceGroupName, slot);
         }
     }

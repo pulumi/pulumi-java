@@ -88,17 +88,14 @@ public final class GetGlobalReachConnectionArgs extends io.pulumi.resources.Invo
             this.globalReachConnectionName = Objects.requireNonNull(globalReachConnectionName);
             return this;
         }
-
         public Builder privateCloudName(String privateCloudName) {
             this.privateCloudName = Objects.requireNonNull(privateCloudName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetGlobalReachConnectionArgs build() {
+        }        public GetGlobalReachConnectionArgs build() {
             return new GetGlobalReachConnectionArgs(globalReachConnectionName, privateCloudName, resourceGroupName);
         }
     }

@@ -79,12 +79,10 @@ public final class RequestsBasedTriggerResponse extends io.pulumi.resources.Invo
             this.count = count;
             return this;
         }
-
         public Builder timeInterval(@Nullable String timeInterval) {
             this.timeInterval = timeInterval;
             return this;
-        }
-        public RequestsBasedTriggerResponse build() {
+        }        public RequestsBasedTriggerResponse build() {
             return new RequestsBasedTriggerResponse(count, timeInterval);
         }
     }

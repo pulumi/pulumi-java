@@ -88,17 +88,14 @@ public final class GetPrivateAtlaseArgs extends io.pulumi.resources.InvokeArgs {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder privateAtlasName(String privateAtlasName) {
             this.privateAtlasName = Objects.requireNonNull(privateAtlasName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetPrivateAtlaseArgs build() {
+        }        public GetPrivateAtlaseArgs build() {
             return new GetPrivateAtlaseArgs(accountName, privateAtlasName, resourceGroupName);
         }
     }

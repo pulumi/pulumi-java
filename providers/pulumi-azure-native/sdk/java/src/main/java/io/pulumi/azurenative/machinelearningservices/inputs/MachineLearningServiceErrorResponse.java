@@ -58,8 +58,7 @@ public final class MachineLearningServiceErrorResponse extends io.pulumi.resourc
         public Builder error(ErrorResponseResponse error) {
             this.error = Objects.requireNonNull(error);
             return this;
-        }
-        public MachineLearningServiceErrorResponse build() {
+        }        public MachineLearningServiceErrorResponse build() {
             return new MachineLearningServiceErrorResponse(error);
         }
     }

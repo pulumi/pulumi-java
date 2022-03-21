@@ -86,17 +86,14 @@ public final class StatefulPolicyPreservedStateResponse {
             this.disks = Objects.requireNonNull(disks);
             return this;
         }
-
         public Builder externalIPs(Map<String,String> externalIPs) {
             this.externalIPs = Objects.requireNonNull(externalIPs);
             return this;
         }
-
         public Builder internalIPs(Map<String,String> internalIPs) {
             this.internalIPs = Objects.requireNonNull(internalIPs);
             return this;
-        }
-        public StatefulPolicyPreservedStateResponse build() {
+        }        public StatefulPolicyPreservedStateResponse build() {
             return new StatefulPolicyPreservedStateResponse(disks, externalIPs, internalIPs);
         }
     }

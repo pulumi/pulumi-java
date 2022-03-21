@@ -117,27 +117,22 @@ public final class MetadataExportResponse {
             this.databaseDumpType = Objects.requireNonNull(databaseDumpType);
             return this;
         }
-
         public Builder destinationGcsUri(String destinationGcsUri) {
             this.destinationGcsUri = Objects.requireNonNull(destinationGcsUri);
             return this;
         }
-
         public Builder endTime(String endTime) {
             this.endTime = Objects.requireNonNull(endTime);
             return this;
         }
-
         public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
-        }
-        public MetadataExportResponse build() {
+        }        public MetadataExportResponse build() {
             return new MetadataExportResponse(databaseDumpType, destinationGcsUri, endTime, startTime, state);
         }
     }

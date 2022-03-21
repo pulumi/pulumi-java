@@ -89,17 +89,14 @@ public final class GuestPoliciesRecipeUpdateStepArchiveExtraction {
             this.artifactId = Objects.requireNonNull(artifactId);
             return this;
         }
-
         public Builder destination(@Nullable String destination) {
             this.destination = destination;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GuestPoliciesRecipeUpdateStepArchiveExtraction build() {
+        }        public GuestPoliciesRecipeUpdateStepArchiveExtraction build() {
             return new GuestPoliciesRecipeUpdateStepArchiveExtraction(artifactId, destination, type);
         }
     }

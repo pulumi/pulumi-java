@@ -67,22 +67,21 @@ public final class InstanceFromMachineImageServiceAccountGetArgs extends io.pulu
             this.email = email;
             return this;
         }
-
         public Builder email(@Nullable String email) {
             this.email = Output.ofNullable(email);
             return this;
         }
-
         public Builder scopes(Output<List<String>> scopes) {
             this.scopes = Objects.requireNonNull(scopes);
             return this;
         }
-
         public Builder scopes(List<String> scopes) {
             this.scopes = Output.of(Objects.requireNonNull(scopes));
             return this;
         }
-        public InstanceFromMachineImageServiceAccountGetArgs build() {
+        public Builder scopes(String... scopes) {
+            return scopes(List.of(scopes));
+        }        public InstanceFromMachineImageServiceAccountGetArgs build() {
             return new InstanceFromMachineImageServiceAccountGetArgs(email, scopes);
         }
     }

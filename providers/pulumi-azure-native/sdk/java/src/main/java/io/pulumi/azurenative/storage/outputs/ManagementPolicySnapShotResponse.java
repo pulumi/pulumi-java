@@ -87,17 +87,14 @@ public final class ManagementPolicySnapShotResponse {
             this.delete = delete;
             return this;
         }
-
         public Builder tierToArchive(@Nullable DateAfterCreationResponse tierToArchive) {
             this.tierToArchive = tierToArchive;
             return this;
         }
-
         public Builder tierToCool(@Nullable DateAfterCreationResponse tierToCool) {
             this.tierToCool = tierToCool;
             return this;
-        }
-        public ManagementPolicySnapShotResponse build() {
+        }        public ManagementPolicySnapShotResponse build() {
             return new ManagementPolicySnapShotResponse(delete, tierToArchive, tierToCool);
         }
     }

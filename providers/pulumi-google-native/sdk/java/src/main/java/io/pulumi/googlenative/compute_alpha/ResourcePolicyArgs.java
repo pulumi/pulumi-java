@@ -174,92 +174,74 @@ public final class ResourcePolicyArgs extends io.pulumi.resources.ResourceArgs {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder groupPlacementPolicy(@Nullable Output<ResourcePolicyGroupPlacementPolicyArgs> groupPlacementPolicy) {
             this.groupPlacementPolicy = groupPlacementPolicy;
             return this;
         }
-
         public Builder groupPlacementPolicy(@Nullable ResourcePolicyGroupPlacementPolicyArgs groupPlacementPolicy) {
             this.groupPlacementPolicy = Output.ofNullable(groupPlacementPolicy);
             return this;
         }
-
         public Builder instanceSchedulePolicy(@Nullable Output<ResourcePolicyInstanceSchedulePolicyArgs> instanceSchedulePolicy) {
             this.instanceSchedulePolicy = instanceSchedulePolicy;
             return this;
         }
-
         public Builder instanceSchedulePolicy(@Nullable ResourcePolicyInstanceSchedulePolicyArgs instanceSchedulePolicy) {
             this.instanceSchedulePolicy = Output.ofNullable(instanceSchedulePolicy);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder region(Output<String> region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
-
         public Builder region(String region) {
             this.region = Output.of(Objects.requireNonNull(region));
             return this;
         }
-
         public Builder requestId(@Nullable Output<String> requestId) {
             this.requestId = requestId;
             return this;
         }
-
         public Builder requestId(@Nullable String requestId) {
             this.requestId = Output.ofNullable(requestId);
             return this;
         }
-
         public Builder snapshotSchedulePolicy(@Nullable Output<ResourcePolicySnapshotSchedulePolicyArgs> snapshotSchedulePolicy) {
             this.snapshotSchedulePolicy = snapshotSchedulePolicy;
             return this;
         }
-
         public Builder snapshotSchedulePolicy(@Nullable ResourcePolicySnapshotSchedulePolicyArgs snapshotSchedulePolicy) {
             this.snapshotSchedulePolicy = Output.ofNullable(snapshotSchedulePolicy);
             return this;
         }
-
         public Builder vmMaintenancePolicy(@Nullable Output<ResourcePolicyVmMaintenancePolicyArgs> vmMaintenancePolicy) {
             this.vmMaintenancePolicy = vmMaintenancePolicy;
             return this;
         }
-
         public Builder vmMaintenancePolicy(@Nullable ResourcePolicyVmMaintenancePolicyArgs vmMaintenancePolicy) {
             this.vmMaintenancePolicy = Output.ofNullable(vmMaintenancePolicy);
             return this;
-        }
-        public ResourcePolicyArgs build() {
+        }        public ResourcePolicyArgs build() {
             return new ResourcePolicyArgs(description, groupPlacementPolicy, instanceSchedulePolicy, name, project, region, requestId, snapshotSchedulePolicy, vmMaintenancePolicy);
         }
     }

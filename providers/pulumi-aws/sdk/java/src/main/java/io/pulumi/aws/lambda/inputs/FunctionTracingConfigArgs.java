@@ -56,12 +56,10 @@ public final class FunctionTracingConfigArgs extends io.pulumi.resources.Resourc
             this.mode = Objects.requireNonNull(mode);
             return this;
         }
-
         public Builder mode(String mode) {
             this.mode = Output.of(Objects.requireNonNull(mode));
             return this;
-        }
-        public FunctionTracingConfigArgs build() {
+        }        public FunctionTracingConfigArgs build() {
             return new FunctionTracingConfigArgs(mode);
         }
     }

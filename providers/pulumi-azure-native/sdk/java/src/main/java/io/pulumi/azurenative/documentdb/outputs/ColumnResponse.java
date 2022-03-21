@@ -71,12 +71,10 @@ public final class ColumnResponse {
             this.name = name;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
-        }
-        public ColumnResponse build() {
+        }        public ColumnResponse build() {
             return new ColumnResponse(name, type);
         }
     }

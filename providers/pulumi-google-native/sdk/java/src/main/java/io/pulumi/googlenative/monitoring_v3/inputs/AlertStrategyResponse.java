@@ -77,12 +77,10 @@ public final class AlertStrategyResponse extends io.pulumi.resources.InvokeArgs 
             this.autoClose = Objects.requireNonNull(autoClose);
             return this;
         }
-
         public Builder notificationRateLimit(NotificationRateLimitResponse notificationRateLimit) {
             this.notificationRateLimit = Objects.requireNonNull(notificationRateLimit);
             return this;
-        }
-        public AlertStrategyResponse build() {
+        }        public AlertStrategyResponse build() {
             return new AlertStrategyResponse(autoClose, notificationRateLimit);
         }
     }

@@ -71,12 +71,10 @@ public final class UserAssignedIdentityMetaResponse {
             this.clientId = clientId;
             return this;
         }
-
         public Builder principalId(@Nullable String principalId) {
             this.principalId = principalId;
             return this;
-        }
-        public UserAssignedIdentityMetaResponse build() {
+        }        public UserAssignedIdentityMetaResponse build() {
             return new UserAssignedIdentityMetaResponse(clientId, principalId);
         }
     }

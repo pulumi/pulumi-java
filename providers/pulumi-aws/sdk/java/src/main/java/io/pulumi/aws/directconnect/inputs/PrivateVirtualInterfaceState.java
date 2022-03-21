@@ -326,182 +326,146 @@ public final class PrivateVirtualInterfaceState extends io.pulumi.resources.Reso
             this.addressFamily = addressFamily;
             return this;
         }
-
         public Builder addressFamily(@Nullable String addressFamily) {
             this.addressFamily = Output.ofNullable(addressFamily);
             return this;
         }
-
         public Builder amazonAddress(@Nullable Output<String> amazonAddress) {
             this.amazonAddress = amazonAddress;
             return this;
         }
-
         public Builder amazonAddress(@Nullable String amazonAddress) {
             this.amazonAddress = Output.ofNullable(amazonAddress);
             return this;
         }
-
         public Builder amazonSideAsn(@Nullable Output<String> amazonSideAsn) {
             this.amazonSideAsn = amazonSideAsn;
             return this;
         }
-
         public Builder amazonSideAsn(@Nullable String amazonSideAsn) {
             this.amazonSideAsn = Output.ofNullable(amazonSideAsn);
             return this;
         }
-
         public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder awsDevice(@Nullable Output<String> awsDevice) {
             this.awsDevice = awsDevice;
             return this;
         }
-
         public Builder awsDevice(@Nullable String awsDevice) {
             this.awsDevice = Output.ofNullable(awsDevice);
             return this;
         }
-
         public Builder bgpAsn(@Nullable Output<Integer> bgpAsn) {
             this.bgpAsn = bgpAsn;
             return this;
         }
-
         public Builder bgpAsn(@Nullable Integer bgpAsn) {
             this.bgpAsn = Output.ofNullable(bgpAsn);
             return this;
         }
-
         public Builder bgpAuthKey(@Nullable Output<String> bgpAuthKey) {
             this.bgpAuthKey = bgpAuthKey;
             return this;
         }
-
         public Builder bgpAuthKey(@Nullable String bgpAuthKey) {
             this.bgpAuthKey = Output.ofNullable(bgpAuthKey);
             return this;
         }
-
         public Builder connectionId(@Nullable Output<String> connectionId) {
             this.connectionId = connectionId;
             return this;
         }
-
         public Builder connectionId(@Nullable String connectionId) {
             this.connectionId = Output.ofNullable(connectionId);
             return this;
         }
-
         public Builder customerAddress(@Nullable Output<String> customerAddress) {
             this.customerAddress = customerAddress;
             return this;
         }
-
         public Builder customerAddress(@Nullable String customerAddress) {
             this.customerAddress = Output.ofNullable(customerAddress);
             return this;
         }
-
         public Builder dxGatewayId(@Nullable Output<String> dxGatewayId) {
             this.dxGatewayId = dxGatewayId;
             return this;
         }
-
         public Builder dxGatewayId(@Nullable String dxGatewayId) {
             this.dxGatewayId = Output.ofNullable(dxGatewayId);
             return this;
         }
-
         public Builder jumboFrameCapable(@Nullable Output<Boolean> jumboFrameCapable) {
             this.jumboFrameCapable = jumboFrameCapable;
             return this;
         }
-
         public Builder jumboFrameCapable(@Nullable Boolean jumboFrameCapable) {
             this.jumboFrameCapable = Output.ofNullable(jumboFrameCapable);
             return this;
         }
-
         public Builder mtu(@Nullable Output<Integer> mtu) {
             this.mtu = mtu;
             return this;
         }
-
         public Builder mtu(@Nullable Integer mtu) {
             this.mtu = Output.ofNullable(mtu);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder sitelinkEnabled(@Nullable Output<Boolean> sitelinkEnabled) {
             this.sitelinkEnabled = sitelinkEnabled;
             return this;
         }
-
         public Builder sitelinkEnabled(@Nullable Boolean sitelinkEnabled) {
             this.sitelinkEnabled = Output.ofNullable(sitelinkEnabled);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
-
         public Builder vlan(@Nullable Output<Integer> vlan) {
             this.vlan = vlan;
             return this;
         }
-
         public Builder vlan(@Nullable Integer vlan) {
             this.vlan = Output.ofNullable(vlan);
             return this;
         }
-
         public Builder vpnGatewayId(@Nullable Output<String> vpnGatewayId) {
             this.vpnGatewayId = vpnGatewayId;
             return this;
         }
-
         public Builder vpnGatewayId(@Nullable String vpnGatewayId) {
             this.vpnGatewayId = Output.ofNullable(vpnGatewayId);
             return this;
-        }
-        public PrivateVirtualInterfaceState build() {
+        }        public PrivateVirtualInterfaceState build() {
             return new PrivateVirtualInterfaceState(addressFamily, amazonAddress, amazonSideAsn, arn, awsDevice, bgpAsn, bgpAuthKey, connectionId, customerAddress, dxGatewayId, jumboFrameCapable, mtu, name, sitelinkEnabled, tags, tagsAll, vlan, vpnGatewayId);
         }
     }

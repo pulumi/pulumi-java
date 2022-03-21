@@ -58,8 +58,7 @@ public final class BucketSseKmsEncryptedObjects extends io.pulumi.resources.Invo
         public Builder status(BucketSseKmsEncryptedObjectsStatus status) {
             this.status = Objects.requireNonNull(status);
             return this;
-        }
-        public BucketSseKmsEncryptedObjects build() {
+        }        public BucketSseKmsEncryptedObjects build() {
             return new BucketSseKmsEncryptedObjects(status);
         }
     }

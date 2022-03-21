@@ -79,22 +79,18 @@ public final class VolumeAttachmentSourceArgs extends io.pulumi.resources.Resour
             this.inlineVolumeSpec = inlineVolumeSpec;
             return this;
         }
-
         public Builder inlineVolumeSpec(@Nullable PersistentVolumeSpecArgs inlineVolumeSpec) {
             this.inlineVolumeSpec = Output.ofNullable(inlineVolumeSpec);
             return this;
         }
-
         public Builder persistentVolumeName(@Nullable Output<String> persistentVolumeName) {
             this.persistentVolumeName = persistentVolumeName;
             return this;
         }
-
         public Builder persistentVolumeName(@Nullable String persistentVolumeName) {
             this.persistentVolumeName = Output.ofNullable(persistentVolumeName);
             return this;
-        }
-        public VolumeAttachmentSourceArgs build() {
+        }        public VolumeAttachmentSourceArgs build() {
             return new VolumeAttachmentSourceArgs(inlineVolumeSpec, persistentVolumeName);
         }
     }

@@ -107,42 +107,34 @@ public final class SmsChannelArgs extends io.pulumi.resources.ResourceArgs {
             this.applicationId = Objects.requireNonNull(applicationId);
             return this;
         }
-
         public Builder applicationId(String applicationId) {
             this.applicationId = Output.of(Objects.requireNonNull(applicationId));
             return this;
         }
-
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
         }
-
         public Builder senderId(@Nullable Output<String> senderId) {
             this.senderId = senderId;
             return this;
         }
-
         public Builder senderId(@Nullable String senderId) {
             this.senderId = Output.ofNullable(senderId);
             return this;
         }
-
         public Builder shortCode(@Nullable Output<String> shortCode) {
             this.shortCode = shortCode;
             return this;
         }
-
         public Builder shortCode(@Nullable String shortCode) {
             this.shortCode = Output.ofNullable(shortCode);
             return this;
-        }
-        public SmsChannelArgs build() {
+        }        public SmsChannelArgs build() {
             return new SmsChannelArgs(applicationId, enabled, senderId, shortCode);
         }
     }

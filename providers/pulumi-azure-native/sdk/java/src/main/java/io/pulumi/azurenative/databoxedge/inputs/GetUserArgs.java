@@ -88,17 +88,14 @@ public final class GetUserArgs extends io.pulumi.resources.InvokeArgs {
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetUserArgs build() {
+        }        public GetUserArgs build() {
             return new GetUserArgs(deviceName, name, resourceGroupName);
         }
     }

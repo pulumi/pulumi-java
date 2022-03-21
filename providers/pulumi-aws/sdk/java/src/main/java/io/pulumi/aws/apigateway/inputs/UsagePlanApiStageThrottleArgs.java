@@ -92,32 +92,26 @@ public final class UsagePlanApiStageThrottleArgs extends io.pulumi.resources.Res
             this.burstLimit = burstLimit;
             return this;
         }
-
         public Builder burstLimit(@Nullable Integer burstLimit) {
             this.burstLimit = Output.ofNullable(burstLimit);
             return this;
         }
-
         public Builder path(Output<String> path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
-
         public Builder path(String path) {
             this.path = Output.of(Objects.requireNonNull(path));
             return this;
         }
-
         public Builder rateLimit(@Nullable Output<Double> rateLimit) {
             this.rateLimit = rateLimit;
             return this;
         }
-
         public Builder rateLimit(@Nullable Double rateLimit) {
             this.rateLimit = Output.ofNullable(rateLimit);
             return this;
-        }
-        public UsagePlanApiStageThrottleArgs build() {
+        }        public UsagePlanApiStageThrottleArgs build() {
             return new UsagePlanApiStageThrottleArgs(burstLimit, path, rateLimit);
         }
     }

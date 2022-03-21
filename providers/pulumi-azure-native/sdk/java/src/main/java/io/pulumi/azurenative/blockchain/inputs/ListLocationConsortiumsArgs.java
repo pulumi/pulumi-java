@@ -54,8 +54,7 @@ public final class ListLocationConsortiumsArgs extends io.pulumi.resources.Invok
         public Builder locationName(String locationName) {
             this.locationName = Objects.requireNonNull(locationName);
             return this;
-        }
-        public ListLocationConsortiumsArgs build() {
+        }        public ListLocationConsortiumsArgs build() {
             return new ListLocationConsortiumsArgs(locationName);
         }
     }

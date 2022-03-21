@@ -102,22 +102,27 @@ public final class SparkRBatchResponse {
             this.archiveUris = Objects.requireNonNull(archiveUris);
             return this;
         }
-
+        public Builder archiveUris(String... archiveUris) {
+            return archiveUris(List.of(archiveUris));
+        }
         public Builder args(List<String> args) {
             this.args = Objects.requireNonNull(args);
             return this;
         }
-
+        public Builder args(String... args) {
+            return args(List.of(args));
+        }
         public Builder fileUris(List<String> fileUris) {
             this.fileUris = Objects.requireNonNull(fileUris);
             return this;
         }
-
+        public Builder fileUris(String... fileUris) {
+            return fileUris(List.of(fileUris));
+        }
         public Builder mainRFileUri(String mainRFileUri) {
             this.mainRFileUri = Objects.requireNonNull(mainRFileUri);
             return this;
-        }
-        public SparkRBatchResponse build() {
+        }        public SparkRBatchResponse build() {
             return new SparkRBatchResponse(archiveUris, args, fileUris, mainRFileUri);
         }
     }

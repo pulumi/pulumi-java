@@ -283,142 +283,114 @@ public final class TaskOptionsArgs extends io.pulumi.resources.ResourceArgs {
             this.atime = atime;
             return this;
         }
-
         public Builder atime(@Nullable TaskOptionsAtime atime) {
             this.atime = Output.ofNullable(atime);
             return this;
         }
-
         public Builder bytesPerSecond(@Nullable Output<Integer> bytesPerSecond) {
             this.bytesPerSecond = bytesPerSecond;
             return this;
         }
-
         public Builder bytesPerSecond(@Nullable Integer bytesPerSecond) {
             this.bytesPerSecond = Output.ofNullable(bytesPerSecond);
             return this;
         }
-
         public Builder gid(@Nullable Output<TaskOptionsGid> gid) {
             this.gid = gid;
             return this;
         }
-
         public Builder gid(@Nullable TaskOptionsGid gid) {
             this.gid = Output.ofNullable(gid);
             return this;
         }
-
         public Builder logLevel(@Nullable Output<TaskOptionsLogLevel> logLevel) {
             this.logLevel = logLevel;
             return this;
         }
-
         public Builder logLevel(@Nullable TaskOptionsLogLevel logLevel) {
             this.logLevel = Output.ofNullable(logLevel);
             return this;
         }
-
         public Builder mtime(@Nullable Output<TaskOptionsMtime> mtime) {
             this.mtime = mtime;
             return this;
         }
-
         public Builder mtime(@Nullable TaskOptionsMtime mtime) {
             this.mtime = Output.ofNullable(mtime);
             return this;
         }
-
         public Builder overwriteMode(@Nullable Output<TaskOptionsOverwriteMode> overwriteMode) {
             this.overwriteMode = overwriteMode;
             return this;
         }
-
         public Builder overwriteMode(@Nullable TaskOptionsOverwriteMode overwriteMode) {
             this.overwriteMode = Output.ofNullable(overwriteMode);
             return this;
         }
-
         public Builder posixPermissions(@Nullable Output<TaskOptionsPosixPermissions> posixPermissions) {
             this.posixPermissions = posixPermissions;
             return this;
         }
-
         public Builder posixPermissions(@Nullable TaskOptionsPosixPermissions posixPermissions) {
             this.posixPermissions = Output.ofNullable(posixPermissions);
             return this;
         }
-
         public Builder preserveDeletedFiles(@Nullable Output<TaskOptionsPreserveDeletedFiles> preserveDeletedFiles) {
             this.preserveDeletedFiles = preserveDeletedFiles;
             return this;
         }
-
         public Builder preserveDeletedFiles(@Nullable TaskOptionsPreserveDeletedFiles preserveDeletedFiles) {
             this.preserveDeletedFiles = Output.ofNullable(preserveDeletedFiles);
             return this;
         }
-
         public Builder preserveDevices(@Nullable Output<TaskOptionsPreserveDevices> preserveDevices) {
             this.preserveDevices = preserveDevices;
             return this;
         }
-
         public Builder preserveDevices(@Nullable TaskOptionsPreserveDevices preserveDevices) {
             this.preserveDevices = Output.ofNullable(preserveDevices);
             return this;
         }
-
         public Builder securityDescriptorCopyFlags(@Nullable Output<TaskOptionsSecurityDescriptorCopyFlags> securityDescriptorCopyFlags) {
             this.securityDescriptorCopyFlags = securityDescriptorCopyFlags;
             return this;
         }
-
         public Builder securityDescriptorCopyFlags(@Nullable TaskOptionsSecurityDescriptorCopyFlags securityDescriptorCopyFlags) {
             this.securityDescriptorCopyFlags = Output.ofNullable(securityDescriptorCopyFlags);
             return this;
         }
-
         public Builder taskQueueing(@Nullable Output<TaskOptionsTaskQueueing> taskQueueing) {
             this.taskQueueing = taskQueueing;
             return this;
         }
-
         public Builder taskQueueing(@Nullable TaskOptionsTaskQueueing taskQueueing) {
             this.taskQueueing = Output.ofNullable(taskQueueing);
             return this;
         }
-
         public Builder transferMode(@Nullable Output<TaskOptionsTransferMode> transferMode) {
             this.transferMode = transferMode;
             return this;
         }
-
         public Builder transferMode(@Nullable TaskOptionsTransferMode transferMode) {
             this.transferMode = Output.ofNullable(transferMode);
             return this;
         }
-
         public Builder uid(@Nullable Output<TaskOptionsUid> uid) {
             this.uid = uid;
             return this;
         }
-
         public Builder uid(@Nullable TaskOptionsUid uid) {
             this.uid = Output.ofNullable(uid);
             return this;
         }
-
         public Builder verifyMode(@Nullable Output<TaskOptionsVerifyMode> verifyMode) {
             this.verifyMode = verifyMode;
             return this;
         }
-
         public Builder verifyMode(@Nullable TaskOptionsVerifyMode verifyMode) {
             this.verifyMode = Output.ofNullable(verifyMode);
             return this;
-        }
-        public TaskOptionsArgs build() {
+        }        public TaskOptionsArgs build() {
             return new TaskOptionsArgs(atime, bytesPerSecond, gid, logLevel, mtime, overwriteMode, posixPermissions, preserveDeletedFiles, preserveDevices, securityDescriptorCopyFlags, taskQueueing, transferMode, uid, verifyMode);
         }
     }

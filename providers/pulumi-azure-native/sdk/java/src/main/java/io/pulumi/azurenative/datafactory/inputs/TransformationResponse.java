@@ -129,27 +129,22 @@ public final class TransformationResponse extends io.pulumi.resources.InvokeArgs
             this.dataset = dataset;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder flowlet(@Nullable DataFlowReferenceResponse flowlet) {
             this.flowlet = flowlet;
             return this;
         }
-
         public Builder linkedService(@Nullable LinkedServiceReferenceResponse linkedService) {
             this.linkedService = linkedService;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public TransformationResponse build() {
+        }        public TransformationResponse build() {
             return new TransformationResponse(dataset, description, flowlet, linkedService, name);
         }
     }

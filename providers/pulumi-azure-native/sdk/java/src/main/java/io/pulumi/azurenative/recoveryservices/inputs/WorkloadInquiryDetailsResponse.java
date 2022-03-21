@@ -96,17 +96,14 @@ public final class WorkloadInquiryDetailsResponse extends io.pulumi.resources.In
             this.inquiryValidation = inquiryValidation;
             return this;
         }
-
         public Builder itemCount(@Nullable Double itemCount) {
             this.itemCount = itemCount;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
-        }
-        public WorkloadInquiryDetailsResponse build() {
+        }        public WorkloadInquiryDetailsResponse build() {
             return new WorkloadInquiryDetailsResponse(inquiryValidation, itemCount, type);
         }
     }

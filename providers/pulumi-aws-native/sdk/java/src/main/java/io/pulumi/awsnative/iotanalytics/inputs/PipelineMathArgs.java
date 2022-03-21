@@ -90,42 +90,34 @@ public final class PipelineMathArgs extends io.pulumi.resources.ResourceArgs {
             this.attribute = Objects.requireNonNull(attribute);
             return this;
         }
-
         public Builder attribute(String attribute) {
             this.attribute = Output.of(Objects.requireNonNull(attribute));
             return this;
         }
-
         public Builder math(Output<String> math) {
             this.math = Objects.requireNonNull(math);
             return this;
         }
-
         public Builder math(String math) {
             this.math = Output.of(Objects.requireNonNull(math));
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder next(@Nullable Output<String> next) {
             this.next = next;
             return this;
         }
-
         public Builder next(@Nullable String next) {
             this.next = Output.ofNullable(next);
             return this;
-        }
-        public PipelineMathArgs build() {
+        }        public PipelineMathArgs build() {
             return new PipelineMathArgs(attribute, math, name, next);
         }
     }

@@ -149,62 +149,50 @@ public final class GlobalNetworkEndpointGroupState extends io.pulumi.resources.R
             this.defaultPort = defaultPort;
             return this;
         }
-
         public Builder defaultPort(@Nullable Integer defaultPort) {
             this.defaultPort = Output.ofNullable(defaultPort);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder networkEndpointType(@Nullable Output<String> networkEndpointType) {
             this.networkEndpointType = networkEndpointType;
             return this;
         }
-
         public Builder networkEndpointType(@Nullable String networkEndpointType) {
             this.networkEndpointType = Output.ofNullable(networkEndpointType);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder selfLink(@Nullable Output<String> selfLink) {
             this.selfLink = selfLink;
             return this;
         }
-
         public Builder selfLink(@Nullable String selfLink) {
             this.selfLink = Output.ofNullable(selfLink);
             return this;
-        }
-        public GlobalNetworkEndpointGroupState build() {
+        }        public GlobalNetworkEndpointGroupState build() {
             return new GlobalNetworkEndpointGroupState(defaultPort, description, name, networkEndpointType, project, selfLink);
         }
     }

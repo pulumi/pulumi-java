@@ -87,17 +87,14 @@ public final class SpotInstanceRequestLaunchTemplate {
             this.id = id;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = version;
             return this;
-        }
-        public SpotInstanceRequestLaunchTemplate build() {
+        }        public SpotInstanceRequestLaunchTemplate build() {
             return new SpotInstanceRequestLaunchTemplate(id, name, version);
         }
     }

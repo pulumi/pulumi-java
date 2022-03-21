@@ -144,62 +144,50 @@ public final class AnalyticsApplicationOutputArgs extends io.pulumi.resources.Re
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder kinesisFirehose(@Nullable Output<AnalyticsApplicationOutputKinesisFirehoseArgs> kinesisFirehose) {
             this.kinesisFirehose = kinesisFirehose;
             return this;
         }
-
         public Builder kinesisFirehose(@Nullable AnalyticsApplicationOutputKinesisFirehoseArgs kinesisFirehose) {
             this.kinesisFirehose = Output.ofNullable(kinesisFirehose);
             return this;
         }
-
         public Builder kinesisStream(@Nullable Output<AnalyticsApplicationOutputKinesisStreamArgs> kinesisStream) {
             this.kinesisStream = kinesisStream;
             return this;
         }
-
         public Builder kinesisStream(@Nullable AnalyticsApplicationOutputKinesisStreamArgs kinesisStream) {
             this.kinesisStream = Output.ofNullable(kinesisStream);
             return this;
         }
-
         public Builder lambda(@Nullable Output<AnalyticsApplicationOutputLambdaArgs> lambda) {
             this.lambda = lambda;
             return this;
         }
-
         public Builder lambda(@Nullable AnalyticsApplicationOutputLambdaArgs lambda) {
             this.lambda = Output.ofNullable(lambda);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder schema(Output<AnalyticsApplicationOutputSchemaArgs> schema) {
             this.schema = Objects.requireNonNull(schema);
             return this;
         }
-
         public Builder schema(AnalyticsApplicationOutputSchemaArgs schema) {
             this.schema = Output.of(Objects.requireNonNull(schema));
             return this;
-        }
-        public AnalyticsApplicationOutputArgs build() {
+        }        public AnalyticsApplicationOutputArgs build() {
             return new AnalyticsApplicationOutputArgs(id, kinesisFirehose, kinesisStream, lambda, name, schema);
         }
     }

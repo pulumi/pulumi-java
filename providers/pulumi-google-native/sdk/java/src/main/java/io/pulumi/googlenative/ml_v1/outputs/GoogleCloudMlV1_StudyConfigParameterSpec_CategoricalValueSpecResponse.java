@@ -53,7 +53,9 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_CategoricalValueSpec
             this.values = Objects.requireNonNull(values);
             return this;
         }
-        public GoogleCloudMlV1_StudyConfigParameterSpec_CategoricalValueSpecResponse build() {
+        public Builder values(String... values) {
+            return values(List.of(values));
+        }        public GoogleCloudMlV1_StudyConfigParameterSpec_CategoricalValueSpecResponse build() {
             return new GoogleCloudMlV1_StudyConfigParameterSpec_CategoricalValueSpecResponse(values);
         }
     }

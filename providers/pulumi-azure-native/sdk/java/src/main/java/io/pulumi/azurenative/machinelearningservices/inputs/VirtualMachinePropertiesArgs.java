@@ -108,42 +108,34 @@ public final class VirtualMachinePropertiesArgs extends io.pulumi.resources.Reso
             this.address = address;
             return this;
         }
-
         public Builder address(@Nullable String address) {
             this.address = Output.ofNullable(address);
             return this;
         }
-
         public Builder administratorAccount(@Nullable Output<VirtualMachineSshCredentialsArgs> administratorAccount) {
             this.administratorAccount = administratorAccount;
             return this;
         }
-
         public Builder administratorAccount(@Nullable VirtualMachineSshCredentialsArgs administratorAccount) {
             this.administratorAccount = Output.ofNullable(administratorAccount);
             return this;
         }
-
         public Builder sshPort(@Nullable Output<Integer> sshPort) {
             this.sshPort = sshPort;
             return this;
         }
-
         public Builder sshPort(@Nullable Integer sshPort) {
             this.sshPort = Output.ofNullable(sshPort);
             return this;
         }
-
         public Builder virtualMachineSize(@Nullable Output<String> virtualMachineSize) {
             this.virtualMachineSize = virtualMachineSize;
             return this;
         }
-
         public Builder virtualMachineSize(@Nullable String virtualMachineSize) {
             this.virtualMachineSize = Output.ofNullable(virtualMachineSize);
             return this;
-        }
-        public VirtualMachinePropertiesArgs build() {
+        }        public VirtualMachinePropertiesArgs build() {
             return new VirtualMachinePropertiesArgs(address, administratorAccount, sshPort, virtualMachineSize);
         }
     }

@@ -90,17 +90,14 @@ public final class ListConfigurationStoreKeysArgs extends io.pulumi.resources.In
             this.configStoreName = Objects.requireNonNull(configStoreName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder skipToken(@Nullable String skipToken) {
             this.skipToken = skipToken;
             return this;
-        }
-        public ListConfigurationStoreKeysArgs build() {
+        }        public ListConfigurationStoreKeysArgs build() {
             return new ListConfigurationStoreKeysArgs(configStoreName, resourceGroupName, skipToken);
         }
     }

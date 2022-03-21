@@ -141,42 +141,46 @@ public final class ResourceProviderManifestPropertiesResponseManagement extends 
             this.incidentContactEmail = incidentContactEmail;
             return this;
         }
-
         public Builder incidentRoutingService(@Nullable String incidentRoutingService) {
             this.incidentRoutingService = incidentRoutingService;
             return this;
         }
-
         public Builder incidentRoutingTeam(@Nullable String incidentRoutingTeam) {
             this.incidentRoutingTeam = incidentRoutingTeam;
             return this;
         }
-
         public Builder manifestOwners(@Nullable List<String> manifestOwners) {
             this.manifestOwners = manifestOwners;
             return this;
         }
-
+        public Builder manifestOwners(String... manifestOwners) {
+            return manifestOwners(List.of(manifestOwners));
+        }
         public Builder resourceAccessPolicy(@Nullable String resourceAccessPolicy) {
             this.resourceAccessPolicy = resourceAccessPolicy;
             return this;
         }
-
         public Builder resourceAccessRoles(@Nullable List<Object> resourceAccessRoles) {
             this.resourceAccessRoles = resourceAccessRoles;
             return this;
         }
-
+        public Builder resourceAccessRoles(Object... resourceAccessRoles) {
+            return resourceAccessRoles(List.of(resourceAccessRoles));
+        }
         public Builder schemaOwners(@Nullable List<String> schemaOwners) {
             this.schemaOwners = schemaOwners;
             return this;
         }
-
+        public Builder schemaOwners(String... schemaOwners) {
+            return schemaOwners(List.of(schemaOwners));
+        }
         public Builder serviceTreeInfos(@Nullable List<ServiceTreeInfoResponse> serviceTreeInfos) {
             this.serviceTreeInfos = serviceTreeInfos;
             return this;
         }
-        public ResourceProviderManifestPropertiesResponseManagement build() {
+        public Builder serviceTreeInfos(ServiceTreeInfoResponse... serviceTreeInfos) {
+            return serviceTreeInfos(List.of(serviceTreeInfos));
+        }        public ResourceProviderManifestPropertiesResponseManagement build() {
             return new ResourceProviderManifestPropertiesResponseManagement(incidentContactEmail, incidentRoutingService, incidentRoutingTeam, manifestOwners, resourceAccessPolicy, resourceAccessRoles, schemaOwners, serviceTreeInfos);
         }
     }

@@ -69,12 +69,10 @@ public final class WebAclRuleStatementOrStatementStatementNotStatementStatementA
             this.fallbackBehavior = Objects.requireNonNull(fallbackBehavior);
             return this;
         }
-
         public Builder headerName(String headerName) {
             this.headerName = Objects.requireNonNull(headerName);
             return this;
-        }
-        public WebAclRuleStatementOrStatementStatementNotStatementStatementAndStatementStatementGeoMatchStatementForwardedIpConfig build() {
+        }        public WebAclRuleStatementOrStatementStatementNotStatementStatementAndStatementStatementGeoMatchStatementForwardedIpConfig build() {
             return new WebAclRuleStatementOrStatementStatementNotStatementStatementAndStatementStatementGeoMatchStatementForwardedIpConfig(fallbackBehavior, headerName);
         }
     }

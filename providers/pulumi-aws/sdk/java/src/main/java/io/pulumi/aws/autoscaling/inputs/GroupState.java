@@ -641,342 +641,301 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder availabilityZones(@Nullable Output<List<String>> availabilityZones) {
             this.availabilityZones = availabilityZones;
             return this;
         }
-
         public Builder availabilityZones(@Nullable List<String> availabilityZones) {
             this.availabilityZones = Output.ofNullable(availabilityZones);
             return this;
         }
-
+        public Builder availabilityZones(String... availabilityZones) {
+            return availabilityZones(List.of(availabilityZones));
+        }
         public Builder capacityRebalance(@Nullable Output<Boolean> capacityRebalance) {
             this.capacityRebalance = capacityRebalance;
             return this;
         }
-
         public Builder capacityRebalance(@Nullable Boolean capacityRebalance) {
             this.capacityRebalance = Output.ofNullable(capacityRebalance);
             return this;
         }
-
         public Builder defaultCooldown(@Nullable Output<Integer> defaultCooldown) {
             this.defaultCooldown = defaultCooldown;
             return this;
         }
-
         public Builder defaultCooldown(@Nullable Integer defaultCooldown) {
             this.defaultCooldown = Output.ofNullable(defaultCooldown);
             return this;
         }
-
         public Builder desiredCapacity(@Nullable Output<Integer> desiredCapacity) {
             this.desiredCapacity = desiredCapacity;
             return this;
         }
-
         public Builder desiredCapacity(@Nullable Integer desiredCapacity) {
             this.desiredCapacity = Output.ofNullable(desiredCapacity);
             return this;
         }
-
         public Builder enabledMetrics(@Nullable Output<List<String>> enabledMetrics) {
             this.enabledMetrics = enabledMetrics;
             return this;
         }
-
         public Builder enabledMetrics(@Nullable List<String> enabledMetrics) {
             this.enabledMetrics = Output.ofNullable(enabledMetrics);
             return this;
         }
-
+        public Builder enabledMetrics(String... enabledMetrics) {
+            return enabledMetrics(List.of(enabledMetrics));
+        }
         public Builder forceDelete(@Nullable Output<Boolean> forceDelete) {
             this.forceDelete = forceDelete;
             return this;
         }
-
         public Builder forceDelete(@Nullable Boolean forceDelete) {
             this.forceDelete = Output.ofNullable(forceDelete);
             return this;
         }
-
         public Builder forceDeleteWarmPool(@Nullable Output<Boolean> forceDeleteWarmPool) {
             this.forceDeleteWarmPool = forceDeleteWarmPool;
             return this;
         }
-
         public Builder forceDeleteWarmPool(@Nullable Boolean forceDeleteWarmPool) {
             this.forceDeleteWarmPool = Output.ofNullable(forceDeleteWarmPool);
             return this;
         }
-
         public Builder healthCheckGracePeriod(@Nullable Output<Integer> healthCheckGracePeriod) {
             this.healthCheckGracePeriod = healthCheckGracePeriod;
             return this;
         }
-
         public Builder healthCheckGracePeriod(@Nullable Integer healthCheckGracePeriod) {
             this.healthCheckGracePeriod = Output.ofNullable(healthCheckGracePeriod);
             return this;
         }
-
         public Builder healthCheckType(@Nullable Output<String> healthCheckType) {
             this.healthCheckType = healthCheckType;
             return this;
         }
-
         public Builder healthCheckType(@Nullable String healthCheckType) {
             this.healthCheckType = Output.ofNullable(healthCheckType);
             return this;
         }
-
         public Builder initialLifecycleHooks(@Nullable Output<List<GroupInitialLifecycleHookGetArgs>> initialLifecycleHooks) {
             this.initialLifecycleHooks = initialLifecycleHooks;
             return this;
         }
-
         public Builder initialLifecycleHooks(@Nullable List<GroupInitialLifecycleHookGetArgs> initialLifecycleHooks) {
             this.initialLifecycleHooks = Output.ofNullable(initialLifecycleHooks);
             return this;
         }
-
+        public Builder initialLifecycleHooks(GroupInitialLifecycleHookGetArgs... initialLifecycleHooks) {
+            return initialLifecycleHooks(List.of(initialLifecycleHooks));
+        }
         public Builder instanceRefresh(@Nullable Output<GroupInstanceRefreshGetArgs> instanceRefresh) {
             this.instanceRefresh = instanceRefresh;
             return this;
         }
-
         public Builder instanceRefresh(@Nullable GroupInstanceRefreshGetArgs instanceRefresh) {
             this.instanceRefresh = Output.ofNullable(instanceRefresh);
             return this;
         }
-
         public Builder launchConfiguration(@Nullable Output<String> launchConfiguration) {
             this.launchConfiguration = launchConfiguration;
             return this;
         }
-
         public Builder launchTemplate(@Nullable Output<GroupLaunchTemplateGetArgs> launchTemplate) {
             this.launchTemplate = launchTemplate;
             return this;
         }
-
         public Builder launchTemplate(@Nullable GroupLaunchTemplateGetArgs launchTemplate) {
             this.launchTemplate = Output.ofNullable(launchTemplate);
             return this;
         }
-
         public Builder loadBalancers(@Nullable Output<List<String>> loadBalancers) {
             this.loadBalancers = loadBalancers;
             return this;
         }
-
         public Builder loadBalancers(@Nullable List<String> loadBalancers) {
             this.loadBalancers = Output.ofNullable(loadBalancers);
             return this;
         }
-
+        public Builder loadBalancers(String... loadBalancers) {
+            return loadBalancers(List.of(loadBalancers));
+        }
         public Builder maxInstanceLifetime(@Nullable Output<Integer> maxInstanceLifetime) {
             this.maxInstanceLifetime = maxInstanceLifetime;
             return this;
         }
-
         public Builder maxInstanceLifetime(@Nullable Integer maxInstanceLifetime) {
             this.maxInstanceLifetime = Output.ofNullable(maxInstanceLifetime);
             return this;
         }
-
         public Builder maxSize(@Nullable Output<Integer> maxSize) {
             this.maxSize = maxSize;
             return this;
         }
-
         public Builder maxSize(@Nullable Integer maxSize) {
             this.maxSize = Output.ofNullable(maxSize);
             return this;
         }
-
         public Builder metricsGranularity(@Nullable Output<Either<String,MetricsGranularity>> metricsGranularity) {
             this.metricsGranularity = metricsGranularity;
             return this;
         }
-
         public Builder metricsGranularity(@Nullable Either<String,MetricsGranularity> metricsGranularity) {
             this.metricsGranularity = Output.ofNullable(metricsGranularity);
             return this;
         }
-
         public Builder minElbCapacity(@Nullable Output<Integer> minElbCapacity) {
             this.minElbCapacity = minElbCapacity;
             return this;
         }
-
         public Builder minElbCapacity(@Nullable Integer minElbCapacity) {
             this.minElbCapacity = Output.ofNullable(minElbCapacity);
             return this;
         }
-
         public Builder minSize(@Nullable Output<Integer> minSize) {
             this.minSize = minSize;
             return this;
         }
-
         public Builder minSize(@Nullable Integer minSize) {
             this.minSize = Output.ofNullable(minSize);
             return this;
         }
-
         public Builder mixedInstancesPolicy(@Nullable Output<GroupMixedInstancesPolicyGetArgs> mixedInstancesPolicy) {
             this.mixedInstancesPolicy = mixedInstancesPolicy;
             return this;
         }
-
         public Builder mixedInstancesPolicy(@Nullable GroupMixedInstancesPolicyGetArgs mixedInstancesPolicy) {
             this.mixedInstancesPolicy = Output.ofNullable(mixedInstancesPolicy);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder namePrefix(@Nullable Output<String> namePrefix) {
             this.namePrefix = namePrefix;
             return this;
         }
-
         public Builder namePrefix(@Nullable String namePrefix) {
             this.namePrefix = Output.ofNullable(namePrefix);
             return this;
         }
-
         public Builder placementGroup(@Nullable Output<String> placementGroup) {
             this.placementGroup = placementGroup;
             return this;
         }
-
         public Builder protectFromScaleIn(@Nullable Output<Boolean> protectFromScaleIn) {
             this.protectFromScaleIn = protectFromScaleIn;
             return this;
         }
-
         public Builder protectFromScaleIn(@Nullable Boolean protectFromScaleIn) {
             this.protectFromScaleIn = Output.ofNullable(protectFromScaleIn);
             return this;
         }
-
         public Builder serviceLinkedRoleArn(@Nullable Output<String> serviceLinkedRoleArn) {
             this.serviceLinkedRoleArn = serviceLinkedRoleArn;
             return this;
         }
-
         public Builder serviceLinkedRoleArn(@Nullable String serviceLinkedRoleArn) {
             this.serviceLinkedRoleArn = Output.ofNullable(serviceLinkedRoleArn);
             return this;
         }
-
         public Builder suspendedProcesses(@Nullable Output<List<String>> suspendedProcesses) {
             this.suspendedProcesses = suspendedProcesses;
             return this;
         }
-
         public Builder suspendedProcesses(@Nullable List<String> suspendedProcesses) {
             this.suspendedProcesses = Output.ofNullable(suspendedProcesses);
             return this;
         }
-
+        public Builder suspendedProcesses(String... suspendedProcesses) {
+            return suspendedProcesses(List.of(suspendedProcesses));
+        }
         public Builder tags(@Nullable Output<List<GroupTagGetArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<GroupTagGetArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
+        public Builder tags(GroupTagGetArgs... tags) {
+            return tags(List.of(tags));
+        }
         public Builder tagsCollection(@Nullable Output<List<Map<String,String>>> tagsCollection) {
             this.tagsCollection = tagsCollection;
             return this;
         }
-
         public Builder tagsCollection(@Nullable List<Map<String,String>> tagsCollection) {
             this.tagsCollection = Output.ofNullable(tagsCollection);
             return this;
         }
-
         public Builder targetGroupArns(@Nullable Output<List<String>> targetGroupArns) {
             this.targetGroupArns = targetGroupArns;
             return this;
         }
-
         public Builder targetGroupArns(@Nullable List<String> targetGroupArns) {
             this.targetGroupArns = Output.ofNullable(targetGroupArns);
             return this;
         }
-
+        public Builder targetGroupArns(String... targetGroupArns) {
+            return targetGroupArns(List.of(targetGroupArns));
+        }
         public Builder terminationPolicies(@Nullable Output<List<String>> terminationPolicies) {
             this.terminationPolicies = terminationPolicies;
             return this;
         }
-
         public Builder terminationPolicies(@Nullable List<String> terminationPolicies) {
             this.terminationPolicies = Output.ofNullable(terminationPolicies);
             return this;
         }
-
+        public Builder terminationPolicies(String... terminationPolicies) {
+            return terminationPolicies(List.of(terminationPolicies));
+        }
         public Builder vpcZoneIdentifiers(@Nullable Output<List<String>> vpcZoneIdentifiers) {
             this.vpcZoneIdentifiers = vpcZoneIdentifiers;
             return this;
         }
-
         public Builder vpcZoneIdentifiers(@Nullable List<String> vpcZoneIdentifiers) {
             this.vpcZoneIdentifiers = Output.ofNullable(vpcZoneIdentifiers);
             return this;
         }
-
+        public Builder vpcZoneIdentifiers(String... vpcZoneIdentifiers) {
+            return vpcZoneIdentifiers(List.of(vpcZoneIdentifiers));
+        }
         public Builder waitForCapacityTimeout(@Nullable Output<String> waitForCapacityTimeout) {
             this.waitForCapacityTimeout = waitForCapacityTimeout;
             return this;
         }
-
         public Builder waitForCapacityTimeout(@Nullable String waitForCapacityTimeout) {
             this.waitForCapacityTimeout = Output.ofNullable(waitForCapacityTimeout);
             return this;
         }
-
         public Builder waitForElbCapacity(@Nullable Output<Integer> waitForElbCapacity) {
             this.waitForElbCapacity = waitForElbCapacity;
             return this;
         }
-
         public Builder waitForElbCapacity(@Nullable Integer waitForElbCapacity) {
             this.waitForElbCapacity = Output.ofNullable(waitForElbCapacity);
             return this;
         }
-
         public Builder warmPool(@Nullable Output<GroupWarmPoolGetArgs> warmPool) {
             this.warmPool = warmPool;
             return this;
         }
-
         public Builder warmPool(@Nullable GroupWarmPoolGetArgs warmPool) {
             this.warmPool = Output.ofNullable(warmPool);
             return this;
-        }
-        public GroupState build() {
+        }        public GroupState build() {
             return new GroupState(arn, availabilityZones, capacityRebalance, defaultCooldown, desiredCapacity, enabledMetrics, forceDelete, forceDeleteWarmPool, healthCheckGracePeriod, healthCheckType, initialLifecycleHooks, instanceRefresh, launchConfiguration, launchTemplate, loadBalancers, maxInstanceLifetime, maxSize, metricsGranularity, minElbCapacity, minSize, mixedInstancesPolicy, name, namePrefix, placementGroup, protectFromScaleIn, serviceLinkedRoleArn, suspendedProcesses, tags, tagsCollection, targetGroupArns, terminationPolicies, vpcZoneIdentifiers, waitForCapacityTimeout, waitForElbCapacity, warmPool);
         }
     }

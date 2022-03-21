@@ -80,27 +80,22 @@ public final class InstanceMemcacheNode {
             this.host = host;
             return this;
         }
-
         public Builder nodeId(@Nullable String nodeId) {
             this.nodeId = nodeId;
             return this;
         }
-
         public Builder port(@Nullable Integer port) {
             this.port = port;
             return this;
         }
-
         public Builder state(@Nullable String state) {
             this.state = state;
             return this;
         }
-
         public Builder zone(@Nullable String zone) {
             this.zone = zone;
             return this;
-        }
-        public InstanceMemcacheNode build() {
+        }        public InstanceMemcacheNode build() {
             return new InstanceMemcacheNode(host, nodeId, port, state, zone);
         }
     }

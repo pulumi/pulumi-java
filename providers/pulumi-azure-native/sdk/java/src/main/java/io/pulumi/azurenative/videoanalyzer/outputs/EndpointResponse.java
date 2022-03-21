@@ -71,12 +71,10 @@ public final class EndpointResponse {
             this.endpointUrl = endpointUrl;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public EndpointResponse build() {
+        }        public EndpointResponse build() {
             return new EndpointResponse(endpointUrl, type);
         }
     }

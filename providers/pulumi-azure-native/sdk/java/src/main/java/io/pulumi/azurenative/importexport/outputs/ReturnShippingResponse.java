@@ -69,12 +69,10 @@ public final class ReturnShippingResponse {
             this.carrierAccountNumber = Objects.requireNonNull(carrierAccountNumber);
             return this;
         }
-
         public Builder carrierName(String carrierName) {
             this.carrierName = Objects.requireNonNull(carrierName);
             return this;
-        }
-        public ReturnShippingResponse build() {
+        }        public ReturnShippingResponse build() {
             return new ReturnShippingResponse(carrierAccountNumber, carrierName);
         }
     }

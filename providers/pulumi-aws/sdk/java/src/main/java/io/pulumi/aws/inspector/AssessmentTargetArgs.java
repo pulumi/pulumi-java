@@ -74,22 +74,18 @@ public final class AssessmentTargetArgs extends io.pulumi.resources.ResourceArgs
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder resourceGroupArn(@Nullable Output<String> resourceGroupArn) {
             this.resourceGroupArn = resourceGroupArn;
             return this;
         }
-
         public Builder resourceGroupArn(@Nullable String resourceGroupArn) {
             this.resourceGroupArn = Output.ofNullable(resourceGroupArn);
             return this;
-        }
-        public AssessmentTargetArgs build() {
+        }        public AssessmentTargetArgs build() {
             return new AssessmentTargetArgs(name, resourceGroupArn);
         }
     }

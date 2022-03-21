@@ -88,17 +88,14 @@ public final class KpiGroupByMetadataResponse {
             this.displayName = displayName;
             return this;
         }
-
         public Builder fieldName(@Nullable String fieldName) {
             this.fieldName = fieldName;
             return this;
         }
-
         public Builder fieldType(@Nullable String fieldType) {
             this.fieldType = fieldType;
             return this;
-        }
-        public KpiGroupByMetadataResponse build() {
+        }        public KpiGroupByMetadataResponse build() {
             return new KpiGroupByMetadataResponse(displayName, fieldName, fieldType);
         }
     }

@@ -72,12 +72,10 @@ public final class GetRegistryArgs extends io.pulumi.resources.InvokeArgs {
             this.registryName = Objects.requireNonNull(registryName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetRegistryArgs build() {
+        }        public GetRegistryArgs build() {
             return new GetRegistryArgs(registryName, resourceGroupName);
         }
     }

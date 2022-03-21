@@ -138,32 +138,26 @@ public final class GetGatewayResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder properties(GatewayPropertiesResponse properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
-
         public Builder sku(@Nullable SkuResponse sku) {
             this.sku = sku;
             return this;
         }
-
         public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetGatewayResult build() {
+        }        public GetGatewayResult build() {
             return new GetGatewayResult(id, name, properties, sku, systemData, type);
         }
     }

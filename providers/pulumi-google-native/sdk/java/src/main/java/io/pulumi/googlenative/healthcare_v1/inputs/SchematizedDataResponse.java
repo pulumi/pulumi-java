@@ -76,12 +76,10 @@ public final class SchematizedDataResponse extends io.pulumi.resources.InvokeArg
             this.data = Objects.requireNonNull(data);
             return this;
         }
-
         public Builder error(String error) {
             this.error = Objects.requireNonNull(error);
             return this;
-        }
-        public SchematizedDataResponse build() {
+        }        public SchematizedDataResponse build() {
             return new SchematizedDataResponse(data, error);
         }
     }

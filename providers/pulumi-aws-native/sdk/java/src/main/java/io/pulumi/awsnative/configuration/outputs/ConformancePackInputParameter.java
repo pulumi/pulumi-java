@@ -53,12 +53,10 @@ public final class ConformancePackInputParameter {
             this.parameterName = Objects.requireNonNull(parameterName);
             return this;
         }
-
         public Builder parameterValue(String parameterValue) {
             this.parameterValue = Objects.requireNonNull(parameterValue);
             return this;
-        }
-        public ConformancePackInputParameter build() {
+        }        public ConformancePackInputParameter build() {
             return new ConformancePackInputParameter(parameterName, parameterValue);
         }
     }

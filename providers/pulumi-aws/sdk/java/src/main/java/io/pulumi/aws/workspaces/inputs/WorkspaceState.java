@@ -237,122 +237,98 @@ public final class WorkspaceState extends io.pulumi.resources.ResourceArgs {
             this.bundleId = bundleId;
             return this;
         }
-
         public Builder bundleId(@Nullable String bundleId) {
             this.bundleId = Output.ofNullable(bundleId);
             return this;
         }
-
         public Builder computerName(@Nullable Output<String> computerName) {
             this.computerName = computerName;
             return this;
         }
-
         public Builder computerName(@Nullable String computerName) {
             this.computerName = Output.ofNullable(computerName);
             return this;
         }
-
         public Builder directoryId(@Nullable Output<String> directoryId) {
             this.directoryId = directoryId;
             return this;
         }
-
         public Builder directoryId(@Nullable String directoryId) {
             this.directoryId = Output.ofNullable(directoryId);
             return this;
         }
-
         public Builder ipAddress(@Nullable Output<String> ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
-
         public Builder ipAddress(@Nullable String ipAddress) {
             this.ipAddress = Output.ofNullable(ipAddress);
             return this;
         }
-
         public Builder rootVolumeEncryptionEnabled(@Nullable Output<Boolean> rootVolumeEncryptionEnabled) {
             this.rootVolumeEncryptionEnabled = rootVolumeEncryptionEnabled;
             return this;
         }
-
         public Builder rootVolumeEncryptionEnabled(@Nullable Boolean rootVolumeEncryptionEnabled) {
             this.rootVolumeEncryptionEnabled = Output.ofNullable(rootVolumeEncryptionEnabled);
             return this;
         }
-
         public Builder state(@Nullable Output<String> state) {
             this.state = state;
             return this;
         }
-
         public Builder state(@Nullable String state) {
             this.state = Output.ofNullable(state);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
-
         public Builder userName(@Nullable Output<String> userName) {
             this.userName = userName;
             return this;
         }
-
         public Builder userName(@Nullable String userName) {
             this.userName = Output.ofNullable(userName);
             return this;
         }
-
         public Builder userVolumeEncryptionEnabled(@Nullable Output<Boolean> userVolumeEncryptionEnabled) {
             this.userVolumeEncryptionEnabled = userVolumeEncryptionEnabled;
             return this;
         }
-
         public Builder userVolumeEncryptionEnabled(@Nullable Boolean userVolumeEncryptionEnabled) {
             this.userVolumeEncryptionEnabled = Output.ofNullable(userVolumeEncryptionEnabled);
             return this;
         }
-
         public Builder volumeEncryptionKey(@Nullable Output<String> volumeEncryptionKey) {
             this.volumeEncryptionKey = volumeEncryptionKey;
             return this;
         }
-
         public Builder volumeEncryptionKey(@Nullable String volumeEncryptionKey) {
             this.volumeEncryptionKey = Output.ofNullable(volumeEncryptionKey);
             return this;
         }
-
         public Builder workspaceProperties(@Nullable Output<WorkspaceWorkspacePropertiesGetArgs> workspaceProperties) {
             this.workspaceProperties = workspaceProperties;
             return this;
         }
-
         public Builder workspaceProperties(@Nullable WorkspaceWorkspacePropertiesGetArgs workspaceProperties) {
             this.workspaceProperties = Output.ofNullable(workspaceProperties);
             return this;
-        }
-        public WorkspaceState build() {
+        }        public WorkspaceState build() {
             return new WorkspaceState(bundleId, computerName, directoryId, ipAddress, rootVolumeEncryptionEnabled, state, tags, tagsAll, userName, userVolumeEncryptionEnabled, volumeEncryptionKey, workspaceProperties);
         }
     }

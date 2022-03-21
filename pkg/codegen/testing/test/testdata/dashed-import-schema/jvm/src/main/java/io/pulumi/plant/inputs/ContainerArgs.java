@@ -94,42 +94,34 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
             this.brightness = brightness;
             return this;
         }
-
         public Builder brightness(@Nullable ContainerBrightness brightness) {
             this.brightness = Output.ofNullable(brightness);
             return this;
         }
-
         public Builder color(@Nullable Output<Either<ContainerColor,String>> color) {
             this.color = color;
             return this;
         }
-
         public Builder color(@Nullable Either<ContainerColor,String> color) {
             this.color = Output.ofNullable(color);
             return this;
         }
-
         public Builder material(@Nullable Output<String> material) {
             this.material = material;
             return this;
         }
-
         public Builder material(@Nullable String material) {
             this.material = Output.ofNullable(material);
             return this;
         }
-
         public Builder size(Output<ContainerSize> size) {
             this.size = Objects.requireNonNull(size);
             return this;
         }
-
         public Builder size(ContainerSize size) {
             this.size = Output.of(Objects.requireNonNull(size));
             return this;
-        }
-        public ContainerArgs build() {
+        }        public ContainerArgs build() {
             return new ContainerArgs(brightness, color, material, size);
         }
     }

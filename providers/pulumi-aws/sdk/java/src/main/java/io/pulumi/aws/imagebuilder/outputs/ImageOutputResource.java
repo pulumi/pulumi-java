@@ -54,7 +54,9 @@ public final class ImageOutputResource {
             this.amis = amis;
             return this;
         }
-        public ImageOutputResource build() {
+        public Builder amis(ImageOutputResourceAmi... amis) {
+            return amis(List.of(amis));
+        }        public ImageOutputResource build() {
             return new ImageOutputResource(amis);
         }
     }

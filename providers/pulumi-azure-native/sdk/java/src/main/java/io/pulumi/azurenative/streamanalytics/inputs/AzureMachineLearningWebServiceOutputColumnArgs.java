@@ -78,22 +78,18 @@ public final class AzureMachineLearningWebServiceOutputColumnArgs extends io.pul
             this.dataType = dataType;
             return this;
         }
-
         public Builder dataType(@Nullable String dataType) {
             this.dataType = Output.ofNullable(dataType);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
-        }
-        public AzureMachineLearningWebServiceOutputColumnArgs build() {
+        }        public AzureMachineLearningWebServiceOutputColumnArgs build() {
             return new AzureMachineLearningWebServiceOutputColumnArgs(dataType, name);
         }
     }

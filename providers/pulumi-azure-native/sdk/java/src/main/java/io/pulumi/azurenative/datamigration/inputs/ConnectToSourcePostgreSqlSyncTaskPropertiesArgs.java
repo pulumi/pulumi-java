@@ -80,22 +80,18 @@ public final class ConnectToSourcePostgreSqlSyncTaskPropertiesArgs extends io.pu
             this.input = input;
             return this;
         }
-
         public Builder input(@Nullable ConnectToSourcePostgreSqlSyncTaskInputArgs input) {
             this.input = Output.ofNullable(input);
             return this;
         }
-
         public Builder taskType(Output<String> taskType) {
             this.taskType = Objects.requireNonNull(taskType);
             return this;
         }
-
         public Builder taskType(String taskType) {
             this.taskType = Output.of(Objects.requireNonNull(taskType));
             return this;
-        }
-        public ConnectToSourcePostgreSqlSyncTaskPropertiesArgs build() {
+        }        public ConnectToSourcePostgreSqlSyncTaskPropertiesArgs build() {
             return new ConnectToSourcePostgreSqlSyncTaskPropertiesArgs(input, taskType);
         }
     }

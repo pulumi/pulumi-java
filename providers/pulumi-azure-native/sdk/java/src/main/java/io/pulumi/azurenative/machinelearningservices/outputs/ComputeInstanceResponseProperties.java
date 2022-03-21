@@ -257,67 +257,60 @@ public final class ComputeInstanceResponseProperties {
             this.applicationSharingPolicy = applicationSharingPolicy;
             return this;
         }
-
         public Builder applications(List<ComputeInstanceApplicationResponse> applications) {
             this.applications = Objects.requireNonNull(applications);
             return this;
         }
-
+        public Builder applications(ComputeInstanceApplicationResponse... applications) {
+            return applications(List.of(applications));
+        }
         public Builder computeInstanceAuthorizationType(@Nullable String computeInstanceAuthorizationType) {
             this.computeInstanceAuthorizationType = computeInstanceAuthorizationType;
             return this;
         }
-
         public Builder connectivityEndpoints(ComputeInstanceConnectivityEndpointsResponse connectivityEndpoints) {
             this.connectivityEndpoints = Objects.requireNonNull(connectivityEndpoints);
             return this;
         }
-
         public Builder createdBy(ComputeInstanceCreatedByResponse createdBy) {
             this.createdBy = Objects.requireNonNull(createdBy);
             return this;
         }
-
         public Builder errors(List<MachineLearningServiceErrorResponse> errors) {
             this.errors = Objects.requireNonNull(errors);
             return this;
         }
-
+        public Builder errors(MachineLearningServiceErrorResponse... errors) {
+            return errors(List.of(errors));
+        }
         public Builder lastOperation(ComputeInstanceLastOperationResponse lastOperation) {
             this.lastOperation = Objects.requireNonNull(lastOperation);
             return this;
         }
-
         public Builder personalComputeInstanceSettings(@Nullable PersonalComputeInstanceSettingsResponse personalComputeInstanceSettings) {
             this.personalComputeInstanceSettings = personalComputeInstanceSettings;
             return this;
         }
-
         public Builder setupScripts(@Nullable SetupScriptsResponse setupScripts) {
             this.setupScripts = setupScripts;
             return this;
         }
-
         public Builder sshSettings(@Nullable ComputeInstanceSshSettingsResponse sshSettings) {
             this.sshSettings = sshSettings;
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder subnet(@Nullable ResourceIdResponse subnet) {
             this.subnet = subnet;
             return this;
         }
-
         public Builder vmSize(@Nullable String vmSize) {
             this.vmSize = vmSize;
             return this;
-        }
-        public ComputeInstanceResponseProperties build() {
+        }        public ComputeInstanceResponseProperties build() {
             return new ComputeInstanceResponseProperties(applicationSharingPolicy, applications, computeInstanceAuthorizationType, connectivityEndpoints, createdBy, errors, lastOperation, personalComputeInstanceSettings, setupScripts, sshSettings, state, subnet, vmSize);
         }
     }

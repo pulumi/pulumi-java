@@ -176,92 +176,83 @@ public final class RegionHealthCheckServiceArgs extends io.pulumi.resources.Reso
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder healthChecks(@Nullable Output<List<String>> healthChecks) {
             this.healthChecks = healthChecks;
             return this;
         }
-
         public Builder healthChecks(@Nullable List<String> healthChecks) {
             this.healthChecks = Output.ofNullable(healthChecks);
             return this;
         }
-
+        public Builder healthChecks(String... healthChecks) {
+            return healthChecks(List.of(healthChecks));
+        }
         public Builder healthStatusAggregationPolicy(@Nullable Output<RegionHealthCheckServiceHealthStatusAggregationPolicy> healthStatusAggregationPolicy) {
             this.healthStatusAggregationPolicy = healthStatusAggregationPolicy;
             return this;
         }
-
         public Builder healthStatusAggregationPolicy(@Nullable RegionHealthCheckServiceHealthStatusAggregationPolicy healthStatusAggregationPolicy) {
             this.healthStatusAggregationPolicy = Output.ofNullable(healthStatusAggregationPolicy);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder networkEndpointGroups(@Nullable Output<List<String>> networkEndpointGroups) {
             this.networkEndpointGroups = networkEndpointGroups;
             return this;
         }
-
         public Builder networkEndpointGroups(@Nullable List<String> networkEndpointGroups) {
             this.networkEndpointGroups = Output.ofNullable(networkEndpointGroups);
             return this;
         }
-
+        public Builder networkEndpointGroups(String... networkEndpointGroups) {
+            return networkEndpointGroups(List.of(networkEndpointGroups));
+        }
         public Builder notificationEndpoints(@Nullable Output<List<String>> notificationEndpoints) {
             this.notificationEndpoints = notificationEndpoints;
             return this;
         }
-
         public Builder notificationEndpoints(@Nullable List<String> notificationEndpoints) {
             this.notificationEndpoints = Output.ofNullable(notificationEndpoints);
             return this;
         }
-
+        public Builder notificationEndpoints(String... notificationEndpoints) {
+            return notificationEndpoints(List.of(notificationEndpoints));
+        }
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder region(Output<String> region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
-
         public Builder region(String region) {
             this.region = Output.of(Objects.requireNonNull(region));
             return this;
         }
-
         public Builder requestId(@Nullable Output<String> requestId) {
             this.requestId = requestId;
             return this;
         }
-
         public Builder requestId(@Nullable String requestId) {
             this.requestId = Output.ofNullable(requestId);
             return this;
-        }
-        public RegionHealthCheckServiceArgs build() {
+        }        public RegionHealthCheckServiceArgs build() {
             return new RegionHealthCheckServiceArgs(description, healthChecks, healthStatusAggregationPolicy, name, networkEndpointGroups, notificationEndpoints, project, region, requestId);
         }
     }

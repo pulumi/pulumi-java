@@ -87,17 +87,14 @@ public final class TimeWindowResponse {
             this.end = Objects.requireNonNull(end);
             return this;
         }
-
         public Builder start(String start) {
             this.start = Objects.requireNonNull(start);
             return this;
         }
-
         public Builder timeZone(@Nullable String timeZone) {
             this.timeZone = timeZone;
             return this;
-        }
-        public TimeWindowResponse build() {
+        }        public TimeWindowResponse build() {
             return new TimeWindowResponse(end, start, timeZone);
         }
     }

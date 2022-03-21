@@ -111,22 +111,18 @@ public final class OSPolicyResourceFileResponse extends io.pulumi.resources.Invo
             this.allowInsecure = Objects.requireNonNull(allowInsecure);
             return this;
         }
-
         public Builder gcs(OSPolicyResourceFileGcsResponse gcs) {
             this.gcs = Objects.requireNonNull(gcs);
             return this;
         }
-
         public Builder localPath(String localPath) {
             this.localPath = Objects.requireNonNull(localPath);
             return this;
         }
-
         public Builder remote(OSPolicyResourceFileRemoteResponse remote) {
             this.remote = Objects.requireNonNull(remote);
             return this;
-        }
-        public OSPolicyResourceFileResponse build() {
+        }        public OSPolicyResourceFileResponse build() {
             return new OSPolicyResourceFileResponse(allowInsecure, gcs, localPath, remote);
         }
     }

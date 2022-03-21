@@ -116,32 +116,26 @@ public final class DeliveryStreamParquetSerDe extends io.pulumi.resources.Invoke
             this.blockSizeBytes = blockSizeBytes;
             return this;
         }
-
         public Builder compression(@Nullable String compression) {
             this.compression = compression;
             return this;
         }
-
         public Builder enableDictionaryCompression(@Nullable Boolean enableDictionaryCompression) {
             this.enableDictionaryCompression = enableDictionaryCompression;
             return this;
         }
-
         public Builder maxPaddingBytes(@Nullable Integer maxPaddingBytes) {
             this.maxPaddingBytes = maxPaddingBytes;
             return this;
         }
-
         public Builder pageSizeBytes(@Nullable Integer pageSizeBytes) {
             this.pageSizeBytes = pageSizeBytes;
             return this;
         }
-
         public Builder writerVersion(@Nullable String writerVersion) {
             this.writerVersion = writerVersion;
             return this;
-        }
-        public DeliveryStreamParquetSerDe build() {
+        }        public DeliveryStreamParquetSerDe build() {
             return new DeliveryStreamParquetSerDe(blockSizeBytes, compression, enableDictionaryCompression, maxPaddingBytes, pageSizeBytes, writerVersion);
         }
     }

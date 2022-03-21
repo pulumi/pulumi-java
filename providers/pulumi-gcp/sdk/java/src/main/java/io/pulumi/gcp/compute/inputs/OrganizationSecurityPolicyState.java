@@ -143,62 +143,50 @@ public final class OrganizationSecurityPolicyState extends io.pulumi.resources.R
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder fingerprint(@Nullable Output<String> fingerprint) {
             this.fingerprint = fingerprint;
             return this;
         }
-
         public Builder fingerprint(@Nullable String fingerprint) {
             this.fingerprint = Output.ofNullable(fingerprint);
             return this;
         }
-
         public Builder parent(@Nullable Output<String> parent) {
             this.parent = parent;
             return this;
         }
-
         public Builder parent(@Nullable String parent) {
             this.parent = Output.ofNullable(parent);
             return this;
         }
-
         public Builder policyId(@Nullable Output<String> policyId) {
             this.policyId = policyId;
             return this;
         }
-
         public Builder policyId(@Nullable String policyId) {
             this.policyId = Output.ofNullable(policyId);
             return this;
         }
-
         public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public OrganizationSecurityPolicyState build() {
+        }        public OrganizationSecurityPolicyState build() {
             return new OrganizationSecurityPolicyState(description, displayName, fingerprint, parent, policyId, type);
         }
     }

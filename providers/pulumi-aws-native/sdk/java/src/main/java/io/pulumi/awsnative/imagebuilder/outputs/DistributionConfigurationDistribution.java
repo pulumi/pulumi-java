@@ -123,27 +123,28 @@ public final class DistributionConfigurationDistribution {
             this.amiDistributionConfiguration = amiDistributionConfiguration;
             return this;
         }
-
         public Builder containerDistributionConfiguration(@Nullable DistributionConfigurationDistributionContainerDistributionConfigurationProperties containerDistributionConfiguration) {
             this.containerDistributionConfiguration = containerDistributionConfiguration;
             return this;
         }
-
         public Builder launchTemplateConfigurations(@Nullable List<DistributionConfigurationLaunchTemplateConfiguration> launchTemplateConfigurations) {
             this.launchTemplateConfigurations = launchTemplateConfigurations;
             return this;
         }
-
+        public Builder launchTemplateConfigurations(DistributionConfigurationLaunchTemplateConfiguration... launchTemplateConfigurations) {
+            return launchTemplateConfigurations(List.of(launchTemplateConfigurations));
+        }
         public Builder licenseConfigurationArns(@Nullable List<String> licenseConfigurationArns) {
             this.licenseConfigurationArns = licenseConfigurationArns;
             return this;
         }
-
+        public Builder licenseConfigurationArns(String... licenseConfigurationArns) {
+            return licenseConfigurationArns(List.of(licenseConfigurationArns));
+        }
         public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
-        }
-        public DistributionConfigurationDistribution build() {
+        }        public DistributionConfigurationDistribution build() {
             return new DistributionConfigurationDistribution(amiDistributionConfiguration, containerDistributionConfiguration, launchTemplateConfigurations, licenseConfigurationArns, region);
         }
     }

@@ -50,8 +50,7 @@ public final class GetTestGridProjectArgs extends io.pulumi.resources.InvokeArgs
         public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
-        }
-        public GetTestGridProjectArgs build() {
+        }        public GetTestGridProjectArgs build() {
             return new GetTestGridProjectArgs(arn);
         }
     }

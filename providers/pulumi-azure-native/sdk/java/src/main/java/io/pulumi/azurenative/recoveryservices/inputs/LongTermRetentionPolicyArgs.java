@@ -131,52 +131,42 @@ public final class LongTermRetentionPolicyArgs extends io.pulumi.resources.Resou
             this.dailySchedule = dailySchedule;
             return this;
         }
-
         public Builder dailySchedule(@Nullable DailyRetentionScheduleArgs dailySchedule) {
             this.dailySchedule = Output.ofNullable(dailySchedule);
             return this;
         }
-
         public Builder monthlySchedule(@Nullable Output<MonthlyRetentionScheduleArgs> monthlySchedule) {
             this.monthlySchedule = monthlySchedule;
             return this;
         }
-
         public Builder monthlySchedule(@Nullable MonthlyRetentionScheduleArgs monthlySchedule) {
             this.monthlySchedule = Output.ofNullable(monthlySchedule);
             return this;
         }
-
         public Builder retentionPolicyType(Output<String> retentionPolicyType) {
             this.retentionPolicyType = Objects.requireNonNull(retentionPolicyType);
             return this;
         }
-
         public Builder retentionPolicyType(String retentionPolicyType) {
             this.retentionPolicyType = Output.of(Objects.requireNonNull(retentionPolicyType));
             return this;
         }
-
         public Builder weeklySchedule(@Nullable Output<WeeklyRetentionScheduleArgs> weeklySchedule) {
             this.weeklySchedule = weeklySchedule;
             return this;
         }
-
         public Builder weeklySchedule(@Nullable WeeklyRetentionScheduleArgs weeklySchedule) {
             this.weeklySchedule = Output.ofNullable(weeklySchedule);
             return this;
         }
-
         public Builder yearlySchedule(@Nullable Output<YearlyRetentionScheduleArgs> yearlySchedule) {
             this.yearlySchedule = yearlySchedule;
             return this;
         }
-
         public Builder yearlySchedule(@Nullable YearlyRetentionScheduleArgs yearlySchedule) {
             this.yearlySchedule = Output.ofNullable(yearlySchedule);
             return this;
-        }
-        public LongTermRetentionPolicyArgs build() {
+        }        public LongTermRetentionPolicyArgs build() {
             return new LongTermRetentionPolicyArgs(dailySchedule, monthlySchedule, retentionPolicyType, weeklySchedule, yearlySchedule);
         }
     }

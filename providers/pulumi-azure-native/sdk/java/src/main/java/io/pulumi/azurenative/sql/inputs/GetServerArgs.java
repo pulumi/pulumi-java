@@ -90,17 +90,14 @@ public final class GetServerArgs extends io.pulumi.resources.InvokeArgs {
             this.expand = expand;
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder serverName(String serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
-        }
-        public GetServerArgs build() {
+        }        public GetServerArgs build() {
             return new GetServerArgs(expand, resourceGroupName, serverName);
         }
     }

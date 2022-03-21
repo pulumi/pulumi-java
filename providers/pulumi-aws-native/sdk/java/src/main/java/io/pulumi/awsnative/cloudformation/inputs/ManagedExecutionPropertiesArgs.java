@@ -57,12 +57,10 @@ public final class ManagedExecutionPropertiesArgs extends io.pulumi.resources.Re
             this.active = active;
             return this;
         }
-
         public Builder active(@Nullable Boolean active) {
             this.active = Output.ofNullable(active);
             return this;
-        }
-        public ManagedExecutionPropertiesArgs build() {
+        }        public ManagedExecutionPropertiesArgs build() {
             return new ManagedExecutionPropertiesArgs(active);
         }
     }

@@ -86,17 +86,17 @@ public final class SourceCostAllocationResourceResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder resourceType(String resourceType) {
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
         }
-
         public Builder values(List<String> values) {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-        public SourceCostAllocationResourceResponse build() {
+        public Builder values(String... values) {
+            return values(List.of(values));
+        }        public SourceCostAllocationResourceResponse build() {
             return new SourceCostAllocationResourceResponse(name, resourceType, values);
         }
     }

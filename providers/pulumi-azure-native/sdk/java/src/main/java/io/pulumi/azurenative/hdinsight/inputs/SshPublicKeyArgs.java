@@ -61,12 +61,10 @@ public final class SshPublicKeyArgs extends io.pulumi.resources.ResourceArgs {
             this.certificateData = certificateData;
             return this;
         }
-
         public Builder certificateData(@Nullable String certificateData) {
             this.certificateData = Output.ofNullable(certificateData);
             return this;
-        }
-        public SshPublicKeyArgs build() {
+        }        public SshPublicKeyArgs build() {
             return new SshPublicKeyArgs(certificateData);
         }
     }

@@ -90,32 +90,26 @@ public final class FeatureMembershipConfigmanagementHierarchyControllerGetArgs e
             this.enableHierarchicalResourceQuota = enableHierarchicalResourceQuota;
             return this;
         }
-
         public Builder enableHierarchicalResourceQuota(@Nullable Boolean enableHierarchicalResourceQuota) {
             this.enableHierarchicalResourceQuota = Output.ofNullable(enableHierarchicalResourceQuota);
             return this;
         }
-
         public Builder enablePodTreeLabels(@Nullable Output<Boolean> enablePodTreeLabels) {
             this.enablePodTreeLabels = enablePodTreeLabels;
             return this;
         }
-
         public Builder enablePodTreeLabels(@Nullable Boolean enablePodTreeLabels) {
             this.enablePodTreeLabels = Output.ofNullable(enablePodTreeLabels);
             return this;
         }
-
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
-        }
-        public FeatureMembershipConfigmanagementHierarchyControllerGetArgs build() {
+        }        public FeatureMembershipConfigmanagementHierarchyControllerGetArgs build() {
             return new FeatureMembershipConfigmanagementHierarchyControllerGetArgs(enableHierarchicalResourceQuota, enablePodTreeLabels, enabled);
         }
     }

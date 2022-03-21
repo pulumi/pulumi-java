@@ -52,12 +52,10 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
             this.template = template;
             return this;
         }
-
         public Builder template(@Nullable io.pulumi.awsnative.ses.inputs.TemplateArgs template) {
             this.template = Output.ofNullable(template);
             return this;
-        }
-        public TemplateArgs build() {
+        }        public TemplateArgs build() {
             return new TemplateArgs(template);
         }
     }

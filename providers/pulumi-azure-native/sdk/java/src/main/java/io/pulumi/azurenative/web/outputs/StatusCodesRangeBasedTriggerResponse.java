@@ -96,22 +96,18 @@ public final class StatusCodesRangeBasedTriggerResponse {
             this.count = count;
             return this;
         }
-
         public Builder path(@Nullable String path) {
             this.path = path;
             return this;
         }
-
         public Builder statusCodes(@Nullable String statusCodes) {
             this.statusCodes = statusCodes;
             return this;
         }
-
         public Builder timeInterval(@Nullable String timeInterval) {
             this.timeInterval = timeInterval;
             return this;
-        }
-        public StatusCodesRangeBasedTriggerResponse build() {
+        }        public StatusCodesRangeBasedTriggerResponse build() {
             return new StatusCodesRangeBasedTriggerResponse(count, path, statusCodes, timeInterval);
         }
     }

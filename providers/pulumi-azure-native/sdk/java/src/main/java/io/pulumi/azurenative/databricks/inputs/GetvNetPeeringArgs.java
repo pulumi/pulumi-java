@@ -88,17 +88,14 @@ public final class GetvNetPeeringArgs extends io.pulumi.resources.InvokeArgs {
             this.peeringName = Objects.requireNonNull(peeringName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
-        }
-        public GetvNetPeeringArgs build() {
+        }        public GetvNetPeeringArgs build() {
             return new GetvNetPeeringArgs(peeringName, resourceGroupName, workspaceName);
         }
     }

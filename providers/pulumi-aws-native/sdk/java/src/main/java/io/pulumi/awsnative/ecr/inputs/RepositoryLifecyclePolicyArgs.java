@@ -70,22 +70,18 @@ public final class RepositoryLifecyclePolicyArgs extends io.pulumi.resources.Res
             this.lifecyclePolicyText = lifecyclePolicyText;
             return this;
         }
-
         public Builder lifecyclePolicyText(@Nullable String lifecyclePolicyText) {
             this.lifecyclePolicyText = Output.ofNullable(lifecyclePolicyText);
             return this;
         }
-
         public Builder registryId(@Nullable Output<String> registryId) {
             this.registryId = registryId;
             return this;
         }
-
         public Builder registryId(@Nullable String registryId) {
             this.registryId = Output.ofNullable(registryId);
             return this;
-        }
-        public RepositoryLifecyclePolicyArgs build() {
+        }        public RepositoryLifecyclePolicyArgs build() {
             return new RepositoryLifecyclePolicyArgs(lifecyclePolicyText, registryId);
         }
     }

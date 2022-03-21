@@ -76,12 +76,10 @@ public final class VertexResponse extends io.pulumi.resources.InvokeArgs {
             this.x = Objects.requireNonNull(x);
             return this;
         }
-
         public Builder y(Double y) {
             this.y = Objects.requireNonNull(y);
             return this;
-        }
-        public VertexResponse build() {
+        }        public VertexResponse build() {
             return new VertexResponse(x, y);
         }
     }

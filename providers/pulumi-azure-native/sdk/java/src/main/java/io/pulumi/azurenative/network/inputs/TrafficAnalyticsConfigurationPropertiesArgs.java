@@ -128,52 +128,42 @@ public final class TrafficAnalyticsConfigurationPropertiesArgs extends io.pulumi
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
         }
-
         public Builder trafficAnalyticsInterval(@Nullable Output<Integer> trafficAnalyticsInterval) {
             this.trafficAnalyticsInterval = trafficAnalyticsInterval;
             return this;
         }
-
         public Builder trafficAnalyticsInterval(@Nullable Integer trafficAnalyticsInterval) {
             this.trafficAnalyticsInterval = Output.ofNullable(trafficAnalyticsInterval);
             return this;
         }
-
         public Builder workspaceId(@Nullable Output<String> workspaceId) {
             this.workspaceId = workspaceId;
             return this;
         }
-
         public Builder workspaceId(@Nullable String workspaceId) {
             this.workspaceId = Output.ofNullable(workspaceId);
             return this;
         }
-
         public Builder workspaceRegion(@Nullable Output<String> workspaceRegion) {
             this.workspaceRegion = workspaceRegion;
             return this;
         }
-
         public Builder workspaceRegion(@Nullable String workspaceRegion) {
             this.workspaceRegion = Output.ofNullable(workspaceRegion);
             return this;
         }
-
         public Builder workspaceResourceId(@Nullable Output<String> workspaceResourceId) {
             this.workspaceResourceId = workspaceResourceId;
             return this;
         }
-
         public Builder workspaceResourceId(@Nullable String workspaceResourceId) {
             this.workspaceResourceId = Output.ofNullable(workspaceResourceId);
             return this;
-        }
-        public TrafficAnalyticsConfigurationPropertiesArgs build() {
+        }        public TrafficAnalyticsConfigurationPropertiesArgs build() {
             return new TrafficAnalyticsConfigurationPropertiesArgs(enabled, trafficAnalyticsInterval, workspaceId, workspaceRegion, workspaceResourceId);
         }
     }

@@ -101,22 +101,18 @@ public final class NetworkInterfaceResponse {
             this.externalIp = Objects.requireNonNull(externalIp);
             return this;
         }
-
         public Builder internalIp(String internalIp) {
             this.internalIp = Objects.requireNonNull(internalIp);
             return this;
         }
-
         public Builder network(String network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }
-
         public Builder subnetwork(String subnetwork) {
             this.subnetwork = Objects.requireNonNull(subnetwork);
             return this;
-        }
-        public NetworkInterfaceResponse build() {
+        }        public NetworkInterfaceResponse build() {
             return new NetworkInterfaceResponse(externalIp, internalIp, network, subnetwork);
         }
     }

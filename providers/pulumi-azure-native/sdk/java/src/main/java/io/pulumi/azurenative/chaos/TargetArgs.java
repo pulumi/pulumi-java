@@ -155,72 +155,58 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder parentProviderNamespace(Output<String> parentProviderNamespace) {
             this.parentProviderNamespace = Objects.requireNonNull(parentProviderNamespace);
             return this;
         }
-
         public Builder parentProviderNamespace(String parentProviderNamespace) {
             this.parentProviderNamespace = Output.of(Objects.requireNonNull(parentProviderNamespace));
             return this;
         }
-
         public Builder parentResourceName(Output<String> parentResourceName) {
             this.parentResourceName = Objects.requireNonNull(parentResourceName);
             return this;
         }
-
         public Builder parentResourceName(String parentResourceName) {
             this.parentResourceName = Output.of(Objects.requireNonNull(parentResourceName));
             return this;
         }
-
         public Builder parentResourceType(Output<String> parentResourceType) {
             this.parentResourceType = Objects.requireNonNull(parentResourceType);
             return this;
         }
-
         public Builder parentResourceType(String parentResourceType) {
             this.parentResourceType = Output.of(Objects.requireNonNull(parentResourceType));
             return this;
         }
-
         public Builder properties(Output<Object> properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
-
         public Builder properties(Object properties) {
             this.properties = Output.of(Objects.requireNonNull(properties));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder targetName(@Nullable Output<String> targetName) {
             this.targetName = targetName;
             return this;
         }
-
         public Builder targetName(@Nullable String targetName) {
             this.targetName = Output.ofNullable(targetName);
             return this;
-        }
-        public TargetArgs build() {
+        }        public TargetArgs build() {
             return new TargetArgs(location, parentProviderNamespace, parentResourceName, parentResourceType, properties, resourceGroupName, targetName);
         }
     }

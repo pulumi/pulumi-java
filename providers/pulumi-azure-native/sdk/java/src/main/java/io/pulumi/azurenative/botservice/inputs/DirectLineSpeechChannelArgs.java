@@ -112,42 +112,34 @@ public final class DirectLineSpeechChannelArgs extends io.pulumi.resources.Resou
             this.channelName = Objects.requireNonNull(channelName);
             return this;
         }
-
         public Builder channelName(String channelName) {
             this.channelName = Output.of(Objects.requireNonNull(channelName));
             return this;
         }
-
         public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
-
         public Builder etag(@Nullable String etag) {
             this.etag = Output.ofNullable(etag);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder properties(@Nullable Output<DirectLineSpeechChannelPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder properties(@Nullable DirectLineSpeechChannelPropertiesArgs properties) {
             this.properties = Output.ofNullable(properties);
             return this;
-        }
-        public DirectLineSpeechChannelArgs build() {
+        }        public DirectLineSpeechChannelArgs build() {
             return new DirectLineSpeechChannelArgs(channelName, etag, location, properties);
         }
     }

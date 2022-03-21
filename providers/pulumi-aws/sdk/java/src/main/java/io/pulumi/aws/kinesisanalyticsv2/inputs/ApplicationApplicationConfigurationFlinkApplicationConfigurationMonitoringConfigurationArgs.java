@@ -90,32 +90,26 @@ public final class ApplicationApplicationConfigurationFlinkApplicationConfigurat
             this.configurationType = Objects.requireNonNull(configurationType);
             return this;
         }
-
         public Builder configurationType(String configurationType) {
             this.configurationType = Output.of(Objects.requireNonNull(configurationType));
             return this;
         }
-
         public Builder logLevel(@Nullable Output<String> logLevel) {
             this.logLevel = logLevel;
             return this;
         }
-
         public Builder logLevel(@Nullable String logLevel) {
             this.logLevel = Output.ofNullable(logLevel);
             return this;
         }
-
         public Builder metricsLevel(@Nullable Output<String> metricsLevel) {
             this.metricsLevel = metricsLevel;
             return this;
         }
-
         public Builder metricsLevel(@Nullable String metricsLevel) {
             this.metricsLevel = Output.ofNullable(metricsLevel);
             return this;
-        }
-        public ApplicationApplicationConfigurationFlinkApplicationConfigurationMonitoringConfigurationArgs build() {
+        }        public ApplicationApplicationConfigurationFlinkApplicationConfigurationMonitoringConfigurationArgs build() {
             return new ApplicationApplicationConfigurationFlinkApplicationConfigurationMonitoringConfigurationArgs(configurationType, logLevel, metricsLevel);
         }
     }

@@ -103,22 +103,18 @@ public final class GetSecretResult {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder replication(ReplicationResponse replication) {
             this.replication = Objects.requireNonNull(replication);
             return this;
-        }
-        public GetSecretResult build() {
+        }        public GetSecretResult build() {
             return new GetSecretResult(createTime, labels, name, replication);
         }
     }

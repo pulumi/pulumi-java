@@ -128,52 +128,42 @@ public final class MysqlProfileArgs extends io.pulumi.resources.ResourceArgs {
             this.hostname = Objects.requireNonNull(hostname);
             return this;
         }
-
         public Builder hostname(String hostname) {
             this.hostname = Output.of(Objects.requireNonNull(hostname));
             return this;
         }
-
         public Builder password(Output<String> password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
-
         public Builder password(String password) {
             this.password = Output.of(Objects.requireNonNull(password));
             return this;
         }
-
         public Builder port(@Nullable Output<Integer> port) {
             this.port = port;
             return this;
         }
-
         public Builder port(@Nullable Integer port) {
             this.port = Output.ofNullable(port);
             return this;
         }
-
         public Builder sslConfig(@Nullable Output<MysqlSslConfigArgs> sslConfig) {
             this.sslConfig = sslConfig;
             return this;
         }
-
         public Builder sslConfig(@Nullable MysqlSslConfigArgs sslConfig) {
             this.sslConfig = Output.ofNullable(sslConfig);
             return this;
         }
-
         public Builder username(Output<String> username) {
             this.username = Objects.requireNonNull(username);
             return this;
         }
-
         public Builder username(String username) {
             this.username = Output.of(Objects.requireNonNull(username));
             return this;
-        }
-        public MysqlProfileArgs build() {
+        }        public MysqlProfileArgs build() {
             return new MysqlProfileArgs(hostname, password, port, sslConfig, username);
         }
     }

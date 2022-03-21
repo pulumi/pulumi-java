@@ -75,22 +75,18 @@ public final class BucketServerSideEncryptionConfigurationRuleArgs extends io.pu
             this.applyServerSideEncryptionByDefault = Objects.requireNonNull(applyServerSideEncryptionByDefault);
             return this;
         }
-
         public Builder applyServerSideEncryptionByDefault(BucketServerSideEncryptionConfigurationRuleApplyServerSideEncryptionByDefaultArgs applyServerSideEncryptionByDefault) {
             this.applyServerSideEncryptionByDefault = Output.of(Objects.requireNonNull(applyServerSideEncryptionByDefault));
             return this;
         }
-
         public Builder bucketKeyEnabled(@Nullable Output<Boolean> bucketKeyEnabled) {
             this.bucketKeyEnabled = bucketKeyEnabled;
             return this;
         }
-
         public Builder bucketKeyEnabled(@Nullable Boolean bucketKeyEnabled) {
             this.bucketKeyEnabled = Output.ofNullable(bucketKeyEnabled);
             return this;
-        }
-        public BucketServerSideEncryptionConfigurationRuleArgs build() {
+        }        public BucketServerSideEncryptionConfigurationRuleArgs build() {
             return new BucketServerSideEncryptionConfigurationRuleArgs(applyServerSideEncryptionByDefault, bucketKeyEnabled);
         }
     }

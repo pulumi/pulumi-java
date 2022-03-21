@@ -257,132 +257,106 @@ public final class RunbookArgs extends io.pulumi.resources.ResourceArgs {
             this.automationAccountName = Objects.requireNonNull(automationAccountName);
             return this;
         }
-
         public Builder automationAccountName(String automationAccountName) {
             this.automationAccountName = Output.of(Objects.requireNonNull(automationAccountName));
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder draft(@Nullable Output<RunbookDraftArgs> draft) {
             this.draft = draft;
             return this;
         }
-
         public Builder draft(@Nullable RunbookDraftArgs draft) {
             this.draft = Output.ofNullable(draft);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder logActivityTrace(@Nullable Output<Integer> logActivityTrace) {
             this.logActivityTrace = logActivityTrace;
             return this;
         }
-
         public Builder logActivityTrace(@Nullable Integer logActivityTrace) {
             this.logActivityTrace = Output.ofNullable(logActivityTrace);
             return this;
         }
-
         public Builder logProgress(@Nullable Output<Boolean> logProgress) {
             this.logProgress = logProgress;
             return this;
         }
-
         public Builder logProgress(@Nullable Boolean logProgress) {
             this.logProgress = Output.ofNullable(logProgress);
             return this;
         }
-
         public Builder logVerbose(@Nullable Output<Boolean> logVerbose) {
             this.logVerbose = logVerbose;
             return this;
         }
-
         public Builder logVerbose(@Nullable Boolean logVerbose) {
             this.logVerbose = Output.ofNullable(logVerbose);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder publishContentLink(@Nullable Output<ContentLinkArgs> publishContentLink) {
             this.publishContentLink = publishContentLink;
             return this;
         }
-
         public Builder publishContentLink(@Nullable ContentLinkArgs publishContentLink) {
             this.publishContentLink = Output.ofNullable(publishContentLink);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder runbookName(@Nullable Output<String> runbookName) {
             this.runbookName = runbookName;
             return this;
         }
-
         public Builder runbookName(@Nullable String runbookName) {
             this.runbookName = Output.ofNullable(runbookName);
             return this;
         }
-
         public Builder runbookType(Output<Either<String,RunbookTypeEnum>> runbookType) {
             this.runbookType = Objects.requireNonNull(runbookType);
             return this;
         }
-
         public Builder runbookType(Either<String,RunbookTypeEnum> runbookType) {
             this.runbookType = Output.of(Objects.requireNonNull(runbookType));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public RunbookArgs build() {
+        }        public RunbookArgs build() {
             return new RunbookArgs(automationAccountName, description, draft, location, logActivityTrace, logProgress, logVerbose, name, publishContentLink, resourceGroupName, runbookName, runbookType, tags);
         }
     }

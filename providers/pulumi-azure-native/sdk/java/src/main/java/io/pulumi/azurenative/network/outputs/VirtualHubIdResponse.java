@@ -53,8 +53,7 @@ public final class VirtualHubIdResponse {
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
-        }
-        public VirtualHubIdResponse build() {
+        }        public VirtualHubIdResponse build() {
             return new VirtualHubIdResponse(id);
         }
     }

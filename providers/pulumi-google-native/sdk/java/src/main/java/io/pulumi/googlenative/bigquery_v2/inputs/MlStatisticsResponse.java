@@ -74,12 +74,13 @@ public final class MlStatisticsResponse extends io.pulumi.resources.InvokeArgs {
             this.iterationResults = Objects.requireNonNull(iterationResults);
             return this;
         }
-
+        public Builder iterationResults(IterationResultResponse... iterationResults) {
+            return iterationResults(List.of(iterationResults));
+        }
         public Builder maxIterations(String maxIterations) {
             this.maxIterations = Objects.requireNonNull(maxIterations);
             return this;
-        }
-        public MlStatisticsResponse build() {
+        }        public MlStatisticsResponse build() {
             return new MlStatisticsResponse(iterationResults, maxIterations);
         }
     }

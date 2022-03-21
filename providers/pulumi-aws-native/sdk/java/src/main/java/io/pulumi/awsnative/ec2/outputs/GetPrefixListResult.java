@@ -188,47 +188,44 @@ public final class GetPrefixListResult {
             this.addressFamily = addressFamily;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
-
         public Builder entries(@Nullable List<PrefixListEntry> entries) {
             this.entries = entries;
             return this;
         }
-
+        public Builder entries(PrefixListEntry... entries) {
+            return entries(List.of(entries));
+        }
         public Builder maxEntries(@Nullable Integer maxEntries) {
             this.maxEntries = maxEntries;
             return this;
         }
-
         public Builder ownerId(@Nullable String ownerId) {
             this.ownerId = ownerId;
             return this;
         }
-
         public Builder prefixListId(@Nullable String prefixListId) {
             this.prefixListId = prefixListId;
             return this;
         }
-
         public Builder prefixListName(@Nullable String prefixListName) {
             this.prefixListName = prefixListName;
             return this;
         }
-
         public Builder tags(@Nullable List<PrefixListTag> tags) {
             this.tags = tags;
             return this;
         }
-
+        public Builder tags(PrefixListTag... tags) {
+            return tags(List.of(tags));
+        }
         public Builder version(@Nullable Integer version) {
             this.version = version;
             return this;
-        }
-        public GetPrefixListResult build() {
+        }        public GetPrefixListResult build() {
             return new GetPrefixListResult(addressFamily, arn, entries, maxEntries, ownerId, prefixListId, prefixListName, tags, version);
         }
     }

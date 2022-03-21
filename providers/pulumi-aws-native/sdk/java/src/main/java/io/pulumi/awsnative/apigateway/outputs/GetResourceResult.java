@@ -53,8 +53,7 @@ public final class GetResourceResult {
         public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = resourceId;
             return this;
-        }
-        public GetResourceResult build() {
+        }        public GetResourceResult build() {
             return new GetResourceResult(resourceId);
         }
     }

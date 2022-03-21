@@ -138,27 +138,22 @@ public final class JobRetryConfig {
             this.maxBackoffDuration = maxBackoffDuration;
             return this;
         }
-
         public Builder maxDoublings(@Nullable Integer maxDoublings) {
             this.maxDoublings = maxDoublings;
             return this;
         }
-
         public Builder maxRetryDuration(@Nullable String maxRetryDuration) {
             this.maxRetryDuration = maxRetryDuration;
             return this;
         }
-
         public Builder minBackoffDuration(@Nullable String minBackoffDuration) {
             this.minBackoffDuration = minBackoffDuration;
             return this;
         }
-
         public Builder retryCount(@Nullable Integer retryCount) {
             this.retryCount = retryCount;
             return this;
-        }
-        public JobRetryConfig build() {
+        }        public JobRetryConfig build() {
             return new JobRetryConfig(maxBackoffDuration, maxDoublings, maxRetryDuration, minBackoffDuration, retryCount);
         }
     }

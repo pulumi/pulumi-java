@@ -53,8 +53,7 @@ public final class GetOnlineDeploymentLogsResult {
         public Builder content(@Nullable String content) {
             this.content = content;
             return this;
-        }
-        public GetOnlineDeploymentLogsResult build() {
+        }        public GetOnlineDeploymentLogsResult build() {
             return new GetOnlineDeploymentLogsResult(content);
         }
     }

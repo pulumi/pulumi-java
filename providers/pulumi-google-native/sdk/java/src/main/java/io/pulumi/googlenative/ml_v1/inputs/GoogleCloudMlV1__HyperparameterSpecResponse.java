@@ -192,47 +192,41 @@ public final class GoogleCloudMlV1__HyperparameterSpecResponse extends io.pulumi
             this.algorithm = Objects.requireNonNull(algorithm);
             return this;
         }
-
         public Builder enableTrialEarlyStopping(Boolean enableTrialEarlyStopping) {
             this.enableTrialEarlyStopping = Objects.requireNonNull(enableTrialEarlyStopping);
             return this;
         }
-
         public Builder goal(String goal) {
             this.goal = Objects.requireNonNull(goal);
             return this;
         }
-
         public Builder hyperparameterMetricTag(String hyperparameterMetricTag) {
             this.hyperparameterMetricTag = Objects.requireNonNull(hyperparameterMetricTag);
             return this;
         }
-
         public Builder maxFailedTrials(Integer maxFailedTrials) {
             this.maxFailedTrials = Objects.requireNonNull(maxFailedTrials);
             return this;
         }
-
         public Builder maxParallelTrials(Integer maxParallelTrials) {
             this.maxParallelTrials = Objects.requireNonNull(maxParallelTrials);
             return this;
         }
-
         public Builder maxTrials(Integer maxTrials) {
             this.maxTrials = Objects.requireNonNull(maxTrials);
             return this;
         }
-
         public Builder params(List<GoogleCloudMlV1__ParameterSpecResponse> params) {
             this.params = Objects.requireNonNull(params);
             return this;
         }
-
+        public Builder params(GoogleCloudMlV1__ParameterSpecResponse... params) {
+            return params(List.of(params));
+        }
         public Builder resumePreviousJobId(String resumePreviousJobId) {
             this.resumePreviousJobId = Objects.requireNonNull(resumePreviousJobId);
             return this;
-        }
-        public GoogleCloudMlV1__HyperparameterSpecResponse build() {
+        }        public GoogleCloudMlV1__HyperparameterSpecResponse build() {
             return new GoogleCloudMlV1__HyperparameterSpecResponse(algorithm, enableTrialEarlyStopping, goal, hyperparameterMetricTag, maxFailedTrials, maxParallelTrials, maxTrials, params, resumePreviousJobId);
         }
     }

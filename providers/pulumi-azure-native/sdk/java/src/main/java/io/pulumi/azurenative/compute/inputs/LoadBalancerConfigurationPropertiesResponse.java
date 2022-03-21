@@ -56,7 +56,9 @@ public final class LoadBalancerConfigurationPropertiesResponse extends io.pulumi
             this.frontendIPConfigurations = Objects.requireNonNull(frontendIPConfigurations);
             return this;
         }
-        public LoadBalancerConfigurationPropertiesResponse build() {
+        public Builder frontendIPConfigurations(LoadBalancerFrontendIPConfigurationResponse... frontendIPConfigurations) {
+            return frontendIPConfigurations(List.of(frontendIPConfigurations));
+        }        public LoadBalancerConfigurationPropertiesResponse build() {
             return new LoadBalancerConfigurationPropertiesResponse(frontendIPConfigurations);
         }
     }

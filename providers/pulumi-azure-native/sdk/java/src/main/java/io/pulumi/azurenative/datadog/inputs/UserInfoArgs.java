@@ -94,32 +94,26 @@ public final class UserInfoArgs extends io.pulumi.resources.ResourceArgs {
             this.emailAddress = emailAddress;
             return this;
         }
-
         public Builder emailAddress(@Nullable String emailAddress) {
             this.emailAddress = Output.ofNullable(emailAddress);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder phoneNumber(@Nullable Output<String> phoneNumber) {
             this.phoneNumber = phoneNumber;
             return this;
         }
-
         public Builder phoneNumber(@Nullable String phoneNumber) {
             this.phoneNumber = Output.ofNullable(phoneNumber);
             return this;
-        }
-        public UserInfoArgs build() {
+        }        public UserInfoArgs build() {
             return new UserInfoArgs(emailAddress, name, phoneNumber);
         }
     }

@@ -201,52 +201,45 @@ public final class GetSubscriptionDiagnosticSettingResult {
             this.eventHubAuthorizationRuleId = eventHubAuthorizationRuleId;
             return this;
         }
-
         public Builder eventHubName(@Nullable String eventHubName) {
             this.eventHubName = eventHubName;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder logs(@Nullable List<SubscriptionLogSettingsResponse> logs) {
             this.logs = logs;
             return this;
         }
-
+        public Builder logs(SubscriptionLogSettingsResponse... logs) {
+            return logs(List.of(logs));
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder serviceBusRuleId(@Nullable String serviceBusRuleId) {
             this.serviceBusRuleId = serviceBusRuleId;
             return this;
         }
-
         public Builder storageAccountId(@Nullable String storageAccountId) {
             this.storageAccountId = storageAccountId;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder workspaceId(@Nullable String workspaceId) {
             this.workspaceId = workspaceId;
             return this;
-        }
-        public GetSubscriptionDiagnosticSettingResult build() {
+        }        public GetSubscriptionDiagnosticSettingResult build() {
             return new GetSubscriptionDiagnosticSettingResult(eventHubAuthorizationRuleId, eventHubName, id, location, logs, name, serviceBusRuleId, storageAccountId, type, workspaceId);
         }
     }

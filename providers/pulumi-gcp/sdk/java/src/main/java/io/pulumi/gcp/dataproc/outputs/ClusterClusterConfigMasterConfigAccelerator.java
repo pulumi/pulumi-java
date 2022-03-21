@@ -70,12 +70,10 @@ public final class ClusterClusterConfigMasterConfigAccelerator {
             this.acceleratorCount = Objects.requireNonNull(acceleratorCount);
             return this;
         }
-
         public Builder acceleratorType(String acceleratorType) {
             this.acceleratorType = Objects.requireNonNull(acceleratorType);
             return this;
-        }
-        public ClusterClusterConfigMasterConfigAccelerator build() {
+        }        public ClusterClusterConfigMasterConfigAccelerator build() {
             return new ClusterClusterConfigMasterConfigAccelerator(acceleratorCount, acceleratorType);
         }
     }

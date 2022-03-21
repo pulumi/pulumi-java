@@ -104,42 +104,37 @@ public final class JitNetworkAccessRequestArgs extends io.pulumi.resources.Resou
             this.justification = justification;
             return this;
         }
-
         public Builder justification(@Nullable String justification) {
             this.justification = Output.ofNullable(justification);
             return this;
         }
-
         public Builder requestor(Output<String> requestor) {
             this.requestor = Objects.requireNonNull(requestor);
             return this;
         }
-
         public Builder requestor(String requestor) {
             this.requestor = Output.of(Objects.requireNonNull(requestor));
             return this;
         }
-
         public Builder startTimeUtc(Output<String> startTimeUtc) {
             this.startTimeUtc = Objects.requireNonNull(startTimeUtc);
             return this;
         }
-
         public Builder startTimeUtc(String startTimeUtc) {
             this.startTimeUtc = Output.of(Objects.requireNonNull(startTimeUtc));
             return this;
         }
-
         public Builder virtualMachines(Output<List<JitNetworkAccessRequestVirtualMachineArgs>> virtualMachines) {
             this.virtualMachines = Objects.requireNonNull(virtualMachines);
             return this;
         }
-
         public Builder virtualMachines(List<JitNetworkAccessRequestVirtualMachineArgs> virtualMachines) {
             this.virtualMachines = Output.of(Objects.requireNonNull(virtualMachines));
             return this;
         }
-        public JitNetworkAccessRequestArgs build() {
+        public Builder virtualMachines(JitNetworkAccessRequestVirtualMachineArgs... virtualMachines) {
+            return virtualMachines(List.of(virtualMachines));
+        }        public JitNetworkAccessRequestArgs build() {
             return new JitNetworkAccessRequestArgs(justification, requestor, startTimeUtc, virtualMachines);
         }
     }

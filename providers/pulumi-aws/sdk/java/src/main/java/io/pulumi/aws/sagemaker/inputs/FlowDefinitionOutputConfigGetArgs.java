@@ -74,22 +74,18 @@ public final class FlowDefinitionOutputConfigGetArgs extends io.pulumi.resources
             this.kmsKeyId = kmsKeyId;
             return this;
         }
-
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = Output.ofNullable(kmsKeyId);
             return this;
         }
-
         public Builder s3OutputPath(Output<String> s3OutputPath) {
             this.s3OutputPath = Objects.requireNonNull(s3OutputPath);
             return this;
         }
-
         public Builder s3OutputPath(String s3OutputPath) {
             this.s3OutputPath = Output.of(Objects.requireNonNull(s3OutputPath));
             return this;
-        }
-        public FlowDefinitionOutputConfigGetArgs build() {
+        }        public FlowDefinitionOutputConfigGetArgs build() {
             return new FlowDefinitionOutputConfigGetArgs(kmsKeyId, s3OutputPath);
         }
     }

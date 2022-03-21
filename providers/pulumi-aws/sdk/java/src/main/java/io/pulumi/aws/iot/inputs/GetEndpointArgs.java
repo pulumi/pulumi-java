@@ -56,8 +56,7 @@ public final class GetEndpointArgs extends io.pulumi.resources.InvokeArgs {
         public Builder endpointType(@Nullable String endpointType) {
             this.endpointType = endpointType;
             return this;
-        }
-        public GetEndpointArgs build() {
+        }        public GetEndpointArgs build() {
             return new GetEndpointArgs(endpointType);
         }
     }

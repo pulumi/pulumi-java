@@ -97,17 +97,20 @@ public final class TimelineResultsMetadataResponse extends io.pulumi.resources.I
             this.aggregations = Objects.requireNonNull(aggregations);
             return this;
         }
-
+        public Builder aggregations(TimelineAggregationResponse... aggregations) {
+            return aggregations(List.of(aggregations));
+        }
         public Builder errors(@Nullable List<TimelineErrorResponse> errors) {
             this.errors = errors;
             return this;
         }
-
+        public Builder errors(TimelineErrorResponse... errors) {
+            return errors(List.of(errors));
+        }
         public Builder totalCount(Integer totalCount) {
             this.totalCount = Objects.requireNonNull(totalCount);
             return this;
-        }
-        public TimelineResultsMetadataResponse build() {
+        }        public TimelineResultsMetadataResponse build() {
             return new TimelineResultsMetadataResponse(aggregations, errors, totalCount);
         }
     }

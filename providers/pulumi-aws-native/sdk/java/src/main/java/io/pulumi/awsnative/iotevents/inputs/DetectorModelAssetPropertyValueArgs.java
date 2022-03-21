@@ -88,32 +88,26 @@ public final class DetectorModelAssetPropertyValueArgs extends io.pulumi.resourc
             this.quality = quality;
             return this;
         }
-
         public Builder quality(@Nullable String quality) {
             this.quality = Output.ofNullable(quality);
             return this;
         }
-
         public Builder timestamp(@Nullable Output<DetectorModelAssetPropertyTimestampArgs> timestamp) {
             this.timestamp = timestamp;
             return this;
         }
-
         public Builder timestamp(@Nullable DetectorModelAssetPropertyTimestampArgs timestamp) {
             this.timestamp = Output.ofNullable(timestamp);
             return this;
         }
-
         public Builder value(Output<DetectorModelAssetPropertyVariantArgs> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public Builder value(DetectorModelAssetPropertyVariantArgs value) {
             this.value = Output.of(Objects.requireNonNull(value));
             return this;
-        }
-        public DetectorModelAssetPropertyValueArgs build() {
+        }        public DetectorModelAssetPropertyValueArgs build() {
             return new DetectorModelAssetPropertyValueArgs(quality, timestamp, value);
         }
     }

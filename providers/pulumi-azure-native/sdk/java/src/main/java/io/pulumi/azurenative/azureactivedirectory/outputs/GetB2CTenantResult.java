@@ -170,42 +170,34 @@ public final class GetB2CTenantResult {
             this.billingConfig = billingConfig;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder sku(B2CResourceSKUResponse sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tenantId(@Nullable String tenantId) {
             this.tenantId = tenantId;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetB2CTenantResult build() {
+        }        public GetB2CTenantResult build() {
             return new GetB2CTenantResult(billingConfig, id, location, name, sku, tags, tenantId, type);
         }
     }

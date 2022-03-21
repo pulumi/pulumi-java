@@ -67,22 +67,21 @@ public final class DefaultRolloutSpecificationRestOfTheWorldGroupTwoArgs extends
             this.regions = regions;
             return this;
         }
-
         public Builder regions(@Nullable List<String> regions) {
             this.regions = Output.ofNullable(regions);
             return this;
         }
-
+        public Builder regions(String... regions) {
+            return regions(List.of(regions));
+        }
         public Builder waitDuration(@Nullable Output<String> waitDuration) {
             this.waitDuration = waitDuration;
             return this;
         }
-
         public Builder waitDuration(@Nullable String waitDuration) {
             this.waitDuration = Output.ofNullable(waitDuration);
             return this;
-        }
-        public DefaultRolloutSpecificationRestOfTheWorldGroupTwoArgs build() {
+        }        public DefaultRolloutSpecificationRestOfTheWorldGroupTwoArgs build() {
             return new DefaultRolloutSpecificationRestOfTheWorldGroupTwoArgs(regions, waitDuration);
         }
     }

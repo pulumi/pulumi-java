@@ -53,8 +53,7 @@ public final class AzureStaticWebAppsRegistrationResponse {
         public Builder clientId(@Nullable String clientId) {
             this.clientId = clientId;
             return this;
-        }
-        public AzureStaticWebAppsRegistrationResponse build() {
+        }        public AzureStaticWebAppsRegistrationResponse build() {
             return new AzureStaticWebAppsRegistrationResponse(clientId);
         }
     }

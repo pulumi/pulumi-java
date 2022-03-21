@@ -132,52 +132,45 @@ public final class SlotTypeArgs extends io.pulumi.resources.ResourceArgs {
             this.createVersion = createVersion;
             return this;
         }
-
         public Builder createVersion(@Nullable Boolean createVersion) {
             this.createVersion = Output.ofNullable(createVersion);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder enumerationValues(Output<List<SlotTypeEnumerationValueArgs>> enumerationValues) {
             this.enumerationValues = Objects.requireNonNull(enumerationValues);
             return this;
         }
-
         public Builder enumerationValues(List<SlotTypeEnumerationValueArgs> enumerationValues) {
             this.enumerationValues = Output.of(Objects.requireNonNull(enumerationValues));
             return this;
         }
-
+        public Builder enumerationValues(SlotTypeEnumerationValueArgs... enumerationValues) {
+            return enumerationValues(List.of(enumerationValues));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder valueSelectionStrategy(@Nullable Output<String> valueSelectionStrategy) {
             this.valueSelectionStrategy = valueSelectionStrategy;
             return this;
         }
-
         public Builder valueSelectionStrategy(@Nullable String valueSelectionStrategy) {
             this.valueSelectionStrategy = Output.ofNullable(valueSelectionStrategy);
             return this;
-        }
-        public SlotTypeArgs build() {
+        }        public SlotTypeArgs build() {
             return new SlotTypeArgs(createVersion, description, enumerationValues, name, valueSelectionStrategy);
         }
     }

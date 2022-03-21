@@ -87,17 +87,14 @@ public final class TargetEligibilityErrorMessageResponse {
             this.message = message;
             return this;
         }
-
         public Builder resolution(@Nullable String resolution) {
             this.resolution = resolution;
             return this;
         }
-
         public Builder resultCode(@Nullable String resultCode) {
             this.resultCode = resultCode;
             return this;
-        }
-        public TargetEligibilityErrorMessageResponse build() {
+        }        public TargetEligibilityErrorMessageResponse build() {
             return new TargetEligibilityErrorMessageResponse(message, resolution, resultCode);
         }
     }

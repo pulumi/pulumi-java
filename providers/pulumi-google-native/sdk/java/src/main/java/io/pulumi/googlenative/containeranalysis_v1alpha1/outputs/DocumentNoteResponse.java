@@ -69,12 +69,10 @@ public final class DocumentNoteResponse {
             this.dataLicence = Objects.requireNonNull(dataLicence);
             return this;
         }
-
         public Builder spdxVersion(String spdxVersion) {
             this.spdxVersion = Objects.requireNonNull(spdxVersion);
             return this;
-        }
-        public DocumentNoteResponse build() {
+        }        public DocumentNoteResponse build() {
             return new DocumentNoteResponse(dataLicence, spdxVersion);
         }
     }

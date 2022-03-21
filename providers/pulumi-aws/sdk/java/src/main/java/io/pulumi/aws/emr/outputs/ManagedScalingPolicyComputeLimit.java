@@ -120,27 +120,22 @@ public final class ManagedScalingPolicyComputeLimit {
             this.maximumCapacityUnits = Objects.requireNonNull(maximumCapacityUnits);
             return this;
         }
-
         public Builder maximumCoreCapacityUnits(@Nullable Integer maximumCoreCapacityUnits) {
             this.maximumCoreCapacityUnits = maximumCoreCapacityUnits;
             return this;
         }
-
         public Builder maximumOndemandCapacityUnits(@Nullable Integer maximumOndemandCapacityUnits) {
             this.maximumOndemandCapacityUnits = maximumOndemandCapacityUnits;
             return this;
         }
-
         public Builder minimumCapacityUnits(Integer minimumCapacityUnits) {
             this.minimumCapacityUnits = Objects.requireNonNull(minimumCapacityUnits);
             return this;
         }
-
         public Builder unitType(String unitType) {
             this.unitType = Objects.requireNonNull(unitType);
             return this;
-        }
-        public ManagedScalingPolicyComputeLimit build() {
+        }        public ManagedScalingPolicyComputeLimit build() {
             return new ManagedScalingPolicyComputeLimit(maximumCapacityUnits, maximumCoreCapacityUnits, maximumOndemandCapacityUnits, minimumCapacityUnits, unitType);
         }
     }

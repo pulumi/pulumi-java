@@ -88,17 +88,14 @@ public final class MetastoreServiceHiveMetastoreConfigKerberosConfig {
             this.keytab = Objects.requireNonNull(keytab);
             return this;
         }
-
         public Builder krb5ConfigGcsUri(String krb5ConfigGcsUri) {
             this.krb5ConfigGcsUri = Objects.requireNonNull(krb5ConfigGcsUri);
             return this;
         }
-
         public Builder principal(String principal) {
             this.principal = Objects.requireNonNull(principal);
             return this;
-        }
-        public MetastoreServiceHiveMetastoreConfigKerberosConfig build() {
+        }        public MetastoreServiceHiveMetastoreConfigKerberosConfig build() {
             return new MetastoreServiceHiveMetastoreConfigKerberosConfig(keytab, krb5ConfigGcsUri, principal);
         }
     }

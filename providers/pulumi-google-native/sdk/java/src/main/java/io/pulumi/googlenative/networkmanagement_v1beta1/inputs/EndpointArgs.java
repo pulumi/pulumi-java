@@ -193,92 +193,74 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
             this.cloudFunction = cloudFunction;
             return this;
         }
-
         public Builder cloudFunction(@Nullable CloudFunctionEndpointArgs cloudFunction) {
             this.cloudFunction = Output.ofNullable(cloudFunction);
             return this;
         }
-
         public Builder cloudSqlInstance(@Nullable Output<String> cloudSqlInstance) {
             this.cloudSqlInstance = cloudSqlInstance;
             return this;
         }
-
         public Builder cloudSqlInstance(@Nullable String cloudSqlInstance) {
             this.cloudSqlInstance = Output.ofNullable(cloudSqlInstance);
             return this;
         }
-
         public Builder gkeMasterCluster(@Nullable Output<String> gkeMasterCluster) {
             this.gkeMasterCluster = gkeMasterCluster;
             return this;
         }
-
         public Builder gkeMasterCluster(@Nullable String gkeMasterCluster) {
             this.gkeMasterCluster = Output.ofNullable(gkeMasterCluster);
             return this;
         }
-
         public Builder instance(@Nullable Output<String> instance) {
             this.instance = instance;
             return this;
         }
-
         public Builder instance(@Nullable String instance) {
             this.instance = Output.ofNullable(instance);
             return this;
         }
-
         public Builder ipAddress(@Nullable Output<String> ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
-
         public Builder ipAddress(@Nullable String ipAddress) {
             this.ipAddress = Output.ofNullable(ipAddress);
             return this;
         }
-
         public Builder network(@Nullable Output<String> network) {
             this.network = network;
             return this;
         }
-
         public Builder network(@Nullable String network) {
             this.network = Output.ofNullable(network);
             return this;
         }
-
         public Builder networkType(@Nullable Output<EndpointNetworkType> networkType) {
             this.networkType = networkType;
             return this;
         }
-
         public Builder networkType(@Nullable EndpointNetworkType networkType) {
             this.networkType = Output.ofNullable(networkType);
             return this;
         }
-
         public Builder port(@Nullable Output<Integer> port) {
             this.port = port;
             return this;
         }
-
         public Builder port(@Nullable Integer port) {
             this.port = Output.ofNullable(port);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
-        }
-        public EndpointArgs build() {
+        }        public EndpointArgs build() {
             return new EndpointArgs(cloudFunction, cloudSqlInstance, gkeMasterCluster, instance, ipAddress, network, networkType, port, project);
         }
     }

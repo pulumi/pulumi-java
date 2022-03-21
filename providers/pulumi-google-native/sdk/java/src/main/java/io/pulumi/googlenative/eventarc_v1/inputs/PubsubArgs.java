@@ -61,12 +61,10 @@ public final class PubsubArgs extends io.pulumi.resources.ResourceArgs {
             this.topic = topic;
             return this;
         }
-
         public Builder topic(@Nullable String topic) {
             this.topic = Output.ofNullable(topic);
             return this;
-        }
-        public PubsubArgs build() {
+        }        public PubsubArgs build() {
             return new PubsubArgs(topic);
         }
     }

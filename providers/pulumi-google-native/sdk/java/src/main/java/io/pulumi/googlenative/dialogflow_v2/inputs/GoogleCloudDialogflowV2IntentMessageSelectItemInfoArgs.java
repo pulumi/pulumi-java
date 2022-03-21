@@ -79,22 +79,21 @@ public final class GoogleCloudDialogflowV2IntentMessageSelectItemInfoArgs extend
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder key(String key) {
             this.key = Output.of(Objects.requireNonNull(key));
             return this;
         }
-
         public Builder synonyms(@Nullable Output<List<String>> synonyms) {
             this.synonyms = synonyms;
             return this;
         }
-
         public Builder synonyms(@Nullable List<String> synonyms) {
             this.synonyms = Output.ofNullable(synonyms);
             return this;
         }
-        public GoogleCloudDialogflowV2IntentMessageSelectItemInfoArgs build() {
+        public Builder synonyms(String... synonyms) {
+            return synonyms(List.of(synonyms));
+        }        public GoogleCloudDialogflowV2IntentMessageSelectItemInfoArgs build() {
             return new GoogleCloudDialogflowV2IntentMessageSelectItemInfoArgs(key, synonyms);
         }
     }

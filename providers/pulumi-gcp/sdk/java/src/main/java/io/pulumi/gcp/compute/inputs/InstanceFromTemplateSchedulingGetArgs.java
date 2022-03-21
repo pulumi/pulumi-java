@@ -106,52 +106,45 @@ public final class InstanceFromTemplateSchedulingGetArgs extends io.pulumi.resou
             this.automaticRestart = automaticRestart;
             return this;
         }
-
         public Builder automaticRestart(@Nullable Boolean automaticRestart) {
             this.automaticRestart = Output.ofNullable(automaticRestart);
             return this;
         }
-
         public Builder minNodeCpus(@Nullable Output<Integer> minNodeCpus) {
             this.minNodeCpus = minNodeCpus;
             return this;
         }
-
         public Builder minNodeCpus(@Nullable Integer minNodeCpus) {
             this.minNodeCpus = Output.ofNullable(minNodeCpus);
             return this;
         }
-
         public Builder nodeAffinities(@Nullable Output<List<InstanceFromTemplateSchedulingNodeAffinityGetArgs>> nodeAffinities) {
             this.nodeAffinities = nodeAffinities;
             return this;
         }
-
         public Builder nodeAffinities(@Nullable List<InstanceFromTemplateSchedulingNodeAffinityGetArgs> nodeAffinities) {
             this.nodeAffinities = Output.ofNullable(nodeAffinities);
             return this;
         }
-
+        public Builder nodeAffinities(InstanceFromTemplateSchedulingNodeAffinityGetArgs... nodeAffinities) {
+            return nodeAffinities(List.of(nodeAffinities));
+        }
         public Builder onHostMaintenance(@Nullable Output<String> onHostMaintenance) {
             this.onHostMaintenance = onHostMaintenance;
             return this;
         }
-
         public Builder onHostMaintenance(@Nullable String onHostMaintenance) {
             this.onHostMaintenance = Output.ofNullable(onHostMaintenance);
             return this;
         }
-
         public Builder preemptible(@Nullable Output<Boolean> preemptible) {
             this.preemptible = preemptible;
             return this;
         }
-
         public Builder preemptible(@Nullable Boolean preemptible) {
             this.preemptible = Output.ofNullable(preemptible);
             return this;
-        }
-        public InstanceFromTemplateSchedulingGetArgs build() {
+        }        public InstanceFromTemplateSchedulingGetArgs build() {
             return new InstanceFromTemplateSchedulingGetArgs(automaticRestart, minNodeCpus, nodeAffinities, onHostMaintenance, preemptible);
         }
     }

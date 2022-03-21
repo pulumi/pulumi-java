@@ -144,62 +144,50 @@ public final class SharedPrivateLinkResourcePropertiesArgs extends io.pulumi.res
             this.groupId = groupId;
             return this;
         }
-
         public Builder groupId(@Nullable String groupId) {
             this.groupId = Output.ofNullable(groupId);
             return this;
         }
-
         public Builder privateLinkResourceId(@Nullable Output<String> privateLinkResourceId) {
             this.privateLinkResourceId = privateLinkResourceId;
             return this;
         }
-
         public Builder privateLinkResourceId(@Nullable String privateLinkResourceId) {
             this.privateLinkResourceId = Output.ofNullable(privateLinkResourceId);
             return this;
         }
-
         public Builder provisioningState(@Nullable Output<SharedPrivateLinkResourceProvisioningState> provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
-
         public Builder provisioningState(@Nullable SharedPrivateLinkResourceProvisioningState provisioningState) {
             this.provisioningState = Output.ofNullable(provisioningState);
             return this;
         }
-
         public Builder requestMessage(@Nullable Output<String> requestMessage) {
             this.requestMessage = requestMessage;
             return this;
         }
-
         public Builder requestMessage(@Nullable String requestMessage) {
             this.requestMessage = Output.ofNullable(requestMessage);
             return this;
         }
-
         public Builder resourceRegion(@Nullable Output<String> resourceRegion) {
             this.resourceRegion = resourceRegion;
             return this;
         }
-
         public Builder resourceRegion(@Nullable String resourceRegion) {
             this.resourceRegion = Output.ofNullable(resourceRegion);
             return this;
         }
-
         public Builder status(@Nullable Output<SharedPrivateLinkResourceStatus> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable SharedPrivateLinkResourceStatus status) {
             this.status = Output.ofNullable(status);
             return this;
-        }
-        public SharedPrivateLinkResourcePropertiesArgs build() {
+        }        public SharedPrivateLinkResourcePropertiesArgs build() {
             return new SharedPrivateLinkResourcePropertiesArgs(groupId, privateLinkResourceId, provisioningState, requestMessage, resourceRegion, status);
         }
     }

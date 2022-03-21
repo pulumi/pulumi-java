@@ -74,22 +74,24 @@ public final class DataSourceSalesforceChatterFeedConfiguration {
             this.documentDataFieldName = Objects.requireNonNull(documentDataFieldName);
             return this;
         }
-
         public Builder documentTitleFieldName(@Nullable String documentTitleFieldName) {
             this.documentTitleFieldName = documentTitleFieldName;
             return this;
         }
-
         public Builder fieldMappings(@Nullable List<DataSourceToIndexFieldMapping> fieldMappings) {
             this.fieldMappings = fieldMappings;
             return this;
         }
-
+        public Builder fieldMappings(DataSourceToIndexFieldMapping... fieldMappings) {
+            return fieldMappings(List.of(fieldMappings));
+        }
         public Builder includeFilterTypes(@Nullable List<DataSourceSalesforceChatterFeedIncludeFilterType> includeFilterTypes) {
             this.includeFilterTypes = includeFilterTypes;
             return this;
         }
-        public DataSourceSalesforceChatterFeedConfiguration build() {
+        public Builder includeFilterTypes(DataSourceSalesforceChatterFeedIncludeFilterType... includeFilterTypes) {
+            return includeFilterTypes(List.of(includeFilterTypes));
+        }        public DataSourceSalesforceChatterFeedConfiguration build() {
             return new DataSourceSalesforceChatterFeedConfiguration(documentDataFieldName, documentTitleFieldName, fieldMappings, includeFilterTypes);
         }
     }

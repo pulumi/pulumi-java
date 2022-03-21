@@ -70,12 +70,13 @@ public final class SecurityPolicyRuleMatcherConfigDestinationPortResponse {
             this.ipProtocol = Objects.requireNonNull(ipProtocol);
             return this;
         }
-
         public Builder ports(List<String> ports) {
             this.ports = Objects.requireNonNull(ports);
             return this;
         }
-        public SecurityPolicyRuleMatcherConfigDestinationPortResponse build() {
+        public Builder ports(String... ports) {
+            return ports(List.of(ports));
+        }        public SecurityPolicyRuleMatcherConfigDestinationPortResponse build() {
             return new SecurityPolicyRuleMatcherConfigDestinationPortResponse(ipProtocol, ports);
         }
     }

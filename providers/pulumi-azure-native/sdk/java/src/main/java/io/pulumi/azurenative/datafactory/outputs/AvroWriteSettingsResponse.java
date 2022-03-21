@@ -122,27 +122,22 @@ public final class AvroWriteSettingsResponse {
             this.fileNamePrefix = fileNamePrefix;
             return this;
         }
-
         public Builder maxRowsPerFile(@Nullable Object maxRowsPerFile) {
             this.maxRowsPerFile = maxRowsPerFile;
             return this;
         }
-
         public Builder recordName(@Nullable String recordName) {
             this.recordName = recordName;
             return this;
         }
-
         public Builder recordNamespace(@Nullable String recordNamespace) {
             this.recordNamespace = recordNamespace;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public AvroWriteSettingsResponse build() {
+        }        public AvroWriteSettingsResponse build() {
             return new AvroWriteSettingsResponse(fileNamePrefix, maxRowsPerFile, recordName, recordNamespace, type);
         }
     }

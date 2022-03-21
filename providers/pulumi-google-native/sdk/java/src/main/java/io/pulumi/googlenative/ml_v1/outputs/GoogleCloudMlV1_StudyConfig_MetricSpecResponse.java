@@ -69,12 +69,10 @@ public final class GoogleCloudMlV1_StudyConfig_MetricSpecResponse {
             this.goal = Objects.requireNonNull(goal);
             return this;
         }
-
         public Builder metric(String metric) {
             this.metric = Objects.requireNonNull(metric);
             return this;
-        }
-        public GoogleCloudMlV1_StudyConfig_MetricSpecResponse build() {
+        }        public GoogleCloudMlV1_StudyConfig_MetricSpecResponse build() {
             return new GoogleCloudMlV1_StudyConfig_MetricSpecResponse(goal, metric);
         }
     }

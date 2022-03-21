@@ -56,12 +56,10 @@ public final class ConnectionConfirmationArgs extends io.pulumi.resources.Resour
             this.connectionId = Objects.requireNonNull(connectionId);
             return this;
         }
-
         public Builder connectionId(String connectionId) {
             this.connectionId = Output.of(Objects.requireNonNull(connectionId));
             return this;
-        }
-        public ConnectionConfirmationArgs build() {
+        }        public ConnectionConfirmationArgs build() {
             return new ConnectionConfirmationArgs(connectionId);
         }
     }

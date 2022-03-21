@@ -211,97 +211,81 @@ public final class GetDomainResult {
             this.accessPolicies = accessPolicies;
             return this;
         }
-
         public Builder advancedOptions(@Nullable Object advancedOptions) {
             this.advancedOptions = advancedOptions;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
-
         public Builder clusterConfig(@Nullable DomainClusterConfig clusterConfig) {
             this.clusterConfig = clusterConfig;
             return this;
         }
-
         public Builder cognitoOptions(@Nullable DomainCognitoOptions cognitoOptions) {
             this.cognitoOptions = cognitoOptions;
             return this;
         }
-
         public Builder domainArn(@Nullable String domainArn) {
             this.domainArn = domainArn;
             return this;
         }
-
         public Builder domainEndpoint(@Nullable String domainEndpoint) {
             this.domainEndpoint = domainEndpoint;
             return this;
         }
-
         public Builder domainEndpointOptions(@Nullable DomainEndpointOptions domainEndpointOptions) {
             this.domainEndpointOptions = domainEndpointOptions;
             return this;
         }
-
         public Builder domainEndpoints(@Nullable Object domainEndpoints) {
             this.domainEndpoints = domainEndpoints;
             return this;
         }
-
         public Builder eBSOptions(@Nullable DomainEBSOptions eBSOptions) {
             this.eBSOptions = eBSOptions;
             return this;
         }
-
         public Builder encryptionAtRestOptions(@Nullable DomainEncryptionAtRestOptions encryptionAtRestOptions) {
             this.encryptionAtRestOptions = encryptionAtRestOptions;
             return this;
         }
-
         public Builder engineVersion(@Nullable String engineVersion) {
             this.engineVersion = engineVersion;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder logPublishingOptions(@Nullable Object logPublishingOptions) {
             this.logPublishingOptions = logPublishingOptions;
             return this;
         }
-
         public Builder nodeToNodeEncryptionOptions(@Nullable DomainNodeToNodeEncryptionOptions nodeToNodeEncryptionOptions) {
             this.nodeToNodeEncryptionOptions = nodeToNodeEncryptionOptions;
             return this;
         }
-
         public Builder serviceSoftwareOptions(@Nullable DomainServiceSoftwareOptions serviceSoftwareOptions) {
             this.serviceSoftwareOptions = serviceSoftwareOptions;
             return this;
         }
-
         public Builder snapshotOptions(@Nullable DomainSnapshotOptions snapshotOptions) {
             this.snapshotOptions = snapshotOptions;
             return this;
         }
-
         public Builder tags(@Nullable List<DomainTag> tags) {
             this.tags = tags;
             return this;
         }
-
+        public Builder tags(DomainTag... tags) {
+            return tags(List.of(tags));
+        }
         public Builder vPCOptions(@Nullable DomainVPCOptions vPCOptions) {
             this.vPCOptions = vPCOptions;
             return this;
-        }
-        public GetDomainResult build() {
+        }        public GetDomainResult build() {
             return new GetDomainResult(accessPolicies, advancedOptions, arn, clusterConfig, cognitoOptions, domainArn, domainEndpoint, domainEndpointOptions, domainEndpoints, eBSOptions, encryptionAtRestOptions, engineVersion, id, logPublishingOptions, nodeToNodeEncryptionOptions, serviceSoftwareOptions, snapshotOptions, tags, vPCOptions);
         }
     }

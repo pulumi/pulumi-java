@@ -53,8 +53,7 @@ public final class DscConfigurationAssociationPropertyResponse {
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
-        }
-        public DscConfigurationAssociationPropertyResponse build() {
+        }        public DscConfigurationAssociationPropertyResponse build() {
             return new DscConfigurationAssociationPropertyResponse(name);
         }
     }

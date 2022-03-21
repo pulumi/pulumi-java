@@ -519,147 +519,121 @@ public final class AKSServiceResponseResponse {
             this.aadAuthEnabled = aadAuthEnabled;
             return this;
         }
-
         public Builder appInsightsEnabled(@Nullable Boolean appInsightsEnabled) {
             this.appInsightsEnabled = appInsightsEnabled;
             return this;
         }
-
         public Builder authEnabled(@Nullable Boolean authEnabled) {
             this.authEnabled = authEnabled;
             return this;
         }
-
         public Builder autoScaler(@Nullable AKSServiceResponseResponseAutoScaler autoScaler) {
             this.autoScaler = autoScaler;
             return this;
         }
-
         public Builder computeName(@Nullable String computeName) {
             this.computeName = computeName;
             return this;
         }
-
         public Builder computeType(String computeType) {
             this.computeType = Objects.requireNonNull(computeType);
             return this;
         }
-
         public Builder containerResourceRequirements(@Nullable ContainerResourceRequirementsResponse containerResourceRequirements) {
             this.containerResourceRequirements = containerResourceRequirements;
             return this;
         }
-
         public Builder dataCollection(@Nullable AKSServiceResponseResponseDataCollection dataCollection) {
             this.dataCollection = dataCollection;
             return this;
         }
-
         public Builder deploymentStatus(AKSServiceResponseResponseDeploymentStatus deploymentStatus) {
             this.deploymentStatus = Objects.requireNonNull(deploymentStatus);
             return this;
         }
-
         public Builder deploymentType(@Nullable String deploymentType) {
             this.deploymentType = deploymentType;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder environmentImageRequest(@Nullable AKSServiceResponseResponseEnvironmentImageRequest environmentImageRequest) {
             this.environmentImageRequest = environmentImageRequest;
             return this;
         }
-
         public Builder error(ServiceResponseBaseResponseError error) {
             this.error = Objects.requireNonNull(error);
             return this;
         }
-
         public Builder isDefault(@Nullable Boolean isDefault) {
             this.isDefault = isDefault;
             return this;
         }
-
         public Builder kvTags(@Nullable Map<String,String> kvTags) {
             this.kvTags = kvTags;
             return this;
         }
-
         public Builder livenessProbeRequirements(@Nullable AKSServiceResponseResponseLivenessProbeRequirements livenessProbeRequirements) {
             this.livenessProbeRequirements = livenessProbeRequirements;
             return this;
         }
-
         public Builder maxConcurrentRequestsPerContainer(@Nullable Integer maxConcurrentRequestsPerContainer) {
             this.maxConcurrentRequestsPerContainer = maxConcurrentRequestsPerContainer;
             return this;
         }
-
         public Builder maxQueueWaitMs(@Nullable Integer maxQueueWaitMs) {
             this.maxQueueWaitMs = maxQueueWaitMs;
             return this;
         }
-
         public Builder modelConfigMap(Map<String,Object> modelConfigMap) {
             this.modelConfigMap = Objects.requireNonNull(modelConfigMap);
             return this;
         }
-
         public Builder models(@Nullable List<ModelResponse> models) {
             this.models = models;
             return this;
         }
-
+        public Builder models(ModelResponse... models) {
+            return models(List.of(models));
+        }
         public Builder namespace(@Nullable String namespace) {
             this.namespace = namespace;
             return this;
         }
-
         public Builder numReplicas(@Nullable Integer numReplicas) {
             this.numReplicas = numReplicas;
             return this;
         }
-
         public Builder properties(@Nullable Map<String,String> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder scoringTimeoutMs(@Nullable Integer scoringTimeoutMs) {
             this.scoringTimeoutMs = scoringTimeoutMs;
             return this;
         }
-
         public Builder scoringUri(String scoringUri) {
             this.scoringUri = Objects.requireNonNull(scoringUri);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder swaggerUri(String swaggerUri) {
             this.swaggerUri = Objects.requireNonNull(swaggerUri);
             return this;
         }
-
         public Builder trafficPercentile(@Nullable Double trafficPercentile) {
             this.trafficPercentile = trafficPercentile;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
-        }
-        public AKSServiceResponseResponse build() {
+        }        public AKSServiceResponseResponse build() {
             return new AKSServiceResponseResponse(aadAuthEnabled, appInsightsEnabled, authEnabled, autoScaler, computeName, computeType, containerResourceRequirements, dataCollection, deploymentStatus, deploymentType, description, environmentImageRequest, error, isDefault, kvTags, livenessProbeRequirements, maxConcurrentRequestsPerContainer, maxQueueWaitMs, modelConfigMap, models, namespace, numReplicas, properties, scoringTimeoutMs, scoringUri, state, swaggerUri, trafficPercentile, type);
         }
     }

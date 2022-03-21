@@ -80,22 +80,18 @@ public final class ClusterNode {
             this.address = address;
             return this;
         }
-
         public Builder availabilityZone(@Nullable String availabilityZone) {
             this.availabilityZone = availabilityZone;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder port(@Nullable Integer port) {
             this.port = port;
             return this;
-        }
-        public ClusterNode build() {
+        }        public ClusterNode build() {
             return new ClusterNode(address, availabilityZone, id, port);
         }
     }

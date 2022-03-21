@@ -107,42 +107,34 @@ public final class ServiceActionState extends io.pulumi.resources.ResourceArgs {
             this.acceptLanguage = acceptLanguage;
             return this;
         }
-
         public Builder acceptLanguage(@Nullable String acceptLanguage) {
             this.acceptLanguage = Output.ofNullable(acceptLanguage);
             return this;
         }
-
         public Builder definition(@Nullable Output<ServiceActionDefinitionGetArgs> definition) {
             this.definition = definition;
             return this;
         }
-
         public Builder definition(@Nullable ServiceActionDefinitionGetArgs definition) {
             this.definition = Output.ofNullable(definition);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
-        }
-        public ServiceActionState build() {
+        }        public ServiceActionState build() {
             return new ServiceActionState(acceptLanguage, definition, description, name);
         }
     }

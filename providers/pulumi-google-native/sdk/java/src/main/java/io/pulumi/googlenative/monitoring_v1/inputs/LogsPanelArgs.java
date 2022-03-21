@@ -79,22 +79,21 @@ public final class LogsPanelArgs extends io.pulumi.resources.ResourceArgs {
             this.filter = filter;
             return this;
         }
-
         public Builder filter(@Nullable String filter) {
             this.filter = Output.ofNullable(filter);
             return this;
         }
-
         public Builder resourceNames(@Nullable Output<List<String>> resourceNames) {
             this.resourceNames = resourceNames;
             return this;
         }
-
         public Builder resourceNames(@Nullable List<String> resourceNames) {
             this.resourceNames = Output.ofNullable(resourceNames);
             return this;
         }
-        public LogsPanelArgs build() {
+        public Builder resourceNames(String... resourceNames) {
+            return resourceNames(List.of(resourceNames));
+        }        public LogsPanelArgs build() {
             return new LogsPanelArgs(filter, resourceNames);
         }
     }

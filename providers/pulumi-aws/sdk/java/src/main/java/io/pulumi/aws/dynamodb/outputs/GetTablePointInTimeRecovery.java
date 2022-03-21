@@ -43,8 +43,7 @@ public final class GetTablePointInTimeRecovery {
         public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
-        }
-        public GetTablePointInTimeRecovery build() {
+        }        public GetTablePointInTimeRecovery build() {
             return new GetTablePointInTimeRecovery(enabled);
         }
     }

@@ -162,72 +162,64 @@ public final class GoogleCloudMlV1__ParameterSpecArgs extends io.pulumi.resource
             this.categoricalValues = categoricalValues;
             return this;
         }
-
         public Builder categoricalValues(@Nullable List<String> categoricalValues) {
             this.categoricalValues = Output.ofNullable(categoricalValues);
             return this;
         }
-
+        public Builder categoricalValues(String... categoricalValues) {
+            return categoricalValues(List.of(categoricalValues));
+        }
         public Builder discreteValues(@Nullable Output<List<Double>> discreteValues) {
             this.discreteValues = discreteValues;
             return this;
         }
-
         public Builder discreteValues(@Nullable List<Double> discreteValues) {
             this.discreteValues = Output.ofNullable(discreteValues);
             return this;
         }
-
+        public Builder discreteValues(Double... discreteValues) {
+            return discreteValues(List.of(discreteValues));
+        }
         public Builder maxValue(@Nullable Output<Double> maxValue) {
             this.maxValue = maxValue;
             return this;
         }
-
         public Builder maxValue(@Nullable Double maxValue) {
             this.maxValue = Output.ofNullable(maxValue);
             return this;
         }
-
         public Builder minValue(@Nullable Output<Double> minValue) {
             this.minValue = minValue;
             return this;
         }
-
         public Builder minValue(@Nullable Double minValue) {
             this.minValue = Output.ofNullable(minValue);
             return this;
         }
-
         public Builder parameterName(Output<String> parameterName) {
             this.parameterName = Objects.requireNonNull(parameterName);
             return this;
         }
-
         public Builder parameterName(String parameterName) {
             this.parameterName = Output.of(Objects.requireNonNull(parameterName));
             return this;
         }
-
         public Builder scaleType(@Nullable Output<GoogleCloudMlV1__ParameterSpecScaleType> scaleType) {
             this.scaleType = scaleType;
             return this;
         }
-
         public Builder scaleType(@Nullable GoogleCloudMlV1__ParameterSpecScaleType scaleType) {
             this.scaleType = Output.ofNullable(scaleType);
             return this;
         }
-
         public Builder type(Output<GoogleCloudMlV1__ParameterSpecType> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(GoogleCloudMlV1__ParameterSpecType type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public GoogleCloudMlV1__ParameterSpecArgs build() {
+        }        public GoogleCloudMlV1__ParameterSpecArgs build() {
             return new GoogleCloudMlV1__ParameterSpecArgs(categoricalValues, discreteValues, maxValue, minValue, parameterName, scaleType, type);
         }
     }

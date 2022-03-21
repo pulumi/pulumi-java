@@ -107,22 +107,18 @@ public final class GetPatchBaselineArgs extends io.pulumi.resources.InvokeArgs {
             this.defaultBaseline = defaultBaseline;
             return this;
         }
-
         public Builder namePrefix(@Nullable String namePrefix) {
             this.namePrefix = namePrefix;
             return this;
         }
-
         public Builder operatingSystem(@Nullable String operatingSystem) {
             this.operatingSystem = operatingSystem;
             return this;
         }
-
         public Builder owner(String owner) {
             this.owner = Objects.requireNonNull(owner);
             return this;
-        }
-        public GetPatchBaselineArgs build() {
+        }        public GetPatchBaselineArgs build() {
             return new GetPatchBaselineArgs(defaultBaseline, namePrefix, operatingSystem, owner);
         }
     }

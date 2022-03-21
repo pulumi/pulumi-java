@@ -75,22 +75,18 @@ public final class AutoUserSpecificationArgs extends io.pulumi.resources.Resourc
             this.elevationLevel = elevationLevel;
             return this;
         }
-
         public Builder elevationLevel(@Nullable ElevationLevel elevationLevel) {
             this.elevationLevel = Output.ofNullable(elevationLevel);
             return this;
         }
-
         public Builder scope(@Nullable Output<AutoUserScope> scope) {
             this.scope = scope;
             return this;
         }
-
         public Builder scope(@Nullable AutoUserScope scope) {
             this.scope = Output.ofNullable(scope);
             return this;
-        }
-        public AutoUserSpecificationArgs build() {
+        }        public AutoUserSpecificationArgs build() {
             return new AutoUserSpecificationArgs(elevationLevel, scope);
         }
     }

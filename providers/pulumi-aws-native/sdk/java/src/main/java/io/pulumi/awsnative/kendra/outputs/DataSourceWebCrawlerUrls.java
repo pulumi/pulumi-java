@@ -56,12 +56,10 @@ public final class DataSourceWebCrawlerUrls {
             this.seedUrlConfiguration = seedUrlConfiguration;
             return this;
         }
-
         public Builder siteMapsConfiguration(@Nullable DataSourceWebCrawlerSiteMapsConfiguration siteMapsConfiguration) {
             this.siteMapsConfiguration = siteMapsConfiguration;
             return this;
-        }
-        public DataSourceWebCrawlerUrls build() {
+        }        public DataSourceWebCrawlerUrls build() {
             return new DataSourceWebCrawlerUrls(seedUrlConfiguration, siteMapsConfiguration);
         }
     }

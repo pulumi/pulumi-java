@@ -71,12 +71,13 @@ public final class PackageOccurrenceResponse {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
+        public Builder location(LocationResponse... location) {
+            return location(List.of(location));
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public PackageOccurrenceResponse build() {
+        }        public PackageOccurrenceResponse build() {
             return new PackageOccurrenceResponse(location, name);
         }
     }

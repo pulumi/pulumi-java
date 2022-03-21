@@ -216,57 +216,46 @@ public final class GetBlobDataSetResult {
             this.containerName = Objects.requireNonNull(containerName);
             return this;
         }
-
         public Builder dataSetId(String dataSetId) {
             this.dataSetId = Objects.requireNonNull(dataSetId);
             return this;
         }
-
         public Builder filePath(String filePath) {
             this.filePath = Objects.requireNonNull(filePath);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder resourceGroup(String resourceGroup) {
             this.resourceGroup = Objects.requireNonNull(resourceGroup);
             return this;
         }
-
         public Builder storageAccountName(String storageAccountName) {
             this.storageAccountName = Objects.requireNonNull(storageAccountName);
             return this;
         }
-
         public Builder subscriptionId(String subscriptionId) {
             this.subscriptionId = Objects.requireNonNull(subscriptionId);
             return this;
         }
-
         public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetBlobDataSetResult build() {
+        }        public GetBlobDataSetResult build() {
             return new GetBlobDataSetResult(containerName, dataSetId, filePath, id, kind, name, resourceGroup, storageAccountName, subscriptionId, systemData, type);
         }
     }

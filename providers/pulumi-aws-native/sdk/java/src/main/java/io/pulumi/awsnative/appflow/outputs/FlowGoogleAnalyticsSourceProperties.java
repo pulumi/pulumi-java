@@ -43,8 +43,7 @@ public final class FlowGoogleAnalyticsSourceProperties {
         public Builder object(String object) {
             this.object = Objects.requireNonNull(object);
             return this;
-        }
-        public FlowGoogleAnalyticsSourceProperties build() {
+        }        public FlowGoogleAnalyticsSourceProperties build() {
             return new FlowGoogleAnalyticsSourceProperties(object);
         }
     }

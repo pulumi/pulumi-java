@@ -119,27 +119,25 @@ public final class GoogleCloudDialogflowCxV3WebhookGenericWebServiceResponse {
             this.allowedCaCerts = Objects.requireNonNull(allowedCaCerts);
             return this;
         }
-
+        public Builder allowedCaCerts(String... allowedCaCerts) {
+            return allowedCaCerts(List.of(allowedCaCerts));
+        }
         public Builder password(String password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
-
         public Builder requestHeaders(Map<String,String> requestHeaders) {
             this.requestHeaders = Objects.requireNonNull(requestHeaders);
             return this;
         }
-
         public Builder uri(String uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public Builder username(String username) {
             this.username = Objects.requireNonNull(username);
             return this;
-        }
-        public GoogleCloudDialogflowCxV3WebhookGenericWebServiceResponse build() {
+        }        public GoogleCloudDialogflowCxV3WebhookGenericWebServiceResponse build() {
             return new GoogleCloudDialogflowCxV3WebhookGenericWebServiceResponse(allowedCaCerts, password, requestHeaders, uri, username);
         }
     }

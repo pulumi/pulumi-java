@@ -226,112 +226,96 @@ public final class VpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
             this.bgpSettings = bgpSettings;
             return this;
         }
-
         public Builder bgpSettings(@Nullable BgpSettingsArgs bgpSettings) {
             this.bgpSettings = Output.ofNullable(bgpSettings);
             return this;
         }
-
         public Builder connections(@Nullable Output<List<VpnConnectionArgs>> connections) {
             this.connections = connections;
             return this;
         }
-
         public Builder connections(@Nullable List<VpnConnectionArgs> connections) {
             this.connections = Output.ofNullable(connections);
             return this;
         }
-
+        public Builder connections(VpnConnectionArgs... connections) {
+            return connections(List.of(connections));
+        }
         public Builder gatewayName(@Nullable Output<String> gatewayName) {
             this.gatewayName = gatewayName;
             return this;
         }
-
         public Builder gatewayName(@Nullable String gatewayName) {
             this.gatewayName = Output.ofNullable(gatewayName);
             return this;
         }
-
         public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder isRoutingPreferenceInternet(@Nullable Output<Boolean> isRoutingPreferenceInternet) {
             this.isRoutingPreferenceInternet = isRoutingPreferenceInternet;
             return this;
         }
-
         public Builder isRoutingPreferenceInternet(@Nullable Boolean isRoutingPreferenceInternet) {
             this.isRoutingPreferenceInternet = Output.ofNullable(isRoutingPreferenceInternet);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder natRules(@Nullable Output<List<VpnGatewayNatRuleArgs>> natRules) {
             this.natRules = natRules;
             return this;
         }
-
         public Builder natRules(@Nullable List<VpnGatewayNatRuleArgs> natRules) {
             this.natRules = Output.ofNullable(natRules);
             return this;
         }
-
+        public Builder natRules(VpnGatewayNatRuleArgs... natRules) {
+            return natRules(List.of(natRules));
+        }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder virtualHub(@Nullable Output<SubResourceArgs> virtualHub) {
             this.virtualHub = virtualHub;
             return this;
         }
-
         public Builder virtualHub(@Nullable SubResourceArgs virtualHub) {
             this.virtualHub = Output.ofNullable(virtualHub);
             return this;
         }
-
         public Builder vpnGatewayScaleUnit(@Nullable Output<Integer> vpnGatewayScaleUnit) {
             this.vpnGatewayScaleUnit = vpnGatewayScaleUnit;
             return this;
         }
-
         public Builder vpnGatewayScaleUnit(@Nullable Integer vpnGatewayScaleUnit) {
             this.vpnGatewayScaleUnit = Output.ofNullable(vpnGatewayScaleUnit);
             return this;
-        }
-        public VpnGatewayArgs build() {
+        }        public VpnGatewayArgs build() {
             return new VpnGatewayArgs(bgpSettings, connections, gatewayName, id, isRoutingPreferenceInternet, location, natRules, resourceGroupName, tags, virtualHub, vpnGatewayScaleUnit);
         }
     }

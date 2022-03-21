@@ -119,27 +119,22 @@ public final class ContainerStateResponse {
             this.detailStatus = detailStatus;
             return this;
         }
-
         public Builder exitCode(@Nullable String exitCode) {
             this.exitCode = exitCode;
             return this;
         }
-
         public Builder finishTime(@Nullable String finishTime) {
             this.finishTime = finishTime;
             return this;
         }
-
         public Builder startTime(@Nullable String startTime) {
             this.startTime = startTime;
             return this;
         }
-
         public Builder state(@Nullable String state) {
             this.state = state;
             return this;
-        }
-        public ContainerStateResponse build() {
+        }        public ContainerStateResponse build() {
             return new ContainerStateResponse(detailStatus, exitCode, finishTime, startTime, state);
         }
     }

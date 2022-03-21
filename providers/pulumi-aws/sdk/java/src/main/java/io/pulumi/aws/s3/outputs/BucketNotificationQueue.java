@@ -120,27 +120,25 @@ public final class BucketNotificationQueue {
             this.events = Objects.requireNonNull(events);
             return this;
         }
-
+        public Builder events(String... events) {
+            return events(List.of(events));
+        }
         public Builder filterPrefix(@Nullable String filterPrefix) {
             this.filterPrefix = filterPrefix;
             return this;
         }
-
         public Builder filterSuffix(@Nullable String filterSuffix) {
             this.filterSuffix = filterSuffix;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder queueArn(String queueArn) {
             this.queueArn = Objects.requireNonNull(queueArn);
             return this;
-        }
-        public BucketNotificationQueue build() {
+        }        public BucketNotificationQueue build() {
             return new BucketNotificationQueue(events, filterPrefix, filterSuffix, id, queueArn);
         }
     }

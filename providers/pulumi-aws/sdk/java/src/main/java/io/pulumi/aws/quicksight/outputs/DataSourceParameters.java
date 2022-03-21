@@ -378,102 +378,82 @@ public final class DataSourceParameters {
             this.amazonElasticsearch = amazonElasticsearch;
             return this;
         }
-
         public Builder athena(@Nullable DataSourceParametersAthena athena) {
             this.athena = athena;
             return this;
         }
-
         public Builder aurora(@Nullable DataSourceParametersAurora aurora) {
             this.aurora = aurora;
             return this;
         }
-
         public Builder auroraPostgresql(@Nullable DataSourceParametersAuroraPostgresql auroraPostgresql) {
             this.auroraPostgresql = auroraPostgresql;
             return this;
         }
-
         public Builder awsIotAnalytics(@Nullable DataSourceParametersAwsIotAnalytics awsIotAnalytics) {
             this.awsIotAnalytics = awsIotAnalytics;
             return this;
         }
-
         public Builder jira(@Nullable DataSourceParametersJira jira) {
             this.jira = jira;
             return this;
         }
-
         public Builder mariaDb(@Nullable DataSourceParametersMariaDb mariaDb) {
             this.mariaDb = mariaDb;
             return this;
         }
-
         public Builder mysql(@Nullable DataSourceParametersMysql mysql) {
             this.mysql = mysql;
             return this;
         }
-
         public Builder oracle(@Nullable DataSourceParametersOracle oracle) {
             this.oracle = oracle;
             return this;
         }
-
         public Builder postgresql(@Nullable DataSourceParametersPostgresql postgresql) {
             this.postgresql = postgresql;
             return this;
         }
-
         public Builder presto(@Nullable DataSourceParametersPresto presto) {
             this.presto = presto;
             return this;
         }
-
         public Builder rds(@Nullable DataSourceParametersRds rds) {
             this.rds = rds;
             return this;
         }
-
         public Builder redshift(@Nullable DataSourceParametersRedshift redshift) {
             this.redshift = redshift;
             return this;
         }
-
         public Builder s3(@Nullable DataSourceParametersS3 s3) {
             this.s3 = s3;
             return this;
         }
-
         public Builder serviceNow(@Nullable DataSourceParametersServiceNow serviceNow) {
             this.serviceNow = serviceNow;
             return this;
         }
-
         public Builder snowflake(@Nullable DataSourceParametersSnowflake snowflake) {
             this.snowflake = snowflake;
             return this;
         }
-
         public Builder spark(@Nullable DataSourceParametersSpark spark) {
             this.spark = spark;
             return this;
         }
-
         public Builder sqlServer(@Nullable DataSourceParametersSqlServer sqlServer) {
             this.sqlServer = sqlServer;
             return this;
         }
-
         public Builder teradata(@Nullable DataSourceParametersTeradata teradata) {
             this.teradata = teradata;
             return this;
         }
-
         public Builder twitter(@Nullable DataSourceParametersTwitter twitter) {
             this.twitter = twitter;
             return this;
-        }
-        public DataSourceParameters build() {
+        }        public DataSourceParameters build() {
             return new DataSourceParameters(amazonElasticsearch, athena, aurora, auroraPostgresql, awsIotAnalytics, jira, mariaDb, mysql, oracle, postgresql, presto, rds, redshift, s3, serviceNow, snowflake, spark, sqlServer, teradata, twitter);
         }
     }

@@ -126,52 +126,45 @@ public final class ReportPlanArgs extends io.pulumi.resources.ResourceArgs {
             this.reportDeliveryChannel = Objects.requireNonNull(reportDeliveryChannel);
             return this;
         }
-
         public Builder reportDeliveryChannel(ReportDeliveryChannelPropertiesArgs reportDeliveryChannel) {
             this.reportDeliveryChannel = Output.of(Objects.requireNonNull(reportDeliveryChannel));
             return this;
         }
-
         public Builder reportPlanDescription(@Nullable Output<String> reportPlanDescription) {
             this.reportPlanDescription = reportPlanDescription;
             return this;
         }
-
         public Builder reportPlanDescription(@Nullable String reportPlanDescription) {
             this.reportPlanDescription = Output.ofNullable(reportPlanDescription);
             return this;
         }
-
         public Builder reportPlanName(@Nullable Output<String> reportPlanName) {
             this.reportPlanName = reportPlanName;
             return this;
         }
-
         public Builder reportPlanName(@Nullable String reportPlanName) {
             this.reportPlanName = Output.ofNullable(reportPlanName);
             return this;
         }
-
         public Builder reportPlanTags(@Nullable Output<List<ReportPlanTagArgs>> reportPlanTags) {
             this.reportPlanTags = reportPlanTags;
             return this;
         }
-
         public Builder reportPlanTags(@Nullable List<ReportPlanTagArgs> reportPlanTags) {
             this.reportPlanTags = Output.ofNullable(reportPlanTags);
             return this;
         }
-
+        public Builder reportPlanTags(ReportPlanTagArgs... reportPlanTags) {
+            return reportPlanTags(List.of(reportPlanTags));
+        }
         public Builder reportSetting(Output<ReportSettingPropertiesArgs> reportSetting) {
             this.reportSetting = Objects.requireNonNull(reportSetting);
             return this;
         }
-
         public Builder reportSetting(ReportSettingPropertiesArgs reportSetting) {
             this.reportSetting = Output.of(Objects.requireNonNull(reportSetting));
             return this;
-        }
-        public ReportPlanArgs build() {
+        }        public ReportPlanArgs build() {
             return new ReportPlanArgs(reportDeliveryChannel, reportPlanDescription, reportPlanName, reportPlanTags, reportSetting);
         }
     }

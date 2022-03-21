@@ -114,52 +114,42 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
             this.apiproduct = apiproduct;
             return this;
         }
-
         public Builder apiproduct(@Nullable String apiproduct) {
             this.apiproduct = Output.ofNullable(apiproduct);
             return this;
         }
-
         public Builder developerId(Output<String> developerId) {
             this.developerId = Objects.requireNonNull(developerId);
             return this;
         }
-
         public Builder developerId(String developerId) {
             this.developerId = Output.of(Objects.requireNonNull(developerId));
             return this;
         }
-
         public Builder endTime(@Nullable Output<String> endTime) {
             this.endTime = endTime;
             return this;
         }
-
         public Builder endTime(@Nullable String endTime) {
             this.endTime = Output.ofNullable(endTime);
             return this;
         }
-
         public Builder organizationId(Output<String> organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }
-
         public Builder organizationId(String organizationId) {
             this.organizationId = Output.of(Objects.requireNonNull(organizationId));
             return this;
         }
-
         public Builder startTime(@Nullable Output<String> startTime) {
             this.startTime = startTime;
             return this;
         }
-
         public Builder startTime(@Nullable String startTime) {
             this.startTime = Output.ofNullable(startTime);
             return this;
-        }
-        public SubscriptionArgs build() {
+        }        public SubscriptionArgs build() {
             return new SubscriptionArgs(apiproduct, developerId, endTime, organizationId, startTime);
         }
     }

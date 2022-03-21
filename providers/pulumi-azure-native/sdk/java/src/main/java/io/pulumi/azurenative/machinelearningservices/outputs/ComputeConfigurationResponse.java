@@ -138,32 +138,26 @@ public final class ComputeConfigurationResponse {
             this.instanceCount = instanceCount;
             return this;
         }
-
         public Builder instanceType(@Nullable String instanceType) {
             this.instanceType = instanceType;
             return this;
         }
-
         public Builder isLocal(@Nullable Boolean isLocal) {
             this.isLocal = isLocal;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder properties(@Nullable Map<String,String> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder target(@Nullable String target) {
             this.target = target;
             return this;
-        }
-        public ComputeConfigurationResponse build() {
+        }        public ComputeConfigurationResponse build() {
             return new ComputeConfigurationResponse(instanceCount, instanceType, isLocal, location, properties, target);
         }
     }

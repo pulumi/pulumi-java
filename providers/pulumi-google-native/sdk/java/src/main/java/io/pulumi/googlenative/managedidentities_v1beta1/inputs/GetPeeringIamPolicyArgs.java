@@ -78,17 +78,14 @@ public final class GetPeeringIamPolicyArgs extends io.pulumi.resources.InvokeArg
             this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
-
         public Builder peeringId(String peeringId) {
             this.peeringId = Objects.requireNonNull(peeringId);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetPeeringIamPolicyArgs build() {
+        }        public GetPeeringIamPolicyArgs build() {
             return new GetPeeringIamPolicyArgs(optionsRequestedPolicyVersion, peeringId, project);
         }
     }

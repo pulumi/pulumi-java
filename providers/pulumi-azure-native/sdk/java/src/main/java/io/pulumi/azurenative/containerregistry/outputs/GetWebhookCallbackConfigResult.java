@@ -71,12 +71,10 @@ public final class GetWebhookCallbackConfigResult {
             this.customHeaders = customHeaders;
             return this;
         }
-
         public Builder serviceUri(String serviceUri) {
             this.serviceUri = Objects.requireNonNull(serviceUri);
             return this;
-        }
-        public GetWebhookCallbackConfigResult build() {
+        }        public GetWebhookCallbackConfigResult build() {
             return new GetWebhookCallbackConfigResult(customHeaders, serviceUri);
         }
     }

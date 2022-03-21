@@ -62,12 +62,13 @@ public final class MessageStoragePolicyArgs extends io.pulumi.resources.Resource
             this.allowedPersistenceRegions = allowedPersistenceRegions;
             return this;
         }
-
         public Builder allowedPersistenceRegions(@Nullable List<String> allowedPersistenceRegions) {
             this.allowedPersistenceRegions = Output.ofNullable(allowedPersistenceRegions);
             return this;
         }
-        public MessageStoragePolicyArgs build() {
+        public Builder allowedPersistenceRegions(String... allowedPersistenceRegions) {
+            return allowedPersistenceRegions(List.of(allowedPersistenceRegions));
+        }        public MessageStoragePolicyArgs build() {
             return new MessageStoragePolicyArgs(allowedPersistenceRegions);
         }
     }

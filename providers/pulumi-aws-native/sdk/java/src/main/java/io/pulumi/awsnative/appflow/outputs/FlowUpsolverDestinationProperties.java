@@ -64,17 +64,14 @@ public final class FlowUpsolverDestinationProperties {
             this.bucketName = Objects.requireNonNull(bucketName);
             return this;
         }
-
         public Builder bucketPrefix(@Nullable String bucketPrefix) {
             this.bucketPrefix = bucketPrefix;
             return this;
         }
-
         public Builder s3OutputFormatConfig(FlowUpsolverS3OutputFormatConfig s3OutputFormatConfig) {
             this.s3OutputFormatConfig = Objects.requireNonNull(s3OutputFormatConfig);
             return this;
-        }
-        public FlowUpsolverDestinationProperties build() {
+        }        public FlowUpsolverDestinationProperties build() {
             return new FlowUpsolverDestinationProperties(bucketName, bucketPrefix, s3OutputFormatConfig);
         }
     }

@@ -181,82 +181,66 @@ public final class UrlMapArgs extends io.pulumi.resources.ResourceArgs {
             this.apiEndpoint = apiEndpoint;
             return this;
         }
-
         public Builder apiEndpoint(@Nullable ApiEndpointHandlerArgs apiEndpoint) {
             this.apiEndpoint = Output.ofNullable(apiEndpoint);
             return this;
         }
-
         public Builder authFailAction(@Nullable Output<UrlMapAuthFailAction> authFailAction) {
             this.authFailAction = authFailAction;
             return this;
         }
-
         public Builder authFailAction(@Nullable UrlMapAuthFailAction authFailAction) {
             this.authFailAction = Output.ofNullable(authFailAction);
             return this;
         }
-
         public Builder login(@Nullable Output<UrlMapLogin> login) {
             this.login = login;
             return this;
         }
-
         public Builder login(@Nullable UrlMapLogin login) {
             this.login = Output.ofNullable(login);
             return this;
         }
-
         public Builder redirectHttpResponseCode(@Nullable Output<UrlMapRedirectHttpResponseCode> redirectHttpResponseCode) {
             this.redirectHttpResponseCode = redirectHttpResponseCode;
             return this;
         }
-
         public Builder redirectHttpResponseCode(@Nullable UrlMapRedirectHttpResponseCode redirectHttpResponseCode) {
             this.redirectHttpResponseCode = Output.ofNullable(redirectHttpResponseCode);
             return this;
         }
-
         public Builder script(@Nullable Output<ScriptHandlerArgs> script) {
             this.script = script;
             return this;
         }
-
         public Builder script(@Nullable ScriptHandlerArgs script) {
             this.script = Output.ofNullable(script);
             return this;
         }
-
         public Builder securityLevel(@Nullable Output<UrlMapSecurityLevel> securityLevel) {
             this.securityLevel = securityLevel;
             return this;
         }
-
         public Builder securityLevel(@Nullable UrlMapSecurityLevel securityLevel) {
             this.securityLevel = Output.ofNullable(securityLevel);
             return this;
         }
-
         public Builder staticFiles(@Nullable Output<StaticFilesHandlerArgs> staticFiles) {
             this.staticFiles = staticFiles;
             return this;
         }
-
         public Builder staticFiles(@Nullable StaticFilesHandlerArgs staticFiles) {
             this.staticFiles = Output.ofNullable(staticFiles);
             return this;
         }
-
         public Builder urlRegex(@Nullable Output<String> urlRegex) {
             this.urlRegex = urlRegex;
             return this;
         }
-
         public Builder urlRegex(@Nullable String urlRegex) {
             this.urlRegex = Output.ofNullable(urlRegex);
             return this;
-        }
-        public UrlMapArgs build() {
+        }        public UrlMapArgs build() {
             return new UrlMapArgs(apiEndpoint, authFailAction, login, redirectHttpResponseCode, script, securityLevel, staticFiles, urlRegex);
         }
     }

@@ -143,62 +143,56 @@ public final class ReportConfigFilterArgs extends io.pulumi.resources.ResourceAr
             this.and = and;
             return this;
         }
-
         public Builder and(@Nullable List<ReportConfigFilterArgs> and) {
             this.and = Output.ofNullable(and);
             return this;
         }
-
+        public Builder and(ReportConfigFilterArgs... and) {
+            return and(List.of(and));
+        }
         public Builder dimensions(@Nullable Output<ReportConfigComparisonExpressionArgs> dimensions) {
             this.dimensions = dimensions;
             return this;
         }
-
         public Builder dimensions(@Nullable ReportConfigComparisonExpressionArgs dimensions) {
             this.dimensions = Output.ofNullable(dimensions);
             return this;
         }
-
         public Builder or(@Nullable Output<List<ReportConfigFilterArgs>> or) {
             this.or = or;
             return this;
         }
-
         public Builder or(@Nullable List<ReportConfigFilterArgs> or) {
             this.or = Output.ofNullable(or);
             return this;
         }
-
+        public Builder or(ReportConfigFilterArgs... or) {
+            return or(List.of(or));
+        }
         public Builder tagKey(@Nullable Output<ReportConfigComparisonExpressionArgs> tagKey) {
             this.tagKey = tagKey;
             return this;
         }
-
         public Builder tagKey(@Nullable ReportConfigComparisonExpressionArgs tagKey) {
             this.tagKey = Output.ofNullable(tagKey);
             return this;
         }
-
         public Builder tagValue(@Nullable Output<ReportConfigComparisonExpressionArgs> tagValue) {
             this.tagValue = tagValue;
             return this;
         }
-
         public Builder tagValue(@Nullable ReportConfigComparisonExpressionArgs tagValue) {
             this.tagValue = Output.ofNullable(tagValue);
             return this;
         }
-
         public Builder tags(@Nullable Output<ReportConfigComparisonExpressionArgs> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable ReportConfigComparisonExpressionArgs tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public ReportConfigFilterArgs build() {
+        }        public ReportConfigFilterArgs build() {
             return new ReportConfigFilterArgs(and, dimensions, or, tagKey, tagValue, tags);
         }
     }

@@ -76,17 +76,14 @@ public final class GetEnvgroupAttachmentArgs extends io.pulumi.resources.InvokeA
             this.attachmentId = Objects.requireNonNull(attachmentId);
             return this;
         }
-
         public Builder envgroupId(String envgroupId) {
             this.envgroupId = Objects.requireNonNull(envgroupId);
             return this;
         }
-
         public Builder organizationId(String organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
-        }
-        public GetEnvgroupAttachmentArgs build() {
+        }        public GetEnvgroupAttachmentArgs build() {
             return new GetEnvgroupAttachmentArgs(attachmentId, envgroupId, organizationId);
         }
     }

@@ -170,102 +170,85 @@ public final class StateMachineArgs extends io.pulumi.resources.ResourceArgs {
             this.definition = definition;
             return this;
         }
-
         public Builder definition(@Nullable StateMachineDefinitionArgs definition) {
             this.definition = Output.ofNullable(definition);
             return this;
         }
-
         public Builder definitionS3Location(@Nullable Output<StateMachineS3LocationArgs> definitionS3Location) {
             this.definitionS3Location = definitionS3Location;
             return this;
         }
-
         public Builder definitionS3Location(@Nullable StateMachineS3LocationArgs definitionS3Location) {
             this.definitionS3Location = Output.ofNullable(definitionS3Location);
             return this;
         }
-
         public Builder definitionString(@Nullable Output<String> definitionString) {
             this.definitionString = definitionString;
             return this;
         }
-
         public Builder definitionString(@Nullable String definitionString) {
             this.definitionString = Output.ofNullable(definitionString);
             return this;
         }
-
         public Builder definitionSubstitutions(@Nullable Output<StateMachineDefinitionSubstitutionsArgs> definitionSubstitutions) {
             this.definitionSubstitutions = definitionSubstitutions;
             return this;
         }
-
         public Builder definitionSubstitutions(@Nullable StateMachineDefinitionSubstitutionsArgs definitionSubstitutions) {
             this.definitionSubstitutions = Output.ofNullable(definitionSubstitutions);
             return this;
         }
-
         public Builder loggingConfiguration(@Nullable Output<StateMachineLoggingConfigurationArgs> loggingConfiguration) {
             this.loggingConfiguration = loggingConfiguration;
             return this;
         }
-
         public Builder loggingConfiguration(@Nullable StateMachineLoggingConfigurationArgs loggingConfiguration) {
             this.loggingConfiguration = Output.ofNullable(loggingConfiguration);
             return this;
         }
-
         public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public Builder roleArn(String roleArn) {
             this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
         }
-
         public Builder stateMachineName(@Nullable Output<String> stateMachineName) {
             this.stateMachineName = stateMachineName;
             return this;
         }
-
         public Builder stateMachineName(@Nullable String stateMachineName) {
             this.stateMachineName = Output.ofNullable(stateMachineName);
             return this;
         }
-
         public Builder stateMachineType(@Nullable Output<StateMachineType> stateMachineType) {
             this.stateMachineType = stateMachineType;
             return this;
         }
-
         public Builder stateMachineType(@Nullable StateMachineType stateMachineType) {
             this.stateMachineType = Output.ofNullable(stateMachineType);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<StateMachineTagsEntryArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<StateMachineTagsEntryArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
+        public Builder tags(StateMachineTagsEntryArgs... tags) {
+            return tags(List.of(tags));
+        }
         public Builder tracingConfiguration(@Nullable Output<StateMachineTracingConfigurationArgs> tracingConfiguration) {
             this.tracingConfiguration = tracingConfiguration;
             return this;
         }
-
         public Builder tracingConfiguration(@Nullable StateMachineTracingConfigurationArgs tracingConfiguration) {
             this.tracingConfiguration = Output.ofNullable(tracingConfiguration);
             return this;
-        }
-        public StateMachineArgs build() {
+        }        public StateMachineArgs build() {
             return new StateMachineArgs(definition, definitionS3Location, definitionString, definitionSubstitutions, loggingConfiguration, roleArn, stateMachineName, stateMachineType, tags, tracingConfiguration);
         }
     }

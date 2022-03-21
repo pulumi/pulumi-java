@@ -263,132 +263,109 @@ public final class HubspotLinkedServiceArgs extends io.pulumi.resources.Resource
             this.accessToken = accessToken;
             return this;
         }
-
         public Builder accessToken(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> accessToken) {
             this.accessToken = Output.ofNullable(accessToken);
             return this;
         }
-
         public Builder annotations(@Nullable Output<List<Object>> annotations) {
             this.annotations = annotations;
             return this;
         }
-
         public Builder annotations(@Nullable List<Object> annotations) {
             this.annotations = Output.ofNullable(annotations);
             return this;
         }
-
+        public Builder annotations(Object... annotations) {
+            return annotations(List.of(annotations));
+        }
         public Builder clientId(Output<Object> clientId) {
             this.clientId = Objects.requireNonNull(clientId);
             return this;
         }
-
         public Builder clientId(Object clientId) {
             this.clientId = Output.of(Objects.requireNonNull(clientId));
             return this;
         }
-
         public Builder clientSecret(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> clientSecret) {
             this.clientSecret = clientSecret;
             return this;
         }
-
         public Builder clientSecret(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> clientSecret) {
             this.clientSecret = Output.ofNullable(clientSecret);
             return this;
         }
-
         public Builder connectVia(@Nullable Output<IntegrationRuntimeReferenceArgs> connectVia) {
             this.connectVia = connectVia;
             return this;
         }
-
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceArgs connectVia) {
             this.connectVia = Output.ofNullable(connectVia);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder encryptedCredential(@Nullable Output<Object> encryptedCredential) {
             this.encryptedCredential = encryptedCredential;
             return this;
         }
-
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
             this.encryptedCredential = Output.ofNullable(encryptedCredential);
             return this;
         }
-
         public Builder parameters(@Nullable Output<Map<String,ParameterSpecificationArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder parameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
             this.parameters = Output.ofNullable(parameters);
             return this;
         }
-
         public Builder refreshToken(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> refreshToken) {
             this.refreshToken = refreshToken;
             return this;
         }
-
         public Builder refreshToken(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> refreshToken) {
             this.refreshToken = Output.ofNullable(refreshToken);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
-
         public Builder useEncryptedEndpoints(@Nullable Output<Object> useEncryptedEndpoints) {
             this.useEncryptedEndpoints = useEncryptedEndpoints;
             return this;
         }
-
         public Builder useEncryptedEndpoints(@Nullable Object useEncryptedEndpoints) {
             this.useEncryptedEndpoints = Output.ofNullable(useEncryptedEndpoints);
             return this;
         }
-
         public Builder useHostVerification(@Nullable Output<Object> useHostVerification) {
             this.useHostVerification = useHostVerification;
             return this;
         }
-
         public Builder useHostVerification(@Nullable Object useHostVerification) {
             this.useHostVerification = Output.ofNullable(useHostVerification);
             return this;
         }
-
         public Builder usePeerVerification(@Nullable Output<Object> usePeerVerification) {
             this.usePeerVerification = usePeerVerification;
             return this;
         }
-
         public Builder usePeerVerification(@Nullable Object usePeerVerification) {
             this.usePeerVerification = Output.ofNullable(usePeerVerification);
             return this;
-        }
-        public HubspotLinkedServiceArgs build() {
+        }        public HubspotLinkedServiceArgs build() {
             return new HubspotLinkedServiceArgs(accessToken, annotations, clientId, clientSecret, connectVia, description, encryptedCredential, parameters, refreshToken, type, useEncryptedEndpoints, useHostVerification, usePeerVerification);
         }
     }

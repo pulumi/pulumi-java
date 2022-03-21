@@ -181,82 +181,66 @@ public final class OSPolicyResourcePackageResourceArgs extends io.pulumi.resourc
             this.apt = apt;
             return this;
         }
-
         public Builder apt(@Nullable OSPolicyResourcePackageResourceAPTArgs apt) {
             this.apt = Output.ofNullable(apt);
             return this;
         }
-
         public Builder deb(@Nullable Output<OSPolicyResourcePackageResourceDebArgs> deb) {
             this.deb = deb;
             return this;
         }
-
         public Builder deb(@Nullable OSPolicyResourcePackageResourceDebArgs deb) {
             this.deb = Output.ofNullable(deb);
             return this;
         }
-
         public Builder desiredState(Output<OSPolicyResourcePackageResourceDesiredState> desiredState) {
             this.desiredState = Objects.requireNonNull(desiredState);
             return this;
         }
-
         public Builder desiredState(OSPolicyResourcePackageResourceDesiredState desiredState) {
             this.desiredState = Output.of(Objects.requireNonNull(desiredState));
             return this;
         }
-
         public Builder googet(@Nullable Output<OSPolicyResourcePackageResourceGooGetArgs> googet) {
             this.googet = googet;
             return this;
         }
-
         public Builder googet(@Nullable OSPolicyResourcePackageResourceGooGetArgs googet) {
             this.googet = Output.ofNullable(googet);
             return this;
         }
-
         public Builder msi(@Nullable Output<OSPolicyResourcePackageResourceMSIArgs> msi) {
             this.msi = msi;
             return this;
         }
-
         public Builder msi(@Nullable OSPolicyResourcePackageResourceMSIArgs msi) {
             this.msi = Output.ofNullable(msi);
             return this;
         }
-
         public Builder rpm(@Nullable Output<OSPolicyResourcePackageResourceRPMArgs> rpm) {
             this.rpm = rpm;
             return this;
         }
-
         public Builder rpm(@Nullable OSPolicyResourcePackageResourceRPMArgs rpm) {
             this.rpm = Output.ofNullable(rpm);
             return this;
         }
-
         public Builder yum(@Nullable Output<OSPolicyResourcePackageResourceYUMArgs> yum) {
             this.yum = yum;
             return this;
         }
-
         public Builder yum(@Nullable OSPolicyResourcePackageResourceYUMArgs yum) {
             this.yum = Output.ofNullable(yum);
             return this;
         }
-
         public Builder zypper(@Nullable Output<OSPolicyResourcePackageResourceZypperArgs> zypper) {
             this.zypper = zypper;
             return this;
         }
-
         public Builder zypper(@Nullable OSPolicyResourcePackageResourceZypperArgs zypper) {
             this.zypper = Output.ofNullable(zypper);
             return this;
-        }
-        public OSPolicyResourcePackageResourceArgs build() {
+        }        public OSPolicyResourcePackageResourceArgs build() {
             return new OSPolicyResourcePackageResourceArgs(apt, deb, desiredState, googet, msi, rpm, yum, zypper);
         }
     }

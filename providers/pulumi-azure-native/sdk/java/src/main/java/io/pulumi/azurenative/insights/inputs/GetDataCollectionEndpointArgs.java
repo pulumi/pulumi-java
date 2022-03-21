@@ -72,12 +72,10 @@ public final class GetDataCollectionEndpointArgs extends io.pulumi.resources.Inv
             this.dataCollectionEndpointName = Objects.requireNonNull(dataCollectionEndpointName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetDataCollectionEndpointArgs build() {
+        }        public GetDataCollectionEndpointArgs build() {
             return new GetDataCollectionEndpointArgs(dataCollectionEndpointName, resourceGroupName);
         }
     }

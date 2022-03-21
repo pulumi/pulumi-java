@@ -113,42 +113,40 @@ public final class ContainerNetworkInterfaceConfigurationArgs extends io.pulumi.
             this.containerNetworkInterfaces = containerNetworkInterfaces;
             return this;
         }
-
         public Builder containerNetworkInterfaces(@Nullable List<SubResourceArgs> containerNetworkInterfaces) {
             this.containerNetworkInterfaces = Output.ofNullable(containerNetworkInterfaces);
             return this;
         }
-
+        public Builder containerNetworkInterfaces(SubResourceArgs... containerNetworkInterfaces) {
+            return containerNetworkInterfaces(List.of(containerNetworkInterfaces));
+        }
         public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder ipConfigurations(@Nullable Output<List<IPConfigurationProfileArgs>> ipConfigurations) {
             this.ipConfigurations = ipConfigurations;
             return this;
         }
-
         public Builder ipConfigurations(@Nullable List<IPConfigurationProfileArgs> ipConfigurations) {
             this.ipConfigurations = Output.ofNullable(ipConfigurations);
             return this;
         }
-
+        public Builder ipConfigurations(IPConfigurationProfileArgs... ipConfigurations) {
+            return ipConfigurations(List.of(ipConfigurations));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
-        }
-        public ContainerNetworkInterfaceConfigurationArgs build() {
+        }        public ContainerNetworkInterfaceConfigurationArgs build() {
             return new ContainerNetworkInterfaceConfigurationArgs(containerNetworkInterfaces, id, ipConfigurations, name);
         }
     }

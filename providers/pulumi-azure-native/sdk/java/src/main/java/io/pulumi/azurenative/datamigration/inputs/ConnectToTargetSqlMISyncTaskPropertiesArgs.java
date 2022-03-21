@@ -80,22 +80,18 @@ public final class ConnectToTargetSqlMISyncTaskPropertiesArgs extends io.pulumi.
             this.input = input;
             return this;
         }
-
         public Builder input(@Nullable ConnectToTargetSqlMISyncTaskInputArgs input) {
             this.input = Output.ofNullable(input);
             return this;
         }
-
         public Builder taskType(Output<String> taskType) {
             this.taskType = Objects.requireNonNull(taskType);
             return this;
         }
-
         public Builder taskType(String taskType) {
             this.taskType = Output.of(Objects.requireNonNull(taskType));
             return this;
-        }
-        public ConnectToTargetSqlMISyncTaskPropertiesArgs build() {
+        }        public ConnectToTargetSqlMISyncTaskPropertiesArgs build() {
             return new ConnectToTargetSqlMISyncTaskPropertiesArgs(input, taskType);
         }
     }

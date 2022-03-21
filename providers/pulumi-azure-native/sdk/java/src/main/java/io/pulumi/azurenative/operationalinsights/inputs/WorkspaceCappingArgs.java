@@ -61,12 +61,10 @@ public final class WorkspaceCappingArgs extends io.pulumi.resources.ResourceArgs
             this.dailyQuotaGb = dailyQuotaGb;
             return this;
         }
-
         public Builder dailyQuotaGb(@Nullable Double dailyQuotaGb) {
             this.dailyQuotaGb = Output.ofNullable(dailyQuotaGb);
             return this;
-        }
-        public WorkspaceCappingArgs build() {
+        }        public WorkspaceCappingArgs build() {
             return new WorkspaceCappingArgs(dailyQuotaGb);
         }
     }

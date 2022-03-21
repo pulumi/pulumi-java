@@ -103,22 +103,18 @@ public final class ExpressRouteCircuitStatsResponse {
             this.primarybytesIn = primarybytesIn;
             return this;
         }
-
         public Builder primarybytesOut(@Nullable Double primarybytesOut) {
             this.primarybytesOut = primarybytesOut;
             return this;
         }
-
         public Builder secondarybytesIn(@Nullable Double secondarybytesIn) {
             this.secondarybytesIn = secondarybytesIn;
             return this;
         }
-
         public Builder secondarybytesOut(@Nullable Double secondarybytesOut) {
             this.secondarybytesOut = secondarybytesOut;
             return this;
-        }
-        public ExpressRouteCircuitStatsResponse build() {
+        }        public ExpressRouteCircuitStatsResponse build() {
             return new ExpressRouteCircuitStatsResponse(primarybytesIn, primarybytesOut, secondarybytesIn, secondarybytesOut);
         }
     }

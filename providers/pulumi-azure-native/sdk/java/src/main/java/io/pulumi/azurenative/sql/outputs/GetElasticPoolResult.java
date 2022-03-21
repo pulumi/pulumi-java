@@ -272,72 +272,58 @@ public final class GetElasticPoolResult {
             this.creationDate = Objects.requireNonNull(creationDate);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder licenseType(@Nullable String licenseType) {
             this.licenseType = licenseType;
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder maintenanceConfigurationId(@Nullable String maintenanceConfigurationId) {
             this.maintenanceConfigurationId = maintenanceConfigurationId;
             return this;
         }
-
         public Builder maxSizeBytes(@Nullable Double maxSizeBytes) {
             this.maxSizeBytes = maxSizeBytes;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder perDatabaseSettings(@Nullable ElasticPoolPerDatabaseSettingsResponse perDatabaseSettings) {
             this.perDatabaseSettings = perDatabaseSettings;
             return this;
         }
-
         public Builder sku(@Nullable SkuResponse sku) {
             this.sku = sku;
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder zoneRedundant(@Nullable Boolean zoneRedundant) {
             this.zoneRedundant = zoneRedundant;
             return this;
-        }
-        public GetElasticPoolResult build() {
+        }        public GetElasticPoolResult build() {
             return new GetElasticPoolResult(creationDate, id, kind, licenseType, location, maintenanceConfigurationId, maxSizeBytes, name, perDatabaseSettings, sku, state, tags, type, zoneRedundant);
         }
     }

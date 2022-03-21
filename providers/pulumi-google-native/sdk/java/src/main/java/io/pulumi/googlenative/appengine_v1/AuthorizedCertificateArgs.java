@@ -87,32 +87,26 @@ public final class AuthorizedCertificateArgs extends io.pulumi.resources.Resourc
             this.appId = Objects.requireNonNull(appId);
             return this;
         }
-
         public Builder appId(String appId) {
             this.appId = Output.of(Objects.requireNonNull(appId));
             return this;
         }
-
         public Builder certificateRawData(@Nullable Output<CertificateRawDataArgs> certificateRawData) {
             this.certificateRawData = certificateRawData;
             return this;
         }
-
         public Builder certificateRawData(@Nullable CertificateRawDataArgs certificateRawData) {
             this.certificateRawData = Output.ofNullable(certificateRawData);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
-        }
-        public AuthorizedCertificateArgs build() {
+        }        public AuthorizedCertificateArgs build() {
             return new AuthorizedCertificateArgs(appId, certificateRawData, displayName);
         }
     }

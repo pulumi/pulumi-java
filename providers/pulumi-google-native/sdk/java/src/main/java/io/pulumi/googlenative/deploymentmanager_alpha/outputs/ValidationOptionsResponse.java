@@ -69,12 +69,10 @@ public final class ValidationOptionsResponse {
             this.schemaValidation = Objects.requireNonNull(schemaValidation);
             return this;
         }
-
         public Builder undeclaredProperties(String undeclaredProperties) {
             this.undeclaredProperties = Objects.requireNonNull(undeclaredProperties);
             return this;
-        }
-        public ValidationOptionsResponse build() {
+        }        public ValidationOptionsResponse build() {
             return new ValidationOptionsResponse(schemaValidation, undeclaredProperties);
         }
     }

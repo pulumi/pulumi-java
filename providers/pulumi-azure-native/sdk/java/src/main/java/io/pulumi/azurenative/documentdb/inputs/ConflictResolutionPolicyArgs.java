@@ -96,32 +96,26 @@ public final class ConflictResolutionPolicyArgs extends io.pulumi.resources.Reso
             this.conflictResolutionPath = conflictResolutionPath;
             return this;
         }
-
         public Builder conflictResolutionPath(@Nullable String conflictResolutionPath) {
             this.conflictResolutionPath = Output.ofNullable(conflictResolutionPath);
             return this;
         }
-
         public Builder conflictResolutionProcedure(@Nullable Output<String> conflictResolutionProcedure) {
             this.conflictResolutionProcedure = conflictResolutionProcedure;
             return this;
         }
-
         public Builder conflictResolutionProcedure(@Nullable String conflictResolutionProcedure) {
             this.conflictResolutionProcedure = Output.ofNullable(conflictResolutionProcedure);
             return this;
         }
-
         public Builder mode(@Nullable Output<Either<String,ConflictResolutionMode>> mode) {
             this.mode = mode;
             return this;
         }
-
         public Builder mode(@Nullable Either<String,ConflictResolutionMode> mode) {
             this.mode = Output.ofNullable(mode);
             return this;
-        }
-        public ConflictResolutionPolicyArgs build() {
+        }        public ConflictResolutionPolicyArgs build() {
             return new ConflictResolutionPolicyArgs(conflictResolutionPath, conflictResolutionProcedure, mode);
         }
     }

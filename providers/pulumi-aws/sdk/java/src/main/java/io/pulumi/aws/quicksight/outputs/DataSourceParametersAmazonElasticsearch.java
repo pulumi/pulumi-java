@@ -51,8 +51,7 @@ public final class DataSourceParametersAmazonElasticsearch {
         public Builder domain(String domain) {
             this.domain = Objects.requireNonNull(domain);
             return this;
-        }
-        public DataSourceParametersAmazonElasticsearch build() {
+        }        public DataSourceParametersAmazonElasticsearch build() {
             return new DataSourceParametersAmazonElasticsearch(domain);
         }
     }

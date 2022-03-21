@@ -138,32 +138,26 @@ public final class IntegrationRuntimeComputePropertiesResponse {
             this.dataFlowProperties = dataFlowProperties;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder maxParallelExecutionsPerNode(@Nullable Integer maxParallelExecutionsPerNode) {
             this.maxParallelExecutionsPerNode = maxParallelExecutionsPerNode;
             return this;
         }
-
         public Builder nodeSize(@Nullable String nodeSize) {
             this.nodeSize = nodeSize;
             return this;
         }
-
         public Builder numberOfNodes(@Nullable Integer numberOfNodes) {
             this.numberOfNodes = numberOfNodes;
             return this;
         }
-
         public Builder vNetProperties(@Nullable IntegrationRuntimeVNetPropertiesResponse vNetProperties) {
             this.vNetProperties = vNetProperties;
             return this;
-        }
-        public IntegrationRuntimeComputePropertiesResponse build() {
+        }        public IntegrationRuntimeComputePropertiesResponse build() {
             return new IntegrationRuntimeComputePropertiesResponse(dataFlowProperties, location, maxParallelExecutionsPerNode, nodeSize, numberOfNodes, vNetProperties);
         }
     }

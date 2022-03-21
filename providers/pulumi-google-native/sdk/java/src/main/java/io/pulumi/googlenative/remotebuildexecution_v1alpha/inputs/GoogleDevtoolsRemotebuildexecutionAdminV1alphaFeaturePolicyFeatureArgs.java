@@ -80,22 +80,21 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFe
             this.allowedValues = allowedValues;
             return this;
         }
-
         public Builder allowedValues(@Nullable List<String> allowedValues) {
             this.allowedValues = Output.ofNullable(allowedValues);
             return this;
         }
-
+        public Builder allowedValues(String... allowedValues) {
+            return allowedValues(List.of(allowedValues));
+        }
         public Builder policy(@Nullable Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeaturePolicy> policy) {
             this.policy = policy;
             return this;
         }
-
         public Builder policy(@Nullable GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeaturePolicy policy) {
             this.policy = Output.ofNullable(policy);
             return this;
-        }
-        public GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureArgs build() {
+        }        public GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureArgs build() {
             return new GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureArgs(allowedValues, policy);
         }
     }

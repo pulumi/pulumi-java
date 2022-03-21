@@ -141,62 +141,50 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
             this.experimentName = experimentName;
             return this;
         }
-
         public Builder experimentName(@Nullable String experimentName) {
             this.experimentName = Output.ofNullable(experimentName);
             return this;
         }
-
         public Builder identity(@Nullable Output<ResourceIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
-
         public Builder identity(@Nullable ResourceIdentityArgs identity) {
             this.identity = Output.ofNullable(identity);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder properties(Output<ExperimentPropertiesArgs> properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
-
         public Builder properties(ExperimentPropertiesArgs properties) {
             this.properties = Output.of(Objects.requireNonNull(properties));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public ExperimentArgs build() {
+        }        public ExperimentArgs build() {
             return new ExperimentArgs(experimentName, identity, location, properties, resourceGroupName, tags);
         }
     }

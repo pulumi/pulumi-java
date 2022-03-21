@@ -94,17 +94,14 @@ public final class AzureMonitorWorkspacePropertiesResponse extends io.pulumi.res
             this.includeChangeDetails = includeChangeDetails;
             return this;
         }
-
         public Builder workspaceId(@Nullable String workspaceId) {
             this.workspaceId = workspaceId;
             return this;
         }
-
         public Builder workspaceResourceId(@Nullable String workspaceResourceId) {
             this.workspaceResourceId = workspaceResourceId;
             return this;
-        }
-        public AzureMonitorWorkspacePropertiesResponse build() {
+        }        public AzureMonitorWorkspacePropertiesResponse build() {
             return new AzureMonitorWorkspacePropertiesResponse(includeChangeDetails, workspaceId, workspaceResourceId);
         }
     }

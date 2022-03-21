@@ -111,42 +111,34 @@ public final class EncryptionConfigurationArgs extends io.pulumi.resources.Resou
             this.identity = identity;
             return this;
         }
-
         public Builder identity(@Nullable CMKIdentityDefinitionArgs identity) {
             this.identity = Output.ofNullable(identity);
             return this;
         }
-
         public Builder keyName(Output<String> keyName) {
             this.keyName = Objects.requireNonNull(keyName);
             return this;
         }
-
         public Builder keyName(String keyName) {
             this.keyName = Output.of(Objects.requireNonNull(keyName));
             return this;
         }
-
         public Builder keyVersion(@Nullable Output<String> keyVersion) {
             this.keyVersion = keyVersion;
             return this;
         }
-
         public Builder keyVersion(@Nullable String keyVersion) {
             this.keyVersion = Output.ofNullable(keyVersion);
             return this;
         }
-
         public Builder vaultBaseUrl(Output<String> vaultBaseUrl) {
             this.vaultBaseUrl = Objects.requireNonNull(vaultBaseUrl);
             return this;
         }
-
         public Builder vaultBaseUrl(String vaultBaseUrl) {
             this.vaultBaseUrl = Output.of(Objects.requireNonNull(vaultBaseUrl));
             return this;
-        }
-        public EncryptionConfigurationArgs build() {
+        }        public EncryptionConfigurationArgs build() {
             return new EncryptionConfigurationArgs(identity, keyName, keyVersion, vaultBaseUrl);
         }
     }

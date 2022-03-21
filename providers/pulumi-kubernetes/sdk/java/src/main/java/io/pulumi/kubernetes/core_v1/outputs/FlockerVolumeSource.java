@@ -71,12 +71,10 @@ public final class FlockerVolumeSource {
             this.datasetName = datasetName;
             return this;
         }
-
         public Builder datasetUUID(@Nullable String datasetUUID) {
             this.datasetUUID = datasetUUID;
             return this;
-        }
-        public FlockerVolumeSource build() {
+        }        public FlockerVolumeSource build() {
             return new FlockerVolumeSource(datasetName, datasetUUID);
         }
     }

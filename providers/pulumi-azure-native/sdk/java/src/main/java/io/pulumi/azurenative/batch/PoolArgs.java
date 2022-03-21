@@ -356,192 +356,172 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder accountName(String accountName) {
             this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
-
         public Builder applicationLicenses(@Nullable Output<List<String>> applicationLicenses) {
             this.applicationLicenses = applicationLicenses;
             return this;
         }
-
         public Builder applicationLicenses(@Nullable List<String> applicationLicenses) {
             this.applicationLicenses = Output.ofNullable(applicationLicenses);
             return this;
         }
-
+        public Builder applicationLicenses(String... applicationLicenses) {
+            return applicationLicenses(List.of(applicationLicenses));
+        }
         public Builder applicationPackages(@Nullable Output<List<ApplicationPackageReferenceArgs>> applicationPackages) {
             this.applicationPackages = applicationPackages;
             return this;
         }
-
         public Builder applicationPackages(@Nullable List<ApplicationPackageReferenceArgs> applicationPackages) {
             this.applicationPackages = Output.ofNullable(applicationPackages);
             return this;
         }
-
+        public Builder applicationPackages(ApplicationPackageReferenceArgs... applicationPackages) {
+            return applicationPackages(List.of(applicationPackages));
+        }
         public Builder certificates(@Nullable Output<List<CertificateReferenceArgs>> certificates) {
             this.certificates = certificates;
             return this;
         }
-
         public Builder certificates(@Nullable List<CertificateReferenceArgs> certificates) {
             this.certificates = Output.ofNullable(certificates);
             return this;
         }
-
+        public Builder certificates(CertificateReferenceArgs... certificates) {
+            return certificates(List.of(certificates));
+        }
         public Builder deploymentConfiguration(@Nullable Output<DeploymentConfigurationArgs> deploymentConfiguration) {
             this.deploymentConfiguration = deploymentConfiguration;
             return this;
         }
-
         public Builder deploymentConfiguration(@Nullable DeploymentConfigurationArgs deploymentConfiguration) {
             this.deploymentConfiguration = Output.ofNullable(deploymentConfiguration);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder identity(@Nullable Output<BatchPoolIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
-
         public Builder identity(@Nullable BatchPoolIdentityArgs identity) {
             this.identity = Output.ofNullable(identity);
             return this;
         }
-
         public Builder interNodeCommunication(@Nullable Output<InterNodeCommunicationState> interNodeCommunication) {
             this.interNodeCommunication = interNodeCommunication;
             return this;
         }
-
         public Builder interNodeCommunication(@Nullable InterNodeCommunicationState interNodeCommunication) {
             this.interNodeCommunication = Output.ofNullable(interNodeCommunication);
             return this;
         }
-
         public Builder metadata(@Nullable Output<List<MetadataItemArgs>> metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder metadata(@Nullable List<MetadataItemArgs> metadata) {
             this.metadata = Output.ofNullable(metadata);
             return this;
         }
-
+        public Builder metadata(MetadataItemArgs... metadata) {
+            return metadata(List.of(metadata));
+        }
         public Builder mountConfiguration(@Nullable Output<List<MountConfigurationArgs>> mountConfiguration) {
             this.mountConfiguration = mountConfiguration;
             return this;
         }
-
         public Builder mountConfiguration(@Nullable List<MountConfigurationArgs> mountConfiguration) {
             this.mountConfiguration = Output.ofNullable(mountConfiguration);
             return this;
         }
-
+        public Builder mountConfiguration(MountConfigurationArgs... mountConfiguration) {
+            return mountConfiguration(List.of(mountConfiguration));
+        }
         public Builder networkConfiguration(@Nullable Output<NetworkConfigurationArgs> networkConfiguration) {
             this.networkConfiguration = networkConfiguration;
             return this;
         }
-
         public Builder networkConfiguration(@Nullable NetworkConfigurationArgs networkConfiguration) {
             this.networkConfiguration = Output.ofNullable(networkConfiguration);
             return this;
         }
-
         public Builder poolName(@Nullable Output<String> poolName) {
             this.poolName = poolName;
             return this;
         }
-
         public Builder poolName(@Nullable String poolName) {
             this.poolName = Output.ofNullable(poolName);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder scaleSettings(@Nullable Output<ScaleSettingsArgs> scaleSettings) {
             this.scaleSettings = scaleSettings;
             return this;
         }
-
         public Builder scaleSettings(@Nullable ScaleSettingsArgs scaleSettings) {
             this.scaleSettings = Output.ofNullable(scaleSettings);
             return this;
         }
-
         public Builder startTask(@Nullable Output<StartTaskArgs> startTask) {
             this.startTask = startTask;
             return this;
         }
-
         public Builder startTask(@Nullable StartTaskArgs startTask) {
             this.startTask = Output.ofNullable(startTask);
             return this;
         }
-
         public Builder taskSchedulingPolicy(@Nullable Output<TaskSchedulingPolicyArgs> taskSchedulingPolicy) {
             this.taskSchedulingPolicy = taskSchedulingPolicy;
             return this;
         }
-
         public Builder taskSchedulingPolicy(@Nullable TaskSchedulingPolicyArgs taskSchedulingPolicy) {
             this.taskSchedulingPolicy = Output.ofNullable(taskSchedulingPolicy);
             return this;
         }
-
         public Builder taskSlotsPerNode(@Nullable Output<Integer> taskSlotsPerNode) {
             this.taskSlotsPerNode = taskSlotsPerNode;
             return this;
         }
-
         public Builder taskSlotsPerNode(@Nullable Integer taskSlotsPerNode) {
             this.taskSlotsPerNode = Output.ofNullable(taskSlotsPerNode);
             return this;
         }
-
         public Builder userAccounts(@Nullable Output<List<UserAccountArgs>> userAccounts) {
             this.userAccounts = userAccounts;
             return this;
         }
-
         public Builder userAccounts(@Nullable List<UserAccountArgs> userAccounts) {
             this.userAccounts = Output.ofNullable(userAccounts);
             return this;
         }
-
+        public Builder userAccounts(UserAccountArgs... userAccounts) {
+            return userAccounts(List.of(userAccounts));
+        }
         public Builder vmSize(@Nullable Output<String> vmSize) {
             this.vmSize = vmSize;
             return this;
         }
-
         public Builder vmSize(@Nullable String vmSize) {
             this.vmSize = Output.ofNullable(vmSize);
             return this;
-        }
-        public PoolArgs build() {
+        }        public PoolArgs build() {
             return new PoolArgs(accountName, applicationLicenses, applicationPackages, certificates, deploymentConfiguration, displayName, identity, interNodeCommunication, metadata, mountConfiguration, networkConfiguration, poolName, resourceGroupName, scaleSettings, startTask, taskSchedulingPolicy, taskSlotsPerNode, userAccounts, vmSize);
         }
     }

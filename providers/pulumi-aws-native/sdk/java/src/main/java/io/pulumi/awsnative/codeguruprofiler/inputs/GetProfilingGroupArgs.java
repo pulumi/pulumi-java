@@ -54,8 +54,7 @@ public final class GetProfilingGroupArgs extends io.pulumi.resources.InvokeArgs 
         public Builder profilingGroupName(String profilingGroupName) {
             this.profilingGroupName = Objects.requireNonNull(profilingGroupName);
             return this;
-        }
-        public GetProfilingGroupArgs build() {
+        }        public GetProfilingGroupArgs build() {
             return new GetProfilingGroupArgs(profilingGroupName);
         }
     }

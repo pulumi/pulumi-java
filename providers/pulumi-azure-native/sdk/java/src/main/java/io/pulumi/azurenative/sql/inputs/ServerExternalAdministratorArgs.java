@@ -146,62 +146,50 @@ public final class ServerExternalAdministratorArgs extends io.pulumi.resources.R
             this.administratorType = administratorType;
             return this;
         }
-
         public Builder administratorType(@Nullable Either<String,AdministratorType> administratorType) {
             this.administratorType = Output.ofNullable(administratorType);
             return this;
         }
-
         public Builder azureADOnlyAuthentication(@Nullable Output<Boolean> azureADOnlyAuthentication) {
             this.azureADOnlyAuthentication = azureADOnlyAuthentication;
             return this;
         }
-
         public Builder azureADOnlyAuthentication(@Nullable Boolean azureADOnlyAuthentication) {
             this.azureADOnlyAuthentication = Output.ofNullable(azureADOnlyAuthentication);
             return this;
         }
-
         public Builder login(@Nullable Output<String> login) {
             this.login = login;
             return this;
         }
-
         public Builder login(@Nullable String login) {
             this.login = Output.ofNullable(login);
             return this;
         }
-
         public Builder principalType(@Nullable Output<Either<String,PrincipalType>> principalType) {
             this.principalType = principalType;
             return this;
         }
-
         public Builder principalType(@Nullable Either<String,PrincipalType> principalType) {
             this.principalType = Output.ofNullable(principalType);
             return this;
         }
-
         public Builder sid(@Nullable Output<String> sid) {
             this.sid = sid;
             return this;
         }
-
         public Builder sid(@Nullable String sid) {
             this.sid = Output.ofNullable(sid);
             return this;
         }
-
         public Builder tenantId(@Nullable Output<String> tenantId) {
             this.tenantId = tenantId;
             return this;
         }
-
         public Builder tenantId(@Nullable String tenantId) {
             this.tenantId = Output.ofNullable(tenantId);
             return this;
-        }
-        public ServerExternalAdministratorArgs build() {
+        }        public ServerExternalAdministratorArgs build() {
             return new ServerExternalAdministratorArgs(administratorType, azureADOnlyAuthentication, login, principalType, sid, tenantId);
         }
     }

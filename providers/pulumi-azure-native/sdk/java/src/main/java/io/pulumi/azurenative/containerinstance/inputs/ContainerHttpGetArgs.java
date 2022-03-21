@@ -114,42 +114,34 @@ public final class ContainerHttpGetArgs extends io.pulumi.resources.ResourceArgs
             this.httpHeaders = httpHeaders;
             return this;
         }
-
         public Builder httpHeaders(@Nullable HttpHeadersArgs httpHeaders) {
             this.httpHeaders = Output.ofNullable(httpHeaders);
             return this;
         }
-
         public Builder path(@Nullable Output<String> path) {
             this.path = path;
             return this;
         }
-
         public Builder path(@Nullable String path) {
             this.path = Output.ofNullable(path);
             return this;
         }
-
         public Builder port(Output<Integer> port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
-
         public Builder port(Integer port) {
             this.port = Output.of(Objects.requireNonNull(port));
             return this;
         }
-
         public Builder scheme(@Nullable Output<Either<String,Scheme>> scheme) {
             this.scheme = scheme;
             return this;
         }
-
         public Builder scheme(@Nullable Either<String,Scheme> scheme) {
             this.scheme = Output.ofNullable(scheme);
             return this;
-        }
-        public ContainerHttpGetArgs build() {
+        }        public ContainerHttpGetArgs build() {
             return new ContainerHttpGetArgs(httpHeaders, path, port, scheme);
         }
     }

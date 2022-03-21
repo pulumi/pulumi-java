@@ -60,8 +60,7 @@ public final class Office365PolicyPropertiesResponse extends io.pulumi.resources
         public Builder breakOutCategories(@Nullable BreakOutCategoryPoliciesResponse breakOutCategories) {
             this.breakOutCategories = breakOutCategories;
             return this;
-        }
-        public Office365PolicyPropertiesResponse build() {
+        }        public Office365PolicyPropertiesResponse build() {
             return new Office365PolicyPropertiesResponse(breakOutCategories);
         }
     }

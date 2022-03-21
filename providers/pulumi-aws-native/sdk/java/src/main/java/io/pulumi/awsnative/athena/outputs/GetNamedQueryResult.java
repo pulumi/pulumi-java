@@ -53,8 +53,7 @@ public final class GetNamedQueryResult {
         public Builder namedQueryId(@Nullable String namedQueryId) {
             this.namedQueryId = namedQueryId;
             return this;
-        }
-        public GetNamedQueryResult build() {
+        }        public GetNamedQueryResult build() {
             return new GetNamedQueryResult(namedQueryId);
         }
     }

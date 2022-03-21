@@ -103,22 +103,18 @@ public final class VmRecommendationResponse {
             this.configurationStatus = configurationStatus;
             return this;
         }
-
         public Builder enforcementSupport(@Nullable String enforcementSupport) {
             this.enforcementSupport = enforcementSupport;
             return this;
         }
-
         public Builder recommendationAction(@Nullable String recommendationAction) {
             this.recommendationAction = recommendationAction;
             return this;
         }
-
         public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = resourceId;
             return this;
-        }
-        public VmRecommendationResponse build() {
+        }        public VmRecommendationResponse build() {
             return new VmRecommendationResponse(configurationStatus, enforcementSupport, recommendationAction, resourceId);
         }
     }

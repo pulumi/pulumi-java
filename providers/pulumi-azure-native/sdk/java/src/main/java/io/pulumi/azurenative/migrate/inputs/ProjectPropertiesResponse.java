@@ -289,77 +289,65 @@ public final class ProjectPropertiesResponse extends io.pulumi.resources.InvokeA
             this.assessmentSolutionId = assessmentSolutionId;
             return this;
         }
-
         public Builder createdTimestamp(String createdTimestamp) {
             this.createdTimestamp = Objects.requireNonNull(createdTimestamp);
             return this;
         }
-
         public Builder customerStorageAccountArmId(@Nullable String customerStorageAccountArmId) {
             this.customerStorageAccountArmId = customerStorageAccountArmId;
             return this;
         }
-
         public Builder customerWorkspaceId(@Nullable String customerWorkspaceId) {
             this.customerWorkspaceId = customerWorkspaceId;
             return this;
         }
-
         public Builder customerWorkspaceLocation(@Nullable String customerWorkspaceLocation) {
             this.customerWorkspaceLocation = customerWorkspaceLocation;
             return this;
         }
-
         public Builder lastAssessmentTimestamp(String lastAssessmentTimestamp) {
             this.lastAssessmentTimestamp = Objects.requireNonNull(lastAssessmentTimestamp);
             return this;
         }
-
         public Builder numberOfAssessments(Integer numberOfAssessments) {
             this.numberOfAssessments = Objects.requireNonNull(numberOfAssessments);
             return this;
         }
-
         public Builder numberOfGroups(Integer numberOfGroups) {
             this.numberOfGroups = Objects.requireNonNull(numberOfGroups);
             return this;
         }
-
         public Builder numberOfMachines(Integer numberOfMachines) {
             this.numberOfMachines = Objects.requireNonNull(numberOfMachines);
             return this;
         }
-
         public Builder privateEndpointConnections(List<PrivateEndpointConnectionResponse> privateEndpointConnections) {
             this.privateEndpointConnections = Objects.requireNonNull(privateEndpointConnections);
             return this;
         }
-
+        public Builder privateEndpointConnections(PrivateEndpointConnectionResponse... privateEndpointConnections) {
+            return privateEndpointConnections(List.of(privateEndpointConnections));
+        }
         public Builder projectStatus(@Nullable String projectStatus) {
             this.projectStatus = projectStatus;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder publicNetworkAccess(@Nullable String publicNetworkAccess) {
             this.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
-
         public Builder serviceEndpoint(String serviceEndpoint) {
             this.serviceEndpoint = Objects.requireNonNull(serviceEndpoint);
             return this;
         }
-
         public Builder updatedTimestamp(String updatedTimestamp) {
             this.updatedTimestamp = Objects.requireNonNull(updatedTimestamp);
             return this;
-        }
-        public ProjectPropertiesResponse build() {
+        }        public ProjectPropertiesResponse build() {
             return new ProjectPropertiesResponse(assessmentSolutionId, createdTimestamp, customerStorageAccountArmId, customerWorkspaceId, customerWorkspaceLocation, lastAssessmentTimestamp, numberOfAssessments, numberOfGroups, numberOfMachines, privateEndpointConnections, projectStatus, provisioningState, publicNetworkAccess, serviceEndpoint, updatedTimestamp);
         }
     }

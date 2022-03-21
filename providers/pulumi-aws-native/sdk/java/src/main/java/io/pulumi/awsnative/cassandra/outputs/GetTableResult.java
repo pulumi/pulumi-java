@@ -125,32 +125,32 @@ public final class GetTableResult {
             this.billingMode = billingMode;
             return this;
         }
-
         public Builder defaultTimeToLive(@Nullable Integer defaultTimeToLive) {
             this.defaultTimeToLive = defaultTimeToLive;
             return this;
         }
-
         public Builder encryptionSpecification(@Nullable TableEncryptionSpecification encryptionSpecification) {
             this.encryptionSpecification = encryptionSpecification;
             return this;
         }
-
         public Builder pointInTimeRecoveryEnabled(@Nullable Boolean pointInTimeRecoveryEnabled) {
             this.pointInTimeRecoveryEnabled = pointInTimeRecoveryEnabled;
             return this;
         }
-
         public Builder regularColumns(@Nullable List<TableColumn> regularColumns) {
             this.regularColumns = regularColumns;
             return this;
         }
-
+        public Builder regularColumns(TableColumn... regularColumns) {
+            return regularColumns(List.of(regularColumns));
+        }
         public Builder tags(@Nullable List<TableTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetTableResult build() {
+        public Builder tags(TableTag... tags) {
+            return tags(List.of(tags));
+        }        public GetTableResult build() {
             return new GetTableResult(billingMode, defaultTimeToLive, encryptionSpecification, pointInTimeRecoveryEnabled, regularColumns, tags);
         }
     }

@@ -94,32 +94,26 @@ public final class CustomImagePropertiesFromPlanArgs extends io.pulumi.resources
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder offer(@Nullable Output<String> offer) {
             this.offer = offer;
             return this;
         }
-
         public Builder offer(@Nullable String offer) {
             this.offer = Output.ofNullable(offer);
             return this;
         }
-
         public Builder publisher(@Nullable Output<String> publisher) {
             this.publisher = publisher;
             return this;
         }
-
         public Builder publisher(@Nullable String publisher) {
             this.publisher = Output.ofNullable(publisher);
             return this;
-        }
-        public CustomImagePropertiesFromPlanArgs build() {
+        }        public CustomImagePropertiesFromPlanArgs build() {
             return new CustomImagePropertiesFromPlanArgs(id, offer, publisher);
         }
     }

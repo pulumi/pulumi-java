@@ -179,42 +179,34 @@ public final class ConnectionMonitorTestConfigurationResponse extends io.pulumi.
             this.httpConfiguration = httpConfiguration;
             return this;
         }
-
         public Builder icmpConfiguration(@Nullable ConnectionMonitorIcmpConfigurationResponse icmpConfiguration) {
             this.icmpConfiguration = icmpConfiguration;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder preferredIPVersion(@Nullable String preferredIPVersion) {
             this.preferredIPVersion = preferredIPVersion;
             return this;
         }
-
         public Builder protocol(String protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
-
         public Builder successThreshold(@Nullable ConnectionMonitorSuccessThresholdResponse successThreshold) {
             this.successThreshold = successThreshold;
             return this;
         }
-
         public Builder tcpConfiguration(@Nullable ConnectionMonitorTcpConfigurationResponse tcpConfiguration) {
             this.tcpConfiguration = tcpConfiguration;
             return this;
         }
-
         public Builder testFrequencySec(@Nullable Integer testFrequencySec) {
             this.testFrequencySec = testFrequencySec;
             return this;
-        }
-        public ConnectionMonitorTestConfigurationResponse build() {
+        }        public ConnectionMonitorTestConfigurationResponse build() {
             return new ConnectionMonitorTestConfigurationResponse(httpConfiguration, icmpConfiguration, name, preferredIPVersion, protocol, successThreshold, tcpConfiguration, testFrequencySec);
         }
     }

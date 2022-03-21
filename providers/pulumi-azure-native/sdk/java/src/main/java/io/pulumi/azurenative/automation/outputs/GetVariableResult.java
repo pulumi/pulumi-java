@@ -168,42 +168,34 @@ public final class GetVariableResult {
             this.creationTime = creationTime;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder isEncrypted(@Nullable Boolean isEncrypted) {
             this.isEncrypted = isEncrypted;
             return this;
         }
-
         public Builder lastModifiedTime(@Nullable String lastModifiedTime) {
             this.lastModifiedTime = lastModifiedTime;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public GetVariableResult build() {
+        }        public GetVariableResult build() {
             return new GetVariableResult(creationTime, description, id, isEncrypted, lastModifiedTime, name, type, value);
         }
     }

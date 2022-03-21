@@ -88,32 +88,26 @@ public final class ValueResponse {
             this.booleanValue = Objects.requireNonNull(booleanValue);
             return this;
         }
-
         public Builder dateValue(DateResponse dateValue) {
             this.dateValue = Objects.requireNonNull(dateValue);
             return this;
         }
-
         public Builder doubleValue(Double doubleValue) {
             this.doubleValue = Objects.requireNonNull(doubleValue);
             return this;
         }
-
         public Builder integerValue(String integerValue) {
             this.integerValue = Objects.requireNonNull(integerValue);
             return this;
         }
-
         public Builder stringValue(String stringValue) {
             this.stringValue = Objects.requireNonNull(stringValue);
             return this;
         }
-
         public Builder timestampValue(String timestampValue) {
             this.timestampValue = Objects.requireNonNull(timestampValue);
             return this;
-        }
-        public ValueResponse build() {
+        }        public ValueResponse build() {
             return new ValueResponse(booleanValue, dateValue, doubleValue, integerValue, stringValue, timestampValue);
         }
     }

@@ -300,202 +300,174 @@ public final class CoreDataArgs extends io.pulumi.resources.ResourceArgs {
             this.awsProvider = awsProvider;
             return this;
         }
-
         public Builder awsProvider(@Nullable Provider awsProvider) {
             this.awsProvider = Output.ofNullable(awsProvider);
             return this;
         }
-
         public Builder cluster(Output<Cluster> cluster) {
             this.cluster = Objects.requireNonNull(cluster);
             return this;
         }
-
         public Builder cluster(Cluster cluster) {
             this.cluster = Output.of(Objects.requireNonNull(cluster));
             return this;
         }
-
         public Builder clusterSecurityGroup(Output<SecurityGroup> clusterSecurityGroup) {
             this.clusterSecurityGroup = Objects.requireNonNull(clusterSecurityGroup);
             return this;
         }
-
         public Builder clusterSecurityGroup(SecurityGroup clusterSecurityGroup) {
             this.clusterSecurityGroup = Output.of(Objects.requireNonNull(clusterSecurityGroup));
             return this;
         }
-
         public Builder eksNodeAccess(@Nullable Output<ConfigMap> eksNodeAccess) {
             this.eksNodeAccess = eksNodeAccess;
             return this;
         }
-
         public Builder eksNodeAccess(@Nullable ConfigMap eksNodeAccess) {
             this.eksNodeAccess = Output.ofNullable(eksNodeAccess);
             return this;
         }
-
         public Builder encryptionConfig(@Nullable Output<ClusterEncryptionConfigArgs> encryptionConfig) {
             this.encryptionConfig = encryptionConfig;
             return this;
         }
-
         public Builder encryptionConfig(@Nullable ClusterEncryptionConfigArgs encryptionConfig) {
             this.encryptionConfig = Output.ofNullable(encryptionConfig);
             return this;
         }
-
         public Builder endpoint(Output<String> endpoint) {
             this.endpoint = Objects.requireNonNull(endpoint);
             return this;
         }
-
         public Builder endpoint(String endpoint) {
             this.endpoint = Output.of(Objects.requireNonNull(endpoint));
             return this;
         }
-
         public Builder fargateProfile(@Nullable Output<FargateProfile> fargateProfile) {
             this.fargateProfile = fargateProfile;
             return this;
         }
-
         public Builder fargateProfile(@Nullable FargateProfile fargateProfile) {
             this.fargateProfile = Output.ofNullable(fargateProfile);
             return this;
         }
-
         public Builder instanceRoles(Output<List<Role>> instanceRoles) {
             this.instanceRoles = Objects.requireNonNull(instanceRoles);
             return this;
         }
-
         public Builder instanceRoles(List<Role> instanceRoles) {
             this.instanceRoles = Output.of(Objects.requireNonNull(instanceRoles));
             return this;
         }
-
+        public Builder instanceRoles(Role... instanceRoles) {
+            return instanceRoles(List.of(instanceRoles));
+        }
         public Builder kubeconfig(@Nullable Output<Object> kubeconfig) {
             this.kubeconfig = kubeconfig;
             return this;
         }
-
         public Builder kubeconfig(@Nullable Object kubeconfig) {
             this.kubeconfig = Output.ofNullable(kubeconfig);
             return this;
         }
-
         public Builder nodeGroupOptions(Output<ClusterNodeGroupOptionsArgs> nodeGroupOptions) {
             this.nodeGroupOptions = Objects.requireNonNull(nodeGroupOptions);
             return this;
         }
-
         public Builder nodeGroupOptions(ClusterNodeGroupOptionsArgs nodeGroupOptions) {
             this.nodeGroupOptions = Output.of(Objects.requireNonNull(nodeGroupOptions));
             return this;
         }
-
         public Builder nodeSecurityGroupTags(@Nullable Output<Map<String,String>> nodeSecurityGroupTags) {
             this.nodeSecurityGroupTags = nodeSecurityGroupTags;
             return this;
         }
-
         public Builder nodeSecurityGroupTags(@Nullable Map<String,String> nodeSecurityGroupTags) {
             this.nodeSecurityGroupTags = Output.ofNullable(nodeSecurityGroupTags);
             return this;
         }
-
         public Builder oidcProvider(@Nullable Output<OpenIdConnectProvider> oidcProvider) {
             this.oidcProvider = oidcProvider;
             return this;
         }
-
         public Builder oidcProvider(@Nullable OpenIdConnectProvider oidcProvider) {
             this.oidcProvider = Output.ofNullable(oidcProvider);
             return this;
         }
-
         public Builder privateSubnetIds(@Nullable Output<List<String>> privateSubnetIds) {
             this.privateSubnetIds = privateSubnetIds;
             return this;
         }
-
         public Builder privateSubnetIds(@Nullable List<String> privateSubnetIds) {
             this.privateSubnetIds = Output.ofNullable(privateSubnetIds);
             return this;
         }
-
+        public Builder privateSubnetIds(String... privateSubnetIds) {
+            return privateSubnetIds(List.of(privateSubnetIds));
+        }
         public Builder provider(Output<io.pulumi.kubernetes.Provider> provider) {
             this.provider = Objects.requireNonNull(provider);
             return this;
         }
-
         public Builder provider(io.pulumi.kubernetes.Provider provider) {
             this.provider = Output.of(Objects.requireNonNull(provider));
             return this;
         }
-
         public Builder publicSubnetIds(@Nullable Output<List<String>> publicSubnetIds) {
             this.publicSubnetIds = publicSubnetIds;
             return this;
         }
-
         public Builder publicSubnetIds(@Nullable List<String> publicSubnetIds) {
             this.publicSubnetIds = Output.ofNullable(publicSubnetIds);
             return this;
         }
-
+        public Builder publicSubnetIds(String... publicSubnetIds) {
+            return publicSubnetIds(List.of(publicSubnetIds));
+        }
         public Builder storageClasses(@Nullable Output<Map<String,StorageClass>> storageClasses) {
             this.storageClasses = storageClasses;
             return this;
         }
-
         public Builder storageClasses(@Nullable Map<String,StorageClass> storageClasses) {
             this.storageClasses = Output.ofNullable(storageClasses);
             return this;
         }
-
         public Builder subnetIds(Output<List<String>> subnetIds) {
             this.subnetIds = Objects.requireNonNull(subnetIds);
             return this;
         }
-
         public Builder subnetIds(List<String> subnetIds) {
             this.subnetIds = Output.of(Objects.requireNonNull(subnetIds));
             return this;
         }
-
+        public Builder subnetIds(String... subnetIds) {
+            return subnetIds(List.of(subnetIds));
+        }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder vpcCni(@Nullable Output<VpcCni> vpcCni) {
             this.vpcCni = vpcCni;
             return this;
         }
-
         public Builder vpcCni(@Nullable VpcCni vpcCni) {
             this.vpcCni = Output.ofNullable(vpcCni);
             return this;
         }
-
         public Builder vpcId(Output<String> vpcId) {
             this.vpcId = Objects.requireNonNull(vpcId);
             return this;
         }
-
         public Builder vpcId(String vpcId) {
             this.vpcId = Output.of(Objects.requireNonNull(vpcId));
             return this;
-        }
-        public CoreDataArgs build() {
+        }        public CoreDataArgs build() {
             return new CoreDataArgs(awsProvider, cluster, clusterSecurityGroup, eksNodeAccess, encryptionConfig, endpoint, fargateProfile, instanceRoles, kubeconfig, nodeGroupOptions, nodeSecurityGroupTags, oidcProvider, privateSubnetIds, provider, publicSubnetIds, storageClasses, subnetIds, tags, vpcCni, vpcId);
         }
     }

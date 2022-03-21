@@ -90,32 +90,26 @@ public final class VpnConnectionRouteArgs extends io.pulumi.resources.ResourceAr
             this.destinationCidrBlock = destinationCidrBlock;
             return this;
         }
-
         public Builder destinationCidrBlock(@Nullable String destinationCidrBlock) {
             this.destinationCidrBlock = Output.ofNullable(destinationCidrBlock);
             return this;
         }
-
         public Builder source(@Nullable Output<String> source) {
             this.source = source;
             return this;
         }
-
         public Builder source(@Nullable String source) {
             this.source = Output.ofNullable(source);
             return this;
         }
-
         public Builder state(@Nullable Output<String> state) {
             this.state = state;
             return this;
         }
-
         public Builder state(@Nullable String state) {
             this.state = Output.ofNullable(state);
             return this;
-        }
-        public VpnConnectionRouteArgs build() {
+        }        public VpnConnectionRouteArgs build() {
             return new VpnConnectionRouteArgs(destinationCidrBlock, source, state);
         }
     }

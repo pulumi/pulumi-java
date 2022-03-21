@@ -61,12 +61,10 @@ public final class MeshCertificatesArgs extends io.pulumi.resources.ResourceArgs
             this.enableCertificates = enableCertificates;
             return this;
         }
-
         public Builder enableCertificates(@Nullable Boolean enableCertificates) {
             this.enableCertificates = Output.ofNullable(enableCertificates);
             return this;
-        }
-        public MeshCertificatesArgs build() {
+        }        public MeshCertificatesArgs build() {
             return new MeshCertificatesArgs(enableCertificates);
         }
     }

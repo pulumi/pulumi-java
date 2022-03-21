@@ -114,42 +114,37 @@ public final class ConfigMapVolumeSourceArgs extends io.pulumi.resources.Resourc
             this.defaultMode = defaultMode;
             return this;
         }
-
         public Builder defaultMode(@Nullable Integer defaultMode) {
             this.defaultMode = Output.ofNullable(defaultMode);
             return this;
         }
-
         public Builder items(@Nullable Output<List<KeyToPathArgs>> items) {
             this.items = items;
             return this;
         }
-
         public Builder items(@Nullable List<KeyToPathArgs> items) {
             this.items = Output.ofNullable(items);
             return this;
         }
-
+        public Builder items(KeyToPathArgs... items) {
+            return items(List.of(items));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder optional(@Nullable Output<Boolean> optional) {
             this.optional = optional;
             return this;
         }
-
         public Builder optional(@Nullable Boolean optional) {
             this.optional = Output.ofNullable(optional);
             return this;
-        }
-        public ConfigMapVolumeSourceArgs build() {
+        }        public ConfigMapVolumeSourceArgs build() {
             return new ConfigMapVolumeSourceArgs(defaultMode, items, name, optional);
         }
     }

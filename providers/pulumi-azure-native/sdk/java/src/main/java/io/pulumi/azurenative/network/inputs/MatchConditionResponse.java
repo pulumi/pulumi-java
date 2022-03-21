@@ -129,27 +129,31 @@ public final class MatchConditionResponse extends io.pulumi.resources.InvokeArgs
             this.matchValues = Objects.requireNonNull(matchValues);
             return this;
         }
-
+        public Builder matchValues(String... matchValues) {
+            return matchValues(List.of(matchValues));
+        }
         public Builder matchVariables(List<MatchVariableResponse> matchVariables) {
             this.matchVariables = Objects.requireNonNull(matchVariables);
             return this;
         }
-
+        public Builder matchVariables(MatchVariableResponse... matchVariables) {
+            return matchVariables(List.of(matchVariables));
+        }
         public Builder negationConditon(@Nullable Boolean negationConditon) {
             this.negationConditon = negationConditon;
             return this;
         }
-
         public Builder operator(String operator) {
             this.operator = Objects.requireNonNull(operator);
             return this;
         }
-
         public Builder transforms(@Nullable List<String> transforms) {
             this.transforms = transforms;
             return this;
         }
-        public MatchConditionResponse build() {
+        public Builder transforms(String... transforms) {
+            return transforms(List.of(transforms));
+        }        public MatchConditionResponse build() {
             return new MatchConditionResponse(matchValues, matchVariables, negationConditon, operator, transforms);
         }
     }

@@ -54,8 +54,7 @@ public final class GetSigningProfileArgs extends io.pulumi.resources.InvokeArgs 
         public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
-        }
-        public GetSigningProfileArgs build() {
+        }        public GetSigningProfileArgs build() {
             return new GetSigningProfileArgs(arn);
         }
     }

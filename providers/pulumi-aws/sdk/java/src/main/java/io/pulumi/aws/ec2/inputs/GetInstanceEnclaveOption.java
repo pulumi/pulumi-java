@@ -54,8 +54,7 @@ public final class GetInstanceEnclaveOption extends io.pulumi.resources.InvokeAr
         public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
-        }
-        public GetInstanceEnclaveOption build() {
+        }        public GetInstanceEnclaveOption build() {
             return new GetInstanceEnclaveOption(enabled);
         }
     }

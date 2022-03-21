@@ -93,17 +93,17 @@ public final class NetworkInterfaceIPConfigurationPrivateLinkConnectionPropertie
             this.fqdns = Objects.requireNonNull(fqdns);
             return this;
         }
-
+        public Builder fqdns(String... fqdns) {
+            return fqdns(List.of(fqdns));
+        }
         public Builder groupId(String groupId) {
             this.groupId = Objects.requireNonNull(groupId);
             return this;
         }
-
         public Builder requiredMemberName(String requiredMemberName) {
             this.requiredMemberName = Objects.requireNonNull(requiredMemberName);
             return this;
-        }
-        public NetworkInterfaceIPConfigurationPrivateLinkConnectionPropertiesResponse build() {
+        }        public NetworkInterfaceIPConfigurationPrivateLinkConnectionPropertiesResponse build() {
             return new NetworkInterfaceIPConfigurationPrivateLinkConnectionPropertiesResponse(fqdns, groupId, requiredMemberName);
         }
     }

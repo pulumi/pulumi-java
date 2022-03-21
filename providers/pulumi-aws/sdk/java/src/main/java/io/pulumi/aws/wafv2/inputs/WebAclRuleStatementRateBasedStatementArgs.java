@@ -109,42 +109,34 @@ public final class WebAclRuleStatementRateBasedStatementArgs extends io.pulumi.r
             this.aggregateKeyType = aggregateKeyType;
             return this;
         }
-
         public Builder aggregateKeyType(@Nullable String aggregateKeyType) {
             this.aggregateKeyType = Output.ofNullable(aggregateKeyType);
             return this;
         }
-
         public Builder forwardedIpConfig(@Nullable Output<WebAclRuleStatementRateBasedStatementForwardedIpConfigArgs> forwardedIpConfig) {
             this.forwardedIpConfig = forwardedIpConfig;
             return this;
         }
-
         public Builder forwardedIpConfig(@Nullable WebAclRuleStatementRateBasedStatementForwardedIpConfigArgs forwardedIpConfig) {
             this.forwardedIpConfig = Output.ofNullable(forwardedIpConfig);
             return this;
         }
-
         public Builder limit(Output<Integer> limit) {
             this.limit = Objects.requireNonNull(limit);
             return this;
         }
-
         public Builder limit(Integer limit) {
             this.limit = Output.of(Objects.requireNonNull(limit));
             return this;
         }
-
         public Builder scopeDownStatement(@Nullable Output<WebAclRuleStatementRateBasedStatementScopeDownStatementArgs> scopeDownStatement) {
             this.scopeDownStatement = scopeDownStatement;
             return this;
         }
-
         public Builder scopeDownStatement(@Nullable WebAclRuleStatementRateBasedStatementScopeDownStatementArgs scopeDownStatement) {
             this.scopeDownStatement = Output.ofNullable(scopeDownStatement);
             return this;
-        }
-        public WebAclRuleStatementRateBasedStatementArgs build() {
+        }        public WebAclRuleStatementRateBasedStatementArgs build() {
             return new WebAclRuleStatementRateBasedStatementArgs(aggregateKeyType, forwardedIpConfig, limit, scopeDownStatement);
         }
     }

@@ -58,12 +58,13 @@ public final class CachePolicyParametersInCacheKeyAndForwardedToOriginCookiesCon
             this.items = items;
             return this;
         }
-
         public Builder items(@Nullable List<String> items) {
             this.items = Output.ofNullable(items);
             return this;
         }
-        public CachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigCookiesArgs build() {
+        public Builder items(String... items) {
+            return items(List.of(items));
+        }        public CachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigCookiesArgs build() {
             return new CachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigCookiesArgs(items);
         }
     }

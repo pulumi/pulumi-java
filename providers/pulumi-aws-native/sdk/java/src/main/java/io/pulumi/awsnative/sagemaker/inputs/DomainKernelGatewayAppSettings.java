@@ -80,12 +80,13 @@ public final class DomainKernelGatewayAppSettings extends io.pulumi.resources.In
             this.customImages = customImages;
             return this;
         }
-
+        public Builder customImages(DomainCustomImage... customImages) {
+            return customImages(List.of(customImages));
+        }
         public Builder defaultResourceSpec(@Nullable DomainResourceSpec defaultResourceSpec) {
             this.defaultResourceSpec = defaultResourceSpec;
             return this;
-        }
-        public DomainKernelGatewayAppSettings build() {
+        }        public DomainKernelGatewayAppSettings build() {
             return new DomainKernelGatewayAppSettings(customImages, defaultResourceSpec);
         }
     }

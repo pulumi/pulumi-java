@@ -80,22 +80,18 @@ public final class GlobalParameterSpecificationArgs extends io.pulumi.resources.
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(Either<String,GlobalParameterType> type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
-
         public Builder value(Output<Object> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public Builder value(Object value) {
             this.value = Output.of(Objects.requireNonNull(value));
             return this;
-        }
-        public GlobalParameterSpecificationArgs build() {
+        }        public GlobalParameterSpecificationArgs build() {
             return new GlobalParameterSpecificationArgs(type, value);
         }
     }

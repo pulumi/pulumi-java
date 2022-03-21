@@ -155,72 +155,58 @@ public final class ProjectBucketConfigState extends io.pulumi.resources.Resource
             this.bucketId = bucketId;
             return this;
         }
-
         public Builder bucketId(@Nullable String bucketId) {
             this.bucketId = Output.ofNullable(bucketId);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder lifecycleState(@Nullable Output<String> lifecycleState) {
             this.lifecycleState = lifecycleState;
             return this;
         }
-
         public Builder lifecycleState(@Nullable String lifecycleState) {
             this.lifecycleState = Output.ofNullable(lifecycleState);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder retentionDays(@Nullable Output<Integer> retentionDays) {
             this.retentionDays = retentionDays;
             return this;
         }
-
         public Builder retentionDays(@Nullable Integer retentionDays) {
             this.retentionDays = Output.ofNullable(retentionDays);
             return this;
-        }
-        public ProjectBucketConfigState build() {
+        }        public ProjectBucketConfigState build() {
             return new ProjectBucketConfigState(bucketId, description, lifecycleState, location, name, project, retentionDays);
         }
     }

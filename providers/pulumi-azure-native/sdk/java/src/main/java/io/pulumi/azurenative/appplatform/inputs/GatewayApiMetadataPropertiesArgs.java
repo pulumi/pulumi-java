@@ -126,52 +126,42 @@ public final class GatewayApiMetadataPropertiesArgs extends io.pulumi.resources.
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder documentation(@Nullable Output<String> documentation) {
             this.documentation = documentation;
             return this;
         }
-
         public Builder documentation(@Nullable String documentation) {
             this.documentation = Output.ofNullable(documentation);
             return this;
         }
-
         public Builder serverUrl(@Nullable Output<String> serverUrl) {
             this.serverUrl = serverUrl;
             return this;
         }
-
         public Builder serverUrl(@Nullable String serverUrl) {
             this.serverUrl = Output.ofNullable(serverUrl);
             return this;
         }
-
         public Builder title(@Nullable Output<String> title) {
             this.title = title;
             return this;
         }
-
         public Builder title(@Nullable String title) {
             this.title = Output.ofNullable(title);
             return this;
         }
-
         public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = Output.ofNullable(version);
             return this;
-        }
-        public GatewayApiMetadataPropertiesArgs build() {
+        }        public GatewayApiMetadataPropertiesArgs build() {
             return new GatewayApiMetadataPropertiesArgs(description, documentation, serverUrl, title, version);
         }
     }

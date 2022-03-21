@@ -316,87 +316,70 @@ public final class Event {
             this.action = action;
             return this;
         }
-
         public Builder apiVersion(@Nullable String apiVersion) {
             this.apiVersion = apiVersion;
             return this;
         }
-
         public Builder deprecatedCount(@Nullable Integer deprecatedCount) {
             this.deprecatedCount = deprecatedCount;
             return this;
         }
-
         public Builder deprecatedFirstTimestamp(@Nullable String deprecatedFirstTimestamp) {
             this.deprecatedFirstTimestamp = deprecatedFirstTimestamp;
             return this;
         }
-
         public Builder deprecatedLastTimestamp(@Nullable String deprecatedLastTimestamp) {
             this.deprecatedLastTimestamp = deprecatedLastTimestamp;
             return this;
         }
-
         public Builder deprecatedSource(@Nullable EventSource deprecatedSource) {
             this.deprecatedSource = deprecatedSource;
             return this;
         }
-
         public Builder eventTime(String eventTime) {
             this.eventTime = Objects.requireNonNull(eventTime);
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder metadata(@Nullable ObjectMeta metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder note(@Nullable String note) {
             this.note = note;
             return this;
         }
-
         public Builder reason(@Nullable String reason) {
             this.reason = reason;
             return this;
         }
-
         public Builder regarding(@Nullable ObjectReference regarding) {
             this.regarding = regarding;
             return this;
         }
-
         public Builder related(@Nullable ObjectReference related) {
             this.related = related;
             return this;
         }
-
         public Builder reportingController(@Nullable String reportingController) {
             this.reportingController = reportingController;
             return this;
         }
-
         public Builder reportingInstance(@Nullable String reportingInstance) {
             this.reportingInstance = reportingInstance;
             return this;
         }
-
         public Builder series(@Nullable EventSeries series) {
             this.series = series;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
-        }
-        public Event build() {
+        }        public Event build() {
             return new Event(action, apiVersion, deprecatedCount, deprecatedFirstTimestamp, deprecatedLastTimestamp, deprecatedSource, eventTime, kind, metadata, note, reason, regarding, related, reportingController, reportingInstance, series, type);
         }
     }

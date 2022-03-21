@@ -251,67 +251,60 @@ public final class GetRedisEnterpriseResult {
             this.hostName = Objects.requireNonNull(hostName);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder minimumTlsVersion(@Nullable String minimumTlsVersion) {
             this.minimumTlsVersion = minimumTlsVersion;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder privateEndpointConnections(List<PrivateEndpointConnectionResponse> privateEndpointConnections) {
             this.privateEndpointConnections = Objects.requireNonNull(privateEndpointConnections);
             return this;
         }
-
+        public Builder privateEndpointConnections(PrivateEndpointConnectionResponse... privateEndpointConnections) {
+            return privateEndpointConnections(List.of(privateEndpointConnections));
+        }
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder redisVersion(String redisVersion) {
             this.redisVersion = Objects.requireNonNull(redisVersion);
             return this;
         }
-
         public Builder resourceState(String resourceState) {
             this.resourceState = Objects.requireNonNull(resourceState);
             return this;
         }
-
         public Builder sku(EnterpriseSkuResponse sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder zones(@Nullable List<String> zones) {
             this.zones = zones;
             return this;
         }
-        public GetRedisEnterpriseResult build() {
+        public Builder zones(String... zones) {
+            return zones(List.of(zones));
+        }        public GetRedisEnterpriseResult build() {
             return new GetRedisEnterpriseResult(hostName, id, location, minimumTlsVersion, name, privateEndpointConnections, provisioningState, redisVersion, resourceState, sku, tags, type, zones);
         }
     }

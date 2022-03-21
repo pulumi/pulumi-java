@@ -127,52 +127,42 @@ public final class WorkbookTemplateGalleryArgs extends io.pulumi.resources.Resou
             this.category = category;
             return this;
         }
-
         public Builder category(@Nullable String category) {
             this.category = Output.ofNullable(category);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder order(@Nullable Output<Integer> order) {
             this.order = order;
             return this;
         }
-
         public Builder order(@Nullable Integer order) {
             this.order = Output.ofNullable(order);
             return this;
         }
-
         public Builder resourceType(@Nullable Output<String> resourceType) {
             this.resourceType = resourceType;
             return this;
         }
-
         public Builder resourceType(@Nullable String resourceType) {
             this.resourceType = Output.ofNullable(resourceType);
             return this;
         }
-
         public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public WorkbookTemplateGalleryArgs build() {
+        }        public WorkbookTemplateGalleryArgs build() {
             return new WorkbookTemplateGalleryArgs(category, name, order, resourceType, type);
         }
     }

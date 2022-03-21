@@ -88,17 +88,14 @@ public final class WebhookFilterGroupFilter {
             this.excludeMatchedPattern = excludeMatchedPattern;
             return this;
         }
-
         public Builder pattern(String pattern) {
             this.pattern = Objects.requireNonNull(pattern);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public WebhookFilterGroupFilter build() {
+        }        public WebhookFilterGroupFilter build() {
             return new WebhookFilterGroupFilter(excludeMatchedPattern, pattern, type);
         }
     }

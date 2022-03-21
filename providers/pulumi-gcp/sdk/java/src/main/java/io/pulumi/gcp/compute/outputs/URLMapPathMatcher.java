@@ -223,42 +223,40 @@ public final class URLMapPathMatcher {
             this.defaultRouteAction = defaultRouteAction;
             return this;
         }
-
         public Builder defaultService(@Nullable String defaultService) {
             this.defaultService = defaultService;
             return this;
         }
-
         public Builder defaultUrlRedirect(@Nullable URLMapPathMatcherDefaultUrlRedirect defaultUrlRedirect) {
             this.defaultUrlRedirect = defaultUrlRedirect;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder headerAction(@Nullable URLMapPathMatcherHeaderAction headerAction) {
             this.headerAction = headerAction;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder pathRules(@Nullable List<URLMapPathMatcherPathRule> pathRules) {
             this.pathRules = pathRules;
             return this;
         }
-
+        public Builder pathRules(URLMapPathMatcherPathRule... pathRules) {
+            return pathRules(List.of(pathRules));
+        }
         public Builder routeRules(@Nullable List<URLMapPathMatcherRouteRule> routeRules) {
             this.routeRules = routeRules;
             return this;
         }
-        public URLMapPathMatcher build() {
+        public Builder routeRules(URLMapPathMatcherRouteRule... routeRules) {
+            return routeRules(List.of(routeRules));
+        }        public URLMapPathMatcher build() {
             return new URLMapPathMatcher(defaultRouteAction, defaultService, defaultUrlRedirect, description, headerAction, name, pathRules, routeRules);
         }
     }

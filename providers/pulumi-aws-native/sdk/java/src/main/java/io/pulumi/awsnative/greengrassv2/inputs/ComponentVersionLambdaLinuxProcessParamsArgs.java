@@ -67,22 +67,18 @@ public final class ComponentVersionLambdaLinuxProcessParamsArgs extends io.pulum
             this.containerParams = containerParams;
             return this;
         }
-
         public Builder containerParams(@Nullable ComponentVersionLambdaContainerParamsArgs containerParams) {
             this.containerParams = Output.ofNullable(containerParams);
             return this;
         }
-
         public Builder isolationMode(@Nullable Output<ComponentVersionLambdaLinuxProcessParamsIsolationMode> isolationMode) {
             this.isolationMode = isolationMode;
             return this;
         }
-
         public Builder isolationMode(@Nullable ComponentVersionLambdaLinuxProcessParamsIsolationMode isolationMode) {
             this.isolationMode = Output.ofNullable(isolationMode);
             return this;
-        }
-        public ComponentVersionLambdaLinuxProcessParamsArgs build() {
+        }        public ComponentVersionLambdaLinuxProcessParamsArgs build() {
             return new ComponentVersionLambdaLinuxProcessParamsArgs(containerParams, isolationMode);
         }
     }

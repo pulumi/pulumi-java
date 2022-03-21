@@ -67,12 +67,13 @@ public final class DefaultRolloutSpecificationResponseRestOfTheWorldGroupTwo ext
             this.regions = regions;
             return this;
         }
-
+        public Builder regions(String... regions) {
+            return regions(List.of(regions));
+        }
         public Builder waitDuration(@Nullable String waitDuration) {
             this.waitDuration = waitDuration;
             return this;
-        }
-        public DefaultRolloutSpecificationResponseRestOfTheWorldGroupTwo build() {
+        }        public DefaultRolloutSpecificationResponseRestOfTheWorldGroupTwo build() {
             return new DefaultRolloutSpecificationResponseRestOfTheWorldGroupTwo(regions, waitDuration);
         }
     }

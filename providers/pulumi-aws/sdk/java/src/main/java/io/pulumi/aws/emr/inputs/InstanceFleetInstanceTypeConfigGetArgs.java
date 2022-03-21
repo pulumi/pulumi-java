@@ -143,62 +143,56 @@ public final class InstanceFleetInstanceTypeConfigGetArgs extends io.pulumi.reso
             this.bidPrice = bidPrice;
             return this;
         }
-
         public Builder bidPrice(@Nullable String bidPrice) {
             this.bidPrice = Output.ofNullable(bidPrice);
             return this;
         }
-
         public Builder bidPriceAsPercentageOfOnDemandPrice(@Nullable Output<Double> bidPriceAsPercentageOfOnDemandPrice) {
             this.bidPriceAsPercentageOfOnDemandPrice = bidPriceAsPercentageOfOnDemandPrice;
             return this;
         }
-
         public Builder bidPriceAsPercentageOfOnDemandPrice(@Nullable Double bidPriceAsPercentageOfOnDemandPrice) {
             this.bidPriceAsPercentageOfOnDemandPrice = Output.ofNullable(bidPriceAsPercentageOfOnDemandPrice);
             return this;
         }
-
         public Builder configurations(@Nullable Output<List<InstanceFleetInstanceTypeConfigConfigurationGetArgs>> configurations) {
             this.configurations = configurations;
             return this;
         }
-
         public Builder configurations(@Nullable List<InstanceFleetInstanceTypeConfigConfigurationGetArgs> configurations) {
             this.configurations = Output.ofNullable(configurations);
             return this;
         }
-
+        public Builder configurations(InstanceFleetInstanceTypeConfigConfigurationGetArgs... configurations) {
+            return configurations(List.of(configurations));
+        }
         public Builder ebsConfigs(@Nullable Output<List<InstanceFleetInstanceTypeConfigEbsConfigGetArgs>> ebsConfigs) {
             this.ebsConfigs = ebsConfigs;
             return this;
         }
-
         public Builder ebsConfigs(@Nullable List<InstanceFleetInstanceTypeConfigEbsConfigGetArgs> ebsConfigs) {
             this.ebsConfigs = Output.ofNullable(ebsConfigs);
             return this;
         }
-
+        public Builder ebsConfigs(InstanceFleetInstanceTypeConfigEbsConfigGetArgs... ebsConfigs) {
+            return ebsConfigs(List.of(ebsConfigs));
+        }
         public Builder instanceType(Output<String> instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
-
         public Builder instanceType(String instanceType) {
             this.instanceType = Output.of(Objects.requireNonNull(instanceType));
             return this;
         }
-
         public Builder weightedCapacity(@Nullable Output<Integer> weightedCapacity) {
             this.weightedCapacity = weightedCapacity;
             return this;
         }
-
         public Builder weightedCapacity(@Nullable Integer weightedCapacity) {
             this.weightedCapacity = Output.ofNullable(weightedCapacity);
             return this;
-        }
-        public InstanceFleetInstanceTypeConfigGetArgs build() {
+        }        public InstanceFleetInstanceTypeConfigGetArgs build() {
             return new InstanceFleetInstanceTypeConfigGetArgs(bidPrice, bidPriceAsPercentageOfOnDemandPrice, configurations, ebsConfigs, instanceType, weightedCapacity);
         }
     }

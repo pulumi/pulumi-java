@@ -92,32 +92,26 @@ public final class DiskAddOnArgs extends io.pulumi.resources.ResourceArgs {
             this.addOnType = Objects.requireNonNull(addOnType);
             return this;
         }
-
         public Builder addOnType(String addOnType) {
             this.addOnType = Output.of(Objects.requireNonNull(addOnType));
             return this;
         }
-
         public Builder autoSnapshotAddOnRequest(@Nullable Output<DiskAutoSnapshotAddOnArgs> autoSnapshotAddOnRequest) {
             this.autoSnapshotAddOnRequest = autoSnapshotAddOnRequest;
             return this;
         }
-
         public Builder autoSnapshotAddOnRequest(@Nullable DiskAutoSnapshotAddOnArgs autoSnapshotAddOnRequest) {
             this.autoSnapshotAddOnRequest = Output.ofNullable(autoSnapshotAddOnRequest);
             return this;
         }
-
         public Builder status(@Nullable Output<DiskAddOnStatus> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable DiskAddOnStatus status) {
             this.status = Output.ofNullable(status);
             return this;
-        }
-        public DiskAddOnArgs build() {
+        }        public DiskAddOnArgs build() {
             return new DiskAddOnArgs(addOnType, autoSnapshotAddOnRequest, status);
         }
     }

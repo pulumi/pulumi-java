@@ -298,82 +298,78 @@ public final class NetworkInterfaceResponse {
             this.accessConfigs = Objects.requireNonNull(accessConfigs);
             return this;
         }
-
+        public Builder accessConfigs(AccessConfigResponse... accessConfigs) {
+            return accessConfigs(List.of(accessConfigs));
+        }
         public Builder aliasIpRanges(List<AliasIpRangeResponse> aliasIpRanges) {
             this.aliasIpRanges = Objects.requireNonNull(aliasIpRanges);
             return this;
         }
-
+        public Builder aliasIpRanges(AliasIpRangeResponse... aliasIpRanges) {
+            return aliasIpRanges(List.of(aliasIpRanges));
+        }
         public Builder fingerprint(String fingerprint) {
             this.fingerprint = Objects.requireNonNull(fingerprint);
             return this;
         }
-
         public Builder internalIpv6PrefixLength(Integer internalIpv6PrefixLength) {
             this.internalIpv6PrefixLength = Objects.requireNonNull(internalIpv6PrefixLength);
             return this;
         }
-
         public Builder ipv6AccessConfigs(List<AccessConfigResponse> ipv6AccessConfigs) {
             this.ipv6AccessConfigs = Objects.requireNonNull(ipv6AccessConfigs);
             return this;
         }
-
+        public Builder ipv6AccessConfigs(AccessConfigResponse... ipv6AccessConfigs) {
+            return ipv6AccessConfigs(List.of(ipv6AccessConfigs));
+        }
         public Builder ipv6AccessType(String ipv6AccessType) {
             this.ipv6AccessType = Objects.requireNonNull(ipv6AccessType);
             return this;
         }
-
         public Builder ipv6Address(String ipv6Address) {
             this.ipv6Address = Objects.requireNonNull(ipv6Address);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder network(String network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }
-
         public Builder networkIP(String networkIP) {
             this.networkIP = Objects.requireNonNull(networkIP);
             return this;
         }
-
         public Builder nicType(String nicType) {
             this.nicType = Objects.requireNonNull(nicType);
             return this;
         }
-
         public Builder queueCount(Integer queueCount) {
             this.queueCount = Objects.requireNonNull(queueCount);
             return this;
         }
-
         public Builder stackType(String stackType) {
             this.stackType = Objects.requireNonNull(stackType);
             return this;
         }
-
         public Builder subinterfaces(List<NetworkInterfaceSubInterfaceResponse> subinterfaces) {
             this.subinterfaces = Objects.requireNonNull(subinterfaces);
             return this;
         }
-
+        public Builder subinterfaces(NetworkInterfaceSubInterfaceResponse... subinterfaces) {
+            return subinterfaces(List.of(subinterfaces));
+        }
         public Builder subnetwork(String subnetwork) {
             this.subnetwork = Objects.requireNonNull(subnetwork);
             return this;
-        }
-        public NetworkInterfaceResponse build() {
+        }        public NetworkInterfaceResponse build() {
             return new NetworkInterfaceResponse(accessConfigs, aliasIpRanges, fingerprint, internalIpv6PrefixLength, ipv6AccessConfigs, ipv6AccessType, ipv6Address, kind, name, network, networkIP, nicType, queueCount, stackType, subinterfaces, subnetwork);
         }
     }

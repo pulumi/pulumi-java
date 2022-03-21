@@ -61,12 +61,10 @@ public final class OpenShiftRouterProfileArgs extends io.pulumi.resources.Resour
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
-        }
-        public OpenShiftRouterProfileArgs build() {
+        }        public OpenShiftRouterProfileArgs build() {
             return new OpenShiftRouterProfileArgs(name);
         }
     }

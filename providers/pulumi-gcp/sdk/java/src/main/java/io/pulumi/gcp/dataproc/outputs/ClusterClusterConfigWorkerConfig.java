@@ -161,37 +161,36 @@ public final class ClusterClusterConfigWorkerConfig {
             this.accelerators = accelerators;
             return this;
         }
-
+        public Builder accelerators(ClusterClusterConfigWorkerConfigAccelerator... accelerators) {
+            return accelerators(List.of(accelerators));
+        }
         public Builder diskConfig(@Nullable ClusterClusterConfigWorkerConfigDiskConfig diskConfig) {
             this.diskConfig = diskConfig;
             return this;
         }
-
         public Builder imageUri(@Nullable String imageUri) {
             this.imageUri = imageUri;
             return this;
         }
-
         public Builder instanceNames(@Nullable List<String> instanceNames) {
             this.instanceNames = instanceNames;
             return this;
         }
-
+        public Builder instanceNames(String... instanceNames) {
+            return instanceNames(List.of(instanceNames));
+        }
         public Builder machineType(@Nullable String machineType) {
             this.machineType = machineType;
             return this;
         }
-
         public Builder minCpuPlatform(@Nullable String minCpuPlatform) {
             this.minCpuPlatform = minCpuPlatform;
             return this;
         }
-
         public Builder numInstances(@Nullable Integer numInstances) {
             this.numInstances = numInstances;
             return this;
-        }
-        public ClusterClusterConfigWorkerConfig build() {
+        }        public ClusterClusterConfigWorkerConfig build() {
             return new ClusterClusterConfigWorkerConfig(accelerators, diskConfig, imageUri, instanceNames, machineType, minCpuPlatform, numInstances);
         }
     }

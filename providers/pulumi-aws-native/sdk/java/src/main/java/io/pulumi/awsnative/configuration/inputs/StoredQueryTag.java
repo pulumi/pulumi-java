@@ -76,12 +76,10 @@ public final class StoredQueryTag extends io.pulumi.resources.InvokeArgs {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public StoredQueryTag build() {
+        }        public StoredQueryTag build() {
             return new StoredQueryTag(key, value);
         }
     }

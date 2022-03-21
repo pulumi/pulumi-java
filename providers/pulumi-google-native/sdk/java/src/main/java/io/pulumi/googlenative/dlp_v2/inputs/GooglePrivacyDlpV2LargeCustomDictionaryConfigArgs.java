@@ -96,32 +96,26 @@ public final class GooglePrivacyDlpV2LargeCustomDictionaryConfigArgs extends io.
             this.bigQueryField = bigQueryField;
             return this;
         }
-
         public Builder bigQueryField(@Nullable GooglePrivacyDlpV2BigQueryFieldArgs bigQueryField) {
             this.bigQueryField = Output.ofNullable(bigQueryField);
             return this;
         }
-
         public Builder cloudStorageFileSet(@Nullable Output<GooglePrivacyDlpV2CloudStorageFileSetArgs> cloudStorageFileSet) {
             this.cloudStorageFileSet = cloudStorageFileSet;
             return this;
         }
-
         public Builder cloudStorageFileSet(@Nullable GooglePrivacyDlpV2CloudStorageFileSetArgs cloudStorageFileSet) {
             this.cloudStorageFileSet = Output.ofNullable(cloudStorageFileSet);
             return this;
         }
-
         public Builder outputPath(@Nullable Output<GooglePrivacyDlpV2CloudStoragePathArgs> outputPath) {
             this.outputPath = outputPath;
             return this;
         }
-
         public Builder outputPath(@Nullable GooglePrivacyDlpV2CloudStoragePathArgs outputPath) {
             this.outputPath = Output.ofNullable(outputPath);
             return this;
-        }
-        public GooglePrivacyDlpV2LargeCustomDictionaryConfigArgs build() {
+        }        public GooglePrivacyDlpV2LargeCustomDictionaryConfigArgs build() {
             return new GooglePrivacyDlpV2LargeCustomDictionaryConfigArgs(bigQueryField, cloudStorageFileSet, outputPath);
         }
     }

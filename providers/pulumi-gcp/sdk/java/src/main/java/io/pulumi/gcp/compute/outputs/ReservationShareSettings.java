@@ -77,12 +77,13 @@ public final class ReservationShareSettings {
             this.projectMaps = projectMaps;
             return this;
         }
-
+        public Builder projectMaps(ReservationShareSettingsProjectMap... projectMaps) {
+            return projectMaps(List.of(projectMaps));
+        }
         public Builder shareType(@Nullable String shareType) {
             this.shareType = shareType;
             return this;
-        }
-        public ReservationShareSettings build() {
+        }        public ReservationShareSettings build() {
             return new ReservationShareSettings(projectMaps, shareType);
         }
     }

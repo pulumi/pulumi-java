@@ -243,122 +243,98 @@ public final class ApplicationGatewayProbeArgs extends io.pulumi.resources.Resou
             this.host = host;
             return this;
         }
-
         public Builder host(@Nullable String host) {
             this.host = Output.ofNullable(host);
             return this;
         }
-
         public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder interval(@Nullable Output<Integer> interval) {
             this.interval = interval;
             return this;
         }
-
         public Builder interval(@Nullable Integer interval) {
             this.interval = Output.ofNullable(interval);
             return this;
         }
-
         public Builder match(@Nullable Output<ApplicationGatewayProbeHealthResponseMatchArgs> match) {
             this.match = match;
             return this;
         }
-
         public Builder match(@Nullable ApplicationGatewayProbeHealthResponseMatchArgs match) {
             this.match = Output.ofNullable(match);
             return this;
         }
-
         public Builder minServers(@Nullable Output<Integer> minServers) {
             this.minServers = minServers;
             return this;
         }
-
         public Builder minServers(@Nullable Integer minServers) {
             this.minServers = Output.ofNullable(minServers);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder path(@Nullable Output<String> path) {
             this.path = path;
             return this;
         }
-
         public Builder path(@Nullable String path) {
             this.path = Output.ofNullable(path);
             return this;
         }
-
         public Builder pickHostNameFromBackendHttpSettings(@Nullable Output<Boolean> pickHostNameFromBackendHttpSettings) {
             this.pickHostNameFromBackendHttpSettings = pickHostNameFromBackendHttpSettings;
             return this;
         }
-
         public Builder pickHostNameFromBackendHttpSettings(@Nullable Boolean pickHostNameFromBackendHttpSettings) {
             this.pickHostNameFromBackendHttpSettings = Output.ofNullable(pickHostNameFromBackendHttpSettings);
             return this;
         }
-
         public Builder port(@Nullable Output<Integer> port) {
             this.port = port;
             return this;
         }
-
         public Builder port(@Nullable Integer port) {
             this.port = Output.ofNullable(port);
             return this;
         }
-
         public Builder protocol(@Nullable Output<Either<String,ApplicationGatewayProtocol>> protocol) {
             this.protocol = protocol;
             return this;
         }
-
         public Builder protocol(@Nullable Either<String,ApplicationGatewayProtocol> protocol) {
             this.protocol = Output.ofNullable(protocol);
             return this;
         }
-
         public Builder timeout(@Nullable Output<Integer> timeout) {
             this.timeout = timeout;
             return this;
         }
-
         public Builder timeout(@Nullable Integer timeout) {
             this.timeout = Output.ofNullable(timeout);
             return this;
         }
-
         public Builder unhealthyThreshold(@Nullable Output<Integer> unhealthyThreshold) {
             this.unhealthyThreshold = unhealthyThreshold;
             return this;
         }
-
         public Builder unhealthyThreshold(@Nullable Integer unhealthyThreshold) {
             this.unhealthyThreshold = Output.ofNullable(unhealthyThreshold);
             return this;
-        }
-        public ApplicationGatewayProbeArgs build() {
+        }        public ApplicationGatewayProbeArgs build() {
             return new ApplicationGatewayProbeArgs(host, id, interval, match, minServers, name, path, pickHostNameFromBackendHttpSettings, port, protocol, timeout, unhealthyThreshold);
         }
     }

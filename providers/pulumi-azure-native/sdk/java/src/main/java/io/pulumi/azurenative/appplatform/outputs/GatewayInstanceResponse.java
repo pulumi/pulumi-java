@@ -69,12 +69,10 @@ public final class GatewayInstanceResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
-        }
-        public GatewayInstanceResponse build() {
+        }        public GatewayInstanceResponse build() {
             return new GatewayInstanceResponse(name, status);
         }
     }

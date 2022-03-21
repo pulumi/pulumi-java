@@ -75,22 +75,18 @@ public final class TriggerDestinationArgs extends io.pulumi.resources.ResourceAr
             this.cloudFunction = cloudFunction;
             return this;
         }
-
         public Builder cloudFunction(@Nullable String cloudFunction) {
             this.cloudFunction = Output.ofNullable(cloudFunction);
             return this;
         }
-
         public Builder cloudRunService(@Nullable Output<TriggerDestinationCloudRunServiceArgs> cloudRunService) {
             this.cloudRunService = cloudRunService;
             return this;
         }
-
         public Builder cloudRunService(@Nullable TriggerDestinationCloudRunServiceArgs cloudRunService) {
             this.cloudRunService = Output.ofNullable(cloudRunService);
             return this;
-        }
-        public TriggerDestinationArgs build() {
+        }        public TriggerDestinationArgs build() {
             return new TriggerDestinationArgs(cloudFunction, cloudRunService);
         }
     }

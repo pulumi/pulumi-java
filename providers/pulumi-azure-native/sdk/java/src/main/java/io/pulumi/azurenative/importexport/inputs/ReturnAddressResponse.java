@@ -190,47 +190,38 @@ public final class ReturnAddressResponse extends io.pulumi.resources.InvokeArgs 
             this.city = Objects.requireNonNull(city);
             return this;
         }
-
         public Builder countryOrRegion(String countryOrRegion) {
             this.countryOrRegion = Objects.requireNonNull(countryOrRegion);
             return this;
         }
-
         public Builder email(String email) {
             this.email = Objects.requireNonNull(email);
             return this;
         }
-
         public Builder phone(String phone) {
             this.phone = Objects.requireNonNull(phone);
             return this;
         }
-
         public Builder postalCode(String postalCode) {
             this.postalCode = Objects.requireNonNull(postalCode);
             return this;
         }
-
         public Builder recipientName(String recipientName) {
             this.recipientName = Objects.requireNonNull(recipientName);
             return this;
         }
-
         public Builder stateOrProvince(@Nullable String stateOrProvince) {
             this.stateOrProvince = stateOrProvince;
             return this;
         }
-
         public Builder streetAddress1(String streetAddress1) {
             this.streetAddress1 = Objects.requireNonNull(streetAddress1);
             return this;
         }
-
         public Builder streetAddress2(@Nullable String streetAddress2) {
             this.streetAddress2 = streetAddress2;
             return this;
-        }
-        public ReturnAddressResponse build() {
+        }        public ReturnAddressResponse build() {
             return new ReturnAddressResponse(city, countryOrRegion, email, phone, postalCode, recipientName, stateOrProvince, streetAddress1, streetAddress2);
         }
     }

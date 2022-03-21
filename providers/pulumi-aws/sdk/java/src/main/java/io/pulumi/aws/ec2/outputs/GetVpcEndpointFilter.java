@@ -74,12 +74,13 @@ public final class GetVpcEndpointFilter {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder values(List<String> values) {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-        public GetVpcEndpointFilter build() {
+        public Builder values(String... values) {
+            return values(List.of(values));
+        }        public GetVpcEndpointFilter build() {
             return new GetVpcEndpointFilter(name, values);
         }
     }

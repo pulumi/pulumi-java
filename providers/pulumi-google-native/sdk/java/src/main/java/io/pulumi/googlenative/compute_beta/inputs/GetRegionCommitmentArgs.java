@@ -78,17 +78,14 @@ public final class GetRegionCommitmentArgs extends io.pulumi.resources.InvokeArg
             this.commitment = Objects.requireNonNull(commitment);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
-        }
-        public GetRegionCommitmentArgs build() {
+        }        public GetRegionCommitmentArgs build() {
             return new GetRegionCommitmentArgs(commitment, project, region);
         }
     }

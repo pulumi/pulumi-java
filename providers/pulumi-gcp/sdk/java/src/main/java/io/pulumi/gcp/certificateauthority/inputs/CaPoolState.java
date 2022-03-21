@@ -163,72 +163,58 @@ public final class CaPoolState extends io.pulumi.resources.ResourceArgs {
             this.issuancePolicy = issuancePolicy;
             return this;
         }
-
         public Builder issuancePolicy(@Nullable CaPoolIssuancePolicyGetArgs issuancePolicy) {
             this.issuancePolicy = Output.ofNullable(issuancePolicy);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder publishingOptions(@Nullable Output<CaPoolPublishingOptionsGetArgs> publishingOptions) {
             this.publishingOptions = publishingOptions;
             return this;
         }
-
         public Builder publishingOptions(@Nullable CaPoolPublishingOptionsGetArgs publishingOptions) {
             this.publishingOptions = Output.ofNullable(publishingOptions);
             return this;
         }
-
         public Builder tier(@Nullable Output<String> tier) {
             this.tier = tier;
             return this;
         }
-
         public Builder tier(@Nullable String tier) {
             this.tier = Output.ofNullable(tier);
             return this;
-        }
-        public CaPoolState build() {
+        }        public CaPoolState build() {
             return new CaPoolState(issuancePolicy, labels, location, name, project, publishingOptions, tier);
         }
     }

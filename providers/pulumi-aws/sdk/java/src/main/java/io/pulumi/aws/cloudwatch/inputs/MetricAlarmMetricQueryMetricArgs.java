@@ -143,62 +143,50 @@ public final class MetricAlarmMetricQueryMetricArgs extends io.pulumi.resources.
             this.dimensions = dimensions;
             return this;
         }
-
         public Builder dimensions(@Nullable Map<String,String> dimensions) {
             this.dimensions = Output.ofNullable(dimensions);
             return this;
         }
-
         public Builder metricName(Output<String> metricName) {
             this.metricName = Objects.requireNonNull(metricName);
             return this;
         }
-
         public Builder metricName(String metricName) {
             this.metricName = Output.of(Objects.requireNonNull(metricName));
             return this;
         }
-
         public Builder namespace(@Nullable Output<String> namespace) {
             this.namespace = namespace;
             return this;
         }
-
         public Builder namespace(@Nullable String namespace) {
             this.namespace = Output.ofNullable(namespace);
             return this;
         }
-
         public Builder period(Output<Integer> period) {
             this.period = Objects.requireNonNull(period);
             return this;
         }
-
         public Builder period(Integer period) {
             this.period = Output.of(Objects.requireNonNull(period));
             return this;
         }
-
         public Builder stat(Output<String> stat) {
             this.stat = Objects.requireNonNull(stat);
             return this;
         }
-
         public Builder stat(String stat) {
             this.stat = Output.of(Objects.requireNonNull(stat));
             return this;
         }
-
         public Builder unit(@Nullable Output<String> unit) {
             this.unit = unit;
             return this;
         }
-
         public Builder unit(@Nullable String unit) {
             this.unit = Output.ofNullable(unit);
             return this;
-        }
-        public MetricAlarmMetricQueryMetricArgs build() {
+        }        public MetricAlarmMetricQueryMetricArgs build() {
             return new MetricAlarmMetricQueryMetricArgs(dimensions, metricName, namespace, period, stat, unit);
         }
     }

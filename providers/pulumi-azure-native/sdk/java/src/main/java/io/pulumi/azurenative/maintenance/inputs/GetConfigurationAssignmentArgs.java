@@ -120,27 +120,22 @@ public final class GetConfigurationAssignmentArgs extends io.pulumi.resources.In
             this.configurationAssignmentName = Objects.requireNonNull(configurationAssignmentName);
             return this;
         }
-
         public Builder providerName(String providerName) {
             this.providerName = Objects.requireNonNull(providerName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceName(String resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
         }
-
         public Builder resourceType(String resourceType) {
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
-        }
-        public GetConfigurationAssignmentArgs build() {
+        }        public GetConfigurationAssignmentArgs build() {
             return new GetConfigurationAssignmentArgs(configurationAssignmentName, providerName, resourceGroupName, resourceName, resourceType);
         }
     }

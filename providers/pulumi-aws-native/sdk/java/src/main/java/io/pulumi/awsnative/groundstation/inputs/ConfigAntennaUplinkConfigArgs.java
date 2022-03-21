@@ -80,32 +80,26 @@ public final class ConfigAntennaUplinkConfigArgs extends io.pulumi.resources.Res
             this.spectrumConfig = spectrumConfig;
             return this;
         }
-
         public Builder spectrumConfig(@Nullable ConfigUplinkSpectrumConfigArgs spectrumConfig) {
             this.spectrumConfig = Output.ofNullable(spectrumConfig);
             return this;
         }
-
         public Builder targetEirp(@Nullable Output<ConfigEirpArgs> targetEirp) {
             this.targetEirp = targetEirp;
             return this;
         }
-
         public Builder targetEirp(@Nullable ConfigEirpArgs targetEirp) {
             this.targetEirp = Output.ofNullable(targetEirp);
             return this;
         }
-
         public Builder transmitDisabled(@Nullable Output<Boolean> transmitDisabled) {
             this.transmitDisabled = transmitDisabled;
             return this;
         }
-
         public Builder transmitDisabled(@Nullable Boolean transmitDisabled) {
             this.transmitDisabled = Output.ofNullable(transmitDisabled);
             return this;
-        }
-        public ConfigAntennaUplinkConfigArgs build() {
+        }        public ConfigAntennaUplinkConfigArgs build() {
             return new ConfigAntennaUplinkConfigArgs(spectrumConfig, targetEirp, transmitDisabled);
         }
     }

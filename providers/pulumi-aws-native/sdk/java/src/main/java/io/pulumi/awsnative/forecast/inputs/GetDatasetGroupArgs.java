@@ -54,8 +54,7 @@ public final class GetDatasetGroupArgs extends io.pulumi.resources.InvokeArgs {
         public Builder datasetGroupArn(String datasetGroupArn) {
             this.datasetGroupArn = Objects.requireNonNull(datasetGroupArn);
             return this;
-        }
-        public GetDatasetGroupArgs build() {
+        }        public GetDatasetGroupArgs build() {
             return new GetDatasetGroupArgs(datasetGroupArn);
         }
     }

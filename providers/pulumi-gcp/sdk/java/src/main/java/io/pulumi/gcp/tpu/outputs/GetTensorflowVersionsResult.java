@@ -86,22 +86,21 @@ public final class GetTensorflowVersionsResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
-
         public Builder versions(List<String> versions) {
             this.versions = Objects.requireNonNull(versions);
             return this;
         }
-
+        public Builder versions(String... versions) {
+            return versions(List.of(versions));
+        }
         public Builder zone(String zone) {
             this.zone = Objects.requireNonNull(zone);
             return this;
-        }
-        public GetTensorflowVersionsResult build() {
+        }        public GetTensorflowVersionsResult build() {
             return new GetTensorflowVersionsResult(id, project, versions, zone);
         }
     }

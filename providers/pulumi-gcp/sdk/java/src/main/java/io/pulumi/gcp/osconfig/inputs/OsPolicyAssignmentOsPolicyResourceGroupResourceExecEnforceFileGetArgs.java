@@ -109,42 +109,34 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFil
             this.allowInsecure = allowInsecure;
             return this;
         }
-
         public Builder allowInsecure(@Nullable Boolean allowInsecure) {
             this.allowInsecure = Output.ofNullable(allowInsecure);
             return this;
         }
-
         public Builder gcs(@Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFileGcsGetArgs> gcs) {
             this.gcs = gcs;
             return this;
         }
-
         public Builder gcs(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFileGcsGetArgs gcs) {
             this.gcs = Output.ofNullable(gcs);
             return this;
         }
-
         public Builder localPath(@Nullable Output<String> localPath) {
             this.localPath = localPath;
             return this;
         }
-
         public Builder localPath(@Nullable String localPath) {
             this.localPath = Output.ofNullable(localPath);
             return this;
         }
-
         public Builder remote(@Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFileRemoteGetArgs> remote) {
             this.remote = remote;
             return this;
         }
-
         public Builder remote(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFileRemoteGetArgs remote) {
             this.remote = Output.ofNullable(remote);
             return this;
-        }
-        public OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFileGetArgs build() {
+        }        public OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFileGetArgs build() {
             return new OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFileGetArgs(allowInsecure, gcs, localPath, remote);
         }
     }

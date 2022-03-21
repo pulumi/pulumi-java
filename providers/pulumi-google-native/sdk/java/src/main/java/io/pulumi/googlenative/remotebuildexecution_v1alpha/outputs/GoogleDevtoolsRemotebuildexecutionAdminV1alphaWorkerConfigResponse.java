@@ -216,57 +216,46 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigRes
             this.accelerator = Objects.requireNonNull(accelerator);
             return this;
         }
-
         public Builder diskSizeGb(String diskSizeGb) {
             this.diskSizeGb = Objects.requireNonNull(diskSizeGb);
             return this;
         }
-
         public Builder diskType(String diskType) {
             this.diskType = Objects.requireNonNull(diskType);
             return this;
         }
-
         public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder machineType(String machineType) {
             this.machineType = Objects.requireNonNull(machineType);
             return this;
         }
-
         public Builder maxConcurrentActions(String maxConcurrentActions) {
             this.maxConcurrentActions = Objects.requireNonNull(maxConcurrentActions);
             return this;
         }
-
         public Builder minCpuPlatform(String minCpuPlatform) {
             this.minCpuPlatform = Objects.requireNonNull(minCpuPlatform);
             return this;
         }
-
         public Builder networkAccess(String networkAccess) {
             this.networkAccess = Objects.requireNonNull(networkAccess);
             return this;
         }
-
         public Builder reserved(Boolean reserved) {
             this.reserved = Objects.requireNonNull(reserved);
             return this;
         }
-
         public Builder soleTenantNodeType(String soleTenantNodeType) {
             this.soleTenantNodeType = Objects.requireNonNull(soleTenantNodeType);
             return this;
         }
-
         public Builder vmImage(String vmImage) {
             this.vmImage = Objects.requireNonNull(vmImage);
             return this;
-        }
-        public GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigResponse build() {
+        }        public GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigResponse build() {
             return new GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigResponse(accelerator, diskSizeGb, diskType, labels, machineType, maxConcurrentActions, minCpuPlatform, networkAccess, reserved, soleTenantNodeType, vmImage);
         }
     }

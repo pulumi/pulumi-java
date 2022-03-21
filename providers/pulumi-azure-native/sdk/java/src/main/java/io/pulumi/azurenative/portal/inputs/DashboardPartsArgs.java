@@ -79,22 +79,18 @@ public final class DashboardPartsArgs extends io.pulumi.resources.ResourceArgs {
             this.metadata = metadata;
             return this;
         }
-
         public Builder metadata(@Nullable MarkdownPartMetadataArgs metadata) {
             this.metadata = Output.ofNullable(metadata);
             return this;
         }
-
         public Builder position(Output<DashboardPartsPositionArgs> position) {
             this.position = Objects.requireNonNull(position);
             return this;
         }
-
         public Builder position(DashboardPartsPositionArgs position) {
             this.position = Output.of(Objects.requireNonNull(position));
             return this;
-        }
-        public DashboardPartsArgs build() {
+        }        public DashboardPartsArgs build() {
             return new DashboardPartsArgs(metadata, position);
         }
     }

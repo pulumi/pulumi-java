@@ -73,12 +73,13 @@ public final class GetRegionsFilter extends io.pulumi.resources.InvokeArgs {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder values(List<String> values) {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-        public GetRegionsFilter build() {
+        public Builder values(String... values) {
+            return values(List.of(values));
+        }        public GetRegionsFilter build() {
             return new GetRegionsFilter(name, values);
         }
     }

@@ -74,12 +74,10 @@ public final class RCranPackageResponse extends io.pulumi.resources.InvokeArgs {
             this.name = name;
             return this;
         }
-
         public Builder repository(@Nullable String repository) {
             this.repository = repository;
             return this;
-        }
-        public RCranPackageResponse build() {
+        }        public RCranPackageResponse build() {
             return new RCranPackageResponse(name, repository);
         }
     }

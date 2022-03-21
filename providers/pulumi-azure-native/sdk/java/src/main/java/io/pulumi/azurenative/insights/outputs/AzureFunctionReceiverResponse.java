@@ -120,27 +120,22 @@ public final class AzureFunctionReceiverResponse {
             this.functionAppResourceId = Objects.requireNonNull(functionAppResourceId);
             return this;
         }
-
         public Builder functionName(String functionName) {
             this.functionName = Objects.requireNonNull(functionName);
             return this;
         }
-
         public Builder httpTriggerUrl(String httpTriggerUrl) {
             this.httpTriggerUrl = Objects.requireNonNull(httpTriggerUrl);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder useCommonAlertSchema(@Nullable Boolean useCommonAlertSchema) {
             this.useCommonAlertSchema = useCommonAlertSchema;
             return this;
-        }
-        public AzureFunctionReceiverResponse build() {
+        }        public AzureFunctionReceiverResponse build() {
             return new AzureFunctionReceiverResponse(functionAppResourceId, functionName, httpTriggerUrl, name, useCommonAlertSchema);
         }
     }

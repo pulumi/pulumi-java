@@ -108,42 +108,34 @@ public final class SubscriptionIAMPolicyState extends io.pulumi.resources.Resour
             this.etag = etag;
             return this;
         }
-
         public Builder etag(@Nullable String etag) {
             this.etag = Output.ofNullable(etag);
             return this;
         }
-
         public Builder policyData(@Nullable Output<String> policyData) {
             this.policyData = policyData;
             return this;
         }
-
         public Builder policyData(@Nullable String policyData) {
             this.policyData = Output.ofNullable(policyData);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder subscription(@Nullable Output<String> subscription) {
             this.subscription = subscription;
             return this;
         }
-
         public Builder subscription(@Nullable String subscription) {
             this.subscription = Output.ofNullable(subscription);
             return this;
-        }
-        public SubscriptionIAMPolicyState build() {
+        }        public SubscriptionIAMPolicyState build() {
             return new SubscriptionIAMPolicyState(etag, policyData, project, subscription);
         }
     }

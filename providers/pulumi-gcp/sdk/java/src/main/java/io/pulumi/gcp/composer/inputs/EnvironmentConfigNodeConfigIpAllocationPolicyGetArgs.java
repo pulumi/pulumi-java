@@ -103,52 +103,42 @@ public final class EnvironmentConfigNodeConfigIpAllocationPolicyGetArgs extends 
             this.clusterIpv4CidrBlock = clusterIpv4CidrBlock;
             return this;
         }
-
         public Builder clusterIpv4CidrBlock(@Nullable String clusterIpv4CidrBlock) {
             this.clusterIpv4CidrBlock = Output.ofNullable(clusterIpv4CidrBlock);
             return this;
         }
-
         public Builder clusterSecondaryRangeName(@Nullable Output<String> clusterSecondaryRangeName) {
             this.clusterSecondaryRangeName = clusterSecondaryRangeName;
             return this;
         }
-
         public Builder clusterSecondaryRangeName(@Nullable String clusterSecondaryRangeName) {
             this.clusterSecondaryRangeName = Output.ofNullable(clusterSecondaryRangeName);
             return this;
         }
-
         public Builder servicesIpv4CidrBlock(@Nullable Output<String> servicesIpv4CidrBlock) {
             this.servicesIpv4CidrBlock = servicesIpv4CidrBlock;
             return this;
         }
-
         public Builder servicesIpv4CidrBlock(@Nullable String servicesIpv4CidrBlock) {
             this.servicesIpv4CidrBlock = Output.ofNullable(servicesIpv4CidrBlock);
             return this;
         }
-
         public Builder servicesSecondaryRangeName(@Nullable Output<String> servicesSecondaryRangeName) {
             this.servicesSecondaryRangeName = servicesSecondaryRangeName;
             return this;
         }
-
         public Builder servicesSecondaryRangeName(@Nullable String servicesSecondaryRangeName) {
             this.servicesSecondaryRangeName = Output.ofNullable(servicesSecondaryRangeName);
             return this;
         }
-
         public Builder useIpAliases(@Nullable Output<Boolean> useIpAliases) {
             this.useIpAliases = useIpAliases;
             return this;
         }
-
         public Builder useIpAliases(@Nullable Boolean useIpAliases) {
             this.useIpAliases = Output.ofNullable(useIpAliases);
             return this;
-        }
-        public EnvironmentConfigNodeConfigIpAllocationPolicyGetArgs build() {
+        }        public EnvironmentConfigNodeConfigIpAllocationPolicyGetArgs build() {
             return new EnvironmentConfigNodeConfigIpAllocationPolicyGetArgs(clusterIpv4CidrBlock, clusterSecondaryRangeName, servicesIpv4CidrBlock, servicesSecondaryRangeName, useIpAliases);
         }
     }

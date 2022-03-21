@@ -94,17 +94,14 @@ public final class ComputeVmInstanceViewStatusResponse extends io.pulumi.resourc
             this.code = code;
             return this;
         }
-
         public Builder displayStatus(@Nullable String displayStatus) {
             this.displayStatus = displayStatus;
             return this;
         }
-
         public Builder message(@Nullable String message) {
             this.message = message;
             return this;
-        }
-        public ComputeVmInstanceViewStatusResponse build() {
+        }        public ComputeVmInstanceViewStatusResponse build() {
             return new ComputeVmInstanceViewStatusResponse(code, displayStatus, message);
         }
     }

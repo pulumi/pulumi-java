@@ -153,37 +153,30 @@ public final class GetBlobContainerImmutabilityPolicyResult {
             this.allowProtectedAppendWrites = allowProtectedAppendWrites;
             return this;
         }
-
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder immutabilityPeriodSinceCreationInDays(@Nullable Integer immutabilityPeriodSinceCreationInDays) {
             this.immutabilityPeriodSinceCreationInDays = immutabilityPeriodSinceCreationInDays;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetBlobContainerImmutabilityPolicyResult build() {
+        }        public GetBlobContainerImmutabilityPolicyResult build() {
             return new GetBlobContainerImmutabilityPolicyResult(allowProtectedAppendWrites, etag, id, immutabilityPeriodSinceCreationInDays, name, state, type);
         }
     }

@@ -78,22 +78,18 @@ public final class ResourceAccessRuleArgs extends io.pulumi.resources.ResourceAr
             this.resourceId = resourceId;
             return this;
         }
-
         public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = Output.ofNullable(resourceId);
             return this;
         }
-
         public Builder tenantId(@Nullable Output<String> tenantId) {
             this.tenantId = tenantId;
             return this;
         }
-
         public Builder tenantId(@Nullable String tenantId) {
             this.tenantId = Output.ofNullable(tenantId);
             return this;
-        }
-        public ResourceAccessRuleArgs build() {
+        }        public ResourceAccessRuleArgs build() {
             return new ResourceAccessRuleArgs(resourceId, tenantId);
         }
     }

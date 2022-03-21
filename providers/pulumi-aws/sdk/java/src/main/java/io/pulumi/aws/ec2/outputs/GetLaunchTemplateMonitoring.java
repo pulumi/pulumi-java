@@ -51,8 +51,7 @@ public final class GetLaunchTemplateMonitoring {
         public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
-        }
-        public GetLaunchTemplateMonitoring build() {
+        }        public GetLaunchTemplateMonitoring build() {
             return new GetLaunchTemplateMonitoring(enabled);
         }
     }

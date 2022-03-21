@@ -94,17 +94,14 @@ public final class ManagedIdentityPropertiesResponse extends io.pulumi.resources
             this.principalId = principalId;
             return this;
         }
-
         public Builder tenantId(@Nullable String tenantId) {
             this.tenantId = tenantId;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
-        }
-        public ManagedIdentityPropertiesResponse build() {
+        }        public ManagedIdentityPropertiesResponse build() {
             return new ManagedIdentityPropertiesResponse(principalId, tenantId, type);
         }
     }

@@ -108,22 +108,18 @@ public final class LocationPreferenceResponse extends io.pulumi.resources.Invoke
             this.followGaeApplication = Objects.requireNonNull(followGaeApplication);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder secondaryZone(String secondaryZone) {
             this.secondaryZone = Objects.requireNonNull(secondaryZone);
             return this;
         }
-
         public Builder zone(String zone) {
             this.zone = Objects.requireNonNull(zone);
             return this;
-        }
-        public LocationPreferenceResponse build() {
+        }        public LocationPreferenceResponse build() {
             return new LocationPreferenceResponse(followGaeApplication, kind, secondaryZone, zone);
         }
     }

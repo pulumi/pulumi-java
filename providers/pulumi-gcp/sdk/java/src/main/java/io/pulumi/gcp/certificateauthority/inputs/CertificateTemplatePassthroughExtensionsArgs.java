@@ -76,22 +76,24 @@ public final class CertificateTemplatePassthroughExtensionsArgs extends io.pulum
             this.additionalExtensions = additionalExtensions;
             return this;
         }
-
         public Builder additionalExtensions(@Nullable List<CertificateTemplatePassthroughExtensionsAdditionalExtensionArgs> additionalExtensions) {
             this.additionalExtensions = Output.ofNullable(additionalExtensions);
             return this;
         }
-
+        public Builder additionalExtensions(CertificateTemplatePassthroughExtensionsAdditionalExtensionArgs... additionalExtensions) {
+            return additionalExtensions(List.of(additionalExtensions));
+        }
         public Builder knownExtensions(@Nullable Output<List<String>> knownExtensions) {
             this.knownExtensions = knownExtensions;
             return this;
         }
-
         public Builder knownExtensions(@Nullable List<String> knownExtensions) {
             this.knownExtensions = Output.ofNullable(knownExtensions);
             return this;
         }
-        public CertificateTemplatePassthroughExtensionsArgs build() {
+        public Builder knownExtensions(String... knownExtensions) {
+            return knownExtensions(List.of(knownExtensions));
+        }        public CertificateTemplatePassthroughExtensionsArgs build() {
             return new CertificateTemplatePassthroughExtensionsArgs(additionalExtensions, knownExtensions);
         }
     }

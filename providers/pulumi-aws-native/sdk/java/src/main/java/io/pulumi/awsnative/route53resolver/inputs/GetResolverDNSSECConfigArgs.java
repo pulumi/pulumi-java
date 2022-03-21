@@ -54,8 +54,7 @@ public final class GetResolverDNSSECConfigArgs extends io.pulumi.resources.Invok
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
-        }
-        public GetResolverDNSSECConfigArgs build() {
+        }        public GetResolverDNSSECConfigArgs build() {
             return new GetResolverDNSSECConfigArgs(id);
         }
     }

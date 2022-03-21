@@ -198,92 +198,77 @@ public final class ObjectAccessControlState extends io.pulumi.resources.Resource
             this.bucket = bucket;
             return this;
         }
-
         public Builder bucket(@Nullable String bucket) {
             this.bucket = Output.ofNullable(bucket);
             return this;
         }
-
         public Builder domain(@Nullable Output<String> domain) {
             this.domain = domain;
             return this;
         }
-
         public Builder domain(@Nullable String domain) {
             this.domain = Output.ofNullable(domain);
             return this;
         }
-
         public Builder email(@Nullable Output<String> email) {
             this.email = email;
             return this;
         }
-
         public Builder email(@Nullable String email) {
             this.email = Output.ofNullable(email);
             return this;
         }
-
         public Builder entity(@Nullable Output<String> entity) {
             this.entity = entity;
             return this;
         }
-
         public Builder entity(@Nullable String entity) {
             this.entity = Output.ofNullable(entity);
             return this;
         }
-
         public Builder entityId(@Nullable Output<String> entityId) {
             this.entityId = entityId;
             return this;
         }
-
         public Builder entityId(@Nullable String entityId) {
             this.entityId = Output.ofNullable(entityId);
             return this;
         }
-
         public Builder generation(@Nullable Output<Integer> generation) {
             this.generation = generation;
             return this;
         }
-
         public Builder generation(@Nullable Integer generation) {
             this.generation = Output.ofNullable(generation);
             return this;
         }
-
         public Builder object(@Nullable Output<String> object) {
             this.object = object;
             return this;
         }
-
         public Builder object(@Nullable String object) {
             this.object = Output.ofNullable(object);
             return this;
         }
-
         public Builder projectTeams(@Nullable Output<List<ObjectAccessControlProjectTeamGetArgs>> projectTeams) {
             this.projectTeams = projectTeams;
             return this;
         }
-
         public Builder projectTeams(@Nullable List<ObjectAccessControlProjectTeamGetArgs> projectTeams) {
             this.projectTeams = Output.ofNullable(projectTeams);
             return this;
         }
-
+        public Builder projectTeams(ObjectAccessControlProjectTeamGetArgs... projectTeams) {
+            return projectTeams(List.of(projectTeams));
+        }
         public Builder role(@Nullable Output<String> role) {
             this.role = role;
             return this;
         }
-
         public Builder role(@Nullable String role) {
             this.role = Output.ofNullable(role);
             return this;
-        }
-        public ObjectAccessControlState build() {
+        }        public ObjectAccessControlState build() {
             return new ObjectAccessControlState(bucket, domain, email, entity, entityId, generation, object, projectTeams, role);
         }
     }

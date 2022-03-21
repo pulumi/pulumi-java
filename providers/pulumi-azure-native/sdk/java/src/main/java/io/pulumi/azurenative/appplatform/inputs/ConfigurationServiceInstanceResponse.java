@@ -76,12 +76,10 @@ public final class ConfigurationServiceInstanceResponse extends io.pulumi.resour
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
-        }
-        public ConfigurationServiceInstanceResponse build() {
+        }        public ConfigurationServiceInstanceResponse build() {
             return new ConfigurationServiceInstanceResponse(name, status);
         }
     }

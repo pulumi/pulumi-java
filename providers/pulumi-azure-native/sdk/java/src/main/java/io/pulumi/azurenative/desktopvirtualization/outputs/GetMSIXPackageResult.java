@@ -267,72 +267,64 @@ public final class GetMSIXPackageResult {
             this.displayName = displayName;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder imagePath(@Nullable String imagePath) {
             this.imagePath = imagePath;
             return this;
         }
-
         public Builder isActive(@Nullable Boolean isActive) {
             this.isActive = isActive;
             return this;
         }
-
         public Builder isRegularRegistration(@Nullable Boolean isRegularRegistration) {
             this.isRegularRegistration = isRegularRegistration;
             return this;
         }
-
         public Builder lastUpdated(@Nullable String lastUpdated) {
             this.lastUpdated = lastUpdated;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder packageApplications(@Nullable List<MsixPackageApplicationsResponse> packageApplications) {
             this.packageApplications = packageApplications;
             return this;
         }
-
+        public Builder packageApplications(MsixPackageApplicationsResponse... packageApplications) {
+            return packageApplications(List.of(packageApplications));
+        }
         public Builder packageDependencies(@Nullable List<MsixPackageDependenciesResponse> packageDependencies) {
             this.packageDependencies = packageDependencies;
             return this;
         }
-
+        public Builder packageDependencies(MsixPackageDependenciesResponse... packageDependencies) {
+            return packageDependencies(List.of(packageDependencies));
+        }
         public Builder packageFamilyName(@Nullable String packageFamilyName) {
             this.packageFamilyName = packageFamilyName;
             return this;
         }
-
         public Builder packageName(@Nullable String packageName) {
             this.packageName = packageName;
             return this;
         }
-
         public Builder packageRelativePath(@Nullable String packageRelativePath) {
             this.packageRelativePath = packageRelativePath;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = version;
             return this;
-        }
-        public GetMSIXPackageResult build() {
+        }        public GetMSIXPackageResult build() {
             return new GetMSIXPackageResult(displayName, id, imagePath, isActive, isRegularRegistration, lastUpdated, name, packageApplications, packageDependencies, packageFamilyName, packageName, packageRelativePath, type, version);
         }
     }

@@ -88,17 +88,14 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleQueryPara
             this.exactMatch = exactMatch;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder presentMatch(@Nullable Boolean presentMatch) {
             this.presentMatch = presentMatch;
             return this;
-        }
-        public EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleQueryParameterMatch build() {
+        }        public EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleQueryParameterMatch build() {
             return new EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleQueryParameterMatch(exactMatch, name, presentMatch);
         }
     }

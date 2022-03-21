@@ -132,52 +132,42 @@ public final class AzureSqlContainerArgs extends io.pulumi.resources.ResourceArg
             this.backupManagementType = backupManagementType;
             return this;
         }
-
         public Builder backupManagementType(@Nullable Either<String,BackupManagementType> backupManagementType) {
             this.backupManagementType = Output.ofNullable(backupManagementType);
             return this;
         }
-
         public Builder containerType(Output<String> containerType) {
             this.containerType = Objects.requireNonNull(containerType);
             return this;
         }
-
         public Builder containerType(String containerType) {
             this.containerType = Output.of(Objects.requireNonNull(containerType));
             return this;
         }
-
         public Builder friendlyName(@Nullable Output<String> friendlyName) {
             this.friendlyName = friendlyName;
             return this;
         }
-
         public Builder friendlyName(@Nullable String friendlyName) {
             this.friendlyName = Output.ofNullable(friendlyName);
             return this;
         }
-
         public Builder healthStatus(@Nullable Output<String> healthStatus) {
             this.healthStatus = healthStatus;
             return this;
         }
-
         public Builder healthStatus(@Nullable String healthStatus) {
             this.healthStatus = Output.ofNullable(healthStatus);
             return this;
         }
-
         public Builder registrationStatus(@Nullable Output<String> registrationStatus) {
             this.registrationStatus = registrationStatus;
             return this;
         }
-
         public Builder registrationStatus(@Nullable String registrationStatus) {
             this.registrationStatus = Output.ofNullable(registrationStatus);
             return this;
-        }
-        public AzureSqlContainerArgs build() {
+        }        public AzureSqlContainerArgs build() {
             return new AzureSqlContainerArgs(backupManagementType, containerType, friendlyName, healthStatus, registrationStatus);
         }
     }

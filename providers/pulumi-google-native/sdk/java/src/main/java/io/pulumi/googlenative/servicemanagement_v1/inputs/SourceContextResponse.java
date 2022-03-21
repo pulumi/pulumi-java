@@ -58,8 +58,7 @@ public final class SourceContextResponse extends io.pulumi.resources.InvokeArgs 
         public Builder fileName(String fileName) {
             this.fileName = Objects.requireNonNull(fileName);
             return this;
-        }
-        public SourceContextResponse build() {
+        }        public SourceContextResponse build() {
             return new SourceContextResponse(fileName);
         }
     }

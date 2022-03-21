@@ -69,12 +69,10 @@ public final class UserAssignedIdentityResponse {
             this.clientId = Objects.requireNonNull(clientId);
             return this;
         }
-
         public Builder principalId(String principalId) {
             this.principalId = Objects.requireNonNull(principalId);
             return this;
-        }
-        public UserAssignedIdentityResponse build() {
+        }        public UserAssignedIdentityResponse build() {
             return new UserAssignedIdentityResponse(clientId, principalId);
         }
     }

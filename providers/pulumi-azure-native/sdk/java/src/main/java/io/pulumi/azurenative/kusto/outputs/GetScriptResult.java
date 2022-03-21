@@ -169,42 +169,34 @@ public final class GetScriptResult {
             this.continueOnErrors = continueOnErrors;
             return this;
         }
-
         public Builder forceUpdateTag(@Nullable String forceUpdateTag) {
             this.forceUpdateTag = forceUpdateTag;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder scriptUrl(String scriptUrl) {
             this.scriptUrl = Objects.requireNonNull(scriptUrl);
             return this;
         }
-
         public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetScriptResult build() {
+        }        public GetScriptResult build() {
             return new GetScriptResult(continueOnErrors, forceUpdateTag, id, name, provisioningState, scriptUrl, systemData, type);
         }
     }

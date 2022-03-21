@@ -123,52 +123,42 @@ public final class BotAliasArgs extends io.pulumi.resources.ResourceArgs {
             this.botName = Objects.requireNonNull(botName);
             return this;
         }
-
         public Builder botName(String botName) {
             this.botName = Output.of(Objects.requireNonNull(botName));
             return this;
         }
-
         public Builder botVersion(Output<String> botVersion) {
             this.botVersion = Objects.requireNonNull(botVersion);
             return this;
         }
-
         public Builder botVersion(String botVersion) {
             this.botVersion = Output.of(Objects.requireNonNull(botVersion));
             return this;
         }
-
         public Builder conversationLogs(@Nullable Output<BotAliasConversationLogsArgs> conversationLogs) {
             this.conversationLogs = conversationLogs;
             return this;
         }
-
         public Builder conversationLogs(@Nullable BotAliasConversationLogsArgs conversationLogs) {
             this.conversationLogs = Output.ofNullable(conversationLogs);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
-        }
-        public BotAliasArgs build() {
+        }        public BotAliasArgs build() {
             return new BotAliasArgs(botName, botVersion, conversationLogs, description, name);
         }
     }

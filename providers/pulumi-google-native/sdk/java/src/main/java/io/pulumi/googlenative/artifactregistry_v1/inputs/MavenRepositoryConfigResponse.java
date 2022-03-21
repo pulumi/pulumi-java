@@ -77,12 +77,10 @@ public final class MavenRepositoryConfigResponse extends io.pulumi.resources.Inv
             this.allowSnapshotOverwrites = Objects.requireNonNull(allowSnapshotOverwrites);
             return this;
         }
-
         public Builder versionPolicy(String versionPolicy) {
             this.versionPolicy = Objects.requireNonNull(versionPolicy);
             return this;
-        }
-        public MavenRepositoryConfigResponse build() {
+        }        public MavenRepositoryConfigResponse build() {
             return new MavenRepositoryConfigResponse(allowSnapshotOverwrites, versionPolicy);
         }
     }

@@ -45,8 +45,7 @@ public final class WarmPoolInstanceReusePolicy {
         public Builder reuseOnScaleIn(@Nullable Boolean reuseOnScaleIn) {
             this.reuseOnScaleIn = reuseOnScaleIn;
             return this;
-        }
-        public WarmPoolInstanceReusePolicy build() {
+        }        public WarmPoolInstanceReusePolicy build() {
             return new WarmPoolInstanceReusePolicy(reuseOnScaleIn);
         }
     }

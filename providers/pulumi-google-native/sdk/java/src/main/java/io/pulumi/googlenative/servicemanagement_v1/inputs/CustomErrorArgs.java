@@ -80,22 +80,24 @@ public final class CustomErrorArgs extends io.pulumi.resources.ResourceArgs {
             this.rules = rules;
             return this;
         }
-
         public Builder rules(@Nullable List<CustomErrorRuleArgs> rules) {
             this.rules = Output.ofNullable(rules);
             return this;
         }
-
+        public Builder rules(CustomErrorRuleArgs... rules) {
+            return rules(List.of(rules));
+        }
         public Builder types(@Nullable Output<List<String>> types) {
             this.types = types;
             return this;
         }
-
         public Builder types(@Nullable List<String> types) {
             this.types = Output.ofNullable(types);
             return this;
         }
-        public CustomErrorArgs build() {
+        public Builder types(String... types) {
+            return types(List.of(types));
+        }        public CustomErrorArgs build() {
             return new CustomErrorArgs(rules, types);
         }
     }

@@ -61,12 +61,10 @@ public final class LoggingConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.componentConfig = componentConfig;
             return this;
         }
-
         public Builder componentConfig(@Nullable LoggingComponentConfigArgs componentConfig) {
             this.componentConfig = Output.ofNullable(componentConfig);
             return this;
-        }
-        public LoggingConfigArgs build() {
+        }        public LoggingConfigArgs build() {
             return new LoggingConfigArgs(componentConfig);
         }
     }

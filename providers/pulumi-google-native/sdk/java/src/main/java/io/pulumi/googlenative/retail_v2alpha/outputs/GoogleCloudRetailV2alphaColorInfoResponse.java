@@ -70,12 +70,16 @@ public final class GoogleCloudRetailV2alphaColorInfoResponse {
             this.colorFamilies = Objects.requireNonNull(colorFamilies);
             return this;
         }
-
+        public Builder colorFamilies(String... colorFamilies) {
+            return colorFamilies(List.of(colorFamilies));
+        }
         public Builder colors(List<String> colors) {
             this.colors = Objects.requireNonNull(colors);
             return this;
         }
-        public GoogleCloudRetailV2alphaColorInfoResponse build() {
+        public Builder colors(String... colors) {
+            return colors(List.of(colors));
+        }        public GoogleCloudRetailV2alphaColorInfoResponse build() {
             return new GoogleCloudRetailV2alphaColorInfoResponse(colorFamilies, colors);
         }
     }

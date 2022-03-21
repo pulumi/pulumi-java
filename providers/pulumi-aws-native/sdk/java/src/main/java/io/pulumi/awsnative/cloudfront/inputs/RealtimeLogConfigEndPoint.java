@@ -65,12 +65,10 @@ public final class RealtimeLogConfigEndPoint extends io.pulumi.resources.InvokeA
             this.kinesisStreamConfig = Objects.requireNonNull(kinesisStreamConfig);
             return this;
         }
-
         public Builder streamType(String streamType) {
             this.streamType = Objects.requireNonNull(streamType);
             return this;
-        }
-        public RealtimeLogConfigEndPoint build() {
+        }        public RealtimeLogConfigEndPoint build() {
             return new RealtimeLogConfigEndPoint(kinesisStreamConfig, streamType);
         }
     }

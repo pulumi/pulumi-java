@@ -62,12 +62,10 @@ public final class PatchInstanceFilterGroupLabelArgs extends io.pulumi.resources
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
-        }
-        public PatchInstanceFilterGroupLabelArgs build() {
+        }        public PatchInstanceFilterGroupLabelArgs build() {
             return new PatchInstanceFilterGroupLabelArgs(labels);
         }
     }

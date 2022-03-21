@@ -71,12 +71,10 @@ public final class CanaryArtifactConfigS3Encryption {
             this.encryptionMode = encryptionMode;
             return this;
         }
-
         public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
             this.kmsKeyArn = kmsKeyArn;
             return this;
-        }
-        public CanaryArtifactConfigS3Encryption build() {
+        }        public CanaryArtifactConfigS3Encryption build() {
             return new CanaryArtifactConfigS3Encryption(encryptionMode, kmsKeyArn);
         }
     }

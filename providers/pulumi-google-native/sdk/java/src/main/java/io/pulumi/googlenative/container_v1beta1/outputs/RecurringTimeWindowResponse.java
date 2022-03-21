@@ -70,12 +70,10 @@ public final class RecurringTimeWindowResponse {
             this.recurrence = Objects.requireNonNull(recurrence);
             return this;
         }
-
         public Builder window(TimeWindowResponse window) {
             this.window = Objects.requireNonNull(window);
             return this;
-        }
-        public RecurringTimeWindowResponse build() {
+        }        public RecurringTimeWindowResponse build() {
             return new RecurringTimeWindowResponse(recurrence, window);
         }
     }

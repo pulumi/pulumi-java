@@ -79,22 +79,18 @@ public final class GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigAr
             this.filter = filter;
             return this;
         }
-
         public Builder filter(@Nullable String filter) {
             this.filter = Output.ofNullable(filter);
             return this;
         }
-
         public Builder medium(@Nullable Output<GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigMedium> medium) {
             this.medium = medium;
             return this;
         }
-
         public Builder medium(@Nullable GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigMedium medium) {
             this.medium = Output.ofNullable(medium);
             return this;
-        }
-        public GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigArgs build() {
+        }        public GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigArgs build() {
             return new GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigArgs(filter, medium);
         }
     }

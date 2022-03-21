@@ -71,12 +71,10 @@ public final class InstanceTag {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public InstanceTag build() {
+        }        public InstanceTag build() {
             return new InstanceTag(key, value);
         }
     }

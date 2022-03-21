@@ -54,8 +54,7 @@ public final class GetDiagnosticSettingArgs extends io.pulumi.resources.InvokeAr
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public GetDiagnosticSettingArgs build() {
+        }        public GetDiagnosticSettingArgs build() {
             return new GetDiagnosticSettingArgs(name);
         }
     }

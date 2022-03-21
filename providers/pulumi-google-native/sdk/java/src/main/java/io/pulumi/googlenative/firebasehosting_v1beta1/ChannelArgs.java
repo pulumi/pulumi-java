@@ -160,82 +160,66 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
             this.channelId = Objects.requireNonNull(channelId);
             return this;
         }
-
         public Builder channelId(String channelId) {
             this.channelId = Output.of(Objects.requireNonNull(channelId));
             return this;
         }
-
         public Builder expireTime(@Nullable Output<String> expireTime) {
             this.expireTime = expireTime;
             return this;
         }
-
         public Builder expireTime(@Nullable String expireTime) {
             this.expireTime = Output.ofNullable(expireTime);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder retainedReleaseCount(@Nullable Output<Integer> retainedReleaseCount) {
             this.retainedReleaseCount = retainedReleaseCount;
             return this;
         }
-
         public Builder retainedReleaseCount(@Nullable Integer retainedReleaseCount) {
             this.retainedReleaseCount = Output.ofNullable(retainedReleaseCount);
             return this;
         }
-
         public Builder siteId(Output<String> siteId) {
             this.siteId = Objects.requireNonNull(siteId);
             return this;
         }
-
         public Builder siteId(String siteId) {
             this.siteId = Output.of(Objects.requireNonNull(siteId));
             return this;
         }
-
         public Builder ttl(@Nullable Output<String> ttl) {
             this.ttl = ttl;
             return this;
         }
-
         public Builder ttl(@Nullable String ttl) {
             this.ttl = Output.ofNullable(ttl);
             return this;
-        }
-        public ChannelArgs build() {
+        }        public ChannelArgs build() {
             return new ChannelArgs(channelId, expireTime, labels, name, project, retainedReleaseCount, siteId, ttl);
         }
     }

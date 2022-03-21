@@ -215,57 +215,55 @@ public final class GetSslPolicyResult {
             this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
             return this;
         }
-
         public Builder customFeatures(List<String> customFeatures) {
             this.customFeatures = Objects.requireNonNull(customFeatures);
             return this;
         }
-
+        public Builder customFeatures(String... customFeatures) {
+            return customFeatures(List.of(customFeatures));
+        }
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder enabledFeatures(List<String> enabledFeatures) {
             this.enabledFeatures = Objects.requireNonNull(enabledFeatures);
             return this;
         }
-
+        public Builder enabledFeatures(String... enabledFeatures) {
+            return enabledFeatures(List.of(enabledFeatures));
+        }
         public Builder fingerprint(String fingerprint) {
             this.fingerprint = Objects.requireNonNull(fingerprint);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder minTlsVersion(String minTlsVersion) {
             this.minTlsVersion = Objects.requireNonNull(minTlsVersion);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder profile(String profile) {
             this.profile = Objects.requireNonNull(profile);
             return this;
         }
-
         public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
-
         public Builder warnings(List<SslPolicyWarningsItemResponse> warnings) {
             this.warnings = Objects.requireNonNull(warnings);
             return this;
         }
-        public GetSslPolicyResult build() {
+        public Builder warnings(SslPolicyWarningsItemResponse... warnings) {
+            return warnings(List.of(warnings));
+        }        public GetSslPolicyResult build() {
             return new GetSslPolicyResult(creationTimestamp, customFeatures, description, enabledFeatures, fingerprint, kind, minTlsVersion, name, profile, selfLink, warnings);
         }
     }

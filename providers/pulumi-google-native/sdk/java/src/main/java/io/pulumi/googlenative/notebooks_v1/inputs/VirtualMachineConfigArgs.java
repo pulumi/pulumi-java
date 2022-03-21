@@ -263,132 +263,112 @@ public final class VirtualMachineConfigArgs extends io.pulumi.resources.Resource
             this.acceleratorConfig = acceleratorConfig;
             return this;
         }
-
         public Builder acceleratorConfig(@Nullable RuntimeAcceleratorConfigArgs acceleratorConfig) {
             this.acceleratorConfig = Output.ofNullable(acceleratorConfig);
             return this;
         }
-
         public Builder containerImages(@Nullable Output<List<ContainerImageArgs>> containerImages) {
             this.containerImages = containerImages;
             return this;
         }
-
         public Builder containerImages(@Nullable List<ContainerImageArgs> containerImages) {
             this.containerImages = Output.ofNullable(containerImages);
             return this;
         }
-
+        public Builder containerImages(ContainerImageArgs... containerImages) {
+            return containerImages(List.of(containerImages));
+        }
         public Builder dataDisk(Output<LocalDiskArgs> dataDisk) {
             this.dataDisk = Objects.requireNonNull(dataDisk);
             return this;
         }
-
         public Builder dataDisk(LocalDiskArgs dataDisk) {
             this.dataDisk = Output.of(Objects.requireNonNull(dataDisk));
             return this;
         }
-
         public Builder encryptionConfig(@Nullable Output<EncryptionConfigArgs> encryptionConfig) {
             this.encryptionConfig = encryptionConfig;
             return this;
         }
-
         public Builder encryptionConfig(@Nullable EncryptionConfigArgs encryptionConfig) {
             this.encryptionConfig = Output.ofNullable(encryptionConfig);
             return this;
         }
-
         public Builder internalIpOnly(@Nullable Output<Boolean> internalIpOnly) {
             this.internalIpOnly = internalIpOnly;
             return this;
         }
-
         public Builder internalIpOnly(@Nullable Boolean internalIpOnly) {
             this.internalIpOnly = Output.ofNullable(internalIpOnly);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder machineType(Output<String> machineType) {
             this.machineType = Objects.requireNonNull(machineType);
             return this;
         }
-
         public Builder machineType(String machineType) {
             this.machineType = Output.of(Objects.requireNonNull(machineType));
             return this;
         }
-
         public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder metadata(@Nullable Map<String,String> metadata) {
             this.metadata = Output.ofNullable(metadata);
             return this;
         }
-
         public Builder network(@Nullable Output<String> network) {
             this.network = network;
             return this;
         }
-
         public Builder network(@Nullable String network) {
             this.network = Output.ofNullable(network);
             return this;
         }
-
         public Builder nicType(@Nullable Output<VirtualMachineConfigNicType> nicType) {
             this.nicType = nicType;
             return this;
         }
-
         public Builder nicType(@Nullable VirtualMachineConfigNicType nicType) {
             this.nicType = Output.ofNullable(nicType);
             return this;
         }
-
         public Builder shieldedInstanceConfig(@Nullable Output<RuntimeShieldedInstanceConfigArgs> shieldedInstanceConfig) {
             this.shieldedInstanceConfig = shieldedInstanceConfig;
             return this;
         }
-
         public Builder shieldedInstanceConfig(@Nullable RuntimeShieldedInstanceConfigArgs shieldedInstanceConfig) {
             this.shieldedInstanceConfig = Output.ofNullable(shieldedInstanceConfig);
             return this;
         }
-
         public Builder subnet(@Nullable Output<String> subnet) {
             this.subnet = subnet;
             return this;
         }
-
         public Builder subnet(@Nullable String subnet) {
             this.subnet = Output.ofNullable(subnet);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public VirtualMachineConfigArgs build() {
+        public Builder tags(String... tags) {
+            return tags(List.of(tags));
+        }        public VirtualMachineConfigArgs build() {
             return new VirtualMachineConfigArgs(acceleratorConfig, containerImages, dataDisk, encryptionConfig, internalIpOnly, labels, machineType, metadata, network, nicType, shieldedInstanceConfig, subnet, tags);
         }
     }

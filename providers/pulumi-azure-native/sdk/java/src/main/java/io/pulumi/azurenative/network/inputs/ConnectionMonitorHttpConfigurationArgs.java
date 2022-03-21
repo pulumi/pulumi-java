@@ -148,62 +148,56 @@ public final class ConnectionMonitorHttpConfigurationArgs extends io.pulumi.reso
             this.method = method;
             return this;
         }
-
         public Builder method(@Nullable Either<String,HTTPConfigurationMethod> method) {
             this.method = Output.ofNullable(method);
             return this;
         }
-
         public Builder path(@Nullable Output<String> path) {
             this.path = path;
             return this;
         }
-
         public Builder path(@Nullable String path) {
             this.path = Output.ofNullable(path);
             return this;
         }
-
         public Builder port(@Nullable Output<Integer> port) {
             this.port = port;
             return this;
         }
-
         public Builder port(@Nullable Integer port) {
             this.port = Output.ofNullable(port);
             return this;
         }
-
         public Builder preferHTTPS(@Nullable Output<Boolean> preferHTTPS) {
             this.preferHTTPS = preferHTTPS;
             return this;
         }
-
         public Builder preferHTTPS(@Nullable Boolean preferHTTPS) {
             this.preferHTTPS = Output.ofNullable(preferHTTPS);
             return this;
         }
-
         public Builder requestHeaders(@Nullable Output<List<HTTPHeaderArgs>> requestHeaders) {
             this.requestHeaders = requestHeaders;
             return this;
         }
-
         public Builder requestHeaders(@Nullable List<HTTPHeaderArgs> requestHeaders) {
             this.requestHeaders = Output.ofNullable(requestHeaders);
             return this;
         }
-
+        public Builder requestHeaders(HTTPHeaderArgs... requestHeaders) {
+            return requestHeaders(List.of(requestHeaders));
+        }
         public Builder validStatusCodeRanges(@Nullable Output<List<String>> validStatusCodeRanges) {
             this.validStatusCodeRanges = validStatusCodeRanges;
             return this;
         }
-
         public Builder validStatusCodeRanges(@Nullable List<String> validStatusCodeRanges) {
             this.validStatusCodeRanges = Output.ofNullable(validStatusCodeRanges);
             return this;
         }
-        public ConnectionMonitorHttpConfigurationArgs build() {
+        public Builder validStatusCodeRanges(String... validStatusCodeRanges) {
+            return validStatusCodeRanges(List.of(validStatusCodeRanges));
+        }        public ConnectionMonitorHttpConfigurationArgs build() {
             return new ConnectionMonitorHttpConfigurationArgs(method, path, port, preferHTTPS, requestHeaders, validStatusCodeRanges);
         }
     }

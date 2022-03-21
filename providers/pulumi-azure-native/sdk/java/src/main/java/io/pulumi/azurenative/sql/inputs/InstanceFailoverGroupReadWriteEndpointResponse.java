@@ -79,12 +79,10 @@ public final class InstanceFailoverGroupReadWriteEndpointResponse extends io.pul
             this.failoverPolicy = Objects.requireNonNull(failoverPolicy);
             return this;
         }
-
         public Builder failoverWithDataLossGracePeriodMinutes(@Nullable Integer failoverWithDataLossGracePeriodMinutes) {
             this.failoverWithDataLossGracePeriodMinutes = failoverWithDataLossGracePeriodMinutes;
             return this;
-        }
-        public InstanceFailoverGroupReadWriteEndpointResponse build() {
+        }        public InstanceFailoverGroupReadWriteEndpointResponse build() {
             return new InstanceFailoverGroupReadWriteEndpointResponse(failoverPolicy, failoverWithDataLossGracePeriodMinutes);
         }
     }

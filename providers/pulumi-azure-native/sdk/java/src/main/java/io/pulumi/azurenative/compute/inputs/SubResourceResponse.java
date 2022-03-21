@@ -56,8 +56,7 @@ public final class SubResourceResponse extends io.pulumi.resources.InvokeArgs {
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
-        }
-        public SubResourceResponse build() {
+        }        public SubResourceResponse build() {
             return new SubResourceResponse(id);
         }
     }

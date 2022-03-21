@@ -168,92 +168,74 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
             this.certificateAuthorityId = Objects.requireNonNull(certificateAuthorityId);
             return this;
         }
-
         public Builder certificateAuthorityId(String certificateAuthorityId) {
             this.certificateAuthorityId = Output.of(Objects.requireNonNull(certificateAuthorityId));
             return this;
         }
-
         public Builder certificateId(@Nullable Output<String> certificateId) {
             this.certificateId = certificateId;
             return this;
         }
-
         public Builder certificateId(@Nullable String certificateId) {
             this.certificateId = Output.ofNullable(certificateId);
             return this;
         }
-
         public Builder config(@Nullable Output<CertificateConfigArgs> config) {
             this.config = config;
             return this;
         }
-
         public Builder config(@Nullable CertificateConfigArgs config) {
             this.config = Output.ofNullable(config);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder lifetime(Output<String> lifetime) {
             this.lifetime = Objects.requireNonNull(lifetime);
             return this;
         }
-
         public Builder lifetime(String lifetime) {
             this.lifetime = Output.of(Objects.requireNonNull(lifetime));
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder pemCsr(@Nullable Output<String> pemCsr) {
             this.pemCsr = pemCsr;
             return this;
         }
-
         public Builder pemCsr(@Nullable String pemCsr) {
             this.pemCsr = Output.ofNullable(pemCsr);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder requestId(@Nullable Output<String> requestId) {
             this.requestId = requestId;
             return this;
         }
-
         public Builder requestId(@Nullable String requestId) {
             this.requestId = Output.ofNullable(requestId);
             return this;
-        }
-        public CertificateArgs build() {
+        }        public CertificateArgs build() {
             return new CertificateArgs(certificateAuthorityId, certificateId, config, labels, lifetime, location, pemCsr, project, requestId);
         }
     }

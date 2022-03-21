@@ -88,22 +88,21 @@ public final class CertificateReferenceResponse {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder storeLocation(@Nullable String storeLocation) {
             this.storeLocation = storeLocation;
             return this;
         }
-
         public Builder storeName(@Nullable String storeName) {
             this.storeName = storeName;
             return this;
         }
-
         public Builder visibility(@Nullable List<String> visibility) {
             this.visibility = visibility;
             return this;
         }
-        public CertificateReferenceResponse build() {
+        public Builder visibility(String... visibility) {
+            return visibility(List.of(visibility));
+        }        public CertificateReferenceResponse build() {
             return new CertificateReferenceResponse(id, storeLocation, storeName, visibility);
         }
     }

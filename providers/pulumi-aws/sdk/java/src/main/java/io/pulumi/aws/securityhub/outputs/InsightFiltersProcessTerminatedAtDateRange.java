@@ -70,12 +70,10 @@ public final class InsightFiltersProcessTerminatedAtDateRange {
             this.unit = Objects.requireNonNull(unit);
             return this;
         }
-
         public Builder value(Integer value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public InsightFiltersProcessTerminatedAtDateRange build() {
+        }        public InsightFiltersProcessTerminatedAtDateRange build() {
             return new InsightFiltersProcessTerminatedAtDateRange(unit, value);
         }
     }

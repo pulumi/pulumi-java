@@ -137,32 +137,29 @@ public final class ReplicaSetStatus {
             this.availableReplicas = availableReplicas;
             return this;
         }
-
         public Builder conditions(@Nullable List<ReplicaSetCondition> conditions) {
             this.conditions = conditions;
             return this;
         }
-
+        public Builder conditions(ReplicaSetCondition... conditions) {
+            return conditions(List.of(conditions));
+        }
         public Builder fullyLabeledReplicas(@Nullable Integer fullyLabeledReplicas) {
             this.fullyLabeledReplicas = fullyLabeledReplicas;
             return this;
         }
-
         public Builder observedGeneration(@Nullable Integer observedGeneration) {
             this.observedGeneration = observedGeneration;
             return this;
         }
-
         public Builder readyReplicas(@Nullable Integer readyReplicas) {
             this.readyReplicas = readyReplicas;
             return this;
         }
-
         public Builder replicas(Integer replicas) {
             this.replicas = Objects.requireNonNull(replicas);
             return this;
-        }
-        public ReplicaSetStatus build() {
+        }        public ReplicaSetStatus build() {
             return new ReplicaSetStatus(availableReplicas, conditions, fullyLabeledReplicas, observedGeneration, readyReplicas, replicas);
         }
     }

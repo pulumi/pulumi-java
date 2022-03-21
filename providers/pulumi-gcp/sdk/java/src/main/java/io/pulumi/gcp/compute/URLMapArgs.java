@@ -228,102 +228,91 @@ public final class URLMapArgs extends io.pulumi.resources.ResourceArgs {
             this.defaultRouteAction = defaultRouteAction;
             return this;
         }
-
         public Builder defaultRouteAction(@Nullable URLMapDefaultRouteActionArgs defaultRouteAction) {
             this.defaultRouteAction = Output.ofNullable(defaultRouteAction);
             return this;
         }
-
         public Builder defaultService(@Nullable Output<String> defaultService) {
             this.defaultService = defaultService;
             return this;
         }
-
         public Builder defaultService(@Nullable String defaultService) {
             this.defaultService = Output.ofNullable(defaultService);
             return this;
         }
-
         public Builder defaultUrlRedirect(@Nullable Output<URLMapDefaultUrlRedirectArgs> defaultUrlRedirect) {
             this.defaultUrlRedirect = defaultUrlRedirect;
             return this;
         }
-
         public Builder defaultUrlRedirect(@Nullable URLMapDefaultUrlRedirectArgs defaultUrlRedirect) {
             this.defaultUrlRedirect = Output.ofNullable(defaultUrlRedirect);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder headerAction(@Nullable Output<URLMapHeaderActionArgs> headerAction) {
             this.headerAction = headerAction;
             return this;
         }
-
         public Builder headerAction(@Nullable URLMapHeaderActionArgs headerAction) {
             this.headerAction = Output.ofNullable(headerAction);
             return this;
         }
-
         public Builder hostRules(@Nullable Output<List<URLMapHostRuleArgs>> hostRules) {
             this.hostRules = hostRules;
             return this;
         }
-
         public Builder hostRules(@Nullable List<URLMapHostRuleArgs> hostRules) {
             this.hostRules = Output.ofNullable(hostRules);
             return this;
         }
-
+        public Builder hostRules(URLMapHostRuleArgs... hostRules) {
+            return hostRules(List.of(hostRules));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder pathMatchers(@Nullable Output<List<URLMapPathMatcherArgs>> pathMatchers) {
             this.pathMatchers = pathMatchers;
             return this;
         }
-
         public Builder pathMatchers(@Nullable List<URLMapPathMatcherArgs> pathMatchers) {
             this.pathMatchers = Output.ofNullable(pathMatchers);
             return this;
         }
-
+        public Builder pathMatchers(URLMapPathMatcherArgs... pathMatchers) {
+            return pathMatchers(List.of(pathMatchers));
+        }
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder tests(@Nullable Output<List<URLMapTestArgs>> tests) {
             this.tests = tests;
             return this;
         }
-
         public Builder tests(@Nullable List<URLMapTestArgs> tests) {
             this.tests = Output.ofNullable(tests);
             return this;
         }
-        public URLMapArgs build() {
+        public Builder tests(URLMapTestArgs... tests) {
+            return tests(List.of(tests));
+        }        public URLMapArgs build() {
             return new URLMapArgs(defaultRouteAction, defaultService, defaultUrlRedirect, description, headerAction, hostRules, name, pathMatchers, project, tests);
         }
     }

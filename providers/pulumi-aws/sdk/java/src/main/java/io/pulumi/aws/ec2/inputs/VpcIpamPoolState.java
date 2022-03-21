@@ -326,182 +326,146 @@ public final class VpcIpamPoolState extends io.pulumi.resources.ResourceArgs {
             this.addressFamily = addressFamily;
             return this;
         }
-
         public Builder addressFamily(@Nullable String addressFamily) {
             this.addressFamily = Output.ofNullable(addressFamily);
             return this;
         }
-
         public Builder allocationDefaultNetmaskLength(@Nullable Output<Integer> allocationDefaultNetmaskLength) {
             this.allocationDefaultNetmaskLength = allocationDefaultNetmaskLength;
             return this;
         }
-
         public Builder allocationDefaultNetmaskLength(@Nullable Integer allocationDefaultNetmaskLength) {
             this.allocationDefaultNetmaskLength = Output.ofNullable(allocationDefaultNetmaskLength);
             return this;
         }
-
         public Builder allocationMaxNetmaskLength(@Nullable Output<Integer> allocationMaxNetmaskLength) {
             this.allocationMaxNetmaskLength = allocationMaxNetmaskLength;
             return this;
         }
-
         public Builder allocationMaxNetmaskLength(@Nullable Integer allocationMaxNetmaskLength) {
             this.allocationMaxNetmaskLength = Output.ofNullable(allocationMaxNetmaskLength);
             return this;
         }
-
         public Builder allocationMinNetmaskLength(@Nullable Output<Integer> allocationMinNetmaskLength) {
             this.allocationMinNetmaskLength = allocationMinNetmaskLength;
             return this;
         }
-
         public Builder allocationMinNetmaskLength(@Nullable Integer allocationMinNetmaskLength) {
             this.allocationMinNetmaskLength = Output.ofNullable(allocationMinNetmaskLength);
             return this;
         }
-
         public Builder allocationResourceTags(@Nullable Output<Map<String,String>> allocationResourceTags) {
             this.allocationResourceTags = allocationResourceTags;
             return this;
         }
-
         public Builder allocationResourceTags(@Nullable Map<String,String> allocationResourceTags) {
             this.allocationResourceTags = Output.ofNullable(allocationResourceTags);
             return this;
         }
-
         public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder autoImport(@Nullable Output<Boolean> autoImport) {
             this.autoImport = autoImport;
             return this;
         }
-
         public Builder autoImport(@Nullable Boolean autoImport) {
             this.autoImport = Output.ofNullable(autoImport);
             return this;
         }
-
         public Builder awsService(@Nullable Output<String> awsService) {
             this.awsService = awsService;
             return this;
         }
-
         public Builder awsService(@Nullable String awsService) {
             this.awsService = Output.ofNullable(awsService);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder ipamScopeId(@Nullable Output<String> ipamScopeId) {
             this.ipamScopeId = ipamScopeId;
             return this;
         }
-
         public Builder ipamScopeId(@Nullable String ipamScopeId) {
             this.ipamScopeId = Output.ofNullable(ipamScopeId);
             return this;
         }
-
         public Builder ipamScopeType(@Nullable Output<String> ipamScopeType) {
             this.ipamScopeType = ipamScopeType;
             return this;
         }
-
         public Builder ipamScopeType(@Nullable String ipamScopeType) {
             this.ipamScopeType = Output.ofNullable(ipamScopeType);
             return this;
         }
-
         public Builder locale(@Nullable Output<String> locale) {
             this.locale = locale;
             return this;
         }
-
         public Builder locale(@Nullable String locale) {
             this.locale = Output.ofNullable(locale);
             return this;
         }
-
         public Builder poolDepth(@Nullable Output<Integer> poolDepth) {
             this.poolDepth = poolDepth;
             return this;
         }
-
         public Builder poolDepth(@Nullable Integer poolDepth) {
             this.poolDepth = Output.ofNullable(poolDepth);
             return this;
         }
-
         public Builder publiclyAdvertisable(@Nullable Output<Boolean> publiclyAdvertisable) {
             this.publiclyAdvertisable = publiclyAdvertisable;
             return this;
         }
-
         public Builder publiclyAdvertisable(@Nullable Boolean publiclyAdvertisable) {
             this.publiclyAdvertisable = Output.ofNullable(publiclyAdvertisable);
             return this;
         }
-
         public Builder sourceIpamPoolId(@Nullable Output<String> sourceIpamPoolId) {
             this.sourceIpamPoolId = sourceIpamPoolId;
             return this;
         }
-
         public Builder sourceIpamPoolId(@Nullable String sourceIpamPoolId) {
             this.sourceIpamPoolId = Output.ofNullable(sourceIpamPoolId);
             return this;
         }
-
         public Builder state(@Nullable Output<String> state) {
             this.state = state;
             return this;
         }
-
         public Builder state(@Nullable String state) {
             this.state = Output.ofNullable(state);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
-        }
-        public VpcIpamPoolState build() {
+        }        public VpcIpamPoolState build() {
             return new VpcIpamPoolState(addressFamily, allocationDefaultNetmaskLength, allocationMaxNetmaskLength, allocationMinNetmaskLength, allocationResourceTags, arn, autoImport, awsService, description, ipamScopeId, ipamScopeType, locale, poolDepth, publiclyAdvertisable, sourceIpamPoolId, state, tags, tagsAll);
         }
     }

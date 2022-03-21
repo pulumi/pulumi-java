@@ -122,27 +122,31 @@ public final class GetBackendServiceIamPolicyResult {
             this.auditConfigs = Objects.requireNonNull(auditConfigs);
             return this;
         }
-
+        public Builder auditConfigs(AuditConfigResponse... auditConfigs) {
+            return auditConfigs(List.of(auditConfigs));
+        }
         public Builder bindings(List<BindingResponse> bindings) {
             this.bindings = Objects.requireNonNull(bindings);
             return this;
         }
-
+        public Builder bindings(BindingResponse... bindings) {
+            return bindings(List.of(bindings));
+        }
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder rules(List<RuleResponse> rules) {
             this.rules = Objects.requireNonNull(rules);
             return this;
         }
-
+        public Builder rules(RuleResponse... rules) {
+            return rules(List.of(rules));
+        }
         public Builder version(Integer version) {
             this.version = Objects.requireNonNull(version);
             return this;
-        }
-        public GetBackendServiceIamPolicyResult build() {
+        }        public GetBackendServiceIamPolicyResult build() {
             return new GetBackendServiceIamPolicyResult(auditConfigs, bindings, etag, rules, version);
         }
     }

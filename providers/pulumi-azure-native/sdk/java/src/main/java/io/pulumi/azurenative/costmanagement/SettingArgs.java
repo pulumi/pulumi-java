@@ -108,42 +108,37 @@ public final class SettingArgs extends io.pulumi.resources.ResourceArgs {
             this.cache = cache;
             return this;
         }
-
         public Builder cache(@Nullable List<SettingsPropertiesCacheArgs> cache) {
             this.cache = Output.ofNullable(cache);
             return this;
         }
-
+        public Builder cache(SettingsPropertiesCacheArgs... cache) {
+            return cache(List.of(cache));
+        }
         public Builder scope(Output<String> scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
-
         public Builder scope(String scope) {
             this.scope = Output.of(Objects.requireNonNull(scope));
             return this;
         }
-
         public Builder settingName(@Nullable Output<String> settingName) {
             this.settingName = settingName;
             return this;
         }
-
         public Builder settingName(@Nullable String settingName) {
             this.settingName = Output.ofNullable(settingName);
             return this;
         }
-
         public Builder startOn(@Nullable Output<String> startOn) {
             this.startOn = startOn;
             return this;
         }
-
         public Builder startOn(@Nullable String startOn) {
             this.startOn = Output.ofNullable(startOn);
             return this;
-        }
-        public SettingArgs build() {
+        }        public SettingArgs build() {
             return new SettingArgs(cache, scope, settingName, startOn);
         }
     }

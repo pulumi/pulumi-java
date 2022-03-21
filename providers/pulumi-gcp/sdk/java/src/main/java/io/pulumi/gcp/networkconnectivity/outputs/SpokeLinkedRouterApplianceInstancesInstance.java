@@ -71,12 +71,10 @@ public final class SpokeLinkedRouterApplianceInstancesInstance {
             this.ipAddress = ipAddress;
             return this;
         }
-
         public Builder virtualMachine(@Nullable String virtualMachine) {
             this.virtualMachine = virtualMachine;
             return this;
-        }
-        public SpokeLinkedRouterApplianceInstancesInstance build() {
+        }        public SpokeLinkedRouterApplianceInstancesInstance build() {
             return new SpokeLinkedRouterApplianceInstancesInstance(ipAddress, virtualMachine);
         }
     }

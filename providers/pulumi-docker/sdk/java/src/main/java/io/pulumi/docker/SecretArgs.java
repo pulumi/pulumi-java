@@ -92,32 +92,29 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
             this.data = Objects.requireNonNull(data);
             return this;
         }
-
         public Builder data(String data) {
             this.data = Output.of(Objects.requireNonNull(data));
             return this;
         }
-
         public Builder labels(@Nullable Output<List<SecretLabelArgs>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable List<SecretLabelArgs> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
+        public Builder labels(SecretLabelArgs... labels) {
+            return labels(List.of(labels));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
-        }
-        public SecretArgs build() {
+        }        public SecretArgs build() {
             return new SecretArgs(data, labels, name);
         }
     }

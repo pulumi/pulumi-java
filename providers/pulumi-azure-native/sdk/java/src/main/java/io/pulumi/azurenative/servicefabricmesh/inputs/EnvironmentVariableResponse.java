@@ -78,12 +78,10 @@ public final class EnvironmentVariableResponse extends io.pulumi.resources.Invok
             this.name = name;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public EnvironmentVariableResponse build() {
+        }        public EnvironmentVariableResponse build() {
             return new EnvironmentVariableResponse(name, value);
         }
     }

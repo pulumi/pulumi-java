@@ -57,12 +57,10 @@ public final class VirtualServiceSpecArgs extends io.pulumi.resources.ResourceAr
             this.provider = provider;
             return this;
         }
-
         public Builder provider(@Nullable VirtualServiceSpecProviderArgs provider) {
             this.provider = Output.ofNullable(provider);
             return this;
-        }
-        public VirtualServiceSpecArgs build() {
+        }        public VirtualServiceSpecArgs build() {
             return new VirtualServiceSpecArgs(provider);
         }
     }

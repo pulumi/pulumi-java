@@ -60,8 +60,7 @@ public final class PersonalComputeInstanceSettingsResponse extends io.pulumi.res
         public Builder assignedUser(@Nullable AssignedUserResponse assignedUser) {
             this.assignedUser = assignedUser;
             return this;
-        }
-        public PersonalComputeInstanceSettingsResponse build() {
+        }        public PersonalComputeInstanceSettingsResponse build() {
             return new PersonalComputeInstanceSettingsResponse(assignedUser);
         }
     }

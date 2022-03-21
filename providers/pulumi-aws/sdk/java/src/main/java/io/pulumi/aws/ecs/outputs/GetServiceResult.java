@@ -150,42 +150,34 @@ public final class GetServiceResult {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder clusterArn(String clusterArn) {
             this.clusterArn = Objects.requireNonNull(clusterArn);
             return this;
         }
-
         public Builder desiredCount(Integer desiredCount) {
             this.desiredCount = Objects.requireNonNull(desiredCount);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder launchType(String launchType) {
             this.launchType = Objects.requireNonNull(launchType);
             return this;
         }
-
         public Builder schedulingStrategy(String schedulingStrategy) {
             this.schedulingStrategy = Objects.requireNonNull(schedulingStrategy);
             return this;
         }
-
         public Builder serviceName(String serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
-
         public Builder taskDefinition(String taskDefinition) {
             this.taskDefinition = Objects.requireNonNull(taskDefinition);
             return this;
-        }
-        public GetServiceResult build() {
+        }        public GetServiceResult build() {
             return new GetServiceResult(arn, clusterArn, desiredCount, id, launchType, schedulingStrategy, serviceName, taskDefinition);
         }
     }

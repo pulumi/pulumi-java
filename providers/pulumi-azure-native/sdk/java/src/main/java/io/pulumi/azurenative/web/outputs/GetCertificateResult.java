@@ -459,132 +459,109 @@ public final class GetCertificateResult {
             this.canonicalName = canonicalName;
             return this;
         }
-
         public Builder cerBlob(String cerBlob) {
             this.cerBlob = Objects.requireNonNull(cerBlob);
             return this;
         }
-
         public Builder domainValidationMethod(@Nullable String domainValidationMethod) {
             this.domainValidationMethod = domainValidationMethod;
             return this;
         }
-
         public Builder expirationDate(String expirationDate) {
             this.expirationDate = Objects.requireNonNull(expirationDate);
             return this;
         }
-
         public Builder friendlyName(String friendlyName) {
             this.friendlyName = Objects.requireNonNull(friendlyName);
             return this;
         }
-
         public Builder hostNames(@Nullable List<String> hostNames) {
             this.hostNames = hostNames;
             return this;
         }
-
+        public Builder hostNames(String... hostNames) {
+            return hostNames(List.of(hostNames));
+        }
         public Builder hostingEnvironmentProfile(HostingEnvironmentProfileResponse hostingEnvironmentProfile) {
             this.hostingEnvironmentProfile = Objects.requireNonNull(hostingEnvironmentProfile);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder issueDate(String issueDate) {
             this.issueDate = Objects.requireNonNull(issueDate);
             return this;
         }
-
         public Builder issuer(String issuer) {
             this.issuer = Objects.requireNonNull(issuer);
             return this;
         }
-
         public Builder keyVaultId(@Nullable String keyVaultId) {
             this.keyVaultId = keyVaultId;
             return this;
         }
-
         public Builder keyVaultSecretName(@Nullable String keyVaultSecretName) {
             this.keyVaultSecretName = keyVaultSecretName;
             return this;
         }
-
         public Builder keyVaultSecretStatus(String keyVaultSecretStatus) {
             this.keyVaultSecretStatus = Objects.requireNonNull(keyVaultSecretStatus);
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder pfxBlob(@Nullable String pfxBlob) {
             this.pfxBlob = pfxBlob;
             return this;
         }
-
         public Builder publicKeyHash(String publicKeyHash) {
             this.publicKeyHash = Objects.requireNonNull(publicKeyHash);
             return this;
         }
-
         public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
-
         public Builder serverFarmId(@Nullable String serverFarmId) {
             this.serverFarmId = serverFarmId;
             return this;
         }
-
         public Builder siteName(String siteName) {
             this.siteName = Objects.requireNonNull(siteName);
             return this;
         }
-
         public Builder subjectName(String subjectName) {
             this.subjectName = Objects.requireNonNull(subjectName);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder thumbprint(String thumbprint) {
             this.thumbprint = Objects.requireNonNull(thumbprint);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder valid(Boolean valid) {
             this.valid = Objects.requireNonNull(valid);
             return this;
-        }
-        public GetCertificateResult build() {
+        }        public GetCertificateResult build() {
             return new GetCertificateResult(canonicalName, cerBlob, domainValidationMethod, expirationDate, friendlyName, hostNames, hostingEnvironmentProfile, id, issueDate, issuer, keyVaultId, keyVaultSecretName, keyVaultSecretStatus, kind, location, name, pfxBlob, publicKeyHash, selfLink, serverFarmId, siteName, subjectName, tags, thumbprint, type, valid);
         }
     }

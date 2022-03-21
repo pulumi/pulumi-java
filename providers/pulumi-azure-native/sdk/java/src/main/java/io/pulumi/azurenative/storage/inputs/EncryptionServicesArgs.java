@@ -110,42 +110,34 @@ public final class EncryptionServicesArgs extends io.pulumi.resources.ResourceAr
             this.blob = blob;
             return this;
         }
-
         public Builder blob(@Nullable EncryptionServiceArgs blob) {
             this.blob = Output.ofNullable(blob);
             return this;
         }
-
         public Builder file(@Nullable Output<EncryptionServiceArgs> file) {
             this.file = file;
             return this;
         }
-
         public Builder file(@Nullable EncryptionServiceArgs file) {
             this.file = Output.ofNullable(file);
             return this;
         }
-
         public Builder queue(@Nullable Output<EncryptionServiceArgs> queue) {
             this.queue = queue;
             return this;
         }
-
         public Builder queue(@Nullable EncryptionServiceArgs queue) {
             this.queue = Output.ofNullable(queue);
             return this;
         }
-
         public Builder table(@Nullable Output<EncryptionServiceArgs> table) {
             this.table = table;
             return this;
         }
-
         public Builder table(@Nullable EncryptionServiceArgs table) {
             this.table = Output.ofNullable(table);
             return this;
-        }
-        public EncryptionServicesArgs build() {
+        }        public EncryptionServicesArgs build() {
             return new EncryptionServicesArgs(blob, file, queue, table);
         }
     }

@@ -75,22 +75,18 @@ public final class TransitGatewayPeeringAttachmentAccepterArgs extends io.pulumi
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder transitGatewayAttachmentId(Output<String> transitGatewayAttachmentId) {
             this.transitGatewayAttachmentId = Objects.requireNonNull(transitGatewayAttachmentId);
             return this;
         }
-
         public Builder transitGatewayAttachmentId(String transitGatewayAttachmentId) {
             this.transitGatewayAttachmentId = Output.of(Objects.requireNonNull(transitGatewayAttachmentId));
             return this;
-        }
-        public TransitGatewayPeeringAttachmentAccepterArgs build() {
+        }        public TransitGatewayPeeringAttachmentAccepterArgs build() {
             return new TransitGatewayPeeringAttachmentAccepterArgs(tags, transitGatewayAttachmentId);
         }
     }

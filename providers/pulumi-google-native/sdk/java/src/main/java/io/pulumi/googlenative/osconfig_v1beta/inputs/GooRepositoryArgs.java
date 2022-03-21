@@ -77,22 +77,18 @@ public final class GooRepositoryArgs extends io.pulumi.resources.ResourceArgs {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder url(Output<String> url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public Builder url(String url) {
             this.url = Output.of(Objects.requireNonNull(url));
             return this;
-        }
-        public GooRepositoryArgs build() {
+        }        public GooRepositoryArgs build() {
             return new GooRepositoryArgs(name, url);
         }
     }

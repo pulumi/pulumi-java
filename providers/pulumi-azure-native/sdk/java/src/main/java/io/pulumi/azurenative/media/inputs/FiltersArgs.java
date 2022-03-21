@@ -117,42 +117,37 @@ public final class FiltersArgs extends io.pulumi.resources.ResourceArgs {
             this.crop = crop;
             return this;
         }
-
         public Builder crop(@Nullable RectangleArgs crop) {
             this.crop = Output.ofNullable(crop);
             return this;
         }
-
         public Builder deinterlace(@Nullable Output<DeinterlaceArgs> deinterlace) {
             this.deinterlace = deinterlace;
             return this;
         }
-
         public Builder deinterlace(@Nullable DeinterlaceArgs deinterlace) {
             this.deinterlace = Output.ofNullable(deinterlace);
             return this;
         }
-
         public Builder overlays(@Nullable Output<List<Either<AudioOverlayArgs,VideoOverlayArgs>>> overlays) {
             this.overlays = overlays;
             return this;
         }
-
         public Builder overlays(@Nullable List<Either<AudioOverlayArgs,VideoOverlayArgs>> overlays) {
             this.overlays = Output.ofNullable(overlays);
             return this;
         }
-
+        public Builder overlays(Either<AudioOverlayArgs,VideoOverlayArgs>... overlays) {
+            return overlays(List.of(overlays));
+        }
         public Builder rotation(@Nullable Output<Either<String,Rotation>> rotation) {
             this.rotation = rotation;
             return this;
         }
-
         public Builder rotation(@Nullable Either<String,Rotation> rotation) {
             this.rotation = Output.ofNullable(rotation);
             return this;
-        }
-        public FiltersArgs build() {
+        }        public FiltersArgs build() {
             return new FiltersArgs(crop, deinterlace, overlays, rotation);
         }
     }

@@ -53,12 +53,10 @@ public final class EC2FleetCapacityReservationOptionsRequestArgs extends io.pulu
             this.usageStrategy = usageStrategy;
             return this;
         }
-
         public Builder usageStrategy(@Nullable EC2FleetCapacityReservationOptionsRequestUsageStrategy usageStrategy) {
             this.usageStrategy = Output.ofNullable(usageStrategy);
             return this;
-        }
-        public EC2FleetCapacityReservationOptionsRequestArgs build() {
+        }        public EC2FleetCapacityReservationOptionsRequestArgs build() {
             return new EC2FleetCapacityReservationOptionsRequestArgs(usageStrategy);
         }
     }

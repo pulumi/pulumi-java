@@ -109,42 +109,37 @@ public final class WebAclRuleStatementManagedRuleGroupStatementArgs extends io.p
             this.excludedRules = excludedRules;
             return this;
         }
-
         public Builder excludedRules(@Nullable List<WebAclRuleStatementManagedRuleGroupStatementExcludedRuleArgs> excludedRules) {
             this.excludedRules = Output.ofNullable(excludedRules);
             return this;
         }
-
+        public Builder excludedRules(WebAclRuleStatementManagedRuleGroupStatementExcludedRuleArgs... excludedRules) {
+            return excludedRules(List.of(excludedRules));
+        }
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder scopeDownStatement(@Nullable Output<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementArgs> scopeDownStatement) {
             this.scopeDownStatement = scopeDownStatement;
             return this;
         }
-
         public Builder scopeDownStatement(@Nullable WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementArgs scopeDownStatement) {
             this.scopeDownStatement = Output.ofNullable(scopeDownStatement);
             return this;
         }
-
         public Builder vendorName(Output<String> vendorName) {
             this.vendorName = Objects.requireNonNull(vendorName);
             return this;
         }
-
         public Builder vendorName(String vendorName) {
             this.vendorName = Output.of(Objects.requireNonNull(vendorName));
             return this;
-        }
-        public WebAclRuleStatementManagedRuleGroupStatementArgs build() {
+        }        public WebAclRuleStatementManagedRuleGroupStatementArgs build() {
             return new WebAclRuleStatementManagedRuleGroupStatementArgs(excludedRules, name, scopeDownStatement, vendorName);
         }
     }

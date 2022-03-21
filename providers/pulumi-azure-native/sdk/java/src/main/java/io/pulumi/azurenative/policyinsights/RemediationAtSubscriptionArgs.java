@@ -125,52 +125,42 @@ public final class RemediationAtSubscriptionArgs extends io.pulumi.resources.Res
             this.filters = filters;
             return this;
         }
-
         public Builder filters(@Nullable RemediationFiltersArgs filters) {
             this.filters = Output.ofNullable(filters);
             return this;
         }
-
         public Builder policyAssignmentId(@Nullable Output<String> policyAssignmentId) {
             this.policyAssignmentId = policyAssignmentId;
             return this;
         }
-
         public Builder policyAssignmentId(@Nullable String policyAssignmentId) {
             this.policyAssignmentId = Output.ofNullable(policyAssignmentId);
             return this;
         }
-
         public Builder policyDefinitionReferenceId(@Nullable Output<String> policyDefinitionReferenceId) {
             this.policyDefinitionReferenceId = policyDefinitionReferenceId;
             return this;
         }
-
         public Builder policyDefinitionReferenceId(@Nullable String policyDefinitionReferenceId) {
             this.policyDefinitionReferenceId = Output.ofNullable(policyDefinitionReferenceId);
             return this;
         }
-
         public Builder remediationName(@Nullable Output<String> remediationName) {
             this.remediationName = remediationName;
             return this;
         }
-
         public Builder remediationName(@Nullable String remediationName) {
             this.remediationName = Output.ofNullable(remediationName);
             return this;
         }
-
         public Builder resourceDiscoveryMode(@Nullable Output<Either<String,ResourceDiscoveryMode>> resourceDiscoveryMode) {
             this.resourceDiscoveryMode = resourceDiscoveryMode;
             return this;
         }
-
         public Builder resourceDiscoveryMode(@Nullable Either<String,ResourceDiscoveryMode> resourceDiscoveryMode) {
             this.resourceDiscoveryMode = Output.ofNullable(resourceDiscoveryMode);
             return this;
-        }
-        public RemediationAtSubscriptionArgs build() {
+        }        public RemediationAtSubscriptionArgs build() {
             return new RemediationAtSubscriptionArgs(filters, policyAssignmentId, policyDefinitionReferenceId, remediationName, resourceDiscoveryMode);
         }
     }

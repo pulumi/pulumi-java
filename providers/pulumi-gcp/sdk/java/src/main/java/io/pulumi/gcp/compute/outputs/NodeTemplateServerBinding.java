@@ -73,8 +73,7 @@ public final class NodeTemplateServerBinding {
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public NodeTemplateServerBinding build() {
+        }        public NodeTemplateServerBinding build() {
             return new NodeTemplateServerBinding(type);
         }
     }

@@ -107,22 +107,21 @@ public final class WebAclRuleStatementOrStatementStatementNotStatementStatementO
             this.comparisonOperator = Objects.requireNonNull(comparisonOperator);
             return this;
         }
-
         public Builder fieldToMatch(@Nullable WebAclRuleStatementOrStatementStatementNotStatementStatementOrStatementStatementSizeConstraintStatementFieldToMatch fieldToMatch) {
             this.fieldToMatch = fieldToMatch;
             return this;
         }
-
         public Builder size(Integer size) {
             this.size = Objects.requireNonNull(size);
             return this;
         }
-
         public Builder textTransformations(List<WebAclRuleStatementOrStatementStatementNotStatementStatementOrStatementStatementSizeConstraintStatementTextTransformation> textTransformations) {
             this.textTransformations = Objects.requireNonNull(textTransformations);
             return this;
         }
-        public WebAclRuleStatementOrStatementStatementNotStatementStatementOrStatementStatementSizeConstraintStatement build() {
+        public Builder textTransformations(WebAclRuleStatementOrStatementStatementNotStatementStatementOrStatementStatementSizeConstraintStatementTextTransformation... textTransformations) {
+            return textTransformations(List.of(textTransformations));
+        }        public WebAclRuleStatementOrStatementStatementNotStatementStatementOrStatementStatementSizeConstraintStatement build() {
             return new WebAclRuleStatementOrStatementStatementNotStatementStatementOrStatementStatementSizeConstraintStatement(comparisonOperator, fieldToMatch, size, textTransformations);
         }
     }

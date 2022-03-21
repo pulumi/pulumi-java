@@ -279,142 +279,117 @@ public final class VaultPropertiesArgs extends io.pulumi.resources.ResourceArgs 
             this.accessPolicies = accessPolicies;
             return this;
         }
-
         public Builder accessPolicies(@Nullable List<AccessPolicyEntryArgs> accessPolicies) {
             this.accessPolicies = Output.ofNullable(accessPolicies);
             return this;
         }
-
+        public Builder accessPolicies(AccessPolicyEntryArgs... accessPolicies) {
+            return accessPolicies(List.of(accessPolicies));
+        }
         public Builder createMode(@Nullable Output<CreateMode> createMode) {
             this.createMode = createMode;
             return this;
         }
-
         public Builder createMode(@Nullable CreateMode createMode) {
             this.createMode = Output.ofNullable(createMode);
             return this;
         }
-
         public Builder enablePurgeProtection(@Nullable Output<Boolean> enablePurgeProtection) {
             this.enablePurgeProtection = enablePurgeProtection;
             return this;
         }
-
         public Builder enablePurgeProtection(@Nullable Boolean enablePurgeProtection) {
             this.enablePurgeProtection = Output.ofNullable(enablePurgeProtection);
             return this;
         }
-
         public Builder enableRbacAuthorization(@Nullable Output<Boolean> enableRbacAuthorization) {
             this.enableRbacAuthorization = enableRbacAuthorization;
             return this;
         }
-
         public Builder enableRbacAuthorization(@Nullable Boolean enableRbacAuthorization) {
             this.enableRbacAuthorization = Output.ofNullable(enableRbacAuthorization);
             return this;
         }
-
         public Builder enableSoftDelete(@Nullable Output<Boolean> enableSoftDelete) {
             this.enableSoftDelete = enableSoftDelete;
             return this;
         }
-
         public Builder enableSoftDelete(@Nullable Boolean enableSoftDelete) {
             this.enableSoftDelete = Output.ofNullable(enableSoftDelete);
             return this;
         }
-
         public Builder enabledForDeployment(@Nullable Output<Boolean> enabledForDeployment) {
             this.enabledForDeployment = enabledForDeployment;
             return this;
         }
-
         public Builder enabledForDeployment(@Nullable Boolean enabledForDeployment) {
             this.enabledForDeployment = Output.ofNullable(enabledForDeployment);
             return this;
         }
-
         public Builder enabledForDiskEncryption(@Nullable Output<Boolean> enabledForDiskEncryption) {
             this.enabledForDiskEncryption = enabledForDiskEncryption;
             return this;
         }
-
         public Builder enabledForDiskEncryption(@Nullable Boolean enabledForDiskEncryption) {
             this.enabledForDiskEncryption = Output.ofNullable(enabledForDiskEncryption);
             return this;
         }
-
         public Builder enabledForTemplateDeployment(@Nullable Output<Boolean> enabledForTemplateDeployment) {
             this.enabledForTemplateDeployment = enabledForTemplateDeployment;
             return this;
         }
-
         public Builder enabledForTemplateDeployment(@Nullable Boolean enabledForTemplateDeployment) {
             this.enabledForTemplateDeployment = Output.ofNullable(enabledForTemplateDeployment);
             return this;
         }
-
         public Builder networkAcls(@Nullable Output<NetworkRuleSetArgs> networkAcls) {
             this.networkAcls = networkAcls;
             return this;
         }
-
         public Builder networkAcls(@Nullable NetworkRuleSetArgs networkAcls) {
             this.networkAcls = Output.ofNullable(networkAcls);
             return this;
         }
-
         public Builder provisioningState(@Nullable Output<Either<String,VaultProvisioningState>> provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
-
         public Builder provisioningState(@Nullable Either<String,VaultProvisioningState> provisioningState) {
             this.provisioningState = Output.ofNullable(provisioningState);
             return this;
         }
-
         public Builder sku(Output<SkuArgs> sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
-
         public Builder sku(SkuArgs sku) {
             this.sku = Output.of(Objects.requireNonNull(sku));
             return this;
         }
-
         public Builder softDeleteRetentionInDays(@Nullable Output<Integer> softDeleteRetentionInDays) {
             this.softDeleteRetentionInDays = softDeleteRetentionInDays;
             return this;
         }
-
         public Builder softDeleteRetentionInDays(@Nullable Integer softDeleteRetentionInDays) {
             this.softDeleteRetentionInDays = Output.ofNullable(softDeleteRetentionInDays);
             return this;
         }
-
         public Builder tenantId(Output<String> tenantId) {
             this.tenantId = Objects.requireNonNull(tenantId);
             return this;
         }
-
         public Builder tenantId(String tenantId) {
             this.tenantId = Output.of(Objects.requireNonNull(tenantId));
             return this;
         }
-
         public Builder vaultUri(@Nullable Output<String> vaultUri) {
             this.vaultUri = vaultUri;
             return this;
         }
-
         public Builder vaultUri(@Nullable String vaultUri) {
             this.vaultUri = Output.ofNullable(vaultUri);
             return this;
-        }
-        public VaultPropertiesArgs build() {
+        }        public VaultPropertiesArgs build() {
             return new VaultPropertiesArgs(accessPolicies, createMode, enablePurgeProtection, enableRbacAuthorization, enableSoftDelete, enabledForDeployment, enabledForDiskEncryption, enabledForTemplateDeployment, networkAcls, provisioningState, sku, softDeleteRetentionInDays, tenantId, vaultUri);
         }
     }

@@ -45,8 +45,7 @@ public final class DeliveryStreamOutputFormatConfiguration {
         public Builder serializer(@Nullable DeliveryStreamSerializer serializer) {
             this.serializer = serializer;
             return this;
-        }
-        public DeliveryStreamOutputFormatConfiguration build() {
+        }        public DeliveryStreamOutputFormatConfiguration build() {
             return new DeliveryStreamOutputFormatConfiguration(serializer);
         }
     }

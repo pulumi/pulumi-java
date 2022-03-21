@@ -155,72 +155,58 @@ public final class ConfigurationArgs extends io.pulumi.resources.ResourceArgs {
             this.authenticationStrategy = authenticationStrategy;
             return this;
         }
-
         public Builder authenticationStrategy(@Nullable String authenticationStrategy) {
             this.authenticationStrategy = Output.ofNullable(authenticationStrategy);
             return this;
         }
-
         public Builder data(Output<String> data) {
             this.data = Objects.requireNonNull(data);
             return this;
         }
-
         public Builder data(String data) {
             this.data = Output.of(Objects.requireNonNull(data));
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder engineType(Output<String> engineType) {
             this.engineType = Objects.requireNonNull(engineType);
             return this;
         }
-
         public Builder engineType(String engineType) {
             this.engineType = Output.of(Objects.requireNonNull(engineType));
             return this;
         }
-
         public Builder engineVersion(Output<String> engineVersion) {
             this.engineVersion = Objects.requireNonNull(engineVersion);
             return this;
         }
-
         public Builder engineVersion(String engineVersion) {
             this.engineVersion = Output.of(Objects.requireNonNull(engineVersion));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public ConfigurationArgs build() {
+        }        public ConfigurationArgs build() {
             return new ConfigurationArgs(authenticationStrategy, data, description, engineType, engineVersion, name, tags);
         }
     }

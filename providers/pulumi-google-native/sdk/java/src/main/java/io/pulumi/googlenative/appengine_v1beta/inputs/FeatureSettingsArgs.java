@@ -78,22 +78,18 @@ public final class FeatureSettingsArgs extends io.pulumi.resources.ResourceArgs 
             this.splitHealthChecks = splitHealthChecks;
             return this;
         }
-
         public Builder splitHealthChecks(@Nullable Boolean splitHealthChecks) {
             this.splitHealthChecks = Output.ofNullable(splitHealthChecks);
             return this;
         }
-
         public Builder useContainerOptimizedOs(@Nullable Output<Boolean> useContainerOptimizedOs) {
             this.useContainerOptimizedOs = useContainerOptimizedOs;
             return this;
         }
-
         public Builder useContainerOptimizedOs(@Nullable Boolean useContainerOptimizedOs) {
             this.useContainerOptimizedOs = Output.ofNullable(useContainerOptimizedOs);
             return this;
-        }
-        public FeatureSettingsArgs build() {
+        }        public FeatureSettingsArgs build() {
             return new FeatureSettingsArgs(splitHealthChecks, useContainerOptimizedOs);
         }
     }

@@ -75,22 +75,18 @@ public final class PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthArgs ext
             this.dayOfWeek = Objects.requireNonNull(dayOfWeek);
             return this;
         }
-
         public Builder dayOfWeek(String dayOfWeek) {
             this.dayOfWeek = Output.of(Objects.requireNonNull(dayOfWeek));
             return this;
         }
-
         public Builder weekOrdinal(Output<Integer> weekOrdinal) {
             this.weekOrdinal = Objects.requireNonNull(weekOrdinal);
             return this;
         }
-
         public Builder weekOrdinal(Integer weekOrdinal) {
             this.weekOrdinal = Output.of(Objects.requireNonNull(weekOrdinal));
             return this;
-        }
-        public PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthArgs build() {
+        }        public PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthArgs build() {
             return new PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthArgs(dayOfWeek, weekOrdinal);
         }
     }

@@ -57,12 +57,13 @@ public final class ClusterMonitoringConfigArgs extends io.pulumi.resources.Resou
             this.enableComponents = Objects.requireNonNull(enableComponents);
             return this;
         }
-
         public Builder enableComponents(List<String> enableComponents) {
             this.enableComponents = Output.of(Objects.requireNonNull(enableComponents));
             return this;
         }
-        public ClusterMonitoringConfigArgs build() {
+        public Builder enableComponents(String... enableComponents) {
+            return enableComponents(List.of(enableComponents));
+        }        public ClusterMonitoringConfigArgs build() {
             return new ClusterMonitoringConfigArgs(enableComponents);
         }
     }

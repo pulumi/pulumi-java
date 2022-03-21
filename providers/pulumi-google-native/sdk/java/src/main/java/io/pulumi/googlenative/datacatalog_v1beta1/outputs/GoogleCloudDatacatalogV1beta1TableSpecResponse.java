@@ -51,8 +51,7 @@ public final class GoogleCloudDatacatalogV1beta1TableSpecResponse {
         public Builder groupedEntry(String groupedEntry) {
             this.groupedEntry = Objects.requireNonNull(groupedEntry);
             return this;
-        }
-        public GoogleCloudDatacatalogV1beta1TableSpecResponse build() {
+        }        public GoogleCloudDatacatalogV1beta1TableSpecResponse build() {
             return new GoogleCloudDatacatalogV1beta1TableSpecResponse(groupedEntry);
         }
     }

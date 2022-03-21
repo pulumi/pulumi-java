@@ -102,32 +102,26 @@ public final class GetInstanceSerialPortResult {
             this.contents = Objects.requireNonNull(contents);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder instance(String instance) {
             this.instance = Objects.requireNonNull(instance);
             return this;
         }
-
         public Builder port(Integer port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
-
         public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
-
         public Builder zone(String zone) {
             this.zone = Objects.requireNonNull(zone);
             return this;
-        }
-        public GetInstanceSerialPortResult build() {
+        }        public GetInstanceSerialPortResult build() {
             return new GetInstanceSerialPortResult(contents, id, instance, port, project, zone);
         }
     }

@@ -247,67 +247,54 @@ public final class RouteTableRoute {
             this.carrierGatewayId = carrierGatewayId;
             return this;
         }
-
         public Builder cidrBlock(@Nullable String cidrBlock) {
             this.cidrBlock = cidrBlock;
             return this;
         }
-
         public Builder destinationPrefixListId(@Nullable String destinationPrefixListId) {
             this.destinationPrefixListId = destinationPrefixListId;
             return this;
         }
-
         public Builder egressOnlyGatewayId(@Nullable String egressOnlyGatewayId) {
             this.egressOnlyGatewayId = egressOnlyGatewayId;
             return this;
         }
-
         public Builder gatewayId(@Nullable String gatewayId) {
             this.gatewayId = gatewayId;
             return this;
         }
-
         public Builder instanceId(@Nullable String instanceId) {
             this.instanceId = instanceId;
             return this;
         }
-
         public Builder ipv6CidrBlock(@Nullable String ipv6CidrBlock) {
             this.ipv6CidrBlock = ipv6CidrBlock;
             return this;
         }
-
         public Builder localGatewayId(@Nullable String localGatewayId) {
             this.localGatewayId = localGatewayId;
             return this;
         }
-
         public Builder natGatewayId(@Nullable String natGatewayId) {
             this.natGatewayId = natGatewayId;
             return this;
         }
-
         public Builder networkInterfaceId(@Nullable String networkInterfaceId) {
             this.networkInterfaceId = networkInterfaceId;
             return this;
         }
-
         public Builder transitGatewayId(@Nullable String transitGatewayId) {
             this.transitGatewayId = transitGatewayId;
             return this;
         }
-
         public Builder vpcEndpointId(@Nullable String vpcEndpointId) {
             this.vpcEndpointId = vpcEndpointId;
             return this;
         }
-
         public Builder vpcPeeringConnectionId(@Nullable String vpcPeeringConnectionId) {
             this.vpcPeeringConnectionId = vpcPeeringConnectionId;
             return this;
-        }
-        public RouteTableRoute build() {
+        }        public RouteTableRoute build() {
             return new RouteTableRoute(carrierGatewayId, cidrBlock, destinationPrefixListId, egressOnlyGatewayId, gatewayId, instanceId, ipv6CidrBlock, localGatewayId, natGatewayId, networkInterfaceId, transitGatewayId, vpcEndpointId, vpcPeeringConnectionId);
         }
     }

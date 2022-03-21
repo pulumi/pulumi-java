@@ -92,17 +92,14 @@ public final class FollowerDatabaseDefinitionResponse extends io.pulumi.resource
             this.attachedDatabaseConfigurationName = Objects.requireNonNull(attachedDatabaseConfigurationName);
             return this;
         }
-
         public Builder clusterResourceId(String clusterResourceId) {
             this.clusterResourceId = Objects.requireNonNull(clusterResourceId);
             return this;
         }
-
         public Builder databaseName(String databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
-        }
-        public FollowerDatabaseDefinitionResponse build() {
+        }        public FollowerDatabaseDefinitionResponse build() {
             return new FollowerDatabaseDefinitionResponse(attachedDatabaseConfigurationName, clusterResourceId, databaseName);
         }
     }

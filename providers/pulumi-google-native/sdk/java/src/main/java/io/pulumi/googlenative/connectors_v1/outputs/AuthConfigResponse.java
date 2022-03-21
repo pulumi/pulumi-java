@@ -122,27 +122,25 @@ public final class AuthConfigResponse {
             this.additionalVariables = Objects.requireNonNull(additionalVariables);
             return this;
         }
-
+        public Builder additionalVariables(ConfigVariableResponse... additionalVariables) {
+            return additionalVariables(List.of(additionalVariables));
+        }
         public Builder authType(String authType) {
             this.authType = Objects.requireNonNull(authType);
             return this;
         }
-
         public Builder oauth2ClientCredentials(Oauth2ClientCredentialsResponse oauth2ClientCredentials) {
             this.oauth2ClientCredentials = Objects.requireNonNull(oauth2ClientCredentials);
             return this;
         }
-
         public Builder oauth2JwtBearer(Oauth2JwtBearerResponse oauth2JwtBearer) {
             this.oauth2JwtBearer = Objects.requireNonNull(oauth2JwtBearer);
             return this;
         }
-
         public Builder userPassword(UserPasswordResponse userPassword) {
             this.userPassword = Objects.requireNonNull(userPassword);
             return this;
-        }
-        public AuthConfigResponse build() {
+        }        public AuthConfigResponse build() {
             return new AuthConfigResponse(additionalVariables, authType, oauth2ClientCredentials, oauth2JwtBearer, userPassword);
         }
     }

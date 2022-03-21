@@ -145,62 +145,50 @@ public final class DiskEncryptionPropertiesArgs extends io.pulumi.resources.Reso
             this.encryptionAlgorithm = encryptionAlgorithm;
             return this;
         }
-
         public Builder encryptionAlgorithm(@Nullable Either<String,JsonWebKeyEncryptionAlgorithm> encryptionAlgorithm) {
             this.encryptionAlgorithm = Output.ofNullable(encryptionAlgorithm);
             return this;
         }
-
         public Builder encryptionAtHost(@Nullable Output<Boolean> encryptionAtHost) {
             this.encryptionAtHost = encryptionAtHost;
             return this;
         }
-
         public Builder encryptionAtHost(@Nullable Boolean encryptionAtHost) {
             this.encryptionAtHost = Output.ofNullable(encryptionAtHost);
             return this;
         }
-
         public Builder keyName(@Nullable Output<String> keyName) {
             this.keyName = keyName;
             return this;
         }
-
         public Builder keyName(@Nullable String keyName) {
             this.keyName = Output.ofNullable(keyName);
             return this;
         }
-
         public Builder keyVersion(@Nullable Output<String> keyVersion) {
             this.keyVersion = keyVersion;
             return this;
         }
-
         public Builder keyVersion(@Nullable String keyVersion) {
             this.keyVersion = Output.ofNullable(keyVersion);
             return this;
         }
-
         public Builder msiResourceId(@Nullable Output<String> msiResourceId) {
             this.msiResourceId = msiResourceId;
             return this;
         }
-
         public Builder msiResourceId(@Nullable String msiResourceId) {
             this.msiResourceId = Output.ofNullable(msiResourceId);
             return this;
         }
-
         public Builder vaultUri(@Nullable Output<String> vaultUri) {
             this.vaultUri = vaultUri;
             return this;
         }
-
         public Builder vaultUri(@Nullable String vaultUri) {
             this.vaultUri = Output.ofNullable(vaultUri);
             return this;
-        }
-        public DiskEncryptionPropertiesArgs build() {
+        }        public DiskEncryptionPropertiesArgs build() {
             return new DiskEncryptionPropertiesArgs(encryptionAlgorithm, encryptionAtHost, keyName, keyVersion, msiResourceId, vaultUri);
         }
     }

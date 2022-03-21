@@ -104,22 +104,21 @@ public final class MediaGraphAssetSinkResponse {
             this.assetName = Objects.requireNonNull(assetName);
             return this;
         }
-
         public Builder inputs(List<String> inputs) {
             this.inputs = Objects.requireNonNull(inputs);
             return this;
         }
-
+        public Builder inputs(String... inputs) {
+            return inputs(List.of(inputs));
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
-        }
-        public MediaGraphAssetSinkResponse build() {
+        }        public MediaGraphAssetSinkResponse build() {
             return new MediaGraphAssetSinkResponse(assetName, inputs, name, odataType);
         }
     }

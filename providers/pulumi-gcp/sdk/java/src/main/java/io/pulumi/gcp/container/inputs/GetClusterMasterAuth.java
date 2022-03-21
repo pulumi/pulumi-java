@@ -90,22 +90,21 @@ public final class GetClusterMasterAuth extends io.pulumi.resources.InvokeArgs {
             this.clientCertificate = Objects.requireNonNull(clientCertificate);
             return this;
         }
-
         public Builder clientCertificateConfigs(List<GetClusterMasterAuthClientCertificateConfig> clientCertificateConfigs) {
             this.clientCertificateConfigs = Objects.requireNonNull(clientCertificateConfigs);
             return this;
         }
-
+        public Builder clientCertificateConfigs(GetClusterMasterAuthClientCertificateConfig... clientCertificateConfigs) {
+            return clientCertificateConfigs(List.of(clientCertificateConfigs));
+        }
         public Builder clientKey(String clientKey) {
             this.clientKey = Objects.requireNonNull(clientKey);
             return this;
         }
-
         public Builder clusterCaCertificate(String clusterCaCertificate) {
             this.clusterCaCertificate = Objects.requireNonNull(clusterCaCertificate);
             return this;
-        }
-        public GetClusterMasterAuth build() {
+        }        public GetClusterMasterAuth build() {
             return new GetClusterMasterAuth(clientCertificate, clientCertificateConfigs, clientKey, clusterCaCertificate);
         }
     }

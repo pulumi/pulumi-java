@@ -112,22 +112,21 @@ public final class SourceTriggerResponse extends io.pulumi.resources.InvokeArgs 
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder sourceRepository(SourcePropertiesResponse sourceRepository) {
             this.sourceRepository = Objects.requireNonNull(sourceRepository);
             return this;
         }
-
         public Builder sourceTriggerEvents(List<String> sourceTriggerEvents) {
             this.sourceTriggerEvents = Objects.requireNonNull(sourceTriggerEvents);
             return this;
         }
-
+        public Builder sourceTriggerEvents(String... sourceTriggerEvents) {
+            return sourceTriggerEvents(List.of(sourceTriggerEvents));
+        }
         public Builder status(@Nullable String status) {
             this.status = status;
             return this;
-        }
-        public SourceTriggerResponse build() {
+        }        public SourceTriggerResponse build() {
             return new SourceTriggerResponse(name, sourceRepository, sourceTriggerEvents, status);
         }
     }

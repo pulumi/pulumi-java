@@ -120,27 +120,22 @@ public final class GetSaasSubscriptionLevelResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder properties(SaasResourceResponseProperties properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetSaasSubscriptionLevelResult build() {
+        }        public GetSaasSubscriptionLevelResult build() {
             return new GetSaasSubscriptionLevelResult(id, name, properties, tags, type);
         }
     }

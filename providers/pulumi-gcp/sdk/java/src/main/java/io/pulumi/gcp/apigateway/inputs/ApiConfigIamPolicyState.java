@@ -121,52 +121,42 @@ public final class ApiConfigIamPolicyState extends io.pulumi.resources.ResourceA
             this.api = api;
             return this;
         }
-
         public Builder api(@Nullable String api) {
             this.api = Output.ofNullable(api);
             return this;
         }
-
         public Builder apiConfig(@Nullable Output<String> apiConfig) {
             this.apiConfig = apiConfig;
             return this;
         }
-
         public Builder apiConfig(@Nullable String apiConfig) {
             this.apiConfig = Output.ofNullable(apiConfig);
             return this;
         }
-
         public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
-
         public Builder etag(@Nullable String etag) {
             this.etag = Output.ofNullable(etag);
             return this;
         }
-
         public Builder policyData(@Nullable Output<String> policyData) {
             this.policyData = policyData;
             return this;
         }
-
         public Builder policyData(@Nullable String policyData) {
             this.policyData = Output.ofNullable(policyData);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
-        }
-        public ApiConfigIamPolicyState build() {
+        }        public ApiConfigIamPolicyState build() {
             return new ApiConfigIamPolicyState(api, apiConfig, etag, policyData, project);
         }
     }

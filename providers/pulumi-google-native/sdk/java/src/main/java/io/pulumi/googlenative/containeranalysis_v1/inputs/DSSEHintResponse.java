@@ -58,8 +58,7 @@ public final class DSSEHintResponse extends io.pulumi.resources.InvokeArgs {
         public Builder humanReadableName(String humanReadableName) {
             this.humanReadableName = Objects.requireNonNull(humanReadableName);
             return this;
-        }
-        public DSSEHintResponse build() {
+        }        public DSSEHintResponse build() {
             return new DSSEHintResponse(humanReadableName);
         }
     }

@@ -121,42 +121,37 @@ public final class RegionUrlMapPathMatcherPathRuleGetArgs extends io.pulumi.reso
             this.paths = Objects.requireNonNull(paths);
             return this;
         }
-
         public Builder paths(List<String> paths) {
             this.paths = Output.of(Objects.requireNonNull(paths));
             return this;
         }
-
+        public Builder paths(String... paths) {
+            return paths(List.of(paths));
+        }
         public Builder routeAction(@Nullable Output<RegionUrlMapPathMatcherPathRuleRouteActionGetArgs> routeAction) {
             this.routeAction = routeAction;
             return this;
         }
-
         public Builder routeAction(@Nullable RegionUrlMapPathMatcherPathRuleRouteActionGetArgs routeAction) {
             this.routeAction = Output.ofNullable(routeAction);
             return this;
         }
-
         public Builder service(@Nullable Output<String> service) {
             this.service = service;
             return this;
         }
-
         public Builder service(@Nullable String service) {
             this.service = Output.ofNullable(service);
             return this;
         }
-
         public Builder urlRedirect(@Nullable Output<RegionUrlMapPathMatcherPathRuleUrlRedirectGetArgs> urlRedirect) {
             this.urlRedirect = urlRedirect;
             return this;
         }
-
         public Builder urlRedirect(@Nullable RegionUrlMapPathMatcherPathRuleUrlRedirectGetArgs urlRedirect) {
             this.urlRedirect = Output.ofNullable(urlRedirect);
             return this;
-        }
-        public RegionUrlMapPathMatcherPathRuleGetArgs build() {
+        }        public RegionUrlMapPathMatcherPathRuleGetArgs build() {
             return new RegionUrlMapPathMatcherPathRuleGetArgs(paths, routeAction, service, urlRedirect);
         }
     }

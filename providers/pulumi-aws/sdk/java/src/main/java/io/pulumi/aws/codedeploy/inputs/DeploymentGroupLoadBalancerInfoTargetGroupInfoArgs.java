@@ -57,12 +57,10 @@ public final class DeploymentGroupLoadBalancerInfoTargetGroupInfoArgs extends io
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
-        }
-        public DeploymentGroupLoadBalancerInfoTargetGroupInfoArgs build() {
+        }        public DeploymentGroupLoadBalancerInfoTargetGroupInfoArgs build() {
             return new DeploymentGroupLoadBalancerInfoTargetGroupInfoArgs(name);
         }
     }

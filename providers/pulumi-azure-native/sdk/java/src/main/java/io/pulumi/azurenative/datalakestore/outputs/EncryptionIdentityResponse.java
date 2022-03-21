@@ -85,17 +85,14 @@ public final class EncryptionIdentityResponse {
             this.principalId = Objects.requireNonNull(principalId);
             return this;
         }
-
         public Builder tenantId(String tenantId) {
             this.tenantId = Objects.requireNonNull(tenantId);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public EncryptionIdentityResponse build() {
+        }        public EncryptionIdentityResponse build() {
             return new EncryptionIdentityResponse(principalId, tenantId, type);
         }
     }

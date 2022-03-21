@@ -74,22 +74,18 @@ public final class WebhookAuthenticationConfigurationArgs extends io.pulumi.reso
             this.allowedIpRange = allowedIpRange;
             return this;
         }
-
         public Builder allowedIpRange(@Nullable String allowedIpRange) {
             this.allowedIpRange = Output.ofNullable(allowedIpRange);
             return this;
         }
-
         public Builder secretToken(@Nullable Output<String> secretToken) {
             this.secretToken = secretToken;
             return this;
         }
-
         public Builder secretToken(@Nullable String secretToken) {
             this.secretToken = Output.ofNullable(secretToken);
             return this;
-        }
-        public WebhookAuthenticationConfigurationArgs build() {
+        }        public WebhookAuthenticationConfigurationArgs build() {
             return new WebhookAuthenticationConfigurationArgs(allowedIpRange, secretToken);
         }
     }

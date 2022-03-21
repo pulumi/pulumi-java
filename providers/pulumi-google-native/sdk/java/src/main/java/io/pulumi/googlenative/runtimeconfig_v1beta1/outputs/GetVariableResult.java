@@ -117,27 +117,22 @@ public final class GetVariableResult {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder text(String text) {
             this.text = Objects.requireNonNull(text);
             return this;
         }
-
         public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public GetVariableResult build() {
+        }        public GetVariableResult build() {
             return new GetVariableResult(name, state, text, updateTime, value);
         }
     }

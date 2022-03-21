@@ -72,12 +72,10 @@ public final class GetDigitalTwinArgs extends io.pulumi.resources.InvokeArgs {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceName(String resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
-        }
-        public GetDigitalTwinArgs build() {
+        }        public GetDigitalTwinArgs build() {
             return new GetDigitalTwinArgs(resourceGroupName, resourceName);
         }
     }

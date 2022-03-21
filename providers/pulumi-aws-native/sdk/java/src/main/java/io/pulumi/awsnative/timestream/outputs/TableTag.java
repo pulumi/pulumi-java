@@ -55,12 +55,10 @@ public final class TableTag {
             this.key = key;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public TableTag build() {
+        }        public TableTag build() {
             return new TableTag(key, value);
         }
     }

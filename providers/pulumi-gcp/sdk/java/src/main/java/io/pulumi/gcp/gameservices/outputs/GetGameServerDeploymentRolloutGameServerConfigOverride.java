@@ -55,12 +55,13 @@ public final class GetGameServerDeploymentRolloutGameServerConfigOverride {
             this.configVersion = Objects.requireNonNull(configVersion);
             return this;
         }
-
         public Builder realmsSelectors(List<GetGameServerDeploymentRolloutGameServerConfigOverrideRealmsSelector> realmsSelectors) {
             this.realmsSelectors = Objects.requireNonNull(realmsSelectors);
             return this;
         }
-        public GetGameServerDeploymentRolloutGameServerConfigOverride build() {
+        public Builder realmsSelectors(GetGameServerDeploymentRolloutGameServerConfigOverrideRealmsSelector... realmsSelectors) {
+            return realmsSelectors(List.of(realmsSelectors));
+        }        public GetGameServerDeploymentRolloutGameServerConfigOverride build() {
             return new GetGameServerDeploymentRolloutGameServerConfigOverride(configVersion, realmsSelectors);
         }
     }

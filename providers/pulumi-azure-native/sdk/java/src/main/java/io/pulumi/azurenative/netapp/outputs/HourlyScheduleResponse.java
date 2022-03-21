@@ -88,17 +88,14 @@ public final class HourlyScheduleResponse {
             this.minute = minute;
             return this;
         }
-
         public Builder snapshotsToKeep(@Nullable Integer snapshotsToKeep) {
             this.snapshotsToKeep = snapshotsToKeep;
             return this;
         }
-
         public Builder usedBytes(@Nullable Double usedBytes) {
             this.usedBytes = usedBytes;
             return this;
-        }
-        public HourlyScheduleResponse build() {
+        }        public HourlyScheduleResponse build() {
             return new HourlyScheduleResponse(minute, snapshotsToKeep, usedBytes);
         }
     }

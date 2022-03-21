@@ -60,12 +60,10 @@ public final class IPRuleArgs extends io.pulumi.resources.ResourceArgs {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Output.of(Objects.requireNonNull(value));
             return this;
-        }
-        public IPRuleArgs build() {
+        }        public IPRuleArgs build() {
             return new IPRuleArgs(value);
         }
     }

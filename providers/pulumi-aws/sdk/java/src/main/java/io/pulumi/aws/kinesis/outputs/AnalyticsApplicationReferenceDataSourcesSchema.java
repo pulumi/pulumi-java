@@ -94,17 +94,17 @@ public final class AnalyticsApplicationReferenceDataSourcesSchema {
             this.recordColumns = Objects.requireNonNull(recordColumns);
             return this;
         }
-
+        public Builder recordColumns(AnalyticsApplicationReferenceDataSourcesSchemaRecordColumn... recordColumns) {
+            return recordColumns(List.of(recordColumns));
+        }
         public Builder recordEncoding(@Nullable String recordEncoding) {
             this.recordEncoding = recordEncoding;
             return this;
         }
-
         public Builder recordFormat(AnalyticsApplicationReferenceDataSourcesSchemaRecordFormat recordFormat) {
             this.recordFormat = Objects.requireNonNull(recordFormat);
             return this;
-        }
-        public AnalyticsApplicationReferenceDataSourcesSchema build() {
+        }        public AnalyticsApplicationReferenceDataSourcesSchema build() {
             return new AnalyticsApplicationReferenceDataSourcesSchema(recordColumns, recordEncoding, recordFormat);
         }
     }

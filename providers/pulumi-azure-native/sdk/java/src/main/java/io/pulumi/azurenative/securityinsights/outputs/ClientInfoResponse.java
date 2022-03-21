@@ -103,22 +103,18 @@ public final class ClientInfoResponse {
             this.email = email;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder objectId(@Nullable String objectId) {
             this.objectId = objectId;
             return this;
         }
-
         public Builder userPrincipalName(@Nullable String userPrincipalName) {
             this.userPrincipalName = userPrincipalName;
             return this;
-        }
-        public ClientInfoResponse build() {
+        }        public ClientInfoResponse build() {
             return new ClientInfoResponse(email, name, objectId, userPrincipalName);
         }
     }

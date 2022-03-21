@@ -87,17 +87,14 @@ public final class FeatureGroupOfflineStoreConfigDataCatalogConfig {
             this.catalog = catalog;
             return this;
         }
-
         public Builder database(@Nullable String database) {
             this.database = database;
             return this;
         }
-
         public Builder tableName(@Nullable String tableName) {
             this.tableName = tableName;
             return this;
-        }
-        public FeatureGroupOfflineStoreConfigDataCatalogConfig build() {
+        }        public FeatureGroupOfflineStoreConfigDataCatalogConfig build() {
             return new FeatureGroupOfflineStoreConfigDataCatalogConfig(catalog, database, tableName);
         }
     }

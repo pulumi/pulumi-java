@@ -61,8 +61,7 @@ public final class DefaultTags extends io.pulumi.resources.InvokeArgs {
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
-        }
-        public DefaultTags build() {
+        }        public DefaultTags build() {
             return new DefaultTags(tags);
         }
     }

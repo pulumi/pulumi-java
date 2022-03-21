@@ -60,12 +60,10 @@ public final class GatewayGreengrassV2Args extends io.pulumi.resources.ResourceA
             this.coreDeviceThingName = Objects.requireNonNull(coreDeviceThingName);
             return this;
         }
-
         public Builder coreDeviceThingName(String coreDeviceThingName) {
             this.coreDeviceThingName = Output.of(Objects.requireNonNull(coreDeviceThingName));
             return this;
-        }
-        public GatewayGreengrassV2Args build() {
+        }        public GatewayGreengrassV2Args build() {
             return new GatewayGreengrassV2Args(coreDeviceThingName);
         }
     }

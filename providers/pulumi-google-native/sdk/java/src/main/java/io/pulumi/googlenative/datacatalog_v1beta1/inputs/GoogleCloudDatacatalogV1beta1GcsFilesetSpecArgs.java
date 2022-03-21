@@ -61,12 +61,13 @@ public final class GoogleCloudDatacatalogV1beta1GcsFilesetSpecArgs extends io.pu
             this.filePatterns = Objects.requireNonNull(filePatterns);
             return this;
         }
-
         public Builder filePatterns(List<String> filePatterns) {
             this.filePatterns = Output.of(Objects.requireNonNull(filePatterns));
             return this;
         }
-        public GoogleCloudDatacatalogV1beta1GcsFilesetSpecArgs build() {
+        public Builder filePatterns(String... filePatterns) {
+            return filePatterns(List.of(filePatterns));
+        }        public GoogleCloudDatacatalogV1beta1GcsFilesetSpecArgs build() {
             return new GoogleCloudDatacatalogV1beta1GcsFilesetSpecArgs(filePatterns);
         }
     }

@@ -197,92 +197,80 @@ public final class AzureDataExplorerCommandActivityArgs extends io.pulumi.resour
             this.command = Objects.requireNonNull(command);
             return this;
         }
-
         public Builder command(Object command) {
             this.command = Output.of(Objects.requireNonNull(command));
             return this;
         }
-
         public Builder commandTimeout(@Nullable Output<Object> commandTimeout) {
             this.commandTimeout = commandTimeout;
             return this;
         }
-
         public Builder commandTimeout(@Nullable Object commandTimeout) {
             this.commandTimeout = Output.ofNullable(commandTimeout);
             return this;
         }
-
         public Builder dependsOn(@Nullable Output<List<ActivityDependencyArgs>> dependsOn) {
             this.dependsOn = dependsOn;
             return this;
         }
-
         public Builder dependsOn(@Nullable List<ActivityDependencyArgs> dependsOn) {
             this.dependsOn = Output.ofNullable(dependsOn);
             return this;
         }
-
+        public Builder dependsOn(ActivityDependencyArgs... dependsOn) {
+            return dependsOn(List.of(dependsOn));
+        }
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder linkedServiceName(@Nullable Output<LinkedServiceReferenceArgs> linkedServiceName) {
             this.linkedServiceName = linkedServiceName;
             return this;
         }
-
         public Builder linkedServiceName(@Nullable LinkedServiceReferenceArgs linkedServiceName) {
             this.linkedServiceName = Output.ofNullable(linkedServiceName);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder policy(@Nullable Output<ActivityPolicyArgs> policy) {
             this.policy = policy;
             return this;
         }
-
         public Builder policy(@Nullable ActivityPolicyArgs policy) {
             this.policy = Output.ofNullable(policy);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
-
         public Builder userProperties(@Nullable Output<List<UserPropertyArgs>> userProperties) {
             this.userProperties = userProperties;
             return this;
         }
-
         public Builder userProperties(@Nullable List<UserPropertyArgs> userProperties) {
             this.userProperties = Output.ofNullable(userProperties);
             return this;
         }
-        public AzureDataExplorerCommandActivityArgs build() {
+        public Builder userProperties(UserPropertyArgs... userProperties) {
+            return userProperties(List.of(userProperties));
+        }        public AzureDataExplorerCommandActivityArgs build() {
             return new AzureDataExplorerCommandActivityArgs(command, commandTimeout, dependsOn, description, linkedServiceName, name, policy, type, userProperties);
         }
     }

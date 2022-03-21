@@ -79,22 +79,18 @@ public final class DeliveryRuleRequestSchemeConditionArgs extends io.pulumi.reso
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder parameters(Output<RequestSchemeMatchConditionParametersArgs> parameters) {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
-
         public Builder parameters(RequestSchemeMatchConditionParametersArgs parameters) {
             this.parameters = Output.of(Objects.requireNonNull(parameters));
             return this;
-        }
-        public DeliveryRuleRequestSchemeConditionArgs build() {
+        }        public DeliveryRuleRequestSchemeConditionArgs build() {
             return new DeliveryRuleRequestSchemeConditionArgs(name, parameters);
         }
     }

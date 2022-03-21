@@ -286,77 +286,68 @@ public final class GetConnectedRegistryResult {
             this.activation = Objects.requireNonNull(activation);
             return this;
         }
-
         public Builder clientTokenIds(@Nullable List<String> clientTokenIds) {
             this.clientTokenIds = clientTokenIds;
             return this;
         }
-
+        public Builder clientTokenIds(String... clientTokenIds) {
+            return clientTokenIds(List.of(clientTokenIds));
+        }
         public Builder connectionState(String connectionState) {
             this.connectionState = Objects.requireNonNull(connectionState);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder lastActivityTime(String lastActivityTime) {
             this.lastActivityTime = Objects.requireNonNull(lastActivityTime);
             return this;
         }
-
         public Builder logging(@Nullable LoggingPropertiesResponse logging) {
             this.logging = logging;
             return this;
         }
-
         public Builder loginServer(@Nullable LoginServerPropertiesResponse loginServer) {
             this.loginServer = loginServer;
             return this;
         }
-
         public Builder mode(String mode) {
             this.mode = Objects.requireNonNull(mode);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder parent(ParentPropertiesResponse parent) {
             this.parent = Objects.requireNonNull(parent);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder statusDetails(List<StatusDetailPropertiesResponse> statusDetails) {
             this.statusDetails = Objects.requireNonNull(statusDetails);
             return this;
         }
-
+        public Builder statusDetails(StatusDetailPropertiesResponse... statusDetails) {
+            return statusDetails(List.of(statusDetails));
+        }
         public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
-        }
-        public GetConnectedRegistryResult build() {
+        }        public GetConnectedRegistryResult build() {
             return new GetConnectedRegistryResult(activation, clientTokenIds, connectionState, id, lastActivityTime, logging, loginServer, mode, name, parent, provisioningState, statusDetails, systemData, type, version);
         }
     }

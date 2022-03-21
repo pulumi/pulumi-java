@@ -78,17 +78,14 @@ public final class GetMachineImageIamPolicyArgs extends io.pulumi.resources.Invo
             this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder resource(String resource) {
             this.resource = Objects.requireNonNull(resource);
             return this;
-        }
-        public GetMachineImageIamPolicyArgs build() {
+        }        public GetMachineImageIamPolicyArgs build() {
             return new GetMachineImageIamPolicyArgs(optionsRequestedPolicyVersion, project, resource);
         }
     }

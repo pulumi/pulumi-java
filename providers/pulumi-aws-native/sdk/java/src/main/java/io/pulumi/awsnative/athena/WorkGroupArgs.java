@@ -160,72 +160,61 @@ public final class WorkGroupArgs extends io.pulumi.resources.ResourceArgs {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder recursiveDeleteOption(@Nullable Output<Boolean> recursiveDeleteOption) {
             this.recursiveDeleteOption = recursiveDeleteOption;
             return this;
         }
-
         public Builder recursiveDeleteOption(@Nullable Boolean recursiveDeleteOption) {
             this.recursiveDeleteOption = Output.ofNullable(recursiveDeleteOption);
             return this;
         }
-
         public Builder state(@Nullable Output<WorkGroupState> state) {
             this.state = state;
             return this;
         }
-
         public Builder state(@Nullable WorkGroupState state) {
             this.state = Output.ofNullable(state);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<WorkGroupTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<WorkGroupTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
+        public Builder tags(WorkGroupTagArgs... tags) {
+            return tags(List.of(tags));
+        }
         public Builder workGroupConfiguration(@Nullable Output<WorkGroupConfigurationArgs> workGroupConfiguration) {
             this.workGroupConfiguration = workGroupConfiguration;
             return this;
         }
-
         public Builder workGroupConfiguration(@Nullable WorkGroupConfigurationArgs workGroupConfiguration) {
             this.workGroupConfiguration = Output.ofNullable(workGroupConfiguration);
             return this;
         }
-
         public Builder workGroupConfigurationUpdates(@Nullable Output<WorkGroupConfigurationUpdatesArgs> workGroupConfigurationUpdates) {
             this.workGroupConfigurationUpdates = workGroupConfigurationUpdates;
             return this;
         }
-
         public Builder workGroupConfigurationUpdates(@Nullable WorkGroupConfigurationUpdatesArgs workGroupConfigurationUpdates) {
             this.workGroupConfigurationUpdates = Output.ofNullable(workGroupConfigurationUpdates);
             return this;
-        }
-        public WorkGroupArgs build() {
+        }        public WorkGroupArgs build() {
             return new WorkGroupArgs(description, name, recursiveDeleteOption, state, tags, workGroupConfiguration, workGroupConfigurationUpdates);
         }
     }

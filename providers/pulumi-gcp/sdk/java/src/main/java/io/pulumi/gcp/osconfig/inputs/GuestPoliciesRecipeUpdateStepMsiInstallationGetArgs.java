@@ -92,32 +92,32 @@ public final class GuestPoliciesRecipeUpdateStepMsiInstallationGetArgs extends i
             this.allowedExitCodes = allowedExitCodes;
             return this;
         }
-
         public Builder allowedExitCodes(@Nullable List<Integer> allowedExitCodes) {
             this.allowedExitCodes = Output.ofNullable(allowedExitCodes);
             return this;
         }
-
+        public Builder allowedExitCodes(Integer... allowedExitCodes) {
+            return allowedExitCodes(List.of(allowedExitCodes));
+        }
         public Builder artifactId(Output<String> artifactId) {
             this.artifactId = Objects.requireNonNull(artifactId);
             return this;
         }
-
         public Builder artifactId(String artifactId) {
             this.artifactId = Output.of(Objects.requireNonNull(artifactId));
             return this;
         }
-
         public Builder flags(@Nullable Output<List<String>> flags) {
             this.flags = flags;
             return this;
         }
-
         public Builder flags(@Nullable List<String> flags) {
             this.flags = Output.ofNullable(flags);
             return this;
         }
-        public GuestPoliciesRecipeUpdateStepMsiInstallationGetArgs build() {
+        public Builder flags(String... flags) {
+            return flags(List.of(flags));
+        }        public GuestPoliciesRecipeUpdateStepMsiInstallationGetArgs build() {
             return new GuestPoliciesRecipeUpdateStepMsiInstallationGetArgs(allowedExitCodes, artifactId, flags);
         }
     }

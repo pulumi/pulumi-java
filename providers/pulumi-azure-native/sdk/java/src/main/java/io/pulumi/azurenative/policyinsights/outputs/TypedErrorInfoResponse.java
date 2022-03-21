@@ -70,12 +70,10 @@ public final class TypedErrorInfoResponse {
             this.info = Objects.requireNonNull(info);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public TypedErrorInfoResponse build() {
+        }        public TypedErrorInfoResponse build() {
             return new TypedErrorInfoResponse(info, type);
         }
     }

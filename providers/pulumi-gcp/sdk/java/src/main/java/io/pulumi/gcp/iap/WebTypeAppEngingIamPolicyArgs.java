@@ -92,32 +92,26 @@ public final class WebTypeAppEngingIamPolicyArgs extends io.pulumi.resources.Res
             this.appId = Objects.requireNonNull(appId);
             return this;
         }
-
         public Builder appId(String appId) {
             this.appId = Output.of(Objects.requireNonNull(appId));
             return this;
         }
-
         public Builder policyData(Output<String> policyData) {
             this.policyData = Objects.requireNonNull(policyData);
             return this;
         }
-
         public Builder policyData(String policyData) {
             this.policyData = Output.of(Objects.requireNonNull(policyData));
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
-        }
-        public WebTypeAppEngingIamPolicyArgs build() {
+        }        public WebTypeAppEngingIamPolicyArgs build() {
             return new WebTypeAppEngingIamPolicyArgs(appId, policyData, project);
         }
     }

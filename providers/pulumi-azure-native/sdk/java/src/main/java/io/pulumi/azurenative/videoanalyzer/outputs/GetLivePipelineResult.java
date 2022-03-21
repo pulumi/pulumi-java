@@ -187,47 +187,41 @@ public final class GetLivePipelineResult {
             this.bitrateKbps = Objects.requireNonNull(bitrateKbps);
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder parameters(@Nullable List<ParameterDefinitionResponse> parameters) {
             this.parameters = parameters;
             return this;
         }
-
+        public Builder parameters(ParameterDefinitionResponse... parameters) {
+            return parameters(List.of(parameters));
+        }
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public Builder topologyName(String topologyName) {
             this.topologyName = Objects.requireNonNull(topologyName);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetLivePipelineResult build() {
+        }        public GetLivePipelineResult build() {
             return new GetLivePipelineResult(bitrateKbps, description, id, name, parameters, state, systemData, topologyName, type);
         }
     }

@@ -45,8 +45,7 @@ public final class DeliveryStreamInputFormatConfiguration {
         public Builder deserializer(@Nullable DeliveryStreamDeserializer deserializer) {
             this.deserializer = deserializer;
             return this;
-        }
-        public DeliveryStreamInputFormatConfiguration build() {
+        }        public DeliveryStreamInputFormatConfiguration build() {
             return new DeliveryStreamInputFormatConfiguration(deserializer);
         }
     }

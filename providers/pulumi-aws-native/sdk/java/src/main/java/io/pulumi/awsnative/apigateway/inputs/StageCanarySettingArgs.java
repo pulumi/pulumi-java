@@ -113,42 +113,34 @@ public final class StageCanarySettingArgs extends io.pulumi.resources.ResourceAr
             this.deploymentId = deploymentId;
             return this;
         }
-
         public Builder deploymentId(@Nullable String deploymentId) {
             this.deploymentId = Output.ofNullable(deploymentId);
             return this;
         }
-
         public Builder percentTraffic(@Nullable Output<Double> percentTraffic) {
             this.percentTraffic = percentTraffic;
             return this;
         }
-
         public Builder percentTraffic(@Nullable Double percentTraffic) {
             this.percentTraffic = Output.ofNullable(percentTraffic);
             return this;
         }
-
         public Builder stageVariableOverrides(@Nullable Output<Object> stageVariableOverrides) {
             this.stageVariableOverrides = stageVariableOverrides;
             return this;
         }
-
         public Builder stageVariableOverrides(@Nullable Object stageVariableOverrides) {
             this.stageVariableOverrides = Output.ofNullable(stageVariableOverrides);
             return this;
         }
-
         public Builder useStageCache(@Nullable Output<Boolean> useStageCache) {
             this.useStageCache = useStageCache;
             return this;
         }
-
         public Builder useStageCache(@Nullable Boolean useStageCache) {
             this.useStageCache = Output.ofNullable(useStageCache);
             return this;
-        }
-        public StageCanarySettingArgs build() {
+        }        public StageCanarySettingArgs build() {
             return new StageCanarySettingArgs(deploymentId, percentTraffic, stageVariableOverrides, useStageCache);
         }
     }

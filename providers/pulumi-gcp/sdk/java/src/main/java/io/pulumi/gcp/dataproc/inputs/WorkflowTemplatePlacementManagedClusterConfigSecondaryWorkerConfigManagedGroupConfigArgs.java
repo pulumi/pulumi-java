@@ -66,22 +66,18 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerC
             this.instanceGroupManagerName = instanceGroupManagerName;
             return this;
         }
-
         public Builder instanceGroupManagerName(@Nullable String instanceGroupManagerName) {
             this.instanceGroupManagerName = Output.ofNullable(instanceGroupManagerName);
             return this;
         }
-
         public Builder instanceTemplateName(@Nullable Output<String> instanceTemplateName) {
             this.instanceTemplateName = instanceTemplateName;
             return this;
         }
-
         public Builder instanceTemplateName(@Nullable String instanceTemplateName) {
             this.instanceTemplateName = Output.ofNullable(instanceTemplateName);
             return this;
-        }
-        public WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigManagedGroupConfigArgs build() {
+        }        public WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigManagedGroupConfigArgs build() {
             return new WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigManagedGroupConfigArgs(instanceGroupManagerName, instanceTemplateName);
         }
     }

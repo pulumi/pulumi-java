@@ -95,17 +95,14 @@ public final class ExportScheduleResponse extends io.pulumi.resources.InvokeArgs
             this.recurrence = recurrence;
             return this;
         }
-
         public Builder recurrencePeriod(@Nullable ExportRecurrencePeriodResponse recurrencePeriod) {
             this.recurrencePeriod = recurrencePeriod;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = status;
             return this;
-        }
-        public ExportScheduleResponse build() {
+        }        public ExportScheduleResponse build() {
             return new ExportScheduleResponse(recurrence, recurrencePeriod, status);
         }
     }

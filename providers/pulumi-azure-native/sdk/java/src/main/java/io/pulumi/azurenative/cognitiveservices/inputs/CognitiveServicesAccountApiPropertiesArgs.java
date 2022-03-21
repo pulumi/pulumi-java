@@ -207,102 +207,82 @@ public final class CognitiveServicesAccountApiPropertiesArgs extends io.pulumi.r
             this.aadClientId = aadClientId;
             return this;
         }
-
         public Builder aadClientId(@Nullable String aadClientId) {
             this.aadClientId = Output.ofNullable(aadClientId);
             return this;
         }
-
         public Builder aadTenantId(@Nullable Output<String> aadTenantId) {
             this.aadTenantId = aadTenantId;
             return this;
         }
-
         public Builder aadTenantId(@Nullable String aadTenantId) {
             this.aadTenantId = Output.ofNullable(aadTenantId);
             return this;
         }
-
         public Builder eventHubConnectionString(@Nullable Output<String> eventHubConnectionString) {
             this.eventHubConnectionString = eventHubConnectionString;
             return this;
         }
-
         public Builder eventHubConnectionString(@Nullable String eventHubConnectionString) {
             this.eventHubConnectionString = Output.ofNullable(eventHubConnectionString);
             return this;
         }
-
         public Builder qnaAzureSearchEndpointId(@Nullable Output<String> qnaAzureSearchEndpointId) {
             this.qnaAzureSearchEndpointId = qnaAzureSearchEndpointId;
             return this;
         }
-
         public Builder qnaAzureSearchEndpointId(@Nullable String qnaAzureSearchEndpointId) {
             this.qnaAzureSearchEndpointId = Output.ofNullable(qnaAzureSearchEndpointId);
             return this;
         }
-
         public Builder qnaAzureSearchEndpointKey(@Nullable Output<String> qnaAzureSearchEndpointKey) {
             this.qnaAzureSearchEndpointKey = qnaAzureSearchEndpointKey;
             return this;
         }
-
         public Builder qnaAzureSearchEndpointKey(@Nullable String qnaAzureSearchEndpointKey) {
             this.qnaAzureSearchEndpointKey = Output.ofNullable(qnaAzureSearchEndpointKey);
             return this;
         }
-
         public Builder qnaRuntimeEndpoint(@Nullable Output<String> qnaRuntimeEndpoint) {
             this.qnaRuntimeEndpoint = qnaRuntimeEndpoint;
             return this;
         }
-
         public Builder qnaRuntimeEndpoint(@Nullable String qnaRuntimeEndpoint) {
             this.qnaRuntimeEndpoint = Output.ofNullable(qnaRuntimeEndpoint);
             return this;
         }
-
         public Builder statisticsEnabled(@Nullable Output<Boolean> statisticsEnabled) {
             this.statisticsEnabled = statisticsEnabled;
             return this;
         }
-
         public Builder statisticsEnabled(@Nullable Boolean statisticsEnabled) {
             this.statisticsEnabled = Output.ofNullable(statisticsEnabled);
             return this;
         }
-
         public Builder storageAccountConnectionString(@Nullable Output<String> storageAccountConnectionString) {
             this.storageAccountConnectionString = storageAccountConnectionString;
             return this;
         }
-
         public Builder storageAccountConnectionString(@Nullable String storageAccountConnectionString) {
             this.storageAccountConnectionString = Output.ofNullable(storageAccountConnectionString);
             return this;
         }
-
         public Builder superUser(@Nullable Output<String> superUser) {
             this.superUser = superUser;
             return this;
         }
-
         public Builder superUser(@Nullable String superUser) {
             this.superUser = Output.ofNullable(superUser);
             return this;
         }
-
         public Builder websiteName(@Nullable Output<String> websiteName) {
             this.websiteName = websiteName;
             return this;
         }
-
         public Builder websiteName(@Nullable String websiteName) {
             this.websiteName = Output.ofNullable(websiteName);
             return this;
-        }
-        public CognitiveServicesAccountApiPropertiesArgs build() {
+        }        public CognitiveServicesAccountApiPropertiesArgs build() {
             return new CognitiveServicesAccountApiPropertiesArgs(aadClientId, aadTenantId, eventHubConnectionString, qnaAzureSearchEndpointId, qnaAzureSearchEndpointKey, qnaRuntimeEndpoint, statisticsEnabled, storageAccountConnectionString, superUser, websiteName);
         }
     }

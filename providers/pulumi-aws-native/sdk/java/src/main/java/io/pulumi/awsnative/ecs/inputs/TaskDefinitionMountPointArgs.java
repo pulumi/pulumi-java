@@ -79,32 +79,26 @@ public final class TaskDefinitionMountPointArgs extends io.pulumi.resources.Reso
             this.containerPath = containerPath;
             return this;
         }
-
         public Builder containerPath(@Nullable String containerPath) {
             this.containerPath = Output.ofNullable(containerPath);
             return this;
         }
-
         public Builder readOnly(@Nullable Output<Boolean> readOnly) {
             this.readOnly = readOnly;
             return this;
         }
-
         public Builder readOnly(@Nullable Boolean readOnly) {
             this.readOnly = Output.ofNullable(readOnly);
             return this;
         }
-
         public Builder sourceVolume(@Nullable Output<String> sourceVolume) {
             this.sourceVolume = sourceVolume;
             return this;
         }
-
         public Builder sourceVolume(@Nullable String sourceVolume) {
             this.sourceVolume = Output.ofNullable(sourceVolume);
             return this;
-        }
-        public TaskDefinitionMountPointArgs build() {
+        }        public TaskDefinitionMountPointArgs build() {
             return new TaskDefinitionMountPointArgs(containerPath, readOnly, sourceVolume);
         }
     }

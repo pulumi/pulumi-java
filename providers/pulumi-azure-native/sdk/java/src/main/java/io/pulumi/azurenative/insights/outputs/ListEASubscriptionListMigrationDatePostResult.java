@@ -72,12 +72,10 @@ public final class ListEASubscriptionListMigrationDatePostResult {
             this.isGrandFatherableSubscription = isGrandFatherableSubscription;
             return this;
         }
-
         public Builder optedInDate(@Nullable String optedInDate) {
             this.optedInDate = optedInDate;
             return this;
-        }
-        public ListEASubscriptionListMigrationDatePostResult build() {
+        }        public ListEASubscriptionListMigrationDatePostResult build() {
             return new ListEASubscriptionListMigrationDatePostResult(isGrandFatherableSubscription, optedInDate);
         }
     }

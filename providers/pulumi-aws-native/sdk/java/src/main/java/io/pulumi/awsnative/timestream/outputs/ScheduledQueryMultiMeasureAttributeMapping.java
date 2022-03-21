@@ -64,17 +64,14 @@ public final class ScheduledQueryMultiMeasureAttributeMapping {
             this.measureValueType = Objects.requireNonNull(measureValueType);
             return this;
         }
-
         public Builder sourceColumn(String sourceColumn) {
             this.sourceColumn = Objects.requireNonNull(sourceColumn);
             return this;
         }
-
         public Builder targetMultiMeasureAttributeName(@Nullable String targetMultiMeasureAttributeName) {
             this.targetMultiMeasureAttributeName = targetMultiMeasureAttributeName;
             return this;
-        }
-        public ScheduledQueryMultiMeasureAttributeMapping build() {
+        }        public ScheduledQueryMultiMeasureAttributeMapping build() {
             return new ScheduledQueryMultiMeasureAttributeMapping(measureValueType, sourceColumn, targetMultiMeasureAttributeName);
         }
     }

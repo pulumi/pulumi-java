@@ -108,52 +108,45 @@ public final class DefaultRolloutPropertiesStatusArgs extends io.pulumi.resource
             this.completedRegions = completedRegions;
             return this;
         }
-
         public Builder completedRegions(@Nullable List<String> completedRegions) {
             this.completedRegions = Output.ofNullable(completedRegions);
             return this;
         }
-
+        public Builder completedRegions(String... completedRegions) {
+            return completedRegions(List.of(completedRegions));
+        }
         public Builder failedOrSkippedRegions(@Nullable Output<Map<String,ExtendedErrorInfoArgs>> failedOrSkippedRegions) {
             this.failedOrSkippedRegions = failedOrSkippedRegions;
             return this;
         }
-
         public Builder failedOrSkippedRegions(@Nullable Map<String,ExtendedErrorInfoArgs> failedOrSkippedRegions) {
             this.failedOrSkippedRegions = Output.ofNullable(failedOrSkippedRegions);
             return this;
         }
-
         public Builder nextTrafficRegion(@Nullable Output<Either<String,TrafficRegionCategory>> nextTrafficRegion) {
             this.nextTrafficRegion = nextTrafficRegion;
             return this;
         }
-
         public Builder nextTrafficRegion(@Nullable Either<String,TrafficRegionCategory> nextTrafficRegion) {
             this.nextTrafficRegion = Output.ofNullable(nextTrafficRegion);
             return this;
         }
-
         public Builder nextTrafficRegionScheduledTime(@Nullable Output<String> nextTrafficRegionScheduledTime) {
             this.nextTrafficRegionScheduledTime = nextTrafficRegionScheduledTime;
             return this;
         }
-
         public Builder nextTrafficRegionScheduledTime(@Nullable String nextTrafficRegionScheduledTime) {
             this.nextTrafficRegionScheduledTime = Output.ofNullable(nextTrafficRegionScheduledTime);
             return this;
         }
-
         public Builder subscriptionReregistrationResult(@Nullable Output<Either<String,SubscriptionReregistrationResult>> subscriptionReregistrationResult) {
             this.subscriptionReregistrationResult = subscriptionReregistrationResult;
             return this;
         }
-
         public Builder subscriptionReregistrationResult(@Nullable Either<String,SubscriptionReregistrationResult> subscriptionReregistrationResult) {
             this.subscriptionReregistrationResult = Output.ofNullable(subscriptionReregistrationResult);
             return this;
-        }
-        public DefaultRolloutPropertiesStatusArgs build() {
+        }        public DefaultRolloutPropertiesStatusArgs build() {
             return new DefaultRolloutPropertiesStatusArgs(completedRegions, failedOrSkippedRegions, nextTrafficRegion, nextTrafficRegionScheduledTime, subscriptionReregistrationResult);
         }
     }

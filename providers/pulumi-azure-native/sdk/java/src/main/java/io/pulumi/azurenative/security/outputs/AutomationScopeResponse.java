@@ -71,12 +71,10 @@ public final class AutomationScopeResponse {
             this.description = description;
             return this;
         }
-
         public Builder scopePath(@Nullable String scopePath) {
             this.scopePath = scopePath;
             return this;
-        }
-        public AutomationScopeResponse build() {
+        }        public AutomationScopeResponse build() {
             return new AutomationScopeResponse(description, scopePath);
         }
     }

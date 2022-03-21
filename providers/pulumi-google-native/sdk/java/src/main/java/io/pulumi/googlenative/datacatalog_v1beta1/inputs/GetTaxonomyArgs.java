@@ -78,17 +78,14 @@ public final class GetTaxonomyArgs extends io.pulumi.resources.InvokeArgs {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder taxonomyId(String taxonomyId) {
             this.taxonomyId = Objects.requireNonNull(taxonomyId);
             return this;
-        }
-        public GetTaxonomyArgs build() {
+        }        public GetTaxonomyArgs build() {
             return new GetTaxonomyArgs(location, project, taxonomyId);
         }
     }

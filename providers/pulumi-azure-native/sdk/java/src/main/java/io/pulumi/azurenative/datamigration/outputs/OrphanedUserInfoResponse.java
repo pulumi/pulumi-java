@@ -71,12 +71,10 @@ public final class OrphanedUserInfoResponse {
             this.databaseName = databaseName;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
-        }
-        public OrphanedUserInfoResponse build() {
+        }        public OrphanedUserInfoResponse build() {
             return new OrphanedUserInfoResponse(databaseName, name);
         }
     }

@@ -143,62 +143,50 @@ public final class CircuitBreakersArgs extends io.pulumi.resources.ResourceArgs 
             this.connectTimeout = connectTimeout;
             return this;
         }
-
         public Builder connectTimeout(@Nullable DurationArgs connectTimeout) {
             this.connectTimeout = Output.ofNullable(connectTimeout);
             return this;
         }
-
         public Builder maxConnections(@Nullable Output<Integer> maxConnections) {
             this.maxConnections = maxConnections;
             return this;
         }
-
         public Builder maxConnections(@Nullable Integer maxConnections) {
             this.maxConnections = Output.ofNullable(maxConnections);
             return this;
         }
-
         public Builder maxPendingRequests(@Nullable Output<Integer> maxPendingRequests) {
             this.maxPendingRequests = maxPendingRequests;
             return this;
         }
-
         public Builder maxPendingRequests(@Nullable Integer maxPendingRequests) {
             this.maxPendingRequests = Output.ofNullable(maxPendingRequests);
             return this;
         }
-
         public Builder maxRequests(@Nullable Output<Integer> maxRequests) {
             this.maxRequests = maxRequests;
             return this;
         }
-
         public Builder maxRequests(@Nullable Integer maxRequests) {
             this.maxRequests = Output.ofNullable(maxRequests);
             return this;
         }
-
         public Builder maxRequestsPerConnection(@Nullable Output<Integer> maxRequestsPerConnection) {
             this.maxRequestsPerConnection = maxRequestsPerConnection;
             return this;
         }
-
         public Builder maxRequestsPerConnection(@Nullable Integer maxRequestsPerConnection) {
             this.maxRequestsPerConnection = Output.ofNullable(maxRequestsPerConnection);
             return this;
         }
-
         public Builder maxRetries(@Nullable Output<Integer> maxRetries) {
             this.maxRetries = maxRetries;
             return this;
         }
-
         public Builder maxRetries(@Nullable Integer maxRetries) {
             this.maxRetries = Output.ofNullable(maxRetries);
             return this;
-        }
-        public CircuitBreakersArgs build() {
+        }        public CircuitBreakersArgs build() {
             return new CircuitBreakersArgs(connectTimeout, maxConnections, maxPendingRequests, maxRequests, maxRequestsPerConnection, maxRetries);
         }
     }

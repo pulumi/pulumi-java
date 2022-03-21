@@ -196,102 +196,88 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
             this.awsAccountId = Objects.requireNonNull(awsAccountId);
             return this;
         }
-
         public Builder awsAccountId(String awsAccountId) {
             this.awsAccountId = Output.of(Objects.requireNonNull(awsAccountId));
             return this;
         }
-
         public Builder dashboardId(Output<String> dashboardId) {
             this.dashboardId = Objects.requireNonNull(dashboardId);
             return this;
         }
-
         public Builder dashboardId(String dashboardId) {
             this.dashboardId = Output.of(Objects.requireNonNull(dashboardId));
             return this;
         }
-
         public Builder dashboardPublishOptions(@Nullable Output<DashboardPublishOptionsArgs> dashboardPublishOptions) {
             this.dashboardPublishOptions = dashboardPublishOptions;
             return this;
         }
-
         public Builder dashboardPublishOptions(@Nullable DashboardPublishOptionsArgs dashboardPublishOptions) {
             this.dashboardPublishOptions = Output.ofNullable(dashboardPublishOptions);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder parameters(@Nullable Output<DashboardParametersArgs> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder parameters(@Nullable DashboardParametersArgs parameters) {
             this.parameters = Output.ofNullable(parameters);
             return this;
         }
-
         public Builder permissions(@Nullable Output<List<DashboardResourcePermissionArgs>> permissions) {
             this.permissions = permissions;
             return this;
         }
-
         public Builder permissions(@Nullable List<DashboardResourcePermissionArgs> permissions) {
             this.permissions = Output.ofNullable(permissions);
             return this;
         }
-
+        public Builder permissions(DashboardResourcePermissionArgs... permissions) {
+            return permissions(List.of(permissions));
+        }
         public Builder sourceEntity(Output<DashboardSourceEntityArgs> sourceEntity) {
             this.sourceEntity = Objects.requireNonNull(sourceEntity);
             return this;
         }
-
         public Builder sourceEntity(DashboardSourceEntityArgs sourceEntity) {
             this.sourceEntity = Output.of(Objects.requireNonNull(sourceEntity));
             return this;
         }
-
         public Builder tags(@Nullable Output<List<DashboardTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<DashboardTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
+        public Builder tags(DashboardTagArgs... tags) {
+            return tags(List.of(tags));
+        }
         public Builder themeArn(@Nullable Output<String> themeArn) {
             this.themeArn = themeArn;
             return this;
         }
-
         public Builder themeArn(@Nullable String themeArn) {
             this.themeArn = Output.ofNullable(themeArn);
             return this;
         }
-
         public Builder versionDescription(@Nullable Output<String> versionDescription) {
             this.versionDescription = versionDescription;
             return this;
         }
-
         public Builder versionDescription(@Nullable String versionDescription) {
             this.versionDescription = Output.ofNullable(versionDescription);
             return this;
-        }
-        public DashboardArgs build() {
+        }        public DashboardArgs build() {
             return new DashboardArgs(awsAccountId, dashboardId, dashboardPublishOptions, name, parameters, permissions, sourceEntity, tags, themeArn, versionDescription);
         }
     }

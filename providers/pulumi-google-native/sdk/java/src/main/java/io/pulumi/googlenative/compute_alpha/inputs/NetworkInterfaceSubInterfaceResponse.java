@@ -101,22 +101,18 @@ public final class NetworkInterfaceSubInterfaceResponse extends io.pulumi.resour
             this.ipAddress = Objects.requireNonNull(ipAddress);
             return this;
         }
-
         public Builder ipAllocationMode(String ipAllocationMode) {
             this.ipAllocationMode = Objects.requireNonNull(ipAllocationMode);
             return this;
         }
-
         public Builder subnetwork(String subnetwork) {
             this.subnetwork = Objects.requireNonNull(subnetwork);
             return this;
         }
-
         public Builder vlan(Integer vlan) {
             this.vlan = Objects.requireNonNull(vlan);
             return this;
-        }
-        public NetworkInterfaceSubInterfaceResponse build() {
+        }        public NetworkInterfaceSubInterfaceResponse build() {
             return new NetworkInterfaceSubInterfaceResponse(ipAddress, ipAllocationMode, subnetwork, vlan);
         }
     }

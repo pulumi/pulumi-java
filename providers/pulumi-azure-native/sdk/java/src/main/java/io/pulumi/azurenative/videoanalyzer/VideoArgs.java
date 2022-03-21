@@ -122,52 +122,42 @@ public final class VideoArgs extends io.pulumi.resources.ResourceArgs {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder accountName(String accountName) {
             this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder title(@Nullable Output<String> title) {
             this.title = title;
             return this;
         }
-
         public Builder title(@Nullable String title) {
             this.title = Output.ofNullable(title);
             return this;
         }
-
         public Builder videoName(@Nullable Output<String> videoName) {
             this.videoName = videoName;
             return this;
         }
-
         public Builder videoName(@Nullable String videoName) {
             this.videoName = Output.ofNullable(videoName);
             return this;
-        }
-        public VideoArgs build() {
+        }        public VideoArgs build() {
             return new VideoArgs(accountName, description, resourceGroupName, title, videoName);
         }
     }

@@ -110,22 +110,18 @@ public final class MountTargetPropertiesResponse extends io.pulumi.resources.Inv
             this.fileSystemId = Objects.requireNonNull(fileSystemId);
             return this;
         }
-
         public Builder ipAddress(String ipAddress) {
             this.ipAddress = Objects.requireNonNull(ipAddress);
             return this;
         }
-
         public Builder mountTargetId(String mountTargetId) {
             this.mountTargetId = Objects.requireNonNull(mountTargetId);
             return this;
         }
-
         public Builder smbServerFqdn(@Nullable String smbServerFqdn) {
             this.smbServerFqdn = smbServerFqdn;
             return this;
-        }
-        public MountTargetPropertiesResponse build() {
+        }        public MountTargetPropertiesResponse build() {
             return new MountTargetPropertiesResponse(fileSystemId, ipAddress, mountTargetId, smbServerFqdn);
         }
     }

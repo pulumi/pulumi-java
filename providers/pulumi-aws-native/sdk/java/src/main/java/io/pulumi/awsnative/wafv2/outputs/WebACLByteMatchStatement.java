@@ -83,27 +83,25 @@ public final class WebACLByteMatchStatement {
             this.fieldToMatch = Objects.requireNonNull(fieldToMatch);
             return this;
         }
-
         public Builder positionalConstraint(WebACLPositionalConstraint positionalConstraint) {
             this.positionalConstraint = Objects.requireNonNull(positionalConstraint);
             return this;
         }
-
         public Builder searchString(@Nullable String searchString) {
             this.searchString = searchString;
             return this;
         }
-
         public Builder searchStringBase64(@Nullable String searchStringBase64) {
             this.searchStringBase64 = searchStringBase64;
             return this;
         }
-
         public Builder textTransformations(List<WebACLTextTransformation> textTransformations) {
             this.textTransformations = Objects.requireNonNull(textTransformations);
             return this;
         }
-        public WebACLByteMatchStatement build() {
+        public Builder textTransformations(WebACLTextTransformation... textTransformations) {
+            return textTransformations(List.of(textTransformations));
+        }        public WebACLByteMatchStatement build() {
             return new WebACLByteMatchStatement(fieldToMatch, positionalConstraint, searchString, searchStringBase64, textTransformations);
         }
     }

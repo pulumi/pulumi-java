@@ -263,82 +263,72 @@ public final class GetInstanceResult {
             this.addOns = addOns;
             return this;
         }
-
+        public Builder addOns(InstanceAddOn... addOns) {
+            return addOns(List.of(addOns));
+        }
         public Builder hardware(@Nullable InstanceHardware hardware) {
             this.hardware = hardware;
             return this;
         }
-
         public Builder instanceArn(@Nullable String instanceArn) {
             this.instanceArn = instanceArn;
             return this;
         }
-
         public Builder isStaticIp(@Nullable Boolean isStaticIp) {
             this.isStaticIp = isStaticIp;
             return this;
         }
-
         public Builder keyPairName(@Nullable String keyPairName) {
             this.keyPairName = keyPairName;
             return this;
         }
-
         public Builder location(@Nullable InstanceLocation location) {
             this.location = location;
             return this;
         }
-
         public Builder networking(@Nullable InstanceNetworking networking) {
             this.networking = networking;
             return this;
         }
-
         public Builder privateIpAddress(@Nullable String privateIpAddress) {
             this.privateIpAddress = privateIpAddress;
             return this;
         }
-
         public Builder publicIpAddress(@Nullable String publicIpAddress) {
             this.publicIpAddress = publicIpAddress;
             return this;
         }
-
         public Builder resourceType(@Nullable String resourceType) {
             this.resourceType = resourceType;
             return this;
         }
-
         public Builder sshKeyName(@Nullable String sshKeyName) {
             this.sshKeyName = sshKeyName;
             return this;
         }
-
         public Builder state(@Nullable InstanceState state) {
             this.state = state;
             return this;
         }
-
         public Builder supportCode(@Nullable String supportCode) {
             this.supportCode = supportCode;
             return this;
         }
-
         public Builder tags(@Nullable List<InstanceTag> tags) {
             this.tags = tags;
             return this;
         }
-
+        public Builder tags(InstanceTag... tags) {
+            return tags(List.of(tags));
+        }
         public Builder userData(@Nullable String userData) {
             this.userData = userData;
             return this;
         }
-
         public Builder userName(@Nullable String userName) {
             this.userName = userName;
             return this;
-        }
-        public GetInstanceResult build() {
+        }        public GetInstanceResult build() {
             return new GetInstanceResult(addOns, hardware, instanceArn, isStaticIp, keyPairName, location, networking, privateIpAddress, publicIpAddress, resourceType, sshKeyName, state, supportCode, tags, userData, userName);
         }
     }

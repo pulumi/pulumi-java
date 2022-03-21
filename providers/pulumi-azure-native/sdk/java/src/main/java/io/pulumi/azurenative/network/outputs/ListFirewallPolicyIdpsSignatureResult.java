@@ -73,12 +73,13 @@ public final class ListFirewallPolicyIdpsSignatureResult {
             this.matchingRecordsCount = matchingRecordsCount;
             return this;
         }
-
         public Builder signatures(@Nullable List<SingleQueryResultResponse> signatures) {
             this.signatures = signatures;
             return this;
         }
-        public ListFirewallPolicyIdpsSignatureResult build() {
+        public Builder signatures(SingleQueryResultResponse... signatures) {
+            return signatures(List.of(signatures));
+        }        public ListFirewallPolicyIdpsSignatureResult build() {
             return new ListFirewallPolicyIdpsSignatureResult(matchingRecordsCount, signatures);
         }
     }

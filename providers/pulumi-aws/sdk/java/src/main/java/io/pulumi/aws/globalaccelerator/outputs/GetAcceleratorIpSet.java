@@ -54,12 +54,13 @@ public final class GetAcceleratorIpSet {
             this.ipAddresses = Objects.requireNonNull(ipAddresses);
             return this;
         }
-
+        public Builder ipAddresses(String... ipAddresses) {
+            return ipAddresses(List.of(ipAddresses));
+        }
         public Builder ipFamily(String ipFamily) {
             this.ipFamily = Objects.requireNonNull(ipFamily);
             return this;
-        }
-        public GetAcceleratorIpSet build() {
+        }        public GetAcceleratorIpSet build() {
             return new GetAcceleratorIpSet(ipAddresses, ipFamily);
         }
     }

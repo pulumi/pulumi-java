@@ -82,17 +82,17 @@ public final class TemplateDataSetConfiguration {
             this.columnGroupSchemaList = columnGroupSchemaList;
             return this;
         }
-
+        public Builder columnGroupSchemaList(TemplateColumnGroupSchema... columnGroupSchemaList) {
+            return columnGroupSchemaList(List.of(columnGroupSchemaList));
+        }
         public Builder dataSetSchema(@Nullable TemplateDataSetSchema dataSetSchema) {
             this.dataSetSchema = dataSetSchema;
             return this;
         }
-
         public Builder placeholder(@Nullable String placeholder) {
             this.placeholder = placeholder;
             return this;
-        }
-        public TemplateDataSetConfiguration build() {
+        }        public TemplateDataSetConfiguration build() {
             return new TemplateDataSetConfiguration(columnGroupSchemaList, dataSetSchema, placeholder);
         }
     }

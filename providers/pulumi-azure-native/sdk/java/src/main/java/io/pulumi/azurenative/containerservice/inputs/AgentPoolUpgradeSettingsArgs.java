@@ -61,12 +61,10 @@ public final class AgentPoolUpgradeSettingsArgs extends io.pulumi.resources.Reso
             this.maxSurge = maxSurge;
             return this;
         }
-
         public Builder maxSurge(@Nullable String maxSurge) {
             this.maxSurge = Output.ofNullable(maxSurge);
             return this;
-        }
-        public AgentPoolUpgradeSettingsArgs build() {
+        }        public AgentPoolUpgradeSettingsArgs build() {
             return new AgentPoolUpgradeSettingsArgs(maxSurge);
         }
     }

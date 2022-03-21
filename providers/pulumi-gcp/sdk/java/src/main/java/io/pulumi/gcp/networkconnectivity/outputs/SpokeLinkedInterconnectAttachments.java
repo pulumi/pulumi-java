@@ -71,12 +71,13 @@ public final class SpokeLinkedInterconnectAttachments {
             this.siteToSiteDataTransfer = Objects.requireNonNull(siteToSiteDataTransfer);
             return this;
         }
-
         public Builder uris(List<String> uris) {
             this.uris = Objects.requireNonNull(uris);
             return this;
         }
-        public SpokeLinkedInterconnectAttachments build() {
+        public Builder uris(String... uris) {
+            return uris(List.of(uris));
+        }        public SpokeLinkedInterconnectAttachments build() {
             return new SpokeLinkedInterconnectAttachments(siteToSiteDataTransfer, uris);
         }
     }

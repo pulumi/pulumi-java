@@ -157,72 +157,64 @@ public final class StartTaskArgs extends io.pulumi.resources.ResourceArgs {
             this.commandLine = commandLine;
             return this;
         }
-
         public Builder commandLine(@Nullable String commandLine) {
             this.commandLine = Output.ofNullable(commandLine);
             return this;
         }
-
         public Builder containerSettings(@Nullable Output<TaskContainerSettingsArgs> containerSettings) {
             this.containerSettings = containerSettings;
             return this;
         }
-
         public Builder containerSettings(@Nullable TaskContainerSettingsArgs containerSettings) {
             this.containerSettings = Output.ofNullable(containerSettings);
             return this;
         }
-
         public Builder environmentSettings(@Nullable Output<List<EnvironmentSettingArgs>> environmentSettings) {
             this.environmentSettings = environmentSettings;
             return this;
         }
-
         public Builder environmentSettings(@Nullable List<EnvironmentSettingArgs> environmentSettings) {
             this.environmentSettings = Output.ofNullable(environmentSettings);
             return this;
         }
-
+        public Builder environmentSettings(EnvironmentSettingArgs... environmentSettings) {
+            return environmentSettings(List.of(environmentSettings));
+        }
         public Builder maxTaskRetryCount(@Nullable Output<Integer> maxTaskRetryCount) {
             this.maxTaskRetryCount = maxTaskRetryCount;
             return this;
         }
-
         public Builder maxTaskRetryCount(@Nullable Integer maxTaskRetryCount) {
             this.maxTaskRetryCount = Output.ofNullable(maxTaskRetryCount);
             return this;
         }
-
         public Builder resourceFiles(@Nullable Output<List<ResourceFileArgs>> resourceFiles) {
             this.resourceFiles = resourceFiles;
             return this;
         }
-
         public Builder resourceFiles(@Nullable List<ResourceFileArgs> resourceFiles) {
             this.resourceFiles = Output.ofNullable(resourceFiles);
             return this;
         }
-
+        public Builder resourceFiles(ResourceFileArgs... resourceFiles) {
+            return resourceFiles(List.of(resourceFiles));
+        }
         public Builder userIdentity(@Nullable Output<UserIdentityArgs> userIdentity) {
             this.userIdentity = userIdentity;
             return this;
         }
-
         public Builder userIdentity(@Nullable UserIdentityArgs userIdentity) {
             this.userIdentity = Output.ofNullable(userIdentity);
             return this;
         }
-
         public Builder waitForSuccess(@Nullable Output<Boolean> waitForSuccess) {
             this.waitForSuccess = waitForSuccess;
             return this;
         }
-
         public Builder waitForSuccess(@Nullable Boolean waitForSuccess) {
             this.waitForSuccess = Output.ofNullable(waitForSuccess);
             return this;
-        }
-        public StartTaskArgs build() {
+        }        public StartTaskArgs build() {
             return new StartTaskArgs(commandLine, containerSettings, environmentSettings, maxTaskRetryCount, resourceFiles, userIdentity, waitForSuccess);
         }
     }

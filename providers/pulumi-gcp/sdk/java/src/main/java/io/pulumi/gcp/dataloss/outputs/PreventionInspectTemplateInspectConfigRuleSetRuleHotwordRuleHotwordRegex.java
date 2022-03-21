@@ -74,12 +74,13 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleH
             this.groupIndexes = groupIndexes;
             return this;
         }
-
+        public Builder groupIndexes(Integer... groupIndexes) {
+            return groupIndexes(List.of(groupIndexes));
+        }
         public Builder pattern(String pattern) {
             this.pattern = Objects.requireNonNull(pattern);
             return this;
-        }
-        public PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleHotwordRegex build() {
+        }        public PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleHotwordRegex build() {
             return new PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleHotwordRegex(groupIndexes, pattern);
         }
     }

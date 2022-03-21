@@ -67,22 +67,18 @@ public final class InstanceFromMachineImageReservationAffinityArgs extends io.pu
             this.specificReservation = specificReservation;
             return this;
         }
-
         public Builder specificReservation(@Nullable InstanceFromMachineImageReservationAffinitySpecificReservationArgs specificReservation) {
             this.specificReservation = Output.ofNullable(specificReservation);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public InstanceFromMachineImageReservationAffinityArgs build() {
+        }        public InstanceFromMachineImageReservationAffinityArgs build() {
             return new InstanceFromMachineImageReservationAffinityArgs(specificReservation, type);
         }
     }

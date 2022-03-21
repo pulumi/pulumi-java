@@ -75,12 +75,10 @@ public final class RegionBackendServiceCdnPolicyNegativeCachingPolicy {
             this.code = code;
             return this;
         }
-
         public Builder ttl(@Nullable Integer ttl) {
             this.ttl = ttl;
             return this;
-        }
-        public RegionBackendServiceCdnPolicyNegativeCachingPolicy build() {
+        }        public RegionBackendServiceCdnPolicyNegativeCachingPolicy build() {
             return new RegionBackendServiceCdnPolicyNegativeCachingPolicy(code, ttl);
         }
     }

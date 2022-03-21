@@ -58,8 +58,7 @@ public final class BlobInventoryPolicyDefinitionResponse extends io.pulumi.resou
         public Builder filters(BlobInventoryPolicyFilterResponse filters) {
             this.filters = Objects.requireNonNull(filters);
             return this;
-        }
-        public BlobInventoryPolicyDefinitionResponse build() {
+        }        public BlobInventoryPolicyDefinitionResponse build() {
             return new BlobInventoryPolicyDefinitionResponse(filters);
         }
     }

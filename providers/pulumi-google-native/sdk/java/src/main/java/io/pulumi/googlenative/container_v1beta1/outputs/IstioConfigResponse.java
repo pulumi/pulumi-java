@@ -70,12 +70,10 @@ public final class IstioConfigResponse {
             this.auth = Objects.requireNonNull(auth);
             return this;
         }
-
         public Builder disabled(Boolean disabled) {
             this.disabled = Objects.requireNonNull(disabled);
             return this;
-        }
-        public IstioConfigResponse build() {
+        }        public IstioConfigResponse build() {
             return new IstioConfigResponse(auth, disabled);
         }
     }

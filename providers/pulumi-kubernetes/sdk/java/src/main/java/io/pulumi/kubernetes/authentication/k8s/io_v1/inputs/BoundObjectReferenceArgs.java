@@ -110,42 +110,34 @@ public final class BoundObjectReferenceArgs extends io.pulumi.resources.Resource
             this.apiVersion = apiVersion;
             return this;
         }
-
         public Builder apiVersion(@Nullable String apiVersion) {
             this.apiVersion = Output.ofNullable(apiVersion);
             return this;
         }
-
         public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder uid(@Nullable Output<String> uid) {
             this.uid = uid;
             return this;
         }
-
         public Builder uid(@Nullable String uid) {
             this.uid = Output.ofNullable(uid);
             return this;
-        }
-        public BoundObjectReferenceArgs build() {
+        }        public BoundObjectReferenceArgs build() {
             return new BoundObjectReferenceArgs(apiVersion, kind, name, uid);
         }
     }

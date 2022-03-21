@@ -94,17 +94,17 @@ public final class CounterOptionsResponse extends io.pulumi.resources.InvokeArgs
             this.customFields = Objects.requireNonNull(customFields);
             return this;
         }
-
+        public Builder customFields(CustomFieldResponse... customFields) {
+            return customFields(List.of(customFields));
+        }
         public Builder field(String field) {
             this.field = Objects.requireNonNull(field);
             return this;
         }
-
         public Builder metric(String metric) {
             this.metric = Objects.requireNonNull(metric);
             return this;
-        }
-        public CounterOptionsResponse build() {
+        }        public CounterOptionsResponse build() {
             return new CounterOptionsResponse(customFields, field, metric);
         }
     }

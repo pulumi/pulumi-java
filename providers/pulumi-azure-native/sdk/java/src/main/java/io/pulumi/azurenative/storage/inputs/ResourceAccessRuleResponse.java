@@ -78,12 +78,10 @@ public final class ResourceAccessRuleResponse extends io.pulumi.resources.Invoke
             this.resourceId = resourceId;
             return this;
         }
-
         public Builder tenantId(@Nullable String tenantId) {
             this.tenantId = tenantId;
             return this;
-        }
-        public ResourceAccessRuleResponse build() {
+        }        public ResourceAccessRuleResponse build() {
             return new ResourceAccessRuleResponse(resourceId, tenantId);
         }
     }

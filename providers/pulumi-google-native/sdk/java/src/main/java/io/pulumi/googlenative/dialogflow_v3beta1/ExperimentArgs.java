@@ -337,192 +337,157 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
             this.agentId = Objects.requireNonNull(agentId);
             return this;
         }
-
         public Builder agentId(String agentId) {
             this.agentId = Output.of(Objects.requireNonNull(agentId));
             return this;
         }
-
         public Builder createTime(@Nullable Output<String> createTime) {
             this.createTime = createTime;
             return this;
         }
-
         public Builder createTime(@Nullable String createTime) {
             this.createTime = Output.ofNullable(createTime);
             return this;
         }
-
         public Builder definition(@Nullable Output<GoogleCloudDialogflowCxV3beta1ExperimentDefinitionArgs> definition) {
             this.definition = definition;
             return this;
         }
-
         public Builder definition(@Nullable GoogleCloudDialogflowCxV3beta1ExperimentDefinitionArgs definition) {
             this.definition = Output.ofNullable(definition);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder displayName(Output<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
-
         public Builder endTime(@Nullable Output<String> endTime) {
             this.endTime = endTime;
             return this;
         }
-
         public Builder endTime(@Nullable String endTime) {
             this.endTime = Output.ofNullable(endTime);
             return this;
         }
-
         public Builder environmentId(Output<String> environmentId) {
             this.environmentId = Objects.requireNonNull(environmentId);
             return this;
         }
-
         public Builder environmentId(String environmentId) {
             this.environmentId = Output.of(Objects.requireNonNull(environmentId));
             return this;
         }
-
         public Builder experimentLength(@Nullable Output<String> experimentLength) {
             this.experimentLength = experimentLength;
             return this;
         }
-
         public Builder experimentLength(@Nullable String experimentLength) {
             this.experimentLength = Output.ofNullable(experimentLength);
             return this;
         }
-
         public Builder lastUpdateTime(@Nullable Output<String> lastUpdateTime) {
             this.lastUpdateTime = lastUpdateTime;
             return this;
         }
-
         public Builder lastUpdateTime(@Nullable String lastUpdateTime) {
             this.lastUpdateTime = Output.ofNullable(lastUpdateTime);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder result(@Nullable Output<GoogleCloudDialogflowCxV3beta1ExperimentResultArgs> result) {
             this.result = result;
             return this;
         }
-
         public Builder result(@Nullable GoogleCloudDialogflowCxV3beta1ExperimentResultArgs result) {
             this.result = Output.ofNullable(result);
             return this;
         }
-
         public Builder rolloutConfig(@Nullable Output<GoogleCloudDialogflowCxV3beta1RolloutConfigArgs> rolloutConfig) {
             this.rolloutConfig = rolloutConfig;
             return this;
         }
-
         public Builder rolloutConfig(@Nullable GoogleCloudDialogflowCxV3beta1RolloutConfigArgs rolloutConfig) {
             this.rolloutConfig = Output.ofNullable(rolloutConfig);
             return this;
         }
-
         public Builder rolloutFailureReason(@Nullable Output<String> rolloutFailureReason) {
             this.rolloutFailureReason = rolloutFailureReason;
             return this;
         }
-
         public Builder rolloutFailureReason(@Nullable String rolloutFailureReason) {
             this.rolloutFailureReason = Output.ofNullable(rolloutFailureReason);
             return this;
         }
-
         public Builder rolloutState(@Nullable Output<GoogleCloudDialogflowCxV3beta1RolloutStateArgs> rolloutState) {
             this.rolloutState = rolloutState;
             return this;
         }
-
         public Builder rolloutState(@Nullable GoogleCloudDialogflowCxV3beta1RolloutStateArgs rolloutState) {
             this.rolloutState = Output.ofNullable(rolloutState);
             return this;
         }
-
         public Builder startTime(@Nullable Output<String> startTime) {
             this.startTime = startTime;
             return this;
         }
-
         public Builder startTime(@Nullable String startTime) {
             this.startTime = Output.ofNullable(startTime);
             return this;
         }
-
         public Builder state(@Nullable Output<ExperimentState> state) {
             this.state = state;
             return this;
         }
-
         public Builder state(@Nullable ExperimentState state) {
             this.state = Output.ofNullable(state);
             return this;
         }
-
         public Builder variantsHistory(@Nullable Output<List<GoogleCloudDialogflowCxV3beta1VariantsHistoryArgs>> variantsHistory) {
             this.variantsHistory = variantsHistory;
             return this;
         }
-
         public Builder variantsHistory(@Nullable List<GoogleCloudDialogflowCxV3beta1VariantsHistoryArgs> variantsHistory) {
             this.variantsHistory = Output.ofNullable(variantsHistory);
             return this;
         }
-        public ExperimentArgs build() {
+        public Builder variantsHistory(GoogleCloudDialogflowCxV3beta1VariantsHistoryArgs... variantsHistory) {
+            return variantsHistory(List.of(variantsHistory));
+        }        public ExperimentArgs build() {
             return new ExperimentArgs(agentId, createTime, definition, description, displayName, endTime, environmentId, experimentLength, lastUpdateTime, location, name, project, result, rolloutConfig, rolloutFailureReason, rolloutState, startTime, state, variantsHistory);
         }
     }

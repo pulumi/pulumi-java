@@ -52,12 +52,10 @@ public final class NetworkInterfaceInstanceIpv6AddressArgs extends io.pulumi.res
             this.ipv6Address = Objects.requireNonNull(ipv6Address);
             return this;
         }
-
         public Builder ipv6Address(String ipv6Address) {
             this.ipv6Address = Output.of(Objects.requireNonNull(ipv6Address));
             return this;
-        }
-        public NetworkInterfaceInstanceIpv6AddressArgs build() {
+        }        public NetworkInterfaceInstanceIpv6AddressArgs build() {
             return new NetworkInterfaceInstanceIpv6AddressArgs(ipv6Address);
         }
     }

@@ -95,32 +95,26 @@ public final class HandlerMappingArgs extends io.pulumi.resources.ResourceArgs {
             this.arguments = arguments;
             return this;
         }
-
         public Builder arguments(@Nullable String arguments) {
             this.arguments = Output.ofNullable(arguments);
             return this;
         }
-
         public Builder extension(@Nullable Output<String> extension) {
             this.extension = extension;
             return this;
         }
-
         public Builder extension(@Nullable String extension) {
             this.extension = Output.ofNullable(extension);
             return this;
         }
-
         public Builder scriptProcessor(@Nullable Output<String> scriptProcessor) {
             this.scriptProcessor = scriptProcessor;
             return this;
         }
-
         public Builder scriptProcessor(@Nullable String scriptProcessor) {
             this.scriptProcessor = Output.ofNullable(scriptProcessor);
             return this;
-        }
-        public HandlerMappingArgs build() {
+        }        public HandlerMappingArgs build() {
             return new HandlerMappingArgs(arguments, extension, scriptProcessor);
         }
     }

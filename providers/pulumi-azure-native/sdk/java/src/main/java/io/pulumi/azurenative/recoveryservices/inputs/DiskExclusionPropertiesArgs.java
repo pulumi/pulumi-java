@@ -76,22 +76,21 @@ public final class DiskExclusionPropertiesArgs extends io.pulumi.resources.Resou
             this.diskLunList = diskLunList;
             return this;
         }
-
         public Builder diskLunList(@Nullable List<Integer> diskLunList) {
             this.diskLunList = Output.ofNullable(diskLunList);
             return this;
         }
-
+        public Builder diskLunList(Integer... diskLunList) {
+            return diskLunList(List.of(diskLunList));
+        }
         public Builder isInclusionList(@Nullable Output<Boolean> isInclusionList) {
             this.isInclusionList = isInclusionList;
             return this;
         }
-
         public Builder isInclusionList(@Nullable Boolean isInclusionList) {
             this.isInclusionList = Output.ofNullable(isInclusionList);
             return this;
-        }
-        public DiskExclusionPropertiesArgs build() {
+        }        public DiskExclusionPropertiesArgs build() {
             return new DiskExclusionPropertiesArgs(diskLunList, isInclusionList);
         }
     }

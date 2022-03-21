@@ -145,62 +145,59 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
             this.args = args;
             return this;
         }
-
         public Builder args(@Nullable List<String> args) {
             this.args = Output.ofNullable(args);
             return this;
         }
-
+        public Builder args(String... args) {
+            return args(List.of(args));
+        }
         public Builder command(@Nullable Output<List<String>> command) {
             this.command = command;
             return this;
         }
-
         public Builder command(@Nullable List<String> command) {
             this.command = Output.ofNullable(command);
             return this;
         }
-
+        public Builder command(String... command) {
+            return command(List.of(command));
+        }
         public Builder env(@Nullable Output<List<EnvironmentVarArgs>> env) {
             this.env = env;
             return this;
         }
-
         public Builder env(@Nullable List<EnvironmentVarArgs> env) {
             this.env = Output.ofNullable(env);
             return this;
         }
-
+        public Builder env(EnvironmentVarArgs... env) {
+            return env(List.of(env));
+        }
         public Builder image(@Nullable Output<String> image) {
             this.image = image;
             return this;
         }
-
         public Builder image(@Nullable String image) {
             this.image = Output.ofNullable(image);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder resources(@Nullable Output<ContainerResourcesArgs> resources) {
             this.resources = resources;
             return this;
         }
-
         public Builder resources(@Nullable ContainerResourcesArgs resources) {
             this.resources = Output.ofNullable(resources);
             return this;
-        }
-        public ContainerArgs build() {
+        }        public ContainerArgs build() {
             return new ContainerArgs(args, command, env, image, name, resources);
         }
     }

@@ -55,8 +55,7 @@ public final class PolicyNetwork {
         public Builder networkUrl(String networkUrl) {
             this.networkUrl = Objects.requireNonNull(networkUrl);
             return this;
-        }
-        public PolicyNetwork build() {
+        }        public PolicyNetwork build() {
             return new PolicyNetwork(networkUrl);
         }
     }

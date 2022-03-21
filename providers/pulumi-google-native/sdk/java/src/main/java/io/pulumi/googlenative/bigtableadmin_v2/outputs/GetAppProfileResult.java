@@ -119,27 +119,22 @@ public final class GetAppProfileResult {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder multiClusterRoutingUseAny(MultiClusterRoutingUseAnyResponse multiClusterRoutingUseAny) {
             this.multiClusterRoutingUseAny = Objects.requireNonNull(multiClusterRoutingUseAny);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder singleClusterRouting(SingleClusterRoutingResponse singleClusterRouting) {
             this.singleClusterRouting = Objects.requireNonNull(singleClusterRouting);
             return this;
-        }
-        public GetAppProfileResult build() {
+        }        public GetAppProfileResult build() {
             return new GetAppProfileResult(description, etag, multiClusterRoutingUseAny, name, singleClusterRouting);
         }
     }

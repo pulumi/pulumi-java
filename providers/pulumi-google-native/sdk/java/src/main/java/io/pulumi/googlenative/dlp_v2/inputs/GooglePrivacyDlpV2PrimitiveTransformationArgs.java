@@ -249,122 +249,98 @@ public final class GooglePrivacyDlpV2PrimitiveTransformationArgs extends io.pulu
             this.bucketingConfig = bucketingConfig;
             return this;
         }
-
         public Builder bucketingConfig(@Nullable GooglePrivacyDlpV2BucketingConfigArgs bucketingConfig) {
             this.bucketingConfig = Output.ofNullable(bucketingConfig);
             return this;
         }
-
         public Builder characterMaskConfig(@Nullable Output<GooglePrivacyDlpV2CharacterMaskConfigArgs> characterMaskConfig) {
             this.characterMaskConfig = characterMaskConfig;
             return this;
         }
-
         public Builder characterMaskConfig(@Nullable GooglePrivacyDlpV2CharacterMaskConfigArgs characterMaskConfig) {
             this.characterMaskConfig = Output.ofNullable(characterMaskConfig);
             return this;
         }
-
         public Builder cryptoDeterministicConfig(@Nullable Output<GooglePrivacyDlpV2CryptoDeterministicConfigArgs> cryptoDeterministicConfig) {
             this.cryptoDeterministicConfig = cryptoDeterministicConfig;
             return this;
         }
-
         public Builder cryptoDeterministicConfig(@Nullable GooglePrivacyDlpV2CryptoDeterministicConfigArgs cryptoDeterministicConfig) {
             this.cryptoDeterministicConfig = Output.ofNullable(cryptoDeterministicConfig);
             return this;
         }
-
         public Builder cryptoHashConfig(@Nullable Output<GooglePrivacyDlpV2CryptoHashConfigArgs> cryptoHashConfig) {
             this.cryptoHashConfig = cryptoHashConfig;
             return this;
         }
-
         public Builder cryptoHashConfig(@Nullable GooglePrivacyDlpV2CryptoHashConfigArgs cryptoHashConfig) {
             this.cryptoHashConfig = Output.ofNullable(cryptoHashConfig);
             return this;
         }
-
         public Builder cryptoReplaceFfxFpeConfig(@Nullable Output<GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigArgs> cryptoReplaceFfxFpeConfig) {
             this.cryptoReplaceFfxFpeConfig = cryptoReplaceFfxFpeConfig;
             return this;
         }
-
         public Builder cryptoReplaceFfxFpeConfig(@Nullable GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigArgs cryptoReplaceFfxFpeConfig) {
             this.cryptoReplaceFfxFpeConfig = Output.ofNullable(cryptoReplaceFfxFpeConfig);
             return this;
         }
-
         public Builder dateShiftConfig(@Nullable Output<GooglePrivacyDlpV2DateShiftConfigArgs> dateShiftConfig) {
             this.dateShiftConfig = dateShiftConfig;
             return this;
         }
-
         public Builder dateShiftConfig(@Nullable GooglePrivacyDlpV2DateShiftConfigArgs dateShiftConfig) {
             this.dateShiftConfig = Output.ofNullable(dateShiftConfig);
             return this;
         }
-
         public Builder fixedSizeBucketingConfig(@Nullable Output<GooglePrivacyDlpV2FixedSizeBucketingConfigArgs> fixedSizeBucketingConfig) {
             this.fixedSizeBucketingConfig = fixedSizeBucketingConfig;
             return this;
         }
-
         public Builder fixedSizeBucketingConfig(@Nullable GooglePrivacyDlpV2FixedSizeBucketingConfigArgs fixedSizeBucketingConfig) {
             this.fixedSizeBucketingConfig = Output.ofNullable(fixedSizeBucketingConfig);
             return this;
         }
-
         public Builder redactConfig(@Nullable Output<GooglePrivacyDlpV2RedactConfigArgs> redactConfig) {
             this.redactConfig = redactConfig;
             return this;
         }
-
         public Builder redactConfig(@Nullable GooglePrivacyDlpV2RedactConfigArgs redactConfig) {
             this.redactConfig = Output.ofNullable(redactConfig);
             return this;
         }
-
         public Builder replaceConfig(@Nullable Output<GooglePrivacyDlpV2ReplaceValueConfigArgs> replaceConfig) {
             this.replaceConfig = replaceConfig;
             return this;
         }
-
         public Builder replaceConfig(@Nullable GooglePrivacyDlpV2ReplaceValueConfigArgs replaceConfig) {
             this.replaceConfig = Output.ofNullable(replaceConfig);
             return this;
         }
-
         public Builder replaceDictionaryConfig(@Nullable Output<GooglePrivacyDlpV2ReplaceDictionaryConfigArgs> replaceDictionaryConfig) {
             this.replaceDictionaryConfig = replaceDictionaryConfig;
             return this;
         }
-
         public Builder replaceDictionaryConfig(@Nullable GooglePrivacyDlpV2ReplaceDictionaryConfigArgs replaceDictionaryConfig) {
             this.replaceDictionaryConfig = Output.ofNullable(replaceDictionaryConfig);
             return this;
         }
-
         public Builder replaceWithInfoTypeConfig(@Nullable Output<GooglePrivacyDlpV2ReplaceWithInfoTypeConfigArgs> replaceWithInfoTypeConfig) {
             this.replaceWithInfoTypeConfig = replaceWithInfoTypeConfig;
             return this;
         }
-
         public Builder replaceWithInfoTypeConfig(@Nullable GooglePrivacyDlpV2ReplaceWithInfoTypeConfigArgs replaceWithInfoTypeConfig) {
             this.replaceWithInfoTypeConfig = Output.ofNullable(replaceWithInfoTypeConfig);
             return this;
         }
-
         public Builder timePartConfig(@Nullable Output<GooglePrivacyDlpV2TimePartConfigArgs> timePartConfig) {
             this.timePartConfig = timePartConfig;
             return this;
         }
-
         public Builder timePartConfig(@Nullable GooglePrivacyDlpV2TimePartConfigArgs timePartConfig) {
             this.timePartConfig = Output.ofNullable(timePartConfig);
             return this;
-        }
-        public GooglePrivacyDlpV2PrimitiveTransformationArgs build() {
+        }        public GooglePrivacyDlpV2PrimitiveTransformationArgs build() {
             return new GooglePrivacyDlpV2PrimitiveTransformationArgs(bucketingConfig, characterMaskConfig, cryptoDeterministicConfig, cryptoHashConfig, cryptoReplaceFfxFpeConfig, dateShiftConfig, fixedSizeBucketingConfig, redactConfig, replaceConfig, replaceDictionaryConfig, replaceWithInfoTypeConfig, timePartConfig);
         }
     }

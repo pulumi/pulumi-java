@@ -88,17 +88,14 @@ public final class ArmRoleReceiverResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder roleId(String roleId) {
             this.roleId = Objects.requireNonNull(roleId);
             return this;
         }
-
         public Builder useCommonAlertSchema(@Nullable Boolean useCommonAlertSchema) {
             this.useCommonAlertSchema = useCommonAlertSchema;
             return this;
-        }
-        public ArmRoleReceiverResponse build() {
+        }        public ArmRoleReceiverResponse build() {
             return new ArmRoleReceiverResponse(name, roleId, useCommonAlertSchema);
         }
     }

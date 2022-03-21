@@ -73,12 +73,13 @@ public final class WebAclRuleStatementAndStatementStatementAndStatementStatement
             this.countryCodes = Objects.requireNonNull(countryCodes);
             return this;
         }
-
+        public Builder countryCodes(String... countryCodes) {
+            return countryCodes(List.of(countryCodes));
+        }
         public Builder forwardedIpConfig(@Nullable WebAclRuleStatementAndStatementStatementAndStatementStatementAndStatementStatementGeoMatchStatementForwardedIpConfig forwardedIpConfig) {
             this.forwardedIpConfig = forwardedIpConfig;
             return this;
-        }
-        public WebAclRuleStatementAndStatementStatementAndStatementStatementAndStatementStatementGeoMatchStatement build() {
+        }        public WebAclRuleStatementAndStatementStatementAndStatementStatementAndStatementStatementGeoMatchStatement build() {
             return new WebAclRuleStatementAndStatementStatementAndStatementStatementAndStatementStatementGeoMatchStatement(countryCodes, forwardedIpConfig);
         }
     }

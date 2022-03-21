@@ -72,12 +72,10 @@ public final class ListSqlMigrationServiceMonitoringDataArgs extends io.pulumi.r
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder sqlMigrationServiceName(String sqlMigrationServiceName) {
             this.sqlMigrationServiceName = Objects.requireNonNull(sqlMigrationServiceName);
             return this;
-        }
-        public ListSqlMigrationServiceMonitoringDataArgs build() {
+        }        public ListSqlMigrationServiceMonitoringDataArgs build() {
             return new ListSqlMigrationServiceMonitoringDataArgs(resourceGroupName, sqlMigrationServiceName);
         }
     }

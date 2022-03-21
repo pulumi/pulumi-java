@@ -70,12 +70,10 @@ public final class HealthStateResponse {
             this.healthStateName = Objects.requireNonNull(healthStateName);
             return this;
         }
-
         public Builder severity(Double severity) {
             this.severity = Objects.requireNonNull(severity);
             return this;
-        }
-        public HealthStateResponse build() {
+        }        public HealthStateResponse build() {
             return new HealthStateResponse(healthStateName, severity);
         }
     }

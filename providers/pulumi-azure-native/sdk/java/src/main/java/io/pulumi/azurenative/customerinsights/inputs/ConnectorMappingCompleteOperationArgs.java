@@ -79,22 +79,18 @@ public final class ConnectorMappingCompleteOperationArgs extends io.pulumi.resou
             this.completionOperationType = completionOperationType;
             return this;
         }
-
         public Builder completionOperationType(@Nullable CompletionOperationTypes completionOperationType) {
             this.completionOperationType = Output.ofNullable(completionOperationType);
             return this;
         }
-
         public Builder destinationFolder(@Nullable Output<String> destinationFolder) {
             this.destinationFolder = destinationFolder;
             return this;
         }
-
         public Builder destinationFolder(@Nullable String destinationFolder) {
             this.destinationFolder = Output.ofNullable(destinationFolder);
             return this;
-        }
-        public ConnectorMappingCompleteOperationArgs build() {
+        }        public ConnectorMappingCompleteOperationArgs build() {
             return new ConnectorMappingCompleteOperationArgs(completionOperationType, destinationFolder);
         }
     }

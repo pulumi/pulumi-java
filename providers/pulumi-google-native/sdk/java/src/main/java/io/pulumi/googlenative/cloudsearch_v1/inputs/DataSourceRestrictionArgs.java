@@ -80,22 +80,21 @@ public final class DataSourceRestrictionArgs extends io.pulumi.resources.Resourc
             this.filterOptions = filterOptions;
             return this;
         }
-
         public Builder filterOptions(@Nullable List<FilterOptionsArgs> filterOptions) {
             this.filterOptions = Output.ofNullable(filterOptions);
             return this;
         }
-
+        public Builder filterOptions(FilterOptionsArgs... filterOptions) {
+            return filterOptions(List.of(filterOptions));
+        }
         public Builder source(@Nullable Output<SourceArgs> source) {
             this.source = source;
             return this;
         }
-
         public Builder source(@Nullable SourceArgs source) {
             this.source = Output.ofNullable(source);
             return this;
-        }
-        public DataSourceRestrictionArgs build() {
+        }        public DataSourceRestrictionArgs build() {
             return new DataSourceRestrictionArgs(filterOptions, source);
         }
     }

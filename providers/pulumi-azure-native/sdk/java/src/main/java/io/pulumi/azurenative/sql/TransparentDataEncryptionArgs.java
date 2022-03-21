@@ -124,52 +124,42 @@ public final class TransparentDataEncryptionArgs extends io.pulumi.resources.Res
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
-
         public Builder databaseName(String databaseName) {
             this.databaseName = Output.of(Objects.requireNonNull(databaseName));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder serverName(Output<String> serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
         }
-
         public Builder serverName(String serverName) {
             this.serverName = Output.of(Objects.requireNonNull(serverName));
             return this;
         }
-
         public Builder status(@Nullable Output<Either<String,TransparentDataEncryptionStatus>> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable Either<String,TransparentDataEncryptionStatus> status) {
             this.status = Output.ofNullable(status);
             return this;
         }
-
         public Builder transparentDataEncryptionName(@Nullable Output<String> transparentDataEncryptionName) {
             this.transparentDataEncryptionName = transparentDataEncryptionName;
             return this;
         }
-
         public Builder transparentDataEncryptionName(@Nullable String transparentDataEncryptionName) {
             this.transparentDataEncryptionName = Output.ofNullable(transparentDataEncryptionName);
             return this;
-        }
-        public TransparentDataEncryptionArgs build() {
+        }        public TransparentDataEncryptionArgs build() {
             return new TransparentDataEncryptionArgs(databaseName, resourceGroupName, serverName, status, transparentDataEncryptionName);
         }
     }

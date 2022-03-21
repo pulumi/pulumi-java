@@ -58,8 +58,7 @@ public final class EntityKeyResponse extends io.pulumi.resources.InvokeArgs {
         public Builder namespace(String namespace) {
             this.namespace = Objects.requireNonNull(namespace);
             return this;
-        }
-        public EntityKeyResponse build() {
+        }        public EntityKeyResponse build() {
             return new EntityKeyResponse(namespace);
         }
     }

@@ -144,32 +144,29 @@ public final class RecordSetResponse extends io.pulumi.resources.InvokeArgs {
             this.fqdn = fqdn;
             return this;
         }
-
         public Builder ipAddresses(@Nullable List<String> ipAddresses) {
             this.ipAddresses = ipAddresses;
             return this;
         }
-
+        public Builder ipAddresses(String... ipAddresses) {
+            return ipAddresses(List.of(ipAddresses));
+        }
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder recordSetName(@Nullable String recordSetName) {
             this.recordSetName = recordSetName;
             return this;
         }
-
         public Builder recordType(@Nullable String recordType) {
             this.recordType = recordType;
             return this;
         }
-
         public Builder ttl(@Nullable Integer ttl) {
             this.ttl = ttl;
             return this;
-        }
-        public RecordSetResponse build() {
+        }        public RecordSetResponse build() {
             return new RecordSetResponse(fqdn, ipAddresses, provisioningState, recordSetName, recordType, ttl);
         }
     }

@@ -184,82 +184,72 @@ public final class ServicesPropertiesArgs extends io.pulumi.resources.ResourceAr
             this.accessPolicies = accessPolicies;
             return this;
         }
-
         public Builder accessPolicies(@Nullable List<ServiceAccessPolicyEntryArgs> accessPolicies) {
             this.accessPolicies = Output.ofNullable(accessPolicies);
             return this;
         }
-
+        public Builder accessPolicies(ServiceAccessPolicyEntryArgs... accessPolicies) {
+            return accessPolicies(List.of(accessPolicies));
+        }
         public Builder acrConfiguration(@Nullable Output<ServiceAcrConfigurationInfoArgs> acrConfiguration) {
             this.acrConfiguration = acrConfiguration;
             return this;
         }
-
         public Builder acrConfiguration(@Nullable ServiceAcrConfigurationInfoArgs acrConfiguration) {
             this.acrConfiguration = Output.ofNullable(acrConfiguration);
             return this;
         }
-
         public Builder authenticationConfiguration(@Nullable Output<ServiceAuthenticationConfigurationInfoArgs> authenticationConfiguration) {
             this.authenticationConfiguration = authenticationConfiguration;
             return this;
         }
-
         public Builder authenticationConfiguration(@Nullable ServiceAuthenticationConfigurationInfoArgs authenticationConfiguration) {
             this.authenticationConfiguration = Output.ofNullable(authenticationConfiguration);
             return this;
         }
-
         public Builder corsConfiguration(@Nullable Output<ServiceCorsConfigurationInfoArgs> corsConfiguration) {
             this.corsConfiguration = corsConfiguration;
             return this;
         }
-
         public Builder corsConfiguration(@Nullable ServiceCorsConfigurationInfoArgs corsConfiguration) {
             this.corsConfiguration = Output.ofNullable(corsConfiguration);
             return this;
         }
-
         public Builder cosmosDbConfiguration(@Nullable Output<ServiceCosmosDbConfigurationInfoArgs> cosmosDbConfiguration) {
             this.cosmosDbConfiguration = cosmosDbConfiguration;
             return this;
         }
-
         public Builder cosmosDbConfiguration(@Nullable ServiceCosmosDbConfigurationInfoArgs cosmosDbConfiguration) {
             this.cosmosDbConfiguration = Output.ofNullable(cosmosDbConfiguration);
             return this;
         }
-
         public Builder exportConfiguration(@Nullable Output<ServiceExportConfigurationInfoArgs> exportConfiguration) {
             this.exportConfiguration = exportConfiguration;
             return this;
         }
-
         public Builder exportConfiguration(@Nullable ServiceExportConfigurationInfoArgs exportConfiguration) {
             this.exportConfiguration = Output.ofNullable(exportConfiguration);
             return this;
         }
-
         public Builder privateEndpointConnections(@Nullable Output<List<PrivateEndpointConnectionArgs>> privateEndpointConnections) {
             this.privateEndpointConnections = privateEndpointConnections;
             return this;
         }
-
         public Builder privateEndpointConnections(@Nullable List<PrivateEndpointConnectionArgs> privateEndpointConnections) {
             this.privateEndpointConnections = Output.ofNullable(privateEndpointConnections);
             return this;
         }
-
+        public Builder privateEndpointConnections(PrivateEndpointConnectionArgs... privateEndpointConnections) {
+            return privateEndpointConnections(List.of(privateEndpointConnections));
+        }
         public Builder publicNetworkAccess(@Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess) {
             this.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
-
         public Builder publicNetworkAccess(@Nullable Either<String,PublicNetworkAccess> publicNetworkAccess) {
             this.publicNetworkAccess = Output.ofNullable(publicNetworkAccess);
             return this;
-        }
-        public ServicesPropertiesArgs build() {
+        }        public ServicesPropertiesArgs build() {
             return new ServicesPropertiesArgs(accessPolicies, acrConfiguration, authenticationConfiguration, corsConfiguration, cosmosDbConfiguration, exportConfiguration, privateEndpointConnections, publicNetworkAccess);
         }
     }

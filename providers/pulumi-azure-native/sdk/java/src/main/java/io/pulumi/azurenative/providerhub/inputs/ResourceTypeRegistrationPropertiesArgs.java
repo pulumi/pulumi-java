@@ -414,292 +414,270 @@ public final class ResourceTypeRegistrationPropertiesArgs extends io.pulumi.reso
             this.allowedUnauthorizedActions = allowedUnauthorizedActions;
             return this;
         }
-
         public Builder allowedUnauthorizedActions(@Nullable List<String> allowedUnauthorizedActions) {
             this.allowedUnauthorizedActions = Output.ofNullable(allowedUnauthorizedActions);
             return this;
         }
-
+        public Builder allowedUnauthorizedActions(String... allowedUnauthorizedActions) {
+            return allowedUnauthorizedActions(List.of(allowedUnauthorizedActions));
+        }
         public Builder authorizationActionMappings(@Nullable Output<List<AuthorizationActionMappingArgs>> authorizationActionMappings) {
             this.authorizationActionMappings = authorizationActionMappings;
             return this;
         }
-
         public Builder authorizationActionMappings(@Nullable List<AuthorizationActionMappingArgs> authorizationActionMappings) {
             this.authorizationActionMappings = Output.ofNullable(authorizationActionMappings);
             return this;
         }
-
+        public Builder authorizationActionMappings(AuthorizationActionMappingArgs... authorizationActionMappings) {
+            return authorizationActionMappings(List.of(authorizationActionMappings));
+        }
         public Builder checkNameAvailabilitySpecifications(@Nullable Output<ResourceTypeRegistrationPropertiesCheckNameAvailabilitySpecificationsArgs> checkNameAvailabilitySpecifications) {
             this.checkNameAvailabilitySpecifications = checkNameAvailabilitySpecifications;
             return this;
         }
-
         public Builder checkNameAvailabilitySpecifications(@Nullable ResourceTypeRegistrationPropertiesCheckNameAvailabilitySpecificationsArgs checkNameAvailabilitySpecifications) {
             this.checkNameAvailabilitySpecifications = Output.ofNullable(checkNameAvailabilitySpecifications);
             return this;
         }
-
         public Builder defaultApiVersion(@Nullable Output<String> defaultApiVersion) {
             this.defaultApiVersion = defaultApiVersion;
             return this;
         }
-
         public Builder defaultApiVersion(@Nullable String defaultApiVersion) {
             this.defaultApiVersion = Output.ofNullable(defaultApiVersion);
             return this;
         }
-
         public Builder disallowedActionVerbs(@Nullable Output<List<String>> disallowedActionVerbs) {
             this.disallowedActionVerbs = disallowedActionVerbs;
             return this;
         }
-
         public Builder disallowedActionVerbs(@Nullable List<String> disallowedActionVerbs) {
             this.disallowedActionVerbs = Output.ofNullable(disallowedActionVerbs);
             return this;
         }
-
+        public Builder disallowedActionVerbs(String... disallowedActionVerbs) {
+            return disallowedActionVerbs(List.of(disallowedActionVerbs));
+        }
         public Builder enableAsyncOperation(@Nullable Output<Boolean> enableAsyncOperation) {
             this.enableAsyncOperation = enableAsyncOperation;
             return this;
         }
-
         public Builder enableAsyncOperation(@Nullable Boolean enableAsyncOperation) {
             this.enableAsyncOperation = Output.ofNullable(enableAsyncOperation);
             return this;
         }
-
         public Builder enableThirdPartyS2S(@Nullable Output<Boolean> enableThirdPartyS2S) {
             this.enableThirdPartyS2S = enableThirdPartyS2S;
             return this;
         }
-
         public Builder enableThirdPartyS2S(@Nullable Boolean enableThirdPartyS2S) {
             this.enableThirdPartyS2S = Output.ofNullable(enableThirdPartyS2S);
             return this;
         }
-
         public Builder endpoints(@Nullable Output<List<ResourceTypeEndpointArgs>> endpoints) {
             this.endpoints = endpoints;
             return this;
         }
-
         public Builder endpoints(@Nullable List<ResourceTypeEndpointArgs> endpoints) {
             this.endpoints = Output.ofNullable(endpoints);
             return this;
         }
-
+        public Builder endpoints(ResourceTypeEndpointArgs... endpoints) {
+            return endpoints(List.of(endpoints));
+        }
         public Builder extendedLocations(@Nullable Output<List<ExtendedLocationOptionsArgs>> extendedLocations) {
             this.extendedLocations = extendedLocations;
             return this;
         }
-
         public Builder extendedLocations(@Nullable List<ExtendedLocationOptionsArgs> extendedLocations) {
             this.extendedLocations = Output.ofNullable(extendedLocations);
             return this;
         }
-
+        public Builder extendedLocations(ExtendedLocationOptionsArgs... extendedLocations) {
+            return extendedLocations(List.of(extendedLocations));
+        }
         public Builder extensionOptions(@Nullable Output<ResourceTypeRegistrationPropertiesExtensionOptionsArgs> extensionOptions) {
             this.extensionOptions = extensionOptions;
             return this;
         }
-
         public Builder extensionOptions(@Nullable ResourceTypeRegistrationPropertiesExtensionOptionsArgs extensionOptions) {
             this.extensionOptions = Output.ofNullable(extensionOptions);
             return this;
         }
-
         public Builder featuresRule(@Nullable Output<ResourceTypeRegistrationPropertiesFeaturesRuleArgs> featuresRule) {
             this.featuresRule = featuresRule;
             return this;
         }
-
         public Builder featuresRule(@Nullable ResourceTypeRegistrationPropertiesFeaturesRuleArgs featuresRule) {
             this.featuresRule = Output.ofNullable(featuresRule);
             return this;
         }
-
         public Builder identityManagement(@Nullable Output<ResourceTypeRegistrationPropertiesIdentityManagementArgs> identityManagement) {
             this.identityManagement = identityManagement;
             return this;
         }
-
         public Builder identityManagement(@Nullable ResourceTypeRegistrationPropertiesIdentityManagementArgs identityManagement) {
             this.identityManagement = Output.ofNullable(identityManagement);
             return this;
         }
-
         public Builder isPureProxy(@Nullable Output<Boolean> isPureProxy) {
             this.isPureProxy = isPureProxy;
             return this;
         }
-
         public Builder isPureProxy(@Nullable Boolean isPureProxy) {
             this.isPureProxy = Output.ofNullable(isPureProxy);
             return this;
         }
-
         public Builder linkedAccessChecks(@Nullable Output<List<LinkedAccessCheckArgs>> linkedAccessChecks) {
             this.linkedAccessChecks = linkedAccessChecks;
             return this;
         }
-
         public Builder linkedAccessChecks(@Nullable List<LinkedAccessCheckArgs> linkedAccessChecks) {
             this.linkedAccessChecks = Output.ofNullable(linkedAccessChecks);
             return this;
         }
-
+        public Builder linkedAccessChecks(LinkedAccessCheckArgs... linkedAccessChecks) {
+            return linkedAccessChecks(List.of(linkedAccessChecks));
+        }
         public Builder loggingRules(@Nullable Output<List<LoggingRuleArgs>> loggingRules) {
             this.loggingRules = loggingRules;
             return this;
         }
-
         public Builder loggingRules(@Nullable List<LoggingRuleArgs> loggingRules) {
             this.loggingRules = Output.ofNullable(loggingRules);
             return this;
         }
-
+        public Builder loggingRules(LoggingRuleArgs... loggingRules) {
+            return loggingRules(List.of(loggingRules));
+        }
         public Builder marketplaceType(@Nullable Output<String> marketplaceType) {
             this.marketplaceType = marketplaceType;
             return this;
         }
-
         public Builder marketplaceType(@Nullable String marketplaceType) {
             this.marketplaceType = Output.ofNullable(marketplaceType);
             return this;
         }
-
         public Builder provisioningState(@Nullable Output<Either<String,ProvisioningState>> provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
-
         public Builder provisioningState(@Nullable Either<String,ProvisioningState> provisioningState) {
             this.provisioningState = Output.ofNullable(provisioningState);
             return this;
         }
-
         public Builder regionality(@Nullable Output<Either<String,Regionality>> regionality) {
             this.regionality = regionality;
             return this;
         }
-
         public Builder regionality(@Nullable Either<String,Regionality> regionality) {
             this.regionality = Output.ofNullable(regionality);
             return this;
         }
-
         public Builder requestHeaderOptions(@Nullable Output<ResourceTypeRegistrationPropertiesRequestHeaderOptionsArgs> requestHeaderOptions) {
             this.requestHeaderOptions = requestHeaderOptions;
             return this;
         }
-
         public Builder requestHeaderOptions(@Nullable ResourceTypeRegistrationPropertiesRequestHeaderOptionsArgs requestHeaderOptions) {
             this.requestHeaderOptions = Output.ofNullable(requestHeaderOptions);
             return this;
         }
-
         public Builder requiredFeatures(@Nullable Output<List<String>> requiredFeatures) {
             this.requiredFeatures = requiredFeatures;
             return this;
         }
-
         public Builder requiredFeatures(@Nullable List<String> requiredFeatures) {
             this.requiredFeatures = Output.ofNullable(requiredFeatures);
             return this;
         }
-
+        public Builder requiredFeatures(String... requiredFeatures) {
+            return requiredFeatures(List.of(requiredFeatures));
+        }
         public Builder resourceDeletionPolicy(@Nullable Output<Either<String,ResourceDeletionPolicy>> resourceDeletionPolicy) {
             this.resourceDeletionPolicy = resourceDeletionPolicy;
             return this;
         }
-
         public Builder resourceDeletionPolicy(@Nullable Either<String,ResourceDeletionPolicy> resourceDeletionPolicy) {
             this.resourceDeletionPolicy = Output.ofNullable(resourceDeletionPolicy);
             return this;
         }
-
         public Builder resourceMovePolicy(@Nullable Output<ResourceTypeRegistrationPropertiesResourceMovePolicyArgs> resourceMovePolicy) {
             this.resourceMovePolicy = resourceMovePolicy;
             return this;
         }
-
         public Builder resourceMovePolicy(@Nullable ResourceTypeRegistrationPropertiesResourceMovePolicyArgs resourceMovePolicy) {
             this.resourceMovePolicy = Output.ofNullable(resourceMovePolicy);
             return this;
         }
-
         public Builder routingType(@Nullable Output<Either<String,RoutingType>> routingType) {
             this.routingType = routingType;
             return this;
         }
-
         public Builder routingType(@Nullable Either<String,RoutingType> routingType) {
             this.routingType = Output.ofNullable(routingType);
             return this;
         }
-
         public Builder serviceTreeInfos(@Nullable Output<List<ServiceTreeInfoArgs>> serviceTreeInfos) {
             this.serviceTreeInfos = serviceTreeInfos;
             return this;
         }
-
         public Builder serviceTreeInfos(@Nullable List<ServiceTreeInfoArgs> serviceTreeInfos) {
             this.serviceTreeInfos = Output.ofNullable(serviceTreeInfos);
             return this;
         }
-
+        public Builder serviceTreeInfos(ServiceTreeInfoArgs... serviceTreeInfos) {
+            return serviceTreeInfos(List.of(serviceTreeInfos));
+        }
         public Builder subscriptionLifecycleNotificationSpecifications(@Nullable Output<ResourceTypeRegistrationPropertiesSubscriptionLifecycleNotificationSpecificationsArgs> subscriptionLifecycleNotificationSpecifications) {
             this.subscriptionLifecycleNotificationSpecifications = subscriptionLifecycleNotificationSpecifications;
             return this;
         }
-
         public Builder subscriptionLifecycleNotificationSpecifications(@Nullable ResourceTypeRegistrationPropertiesSubscriptionLifecycleNotificationSpecificationsArgs subscriptionLifecycleNotificationSpecifications) {
             this.subscriptionLifecycleNotificationSpecifications = Output.ofNullable(subscriptionLifecycleNotificationSpecifications);
             return this;
         }
-
         public Builder subscriptionStateRules(@Nullable Output<List<SubscriptionStateRuleArgs>> subscriptionStateRules) {
             this.subscriptionStateRules = subscriptionStateRules;
             return this;
         }
-
         public Builder subscriptionStateRules(@Nullable List<SubscriptionStateRuleArgs> subscriptionStateRules) {
             this.subscriptionStateRules = Output.ofNullable(subscriptionStateRules);
             return this;
         }
-
+        public Builder subscriptionStateRules(SubscriptionStateRuleArgs... subscriptionStateRules) {
+            return subscriptionStateRules(List.of(subscriptionStateRules));
+        }
         public Builder swaggerSpecifications(@Nullable Output<List<SwaggerSpecificationArgs>> swaggerSpecifications) {
             this.swaggerSpecifications = swaggerSpecifications;
             return this;
         }
-
         public Builder swaggerSpecifications(@Nullable List<SwaggerSpecificationArgs> swaggerSpecifications) {
             this.swaggerSpecifications = Output.ofNullable(swaggerSpecifications);
             return this;
         }
-
+        public Builder swaggerSpecifications(SwaggerSpecificationArgs... swaggerSpecifications) {
+            return swaggerSpecifications(List.of(swaggerSpecifications));
+        }
         public Builder templateDeploymentOptions(@Nullable Output<ResourceTypeRegistrationPropertiesTemplateDeploymentOptionsArgs> templateDeploymentOptions) {
             this.templateDeploymentOptions = templateDeploymentOptions;
             return this;
         }
-
         public Builder templateDeploymentOptions(@Nullable ResourceTypeRegistrationPropertiesTemplateDeploymentOptionsArgs templateDeploymentOptions) {
             this.templateDeploymentOptions = Output.ofNullable(templateDeploymentOptions);
             return this;
         }
-
         public Builder throttlingRules(@Nullable Output<List<ThrottlingRuleArgs>> throttlingRules) {
             this.throttlingRules = throttlingRules;
             return this;
         }
-
         public Builder throttlingRules(@Nullable List<ThrottlingRuleArgs> throttlingRules) {
             this.throttlingRules = Output.ofNullable(throttlingRules);
             return this;
         }
-        public ResourceTypeRegistrationPropertiesArgs build() {
+        public Builder throttlingRules(ThrottlingRuleArgs... throttlingRules) {
+            return throttlingRules(List.of(throttlingRules));
+        }        public ResourceTypeRegistrationPropertiesArgs build() {
             return new ResourceTypeRegistrationPropertiesArgs(allowedUnauthorizedActions, authorizationActionMappings, checkNameAvailabilitySpecifications, defaultApiVersion, disallowedActionVerbs, enableAsyncOperation, enableThirdPartyS2S, endpoints, extendedLocations, extensionOptions, featuresRule, identityManagement, isPureProxy, linkedAccessChecks, loggingRules, marketplaceType, provisioningState, regionality, requestHeaderOptions, requiredFeatures, resourceDeletionPolicy, resourceMovePolicy, routingType, serviceTreeInfos, subscriptionLifecycleNotificationSpecifications, subscriptionStateRules, swaggerSpecifications, templateDeploymentOptions, throttlingRules);
         }
     }

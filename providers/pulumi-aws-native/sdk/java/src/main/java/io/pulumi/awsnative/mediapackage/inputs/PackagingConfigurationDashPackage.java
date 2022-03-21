@@ -140,32 +140,32 @@ public final class PackagingConfigurationDashPackage extends io.pulumi.resources
             this.dashManifests = Objects.requireNonNull(dashManifests);
             return this;
         }
-
+        public Builder dashManifests(PackagingConfigurationDashManifest... dashManifests) {
+            return dashManifests(List.of(dashManifests));
+        }
         public Builder encryption(@Nullable PackagingConfigurationDashEncryption encryption) {
             this.encryption = encryption;
             return this;
         }
-
         public Builder includeEncoderConfigurationInSegments(@Nullable Boolean includeEncoderConfigurationInSegments) {
             this.includeEncoderConfigurationInSegments = includeEncoderConfigurationInSegments;
             return this;
         }
-
         public Builder periodTriggers(@Nullable List<PackagingConfigurationDashPackagePeriodTriggersItem> periodTriggers) {
             this.periodTriggers = periodTriggers;
             return this;
         }
-
+        public Builder periodTriggers(PackagingConfigurationDashPackagePeriodTriggersItem... periodTriggers) {
+            return periodTriggers(List.of(periodTriggers));
+        }
         public Builder segmentDurationSeconds(@Nullable Integer segmentDurationSeconds) {
             this.segmentDurationSeconds = segmentDurationSeconds;
             return this;
         }
-
         public Builder segmentTemplateFormat(@Nullable PackagingConfigurationDashPackageSegmentTemplateFormat segmentTemplateFormat) {
             this.segmentTemplateFormat = segmentTemplateFormat;
             return this;
-        }
-        public PackagingConfigurationDashPackage build() {
+        }        public PackagingConfigurationDashPackage build() {
             return new PackagingConfigurationDashPackage(dashManifests, encryption, includeEncoderConfigurationInSegments, periodTriggers, segmentDurationSeconds, segmentTemplateFormat);
         }
     }

@@ -43,8 +43,7 @@ public final class EnvironmentConfigWebServerConfig {
         public Builder machineType(String machineType) {
             this.machineType = Objects.requireNonNull(machineType);
             return this;
-        }
-        public EnvironmentConfigWebServerConfig build() {
+        }        public EnvironmentConfigWebServerConfig build() {
             return new EnvironmentConfigWebServerConfig(machineType);
         }
     }

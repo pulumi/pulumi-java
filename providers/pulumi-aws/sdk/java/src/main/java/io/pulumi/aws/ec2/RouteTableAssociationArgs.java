@@ -90,32 +90,26 @@ public final class RouteTableAssociationArgs extends io.pulumi.resources.Resourc
             this.gatewayId = gatewayId;
             return this;
         }
-
         public Builder gatewayId(@Nullable String gatewayId) {
             this.gatewayId = Output.ofNullable(gatewayId);
             return this;
         }
-
         public Builder routeTableId(Output<String> routeTableId) {
             this.routeTableId = Objects.requireNonNull(routeTableId);
             return this;
         }
-
         public Builder routeTableId(String routeTableId) {
             this.routeTableId = Output.of(Objects.requireNonNull(routeTableId));
             return this;
         }
-
         public Builder subnetId(@Nullable Output<String> subnetId) {
             this.subnetId = subnetId;
             return this;
         }
-
         public Builder subnetId(@Nullable String subnetId) {
             this.subnetId = Output.ofNullable(subnetId);
             return this;
-        }
-        public RouteTableAssociationArgs build() {
+        }        public RouteTableAssociationArgs build() {
             return new RouteTableAssociationArgs(gatewayId, routeTableId, subnetId);
         }
     }

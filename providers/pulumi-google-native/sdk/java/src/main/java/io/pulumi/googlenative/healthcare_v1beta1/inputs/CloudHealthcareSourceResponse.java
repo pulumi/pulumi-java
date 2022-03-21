@@ -58,8 +58,7 @@ public final class CloudHealthcareSourceResponse extends io.pulumi.resources.Inv
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public CloudHealthcareSourceResponse build() {
+        }        public CloudHealthcareSourceResponse build() {
             return new CloudHealthcareSourceResponse(name);
         }
     }

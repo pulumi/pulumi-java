@@ -120,27 +120,25 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBasicCardResponse {
             this.buttons = Objects.requireNonNull(buttons);
             return this;
         }
-
+        public Builder buttons(GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonResponse... buttons) {
+            return buttons(List.of(buttons));
+        }
         public Builder formattedText(String formattedText) {
             this.formattedText = Objects.requireNonNull(formattedText);
             return this;
         }
-
         public Builder image(GoogleCloudDialogflowV2beta1IntentMessageImageResponse image) {
             this.image = Objects.requireNonNull(image);
             return this;
         }
-
         public Builder subtitle(String subtitle) {
             this.subtitle = Objects.requireNonNull(subtitle);
             return this;
         }
-
         public Builder title(String title) {
             this.title = Objects.requireNonNull(title);
             return this;
-        }
-        public GoogleCloudDialogflowV2beta1IntentMessageBasicCardResponse build() {
+        }        public GoogleCloudDialogflowV2beta1IntentMessageBasicCardResponse build() {
             return new GoogleCloudDialogflowV2beta1IntentMessageBasicCardResponse(buttons, formattedText, image, subtitle, title);
         }
     }

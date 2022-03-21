@@ -76,12 +76,13 @@ public final class GetImageRecipesArgs extends io.pulumi.resources.InvokeArgs {
             this.filters = filters;
             return this;
         }
-
+        public Builder filters(GetImageRecipesFilter... filters) {
+            return filters(List.of(filters));
+        }
         public Builder owner(@Nullable String owner) {
             this.owner = owner;
             return this;
-        }
-        public GetImageRecipesArgs build() {
+        }        public GetImageRecipesArgs build() {
             return new GetImageRecipesArgs(filters, owner);
         }
     }

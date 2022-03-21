@@ -122,52 +122,42 @@ public final class InstanceGroupManagerAutoHealingPolicyArgs extends io.pulumi.r
             this.autoHealingTriggers = autoHealingTriggers;
             return this;
         }
-
         public Builder autoHealingTriggers(@Nullable InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersArgs autoHealingTriggers) {
             this.autoHealingTriggers = Output.ofNullable(autoHealingTriggers);
             return this;
         }
-
         public Builder healthCheck(@Nullable Output<String> healthCheck) {
             this.healthCheck = healthCheck;
             return this;
         }
-
         public Builder healthCheck(@Nullable String healthCheck) {
             this.healthCheck = Output.ofNullable(healthCheck);
             return this;
         }
-
         public Builder initialDelaySec(@Nullable Output<Integer> initialDelaySec) {
             this.initialDelaySec = initialDelaySec;
             return this;
         }
-
         public Builder initialDelaySec(@Nullable Integer initialDelaySec) {
             this.initialDelaySec = Output.ofNullable(initialDelaySec);
             return this;
         }
-
         public Builder maxUnavailable(@Nullable Output<FixedOrPercentArgs> maxUnavailable) {
             this.maxUnavailable = maxUnavailable;
             return this;
         }
-
         public Builder maxUnavailable(@Nullable FixedOrPercentArgs maxUnavailable) {
             this.maxUnavailable = Output.ofNullable(maxUnavailable);
             return this;
         }
-
         public Builder updateInstances(@Nullable Output<InstanceGroupManagerAutoHealingPolicyUpdateInstances> updateInstances) {
             this.updateInstances = updateInstances;
             return this;
         }
-
         public Builder updateInstances(@Nullable InstanceGroupManagerAutoHealingPolicyUpdateInstances updateInstances) {
             this.updateInstances = Output.ofNullable(updateInstances);
             return this;
-        }
-        public InstanceGroupManagerAutoHealingPolicyArgs build() {
+        }        public InstanceGroupManagerAutoHealingPolicyArgs build() {
             return new InstanceGroupManagerAutoHealingPolicyArgs(autoHealingTriggers, healthCheck, initialDelaySec, maxUnavailable, updateInstances);
         }
     }

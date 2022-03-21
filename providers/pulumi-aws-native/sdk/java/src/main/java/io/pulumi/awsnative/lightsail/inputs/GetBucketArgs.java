@@ -54,8 +54,7 @@ public final class GetBucketArgs extends io.pulumi.resources.InvokeArgs {
         public Builder bucketName(String bucketName) {
             this.bucketName = Objects.requireNonNull(bucketName);
             return this;
-        }
-        public GetBucketArgs build() {
+        }        public GetBucketArgs build() {
             return new GetBucketArgs(bucketName);
         }
     }

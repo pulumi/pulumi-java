@@ -79,22 +79,18 @@ public final class ResourceRequirementsArgs extends io.pulumi.resources.Resource
             this.limits = limits;
             return this;
         }
-
         public Builder limits(@Nullable Map<String,String> limits) {
             this.limits = Output.ofNullable(limits);
             return this;
         }
-
         public Builder requests(@Nullable Output<Map<String,String>> requests) {
             this.requests = requests;
             return this;
         }
-
         public Builder requests(@Nullable Map<String,String> requests) {
             this.requests = Output.ofNullable(requests);
             return this;
-        }
-        public ResourceRequirementsArgs build() {
+        }        public ResourceRequirementsArgs build() {
             return new ResourceRequirementsArgs(limits, requests);
         }
     }

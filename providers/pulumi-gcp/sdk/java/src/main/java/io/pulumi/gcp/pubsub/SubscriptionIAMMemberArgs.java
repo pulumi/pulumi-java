@@ -118,52 +118,42 @@ public final class SubscriptionIAMMemberArgs extends io.pulumi.resources.Resourc
             this.condition = condition;
             return this;
         }
-
         public Builder condition(@Nullable SubscriptionIAMMemberConditionArgs condition) {
             this.condition = Output.ofNullable(condition);
             return this;
         }
-
         public Builder member(Output<String> member) {
             this.member = Objects.requireNonNull(member);
             return this;
         }
-
         public Builder member(String member) {
             this.member = Output.of(Objects.requireNonNull(member));
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder role(Output<String> role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }
-
         public Builder role(String role) {
             this.role = Output.of(Objects.requireNonNull(role));
             return this;
         }
-
         public Builder subscription(Output<String> subscription) {
             this.subscription = Objects.requireNonNull(subscription);
             return this;
         }
-
         public Builder subscription(String subscription) {
             this.subscription = Output.of(Objects.requireNonNull(subscription));
             return this;
-        }
-        public SubscriptionIAMMemberArgs build() {
+        }        public SubscriptionIAMMemberArgs build() {
             return new SubscriptionIAMMemberArgs(condition, member, project, role, subscription);
         }
     }

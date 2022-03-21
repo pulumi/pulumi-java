@@ -71,12 +71,13 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageTextResponse {
             this.allowPlaybackInterruption = Objects.requireNonNull(allowPlaybackInterruption);
             return this;
         }
-
         public Builder text(List<String> text) {
             this.text = Objects.requireNonNull(text);
             return this;
         }
-        public GoogleCloudDialogflowCxV3beta1ResponseMessageTextResponse build() {
+        public Builder text(String... text) {
+            return text(List.of(text));
+        }        public GoogleCloudDialogflowCxV3beta1ResponseMessageTextResponse build() {
             return new GoogleCloudDialogflowCxV3beta1ResponseMessageTextResponse(allowPlaybackInterruption, text);
         }
     }

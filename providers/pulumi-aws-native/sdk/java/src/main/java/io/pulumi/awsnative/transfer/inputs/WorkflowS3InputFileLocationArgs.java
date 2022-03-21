@@ -78,22 +78,18 @@ public final class WorkflowS3InputFileLocationArgs extends io.pulumi.resources.R
             this.bucket = bucket;
             return this;
         }
-
         public Builder bucket(@Nullable String bucket) {
             this.bucket = Output.ofNullable(bucket);
             return this;
         }
-
         public Builder key(@Nullable Output<String> key) {
             this.key = key;
             return this;
         }
-
         public Builder key(@Nullable String key) {
             this.key = Output.ofNullable(key);
             return this;
-        }
-        public WorkflowS3InputFileLocationArgs build() {
+        }        public WorkflowS3InputFileLocationArgs build() {
             return new WorkflowS3InputFileLocationArgs(bucket, key);
         }
     }

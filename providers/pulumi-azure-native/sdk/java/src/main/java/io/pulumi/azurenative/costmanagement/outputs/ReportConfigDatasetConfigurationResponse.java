@@ -54,7 +54,9 @@ public final class ReportConfigDatasetConfigurationResponse {
             this.columns = columns;
             return this;
         }
-        public ReportConfigDatasetConfigurationResponse build() {
+        public Builder columns(String... columns) {
+            return columns(List.of(columns));
+        }        public ReportConfigDatasetConfigurationResponse build() {
             return new ReportConfigDatasetConfigurationResponse(columns);
         }
     }

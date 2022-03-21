@@ -109,42 +109,34 @@ public final class DetectorArgs extends io.pulumi.resources.ResourceArgs {
             this.datasources = datasources;
             return this;
         }
-
         public Builder datasources(@Nullable DetectorDatasourcesArgs datasources) {
             this.datasources = Output.ofNullable(datasources);
             return this;
         }
-
         public Builder enable(@Nullable Output<Boolean> enable) {
             this.enable = enable;
             return this;
         }
-
         public Builder enable(@Nullable Boolean enable) {
             this.enable = Output.ofNullable(enable);
             return this;
         }
-
         public Builder findingPublishingFrequency(@Nullable Output<String> findingPublishingFrequency) {
             this.findingPublishingFrequency = findingPublishingFrequency;
             return this;
         }
-
         public Builder findingPublishingFrequency(@Nullable String findingPublishingFrequency) {
             this.findingPublishingFrequency = Output.ofNullable(findingPublishingFrequency);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public DetectorArgs build() {
+        }        public DetectorArgs build() {
             return new DetectorArgs(datasources, enable, findingPublishingFrequency, tags);
         }
     }

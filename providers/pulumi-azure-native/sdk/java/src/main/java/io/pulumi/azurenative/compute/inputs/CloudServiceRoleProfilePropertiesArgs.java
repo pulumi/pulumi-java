@@ -79,22 +79,18 @@ public final class CloudServiceRoleProfilePropertiesArgs extends io.pulumi.resou
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder sku(@Nullable Output<CloudServiceRoleSkuArgs> sku) {
             this.sku = sku;
             return this;
         }
-
         public Builder sku(@Nullable CloudServiceRoleSkuArgs sku) {
             this.sku = Output.ofNullable(sku);
             return this;
-        }
-        public CloudServiceRoleProfilePropertiesArgs build() {
+        }        public CloudServiceRoleProfilePropertiesArgs build() {
             return new CloudServiceRoleProfilePropertiesArgs(name, sku);
         }
     }

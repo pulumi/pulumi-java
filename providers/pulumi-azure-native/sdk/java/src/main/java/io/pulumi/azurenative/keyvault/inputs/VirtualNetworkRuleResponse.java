@@ -79,12 +79,10 @@ public final class VirtualNetworkRuleResponse extends io.pulumi.resources.Invoke
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder ignoreMissingVnetServiceEndpoint(@Nullable Boolean ignoreMissingVnetServiceEndpoint) {
             this.ignoreMissingVnetServiceEndpoint = ignoreMissingVnetServiceEndpoint;
             return this;
-        }
-        public VirtualNetworkRuleResponse build() {
+        }        public VirtualNetworkRuleResponse build() {
             return new VirtualNetworkRuleResponse(id, ignoreMissingVnetServiceEndpoint);
         }
     }

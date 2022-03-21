@@ -96,32 +96,26 @@ public final class MultiStepArgs extends io.pulumi.resources.ResourceArgs {
             this.multistepNumber = multistepNumber;
             return this;
         }
-
         public Builder multistepNumber(@Nullable Integer multistepNumber) {
             this.multistepNumber = Output.ofNullable(multistepNumber);
             return this;
         }
-
         public Builder primaryStep(@Nullable Output<PrimaryStepArgs> primaryStep) {
             this.primaryStep = primaryStep;
             return this;
         }
-
         public Builder primaryStep(@Nullable PrimaryStepArgs primaryStep) {
             this.primaryStep = Output.ofNullable(primaryStep);
             return this;
         }
-
         public Builder primaryStepId(@Nullable Output<String> primaryStepId) {
             this.primaryStepId = primaryStepId;
             return this;
         }
-
         public Builder primaryStepId(@Nullable String primaryStepId) {
             this.primaryStepId = Output.ofNullable(primaryStepId);
             return this;
-        }
-        public MultiStepArgs build() {
+        }        public MultiStepArgs build() {
             return new MultiStepArgs(multistepNumber, primaryStep, primaryStepId);
         }
     }

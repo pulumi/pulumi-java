@@ -78,22 +78,18 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionTri
             this.noSmalltalk = noSmalltalk;
             return this;
         }
-
         public Builder noSmalltalk(@Nullable Boolean noSmalltalk) {
             this.noSmalltalk = Output.ofNullable(noSmalltalk);
             return this;
         }
-
         public Builder onlyEndUser(@Nullable Output<Boolean> onlyEndUser) {
             this.onlyEndUser = onlyEndUser;
             return this;
         }
-
         public Builder onlyEndUser(@Nullable Boolean onlyEndUser) {
             this.onlyEndUser = Output.ofNullable(onlyEndUser);
             return this;
-        }
-        public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionTriggerSettingsArgs build() {
+        }        public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionTriggerSettingsArgs build() {
             return new GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionTriggerSettingsArgs(noSmalltalk, onlyEndUser);
         }
     }

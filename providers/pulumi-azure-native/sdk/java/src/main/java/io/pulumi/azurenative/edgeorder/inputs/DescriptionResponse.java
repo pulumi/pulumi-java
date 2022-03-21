@@ -142,32 +142,35 @@ public final class DescriptionResponse extends io.pulumi.resources.InvokeArgs {
             this.attributes = Objects.requireNonNull(attributes);
             return this;
         }
-
+        public Builder attributes(String... attributes) {
+            return attributes(List.of(attributes));
+        }
         public Builder descriptionType(String descriptionType) {
             this.descriptionType = Objects.requireNonNull(descriptionType);
             return this;
         }
-
         public Builder keywords(List<String> keywords) {
             this.keywords = Objects.requireNonNull(keywords);
             return this;
         }
-
+        public Builder keywords(String... keywords) {
+            return keywords(List.of(keywords));
+        }
         public Builder links(List<LinkResponse> links) {
             this.links = Objects.requireNonNull(links);
             return this;
         }
-
+        public Builder links(LinkResponse... links) {
+            return links(List.of(links));
+        }
         public Builder longDescription(String longDescription) {
             this.longDescription = Objects.requireNonNull(longDescription);
             return this;
         }
-
         public Builder shortDescription(String shortDescription) {
             this.shortDescription = Objects.requireNonNull(shortDescription);
             return this;
-        }
-        public DescriptionResponse build() {
+        }        public DescriptionResponse build() {
             return new DescriptionResponse(attributes, descriptionType, keywords, links, longDescription, shortDescription);
         }
     }

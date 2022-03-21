@@ -110,42 +110,37 @@ public final class DefenderSettingArgs extends io.pulumi.resources.ResourceArgs 
             this.deviceQuota = Objects.requireNonNull(deviceQuota);
             return this;
         }
-
         public Builder deviceQuota(Integer deviceQuota) {
             this.deviceQuota = Output.of(Objects.requireNonNull(deviceQuota));
             return this;
         }
-
         public Builder mdeIntegration(Output<DefenderSettingsPropertiesMdeIntegrationArgs> mdeIntegration) {
             this.mdeIntegration = Objects.requireNonNull(mdeIntegration);
             return this;
         }
-
         public Builder mdeIntegration(DefenderSettingsPropertiesMdeIntegrationArgs mdeIntegration) {
             this.mdeIntegration = Output.of(Objects.requireNonNull(mdeIntegration));
             return this;
         }
-
         public Builder onboardingKind(Output<Either<String,OnboardingKind>> onboardingKind) {
             this.onboardingKind = Objects.requireNonNull(onboardingKind);
             return this;
         }
-
         public Builder onboardingKind(Either<String,OnboardingKind> onboardingKind) {
             this.onboardingKind = Output.of(Objects.requireNonNull(onboardingKind));
             return this;
         }
-
         public Builder sentinelWorkspaceResourceIds(Output<List<String>> sentinelWorkspaceResourceIds) {
             this.sentinelWorkspaceResourceIds = Objects.requireNonNull(sentinelWorkspaceResourceIds);
             return this;
         }
-
         public Builder sentinelWorkspaceResourceIds(List<String> sentinelWorkspaceResourceIds) {
             this.sentinelWorkspaceResourceIds = Output.of(Objects.requireNonNull(sentinelWorkspaceResourceIds));
             return this;
         }
-        public DefenderSettingArgs build() {
+        public Builder sentinelWorkspaceResourceIds(String... sentinelWorkspaceResourceIds) {
+            return sentinelWorkspaceResourceIds(List.of(sentinelWorkspaceResourceIds));
+        }        public DefenderSettingArgs build() {
             return new DefenderSettingArgs(deviceQuota, mdeIntegration, onboardingKind, sentinelWorkspaceResourceIds);
         }
     }

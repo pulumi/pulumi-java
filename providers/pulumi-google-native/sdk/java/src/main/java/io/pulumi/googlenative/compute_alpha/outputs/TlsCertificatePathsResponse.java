@@ -69,12 +69,10 @@ public final class TlsCertificatePathsResponse {
             this.certificatePath = Objects.requireNonNull(certificatePath);
             return this;
         }
-
         public Builder privateKeyPath(String privateKeyPath) {
             this.privateKeyPath = Objects.requireNonNull(privateKeyPath);
             return this;
-        }
-        public TlsCertificatePathsResponse build() {
+        }        public TlsCertificatePathsResponse build() {
             return new TlsCertificatePathsResponse(certificatePath, privateKeyPath);
         }
     }

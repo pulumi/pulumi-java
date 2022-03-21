@@ -95,17 +95,14 @@ public final class ScriptSecureStringExecutionParameterResponse extends io.pulum
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder secureValue(@Nullable String secureValue) {
             this.secureValue = secureValue;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public ScriptSecureStringExecutionParameterResponse build() {
+        }        public ScriptSecureStringExecutionParameterResponse build() {
             return new ScriptSecureStringExecutionParameterResponse(name, secureValue, type);
         }
     }

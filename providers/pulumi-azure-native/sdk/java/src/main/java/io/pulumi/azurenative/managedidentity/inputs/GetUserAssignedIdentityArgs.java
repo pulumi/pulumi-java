@@ -72,12 +72,10 @@ public final class GetUserAssignedIdentityArgs extends io.pulumi.resources.Invok
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceName(String resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
-        }
-        public GetUserAssignedIdentityArgs build() {
+        }        public GetUserAssignedIdentityArgs build() {
             return new GetUserAssignedIdentityArgs(resourceGroupName, resourceName);
         }
     }

@@ -46,7 +46,9 @@ public final class ThemeTypography {
             this.fontFamilies = fontFamilies;
             return this;
         }
-        public ThemeTypography build() {
+        public Builder fontFamilies(ThemeFont... fontFamilies) {
+            return fontFamilies(List.of(fontFamilies));
+        }        public ThemeTypography build() {
             return new ThemeTypography(fontFamilies);
         }
     }

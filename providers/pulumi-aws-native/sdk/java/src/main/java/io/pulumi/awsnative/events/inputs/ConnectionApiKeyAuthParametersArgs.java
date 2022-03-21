@@ -65,22 +65,18 @@ public final class ConnectionApiKeyAuthParametersArgs extends io.pulumi.resource
             this.apiKeyName = Objects.requireNonNull(apiKeyName);
             return this;
         }
-
         public Builder apiKeyName(String apiKeyName) {
             this.apiKeyName = Output.of(Objects.requireNonNull(apiKeyName));
             return this;
         }
-
         public Builder apiKeyValue(Output<String> apiKeyValue) {
             this.apiKeyValue = Objects.requireNonNull(apiKeyValue);
             return this;
         }
-
         public Builder apiKeyValue(String apiKeyValue) {
             this.apiKeyValue = Output.of(Objects.requireNonNull(apiKeyValue));
             return this;
-        }
-        public ConnectionApiKeyAuthParametersArgs build() {
+        }        public ConnectionApiKeyAuthParametersArgs build() {
             return new ConnectionApiKeyAuthParametersArgs(apiKeyName, apiKeyValue);
         }
     }

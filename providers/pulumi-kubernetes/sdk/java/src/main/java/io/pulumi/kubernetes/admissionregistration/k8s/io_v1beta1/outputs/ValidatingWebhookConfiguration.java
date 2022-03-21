@@ -106,22 +106,21 @@ public final class ValidatingWebhookConfiguration {
             this.apiVersion = apiVersion;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder metadata(@Nullable ObjectMeta metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder webhooks(@Nullable List<ValidatingWebhook> webhooks) {
             this.webhooks = webhooks;
             return this;
         }
-        public ValidatingWebhookConfiguration build() {
+        public Builder webhooks(ValidatingWebhook... webhooks) {
+            return webhooks(List.of(webhooks));
+        }        public ValidatingWebhookConfiguration build() {
             return new ValidatingWebhookConfiguration(apiVersion, kind, metadata, webhooks);
         }
     }

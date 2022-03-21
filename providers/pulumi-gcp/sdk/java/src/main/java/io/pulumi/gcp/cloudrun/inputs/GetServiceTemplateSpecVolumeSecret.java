@@ -79,17 +79,17 @@ public final class GetServiceTemplateSpecVolumeSecret extends io.pulumi.resource
             this.defaultMode = Objects.requireNonNull(defaultMode);
             return this;
         }
-
         public Builder items(List<GetServiceTemplateSpecVolumeSecretItem> items) {
             this.items = Objects.requireNonNull(items);
             return this;
         }
-
+        public Builder items(GetServiceTemplateSpecVolumeSecretItem... items) {
+            return items(List.of(items));
+        }
         public Builder secretName(String secretName) {
             this.secretName = Objects.requireNonNull(secretName);
             return this;
-        }
-        public GetServiceTemplateSpecVolumeSecret build() {
+        }        public GetServiceTemplateSpecVolumeSecret build() {
             return new GetServiceTemplateSpecVolumeSecret(defaultMode, items, secretName);
         }
     }

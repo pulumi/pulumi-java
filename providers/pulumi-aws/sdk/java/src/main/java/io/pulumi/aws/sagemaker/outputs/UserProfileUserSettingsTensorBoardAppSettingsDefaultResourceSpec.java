@@ -103,22 +103,18 @@ public final class UserProfileUserSettingsTensorBoardAppSettingsDefaultResourceS
             this.instanceType = instanceType;
             return this;
         }
-
         public Builder lifecycleConfigArn(@Nullable String lifecycleConfigArn) {
             this.lifecycleConfigArn = lifecycleConfigArn;
             return this;
         }
-
         public Builder sagemakerImageArn(@Nullable String sagemakerImageArn) {
             this.sagemakerImageArn = sagemakerImageArn;
             return this;
         }
-
         public Builder sagemakerImageVersionArn(@Nullable String sagemakerImageVersionArn) {
             this.sagemakerImageVersionArn = sagemakerImageVersionArn;
             return this;
-        }
-        public UserProfileUserSettingsTensorBoardAppSettingsDefaultResourceSpec build() {
+        }        public UserProfileUserSettingsTensorBoardAppSettingsDefaultResourceSpec build() {
             return new UserProfileUserSettingsTensorBoardAppSettingsDefaultResourceSpec(instanceType, lifecycleConfigArn, sagemakerImageArn, sagemakerImageVersionArn);
         }
     }

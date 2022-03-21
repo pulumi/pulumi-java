@@ -76,12 +76,10 @@ public final class LoadBalancerConfigResponse extends io.pulumi.resources.Invoke
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
-        }
-        public LoadBalancerConfigResponse build() {
+        }        public LoadBalancerConfigResponse build() {
             return new LoadBalancerConfigResponse(type, version);
         }
     }

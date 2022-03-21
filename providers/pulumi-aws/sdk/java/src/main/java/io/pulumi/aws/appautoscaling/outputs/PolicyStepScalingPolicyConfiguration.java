@@ -122,27 +122,25 @@ public final class PolicyStepScalingPolicyConfiguration {
             this.adjustmentType = adjustmentType;
             return this;
         }
-
         public Builder cooldown(@Nullable Integer cooldown) {
             this.cooldown = cooldown;
             return this;
         }
-
         public Builder metricAggregationType(@Nullable String metricAggregationType) {
             this.metricAggregationType = metricAggregationType;
             return this;
         }
-
         public Builder minAdjustmentMagnitude(@Nullable Integer minAdjustmentMagnitude) {
             this.minAdjustmentMagnitude = minAdjustmentMagnitude;
             return this;
         }
-
         public Builder stepAdjustments(@Nullable List<PolicyStepScalingPolicyConfigurationStepAdjustment> stepAdjustments) {
             this.stepAdjustments = stepAdjustments;
             return this;
         }
-        public PolicyStepScalingPolicyConfiguration build() {
+        public Builder stepAdjustments(PolicyStepScalingPolicyConfigurationStepAdjustment... stepAdjustments) {
+            return stepAdjustments(List.of(stepAdjustments));
+        }        public PolicyStepScalingPolicyConfiguration build() {
             return new PolicyStepScalingPolicyConfiguration(adjustmentType, cooldown, metricAggregationType, minAdjustmentMagnitude, stepAdjustments);
         }
     }

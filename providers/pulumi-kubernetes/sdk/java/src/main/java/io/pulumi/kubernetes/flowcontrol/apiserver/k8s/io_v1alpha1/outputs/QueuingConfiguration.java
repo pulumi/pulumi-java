@@ -87,17 +87,14 @@ public final class QueuingConfiguration {
             this.handSize = handSize;
             return this;
         }
-
         public Builder queueLengthLimit(@Nullable Integer queueLengthLimit) {
             this.queueLengthLimit = queueLengthLimit;
             return this;
         }
-
         public Builder queues(@Nullable Integer queues) {
             this.queues = queues;
             return this;
-        }
-        public QueuingConfiguration build() {
+        }        public QueuingConfiguration build() {
             return new QueuingConfiguration(handSize, queueLengthLimit, queues);
         }
     }

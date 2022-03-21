@@ -127,52 +127,45 @@ public final class ComputeSchedulingArgs extends io.pulumi.resources.ResourceArg
             this.automaticRestart = automaticRestart;
             return this;
         }
-
         public Builder automaticRestart(@Nullable Boolean automaticRestart) {
             this.automaticRestart = Output.ofNullable(automaticRestart);
             return this;
         }
-
         public Builder minNodeCpus(@Nullable Output<Integer> minNodeCpus) {
             this.minNodeCpus = minNodeCpus;
             return this;
         }
-
         public Builder minNodeCpus(@Nullable Integer minNodeCpus) {
             this.minNodeCpus = Output.ofNullable(minNodeCpus);
             return this;
         }
-
         public Builder nodeAffinities(@Nullable Output<List<SchedulingNodeAffinityArgs>> nodeAffinities) {
             this.nodeAffinities = nodeAffinities;
             return this;
         }
-
         public Builder nodeAffinities(@Nullable List<SchedulingNodeAffinityArgs> nodeAffinities) {
             this.nodeAffinities = Output.ofNullable(nodeAffinities);
             return this;
         }
-
+        public Builder nodeAffinities(SchedulingNodeAffinityArgs... nodeAffinities) {
+            return nodeAffinities(List.of(nodeAffinities));
+        }
         public Builder onHostMaintenance(@Nullable Output<ComputeSchedulingOnHostMaintenance> onHostMaintenance) {
             this.onHostMaintenance = onHostMaintenance;
             return this;
         }
-
         public Builder onHostMaintenance(@Nullable ComputeSchedulingOnHostMaintenance onHostMaintenance) {
             this.onHostMaintenance = Output.ofNullable(onHostMaintenance);
             return this;
         }
-
         public Builder restartType(@Nullable Output<ComputeSchedulingRestartType> restartType) {
             this.restartType = restartType;
             return this;
         }
-
         public Builder restartType(@Nullable ComputeSchedulingRestartType restartType) {
             this.restartType = Output.ofNullable(restartType);
             return this;
-        }
-        public ComputeSchedulingArgs build() {
+        }        public ComputeSchedulingArgs build() {
             return new ComputeSchedulingArgs(automaticRestart, minNodeCpus, nodeAffinities, onHostMaintenance, restartType);
         }
     }

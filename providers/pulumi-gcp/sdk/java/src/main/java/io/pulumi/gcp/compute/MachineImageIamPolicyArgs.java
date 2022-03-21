@@ -92,32 +92,26 @@ public final class MachineImageIamPolicyArgs extends io.pulumi.resources.Resourc
             this.machineImage = Objects.requireNonNull(machineImage);
             return this;
         }
-
         public Builder machineImage(String machineImage) {
             this.machineImage = Output.of(Objects.requireNonNull(machineImage));
             return this;
         }
-
         public Builder policyData(Output<String> policyData) {
             this.policyData = Objects.requireNonNull(policyData);
             return this;
         }
-
         public Builder policyData(String policyData) {
             this.policyData = Output.of(Objects.requireNonNull(policyData));
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
-        }
-        public MachineImageIamPolicyArgs build() {
+        }        public MachineImageIamPolicyArgs build() {
             return new MachineImageIamPolicyArgs(machineImage, policyData, project);
         }
     }

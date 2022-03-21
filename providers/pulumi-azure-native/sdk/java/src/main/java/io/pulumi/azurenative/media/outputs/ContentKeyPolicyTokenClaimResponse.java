@@ -71,12 +71,10 @@ public final class ContentKeyPolicyTokenClaimResponse {
             this.claimType = claimType;
             return this;
         }
-
         public Builder claimValue(@Nullable String claimValue) {
             this.claimValue = claimValue;
             return this;
-        }
-        public ContentKeyPolicyTokenClaimResponse build() {
+        }        public ContentKeyPolicyTokenClaimResponse build() {
             return new ContentKeyPolicyTokenClaimResponse(claimType, claimValue);
         }
     }

@@ -62,12 +62,10 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageLiveAgentHandoffArgs 
             this.metadata = metadata;
             return this;
         }
-
         public Builder metadata(@Nullable Map<String,String> metadata) {
             this.metadata = Output.ofNullable(metadata);
             return this;
-        }
-        public GoogleCloudDialogflowCxV3ResponseMessageLiveAgentHandoffArgs build() {
+        }        public GoogleCloudDialogflowCxV3ResponseMessageLiveAgentHandoffArgs build() {
             return new GoogleCloudDialogflowCxV3ResponseMessageLiveAgentHandoffArgs(metadata);
         }
     }

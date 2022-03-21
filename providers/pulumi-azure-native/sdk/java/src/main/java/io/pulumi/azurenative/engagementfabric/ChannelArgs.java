@@ -140,62 +140,53 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder accountName(String accountName) {
             this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
-
         public Builder channelFunctions(@Nullable Output<List<String>> channelFunctions) {
             this.channelFunctions = channelFunctions;
             return this;
         }
-
         public Builder channelFunctions(@Nullable List<String> channelFunctions) {
             this.channelFunctions = Output.ofNullable(channelFunctions);
             return this;
         }
-
+        public Builder channelFunctions(String... channelFunctions) {
+            return channelFunctions(List.of(channelFunctions));
+        }
         public Builder channelName(@Nullable Output<String> channelName) {
             this.channelName = channelName;
             return this;
         }
-
         public Builder channelName(@Nullable String channelName) {
             this.channelName = Output.ofNullable(channelName);
             return this;
         }
-
         public Builder channelType(Output<String> channelType) {
             this.channelType = Objects.requireNonNull(channelType);
             return this;
         }
-
         public Builder channelType(String channelType) {
             this.channelType = Output.of(Objects.requireNonNull(channelType));
             return this;
         }
-
         public Builder credentials(@Nullable Output<Map<String,String>> credentials) {
             this.credentials = credentials;
             return this;
         }
-
         public Builder credentials(@Nullable Map<String,String> credentials) {
             this.credentials = Output.ofNullable(credentials);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
-        }
-        public ChannelArgs build() {
+        }        public ChannelArgs build() {
             return new ChannelArgs(accountName, channelFunctions, channelName, channelType, credentials, resourceGroupName);
         }
     }

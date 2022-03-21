@@ -43,8 +43,7 @@ public final class GetClusterNodeConfigSandboxConfig {
         public Builder sandboxType(String sandboxType) {
             this.sandboxType = Objects.requireNonNull(sandboxType);
             return this;
-        }
-        public GetClusterNodeConfigSandboxConfig build() {
+        }        public GetClusterNodeConfigSandboxConfig build() {
             return new GetClusterNodeConfigSandboxConfig(sandboxType);
         }
     }

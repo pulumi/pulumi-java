@@ -95,17 +95,14 @@ public final class DataPathAssetReferenceResponse extends io.pulumi.resources.In
             this.datastoreId = datastoreId;
             return this;
         }
-
         public Builder path(@Nullable String path) {
             this.path = path;
             return this;
         }
-
         public Builder referenceType(String referenceType) {
             this.referenceType = Objects.requireNonNull(referenceType);
             return this;
-        }
-        public DataPathAssetReferenceResponse build() {
+        }        public DataPathAssetReferenceResponse build() {
             return new DataPathAssetReferenceResponse(datastoreId, path, referenceType);
         }
     }

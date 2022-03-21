@@ -142,62 +142,50 @@ public final class DeploymentScriptArgs extends io.pulumi.resources.ResourceArgs
             this.identity = identity;
             return this;
         }
-
         public Builder identity(@Nullable ManagedServiceIdentityArgs identity) {
             this.identity = Output.ofNullable(identity);
             return this;
         }
-
         public Builder kind(Output<Either<String,ScriptType>> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder kind(Either<String,ScriptType> kind) {
             this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder scriptName(@Nullable Output<String> scriptName) {
             this.scriptName = scriptName;
             return this;
         }
-
         public Builder scriptName(@Nullable String scriptName) {
             this.scriptName = Output.ofNullable(scriptName);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public DeploymentScriptArgs build() {
+        }        public DeploymentScriptArgs build() {
             return new DeploymentScriptArgs(identity, kind, location, resourceGroupName, scriptName, tags);
         }
     }

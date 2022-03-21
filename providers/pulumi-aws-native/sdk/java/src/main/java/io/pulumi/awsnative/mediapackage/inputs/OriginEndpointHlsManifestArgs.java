@@ -209,102 +209,85 @@ public final class OriginEndpointHlsManifestArgs extends io.pulumi.resources.Res
             this.adMarkers = adMarkers;
             return this;
         }
-
         public Builder adMarkers(@Nullable OriginEndpointHlsManifestAdMarkers adMarkers) {
             this.adMarkers = Output.ofNullable(adMarkers);
             return this;
         }
-
         public Builder adTriggers(@Nullable Output<List<OriginEndpointHlsManifestAdTriggersItem>> adTriggers) {
             this.adTriggers = adTriggers;
             return this;
         }
-
         public Builder adTriggers(@Nullable List<OriginEndpointHlsManifestAdTriggersItem> adTriggers) {
             this.adTriggers = Output.ofNullable(adTriggers);
             return this;
         }
-
+        public Builder adTriggers(OriginEndpointHlsManifestAdTriggersItem... adTriggers) {
+            return adTriggers(List.of(adTriggers));
+        }
         public Builder adsOnDeliveryRestrictions(@Nullable Output<OriginEndpointAdsOnDeliveryRestrictions> adsOnDeliveryRestrictions) {
             this.adsOnDeliveryRestrictions = adsOnDeliveryRestrictions;
             return this;
         }
-
         public Builder adsOnDeliveryRestrictions(@Nullable OriginEndpointAdsOnDeliveryRestrictions adsOnDeliveryRestrictions) {
             this.adsOnDeliveryRestrictions = Output.ofNullable(adsOnDeliveryRestrictions);
             return this;
         }
-
         public Builder id(Output<String> id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Output.of(Objects.requireNonNull(id));
             return this;
         }
-
         public Builder includeIframeOnlyStream(@Nullable Output<Boolean> includeIframeOnlyStream) {
             this.includeIframeOnlyStream = includeIframeOnlyStream;
             return this;
         }
-
         public Builder includeIframeOnlyStream(@Nullable Boolean includeIframeOnlyStream) {
             this.includeIframeOnlyStream = Output.ofNullable(includeIframeOnlyStream);
             return this;
         }
-
         public Builder manifestName(@Nullable Output<String> manifestName) {
             this.manifestName = manifestName;
             return this;
         }
-
         public Builder manifestName(@Nullable String manifestName) {
             this.manifestName = Output.ofNullable(manifestName);
             return this;
         }
-
         public Builder playlistType(@Nullable Output<OriginEndpointHlsManifestPlaylistType> playlistType) {
             this.playlistType = playlistType;
             return this;
         }
-
         public Builder playlistType(@Nullable OriginEndpointHlsManifestPlaylistType playlistType) {
             this.playlistType = Output.ofNullable(playlistType);
             return this;
         }
-
         public Builder playlistWindowSeconds(@Nullable Output<Integer> playlistWindowSeconds) {
             this.playlistWindowSeconds = playlistWindowSeconds;
             return this;
         }
-
         public Builder playlistWindowSeconds(@Nullable Integer playlistWindowSeconds) {
             this.playlistWindowSeconds = Output.ofNullable(playlistWindowSeconds);
             return this;
         }
-
         public Builder programDateTimeIntervalSeconds(@Nullable Output<Integer> programDateTimeIntervalSeconds) {
             this.programDateTimeIntervalSeconds = programDateTimeIntervalSeconds;
             return this;
         }
-
         public Builder programDateTimeIntervalSeconds(@Nullable Integer programDateTimeIntervalSeconds) {
             this.programDateTimeIntervalSeconds = Output.ofNullable(programDateTimeIntervalSeconds);
             return this;
         }
-
         public Builder url(@Nullable Output<String> url) {
             this.url = url;
             return this;
         }
-
         public Builder url(@Nullable String url) {
             this.url = Output.ofNullable(url);
             return this;
-        }
-        public OriginEndpointHlsManifestArgs build() {
+        }        public OriginEndpointHlsManifestArgs build() {
             return new OriginEndpointHlsManifestArgs(adMarkers, adTriggers, adsOnDeliveryRestrictions, id, includeIframeOnlyStream, manifestName, playlistType, playlistWindowSeconds, programDateTimeIntervalSeconds, url);
         }
     }

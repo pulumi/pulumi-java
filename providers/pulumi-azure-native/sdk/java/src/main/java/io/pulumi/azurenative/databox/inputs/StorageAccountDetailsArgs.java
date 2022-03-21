@@ -95,32 +95,26 @@ public final class StorageAccountDetailsArgs extends io.pulumi.resources.Resourc
             this.dataAccountType = Objects.requireNonNull(dataAccountType);
             return this;
         }
-
         public Builder dataAccountType(String dataAccountType) {
             this.dataAccountType = Output.of(Objects.requireNonNull(dataAccountType));
             return this;
         }
-
         public Builder sharePassword(@Nullable Output<String> sharePassword) {
             this.sharePassword = sharePassword;
             return this;
         }
-
         public Builder sharePassword(@Nullable String sharePassword) {
             this.sharePassword = Output.ofNullable(sharePassword);
             return this;
         }
-
         public Builder storageAccountId(Output<String> storageAccountId) {
             this.storageAccountId = Objects.requireNonNull(storageAccountId);
             return this;
         }
-
         public Builder storageAccountId(String storageAccountId) {
             this.storageAccountId = Output.of(Objects.requireNonNull(storageAccountId));
             return this;
-        }
-        public StorageAccountDetailsArgs build() {
+        }        public StorageAccountDetailsArgs build() {
             return new StorageAccountDetailsArgs(dataAccountType, sharePassword, storageAccountId);
         }
     }

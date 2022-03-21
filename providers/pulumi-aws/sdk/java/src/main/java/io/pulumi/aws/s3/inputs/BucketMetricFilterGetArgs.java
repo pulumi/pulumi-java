@@ -75,22 +75,18 @@ public final class BucketMetricFilterGetArgs extends io.pulumi.resources.Resourc
             this.prefix = prefix;
             return this;
         }
-
         public Builder prefix(@Nullable String prefix) {
             this.prefix = Output.ofNullable(prefix);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public BucketMetricFilterGetArgs build() {
+        }        public BucketMetricFilterGetArgs build() {
             return new BucketMetricFilterGetArgs(prefix, tags);
         }
     }

@@ -98,32 +98,26 @@ public final class SecurityPolicyRuleMatchArgs extends io.pulumi.resources.Resou
             this.config = config;
             return this;
         }
-
         public Builder config(@Nullable SecurityPolicyRuleMatchConfigArgs config) {
             this.config = Output.ofNullable(config);
             return this;
         }
-
         public Builder expr(@Nullable Output<SecurityPolicyRuleMatchExprArgs> expr) {
             this.expr = expr;
             return this;
         }
-
         public Builder expr(@Nullable SecurityPolicyRuleMatchExprArgs expr) {
             this.expr = Output.ofNullable(expr);
             return this;
         }
-
         public Builder versionedExpr(@Nullable Output<String> versionedExpr) {
             this.versionedExpr = versionedExpr;
             return this;
         }
-
         public Builder versionedExpr(@Nullable String versionedExpr) {
             this.versionedExpr = Output.ofNullable(versionedExpr);
             return this;
-        }
-        public SecurityPolicyRuleMatchArgs build() {
+        }        public SecurityPolicyRuleMatchArgs build() {
             return new SecurityPolicyRuleMatchArgs(config, expr, versionedExpr);
         }
     }

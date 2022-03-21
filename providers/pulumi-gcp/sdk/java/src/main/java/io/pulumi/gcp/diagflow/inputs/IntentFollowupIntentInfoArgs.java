@@ -71,22 +71,18 @@ public final class IntentFollowupIntentInfoArgs extends io.pulumi.resources.Reso
             this.followupIntentName = followupIntentName;
             return this;
         }
-
         public Builder followupIntentName(@Nullable String followupIntentName) {
             this.followupIntentName = Output.ofNullable(followupIntentName);
             return this;
         }
-
         public Builder parentFollowupIntentName(@Nullable Output<String> parentFollowupIntentName) {
             this.parentFollowupIntentName = parentFollowupIntentName;
             return this;
         }
-
         public Builder parentFollowupIntentName(@Nullable String parentFollowupIntentName) {
             this.parentFollowupIntentName = Output.ofNullable(parentFollowupIntentName);
             return this;
-        }
-        public IntentFollowupIntentInfoArgs build() {
+        }        public IntentFollowupIntentInfoArgs build() {
             return new IntentFollowupIntentInfoArgs(followupIntentName, parentFollowupIntentName);
         }
     }

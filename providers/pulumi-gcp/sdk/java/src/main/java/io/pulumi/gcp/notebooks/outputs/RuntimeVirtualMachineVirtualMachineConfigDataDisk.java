@@ -319,62 +319,56 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDisk {
             this.autoDelete = autoDelete;
             return this;
         }
-
         public Builder boot(@Nullable Boolean boot) {
             this.boot = boot;
             return this;
         }
-
         public Builder deviceName(@Nullable String deviceName) {
             this.deviceName = deviceName;
             return this;
         }
-
         public Builder guestOsFeatures(@Nullable List<String> guestOsFeatures) {
             this.guestOsFeatures = guestOsFeatures;
             return this;
         }
-
+        public Builder guestOsFeatures(String... guestOsFeatures) {
+            return guestOsFeatures(List.of(guestOsFeatures));
+        }
         public Builder index(@Nullable Integer index) {
             this.index = index;
             return this;
         }
-
         public Builder initializeParams(@Nullable RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializeParams initializeParams) {
             this.initializeParams = initializeParams;
             return this;
         }
-
         public Builder $interface(@Nullable String $interface) {
             this.$interface = $interface;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder licenses(@Nullable List<String> licenses) {
             this.licenses = licenses;
             return this;
         }
-
+        public Builder licenses(String... licenses) {
+            return licenses(List.of(licenses));
+        }
         public Builder mode(@Nullable String mode) {
             this.mode = mode;
             return this;
         }
-
         public Builder source(@Nullable String source) {
             this.source = source;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
-        }
-        public RuntimeVirtualMachineVirtualMachineConfigDataDisk build() {
+        }        public RuntimeVirtualMachineVirtualMachineConfigDataDisk build() {
             return new RuntimeVirtualMachineVirtualMachineConfigDataDisk(autoDelete, boot, deviceName, guestOsFeatures, index, initializeParams, $interface, kind, licenses, mode, source, type);
         }
     }

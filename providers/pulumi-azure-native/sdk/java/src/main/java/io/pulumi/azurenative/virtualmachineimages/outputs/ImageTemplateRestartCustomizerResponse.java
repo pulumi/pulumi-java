@@ -121,27 +121,22 @@ public final class ImageTemplateRestartCustomizerResponse {
             this.name = name;
             return this;
         }
-
         public Builder restartCheckCommand(@Nullable String restartCheckCommand) {
             this.restartCheckCommand = restartCheckCommand;
             return this;
         }
-
         public Builder restartCommand(@Nullable String restartCommand) {
             this.restartCommand = restartCommand;
             return this;
         }
-
         public Builder restartTimeout(@Nullable String restartTimeout) {
             this.restartTimeout = restartTimeout;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public ImageTemplateRestartCustomizerResponse build() {
+        }        public ImageTemplateRestartCustomizerResponse build() {
             return new ImageTemplateRestartCustomizerResponse(name, restartCheckCommand, restartCommand, restartTimeout, type);
         }
     }

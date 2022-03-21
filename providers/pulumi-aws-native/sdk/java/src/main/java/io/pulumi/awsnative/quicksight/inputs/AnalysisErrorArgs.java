@@ -75,22 +75,18 @@ public final class AnalysisErrorArgs extends io.pulumi.resources.ResourceArgs {
             this.message = message;
             return this;
         }
-
         public Builder message(@Nullable String message) {
             this.message = Output.ofNullable(message);
             return this;
         }
-
         public Builder type(@Nullable Output<AnalysisErrorType> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable AnalysisErrorType type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public AnalysisErrorArgs build() {
+        }        public AnalysisErrorArgs build() {
             return new AnalysisErrorArgs(message, type);
         }
     }

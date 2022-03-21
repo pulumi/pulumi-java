@@ -150,72 +150,61 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
             this.dataBundles = dataBundles;
             return this;
         }
-
         public Builder dataBundles(@Nullable List<String> dataBundles) {
             this.dataBundles = Output.ofNullable(dataBundles);
             return this;
         }
-
+        public Builder dataBundles(String... dataBundles) {
+            return dataBundles(List.of(dataBundles));
+        }
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder federationMode(@Nullable Output<EnvironmentFederationMode> federationMode) {
             this.federationMode = federationMode;
             return this;
         }
-
         public Builder federationMode(@Nullable EnvironmentFederationMode federationMode) {
             this.federationMode = Output.ofNullable(federationMode);
             return this;
         }
-
         public Builder federationParameters(@Nullable Output<EnvironmentFederationParametersArgs> federationParameters) {
             this.federationParameters = federationParameters;
             return this;
         }
-
         public Builder federationParameters(@Nullable EnvironmentFederationParametersArgs federationParameters) {
             this.federationParameters = Output.ofNullable(federationParameters);
             return this;
         }
-
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
-
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = Output.ofNullable(kmsKeyId);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder superuserParameters(@Nullable Output<EnvironmentSuperuserParametersArgs> superuserParameters) {
             this.superuserParameters = superuserParameters;
             return this;
         }
-
         public Builder superuserParameters(@Nullable EnvironmentSuperuserParametersArgs superuserParameters) {
             this.superuserParameters = Output.ofNullable(superuserParameters);
             return this;
-        }
-        public EnvironmentArgs build() {
+        }        public EnvironmentArgs build() {
             return new EnvironmentArgs(dataBundles, description, federationMode, federationParameters, kmsKeyId, name, superuserParameters);
         }
     }

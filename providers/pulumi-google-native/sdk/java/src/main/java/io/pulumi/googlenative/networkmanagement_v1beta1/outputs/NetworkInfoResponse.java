@@ -85,17 +85,14 @@ public final class NetworkInfoResponse {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder matchedIpRange(String matchedIpRange) {
             this.matchedIpRange = Objects.requireNonNull(matchedIpRange);
             return this;
         }
-
         public Builder uri(String uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
-        }
-        public NetworkInfoResponse build() {
+        }        public NetworkInfoResponse build() {
             return new NetworkInfoResponse(displayName, matchedIpRange, uri);
         }
     }

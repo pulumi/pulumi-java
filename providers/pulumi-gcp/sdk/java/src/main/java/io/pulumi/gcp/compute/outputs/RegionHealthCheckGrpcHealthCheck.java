@@ -138,22 +138,18 @@ public final class RegionHealthCheckGrpcHealthCheck {
             this.grpcServiceName = grpcServiceName;
             return this;
         }
-
         public Builder port(@Nullable Integer port) {
             this.port = port;
             return this;
         }
-
         public Builder portName(@Nullable String portName) {
             this.portName = portName;
             return this;
         }
-
         public Builder portSpecification(@Nullable String portSpecification) {
             this.portSpecification = portSpecification;
             return this;
-        }
-        public RegionHealthCheckGrpcHealthCheck build() {
+        }        public RegionHealthCheckGrpcHealthCheck build() {
             return new RegionHealthCheckGrpcHealthCheck(grpcServiceName, port, portName, portSpecification);
         }
     }

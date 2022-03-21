@@ -147,37 +147,33 @@ public final class GetClusterResult {
             this.clusterCertificates = Objects.requireNonNull(clusterCertificates);
             return this;
         }
-
         public Builder clusterId(String clusterId) {
             this.clusterId = Objects.requireNonNull(clusterId);
             return this;
         }
-
         public Builder clusterState(String clusterState) {
             this.clusterState = Objects.requireNonNull(clusterState);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder securityGroupId(String securityGroupId) {
             this.securityGroupId = Objects.requireNonNull(securityGroupId);
             return this;
         }
-
         public Builder subnetIds(List<String> subnetIds) {
             this.subnetIds = Objects.requireNonNull(subnetIds);
             return this;
         }
-
+        public Builder subnetIds(String... subnetIds) {
+            return subnetIds(List.of(subnetIds));
+        }
         public Builder vpcId(String vpcId) {
             this.vpcId = Objects.requireNonNull(vpcId);
             return this;
-        }
-        public GetClusterResult build() {
+        }        public GetClusterResult build() {
             return new GetClusterResult(clusterCertificates, clusterId, clusterState, id, securityGroupId, subnetIds, vpcId);
         }
     }

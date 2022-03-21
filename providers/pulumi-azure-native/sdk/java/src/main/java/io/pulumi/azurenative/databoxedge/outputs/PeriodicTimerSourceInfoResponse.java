@@ -87,17 +87,14 @@ public final class PeriodicTimerSourceInfoResponse {
             this.schedule = Objects.requireNonNull(schedule);
             return this;
         }
-
         public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public Builder topic(@Nullable String topic) {
             this.topic = topic;
             return this;
-        }
-        public PeriodicTimerSourceInfoResponse build() {
+        }        public PeriodicTimerSourceInfoResponse build() {
             return new PeriodicTimerSourceInfoResponse(schedule, startTime, topic);
         }
     }

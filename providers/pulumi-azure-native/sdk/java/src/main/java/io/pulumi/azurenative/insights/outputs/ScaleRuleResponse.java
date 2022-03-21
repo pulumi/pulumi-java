@@ -70,12 +70,10 @@ public final class ScaleRuleResponse {
             this.metricTrigger = Objects.requireNonNull(metricTrigger);
             return this;
         }
-
         public Builder scaleAction(ScaleActionResponse scaleAction) {
             this.scaleAction = Objects.requireNonNull(scaleAction);
             return this;
-        }
-        public ScaleRuleResponse build() {
+        }        public ScaleRuleResponse build() {
             return new ScaleRuleResponse(metricTrigger, scaleAction);
         }
     }

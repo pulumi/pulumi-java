@@ -93,32 +93,29 @@ public final class EdgeCacheServiceRoutingPathMatcherGetArgs extends io.pulumi.r
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder routeRules(Output<List<EdgeCacheServiceRoutingPathMatcherRouteRuleGetArgs>> routeRules) {
             this.routeRules = Objects.requireNonNull(routeRules);
             return this;
         }
-
         public Builder routeRules(List<EdgeCacheServiceRoutingPathMatcherRouteRuleGetArgs> routeRules) {
             this.routeRules = Output.of(Objects.requireNonNull(routeRules));
             return this;
         }
-        public EdgeCacheServiceRoutingPathMatcherGetArgs build() {
+        public Builder routeRules(EdgeCacheServiceRoutingPathMatcherRouteRuleGetArgs... routeRules) {
+            return routeRules(List.of(routeRules));
+        }        public EdgeCacheServiceRoutingPathMatcherGetArgs build() {
             return new EdgeCacheServiceRoutingPathMatcherGetArgs(description, name, routeRules);
         }
     }

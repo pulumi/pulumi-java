@@ -71,12 +71,10 @@ public final class WorkgroupConfigurationResultConfigurationEncryptionConfigurat
             this.encryptionOption = encryptionOption;
             return this;
         }
-
         public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
             this.kmsKeyArn = kmsKeyArn;
             return this;
-        }
-        public WorkgroupConfigurationResultConfigurationEncryptionConfiguration build() {
+        }        public WorkgroupConfigurationResultConfigurationEncryptionConfiguration build() {
             return new WorkgroupConfigurationResultConfigurationEncryptionConfiguration(encryptionOption, kmsKeyArn);
         }
     }

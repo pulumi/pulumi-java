@@ -62,12 +62,10 @@ public final class ServicePlacementPolicyDescriptionArgs extends io.pulumi.resou
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(Either<String,ServicePlacementPolicyType> type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public ServicePlacementPolicyDescriptionArgs build() {
+        }        public ServicePlacementPolicyDescriptionArgs build() {
             return new ServicePlacementPolicyDescriptionArgs(type);
         }
     }

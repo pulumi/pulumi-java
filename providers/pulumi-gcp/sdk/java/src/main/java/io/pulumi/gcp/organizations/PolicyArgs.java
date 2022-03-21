@@ -143,62 +143,50 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
             this.booleanPolicy = booleanPolicy;
             return this;
         }
-
         public Builder booleanPolicy(@Nullable PolicyBooleanPolicyArgs booleanPolicy) {
             this.booleanPolicy = Output.ofNullable(booleanPolicy);
             return this;
         }
-
         public Builder constraint(Output<String> constraint) {
             this.constraint = Objects.requireNonNull(constraint);
             return this;
         }
-
         public Builder constraint(String constraint) {
             this.constraint = Output.of(Objects.requireNonNull(constraint));
             return this;
         }
-
         public Builder listPolicy(@Nullable Output<PolicyListPolicyArgs> listPolicy) {
             this.listPolicy = listPolicy;
             return this;
         }
-
         public Builder listPolicy(@Nullable PolicyListPolicyArgs listPolicy) {
             this.listPolicy = Output.ofNullable(listPolicy);
             return this;
         }
-
         public Builder orgId(Output<String> orgId) {
             this.orgId = Objects.requireNonNull(orgId);
             return this;
         }
-
         public Builder orgId(String orgId) {
             this.orgId = Output.of(Objects.requireNonNull(orgId));
             return this;
         }
-
         public Builder restorePolicy(@Nullable Output<PolicyRestorePolicyArgs> restorePolicy) {
             this.restorePolicy = restorePolicy;
             return this;
         }
-
         public Builder restorePolicy(@Nullable PolicyRestorePolicyArgs restorePolicy) {
             this.restorePolicy = Output.ofNullable(restorePolicy);
             return this;
         }
-
         public Builder version(@Nullable Output<Integer> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable Integer version) {
             this.version = Output.ofNullable(version);
             return this;
-        }
-        public PolicyArgs build() {
+        }        public PolicyArgs build() {
             return new PolicyArgs(booleanPolicy, constraint, listPolicy, orgId, restorePolicy, version);
         }
     }

@@ -69,12 +69,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryGoo 
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder url(String url) {
             this.url = Objects.requireNonNull(url);
             return this;
-        }
-        public OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryGoo build() {
+        }        public OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryGoo build() {
             return new OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryGoo(name, url);
         }
     }

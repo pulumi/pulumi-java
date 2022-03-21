@@ -61,12 +61,10 @@ public final class ResourcePolicyInstanceSchedulePolicyScheduleArgs extends io.p
             this.schedule = schedule;
             return this;
         }
-
         public Builder schedule(@Nullable String schedule) {
             this.schedule = Output.ofNullable(schedule);
             return this;
-        }
-        public ResourcePolicyInstanceSchedulePolicyScheduleArgs build() {
+        }        public ResourcePolicyInstanceSchedulePolicyScheduleArgs build() {
             return new ResourcePolicyInstanceSchedulePolicyScheduleArgs(schedule);
         }
     }

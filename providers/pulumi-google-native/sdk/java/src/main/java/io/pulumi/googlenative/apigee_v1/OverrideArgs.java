@@ -115,52 +115,42 @@ public final class OverrideArgs extends io.pulumi.resources.ResourceArgs {
             this.apiProxy = apiProxy;
             return this;
         }
-
         public Builder apiProxy(@Nullable String apiProxy) {
             this.apiProxy = Output.ofNullable(apiProxy);
             return this;
         }
-
         public Builder environmentId(Output<String> environmentId) {
             this.environmentId = Objects.requireNonNull(environmentId);
             return this;
         }
-
         public Builder environmentId(String environmentId) {
             this.environmentId = Output.of(Objects.requireNonNull(environmentId));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder organizationId(Output<String> organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }
-
         public Builder organizationId(String organizationId) {
             this.organizationId = Output.of(Objects.requireNonNull(organizationId));
             return this;
         }
-
         public Builder samplingConfig(@Nullable Output<GoogleCloudApigeeV1TraceSamplingConfigArgs> samplingConfig) {
             this.samplingConfig = samplingConfig;
             return this;
         }
-
         public Builder samplingConfig(@Nullable GoogleCloudApigeeV1TraceSamplingConfigArgs samplingConfig) {
             this.samplingConfig = Output.ofNullable(samplingConfig);
             return this;
-        }
-        public OverrideArgs build() {
+        }        public OverrideArgs build() {
             return new OverrideArgs(apiProxy, environmentId, name, organizationId, samplingConfig);
         }
     }

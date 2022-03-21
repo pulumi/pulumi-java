@@ -120,27 +120,25 @@ public final class GetServiceResult {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder endpoints(List<EndpointResponse> endpoints) {
             this.endpoints = Objects.requireNonNull(endpoints);
             return this;
         }
-
+        public Builder endpoints(EndpointResponse... endpoints) {
+            return endpoints(List.of(endpoints));
+        }
         public Builder metadata(Map<String,String> metadata) {
             this.metadata = Objects.requireNonNull(metadata);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
-        }
-        public GetServiceResult build() {
+        }        public GetServiceResult build() {
             return new GetServiceResult(createTime, endpoints, metadata, name, updateTime);
         }
     }

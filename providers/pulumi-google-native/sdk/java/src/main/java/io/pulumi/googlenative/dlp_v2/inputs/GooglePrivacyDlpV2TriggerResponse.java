@@ -77,12 +77,10 @@ public final class GooglePrivacyDlpV2TriggerResponse extends io.pulumi.resources
             this.manual = Objects.requireNonNull(manual);
             return this;
         }
-
         public Builder schedule(GooglePrivacyDlpV2ScheduleResponse schedule) {
             this.schedule = Objects.requireNonNull(schedule);
             return this;
-        }
-        public GooglePrivacyDlpV2TriggerResponse build() {
+        }        public GooglePrivacyDlpV2TriggerResponse build() {
             return new GooglePrivacyDlpV2TriggerResponse(manual, schedule);
         }
     }

@@ -98,32 +98,26 @@ public final class AccountEncryptionArgs extends io.pulumi.resources.ResourceArg
             this.identity = identity;
             return this;
         }
-
         public Builder identity(@Nullable ResourceIdentityArgs identity) {
             this.identity = Output.ofNullable(identity);
             return this;
         }
-
         public Builder keyVaultProperties(@Nullable Output<KeyVaultPropertiesArgs> keyVaultProperties) {
             this.keyVaultProperties = keyVaultProperties;
             return this;
         }
-
         public Builder keyVaultProperties(@Nullable KeyVaultPropertiesArgs keyVaultProperties) {
             this.keyVaultProperties = Output.ofNullable(keyVaultProperties);
             return this;
         }
-
         public Builder type(Output<Either<String,AccountEncryptionKeyType>> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(Either<String,AccountEncryptionKeyType> type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public AccountEncryptionArgs build() {
+        }        public AccountEncryptionArgs build() {
             return new AccountEncryptionArgs(identity, keyVaultProperties, type);
         }
     }

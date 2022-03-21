@@ -103,42 +103,40 @@ public final class RRSetRoutingPolicyGeoPolicyGeoPolicyItemArgs extends io.pulum
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder rrdatas(@Nullable Output<List<String>> rrdatas) {
             this.rrdatas = rrdatas;
             return this;
         }
-
         public Builder rrdatas(@Nullable List<String> rrdatas) {
             this.rrdatas = Output.ofNullable(rrdatas);
             return this;
         }
-
+        public Builder rrdatas(String... rrdatas) {
+            return rrdatas(List.of(rrdatas));
+        }
         public Builder signatureRrdatas(@Nullable Output<List<String>> signatureRrdatas) {
             this.signatureRrdatas = signatureRrdatas;
             return this;
         }
-
         public Builder signatureRrdatas(@Nullable List<String> signatureRrdatas) {
             this.signatureRrdatas = Output.ofNullable(signatureRrdatas);
             return this;
         }
-        public RRSetRoutingPolicyGeoPolicyGeoPolicyItemArgs build() {
+        public Builder signatureRrdatas(String... signatureRrdatas) {
+            return signatureRrdatas(List.of(signatureRrdatas));
+        }        public RRSetRoutingPolicyGeoPolicyGeoPolicyItemArgs build() {
             return new RRSetRoutingPolicyGeoPolicyGeoPolicyItemArgs(kind, location, rrdatas, signatureRrdatas);
         }
     }

@@ -72,12 +72,10 @@ public final class ContainerRecipeTargetContainerRepository {
             this.repositoryName = repositoryName;
             return this;
         }
-
         public Builder service(@Nullable ContainerRecipeTargetContainerRepositoryService service) {
             this.service = service;
             return this;
-        }
-        public ContainerRecipeTargetContainerRepository build() {
+        }        public ContainerRecipeTargetContainerRepository build() {
             return new ContainerRecipeTargetContainerRepository(repositoryName, service);
         }
     }

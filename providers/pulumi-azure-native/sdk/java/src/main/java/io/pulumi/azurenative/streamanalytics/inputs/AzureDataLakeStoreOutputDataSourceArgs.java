@@ -191,92 +191,74 @@ public final class AzureDataLakeStoreOutputDataSourceArgs extends io.pulumi.reso
             this.accountName = accountName;
             return this;
         }
-
         public Builder accountName(@Nullable String accountName) {
             this.accountName = Output.ofNullable(accountName);
             return this;
         }
-
         public Builder dateFormat(@Nullable Output<String> dateFormat) {
             this.dateFormat = dateFormat;
             return this;
         }
-
         public Builder dateFormat(@Nullable String dateFormat) {
             this.dateFormat = Output.ofNullable(dateFormat);
             return this;
         }
-
         public Builder filePathPrefix(@Nullable Output<String> filePathPrefix) {
             this.filePathPrefix = filePathPrefix;
             return this;
         }
-
         public Builder filePathPrefix(@Nullable String filePathPrefix) {
             this.filePathPrefix = Output.ofNullable(filePathPrefix);
             return this;
         }
-
         public Builder refreshToken(@Nullable Output<String> refreshToken) {
             this.refreshToken = refreshToken;
             return this;
         }
-
         public Builder refreshToken(@Nullable String refreshToken) {
             this.refreshToken = Output.ofNullable(refreshToken);
             return this;
         }
-
         public Builder tenantId(@Nullable Output<String> tenantId) {
             this.tenantId = tenantId;
             return this;
         }
-
         public Builder tenantId(@Nullable String tenantId) {
             this.tenantId = Output.ofNullable(tenantId);
             return this;
         }
-
         public Builder timeFormat(@Nullable Output<String> timeFormat) {
             this.timeFormat = timeFormat;
             return this;
         }
-
         public Builder timeFormat(@Nullable String timeFormat) {
             this.timeFormat = Output.ofNullable(timeFormat);
             return this;
         }
-
         public Builder tokenUserDisplayName(@Nullable Output<String> tokenUserDisplayName) {
             this.tokenUserDisplayName = tokenUserDisplayName;
             return this;
         }
-
         public Builder tokenUserDisplayName(@Nullable String tokenUserDisplayName) {
             this.tokenUserDisplayName = Output.ofNullable(tokenUserDisplayName);
             return this;
         }
-
         public Builder tokenUserPrincipalName(@Nullable Output<String> tokenUserPrincipalName) {
             this.tokenUserPrincipalName = tokenUserPrincipalName;
             return this;
         }
-
         public Builder tokenUserPrincipalName(@Nullable String tokenUserPrincipalName) {
             this.tokenUserPrincipalName = Output.ofNullable(tokenUserPrincipalName);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public AzureDataLakeStoreOutputDataSourceArgs build() {
+        }        public AzureDataLakeStoreOutputDataSourceArgs build() {
             return new AzureDataLakeStoreOutputDataSourceArgs(accountName, dateFormat, filePathPrefix, refreshToken, tenantId, timeFormat, tokenUserDisplayName, tokenUserPrincipalName, type);
         }
     }

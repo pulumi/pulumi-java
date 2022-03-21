@@ -57,12 +57,10 @@ public final class DomainRetentionPolicyGetArgs extends io.pulumi.resources.Reso
             this.homeEfsFileSystem = homeEfsFileSystem;
             return this;
         }
-
         public Builder homeEfsFileSystem(@Nullable String homeEfsFileSystem) {
             this.homeEfsFileSystem = Output.ofNullable(homeEfsFileSystem);
             return this;
-        }
-        public DomainRetentionPolicyGetArgs build() {
+        }        public DomainRetentionPolicyGetArgs build() {
             return new DomainRetentionPolicyGetArgs(homeEfsFileSystem);
         }
     }

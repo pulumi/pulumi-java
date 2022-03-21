@@ -102,37 +102,30 @@ public final class GetProjectProject {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder lifecycleState(String lifecycleState) {
             this.lifecycleState = Objects.requireNonNull(lifecycleState);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder number(String number) {
             this.number = Objects.requireNonNull(number);
             return this;
         }
-
         public Builder parent(Map<String,String> parent) {
             this.parent = Objects.requireNonNull(parent);
             return this;
         }
-
         public Builder projectId(String projectId) {
             this.projectId = Objects.requireNonNull(projectId);
             return this;
-        }
-        public GetProjectProject build() {
+        }        public GetProjectProject build() {
             return new GetProjectProject(createTime, labels, lifecycleState, name, number, parent, projectId);
         }
     }

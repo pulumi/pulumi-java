@@ -128,37 +128,48 @@ public final class DataSourceGoogleDriveConfiguration extends io.pulumi.resource
             this.excludeMimeTypes = excludeMimeTypes;
             return this;
         }
-
+        public Builder excludeMimeTypes(String... excludeMimeTypes) {
+            return excludeMimeTypes(List.of(excludeMimeTypes));
+        }
         public Builder excludeSharedDrives(@Nullable List<String> excludeSharedDrives) {
             this.excludeSharedDrives = excludeSharedDrives;
             return this;
         }
-
+        public Builder excludeSharedDrives(String... excludeSharedDrives) {
+            return excludeSharedDrives(List.of(excludeSharedDrives));
+        }
         public Builder excludeUserAccounts(@Nullable List<String> excludeUserAccounts) {
             this.excludeUserAccounts = excludeUserAccounts;
             return this;
         }
-
+        public Builder excludeUserAccounts(String... excludeUserAccounts) {
+            return excludeUserAccounts(List.of(excludeUserAccounts));
+        }
         public Builder exclusionPatterns(@Nullable List<String> exclusionPatterns) {
             this.exclusionPatterns = exclusionPatterns;
             return this;
         }
-
+        public Builder exclusionPatterns(String... exclusionPatterns) {
+            return exclusionPatterns(List.of(exclusionPatterns));
+        }
         public Builder fieldMappings(@Nullable List<DataSourceToIndexFieldMapping> fieldMappings) {
             this.fieldMappings = fieldMappings;
             return this;
         }
-
+        public Builder fieldMappings(DataSourceToIndexFieldMapping... fieldMappings) {
+            return fieldMappings(List.of(fieldMappings));
+        }
         public Builder inclusionPatterns(@Nullable List<String> inclusionPatterns) {
             this.inclusionPatterns = inclusionPatterns;
             return this;
         }
-
+        public Builder inclusionPatterns(String... inclusionPatterns) {
+            return inclusionPatterns(List.of(inclusionPatterns));
+        }
         public Builder secretArn(String secretArn) {
             this.secretArn = Objects.requireNonNull(secretArn);
             return this;
-        }
-        public DataSourceGoogleDriveConfiguration build() {
+        }        public DataSourceGoogleDriveConfiguration build() {
             return new DataSourceGoogleDriveConfiguration(excludeMimeTypes, excludeSharedDrives, excludeUserAccounts, exclusionPatterns, fieldMappings, inclusionPatterns, secretArn);
         }
     }

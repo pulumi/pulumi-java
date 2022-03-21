@@ -53,8 +53,7 @@ public final class SecretTopic {
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public SecretTopic build() {
+        }        public SecretTopic build() {
             return new SecretTopic(name);
         }
     }

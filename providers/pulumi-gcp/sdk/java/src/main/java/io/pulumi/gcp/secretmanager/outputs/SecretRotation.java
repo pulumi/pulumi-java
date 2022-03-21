@@ -75,12 +75,10 @@ public final class SecretRotation {
             this.nextRotationTime = nextRotationTime;
             return this;
         }
-
         public Builder rotationPeriod(@Nullable String rotationPeriod) {
             this.rotationPeriod = rotationPeriod;
             return this;
-        }
-        public SecretRotation build() {
+        }        public SecretRotation build() {
             return new SecretRotation(nextRotationTime, rotationPeriod);
         }
     }

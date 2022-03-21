@@ -169,42 +169,40 @@ public final class GetEntityTypeResult {
             this.autoExpansionMode = Objects.requireNonNull(autoExpansionMode);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder enableFuzzyExtraction(Boolean enableFuzzyExtraction) {
             this.enableFuzzyExtraction = Objects.requireNonNull(enableFuzzyExtraction);
             return this;
         }
-
         public Builder entities(List<GoogleCloudDialogflowCxV3EntityTypeEntityResponse> entities) {
             this.entities = Objects.requireNonNull(entities);
             return this;
         }
-
+        public Builder entities(GoogleCloudDialogflowCxV3EntityTypeEntityResponse... entities) {
+            return entities(List.of(entities));
+        }
         public Builder excludedPhrases(List<GoogleCloudDialogflowCxV3EntityTypeExcludedPhraseResponse> excludedPhrases) {
             this.excludedPhrases = Objects.requireNonNull(excludedPhrases);
             return this;
         }
-
+        public Builder excludedPhrases(GoogleCloudDialogflowCxV3EntityTypeExcludedPhraseResponse... excludedPhrases) {
+            return excludedPhrases(List.of(excludedPhrases));
+        }
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder redact(Boolean redact) {
             this.redact = Objects.requireNonNull(redact);
             return this;
-        }
-        public GetEntityTypeResult build() {
+        }        public GetEntityTypeResult build() {
             return new GetEntityTypeResult(autoExpansionMode, displayName, enableFuzzyExtraction, entities, excludedPhrases, kind, name, redact);
         }
     }

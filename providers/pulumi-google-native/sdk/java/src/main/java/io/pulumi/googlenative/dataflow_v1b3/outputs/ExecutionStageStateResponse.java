@@ -85,17 +85,14 @@ public final class ExecutionStageStateResponse {
             this.currentStateTime = Objects.requireNonNull(currentStateTime);
             return this;
         }
-
         public Builder executionStageName(String executionStageName) {
             this.executionStageName = Objects.requireNonNull(executionStageName);
             return this;
         }
-
         public Builder executionStageState(String executionStageState) {
             this.executionStageState = Objects.requireNonNull(executionStageState);
             return this;
-        }
-        public ExecutionStageStateResponse build() {
+        }        public ExecutionStageStateResponse build() {
             return new ExecutionStageStateResponse(currentStateTime, executionStageName, executionStageState);
         }
     }

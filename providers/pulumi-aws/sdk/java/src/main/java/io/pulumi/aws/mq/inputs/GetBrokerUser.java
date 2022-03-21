@@ -78,17 +78,17 @@ public final class GetBrokerUser extends io.pulumi.resources.InvokeArgs {
             this.consoleAccess = Objects.requireNonNull(consoleAccess);
             return this;
         }
-
         public Builder groups(List<String> groups) {
             this.groups = Objects.requireNonNull(groups);
             return this;
         }
-
+        public Builder groups(String... groups) {
+            return groups(List.of(groups));
+        }
         public Builder username(String username) {
             this.username = Objects.requireNonNull(username);
             return this;
-        }
-        public GetBrokerUser build() {
+        }        public GetBrokerUser build() {
             return new GetBrokerUser(consoleAccess, groups, username);
         }
     }

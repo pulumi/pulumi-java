@@ -80,22 +80,24 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
             this.destinations = destinations;
             return this;
         }
-
         public Builder destinations(@Nullable List<DestinationArgs> destinations) {
             this.destinations = Output.ofNullable(destinations);
             return this;
         }
-
+        public Builder destinations(DestinationArgs... destinations) {
+            return destinations(List.of(destinations));
+        }
         public Builder sources(@Nullable Output<List<SourceArgs>> sources) {
             this.sources = sources;
             return this;
         }
-
         public Builder sources(@Nullable List<SourceArgs> sources) {
             this.sources = Output.ofNullable(sources);
             return this;
         }
-        public RuleArgs build() {
+        public Builder sources(SourceArgs... sources) {
+            return sources(List.of(sources));
+        }        public RuleArgs build() {
             return new RuleArgs(destinations, sources);
         }
     }

@@ -78,22 +78,18 @@ public final class GcsProfileArgs extends io.pulumi.resources.ResourceArgs {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
-
         public Builder bucket(String bucket) {
             this.bucket = Output.of(Objects.requireNonNull(bucket));
             return this;
         }
-
         public Builder rootPath(@Nullable Output<String> rootPath) {
             this.rootPath = rootPath;
             return this;
         }
-
         public Builder rootPath(@Nullable String rootPath) {
             this.rootPath = Output.ofNullable(rootPath);
             return this;
-        }
-        public GcsProfileArgs build() {
+        }        public GcsProfileArgs build() {
             return new GcsProfileArgs(bucket, rootPath);
         }
     }

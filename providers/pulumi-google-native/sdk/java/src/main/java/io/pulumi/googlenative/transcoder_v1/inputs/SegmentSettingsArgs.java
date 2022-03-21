@@ -79,22 +79,18 @@ public final class SegmentSettingsArgs extends io.pulumi.resources.ResourceArgs 
             this.individualSegments = Objects.requireNonNull(individualSegments);
             return this;
         }
-
         public Builder individualSegments(Boolean individualSegments) {
             this.individualSegments = Output.of(Objects.requireNonNull(individualSegments));
             return this;
         }
-
         public Builder segmentDuration(@Nullable Output<String> segmentDuration) {
             this.segmentDuration = segmentDuration;
             return this;
         }
-
         public Builder segmentDuration(@Nullable String segmentDuration) {
             this.segmentDuration = Output.ofNullable(segmentDuration);
             return this;
-        }
-        public SegmentSettingsArgs build() {
+        }        public SegmentSettingsArgs build() {
             return new SegmentSettingsArgs(individualSegments, segmentDuration);
         }
     }

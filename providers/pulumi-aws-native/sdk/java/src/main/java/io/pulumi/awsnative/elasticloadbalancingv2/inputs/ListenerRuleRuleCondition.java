@@ -145,42 +145,37 @@ public final class ListenerRuleRuleCondition extends io.pulumi.resources.InvokeA
             this.field = field;
             return this;
         }
-
         public Builder hostHeaderConfig(@Nullable ListenerRuleHostHeaderConfig hostHeaderConfig) {
             this.hostHeaderConfig = hostHeaderConfig;
             return this;
         }
-
         public Builder httpHeaderConfig(@Nullable ListenerRuleHttpHeaderConfig httpHeaderConfig) {
             this.httpHeaderConfig = httpHeaderConfig;
             return this;
         }
-
         public Builder httpRequestMethodConfig(@Nullable ListenerRuleHttpRequestMethodConfig httpRequestMethodConfig) {
             this.httpRequestMethodConfig = httpRequestMethodConfig;
             return this;
         }
-
         public Builder pathPatternConfig(@Nullable ListenerRulePathPatternConfig pathPatternConfig) {
             this.pathPatternConfig = pathPatternConfig;
             return this;
         }
-
         public Builder queryStringConfig(@Nullable ListenerRuleQueryStringConfig queryStringConfig) {
             this.queryStringConfig = queryStringConfig;
             return this;
         }
-
         public Builder sourceIpConfig(@Nullable ListenerRuleSourceIpConfig sourceIpConfig) {
             this.sourceIpConfig = sourceIpConfig;
             return this;
         }
-
         public Builder values(@Nullable List<String> values) {
             this.values = values;
             return this;
         }
-        public ListenerRuleRuleCondition build() {
+        public Builder values(String... values) {
+            return values(List.of(values));
+        }        public ListenerRuleRuleCondition build() {
             return new ListenerRuleRuleCondition(field, hostHeaderConfig, httpHeaderConfig, httpRequestMethodConfig, pathPatternConfig, queryStringConfig, sourceIpConfig, values);
         }
     }

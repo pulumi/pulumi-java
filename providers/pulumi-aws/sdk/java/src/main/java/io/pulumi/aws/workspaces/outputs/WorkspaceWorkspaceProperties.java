@@ -120,27 +120,22 @@ public final class WorkspaceWorkspaceProperties {
             this.computeTypeName = computeTypeName;
             return this;
         }
-
         public Builder rootVolumeSizeGib(@Nullable Integer rootVolumeSizeGib) {
             this.rootVolumeSizeGib = rootVolumeSizeGib;
             return this;
         }
-
         public Builder runningMode(@Nullable String runningMode) {
             this.runningMode = runningMode;
             return this;
         }
-
         public Builder runningModeAutoStopTimeoutInMinutes(@Nullable Integer runningModeAutoStopTimeoutInMinutes) {
             this.runningModeAutoStopTimeoutInMinutes = runningModeAutoStopTimeoutInMinutes;
             return this;
         }
-
         public Builder userVolumeSizeGib(@Nullable Integer userVolumeSizeGib) {
             this.userVolumeSizeGib = userVolumeSizeGib;
             return this;
-        }
-        public WorkspaceWorkspaceProperties build() {
+        }        public WorkspaceWorkspaceProperties build() {
             return new WorkspaceWorkspaceProperties(computeTypeName, rootVolumeSizeGib, runningMode, runningModeAutoStopTimeoutInMinutes, userVolumeSizeGib);
         }
     }

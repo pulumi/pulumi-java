@@ -203,102 +203,85 @@ public final class StandardsControlState extends io.pulumi.resources.ResourceArg
             this.controlId = controlId;
             return this;
         }
-
         public Builder controlId(@Nullable String controlId) {
             this.controlId = Output.ofNullable(controlId);
             return this;
         }
-
         public Builder controlStatus(@Nullable Output<String> controlStatus) {
             this.controlStatus = controlStatus;
             return this;
         }
-
         public Builder controlStatus(@Nullable String controlStatus) {
             this.controlStatus = Output.ofNullable(controlStatus);
             return this;
         }
-
         public Builder controlStatusUpdatedAt(@Nullable Output<String> controlStatusUpdatedAt) {
             this.controlStatusUpdatedAt = controlStatusUpdatedAt;
             return this;
         }
-
         public Builder controlStatusUpdatedAt(@Nullable String controlStatusUpdatedAt) {
             this.controlStatusUpdatedAt = Output.ofNullable(controlStatusUpdatedAt);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder disabledReason(@Nullable Output<String> disabledReason) {
             this.disabledReason = disabledReason;
             return this;
         }
-
         public Builder disabledReason(@Nullable String disabledReason) {
             this.disabledReason = Output.ofNullable(disabledReason);
             return this;
         }
-
         public Builder relatedRequirements(@Nullable Output<List<String>> relatedRequirements) {
             this.relatedRequirements = relatedRequirements;
             return this;
         }
-
         public Builder relatedRequirements(@Nullable List<String> relatedRequirements) {
             this.relatedRequirements = Output.ofNullable(relatedRequirements);
             return this;
         }
-
+        public Builder relatedRequirements(String... relatedRequirements) {
+            return relatedRequirements(List.of(relatedRequirements));
+        }
         public Builder remediationUrl(@Nullable Output<String> remediationUrl) {
             this.remediationUrl = remediationUrl;
             return this;
         }
-
         public Builder remediationUrl(@Nullable String remediationUrl) {
             this.remediationUrl = Output.ofNullable(remediationUrl);
             return this;
         }
-
         public Builder severityRating(@Nullable Output<String> severityRating) {
             this.severityRating = severityRating;
             return this;
         }
-
         public Builder severityRating(@Nullable String severityRating) {
             this.severityRating = Output.ofNullable(severityRating);
             return this;
         }
-
         public Builder standardsControlArn(@Nullable Output<String> standardsControlArn) {
             this.standardsControlArn = standardsControlArn;
             return this;
         }
-
         public Builder standardsControlArn(@Nullable String standardsControlArn) {
             this.standardsControlArn = Output.ofNullable(standardsControlArn);
             return this;
         }
-
         public Builder title(@Nullable Output<String> title) {
             this.title = title;
             return this;
         }
-
         public Builder title(@Nullable String title) {
             this.title = Output.ofNullable(title);
             return this;
-        }
-        public StandardsControlState build() {
+        }        public StandardsControlState build() {
             return new StandardsControlState(controlId, controlStatus, controlStatusUpdatedAt, description, disabledReason, relatedRequirements, remediationUrl, severityRating, standardsControlArn, title);
         }
     }

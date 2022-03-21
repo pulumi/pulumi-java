@@ -190,92 +190,77 @@ public final class InstanceGroupArgs extends io.pulumi.resources.ResourceArgs {
             this.autoscalingPolicy = autoscalingPolicy;
             return this;
         }
-
         public Builder autoscalingPolicy(@Nullable String autoscalingPolicy) {
             this.autoscalingPolicy = Output.ofNullable(autoscalingPolicy);
             return this;
         }
-
         public Builder bidPrice(@Nullable Output<String> bidPrice) {
             this.bidPrice = bidPrice;
             return this;
         }
-
         public Builder bidPrice(@Nullable String bidPrice) {
             this.bidPrice = Output.ofNullable(bidPrice);
             return this;
         }
-
         public Builder clusterId(Output<String> clusterId) {
             this.clusterId = Objects.requireNonNull(clusterId);
             return this;
         }
-
         public Builder clusterId(String clusterId) {
             this.clusterId = Output.of(Objects.requireNonNull(clusterId));
             return this;
         }
-
         public Builder configurationsJson(@Nullable Output<String> configurationsJson) {
             this.configurationsJson = configurationsJson;
             return this;
         }
-
         public Builder configurationsJson(@Nullable String configurationsJson) {
             this.configurationsJson = Output.ofNullable(configurationsJson);
             return this;
         }
-
         public Builder ebsConfigs(@Nullable Output<List<InstanceGroupEbsConfigArgs>> ebsConfigs) {
             this.ebsConfigs = ebsConfigs;
             return this;
         }
-
         public Builder ebsConfigs(@Nullable List<InstanceGroupEbsConfigArgs> ebsConfigs) {
             this.ebsConfigs = Output.ofNullable(ebsConfigs);
             return this;
         }
-
+        public Builder ebsConfigs(InstanceGroupEbsConfigArgs... ebsConfigs) {
+            return ebsConfigs(List.of(ebsConfigs));
+        }
         public Builder ebsOptimized(@Nullable Output<Boolean> ebsOptimized) {
             this.ebsOptimized = ebsOptimized;
             return this;
         }
-
         public Builder ebsOptimized(@Nullable Boolean ebsOptimized) {
             this.ebsOptimized = Output.ofNullable(ebsOptimized);
             return this;
         }
-
         public Builder instanceCount(@Nullable Output<Integer> instanceCount) {
             this.instanceCount = instanceCount;
             return this;
         }
-
         public Builder instanceCount(@Nullable Integer instanceCount) {
             this.instanceCount = Output.ofNullable(instanceCount);
             return this;
         }
-
         public Builder instanceType(Output<String> instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
-
         public Builder instanceType(String instanceType) {
             this.instanceType = Output.of(Objects.requireNonNull(instanceType));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
-        }
-        public InstanceGroupArgs build() {
+        }        public InstanceGroupArgs build() {
             return new InstanceGroupArgs(autoscalingPolicy, bidPrice, clusterId, configurationsJson, ebsConfigs, ebsOptimized, instanceCount, instanceType, name);
         }
     }

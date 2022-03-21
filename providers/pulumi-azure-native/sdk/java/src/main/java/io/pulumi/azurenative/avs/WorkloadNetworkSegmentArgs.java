@@ -156,72 +156,58 @@ public final class WorkloadNetworkSegmentArgs extends io.pulumi.resources.Resour
             this.connectedGateway = connectedGateway;
             return this;
         }
-
         public Builder connectedGateway(@Nullable String connectedGateway) {
             this.connectedGateway = Output.ofNullable(connectedGateway);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder privateCloudName(Output<String> privateCloudName) {
             this.privateCloudName = Objects.requireNonNull(privateCloudName);
             return this;
         }
-
         public Builder privateCloudName(String privateCloudName) {
             this.privateCloudName = Output.of(Objects.requireNonNull(privateCloudName));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder revision(@Nullable Output<Double> revision) {
             this.revision = revision;
             return this;
         }
-
         public Builder revision(@Nullable Double revision) {
             this.revision = Output.ofNullable(revision);
             return this;
         }
-
         public Builder segmentId(@Nullable Output<String> segmentId) {
             this.segmentId = segmentId;
             return this;
         }
-
         public Builder segmentId(@Nullable String segmentId) {
             this.segmentId = Output.ofNullable(segmentId);
             return this;
         }
-
         public Builder subnet(@Nullable Output<WorkloadNetworkSegmentSubnetArgs> subnet) {
             this.subnet = subnet;
             return this;
         }
-
         public Builder subnet(@Nullable WorkloadNetworkSegmentSubnetArgs subnet) {
             this.subnet = Output.ofNullable(subnet);
             return this;
-        }
-        public WorkloadNetworkSegmentArgs build() {
+        }        public WorkloadNetworkSegmentArgs build() {
             return new WorkloadNetworkSegmentArgs(connectedGateway, displayName, privateCloudName, resourceGroupName, revision, segmentId, subnet);
         }
     }

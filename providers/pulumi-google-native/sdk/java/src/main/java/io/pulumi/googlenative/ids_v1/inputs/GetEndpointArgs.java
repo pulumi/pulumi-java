@@ -78,17 +78,14 @@ public final class GetEndpointArgs extends io.pulumi.resources.InvokeArgs {
             this.endpointId = Objects.requireNonNull(endpointId);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetEndpointArgs build() {
+        }        public GetEndpointArgs build() {
             return new GetEndpointArgs(endpointId, location, project);
         }
     }

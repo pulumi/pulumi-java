@@ -189,92 +189,80 @@ public final class FargateProfileState extends io.pulumi.resources.ResourceArgs 
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder clusterName(@Nullable Output<String> clusterName) {
             this.clusterName = clusterName;
             return this;
         }
-
         public Builder clusterName(@Nullable String clusterName) {
             this.clusterName = Output.ofNullable(clusterName);
             return this;
         }
-
         public Builder fargateProfileName(@Nullable Output<String> fargateProfileName) {
             this.fargateProfileName = fargateProfileName;
             return this;
         }
-
         public Builder fargateProfileName(@Nullable String fargateProfileName) {
             this.fargateProfileName = Output.ofNullable(fargateProfileName);
             return this;
         }
-
         public Builder podExecutionRoleArn(@Nullable Output<String> podExecutionRoleArn) {
             this.podExecutionRoleArn = podExecutionRoleArn;
             return this;
         }
-
         public Builder podExecutionRoleArn(@Nullable String podExecutionRoleArn) {
             this.podExecutionRoleArn = Output.ofNullable(podExecutionRoleArn);
             return this;
         }
-
         public Builder selectors(@Nullable Output<List<FargateProfileSelectorGetArgs>> selectors) {
             this.selectors = selectors;
             return this;
         }
-
         public Builder selectors(@Nullable List<FargateProfileSelectorGetArgs> selectors) {
             this.selectors = Output.ofNullable(selectors);
             return this;
         }
-
+        public Builder selectors(FargateProfileSelectorGetArgs... selectors) {
+            return selectors(List.of(selectors));
+        }
         public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = Output.ofNullable(status);
             return this;
         }
-
         public Builder subnetIds(@Nullable Output<List<String>> subnetIds) {
             this.subnetIds = subnetIds;
             return this;
         }
-
         public Builder subnetIds(@Nullable List<String> subnetIds) {
             this.subnetIds = Output.ofNullable(subnetIds);
             return this;
         }
-
+        public Builder subnetIds(String... subnetIds) {
+            return subnetIds(List.of(subnetIds));
+        }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
-        }
-        public FargateProfileState build() {
+        }        public FargateProfileState build() {
             return new FargateProfileState(arn, clusterName, fargateProfileName, podExecutionRoleArn, selectors, status, subnetIds, tags, tagsAll);
         }
     }

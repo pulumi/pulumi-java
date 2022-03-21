@@ -181,92 +181,77 @@ public final class BackendBucketArgs extends io.pulumi.resources.ResourceArgs {
             this.bucketName = bucketName;
             return this;
         }
-
         public Builder bucketName(@Nullable String bucketName) {
             this.bucketName = Output.ofNullable(bucketName);
             return this;
         }
-
         public Builder cdnPolicy(@Nullable Output<BackendBucketCdnPolicyArgs> cdnPolicy) {
             this.cdnPolicy = cdnPolicy;
             return this;
         }
-
         public Builder cdnPolicy(@Nullable BackendBucketCdnPolicyArgs cdnPolicy) {
             this.cdnPolicy = Output.ofNullable(cdnPolicy);
             return this;
         }
-
         public Builder customResponseHeaders(@Nullable Output<List<String>> customResponseHeaders) {
             this.customResponseHeaders = customResponseHeaders;
             return this;
         }
-
         public Builder customResponseHeaders(@Nullable List<String> customResponseHeaders) {
             this.customResponseHeaders = Output.ofNullable(customResponseHeaders);
             return this;
         }
-
+        public Builder customResponseHeaders(String... customResponseHeaders) {
+            return customResponseHeaders(List.of(customResponseHeaders));
+        }
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder enableCdn(@Nullable Output<Boolean> enableCdn) {
             this.enableCdn = enableCdn;
             return this;
         }
-
         public Builder enableCdn(@Nullable Boolean enableCdn) {
             this.enableCdn = Output.ofNullable(enableCdn);
             return this;
         }
-
         public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder requestId(@Nullable Output<String> requestId) {
             this.requestId = requestId;
             return this;
         }
-
         public Builder requestId(@Nullable String requestId) {
             this.requestId = Output.ofNullable(requestId);
             return this;
-        }
-        public BackendBucketArgs build() {
+        }        public BackendBucketArgs build() {
             return new BackendBucketArgs(bucketName, cdnPolicy, customResponseHeaders, description, enableCdn, kind, name, project, requestId);
         }
     }

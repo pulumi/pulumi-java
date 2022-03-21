@@ -64,12 +64,10 @@ public final class GetServicePerimeterArgs extends io.pulumi.resources.InvokeArg
             this.accessPolicyId = Objects.requireNonNull(accessPolicyId);
             return this;
         }
-
         public Builder servicePerimeterId(String servicePerimeterId) {
             this.servicePerimeterId = Objects.requireNonNull(servicePerimeterId);
             return this;
-        }
-        public GetServicePerimeterArgs build() {
+        }        public GetServicePerimeterArgs build() {
             return new GetServicePerimeterArgs(accessPolicyId, servicePerimeterId);
         }
     }

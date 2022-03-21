@@ -60,8 +60,7 @@ public final class StorageClassificationMappingPropertiesResponse extends io.pul
         public Builder targetStorageClassificationId(@Nullable String targetStorageClassificationId) {
             this.targetStorageClassificationId = targetStorageClassificationId;
             return this;
-        }
-        public StorageClassificationMappingPropertiesResponse build() {
+        }        public StorageClassificationMappingPropertiesResponse build() {
             return new StorageClassificationMappingPropertiesResponse(targetStorageClassificationId);
         }
     }

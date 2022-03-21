@@ -92,32 +92,32 @@ public final class LifecyclePolicyPolicyDetailsArgs extends io.pulumi.resources.
             this.resourceTypes = Objects.requireNonNull(resourceTypes);
             return this;
         }
-
         public Builder resourceTypes(List<String> resourceTypes) {
             this.resourceTypes = Output.of(Objects.requireNonNull(resourceTypes));
             return this;
         }
-
+        public Builder resourceTypes(String... resourceTypes) {
+            return resourceTypes(List.of(resourceTypes));
+        }
         public Builder schedules(Output<List<LifecyclePolicyPolicyDetailsScheduleArgs>> schedules) {
             this.schedules = Objects.requireNonNull(schedules);
             return this;
         }
-
         public Builder schedules(List<LifecyclePolicyPolicyDetailsScheduleArgs> schedules) {
             this.schedules = Output.of(Objects.requireNonNull(schedules));
             return this;
         }
-
+        public Builder schedules(LifecyclePolicyPolicyDetailsScheduleArgs... schedules) {
+            return schedules(List.of(schedules));
+        }
         public Builder targetTags(Output<Map<String,String>> targetTags) {
             this.targetTags = Objects.requireNonNull(targetTags);
             return this;
         }
-
         public Builder targetTags(Map<String,String> targetTags) {
             this.targetTags = Output.of(Objects.requireNonNull(targetTags));
             return this;
-        }
-        public LifecyclePolicyPolicyDetailsArgs build() {
+        }        public LifecyclePolicyPolicyDetailsArgs build() {
             return new LifecyclePolicyPolicyDetailsArgs(resourceTypes, schedules, targetTags);
         }
     }

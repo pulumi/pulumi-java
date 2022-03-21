@@ -170,42 +170,34 @@ public final class GetPipelineRunResult {
             this.forceUpdateTag = forceUpdateTag;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder request(@Nullable PipelineRunRequestResponse request) {
             this.request = request;
             return this;
         }
-
         public Builder response(PipelineRunResponseResponse response) {
             this.response = Objects.requireNonNull(response);
             return this;
         }
-
         public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetPipelineRunResult build() {
+        }        public GetPipelineRunResult build() {
             return new GetPipelineRunResult(forceUpdateTag, id, name, provisioningState, request, response, systemData, type);
         }
     }

@@ -71,22 +71,18 @@ public final class DeviceConfig {
             this.binaryData = binaryData;
             return this;
         }
-
         public Builder cloudUpdateTime(@Nullable String cloudUpdateTime) {
             this.cloudUpdateTime = cloudUpdateTime;
             return this;
         }
-
         public Builder deviceAckTime(@Nullable String deviceAckTime) {
             this.deviceAckTime = deviceAckTime;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = version;
             return this;
-        }
-        public DeviceConfig build() {
+        }        public DeviceConfig build() {
             return new DeviceConfig(binaryData, cloudUpdateTime, deviceAckTime, version);
         }
     }

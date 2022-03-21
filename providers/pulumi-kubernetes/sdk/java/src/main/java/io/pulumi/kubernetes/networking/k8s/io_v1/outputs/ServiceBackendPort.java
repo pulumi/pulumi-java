@@ -72,12 +72,10 @@ public final class ServiceBackendPort {
             this.name = name;
             return this;
         }
-
         public Builder number(@Nullable Integer number) {
             this.number = number;
             return this;
-        }
-        public ServiceBackendPort build() {
+        }        public ServiceBackendPort build() {
             return new ServiceBackendPort(name, number);
         }
     }

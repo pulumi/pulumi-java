@@ -56,8 +56,7 @@ public final class DatasetJsonOptions extends io.pulumi.resources.InvokeArgs {
         public Builder multiLine(@Nullable Boolean multiLine) {
             this.multiLine = multiLine;
             return this;
-        }
-        public DatasetJsonOptions build() {
+        }        public DatasetJsonOptions build() {
             return new DatasetJsonOptions(multiLine);
         }
     }

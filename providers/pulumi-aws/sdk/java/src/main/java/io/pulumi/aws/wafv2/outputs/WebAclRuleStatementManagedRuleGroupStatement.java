@@ -106,22 +106,21 @@ public final class WebAclRuleStatementManagedRuleGroupStatement {
             this.excludedRules = excludedRules;
             return this;
         }
-
+        public Builder excludedRules(WebAclRuleStatementManagedRuleGroupStatementExcludedRule... excludedRules) {
+            return excludedRules(List.of(excludedRules));
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder scopeDownStatement(@Nullable WebAclRuleStatementManagedRuleGroupStatementScopeDownStatement scopeDownStatement) {
             this.scopeDownStatement = scopeDownStatement;
             return this;
         }
-
         public Builder vendorName(String vendorName) {
             this.vendorName = Objects.requireNonNull(vendorName);
             return this;
-        }
-        public WebAclRuleStatementManagedRuleGroupStatement build() {
+        }        public WebAclRuleStatementManagedRuleGroupStatement build() {
             return new WebAclRuleStatementManagedRuleGroupStatement(excludedRules, name, scopeDownStatement, vendorName);
         }
     }

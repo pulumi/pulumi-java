@@ -97,17 +97,17 @@ public final class DedicatedHostInstanceViewResponse extends io.pulumi.resources
             this.assetId = Objects.requireNonNull(assetId);
             return this;
         }
-
         public Builder availableCapacity(@Nullable DedicatedHostAvailableCapacityResponse availableCapacity) {
             this.availableCapacity = availableCapacity;
             return this;
         }
-
         public Builder statuses(@Nullable List<InstanceViewStatusResponse> statuses) {
             this.statuses = statuses;
             return this;
         }
-        public DedicatedHostInstanceViewResponse build() {
+        public Builder statuses(InstanceViewStatusResponse... statuses) {
+            return statuses(List.of(statuses));
+        }        public DedicatedHostInstanceViewResponse build() {
             return new DedicatedHostInstanceViewResponse(assetId, availableCapacity, statuses);
         }
     }

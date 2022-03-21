@@ -56,12 +56,10 @@ public final class FunctionDeadLetterConfigGetArgs extends io.pulumi.resources.R
             this.targetArn = Objects.requireNonNull(targetArn);
             return this;
         }
-
         public Builder targetArn(String targetArn) {
             this.targetArn = Output.of(Objects.requireNonNull(targetArn));
             return this;
-        }
-        public FunctionDeadLetterConfigGetArgs build() {
+        }        public FunctionDeadLetterConfigGetArgs build() {
             return new FunctionDeadLetterConfigGetArgs(targetArn);
         }
     }

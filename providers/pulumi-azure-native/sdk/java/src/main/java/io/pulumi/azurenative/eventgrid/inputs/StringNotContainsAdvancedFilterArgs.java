@@ -96,32 +96,29 @@ public final class StringNotContainsAdvancedFilterArgs extends io.pulumi.resourc
             this.key = key;
             return this;
         }
-
         public Builder key(@Nullable String key) {
             this.key = Output.ofNullable(key);
             return this;
         }
-
         public Builder operatorType(Output<String> operatorType) {
             this.operatorType = Objects.requireNonNull(operatorType);
             return this;
         }
-
         public Builder operatorType(String operatorType) {
             this.operatorType = Output.of(Objects.requireNonNull(operatorType));
             return this;
         }
-
         public Builder values(@Nullable Output<List<String>> values) {
             this.values = values;
             return this;
         }
-
         public Builder values(@Nullable List<String> values) {
             this.values = Output.ofNullable(values);
             return this;
         }
-        public StringNotContainsAdvancedFilterArgs build() {
+        public Builder values(String... values) {
+            return values(List.of(values));
+        }        public StringNotContainsAdvancedFilterArgs build() {
             return new StringNotContainsAdvancedFilterArgs(key, operatorType, values);
         }
     }

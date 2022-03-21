@@ -118,12 +118,13 @@ public final class SwitchCaseResponse extends io.pulumi.resources.InvokeArgs {
             this.activities = activities;
             return this;
         }
-
+        public Builder activities(Object... activities) {
+            return activities(List.of(activities));
+        }
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public SwitchCaseResponse build() {
+        }        public SwitchCaseResponse build() {
             return new SwitchCaseResponse(activities, value);
         }
     }

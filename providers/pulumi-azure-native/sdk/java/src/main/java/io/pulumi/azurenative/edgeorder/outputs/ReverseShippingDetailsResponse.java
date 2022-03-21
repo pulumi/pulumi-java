@@ -117,27 +117,22 @@ public final class ReverseShippingDetailsResponse {
             this.carrierDisplayName = Objects.requireNonNull(carrierDisplayName);
             return this;
         }
-
         public Builder carrierName(String carrierName) {
             this.carrierName = Objects.requireNonNull(carrierName);
             return this;
         }
-
         public Builder sasKeyForLabel(String sasKeyForLabel) {
             this.sasKeyForLabel = Objects.requireNonNull(sasKeyForLabel);
             return this;
         }
-
         public Builder trackingId(String trackingId) {
             this.trackingId = Objects.requireNonNull(trackingId);
             return this;
         }
-
         public Builder trackingUrl(String trackingUrl) {
             this.trackingUrl = Objects.requireNonNull(trackingUrl);
             return this;
-        }
-        public ReverseShippingDetailsResponse build() {
+        }        public ReverseShippingDetailsResponse build() {
             return new ReverseShippingDetailsResponse(carrierDisplayName, carrierName, sasKeyForLabel, trackingId, trackingUrl);
         }
     }

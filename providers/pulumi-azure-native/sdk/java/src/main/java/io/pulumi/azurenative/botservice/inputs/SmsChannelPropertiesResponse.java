@@ -127,27 +127,22 @@ public final class SmsChannelPropertiesResponse extends io.pulumi.resources.Invo
             this.accountSID = Objects.requireNonNull(accountSID);
             return this;
         }
-
         public Builder authToken(@Nullable String authToken) {
             this.authToken = authToken;
             return this;
         }
-
         public Builder isEnabled(Boolean isEnabled) {
             this.isEnabled = Objects.requireNonNull(isEnabled);
             return this;
         }
-
         public Builder isValidated(@Nullable Boolean isValidated) {
             this.isValidated = isValidated;
             return this;
         }
-
         public Builder phone(String phone) {
             this.phone = Objects.requireNonNull(phone);
             return this;
-        }
-        public SmsChannelPropertiesResponse build() {
+        }        public SmsChannelPropertiesResponse build() {
             return new SmsChannelPropertiesResponse(accountSID, authToken, isEnabled, isValidated, phone);
         }
     }

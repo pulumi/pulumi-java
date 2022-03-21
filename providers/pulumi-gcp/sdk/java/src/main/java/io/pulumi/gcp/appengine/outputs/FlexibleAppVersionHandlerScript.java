@@ -51,8 +51,7 @@ public final class FlexibleAppVersionHandlerScript {
         public Builder scriptPath(String scriptPath) {
             this.scriptPath = Objects.requireNonNull(scriptPath);
             return this;
-        }
-        public FlexibleAppVersionHandlerScript build() {
+        }        public FlexibleAppVersionHandlerScript build() {
             return new FlexibleAppVersionHandlerScript(scriptPath);
         }
     }

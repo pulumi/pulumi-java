@@ -89,17 +89,20 @@ public final class FrontDoorManagedRuleGroupOverrideResponse {
             this.exclusions = exclusions;
             return this;
         }
-
+        public Builder exclusions(ManagedRuleExclusionResponse... exclusions) {
+            return exclusions(List.of(exclusions));
+        }
         public Builder ruleGroupName(String ruleGroupName) {
             this.ruleGroupName = Objects.requireNonNull(ruleGroupName);
             return this;
         }
-
         public Builder rules(@Nullable List<FrontDoorManagedRuleOverrideResponse> rules) {
             this.rules = rules;
             return this;
         }
-        public FrontDoorManagedRuleGroupOverrideResponse build() {
+        public Builder rules(FrontDoorManagedRuleOverrideResponse... rules) {
+            return rules(List.of(rules));
+        }        public FrontDoorManagedRuleGroupOverrideResponse build() {
             return new FrontDoorManagedRuleGroupOverrideResponse(exclusions, ruleGroupName, rules);
         }
     }

@@ -57,12 +57,13 @@ public final class RuleGroupRuleGroupRuleVariablesIpSetIpSetGetArgs extends io.p
             this.definitions = Objects.requireNonNull(definitions);
             return this;
         }
-
         public Builder definitions(List<String> definitions) {
             this.definitions = Output.of(Objects.requireNonNull(definitions));
             return this;
         }
-        public RuleGroupRuleGroupRuleVariablesIpSetIpSetGetArgs build() {
+        public Builder definitions(String... definitions) {
+            return definitions(List.of(definitions));
+        }        public RuleGroupRuleGroupRuleVariablesIpSetIpSetGetArgs build() {
             return new RuleGroupRuleGroupRuleVariablesIpSetIpSetGetArgs(definitions);
         }
     }

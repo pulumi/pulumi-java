@@ -258,72 +258,61 @@ public final class GetTransitGatewayResult {
             this.amazonSideAsn = Objects.requireNonNull(amazonSideAsn);
             return this;
         }
-
         public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder associationDefaultRouteTableId(String associationDefaultRouteTableId) {
             this.associationDefaultRouteTableId = Objects.requireNonNull(associationDefaultRouteTableId);
             return this;
         }
-
         public Builder autoAcceptSharedAttachments(String autoAcceptSharedAttachments) {
             this.autoAcceptSharedAttachments = Objects.requireNonNull(autoAcceptSharedAttachments);
             return this;
         }
-
         public Builder defaultRouteTableAssociation(String defaultRouteTableAssociation) {
             this.defaultRouteTableAssociation = Objects.requireNonNull(defaultRouteTableAssociation);
             return this;
         }
-
         public Builder defaultRouteTablePropagation(String defaultRouteTablePropagation) {
             this.defaultRouteTablePropagation = Objects.requireNonNull(defaultRouteTablePropagation);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder dnsSupport(String dnsSupport) {
             this.dnsSupport = Objects.requireNonNull(dnsSupport);
             return this;
         }
-
         public Builder filters(@Nullable List<GetTransitGatewayFilter> filters) {
             this.filters = filters;
             return this;
         }
-
+        public Builder filters(GetTransitGatewayFilter... filters) {
+            return filters(List.of(filters));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder ownerId(String ownerId) {
             this.ownerId = Objects.requireNonNull(ownerId);
             return this;
         }
-
         public Builder propagationDefaultRouteTableId(String propagationDefaultRouteTableId) {
             this.propagationDefaultRouteTableId = Objects.requireNonNull(propagationDefaultRouteTableId);
             return this;
         }
-
         public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
-
         public Builder vpnEcmpSupport(String vpnEcmpSupport) {
             this.vpnEcmpSupport = Objects.requireNonNull(vpnEcmpSupport);
             return this;
-        }
-        public GetTransitGatewayResult build() {
+        }        public GetTransitGatewayResult build() {
             return new GetTransitGatewayResult(amazonSideAsn, arn, associationDefaultRouteTableId, autoAcceptSharedAttachments, defaultRouteTableAssociation, defaultRouteTablePropagation, description, dnsSupport, filters, id, ownerId, propagationDefaultRouteTableId, tags, vpnEcmpSupport);
         }
     }

@@ -78,22 +78,18 @@ public final class CustomDomainPropertiesArgs extends io.pulumi.resources.Resour
             this.certName = certName;
             return this;
         }
-
         public Builder certName(@Nullable String certName) {
             this.certName = Output.ofNullable(certName);
             return this;
         }
-
         public Builder thumbprint(@Nullable Output<String> thumbprint) {
             this.thumbprint = thumbprint;
             return this;
         }
-
         public Builder thumbprint(@Nullable String thumbprint) {
             this.thumbprint = Output.ofNullable(thumbprint);
             return this;
-        }
-        public CustomDomainPropertiesArgs build() {
+        }        public CustomDomainPropertiesArgs build() {
             return new CustomDomainPropertiesArgs(certName, thumbprint);
         }
     }

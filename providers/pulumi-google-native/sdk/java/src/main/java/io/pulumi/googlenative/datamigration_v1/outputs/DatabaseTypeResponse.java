@@ -69,12 +69,10 @@ public final class DatabaseTypeResponse {
             this.engine = Objects.requireNonNull(engine);
             return this;
         }
-
         public Builder provider(String provider) {
             this.provider = Objects.requireNonNull(provider);
             return this;
-        }
-        public DatabaseTypeResponse build() {
+        }        public DatabaseTypeResponse build() {
             return new DatabaseTypeResponse(engine, provider);
         }
     }

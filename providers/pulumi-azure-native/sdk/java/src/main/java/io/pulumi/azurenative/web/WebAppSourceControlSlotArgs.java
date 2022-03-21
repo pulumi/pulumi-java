@@ -220,112 +220,90 @@ public final class WebAppSourceControlSlotArgs extends io.pulumi.resources.Resou
             this.branch = branch;
             return this;
         }
-
         public Builder branch(@Nullable String branch) {
             this.branch = Output.ofNullable(branch);
             return this;
         }
-
         public Builder deploymentRollbackEnabled(@Nullable Output<Boolean> deploymentRollbackEnabled) {
             this.deploymentRollbackEnabled = deploymentRollbackEnabled;
             return this;
         }
-
         public Builder deploymentRollbackEnabled(@Nullable Boolean deploymentRollbackEnabled) {
             this.deploymentRollbackEnabled = Output.ofNullable(deploymentRollbackEnabled);
             return this;
         }
-
         public Builder gitHubActionConfiguration(@Nullable Output<GitHubActionConfigurationArgs> gitHubActionConfiguration) {
             this.gitHubActionConfiguration = gitHubActionConfiguration;
             return this;
         }
-
         public Builder gitHubActionConfiguration(@Nullable GitHubActionConfigurationArgs gitHubActionConfiguration) {
             this.gitHubActionConfiguration = Output.ofNullable(gitHubActionConfiguration);
             return this;
         }
-
         public Builder isGitHubAction(@Nullable Output<Boolean> isGitHubAction) {
             this.isGitHubAction = isGitHubAction;
             return this;
         }
-
         public Builder isGitHubAction(@Nullable Boolean isGitHubAction) {
             this.isGitHubAction = Output.ofNullable(isGitHubAction);
             return this;
         }
-
         public Builder isManualIntegration(@Nullable Output<Boolean> isManualIntegration) {
             this.isManualIntegration = isManualIntegration;
             return this;
         }
-
         public Builder isManualIntegration(@Nullable Boolean isManualIntegration) {
             this.isManualIntegration = Output.ofNullable(isManualIntegration);
             return this;
         }
-
         public Builder isMercurial(@Nullable Output<Boolean> isMercurial) {
             this.isMercurial = isMercurial;
             return this;
         }
-
         public Builder isMercurial(@Nullable Boolean isMercurial) {
             this.isMercurial = Output.ofNullable(isMercurial);
             return this;
         }
-
         public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder repoUrl(@Nullable Output<String> repoUrl) {
             this.repoUrl = repoUrl;
             return this;
         }
-
         public Builder repoUrl(@Nullable String repoUrl) {
             this.repoUrl = Output.ofNullable(repoUrl);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder slot(Output<String> slot) {
             this.slot = Objects.requireNonNull(slot);
             return this;
         }
-
         public Builder slot(String slot) {
             this.slot = Output.of(Objects.requireNonNull(slot));
             return this;
-        }
-        public WebAppSourceControlSlotArgs build() {
+        }        public WebAppSourceControlSlotArgs build() {
             return new WebAppSourceControlSlotArgs(branch, deploymentRollbackEnabled, gitHubActionConfiguration, isGitHubAction, isManualIntegration, isMercurial, kind, name, repoUrl, resourceGroupName, slot);
         }
     }

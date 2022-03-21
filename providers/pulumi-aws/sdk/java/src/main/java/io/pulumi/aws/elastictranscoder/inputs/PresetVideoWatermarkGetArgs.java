@@ -202,102 +202,82 @@ public final class PresetVideoWatermarkGetArgs extends io.pulumi.resources.Resou
             this.horizontalAlign = horizontalAlign;
             return this;
         }
-
         public Builder horizontalAlign(@Nullable String horizontalAlign) {
             this.horizontalAlign = Output.ofNullable(horizontalAlign);
             return this;
         }
-
         public Builder horizontalOffset(@Nullable Output<String> horizontalOffset) {
             this.horizontalOffset = horizontalOffset;
             return this;
         }
-
         public Builder horizontalOffset(@Nullable String horizontalOffset) {
             this.horizontalOffset = Output.ofNullable(horizontalOffset);
             return this;
         }
-
         public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder maxHeight(@Nullable Output<String> maxHeight) {
             this.maxHeight = maxHeight;
             return this;
         }
-
         public Builder maxHeight(@Nullable String maxHeight) {
             this.maxHeight = Output.ofNullable(maxHeight);
             return this;
         }
-
         public Builder maxWidth(@Nullable Output<String> maxWidth) {
             this.maxWidth = maxWidth;
             return this;
         }
-
         public Builder maxWidth(@Nullable String maxWidth) {
             this.maxWidth = Output.ofNullable(maxWidth);
             return this;
         }
-
         public Builder opacity(@Nullable Output<String> opacity) {
             this.opacity = opacity;
             return this;
         }
-
         public Builder opacity(@Nullable String opacity) {
             this.opacity = Output.ofNullable(opacity);
             return this;
         }
-
         public Builder sizingPolicy(@Nullable Output<String> sizingPolicy) {
             this.sizingPolicy = sizingPolicy;
             return this;
         }
-
         public Builder sizingPolicy(@Nullable String sizingPolicy) {
             this.sizingPolicy = Output.ofNullable(sizingPolicy);
             return this;
         }
-
         public Builder target(@Nullable Output<String> target) {
             this.target = target;
             return this;
         }
-
         public Builder target(@Nullable String target) {
             this.target = Output.ofNullable(target);
             return this;
         }
-
         public Builder verticalAlign(@Nullable Output<String> verticalAlign) {
             this.verticalAlign = verticalAlign;
             return this;
         }
-
         public Builder verticalAlign(@Nullable String verticalAlign) {
             this.verticalAlign = Output.ofNullable(verticalAlign);
             return this;
         }
-
         public Builder verticalOffset(@Nullable Output<String> verticalOffset) {
             this.verticalOffset = verticalOffset;
             return this;
         }
-
         public Builder verticalOffset(@Nullable String verticalOffset) {
             this.verticalOffset = Output.ofNullable(verticalOffset);
             return this;
-        }
-        public PresetVideoWatermarkGetArgs build() {
+        }        public PresetVideoWatermarkGetArgs build() {
             return new PresetVideoWatermarkGetArgs(horizontalAlign, horizontalOffset, id, maxHeight, maxWidth, opacity, sizingPolicy, target, verticalAlign, verticalOffset);
         }
     }

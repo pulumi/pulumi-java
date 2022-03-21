@@ -251,67 +251,60 @@ public final class GetVirtualWanResult {
             this.allowBranchToBranchTraffic = allowBranchToBranchTraffic;
             return this;
         }
-
         public Builder allowVnetToVnetTraffic(@Nullable Boolean allowVnetToVnetTraffic) {
             this.allowVnetToVnetTraffic = allowVnetToVnetTraffic;
             return this;
         }
-
         public Builder disableVpnEncryption(@Nullable Boolean disableVpnEncryption) {
             this.disableVpnEncryption = disableVpnEncryption;
             return this;
         }
-
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder office365LocalBreakoutCategory(String office365LocalBreakoutCategory) {
             this.office365LocalBreakoutCategory = Objects.requireNonNull(office365LocalBreakoutCategory);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder virtualHubs(List<SubResourceResponse> virtualHubs) {
             this.virtualHubs = Objects.requireNonNull(virtualHubs);
             return this;
         }
-
+        public Builder virtualHubs(SubResourceResponse... virtualHubs) {
+            return virtualHubs(List.of(virtualHubs));
+        }
         public Builder vpnSites(List<SubResourceResponse> vpnSites) {
             this.vpnSites = Objects.requireNonNull(vpnSites);
             return this;
         }
-        public GetVirtualWanResult build() {
+        public Builder vpnSites(SubResourceResponse... vpnSites) {
+            return vpnSites(List.of(vpnSites));
+        }        public GetVirtualWanResult build() {
             return new GetVirtualWanResult(allowBranchToBranchTraffic, allowVnetToVnetTraffic, disableVpnEncryption, etag, id, location, name, office365LocalBreakoutCategory, provisioningState, tags, type, virtualHubs, vpnSites);
         }
     }

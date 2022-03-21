@@ -66,12 +66,13 @@ public final class GetOrganizationPolicyListPolicyDeny extends io.pulumi.resourc
             this.all = Objects.requireNonNull(all);
             return this;
         }
-
         public Builder values(List<String> values) {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-        public GetOrganizationPolicyListPolicyDeny build() {
+        public Builder values(String... values) {
+            return values(List.of(values));
+        }        public GetOrganizationPolicyListPolicyDeny build() {
             return new GetOrganizationPolicyListPolicyDeny(all, values);
         }
     }

@@ -138,32 +138,26 @@ public final class RuntimeClass {
             this.apiVersion = apiVersion;
             return this;
         }
-
         public Builder handler(String handler) {
             this.handler = Objects.requireNonNull(handler);
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder metadata(@Nullable ObjectMeta metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder overhead(@Nullable Overhead overhead) {
             this.overhead = overhead;
             return this;
         }
-
         public Builder scheduling(@Nullable Scheduling scheduling) {
             this.scheduling = scheduling;
             return this;
-        }
-        public RuntimeClass build() {
+        }        public RuntimeClass build() {
             return new RuntimeClass(apiVersion, handler, kind, metadata, overhead, scheduling);
         }
     }

@@ -246,67 +246,54 @@ public final class GetHttpHealthCheckResult {
             this.checkIntervalSec = Objects.requireNonNull(checkIntervalSec);
             return this;
         }
-
         public Builder creationTimestamp(String creationTimestamp) {
             this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder healthyThreshold(Integer healthyThreshold) {
             this.healthyThreshold = Objects.requireNonNull(healthyThreshold);
             return this;
         }
-
         public Builder host(String host) {
             this.host = Objects.requireNonNull(host);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder port(Integer port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
-
         public Builder requestPath(String requestPath) {
             this.requestPath = Objects.requireNonNull(requestPath);
             return this;
         }
-
         public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
-
         public Builder selfLinkWithId(String selfLinkWithId) {
             this.selfLinkWithId = Objects.requireNonNull(selfLinkWithId);
             return this;
         }
-
         public Builder timeoutSec(Integer timeoutSec) {
             this.timeoutSec = Objects.requireNonNull(timeoutSec);
             return this;
         }
-
         public Builder unhealthyThreshold(Integer unhealthyThreshold) {
             this.unhealthyThreshold = Objects.requireNonNull(unhealthyThreshold);
             return this;
-        }
-        public GetHttpHealthCheckResult build() {
+        }        public GetHttpHealthCheckResult build() {
             return new GetHttpHealthCheckResult(checkIntervalSec, creationTimestamp, description, healthyThreshold, host, kind, name, port, requestPath, selfLink, selfLinkWithId, timeoutSec, unhealthyThreshold);
         }
     }

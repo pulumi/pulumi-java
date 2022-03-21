@@ -136,32 +136,26 @@ public final class GetLifecycleHookResult {
             this.defaultResult = defaultResult;
             return this;
         }
-
         public Builder heartbeatTimeout(@Nullable Integer heartbeatTimeout) {
             this.heartbeatTimeout = heartbeatTimeout;
             return this;
         }
-
         public Builder lifecycleTransition(@Nullable String lifecycleTransition) {
             this.lifecycleTransition = lifecycleTransition;
             return this;
         }
-
         public Builder notificationMetadata(@Nullable String notificationMetadata) {
             this.notificationMetadata = notificationMetadata;
             return this;
         }
-
         public Builder notificationTargetARN(@Nullable String notificationTargetARN) {
             this.notificationTargetARN = notificationTargetARN;
             return this;
         }
-
         public Builder roleARN(@Nullable String roleARN) {
             this.roleARN = roleARN;
             return this;
-        }
-        public GetLifecycleHookResult build() {
+        }        public GetLifecycleHookResult build() {
             return new GetLifecycleHookResult(defaultResult, heartbeatTimeout, lifecycleTransition, notificationMetadata, notificationTargetARN, roleARN);
         }
     }

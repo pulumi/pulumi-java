@@ -71,12 +71,10 @@ public final class VpcEndpointDnsEntry {
             this.dnsName = dnsName;
             return this;
         }
-
         public Builder hostedZoneId(@Nullable String hostedZoneId) {
             this.hostedZoneId = hostedZoneId;
             return this;
-        }
-        public VpcEndpointDnsEntry build() {
+        }        public VpcEndpointDnsEntry build() {
             return new VpcEndpointDnsEntry(dnsName, hostedZoneId);
         }
     }

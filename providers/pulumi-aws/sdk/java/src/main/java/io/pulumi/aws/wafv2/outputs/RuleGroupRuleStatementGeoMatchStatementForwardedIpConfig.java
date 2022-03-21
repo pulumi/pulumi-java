@@ -69,12 +69,10 @@ public final class RuleGroupRuleStatementGeoMatchStatementForwardedIpConfig {
             this.fallbackBehavior = Objects.requireNonNull(fallbackBehavior);
             return this;
         }
-
         public Builder headerName(String headerName) {
             this.headerName = Objects.requireNonNull(headerName);
             return this;
-        }
-        public RuleGroupRuleStatementGeoMatchStatementForwardedIpConfig build() {
+        }        public RuleGroupRuleStatementGeoMatchStatementForwardedIpConfig build() {
             return new RuleGroupRuleStatementGeoMatchStatementForwardedIpConfig(fallbackBehavior, headerName);
         }
     }

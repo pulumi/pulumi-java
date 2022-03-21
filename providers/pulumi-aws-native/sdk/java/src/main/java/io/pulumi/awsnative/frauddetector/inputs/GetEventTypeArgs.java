@@ -54,8 +54,7 @@ public final class GetEventTypeArgs extends io.pulumi.resources.InvokeArgs {
         public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
-        }
-        public GetEventTypeArgs build() {
+        }        public GetEventTypeArgs build() {
             return new GetEventTypeArgs(arn);
         }
     }

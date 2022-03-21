@@ -314,82 +314,66 @@ public final class GetSqlPoolResult {
             this.collation = collation;
             return this;
         }
-
         public Builder createMode(@Nullable String createMode) {
             this.createMode = createMode;
             return this;
         }
-
         public Builder creationDate(@Nullable String creationDate) {
             this.creationDate = creationDate;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder maxSizeBytes(@Nullable Double maxSizeBytes) {
             this.maxSizeBytes = maxSizeBytes;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder provisioningState(@Nullable String provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
-
         public Builder recoverableDatabaseId(@Nullable String recoverableDatabaseId) {
             this.recoverableDatabaseId = recoverableDatabaseId;
             return this;
         }
-
         public Builder restorePointInTime(@Nullable String restorePointInTime) {
             this.restorePointInTime = restorePointInTime;
             return this;
         }
-
         public Builder sku(@Nullable SkuResponse sku) {
             this.sku = sku;
             return this;
         }
-
         public Builder sourceDatabaseId(@Nullable String sourceDatabaseId) {
             this.sourceDatabaseId = sourceDatabaseId;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }
-
         public Builder storageAccountType(@Nullable String storageAccountType) {
             this.storageAccountType = storageAccountType;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetSqlPoolResult build() {
+        }        public GetSqlPoolResult build() {
             return new GetSqlPoolResult(collation, createMode, creationDate, id, location, maxSizeBytes, name, provisioningState, recoverableDatabaseId, restorePointInTime, sku, sourceDatabaseId, status, storageAccountType, tags, type);
         }
     }

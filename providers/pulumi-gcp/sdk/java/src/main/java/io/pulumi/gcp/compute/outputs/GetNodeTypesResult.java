@@ -86,22 +86,21 @@ public final class GetNodeTypesResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder names(List<String> names) {
             this.names = Objects.requireNonNull(names);
             return this;
         }
-
+        public Builder names(String... names) {
+            return names(List.of(names));
+        }
         public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
-
         public Builder zone(String zone) {
             this.zone = Objects.requireNonNull(zone);
             return this;
-        }
-        public GetNodeTypesResult build() {
+        }        public GetNodeTypesResult build() {
             return new GetNodeTypesResult(id, names, project, zone);
         }
     }

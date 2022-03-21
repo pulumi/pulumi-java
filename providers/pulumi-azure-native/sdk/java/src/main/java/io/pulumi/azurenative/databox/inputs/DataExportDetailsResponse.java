@@ -98,17 +98,14 @@ public final class DataExportDetailsResponse extends io.pulumi.resources.InvokeA
             this.accountDetails = Objects.requireNonNull(accountDetails);
             return this;
         }
-
         public Builder logCollectionLevel(@Nullable String logCollectionLevel) {
             this.logCollectionLevel = logCollectionLevel;
             return this;
         }
-
         public Builder transferConfiguration(TransferConfigurationResponse transferConfiguration) {
             this.transferConfiguration = Objects.requireNonNull(transferConfiguration);
             return this;
-        }
-        public DataExportDetailsResponse build() {
+        }        public DataExportDetailsResponse build() {
             return new DataExportDetailsResponse(accountDetails, logCollectionLevel, transferConfiguration);
         }
     }

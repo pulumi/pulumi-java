@@ -124,52 +124,42 @@ public final class HumanTaskUIState extends io.pulumi.resources.ResourceArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder humanTaskUiName(@Nullable Output<String> humanTaskUiName) {
             this.humanTaskUiName = humanTaskUiName;
             return this;
         }
-
         public Builder humanTaskUiName(@Nullable String humanTaskUiName) {
             this.humanTaskUiName = Output.ofNullable(humanTaskUiName);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
-
         public Builder uiTemplate(@Nullable Output<HumanTaskUIUiTemplateGetArgs> uiTemplate) {
             this.uiTemplate = uiTemplate;
             return this;
         }
-
         public Builder uiTemplate(@Nullable HumanTaskUIUiTemplateGetArgs uiTemplate) {
             this.uiTemplate = Output.ofNullable(uiTemplate);
             return this;
-        }
-        public HumanTaskUIState build() {
+        }        public HumanTaskUIState build() {
             return new HumanTaskUIState(arn, humanTaskUiName, tags, tagsAll, uiTemplate);
         }
     }

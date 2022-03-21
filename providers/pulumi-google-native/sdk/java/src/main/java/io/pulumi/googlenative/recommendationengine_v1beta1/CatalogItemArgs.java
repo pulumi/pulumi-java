@@ -210,112 +210,96 @@ public final class CatalogItemArgs extends io.pulumi.resources.ResourceArgs {
             this.catalogId = Objects.requireNonNull(catalogId);
             return this;
         }
-
         public Builder catalogId(String catalogId) {
             this.catalogId = Output.of(Objects.requireNonNull(catalogId));
             return this;
         }
-
         public Builder categoryHierarchies(Output<List<GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyArgs>> categoryHierarchies) {
             this.categoryHierarchies = Objects.requireNonNull(categoryHierarchies);
             return this;
         }
-
         public Builder categoryHierarchies(List<GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyArgs> categoryHierarchies) {
             this.categoryHierarchies = Output.of(Objects.requireNonNull(categoryHierarchies));
             return this;
         }
-
+        public Builder categoryHierarchies(GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyArgs... categoryHierarchies) {
+            return categoryHierarchies(List.of(categoryHierarchies));
+        }
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder id(Output<String> id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Output.of(Objects.requireNonNull(id));
             return this;
         }
-
         public Builder itemAttributes(@Nullable Output<GoogleCloudRecommendationengineV1beta1FeatureMapArgs> itemAttributes) {
             this.itemAttributes = itemAttributes;
             return this;
         }
-
         public Builder itemAttributes(@Nullable GoogleCloudRecommendationengineV1beta1FeatureMapArgs itemAttributes) {
             this.itemAttributes = Output.ofNullable(itemAttributes);
             return this;
         }
-
         public Builder itemGroupId(@Nullable Output<String> itemGroupId) {
             this.itemGroupId = itemGroupId;
             return this;
         }
-
         public Builder itemGroupId(@Nullable String itemGroupId) {
             this.itemGroupId = Output.ofNullable(itemGroupId);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder productMetadata(@Nullable Output<GoogleCloudRecommendationengineV1beta1ProductCatalogItemArgs> productMetadata) {
             this.productMetadata = productMetadata;
             return this;
         }
-
         public Builder productMetadata(@Nullable GoogleCloudRecommendationengineV1beta1ProductCatalogItemArgs productMetadata) {
             this.productMetadata = Output.ofNullable(productMetadata);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
+        public Builder tags(String... tags) {
+            return tags(List.of(tags));
+        }
         public Builder title(Output<String> title) {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public Builder title(String title) {
             this.title = Output.of(Objects.requireNonNull(title));
             return this;
-        }
-        public CatalogItemArgs build() {
+        }        public CatalogItemArgs build() {
             return new CatalogItemArgs(catalogId, categoryHierarchies, description, id, itemAttributes, itemGroupId, location, productMetadata, project, tags, title);
         }
     }

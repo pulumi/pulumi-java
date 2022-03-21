@@ -86,17 +86,14 @@ public final class WaitStatisticsResponse {
             this.waitCount = Objects.requireNonNull(waitCount);
             return this;
         }
-
         public Builder waitTimeMs(Double waitTimeMs) {
             this.waitTimeMs = Objects.requireNonNull(waitTimeMs);
             return this;
         }
-
         public Builder waitType(String waitType) {
             this.waitType = Objects.requireNonNull(waitType);
             return this;
-        }
-        public WaitStatisticsResponse build() {
+        }        public WaitStatisticsResponse build() {
             return new WaitStatisticsResponse(waitCount, waitTimeMs, waitType);
         }
     }

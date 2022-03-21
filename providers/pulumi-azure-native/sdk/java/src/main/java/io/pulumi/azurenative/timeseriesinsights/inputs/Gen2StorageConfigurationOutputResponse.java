@@ -58,8 +58,7 @@ public final class Gen2StorageConfigurationOutputResponse extends io.pulumi.reso
         public Builder accountName(String accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
-        }
-        public Gen2StorageConfigurationOutputResponse build() {
+        }        public Gen2StorageConfigurationOutputResponse build() {
             return new Gen2StorageConfigurationOutputResponse(accountName);
         }
     }

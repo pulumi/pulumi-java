@@ -61,12 +61,10 @@ public final class GooglePrivacyDlpV2DetectionRuleArgs extends io.pulumi.resourc
             this.hotwordRule = hotwordRule;
             return this;
         }
-
         public Builder hotwordRule(@Nullable GooglePrivacyDlpV2HotwordRuleArgs hotwordRule) {
             this.hotwordRule = Output.ofNullable(hotwordRule);
             return this;
-        }
-        public GooglePrivacyDlpV2DetectionRuleArgs build() {
+        }        public GooglePrivacyDlpV2DetectionRuleArgs build() {
             return new GooglePrivacyDlpV2DetectionRuleArgs(hotwordRule);
         }
     }

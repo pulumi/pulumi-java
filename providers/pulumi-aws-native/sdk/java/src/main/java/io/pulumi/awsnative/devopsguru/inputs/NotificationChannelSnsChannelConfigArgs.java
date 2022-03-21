@@ -57,12 +57,10 @@ public final class NotificationChannelSnsChannelConfigArgs extends io.pulumi.res
             this.topicArn = topicArn;
             return this;
         }
-
         public Builder topicArn(@Nullable String topicArn) {
             this.topicArn = Output.ofNullable(topicArn);
             return this;
-        }
-        public NotificationChannelSnsChannelConfigArgs build() {
+        }        public NotificationChannelSnsChannelConfigArgs build() {
             return new NotificationChannelSnsChannelConfigArgs(topicArn);
         }
     }

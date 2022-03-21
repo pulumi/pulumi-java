@@ -156,72 +156,58 @@ public final class ControllerArgs extends io.pulumi.resources.ResourceArgs {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder sku(Output<SkuArgs> sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
-
         public Builder sku(SkuArgs sku) {
             this.sku = Output.of(Objects.requireNonNull(sku));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder targetContainerHostCredentialsBase64(Output<String> targetContainerHostCredentialsBase64) {
             this.targetContainerHostCredentialsBase64 = Objects.requireNonNull(targetContainerHostCredentialsBase64);
             return this;
         }
-
         public Builder targetContainerHostCredentialsBase64(String targetContainerHostCredentialsBase64) {
             this.targetContainerHostCredentialsBase64 = Output.of(Objects.requireNonNull(targetContainerHostCredentialsBase64));
             return this;
         }
-
         public Builder targetContainerHostResourceId(Output<String> targetContainerHostResourceId) {
             this.targetContainerHostResourceId = Objects.requireNonNull(targetContainerHostResourceId);
             return this;
         }
-
         public Builder targetContainerHostResourceId(String targetContainerHostResourceId) {
             this.targetContainerHostResourceId = Output.of(Objects.requireNonNull(targetContainerHostResourceId));
             return this;
-        }
-        public ControllerArgs build() {
+        }        public ControllerArgs build() {
             return new ControllerArgs(location, name, resourceGroupName, sku, tags, targetContainerHostCredentialsBase64, targetContainerHostResourceId);
         }
     }

@@ -89,17 +89,14 @@ public final class ContainerState {
             this.running = running;
             return this;
         }
-
         public Builder terminated(@Nullable ContainerStateTerminated terminated) {
             this.terminated = terminated;
             return this;
         }
-
         public Builder waiting(@Nullable ContainerStateWaiting waiting) {
             this.waiting = waiting;
             return this;
-        }
-        public ContainerState build() {
+        }        public ContainerState build() {
             return new ContainerState(running, terminated, waiting);
         }
     }

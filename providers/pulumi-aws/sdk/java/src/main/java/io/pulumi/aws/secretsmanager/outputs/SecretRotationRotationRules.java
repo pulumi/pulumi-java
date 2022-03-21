@@ -51,8 +51,7 @@ public final class SecretRotationRotationRules {
         public Builder automaticallyAfterDays(Integer automaticallyAfterDays) {
             this.automaticallyAfterDays = Objects.requireNonNull(automaticallyAfterDays);
             return this;
-        }
-        public SecretRotationRotationRules build() {
+        }        public SecretRotationRotationRules build() {
             return new SecretRotationRotationRules(automaticallyAfterDays);
         }
     }

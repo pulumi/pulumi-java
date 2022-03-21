@@ -62,12 +62,13 @@ public final class DistributionGroupListReceiverValueArgs extends io.pulumi.reso
             this.distributionGroups = distributionGroups;
             return this;
         }
-
         public Builder distributionGroups(@Nullable List<String> distributionGroups) {
             this.distributionGroups = Output.ofNullable(distributionGroups);
             return this;
         }
-        public DistributionGroupListReceiverValueArgs build() {
+        public Builder distributionGroups(String... distributionGroups) {
+            return distributionGroups(List.of(distributionGroups));
+        }        public DistributionGroupListReceiverValueArgs build() {
             return new DistributionGroupListReceiverValueArgs(distributionGroups);
         }
     }

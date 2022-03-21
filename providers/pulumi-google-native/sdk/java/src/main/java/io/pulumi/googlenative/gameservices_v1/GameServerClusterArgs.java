@@ -172,92 +172,74 @@ public final class GameServerClusterArgs extends io.pulumi.resources.ResourceArg
             this.connectionInfo = connectionInfo;
             return this;
         }
-
         public Builder connectionInfo(@Nullable GameServerClusterConnectionInfoArgs connectionInfo) {
             this.connectionInfo = Output.ofNullable(connectionInfo);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
-
         public Builder etag(@Nullable String etag) {
             this.etag = Output.ofNullable(etag);
             return this;
         }
-
         public Builder gameServerClusterId(Output<String> gameServerClusterId) {
             this.gameServerClusterId = Objects.requireNonNull(gameServerClusterId);
             return this;
         }
-
         public Builder gameServerClusterId(String gameServerClusterId) {
             this.gameServerClusterId = Output.of(Objects.requireNonNull(gameServerClusterId));
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder realmId(Output<String> realmId) {
             this.realmId = Objects.requireNonNull(realmId);
             return this;
         }
-
         public Builder realmId(String realmId) {
             this.realmId = Output.of(Objects.requireNonNull(realmId));
             return this;
-        }
-        public GameServerClusterArgs build() {
+        }        public GameServerClusterArgs build() {
             return new GameServerClusterArgs(connectionInfo, description, etag, gameServerClusterId, labels, location, name, project, realmId);
         }
     }

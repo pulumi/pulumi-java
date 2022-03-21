@@ -102,27 +102,22 @@ public final class GetApiConfigIamPolicyArgs extends io.pulumi.resources.InvokeA
             this.apiId = Objects.requireNonNull(apiId);
             return this;
         }
-
         public Builder configId(String configId) {
             this.configId = Objects.requireNonNull(configId);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder optionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
             this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetApiConfigIamPolicyArgs build() {
+        }        public GetApiConfigIamPolicyArgs build() {
             return new GetApiConfigIamPolicyArgs(apiId, configId, location, optionsRequestedPolicyVersion, project);
         }
     }

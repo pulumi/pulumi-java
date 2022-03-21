@@ -54,8 +54,7 @@ public final class GetLiveTokenArgs extends io.pulumi.resources.InvokeArgs {
         public Builder resourceUri(String resourceUri) {
             this.resourceUri = Objects.requireNonNull(resourceUri);
             return this;
-        }
-        public GetLiveTokenArgs build() {
+        }        public GetLiveTokenArgs build() {
             return new GetLiveTokenArgs(resourceUri);
         }
     }

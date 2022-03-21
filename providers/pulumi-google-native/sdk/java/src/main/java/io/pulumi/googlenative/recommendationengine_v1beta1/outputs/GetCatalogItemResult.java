@@ -153,37 +153,36 @@ public final class GetCatalogItemResult {
             this.categoryHierarchies = Objects.requireNonNull(categoryHierarchies);
             return this;
         }
-
+        public Builder categoryHierarchies(GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyResponse... categoryHierarchies) {
+            return categoryHierarchies(List.of(categoryHierarchies));
+        }
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder itemAttributes(GoogleCloudRecommendationengineV1beta1FeatureMapResponse itemAttributes) {
             this.itemAttributes = Objects.requireNonNull(itemAttributes);
             return this;
         }
-
         public Builder itemGroupId(String itemGroupId) {
             this.itemGroupId = Objects.requireNonNull(itemGroupId);
             return this;
         }
-
         public Builder productMetadata(GoogleCloudRecommendationengineV1beta1ProductCatalogItemResponse productMetadata) {
             this.productMetadata = Objects.requireNonNull(productMetadata);
             return this;
         }
-
         public Builder tags(List<String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
-
+        public Builder tags(String... tags) {
+            return tags(List.of(tags));
+        }
         public Builder title(String title) {
             this.title = Objects.requireNonNull(title);
             return this;
-        }
-        public GetCatalogItemResult build() {
+        }        public GetCatalogItemResult build() {
             return new GetCatalogItemResult(categoryHierarchies, description, itemAttributes, itemGroupId, productMetadata, tags, title);
         }
     }

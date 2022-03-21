@@ -72,12 +72,10 @@ public final class GetEndpointAuthorizationArgs extends io.pulumi.resources.Invo
             this.account = Objects.requireNonNull(account);
             return this;
         }
-
         public Builder clusterIdentifier(String clusterIdentifier) {
             this.clusterIdentifier = Objects.requireNonNull(clusterIdentifier);
             return this;
-        }
-        public GetEndpointAuthorizationArgs build() {
+        }        public GetEndpointAuthorizationArgs build() {
             return new GetEndpointAuthorizationArgs(account, clusterIdentifier);
         }
     }

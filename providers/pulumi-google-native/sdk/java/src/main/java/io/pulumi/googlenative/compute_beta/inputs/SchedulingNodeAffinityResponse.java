@@ -93,17 +93,17 @@ public final class SchedulingNodeAffinityResponse extends io.pulumi.resources.In
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder operator(String operator) {
             this.operator = Objects.requireNonNull(operator);
             return this;
         }
-
         public Builder values(List<String> values) {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-        public SchedulingNodeAffinityResponse build() {
+        public Builder values(String... values) {
+            return values(List.of(values));
+        }        public SchedulingNodeAffinityResponse build() {
             return new SchedulingNodeAffinityResponse(key, operator, values);
         }
     }

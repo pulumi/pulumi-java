@@ -76,12 +76,16 @@ public final class GetAmiArgs extends io.pulumi.resources.InvokeArgs {
             this.executableUsers = executableUsers;
             return this;
         }
-
+        public Builder executableUsers(String... executableUsers) {
+            return executableUsers(List.of(executableUsers));
+        }
         public Builder owners(List<String> owners) {
             this.owners = Objects.requireNonNull(owners);
             return this;
         }
-        public GetAmiArgs build() {
+        public Builder owners(String... owners) {
+            return owners(List.of(owners));
+        }        public GetAmiArgs build() {
             return new GetAmiArgs(executableUsers, owners);
         }
     }

@@ -53,12 +53,10 @@ public final class IndexServerSideEncryptionConfigurationArgs extends io.pulumi.
             this.kmsKeyId = kmsKeyId;
             return this;
         }
-
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = Output.ofNullable(kmsKeyId);
             return this;
-        }
-        public IndexServerSideEncryptionConfigurationArgs build() {
+        }        public IndexServerSideEncryptionConfigurationArgs build() {
             return new IndexServerSideEncryptionConfigurationArgs(kmsKeyId);
         }
     }

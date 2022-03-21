@@ -70,12 +70,10 @@ public final class InstanceGroupManagerStatusAllInstancesConfigResponse {
             this.currentRevision = Objects.requireNonNull(currentRevision);
             return this;
         }
-
         public Builder effective(Boolean effective) {
             this.effective = Objects.requireNonNull(effective);
             return this;
-        }
-        public InstanceGroupManagerStatusAllInstancesConfigResponse build() {
+        }        public InstanceGroupManagerStatusAllInstancesConfigResponse build() {
             return new InstanceGroupManagerStatusAllInstancesConfigResponse(currentRevision, effective);
         }
     }

@@ -170,102 +170,88 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
             this.bindingProperties = bindingProperties;
             return this;
         }
-
         public Builder bindingProperties(@Nullable ComponentBindingPropertiesArgs bindingProperties) {
             this.bindingProperties = Output.ofNullable(bindingProperties);
             return this;
         }
-
         public Builder children(@Nullable Output<List<ComponentChildArgs>> children) {
             this.children = children;
             return this;
         }
-
         public Builder children(@Nullable List<ComponentChildArgs> children) {
             this.children = Output.ofNullable(children);
             return this;
         }
-
+        public Builder children(ComponentChildArgs... children) {
+            return children(List.of(children));
+        }
         public Builder collectionProperties(@Nullable Output<ComponentCollectionPropertiesArgs> collectionProperties) {
             this.collectionProperties = collectionProperties;
             return this;
         }
-
         public Builder collectionProperties(@Nullable ComponentCollectionPropertiesArgs collectionProperties) {
             this.collectionProperties = Output.ofNullable(collectionProperties);
             return this;
         }
-
         public Builder componentType(@Nullable Output<String> componentType) {
             this.componentType = componentType;
             return this;
         }
-
         public Builder componentType(@Nullable String componentType) {
             this.componentType = Output.ofNullable(componentType);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder overrides(@Nullable Output<ComponentOverridesArgs> overrides) {
             this.overrides = overrides;
             return this;
         }
-
         public Builder overrides(@Nullable ComponentOverridesArgs overrides) {
             this.overrides = Output.ofNullable(overrides);
             return this;
         }
-
         public Builder properties(@Nullable Output<ComponentPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder properties(@Nullable ComponentPropertiesArgs properties) {
             this.properties = Output.ofNullable(properties);
             return this;
         }
-
         public Builder sourceId(@Nullable Output<String> sourceId) {
             this.sourceId = sourceId;
             return this;
         }
-
         public Builder sourceId(@Nullable String sourceId) {
             this.sourceId = Output.ofNullable(sourceId);
             return this;
         }
-
         public Builder tags(@Nullable Output<ComponentTagsArgs> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable ComponentTagsArgs tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder variants(@Nullable Output<List<ComponentVariantArgs>> variants) {
             this.variants = variants;
             return this;
         }
-
         public Builder variants(@Nullable List<ComponentVariantArgs> variants) {
             this.variants = Output.ofNullable(variants);
             return this;
         }
-        public ComponentArgs build() {
+        public Builder variants(ComponentVariantArgs... variants) {
+            return variants(List.of(variants));
+        }        public ComponentArgs build() {
             return new ComponentArgs(bindingProperties, children, collectionProperties, componentType, name, overrides, properties, sourceId, tags, variants);
         }
     }

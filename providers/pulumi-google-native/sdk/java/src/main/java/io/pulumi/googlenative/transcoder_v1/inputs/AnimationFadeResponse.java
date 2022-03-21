@@ -109,22 +109,18 @@ public final class AnimationFadeResponse extends io.pulumi.resources.InvokeArgs 
             this.endTimeOffset = Objects.requireNonNull(endTimeOffset);
             return this;
         }
-
         public Builder fadeType(String fadeType) {
             this.fadeType = Objects.requireNonNull(fadeType);
             return this;
         }
-
         public Builder startTimeOffset(String startTimeOffset) {
             this.startTimeOffset = Objects.requireNonNull(startTimeOffset);
             return this;
         }
-
         public Builder xy(NormalizedCoordinateResponse xy) {
             this.xy = Objects.requireNonNull(xy);
             return this;
-        }
-        public AnimationFadeResponse build() {
+        }        public AnimationFadeResponse build() {
             return new AnimationFadeResponse(endTimeOffset, fadeType, startTimeOffset, xy);
         }
     }

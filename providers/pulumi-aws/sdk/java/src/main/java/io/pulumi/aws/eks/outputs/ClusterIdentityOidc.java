@@ -53,8 +53,7 @@ public final class ClusterIdentityOidc {
         public Builder issuer(@Nullable String issuer) {
             this.issuer = issuer;
             return this;
-        }
-        public ClusterIdentityOidc build() {
+        }        public ClusterIdentityOidc build() {
             return new ClusterIdentityOidc(issuer);
         }
     }

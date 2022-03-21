@@ -58,12 +58,13 @@ public final class ChannelHlsIngestGetArgs extends io.pulumi.resources.ResourceA
             this.ingestEndpoints = ingestEndpoints;
             return this;
         }
-
         public Builder ingestEndpoints(@Nullable List<ChannelHlsIngestIngestEndpointGetArgs> ingestEndpoints) {
             this.ingestEndpoints = Output.ofNullable(ingestEndpoints);
             return this;
         }
-        public ChannelHlsIngestGetArgs build() {
+        public Builder ingestEndpoints(ChannelHlsIngestIngestEndpointGetArgs... ingestEndpoints) {
+            return ingestEndpoints(List.of(ingestEndpoints));
+        }        public ChannelHlsIngestGetArgs build() {
             return new ChannelHlsIngestGetArgs(ingestEndpoints);
         }
     }

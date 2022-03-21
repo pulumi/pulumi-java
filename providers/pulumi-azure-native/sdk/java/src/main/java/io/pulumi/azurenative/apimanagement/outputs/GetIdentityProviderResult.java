@@ -232,62 +232,53 @@ public final class GetIdentityProviderResult {
             this.allowedTenants = allowedTenants;
             return this;
         }
-
+        public Builder allowedTenants(String... allowedTenants) {
+            return allowedTenants(List.of(allowedTenants));
+        }
         public Builder authority(@Nullable String authority) {
             this.authority = authority;
             return this;
         }
-
         public Builder clientId(String clientId) {
             this.clientId = Objects.requireNonNull(clientId);
             return this;
         }
-
         public Builder clientSecret(@Nullable String clientSecret) {
             this.clientSecret = clientSecret;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder passwordResetPolicyName(@Nullable String passwordResetPolicyName) {
             this.passwordResetPolicyName = passwordResetPolicyName;
             return this;
         }
-
         public Builder profileEditingPolicyName(@Nullable String profileEditingPolicyName) {
             this.profileEditingPolicyName = profileEditingPolicyName;
             return this;
         }
-
         public Builder signinPolicyName(@Nullable String signinPolicyName) {
             this.signinPolicyName = signinPolicyName;
             return this;
         }
-
         public Builder signinTenant(@Nullable String signinTenant) {
             this.signinTenant = signinTenant;
             return this;
         }
-
         public Builder signupPolicyName(@Nullable String signupPolicyName) {
             this.signupPolicyName = signupPolicyName;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetIdentityProviderResult build() {
+        }        public GetIdentityProviderResult build() {
             return new GetIdentityProviderResult(allowedTenants, authority, clientId, clientSecret, id, name, passwordResetPolicyName, profileEditingPolicyName, signinPolicyName, signinTenant, signupPolicyName, type);
         }
     }

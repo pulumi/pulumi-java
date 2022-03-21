@@ -129,47 +129,47 @@ public final class GetPolicyDocumentResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder json(String json) {
             this.json = Objects.requireNonNull(json);
             return this;
         }
-
         public Builder overrideJson(@Nullable String overrideJson) {
             this.overrideJson = overrideJson;
             return this;
         }
-
         public Builder overridePolicyDocuments(@Nullable List<String> overridePolicyDocuments) {
             this.overridePolicyDocuments = overridePolicyDocuments;
             return this;
         }
-
+        public Builder overridePolicyDocuments(String... overridePolicyDocuments) {
+            return overridePolicyDocuments(List.of(overridePolicyDocuments));
+        }
         public Builder policyId(@Nullable String policyId) {
             this.policyId = policyId;
             return this;
         }
-
         public Builder sourceJson(@Nullable String sourceJson) {
             this.sourceJson = sourceJson;
             return this;
         }
-
         public Builder sourcePolicyDocuments(@Nullable List<String> sourcePolicyDocuments) {
             this.sourcePolicyDocuments = sourcePolicyDocuments;
             return this;
         }
-
+        public Builder sourcePolicyDocuments(String... sourcePolicyDocuments) {
+            return sourcePolicyDocuments(List.of(sourcePolicyDocuments));
+        }
         public Builder statements(@Nullable List<GetPolicyDocumentStatement> statements) {
             this.statements = statements;
             return this;
         }
-
+        public Builder statements(GetPolicyDocumentStatement... statements) {
+            return statements(List.of(statements));
+        }
         public Builder version(@Nullable String version) {
             this.version = version;
             return this;
-        }
-        public GetPolicyDocumentResult build() {
+        }        public GetPolicyDocumentResult build() {
             return new GetPolicyDocumentResult(id, json, overrideJson, overridePolicyDocuments, policyId, sourceJson, sourcePolicyDocuments, statements, version);
         }
     }

@@ -106,22 +106,21 @@ public final class RuleGroupRuleStatementAndStatementStatementByteMatchStatement
             this.fieldToMatch = fieldToMatch;
             return this;
         }
-
         public Builder positionalConstraint(String positionalConstraint) {
             this.positionalConstraint = Objects.requireNonNull(positionalConstraint);
             return this;
         }
-
         public Builder searchString(String searchString) {
             this.searchString = Objects.requireNonNull(searchString);
             return this;
         }
-
         public Builder textTransformations(List<RuleGroupRuleStatementAndStatementStatementByteMatchStatementTextTransformation> textTransformations) {
             this.textTransformations = Objects.requireNonNull(textTransformations);
             return this;
         }
-        public RuleGroupRuleStatementAndStatementStatementByteMatchStatement build() {
+        public Builder textTransformations(RuleGroupRuleStatementAndStatementStatementByteMatchStatementTextTransformation... textTransformations) {
+            return textTransformations(List.of(textTransformations));
+        }        public RuleGroupRuleStatementAndStatementStatementByteMatchStatement build() {
             return new RuleGroupRuleStatementAndStatementStatementByteMatchStatement(fieldToMatch, positionalConstraint, searchString, textTransformations);
         }
     }

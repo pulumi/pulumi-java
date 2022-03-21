@@ -69,12 +69,10 @@ public final class GoogleCloudApigeeV1PropertyResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public GoogleCloudApigeeV1PropertyResponse build() {
+        }        public GoogleCloudApigeeV1PropertyResponse build() {
             return new GoogleCloudApigeeV1PropertyResponse(name, value);
         }
     }

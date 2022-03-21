@@ -82,22 +82,21 @@ public final class EntityTypeEntityGetArgs extends io.pulumi.resources.ResourceA
             this.synonyms = Objects.requireNonNull(synonyms);
             return this;
         }
-
         public Builder synonyms(List<String> synonyms) {
             this.synonyms = Output.of(Objects.requireNonNull(synonyms));
             return this;
         }
-
+        public Builder synonyms(String... synonyms) {
+            return synonyms(List.of(synonyms));
+        }
         public Builder value(Output<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Output.of(Objects.requireNonNull(value));
             return this;
-        }
-        public EntityTypeEntityGetArgs build() {
+        }        public EntityTypeEntityGetArgs build() {
             return new EntityTypeEntityGetArgs(synonyms, value);
         }
     }

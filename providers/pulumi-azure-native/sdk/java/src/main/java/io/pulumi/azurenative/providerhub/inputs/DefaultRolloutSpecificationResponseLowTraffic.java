@@ -67,12 +67,13 @@ public final class DefaultRolloutSpecificationResponseLowTraffic extends io.pulu
             this.regions = regions;
             return this;
         }
-
+        public Builder regions(String... regions) {
+            return regions(List.of(regions));
+        }
         public Builder waitDuration(@Nullable String waitDuration) {
             this.waitDuration = waitDuration;
             return this;
-        }
-        public DefaultRolloutSpecificationResponseLowTraffic build() {
+        }        public DefaultRolloutSpecificationResponseLowTraffic build() {
             return new DefaultRolloutSpecificationResponseLowTraffic(regions, waitDuration);
         }
     }

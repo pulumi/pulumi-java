@@ -88,17 +88,14 @@ public final class WorkflowTemplatePlacementManagedCluster {
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
-
         public Builder config(WorkflowTemplatePlacementManagedClusterConfig config) {
             this.config = Objects.requireNonNull(config);
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = labels;
             return this;
-        }
-        public WorkflowTemplatePlacementManagedCluster build() {
+        }        public WorkflowTemplatePlacementManagedCluster build() {
             return new WorkflowTemplatePlacementManagedCluster(clusterName, config, labels);
         }
     }

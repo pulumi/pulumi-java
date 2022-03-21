@@ -269,72 +269,61 @@ public final class AutomaticScalingResponse {
             this.coolDownPeriod = Objects.requireNonNull(coolDownPeriod);
             return this;
         }
-
         public Builder cpuUtilization(CpuUtilizationResponse cpuUtilization) {
             this.cpuUtilization = Objects.requireNonNull(cpuUtilization);
             return this;
         }
-
         public Builder customMetrics(List<CustomMetricResponse> customMetrics) {
             this.customMetrics = Objects.requireNonNull(customMetrics);
             return this;
         }
-
+        public Builder customMetrics(CustomMetricResponse... customMetrics) {
+            return customMetrics(List.of(customMetrics));
+        }
         public Builder diskUtilization(DiskUtilizationResponse diskUtilization) {
             this.diskUtilization = Objects.requireNonNull(diskUtilization);
             return this;
         }
-
         public Builder maxConcurrentRequests(Integer maxConcurrentRequests) {
             this.maxConcurrentRequests = Objects.requireNonNull(maxConcurrentRequests);
             return this;
         }
-
         public Builder maxIdleInstances(Integer maxIdleInstances) {
             this.maxIdleInstances = Objects.requireNonNull(maxIdleInstances);
             return this;
         }
-
         public Builder maxPendingLatency(String maxPendingLatency) {
             this.maxPendingLatency = Objects.requireNonNull(maxPendingLatency);
             return this;
         }
-
         public Builder maxTotalInstances(Integer maxTotalInstances) {
             this.maxTotalInstances = Objects.requireNonNull(maxTotalInstances);
             return this;
         }
-
         public Builder minIdleInstances(Integer minIdleInstances) {
             this.minIdleInstances = Objects.requireNonNull(minIdleInstances);
             return this;
         }
-
         public Builder minPendingLatency(String minPendingLatency) {
             this.minPendingLatency = Objects.requireNonNull(minPendingLatency);
             return this;
         }
-
         public Builder minTotalInstances(Integer minTotalInstances) {
             this.minTotalInstances = Objects.requireNonNull(minTotalInstances);
             return this;
         }
-
         public Builder networkUtilization(NetworkUtilizationResponse networkUtilization) {
             this.networkUtilization = Objects.requireNonNull(networkUtilization);
             return this;
         }
-
         public Builder requestUtilization(RequestUtilizationResponse requestUtilization) {
             this.requestUtilization = Objects.requireNonNull(requestUtilization);
             return this;
         }
-
         public Builder standardSchedulerSettings(StandardSchedulerSettingsResponse standardSchedulerSettings) {
             this.standardSchedulerSettings = Objects.requireNonNull(standardSchedulerSettings);
             return this;
-        }
-        public AutomaticScalingResponse build() {
+        }        public AutomaticScalingResponse build() {
             return new AutomaticScalingResponse(coolDownPeriod, cpuUtilization, customMetrics, diskUtilization, maxConcurrentRequests, maxIdleInstances, maxPendingLatency, maxTotalInstances, minIdleInstances, minPendingLatency, minTotalInstances, networkUtilization, requestUtilization, standardSchedulerSettings);
         }
     }

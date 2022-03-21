@@ -59,12 +59,10 @@ public final class BillingAccountSinkBigqueryOptionsGetArgs extends io.pulumi.re
             this.usePartitionedTables = Objects.requireNonNull(usePartitionedTables);
             return this;
         }
-
         public Builder usePartitionedTables(Boolean usePartitionedTables) {
             this.usePartitionedTables = Output.of(Objects.requireNonNull(usePartitionedTables));
             return this;
-        }
-        public BillingAccountSinkBigqueryOptionsGetArgs build() {
+        }        public BillingAccountSinkBigqueryOptionsGetArgs build() {
             return new BillingAccountSinkBigqueryOptionsGetArgs(usePartitionedTables);
         }
     }

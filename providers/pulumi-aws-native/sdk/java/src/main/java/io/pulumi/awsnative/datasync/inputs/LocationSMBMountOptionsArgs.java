@@ -61,12 +61,10 @@ public final class LocationSMBMountOptionsArgs extends io.pulumi.resources.Resou
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable LocationSMBMountOptionsVersion version) {
             this.version = Output.ofNullable(version);
             return this;
-        }
-        public LocationSMBMountOptionsArgs build() {
+        }        public LocationSMBMountOptionsArgs build() {
             return new LocationSMBMountOptionsArgs(version);
         }
     }

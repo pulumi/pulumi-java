@@ -122,62 +122,53 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
             this.applicationIdentifier = Objects.requireNonNull(applicationIdentifier);
             return this;
         }
-
         public Builder applicationIdentifier(String applicationIdentifier) {
             this.applicationIdentifier = Output.of(Objects.requireNonNull(applicationIdentifier));
             return this;
         }
-
         public Builder environmentIdentifier(Output<String> environmentIdentifier) {
             this.environmentIdentifier = Objects.requireNonNull(environmentIdentifier);
             return this;
         }
-
         public Builder environmentIdentifier(String environmentIdentifier) {
             this.environmentIdentifier = Output.of(Objects.requireNonNull(environmentIdentifier));
             return this;
         }
-
         public Builder routeType(@Nullable Output<RouteType> routeType) {
             this.routeType = routeType;
             return this;
         }
-
         public Builder routeType(@Nullable RouteType routeType) {
             this.routeType = Output.ofNullable(routeType);
             return this;
         }
-
         public Builder serviceIdentifier(Output<String> serviceIdentifier) {
             this.serviceIdentifier = Objects.requireNonNull(serviceIdentifier);
             return this;
         }
-
         public Builder serviceIdentifier(String serviceIdentifier) {
             this.serviceIdentifier = Output.of(Objects.requireNonNull(serviceIdentifier));
             return this;
         }
-
         public Builder tags(@Nullable Output<List<RouteTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<RouteTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
+        public Builder tags(RouteTagArgs... tags) {
+            return tags(List.of(tags));
+        }
         public Builder uriPathRoute(@Nullable Output<RouteUriPathRouteInputArgs> uriPathRoute) {
             this.uriPathRoute = uriPathRoute;
             return this;
         }
-
         public Builder uriPathRoute(@Nullable RouteUriPathRouteInputArgs uriPathRoute) {
             this.uriPathRoute = Output.ofNullable(uriPathRoute);
             return this;
-        }
-        public RouteArgs build() {
+        }        public RouteArgs build() {
             return new RouteArgs(applicationIdentifier, environmentIdentifier, routeType, serviceIdentifier, tags, uriPathRoute);
         }
     }

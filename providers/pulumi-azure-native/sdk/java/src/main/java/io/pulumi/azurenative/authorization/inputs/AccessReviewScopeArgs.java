@@ -79,22 +79,18 @@ public final class AccessReviewScopeArgs extends io.pulumi.resources.ResourceArg
             this.expandNestedMemberships = expandNestedMemberships;
             return this;
         }
-
         public Builder expandNestedMemberships(@Nullable Boolean expandNestedMemberships) {
             this.expandNestedMemberships = Output.ofNullable(expandNestedMemberships);
             return this;
         }
-
         public Builder inactiveDuration(@Nullable Output<String> inactiveDuration) {
             this.inactiveDuration = inactiveDuration;
             return this;
         }
-
         public Builder inactiveDuration(@Nullable String inactiveDuration) {
             this.inactiveDuration = Output.ofNullable(inactiveDuration);
             return this;
-        }
-        public AccessReviewScopeArgs build() {
+        }        public AccessReviewScopeArgs build() {
             return new AccessReviewScopeArgs(expandNestedMemberships, inactiveDuration);
         }
     }

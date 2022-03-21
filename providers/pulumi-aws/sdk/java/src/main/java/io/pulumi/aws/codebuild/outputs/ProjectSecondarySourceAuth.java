@@ -87,12 +87,10 @@ public final class ProjectSecondarySourceAuth {
             this.resource = resource;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public ProjectSecondarySourceAuth build() {
+        }        public ProjectSecondarySourceAuth build() {
             return new ProjectSecondarySourceAuth(resource, type);
         }
     }

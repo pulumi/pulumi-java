@@ -213,52 +213,48 @@ public final class AzureMLUpdateResourceActivityResponse extends io.pulumi.resou
             this.dependsOn = dependsOn;
             return this;
         }
-
+        public Builder dependsOn(ActivityDependencyResponse... dependsOn) {
+            return dependsOn(List.of(dependsOn));
+        }
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder linkedServiceName(@Nullable LinkedServiceReferenceResponse linkedServiceName) {
             this.linkedServiceName = linkedServiceName;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder policy(@Nullable ActivityPolicyResponse policy) {
             this.policy = policy;
             return this;
         }
-
         public Builder trainedModelFilePath(Object trainedModelFilePath) {
             this.trainedModelFilePath = Objects.requireNonNull(trainedModelFilePath);
             return this;
         }
-
         public Builder trainedModelLinkedServiceName(LinkedServiceReferenceResponse trainedModelLinkedServiceName) {
             this.trainedModelLinkedServiceName = Objects.requireNonNull(trainedModelLinkedServiceName);
             return this;
         }
-
         public Builder trainedModelName(Object trainedModelName) {
             this.trainedModelName = Objects.requireNonNull(trainedModelName);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder userProperties(@Nullable List<UserPropertyResponse> userProperties) {
             this.userProperties = userProperties;
             return this;
         }
-        public AzureMLUpdateResourceActivityResponse build() {
+        public Builder userProperties(UserPropertyResponse... userProperties) {
+            return userProperties(List.of(userProperties));
+        }        public AzureMLUpdateResourceActivityResponse build() {
             return new AzureMLUpdateResourceActivityResponse(dependsOn, description, linkedServiceName, name, policy, trainedModelFilePath, trainedModelLinkedServiceName, trainedModelName, type, userProperties);
         }
     }

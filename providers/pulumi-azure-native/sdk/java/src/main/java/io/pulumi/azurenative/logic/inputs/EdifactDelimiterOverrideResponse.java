@@ -239,62 +239,50 @@ public final class EdifactDelimiterOverrideResponse extends io.pulumi.resources.
             this.componentSeparator = Objects.requireNonNull(componentSeparator);
             return this;
         }
-
         public Builder dataElementSeparator(Integer dataElementSeparator) {
             this.dataElementSeparator = Objects.requireNonNull(dataElementSeparator);
             return this;
         }
-
         public Builder decimalPointIndicator(String decimalPointIndicator) {
             this.decimalPointIndicator = Objects.requireNonNull(decimalPointIndicator);
             return this;
         }
-
         public Builder messageAssociationAssignedCode(@Nullable String messageAssociationAssignedCode) {
             this.messageAssociationAssignedCode = messageAssociationAssignedCode;
             return this;
         }
-
         public Builder messageId(@Nullable String messageId) {
             this.messageId = messageId;
             return this;
         }
-
         public Builder messageRelease(@Nullable String messageRelease) {
             this.messageRelease = messageRelease;
             return this;
         }
-
         public Builder messageVersion(@Nullable String messageVersion) {
             this.messageVersion = messageVersion;
             return this;
         }
-
         public Builder releaseIndicator(Integer releaseIndicator) {
             this.releaseIndicator = Objects.requireNonNull(releaseIndicator);
             return this;
         }
-
         public Builder repetitionSeparator(Integer repetitionSeparator) {
             this.repetitionSeparator = Objects.requireNonNull(repetitionSeparator);
             return this;
         }
-
         public Builder segmentTerminator(Integer segmentTerminator) {
             this.segmentTerminator = Objects.requireNonNull(segmentTerminator);
             return this;
         }
-
         public Builder segmentTerminatorSuffix(String segmentTerminatorSuffix) {
             this.segmentTerminatorSuffix = Objects.requireNonNull(segmentTerminatorSuffix);
             return this;
         }
-
         public Builder targetNamespace(@Nullable String targetNamespace) {
             this.targetNamespace = targetNamespace;
             return this;
-        }
-        public EdifactDelimiterOverrideResponse build() {
+        }        public EdifactDelimiterOverrideResponse build() {
             return new EdifactDelimiterOverrideResponse(componentSeparator, dataElementSeparator, decimalPointIndicator, messageAssociationAssignedCode, messageId, messageRelease, messageVersion, releaseIndicator, repetitionSeparator, segmentTerminator, segmentTerminatorSuffix, targetNamespace);
         }
     }

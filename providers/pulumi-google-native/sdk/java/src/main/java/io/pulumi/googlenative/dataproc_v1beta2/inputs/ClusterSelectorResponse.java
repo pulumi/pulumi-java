@@ -77,12 +77,10 @@ public final class ClusterSelectorResponse extends io.pulumi.resources.InvokeArg
             this.clusterLabels = Objects.requireNonNull(clusterLabels);
             return this;
         }
-
         public Builder zone(String zone) {
             this.zone = Objects.requireNonNull(zone);
             return this;
-        }
-        public ClusterSelectorResponse build() {
+        }        public ClusterSelectorResponse build() {
             return new ClusterSelectorResponse(clusterLabels, zone);
         }
     }

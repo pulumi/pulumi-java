@@ -75,12 +75,10 @@ public final class SqlDatabaseGetPropertiesResponseOptions extends io.pulumi.res
             this.autoscaleSettings = autoscaleSettings;
             return this;
         }
-
         public Builder throughput(@Nullable Integer throughput) {
             this.throughput = throughput;
             return this;
-        }
-        public SqlDatabaseGetPropertiesResponseOptions build() {
+        }        public SqlDatabaseGetPropertiesResponseOptions build() {
             return new SqlDatabaseGetPropertiesResponseOptions(autoscaleSettings, throughput);
         }
     }

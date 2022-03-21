@@ -70,12 +70,10 @@ public final class IdentityResponse {
             this.revision = Objects.requireNonNull(revision);
             return this;
         }
-
         public Builder updateId(String updateId) {
             this.updateId = Objects.requireNonNull(updateId);
             return this;
-        }
-        public IdentityResponse build() {
+        }        public IdentityResponse build() {
             return new IdentityResponse(revision, updateId);
         }
     }

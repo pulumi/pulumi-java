@@ -75,22 +75,18 @@ public final class DeploymentConfigurationArgs extends io.pulumi.resources.Resou
             this.cloudServiceConfiguration = cloudServiceConfiguration;
             return this;
         }
-
         public Builder cloudServiceConfiguration(@Nullable CloudServiceConfigurationArgs cloudServiceConfiguration) {
             this.cloudServiceConfiguration = Output.ofNullable(cloudServiceConfiguration);
             return this;
         }
-
         public Builder virtualMachineConfiguration(@Nullable Output<VirtualMachineConfigurationArgs> virtualMachineConfiguration) {
             this.virtualMachineConfiguration = virtualMachineConfiguration;
             return this;
         }
-
         public Builder virtualMachineConfiguration(@Nullable VirtualMachineConfigurationArgs virtualMachineConfiguration) {
             this.virtualMachineConfiguration = Output.ofNullable(virtualMachineConfiguration);
             return this;
-        }
-        public DeploymentConfigurationArgs build() {
+        }        public DeploymentConfigurationArgs build() {
             return new DeploymentConfigurationArgs(cloudServiceConfiguration, virtualMachineConfiguration);
         }
     }

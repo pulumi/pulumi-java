@@ -69,12 +69,10 @@ public final class GetTenantResult {
             this.externalId = Objects.requireNonNull(externalId);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public GetTenantResult build() {
+        }        public GetTenantResult build() {
             return new GetTenantResult(externalId, name);
         }
     }

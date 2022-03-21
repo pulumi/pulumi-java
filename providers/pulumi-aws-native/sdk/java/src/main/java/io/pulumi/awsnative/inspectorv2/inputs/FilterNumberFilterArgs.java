@@ -66,22 +66,18 @@ public final class FilterNumberFilterArgs extends io.pulumi.resources.ResourceAr
             this.lowerInclusive = lowerInclusive;
             return this;
         }
-
         public Builder lowerInclusive(@Nullable Double lowerInclusive) {
             this.lowerInclusive = Output.ofNullable(lowerInclusive);
             return this;
         }
-
         public Builder upperInclusive(@Nullable Output<Double> upperInclusive) {
             this.upperInclusive = upperInclusive;
             return this;
         }
-
         public Builder upperInclusive(@Nullable Double upperInclusive) {
             this.upperInclusive = Output.ofNullable(upperInclusive);
             return this;
-        }
-        public FilterNumberFilterArgs build() {
+        }        public FilterNumberFilterArgs build() {
             return new FilterNumberFilterArgs(lowerInclusive, upperInclusive);
         }
     }

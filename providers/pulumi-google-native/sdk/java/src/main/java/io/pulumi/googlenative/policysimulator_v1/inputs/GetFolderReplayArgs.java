@@ -76,17 +76,14 @@ public final class GetFolderReplayArgs extends io.pulumi.resources.InvokeArgs {
             this.folderId = Objects.requireNonNull(folderId);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder replayId(String replayId) {
             this.replayId = Objects.requireNonNull(replayId);
             return this;
-        }
-        public GetFolderReplayArgs build() {
+        }        public GetFolderReplayArgs build() {
             return new GetFolderReplayArgs(folderId, location, replayId);
         }
     }

@@ -158,72 +158,64 @@ public final class GameSessionQueueState extends io.pulumi.resources.ResourceArg
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder destinations(@Nullable Output<List<String>> destinations) {
             this.destinations = destinations;
             return this;
         }
-
         public Builder destinations(@Nullable List<String> destinations) {
             this.destinations = Output.ofNullable(destinations);
             return this;
         }
-
+        public Builder destinations(String... destinations) {
+            return destinations(List.of(destinations));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder playerLatencyPolicies(@Nullable Output<List<GameSessionQueuePlayerLatencyPolicyGetArgs>> playerLatencyPolicies) {
             this.playerLatencyPolicies = playerLatencyPolicies;
             return this;
         }
-
         public Builder playerLatencyPolicies(@Nullable List<GameSessionQueuePlayerLatencyPolicyGetArgs> playerLatencyPolicies) {
             this.playerLatencyPolicies = Output.ofNullable(playerLatencyPolicies);
             return this;
         }
-
+        public Builder playerLatencyPolicies(GameSessionQueuePlayerLatencyPolicyGetArgs... playerLatencyPolicies) {
+            return playerLatencyPolicies(List.of(playerLatencyPolicies));
+        }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
-
         public Builder timeoutInSeconds(@Nullable Output<Integer> timeoutInSeconds) {
             this.timeoutInSeconds = timeoutInSeconds;
             return this;
         }
-
         public Builder timeoutInSeconds(@Nullable Integer timeoutInSeconds) {
             this.timeoutInSeconds = Output.ofNullable(timeoutInSeconds);
             return this;
-        }
-        public GameSessionQueueState build() {
+        }        public GameSessionQueueState build() {
             return new GameSessionQueueState(arn, destinations, name, playerLatencyPolicies, tags, tagsAll, timeoutInSeconds);
         }
     }

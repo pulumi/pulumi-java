@@ -90,22 +90,18 @@ public final class GetNodePoolArgs extends io.pulumi.resources.InvokeArgs {
             this.clusterId = Objects.requireNonNull(clusterId);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder nodePoolId(String nodePoolId) {
             this.nodePoolId = Objects.requireNonNull(nodePoolId);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetNodePoolArgs build() {
+        }        public GetNodePoolArgs build() {
             return new GetNodePoolArgs(clusterId, location, nodePoolId, project);
         }
     }

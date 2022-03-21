@@ -125,52 +125,42 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             this.grpcConfig = grpcConfig;
             return this;
         }
-
         public Builder grpcConfig(@Nullable String grpcConfig) {
             this.grpcConfig = Output.ofNullable(grpcConfig);
             return this;
         }
-
         public Builder openapiConfig(@Nullable Output<String> openapiConfig) {
             this.openapiConfig = openapiConfig;
             return this;
         }
-
         public Builder openapiConfig(@Nullable String openapiConfig) {
             this.openapiConfig = Output.ofNullable(openapiConfig);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder protocOutputBase64(@Nullable Output<String> protocOutputBase64) {
             this.protocOutputBase64 = protocOutputBase64;
             return this;
         }
-
         public Builder protocOutputBase64(@Nullable String protocOutputBase64) {
             this.protocOutputBase64 = Output.ofNullable(protocOutputBase64);
             return this;
         }
-
         public Builder serviceName(Output<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
-
         public Builder serviceName(String serviceName) {
             this.serviceName = Output.of(Objects.requireNonNull(serviceName));
             return this;
-        }
-        public ServiceArgs build() {
+        }        public ServiceArgs build() {
             return new ServiceArgs(grpcConfig, openapiConfig, project, protocOutputBase64, serviceName);
         }
     }

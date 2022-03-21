@@ -95,32 +95,26 @@ public final class RuntimeConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.containerImage = containerImage;
             return this;
         }
-
         public Builder containerImage(@Nullable String containerImage) {
             this.containerImage = Output.ofNullable(containerImage);
             return this;
         }
-
         public Builder properties(@Nullable Output<Map<String,String>> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder properties(@Nullable Map<String,String> properties) {
             this.properties = Output.ofNullable(properties);
             return this;
         }
-
         public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = Output.ofNullable(version);
             return this;
-        }
-        public RuntimeConfigArgs build() {
+        }        public RuntimeConfigArgs build() {
             return new RuntimeConfigArgs(containerImage, properties, version);
         }
     }

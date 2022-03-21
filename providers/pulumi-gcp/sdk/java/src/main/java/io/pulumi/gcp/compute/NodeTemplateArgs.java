@@ -201,92 +201,74 @@ public final class NodeTemplateArgs extends io.pulumi.resources.ResourceArgs {
             this.cpuOvercommitType = cpuOvercommitType;
             return this;
         }
-
         public Builder cpuOvercommitType(@Nullable String cpuOvercommitType) {
             this.cpuOvercommitType = Output.ofNullable(cpuOvercommitType);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder nodeAffinityLabels(@Nullable Output<Map<String,String>> nodeAffinityLabels) {
             this.nodeAffinityLabels = nodeAffinityLabels;
             return this;
         }
-
         public Builder nodeAffinityLabels(@Nullable Map<String,String> nodeAffinityLabels) {
             this.nodeAffinityLabels = Output.ofNullable(nodeAffinityLabels);
             return this;
         }
-
         public Builder nodeType(@Nullable Output<String> nodeType) {
             this.nodeType = nodeType;
             return this;
         }
-
         public Builder nodeType(@Nullable String nodeType) {
             this.nodeType = Output.ofNullable(nodeType);
             return this;
         }
-
         public Builder nodeTypeFlexibility(@Nullable Output<NodeTemplateNodeTypeFlexibilityArgs> nodeTypeFlexibility) {
             this.nodeTypeFlexibility = nodeTypeFlexibility;
             return this;
         }
-
         public Builder nodeTypeFlexibility(@Nullable NodeTemplateNodeTypeFlexibilityArgs nodeTypeFlexibility) {
             this.nodeTypeFlexibility = Output.ofNullable(nodeTypeFlexibility);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
-
         public Builder region(@Nullable String region) {
             this.region = Output.ofNullable(region);
             return this;
         }
-
         public Builder serverBinding(@Nullable Output<NodeTemplateServerBindingArgs> serverBinding) {
             this.serverBinding = serverBinding;
             return this;
         }
-
         public Builder serverBinding(@Nullable NodeTemplateServerBindingArgs serverBinding) {
             this.serverBinding = Output.ofNullable(serverBinding);
             return this;
-        }
-        public NodeTemplateArgs build() {
+        }        public NodeTemplateArgs build() {
             return new NodeTemplateArgs(cpuOvercommitType, description, name, nodeAffinityLabels, nodeType, nodeTypeFlexibility, project, region, serverBinding);
         }
     }

@@ -118,22 +118,18 @@ public final class ManagedZoneDnssecConfigDefaultKeySpec {
             this.algorithm = algorithm;
             return this;
         }
-
         public Builder keyLength(@Nullable Integer keyLength) {
             this.keyLength = keyLength;
             return this;
         }
-
         public Builder keyType(@Nullable String keyType) {
             this.keyType = keyType;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
-        }
-        public ManagedZoneDnssecConfigDefaultKeySpec build() {
+        }        public ManagedZoneDnssecConfigDefaultKeySpec build() {
             return new ManagedZoneDnssecConfigDefaultKeySpec(algorithm, keyLength, keyType, kind);
         }
     }

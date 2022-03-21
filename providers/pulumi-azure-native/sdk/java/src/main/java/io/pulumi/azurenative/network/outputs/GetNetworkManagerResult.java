@@ -235,62 +235,53 @@ public final class GetNetworkManagerResult {
             this.description = description;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder networkManagerScopeAccesses(@Nullable List<String> networkManagerScopeAccesses) {
             this.networkManagerScopeAccesses = networkManagerScopeAccesses;
             return this;
         }
-
+        public Builder networkManagerScopeAccesses(String... networkManagerScopeAccesses) {
+            return networkManagerScopeAccesses(List.of(networkManagerScopeAccesses));
+        }
         public Builder networkManagerScopes(@Nullable NetworkManagerPropertiesResponseNetworkManagerScopes networkManagerScopes) {
             this.networkManagerScopes = networkManagerScopes;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetNetworkManagerResult build() {
+        }        public GetNetworkManagerResult build() {
             return new GetNetworkManagerResult(description, displayName, etag, id, location, name, networkManagerScopeAccesses, networkManagerScopes, provisioningState, systemData, tags, type);
         }
     }

@@ -156,72 +156,58 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder accountName(String accountName) {
             this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
-
         public Builder groupId(@Nullable Output<String> groupId) {
             this.groupId = groupId;
             return this;
         }
-
         public Builder groupId(@Nullable String groupId) {
             this.groupId = Output.ofNullable(groupId);
             return this;
         }
-
         public Builder privateEndpoint(@Nullable Output<PrivateEndpointPropertyArgs> privateEndpoint) {
             this.privateEndpoint = privateEndpoint;
             return this;
         }
-
         public Builder privateEndpoint(@Nullable PrivateEndpointPropertyArgs privateEndpoint) {
             this.privateEndpoint = Output.ofNullable(privateEndpoint);
             return this;
         }
-
         public Builder privateEndpointConnectionName(@Nullable Output<String> privateEndpointConnectionName) {
             this.privateEndpointConnectionName = privateEndpointConnectionName;
             return this;
         }
-
         public Builder privateEndpointConnectionName(@Nullable String privateEndpointConnectionName) {
             this.privateEndpointConnectionName = Output.ofNullable(privateEndpointConnectionName);
             return this;
         }
-
         public Builder privateLinkServiceConnectionState(@Nullable Output<PrivateLinkServiceConnectionStatePropertyArgs> privateLinkServiceConnectionState) {
             this.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
             return this;
         }
-
         public Builder privateLinkServiceConnectionState(@Nullable PrivateLinkServiceConnectionStatePropertyArgs privateLinkServiceConnectionState) {
             this.privateLinkServiceConnectionState = Output.ofNullable(privateLinkServiceConnectionState);
             return this;
         }
-
         public Builder provisioningState(@Nullable Output<String> provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
-
         public Builder provisioningState(@Nullable String provisioningState) {
             this.provisioningState = Output.ofNullable(provisioningState);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
-        }
-        public PrivateEndpointConnectionArgs build() {
+        }        public PrivateEndpointConnectionArgs build() {
             return new PrivateEndpointConnectionArgs(accountName, groupId, privateEndpoint, privateEndpointConnectionName, privateLinkServiceConnectionState, provisioningState, resourceGroupName);
         }
     }

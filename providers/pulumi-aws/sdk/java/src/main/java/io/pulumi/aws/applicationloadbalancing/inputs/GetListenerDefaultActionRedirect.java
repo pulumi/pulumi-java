@@ -116,32 +116,26 @@ public final class GetListenerDefaultActionRedirect extends io.pulumi.resources.
             this.host = Objects.requireNonNull(host);
             return this;
         }
-
         public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
-
         public Builder port(String port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
-
         public Builder protocol(String protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
-
         public Builder query(String query) {
             this.query = Objects.requireNonNull(query);
             return this;
         }
-
         public Builder statusCode(String statusCode) {
             this.statusCode = Objects.requireNonNull(statusCode);
             return this;
-        }
-        public GetListenerDefaultActionRedirect build() {
+        }        public GetListenerDefaultActionRedirect build() {
             return new GetListenerDefaultActionRedirect(host, path, port, protocol, query, statusCode);
         }
     }

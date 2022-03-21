@@ -111,22 +111,18 @@ public final class ContentSourceResponse extends io.pulumi.resources.InvokeArgs 
             this.hash = hash;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = version;
             return this;
-        }
-        public ContentSourceResponse build() {
+        }        public ContentSourceResponse build() {
             return new ContentSourceResponse(hash, type, value, version);
         }
     }

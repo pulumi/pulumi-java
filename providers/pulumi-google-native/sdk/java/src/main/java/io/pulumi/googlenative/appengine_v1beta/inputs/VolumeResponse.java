@@ -93,17 +93,14 @@ public final class VolumeResponse extends io.pulumi.resources.InvokeArgs {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder sizeGb(Double sizeGb) {
             this.sizeGb = Objects.requireNonNull(sizeGb);
             return this;
         }
-
         public Builder volumeType(String volumeType) {
             this.volumeType = Objects.requireNonNull(volumeType);
             return this;
-        }
-        public VolumeResponse build() {
+        }        public VolumeResponse build() {
             return new VolumeResponse(name, sizeGb, volumeType);
         }
     }

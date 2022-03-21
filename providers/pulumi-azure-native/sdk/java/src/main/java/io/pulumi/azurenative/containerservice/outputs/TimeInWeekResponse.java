@@ -73,12 +73,13 @@ public final class TimeInWeekResponse {
             this.day = day;
             return this;
         }
-
         public Builder hourSlots(@Nullable List<Integer> hourSlots) {
             this.hourSlots = hourSlots;
             return this;
         }
-        public TimeInWeekResponse build() {
+        public Builder hourSlots(Integer... hourSlots) {
+            return hourSlots(List.of(hourSlots));
+        }        public TimeInWeekResponse build() {
             return new TimeInWeekResponse(day, hourSlots);
         }
     }

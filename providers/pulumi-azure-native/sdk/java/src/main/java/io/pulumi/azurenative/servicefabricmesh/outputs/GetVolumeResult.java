@@ -217,57 +217,46 @@ public final class GetVolumeResult {
             this.azureFileParameters = azureFileParameters;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder provider(String provider) {
             this.provider = Objects.requireNonNull(provider);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder statusDetails(String statusDetails) {
             this.statusDetails = Objects.requireNonNull(statusDetails);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetVolumeResult build() {
+        }        public GetVolumeResult build() {
             return new GetVolumeResult(azureFileParameters, description, id, location, name, provider, provisioningState, status, statusDetails, tags, type);
         }
     }

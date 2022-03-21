@@ -147,82 +147,78 @@ public final class LaunchArgs extends io.pulumi.resources.ResourceArgs {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder groups(Output<List<LaunchGroupObjectArgs>> groups) {
             this.groups = Objects.requireNonNull(groups);
             return this;
         }
-
         public Builder groups(List<LaunchGroupObjectArgs> groups) {
             this.groups = Output.of(Objects.requireNonNull(groups));
             return this;
         }
-
+        public Builder groups(LaunchGroupObjectArgs... groups) {
+            return groups(List.of(groups));
+        }
         public Builder metricMonitors(@Nullable Output<List<LaunchMetricDefinitionObjectArgs>> metricMonitors) {
             this.metricMonitors = metricMonitors;
             return this;
         }
-
         public Builder metricMonitors(@Nullable List<LaunchMetricDefinitionObjectArgs> metricMonitors) {
             this.metricMonitors = Output.ofNullable(metricMonitors);
             return this;
         }
-
+        public Builder metricMonitors(LaunchMetricDefinitionObjectArgs... metricMonitors) {
+            return metricMonitors(List.of(metricMonitors));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(Output<String> project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
-
         public Builder project(String project) {
             this.project = Output.of(Objects.requireNonNull(project));
             return this;
         }
-
         public Builder randomizationSalt(@Nullable Output<String> randomizationSalt) {
             this.randomizationSalt = randomizationSalt;
             return this;
         }
-
         public Builder randomizationSalt(@Nullable String randomizationSalt) {
             this.randomizationSalt = Output.ofNullable(randomizationSalt);
             return this;
         }
-
         public Builder scheduledSplitsConfig(Output<List<LaunchStepConfigArgs>> scheduledSplitsConfig) {
             this.scheduledSplitsConfig = Objects.requireNonNull(scheduledSplitsConfig);
             return this;
         }
-
         public Builder scheduledSplitsConfig(List<LaunchStepConfigArgs> scheduledSplitsConfig) {
             this.scheduledSplitsConfig = Output.of(Objects.requireNonNull(scheduledSplitsConfig));
             return this;
         }
-
+        public Builder scheduledSplitsConfig(LaunchStepConfigArgs... scheduledSplitsConfig) {
+            return scheduledSplitsConfig(List.of(scheduledSplitsConfig));
+        }
         public Builder tags(@Nullable Output<List<LaunchTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<LaunchTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public LaunchArgs build() {
+        public Builder tags(LaunchTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public LaunchArgs build() {
             return new LaunchArgs(description, groups, metricMonitors, name, project, randomizationSalt, scheduledSplitsConfig, tags);
         }
     }

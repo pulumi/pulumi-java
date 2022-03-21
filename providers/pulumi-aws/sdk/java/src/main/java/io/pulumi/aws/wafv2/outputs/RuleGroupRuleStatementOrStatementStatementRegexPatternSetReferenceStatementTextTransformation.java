@@ -70,12 +70,10 @@ public final class RuleGroupRuleStatementOrStatementStatementRegexPatternSetRefe
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public RuleGroupRuleStatementOrStatementStatementRegexPatternSetReferenceStatementTextTransformation build() {
+        }        public RuleGroupRuleStatementOrStatementStatementRegexPatternSetReferenceStatementTextTransformation build() {
             return new RuleGroupRuleStatementOrStatementStatementRegexPatternSetReferenceStatementTextTransformation(priority, type);
         }
     }

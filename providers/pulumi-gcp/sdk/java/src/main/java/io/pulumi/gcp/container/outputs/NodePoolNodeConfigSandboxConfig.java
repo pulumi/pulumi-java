@@ -43,8 +43,7 @@ public final class NodePoolNodeConfigSandboxConfig {
         public Builder sandboxType(String sandboxType) {
             this.sandboxType = Objects.requireNonNull(sandboxType);
             return this;
-        }
-        public NodePoolNodeConfigSandboxConfig build() {
+        }        public NodePoolNodeConfigSandboxConfig build() {
             return new NodePoolNodeConfigSandboxConfig(sandboxType);
         }
     }

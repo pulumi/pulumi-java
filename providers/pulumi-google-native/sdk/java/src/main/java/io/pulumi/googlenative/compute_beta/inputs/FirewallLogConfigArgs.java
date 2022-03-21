@@ -79,22 +79,18 @@ public final class FirewallLogConfigArgs extends io.pulumi.resources.ResourceArg
             this.enable = enable;
             return this;
         }
-
         public Builder enable(@Nullable Boolean enable) {
             this.enable = Output.ofNullable(enable);
             return this;
         }
-
         public Builder metadata(@Nullable Output<FirewallLogConfigMetadata> metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder metadata(@Nullable FirewallLogConfigMetadata metadata) {
             this.metadata = Output.ofNullable(metadata);
             return this;
-        }
-        public FirewallLogConfigArgs build() {
+        }        public FirewallLogConfigArgs build() {
             return new FirewallLogConfigArgs(enable, metadata);
         }
     }

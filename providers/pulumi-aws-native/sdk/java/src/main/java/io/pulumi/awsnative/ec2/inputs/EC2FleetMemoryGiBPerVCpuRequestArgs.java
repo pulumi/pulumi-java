@@ -66,22 +66,18 @@ public final class EC2FleetMemoryGiBPerVCpuRequestArgs extends io.pulumi.resourc
             this.max = max;
             return this;
         }
-
         public Builder max(@Nullable Double max) {
             this.max = Output.ofNullable(max);
             return this;
         }
-
         public Builder min(@Nullable Output<Double> min) {
             this.min = min;
             return this;
         }
-
         public Builder min(@Nullable Double min) {
             this.min = Output.ofNullable(min);
             return this;
-        }
-        public EC2FleetMemoryGiBPerVCpuRequestArgs build() {
+        }        public EC2FleetMemoryGiBPerVCpuRequestArgs build() {
             return new EC2FleetMemoryGiBPerVCpuRequestArgs(max, min);
         }
     }

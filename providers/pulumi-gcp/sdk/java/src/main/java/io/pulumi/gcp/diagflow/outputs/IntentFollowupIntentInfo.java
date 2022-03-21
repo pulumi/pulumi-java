@@ -65,12 +65,10 @@ public final class IntentFollowupIntentInfo {
             this.followupIntentName = followupIntentName;
             return this;
         }
-
         public Builder parentFollowupIntentName(@Nullable String parentFollowupIntentName) {
             this.parentFollowupIntentName = parentFollowupIntentName;
             return this;
-        }
-        public IntentFollowupIntentInfo build() {
+        }        public IntentFollowupIntentInfo build() {
             return new IntentFollowupIntentInfo(followupIntentName, parentFollowupIntentName);
         }
     }

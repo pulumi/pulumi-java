@@ -128,62 +128,50 @@ public final class SharedflowArgs extends io.pulumi.resources.ResourceArgs {
             this.action = Objects.requireNonNull(action);
             return this;
         }
-
         public Builder action(String action) {
             this.action = Output.of(Objects.requireNonNull(action));
             return this;
         }
-
         public Builder contentType(@Nullable Output<String> contentType) {
             this.contentType = contentType;
             return this;
         }
-
         public Builder contentType(@Nullable String contentType) {
             this.contentType = Output.ofNullable(contentType);
             return this;
         }
-
         public Builder data(@Nullable Output<String> data) {
             this.data = data;
             return this;
         }
-
         public Builder data(@Nullable String data) {
             this.data = Output.ofNullable(data);
             return this;
         }
-
         public Builder extensions(@Nullable Output<List<Map<String,String>>> extensions) {
             this.extensions = extensions;
             return this;
         }
-
         public Builder extensions(@Nullable List<Map<String,String>> extensions) {
             this.extensions = Output.ofNullable(extensions);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder organizationId(Output<String> organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }
-
         public Builder organizationId(String organizationId) {
             this.organizationId = Output.of(Objects.requireNonNull(organizationId));
             return this;
-        }
-        public SharedflowArgs build() {
+        }        public SharedflowArgs build() {
             return new SharedflowArgs(action, contentType, data, extensions, name, organizationId);
         }
     }

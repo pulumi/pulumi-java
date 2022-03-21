@@ -92,17 +92,17 @@ public final class GetIpamPreviewNextCidrArgs extends io.pulumi.resources.Invoke
             this.disallowedCidrs = disallowedCidrs;
             return this;
         }
-
+        public Builder disallowedCidrs(String... disallowedCidrs) {
+            return disallowedCidrs(List.of(disallowedCidrs));
+        }
         public Builder ipamPoolId(String ipamPoolId) {
             this.ipamPoolId = Objects.requireNonNull(ipamPoolId);
             return this;
         }
-
         public Builder netmaskLength(@Nullable Integer netmaskLength) {
             this.netmaskLength = netmaskLength;
             return this;
-        }
-        public GetIpamPreviewNextCidrArgs build() {
+        }        public GetIpamPreviewNextCidrArgs build() {
             return new GetIpamPreviewNextCidrArgs(disallowedCidrs, ipamPoolId, netmaskLength);
         }
     }

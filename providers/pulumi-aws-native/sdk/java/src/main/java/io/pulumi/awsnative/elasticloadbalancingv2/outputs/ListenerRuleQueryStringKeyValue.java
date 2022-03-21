@@ -55,12 +55,10 @@ public final class ListenerRuleQueryStringKeyValue {
             this.key = key;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public ListenerRuleQueryStringKeyValue build() {
+        }        public ListenerRuleQueryStringKeyValue build() {
             return new ListenerRuleQueryStringKeyValue(key, value);
         }
     }

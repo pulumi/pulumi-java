@@ -69,22 +69,18 @@ public final class RepositoryPolicyArgs extends io.pulumi.resources.ResourceArgs
             this.policy = Objects.requireNonNull(policy);
             return this;
         }
-
         public Builder policy(String policy) {
             this.policy = Output.of(Objects.requireNonNull(policy));
             return this;
         }
-
         public Builder repositoryName(Output<String> repositoryName) {
             this.repositoryName = Objects.requireNonNull(repositoryName);
             return this;
         }
-
         public Builder repositoryName(String repositoryName) {
             this.repositoryName = Output.of(Objects.requireNonNull(repositoryName));
             return this;
-        }
-        public RepositoryPolicyArgs build() {
+        }        public RepositoryPolicyArgs build() {
             return new RepositoryPolicyArgs(policy, repositoryName);
         }
     }

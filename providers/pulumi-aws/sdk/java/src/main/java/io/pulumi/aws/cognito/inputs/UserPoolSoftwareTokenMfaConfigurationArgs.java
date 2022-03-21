@@ -56,12 +56,10 @@ public final class UserPoolSoftwareTokenMfaConfigurationArgs extends io.pulumi.r
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public Builder enabled(Boolean enabled) {
             this.enabled = Output.of(Objects.requireNonNull(enabled));
             return this;
-        }
-        public UserPoolSoftwareTokenMfaConfigurationArgs build() {
+        }        public UserPoolSoftwareTokenMfaConfigurationArgs build() {
             return new UserPoolSoftwareTokenMfaConfigurationArgs(enabled);
         }
     }

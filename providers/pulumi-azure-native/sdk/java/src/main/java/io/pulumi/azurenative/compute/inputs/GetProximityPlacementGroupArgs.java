@@ -90,17 +90,14 @@ public final class GetProximityPlacementGroupArgs extends io.pulumi.resources.In
             this.includeColocationStatus = includeColocationStatus;
             return this;
         }
-
         public Builder proximityPlacementGroupName(String proximityPlacementGroupName) {
             this.proximityPlacementGroupName = Objects.requireNonNull(proximityPlacementGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetProximityPlacementGroupArgs build() {
+        }        public GetProximityPlacementGroupArgs build() {
             return new GetProximityPlacementGroupArgs(includeColocationStatus, proximityPlacementGroupName, resourceGroupName);
         }
     }

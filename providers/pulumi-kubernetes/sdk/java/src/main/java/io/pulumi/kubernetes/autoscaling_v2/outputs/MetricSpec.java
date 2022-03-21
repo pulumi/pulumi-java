@@ -140,32 +140,26 @@ public final class MetricSpec {
             this.containerResource = containerResource;
             return this;
         }
-
         public Builder external(@Nullable ExternalMetricSource external) {
             this.external = external;
             return this;
         }
-
         public Builder object(@Nullable ObjectMetricSource object) {
             this.object = object;
             return this;
         }
-
         public Builder pods(@Nullable PodsMetricSource pods) {
             this.pods = pods;
             return this;
         }
-
         public Builder resource(@Nullable ResourceMetricSource resource) {
             this.resource = resource;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public MetricSpec build() {
+        }        public MetricSpec build() {
             return new MetricSpec(containerResource, external, object, pods, resource, type);
         }
     }

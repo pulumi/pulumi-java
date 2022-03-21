@@ -234,62 +234,53 @@ public final class VirtualMachineScaleSetExtensionResponse {
             this.autoUpgradeMinorVersion = autoUpgradeMinorVersion;
             return this;
         }
-
         public Builder enableAutomaticUpgrade(@Nullable Boolean enableAutomaticUpgrade) {
             this.enableAutomaticUpgrade = enableAutomaticUpgrade;
             return this;
         }
-
         public Builder forceUpdateTag(@Nullable String forceUpdateTag) {
             this.forceUpdateTag = forceUpdateTag;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder protectedSettings(@Nullable Object protectedSettings) {
             this.protectedSettings = protectedSettings;
             return this;
         }
-
         public Builder provisionAfterExtensions(@Nullable List<String> provisionAfterExtensions) {
             this.provisionAfterExtensions = provisionAfterExtensions;
             return this;
         }
-
+        public Builder provisionAfterExtensions(String... provisionAfterExtensions) {
+            return provisionAfterExtensions(List.of(provisionAfterExtensions));
+        }
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder publisher(@Nullable String publisher) {
             this.publisher = publisher;
             return this;
         }
-
         public Builder settings(@Nullable Object settings) {
             this.settings = settings;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder typeHandlerVersion(@Nullable String typeHandlerVersion) {
             this.typeHandlerVersion = typeHandlerVersion;
             return this;
-        }
-        public VirtualMachineScaleSetExtensionResponse build() {
+        }        public VirtualMachineScaleSetExtensionResponse build() {
             return new VirtualMachineScaleSetExtensionResponse(autoUpgradeMinorVersion, enableAutomaticUpgrade, forceUpdateTag, id, name, protectedSettings, provisionAfterExtensions, provisioningState, publisher, settings, type, typeHandlerVersion);
         }
     }

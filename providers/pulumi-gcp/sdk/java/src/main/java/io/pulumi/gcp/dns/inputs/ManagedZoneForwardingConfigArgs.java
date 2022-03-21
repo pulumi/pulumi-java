@@ -60,12 +60,13 @@ public final class ManagedZoneForwardingConfigArgs extends io.pulumi.resources.R
             this.targetNameServers = Objects.requireNonNull(targetNameServers);
             return this;
         }
-
         public Builder targetNameServers(List<ManagedZoneForwardingConfigTargetNameServerArgs> targetNameServers) {
             this.targetNameServers = Output.of(Objects.requireNonNull(targetNameServers));
             return this;
         }
-        public ManagedZoneForwardingConfigArgs build() {
+        public Builder targetNameServers(ManagedZoneForwardingConfigTargetNameServerArgs... targetNameServers) {
+            return targetNameServers(List.of(targetNameServers));
+        }        public ManagedZoneForwardingConfigArgs build() {
             return new ManagedZoneForwardingConfigArgs(targetNameServers);
         }
     }

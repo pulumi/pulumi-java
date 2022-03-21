@@ -91,22 +91,18 @@ public final class TopicRuleFirehoseAction extends io.pulumi.resources.InvokeArg
             this.batchMode = batchMode;
             return this;
         }
-
         public Builder deliveryStreamName(String deliveryStreamName) {
             this.deliveryStreamName = Objects.requireNonNull(deliveryStreamName);
             return this;
         }
-
         public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public Builder separator(@Nullable String separator) {
             this.separator = separator;
             return this;
-        }
-        public TopicRuleFirehoseAction build() {
+        }        public TopicRuleFirehoseAction build() {
             return new TopicRuleFirehoseAction(batchMode, deliveryStreamName, roleArn, separator);
         }
     }

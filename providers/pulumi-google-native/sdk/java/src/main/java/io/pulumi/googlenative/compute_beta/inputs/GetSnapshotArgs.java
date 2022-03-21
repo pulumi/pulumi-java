@@ -66,12 +66,10 @@ public final class GetSnapshotArgs extends io.pulumi.resources.InvokeArgs {
             this.project = project;
             return this;
         }
-
         public Builder snapshot(String snapshot) {
             this.snapshot = Objects.requireNonNull(snapshot);
             return this;
-        }
-        public GetSnapshotArgs build() {
+        }        public GetSnapshotArgs build() {
             return new GetSnapshotArgs(project, snapshot);
         }
     }

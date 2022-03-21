@@ -65,17 +65,17 @@ public final class GetAccessPointResult {
             this.accessPointId = accessPointId;
             return this;
         }
-
         public Builder accessPointTags(@Nullable List<AccessPointTag> accessPointTags) {
             this.accessPointTags = accessPointTags;
             return this;
         }
-
+        public Builder accessPointTags(AccessPointTag... accessPointTags) {
+            return accessPointTags(List.of(accessPointTags));
+        }
         public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
-        }
-        public GetAccessPointResult build() {
+        }        public GetAccessPointResult build() {
             return new GetAccessPointResult(accessPointId, accessPointTags, arn);
         }
     }

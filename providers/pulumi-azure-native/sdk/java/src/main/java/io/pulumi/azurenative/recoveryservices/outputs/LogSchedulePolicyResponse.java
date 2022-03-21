@@ -74,12 +74,10 @@ public final class LogSchedulePolicyResponse {
             this.scheduleFrequencyInMins = scheduleFrequencyInMins;
             return this;
         }
-
         public Builder schedulePolicyType(String schedulePolicyType) {
             this.schedulePolicyType = Objects.requireNonNull(schedulePolicyType);
             return this;
-        }
-        public LogSchedulePolicyResponse build() {
+        }        public LogSchedulePolicyResponse build() {
             return new LogSchedulePolicyResponse(scheduleFrequencyInMins, schedulePolicyType);
         }
     }

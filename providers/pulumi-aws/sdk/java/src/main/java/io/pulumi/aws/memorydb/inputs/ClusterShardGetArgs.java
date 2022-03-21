@@ -110,42 +110,37 @@ public final class ClusterShardGetArgs extends io.pulumi.resources.ResourceArgs 
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder nodes(@Nullable Output<List<ClusterShardNodeGetArgs>> nodes) {
             this.nodes = nodes;
             return this;
         }
-
         public Builder nodes(@Nullable List<ClusterShardNodeGetArgs> nodes) {
             this.nodes = Output.ofNullable(nodes);
             return this;
         }
-
+        public Builder nodes(ClusterShardNodeGetArgs... nodes) {
+            return nodes(List.of(nodes));
+        }
         public Builder numNodes(@Nullable Output<Integer> numNodes) {
             this.numNodes = numNodes;
             return this;
         }
-
         public Builder numNodes(@Nullable Integer numNodes) {
             this.numNodes = Output.ofNullable(numNodes);
             return this;
         }
-
         public Builder slots(@Nullable Output<String> slots) {
             this.slots = slots;
             return this;
         }
-
         public Builder slots(@Nullable String slots) {
             this.slots = Output.ofNullable(slots);
             return this;
-        }
-        public ClusterShardGetArgs build() {
+        }        public ClusterShardGetArgs build() {
             return new ClusterShardGetArgs(name, nodes, numNodes, slots);
         }
     }

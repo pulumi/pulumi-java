@@ -91,32 +91,29 @@ public final class KeyGroupArgs extends io.pulumi.resources.ResourceArgs {
             this.comment = comment;
             return this;
         }
-
         public Builder comment(@Nullable String comment) {
             this.comment = Output.ofNullable(comment);
             return this;
         }
-
         public Builder items(Output<List<String>> items) {
             this.items = Objects.requireNonNull(items);
             return this;
         }
-
         public Builder items(List<String> items) {
             this.items = Output.of(Objects.requireNonNull(items));
             return this;
         }
-
+        public Builder items(String... items) {
+            return items(List.of(items));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
-        }
-        public KeyGroupArgs build() {
+        }        public KeyGroupArgs build() {
             return new KeyGroupArgs(comment, items, name);
         }
     }

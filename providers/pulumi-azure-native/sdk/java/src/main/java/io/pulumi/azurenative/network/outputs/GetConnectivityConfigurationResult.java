@@ -251,67 +251,60 @@ public final class GetConnectivityConfigurationResult {
             this.appliesToGroups = appliesToGroups;
             return this;
         }
-
+        public Builder appliesToGroups(ConnectivityGroupItemResponse... appliesToGroups) {
+            return appliesToGroups(List.of(appliesToGroups));
+        }
         public Builder connectivityTopology(String connectivityTopology) {
             this.connectivityTopology = Objects.requireNonNull(connectivityTopology);
             return this;
         }
-
         public Builder deleteExistingPeering(@Nullable String deleteExistingPeering) {
             this.deleteExistingPeering = deleteExistingPeering;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder hubs(@Nullable List<HubResponse> hubs) {
             this.hubs = hubs;
             return this;
         }
-
+        public Builder hubs(HubResponse... hubs) {
+            return hubs(List.of(hubs));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder isGlobal(@Nullable String isGlobal) {
             this.isGlobal = isGlobal;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetConnectivityConfigurationResult build() {
+        }        public GetConnectivityConfigurationResult build() {
             return new GetConnectivityConfigurationResult(appliesToGroups, connectivityTopology, deleteExistingPeering, description, displayName, etag, hubs, id, isGlobal, name, provisioningState, systemData, type);
         }
     }

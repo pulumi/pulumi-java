@@ -93,17 +93,14 @@ public final class EncryptionInfoResponse extends io.pulumi.resources.InvokeArgs
             this.encryptionStatus = Objects.requireNonNull(encryptionStatus);
             return this;
         }
-
         public Builder encryptionType(String encryptionType) {
             this.encryptionType = Objects.requireNonNull(encryptionType);
             return this;
         }
-
         public Builder kmsKeyVersion(String kmsKeyVersion) {
             this.kmsKeyVersion = Objects.requireNonNull(kmsKeyVersion);
             return this;
-        }
-        public EncryptionInfoResponse build() {
+        }        public EncryptionInfoResponse build() {
             return new EncryptionInfoResponse(encryptionStatus, encryptionType, kmsKeyVersion);
         }
     }

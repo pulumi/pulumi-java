@@ -50,8 +50,7 @@ public final class GetAppArgs extends io.pulumi.resources.InvokeArgs {
         public Builder appId(String appId) {
             this.appId = Objects.requireNonNull(appId);
             return this;
-        }
-        public GetAppArgs build() {
+        }        public GetAppArgs build() {
             return new GetAppArgs(appId);
         }
     }

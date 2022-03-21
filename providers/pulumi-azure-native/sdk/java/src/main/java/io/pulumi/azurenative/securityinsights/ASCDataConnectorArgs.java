@@ -140,62 +140,50 @@ public final class ASCDataConnectorArgs extends io.pulumi.resources.ResourceArgs
             this.dataConnectorId = dataConnectorId;
             return this;
         }
-
         public Builder dataConnectorId(@Nullable String dataConnectorId) {
             this.dataConnectorId = Output.ofNullable(dataConnectorId);
             return this;
         }
-
         public Builder dataTypes(@Nullable Output<AlertsDataTypeOfDataConnectorArgs> dataTypes) {
             this.dataTypes = dataTypes;
             return this;
         }
-
         public Builder dataTypes(@Nullable AlertsDataTypeOfDataConnectorArgs dataTypes) {
             this.dataTypes = Output.ofNullable(dataTypes);
             return this;
         }
-
         public Builder kind(Output<String> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder subscriptionId(@Nullable Output<String> subscriptionId) {
             this.subscriptionId = subscriptionId;
             return this;
         }
-
         public Builder subscriptionId(@Nullable String subscriptionId) {
             this.subscriptionId = Output.ofNullable(subscriptionId);
             return this;
         }
-
         public Builder workspaceName(Output<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
-
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
             return this;
-        }
-        public ASCDataConnectorArgs build() {
+        }        public ASCDataConnectorArgs build() {
             return new ASCDataConnectorArgs(dataConnectorId, dataTypes, kind, resourceGroupName, subscriptionId, workspaceName);
         }
     }

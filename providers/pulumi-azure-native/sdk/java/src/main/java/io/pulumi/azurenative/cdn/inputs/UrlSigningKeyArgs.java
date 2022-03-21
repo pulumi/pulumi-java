@@ -78,22 +78,18 @@ public final class UrlSigningKeyArgs extends io.pulumi.resources.ResourceArgs {
             this.keyId = Objects.requireNonNull(keyId);
             return this;
         }
-
         public Builder keyId(String keyId) {
             this.keyId = Output.of(Objects.requireNonNull(keyId));
             return this;
         }
-
         public Builder keySourceParameters(Output<KeyVaultSigningKeyParametersArgs> keySourceParameters) {
             this.keySourceParameters = Objects.requireNonNull(keySourceParameters);
             return this;
         }
-
         public Builder keySourceParameters(KeyVaultSigningKeyParametersArgs keySourceParameters) {
             this.keySourceParameters = Output.of(Objects.requireNonNull(keySourceParameters));
             return this;
-        }
-        public UrlSigningKeyArgs build() {
+        }        public UrlSigningKeyArgs build() {
             return new UrlSigningKeyArgs(keyId, keySourceParameters);
         }
     }

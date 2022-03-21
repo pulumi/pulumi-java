@@ -240,152 +240,122 @@ public final class WebACLStatementArgs extends io.pulumi.resources.ResourceArgs 
             this.andStatement = andStatement;
             return this;
         }
-
         public Builder andStatement(@Nullable WebACLAndStatementArgs andStatement) {
             this.andStatement = Output.ofNullable(andStatement);
             return this;
         }
-
         public Builder byteMatchStatement(@Nullable Output<WebACLByteMatchStatementArgs> byteMatchStatement) {
             this.byteMatchStatement = byteMatchStatement;
             return this;
         }
-
         public Builder byteMatchStatement(@Nullable WebACLByteMatchStatementArgs byteMatchStatement) {
             this.byteMatchStatement = Output.ofNullable(byteMatchStatement);
             return this;
         }
-
         public Builder geoMatchStatement(@Nullable Output<WebACLGeoMatchStatementArgs> geoMatchStatement) {
             this.geoMatchStatement = geoMatchStatement;
             return this;
         }
-
         public Builder geoMatchStatement(@Nullable WebACLGeoMatchStatementArgs geoMatchStatement) {
             this.geoMatchStatement = Output.ofNullable(geoMatchStatement);
             return this;
         }
-
         public Builder iPSetReferenceStatement(@Nullable Output<WebACLIPSetReferenceStatementArgs> iPSetReferenceStatement) {
             this.iPSetReferenceStatement = iPSetReferenceStatement;
             return this;
         }
-
         public Builder iPSetReferenceStatement(@Nullable WebACLIPSetReferenceStatementArgs iPSetReferenceStatement) {
             this.iPSetReferenceStatement = Output.ofNullable(iPSetReferenceStatement);
             return this;
         }
-
         public Builder labelMatchStatement(@Nullable Output<WebACLLabelMatchStatementArgs> labelMatchStatement) {
             this.labelMatchStatement = labelMatchStatement;
             return this;
         }
-
         public Builder labelMatchStatement(@Nullable WebACLLabelMatchStatementArgs labelMatchStatement) {
             this.labelMatchStatement = Output.ofNullable(labelMatchStatement);
             return this;
         }
-
         public Builder managedRuleGroupStatement(@Nullable Output<WebACLManagedRuleGroupStatementArgs> managedRuleGroupStatement) {
             this.managedRuleGroupStatement = managedRuleGroupStatement;
             return this;
         }
-
         public Builder managedRuleGroupStatement(@Nullable WebACLManagedRuleGroupStatementArgs managedRuleGroupStatement) {
             this.managedRuleGroupStatement = Output.ofNullable(managedRuleGroupStatement);
             return this;
         }
-
         public Builder notStatement(@Nullable Output<WebACLNotStatementArgs> notStatement) {
             this.notStatement = notStatement;
             return this;
         }
-
         public Builder notStatement(@Nullable WebACLNotStatementArgs notStatement) {
             this.notStatement = Output.ofNullable(notStatement);
             return this;
         }
-
         public Builder orStatement(@Nullable Output<WebACLOrStatementArgs> orStatement) {
             this.orStatement = orStatement;
             return this;
         }
-
         public Builder orStatement(@Nullable WebACLOrStatementArgs orStatement) {
             this.orStatement = Output.ofNullable(orStatement);
             return this;
         }
-
         public Builder rateBasedStatement(@Nullable Output<WebACLRateBasedStatementArgs> rateBasedStatement) {
             this.rateBasedStatement = rateBasedStatement;
             return this;
         }
-
         public Builder rateBasedStatement(@Nullable WebACLRateBasedStatementArgs rateBasedStatement) {
             this.rateBasedStatement = Output.ofNullable(rateBasedStatement);
             return this;
         }
-
         public Builder regexMatchStatement(@Nullable Output<WebACLRegexMatchStatementArgs> regexMatchStatement) {
             this.regexMatchStatement = regexMatchStatement;
             return this;
         }
-
         public Builder regexMatchStatement(@Nullable WebACLRegexMatchStatementArgs regexMatchStatement) {
             this.regexMatchStatement = Output.ofNullable(regexMatchStatement);
             return this;
         }
-
         public Builder regexPatternSetReferenceStatement(@Nullable Output<WebACLRegexPatternSetReferenceStatementArgs> regexPatternSetReferenceStatement) {
             this.regexPatternSetReferenceStatement = regexPatternSetReferenceStatement;
             return this;
         }
-
         public Builder regexPatternSetReferenceStatement(@Nullable WebACLRegexPatternSetReferenceStatementArgs regexPatternSetReferenceStatement) {
             this.regexPatternSetReferenceStatement = Output.ofNullable(regexPatternSetReferenceStatement);
             return this;
         }
-
         public Builder ruleGroupReferenceStatement(@Nullable Output<WebACLRuleGroupReferenceStatementArgs> ruleGroupReferenceStatement) {
             this.ruleGroupReferenceStatement = ruleGroupReferenceStatement;
             return this;
         }
-
         public Builder ruleGroupReferenceStatement(@Nullable WebACLRuleGroupReferenceStatementArgs ruleGroupReferenceStatement) {
             this.ruleGroupReferenceStatement = Output.ofNullable(ruleGroupReferenceStatement);
             return this;
         }
-
         public Builder sizeConstraintStatement(@Nullable Output<WebACLSizeConstraintStatementArgs> sizeConstraintStatement) {
             this.sizeConstraintStatement = sizeConstraintStatement;
             return this;
         }
-
         public Builder sizeConstraintStatement(@Nullable WebACLSizeConstraintStatementArgs sizeConstraintStatement) {
             this.sizeConstraintStatement = Output.ofNullable(sizeConstraintStatement);
             return this;
         }
-
         public Builder sqliMatchStatement(@Nullable Output<WebACLSqliMatchStatementArgs> sqliMatchStatement) {
             this.sqliMatchStatement = sqliMatchStatement;
             return this;
         }
-
         public Builder sqliMatchStatement(@Nullable WebACLSqliMatchStatementArgs sqliMatchStatement) {
             this.sqliMatchStatement = Output.ofNullable(sqliMatchStatement);
             return this;
         }
-
         public Builder xssMatchStatement(@Nullable Output<WebACLXssMatchStatementArgs> xssMatchStatement) {
             this.xssMatchStatement = xssMatchStatement;
             return this;
         }
-
         public Builder xssMatchStatement(@Nullable WebACLXssMatchStatementArgs xssMatchStatement) {
             this.xssMatchStatement = Output.ofNullable(xssMatchStatement);
             return this;
-        }
-        public WebACLStatementArgs build() {
+        }        public WebACLStatementArgs build() {
             return new WebACLStatementArgs(andStatement, byteMatchStatement, geoMatchStatement, iPSetReferenceStatement, labelMatchStatement, managedRuleGroupStatement, notStatement, orStatement, rateBasedStatement, regexMatchStatement, regexPatternSetReferenceStatement, ruleGroupReferenceStatement, sizeConstraintStatement, sqliMatchStatement, xssMatchStatement);
         }
     }

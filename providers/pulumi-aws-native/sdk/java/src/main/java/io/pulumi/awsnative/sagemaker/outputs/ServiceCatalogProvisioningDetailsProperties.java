@@ -81,22 +81,21 @@ public final class ServiceCatalogProvisioningDetailsProperties {
             this.pathId = pathId;
             return this;
         }
-
         public Builder productId(String productId) {
             this.productId = Objects.requireNonNull(productId);
             return this;
         }
-
         public Builder provisioningArtifactId(@Nullable String provisioningArtifactId) {
             this.provisioningArtifactId = provisioningArtifactId;
             return this;
         }
-
         public Builder provisioningParameters(@Nullable List<ProjectProvisioningParameter> provisioningParameters) {
             this.provisioningParameters = provisioningParameters;
             return this;
         }
-        public ServiceCatalogProvisioningDetailsProperties build() {
+        public Builder provisioningParameters(ProjectProvisioningParameter... provisioningParameters) {
+            return provisioningParameters(List.of(provisioningParameters));
+        }        public ServiceCatalogProvisioningDetailsProperties build() {
             return new ServiceCatalogProvisioningDetailsProperties(pathId, productId, provisioningArtifactId, provisioningParameters);
         }
     }

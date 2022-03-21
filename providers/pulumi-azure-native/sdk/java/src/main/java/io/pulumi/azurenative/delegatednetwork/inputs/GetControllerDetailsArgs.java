@@ -72,12 +72,10 @@ public final class GetControllerDetailsArgs extends io.pulumi.resources.InvokeAr
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceName(String resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
-        }
-        public GetControllerDetailsArgs build() {
+        }        public GetControllerDetailsArgs build() {
             return new GetControllerDetailsArgs(resourceGroupName, resourceName);
         }
     }

@@ -239,122 +239,98 @@ public final class AzureClusterArgs extends io.pulumi.resources.ResourceArgs {
             this.annotations = annotations;
             return this;
         }
-
         public Builder annotations(@Nullable Map<String,String> annotations) {
             this.annotations = Output.ofNullable(annotations);
             return this;
         }
-
         public Builder authorization(Output<AzureClusterAuthorizationArgs> authorization) {
             this.authorization = Objects.requireNonNull(authorization);
             return this;
         }
-
         public Builder authorization(AzureClusterAuthorizationArgs authorization) {
             this.authorization = Output.of(Objects.requireNonNull(authorization));
             return this;
         }
-
         public Builder azureRegion(Output<String> azureRegion) {
             this.azureRegion = Objects.requireNonNull(azureRegion);
             return this;
         }
-
         public Builder azureRegion(String azureRegion) {
             this.azureRegion = Output.of(Objects.requireNonNull(azureRegion));
             return this;
         }
-
         public Builder client(Output<String> client) {
             this.client = Objects.requireNonNull(client);
             return this;
         }
-
         public Builder client(String client) {
             this.client = Output.of(Objects.requireNonNull(client));
             return this;
         }
-
         public Builder controlPlane(Output<AzureClusterControlPlaneArgs> controlPlane) {
             this.controlPlane = Objects.requireNonNull(controlPlane);
             return this;
         }
-
         public Builder controlPlane(AzureClusterControlPlaneArgs controlPlane) {
             this.controlPlane = Output.of(Objects.requireNonNull(controlPlane));
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder fleet(Output<AzureClusterFleetArgs> fleet) {
             this.fleet = Objects.requireNonNull(fleet);
             return this;
         }
-
         public Builder fleet(AzureClusterFleetArgs fleet) {
             this.fleet = Output.of(Objects.requireNonNull(fleet));
             return this;
         }
-
         public Builder location(Output<String> location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Output.of(Objects.requireNonNull(location));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder networking(Output<AzureClusterNetworkingArgs> networking) {
             this.networking = Objects.requireNonNull(networking);
             return this;
         }
-
         public Builder networking(AzureClusterNetworkingArgs networking) {
             this.networking = Output.of(Objects.requireNonNull(networking));
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder resourceGroupId(Output<String> resourceGroupId) {
             this.resourceGroupId = Objects.requireNonNull(resourceGroupId);
             return this;
         }
-
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = Output.of(Objects.requireNonNull(resourceGroupId));
             return this;
-        }
-        public AzureClusterArgs build() {
+        }        public AzureClusterArgs build() {
             return new AzureClusterArgs(annotations, authorization, azureRegion, client, controlPlane, description, fleet, location, name, networking, project, resourceGroupId);
         }
     }

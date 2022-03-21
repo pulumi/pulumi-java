@@ -62,7 +62,9 @@ public final class WinRMConfigurationResponse extends io.pulumi.resources.Invoke
             this.listeners = listeners;
             return this;
         }
-        public WinRMConfigurationResponse build() {
+        public Builder listeners(WinRMListenerResponse... listeners) {
+            return listeners(List.of(listeners));
+        }        public WinRMConfigurationResponse build() {
             return new WinRMConfigurationResponse(listeners);
         }
     }

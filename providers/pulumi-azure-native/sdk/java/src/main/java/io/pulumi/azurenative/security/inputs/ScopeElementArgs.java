@@ -61,12 +61,10 @@ public final class ScopeElementArgs extends io.pulumi.resources.ResourceArgs {
             this.field = field;
             return this;
         }
-
         public Builder field(@Nullable String field) {
             this.field = Output.ofNullable(field);
             return this;
-        }
-        public ScopeElementArgs build() {
+        }        public ScopeElementArgs build() {
             return new ScopeElementArgs(field);
         }
     }

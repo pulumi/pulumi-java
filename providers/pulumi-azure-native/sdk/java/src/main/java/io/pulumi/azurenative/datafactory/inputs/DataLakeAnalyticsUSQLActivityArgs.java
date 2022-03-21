@@ -278,142 +278,120 @@ public final class DataLakeAnalyticsUSQLActivityArgs extends io.pulumi.resources
             this.compilationMode = compilationMode;
             return this;
         }
-
         public Builder compilationMode(@Nullable Object compilationMode) {
             this.compilationMode = Output.ofNullable(compilationMode);
             return this;
         }
-
         public Builder degreeOfParallelism(@Nullable Output<Object> degreeOfParallelism) {
             this.degreeOfParallelism = degreeOfParallelism;
             return this;
         }
-
         public Builder degreeOfParallelism(@Nullable Object degreeOfParallelism) {
             this.degreeOfParallelism = Output.ofNullable(degreeOfParallelism);
             return this;
         }
-
         public Builder dependsOn(@Nullable Output<List<ActivityDependencyArgs>> dependsOn) {
             this.dependsOn = dependsOn;
             return this;
         }
-
         public Builder dependsOn(@Nullable List<ActivityDependencyArgs> dependsOn) {
             this.dependsOn = Output.ofNullable(dependsOn);
             return this;
         }
-
+        public Builder dependsOn(ActivityDependencyArgs... dependsOn) {
+            return dependsOn(List.of(dependsOn));
+        }
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder linkedServiceName(@Nullable Output<LinkedServiceReferenceArgs> linkedServiceName) {
             this.linkedServiceName = linkedServiceName;
             return this;
         }
-
         public Builder linkedServiceName(@Nullable LinkedServiceReferenceArgs linkedServiceName) {
             this.linkedServiceName = Output.ofNullable(linkedServiceName);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder parameters(@Nullable Output<Map<String,Object>> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder parameters(@Nullable Map<String,Object> parameters) {
             this.parameters = Output.ofNullable(parameters);
             return this;
         }
-
         public Builder policy(@Nullable Output<ActivityPolicyArgs> policy) {
             this.policy = policy;
             return this;
         }
-
         public Builder policy(@Nullable ActivityPolicyArgs policy) {
             this.policy = Output.ofNullable(policy);
             return this;
         }
-
         public Builder priority(@Nullable Output<Object> priority) {
             this.priority = priority;
             return this;
         }
-
         public Builder priority(@Nullable Object priority) {
             this.priority = Output.ofNullable(priority);
             return this;
         }
-
         public Builder runtimeVersion(@Nullable Output<Object> runtimeVersion) {
             this.runtimeVersion = runtimeVersion;
             return this;
         }
-
         public Builder runtimeVersion(@Nullable Object runtimeVersion) {
             this.runtimeVersion = Output.ofNullable(runtimeVersion);
             return this;
         }
-
         public Builder scriptLinkedService(Output<LinkedServiceReferenceArgs> scriptLinkedService) {
             this.scriptLinkedService = Objects.requireNonNull(scriptLinkedService);
             return this;
         }
-
         public Builder scriptLinkedService(LinkedServiceReferenceArgs scriptLinkedService) {
             this.scriptLinkedService = Output.of(Objects.requireNonNull(scriptLinkedService));
             return this;
         }
-
         public Builder scriptPath(Output<Object> scriptPath) {
             this.scriptPath = Objects.requireNonNull(scriptPath);
             return this;
         }
-
         public Builder scriptPath(Object scriptPath) {
             this.scriptPath = Output.of(Objects.requireNonNull(scriptPath));
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
-
         public Builder userProperties(@Nullable Output<List<UserPropertyArgs>> userProperties) {
             this.userProperties = userProperties;
             return this;
         }
-
         public Builder userProperties(@Nullable List<UserPropertyArgs> userProperties) {
             this.userProperties = Output.ofNullable(userProperties);
             return this;
         }
-        public DataLakeAnalyticsUSQLActivityArgs build() {
+        public Builder userProperties(UserPropertyArgs... userProperties) {
+            return userProperties(List.of(userProperties));
+        }        public DataLakeAnalyticsUSQLActivityArgs build() {
             return new DataLakeAnalyticsUSQLActivityArgs(compilationMode, degreeOfParallelism, dependsOn, description, linkedServiceName, name, parameters, policy, priority, runtimeVersion, scriptLinkedService, scriptPath, type, userProperties);
         }
     }

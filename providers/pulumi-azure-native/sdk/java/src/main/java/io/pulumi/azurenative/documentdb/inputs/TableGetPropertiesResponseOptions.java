@@ -75,12 +75,10 @@ public final class TableGetPropertiesResponseOptions extends io.pulumi.resources
             this.autoscaleSettings = autoscaleSettings;
             return this;
         }
-
         public Builder throughput(@Nullable Integer throughput) {
             this.throughput = throughput;
             return this;
-        }
-        public TableGetPropertiesResponseOptions build() {
+        }        public TableGetPropertiesResponseOptions build() {
             return new TableGetPropertiesResponseOptions(autoscaleSettings, throughput);
         }
     }

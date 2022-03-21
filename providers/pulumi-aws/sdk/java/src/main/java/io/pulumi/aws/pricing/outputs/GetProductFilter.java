@@ -69,12 +69,10 @@ public final class GetProductFilter {
             this.field = Objects.requireNonNull(field);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public GetProductFilter build() {
+        }        public GetProductFilter build() {
             return new GetProductFilter(field, value);
         }
     }

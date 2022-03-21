@@ -94,32 +94,26 @@ public final class LiveEventInputTrackSelectionArgs extends io.pulumi.resources.
             this.operation = operation;
             return this;
         }
-
         public Builder operation(@Nullable String operation) {
             this.operation = Output.ofNullable(operation);
             return this;
         }
-
         public Builder property(@Nullable Output<String> property) {
             this.property = property;
             return this;
         }
-
         public Builder property(@Nullable String property) {
             this.property = Output.ofNullable(property);
             return this;
         }
-
         public Builder value(@Nullable Output<String> value) {
             this.value = value;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = Output.ofNullable(value);
             return this;
-        }
-        public LiveEventInputTrackSelectionArgs build() {
+        }        public LiveEventInputTrackSelectionArgs build() {
             return new LiveEventInputTrackSelectionArgs(operation, property, value);
         }
     }

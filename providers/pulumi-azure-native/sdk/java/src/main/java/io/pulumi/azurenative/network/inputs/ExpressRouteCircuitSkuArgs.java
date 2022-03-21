@@ -97,32 +97,26 @@ public final class ExpressRouteCircuitSkuArgs extends io.pulumi.resources.Resour
             this.family = family;
             return this;
         }
-
         public Builder family(@Nullable Either<String,ExpressRouteCircuitSkuFamily> family) {
             this.family = Output.ofNullable(family);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder tier(@Nullable Output<Either<String,ExpressRouteCircuitSkuTier>> tier) {
             this.tier = tier;
             return this;
         }
-
         public Builder tier(@Nullable Either<String,ExpressRouteCircuitSkuTier> tier) {
             this.tier = Output.ofNullable(tier);
             return this;
-        }
-        public ExpressRouteCircuitSkuArgs build() {
+        }        public ExpressRouteCircuitSkuArgs build() {
             return new ExpressRouteCircuitSkuArgs(family, name, tier);
         }
     }

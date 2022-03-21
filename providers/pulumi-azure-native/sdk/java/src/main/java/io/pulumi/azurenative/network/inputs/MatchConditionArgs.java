@@ -132,52 +132,51 @@ public final class MatchConditionArgs extends io.pulumi.resources.ResourceArgs {
             this.matchValues = Objects.requireNonNull(matchValues);
             return this;
         }
-
         public Builder matchValues(List<String> matchValues) {
             this.matchValues = Output.of(Objects.requireNonNull(matchValues));
             return this;
         }
-
+        public Builder matchValues(String... matchValues) {
+            return matchValues(List.of(matchValues));
+        }
         public Builder matchVariables(Output<List<MatchVariableArgs>> matchVariables) {
             this.matchVariables = Objects.requireNonNull(matchVariables);
             return this;
         }
-
         public Builder matchVariables(List<MatchVariableArgs> matchVariables) {
             this.matchVariables = Output.of(Objects.requireNonNull(matchVariables));
             return this;
         }
-
+        public Builder matchVariables(MatchVariableArgs... matchVariables) {
+            return matchVariables(List.of(matchVariables));
+        }
         public Builder negationConditon(@Nullable Output<Boolean> negationConditon) {
             this.negationConditon = negationConditon;
             return this;
         }
-
         public Builder negationConditon(@Nullable Boolean negationConditon) {
             this.negationConditon = Output.ofNullable(negationConditon);
             return this;
         }
-
         public Builder operator(Output<Either<String,WebApplicationFirewallOperator>> operator) {
             this.operator = Objects.requireNonNull(operator);
             return this;
         }
-
         public Builder operator(Either<String,WebApplicationFirewallOperator> operator) {
             this.operator = Output.of(Objects.requireNonNull(operator));
             return this;
         }
-
         public Builder transforms(@Nullable Output<List<Either<String,WebApplicationFirewallTransform>>> transforms) {
             this.transforms = transforms;
             return this;
         }
-
         public Builder transforms(@Nullable List<Either<String,WebApplicationFirewallTransform>> transforms) {
             this.transforms = Output.ofNullable(transforms);
             return this;
         }
-        public MatchConditionArgs build() {
+        public Builder transforms(Either<String,WebApplicationFirewallTransform>... transforms) {
+            return transforms(List.of(transforms));
+        }        public MatchConditionArgs build() {
             return new MatchConditionArgs(matchValues, matchVariables, negationConditon, operator, transforms);
         }
     }

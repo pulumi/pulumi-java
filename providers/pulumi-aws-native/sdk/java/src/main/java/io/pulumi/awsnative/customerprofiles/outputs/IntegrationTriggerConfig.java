@@ -56,12 +56,10 @@ public final class IntegrationTriggerConfig {
             this.triggerProperties = triggerProperties;
             return this;
         }
-
         public Builder triggerType(IntegrationTriggerType triggerType) {
             this.triggerType = Objects.requireNonNull(triggerType);
             return this;
-        }
-        public IntegrationTriggerConfig build() {
+        }        public IntegrationTriggerConfig build() {
             return new IntegrationTriggerConfig(triggerProperties, triggerType);
         }
     }

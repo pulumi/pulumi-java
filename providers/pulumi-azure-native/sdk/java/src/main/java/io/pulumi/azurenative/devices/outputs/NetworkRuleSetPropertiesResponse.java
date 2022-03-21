@@ -90,17 +90,17 @@ public final class NetworkRuleSetPropertiesResponse {
             this.applyToBuiltInEventHubEndpoint = Objects.requireNonNull(applyToBuiltInEventHubEndpoint);
             return this;
         }
-
         public Builder defaultAction(@Nullable String defaultAction) {
             this.defaultAction = defaultAction;
             return this;
         }
-
         public Builder ipRules(List<NetworkRuleSetIpRuleResponse> ipRules) {
             this.ipRules = Objects.requireNonNull(ipRules);
             return this;
         }
-        public NetworkRuleSetPropertiesResponse build() {
+        public Builder ipRules(NetworkRuleSetIpRuleResponse... ipRules) {
+            return ipRules(List.of(ipRules));
+        }        public NetworkRuleSetPropertiesResponse build() {
             return new NetworkRuleSetPropertiesResponse(applyToBuiltInEventHubEndpoint, defaultAction, ipRules);
         }
     }

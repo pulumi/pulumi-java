@@ -168,42 +168,34 @@ public final class NfsAccessRuleResponse {
             this.access = Objects.requireNonNull(access);
             return this;
         }
-
         public Builder anonymousGID(@Nullable String anonymousGID) {
             this.anonymousGID = anonymousGID;
             return this;
         }
-
         public Builder anonymousUID(@Nullable String anonymousUID) {
             this.anonymousUID = anonymousUID;
             return this;
         }
-
         public Builder filter(@Nullable String filter) {
             this.filter = filter;
             return this;
         }
-
         public Builder rootSquash(@Nullable Boolean rootSquash) {
             this.rootSquash = rootSquash;
             return this;
         }
-
         public Builder scope(String scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
-
         public Builder submountAccess(@Nullable Boolean submountAccess) {
             this.submountAccess = submountAccess;
             return this;
         }
-
         public Builder suid(@Nullable Boolean suid) {
             this.suid = suid;
             return this;
-        }
-        public NfsAccessRuleResponse build() {
+        }        public NfsAccessRuleResponse build() {
             return new NfsAccessRuleResponse(access, anonymousGID, anonymousUID, filter, rootSquash, scope, submountAccess, suid);
         }
     }

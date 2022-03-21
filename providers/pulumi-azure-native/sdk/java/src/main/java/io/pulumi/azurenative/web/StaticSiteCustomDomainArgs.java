@@ -122,52 +122,42 @@ public final class StaticSiteCustomDomainArgs extends io.pulumi.resources.Resour
             this.domainName = domainName;
             return this;
         }
-
         public Builder domainName(@Nullable String domainName) {
             this.domainName = Output.ofNullable(domainName);
             return this;
         }
-
         public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder validationMethod(@Nullable Output<String> validationMethod) {
             this.validationMethod = validationMethod;
             return this;
         }
-
         public Builder validationMethod(@Nullable String validationMethod) {
             this.validationMethod = Output.ofNullable(validationMethod);
             return this;
-        }
-        public StaticSiteCustomDomainArgs build() {
+        }        public StaticSiteCustomDomainArgs build() {
             return new StaticSiteCustomDomainArgs(domainName, kind, name, resourceGroupName, validationMethod);
         }
     }

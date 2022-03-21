@@ -298,172 +298,141 @@ public final class DatabaseInstanceSettingsGetArgs extends io.pulumi.resources.R
             this.activationPolicy = activationPolicy;
             return this;
         }
-
         public Builder activationPolicy(@Nullable String activationPolicy) {
             this.activationPolicy = Output.ofNullable(activationPolicy);
             return this;
         }
-
         public Builder availabilityType(@Nullable Output<String> availabilityType) {
             this.availabilityType = availabilityType;
             return this;
         }
-
         public Builder availabilityType(@Nullable String availabilityType) {
             this.availabilityType = Output.ofNullable(availabilityType);
             return this;
         }
-
         public Builder backupConfiguration(@Nullable Output<DatabaseInstanceSettingsBackupConfigurationGetArgs> backupConfiguration) {
             this.backupConfiguration = backupConfiguration;
             return this;
         }
-
         public Builder backupConfiguration(@Nullable DatabaseInstanceSettingsBackupConfigurationGetArgs backupConfiguration) {
             this.backupConfiguration = Output.ofNullable(backupConfiguration);
             return this;
         }
-
         public Builder collation(@Nullable Output<String> collation) {
             this.collation = collation;
             return this;
         }
-
         public Builder collation(@Nullable String collation) {
             this.collation = Output.ofNullable(collation);
             return this;
         }
-
         public Builder databaseFlags(@Nullable Output<List<DatabaseInstanceSettingsDatabaseFlagGetArgs>> databaseFlags) {
             this.databaseFlags = databaseFlags;
             return this;
         }
-
         public Builder databaseFlags(@Nullable List<DatabaseInstanceSettingsDatabaseFlagGetArgs> databaseFlags) {
             this.databaseFlags = Output.ofNullable(databaseFlags);
             return this;
         }
-
+        public Builder databaseFlags(DatabaseInstanceSettingsDatabaseFlagGetArgs... databaseFlags) {
+            return databaseFlags(List.of(databaseFlags));
+        }
         public Builder diskAutoresize(@Nullable Output<Boolean> diskAutoresize) {
             this.diskAutoresize = diskAutoresize;
             return this;
         }
-
         public Builder diskAutoresize(@Nullable Boolean diskAutoresize) {
             this.diskAutoresize = Output.ofNullable(diskAutoresize);
             return this;
         }
-
         public Builder diskAutoresizeLimit(@Nullable Output<Integer> diskAutoresizeLimit) {
             this.diskAutoresizeLimit = diskAutoresizeLimit;
             return this;
         }
-
         public Builder diskAutoresizeLimit(@Nullable Integer diskAutoresizeLimit) {
             this.diskAutoresizeLimit = Output.ofNullable(diskAutoresizeLimit);
             return this;
         }
-
         public Builder diskSize(@Nullable Output<Integer> diskSize) {
             this.diskSize = diskSize;
             return this;
         }
-
         public Builder diskSize(@Nullable Integer diskSize) {
             this.diskSize = Output.ofNullable(diskSize);
             return this;
         }
-
         public Builder diskType(@Nullable Output<String> diskType) {
             this.diskType = diskType;
             return this;
         }
-
         public Builder diskType(@Nullable String diskType) {
             this.diskType = Output.ofNullable(diskType);
             return this;
         }
-
         public Builder insightsConfig(@Nullable Output<DatabaseInstanceSettingsInsightsConfigGetArgs> insightsConfig) {
             this.insightsConfig = insightsConfig;
             return this;
         }
-
         public Builder insightsConfig(@Nullable DatabaseInstanceSettingsInsightsConfigGetArgs insightsConfig) {
             this.insightsConfig = Output.ofNullable(insightsConfig);
             return this;
         }
-
         public Builder ipConfiguration(@Nullable Output<DatabaseInstanceSettingsIpConfigurationGetArgs> ipConfiguration) {
             this.ipConfiguration = ipConfiguration;
             return this;
         }
-
         public Builder ipConfiguration(@Nullable DatabaseInstanceSettingsIpConfigurationGetArgs ipConfiguration) {
             this.ipConfiguration = Output.ofNullable(ipConfiguration);
             return this;
         }
-
         public Builder locationPreference(@Nullable Output<DatabaseInstanceSettingsLocationPreferenceGetArgs> locationPreference) {
             this.locationPreference = locationPreference;
             return this;
         }
-
         public Builder locationPreference(@Nullable DatabaseInstanceSettingsLocationPreferenceGetArgs locationPreference) {
             this.locationPreference = Output.ofNullable(locationPreference);
             return this;
         }
-
         public Builder maintenanceWindow(@Nullable Output<DatabaseInstanceSettingsMaintenanceWindowGetArgs> maintenanceWindow) {
             this.maintenanceWindow = maintenanceWindow;
             return this;
         }
-
         public Builder maintenanceWindow(@Nullable DatabaseInstanceSettingsMaintenanceWindowGetArgs maintenanceWindow) {
             this.maintenanceWindow = Output.ofNullable(maintenanceWindow);
             return this;
         }
-
         public Builder pricingPlan(@Nullable Output<String> pricingPlan) {
             this.pricingPlan = pricingPlan;
             return this;
         }
-
         public Builder pricingPlan(@Nullable String pricingPlan) {
             this.pricingPlan = Output.ofNullable(pricingPlan);
             return this;
         }
-
         public Builder tier(Output<String> tier) {
             this.tier = Objects.requireNonNull(tier);
             return this;
         }
-
         public Builder tier(String tier) {
             this.tier = Output.of(Objects.requireNonNull(tier));
             return this;
         }
-
         public Builder userLabels(@Nullable Output<Map<String,String>> userLabels) {
             this.userLabels = userLabels;
             return this;
         }
-
         public Builder userLabels(@Nullable Map<String,String> userLabels) {
             this.userLabels = Output.ofNullable(userLabels);
             return this;
         }
-
         public Builder version(@Nullable Output<Integer> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable Integer version) {
             this.version = Output.ofNullable(version);
             return this;
-        }
-        public DatabaseInstanceSettingsGetArgs build() {
+        }        public DatabaseInstanceSettingsGetArgs build() {
             return new DatabaseInstanceSettingsGetArgs(activationPolicy, availabilityType, backupConfiguration, collation, databaseFlags, diskAutoresize, diskAutoresizeLimit, diskSize, diskType, insightsConfig, ipConfiguration, locationPreference, maintenanceWindow, pricingPlan, tier, userLabels, version);
         }
     }

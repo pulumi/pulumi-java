@@ -58,8 +58,7 @@ public final class GoogleCloudDialogflowCxV3EntityTypeExcludedPhraseResponse ext
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public GoogleCloudDialogflowCxV3EntityTypeExcludedPhraseResponse build() {
+        }        public GoogleCloudDialogflowCxV3EntityTypeExcludedPhraseResponse build() {
             return new GoogleCloudDialogflowCxV3EntityTypeExcludedPhraseResponse(value);
         }
     }

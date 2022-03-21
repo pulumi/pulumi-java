@@ -106,42 +106,34 @@ public final class ConnectorProfileRedshiftConnectorProfilePropertiesArgs extend
             this.bucketName = Objects.requireNonNull(bucketName);
             return this;
         }
-
         public Builder bucketName(String bucketName) {
             this.bucketName = Output.of(Objects.requireNonNull(bucketName));
             return this;
         }
-
         public Builder bucketPrefix(@Nullable Output<String> bucketPrefix) {
             this.bucketPrefix = bucketPrefix;
             return this;
         }
-
         public Builder bucketPrefix(@Nullable String bucketPrefix) {
             this.bucketPrefix = Output.ofNullable(bucketPrefix);
             return this;
         }
-
         public Builder databaseUrl(Output<String> databaseUrl) {
             this.databaseUrl = Objects.requireNonNull(databaseUrl);
             return this;
         }
-
         public Builder databaseUrl(String databaseUrl) {
             this.databaseUrl = Output.of(Objects.requireNonNull(databaseUrl));
             return this;
         }
-
         public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public Builder roleArn(String roleArn) {
             this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
-        }
-        public ConnectorProfileRedshiftConnectorProfilePropertiesArgs build() {
+        }        public ConnectorProfileRedshiftConnectorProfilePropertiesArgs build() {
             return new ConnectorProfileRedshiftConnectorProfilePropertiesArgs(bucketName, bucketPrefix, databaseUrl, roleArn);
         }
     }

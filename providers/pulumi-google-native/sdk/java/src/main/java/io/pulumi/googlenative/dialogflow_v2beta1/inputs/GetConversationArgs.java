@@ -78,17 +78,14 @@ public final class GetConversationArgs extends io.pulumi.resources.InvokeArgs {
             this.conversationId = Objects.requireNonNull(conversationId);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetConversationArgs build() {
+        }        public GetConversationArgs build() {
             return new GetConversationArgs(conversationId, location, project);
         }
     }

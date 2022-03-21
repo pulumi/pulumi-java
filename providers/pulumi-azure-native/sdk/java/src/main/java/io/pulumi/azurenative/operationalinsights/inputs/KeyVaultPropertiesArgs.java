@@ -111,42 +111,34 @@ public final class KeyVaultPropertiesArgs extends io.pulumi.resources.ResourceAr
             this.keyName = keyName;
             return this;
         }
-
         public Builder keyName(@Nullable String keyName) {
             this.keyName = Output.ofNullable(keyName);
             return this;
         }
-
         public Builder keyRsaSize(@Nullable Output<Integer> keyRsaSize) {
             this.keyRsaSize = keyRsaSize;
             return this;
         }
-
         public Builder keyRsaSize(@Nullable Integer keyRsaSize) {
             this.keyRsaSize = Output.ofNullable(keyRsaSize);
             return this;
         }
-
         public Builder keyVaultUri(@Nullable Output<String> keyVaultUri) {
             this.keyVaultUri = keyVaultUri;
             return this;
         }
-
         public Builder keyVaultUri(@Nullable String keyVaultUri) {
             this.keyVaultUri = Output.ofNullable(keyVaultUri);
             return this;
         }
-
         public Builder keyVersion(@Nullable Output<String> keyVersion) {
             this.keyVersion = keyVersion;
             return this;
         }
-
         public Builder keyVersion(@Nullable String keyVersion) {
             this.keyVersion = Output.ofNullable(keyVersion);
             return this;
-        }
-        public KeyVaultPropertiesArgs build() {
+        }        public KeyVaultPropertiesArgs build() {
             return new KeyVaultPropertiesArgs(keyName, keyRsaSize, keyVaultUri, keyVersion);
         }
     }

@@ -72,22 +72,18 @@ public final class SpotFleetBlockDeviceMapping {
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }
-
         public Builder ebs(@Nullable SpotFleetEbsBlockDevice ebs) {
             this.ebs = ebs;
             return this;
         }
-
         public Builder noDevice(@Nullable String noDevice) {
             this.noDevice = noDevice;
             return this;
         }
-
         public Builder virtualName(@Nullable String virtualName) {
             this.virtualName = virtualName;
             return this;
-        }
-        public SpotFleetBlockDeviceMapping build() {
+        }        public SpotFleetBlockDeviceMapping build() {
             return new SpotFleetBlockDeviceMapping(deviceName, ebs, noDevice, virtualName);
         }
     }

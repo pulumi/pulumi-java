@@ -79,22 +79,18 @@ public final class GoogleCloudDialogflowCxV3beta1VariantsHistoryArgs extends io.
             this.updateTime = updateTime;
             return this;
         }
-
         public Builder updateTime(@Nullable String updateTime) {
             this.updateTime = Output.ofNullable(updateTime);
             return this;
         }
-
         public Builder versionVariants(@Nullable Output<GoogleCloudDialogflowCxV3beta1VersionVariantsArgs> versionVariants) {
             this.versionVariants = versionVariants;
             return this;
         }
-
         public Builder versionVariants(@Nullable GoogleCloudDialogflowCxV3beta1VersionVariantsArgs versionVariants) {
             this.versionVariants = Output.ofNullable(versionVariants);
             return this;
-        }
-        public GoogleCloudDialogflowCxV3beta1VariantsHistoryArgs build() {
+        }        public GoogleCloudDialogflowCxV3beta1VariantsHistoryArgs build() {
             return new GoogleCloudDialogflowCxV3beta1VariantsHistoryArgs(updateTime, versionVariants);
         }
     }

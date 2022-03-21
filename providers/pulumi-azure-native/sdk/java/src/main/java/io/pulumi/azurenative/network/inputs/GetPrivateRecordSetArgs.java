@@ -104,22 +104,18 @@ public final class GetPrivateRecordSetArgs extends io.pulumi.resources.InvokeArg
             this.privateZoneName = Objects.requireNonNull(privateZoneName);
             return this;
         }
-
         public Builder recordType(String recordType) {
             this.recordType = Objects.requireNonNull(recordType);
             return this;
         }
-
         public Builder relativeRecordSetName(String relativeRecordSetName) {
             this.relativeRecordSetName = Objects.requireNonNull(relativeRecordSetName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetPrivateRecordSetArgs build() {
+        }        public GetPrivateRecordSetArgs build() {
             return new GetPrivateRecordSetArgs(privateZoneName, recordType, relativeRecordSetName, resourceGroupName);
         }
     }

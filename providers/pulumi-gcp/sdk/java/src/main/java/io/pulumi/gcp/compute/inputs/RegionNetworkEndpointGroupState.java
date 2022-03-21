@@ -205,92 +205,74 @@ public final class RegionNetworkEndpointGroupState extends io.pulumi.resources.R
             this.appEngine = appEngine;
             return this;
         }
-
         public Builder appEngine(@Nullable RegionNetworkEndpointGroupAppEngineGetArgs appEngine) {
             this.appEngine = Output.ofNullable(appEngine);
             return this;
         }
-
         public Builder cloudFunction(@Nullable Output<RegionNetworkEndpointGroupCloudFunctionGetArgs> cloudFunction) {
             this.cloudFunction = cloudFunction;
             return this;
         }
-
         public Builder cloudFunction(@Nullable RegionNetworkEndpointGroupCloudFunctionGetArgs cloudFunction) {
             this.cloudFunction = Output.ofNullable(cloudFunction);
             return this;
         }
-
         public Builder cloudRun(@Nullable Output<RegionNetworkEndpointGroupCloudRunGetArgs> cloudRun) {
             this.cloudRun = cloudRun;
             return this;
         }
-
         public Builder cloudRun(@Nullable RegionNetworkEndpointGroupCloudRunGetArgs cloudRun) {
             this.cloudRun = Output.ofNullable(cloudRun);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder networkEndpointType(@Nullable Output<String> networkEndpointType) {
             this.networkEndpointType = networkEndpointType;
             return this;
         }
-
         public Builder networkEndpointType(@Nullable String networkEndpointType) {
             this.networkEndpointType = Output.ofNullable(networkEndpointType);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
-
         public Builder region(@Nullable String region) {
             this.region = Output.ofNullable(region);
             return this;
         }
-
         public Builder selfLink(@Nullable Output<String> selfLink) {
             this.selfLink = selfLink;
             return this;
         }
-
         public Builder selfLink(@Nullable String selfLink) {
             this.selfLink = Output.ofNullable(selfLink);
             return this;
-        }
-        public RegionNetworkEndpointGroupState build() {
+        }        public RegionNetworkEndpointGroupState build() {
             return new RegionNetworkEndpointGroupState(appEngine, cloudFunction, cloudRun, description, name, networkEndpointType, project, region, selfLink);
         }
     }

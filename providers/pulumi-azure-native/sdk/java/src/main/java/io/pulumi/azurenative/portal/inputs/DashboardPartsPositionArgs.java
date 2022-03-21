@@ -129,52 +129,42 @@ public final class DashboardPartsPositionArgs extends io.pulumi.resources.Resour
             this.colSpan = Objects.requireNonNull(colSpan);
             return this;
         }
-
         public Builder colSpan(Integer colSpan) {
             this.colSpan = Output.of(Objects.requireNonNull(colSpan));
             return this;
         }
-
         public Builder metadata(@Nullable Output<Map<String,Object>> metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder metadata(@Nullable Map<String,Object> metadata) {
             this.metadata = Output.ofNullable(metadata);
             return this;
         }
-
         public Builder rowSpan(Output<Integer> rowSpan) {
             this.rowSpan = Objects.requireNonNull(rowSpan);
             return this;
         }
-
         public Builder rowSpan(Integer rowSpan) {
             this.rowSpan = Output.of(Objects.requireNonNull(rowSpan));
             return this;
         }
-
         public Builder x(Output<Integer> x) {
             this.x = Objects.requireNonNull(x);
             return this;
         }
-
         public Builder x(Integer x) {
             this.x = Output.of(Objects.requireNonNull(x));
             return this;
         }
-
         public Builder y(Output<Integer> y) {
             this.y = Objects.requireNonNull(y);
             return this;
         }
-
         public Builder y(Integer y) {
             this.y = Output.of(Objects.requireNonNull(y));
             return this;
-        }
-        public DashboardPartsPositionArgs build() {
+        }        public DashboardPartsPositionArgs build() {
             return new DashboardPartsPositionArgs(colSpan, metadata, rowSpan, x, y);
         }
     }

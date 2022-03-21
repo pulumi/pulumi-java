@@ -85,17 +85,14 @@ public final class RoleRef {
             this.apiGroup = Objects.requireNonNull(apiGroup);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public RoleRef build() {
+        }        public RoleRef build() {
             return new RoleRef(apiGroup, kind, name);
         }
     }

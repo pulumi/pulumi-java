@@ -72,12 +72,10 @@ public final class RouteWarningsItemDataItemResponse extends io.pulumi.resources
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public RouteWarningsItemDataItemResponse build() {
+        }        public RouteWarningsItemDataItemResponse build() {
             return new RouteWarningsItemDataItemResponse(key, value);
         }
     }

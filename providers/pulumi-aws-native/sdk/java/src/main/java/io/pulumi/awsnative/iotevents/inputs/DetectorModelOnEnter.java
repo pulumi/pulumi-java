@@ -62,7 +62,9 @@ public final class DetectorModelOnEnter extends io.pulumi.resources.InvokeArgs {
             this.events = events;
             return this;
         }
-        public DetectorModelOnEnter build() {
+        public Builder events(DetectorModelEvent... events) {
+            return events(List.of(events));
+        }        public DetectorModelOnEnter build() {
             return new DetectorModelOnEnter(events);
         }
     }

@@ -73,22 +73,18 @@ public final class StageAccessLogSettingsArgs extends io.pulumi.resources.Resour
             this.destinationArn = Objects.requireNonNull(destinationArn);
             return this;
         }
-
         public Builder destinationArn(String destinationArn) {
             this.destinationArn = Output.of(Objects.requireNonNull(destinationArn));
             return this;
         }
-
         public Builder format(Output<String> format) {
             this.format = Objects.requireNonNull(format);
             return this;
         }
-
         public Builder format(String format) {
             this.format = Output.of(Objects.requireNonNull(format));
             return this;
-        }
-        public StageAccessLogSettingsArgs build() {
+        }        public StageAccessLogSettingsArgs build() {
             return new StageAccessLogSettingsArgs(destinationArn, format);
         }
     }

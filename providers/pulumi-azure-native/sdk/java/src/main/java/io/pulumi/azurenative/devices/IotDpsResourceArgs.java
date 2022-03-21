@@ -141,62 +141,50 @@ public final class IotDpsResourceArgs extends io.pulumi.resources.ResourceArgs {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder properties(Output<IotDpsPropertiesDescriptionArgs> properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
-
         public Builder properties(IotDpsPropertiesDescriptionArgs properties) {
             this.properties = Output.of(Objects.requireNonNull(properties));
             return this;
         }
-
         public Builder provisioningServiceName(@Nullable Output<String> provisioningServiceName) {
             this.provisioningServiceName = provisioningServiceName;
             return this;
         }
-
         public Builder provisioningServiceName(@Nullable String provisioningServiceName) {
             this.provisioningServiceName = Output.ofNullable(provisioningServiceName);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder sku(Output<IotDpsSkuInfoArgs> sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
-
         public Builder sku(IotDpsSkuInfoArgs sku) {
             this.sku = Output.of(Objects.requireNonNull(sku));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public IotDpsResourceArgs build() {
+        }        public IotDpsResourceArgs build() {
             return new IotDpsResourceArgs(location, properties, provisioningServiceName, resourceGroupName, sku, tags);
         }
     }

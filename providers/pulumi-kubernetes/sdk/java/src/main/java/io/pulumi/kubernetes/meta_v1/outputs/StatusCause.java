@@ -95,17 +95,14 @@ public final class StatusCause {
             this.field = field;
             return this;
         }
-
         public Builder message(@Nullable String message) {
             this.message = message;
             return this;
         }
-
         public Builder reason(@Nullable String reason) {
             this.reason = reason;
             return this;
-        }
-        public StatusCause build() {
+        }        public StatusCause build() {
             return new StatusCause(field, message, reason);
         }
     }

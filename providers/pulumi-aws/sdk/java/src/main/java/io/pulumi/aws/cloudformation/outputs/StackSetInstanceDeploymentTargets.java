@@ -46,7 +46,9 @@ public final class StackSetInstanceDeploymentTargets {
             this.organizationalUnitIds = organizationalUnitIds;
             return this;
         }
-        public StackSetInstanceDeploymentTargets build() {
+        public Builder organizationalUnitIds(String... organizationalUnitIds) {
+            return organizationalUnitIds(List.of(organizationalUnitIds));
+        }        public StackSetInstanceDeploymentTargets build() {
             return new StackSetInstanceDeploymentTargets(organizationalUnitIds);
         }
     }

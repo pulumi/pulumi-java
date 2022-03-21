@@ -107,42 +107,34 @@ public final class StandardAppVersionAutomaticScalingStandardSchedulerSettingsGe
             this.maxInstances = maxInstances;
             return this;
         }
-
         public Builder maxInstances(@Nullable Integer maxInstances) {
             this.maxInstances = Output.ofNullable(maxInstances);
             return this;
         }
-
         public Builder minInstances(@Nullable Output<Integer> minInstances) {
             this.minInstances = minInstances;
             return this;
         }
-
         public Builder minInstances(@Nullable Integer minInstances) {
             this.minInstances = Output.ofNullable(minInstances);
             return this;
         }
-
         public Builder targetCpuUtilization(@Nullable Output<Double> targetCpuUtilization) {
             this.targetCpuUtilization = targetCpuUtilization;
             return this;
         }
-
         public Builder targetCpuUtilization(@Nullable Double targetCpuUtilization) {
             this.targetCpuUtilization = Output.ofNullable(targetCpuUtilization);
             return this;
         }
-
         public Builder targetThroughputUtilization(@Nullable Output<Double> targetThroughputUtilization) {
             this.targetThroughputUtilization = targetThroughputUtilization;
             return this;
         }
-
         public Builder targetThroughputUtilization(@Nullable Double targetThroughputUtilization) {
             this.targetThroughputUtilization = Output.ofNullable(targetThroughputUtilization);
             return this;
-        }
-        public StandardAppVersionAutomaticScalingStandardSchedulerSettingsGetArgs build() {
+        }        public StandardAppVersionAutomaticScalingStandardSchedulerSettingsGetArgs build() {
             return new StandardAppVersionAutomaticScalingStandardSchedulerSettingsGetArgs(maxInstances, minInstances, targetCpuUtilization, targetThroughputUtilization);
         }
     }

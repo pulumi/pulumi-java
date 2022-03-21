@@ -157,72 +157,58 @@ public final class ApiState extends io.pulumi.resources.ResourceArgs {
             this.apiId = apiId;
             return this;
         }
-
         public Builder apiId(@Nullable String apiId) {
             this.apiId = Output.ofNullable(apiId);
             return this;
         }
-
         public Builder createTime(@Nullable Output<String> createTime) {
             this.createTime = createTime;
             return this;
         }
-
         public Builder createTime(@Nullable String createTime) {
             this.createTime = Output.ofNullable(createTime);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder managedService(@Nullable Output<String> managedService) {
             this.managedService = managedService;
             return this;
         }
-
         public Builder managedService(@Nullable String managedService) {
             this.managedService = Output.ofNullable(managedService);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
-        }
-        public ApiState build() {
+        }        public ApiState build() {
             return new ApiState(apiId, createTime, displayName, labels, managedService, name, project);
         }
     }

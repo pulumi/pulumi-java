@@ -51,8 +51,7 @@ public final class RuleGroupRuleGroupStatefulRuleOptions {
         public Builder ruleOrder(String ruleOrder) {
             this.ruleOrder = Objects.requireNonNull(ruleOrder);
             return this;
-        }
-        public RuleGroupRuleGroupStatefulRuleOptions build() {
+        }        public RuleGroupRuleGroupStatefulRuleOptions build() {
             return new RuleGroupRuleGroupStatefulRuleOptions(ruleOrder);
         }
     }

@@ -128,27 +128,25 @@ public final class RulesEngineResponse extends io.pulumi.resources.InvokeArgs {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder resourceState(String resourceState) {
             this.resourceState = Objects.requireNonNull(resourceState);
             return this;
         }
-
         public Builder rules(@Nullable List<RulesEngineRuleResponse> rules) {
             this.rules = rules;
             return this;
         }
-
+        public Builder rules(RulesEngineRuleResponse... rules) {
+            return rules(List.of(rules));
+        }
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public RulesEngineResponse build() {
+        }        public RulesEngineResponse build() {
             return new RulesEngineResponse(id, name, resourceState, rules, type);
         }
     }

@@ -60,12 +60,10 @@ public final class BotCustomPayloadArgs extends io.pulumi.resources.ResourceArgs
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Output.of(Objects.requireNonNull(value));
             return this;
-        }
-        public BotCustomPayloadArgs build() {
+        }        public BotCustomPayloadArgs build() {
             return new BotCustomPayloadArgs(value);
         }
     }

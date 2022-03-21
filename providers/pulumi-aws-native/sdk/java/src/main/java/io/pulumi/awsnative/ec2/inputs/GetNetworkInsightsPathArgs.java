@@ -50,8 +50,7 @@ public final class GetNetworkInsightsPathArgs extends io.pulumi.resources.Invoke
         public Builder networkInsightsPathId(String networkInsightsPathId) {
             this.networkInsightsPathId = Objects.requireNonNull(networkInsightsPathId);
             return this;
-        }
-        public GetNetworkInsightsPathArgs build() {
+        }        public GetNetworkInsightsPathArgs build() {
             return new GetNetworkInsightsPathArgs(networkInsightsPathId);
         }
     }

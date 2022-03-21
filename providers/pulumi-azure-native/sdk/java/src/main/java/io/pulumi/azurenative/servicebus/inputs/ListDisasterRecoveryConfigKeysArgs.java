@@ -104,22 +104,18 @@ public final class ListDisasterRecoveryConfigKeysArgs extends io.pulumi.resource
             this.alias = Objects.requireNonNull(alias);
             return this;
         }
-
         public Builder authorizationRuleName(String authorizationRuleName) {
             this.authorizationRuleName = Objects.requireNonNull(authorizationRuleName);
             return this;
         }
-
         public Builder namespaceName(String namespaceName) {
             this.namespaceName = Objects.requireNonNull(namespaceName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public ListDisasterRecoveryConfigKeysArgs build() {
+        }        public ListDisasterRecoveryConfigKeysArgs build() {
             return new ListDisasterRecoveryConfigKeysArgs(alias, authorizationRuleName, namespaceName, resourceGroupName);
         }
     }

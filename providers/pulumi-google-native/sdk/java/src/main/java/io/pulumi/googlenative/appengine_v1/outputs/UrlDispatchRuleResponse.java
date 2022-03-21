@@ -85,17 +85,14 @@ public final class UrlDispatchRuleResponse {
             this.domain = Objects.requireNonNull(domain);
             return this;
         }
-
         public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
-
         public Builder service(String service) {
             this.service = Objects.requireNonNull(service);
             return this;
-        }
-        public UrlDispatchRuleResponse build() {
+        }        public UrlDispatchRuleResponse build() {
             return new UrlDispatchRuleResponse(domain, path, service);
         }
     }

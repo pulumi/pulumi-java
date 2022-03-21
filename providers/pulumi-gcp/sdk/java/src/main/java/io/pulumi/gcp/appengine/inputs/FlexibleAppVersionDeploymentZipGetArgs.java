@@ -75,22 +75,18 @@ public final class FlexibleAppVersionDeploymentZipGetArgs extends io.pulumi.reso
             this.filesCount = filesCount;
             return this;
         }
-
         public Builder filesCount(@Nullable Integer filesCount) {
             this.filesCount = Output.ofNullable(filesCount);
             return this;
         }
-
         public Builder sourceUrl(Output<String> sourceUrl) {
             this.sourceUrl = Objects.requireNonNull(sourceUrl);
             return this;
         }
-
         public Builder sourceUrl(String sourceUrl) {
             this.sourceUrl = Output.of(Objects.requireNonNull(sourceUrl));
             return this;
-        }
-        public FlexibleAppVersionDeploymentZipGetArgs build() {
+        }        public FlexibleAppVersionDeploymentZipGetArgs build() {
             return new FlexibleAppVersionDeploymentZipGetArgs(filesCount, sourceUrl);
         }
     }

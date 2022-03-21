@@ -98,32 +98,26 @@ public final class ReportScheduleArgs extends io.pulumi.resources.ResourceArgs {
             this.recurrence = Objects.requireNonNull(recurrence);
             return this;
         }
-
         public Builder recurrence(Either<String,RecurrenceType> recurrence) {
             this.recurrence = Output.of(Objects.requireNonNull(recurrence));
             return this;
         }
-
         public Builder recurrencePeriod(@Nullable Output<ReportRecurrencePeriodArgs> recurrencePeriod) {
             this.recurrencePeriod = recurrencePeriod;
             return this;
         }
-
         public Builder recurrencePeriod(@Nullable ReportRecurrencePeriodArgs recurrencePeriod) {
             this.recurrencePeriod = Output.ofNullable(recurrencePeriod);
             return this;
         }
-
         public Builder status(@Nullable Output<Either<String,StatusType>> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable Either<String,StatusType> status) {
             this.status = Output.ofNullable(status);
             return this;
-        }
-        public ReportScheduleArgs build() {
+        }        public ReportScheduleArgs build() {
             return new ReportScheduleArgs(recurrence, recurrencePeriod, status);
         }
     }

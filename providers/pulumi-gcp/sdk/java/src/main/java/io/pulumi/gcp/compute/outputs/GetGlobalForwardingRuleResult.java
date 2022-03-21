@@ -170,77 +170,65 @@ public final class GetGlobalForwardingRuleResult {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder ipAddress(String ipAddress) {
             this.ipAddress = Objects.requireNonNull(ipAddress);
             return this;
         }
-
         public Builder ipProtocol(String ipProtocol) {
             this.ipProtocol = Objects.requireNonNull(ipProtocol);
             return this;
         }
-
         public Builder ipVersion(String ipVersion) {
             this.ipVersion = Objects.requireNonNull(ipVersion);
             return this;
         }
-
         public Builder labelFingerprint(String labelFingerprint) {
             this.labelFingerprint = Objects.requireNonNull(labelFingerprint);
             return this;
         }
-
         public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder loadBalancingScheme(String loadBalancingScheme) {
             this.loadBalancingScheme = Objects.requireNonNull(loadBalancingScheme);
             return this;
         }
-
         public Builder metadataFilters(List<GetGlobalForwardingRuleMetadataFilter> metadataFilters) {
             this.metadataFilters = Objects.requireNonNull(metadataFilters);
             return this;
         }
-
+        public Builder metadataFilters(GetGlobalForwardingRuleMetadataFilter... metadataFilters) {
+            return metadataFilters(List.of(metadataFilters));
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder network(String network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }
-
         public Builder portRange(String portRange) {
             this.portRange = Objects.requireNonNull(portRange);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
-
         public Builder target(String target) {
             this.target = Objects.requireNonNull(target);
             return this;
-        }
-        public GetGlobalForwardingRuleResult build() {
+        }        public GetGlobalForwardingRuleResult build() {
             return new GetGlobalForwardingRuleResult(description, id, ipAddress, ipProtocol, ipVersion, labelFingerprint, labels, loadBalancingScheme, metadataFilters, name, network, portRange, project, selfLink, target);
         }
     }

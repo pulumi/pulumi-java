@@ -91,17 +91,20 @@ public final class FunctionImageConfig extends io.pulumi.resources.InvokeArgs {
             this.command = command;
             return this;
         }
-
+        public Builder command(String... command) {
+            return command(List.of(command));
+        }
         public Builder entryPoint(@Nullable List<String> entryPoint) {
             this.entryPoint = entryPoint;
             return this;
         }
-
+        public Builder entryPoint(String... entryPoint) {
+            return entryPoint(List.of(entryPoint));
+        }
         public Builder workingDirectory(@Nullable String workingDirectory) {
             this.workingDirectory = workingDirectory;
             return this;
-        }
-        public FunctionImageConfig build() {
+        }        public FunctionImageConfig build() {
             return new FunctionImageConfig(command, entryPoint, workingDirectory);
         }
     }

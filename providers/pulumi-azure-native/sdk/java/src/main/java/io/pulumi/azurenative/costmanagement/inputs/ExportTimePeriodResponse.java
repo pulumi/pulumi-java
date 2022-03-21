@@ -76,12 +76,10 @@ public final class ExportTimePeriodResponse extends io.pulumi.resources.InvokeAr
             this.from = Objects.requireNonNull(from);
             return this;
         }
-
         public Builder to(String to) {
             this.to = Objects.requireNonNull(to);
             return this;
-        }
-        public ExportTimePeriodResponse build() {
+        }        public ExportTimePeriodResponse build() {
             return new ExportTimePeriodResponse(from, to);
         }
     }

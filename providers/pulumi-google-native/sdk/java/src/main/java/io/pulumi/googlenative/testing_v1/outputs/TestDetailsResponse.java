@@ -70,12 +70,13 @@ public final class TestDetailsResponse {
             this.errorMessage = Objects.requireNonNull(errorMessage);
             return this;
         }
-
         public Builder progressMessages(List<String> progressMessages) {
             this.progressMessages = Objects.requireNonNull(progressMessages);
             return this;
         }
-        public TestDetailsResponse build() {
+        public Builder progressMessages(String... progressMessages) {
+            return progressMessages(List.of(progressMessages));
+        }        public TestDetailsResponse build() {
             return new TestDetailsResponse(errorMessage, progressMessages);
         }
     }

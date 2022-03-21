@@ -78,12 +78,10 @@ public final class LoadBalancerNatRuleReferenceResponse extends io.pulumi.resour
             this.name = name;
             return this;
         }
-
         public Builder sourceArmResourceId(String sourceArmResourceId) {
             this.sourceArmResourceId = Objects.requireNonNull(sourceArmResourceId);
             return this;
-        }
-        public LoadBalancerNatRuleReferenceResponse build() {
+        }        public LoadBalancerNatRuleReferenceResponse build() {
             return new LoadBalancerNatRuleReferenceResponse(name, sourceArmResourceId);
         }
     }

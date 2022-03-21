@@ -67,22 +67,18 @@ public final class InstanceFromTemplateAdvancedMachineFeaturesArgs extends io.pu
             this.enableNestedVirtualization = enableNestedVirtualization;
             return this;
         }
-
         public Builder enableNestedVirtualization(@Nullable Boolean enableNestedVirtualization) {
             this.enableNestedVirtualization = Output.ofNullable(enableNestedVirtualization);
             return this;
         }
-
         public Builder threadsPerCore(@Nullable Output<Integer> threadsPerCore) {
             this.threadsPerCore = threadsPerCore;
             return this;
         }
-
         public Builder threadsPerCore(@Nullable Integer threadsPerCore) {
             this.threadsPerCore = Output.ofNullable(threadsPerCore);
             return this;
-        }
-        public InstanceFromTemplateAdvancedMachineFeaturesArgs build() {
+        }        public InstanceFromTemplateAdvancedMachineFeaturesArgs build() {
             return new InstanceFromTemplateAdvancedMachineFeaturesArgs(enableNestedVirtualization, threadsPerCore);
         }
     }

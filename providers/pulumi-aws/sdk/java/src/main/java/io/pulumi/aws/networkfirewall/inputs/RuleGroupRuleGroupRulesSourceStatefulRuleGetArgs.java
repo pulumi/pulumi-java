@@ -92,32 +92,29 @@ public final class RuleGroupRuleGroupRulesSourceStatefulRuleGetArgs extends io.p
             this.action = Objects.requireNonNull(action);
             return this;
         }
-
         public Builder action(String action) {
             this.action = Output.of(Objects.requireNonNull(action));
             return this;
         }
-
         public Builder header(Output<RuleGroupRuleGroupRulesSourceStatefulRuleHeaderGetArgs> header) {
             this.header = Objects.requireNonNull(header);
             return this;
         }
-
         public Builder header(RuleGroupRuleGroupRulesSourceStatefulRuleHeaderGetArgs header) {
             this.header = Output.of(Objects.requireNonNull(header));
             return this;
         }
-
         public Builder ruleOptions(Output<List<RuleGroupRuleGroupRulesSourceStatefulRuleRuleOptionGetArgs>> ruleOptions) {
             this.ruleOptions = Objects.requireNonNull(ruleOptions);
             return this;
         }
-
         public Builder ruleOptions(List<RuleGroupRuleGroupRulesSourceStatefulRuleRuleOptionGetArgs> ruleOptions) {
             this.ruleOptions = Output.of(Objects.requireNonNull(ruleOptions));
             return this;
         }
-        public RuleGroupRuleGroupRulesSourceStatefulRuleGetArgs build() {
+        public Builder ruleOptions(RuleGroupRuleGroupRulesSourceStatefulRuleRuleOptionGetArgs... ruleOptions) {
+            return ruleOptions(List.of(ruleOptions));
+        }        public RuleGroupRuleGroupRulesSourceStatefulRuleGetArgs build() {
             return new RuleGroupRuleGroupRulesSourceStatefulRuleGetArgs(action, header, ruleOptions);
         }
     }

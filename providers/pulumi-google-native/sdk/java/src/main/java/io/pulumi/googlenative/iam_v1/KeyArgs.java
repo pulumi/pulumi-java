@@ -100,42 +100,34 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
             this.keyAlgorithm = keyAlgorithm;
             return this;
         }
-
         public Builder keyAlgorithm(@Nullable KeyKeyAlgorithm keyAlgorithm) {
             this.keyAlgorithm = Output.ofNullable(keyAlgorithm);
             return this;
         }
-
         public Builder privateKeyType(@Nullable Output<KeyPrivateKeyType> privateKeyType) {
             this.privateKeyType = privateKeyType;
             return this;
         }
-
         public Builder privateKeyType(@Nullable KeyPrivateKeyType privateKeyType) {
             this.privateKeyType = Output.ofNullable(privateKeyType);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder serviceAccountId(Output<String> serviceAccountId) {
             this.serviceAccountId = Objects.requireNonNull(serviceAccountId);
             return this;
         }
-
         public Builder serviceAccountId(String serviceAccountId) {
             this.serviceAccountId = Output.of(Objects.requireNonNull(serviceAccountId));
             return this;
-        }
-        public KeyArgs build() {
+        }        public KeyArgs build() {
             return new KeyArgs(keyAlgorithm, privateKeyType, project, serviceAccountId);
         }
     }

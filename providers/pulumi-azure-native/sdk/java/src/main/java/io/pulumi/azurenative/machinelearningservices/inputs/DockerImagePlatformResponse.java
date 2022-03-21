@@ -56,8 +56,7 @@ public final class DockerImagePlatformResponse extends io.pulumi.resources.Invok
         public Builder operatingSystemType(@Nullable String operatingSystemType) {
             this.operatingSystemType = operatingSystemType;
             return this;
-        }
-        public DockerImagePlatformResponse build() {
+        }        public DockerImagePlatformResponse build() {
             return new DockerImagePlatformResponse(operatingSystemType);
         }
     }

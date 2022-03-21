@@ -105,32 +105,29 @@ public final class GetAccountIdTokenResult {
             this.delegates = delegates;
             return this;
         }
-
+        public Builder delegates(String... delegates) {
+            return delegates(List.of(delegates));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder idToken(String idToken) {
             this.idToken = Objects.requireNonNull(idToken);
             return this;
         }
-
         public Builder includeEmail(@Nullable Boolean includeEmail) {
             this.includeEmail = includeEmail;
             return this;
         }
-
         public Builder targetAudience(String targetAudience) {
             this.targetAudience = Objects.requireNonNull(targetAudience);
             return this;
         }
-
         public Builder targetServiceAccount(@Nullable String targetServiceAccount) {
             this.targetServiceAccount = targetServiceAccount;
             return this;
-        }
-        public GetAccountIdTokenResult build() {
+        }        public GetAccountIdTokenResult build() {
             return new GetAccountIdTokenResult(delegates, id, idToken, includeEmail, targetAudience, targetServiceAccount);
         }
     }

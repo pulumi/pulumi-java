@@ -249,62 +249,53 @@ public final class AzureBatchLinkedServiceResponse extends io.pulumi.resources.I
             this.accessKey = accessKey;
             return this;
         }
-
         public Builder accountName(Object accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder annotations(@Nullable List<Object> annotations) {
             this.annotations = annotations;
             return this;
         }
-
+        public Builder annotations(Object... annotations) {
+            return annotations(List.of(annotations));
+        }
         public Builder batchUri(Object batchUri) {
             this.batchUri = Objects.requireNonNull(batchUri);
             return this;
         }
-
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
             this.connectVia = connectVia;
             return this;
         }
-
         public Builder credential(@Nullable CredentialReferenceResponse credential) {
             this.credential = credential;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
             this.encryptedCredential = encryptedCredential;
             return this;
         }
-
         public Builder linkedServiceName(LinkedServiceReferenceResponse linkedServiceName) {
             this.linkedServiceName = Objects.requireNonNull(linkedServiceName);
             return this;
         }
-
         public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder poolName(Object poolName) {
             this.poolName = Objects.requireNonNull(poolName);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public AzureBatchLinkedServiceResponse build() {
+        }        public AzureBatchLinkedServiceResponse build() {
             return new AzureBatchLinkedServiceResponse(accessKey, accountName, annotations, batchUri, connectVia, credential, description, encryptedCredential, linkedServiceName, parameters, poolName, type);
         }
     }

@@ -112,42 +112,34 @@ public final class CmdkeySetupArgs extends io.pulumi.resources.ResourceArgs {
             this.password = Objects.requireNonNull(password);
             return this;
         }
-
         public Builder password(SecureStringArgs password) {
             this.password = Output.of(Objects.requireNonNull(password));
             return this;
         }
-
         public Builder targetName(Output<Object> targetName) {
             this.targetName = Objects.requireNonNull(targetName);
             return this;
         }
-
         public Builder targetName(Object targetName) {
             this.targetName = Output.of(Objects.requireNonNull(targetName));
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
-
         public Builder userName(Output<Object> userName) {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }
-
         public Builder userName(Object userName) {
             this.userName = Output.of(Objects.requireNonNull(userName));
             return this;
-        }
-        public CmdkeySetupArgs build() {
+        }        public CmdkeySetupArgs build() {
             return new CmdkeySetupArgs(password, targetName, type, userName);
         }
     }

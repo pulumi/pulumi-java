@@ -54,8 +54,7 @@ public final class ListGlobalUserLabsArgs extends io.pulumi.resources.InvokeArgs
         public Builder userName(String userName) {
             this.userName = Objects.requireNonNull(userName);
             return this;
-        }
-        public ListGlobalUserLabsArgs build() {
+        }        public ListGlobalUserLabsArgs build() {
             return new ListGlobalUserLabsArgs(userName);
         }
     }

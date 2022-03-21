@@ -194,112 +194,96 @@ public final class DetectorRuleArgs extends io.pulumi.resources.ResourceArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder createdTime(@Nullable Output<String> createdTime) {
             this.createdTime = createdTime;
             return this;
         }
-
         public Builder createdTime(@Nullable String createdTime) {
             this.createdTime = Output.ofNullable(createdTime);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder detectorId(@Nullable Output<String> detectorId) {
             this.detectorId = detectorId;
             return this;
         }
-
         public Builder detectorId(@Nullable String detectorId) {
             this.detectorId = Output.ofNullable(detectorId);
             return this;
         }
-
         public Builder expression(@Nullable Output<String> expression) {
             this.expression = expression;
             return this;
         }
-
         public Builder expression(@Nullable String expression) {
             this.expression = Output.ofNullable(expression);
             return this;
         }
-
         public Builder language(@Nullable Output<DetectorRuleLanguage> language) {
             this.language = language;
             return this;
         }
-
         public Builder language(@Nullable DetectorRuleLanguage language) {
             this.language = Output.ofNullable(language);
             return this;
         }
-
         public Builder lastUpdatedTime(@Nullable Output<String> lastUpdatedTime) {
             this.lastUpdatedTime = lastUpdatedTime;
             return this;
         }
-
         public Builder lastUpdatedTime(@Nullable String lastUpdatedTime) {
             this.lastUpdatedTime = Output.ofNullable(lastUpdatedTime);
             return this;
         }
-
         public Builder outcomes(@Nullable Output<List<DetectorOutcomeArgs>> outcomes) {
             this.outcomes = outcomes;
             return this;
         }
-
         public Builder outcomes(@Nullable List<DetectorOutcomeArgs> outcomes) {
             this.outcomes = Output.ofNullable(outcomes);
             return this;
         }
-
+        public Builder outcomes(DetectorOutcomeArgs... outcomes) {
+            return outcomes(List.of(outcomes));
+        }
         public Builder ruleId(@Nullable Output<String> ruleId) {
             this.ruleId = ruleId;
             return this;
         }
-
         public Builder ruleId(@Nullable String ruleId) {
             this.ruleId = Output.ofNullable(ruleId);
             return this;
         }
-
         public Builder ruleVersion(@Nullable Output<String> ruleVersion) {
             this.ruleVersion = ruleVersion;
             return this;
         }
-
         public Builder ruleVersion(@Nullable String ruleVersion) {
             this.ruleVersion = Output.ofNullable(ruleVersion);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<DetectorTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<DetectorTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public DetectorRuleArgs build() {
+        public Builder tags(DetectorTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public DetectorRuleArgs build() {
             return new DetectorRuleArgs(arn, createdTime, description, detectorId, expression, language, lastUpdatedTime, outcomes, ruleId, ruleVersion, tags);
         }
     }

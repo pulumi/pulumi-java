@@ -64,12 +64,10 @@ public final class GetThemeArgs extends io.pulumi.resources.InvokeArgs {
             this.awsAccountId = Objects.requireNonNull(awsAccountId);
             return this;
         }
-
         public Builder themeId(String themeId) {
             this.themeId = Objects.requireNonNull(themeId);
             return this;
-        }
-        public GetThemeArgs build() {
+        }        public GetThemeArgs build() {
             return new GetThemeArgs(awsAccountId, themeId);
         }
     }

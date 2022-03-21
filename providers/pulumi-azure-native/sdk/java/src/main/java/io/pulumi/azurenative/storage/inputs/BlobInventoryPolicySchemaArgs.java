@@ -114,42 +114,37 @@ public final class BlobInventoryPolicySchemaArgs extends io.pulumi.resources.Res
             this.destination = Objects.requireNonNull(destination);
             return this;
         }
-
         public Builder destination(String destination) {
             this.destination = Output.of(Objects.requireNonNull(destination));
             return this;
         }
-
         public Builder enabled(Output<Boolean> enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public Builder enabled(Boolean enabled) {
             this.enabled = Output.of(Objects.requireNonNull(enabled));
             return this;
         }
-
         public Builder rules(Output<List<BlobInventoryPolicyRuleArgs>> rules) {
             this.rules = Objects.requireNonNull(rules);
             return this;
         }
-
         public Builder rules(List<BlobInventoryPolicyRuleArgs> rules) {
             this.rules = Output.of(Objects.requireNonNull(rules));
             return this;
         }
-
+        public Builder rules(BlobInventoryPolicyRuleArgs... rules) {
+            return rules(List.of(rules));
+        }
         public Builder type(Output<Either<String,InventoryRuleType>> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(Either<String,InventoryRuleType> type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public BlobInventoryPolicySchemaArgs build() {
+        }        public BlobInventoryPolicySchemaArgs build() {
             return new BlobInventoryPolicySchemaArgs(destination, enabled, rules, type);
         }
     }

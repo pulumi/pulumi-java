@@ -54,7 +54,9 @@ public final class CachePolicyParametersInCacheKeyAndForwardedToOriginQueryStrin
             this.items = items;
             return this;
         }
-        public CachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfigQueryStrings build() {
+        public Builder items(String... items) {
+            return items(List.of(items));
+        }        public CachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfigQueryStrings build() {
             return new CachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfigQueryStrings(items);
         }
     }

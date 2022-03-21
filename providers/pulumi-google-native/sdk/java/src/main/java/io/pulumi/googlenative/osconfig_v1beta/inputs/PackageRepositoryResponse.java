@@ -111,22 +111,18 @@ public final class PackageRepositoryResponse extends io.pulumi.resources.InvokeA
             this.apt = Objects.requireNonNull(apt);
             return this;
         }
-
         public Builder goo(GooRepositoryResponse goo) {
             this.goo = Objects.requireNonNull(goo);
             return this;
         }
-
         public Builder yum(YumRepositoryResponse yum) {
             this.yum = Objects.requireNonNull(yum);
             return this;
         }
-
         public Builder zypper(ZypperRepositoryResponse zypper) {
             this.zypper = Objects.requireNonNull(zypper);
             return this;
-        }
-        public PackageRepositoryResponse build() {
+        }        public PackageRepositoryResponse build() {
             return new PackageRepositoryResponse(apt, goo, yum, zypper);
         }
     }

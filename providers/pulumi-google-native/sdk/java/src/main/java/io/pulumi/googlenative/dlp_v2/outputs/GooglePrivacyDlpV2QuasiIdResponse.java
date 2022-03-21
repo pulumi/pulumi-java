@@ -104,22 +104,18 @@ public final class GooglePrivacyDlpV2QuasiIdResponse {
             this.customTag = Objects.requireNonNull(customTag);
             return this;
         }
-
         public Builder field(GooglePrivacyDlpV2FieldIdResponse field) {
             this.field = Objects.requireNonNull(field);
             return this;
         }
-
         public Builder inferred(GoogleProtobufEmptyResponse inferred) {
             this.inferred = Objects.requireNonNull(inferred);
             return this;
         }
-
         public Builder infoType(GooglePrivacyDlpV2InfoTypeResponse infoType) {
             this.infoType = Objects.requireNonNull(infoType);
             return this;
-        }
-        public GooglePrivacyDlpV2QuasiIdResponse build() {
+        }        public GooglePrivacyDlpV2QuasiIdResponse build() {
             return new GooglePrivacyDlpV2QuasiIdResponse(customTag, field, inferred, infoType);
         }
     }

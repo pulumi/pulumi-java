@@ -162,72 +162,58 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
             this.identity = identity;
             return this;
         }
-
         public Builder identity(@Nullable ResourceIdentityArgs identity) {
             this.identity = Output.ofNullable(identity);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder properties(Output<Object> properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
-
         public Builder properties(Object properties) {
             this.properties = Output.of(Objects.requireNonNull(properties));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder serverName(@Nullable Output<String> serverName) {
             this.serverName = serverName;
             return this;
         }
-
         public Builder serverName(@Nullable String serverName) {
             this.serverName = Output.ofNullable(serverName);
             return this;
         }
-
         public Builder sku(@Nullable Output<SkuArgs> sku) {
             this.sku = sku;
             return this;
         }
-
         public Builder sku(@Nullable SkuArgs sku) {
             this.sku = Output.ofNullable(sku);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public ServerArgs build() {
+        }        public ServerArgs build() {
             return new ServerArgs(identity, location, properties, resourceGroupName, serverName, sku, tags);
         }
     }

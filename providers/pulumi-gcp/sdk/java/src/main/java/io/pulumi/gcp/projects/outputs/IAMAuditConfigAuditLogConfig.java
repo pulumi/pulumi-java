@@ -71,12 +71,13 @@ public final class IAMAuditConfigAuditLogConfig {
             this.exemptedMembers = exemptedMembers;
             return this;
         }
-
+        public Builder exemptedMembers(String... exemptedMembers) {
+            return exemptedMembers(List.of(exemptedMembers));
+        }
         public Builder logType(String logType) {
             this.logType = Objects.requireNonNull(logType);
             return this;
-        }
-        public IAMAuditConfigAuditLogConfig build() {
+        }        public IAMAuditConfigAuditLogConfig build() {
             return new IAMAuditConfigAuditLogConfig(exemptedMembers, logType);
         }
     }

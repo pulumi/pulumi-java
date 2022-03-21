@@ -106,52 +106,45 @@ public final class SamplingRuleArgs extends io.pulumi.resources.ResourceArgs {
             this.ruleName = ruleName;
             return this;
         }
-
         public Builder ruleName(@Nullable String ruleName) {
             this.ruleName = Output.ofNullable(ruleName);
             return this;
         }
-
         public Builder samplingRule(@Nullable Output<io.pulumi.awsnative.xray.inputs.SamplingRuleArgs> samplingRule) {
             this.samplingRule = samplingRule;
             return this;
         }
-
         public Builder samplingRule(@Nullable io.pulumi.awsnative.xray.inputs.SamplingRuleArgs samplingRule) {
             this.samplingRule = Output.ofNullable(samplingRule);
             return this;
         }
-
         public Builder samplingRuleRecord(@Nullable Output<SamplingRuleRecordArgs> samplingRuleRecord) {
             this.samplingRuleRecord = samplingRuleRecord;
             return this;
         }
-
         public Builder samplingRuleRecord(@Nullable SamplingRuleRecordArgs samplingRuleRecord) {
             this.samplingRuleRecord = Output.ofNullable(samplingRuleRecord);
             return this;
         }
-
         public Builder samplingRuleUpdate(@Nullable Output<SamplingRuleUpdateArgs> samplingRuleUpdate) {
             this.samplingRuleUpdate = samplingRuleUpdate;
             return this;
         }
-
         public Builder samplingRuleUpdate(@Nullable SamplingRuleUpdateArgs samplingRuleUpdate) {
             this.samplingRuleUpdate = Output.ofNullable(samplingRuleUpdate);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<TagsItemPropertiesArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<TagsItemPropertiesArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public SamplingRuleArgs build() {
+        public Builder tags(TagsItemPropertiesArgs... tags) {
+            return tags(List.of(tags));
+        }        public SamplingRuleArgs build() {
             return new SamplingRuleArgs(ruleName, samplingRule, samplingRuleRecord, samplingRuleUpdate, tags);
         }
     }

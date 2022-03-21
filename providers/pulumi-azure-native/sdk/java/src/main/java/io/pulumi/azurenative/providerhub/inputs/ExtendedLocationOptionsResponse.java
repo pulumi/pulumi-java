@@ -66,12 +66,10 @@ public final class ExtendedLocationOptionsResponse extends io.pulumi.resources.I
             this.supportedPolicy = supportedPolicy;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
-        }
-        public ExtendedLocationOptionsResponse build() {
+        }        public ExtendedLocationOptionsResponse build() {
             return new ExtendedLocationOptionsResponse(supportedPolicy, type);
         }
     }

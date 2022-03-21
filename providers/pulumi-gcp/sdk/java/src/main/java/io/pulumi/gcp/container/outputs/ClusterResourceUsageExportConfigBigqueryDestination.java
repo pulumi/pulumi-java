@@ -43,8 +43,7 @@ public final class ClusterResourceUsageExportConfigBigqueryDestination {
         public Builder datasetId(String datasetId) {
             this.datasetId = Objects.requireNonNull(datasetId);
             return this;
-        }
-        public ClusterResourceUsageExportConfigBigqueryDestination build() {
+        }        public ClusterResourceUsageExportConfigBigqueryDestination build() {
             return new ClusterResourceUsageExportConfigBigqueryDestination(datasetId);
         }
     }

@@ -207,82 +207,66 @@ public final class ServicePerimeterArgs extends io.pulumi.resources.ResourceArgs
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder parent(Output<String> parent) {
             this.parent = Objects.requireNonNull(parent);
             return this;
         }
-
         public Builder parent(String parent) {
             this.parent = Output.of(Objects.requireNonNull(parent));
             return this;
         }
-
         public Builder perimeterType(@Nullable Output<String> perimeterType) {
             this.perimeterType = perimeterType;
             return this;
         }
-
         public Builder perimeterType(@Nullable String perimeterType) {
             this.perimeterType = Output.ofNullable(perimeterType);
             return this;
         }
-
         public Builder spec(@Nullable Output<ServicePerimeterSpecArgs> spec) {
             this.spec = spec;
             return this;
         }
-
         public Builder spec(@Nullable ServicePerimeterSpecArgs spec) {
             this.spec = Output.ofNullable(spec);
             return this;
         }
-
         public Builder status(@Nullable Output<ServicePerimeterStatusArgs> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable ServicePerimeterStatusArgs status) {
             this.status = Output.ofNullable(status);
             return this;
         }
-
         public Builder title(Output<String> title) {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public Builder title(String title) {
             this.title = Output.of(Objects.requireNonNull(title));
             return this;
         }
-
         public Builder useExplicitDryRunSpec(@Nullable Output<Boolean> useExplicitDryRunSpec) {
             this.useExplicitDryRunSpec = useExplicitDryRunSpec;
             return this;
         }
-
         public Builder useExplicitDryRunSpec(@Nullable Boolean useExplicitDryRunSpec) {
             this.useExplicitDryRunSpec = Output.ofNullable(useExplicitDryRunSpec);
             return this;
-        }
-        public ServicePerimeterArgs build() {
+        }        public ServicePerimeterArgs build() {
             return new ServicePerimeterArgs(description, name, parent, perimeterType, spec, status, title, useExplicitDryRunSpec);
         }
     }

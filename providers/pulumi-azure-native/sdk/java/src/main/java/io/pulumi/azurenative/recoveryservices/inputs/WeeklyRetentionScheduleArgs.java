@@ -97,32 +97,32 @@ public final class WeeklyRetentionScheduleArgs extends io.pulumi.resources.Resou
             this.daysOfTheWeek = daysOfTheWeek;
             return this;
         }
-
         public Builder daysOfTheWeek(@Nullable List<DayOfWeek> daysOfTheWeek) {
             this.daysOfTheWeek = Output.ofNullable(daysOfTheWeek);
             return this;
         }
-
+        public Builder daysOfTheWeek(DayOfWeek... daysOfTheWeek) {
+            return daysOfTheWeek(List.of(daysOfTheWeek));
+        }
         public Builder retentionDuration(@Nullable Output<RetentionDurationArgs> retentionDuration) {
             this.retentionDuration = retentionDuration;
             return this;
         }
-
         public Builder retentionDuration(@Nullable RetentionDurationArgs retentionDuration) {
             this.retentionDuration = Output.ofNullable(retentionDuration);
             return this;
         }
-
         public Builder retentionTimes(@Nullable Output<List<String>> retentionTimes) {
             this.retentionTimes = retentionTimes;
             return this;
         }
-
         public Builder retentionTimes(@Nullable List<String> retentionTimes) {
             this.retentionTimes = Output.ofNullable(retentionTimes);
             return this;
         }
-        public WeeklyRetentionScheduleArgs build() {
+        public Builder retentionTimes(String... retentionTimes) {
+            return retentionTimes(List.of(retentionTimes));
+        }        public WeeklyRetentionScheduleArgs build() {
             return new WeeklyRetentionScheduleArgs(daysOfTheWeek, retentionDuration, retentionTimes);
         }
     }

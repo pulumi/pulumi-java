@@ -204,52 +204,45 @@ public final class GetPacketCaptureResult {
             this.bytesToCapturePerPacket = bytesToCapturePerPacket;
             return this;
         }
-
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder filters(@Nullable List<PacketCaptureFilterResponse> filters) {
             this.filters = filters;
             return this;
         }
-
+        public Builder filters(PacketCaptureFilterResponse... filters) {
+            return filters(List.of(filters));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder storageLocation(PacketCaptureStorageLocationResponse storageLocation) {
             this.storageLocation = Objects.requireNonNull(storageLocation);
             return this;
         }
-
         public Builder target(String target) {
             this.target = Objects.requireNonNull(target);
             return this;
         }
-
         public Builder timeLimitInSeconds(@Nullable Integer timeLimitInSeconds) {
             this.timeLimitInSeconds = timeLimitInSeconds;
             return this;
         }
-
         public Builder totalBytesPerSession(@Nullable Double totalBytesPerSession) {
             this.totalBytesPerSession = totalBytesPerSession;
             return this;
-        }
-        public GetPacketCaptureResult build() {
+        }        public GetPacketCaptureResult build() {
             return new GetPacketCaptureResult(bytesToCapturePerPacket, etag, filters, id, name, provisioningState, storageLocation, target, timeLimitInSeconds, totalBytesPerSession);
         }
     }

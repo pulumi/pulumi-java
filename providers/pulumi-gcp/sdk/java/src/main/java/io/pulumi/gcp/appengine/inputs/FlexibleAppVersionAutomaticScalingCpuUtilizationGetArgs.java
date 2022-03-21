@@ -75,22 +75,18 @@ public final class FlexibleAppVersionAutomaticScalingCpuUtilizationGetArgs exten
             this.aggregationWindowLength = aggregationWindowLength;
             return this;
         }
-
         public Builder aggregationWindowLength(@Nullable String aggregationWindowLength) {
             this.aggregationWindowLength = Output.ofNullable(aggregationWindowLength);
             return this;
         }
-
         public Builder targetUtilization(Output<Double> targetUtilization) {
             this.targetUtilization = Objects.requireNonNull(targetUtilization);
             return this;
         }
-
         public Builder targetUtilization(Double targetUtilization) {
             this.targetUtilization = Output.of(Objects.requireNonNull(targetUtilization));
             return this;
-        }
-        public FlexibleAppVersionAutomaticScalingCpuUtilizationGetArgs build() {
+        }        public FlexibleAppVersionAutomaticScalingCpuUtilizationGetArgs build() {
             return new FlexibleAppVersionAutomaticScalingCpuUtilizationGetArgs(aggregationWindowLength, targetUtilization);
         }
     }

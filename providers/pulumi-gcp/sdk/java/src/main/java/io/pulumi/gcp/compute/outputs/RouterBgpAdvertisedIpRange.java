@@ -73,12 +73,10 @@ public final class RouterBgpAdvertisedIpRange {
             this.description = description;
             return this;
         }
-
         public Builder range(String range) {
             this.range = Objects.requireNonNull(range);
             return this;
-        }
-        public RouterBgpAdvertisedIpRange build() {
+        }        public RouterBgpAdvertisedIpRange build() {
             return new RouterBgpAdvertisedIpRange(description, range);
         }
     }

@@ -161,72 +161,58 @@ public final class ApplicationGatewayFrontendIPConfigurationArgs extends io.pulu
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder privateIPAddress(@Nullable Output<String> privateIPAddress) {
             this.privateIPAddress = privateIPAddress;
             return this;
         }
-
         public Builder privateIPAddress(@Nullable String privateIPAddress) {
             this.privateIPAddress = Output.ofNullable(privateIPAddress);
             return this;
         }
-
         public Builder privateIPAllocationMethod(@Nullable Output<Either<String,IPAllocationMethod>> privateIPAllocationMethod) {
             this.privateIPAllocationMethod = privateIPAllocationMethod;
             return this;
         }
-
         public Builder privateIPAllocationMethod(@Nullable Either<String,IPAllocationMethod> privateIPAllocationMethod) {
             this.privateIPAllocationMethod = Output.ofNullable(privateIPAllocationMethod);
             return this;
         }
-
         public Builder privateLinkConfiguration(@Nullable Output<SubResourceArgs> privateLinkConfiguration) {
             this.privateLinkConfiguration = privateLinkConfiguration;
             return this;
         }
-
         public Builder privateLinkConfiguration(@Nullable SubResourceArgs privateLinkConfiguration) {
             this.privateLinkConfiguration = Output.ofNullable(privateLinkConfiguration);
             return this;
         }
-
         public Builder publicIPAddress(@Nullable Output<SubResourceArgs> publicIPAddress) {
             this.publicIPAddress = publicIPAddress;
             return this;
         }
-
         public Builder publicIPAddress(@Nullable SubResourceArgs publicIPAddress) {
             this.publicIPAddress = Output.ofNullable(publicIPAddress);
             return this;
         }
-
         public Builder subnet(@Nullable Output<SubResourceArgs> subnet) {
             this.subnet = subnet;
             return this;
         }
-
         public Builder subnet(@Nullable SubResourceArgs subnet) {
             this.subnet = Output.ofNullable(subnet);
             return this;
-        }
-        public ApplicationGatewayFrontendIPConfigurationArgs build() {
+        }        public ApplicationGatewayFrontendIPConfigurationArgs build() {
             return new ApplicationGatewayFrontendIPConfigurationArgs(id, name, privateIPAddress, privateIPAllocationMethod, privateLinkConfiguration, publicIPAddress, subnet);
         }
     }

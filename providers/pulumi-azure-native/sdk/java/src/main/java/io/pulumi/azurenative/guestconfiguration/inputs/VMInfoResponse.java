@@ -76,12 +76,10 @@ public final class VMInfoResponse extends io.pulumi.resources.InvokeArgs {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder uuid(String uuid) {
             this.uuid = Objects.requireNonNull(uuid);
             return this;
-        }
-        public VMInfoResponse build() {
+        }        public VMInfoResponse build() {
             return new VMInfoResponse(id, uuid);
         }
     }

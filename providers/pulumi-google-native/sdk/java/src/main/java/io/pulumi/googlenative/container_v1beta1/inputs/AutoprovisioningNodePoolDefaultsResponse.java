@@ -209,52 +209,45 @@ public final class AutoprovisioningNodePoolDefaultsResponse extends io.pulumi.re
             this.bootDiskKmsKey = Objects.requireNonNull(bootDiskKmsKey);
             return this;
         }
-
         public Builder diskSizeGb(Integer diskSizeGb) {
             this.diskSizeGb = Objects.requireNonNull(diskSizeGb);
             return this;
         }
-
         public Builder diskType(String diskType) {
             this.diskType = Objects.requireNonNull(diskType);
             return this;
         }
-
         public Builder imageType(String imageType) {
             this.imageType = Objects.requireNonNull(imageType);
             return this;
         }
-
         public Builder management(NodeManagementResponse management) {
             this.management = Objects.requireNonNull(management);
             return this;
         }
-
         public Builder minCpuPlatform(String minCpuPlatform) {
             this.minCpuPlatform = Objects.requireNonNull(minCpuPlatform);
             return this;
         }
-
         public Builder oauthScopes(List<String> oauthScopes) {
             this.oauthScopes = Objects.requireNonNull(oauthScopes);
             return this;
         }
-
+        public Builder oauthScopes(String... oauthScopes) {
+            return oauthScopes(List.of(oauthScopes));
+        }
         public Builder serviceAccount(String serviceAccount) {
             this.serviceAccount = Objects.requireNonNull(serviceAccount);
             return this;
         }
-
         public Builder shieldedInstanceConfig(ShieldedInstanceConfigResponse shieldedInstanceConfig) {
             this.shieldedInstanceConfig = Objects.requireNonNull(shieldedInstanceConfig);
             return this;
         }
-
         public Builder upgradeSettings(UpgradeSettingsResponse upgradeSettings) {
             this.upgradeSettings = Objects.requireNonNull(upgradeSettings);
             return this;
-        }
-        public AutoprovisioningNodePoolDefaultsResponse build() {
+        }        public AutoprovisioningNodePoolDefaultsResponse build() {
             return new AutoprovisioningNodePoolDefaultsResponse(bootDiskKmsKey, diskSizeGb, diskType, imageType, management, minCpuPlatform, oauthScopes, serviceAccount, shieldedInstanceConfig, upgradeSettings);
         }
     }

@@ -86,17 +86,14 @@ public final class GetAliasResult {
             this.alias = Objects.requireNonNull(alias);
             return this;
         }
-
         public Builder certsInfo(GoogleCloudApigeeV1CertificateResponse certsInfo) {
             this.certsInfo = Objects.requireNonNull(certsInfo);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetAliasResult build() {
+        }        public GetAliasResult build() {
             return new GetAliasResult(alias, certsInfo, type);
         }
     }

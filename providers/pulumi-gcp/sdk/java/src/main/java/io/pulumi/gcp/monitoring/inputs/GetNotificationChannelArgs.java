@@ -125,27 +125,22 @@ public final class GetNotificationChannelArgs extends io.pulumi.resources.Invoke
             this.displayName = displayName;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }
-
         public Builder userLabels(@Nullable Map<String,String> userLabels) {
             this.userLabels = userLabels;
             return this;
-        }
-        public GetNotificationChannelArgs build() {
+        }        public GetNotificationChannelArgs build() {
             return new GetNotificationChannelArgs(displayName, labels, project, type, userLabels);
         }
     }

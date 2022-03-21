@@ -130,52 +130,45 @@ public final class GoogleCloudDialogflowV2FulfillmentArgs extends io.pulumi.reso
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
         }
-
         public Builder features(@Nullable Output<List<GoogleCloudDialogflowV2FulfillmentFeatureArgs>> features) {
             this.features = features;
             return this;
         }
-
         public Builder features(@Nullable List<GoogleCloudDialogflowV2FulfillmentFeatureArgs> features) {
             this.features = Output.ofNullable(features);
             return this;
         }
-
+        public Builder features(GoogleCloudDialogflowV2FulfillmentFeatureArgs... features) {
+            return features(List.of(features));
+        }
         public Builder genericWebService(@Nullable Output<GoogleCloudDialogflowV2FulfillmentGenericWebServiceArgs> genericWebService) {
             this.genericWebService = genericWebService;
             return this;
         }
-
         public Builder genericWebService(@Nullable GoogleCloudDialogflowV2FulfillmentGenericWebServiceArgs genericWebService) {
             this.genericWebService = Output.ofNullable(genericWebService);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
-        }
-        public GoogleCloudDialogflowV2FulfillmentArgs build() {
+        }        public GoogleCloudDialogflowV2FulfillmentArgs build() {
             return new GoogleCloudDialogflowV2FulfillmentArgs(displayName, enabled, features, genericWebService, name);
         }
     }

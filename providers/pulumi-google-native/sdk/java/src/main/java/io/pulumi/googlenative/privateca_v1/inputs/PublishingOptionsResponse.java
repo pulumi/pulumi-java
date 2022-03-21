@@ -76,12 +76,10 @@ public final class PublishingOptionsResponse extends io.pulumi.resources.InvokeA
             this.publishCaCert = Objects.requireNonNull(publishCaCert);
             return this;
         }
-
         public Builder publishCrl(Boolean publishCrl) {
             this.publishCrl = Objects.requireNonNull(publishCrl);
             return this;
-        }
-        public PublishingOptionsResponse build() {
+        }        public PublishingOptionsResponse build() {
             return new PublishingOptionsResponse(publishCaCert, publishCrl);
         }
     }

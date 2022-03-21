@@ -108,22 +108,18 @@ public final class DeviceConfigResponse extends io.pulumi.resources.InvokeArgs {
             this.binaryData = Objects.requireNonNull(binaryData);
             return this;
         }
-
         public Builder cloudUpdateTime(String cloudUpdateTime) {
             this.cloudUpdateTime = Objects.requireNonNull(cloudUpdateTime);
             return this;
         }
-
         public Builder deviceAckTime(String deviceAckTime) {
             this.deviceAckTime = Objects.requireNonNull(deviceAckTime);
             return this;
         }
-
         public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
-        }
-        public DeviceConfigResponse build() {
+        }        public DeviceConfigResponse build() {
             return new DeviceConfigResponse(binaryData, cloudUpdateTime, deviceAckTime, version);
         }
     }

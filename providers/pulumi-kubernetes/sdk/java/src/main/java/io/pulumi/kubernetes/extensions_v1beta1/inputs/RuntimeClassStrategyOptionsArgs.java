@@ -79,22 +79,21 @@ public final class RuntimeClassStrategyOptionsArgs extends io.pulumi.resources.R
             this.allowedRuntimeClassNames = Objects.requireNonNull(allowedRuntimeClassNames);
             return this;
         }
-
         public Builder allowedRuntimeClassNames(List<String> allowedRuntimeClassNames) {
             this.allowedRuntimeClassNames = Output.of(Objects.requireNonNull(allowedRuntimeClassNames));
             return this;
         }
-
+        public Builder allowedRuntimeClassNames(String... allowedRuntimeClassNames) {
+            return allowedRuntimeClassNames(List.of(allowedRuntimeClassNames));
+        }
         public Builder defaultRuntimeClassName(@Nullable Output<String> defaultRuntimeClassName) {
             this.defaultRuntimeClassName = defaultRuntimeClassName;
             return this;
         }
-
         public Builder defaultRuntimeClassName(@Nullable String defaultRuntimeClassName) {
             this.defaultRuntimeClassName = Output.ofNullable(defaultRuntimeClassName);
             return this;
-        }
-        public RuntimeClassStrategyOptionsArgs build() {
+        }        public RuntimeClassStrategyOptionsArgs build() {
             return new RuntimeClassStrategyOptionsArgs(allowedRuntimeClassNames, defaultRuntimeClassName);
         }
     }

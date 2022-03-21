@@ -88,17 +88,14 @@ public final class GetNotificationHubArgs extends io.pulumi.resources.InvokeArgs
             this.namespaceName = Objects.requireNonNull(namespaceName);
             return this;
         }
-
         public Builder notificationHubName(String notificationHubName) {
             this.notificationHubName = Objects.requireNonNull(notificationHubName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetNotificationHubArgs build() {
+        }        public GetNotificationHubArgs build() {
             return new GetNotificationHubArgs(namespaceName, notificationHubName, resourceGroupName);
         }
     }

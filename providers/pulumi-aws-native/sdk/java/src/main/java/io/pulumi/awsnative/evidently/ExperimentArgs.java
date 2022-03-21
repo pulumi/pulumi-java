@@ -160,92 +160,83 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder metricGoals(Output<List<ExperimentMetricGoalObjectArgs>> metricGoals) {
             this.metricGoals = Objects.requireNonNull(metricGoals);
             return this;
         }
-
         public Builder metricGoals(List<ExperimentMetricGoalObjectArgs> metricGoals) {
             this.metricGoals = Output.of(Objects.requireNonNull(metricGoals));
             return this;
         }
-
+        public Builder metricGoals(ExperimentMetricGoalObjectArgs... metricGoals) {
+            return metricGoals(List.of(metricGoals));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder onlineAbConfig(Output<ExperimentOnlineAbConfigObjectArgs> onlineAbConfig) {
             this.onlineAbConfig = Objects.requireNonNull(onlineAbConfig);
             return this;
         }
-
         public Builder onlineAbConfig(ExperimentOnlineAbConfigObjectArgs onlineAbConfig) {
             this.onlineAbConfig = Output.of(Objects.requireNonNull(onlineAbConfig));
             return this;
         }
-
         public Builder project(Output<String> project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
-
         public Builder project(String project) {
             this.project = Output.of(Objects.requireNonNull(project));
             return this;
         }
-
         public Builder randomizationSalt(@Nullable Output<String> randomizationSalt) {
             this.randomizationSalt = randomizationSalt;
             return this;
         }
-
         public Builder randomizationSalt(@Nullable String randomizationSalt) {
             this.randomizationSalt = Output.ofNullable(randomizationSalt);
             return this;
         }
-
         public Builder samplingRate(@Nullable Output<Integer> samplingRate) {
             this.samplingRate = samplingRate;
             return this;
         }
-
         public Builder samplingRate(@Nullable Integer samplingRate) {
             this.samplingRate = Output.ofNullable(samplingRate);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<ExperimentTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<ExperimentTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
+        public Builder tags(ExperimentTagArgs... tags) {
+            return tags(List.of(tags));
+        }
         public Builder treatments(Output<List<ExperimentTreatmentObjectArgs>> treatments) {
             this.treatments = Objects.requireNonNull(treatments);
             return this;
         }
-
         public Builder treatments(List<ExperimentTreatmentObjectArgs> treatments) {
             this.treatments = Output.of(Objects.requireNonNull(treatments));
             return this;
         }
-        public ExperimentArgs build() {
+        public Builder treatments(ExperimentTreatmentObjectArgs... treatments) {
+            return treatments(List.of(treatments));
+        }        public ExperimentArgs build() {
             return new ExperimentArgs(description, metricGoals, name, onlineAbConfig, project, randomizationSalt, samplingRate, tags, treatments);
         }
     }

@@ -73,22 +73,18 @@ public final class SecurityPolicyRuleRateLimitOptionsBanThresholdGetArgs extends
             this.count = Objects.requireNonNull(count);
             return this;
         }
-
         public Builder count(Integer count) {
             this.count = Output.of(Objects.requireNonNull(count));
             return this;
         }
-
         public Builder intervalSec(Output<Integer> intervalSec) {
             this.intervalSec = Objects.requireNonNull(intervalSec);
             return this;
         }
-
         public Builder intervalSec(Integer intervalSec) {
             this.intervalSec = Output.of(Objects.requireNonNull(intervalSec));
             return this;
-        }
-        public SecurityPolicyRuleRateLimitOptionsBanThresholdGetArgs build() {
+        }        public SecurityPolicyRuleRateLimitOptionsBanThresholdGetArgs build() {
             return new SecurityPolicyRuleRateLimitOptionsBanThresholdGetArgs(count, intervalSec);
         }
     }

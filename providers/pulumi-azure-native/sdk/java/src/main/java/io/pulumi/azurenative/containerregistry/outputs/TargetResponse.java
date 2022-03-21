@@ -184,47 +184,38 @@ public final class TargetResponse {
             this.digest = digest;
             return this;
         }
-
         public Builder length(@Nullable Double length) {
             this.length = length;
             return this;
         }
-
         public Builder mediaType(@Nullable String mediaType) {
             this.mediaType = mediaType;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder repository(@Nullable String repository) {
             this.repository = repository;
             return this;
         }
-
         public Builder size(@Nullable Double size) {
             this.size = size;
             return this;
         }
-
         public Builder tag(@Nullable String tag) {
             this.tag = tag;
             return this;
         }
-
         public Builder url(@Nullable String url) {
             this.url = url;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = version;
             return this;
-        }
-        public TargetResponse build() {
+        }        public TargetResponse build() {
             return new TargetResponse(digest, length, mediaType, name, repository, size, tag, url, version);
         }
     }

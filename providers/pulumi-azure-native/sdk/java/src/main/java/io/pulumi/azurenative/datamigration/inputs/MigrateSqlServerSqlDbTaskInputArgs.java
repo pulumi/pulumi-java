@@ -115,42 +115,37 @@ public final class MigrateSqlServerSqlDbTaskInputArgs extends io.pulumi.resource
             this.selectedDatabases = Objects.requireNonNull(selectedDatabases);
             return this;
         }
-
         public Builder selectedDatabases(List<MigrateSqlServerSqlDbDatabaseInputArgs> selectedDatabases) {
             this.selectedDatabases = Output.of(Objects.requireNonNull(selectedDatabases));
             return this;
         }
-
+        public Builder selectedDatabases(MigrateSqlServerSqlDbDatabaseInputArgs... selectedDatabases) {
+            return selectedDatabases(List.of(selectedDatabases));
+        }
         public Builder sourceConnectionInfo(Output<SqlConnectionInfoArgs> sourceConnectionInfo) {
             this.sourceConnectionInfo = Objects.requireNonNull(sourceConnectionInfo);
             return this;
         }
-
         public Builder sourceConnectionInfo(SqlConnectionInfoArgs sourceConnectionInfo) {
             this.sourceConnectionInfo = Output.of(Objects.requireNonNull(sourceConnectionInfo));
             return this;
         }
-
         public Builder targetConnectionInfo(Output<SqlConnectionInfoArgs> targetConnectionInfo) {
             this.targetConnectionInfo = Objects.requireNonNull(targetConnectionInfo);
             return this;
         }
-
         public Builder targetConnectionInfo(SqlConnectionInfoArgs targetConnectionInfo) {
             this.targetConnectionInfo = Output.of(Objects.requireNonNull(targetConnectionInfo));
             return this;
         }
-
         public Builder validationOptions(@Nullable Output<MigrationValidationOptionsArgs> validationOptions) {
             this.validationOptions = validationOptions;
             return this;
         }
-
         public Builder validationOptions(@Nullable MigrationValidationOptionsArgs validationOptions) {
             this.validationOptions = Output.ofNullable(validationOptions);
             return this;
-        }
-        public MigrateSqlServerSqlDbTaskInputArgs build() {
+        }        public MigrateSqlServerSqlDbTaskInputArgs build() {
             return new MigrateSqlServerSqlDbTaskInputArgs(selectedDatabases, sourceConnectionInfo, targetConnectionInfo, validationOptions);
         }
     }

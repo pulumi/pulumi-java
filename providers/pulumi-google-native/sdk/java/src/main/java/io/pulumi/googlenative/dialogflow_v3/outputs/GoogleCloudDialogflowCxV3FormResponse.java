@@ -53,7 +53,9 @@ public final class GoogleCloudDialogflowCxV3FormResponse {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
-        public GoogleCloudDialogflowCxV3FormResponse build() {
+        public Builder parameters(GoogleCloudDialogflowCxV3FormParameterResponse... parameters) {
+            return parameters(List.of(parameters));
+        }        public GoogleCloudDialogflowCxV3FormResponse build() {
             return new GoogleCloudDialogflowCxV3FormResponse(parameters);
         }
     }

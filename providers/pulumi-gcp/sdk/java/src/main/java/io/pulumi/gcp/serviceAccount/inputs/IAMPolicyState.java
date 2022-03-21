@@ -91,32 +91,26 @@ public final class IAMPolicyState extends io.pulumi.resources.ResourceArgs {
             this.etag = etag;
             return this;
         }
-
         public Builder etag(@Nullable String etag) {
             this.etag = Output.ofNullable(etag);
             return this;
         }
-
         public Builder policyData(@Nullable Output<String> policyData) {
             this.policyData = policyData;
             return this;
         }
-
         public Builder policyData(@Nullable String policyData) {
             this.policyData = Output.ofNullable(policyData);
             return this;
         }
-
         public Builder serviceAccountId(@Nullable Output<String> serviceAccountId) {
             this.serviceAccountId = serviceAccountId;
             return this;
         }
-
         public Builder serviceAccountId(@Nullable String serviceAccountId) {
             this.serviceAccountId = Output.ofNullable(serviceAccountId);
             return this;
-        }
-        public IAMPolicyState build() {
+        }        public IAMPolicyState build() {
             return new IAMPolicyState(etag, policyData, serviceAccountId);
         }
     }

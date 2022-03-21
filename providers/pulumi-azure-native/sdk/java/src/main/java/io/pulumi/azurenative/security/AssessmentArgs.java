@@ -162,72 +162,58 @@ public final class AssessmentArgs extends io.pulumi.resources.ResourceArgs {
             this.additionalData = additionalData;
             return this;
         }
-
         public Builder additionalData(@Nullable Map<String,String> additionalData) {
             this.additionalData = Output.ofNullable(additionalData);
             return this;
         }
-
         public Builder assessmentName(@Nullable Output<String> assessmentName) {
             this.assessmentName = assessmentName;
             return this;
         }
-
         public Builder assessmentName(@Nullable String assessmentName) {
             this.assessmentName = Output.ofNullable(assessmentName);
             return this;
         }
-
         public Builder metadata(@Nullable Output<SecurityAssessmentMetadataPropertiesArgs> metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder metadata(@Nullable SecurityAssessmentMetadataPropertiesArgs metadata) {
             this.metadata = Output.ofNullable(metadata);
             return this;
         }
-
         public Builder partnersData(@Nullable Output<SecurityAssessmentPartnerDataArgs> partnersData) {
             this.partnersData = partnersData;
             return this;
         }
-
         public Builder partnersData(@Nullable SecurityAssessmentPartnerDataArgs partnersData) {
             this.partnersData = Output.ofNullable(partnersData);
             return this;
         }
-
         public Builder resourceDetails(Output<Object> resourceDetails) {
             this.resourceDetails = Objects.requireNonNull(resourceDetails);
             return this;
         }
-
         public Builder resourceDetails(Object resourceDetails) {
             this.resourceDetails = Output.of(Objects.requireNonNull(resourceDetails));
             return this;
         }
-
         public Builder resourceId(Output<String> resourceId) {
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
         }
-
         public Builder resourceId(String resourceId) {
             this.resourceId = Output.of(Objects.requireNonNull(resourceId));
             return this;
         }
-
         public Builder status(Output<AssessmentStatusArgs> status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder status(AssessmentStatusArgs status) {
             this.status = Output.of(Objects.requireNonNull(status));
             return this;
-        }
-        public AssessmentArgs build() {
+        }        public AssessmentArgs build() {
             return new AssessmentArgs(additionalData, assessmentName, metadata, partnersData, resourceDetails, resourceId, status);
         }
     }

@@ -111,27 +111,22 @@ public final class LoadBalancerSubnetMapping {
             this.allocationId = allocationId;
             return this;
         }
-
         public Builder ipv6Address(@Nullable String ipv6Address) {
             this.ipv6Address = ipv6Address;
             return this;
         }
-
         public Builder outpostId(@Nullable String outpostId) {
             this.outpostId = outpostId;
             return this;
         }
-
         public Builder privateIpv4Address(@Nullable String privateIpv4Address) {
             this.privateIpv4Address = privateIpv4Address;
             return this;
         }
-
         public Builder subnetId(String subnetId) {
             this.subnetId = Objects.requireNonNull(subnetId);
             return this;
-        }
-        public LoadBalancerSubnetMapping build() {
+        }        public LoadBalancerSubnetMapping build() {
             return new LoadBalancerSubnetMapping(allocationId, ipv6Address, outpostId, privateIpv4Address, subnetId);
         }
     }

@@ -56,12 +56,10 @@ public final class PacketMirroringCollectorIlbArgs extends io.pulumi.resources.R
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public Builder url(String url) {
             this.url = Output.of(Objects.requireNonNull(url));
             return this;
-        }
-        public PacketMirroringCollectorIlbArgs build() {
+        }        public PacketMirroringCollectorIlbArgs build() {
             return new PacketMirroringCollectorIlbArgs(url);
         }
     }

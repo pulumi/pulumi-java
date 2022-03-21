@@ -69,12 +69,10 @@ public final class GetListenerDefaultActionForwardTargetGroup extends io.pulumi.
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder weight(Integer weight) {
             this.weight = Objects.requireNonNull(weight);
             return this;
-        }
-        public GetListenerDefaultActionForwardTargetGroup build() {
+        }        public GetListenerDefaultActionForwardTargetGroup build() {
             return new GetListenerDefaultActionForwardTargetGroup(arn, weight);
         }
     }

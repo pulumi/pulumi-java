@@ -172,82 +172,66 @@ public final class TrafficMirrorSessionArgs extends io.pulumi.resources.Resource
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder networkInterfaceId(Output<String> networkInterfaceId) {
             this.networkInterfaceId = Objects.requireNonNull(networkInterfaceId);
             return this;
         }
-
         public Builder networkInterfaceId(String networkInterfaceId) {
             this.networkInterfaceId = Output.of(Objects.requireNonNull(networkInterfaceId));
             return this;
         }
-
         public Builder packetLength(@Nullable Output<Integer> packetLength) {
             this.packetLength = packetLength;
             return this;
         }
-
         public Builder packetLength(@Nullable Integer packetLength) {
             this.packetLength = Output.ofNullable(packetLength);
             return this;
         }
-
         public Builder sessionNumber(Output<Integer> sessionNumber) {
             this.sessionNumber = Objects.requireNonNull(sessionNumber);
             return this;
         }
-
         public Builder sessionNumber(Integer sessionNumber) {
             this.sessionNumber = Output.of(Objects.requireNonNull(sessionNumber));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder trafficMirrorFilterId(Output<String> trafficMirrorFilterId) {
             this.trafficMirrorFilterId = Objects.requireNonNull(trafficMirrorFilterId);
             return this;
         }
-
         public Builder trafficMirrorFilterId(String trafficMirrorFilterId) {
             this.trafficMirrorFilterId = Output.of(Objects.requireNonNull(trafficMirrorFilterId));
             return this;
         }
-
         public Builder trafficMirrorTargetId(Output<String> trafficMirrorTargetId) {
             this.trafficMirrorTargetId = Objects.requireNonNull(trafficMirrorTargetId);
             return this;
         }
-
         public Builder trafficMirrorTargetId(String trafficMirrorTargetId) {
             this.trafficMirrorTargetId = Output.of(Objects.requireNonNull(trafficMirrorTargetId));
             return this;
         }
-
         public Builder virtualNetworkId(@Nullable Output<Integer> virtualNetworkId) {
             this.virtualNetworkId = virtualNetworkId;
             return this;
         }
-
         public Builder virtualNetworkId(@Nullable Integer virtualNetworkId) {
             this.virtualNetworkId = Output.ofNullable(virtualNetworkId);
             return this;
-        }
-        public TrafficMirrorSessionArgs build() {
+        }        public TrafficMirrorSessionArgs build() {
             return new TrafficMirrorSessionArgs(description, networkInterfaceId, packetLength, sessionNumber, tags, trafficMirrorFilterId, trafficMirrorTargetId, virtualNetworkId);
         }
     }

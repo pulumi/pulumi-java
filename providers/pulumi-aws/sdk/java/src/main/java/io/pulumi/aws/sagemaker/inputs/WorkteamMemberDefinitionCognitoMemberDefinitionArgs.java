@@ -89,32 +89,26 @@ public final class WorkteamMemberDefinitionCognitoMemberDefinitionArgs extends i
             this.clientId = Objects.requireNonNull(clientId);
             return this;
         }
-
         public Builder clientId(String clientId) {
             this.clientId = Output.of(Objects.requireNonNull(clientId));
             return this;
         }
-
         public Builder userGroup(Output<String> userGroup) {
             this.userGroup = Objects.requireNonNull(userGroup);
             return this;
         }
-
         public Builder userGroup(String userGroup) {
             this.userGroup = Output.of(Objects.requireNonNull(userGroup));
             return this;
         }
-
         public Builder userPool(Output<String> userPool) {
             this.userPool = Objects.requireNonNull(userPool);
             return this;
         }
-
         public Builder userPool(String userPool) {
             this.userPool = Output.of(Objects.requireNonNull(userPool));
             return this;
-        }
-        public WorkteamMemberDefinitionCognitoMemberDefinitionArgs build() {
+        }        public WorkteamMemberDefinitionCognitoMemberDefinitionArgs build() {
             return new WorkteamMemberDefinitionCognitoMemberDefinitionArgs(clientId, userGroup, userPool);
         }
     }

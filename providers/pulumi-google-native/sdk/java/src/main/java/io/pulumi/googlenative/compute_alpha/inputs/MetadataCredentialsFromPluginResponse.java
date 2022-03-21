@@ -76,12 +76,10 @@ public final class MetadataCredentialsFromPluginResponse extends io.pulumi.resou
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder structConfig(String structConfig) {
             this.structConfig = Objects.requireNonNull(structConfig);
             return this;
-        }
-        public MetadataCredentialsFromPluginResponse build() {
+        }        public MetadataCredentialsFromPluginResponse build() {
             return new MetadataCredentialsFromPluginResponse(name, structConfig);
         }
     }

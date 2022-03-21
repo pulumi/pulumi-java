@@ -103,22 +103,18 @@ public final class LinkedServicePropsResponse {
             this.createdTime = createdTime;
             return this;
         }
-
         public Builder linkType(@Nullable String linkType) {
             this.linkType = linkType;
             return this;
         }
-
         public Builder linkedServiceResourceId(String linkedServiceResourceId) {
             this.linkedServiceResourceId = Objects.requireNonNull(linkedServiceResourceId);
             return this;
         }
-
         public Builder modifiedTime(@Nullable String modifiedTime) {
             this.modifiedTime = modifiedTime;
             return this;
-        }
-        public LinkedServicePropsResponse build() {
+        }        public LinkedServicePropsResponse build() {
             return new LinkedServicePropsResponse(createdTime, linkType, linkedServiceResourceId, modifiedTime);
         }
     }

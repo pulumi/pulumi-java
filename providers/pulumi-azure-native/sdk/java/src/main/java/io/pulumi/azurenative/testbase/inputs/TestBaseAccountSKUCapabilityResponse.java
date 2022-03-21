@@ -76,12 +76,10 @@ public final class TestBaseAccountSKUCapabilityResponse extends io.pulumi.resour
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public TestBaseAccountSKUCapabilityResponse build() {
+        }        public TestBaseAccountSKUCapabilityResponse build() {
             return new TestBaseAccountSKUCapabilityResponse(name, value);
         }
     }

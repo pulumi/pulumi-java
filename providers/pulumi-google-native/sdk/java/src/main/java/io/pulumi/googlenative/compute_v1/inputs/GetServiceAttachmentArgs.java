@@ -78,17 +78,14 @@ public final class GetServiceAttachmentArgs extends io.pulumi.resources.InvokeAr
             this.project = project;
             return this;
         }
-
         public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
-
         public Builder serviceAttachment(String serviceAttachment) {
             this.serviceAttachment = Objects.requireNonNull(serviceAttachment);
             return this;
-        }
-        public GetServiceAttachmentArgs build() {
+        }        public GetServiceAttachmentArgs build() {
             return new GetServiceAttachmentArgs(project, region, serviceAttachment);
         }
     }

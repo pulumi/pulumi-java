@@ -104,22 +104,18 @@ public final class GetWebAppRelayServiceConnectionSlotArgs extends io.pulumi.res
             this.entityName = Objects.requireNonNull(entityName);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder slot(String slot) {
             this.slot = Objects.requireNonNull(slot);
             return this;
-        }
-        public GetWebAppRelayServiceConnectionSlotArgs build() {
+        }        public GetWebAppRelayServiceConnectionSlotArgs build() {
             return new GetWebAppRelayServiceConnectionSlotArgs(entityName, name, resourceGroupName, slot);
         }
     }

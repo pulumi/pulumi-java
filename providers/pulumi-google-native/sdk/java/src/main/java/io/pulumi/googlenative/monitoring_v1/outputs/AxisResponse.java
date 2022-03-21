@@ -69,12 +69,10 @@ public final class AxisResponse {
             this.label = Objects.requireNonNull(label);
             return this;
         }
-
         public Builder scale(String scale) {
             this.scale = Objects.requireNonNull(scale);
             return this;
-        }
-        public AxisResponse build() {
+        }        public AxisResponse build() {
             return new AxisResponse(label, scale);
         }
     }

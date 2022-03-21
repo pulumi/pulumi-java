@@ -153,37 +153,33 @@ public final class ResourceGroupDefinitionResponse {
             this.dependsOn = dependsOn;
             return this;
         }
-
+        public Builder dependsOn(String... dependsOn) {
+            return dependsOn(List.of(dependsOn));
+        }
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder strongType(@Nullable String strongType) {
             this.strongType = strongType;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
-        }
-        public ResourceGroupDefinitionResponse build() {
+        }        public ResourceGroupDefinitionResponse build() {
             return new ResourceGroupDefinitionResponse(dependsOn, description, displayName, location, name, strongType, tags);
         }
     }

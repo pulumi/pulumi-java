@@ -143,82 +143,66 @@ public final class EC2FleetSpotOptionsRequestArgs extends io.pulumi.resources.Re
             this.allocationStrategy = allocationStrategy;
             return this;
         }
-
         public Builder allocationStrategy(@Nullable EC2FleetSpotOptionsRequestAllocationStrategy allocationStrategy) {
             this.allocationStrategy = Output.ofNullable(allocationStrategy);
             return this;
         }
-
         public Builder instanceInterruptionBehavior(@Nullable Output<EC2FleetSpotOptionsRequestInstanceInterruptionBehavior> instanceInterruptionBehavior) {
             this.instanceInterruptionBehavior = instanceInterruptionBehavior;
             return this;
         }
-
         public Builder instanceInterruptionBehavior(@Nullable EC2FleetSpotOptionsRequestInstanceInterruptionBehavior instanceInterruptionBehavior) {
             this.instanceInterruptionBehavior = Output.ofNullable(instanceInterruptionBehavior);
             return this;
         }
-
         public Builder instancePoolsToUseCount(@Nullable Output<Integer> instancePoolsToUseCount) {
             this.instancePoolsToUseCount = instancePoolsToUseCount;
             return this;
         }
-
         public Builder instancePoolsToUseCount(@Nullable Integer instancePoolsToUseCount) {
             this.instancePoolsToUseCount = Output.ofNullable(instancePoolsToUseCount);
             return this;
         }
-
         public Builder maintenanceStrategies(@Nullable Output<EC2FleetMaintenanceStrategiesArgs> maintenanceStrategies) {
             this.maintenanceStrategies = maintenanceStrategies;
             return this;
         }
-
         public Builder maintenanceStrategies(@Nullable EC2FleetMaintenanceStrategiesArgs maintenanceStrategies) {
             this.maintenanceStrategies = Output.ofNullable(maintenanceStrategies);
             return this;
         }
-
         public Builder maxTotalPrice(@Nullable Output<String> maxTotalPrice) {
             this.maxTotalPrice = maxTotalPrice;
             return this;
         }
-
         public Builder maxTotalPrice(@Nullable String maxTotalPrice) {
             this.maxTotalPrice = Output.ofNullable(maxTotalPrice);
             return this;
         }
-
         public Builder minTargetCapacity(@Nullable Output<Integer> minTargetCapacity) {
             this.minTargetCapacity = minTargetCapacity;
             return this;
         }
-
         public Builder minTargetCapacity(@Nullable Integer minTargetCapacity) {
             this.minTargetCapacity = Output.ofNullable(minTargetCapacity);
             return this;
         }
-
         public Builder singleAvailabilityZone(@Nullable Output<Boolean> singleAvailabilityZone) {
             this.singleAvailabilityZone = singleAvailabilityZone;
             return this;
         }
-
         public Builder singleAvailabilityZone(@Nullable Boolean singleAvailabilityZone) {
             this.singleAvailabilityZone = Output.ofNullable(singleAvailabilityZone);
             return this;
         }
-
         public Builder singleInstanceType(@Nullable Output<Boolean> singleInstanceType) {
             this.singleInstanceType = singleInstanceType;
             return this;
         }
-
         public Builder singleInstanceType(@Nullable Boolean singleInstanceType) {
             this.singleInstanceType = Output.ofNullable(singleInstanceType);
             return this;
-        }
-        public EC2FleetSpotOptionsRequestArgs build() {
+        }        public EC2FleetSpotOptionsRequestArgs build() {
             return new EC2FleetSpotOptionsRequestArgs(allocationStrategy, instanceInterruptionBehavior, instancePoolsToUseCount, maintenanceStrategies, maxTotalPrice, minTargetCapacity, singleAvailabilityZone, singleInstanceType);
         }
     }

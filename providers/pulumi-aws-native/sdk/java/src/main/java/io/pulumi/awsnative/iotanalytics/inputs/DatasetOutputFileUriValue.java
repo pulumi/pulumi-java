@@ -50,8 +50,7 @@ public final class DatasetOutputFileUriValue extends io.pulumi.resources.InvokeA
         public Builder fileName(String fileName) {
             this.fileName = Objects.requireNonNull(fileName);
             return this;
-        }
-        public DatasetOutputFileUriValue build() {
+        }        public DatasetOutputFileUriValue build() {
             return new DatasetOutputFileUriValue(fileName);
         }
     }

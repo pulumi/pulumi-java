@@ -104,22 +104,18 @@ public final class GetThreatIntelligenceIndicatorArgs extends io.pulumi.resource
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder operationalInsightsResourceProvider(String operationalInsightsResourceProvider) {
             this.operationalInsightsResourceProvider = Objects.requireNonNull(operationalInsightsResourceProvider);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
-        }
-        public GetThreatIntelligenceIndicatorArgs build() {
+        }        public GetThreatIntelligenceIndicatorArgs build() {
             return new GetThreatIntelligenceIndicatorArgs(name, operationalInsightsResourceProvider, resourceGroupName, workspaceName);
         }
     }

@@ -60,7 +60,9 @@ public final class ObjectIdResponse extends io.pulumi.resources.InvokeArgs {
             this.objectIdPath = Objects.requireNonNull(objectIdPath);
             return this;
         }
-        public ObjectIdResponse build() {
+        public Builder objectIdPath(Integer... objectIdPath) {
+            return objectIdPath(List.of(objectIdPath));
+        }        public ObjectIdResponse build() {
             return new ObjectIdResponse(objectIdPath);
         }
     }

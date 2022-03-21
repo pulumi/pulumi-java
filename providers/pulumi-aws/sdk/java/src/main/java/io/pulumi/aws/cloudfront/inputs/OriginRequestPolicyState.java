@@ -141,62 +141,50 @@ public final class OriginRequestPolicyState extends io.pulumi.resources.Resource
             this.comment = comment;
             return this;
         }
-
         public Builder comment(@Nullable String comment) {
             this.comment = Output.ofNullable(comment);
             return this;
         }
-
         public Builder cookiesConfig(@Nullable Output<OriginRequestPolicyCookiesConfigGetArgs> cookiesConfig) {
             this.cookiesConfig = cookiesConfig;
             return this;
         }
-
         public Builder cookiesConfig(@Nullable OriginRequestPolicyCookiesConfigGetArgs cookiesConfig) {
             this.cookiesConfig = Output.ofNullable(cookiesConfig);
             return this;
         }
-
         public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
-
         public Builder etag(@Nullable String etag) {
             this.etag = Output.ofNullable(etag);
             return this;
         }
-
         public Builder headersConfig(@Nullable Output<OriginRequestPolicyHeadersConfigGetArgs> headersConfig) {
             this.headersConfig = headersConfig;
             return this;
         }
-
         public Builder headersConfig(@Nullable OriginRequestPolicyHeadersConfigGetArgs headersConfig) {
             this.headersConfig = Output.ofNullable(headersConfig);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder queryStringsConfig(@Nullable Output<OriginRequestPolicyQueryStringsConfigGetArgs> queryStringsConfig) {
             this.queryStringsConfig = queryStringsConfig;
             return this;
         }
-
         public Builder queryStringsConfig(@Nullable OriginRequestPolicyQueryStringsConfigGetArgs queryStringsConfig) {
             this.queryStringsConfig = Output.ofNullable(queryStringsConfig);
             return this;
-        }
-        public OriginRequestPolicyState build() {
+        }        public OriginRequestPolicyState build() {
             return new OriginRequestPolicyState(comment, cookiesConfig, etag, headersConfig, name, queryStringsConfig);
         }
     }

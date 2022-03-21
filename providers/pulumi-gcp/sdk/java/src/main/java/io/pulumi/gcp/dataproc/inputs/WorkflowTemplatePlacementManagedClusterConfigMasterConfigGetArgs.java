@@ -211,102 +211,91 @@ public final class WorkflowTemplatePlacementManagedClusterConfigMasterConfigGetA
             this.accelerators = accelerators;
             return this;
         }
-
         public Builder accelerators(@Nullable List<WorkflowTemplatePlacementManagedClusterConfigMasterConfigAcceleratorGetArgs> accelerators) {
             this.accelerators = Output.ofNullable(accelerators);
             return this;
         }
-
+        public Builder accelerators(WorkflowTemplatePlacementManagedClusterConfigMasterConfigAcceleratorGetArgs... accelerators) {
+            return accelerators(List.of(accelerators));
+        }
         public Builder diskConfig(@Nullable Output<WorkflowTemplatePlacementManagedClusterConfigMasterConfigDiskConfigGetArgs> diskConfig) {
             this.diskConfig = diskConfig;
             return this;
         }
-
         public Builder diskConfig(@Nullable WorkflowTemplatePlacementManagedClusterConfigMasterConfigDiskConfigGetArgs diskConfig) {
             this.diskConfig = Output.ofNullable(diskConfig);
             return this;
         }
-
         public Builder image(@Nullable Output<String> image) {
             this.image = image;
             return this;
         }
-
         public Builder image(@Nullable String image) {
             this.image = Output.ofNullable(image);
             return this;
         }
-
         public Builder instanceNames(@Nullable Output<List<String>> instanceNames) {
             this.instanceNames = instanceNames;
             return this;
         }
-
         public Builder instanceNames(@Nullable List<String> instanceNames) {
             this.instanceNames = Output.ofNullable(instanceNames);
             return this;
         }
-
+        public Builder instanceNames(String... instanceNames) {
+            return instanceNames(List.of(instanceNames));
+        }
         public Builder isPreemptible(@Nullable Output<Boolean> isPreemptible) {
             this.isPreemptible = isPreemptible;
             return this;
         }
-
         public Builder isPreemptible(@Nullable Boolean isPreemptible) {
             this.isPreemptible = Output.ofNullable(isPreemptible);
             return this;
         }
-
         public Builder machineType(@Nullable Output<String> machineType) {
             this.machineType = machineType;
             return this;
         }
-
         public Builder machineType(@Nullable String machineType) {
             this.machineType = Output.ofNullable(machineType);
             return this;
         }
-
         public Builder managedGroupConfigs(@Nullable Output<List<WorkflowTemplatePlacementManagedClusterConfigMasterConfigManagedGroupConfigGetArgs>> managedGroupConfigs) {
             this.managedGroupConfigs = managedGroupConfigs;
             return this;
         }
-
         public Builder managedGroupConfigs(@Nullable List<WorkflowTemplatePlacementManagedClusterConfigMasterConfigManagedGroupConfigGetArgs> managedGroupConfigs) {
             this.managedGroupConfigs = Output.ofNullable(managedGroupConfigs);
             return this;
         }
-
+        public Builder managedGroupConfigs(WorkflowTemplatePlacementManagedClusterConfigMasterConfigManagedGroupConfigGetArgs... managedGroupConfigs) {
+            return managedGroupConfigs(List.of(managedGroupConfigs));
+        }
         public Builder minCpuPlatform(@Nullable Output<String> minCpuPlatform) {
             this.minCpuPlatform = minCpuPlatform;
             return this;
         }
-
         public Builder minCpuPlatform(@Nullable String minCpuPlatform) {
             this.minCpuPlatform = Output.ofNullable(minCpuPlatform);
             return this;
         }
-
         public Builder numInstances(@Nullable Output<Integer> numInstances) {
             this.numInstances = numInstances;
             return this;
         }
-
         public Builder numInstances(@Nullable Integer numInstances) {
             this.numInstances = Output.ofNullable(numInstances);
             return this;
         }
-
         public Builder preemptibility(@Nullable Output<String> preemptibility) {
             this.preemptibility = preemptibility;
             return this;
         }
-
         public Builder preemptibility(@Nullable String preemptibility) {
             this.preemptibility = Output.ofNullable(preemptibility);
             return this;
-        }
-        public WorkflowTemplatePlacementManagedClusterConfigMasterConfigGetArgs build() {
+        }        public WorkflowTemplatePlacementManagedClusterConfigMasterConfigGetArgs build() {
             return new WorkflowTemplatePlacementManagedClusterConfigMasterConfigGetArgs(accelerators, diskConfig, image, instanceNames, isPreemptible, machineType, managedGroupConfigs, minCpuPlatform, numInstances, preemptibility);
         }
     }

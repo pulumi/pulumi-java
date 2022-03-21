@@ -56,12 +56,10 @@ public final class BucketReplicationConfigRuleDeleteMarkerReplicationGetArgs ext
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder status(String status) {
             this.status = Output.of(Objects.requireNonNull(status));
             return this;
-        }
-        public BucketReplicationConfigRuleDeleteMarkerReplicationGetArgs build() {
+        }        public BucketReplicationConfigRuleDeleteMarkerReplicationGetArgs build() {
             return new BucketReplicationConfigRuleDeleteMarkerReplicationGetArgs(status);
         }
     }

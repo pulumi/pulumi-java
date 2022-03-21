@@ -71,12 +71,10 @@ public final class ApplicationPackageSupportUrlsResponse {
             this.governmentCloud = governmentCloud;
             return this;
         }
-
         public Builder publicAzure(@Nullable String publicAzure) {
             this.publicAzure = publicAzure;
             return this;
-        }
-        public ApplicationPackageSupportUrlsResponse build() {
+        }        public ApplicationPackageSupportUrlsResponse build() {
             return new ApplicationPackageSupportUrlsResponse(governmentCloud, publicAzure);
         }
     }

@@ -101,42 +101,34 @@ public final class TagKeyIamMemberArgs extends io.pulumi.resources.ResourceArgs 
             this.condition = condition;
             return this;
         }
-
         public Builder condition(@Nullable TagKeyIamMemberConditionArgs condition) {
             this.condition = Output.ofNullable(condition);
             return this;
         }
-
         public Builder member(Output<String> member) {
             this.member = Objects.requireNonNull(member);
             return this;
         }
-
         public Builder member(String member) {
             this.member = Output.of(Objects.requireNonNull(member));
             return this;
         }
-
         public Builder role(Output<String> role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }
-
         public Builder role(String role) {
             this.role = Output.of(Objects.requireNonNull(role));
             return this;
         }
-
         public Builder tagKey(Output<String> tagKey) {
             this.tagKey = Objects.requireNonNull(tagKey);
             return this;
         }
-
         public Builder tagKey(String tagKey) {
             this.tagKey = Output.of(Objects.requireNonNull(tagKey));
             return this;
-        }
-        public TagKeyIamMemberArgs build() {
+        }        public TagKeyIamMemberArgs build() {
             return new TagKeyIamMemberArgs(condition, member, role, tagKey);
         }
     }

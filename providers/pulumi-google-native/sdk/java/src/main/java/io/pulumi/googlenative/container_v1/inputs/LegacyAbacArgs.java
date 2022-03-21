@@ -61,12 +61,10 @@ public final class LegacyAbacArgs extends io.pulumi.resources.ResourceArgs {
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
-        }
-        public LegacyAbacArgs build() {
+        }        public LegacyAbacArgs build() {
             return new LegacyAbacArgs(enabled);
         }
     }

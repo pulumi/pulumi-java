@@ -208,102 +208,82 @@ public final class SnapshotPolicyArgs extends io.pulumi.resources.ResourceArgs {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder accountName(String accountName) {
             this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
-
         public Builder dailySchedule(@Nullable Output<DailyScheduleArgs> dailySchedule) {
             this.dailySchedule = dailySchedule;
             return this;
         }
-
         public Builder dailySchedule(@Nullable DailyScheduleArgs dailySchedule) {
             this.dailySchedule = Output.ofNullable(dailySchedule);
             return this;
         }
-
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
         }
-
         public Builder hourlySchedule(@Nullable Output<HourlyScheduleArgs> hourlySchedule) {
             this.hourlySchedule = hourlySchedule;
             return this;
         }
-
         public Builder hourlySchedule(@Nullable HourlyScheduleArgs hourlySchedule) {
             this.hourlySchedule = Output.ofNullable(hourlySchedule);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder monthlySchedule(@Nullable Output<MonthlyScheduleArgs> monthlySchedule) {
             this.monthlySchedule = monthlySchedule;
             return this;
         }
-
         public Builder monthlySchedule(@Nullable MonthlyScheduleArgs monthlySchedule) {
             this.monthlySchedule = Output.ofNullable(monthlySchedule);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder snapshotPolicyName(@Nullable Output<String> snapshotPolicyName) {
             this.snapshotPolicyName = snapshotPolicyName;
             return this;
         }
-
         public Builder snapshotPolicyName(@Nullable String snapshotPolicyName) {
             this.snapshotPolicyName = Output.ofNullable(snapshotPolicyName);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder weeklySchedule(@Nullable Output<WeeklyScheduleArgs> weeklySchedule) {
             this.weeklySchedule = weeklySchedule;
             return this;
         }
-
         public Builder weeklySchedule(@Nullable WeeklyScheduleArgs weeklySchedule) {
             this.weeklySchedule = Output.ofNullable(weeklySchedule);
             return this;
-        }
-        public SnapshotPolicyArgs build() {
+        }        public SnapshotPolicyArgs build() {
             return new SnapshotPolicyArgs(accountName, dailySchedule, enabled, hourlySchedule, location, monthlySchedule, resourceGroupName, snapshotPolicyName, tags, weeklySchedule);
         }
     }

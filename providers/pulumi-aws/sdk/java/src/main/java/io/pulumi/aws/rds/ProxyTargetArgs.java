@@ -106,42 +106,34 @@ public final class ProxyTargetArgs extends io.pulumi.resources.ResourceArgs {
             this.dbClusterIdentifier = dbClusterIdentifier;
             return this;
         }
-
         public Builder dbClusterIdentifier(@Nullable String dbClusterIdentifier) {
             this.dbClusterIdentifier = Output.ofNullable(dbClusterIdentifier);
             return this;
         }
-
         public Builder dbInstanceIdentifier(@Nullable Output<String> dbInstanceIdentifier) {
             this.dbInstanceIdentifier = dbInstanceIdentifier;
             return this;
         }
-
         public Builder dbInstanceIdentifier(@Nullable String dbInstanceIdentifier) {
             this.dbInstanceIdentifier = Output.ofNullable(dbInstanceIdentifier);
             return this;
         }
-
         public Builder dbProxyName(Output<String> dbProxyName) {
             this.dbProxyName = Objects.requireNonNull(dbProxyName);
             return this;
         }
-
         public Builder dbProxyName(String dbProxyName) {
             this.dbProxyName = Output.of(Objects.requireNonNull(dbProxyName));
             return this;
         }
-
         public Builder targetGroupName(Output<String> targetGroupName) {
             this.targetGroupName = Objects.requireNonNull(targetGroupName);
             return this;
         }
-
         public Builder targetGroupName(String targetGroupName) {
             this.targetGroupName = Output.of(Objects.requireNonNull(targetGroupName));
             return this;
-        }
-        public ProxyTargetArgs build() {
+        }        public ProxyTargetArgs build() {
             return new ProxyTargetArgs(dbClusterIdentifier, dbInstanceIdentifier, dbProxyName, targetGroupName);
         }
     }

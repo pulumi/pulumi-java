@@ -165,72 +165,76 @@ public final class JobMetadataArgs extends io.pulumi.resources.ResourceArgs {
             this.bigTableDetails = bigTableDetails;
             return this;
         }
-
         public Builder bigTableDetails(@Nullable List<BigTableIODetailsArgs> bigTableDetails) {
             this.bigTableDetails = Output.ofNullable(bigTableDetails);
             return this;
         }
-
+        public Builder bigTableDetails(BigTableIODetailsArgs... bigTableDetails) {
+            return bigTableDetails(List.of(bigTableDetails));
+        }
         public Builder bigqueryDetails(@Nullable Output<List<BigQueryIODetailsArgs>> bigqueryDetails) {
             this.bigqueryDetails = bigqueryDetails;
             return this;
         }
-
         public Builder bigqueryDetails(@Nullable List<BigQueryIODetailsArgs> bigqueryDetails) {
             this.bigqueryDetails = Output.ofNullable(bigqueryDetails);
             return this;
         }
-
+        public Builder bigqueryDetails(BigQueryIODetailsArgs... bigqueryDetails) {
+            return bigqueryDetails(List.of(bigqueryDetails));
+        }
         public Builder datastoreDetails(@Nullable Output<List<DatastoreIODetailsArgs>> datastoreDetails) {
             this.datastoreDetails = datastoreDetails;
             return this;
         }
-
         public Builder datastoreDetails(@Nullable List<DatastoreIODetailsArgs> datastoreDetails) {
             this.datastoreDetails = Output.ofNullable(datastoreDetails);
             return this;
         }
-
+        public Builder datastoreDetails(DatastoreIODetailsArgs... datastoreDetails) {
+            return datastoreDetails(List.of(datastoreDetails));
+        }
         public Builder fileDetails(@Nullable Output<List<FileIODetailsArgs>> fileDetails) {
             this.fileDetails = fileDetails;
             return this;
         }
-
         public Builder fileDetails(@Nullable List<FileIODetailsArgs> fileDetails) {
             this.fileDetails = Output.ofNullable(fileDetails);
             return this;
         }
-
+        public Builder fileDetails(FileIODetailsArgs... fileDetails) {
+            return fileDetails(List.of(fileDetails));
+        }
         public Builder pubsubDetails(@Nullable Output<List<PubSubIODetailsArgs>> pubsubDetails) {
             this.pubsubDetails = pubsubDetails;
             return this;
         }
-
         public Builder pubsubDetails(@Nullable List<PubSubIODetailsArgs> pubsubDetails) {
             this.pubsubDetails = Output.ofNullable(pubsubDetails);
             return this;
         }
-
+        public Builder pubsubDetails(PubSubIODetailsArgs... pubsubDetails) {
+            return pubsubDetails(List.of(pubsubDetails));
+        }
         public Builder sdkVersion(@Nullable Output<SdkVersionArgs> sdkVersion) {
             this.sdkVersion = sdkVersion;
             return this;
         }
-
         public Builder sdkVersion(@Nullable SdkVersionArgs sdkVersion) {
             this.sdkVersion = Output.ofNullable(sdkVersion);
             return this;
         }
-
         public Builder spannerDetails(@Nullable Output<List<SpannerIODetailsArgs>> spannerDetails) {
             this.spannerDetails = spannerDetails;
             return this;
         }
-
         public Builder spannerDetails(@Nullable List<SpannerIODetailsArgs> spannerDetails) {
             this.spannerDetails = Output.ofNullable(spannerDetails);
             return this;
         }
-        public JobMetadataArgs build() {
+        public Builder spannerDetails(SpannerIODetailsArgs... spannerDetails) {
+            return spannerDetails(List.of(spannerDetails));
+        }        public JobMetadataArgs build() {
             return new JobMetadataArgs(bigTableDetails, bigqueryDetails, datastoreDetails, fileDetails, pubsubDetails, sdkVersion, spannerDetails);
         }
     }

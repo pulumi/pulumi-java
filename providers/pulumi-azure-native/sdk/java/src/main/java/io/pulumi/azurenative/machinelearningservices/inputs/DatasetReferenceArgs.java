@@ -78,22 +78,18 @@ public final class DatasetReferenceArgs extends io.pulumi.resources.ResourceArgs
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
-        }
-        public DatasetReferenceArgs build() {
+        }        public DatasetReferenceArgs build() {
             return new DatasetReferenceArgs(id, name);
         }
     }

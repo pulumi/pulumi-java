@@ -143,62 +143,50 @@ public final class ReportByResourceGroupNameArgs extends io.pulumi.resources.Res
             this.definition = Objects.requireNonNull(definition);
             return this;
         }
-
         public Builder definition(ReportDefinitionArgs definition) {
             this.definition = Output.of(Objects.requireNonNull(definition));
             return this;
         }
-
         public Builder deliveryInfo(Output<ReportDeliveryInfoArgs> deliveryInfo) {
             this.deliveryInfo = Objects.requireNonNull(deliveryInfo);
             return this;
         }
-
         public Builder deliveryInfo(ReportDeliveryInfoArgs deliveryInfo) {
             this.deliveryInfo = Output.of(Objects.requireNonNull(deliveryInfo));
             return this;
         }
-
         public Builder format(@Nullable Output<Either<String,FormatType>> format) {
             this.format = format;
             return this;
         }
-
         public Builder format(@Nullable Either<String,FormatType> format) {
             this.format = Output.ofNullable(format);
             return this;
         }
-
         public Builder reportName(@Nullable Output<String> reportName) {
             this.reportName = reportName;
             return this;
         }
-
         public Builder reportName(@Nullable String reportName) {
             this.reportName = Output.ofNullable(reportName);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder schedule(@Nullable Output<ReportScheduleArgs> schedule) {
             this.schedule = schedule;
             return this;
         }
-
         public Builder schedule(@Nullable ReportScheduleArgs schedule) {
             this.schedule = Output.ofNullable(schedule);
             return this;
-        }
-        public ReportByResourceGroupNameArgs build() {
+        }        public ReportByResourceGroupNameArgs build() {
             return new ReportByResourceGroupNameArgs(definition, deliveryInfo, format, reportName, resourceGroupName, schedule);
         }
     }

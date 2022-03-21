@@ -188,92 +188,77 @@ public final class ManagementGroupDiagnosticSettingArgs extends io.pulumi.resour
             this.eventHubAuthorizationRuleId = eventHubAuthorizationRuleId;
             return this;
         }
-
         public Builder eventHubAuthorizationRuleId(@Nullable String eventHubAuthorizationRuleId) {
             this.eventHubAuthorizationRuleId = Output.ofNullable(eventHubAuthorizationRuleId);
             return this;
         }
-
         public Builder eventHubName(@Nullable Output<String> eventHubName) {
             this.eventHubName = eventHubName;
             return this;
         }
-
         public Builder eventHubName(@Nullable String eventHubName) {
             this.eventHubName = Output.ofNullable(eventHubName);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder logs(@Nullable Output<List<ManagementGroupLogSettingsArgs>> logs) {
             this.logs = logs;
             return this;
         }
-
         public Builder logs(@Nullable List<ManagementGroupLogSettingsArgs> logs) {
             this.logs = Output.ofNullable(logs);
             return this;
         }
-
+        public Builder logs(ManagementGroupLogSettingsArgs... logs) {
+            return logs(List.of(logs));
+        }
         public Builder managementGroupId(Output<String> managementGroupId) {
             this.managementGroupId = Objects.requireNonNull(managementGroupId);
             return this;
         }
-
         public Builder managementGroupId(String managementGroupId) {
             this.managementGroupId = Output.of(Objects.requireNonNull(managementGroupId));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder serviceBusRuleId(@Nullable Output<String> serviceBusRuleId) {
             this.serviceBusRuleId = serviceBusRuleId;
             return this;
         }
-
         public Builder serviceBusRuleId(@Nullable String serviceBusRuleId) {
             this.serviceBusRuleId = Output.ofNullable(serviceBusRuleId);
             return this;
         }
-
         public Builder storageAccountId(@Nullable Output<String> storageAccountId) {
             this.storageAccountId = storageAccountId;
             return this;
         }
-
         public Builder storageAccountId(@Nullable String storageAccountId) {
             this.storageAccountId = Output.ofNullable(storageAccountId);
             return this;
         }
-
         public Builder workspaceId(@Nullable Output<String> workspaceId) {
             this.workspaceId = workspaceId;
             return this;
         }
-
         public Builder workspaceId(@Nullable String workspaceId) {
             this.workspaceId = Output.ofNullable(workspaceId);
             return this;
-        }
-        public ManagementGroupDiagnosticSettingArgs build() {
+        }        public ManagementGroupDiagnosticSettingArgs build() {
             return new ManagementGroupDiagnosticSettingArgs(eventHubAuthorizationRuleId, eventHubName, location, logs, managementGroupId, name, serviceBusRuleId, storageAccountId, workspaceId);
         }
     }

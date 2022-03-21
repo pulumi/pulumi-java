@@ -157,72 +157,58 @@ public final class RandomIdState extends io.pulumi.resources.ResourceArgs {
             this.b64Std = b64Std;
             return this;
         }
-
         public Builder b64Std(@Nullable String b64Std) {
             this.b64Std = Output.ofNullable(b64Std);
             return this;
         }
-
         public Builder b64Url(@Nullable Output<String> b64Url) {
             this.b64Url = b64Url;
             return this;
         }
-
         public Builder b64Url(@Nullable String b64Url) {
             this.b64Url = Output.ofNullable(b64Url);
             return this;
         }
-
         public Builder byteLength(@Nullable Output<Integer> byteLength) {
             this.byteLength = byteLength;
             return this;
         }
-
         public Builder byteLength(@Nullable Integer byteLength) {
             this.byteLength = Output.ofNullable(byteLength);
             return this;
         }
-
         public Builder dec(@Nullable Output<String> dec) {
             this.dec = dec;
             return this;
         }
-
         public Builder dec(@Nullable String dec) {
             this.dec = Output.ofNullable(dec);
             return this;
         }
-
         public Builder hex(@Nullable Output<String> hex) {
             this.hex = hex;
             return this;
         }
-
         public Builder hex(@Nullable String hex) {
             this.hex = Output.ofNullable(hex);
             return this;
         }
-
         public Builder keepers(@Nullable Output<Map<String,Object>> keepers) {
             this.keepers = keepers;
             return this;
         }
-
         public Builder keepers(@Nullable Map<String,Object> keepers) {
             this.keepers = Output.ofNullable(keepers);
             return this;
         }
-
         public Builder prefix(@Nullable Output<String> prefix) {
             this.prefix = prefix;
             return this;
         }
-
         public Builder prefix(@Nullable String prefix) {
             this.prefix = Output.ofNullable(prefix);
             return this;
-        }
-        public RandomIdState build() {
+        }        public RandomIdState build() {
             return new RandomIdState(b64Std, b64Url, byteLength, dec, hex, keepers, prefix);
         }
     }

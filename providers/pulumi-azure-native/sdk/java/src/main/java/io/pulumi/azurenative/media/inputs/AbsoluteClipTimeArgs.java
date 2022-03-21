@@ -78,22 +78,18 @@ public final class AbsoluteClipTimeArgs extends io.pulumi.resources.ResourceArgs
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public Builder odataType(String odataType) {
             this.odataType = Output.of(Objects.requireNonNull(odataType));
             return this;
         }
-
         public Builder time(Output<String> time) {
             this.time = Objects.requireNonNull(time);
             return this;
         }
-
         public Builder time(String time) {
             this.time = Output.of(Objects.requireNonNull(time));
             return this;
-        }
-        public AbsoluteClipTimeArgs build() {
+        }        public AbsoluteClipTimeArgs build() {
             return new AbsoluteClipTimeArgs(odataType, time);
         }
     }

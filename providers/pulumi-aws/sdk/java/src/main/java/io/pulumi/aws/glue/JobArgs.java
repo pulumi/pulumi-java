@@ -321,172 +321,141 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
             this.command = Objects.requireNonNull(command);
             return this;
         }
-
         public Builder command(JobCommandArgs command) {
             this.command = Output.of(Objects.requireNonNull(command));
             return this;
         }
-
         public Builder connections(@Nullable Output<List<String>> connections) {
             this.connections = connections;
             return this;
         }
-
         public Builder connections(@Nullable List<String> connections) {
             this.connections = Output.ofNullable(connections);
             return this;
         }
-
+        public Builder connections(String... connections) {
+            return connections(List.of(connections));
+        }
         public Builder defaultArguments(@Nullable Output<Map<String,String>> defaultArguments) {
             this.defaultArguments = defaultArguments;
             return this;
         }
-
         public Builder defaultArguments(@Nullable Map<String,String> defaultArguments) {
             this.defaultArguments = Output.ofNullable(defaultArguments);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder executionProperty(@Nullable Output<JobExecutionPropertyArgs> executionProperty) {
             this.executionProperty = executionProperty;
             return this;
         }
-
         public Builder executionProperty(@Nullable JobExecutionPropertyArgs executionProperty) {
             this.executionProperty = Output.ofNullable(executionProperty);
             return this;
         }
-
         public Builder glueVersion(@Nullable Output<String> glueVersion) {
             this.glueVersion = glueVersion;
             return this;
         }
-
         public Builder glueVersion(@Nullable String glueVersion) {
             this.glueVersion = Output.ofNullable(glueVersion);
             return this;
         }
-
         public Builder maxCapacity(@Nullable Output<Double> maxCapacity) {
             this.maxCapacity = maxCapacity;
             return this;
         }
-
         public Builder maxCapacity(@Nullable Double maxCapacity) {
             this.maxCapacity = Output.ofNullable(maxCapacity);
             return this;
         }
-
         public Builder maxRetries(@Nullable Output<Integer> maxRetries) {
             this.maxRetries = maxRetries;
             return this;
         }
-
         public Builder maxRetries(@Nullable Integer maxRetries) {
             this.maxRetries = Output.ofNullable(maxRetries);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder nonOverridableArguments(@Nullable Output<Map<String,String>> nonOverridableArguments) {
             this.nonOverridableArguments = nonOverridableArguments;
             return this;
         }
-
         public Builder nonOverridableArguments(@Nullable Map<String,String> nonOverridableArguments) {
             this.nonOverridableArguments = Output.ofNullable(nonOverridableArguments);
             return this;
         }
-
         public Builder notificationProperty(@Nullable Output<JobNotificationPropertyArgs> notificationProperty) {
             this.notificationProperty = notificationProperty;
             return this;
         }
-
         public Builder notificationProperty(@Nullable JobNotificationPropertyArgs notificationProperty) {
             this.notificationProperty = Output.ofNullable(notificationProperty);
             return this;
         }
-
         public Builder numberOfWorkers(@Nullable Output<Integer> numberOfWorkers) {
             this.numberOfWorkers = numberOfWorkers;
             return this;
         }
-
         public Builder numberOfWorkers(@Nullable Integer numberOfWorkers) {
             this.numberOfWorkers = Output.ofNullable(numberOfWorkers);
             return this;
         }
-
         public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public Builder roleArn(String roleArn) {
             this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
         }
-
         public Builder securityConfiguration(@Nullable Output<String> securityConfiguration) {
             this.securityConfiguration = securityConfiguration;
             return this;
         }
-
         public Builder securityConfiguration(@Nullable String securityConfiguration) {
             this.securityConfiguration = Output.ofNullable(securityConfiguration);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder timeout(@Nullable Output<Integer> timeout) {
             this.timeout = timeout;
             return this;
         }
-
         public Builder timeout(@Nullable Integer timeout) {
             this.timeout = Output.ofNullable(timeout);
             return this;
         }
-
         public Builder workerType(@Nullable Output<String> workerType) {
             this.workerType = workerType;
             return this;
         }
-
         public Builder workerType(@Nullable String workerType) {
             this.workerType = Output.ofNullable(workerType);
             return this;
-        }
-        public JobArgs build() {
+        }        public JobArgs build() {
             return new JobArgs(command, connections, defaultArguments, description, executionProperty, glueVersion, maxCapacity, maxRetries, name, nonOverridableArguments, notificationProperty, numberOfWorkers, roleArn, securityConfiguration, tags, timeout, workerType);
         }
     }

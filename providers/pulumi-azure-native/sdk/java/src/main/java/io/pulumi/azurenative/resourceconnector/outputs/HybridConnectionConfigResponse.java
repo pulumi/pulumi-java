@@ -102,22 +102,18 @@ public final class HybridConnectionConfigResponse {
             this.expirationTime = Objects.requireNonNull(expirationTime);
             return this;
         }
-
         public Builder hybridConnectionName(String hybridConnectionName) {
             this.hybridConnectionName = Objects.requireNonNull(hybridConnectionName);
             return this;
         }
-
         public Builder relay(String relay) {
             this.relay = Objects.requireNonNull(relay);
             return this;
         }
-
         public Builder token(String token) {
             this.token = Objects.requireNonNull(token);
             return this;
-        }
-        public HybridConnectionConfigResponse build() {
+        }        public HybridConnectionConfigResponse build() {
             return new HybridConnectionConfigResponse(expirationTime, hybridConnectionName, relay, token);
         }
     }

@@ -145,72 +145,58 @@ public final class MetricsSourceArgs extends io.pulumi.resources.ResourceArgs {
             this.identity = identity;
             return this;
         }
-
         public Builder identity(@Nullable IdentityPropertiesArgs identity) {
             this.identity = Output.ofNullable(identity);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder metricsSourceName(@Nullable Output<String> metricsSourceName) {
             this.metricsSourceName = metricsSourceName;
             return this;
         }
-
         public Builder metricsSourceName(@Nullable String metricsSourceName) {
             this.metricsSourceName = Output.ofNullable(metricsSourceName);
             return this;
         }
-
         public Builder monitorName(Output<String> monitorName) {
             this.monitorName = Objects.requireNonNull(monitorName);
             return this;
         }
-
         public Builder monitorName(String monitorName) {
             this.monitorName = Output.of(Objects.requireNonNull(monitorName));
             return this;
         }
-
         public Builder properties(@Nullable Output<MonitorPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder properties(@Nullable MonitorPropertiesArgs properties) {
             this.properties = Output.ofNullable(properties);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public MetricsSourceArgs build() {
+        }        public MetricsSourceArgs build() {
             return new MetricsSourceArgs(identity, location, metricsSourceName, monitorName, properties, resourceGroupName, tags);
         }
     }

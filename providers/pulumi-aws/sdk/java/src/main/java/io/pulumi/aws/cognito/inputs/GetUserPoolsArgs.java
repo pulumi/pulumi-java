@@ -54,8 +54,7 @@ public final class GetUserPoolsArgs extends io.pulumi.resources.InvokeArgs {
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public GetUserPoolsArgs build() {
+        }        public GetUserPoolsArgs build() {
             return new GetUserPoolsArgs(name);
         }
     }

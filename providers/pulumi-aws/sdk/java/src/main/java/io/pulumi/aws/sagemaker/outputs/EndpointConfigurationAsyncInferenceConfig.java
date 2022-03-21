@@ -72,12 +72,10 @@ public final class EndpointConfigurationAsyncInferenceConfig {
             this.clientConfig = clientConfig;
             return this;
         }
-
         public Builder outputConfig(EndpointConfigurationAsyncInferenceConfigOutputConfig outputConfig) {
             this.outputConfig = Objects.requireNonNull(outputConfig);
             return this;
-        }
-        public EndpointConfigurationAsyncInferenceConfig build() {
+        }        public EndpointConfigurationAsyncInferenceConfig build() {
             return new EndpointConfigurationAsyncInferenceConfig(clientConfig, outputConfig);
         }
     }

@@ -88,17 +88,20 @@ public final class AttestationOccurrenceResponse {
             this.jwts = Objects.requireNonNull(jwts);
             return this;
         }
-
+        public Builder jwts(JwtResponse... jwts) {
+            return jwts(List.of(jwts));
+        }
         public Builder serializedPayload(String serializedPayload) {
             this.serializedPayload = Objects.requireNonNull(serializedPayload);
             return this;
         }
-
         public Builder signatures(List<SignatureResponse> signatures) {
             this.signatures = Objects.requireNonNull(signatures);
             return this;
         }
-        public AttestationOccurrenceResponse build() {
+        public Builder signatures(SignatureResponse... signatures) {
+            return signatures(List.of(signatures));
+        }        public AttestationOccurrenceResponse build() {
             return new AttestationOccurrenceResponse(jwts, serializedPayload, signatures);
         }
     }

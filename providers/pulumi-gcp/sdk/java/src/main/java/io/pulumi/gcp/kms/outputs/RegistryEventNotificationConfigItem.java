@@ -55,12 +55,10 @@ public final class RegistryEventNotificationConfigItem {
             this.pubsubTopicName = Objects.requireNonNull(pubsubTopicName);
             return this;
         }
-
         public Builder subfolderMatches(@Nullable String subfolderMatches) {
             this.subfolderMatches = subfolderMatches;
             return this;
-        }
-        public RegistryEventNotificationConfigItem build() {
+        }        public RegistryEventNotificationConfigItem build() {
             return new RegistryEventNotificationConfigItem(pubsubTopicName, subfolderMatches);
         }
     }

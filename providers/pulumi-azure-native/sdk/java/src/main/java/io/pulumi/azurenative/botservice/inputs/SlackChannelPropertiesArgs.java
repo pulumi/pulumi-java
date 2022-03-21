@@ -143,62 +143,50 @@ public final class SlackChannelPropertiesArgs extends io.pulumi.resources.Resour
             this.clientId = clientId;
             return this;
         }
-
         public Builder clientId(@Nullable String clientId) {
             this.clientId = Output.ofNullable(clientId);
             return this;
         }
-
         public Builder clientSecret(@Nullable Output<String> clientSecret) {
             this.clientSecret = clientSecret;
             return this;
         }
-
         public Builder clientSecret(@Nullable String clientSecret) {
             this.clientSecret = Output.ofNullable(clientSecret);
             return this;
         }
-
         public Builder isEnabled(Output<Boolean> isEnabled) {
             this.isEnabled = Objects.requireNonNull(isEnabled);
             return this;
         }
-
         public Builder isEnabled(Boolean isEnabled) {
             this.isEnabled = Output.of(Objects.requireNonNull(isEnabled));
             return this;
         }
-
         public Builder landingPageUrl(@Nullable Output<String> landingPageUrl) {
             this.landingPageUrl = landingPageUrl;
             return this;
         }
-
         public Builder landingPageUrl(@Nullable String landingPageUrl) {
             this.landingPageUrl = Output.ofNullable(landingPageUrl);
             return this;
         }
-
         public Builder signingSecret(@Nullable Output<String> signingSecret) {
             this.signingSecret = signingSecret;
             return this;
         }
-
         public Builder signingSecret(@Nullable String signingSecret) {
             this.signingSecret = Output.ofNullable(signingSecret);
             return this;
         }
-
         public Builder verificationToken(@Nullable Output<String> verificationToken) {
             this.verificationToken = verificationToken;
             return this;
         }
-
         public Builder verificationToken(@Nullable String verificationToken) {
             this.verificationToken = Output.ofNullable(verificationToken);
             return this;
-        }
-        public SlackChannelPropertiesArgs build() {
+        }        public SlackChannelPropertiesArgs build() {
             return new SlackChannelPropertiesArgs(clientId, clientSecret, isEnabled, landingPageUrl, signingSecret, verificationToken);
         }
     }

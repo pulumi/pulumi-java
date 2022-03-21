@@ -56,12 +56,10 @@ public final class ConnectorKafkaClusterEncryptionInTransitArgs extends io.pulum
             this.encryptionType = Objects.requireNonNull(encryptionType);
             return this;
         }
-
         public Builder encryptionType(ConnectorKafkaClusterEncryptionInTransitType encryptionType) {
             this.encryptionType = Output.of(Objects.requireNonNull(encryptionType));
             return this;
-        }
-        public ConnectorKafkaClusterEncryptionInTransitArgs build() {
+        }        public ConnectorKafkaClusterEncryptionInTransitArgs build() {
             return new ConnectorKafkaClusterEncryptionInTransitArgs(encryptionType);
         }
     }

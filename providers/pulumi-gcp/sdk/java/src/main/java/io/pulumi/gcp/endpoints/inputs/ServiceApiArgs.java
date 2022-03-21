@@ -92,42 +92,37 @@ public final class ServiceApiArgs extends io.pulumi.resources.ResourceArgs {
             this.methods = methods;
             return this;
         }
-
         public Builder methods(@Nullable List<ServiceApiMethodArgs> methods) {
             this.methods = Output.ofNullable(methods);
             return this;
         }
-
+        public Builder methods(ServiceApiMethodArgs... methods) {
+            return methods(List.of(methods));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder syntax(@Nullable Output<String> syntax) {
             this.syntax = syntax;
             return this;
         }
-
         public Builder syntax(@Nullable String syntax) {
             this.syntax = Output.ofNullable(syntax);
             return this;
         }
-
         public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = Output.ofNullable(version);
             return this;
-        }
-        public ServiceApiArgs build() {
+        }        public ServiceApiArgs build() {
             return new ServiceApiArgs(methods, name, syntax, version);
         }
     }

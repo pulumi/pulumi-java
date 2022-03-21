@@ -51,8 +51,7 @@ public final class ManagerSkuResponse {
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public ManagerSkuResponse build() {
+        }        public ManagerSkuResponse build() {
             return new ManagerSkuResponse(name);
         }
     }

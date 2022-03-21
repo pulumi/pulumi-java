@@ -58,8 +58,7 @@ public final class GuestOsFeatureResponse extends io.pulumi.resources.InvokeArgs
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GuestOsFeatureResponse build() {
+        }        public GuestOsFeatureResponse build() {
             return new GuestOsFeatureResponse(type);
         }
     }

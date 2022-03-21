@@ -50,8 +50,7 @@ public final class GetDevicePoolArgs extends io.pulumi.resources.InvokeArgs {
         public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
-        }
-        public GetDevicePoolArgs build() {
+        }        public GetDevicePoolArgs build() {
             return new GetDevicePoolArgs(arn);
         }
     }

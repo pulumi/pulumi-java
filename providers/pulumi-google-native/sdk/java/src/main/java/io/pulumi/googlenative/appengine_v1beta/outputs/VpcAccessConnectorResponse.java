@@ -69,12 +69,10 @@ public final class VpcAccessConnectorResponse {
             this.egressSetting = Objects.requireNonNull(egressSetting);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public VpcAccessConnectorResponse build() {
+        }        public VpcAccessConnectorResponse build() {
             return new VpcAccessConnectorResponse(egressSetting, name);
         }
     }

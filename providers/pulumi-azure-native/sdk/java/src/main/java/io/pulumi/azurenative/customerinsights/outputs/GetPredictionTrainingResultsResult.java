@@ -121,27 +121,25 @@ public final class GetPredictionTrainingResultsResult {
             this.canonicalProfiles = Objects.requireNonNull(canonicalProfiles);
             return this;
         }
-
+        public Builder canonicalProfiles(CanonicalProfileDefinitionResponse... canonicalProfiles) {
+            return canonicalProfiles(List.of(canonicalProfiles));
+        }
         public Builder predictionDistribution(PredictionDistributionDefinitionResponse predictionDistribution) {
             this.predictionDistribution = Objects.requireNonNull(predictionDistribution);
             return this;
         }
-
         public Builder primaryProfileInstanceCount(Double primaryProfileInstanceCount) {
             this.primaryProfileInstanceCount = Objects.requireNonNull(primaryProfileInstanceCount);
             return this;
         }
-
         public Builder scoreName(String scoreName) {
             this.scoreName = Objects.requireNonNull(scoreName);
             return this;
         }
-
         public Builder tenantId(String tenantId) {
             this.tenantId = Objects.requireNonNull(tenantId);
             return this;
-        }
-        public GetPredictionTrainingResultsResult build() {
+        }        public GetPredictionTrainingResultsResult build() {
             return new GetPredictionTrainingResultsResult(canonicalProfiles, predictionDistribution, primaryProfileInstanceCount, scoreName, tenantId);
         }
     }

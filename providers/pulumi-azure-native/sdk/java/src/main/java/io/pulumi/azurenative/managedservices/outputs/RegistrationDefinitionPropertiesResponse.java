@@ -137,32 +137,29 @@ public final class RegistrationDefinitionPropertiesResponse {
             this.authorizations = Objects.requireNonNull(authorizations);
             return this;
         }
-
+        public Builder authorizations(AuthorizationResponse... authorizations) {
+            return authorizations(List.of(authorizations));
+        }
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder managedByTenantId(String managedByTenantId) {
             this.managedByTenantId = Objects.requireNonNull(managedByTenantId);
             return this;
         }
-
         public Builder managedByTenantName(String managedByTenantName) {
             this.managedByTenantName = Objects.requireNonNull(managedByTenantName);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder registrationDefinitionName(@Nullable String registrationDefinitionName) {
             this.registrationDefinitionName = registrationDefinitionName;
             return this;
-        }
-        public RegistrationDefinitionPropertiesResponse build() {
+        }        public RegistrationDefinitionPropertiesResponse build() {
             return new RegistrationDefinitionPropertiesResponse(authorizations, description, managedByTenantId, managedByTenantName, provisioningState, registrationDefinitionName);
         }
     }

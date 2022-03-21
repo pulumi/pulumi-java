@@ -120,27 +120,22 @@ public final class GetReplicationProtectedItemResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder properties(ReplicationProtectedItemPropertiesResponse properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetReplicationProtectedItemResult build() {
+        }        public GetReplicationProtectedItemResult build() {
             return new GetReplicationProtectedItemResult(id, location, name, properties, type);
         }
     }

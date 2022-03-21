@@ -70,12 +70,10 @@ public final class LatencyPercentileResponse {
             this.latencyMicros = Objects.requireNonNull(latencyMicros);
             return this;
         }
-
         public Builder percent(Integer percent) {
             this.percent = Objects.requireNonNull(percent);
             return this;
-        }
-        public LatencyPercentileResponse build() {
+        }        public LatencyPercentileResponse build() {
             return new LatencyPercentileResponse(latencyMicros, percent);
         }
     }

@@ -84,27 +84,25 @@ public final class IndexRelevance {
             this.duration = duration;
             return this;
         }
-
         public Builder freshness(@Nullable Boolean freshness) {
             this.freshness = freshness;
             return this;
         }
-
         public Builder importance(@Nullable Integer importance) {
             this.importance = importance;
             return this;
         }
-
         public Builder rankOrder(@Nullable IndexOrder rankOrder) {
             this.rankOrder = rankOrder;
             return this;
         }
-
         public Builder valueImportanceItems(@Nullable List<IndexValueImportanceItem> valueImportanceItems) {
             this.valueImportanceItems = valueImportanceItems;
             return this;
         }
-        public IndexRelevance build() {
+        public Builder valueImportanceItems(IndexValueImportanceItem... valueImportanceItems) {
+            return valueImportanceItems(List.of(valueImportanceItems));
+        }        public IndexRelevance build() {
             return new IndexRelevance(duration, freshness, importance, rankOrder, valueImportanceItems);
         }
     }

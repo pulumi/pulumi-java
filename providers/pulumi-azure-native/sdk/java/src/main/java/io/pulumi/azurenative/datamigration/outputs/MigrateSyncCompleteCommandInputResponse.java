@@ -71,12 +71,10 @@ public final class MigrateSyncCompleteCommandInputResponse {
             this.commitTimeStamp = commitTimeStamp;
             return this;
         }
-
         public Builder databaseName(String databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
-        }
-        public MigrateSyncCompleteCommandInputResponse build() {
+        }        public MigrateSyncCompleteCommandInputResponse build() {
             return new MigrateSyncCompleteCommandInputResponse(commitTimeStamp, databaseName);
         }
     }

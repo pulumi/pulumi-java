@@ -67,12 +67,10 @@ public final class ConfigEirp extends io.pulumi.resources.InvokeArgs {
             this.units = units;
             return this;
         }
-
         public Builder value(@Nullable Double value) {
             this.value = value;
             return this;
-        }
-        public ConfigEirp build() {
+        }        public ConfigEirp build() {
             return new ConfigEirp(units, value);
         }
     }

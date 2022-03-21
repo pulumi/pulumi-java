@@ -76,22 +76,18 @@ public final class AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatGet
             this.mappingParameters = mappingParameters;
             return this;
         }
-
         public Builder mappingParameters(@Nullable AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersGetArgs mappingParameters) {
             this.mappingParameters = Output.ofNullable(mappingParameters);
             return this;
         }
-
         public Builder recordFormatType(@Nullable Output<String> recordFormatType) {
             this.recordFormatType = recordFormatType;
             return this;
         }
-
         public Builder recordFormatType(@Nullable String recordFormatType) {
             this.recordFormatType = Output.ofNullable(recordFormatType);
             return this;
-        }
-        public AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatGetArgs build() {
+        }        public AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatGetArgs build() {
             return new AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatGetArgs(mappingParameters, recordFormatType);
         }
     }

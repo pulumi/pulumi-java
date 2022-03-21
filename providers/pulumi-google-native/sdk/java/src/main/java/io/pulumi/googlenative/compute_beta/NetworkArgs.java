@@ -149,72 +149,58 @@ public final class NetworkArgs extends io.pulumi.resources.ResourceArgs {
             this.autoCreateSubnetworks = autoCreateSubnetworks;
             return this;
         }
-
         public Builder autoCreateSubnetworks(@Nullable Boolean autoCreateSubnetworks) {
             this.autoCreateSubnetworks = Output.ofNullable(autoCreateSubnetworks);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder mtu(@Nullable Output<Integer> mtu) {
             this.mtu = mtu;
             return this;
         }
-
         public Builder mtu(@Nullable Integer mtu) {
             this.mtu = Output.ofNullable(mtu);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder requestId(@Nullable Output<String> requestId) {
             this.requestId = requestId;
             return this;
         }
-
         public Builder requestId(@Nullable String requestId) {
             this.requestId = Output.ofNullable(requestId);
             return this;
         }
-
         public Builder routingConfig(@Nullable Output<NetworkRoutingConfigArgs> routingConfig) {
             this.routingConfig = routingConfig;
             return this;
         }
-
         public Builder routingConfig(@Nullable NetworkRoutingConfigArgs routingConfig) {
             this.routingConfig = Output.ofNullable(routingConfig);
             return this;
-        }
-        public NetworkArgs build() {
+        }        public NetworkArgs build() {
             return new NetworkArgs(autoCreateSubnetworks, description, mtu, name, project, requestId, routingConfig);
         }
     }

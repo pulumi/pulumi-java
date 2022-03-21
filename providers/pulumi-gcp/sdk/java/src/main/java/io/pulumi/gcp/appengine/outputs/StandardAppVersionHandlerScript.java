@@ -51,8 +51,7 @@ public final class StandardAppVersionHandlerScript {
         public Builder scriptPath(String scriptPath) {
             this.scriptPath = Objects.requireNonNull(scriptPath);
             return this;
-        }
-        public StandardAppVersionHandlerScript build() {
+        }        public StandardAppVersionHandlerScript build() {
             return new StandardAppVersionHandlerScript(scriptPath);
         }
     }

@@ -53,12 +53,10 @@ public final class SpotFleetMonitoringArgs extends io.pulumi.resources.ResourceA
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
-        }
-        public SpotFleetMonitoringArgs build() {
+        }        public SpotFleetMonitoringArgs build() {
             return new SpotFleetMonitoringArgs(enabled);
         }
     }

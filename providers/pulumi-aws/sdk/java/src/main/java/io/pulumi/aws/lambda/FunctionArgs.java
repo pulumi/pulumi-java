@@ -487,272 +487,224 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
             this.architectures = architectures;
             return this;
         }
-
         public Builder architectures(@Nullable List<String> architectures) {
             this.architectures = Output.ofNullable(architectures);
             return this;
         }
-
+        public Builder architectures(String... architectures) {
+            return architectures(List.of(architectures));
+        }
         public Builder code(@Nullable Output<Archive> code) {
             this.code = code;
             return this;
         }
-
         public Builder code(@Nullable Archive code) {
             this.code = Output.ofNullable(code);
             return this;
         }
-
         public Builder codeSigningConfigArn(@Nullable Output<String> codeSigningConfigArn) {
             this.codeSigningConfigArn = codeSigningConfigArn;
             return this;
         }
-
         public Builder codeSigningConfigArn(@Nullable String codeSigningConfigArn) {
             this.codeSigningConfigArn = Output.ofNullable(codeSigningConfigArn);
             return this;
         }
-
         public Builder deadLetterConfig(@Nullable Output<FunctionDeadLetterConfigArgs> deadLetterConfig) {
             this.deadLetterConfig = deadLetterConfig;
             return this;
         }
-
         public Builder deadLetterConfig(@Nullable FunctionDeadLetterConfigArgs deadLetterConfig) {
             this.deadLetterConfig = Output.ofNullable(deadLetterConfig);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder environment(@Nullable Output<FunctionEnvironmentArgs> environment) {
             this.environment = environment;
             return this;
         }
-
         public Builder environment(@Nullable FunctionEnvironmentArgs environment) {
             this.environment = Output.ofNullable(environment);
             return this;
         }
-
         public Builder fileSystemConfig(@Nullable Output<FunctionFileSystemConfigArgs> fileSystemConfig) {
             this.fileSystemConfig = fileSystemConfig;
             return this;
         }
-
         public Builder fileSystemConfig(@Nullable FunctionFileSystemConfigArgs fileSystemConfig) {
             this.fileSystemConfig = Output.ofNullable(fileSystemConfig);
             return this;
         }
-
         public Builder handler(@Nullable Output<String> handler) {
             this.handler = handler;
             return this;
         }
-
         public Builder handler(@Nullable String handler) {
             this.handler = Output.ofNullable(handler);
             return this;
         }
-
         public Builder imageConfig(@Nullable Output<FunctionImageConfigArgs> imageConfig) {
             this.imageConfig = imageConfig;
             return this;
         }
-
         public Builder imageConfig(@Nullable FunctionImageConfigArgs imageConfig) {
             this.imageConfig = Output.ofNullable(imageConfig);
             return this;
         }
-
         public Builder imageUri(@Nullable Output<String> imageUri) {
             this.imageUri = imageUri;
             return this;
         }
-
         public Builder imageUri(@Nullable String imageUri) {
             this.imageUri = Output.ofNullable(imageUri);
             return this;
         }
-
         public Builder kmsKeyArn(@Nullable Output<String> kmsKeyArn) {
             this.kmsKeyArn = kmsKeyArn;
             return this;
         }
-
         public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
             this.kmsKeyArn = Output.ofNullable(kmsKeyArn);
             return this;
         }
-
         public Builder layers(@Nullable Output<List<String>> layers) {
             this.layers = layers;
             return this;
         }
-
         public Builder layers(@Nullable List<String> layers) {
             this.layers = Output.ofNullable(layers);
             return this;
         }
-
+        public Builder layers(String... layers) {
+            return layers(List.of(layers));
+        }
         public Builder memorySize(@Nullable Output<Integer> memorySize) {
             this.memorySize = memorySize;
             return this;
         }
-
         public Builder memorySize(@Nullable Integer memorySize) {
             this.memorySize = Output.ofNullable(memorySize);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder packageType(@Nullable Output<String> packageType) {
             this.packageType = packageType;
             return this;
         }
-
         public Builder packageType(@Nullable String packageType) {
             this.packageType = Output.ofNullable(packageType);
             return this;
         }
-
         public Builder publish(@Nullable Output<Boolean> publish) {
             this.publish = publish;
             return this;
         }
-
         public Builder publish(@Nullable Boolean publish) {
             this.publish = Output.ofNullable(publish);
             return this;
         }
-
         public Builder reservedConcurrentExecutions(@Nullable Output<Integer> reservedConcurrentExecutions) {
             this.reservedConcurrentExecutions = reservedConcurrentExecutions;
             return this;
         }
-
         public Builder reservedConcurrentExecutions(@Nullable Integer reservedConcurrentExecutions) {
             this.reservedConcurrentExecutions = Output.ofNullable(reservedConcurrentExecutions);
             return this;
         }
-
         public Builder role(Output<String> role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }
-
         public Builder role(String role) {
             this.role = Output.of(Objects.requireNonNull(role));
             return this;
         }
-
         public Builder runtime(@Nullable Output<Either<String,Runtime>> runtime) {
             this.runtime = runtime;
             return this;
         }
-
         public Builder runtime(@Nullable Either<String,Runtime> runtime) {
             this.runtime = Output.ofNullable(runtime);
             return this;
         }
-
         public Builder s3Bucket(@Nullable Output<String> s3Bucket) {
             this.s3Bucket = s3Bucket;
             return this;
         }
-
         public Builder s3Bucket(@Nullable String s3Bucket) {
             this.s3Bucket = Output.ofNullable(s3Bucket);
             return this;
         }
-
         public Builder s3Key(@Nullable Output<String> s3Key) {
             this.s3Key = s3Key;
             return this;
         }
-
         public Builder s3Key(@Nullable String s3Key) {
             this.s3Key = Output.ofNullable(s3Key);
             return this;
         }
-
         public Builder s3ObjectVersion(@Nullable Output<String> s3ObjectVersion) {
             this.s3ObjectVersion = s3ObjectVersion;
             return this;
         }
-
         public Builder s3ObjectVersion(@Nullable String s3ObjectVersion) {
             this.s3ObjectVersion = Output.ofNullable(s3ObjectVersion);
             return this;
         }
-
         public Builder sourceCodeHash(@Nullable Output<String> sourceCodeHash) {
             this.sourceCodeHash = sourceCodeHash;
             return this;
         }
-
         public Builder sourceCodeHash(@Nullable String sourceCodeHash) {
             this.sourceCodeHash = Output.ofNullable(sourceCodeHash);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder timeout(@Nullable Output<Integer> timeout) {
             this.timeout = timeout;
             return this;
         }
-
         public Builder timeout(@Nullable Integer timeout) {
             this.timeout = Output.ofNullable(timeout);
             return this;
         }
-
         public Builder tracingConfig(@Nullable Output<FunctionTracingConfigArgs> tracingConfig) {
             this.tracingConfig = tracingConfig;
             return this;
         }
-
         public Builder tracingConfig(@Nullable FunctionTracingConfigArgs tracingConfig) {
             this.tracingConfig = Output.ofNullable(tracingConfig);
             return this;
         }
-
         public Builder vpcConfig(@Nullable Output<FunctionVpcConfigArgs> vpcConfig) {
             this.vpcConfig = vpcConfig;
             return this;
         }
-
         public Builder vpcConfig(@Nullable FunctionVpcConfigArgs vpcConfig) {
             this.vpcConfig = Output.ofNullable(vpcConfig);
             return this;
-        }
-        public FunctionArgs build() {
+        }        public FunctionArgs build() {
             return new FunctionArgs(architectures, code, codeSigningConfigArn, deadLetterConfig, description, environment, fileSystemConfig, handler, imageConfig, imageUri, kmsKeyArn, layers, memorySize, name, packageType, publish, reservedConcurrentExecutions, role, runtime, s3Bucket, s3Key, s3ObjectVersion, sourceCodeHash, tags, timeout, tracingConfig, vpcConfig);
         }
     }

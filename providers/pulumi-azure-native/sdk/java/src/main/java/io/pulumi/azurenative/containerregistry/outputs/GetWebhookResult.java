@@ -185,47 +185,41 @@ public final class GetWebhookResult {
             this.actions = Objects.requireNonNull(actions);
             return this;
         }
-
+        public Builder actions(String... actions) {
+            return actions(List.of(actions));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder scope(@Nullable String scope) {
             this.scope = scope;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetWebhookResult build() {
+        }        public GetWebhookResult build() {
             return new GetWebhookResult(actions, id, location, name, provisioningState, scope, status, tags, type);
         }
     }

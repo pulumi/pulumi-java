@@ -43,8 +43,7 @@ public final class ModelBiasJobDefinitionMonitoringOutput {
         public Builder s3Output(ModelBiasJobDefinitionS3Output s3Output) {
             this.s3Output = Objects.requireNonNull(s3Output);
             return this;
-        }
-        public ModelBiasJobDefinitionMonitoringOutput build() {
+        }        public ModelBiasJobDefinitionMonitoringOutput build() {
             return new ModelBiasJobDefinitionMonitoringOutput(s3Output);
         }
     }

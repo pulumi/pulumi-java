@@ -153,82 +153,69 @@ public final class SessionEntityTypeArgs extends io.pulumi.resources.ResourceArg
             this.agentId = Objects.requireNonNull(agentId);
             return this;
         }
-
         public Builder agentId(String agentId) {
             this.agentId = Output.of(Objects.requireNonNull(agentId));
             return this;
         }
-
         public Builder entities(Output<List<GoogleCloudDialogflowCxV3EntityTypeEntityArgs>> entities) {
             this.entities = Objects.requireNonNull(entities);
             return this;
         }
-
         public Builder entities(List<GoogleCloudDialogflowCxV3EntityTypeEntityArgs> entities) {
             this.entities = Output.of(Objects.requireNonNull(entities));
             return this;
         }
-
+        public Builder entities(GoogleCloudDialogflowCxV3EntityTypeEntityArgs... entities) {
+            return entities(List.of(entities));
+        }
         public Builder entityOverrideMode(Output<SessionEntityTypeEntityOverrideMode> entityOverrideMode) {
             this.entityOverrideMode = Objects.requireNonNull(entityOverrideMode);
             return this;
         }
-
         public Builder entityOverrideMode(SessionEntityTypeEntityOverrideMode entityOverrideMode) {
             this.entityOverrideMode = Output.of(Objects.requireNonNull(entityOverrideMode));
             return this;
         }
-
         public Builder environmentId(Output<String> environmentId) {
             this.environmentId = Objects.requireNonNull(environmentId);
             return this;
         }
-
         public Builder environmentId(String environmentId) {
             this.environmentId = Output.of(Objects.requireNonNull(environmentId));
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder sessionId(Output<String> sessionId) {
             this.sessionId = Objects.requireNonNull(sessionId);
             return this;
         }
-
         public Builder sessionId(String sessionId) {
             this.sessionId = Output.of(Objects.requireNonNull(sessionId));
             return this;
-        }
-        public SessionEntityTypeArgs build() {
+        }        public SessionEntityTypeArgs build() {
             return new SessionEntityTypeArgs(agentId, entities, entityOverrideMode, environmentId, location, name, project, sessionId);
         }
     }

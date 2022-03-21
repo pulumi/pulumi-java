@@ -93,42 +93,34 @@ public final class IntegrationSourceFlowConfigArgs extends io.pulumi.resources.R
             this.connectorProfileName = connectorProfileName;
             return this;
         }
-
         public Builder connectorProfileName(@Nullable String connectorProfileName) {
             this.connectorProfileName = Output.ofNullable(connectorProfileName);
             return this;
         }
-
         public Builder connectorType(Output<IntegrationConnectorType> connectorType) {
             this.connectorType = Objects.requireNonNull(connectorType);
             return this;
         }
-
         public Builder connectorType(IntegrationConnectorType connectorType) {
             this.connectorType = Output.of(Objects.requireNonNull(connectorType));
             return this;
         }
-
         public Builder incrementalPullConfig(@Nullable Output<IntegrationIncrementalPullConfigArgs> incrementalPullConfig) {
             this.incrementalPullConfig = incrementalPullConfig;
             return this;
         }
-
         public Builder incrementalPullConfig(@Nullable IntegrationIncrementalPullConfigArgs incrementalPullConfig) {
             this.incrementalPullConfig = Output.ofNullable(incrementalPullConfig);
             return this;
         }
-
         public Builder sourceConnectorProperties(Output<IntegrationSourceConnectorPropertiesArgs> sourceConnectorProperties) {
             this.sourceConnectorProperties = Objects.requireNonNull(sourceConnectorProperties);
             return this;
         }
-
         public Builder sourceConnectorProperties(IntegrationSourceConnectorPropertiesArgs sourceConnectorProperties) {
             this.sourceConnectorProperties = Output.of(Objects.requireNonNull(sourceConnectorProperties));
             return this;
-        }
-        public IntegrationSourceFlowConfigArgs build() {
+        }        public IntegrationSourceFlowConfigArgs build() {
             return new IntegrationSourceFlowConfigArgs(connectorProfileName, connectorType, incrementalPullConfig, sourceConnectorProperties);
         }
     }

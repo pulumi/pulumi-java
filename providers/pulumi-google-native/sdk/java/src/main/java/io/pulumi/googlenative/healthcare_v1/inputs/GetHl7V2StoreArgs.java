@@ -90,22 +90,18 @@ public final class GetHl7V2StoreArgs extends io.pulumi.resources.InvokeArgs {
             this.datasetId = Objects.requireNonNull(datasetId);
             return this;
         }
-
         public Builder hl7V2StoreId(String hl7V2StoreId) {
             this.hl7V2StoreId = Objects.requireNonNull(hl7V2StoreId);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetHl7V2StoreArgs build() {
+        }        public GetHl7V2StoreArgs build() {
             return new GetHl7V2StoreArgs(datasetId, hl7V2StoreId, location, project);
         }
     }

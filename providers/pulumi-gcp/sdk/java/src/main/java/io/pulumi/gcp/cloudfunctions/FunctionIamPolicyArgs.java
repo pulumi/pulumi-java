@@ -90,42 +90,34 @@ public final class FunctionIamPolicyArgs extends io.pulumi.resources.ResourceArg
             this.cloudFunction = Objects.requireNonNull(cloudFunction);
             return this;
         }
-
         public Builder cloudFunction(String cloudFunction) {
             this.cloudFunction = Output.of(Objects.requireNonNull(cloudFunction));
             return this;
         }
-
         public Builder policyData(Output<String> policyData) {
             this.policyData = Objects.requireNonNull(policyData);
             return this;
         }
-
         public Builder policyData(String policyData) {
             this.policyData = Output.of(Objects.requireNonNull(policyData));
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
-
         public Builder region(@Nullable String region) {
             this.region = Output.ofNullable(region);
             return this;
-        }
-        public FunctionIamPolicyArgs build() {
+        }        public FunctionIamPolicyArgs build() {
             return new FunctionIamPolicyArgs(cloudFunction, policyData, project, region);
         }
     }

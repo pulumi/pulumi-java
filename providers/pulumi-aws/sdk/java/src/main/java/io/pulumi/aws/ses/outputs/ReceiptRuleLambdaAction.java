@@ -104,22 +104,18 @@ public final class ReceiptRuleLambdaAction {
             this.functionArn = Objects.requireNonNull(functionArn);
             return this;
         }
-
         public Builder invocationType(@Nullable String invocationType) {
             this.invocationType = invocationType;
             return this;
         }
-
         public Builder position(Integer position) {
             this.position = Objects.requireNonNull(position);
             return this;
         }
-
         public Builder topicArn(@Nullable String topicArn) {
             this.topicArn = topicArn;
             return this;
-        }
-        public ReceiptRuleLambdaAction build() {
+        }        public ReceiptRuleLambdaAction build() {
             return new ReceiptRuleLambdaAction(functionArn, invocationType, position, topicArn);
         }
     }

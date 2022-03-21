@@ -69,12 +69,10 @@ public final class JitAuthorizationPoliciesResponse {
             this.principalId = Objects.requireNonNull(principalId);
             return this;
         }
-
         public Builder roleDefinitionId(String roleDefinitionId) {
             this.roleDefinitionId = Objects.requireNonNull(roleDefinitionId);
             return this;
-        }
-        public JitAuthorizationPoliciesResponse build() {
+        }        public JitAuthorizationPoliciesResponse build() {
             return new JitAuthorizationPoliciesResponse(principalId, roleDefinitionId);
         }
     }

@@ -60,7 +60,9 @@ public final class SystemParametersResponse extends io.pulumi.resources.InvokeAr
             this.rules = Objects.requireNonNull(rules);
             return this;
         }
-        public SystemParametersResponse build() {
+        public Builder rules(SystemParameterRuleResponse... rules) {
+            return rules(List.of(rules));
+        }        public SystemParametersResponse build() {
             return new SystemParametersResponse(rules);
         }
     }

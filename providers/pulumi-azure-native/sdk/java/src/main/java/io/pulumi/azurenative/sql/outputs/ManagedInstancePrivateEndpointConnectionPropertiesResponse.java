@@ -89,17 +89,14 @@ public final class ManagedInstancePrivateEndpointConnectionPropertiesResponse {
             this.privateEndpoint = privateEndpoint;
             return this;
         }
-
         public Builder privateLinkServiceConnectionState(@Nullable ManagedInstancePrivateLinkServiceConnectionStatePropertyResponse privateLinkServiceConnectionState) {
             this.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
-        }
-        public ManagedInstancePrivateEndpointConnectionPropertiesResponse build() {
+        }        public ManagedInstancePrivateEndpointConnectionPropertiesResponse build() {
             return new ManagedInstancePrivateEndpointConnectionPropertiesResponse(privateEndpoint, privateLinkServiceConnectionState, provisioningState);
         }
     }

@@ -78,12 +78,10 @@ public final class EntityReferenceResponse extends io.pulumi.resources.InvokeArg
             this.referenceName = referenceName;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
-        }
-        public EntityReferenceResponse build() {
+        }        public EntityReferenceResponse build() {
             return new EntityReferenceResponse(referenceName, type);
         }
     }

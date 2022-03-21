@@ -162,72 +162,61 @@ public final class ApiOAuthSettingsArgs extends io.pulumi.resources.ResourceArgs
             this.clientId = clientId;
             return this;
         }
-
         public Builder clientId(@Nullable String clientId) {
             this.clientId = Output.ofNullable(clientId);
             return this;
         }
-
         public Builder clientSecret(@Nullable Output<String> clientSecret) {
             this.clientSecret = clientSecret;
             return this;
         }
-
         public Builder clientSecret(@Nullable String clientSecret) {
             this.clientSecret = Output.ofNullable(clientSecret);
             return this;
         }
-
         public Builder customParameters(@Nullable Output<Map<String,ApiOAuthSettingsParameterArgs>> customParameters) {
             this.customParameters = customParameters;
             return this;
         }
-
         public Builder customParameters(@Nullable Map<String,ApiOAuthSettingsParameterArgs> customParameters) {
             this.customParameters = Output.ofNullable(customParameters);
             return this;
         }
-
         public Builder identityProvider(@Nullable Output<String> identityProvider) {
             this.identityProvider = identityProvider;
             return this;
         }
-
         public Builder identityProvider(@Nullable String identityProvider) {
             this.identityProvider = Output.ofNullable(identityProvider);
             return this;
         }
-
         public Builder properties(@Nullable Output<Object> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder properties(@Nullable Object properties) {
             this.properties = Output.ofNullable(properties);
             return this;
         }
-
         public Builder redirectUrl(@Nullable Output<String> redirectUrl) {
             this.redirectUrl = redirectUrl;
             return this;
         }
-
         public Builder redirectUrl(@Nullable String redirectUrl) {
             this.redirectUrl = Output.ofNullable(redirectUrl);
             return this;
         }
-
         public Builder scopes(@Nullable Output<List<String>> scopes) {
             this.scopes = scopes;
             return this;
         }
-
         public Builder scopes(@Nullable List<String> scopes) {
             this.scopes = Output.ofNullable(scopes);
             return this;
         }
-        public ApiOAuthSettingsArgs build() {
+        public Builder scopes(String... scopes) {
+            return scopes(List.of(scopes));
+        }        public ApiOAuthSettingsArgs build() {
             return new ApiOAuthSettingsArgs(clientId, clientSecret, customParameters, identityProvider, properties, redirectUrl, scopes);
         }
     }

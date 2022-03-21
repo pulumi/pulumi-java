@@ -284,77 +284,65 @@ public final class GetQueueResult {
             this.arn = arn;
             return this;
         }
-
         public Builder contentBasedDeduplication(@Nullable Boolean contentBasedDeduplication) {
             this.contentBasedDeduplication = contentBasedDeduplication;
             return this;
         }
-
         public Builder deduplicationScope(@Nullable String deduplicationScope) {
             this.deduplicationScope = deduplicationScope;
             return this;
         }
-
         public Builder delaySeconds(@Nullable Integer delaySeconds) {
             this.delaySeconds = delaySeconds;
             return this;
         }
-
         public Builder fifoThroughputLimit(@Nullable String fifoThroughputLimit) {
             this.fifoThroughputLimit = fifoThroughputLimit;
             return this;
         }
-
         public Builder kmsDataKeyReusePeriodSeconds(@Nullable Integer kmsDataKeyReusePeriodSeconds) {
             this.kmsDataKeyReusePeriodSeconds = kmsDataKeyReusePeriodSeconds;
             return this;
         }
-
         public Builder kmsMasterKeyId(@Nullable String kmsMasterKeyId) {
             this.kmsMasterKeyId = kmsMasterKeyId;
             return this;
         }
-
         public Builder maximumMessageSize(@Nullable Integer maximumMessageSize) {
             this.maximumMessageSize = maximumMessageSize;
             return this;
         }
-
         public Builder messageRetentionPeriod(@Nullable Integer messageRetentionPeriod) {
             this.messageRetentionPeriod = messageRetentionPeriod;
             return this;
         }
-
         public Builder queueUrl(@Nullable String queueUrl) {
             this.queueUrl = queueUrl;
             return this;
         }
-
         public Builder receiveMessageWaitTimeSeconds(@Nullable Integer receiveMessageWaitTimeSeconds) {
             this.receiveMessageWaitTimeSeconds = receiveMessageWaitTimeSeconds;
             return this;
         }
-
         public Builder redriveAllowPolicy(@Nullable Object redriveAllowPolicy) {
             this.redriveAllowPolicy = redriveAllowPolicy;
             return this;
         }
-
         public Builder redrivePolicy(@Nullable Object redrivePolicy) {
             this.redrivePolicy = redrivePolicy;
             return this;
         }
-
         public Builder tags(@Nullable List<QueueTag> tags) {
             this.tags = tags;
             return this;
         }
-
+        public Builder tags(QueueTag... tags) {
+            return tags(List.of(tags));
+        }
         public Builder visibilityTimeout(@Nullable Integer visibilityTimeout) {
             this.visibilityTimeout = visibilityTimeout;
             return this;
-        }
-        public GetQueueResult build() {
+        }        public GetQueueResult build() {
             return new GetQueueResult(arn, contentBasedDeduplication, deduplicationScope, delaySeconds, fifoThroughputLimit, kmsDataKeyReusePeriodSeconds, kmsMasterKeyId, maximumMessageSize, messageRetentionPeriod, queueUrl, receiveMessageWaitTimeSeconds, redriveAllowPolicy, redrivePolicy, tags, visibilityTimeout);
         }
     }

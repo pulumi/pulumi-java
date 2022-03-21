@@ -84,17 +84,14 @@ public final class PolicyAlternativeNameServerConfigTargetNameServerResponse ext
             this.forwardingPath = Objects.requireNonNull(forwardingPath);
             return this;
         }
-
         public Builder ipv4Address(String ipv4Address) {
             this.ipv4Address = Objects.requireNonNull(ipv4Address);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
-        }
-        public PolicyAlternativeNameServerConfigTargetNameServerResponse build() {
+        }        public PolicyAlternativeNameServerConfigTargetNameServerResponse build() {
             return new PolicyAlternativeNameServerConfigTargetNameServerResponse(forwardingPath, ipv4Address, kind);
         }
     }

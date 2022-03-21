@@ -63,12 +63,10 @@ public final class SnapshotSkuArgs extends io.pulumi.resources.ResourceArgs {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable Either<String,SnapshotStorageAccountTypes> name) {
             this.name = Output.ofNullable(name);
             return this;
-        }
-        public SnapshotSkuArgs build() {
+        }        public SnapshotSkuArgs build() {
             return new SnapshotSkuArgs(name);
         }
     }

@@ -56,12 +56,10 @@ public final class BucketServerSideEncryptionConfigurationGetArgs extends io.pul
             this.rule = Objects.requireNonNull(rule);
             return this;
         }
-
         public Builder rule(BucketServerSideEncryptionConfigurationRuleGetArgs rule) {
             this.rule = Output.of(Objects.requireNonNull(rule));
             return this;
-        }
-        public BucketServerSideEncryptionConfigurationGetArgs build() {
+        }        public BucketServerSideEncryptionConfigurationGetArgs build() {
             return new BucketServerSideEncryptionConfigurationGetArgs(rule);
         }
     }

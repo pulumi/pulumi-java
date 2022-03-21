@@ -315,82 +315,66 @@ public final class ThemeUIColorPalette {
             this.accent = accent;
             return this;
         }
-
         public Builder accentForeground(@Nullable String accentForeground) {
             this.accentForeground = accentForeground;
             return this;
         }
-
         public Builder danger(@Nullable String danger) {
             this.danger = danger;
             return this;
         }
-
         public Builder dangerForeground(@Nullable String dangerForeground) {
             this.dangerForeground = dangerForeground;
             return this;
         }
-
         public Builder dimension(@Nullable String dimension) {
             this.dimension = dimension;
             return this;
         }
-
         public Builder dimensionForeground(@Nullable String dimensionForeground) {
             this.dimensionForeground = dimensionForeground;
             return this;
         }
-
         public Builder measure(@Nullable String measure) {
             this.measure = measure;
             return this;
         }
-
         public Builder measureForeground(@Nullable String measureForeground) {
             this.measureForeground = measureForeground;
             return this;
         }
-
         public Builder primaryBackground(@Nullable String primaryBackground) {
             this.primaryBackground = primaryBackground;
             return this;
         }
-
         public Builder primaryForeground(@Nullable String primaryForeground) {
             this.primaryForeground = primaryForeground;
             return this;
         }
-
         public Builder secondaryBackground(@Nullable String secondaryBackground) {
             this.secondaryBackground = secondaryBackground;
             return this;
         }
-
         public Builder secondaryForeground(@Nullable String secondaryForeground) {
             this.secondaryForeground = secondaryForeground;
             return this;
         }
-
         public Builder success(@Nullable String success) {
             this.success = success;
             return this;
         }
-
         public Builder successForeground(@Nullable String successForeground) {
             this.successForeground = successForeground;
             return this;
         }
-
         public Builder warning(@Nullable String warning) {
             this.warning = warning;
             return this;
         }
-
         public Builder warningForeground(@Nullable String warningForeground) {
             this.warningForeground = warningForeground;
             return this;
-        }
-        public ThemeUIColorPalette build() {
+        }        public ThemeUIColorPalette build() {
             return new ThemeUIColorPalette(accent, accentForeground, danger, dangerForeground, dimension, dimensionForeground, measure, measureForeground, primaryBackground, primaryForeground, secondaryBackground, secondaryForeground, success, successForeground, warning, warningForeground);
         }
     }

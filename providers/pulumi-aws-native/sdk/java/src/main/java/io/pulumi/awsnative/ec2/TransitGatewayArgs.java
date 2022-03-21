@@ -189,122 +189,104 @@ public final class TransitGatewayArgs extends io.pulumi.resources.ResourceArgs {
             this.amazonSideAsn = amazonSideAsn;
             return this;
         }
-
         public Builder amazonSideAsn(@Nullable Integer amazonSideAsn) {
             this.amazonSideAsn = Output.ofNullable(amazonSideAsn);
             return this;
         }
-
         public Builder associationDefaultRouteTableId(@Nullable Output<String> associationDefaultRouteTableId) {
             this.associationDefaultRouteTableId = associationDefaultRouteTableId;
             return this;
         }
-
         public Builder associationDefaultRouteTableId(@Nullable String associationDefaultRouteTableId) {
             this.associationDefaultRouteTableId = Output.ofNullable(associationDefaultRouteTableId);
             return this;
         }
-
         public Builder autoAcceptSharedAttachments(@Nullable Output<String> autoAcceptSharedAttachments) {
             this.autoAcceptSharedAttachments = autoAcceptSharedAttachments;
             return this;
         }
-
         public Builder autoAcceptSharedAttachments(@Nullable String autoAcceptSharedAttachments) {
             this.autoAcceptSharedAttachments = Output.ofNullable(autoAcceptSharedAttachments);
             return this;
         }
-
         public Builder defaultRouteTableAssociation(@Nullable Output<String> defaultRouteTableAssociation) {
             this.defaultRouteTableAssociation = defaultRouteTableAssociation;
             return this;
         }
-
         public Builder defaultRouteTableAssociation(@Nullable String defaultRouteTableAssociation) {
             this.defaultRouteTableAssociation = Output.ofNullable(defaultRouteTableAssociation);
             return this;
         }
-
         public Builder defaultRouteTablePropagation(@Nullable Output<String> defaultRouteTablePropagation) {
             this.defaultRouteTablePropagation = defaultRouteTablePropagation;
             return this;
         }
-
         public Builder defaultRouteTablePropagation(@Nullable String defaultRouteTablePropagation) {
             this.defaultRouteTablePropagation = Output.ofNullable(defaultRouteTablePropagation);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder dnsSupport(@Nullable Output<String> dnsSupport) {
             this.dnsSupport = dnsSupport;
             return this;
         }
-
         public Builder dnsSupport(@Nullable String dnsSupport) {
             this.dnsSupport = Output.ofNullable(dnsSupport);
             return this;
         }
-
         public Builder multicastSupport(@Nullable Output<String> multicastSupport) {
             this.multicastSupport = multicastSupport;
             return this;
         }
-
         public Builder multicastSupport(@Nullable String multicastSupport) {
             this.multicastSupport = Output.ofNullable(multicastSupport);
             return this;
         }
-
         public Builder propagationDefaultRouteTableId(@Nullable Output<String> propagationDefaultRouteTableId) {
             this.propagationDefaultRouteTableId = propagationDefaultRouteTableId;
             return this;
         }
-
         public Builder propagationDefaultRouteTableId(@Nullable String propagationDefaultRouteTableId) {
             this.propagationDefaultRouteTableId = Output.ofNullable(propagationDefaultRouteTableId);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<TransitGatewayTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<TransitGatewayTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
+        public Builder tags(TransitGatewayTagArgs... tags) {
+            return tags(List.of(tags));
+        }
         public Builder transitGatewayCidrBlocks(@Nullable Output<List<String>> transitGatewayCidrBlocks) {
             this.transitGatewayCidrBlocks = transitGatewayCidrBlocks;
             return this;
         }
-
         public Builder transitGatewayCidrBlocks(@Nullable List<String> transitGatewayCidrBlocks) {
             this.transitGatewayCidrBlocks = Output.ofNullable(transitGatewayCidrBlocks);
             return this;
         }
-
+        public Builder transitGatewayCidrBlocks(String... transitGatewayCidrBlocks) {
+            return transitGatewayCidrBlocks(List.of(transitGatewayCidrBlocks));
+        }
         public Builder vpnEcmpSupport(@Nullable Output<String> vpnEcmpSupport) {
             this.vpnEcmpSupport = vpnEcmpSupport;
             return this;
         }
-
         public Builder vpnEcmpSupport(@Nullable String vpnEcmpSupport) {
             this.vpnEcmpSupport = Output.ofNullable(vpnEcmpSupport);
             return this;
-        }
-        public TransitGatewayArgs build() {
+        }        public TransitGatewayArgs build() {
             return new TransitGatewayArgs(amazonSideAsn, associationDefaultRouteTableId, autoAcceptSharedAttachments, defaultRouteTableAssociation, defaultRouteTablePropagation, description, dnsSupport, multicastSupport, propagationDefaultRouteTableId, tags, transitGatewayCidrBlocks, vpnEcmpSupport);
         }
     }

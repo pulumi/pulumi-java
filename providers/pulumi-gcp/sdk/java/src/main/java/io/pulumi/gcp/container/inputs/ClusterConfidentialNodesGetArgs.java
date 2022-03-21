@@ -57,12 +57,10 @@ public final class ClusterConfidentialNodesGetArgs extends io.pulumi.resources.R
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public Builder enabled(Boolean enabled) {
             this.enabled = Output.of(Objects.requireNonNull(enabled));
             return this;
-        }
-        public ClusterConfidentialNodesGetArgs build() {
+        }        public ClusterConfidentialNodesGetArgs build() {
             return new ClusterConfidentialNodesGetArgs(enabled);
         }
     }

@@ -202,52 +202,45 @@ public final class GetprivateLinkForAzureAdResult {
             this.allTenants = allTenants;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder ownerTenantId(@Nullable String ownerTenantId) {
             this.ownerTenantId = ownerTenantId;
             return this;
         }
-
         public Builder resourceGroup(@Nullable String resourceGroup) {
             this.resourceGroup = resourceGroup;
             return this;
         }
-
         public Builder resourceName(@Nullable String resourceName) {
             this.resourceName = resourceName;
             return this;
         }
-
         public Builder subscriptionId(@Nullable String subscriptionId) {
             this.subscriptionId = subscriptionId;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tenants(@Nullable List<String> tenants) {
             this.tenants = tenants;
             return this;
         }
-
+        public Builder tenants(String... tenants) {
+            return tenants(List.of(tenants));
+        }
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetprivateLinkForAzureAdResult build() {
+        }        public GetprivateLinkForAzureAdResult build() {
             return new GetprivateLinkForAzureAdResult(allTenants, id, name, ownerTenantId, resourceGroup, resourceName, subscriptionId, tags, tenants, type);
         }
     }

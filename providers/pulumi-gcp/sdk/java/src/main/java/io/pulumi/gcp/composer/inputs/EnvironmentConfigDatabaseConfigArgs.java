@@ -52,12 +52,10 @@ public final class EnvironmentConfigDatabaseConfigArgs extends io.pulumi.resourc
             this.machineType = Objects.requireNonNull(machineType);
             return this;
         }
-
         public Builder machineType(String machineType) {
             this.machineType = Output.of(Objects.requireNonNull(machineType));
             return this;
-        }
-        public EnvironmentConfigDatabaseConfigArgs build() {
+        }        public EnvironmentConfigDatabaseConfigArgs build() {
             return new EnvironmentConfigDatabaseConfigArgs(machineType);
         }
     }

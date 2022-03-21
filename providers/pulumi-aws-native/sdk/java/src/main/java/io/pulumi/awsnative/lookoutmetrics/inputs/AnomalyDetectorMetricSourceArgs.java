@@ -106,52 +106,42 @@ public final class AnomalyDetectorMetricSourceArgs extends io.pulumi.resources.R
             this.appFlowConfig = appFlowConfig;
             return this;
         }
-
         public Builder appFlowConfig(@Nullable AnomalyDetectorAppFlowConfigArgs appFlowConfig) {
             this.appFlowConfig = Output.ofNullable(appFlowConfig);
             return this;
         }
-
         public Builder cloudwatchConfig(@Nullable Output<AnomalyDetectorCloudwatchConfigArgs> cloudwatchConfig) {
             this.cloudwatchConfig = cloudwatchConfig;
             return this;
         }
-
         public Builder cloudwatchConfig(@Nullable AnomalyDetectorCloudwatchConfigArgs cloudwatchConfig) {
             this.cloudwatchConfig = Output.ofNullable(cloudwatchConfig);
             return this;
         }
-
         public Builder rDSSourceConfig(@Nullable Output<AnomalyDetectorRDSSourceConfigArgs> rDSSourceConfig) {
             this.rDSSourceConfig = rDSSourceConfig;
             return this;
         }
-
         public Builder rDSSourceConfig(@Nullable AnomalyDetectorRDSSourceConfigArgs rDSSourceConfig) {
             this.rDSSourceConfig = Output.ofNullable(rDSSourceConfig);
             return this;
         }
-
         public Builder redshiftSourceConfig(@Nullable Output<AnomalyDetectorRedshiftSourceConfigArgs> redshiftSourceConfig) {
             this.redshiftSourceConfig = redshiftSourceConfig;
             return this;
         }
-
         public Builder redshiftSourceConfig(@Nullable AnomalyDetectorRedshiftSourceConfigArgs redshiftSourceConfig) {
             this.redshiftSourceConfig = Output.ofNullable(redshiftSourceConfig);
             return this;
         }
-
         public Builder s3SourceConfig(@Nullable Output<AnomalyDetectorS3SourceConfigArgs> s3SourceConfig) {
             this.s3SourceConfig = s3SourceConfig;
             return this;
         }
-
         public Builder s3SourceConfig(@Nullable AnomalyDetectorS3SourceConfigArgs s3SourceConfig) {
             this.s3SourceConfig = Output.ofNullable(s3SourceConfig);
             return this;
-        }
-        public AnomalyDetectorMetricSourceArgs build() {
+        }        public AnomalyDetectorMetricSourceArgs build() {
             return new AnomalyDetectorMetricSourceArgs(appFlowConfig, cloudwatchConfig, rDSSourceConfig, redshiftSourceConfig, s3SourceConfig);
         }
     }

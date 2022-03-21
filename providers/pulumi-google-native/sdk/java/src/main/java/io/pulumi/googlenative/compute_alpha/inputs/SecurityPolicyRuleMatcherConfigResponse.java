@@ -107,22 +107,30 @@ public final class SecurityPolicyRuleMatcherConfigResponse extends io.pulumi.res
             this.destIpRanges = Objects.requireNonNull(destIpRanges);
             return this;
         }
-
+        public Builder destIpRanges(String... destIpRanges) {
+            return destIpRanges(List.of(destIpRanges));
+        }
         public Builder destPorts(List<SecurityPolicyRuleMatcherConfigDestinationPortResponse> destPorts) {
             this.destPorts = Objects.requireNonNull(destPorts);
             return this;
         }
-
+        public Builder destPorts(SecurityPolicyRuleMatcherConfigDestinationPortResponse... destPorts) {
+            return destPorts(List.of(destPorts));
+        }
         public Builder layer4Configs(List<SecurityPolicyRuleMatcherConfigLayer4ConfigResponse> layer4Configs) {
             this.layer4Configs = Objects.requireNonNull(layer4Configs);
             return this;
         }
-
+        public Builder layer4Configs(SecurityPolicyRuleMatcherConfigLayer4ConfigResponse... layer4Configs) {
+            return layer4Configs(List.of(layer4Configs));
+        }
         public Builder srcIpRanges(List<String> srcIpRanges) {
             this.srcIpRanges = Objects.requireNonNull(srcIpRanges);
             return this;
         }
-        public SecurityPolicyRuleMatcherConfigResponse build() {
+        public Builder srcIpRanges(String... srcIpRanges) {
+            return srcIpRanges(List.of(srcIpRanges));
+        }        public SecurityPolicyRuleMatcherConfigResponse build() {
             return new SecurityPolicyRuleMatcherConfigResponse(destIpRanges, destPorts, layer4Configs, srcIpRanges);
         }
     }

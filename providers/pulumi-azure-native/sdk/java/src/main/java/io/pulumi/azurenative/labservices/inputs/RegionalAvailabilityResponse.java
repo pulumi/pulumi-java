@@ -80,12 +80,13 @@ public final class RegionalAvailabilityResponse extends io.pulumi.resources.Invo
             this.region = region;
             return this;
         }
-
         public Builder sizeAvailabilities(@Nullable List<SizeAvailabilityResponse> sizeAvailabilities) {
             this.sizeAvailabilities = sizeAvailabilities;
             return this;
         }
-        public RegionalAvailabilityResponse build() {
+        public Builder sizeAvailabilities(SizeAvailabilityResponse... sizeAvailabilities) {
+            return sizeAvailabilities(List.of(sizeAvailabilities));
+        }        public RegionalAvailabilityResponse build() {
             return new RegionalAvailabilityResponse(region, sizeAvailabilities);
         }
     }

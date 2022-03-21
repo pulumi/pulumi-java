@@ -266,72 +266,61 @@ public final class GetCertificateResult {
             this.certificateDescription = Objects.requireNonNull(certificateDescription);
             return this;
         }
-
         public Builder certificateTemplate(String certificateTemplate) {
             this.certificateTemplate = Objects.requireNonNull(certificateTemplate);
             return this;
         }
-
         public Builder config(CertificateConfigResponse config) {
             this.config = Objects.requireNonNull(config);
             return this;
         }
-
         public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder issuerCertificateAuthority(String issuerCertificateAuthority) {
             this.issuerCertificateAuthority = Objects.requireNonNull(issuerCertificateAuthority);
             return this;
         }
-
         public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder lifetime(String lifetime) {
             this.lifetime = Objects.requireNonNull(lifetime);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder pemCertificate(String pemCertificate) {
             this.pemCertificate = Objects.requireNonNull(pemCertificate);
             return this;
         }
-
         public Builder pemCertificateChain(List<String> pemCertificateChain) {
             this.pemCertificateChain = Objects.requireNonNull(pemCertificateChain);
             return this;
         }
-
+        public Builder pemCertificateChain(String... pemCertificateChain) {
+            return pemCertificateChain(List.of(pemCertificateChain));
+        }
         public Builder pemCsr(String pemCsr) {
             this.pemCsr = Objects.requireNonNull(pemCsr);
             return this;
         }
-
         public Builder revocationDetails(RevocationDetailsResponse revocationDetails) {
             this.revocationDetails = Objects.requireNonNull(revocationDetails);
             return this;
         }
-
         public Builder subjectMode(String subjectMode) {
             this.subjectMode = Objects.requireNonNull(subjectMode);
             return this;
         }
-
         public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
-        }
-        public GetCertificateResult build() {
+        }        public GetCertificateResult build() {
             return new GetCertificateResult(certificateDescription, certificateTemplate, config, createTime, issuerCertificateAuthority, labels, lifetime, name, pemCertificate, pemCertificateChain, pemCsr, revocationDetails, subjectMode, updateTime);
         }
     }

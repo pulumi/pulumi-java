@@ -54,12 +54,13 @@ public final class StandardSqlStructTypeArgs extends io.pulumi.resources.Resourc
             this.fields = fields;
             return this;
         }
-
         public Builder fields(@Nullable List<StandardSqlFieldArgs> fields) {
             this.fields = Output.ofNullable(fields);
             return this;
         }
-        public StandardSqlStructTypeArgs build() {
+        public Builder fields(StandardSqlFieldArgs... fields) {
+            return fields(List.of(fields));
+        }        public StandardSqlStructTypeArgs build() {
             return new StandardSqlStructTypeArgs(fields);
         }
     }

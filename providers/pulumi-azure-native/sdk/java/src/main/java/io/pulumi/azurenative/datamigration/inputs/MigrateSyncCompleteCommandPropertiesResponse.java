@@ -131,27 +131,25 @@ public final class MigrateSyncCompleteCommandPropertiesResponse extends io.pulum
             this.commandType = Objects.requireNonNull(commandType);
             return this;
         }
-
         public Builder errors(List<ODataErrorResponse> errors) {
             this.errors = Objects.requireNonNull(errors);
             return this;
         }
-
+        public Builder errors(ODataErrorResponse... errors) {
+            return errors(List.of(errors));
+        }
         public Builder input(@Nullable MigrateSyncCompleteCommandInputResponse input) {
             this.input = input;
             return this;
         }
-
         public Builder output(MigrateSyncCompleteCommandOutputResponse output) {
             this.output = Objects.requireNonNull(output);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
-        }
-        public MigrateSyncCompleteCommandPropertiesResponse build() {
+        }        public MigrateSyncCompleteCommandPropertiesResponse build() {
             return new MigrateSyncCompleteCommandPropertiesResponse(commandType, errors, input, output, state);
         }
     }

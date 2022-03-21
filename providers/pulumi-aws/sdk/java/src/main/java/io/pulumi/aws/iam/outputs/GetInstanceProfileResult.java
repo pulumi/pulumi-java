@@ -159,42 +159,34 @@ public final class GetInstanceProfileResult {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder createDate(String createDate) {
             this.createDate = Objects.requireNonNull(createDate);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
-
         public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public Builder roleId(String roleId) {
             this.roleId = Objects.requireNonNull(roleId);
             return this;
         }
-
         public Builder roleName(String roleName) {
             this.roleName = Objects.requireNonNull(roleName);
             return this;
-        }
-        public GetInstanceProfileResult build() {
+        }        public GetInstanceProfileResult build() {
             return new GetInstanceProfileResult(arn, createDate, id, name, path, roleArn, roleId, roleName);
         }
     }

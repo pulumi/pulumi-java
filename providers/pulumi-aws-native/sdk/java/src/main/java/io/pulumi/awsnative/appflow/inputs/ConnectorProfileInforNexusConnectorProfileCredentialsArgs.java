@@ -105,42 +105,34 @@ public final class ConnectorProfileInforNexusConnectorProfileCredentialsArgs ext
             this.accessKeyId = Objects.requireNonNull(accessKeyId);
             return this;
         }
-
         public Builder accessKeyId(String accessKeyId) {
             this.accessKeyId = Output.of(Objects.requireNonNull(accessKeyId));
             return this;
         }
-
         public Builder datakey(Output<String> datakey) {
             this.datakey = Objects.requireNonNull(datakey);
             return this;
         }
-
         public Builder datakey(String datakey) {
             this.datakey = Output.of(Objects.requireNonNull(datakey));
             return this;
         }
-
         public Builder secretAccessKey(Output<String> secretAccessKey) {
             this.secretAccessKey = Objects.requireNonNull(secretAccessKey);
             return this;
         }
-
         public Builder secretAccessKey(String secretAccessKey) {
             this.secretAccessKey = Output.of(Objects.requireNonNull(secretAccessKey));
             return this;
         }
-
         public Builder userId(Output<String> userId) {
             this.userId = Objects.requireNonNull(userId);
             return this;
         }
-
         public Builder userId(String userId) {
             this.userId = Output.of(Objects.requireNonNull(userId));
             return this;
-        }
-        public ConnectorProfileInforNexusConnectorProfileCredentialsArgs build() {
+        }        public ConnectorProfileInforNexusConnectorProfileCredentialsArgs build() {
             return new ConnectorProfileInforNexusConnectorProfileCredentialsArgs(accessKeyId, datakey, secretAccessKey, userId);
         }
     }

@@ -64,17 +64,20 @@ public final class ThrottlingRuleResponse {
             this.action = Objects.requireNonNull(action);
             return this;
         }
-
         public Builder metrics(List<ThrottlingMetricResponse> metrics) {
             this.metrics = Objects.requireNonNull(metrics);
             return this;
         }
-
+        public Builder metrics(ThrottlingMetricResponse... metrics) {
+            return metrics(List.of(metrics));
+        }
         public Builder requiredFeatures(@Nullable List<String> requiredFeatures) {
             this.requiredFeatures = requiredFeatures;
             return this;
         }
-        public ThrottlingRuleResponse build() {
+        public Builder requiredFeatures(String... requiredFeatures) {
+            return requiredFeatures(List.of(requiredFeatures));
+        }        public ThrottlingRuleResponse build() {
             return new ThrottlingRuleResponse(action, metrics, requiredFeatures);
         }
     }

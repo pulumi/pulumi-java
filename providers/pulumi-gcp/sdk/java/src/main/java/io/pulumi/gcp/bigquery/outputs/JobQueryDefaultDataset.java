@@ -71,12 +71,10 @@ public final class JobQueryDefaultDataset {
             this.datasetId = Objects.requireNonNull(datasetId);
             return this;
         }
-
         public Builder projectId(@Nullable String projectId) {
             this.projectId = projectId;
             return this;
-        }
-        public JobQueryDefaultDataset build() {
+        }        public JobQueryDefaultDataset build() {
             return new JobQueryDefaultDataset(datasetId, projectId);
         }
     }

@@ -128,32 +128,29 @@ public final class GooglePrivacyDlpV2CloudStorageOptionsResponse {
             this.bytesLimitPerFile = Objects.requireNonNull(bytesLimitPerFile);
             return this;
         }
-
         public Builder bytesLimitPerFilePercent(Integer bytesLimitPerFilePercent) {
             this.bytesLimitPerFilePercent = Objects.requireNonNull(bytesLimitPerFilePercent);
             return this;
         }
-
         public Builder fileSet(GooglePrivacyDlpV2FileSetResponse fileSet) {
             this.fileSet = Objects.requireNonNull(fileSet);
             return this;
         }
-
         public Builder fileTypes(List<String> fileTypes) {
             this.fileTypes = Objects.requireNonNull(fileTypes);
             return this;
         }
-
+        public Builder fileTypes(String... fileTypes) {
+            return fileTypes(List.of(fileTypes));
+        }
         public Builder filesLimitPercent(Integer filesLimitPercent) {
             this.filesLimitPercent = Objects.requireNonNull(filesLimitPercent);
             return this;
         }
-
         public Builder sampleMethod(String sampleMethod) {
             this.sampleMethod = Objects.requireNonNull(sampleMethod);
             return this;
-        }
-        public GooglePrivacyDlpV2CloudStorageOptionsResponse build() {
+        }        public GooglePrivacyDlpV2CloudStorageOptionsResponse build() {
             return new GooglePrivacyDlpV2CloudStorageOptionsResponse(bytesLimitPerFile, bytesLimitPerFilePercent, fileSet, fileTypes, filesLimitPercent, sampleMethod);
         }
     }

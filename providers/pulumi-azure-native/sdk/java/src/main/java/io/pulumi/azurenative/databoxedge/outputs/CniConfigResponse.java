@@ -101,22 +101,18 @@ public final class CniConfigResponse {
             this.podSubnet = Objects.requireNonNull(podSubnet);
             return this;
         }
-
         public Builder serviceSubnet(String serviceSubnet) {
             this.serviceSubnet = Objects.requireNonNull(serviceSubnet);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
-        }
-        public CniConfigResponse build() {
+        }        public CniConfigResponse build() {
             return new CniConfigResponse(podSubnet, serviceSubnet, type, version);
         }
     }

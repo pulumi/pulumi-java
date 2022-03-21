@@ -54,8 +54,7 @@ public final class GetDelegationSetArgs extends io.pulumi.resources.InvokeArgs {
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
-        }
-        public GetDelegationSetArgs build() {
+        }        public GetDelegationSetArgs build() {
             return new GetDelegationSetArgs(id);
         }
     }

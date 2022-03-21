@@ -75,22 +75,18 @@ public final class DiagnosticArgs extends io.pulumi.resources.ResourceArgs {
             this.field = field;
             return this;
         }
-
         public Builder field(@Nullable String field) {
             this.field = Output.ofNullable(field);
             return this;
         }
-
         public Builder level(@Nullable Output<DiagnosticLevel> level) {
             this.level = level;
             return this;
         }
-
         public Builder level(@Nullable DiagnosticLevel level) {
             this.level = Output.ofNullable(level);
             return this;
-        }
-        public DiagnosticArgs build() {
+        }        public DiagnosticArgs build() {
             return new DiagnosticArgs(field, level);
         }
     }

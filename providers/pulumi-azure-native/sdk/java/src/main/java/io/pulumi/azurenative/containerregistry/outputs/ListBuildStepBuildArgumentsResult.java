@@ -73,12 +73,13 @@ public final class ListBuildStepBuildArgumentsResult {
             this.nextLink = nextLink;
             return this;
         }
-
         public Builder value(@Nullable List<BuildArgumentResponse> value) {
             this.value = value;
             return this;
         }
-        public ListBuildStepBuildArgumentsResult build() {
+        public Builder value(BuildArgumentResponse... value) {
+            return value(List.of(value));
+        }        public ListBuildStepBuildArgumentsResult build() {
             return new ListBuildStepBuildArgumentsResult(nextLink, value);
         }
     }

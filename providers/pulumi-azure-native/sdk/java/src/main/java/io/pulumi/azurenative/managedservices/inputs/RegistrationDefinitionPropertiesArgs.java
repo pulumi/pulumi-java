@@ -112,42 +112,37 @@ public final class RegistrationDefinitionPropertiesArgs extends io.pulumi.resour
             this.authorizations = Objects.requireNonNull(authorizations);
             return this;
         }
-
         public Builder authorizations(List<AuthorizationArgs> authorizations) {
             this.authorizations = Output.of(Objects.requireNonNull(authorizations));
             return this;
         }
-
+        public Builder authorizations(AuthorizationArgs... authorizations) {
+            return authorizations(List.of(authorizations));
+        }
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder managedByTenantId(Output<String> managedByTenantId) {
             this.managedByTenantId = Objects.requireNonNull(managedByTenantId);
             return this;
         }
-
         public Builder managedByTenantId(String managedByTenantId) {
             this.managedByTenantId = Output.of(Objects.requireNonNull(managedByTenantId));
             return this;
         }
-
         public Builder registrationDefinitionName(@Nullable Output<String> registrationDefinitionName) {
             this.registrationDefinitionName = registrationDefinitionName;
             return this;
         }
-
         public Builder registrationDefinitionName(@Nullable String registrationDefinitionName) {
             this.registrationDefinitionName = Output.ofNullable(registrationDefinitionName);
             return this;
-        }
-        public RegistrationDefinitionPropertiesArgs build() {
+        }        public RegistrationDefinitionPropertiesArgs build() {
             return new RegistrationDefinitionPropertiesArgs(authorizations, description, managedByTenantId, registrationDefinitionName);
         }
     }

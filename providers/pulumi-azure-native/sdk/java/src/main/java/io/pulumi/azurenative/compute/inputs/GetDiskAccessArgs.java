@@ -72,12 +72,10 @@ public final class GetDiskAccessArgs extends io.pulumi.resources.InvokeArgs {
             this.diskAccessName = Objects.requireNonNull(diskAccessName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetDiskAccessArgs build() {
+        }        public GetDiskAccessArgs build() {
             return new GetDiskAccessArgs(diskAccessName, resourceGroupName);
         }
     }

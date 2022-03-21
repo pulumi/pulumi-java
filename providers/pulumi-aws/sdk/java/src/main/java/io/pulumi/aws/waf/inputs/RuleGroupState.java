@@ -141,62 +141,53 @@ public final class RuleGroupState extends io.pulumi.resources.ResourceArgs {
             this.activatedRules = activatedRules;
             return this;
         }
-
         public Builder activatedRules(@Nullable List<RuleGroupActivatedRuleGetArgs> activatedRules) {
             this.activatedRules = Output.ofNullable(activatedRules);
             return this;
         }
-
+        public Builder activatedRules(RuleGroupActivatedRuleGetArgs... activatedRules) {
+            return activatedRules(List.of(activatedRules));
+        }
         public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder metricName(@Nullable Output<String> metricName) {
             this.metricName = metricName;
             return this;
         }
-
         public Builder metricName(@Nullable String metricName) {
             this.metricName = Output.ofNullable(metricName);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
-        }
-        public RuleGroupState build() {
+        }        public RuleGroupState build() {
             return new RuleGroupState(activatedRules, arn, metricName, name, tags, tagsAll);
         }
     }

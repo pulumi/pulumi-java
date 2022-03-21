@@ -288,77 +288,77 @@ public final class HDInsightMapReduceActivityResponse {
             this.arguments = arguments;
             return this;
         }
-
+        public Builder arguments(Object... arguments) {
+            return arguments(List.of(arguments));
+        }
         public Builder className(Object className) {
             this.className = Objects.requireNonNull(className);
             return this;
         }
-
         public Builder defines(@Nullable Map<String,Object> defines) {
             this.defines = defines;
             return this;
         }
-
         public Builder dependsOn(@Nullable List<ActivityDependencyResponse> dependsOn) {
             this.dependsOn = dependsOn;
             return this;
         }
-
+        public Builder dependsOn(ActivityDependencyResponse... dependsOn) {
+            return dependsOn(List.of(dependsOn));
+        }
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder getDebugInfo(@Nullable String getDebugInfo) {
             this.getDebugInfo = getDebugInfo;
             return this;
         }
-
         public Builder jarFilePath(Object jarFilePath) {
             this.jarFilePath = Objects.requireNonNull(jarFilePath);
             return this;
         }
-
         public Builder jarLibs(@Nullable List<Object> jarLibs) {
             this.jarLibs = jarLibs;
             return this;
         }
-
+        public Builder jarLibs(Object... jarLibs) {
+            return jarLibs(List.of(jarLibs));
+        }
         public Builder jarLinkedService(@Nullable LinkedServiceReferenceResponse jarLinkedService) {
             this.jarLinkedService = jarLinkedService;
             return this;
         }
-
         public Builder linkedServiceName(@Nullable LinkedServiceReferenceResponse linkedServiceName) {
             this.linkedServiceName = linkedServiceName;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder policy(@Nullable ActivityPolicyResponse policy) {
             this.policy = policy;
             return this;
         }
-
         public Builder storageLinkedServices(@Nullable List<LinkedServiceReferenceResponse> storageLinkedServices) {
             this.storageLinkedServices = storageLinkedServices;
             return this;
         }
-
+        public Builder storageLinkedServices(LinkedServiceReferenceResponse... storageLinkedServices) {
+            return storageLinkedServices(List.of(storageLinkedServices));
+        }
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder userProperties(@Nullable List<UserPropertyResponse> userProperties) {
             this.userProperties = userProperties;
             return this;
         }
-        public HDInsightMapReduceActivityResponse build() {
+        public Builder userProperties(UserPropertyResponse... userProperties) {
+            return userProperties(List.of(userProperties));
+        }        public HDInsightMapReduceActivityResponse build() {
             return new HDInsightMapReduceActivityResponse(arguments, className, defines, dependsOn, description, getDebugInfo, jarFilePath, jarLibs, jarLinkedService, linkedServiceName, name, policy, storageLinkedServices, type, userProperties);
         }
     }

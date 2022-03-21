@@ -78,22 +78,18 @@ public final class EmptyDirVolumeSourceArgs extends io.pulumi.resources.Resource
             this.medium = medium;
             return this;
         }
-
         public Builder medium(@Nullable String medium) {
             this.medium = Output.ofNullable(medium);
             return this;
         }
-
         public Builder sizeLimit(@Nullable Output<String> sizeLimit) {
             this.sizeLimit = sizeLimit;
             return this;
         }
-
         public Builder sizeLimit(@Nullable String sizeLimit) {
             this.sizeLimit = Output.ofNullable(sizeLimit);
             return this;
-        }
-        public EmptyDirVolumeSourceArgs build() {
+        }        public EmptyDirVolumeSourceArgs build() {
             return new EmptyDirVolumeSourceArgs(medium, sizeLimit);
         }
     }

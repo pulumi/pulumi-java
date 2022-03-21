@@ -195,122 +195,104 @@ public final class EC2FleetArgs extends io.pulumi.resources.ResourceArgs {
             this.context = context;
             return this;
         }
-
         public Builder context(@Nullable String context) {
             this.context = Output.ofNullable(context);
             return this;
         }
-
         public Builder excessCapacityTerminationPolicy(@Nullable Output<EC2FleetExcessCapacityTerminationPolicy> excessCapacityTerminationPolicy) {
             this.excessCapacityTerminationPolicy = excessCapacityTerminationPolicy;
             return this;
         }
-
         public Builder excessCapacityTerminationPolicy(@Nullable EC2FleetExcessCapacityTerminationPolicy excessCapacityTerminationPolicy) {
             this.excessCapacityTerminationPolicy = Output.ofNullable(excessCapacityTerminationPolicy);
             return this;
         }
-
         public Builder launchTemplateConfigs(Output<List<EC2FleetFleetLaunchTemplateConfigRequestArgs>> launchTemplateConfigs) {
             this.launchTemplateConfigs = Objects.requireNonNull(launchTemplateConfigs);
             return this;
         }
-
         public Builder launchTemplateConfigs(List<EC2FleetFleetLaunchTemplateConfigRequestArgs> launchTemplateConfigs) {
             this.launchTemplateConfigs = Output.of(Objects.requireNonNull(launchTemplateConfigs));
             return this;
         }
-
+        public Builder launchTemplateConfigs(EC2FleetFleetLaunchTemplateConfigRequestArgs... launchTemplateConfigs) {
+            return launchTemplateConfigs(List.of(launchTemplateConfigs));
+        }
         public Builder onDemandOptions(@Nullable Output<EC2FleetOnDemandOptionsRequestArgs> onDemandOptions) {
             this.onDemandOptions = onDemandOptions;
             return this;
         }
-
         public Builder onDemandOptions(@Nullable EC2FleetOnDemandOptionsRequestArgs onDemandOptions) {
             this.onDemandOptions = Output.ofNullable(onDemandOptions);
             return this;
         }
-
         public Builder replaceUnhealthyInstances(@Nullable Output<Boolean> replaceUnhealthyInstances) {
             this.replaceUnhealthyInstances = replaceUnhealthyInstances;
             return this;
         }
-
         public Builder replaceUnhealthyInstances(@Nullable Boolean replaceUnhealthyInstances) {
             this.replaceUnhealthyInstances = Output.ofNullable(replaceUnhealthyInstances);
             return this;
         }
-
         public Builder spotOptions(@Nullable Output<EC2FleetSpotOptionsRequestArgs> spotOptions) {
             this.spotOptions = spotOptions;
             return this;
         }
-
         public Builder spotOptions(@Nullable EC2FleetSpotOptionsRequestArgs spotOptions) {
             this.spotOptions = Output.ofNullable(spotOptions);
             return this;
         }
-
         public Builder tagSpecifications(@Nullable Output<List<EC2FleetTagSpecificationArgs>> tagSpecifications) {
             this.tagSpecifications = tagSpecifications;
             return this;
         }
-
         public Builder tagSpecifications(@Nullable List<EC2FleetTagSpecificationArgs> tagSpecifications) {
             this.tagSpecifications = Output.ofNullable(tagSpecifications);
             return this;
         }
-
+        public Builder tagSpecifications(EC2FleetTagSpecificationArgs... tagSpecifications) {
+            return tagSpecifications(List.of(tagSpecifications));
+        }
         public Builder targetCapacitySpecification(Output<EC2FleetTargetCapacitySpecificationRequestArgs> targetCapacitySpecification) {
             this.targetCapacitySpecification = Objects.requireNonNull(targetCapacitySpecification);
             return this;
         }
-
         public Builder targetCapacitySpecification(EC2FleetTargetCapacitySpecificationRequestArgs targetCapacitySpecification) {
             this.targetCapacitySpecification = Output.of(Objects.requireNonNull(targetCapacitySpecification));
             return this;
         }
-
         public Builder terminateInstancesWithExpiration(@Nullable Output<Boolean> terminateInstancesWithExpiration) {
             this.terminateInstancesWithExpiration = terminateInstancesWithExpiration;
             return this;
         }
-
         public Builder terminateInstancesWithExpiration(@Nullable Boolean terminateInstancesWithExpiration) {
             this.terminateInstancesWithExpiration = Output.ofNullable(terminateInstancesWithExpiration);
             return this;
         }
-
         public Builder type(@Nullable Output<EC2FleetType> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable EC2FleetType type) {
             this.type = Output.ofNullable(type);
             return this;
         }
-
         public Builder validFrom(@Nullable Output<String> validFrom) {
             this.validFrom = validFrom;
             return this;
         }
-
         public Builder validFrom(@Nullable String validFrom) {
             this.validFrom = Output.ofNullable(validFrom);
             return this;
         }
-
         public Builder validUntil(@Nullable Output<String> validUntil) {
             this.validUntil = validUntil;
             return this;
         }
-
         public Builder validUntil(@Nullable String validUntil) {
             this.validUntil = Output.ofNullable(validUntil);
             return this;
-        }
-        public EC2FleetArgs build() {
+        }        public EC2FleetArgs build() {
             return new EC2FleetArgs(context, excessCapacityTerminationPolicy, launchTemplateConfigs, onDemandOptions, replaceUnhealthyInstances, spotOptions, tagSpecifications, targetCapacitySpecification, terminateInstancesWithExpiration, type, validFrom, validUntil);
         }
     }

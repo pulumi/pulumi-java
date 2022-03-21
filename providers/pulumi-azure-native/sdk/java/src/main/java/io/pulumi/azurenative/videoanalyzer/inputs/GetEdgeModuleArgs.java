@@ -88,17 +88,14 @@ public final class GetEdgeModuleArgs extends io.pulumi.resources.InvokeArgs {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder edgeModuleName(String edgeModuleName) {
             this.edgeModuleName = Objects.requireNonNull(edgeModuleName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetEdgeModuleArgs build() {
+        }        public GetEdgeModuleArgs build() {
             return new GetEdgeModuleArgs(accountName, edgeModuleName, resourceGroupName);
         }
     }

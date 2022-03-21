@@ -73,12 +73,13 @@ public final class ListMonitorApiKeysResult {
             this.nextLink = nextLink;
             return this;
         }
-
         public Builder value(@Nullable List<DatadogApiKeyResponse> value) {
             this.value = value;
             return this;
         }
-        public ListMonitorApiKeysResult build() {
+        public Builder value(DatadogApiKeyResponse... value) {
+            return value(List.of(value));
+        }        public ListMonitorApiKeysResult build() {
             return new ListMonitorApiKeysResult(nextLink, value);
         }
     }

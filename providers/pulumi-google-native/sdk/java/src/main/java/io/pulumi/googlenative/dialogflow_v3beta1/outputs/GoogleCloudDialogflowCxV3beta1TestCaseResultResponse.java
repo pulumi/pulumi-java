@@ -119,27 +119,25 @@ public final class GoogleCloudDialogflowCxV3beta1TestCaseResultResponse {
             this.conversationTurns = Objects.requireNonNull(conversationTurns);
             return this;
         }
-
+        public Builder conversationTurns(GoogleCloudDialogflowCxV3beta1ConversationTurnResponse... conversationTurns) {
+            return conversationTurns(List.of(conversationTurns));
+        }
         public Builder environment(String environment) {
             this.environment = Objects.requireNonNull(environment);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder testResult(String testResult) {
             this.testResult = Objects.requireNonNull(testResult);
             return this;
         }
-
         public Builder testTime(String testTime) {
             this.testTime = Objects.requireNonNull(testTime);
             return this;
-        }
-        public GoogleCloudDialogflowCxV3beta1TestCaseResultResponse build() {
+        }        public GoogleCloudDialogflowCxV3beta1TestCaseResultResponse build() {
             return new GoogleCloudDialogflowCxV3beta1TestCaseResultResponse(conversationTurns, environment, name, testResult, testTime);
         }
     }

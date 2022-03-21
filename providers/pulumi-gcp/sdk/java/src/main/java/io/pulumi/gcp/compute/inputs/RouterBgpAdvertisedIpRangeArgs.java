@@ -75,22 +75,18 @@ public final class RouterBgpAdvertisedIpRangeArgs extends io.pulumi.resources.Re
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder range(Output<String> range) {
             this.range = Objects.requireNonNull(range);
             return this;
         }
-
         public Builder range(String range) {
             this.range = Output.of(Objects.requireNonNull(range));
             return this;
-        }
-        public RouterBgpAdvertisedIpRangeArgs build() {
+        }        public RouterBgpAdvertisedIpRangeArgs build() {
             return new RouterBgpAdvertisedIpRangeArgs(description, range);
         }
     }

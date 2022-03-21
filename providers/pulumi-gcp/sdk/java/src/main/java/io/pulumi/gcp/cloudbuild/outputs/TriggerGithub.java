@@ -115,22 +115,18 @@ public final class TriggerGithub {
             this.name = name;
             return this;
         }
-
         public Builder owner(@Nullable String owner) {
             this.owner = owner;
             return this;
         }
-
         public Builder pullRequest(@Nullable TriggerGithubPullRequest pullRequest) {
             this.pullRequest = pullRequest;
             return this;
         }
-
         public Builder push(@Nullable TriggerGithubPush push) {
             this.push = push;
             return this;
-        }
-        public TriggerGithub build() {
+        }        public TriggerGithub build() {
             return new TriggerGithub(name, owner, pullRequest, push);
         }
     }

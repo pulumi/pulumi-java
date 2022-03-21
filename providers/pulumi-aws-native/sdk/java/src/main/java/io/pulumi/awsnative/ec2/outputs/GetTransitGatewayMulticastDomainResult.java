@@ -138,32 +138,29 @@ public final class GetTransitGatewayMulticastDomainResult {
             this.creationTime = creationTime;
             return this;
         }
-
         public Builder options(@Nullable OptionsProperties options) {
             this.options = options;
             return this;
         }
-
         public Builder state(@Nullable String state) {
             this.state = state;
             return this;
         }
-
         public Builder tags(@Nullable List<TransitGatewayMulticastDomainTag> tags) {
             this.tags = tags;
             return this;
         }
-
+        public Builder tags(TransitGatewayMulticastDomainTag... tags) {
+            return tags(List.of(tags));
+        }
         public Builder transitGatewayMulticastDomainArn(@Nullable String transitGatewayMulticastDomainArn) {
             this.transitGatewayMulticastDomainArn = transitGatewayMulticastDomainArn;
             return this;
         }
-
         public Builder transitGatewayMulticastDomainId(@Nullable String transitGatewayMulticastDomainId) {
             this.transitGatewayMulticastDomainId = transitGatewayMulticastDomainId;
             return this;
-        }
-        public GetTransitGatewayMulticastDomainResult build() {
+        }        public GetTransitGatewayMulticastDomainResult build() {
             return new GetTransitGatewayMulticastDomainResult(creationTime, options, state, tags, transitGatewayMulticastDomainArn, transitGatewayMulticastDomainId);
         }
     }

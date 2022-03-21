@@ -73,12 +73,13 @@ public final class AzureMachineLearningWebServiceInputsResponse {
             this.columnNames = columnNames;
             return this;
         }
-
+        public Builder columnNames(AzureMachineLearningWebServiceInputColumnResponse... columnNames) {
+            return columnNames(List.of(columnNames));
+        }
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
-        }
-        public AzureMachineLearningWebServiceInputsResponse build() {
+        }        public AzureMachineLearningWebServiceInputsResponse build() {
             return new AzureMachineLearningWebServiceInputsResponse(columnNames, name);
         }
     }

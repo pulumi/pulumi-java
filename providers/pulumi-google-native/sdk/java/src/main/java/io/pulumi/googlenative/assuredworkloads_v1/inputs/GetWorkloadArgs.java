@@ -76,17 +76,14 @@ public final class GetWorkloadArgs extends io.pulumi.resources.InvokeArgs {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder organizationId(String organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }
-
         public Builder workloadId(String workloadId) {
             this.workloadId = Objects.requireNonNull(workloadId);
             return this;
-        }
-        public GetWorkloadArgs build() {
+        }        public GetWorkloadArgs build() {
             return new GetWorkloadArgs(location, organizationId, workloadId);
         }
     }

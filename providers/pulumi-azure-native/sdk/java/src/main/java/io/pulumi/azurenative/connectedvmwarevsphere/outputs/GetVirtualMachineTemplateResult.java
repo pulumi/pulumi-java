@@ -483,137 +483,119 @@ public final class GetVirtualMachineTemplateResult {
             this.customResourceName = Objects.requireNonNull(customResourceName);
             return this;
         }
-
         public Builder disks(List<VirtualDiskResponse> disks) {
             this.disks = Objects.requireNonNull(disks);
             return this;
         }
-
+        public Builder disks(VirtualDiskResponse... disks) {
+            return disks(List.of(disks));
+        }
         public Builder extendedLocation(@Nullable ExtendedLocationResponse extendedLocation) {
             this.extendedLocation = extendedLocation;
             return this;
         }
-
         public Builder firmwareType(String firmwareType) {
             this.firmwareType = Objects.requireNonNull(firmwareType);
             return this;
         }
-
         public Builder folderPath(String folderPath) {
             this.folderPath = Objects.requireNonNull(folderPath);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder inventoryItemId(@Nullable String inventoryItemId) {
             this.inventoryItemId = inventoryItemId;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder memorySizeMB(Integer memorySizeMB) {
             this.memorySizeMB = Objects.requireNonNull(memorySizeMB);
             return this;
         }
-
         public Builder moName(String moName) {
             this.moName = Objects.requireNonNull(moName);
             return this;
         }
-
         public Builder moRefId(@Nullable String moRefId) {
             this.moRefId = moRefId;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder networkInterfaces(List<NetworkInterfaceResponse> networkInterfaces) {
             this.networkInterfaces = Objects.requireNonNull(networkInterfaces);
             return this;
         }
-
+        public Builder networkInterfaces(NetworkInterfaceResponse... networkInterfaces) {
+            return networkInterfaces(List.of(networkInterfaces));
+        }
         public Builder numCPUs(Integer numCPUs) {
             this.numCPUs = Objects.requireNonNull(numCPUs);
             return this;
         }
-
         public Builder numCoresPerSocket(Integer numCoresPerSocket) {
             this.numCoresPerSocket = Objects.requireNonNull(numCoresPerSocket);
             return this;
         }
-
         public Builder osName(String osName) {
             this.osName = Objects.requireNonNull(osName);
             return this;
         }
-
         public Builder osType(String osType) {
             this.osType = Objects.requireNonNull(osType);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder statuses(List<ResourceStatusResponse> statuses) {
             this.statuses = Objects.requireNonNull(statuses);
             return this;
         }
-
+        public Builder statuses(ResourceStatusResponse... statuses) {
+            return statuses(List.of(statuses));
+        }
         public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder toolsVersion(String toolsVersion) {
             this.toolsVersion = Objects.requireNonNull(toolsVersion);
             return this;
         }
-
         public Builder toolsVersionStatus(String toolsVersionStatus) {
             this.toolsVersionStatus = Objects.requireNonNull(toolsVersionStatus);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder uuid(String uuid) {
             this.uuid = Objects.requireNonNull(uuid);
             return this;
         }
-
         public Builder vCenterId(@Nullable String vCenterId) {
             this.vCenterId = vCenterId;
             return this;
-        }
-        public GetVirtualMachineTemplateResult build() {
+        }        public GetVirtualMachineTemplateResult build() {
             return new GetVirtualMachineTemplateResult(customResourceName, disks, extendedLocation, firmwareType, folderPath, id, inventoryItemId, kind, location, memorySizeMB, moName, moRefId, name, networkInterfaces, numCPUs, numCoresPerSocket, osName, osType, provisioningState, statuses, systemData, tags, toolsVersion, toolsVersionStatus, type, uuid, vCenterId);
         }
     }

@@ -96,32 +96,26 @@ public final class AffinityArgs extends io.pulumi.resources.ResourceArgs {
             this.nodeAffinity = nodeAffinity;
             return this;
         }
-
         public Builder nodeAffinity(@Nullable NodeAffinityArgs nodeAffinity) {
             this.nodeAffinity = Output.ofNullable(nodeAffinity);
             return this;
         }
-
         public Builder podAffinity(@Nullable Output<PodAffinityArgs> podAffinity) {
             this.podAffinity = podAffinity;
             return this;
         }
-
         public Builder podAffinity(@Nullable PodAffinityArgs podAffinity) {
             this.podAffinity = Output.ofNullable(podAffinity);
             return this;
         }
-
         public Builder podAntiAffinity(@Nullable Output<PodAntiAffinityArgs> podAntiAffinity) {
             this.podAntiAffinity = podAntiAffinity;
             return this;
         }
-
         public Builder podAntiAffinity(@Nullable PodAntiAffinityArgs podAntiAffinity) {
             this.podAntiAffinity = Output.ofNullable(podAntiAffinity);
             return this;
-        }
-        public AffinityArgs build() {
+        }        public AffinityArgs build() {
             return new AffinityArgs(nodeAffinity, podAffinity, podAntiAffinity);
         }
     }

@@ -249,122 +249,98 @@ public final class VirtualMachineScaleSetVMProfileArgs extends io.pulumi.resourc
             this.billingProfile = billingProfile;
             return this;
         }
-
         public Builder billingProfile(@Nullable BillingProfileArgs billingProfile) {
             this.billingProfile = Output.ofNullable(billingProfile);
             return this;
         }
-
         public Builder diagnosticsProfile(@Nullable Output<DiagnosticsProfileArgs> diagnosticsProfile) {
             this.diagnosticsProfile = diagnosticsProfile;
             return this;
         }
-
         public Builder diagnosticsProfile(@Nullable DiagnosticsProfileArgs diagnosticsProfile) {
             this.diagnosticsProfile = Output.ofNullable(diagnosticsProfile);
             return this;
         }
-
         public Builder evictionPolicy(@Nullable Output<Either<String,VirtualMachineEvictionPolicyTypes>> evictionPolicy) {
             this.evictionPolicy = evictionPolicy;
             return this;
         }
-
         public Builder evictionPolicy(@Nullable Either<String,VirtualMachineEvictionPolicyTypes> evictionPolicy) {
             this.evictionPolicy = Output.ofNullable(evictionPolicy);
             return this;
         }
-
         public Builder extensionProfile(@Nullable Output<VirtualMachineScaleSetExtensionProfileArgs> extensionProfile) {
             this.extensionProfile = extensionProfile;
             return this;
         }
-
         public Builder extensionProfile(@Nullable VirtualMachineScaleSetExtensionProfileArgs extensionProfile) {
             this.extensionProfile = Output.ofNullable(extensionProfile);
             return this;
         }
-
         public Builder licenseType(@Nullable Output<String> licenseType) {
             this.licenseType = licenseType;
             return this;
         }
-
         public Builder licenseType(@Nullable String licenseType) {
             this.licenseType = Output.ofNullable(licenseType);
             return this;
         }
-
         public Builder networkProfile(@Nullable Output<VirtualMachineScaleSetNetworkProfileArgs> networkProfile) {
             this.networkProfile = networkProfile;
             return this;
         }
-
         public Builder networkProfile(@Nullable VirtualMachineScaleSetNetworkProfileArgs networkProfile) {
             this.networkProfile = Output.ofNullable(networkProfile);
             return this;
         }
-
         public Builder osProfile(@Nullable Output<VirtualMachineScaleSetOSProfileArgs> osProfile) {
             this.osProfile = osProfile;
             return this;
         }
-
         public Builder osProfile(@Nullable VirtualMachineScaleSetOSProfileArgs osProfile) {
             this.osProfile = Output.ofNullable(osProfile);
             return this;
         }
-
         public Builder priority(@Nullable Output<Either<String,VirtualMachinePriorityTypes>> priority) {
             this.priority = priority;
             return this;
         }
-
         public Builder priority(@Nullable Either<String,VirtualMachinePriorityTypes> priority) {
             this.priority = Output.ofNullable(priority);
             return this;
         }
-
         public Builder scheduledEventsProfile(@Nullable Output<ScheduledEventsProfileArgs> scheduledEventsProfile) {
             this.scheduledEventsProfile = scheduledEventsProfile;
             return this;
         }
-
         public Builder scheduledEventsProfile(@Nullable ScheduledEventsProfileArgs scheduledEventsProfile) {
             this.scheduledEventsProfile = Output.ofNullable(scheduledEventsProfile);
             return this;
         }
-
         public Builder securityProfile(@Nullable Output<SecurityProfileArgs> securityProfile) {
             this.securityProfile = securityProfile;
             return this;
         }
-
         public Builder securityProfile(@Nullable SecurityProfileArgs securityProfile) {
             this.securityProfile = Output.ofNullable(securityProfile);
             return this;
         }
-
         public Builder storageProfile(@Nullable Output<VirtualMachineScaleSetStorageProfileArgs> storageProfile) {
             this.storageProfile = storageProfile;
             return this;
         }
-
         public Builder storageProfile(@Nullable VirtualMachineScaleSetStorageProfileArgs storageProfile) {
             this.storageProfile = Output.ofNullable(storageProfile);
             return this;
         }
-
         public Builder userData(@Nullable Output<String> userData) {
             this.userData = userData;
             return this;
         }
-
         public Builder userData(@Nullable String userData) {
             this.userData = Output.ofNullable(userData);
             return this;
-        }
-        public VirtualMachineScaleSetVMProfileArgs build() {
+        }        public VirtualMachineScaleSetVMProfileArgs build() {
             return new VirtualMachineScaleSetVMProfileArgs(billingProfile, diagnosticsProfile, evictionPolicy, extensionProfile, licenseType, networkProfile, osProfile, priority, scheduledEventsProfile, securityProfile, storageProfile, userData);
         }
     }

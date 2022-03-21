@@ -63,17 +63,14 @@ public final class SigningProfileRevocationRecord {
             this.revocationEffectiveFrom = revocationEffectiveFrom;
             return this;
         }
-
         public Builder revokedAt(@Nullable String revokedAt) {
             this.revokedAt = revokedAt;
             return this;
         }
-
         public Builder revokedBy(@Nullable String revokedBy) {
             this.revokedBy = revokedBy;
             return this;
-        }
-        public SigningProfileRevocationRecord build() {
+        }        public SigningProfileRevocationRecord build() {
             return new SigningProfileRevocationRecord(revocationEffectiveFrom, revokedAt, revokedBy);
         }
     }

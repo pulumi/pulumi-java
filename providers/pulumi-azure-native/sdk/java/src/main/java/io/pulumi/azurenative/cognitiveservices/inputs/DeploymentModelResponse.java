@@ -94,17 +94,14 @@ public final class DeploymentModelResponse extends io.pulumi.resources.InvokeArg
             this.format = format;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = version;
             return this;
-        }
-        public DeploymentModelResponse build() {
+        }        public DeploymentModelResponse build() {
             return new DeploymentModelResponse(format, name, version);
         }
     }

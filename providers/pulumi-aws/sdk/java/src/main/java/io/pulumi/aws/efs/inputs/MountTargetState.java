@@ -221,112 +221,93 @@ public final class MountTargetState extends io.pulumi.resources.ResourceArgs {
             this.availabilityZoneId = availabilityZoneId;
             return this;
         }
-
         public Builder availabilityZoneId(@Nullable String availabilityZoneId) {
             this.availabilityZoneId = Output.ofNullable(availabilityZoneId);
             return this;
         }
-
         public Builder availabilityZoneName(@Nullable Output<String> availabilityZoneName) {
             this.availabilityZoneName = availabilityZoneName;
             return this;
         }
-
         public Builder availabilityZoneName(@Nullable String availabilityZoneName) {
             this.availabilityZoneName = Output.ofNullable(availabilityZoneName);
             return this;
         }
-
         public Builder dnsName(@Nullable Output<String> dnsName) {
             this.dnsName = dnsName;
             return this;
         }
-
         public Builder dnsName(@Nullable String dnsName) {
             this.dnsName = Output.ofNullable(dnsName);
             return this;
         }
-
         public Builder fileSystemArn(@Nullable Output<String> fileSystemArn) {
             this.fileSystemArn = fileSystemArn;
             return this;
         }
-
         public Builder fileSystemArn(@Nullable String fileSystemArn) {
             this.fileSystemArn = Output.ofNullable(fileSystemArn);
             return this;
         }
-
         public Builder fileSystemId(@Nullable Output<String> fileSystemId) {
             this.fileSystemId = fileSystemId;
             return this;
         }
-
         public Builder fileSystemId(@Nullable String fileSystemId) {
             this.fileSystemId = Output.ofNullable(fileSystemId);
             return this;
         }
-
         public Builder ipAddress(@Nullable Output<String> ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
-
         public Builder ipAddress(@Nullable String ipAddress) {
             this.ipAddress = Output.ofNullable(ipAddress);
             return this;
         }
-
         public Builder mountTargetDnsName(@Nullable Output<String> mountTargetDnsName) {
             this.mountTargetDnsName = mountTargetDnsName;
             return this;
         }
-
         public Builder mountTargetDnsName(@Nullable String mountTargetDnsName) {
             this.mountTargetDnsName = Output.ofNullable(mountTargetDnsName);
             return this;
         }
-
         public Builder networkInterfaceId(@Nullable Output<String> networkInterfaceId) {
             this.networkInterfaceId = networkInterfaceId;
             return this;
         }
-
         public Builder networkInterfaceId(@Nullable String networkInterfaceId) {
             this.networkInterfaceId = Output.ofNullable(networkInterfaceId);
             return this;
         }
-
         public Builder ownerId(@Nullable Output<String> ownerId) {
             this.ownerId = ownerId;
             return this;
         }
-
         public Builder ownerId(@Nullable String ownerId) {
             this.ownerId = Output.ofNullable(ownerId);
             return this;
         }
-
         public Builder securityGroups(@Nullable Output<List<String>> securityGroups) {
             this.securityGroups = securityGroups;
             return this;
         }
-
         public Builder securityGroups(@Nullable List<String> securityGroups) {
             this.securityGroups = Output.ofNullable(securityGroups);
             return this;
         }
-
+        public Builder securityGroups(String... securityGroups) {
+            return securityGroups(List.of(securityGroups));
+        }
         public Builder subnetId(@Nullable Output<String> subnetId) {
             this.subnetId = subnetId;
             return this;
         }
-
         public Builder subnetId(@Nullable String subnetId) {
             this.subnetId = Output.ofNullable(subnetId);
             return this;
-        }
-        public MountTargetState build() {
+        }        public MountTargetState build() {
             return new MountTargetState(availabilityZoneId, availabilityZoneName, dnsName, fileSystemArn, fileSystemId, ipAddress, mountTargetDnsName, networkInterfaceId, ownerId, securityGroups, subnetId);
         }
     }

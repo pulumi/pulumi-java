@@ -57,12 +57,13 @@ public final class ObjectTypeKeyMap {
             this.name = name;
             return this;
         }
-
         public Builder objectTypeKeyList(@Nullable List<ObjectTypeKey> objectTypeKeyList) {
             this.objectTypeKeyList = objectTypeKeyList;
             return this;
         }
-        public ObjectTypeKeyMap build() {
+        public Builder objectTypeKeyList(ObjectTypeKey... objectTypeKeyList) {
+            return objectTypeKeyList(List.of(objectTypeKeyList));
+        }        public ObjectTypeKeyMap build() {
             return new ObjectTypeKeyMap(name, objectTypeKeyList);
         }
     }

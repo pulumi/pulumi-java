@@ -123,27 +123,22 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResource {
             this.exec = exec;
             return this;
         }
-
         public Builder file(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceFile file) {
             this.file = file;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder pkg(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkg pkg) {
             this.pkg = pkg;
             return this;
         }
-
         public Builder repository(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceRepository repository) {
             this.repository = repository;
             return this;
-        }
-        public OsPolicyAssignmentOsPolicyResourceGroupResource build() {
+        }        public OsPolicyAssignmentOsPolicyResourceGroupResource build() {
             return new OsPolicyAssignmentOsPolicyResourceGroupResource(exec, file, id, pkg, repository);
         }
     }

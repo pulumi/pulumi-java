@@ -78,12 +78,13 @@ public final class GoogleIamV1__AuditConfigResponse extends io.pulumi.resources.
             this.auditLogConfigs = Objects.requireNonNull(auditLogConfigs);
             return this;
         }
-
+        public Builder auditLogConfigs(GoogleIamV1__AuditLogConfigResponse... auditLogConfigs) {
+            return auditLogConfigs(List.of(auditLogConfigs));
+        }
         public Builder service(String service) {
             this.service = Objects.requireNonNull(service);
             return this;
-        }
-        public GoogleIamV1__AuditConfigResponse build() {
+        }        public GoogleIamV1__AuditConfigResponse build() {
             return new GoogleIamV1__AuditConfigResponse(auditLogConfigs, service);
         }
     }

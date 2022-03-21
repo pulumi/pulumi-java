@@ -79,22 +79,18 @@ public final class CmkKekIdentityArgs extends io.pulumi.resources.ResourceArgs {
             this.useSystemAssignedIdentity = useSystemAssignedIdentity;
             return this;
         }
-
         public Builder useSystemAssignedIdentity(@Nullable Boolean useSystemAssignedIdentity) {
             this.useSystemAssignedIdentity = Output.ofNullable(useSystemAssignedIdentity);
             return this;
         }
-
         public Builder userAssignedIdentity(@Nullable Output<String> userAssignedIdentity) {
             this.userAssignedIdentity = userAssignedIdentity;
             return this;
         }
-
         public Builder userAssignedIdentity(@Nullable String userAssignedIdentity) {
             this.userAssignedIdentity = Output.ofNullable(userAssignedIdentity);
             return this;
-        }
-        public CmkKekIdentityArgs build() {
+        }        public CmkKekIdentityArgs build() {
             return new CmkKekIdentityArgs(useSystemAssignedIdentity, userAssignedIdentity);
         }
     }

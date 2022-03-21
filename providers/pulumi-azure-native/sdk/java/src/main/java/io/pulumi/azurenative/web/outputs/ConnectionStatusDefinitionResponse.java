@@ -88,17 +88,14 @@ public final class ConnectionStatusDefinitionResponse {
             this.error = error;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }
-
         public Builder target(@Nullable String target) {
             this.target = target;
             return this;
-        }
-        public ConnectionStatusDefinitionResponse build() {
+        }        public ConnectionStatusDefinitionResponse build() {
             return new ConnectionStatusDefinitionResponse(error, status, target);
         }
     }

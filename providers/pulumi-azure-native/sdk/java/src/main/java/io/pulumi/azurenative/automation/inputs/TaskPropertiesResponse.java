@@ -79,12 +79,10 @@ public final class TaskPropertiesResponse extends io.pulumi.resources.InvokeArgs
             this.parameters = parameters;
             return this;
         }
-
         public Builder source(@Nullable String source) {
             this.source = source;
             return this;
-        }
-        public TaskPropertiesResponse build() {
+        }        public TaskPropertiesResponse build() {
             return new TaskPropertiesResponse(parameters, source);
         }
     }

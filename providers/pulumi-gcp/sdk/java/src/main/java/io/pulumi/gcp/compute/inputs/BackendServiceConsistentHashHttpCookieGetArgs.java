@@ -92,32 +92,26 @@ public final class BackendServiceConsistentHashHttpCookieGetArgs extends io.pulu
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder path(@Nullable Output<String> path) {
             this.path = path;
             return this;
         }
-
         public Builder path(@Nullable String path) {
             this.path = Output.ofNullable(path);
             return this;
         }
-
         public Builder ttl(@Nullable Output<BackendServiceConsistentHashHttpCookieTtlGetArgs> ttl) {
             this.ttl = ttl;
             return this;
         }
-
         public Builder ttl(@Nullable BackendServiceConsistentHashHttpCookieTtlGetArgs ttl) {
             this.ttl = Output.ofNullable(ttl);
             return this;
-        }
-        public BackendServiceConsistentHashHttpCookieGetArgs build() {
+        }        public BackendServiceConsistentHashHttpCookieGetArgs build() {
             return new BackendServiceConsistentHashHttpCookieGetArgs(name, path, ttl);
         }
     }

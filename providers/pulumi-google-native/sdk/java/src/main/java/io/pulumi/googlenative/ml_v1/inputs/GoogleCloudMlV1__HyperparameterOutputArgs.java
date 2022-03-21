@@ -163,72 +163,61 @@ public final class GoogleCloudMlV1__HyperparameterOutputArgs extends io.pulumi.r
             this.allMetrics = allMetrics;
             return this;
         }
-
         public Builder allMetrics(@Nullable List<GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricArgs> allMetrics) {
             this.allMetrics = Output.ofNullable(allMetrics);
             return this;
         }
-
+        public Builder allMetrics(GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricArgs... allMetrics) {
+            return allMetrics(List.of(allMetrics));
+        }
         public Builder builtInAlgorithmOutput(@Nullable Output<GoogleCloudMlV1__BuiltInAlgorithmOutputArgs> builtInAlgorithmOutput) {
             this.builtInAlgorithmOutput = builtInAlgorithmOutput;
             return this;
         }
-
         public Builder builtInAlgorithmOutput(@Nullable GoogleCloudMlV1__BuiltInAlgorithmOutputArgs builtInAlgorithmOutput) {
             this.builtInAlgorithmOutput = Output.ofNullable(builtInAlgorithmOutput);
             return this;
         }
-
         public Builder finalMetric(@Nullable Output<GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricArgs> finalMetric) {
             this.finalMetric = finalMetric;
             return this;
         }
-
         public Builder finalMetric(@Nullable GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricArgs finalMetric) {
             this.finalMetric = Output.ofNullable(finalMetric);
             return this;
         }
-
         public Builder hyperparameters(@Nullable Output<Map<String,String>> hyperparameters) {
             this.hyperparameters = hyperparameters;
             return this;
         }
-
         public Builder hyperparameters(@Nullable Map<String,String> hyperparameters) {
             this.hyperparameters = Output.ofNullable(hyperparameters);
             return this;
         }
-
         public Builder isTrialStoppedEarly(@Nullable Output<Boolean> isTrialStoppedEarly) {
             this.isTrialStoppedEarly = isTrialStoppedEarly;
             return this;
         }
-
         public Builder isTrialStoppedEarly(@Nullable Boolean isTrialStoppedEarly) {
             this.isTrialStoppedEarly = Output.ofNullable(isTrialStoppedEarly);
             return this;
         }
-
         public Builder trialId(@Nullable Output<String> trialId) {
             this.trialId = trialId;
             return this;
         }
-
         public Builder trialId(@Nullable String trialId) {
             this.trialId = Output.ofNullable(trialId);
             return this;
         }
-
         public Builder webAccessUris(@Nullable Output<Map<String,String>> webAccessUris) {
             this.webAccessUris = webAccessUris;
             return this;
         }
-
         public Builder webAccessUris(@Nullable Map<String,String> webAccessUris) {
             this.webAccessUris = Output.ofNullable(webAccessUris);
             return this;
-        }
-        public GoogleCloudMlV1__HyperparameterOutputArgs build() {
+        }        public GoogleCloudMlV1__HyperparameterOutputArgs build() {
             return new GoogleCloudMlV1__HyperparameterOutputArgs(allMetrics, builtInAlgorithmOutput, finalMetric, hyperparameters, isTrialStoppedEarly, trialId, webAccessUris);
         }
     }

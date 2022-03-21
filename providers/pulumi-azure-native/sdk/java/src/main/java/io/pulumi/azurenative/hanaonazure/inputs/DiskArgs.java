@@ -79,22 +79,18 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
             this.diskSizeGB = diskSizeGB;
             return this;
         }
-
         public Builder diskSizeGB(@Nullable Integer diskSizeGB) {
             this.diskSizeGB = Output.ofNullable(diskSizeGB);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
-        }
-        public DiskArgs build() {
+        }        public DiskArgs build() {
             return new DiskArgs(diskSizeGB, name);
         }
     }

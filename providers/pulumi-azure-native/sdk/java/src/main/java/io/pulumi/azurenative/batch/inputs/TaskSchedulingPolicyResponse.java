@@ -50,8 +50,7 @@ public final class TaskSchedulingPolicyResponse extends io.pulumi.resources.Invo
         public Builder nodeFillType(String nodeFillType) {
             this.nodeFillType = Objects.requireNonNull(nodeFillType);
             return this;
-        }
-        public TaskSchedulingPolicyResponse build() {
+        }        public TaskSchedulingPolicyResponse build() {
             return new TaskSchedulingPolicyResponse(nodeFillType);
         }
     }

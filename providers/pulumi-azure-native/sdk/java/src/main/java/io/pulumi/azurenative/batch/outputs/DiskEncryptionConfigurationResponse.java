@@ -54,7 +54,9 @@ public final class DiskEncryptionConfigurationResponse {
             this.targets = targets;
             return this;
         }
-        public DiskEncryptionConfigurationResponse build() {
+        public Builder targets(String... targets) {
+            return targets(List.of(targets));
+        }        public DiskEncryptionConfigurationResponse build() {
             return new DiskEncryptionConfigurationResponse(targets);
         }
     }

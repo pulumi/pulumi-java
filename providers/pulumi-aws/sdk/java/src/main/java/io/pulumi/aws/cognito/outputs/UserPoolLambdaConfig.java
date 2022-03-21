@@ -249,67 +249,54 @@ public final class UserPoolLambdaConfig {
             this.createAuthChallenge = createAuthChallenge;
             return this;
         }
-
         public Builder customEmailSender(@Nullable UserPoolLambdaConfigCustomEmailSender customEmailSender) {
             this.customEmailSender = customEmailSender;
             return this;
         }
-
         public Builder customMessage(@Nullable String customMessage) {
             this.customMessage = customMessage;
             return this;
         }
-
         public Builder customSmsSender(@Nullable UserPoolLambdaConfigCustomSmsSender customSmsSender) {
             this.customSmsSender = customSmsSender;
             return this;
         }
-
         public Builder defineAuthChallenge(@Nullable String defineAuthChallenge) {
             this.defineAuthChallenge = defineAuthChallenge;
             return this;
         }
-
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
-
         public Builder postAuthentication(@Nullable String postAuthentication) {
             this.postAuthentication = postAuthentication;
             return this;
         }
-
         public Builder postConfirmation(@Nullable String postConfirmation) {
             this.postConfirmation = postConfirmation;
             return this;
         }
-
         public Builder preAuthentication(@Nullable String preAuthentication) {
             this.preAuthentication = preAuthentication;
             return this;
         }
-
         public Builder preSignUp(@Nullable String preSignUp) {
             this.preSignUp = preSignUp;
             return this;
         }
-
         public Builder preTokenGeneration(@Nullable String preTokenGeneration) {
             this.preTokenGeneration = preTokenGeneration;
             return this;
         }
-
         public Builder userMigration(@Nullable String userMigration) {
             this.userMigration = userMigration;
             return this;
         }
-
         public Builder verifyAuthChallengeResponse(@Nullable String verifyAuthChallengeResponse) {
             this.verifyAuthChallengeResponse = verifyAuthChallengeResponse;
             return this;
-        }
-        public UserPoolLambdaConfig build() {
+        }        public UserPoolLambdaConfig build() {
             return new UserPoolLambdaConfig(createAuthChallenge, customEmailSender, customMessage, customSmsSender, defineAuthChallenge, kmsKeyId, postAuthentication, postConfirmation, preAuthentication, preSignUp, preTokenGeneration, userMigration, verifyAuthChallengeResponse);
         }
     }

@@ -196,57 +196,49 @@ public final class GetSubnetworkResult {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder gatewayAddress(String gatewayAddress) {
             this.gatewayAddress = Objects.requireNonNull(gatewayAddress);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder ipCidrRange(String ipCidrRange) {
             this.ipCidrRange = Objects.requireNonNull(ipCidrRange);
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder network(String network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }
-
         public Builder privateIpGoogleAccess(Boolean privateIpGoogleAccess) {
             this.privateIpGoogleAccess = Objects.requireNonNull(privateIpGoogleAccess);
             return this;
         }
-
         public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
-
         public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
-
         public Builder secondaryIpRanges(List<GetSubnetworkSecondaryIpRange> secondaryIpRanges) {
             this.secondaryIpRanges = Objects.requireNonNull(secondaryIpRanges);
             return this;
         }
-
+        public Builder secondaryIpRanges(GetSubnetworkSecondaryIpRange... secondaryIpRanges) {
+            return secondaryIpRanges(List.of(secondaryIpRanges));
+        }
         public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
-        }
-        public GetSubnetworkResult build() {
+        }        public GetSubnetworkResult build() {
             return new GetSubnetworkResult(description, gatewayAddress, id, ipCidrRange, name, network, privateIpGoogleAccess, project, region, secondaryIpRanges, selfLink);
         }
     }

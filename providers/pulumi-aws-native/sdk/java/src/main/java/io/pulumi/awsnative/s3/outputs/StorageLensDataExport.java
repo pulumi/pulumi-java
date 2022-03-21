@@ -56,12 +56,10 @@ public final class StorageLensDataExport {
             this.cloudWatchMetrics = cloudWatchMetrics;
             return this;
         }
-
         public Builder s3BucketDestination(@Nullable StorageLensS3BucketDestination s3BucketDestination) {
             this.s3BucketDestination = s3BucketDestination;
             return this;
-        }
-        public StorageLensDataExport build() {
+        }        public StorageLensDataExport build() {
             return new StorageLensDataExport(cloudWatchMetrics, s3BucketDestination);
         }
     }

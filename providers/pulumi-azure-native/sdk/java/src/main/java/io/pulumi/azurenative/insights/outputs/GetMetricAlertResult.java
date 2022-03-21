@@ -336,92 +336,80 @@ public final class GetMetricAlertResult {
             this.actions = actions;
             return this;
         }
-
+        public Builder actions(MetricAlertActionResponse... actions) {
+            return actions(List.of(actions));
+        }
         public Builder autoMitigate(@Nullable Boolean autoMitigate) {
             this.autoMitigate = autoMitigate;
             return this;
         }
-
         public Builder criteria(Object criteria) {
             this.criteria = Objects.requireNonNull(criteria);
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public Builder evaluationFrequency(String evaluationFrequency) {
             this.evaluationFrequency = Objects.requireNonNull(evaluationFrequency);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder isMigrated(Boolean isMigrated) {
             this.isMigrated = Objects.requireNonNull(isMigrated);
             return this;
         }
-
         public Builder lastUpdatedTime(String lastUpdatedTime) {
             this.lastUpdatedTime = Objects.requireNonNull(lastUpdatedTime);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder scopes(List<String> scopes) {
             this.scopes = Objects.requireNonNull(scopes);
             return this;
         }
-
+        public Builder scopes(String... scopes) {
+            return scopes(List.of(scopes));
+        }
         public Builder severity(Integer severity) {
             this.severity = Objects.requireNonNull(severity);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder targetResourceRegion(@Nullable String targetResourceRegion) {
             this.targetResourceRegion = targetResourceRegion;
             return this;
         }
-
         public Builder targetResourceType(@Nullable String targetResourceType) {
             this.targetResourceType = targetResourceType;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder windowSize(String windowSize) {
             this.windowSize = Objects.requireNonNull(windowSize);
             return this;
-        }
-        public GetMetricAlertResult build() {
+        }        public GetMetricAlertResult build() {
             return new GetMetricAlertResult(actions, autoMitigate, criteria, description, enabled, evaluationFrequency, id, isMigrated, lastUpdatedTime, location, name, scopes, severity, tags, targetResourceRegion, targetResourceType, type, windowSize);
         }
     }

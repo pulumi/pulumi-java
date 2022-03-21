@@ -79,22 +79,18 @@ public final class AlertPolicyConditionConditionAbsentTriggerGetArgs extends io.
             this.count = count;
             return this;
         }
-
         public Builder count(@Nullable Integer count) {
             this.count = Output.ofNullable(count);
             return this;
         }
-
         public Builder percent(@Nullable Output<Double> percent) {
             this.percent = percent;
             return this;
         }
-
         public Builder percent(@Nullable Double percent) {
             this.percent = Output.ofNullable(percent);
             return this;
-        }
-        public AlertPolicyConditionConditionAbsentTriggerGetArgs build() {
+        }        public AlertPolicyConditionConditionAbsentTriggerGetArgs build() {
             return new AlertPolicyConditionConditionAbsentTriggerGetArgs(count, percent);
         }
     }

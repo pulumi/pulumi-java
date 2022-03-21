@@ -137,62 +137,53 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
             this.caMaterial = caMaterial;
             return this;
         }
-
         public Builder caMaterial(@Nullable String caMaterial) {
             this.caMaterial = Output.ofNullable(caMaterial);
             return this;
         }
-
         public Builder certMaterial(@Nullable Output<String> certMaterial) {
             this.certMaterial = certMaterial;
             return this;
         }
-
         public Builder certMaterial(@Nullable String certMaterial) {
             this.certMaterial = Output.ofNullable(certMaterial);
             return this;
         }
-
         public Builder certPath(@Nullable Output<String> certPath) {
             this.certPath = certPath;
             return this;
         }
-
         public Builder certPath(@Nullable String certPath) {
             this.certPath = Output.ofNullable(certPath);
             return this;
         }
-
         public Builder host(@Nullable Output<String> host) {
             this.host = host;
             return this;
         }
-
         public Builder host(@Nullable String host) {
             this.host = Output.ofNullable(host);
             return this;
         }
-
         public Builder keyMaterial(@Nullable Output<String> keyMaterial) {
             this.keyMaterial = keyMaterial;
             return this;
         }
-
         public Builder keyMaterial(@Nullable String keyMaterial) {
             this.keyMaterial = Output.ofNullable(keyMaterial);
             return this;
         }
-
         public Builder registryAuth(@Nullable Output<List<ProviderRegistryAuthArgs>> registryAuth) {
             this.registryAuth = registryAuth;
             return this;
         }
-
         public Builder registryAuth(@Nullable List<ProviderRegistryAuthArgs> registryAuth) {
             this.registryAuth = Output.ofNullable(registryAuth);
             return this;
         }
-        public ProviderArgs build() {
+        public Builder registryAuth(ProviderRegistryAuthArgs... registryAuth) {
+            return registryAuth(List.of(registryAuth));
+        }        public ProviderArgs build() {
             return new ProviderArgs(caMaterial, certMaterial, certPath, host, keyMaterial, registryAuth);
         }
     }

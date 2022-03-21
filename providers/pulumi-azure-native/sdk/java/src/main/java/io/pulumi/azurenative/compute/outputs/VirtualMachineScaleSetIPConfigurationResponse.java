@@ -204,52 +204,54 @@ public final class VirtualMachineScaleSetIPConfigurationResponse {
             this.applicationGatewayBackendAddressPools = applicationGatewayBackendAddressPools;
             return this;
         }
-
+        public Builder applicationGatewayBackendAddressPools(SubResourceResponse... applicationGatewayBackendAddressPools) {
+            return applicationGatewayBackendAddressPools(List.of(applicationGatewayBackendAddressPools));
+        }
         public Builder applicationSecurityGroups(@Nullable List<SubResourceResponse> applicationSecurityGroups) {
             this.applicationSecurityGroups = applicationSecurityGroups;
             return this;
         }
-
+        public Builder applicationSecurityGroups(SubResourceResponse... applicationSecurityGroups) {
+            return applicationSecurityGroups(List.of(applicationSecurityGroups));
+        }
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder loadBalancerBackendAddressPools(@Nullable List<SubResourceResponse> loadBalancerBackendAddressPools) {
             this.loadBalancerBackendAddressPools = loadBalancerBackendAddressPools;
             return this;
         }
-
+        public Builder loadBalancerBackendAddressPools(SubResourceResponse... loadBalancerBackendAddressPools) {
+            return loadBalancerBackendAddressPools(List.of(loadBalancerBackendAddressPools));
+        }
         public Builder loadBalancerInboundNatPools(@Nullable List<SubResourceResponse> loadBalancerInboundNatPools) {
             this.loadBalancerInboundNatPools = loadBalancerInboundNatPools;
             return this;
         }
-
+        public Builder loadBalancerInboundNatPools(SubResourceResponse... loadBalancerInboundNatPools) {
+            return loadBalancerInboundNatPools(List.of(loadBalancerInboundNatPools));
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder primary(@Nullable Boolean primary) {
             this.primary = primary;
             return this;
         }
-
         public Builder privateIPAddressVersion(@Nullable String privateIPAddressVersion) {
             this.privateIPAddressVersion = privateIPAddressVersion;
             return this;
         }
-
         public Builder publicIPAddressConfiguration(@Nullable VirtualMachineScaleSetPublicIPAddressConfigurationResponse publicIPAddressConfiguration) {
             this.publicIPAddressConfiguration = publicIPAddressConfiguration;
             return this;
         }
-
         public Builder subnet(@Nullable ApiEntityReferenceResponse subnet) {
             this.subnet = subnet;
             return this;
-        }
-        public VirtualMachineScaleSetIPConfigurationResponse build() {
+        }        public VirtualMachineScaleSetIPConfigurationResponse build() {
             return new VirtualMachineScaleSetIPConfigurationResponse(applicationGatewayBackendAddressPools, applicationSecurityGroups, id, loadBalancerBackendAddressPools, loadBalancerInboundNatPools, name, primary, privateIPAddressVersion, publicIPAddressConfiguration, subnet);
         }
     }

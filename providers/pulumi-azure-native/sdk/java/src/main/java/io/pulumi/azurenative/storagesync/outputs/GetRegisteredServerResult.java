@@ -440,127 +440,102 @@ public final class GetRegisteredServerResult {
             this.agentVersion = agentVersion;
             return this;
         }
-
         public Builder agentVersionExpirationDate(String agentVersionExpirationDate) {
             this.agentVersionExpirationDate = Objects.requireNonNull(agentVersionExpirationDate);
             return this;
         }
-
         public Builder agentVersionStatus(String agentVersionStatus) {
             this.agentVersionStatus = Objects.requireNonNull(agentVersionStatus);
             return this;
         }
-
         public Builder clusterId(@Nullable String clusterId) {
             this.clusterId = clusterId;
             return this;
         }
-
         public Builder clusterName(@Nullable String clusterName) {
             this.clusterName = clusterName;
             return this;
         }
-
         public Builder discoveryEndpointUri(@Nullable String discoveryEndpointUri) {
             this.discoveryEndpointUri = discoveryEndpointUri;
             return this;
         }
-
         public Builder friendlyName(@Nullable String friendlyName) {
             this.friendlyName = friendlyName;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder lastHeartBeat(@Nullable String lastHeartBeat) {
             this.lastHeartBeat = lastHeartBeat;
             return this;
         }
-
         public Builder lastOperationName(@Nullable String lastOperationName) {
             this.lastOperationName = lastOperationName;
             return this;
         }
-
         public Builder lastWorkflowId(@Nullable String lastWorkflowId) {
             this.lastWorkflowId = lastWorkflowId;
             return this;
         }
-
         public Builder managementEndpointUri(@Nullable String managementEndpointUri) {
             this.managementEndpointUri = managementEndpointUri;
             return this;
         }
-
         public Builder monitoringConfiguration(@Nullable String monitoringConfiguration) {
             this.monitoringConfiguration = monitoringConfiguration;
             return this;
         }
-
         public Builder monitoringEndpointUri(@Nullable String monitoringEndpointUri) {
             this.monitoringEndpointUri = monitoringEndpointUri;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder provisioningState(@Nullable String provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
-
         public Builder resourceLocation(@Nullable String resourceLocation) {
             this.resourceLocation = resourceLocation;
             return this;
         }
-
         public Builder serverCertificate(@Nullable String serverCertificate) {
             this.serverCertificate = serverCertificate;
             return this;
         }
-
         public Builder serverId(@Nullable String serverId) {
             this.serverId = serverId;
             return this;
         }
-
         public Builder serverManagementErrorCode(@Nullable Integer serverManagementErrorCode) {
             this.serverManagementErrorCode = serverManagementErrorCode;
             return this;
         }
-
         public Builder serverOSVersion(@Nullable String serverOSVersion) {
             this.serverOSVersion = serverOSVersion;
             return this;
         }
-
         public Builder serverRole(@Nullable String serverRole) {
             this.serverRole = serverRole;
             return this;
         }
-
         public Builder serviceLocation(@Nullable String serviceLocation) {
             this.serviceLocation = serviceLocation;
             return this;
         }
-
         public Builder storageSyncServiceUid(@Nullable String storageSyncServiceUid) {
             this.storageSyncServiceUid = storageSyncServiceUid;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetRegisteredServerResult build() {
+        }        public GetRegisteredServerResult build() {
             return new GetRegisteredServerResult(agentVersion, agentVersionExpirationDate, agentVersionStatus, clusterId, clusterName, discoveryEndpointUri, friendlyName, id, lastHeartBeat, lastOperationName, lastWorkflowId, managementEndpointUri, monitoringConfiguration, monitoringEndpointUri, name, provisioningState, resourceLocation, serverCertificate, serverId, serverManagementErrorCode, serverOSVersion, serverRole, serviceLocation, storageSyncServiceUid, type);
         }
     }

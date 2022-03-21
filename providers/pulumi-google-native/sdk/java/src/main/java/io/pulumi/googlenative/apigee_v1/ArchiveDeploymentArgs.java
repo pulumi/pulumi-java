@@ -115,52 +115,42 @@ public final class ArchiveDeploymentArgs extends io.pulumi.resources.ResourceArg
             this.environmentId = Objects.requireNonNull(environmentId);
             return this;
         }
-
         public Builder environmentId(String environmentId) {
             this.environmentId = Output.of(Objects.requireNonNull(environmentId));
             return this;
         }
-
         public Builder gcsUri(@Nullable Output<String> gcsUri) {
             this.gcsUri = gcsUri;
             return this;
         }
-
         public Builder gcsUri(@Nullable String gcsUri) {
             this.gcsUri = Output.ofNullable(gcsUri);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder organizationId(Output<String> organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }
-
         public Builder organizationId(String organizationId) {
             this.organizationId = Output.of(Objects.requireNonNull(organizationId));
             return this;
-        }
-        public ArchiveDeploymentArgs build() {
+        }        public ArchiveDeploymentArgs build() {
             return new ArchiveDeploymentArgs(environmentId, gcsUri, labels, name, organizationId);
         }
     }

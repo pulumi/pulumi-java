@@ -43,8 +43,7 @@ public final class ConnectorKafkaCluster {
         public Builder apacheKafkaCluster(ConnectorApacheKafkaCluster apacheKafkaCluster) {
             this.apacheKafkaCluster = Objects.requireNonNull(apacheKafkaCluster);
             return this;
-        }
-        public ConnectorKafkaCluster build() {
+        }        public ConnectorKafkaCluster build() {
             return new ConnectorKafkaCluster(apacheKafkaCluster);
         }
     }

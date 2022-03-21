@@ -175,42 +175,46 @@ public final class HadoopJobResponse extends io.pulumi.resources.InvokeArgs {
             this.archiveUris = Objects.requireNonNull(archiveUris);
             return this;
         }
-
+        public Builder archiveUris(String... archiveUris) {
+            return archiveUris(List.of(archiveUris));
+        }
         public Builder args(List<String> args) {
             this.args = Objects.requireNonNull(args);
             return this;
         }
-
+        public Builder args(String... args) {
+            return args(List.of(args));
+        }
         public Builder fileUris(List<String> fileUris) {
             this.fileUris = Objects.requireNonNull(fileUris);
             return this;
         }
-
+        public Builder fileUris(String... fileUris) {
+            return fileUris(List.of(fileUris));
+        }
         public Builder jarFileUris(List<String> jarFileUris) {
             this.jarFileUris = Objects.requireNonNull(jarFileUris);
             return this;
         }
-
+        public Builder jarFileUris(String... jarFileUris) {
+            return jarFileUris(List.of(jarFileUris));
+        }
         public Builder loggingConfig(LoggingConfigResponse loggingConfig) {
             this.loggingConfig = Objects.requireNonNull(loggingConfig);
             return this;
         }
-
         public Builder mainClass(String mainClass) {
             this.mainClass = Objects.requireNonNull(mainClass);
             return this;
         }
-
         public Builder mainJarFileUri(String mainJarFileUri) {
             this.mainJarFileUri = Objects.requireNonNull(mainJarFileUri);
             return this;
         }
-
         public Builder properties(Map<String,String> properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
-        }
-        public HadoopJobResponse build() {
+        }        public HadoopJobResponse build() {
             return new HadoopJobResponse(archiveUris, args, fileUris, jarFileUris, loggingConfig, mainClass, mainJarFileUri, properties);
         }
     }

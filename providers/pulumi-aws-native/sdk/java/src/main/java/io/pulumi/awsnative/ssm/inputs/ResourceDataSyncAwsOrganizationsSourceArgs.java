@@ -67,22 +67,21 @@ public final class ResourceDataSyncAwsOrganizationsSourceArgs extends io.pulumi.
             this.organizationSourceType = Objects.requireNonNull(organizationSourceType);
             return this;
         }
-
         public Builder organizationSourceType(String organizationSourceType) {
             this.organizationSourceType = Output.of(Objects.requireNonNull(organizationSourceType));
             return this;
         }
-
         public Builder organizationalUnits(@Nullable Output<List<String>> organizationalUnits) {
             this.organizationalUnits = organizationalUnits;
             return this;
         }
-
         public Builder organizationalUnits(@Nullable List<String> organizationalUnits) {
             this.organizationalUnits = Output.ofNullable(organizationalUnits);
             return this;
         }
-        public ResourceDataSyncAwsOrganizationsSourceArgs build() {
+        public Builder organizationalUnits(String... organizationalUnits) {
+            return organizationalUnits(List.of(organizationalUnits));
+        }        public ResourceDataSyncAwsOrganizationsSourceArgs build() {
             return new ResourceDataSyncAwsOrganizationsSourceArgs(organizationSourceType, organizationalUnits);
         }
     }

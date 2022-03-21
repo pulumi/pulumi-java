@@ -77,12 +77,13 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFe
             this.allowedValues = Objects.requireNonNull(allowedValues);
             return this;
         }
-
+        public Builder allowedValues(String... allowedValues) {
+            return allowedValues(List.of(allowedValues));
+        }
         public Builder policy(String policy) {
             this.policy = Objects.requireNonNull(policy);
             return this;
-        }
-        public GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse build() {
+        }        public GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse build() {
             return new GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse(allowedValues, policy);
         }
     }

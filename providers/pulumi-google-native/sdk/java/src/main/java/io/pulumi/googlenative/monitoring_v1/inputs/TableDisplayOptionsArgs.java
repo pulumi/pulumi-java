@@ -62,12 +62,13 @@ public final class TableDisplayOptionsArgs extends io.pulumi.resources.ResourceA
             this.shownColumns = shownColumns;
             return this;
         }
-
         public Builder shownColumns(@Nullable List<String> shownColumns) {
             this.shownColumns = Output.ofNullable(shownColumns);
             return this;
         }
-        public TableDisplayOptionsArgs build() {
+        public Builder shownColumns(String... shownColumns) {
+            return shownColumns(List.of(shownColumns));
+        }        public TableDisplayOptionsArgs build() {
             return new TableDisplayOptionsArgs(shownColumns);
         }
     }

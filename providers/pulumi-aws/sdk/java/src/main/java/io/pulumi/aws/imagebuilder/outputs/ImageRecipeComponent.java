@@ -51,8 +51,7 @@ public final class ImageRecipeComponent {
         public Builder componentArn(String componentArn) {
             this.componentArn = Objects.requireNonNull(componentArn);
             return this;
-        }
-        public ImageRecipeComponent build() {
+        }        public ImageRecipeComponent build() {
             return new ImageRecipeComponent(componentArn);
         }
     }

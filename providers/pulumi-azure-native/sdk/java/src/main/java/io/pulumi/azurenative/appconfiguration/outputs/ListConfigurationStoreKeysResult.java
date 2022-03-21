@@ -73,12 +73,13 @@ public final class ListConfigurationStoreKeysResult {
             this.nextLink = nextLink;
             return this;
         }
-
         public Builder value(@Nullable List<ApiKeyResponse> value) {
             this.value = value;
             return this;
         }
-        public ListConfigurationStoreKeysResult build() {
+        public Builder value(ApiKeyResponse... value) {
+            return value(List.of(value));
+        }        public ListConfigurationStoreKeysResult build() {
             return new ListConfigurationStoreKeysResult(nextLink, value);
         }
     }

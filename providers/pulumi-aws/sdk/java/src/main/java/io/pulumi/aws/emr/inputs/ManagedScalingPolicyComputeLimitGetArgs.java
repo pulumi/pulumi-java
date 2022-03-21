@@ -123,52 +123,42 @@ public final class ManagedScalingPolicyComputeLimitGetArgs extends io.pulumi.res
             this.maximumCapacityUnits = Objects.requireNonNull(maximumCapacityUnits);
             return this;
         }
-
         public Builder maximumCapacityUnits(Integer maximumCapacityUnits) {
             this.maximumCapacityUnits = Output.of(Objects.requireNonNull(maximumCapacityUnits));
             return this;
         }
-
         public Builder maximumCoreCapacityUnits(@Nullable Output<Integer> maximumCoreCapacityUnits) {
             this.maximumCoreCapacityUnits = maximumCoreCapacityUnits;
             return this;
         }
-
         public Builder maximumCoreCapacityUnits(@Nullable Integer maximumCoreCapacityUnits) {
             this.maximumCoreCapacityUnits = Output.ofNullable(maximumCoreCapacityUnits);
             return this;
         }
-
         public Builder maximumOndemandCapacityUnits(@Nullable Output<Integer> maximumOndemandCapacityUnits) {
             this.maximumOndemandCapacityUnits = maximumOndemandCapacityUnits;
             return this;
         }
-
         public Builder maximumOndemandCapacityUnits(@Nullable Integer maximumOndemandCapacityUnits) {
             this.maximumOndemandCapacityUnits = Output.ofNullable(maximumOndemandCapacityUnits);
             return this;
         }
-
         public Builder minimumCapacityUnits(Output<Integer> minimumCapacityUnits) {
             this.minimumCapacityUnits = Objects.requireNonNull(minimumCapacityUnits);
             return this;
         }
-
         public Builder minimumCapacityUnits(Integer minimumCapacityUnits) {
             this.minimumCapacityUnits = Output.of(Objects.requireNonNull(minimumCapacityUnits));
             return this;
         }
-
         public Builder unitType(Output<String> unitType) {
             this.unitType = Objects.requireNonNull(unitType);
             return this;
         }
-
         public Builder unitType(String unitType) {
             this.unitType = Output.of(Objects.requireNonNull(unitType));
             return this;
-        }
-        public ManagedScalingPolicyComputeLimitGetArgs build() {
+        }        public ManagedScalingPolicyComputeLimitGetArgs build() {
             return new ManagedScalingPolicyComputeLimitGetArgs(maximumCapacityUnits, maximumCoreCapacityUnits, maximumOndemandCapacityUnits, minimumCapacityUnits, unitType);
         }
     }

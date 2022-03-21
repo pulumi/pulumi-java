@@ -51,8 +51,7 @@ public final class GatewayRouteSpecGrpcRouteMatch {
         public Builder serviceName(String serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
-        }
-        public GatewayRouteSpecGrpcRouteMatch build() {
+        }        public GatewayRouteSpecGrpcRouteMatch build() {
             return new GatewayRouteSpecGrpcRouteMatch(serviceName);
         }
     }

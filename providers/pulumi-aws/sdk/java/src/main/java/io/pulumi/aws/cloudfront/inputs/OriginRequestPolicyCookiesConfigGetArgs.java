@@ -67,22 +67,18 @@ public final class OriginRequestPolicyCookiesConfigGetArgs extends io.pulumi.res
             this.cookieBehavior = Objects.requireNonNull(cookieBehavior);
             return this;
         }
-
         public Builder cookieBehavior(String cookieBehavior) {
             this.cookieBehavior = Output.of(Objects.requireNonNull(cookieBehavior));
             return this;
         }
-
         public Builder cookies(@Nullable Output<OriginRequestPolicyCookiesConfigCookiesGetArgs> cookies) {
             this.cookies = cookies;
             return this;
         }
-
         public Builder cookies(@Nullable OriginRequestPolicyCookiesConfigCookiesGetArgs cookies) {
             this.cookies = Output.ofNullable(cookies);
             return this;
-        }
-        public OriginRequestPolicyCookiesConfigGetArgs build() {
+        }        public OriginRequestPolicyCookiesConfigGetArgs build() {
             return new OriginRequestPolicyCookiesConfigGetArgs(cookieBehavior, cookies);
         }
     }

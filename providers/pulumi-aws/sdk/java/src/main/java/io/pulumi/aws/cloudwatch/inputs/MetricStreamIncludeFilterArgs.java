@@ -56,12 +56,10 @@ public final class MetricStreamIncludeFilterArgs extends io.pulumi.resources.Res
             this.namespace = Objects.requireNonNull(namespace);
             return this;
         }
-
         public Builder namespace(String namespace) {
             this.namespace = Output.of(Objects.requireNonNull(namespace));
             return this;
-        }
-        public MetricStreamIncludeFilterArgs build() {
+        }        public MetricStreamIncludeFilterArgs build() {
             return new MetricStreamIncludeFilterArgs(namespace);
         }
     }

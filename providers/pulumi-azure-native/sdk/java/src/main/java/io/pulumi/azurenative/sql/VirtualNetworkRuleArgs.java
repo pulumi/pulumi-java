@@ -123,52 +123,42 @@ public final class VirtualNetworkRuleArgs extends io.pulumi.resources.ResourceAr
             this.ignoreMissingVnetServiceEndpoint = ignoreMissingVnetServiceEndpoint;
             return this;
         }
-
         public Builder ignoreMissingVnetServiceEndpoint(@Nullable Boolean ignoreMissingVnetServiceEndpoint) {
             this.ignoreMissingVnetServiceEndpoint = Output.ofNullable(ignoreMissingVnetServiceEndpoint);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder serverName(Output<String> serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
         }
-
         public Builder serverName(String serverName) {
             this.serverName = Output.of(Objects.requireNonNull(serverName));
             return this;
         }
-
         public Builder virtualNetworkRuleName(@Nullable Output<String> virtualNetworkRuleName) {
             this.virtualNetworkRuleName = virtualNetworkRuleName;
             return this;
         }
-
         public Builder virtualNetworkRuleName(@Nullable String virtualNetworkRuleName) {
             this.virtualNetworkRuleName = Output.ofNullable(virtualNetworkRuleName);
             return this;
         }
-
         public Builder virtualNetworkSubnetId(Output<String> virtualNetworkSubnetId) {
             this.virtualNetworkSubnetId = Objects.requireNonNull(virtualNetworkSubnetId);
             return this;
         }
-
         public Builder virtualNetworkSubnetId(String virtualNetworkSubnetId) {
             this.virtualNetworkSubnetId = Output.of(Objects.requireNonNull(virtualNetworkSubnetId));
             return this;
-        }
-        public VirtualNetworkRuleArgs build() {
+        }        public VirtualNetworkRuleArgs build() {
             return new VirtualNetworkRuleArgs(ignoreMissingVnetServiceEndpoint, resourceGroupName, serverName, virtualNetworkRuleName, virtualNetworkSubnetId);
         }
     }

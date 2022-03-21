@@ -103,22 +103,18 @@ public final class CertificateTemplateIdentityConstraintsCelExpression {
             this.description = description;
             return this;
         }
-
         public Builder expression(@Nullable String expression) {
             this.expression = expression;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder title(@Nullable String title) {
             this.title = title;
             return this;
-        }
-        public CertificateTemplateIdentityConstraintsCelExpression build() {
+        }        public CertificateTemplateIdentityConstraintsCelExpression build() {
             return new CertificateTemplateIdentityConstraintsCelExpression(description, expression, location, title);
         }
     }

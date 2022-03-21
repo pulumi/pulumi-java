@@ -120,27 +120,22 @@ public final class StaticSiteTemplateOptionsResponse {
             this.description = description;
             return this;
         }
-
         public Builder isPrivate(@Nullable Boolean isPrivate) {
             this.isPrivate = isPrivate;
             return this;
         }
-
         public Builder owner(@Nullable String owner) {
             this.owner = owner;
             return this;
         }
-
         public Builder repositoryName(@Nullable String repositoryName) {
             this.repositoryName = repositoryName;
             return this;
         }
-
         public Builder templateRepositoryUrl(@Nullable String templateRepositoryUrl) {
             this.templateRepositoryUrl = templateRepositoryUrl;
             return this;
-        }
-        public StaticSiteTemplateOptionsResponse build() {
+        }        public StaticSiteTemplateOptionsResponse build() {
             return new StaticSiteTemplateOptionsResponse(description, isPrivate, owner, repositoryName, templateRepositoryUrl);
         }
     }

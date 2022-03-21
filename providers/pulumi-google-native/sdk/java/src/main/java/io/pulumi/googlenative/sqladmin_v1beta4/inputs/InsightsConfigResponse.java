@@ -125,27 +125,22 @@ public final class InsightsConfigResponse extends io.pulumi.resources.InvokeArgs
             this.queryInsightsEnabled = Objects.requireNonNull(queryInsightsEnabled);
             return this;
         }
-
         public Builder queryPlansPerMinute(Integer queryPlansPerMinute) {
             this.queryPlansPerMinute = Objects.requireNonNull(queryPlansPerMinute);
             return this;
         }
-
         public Builder queryStringLength(Integer queryStringLength) {
             this.queryStringLength = Objects.requireNonNull(queryStringLength);
             return this;
         }
-
         public Builder recordApplicationTags(Boolean recordApplicationTags) {
             this.recordApplicationTags = Objects.requireNonNull(recordApplicationTags);
             return this;
         }
-
         public Builder recordClientAddress(Boolean recordClientAddress) {
             this.recordClientAddress = Objects.requireNonNull(recordClientAddress);
             return this;
-        }
-        public InsightsConfigResponse build() {
+        }        public InsightsConfigResponse build() {
             return new InsightsConfigResponse(queryInsightsEnabled, queryPlansPerMinute, queryStringLength, recordApplicationTags, recordClientAddress);
         }
     }

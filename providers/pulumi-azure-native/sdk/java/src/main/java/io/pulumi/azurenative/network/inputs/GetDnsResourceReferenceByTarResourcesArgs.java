@@ -58,7 +58,9 @@ public final class GetDnsResourceReferenceByTarResourcesArgs extends io.pulumi.r
             this.targetResources = targetResources;
             return this;
         }
-        public GetDnsResourceReferenceByTarResourcesArgs build() {
+        public Builder targetResources(SubResource... targetResources) {
+            return targetResources(List.of(targetResources));
+        }        public GetDnsResourceReferenceByTarResourcesArgs build() {
             return new GetDnsResourceReferenceByTarResourcesArgs(targetResources);
         }
     }

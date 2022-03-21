@@ -52,8 +52,7 @@ public final class ArgFunctionArgs extends io.pulumi.resources.InvokeArgs {
         public Builder arg1(@Nullable Resource arg1) {
             this.arg1 = arg1;
             return this;
-        }
-        public ArgFunctionArgs build() {
+        }        public ArgFunctionArgs build() {
             return new ArgFunctionArgs(arg1);
         }
     }

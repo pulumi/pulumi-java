@@ -78,12 +78,10 @@ public final class DeploymentConfigMinimumHealthyHosts {
             this.type = type;
             return this;
         }
-
         public Builder value(@Nullable Integer value) {
             this.value = value;
             return this;
-        }
-        public DeploymentConfigMinimumHealthyHosts build() {
+        }        public DeploymentConfigMinimumHealthyHosts build() {
             return new DeploymentConfigMinimumHealthyHosts(type, value);
         }
     }

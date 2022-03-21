@@ -53,8 +53,7 @@ public final class ServiceProviderParameterResponseMetadata {
         public Builder constraints(@Nullable ServiceProviderParameterResponseConstraints constraints) {
             this.constraints = constraints;
             return this;
-        }
-        public ServiceProviderParameterResponseMetadata build() {
+        }        public ServiceProviderParameterResponseMetadata build() {
             return new ServiceProviderParameterResponseMetadata(constraints);
         }
     }

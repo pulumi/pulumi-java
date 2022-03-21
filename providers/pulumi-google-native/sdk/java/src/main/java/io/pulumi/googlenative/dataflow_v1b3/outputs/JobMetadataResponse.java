@@ -156,37 +156,48 @@ public final class JobMetadataResponse {
             this.bigTableDetails = Objects.requireNonNull(bigTableDetails);
             return this;
         }
-
+        public Builder bigTableDetails(BigTableIODetailsResponse... bigTableDetails) {
+            return bigTableDetails(List.of(bigTableDetails));
+        }
         public Builder bigqueryDetails(List<BigQueryIODetailsResponse> bigqueryDetails) {
             this.bigqueryDetails = Objects.requireNonNull(bigqueryDetails);
             return this;
         }
-
+        public Builder bigqueryDetails(BigQueryIODetailsResponse... bigqueryDetails) {
+            return bigqueryDetails(List.of(bigqueryDetails));
+        }
         public Builder datastoreDetails(List<DatastoreIODetailsResponse> datastoreDetails) {
             this.datastoreDetails = Objects.requireNonNull(datastoreDetails);
             return this;
         }
-
+        public Builder datastoreDetails(DatastoreIODetailsResponse... datastoreDetails) {
+            return datastoreDetails(List.of(datastoreDetails));
+        }
         public Builder fileDetails(List<FileIODetailsResponse> fileDetails) {
             this.fileDetails = Objects.requireNonNull(fileDetails);
             return this;
         }
-
+        public Builder fileDetails(FileIODetailsResponse... fileDetails) {
+            return fileDetails(List.of(fileDetails));
+        }
         public Builder pubsubDetails(List<PubSubIODetailsResponse> pubsubDetails) {
             this.pubsubDetails = Objects.requireNonNull(pubsubDetails);
             return this;
         }
-
+        public Builder pubsubDetails(PubSubIODetailsResponse... pubsubDetails) {
+            return pubsubDetails(List.of(pubsubDetails));
+        }
         public Builder sdkVersion(SdkVersionResponse sdkVersion) {
             this.sdkVersion = Objects.requireNonNull(sdkVersion);
             return this;
         }
-
         public Builder spannerDetails(List<SpannerIODetailsResponse> spannerDetails) {
             this.spannerDetails = Objects.requireNonNull(spannerDetails);
             return this;
         }
-        public JobMetadataResponse build() {
+        public Builder spannerDetails(SpannerIODetailsResponse... spannerDetails) {
+            return spannerDetails(List.of(spannerDetails));
+        }        public JobMetadataResponse build() {
             return new JobMetadataResponse(bigTableDetails, bigqueryDetails, datastoreDetails, fileDetails, pubsubDetails, sdkVersion, spannerDetails);
         }
     }

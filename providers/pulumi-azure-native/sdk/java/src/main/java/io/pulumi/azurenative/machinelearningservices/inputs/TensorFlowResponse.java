@@ -96,17 +96,14 @@ public final class TensorFlowResponse extends io.pulumi.resources.InvokeArgs {
             this.distributionType = Objects.requireNonNull(distributionType);
             return this;
         }
-
         public Builder parameterServerCount(@Nullable Integer parameterServerCount) {
             this.parameterServerCount = parameterServerCount;
             return this;
         }
-
         public Builder workerCount(@Nullable Integer workerCount) {
             this.workerCount = workerCount;
             return this;
-        }
-        public TensorFlowResponse build() {
+        }        public TensorFlowResponse build() {
             return new TensorFlowResponse(distributionType, parameterServerCount, workerCount);
         }
     }

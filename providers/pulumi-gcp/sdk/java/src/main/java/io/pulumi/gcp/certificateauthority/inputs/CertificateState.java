@@ -314,162 +314,139 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
             this.certificateAuthority = certificateAuthority;
             return this;
         }
-
         public Builder certificateAuthority(@Nullable String certificateAuthority) {
             this.certificateAuthority = Output.ofNullable(certificateAuthority);
             return this;
         }
-
         public Builder certificateDescriptions(@Nullable Output<List<CertificateCertificateDescriptionGetArgs>> certificateDescriptions) {
             this.certificateDescriptions = certificateDescriptions;
             return this;
         }
-
         public Builder certificateDescriptions(@Nullable List<CertificateCertificateDescriptionGetArgs> certificateDescriptions) {
             this.certificateDescriptions = Output.ofNullable(certificateDescriptions);
             return this;
         }
-
+        public Builder certificateDescriptions(CertificateCertificateDescriptionGetArgs... certificateDescriptions) {
+            return certificateDescriptions(List.of(certificateDescriptions));
+        }
         public Builder certificateTemplate(@Nullable Output<String> certificateTemplate) {
             this.certificateTemplate = certificateTemplate;
             return this;
         }
-
         public Builder certificateTemplate(@Nullable String certificateTemplate) {
             this.certificateTemplate = Output.ofNullable(certificateTemplate);
             return this;
         }
-
         public Builder config(@Nullable Output<CertificateConfigGetArgs> config) {
             this.config = config;
             return this;
         }
-
         public Builder config(@Nullable CertificateConfigGetArgs config) {
             this.config = Output.ofNullable(config);
             return this;
         }
-
         public Builder createTime(@Nullable Output<String> createTime) {
             this.createTime = createTime;
             return this;
         }
-
         public Builder createTime(@Nullable String createTime) {
             this.createTime = Output.ofNullable(createTime);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder lifetime(@Nullable Output<String> lifetime) {
             this.lifetime = lifetime;
             return this;
         }
-
         public Builder lifetime(@Nullable String lifetime) {
             this.lifetime = Output.ofNullable(lifetime);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder pemCertificate(@Nullable Output<String> pemCertificate) {
             this.pemCertificate = pemCertificate;
             return this;
         }
-
         public Builder pemCertificate(@Nullable String pemCertificate) {
             this.pemCertificate = Output.ofNullable(pemCertificate);
             return this;
         }
-
         public Builder pemCertificates(@Nullable Output<List<String>> pemCertificates) {
             this.pemCertificates = pemCertificates;
             return this;
         }
-
         public Builder pemCertificates(@Nullable List<String> pemCertificates) {
             this.pemCertificates = Output.ofNullable(pemCertificates);
             return this;
         }
-
+        public Builder pemCertificates(String... pemCertificates) {
+            return pemCertificates(List.of(pemCertificates));
+        }
         public Builder pemCsr(@Nullable Output<String> pemCsr) {
             this.pemCsr = pemCsr;
             return this;
         }
-
         public Builder pemCsr(@Nullable String pemCsr) {
             this.pemCsr = Output.ofNullable(pemCsr);
             return this;
         }
-
         public Builder pool(@Nullable Output<String> pool) {
             this.pool = pool;
             return this;
         }
-
         public Builder pool(@Nullable String pool) {
             this.pool = Output.ofNullable(pool);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder revocationDetails(@Nullable Output<List<CertificateRevocationDetailGetArgs>> revocationDetails) {
             this.revocationDetails = revocationDetails;
             return this;
         }
-
         public Builder revocationDetails(@Nullable List<CertificateRevocationDetailGetArgs> revocationDetails) {
             this.revocationDetails = Output.ofNullable(revocationDetails);
             return this;
         }
-
+        public Builder revocationDetails(CertificateRevocationDetailGetArgs... revocationDetails) {
+            return revocationDetails(List.of(revocationDetails));
+        }
         public Builder updateTime(@Nullable Output<String> updateTime) {
             this.updateTime = updateTime;
             return this;
         }
-
         public Builder updateTime(@Nullable String updateTime) {
             this.updateTime = Output.ofNullable(updateTime);
             return this;
-        }
-        public CertificateState build() {
+        }        public CertificateState build() {
             return new CertificateState(certificateAuthority, certificateDescriptions, certificateTemplate, config, createTime, labels, lifetime, location, name, pemCertificate, pemCertificates, pemCsr, pool, project, revocationDetails, updateTime);
         }
     }

@@ -171,82 +171,66 @@ public final class IdentityProviderConfigOidcArgs extends io.pulumi.resources.Re
             this.clientId = Objects.requireNonNull(clientId);
             return this;
         }
-
         public Builder clientId(String clientId) {
             this.clientId = Output.of(Objects.requireNonNull(clientId));
             return this;
         }
-
         public Builder groupsClaim(@Nullable Output<String> groupsClaim) {
             this.groupsClaim = groupsClaim;
             return this;
         }
-
         public Builder groupsClaim(@Nullable String groupsClaim) {
             this.groupsClaim = Output.ofNullable(groupsClaim);
             return this;
         }
-
         public Builder groupsPrefix(@Nullable Output<String> groupsPrefix) {
             this.groupsPrefix = groupsPrefix;
             return this;
         }
-
         public Builder groupsPrefix(@Nullable String groupsPrefix) {
             this.groupsPrefix = Output.ofNullable(groupsPrefix);
             return this;
         }
-
         public Builder identityProviderConfigName(Output<String> identityProviderConfigName) {
             this.identityProviderConfigName = Objects.requireNonNull(identityProviderConfigName);
             return this;
         }
-
         public Builder identityProviderConfigName(String identityProviderConfigName) {
             this.identityProviderConfigName = Output.of(Objects.requireNonNull(identityProviderConfigName));
             return this;
         }
-
         public Builder issuerUrl(Output<String> issuerUrl) {
             this.issuerUrl = Objects.requireNonNull(issuerUrl);
             return this;
         }
-
         public Builder issuerUrl(String issuerUrl) {
             this.issuerUrl = Output.of(Objects.requireNonNull(issuerUrl));
             return this;
         }
-
         public Builder requiredClaims(@Nullable Output<Map<String,String>> requiredClaims) {
             this.requiredClaims = requiredClaims;
             return this;
         }
-
         public Builder requiredClaims(@Nullable Map<String,String> requiredClaims) {
             this.requiredClaims = Output.ofNullable(requiredClaims);
             return this;
         }
-
         public Builder usernameClaim(@Nullable Output<String> usernameClaim) {
             this.usernameClaim = usernameClaim;
             return this;
         }
-
         public Builder usernameClaim(@Nullable String usernameClaim) {
             this.usernameClaim = Output.ofNullable(usernameClaim);
             return this;
         }
-
         public Builder usernamePrefix(@Nullable Output<String> usernamePrefix) {
             this.usernamePrefix = usernamePrefix;
             return this;
         }
-
         public Builder usernamePrefix(@Nullable String usernamePrefix) {
             this.usernamePrefix = Output.ofNullable(usernamePrefix);
             return this;
-        }
-        public IdentityProviderConfigOidcArgs build() {
+        }        public IdentityProviderConfigOidcArgs build() {
             return new IdentityProviderConfigOidcArgs(clientId, groupsClaim, groupsPrefix, identityProviderConfigName, issuerUrl, requiredClaims, usernameClaim, usernamePrefix);
         }
     }

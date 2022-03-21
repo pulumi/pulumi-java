@@ -103,22 +103,18 @@ public final class SolutionPlanResponse {
             this.name = name;
             return this;
         }
-
         public Builder product(@Nullable String product) {
             this.product = product;
             return this;
         }
-
         public Builder promotionCode(@Nullable String promotionCode) {
             this.promotionCode = promotionCode;
             return this;
         }
-
         public Builder publisher(@Nullable String publisher) {
             this.publisher = publisher;
             return this;
-        }
-        public SolutionPlanResponse build() {
+        }        public SolutionPlanResponse build() {
             return new SolutionPlanResponse(name, product, promotionCode, publisher);
         }
     }

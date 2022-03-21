@@ -110,22 +110,18 @@ public final class ApiManagementServiceIdentityResponse {
             this.principalId = Objects.requireNonNull(principalId);
             return this;
         }
-
         public Builder tenantId(String tenantId) {
             this.tenantId = Objects.requireNonNull(tenantId);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder userAssignedIdentities(@Nullable Map<String,UserIdentityPropertiesResponse> userAssignedIdentities) {
             this.userAssignedIdentities = userAssignedIdentities;
             return this;
-        }
-        public ApiManagementServiceIdentityResponse build() {
+        }        public ApiManagementServiceIdentityResponse build() {
             return new ApiManagementServiceIdentityResponse(principalId, tenantId, type, userAssignedIdentities);
         }
     }

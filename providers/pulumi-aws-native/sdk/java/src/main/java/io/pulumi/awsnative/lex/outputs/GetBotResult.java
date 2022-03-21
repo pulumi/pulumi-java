@@ -113,37 +113,30 @@ public final class GetBotResult {
             this.arn = arn;
             return this;
         }
-
         public Builder dataPrivacy(@Nullable DataPrivacyProperties dataPrivacy) {
             this.dataPrivacy = dataPrivacy;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder idleSessionTTLInSeconds(@Nullable Integer idleSessionTTLInSeconds) {
             this.idleSessionTTLInSeconds = idleSessionTTLInSeconds;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = roleArn;
             return this;
-        }
-        public GetBotResult build() {
+        }        public GetBotResult build() {
             return new GetBotResult(arn, dataPrivacy, description, id, idleSessionTTLInSeconds, name, roleArn);
         }
     }

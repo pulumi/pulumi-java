@@ -110,22 +110,18 @@ public final class OSProfileResponse extends io.pulumi.resources.InvokeArgs {
             this.computerName = computerName;
             return this;
         }
-
         public Builder osType(String osType) {
             this.osType = Objects.requireNonNull(osType);
             return this;
         }
-
         public Builder sshPublicKey(@Nullable String sshPublicKey) {
             this.sshPublicKey = sshPublicKey;
             return this;
         }
-
         public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
-        }
-        public OSProfileResponse build() {
+        }        public OSProfileResponse build() {
             return new OSProfileResponse(computerName, osType, sshPublicKey, version);
         }
     }

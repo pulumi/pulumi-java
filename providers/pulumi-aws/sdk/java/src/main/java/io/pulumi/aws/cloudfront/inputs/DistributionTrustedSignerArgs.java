@@ -76,22 +76,21 @@ public final class DistributionTrustedSignerArgs extends io.pulumi.resources.Res
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
         }
-
         public Builder items(@Nullable Output<List<DistributionTrustedSignerItemArgs>> items) {
             this.items = items;
             return this;
         }
-
         public Builder items(@Nullable List<DistributionTrustedSignerItemArgs> items) {
             this.items = Output.ofNullable(items);
             return this;
         }
-        public DistributionTrustedSignerArgs build() {
+        public Builder items(DistributionTrustedSignerItemArgs... items) {
+            return items(List.of(items));
+        }        public DistributionTrustedSignerArgs build() {
             return new DistributionTrustedSignerArgs(enabled, items);
         }
     }

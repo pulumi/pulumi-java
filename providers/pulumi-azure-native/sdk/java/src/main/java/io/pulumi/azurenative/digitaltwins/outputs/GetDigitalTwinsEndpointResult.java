@@ -105,22 +105,18 @@ public final class GetDigitalTwinsEndpointResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder properties(Object properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetDigitalTwinsEndpointResult build() {
+        }        public GetDigitalTwinsEndpointResult build() {
             return new GetDigitalTwinsEndpointResult(id, name, properties, type);
         }
     }

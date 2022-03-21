@@ -298,82 +298,66 @@ public final class GetLabResult {
             this.createdByObjectId = Objects.requireNonNull(createdByObjectId);
             return this;
         }
-
         public Builder createdByUserPrincipalName(String createdByUserPrincipalName) {
             this.createdByUserPrincipalName = Objects.requireNonNull(createdByUserPrincipalName);
             return this;
         }
-
         public Builder createdDate(String createdDate) {
             this.createdDate = Objects.requireNonNull(createdDate);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder invitationCode(String invitationCode) {
             this.invitationCode = Objects.requireNonNull(invitationCode);
             return this;
         }
-
         public Builder latestOperationResult(LatestOperationResultResponse latestOperationResult) {
             this.latestOperationResult = Objects.requireNonNull(latestOperationResult);
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder maxUsersInLab(@Nullable Integer maxUsersInLab) {
             this.maxUsersInLab = maxUsersInLab;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder provisioningState(@Nullable String provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder uniqueIdentifier(@Nullable String uniqueIdentifier) {
             this.uniqueIdentifier = uniqueIdentifier;
             return this;
         }
-
         public Builder usageQuota(@Nullable String usageQuota) {
             this.usageQuota = usageQuota;
             return this;
         }
-
         public Builder userAccessMode(@Nullable String userAccessMode) {
             this.userAccessMode = userAccessMode;
             return this;
         }
-
         public Builder userQuota(Integer userQuota) {
             this.userQuota = Objects.requireNonNull(userQuota);
             return this;
-        }
-        public GetLabResult build() {
+        }        public GetLabResult build() {
             return new GetLabResult(createdByObjectId, createdByUserPrincipalName, createdDate, id, invitationCode, latestOperationResult, location, maxUsersInLab, name, provisioningState, tags, type, uniqueIdentifier, usageQuota, userAccessMode, userQuota);
         }
     }

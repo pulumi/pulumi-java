@@ -89,17 +89,14 @@ public final class UsagePlanApiStageThrottle {
             this.burstLimit = burstLimit;
             return this;
         }
-
         public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
-
         public Builder rateLimit(@Nullable Double rateLimit) {
             this.rateLimit = rateLimit;
             return this;
-        }
-        public UsagePlanApiStageThrottle build() {
+        }        public UsagePlanApiStageThrottle build() {
             return new UsagePlanApiStageThrottle(burstLimit, path, rateLimit);
         }
     }

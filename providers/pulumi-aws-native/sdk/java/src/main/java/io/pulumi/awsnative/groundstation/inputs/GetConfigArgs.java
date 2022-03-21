@@ -50,8 +50,7 @@ public final class GetConfigArgs extends io.pulumi.resources.InvokeArgs {
         public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
-        }
-        public GetConfigArgs build() {
+        }        public GetConfigArgs build() {
             return new GetConfigArgs(arn);
         }
     }

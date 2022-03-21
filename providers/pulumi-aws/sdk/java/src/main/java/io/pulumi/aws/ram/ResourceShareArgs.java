@@ -92,32 +92,26 @@ public final class ResourceShareArgs extends io.pulumi.resources.ResourceArgs {
             this.allowExternalPrincipals = allowExternalPrincipals;
             return this;
         }
-
         public Builder allowExternalPrincipals(@Nullable Boolean allowExternalPrincipals) {
             this.allowExternalPrincipals = Output.ofNullable(allowExternalPrincipals);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public ResourceShareArgs build() {
+        }        public ResourceShareArgs build() {
             return new ResourceShareArgs(allowExternalPrincipals, name, tags);
         }
     }

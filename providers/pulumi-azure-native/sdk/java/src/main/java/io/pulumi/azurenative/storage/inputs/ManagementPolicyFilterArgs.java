@@ -96,32 +96,35 @@ public final class ManagementPolicyFilterArgs extends io.pulumi.resources.Resour
             this.blobIndexMatch = blobIndexMatch;
             return this;
         }
-
         public Builder blobIndexMatch(@Nullable List<TagFilterArgs> blobIndexMatch) {
             this.blobIndexMatch = Output.ofNullable(blobIndexMatch);
             return this;
         }
-
+        public Builder blobIndexMatch(TagFilterArgs... blobIndexMatch) {
+            return blobIndexMatch(List.of(blobIndexMatch));
+        }
         public Builder blobTypes(Output<List<String>> blobTypes) {
             this.blobTypes = Objects.requireNonNull(blobTypes);
             return this;
         }
-
         public Builder blobTypes(List<String> blobTypes) {
             this.blobTypes = Output.of(Objects.requireNonNull(blobTypes));
             return this;
         }
-
+        public Builder blobTypes(String... blobTypes) {
+            return blobTypes(List.of(blobTypes));
+        }
         public Builder prefixMatch(@Nullable Output<List<String>> prefixMatch) {
             this.prefixMatch = prefixMatch;
             return this;
         }
-
         public Builder prefixMatch(@Nullable List<String> prefixMatch) {
             this.prefixMatch = Output.ofNullable(prefixMatch);
             return this;
         }
-        public ManagementPolicyFilterArgs build() {
+        public Builder prefixMatch(String... prefixMatch) {
+            return prefixMatch(List.of(prefixMatch));
+        }        public ManagementPolicyFilterArgs build() {
             return new ManagementPolicyFilterArgs(blobIndexMatch, blobTypes, prefixMatch);
         }
     }

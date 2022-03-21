@@ -423,117 +423,94 @@ public final class WebServicePropertiesForGraphResponse {
             this.assets = assets;
             return this;
         }
-
         public Builder commitmentPlan(@Nullable CommitmentPlanResponse commitmentPlan) {
             this.commitmentPlan = commitmentPlan;
             return this;
         }
-
         public Builder createdOn(String createdOn) {
             this.createdOn = Objects.requireNonNull(createdOn);
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder diagnostics(@Nullable DiagnosticsConfigurationResponse diagnostics) {
             this.diagnostics = diagnostics;
             return this;
         }
-
         public Builder exampleRequest(@Nullable ExampleRequestResponse exampleRequest) {
             this.exampleRequest = exampleRequest;
             return this;
         }
-
         public Builder exposeSampleData(@Nullable Boolean exposeSampleData) {
             this.exposeSampleData = exposeSampleData;
             return this;
         }
-
         public Builder input(@Nullable ServiceInputOutputSpecificationResponse input) {
             this.input = input;
             return this;
         }
-
         public Builder keys(@Nullable WebServiceKeysResponse keys) {
             this.keys = keys;
             return this;
         }
-
         public Builder machineLearningWorkspace(@Nullable MachineLearningWorkspaceResponse machineLearningWorkspace) {
             this.machineLearningWorkspace = machineLearningWorkspace;
             return this;
         }
-
         public Builder modifiedOn(String modifiedOn) {
             this.modifiedOn = Objects.requireNonNull(modifiedOn);
             return this;
         }
-
         public Builder output(@Nullable ServiceInputOutputSpecificationResponse output) {
             this.output = output;
             return this;
         }
-
         public Builder $package(@Nullable GraphPackageResponse $package) {
             this.$package = $package;
             return this;
         }
-
         public Builder packageType(String packageType) {
             this.packageType = Objects.requireNonNull(packageType);
             return this;
         }
-
         public Builder parameters(@Nullable Map<String,WebServiceParameterResponse> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder payloadsInBlobStorage(@Nullable Boolean payloadsInBlobStorage) {
             this.payloadsInBlobStorage = payloadsInBlobStorage;
             return this;
         }
-
         public Builder payloadsLocation(@Nullable BlobLocationResponse payloadsLocation) {
             this.payloadsLocation = payloadsLocation;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder readOnly(@Nullable Boolean readOnly) {
             this.readOnly = readOnly;
             return this;
         }
-
         public Builder realtimeConfiguration(@Nullable RealtimeConfigurationResponse realtimeConfiguration) {
             this.realtimeConfiguration = realtimeConfiguration;
             return this;
         }
-
         public Builder storageAccount(@Nullable StorageAccountResponse storageAccount) {
             this.storageAccount = storageAccount;
             return this;
         }
-
         public Builder swaggerLocation(String swaggerLocation) {
             this.swaggerLocation = Objects.requireNonNull(swaggerLocation);
             return this;
         }
-
         public Builder title(@Nullable String title) {
             this.title = title;
             return this;
-        }
-        public WebServicePropertiesForGraphResponse build() {
+        }        public WebServicePropertiesForGraphResponse build() {
             return new WebServicePropertiesForGraphResponse(assets, commitmentPlan, createdOn, description, diagnostics, exampleRequest, exposeSampleData, input, keys, machineLearningWorkspace, modifiedOn, output, $package, packageType, parameters, payloadsInBlobStorage, payloadsLocation, provisioningState, readOnly, realtimeConfiguration, storageAccount, swaggerLocation, title);
         }
     }

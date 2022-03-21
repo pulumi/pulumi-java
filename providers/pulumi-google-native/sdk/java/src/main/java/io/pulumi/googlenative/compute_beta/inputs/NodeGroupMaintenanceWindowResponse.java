@@ -77,12 +77,10 @@ public final class NodeGroupMaintenanceWindowResponse extends io.pulumi.resource
             this.maintenanceDuration = Objects.requireNonNull(maintenanceDuration);
             return this;
         }
-
         public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
-        }
-        public NodeGroupMaintenanceWindowResponse build() {
+        }        public NodeGroupMaintenanceWindowResponse build() {
             return new NodeGroupMaintenanceWindowResponse(maintenanceDuration, startTime);
         }
     }

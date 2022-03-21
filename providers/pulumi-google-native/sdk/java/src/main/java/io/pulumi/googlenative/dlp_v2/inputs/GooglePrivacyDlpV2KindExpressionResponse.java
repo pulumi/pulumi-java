@@ -58,8 +58,7 @@ public final class GooglePrivacyDlpV2KindExpressionResponse extends io.pulumi.re
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public GooglePrivacyDlpV2KindExpressionResponse build() {
+        }        public GooglePrivacyDlpV2KindExpressionResponse build() {
             return new GooglePrivacyDlpV2KindExpressionResponse(name);
         }
     }

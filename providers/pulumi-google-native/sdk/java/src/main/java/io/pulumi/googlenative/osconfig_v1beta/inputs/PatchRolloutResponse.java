@@ -77,12 +77,10 @@ public final class PatchRolloutResponse extends io.pulumi.resources.InvokeArgs {
             this.disruptionBudget = Objects.requireNonNull(disruptionBudget);
             return this;
         }
-
         public Builder mode(String mode) {
             this.mode = Objects.requireNonNull(mode);
             return this;
-        }
-        public PatchRolloutResponse build() {
+        }        public PatchRolloutResponse build() {
             return new PatchRolloutResponse(disruptionBudget, mode);
         }
     }

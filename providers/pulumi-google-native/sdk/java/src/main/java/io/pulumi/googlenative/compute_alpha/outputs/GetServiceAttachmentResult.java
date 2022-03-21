@@ -314,87 +314,85 @@ public final class GetServiceAttachmentResult {
             this.connectedEndpoints = Objects.requireNonNull(connectedEndpoints);
             return this;
         }
-
+        public Builder connectedEndpoints(ServiceAttachmentConnectedEndpointResponse... connectedEndpoints) {
+            return connectedEndpoints(List.of(connectedEndpoints));
+        }
         public Builder connectionPreference(String connectionPreference) {
             this.connectionPreference = Objects.requireNonNull(connectionPreference);
             return this;
         }
-
         public Builder consumerAcceptLists(List<ServiceAttachmentConsumerProjectLimitResponse> consumerAcceptLists) {
             this.consumerAcceptLists = Objects.requireNonNull(consumerAcceptLists);
             return this;
         }
-
+        public Builder consumerAcceptLists(ServiceAttachmentConsumerProjectLimitResponse... consumerAcceptLists) {
+            return consumerAcceptLists(List.of(consumerAcceptLists));
+        }
         public Builder consumerRejectLists(List<String> consumerRejectLists) {
             this.consumerRejectLists = Objects.requireNonNull(consumerRejectLists);
             return this;
         }
-
+        public Builder consumerRejectLists(String... consumerRejectLists) {
+            return consumerRejectLists(List.of(consumerRejectLists));
+        }
         public Builder creationTimestamp(String creationTimestamp) {
             this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder domainNames(List<String> domainNames) {
             this.domainNames = Objects.requireNonNull(domainNames);
             return this;
         }
-
+        public Builder domainNames(String... domainNames) {
+            return domainNames(List.of(domainNames));
+        }
         public Builder enableProxyProtocol(Boolean enableProxyProtocol) {
             this.enableProxyProtocol = Objects.requireNonNull(enableProxyProtocol);
             return this;
         }
-
         public Builder fingerprint(String fingerprint) {
             this.fingerprint = Objects.requireNonNull(fingerprint);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder natSubnets(List<String> natSubnets) {
             this.natSubnets = Objects.requireNonNull(natSubnets);
             return this;
         }
-
+        public Builder natSubnets(String... natSubnets) {
+            return natSubnets(List.of(natSubnets));
+        }
         public Builder producerForwardingRule(String producerForwardingRule) {
             this.producerForwardingRule = Objects.requireNonNull(producerForwardingRule);
             return this;
         }
-
         public Builder pscServiceAttachmentId(Uint128Response pscServiceAttachmentId) {
             this.pscServiceAttachmentId = Objects.requireNonNull(pscServiceAttachmentId);
             return this;
         }
-
         public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
-
         public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
-
         public Builder targetService(String targetService) {
             this.targetService = Objects.requireNonNull(targetService);
             return this;
-        }
-        public GetServiceAttachmentResult build() {
+        }        public GetServiceAttachmentResult build() {
             return new GetServiceAttachmentResult(connectedEndpoints, connectionPreference, consumerAcceptLists, consumerRejectLists, creationTimestamp, description, domainNames, enableProxyProtocol, fingerprint, kind, name, natSubnets, producerForwardingRule, pscServiceAttachmentId, region, selfLink, targetService);
         }
     }

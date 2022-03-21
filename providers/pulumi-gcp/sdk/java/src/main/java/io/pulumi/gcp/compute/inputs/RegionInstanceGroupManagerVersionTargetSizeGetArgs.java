@@ -76,22 +76,18 @@ public final class RegionInstanceGroupManagerVersionTargetSizeGetArgs extends io
             this.fixed = fixed;
             return this;
         }
-
         public Builder fixed(@Nullable Integer fixed) {
             this.fixed = Output.ofNullable(fixed);
             return this;
         }
-
         public Builder percent(@Nullable Output<Integer> percent) {
             this.percent = percent;
             return this;
         }
-
         public Builder percent(@Nullable Integer percent) {
             this.percent = Output.ofNullable(percent);
             return this;
-        }
-        public RegionInstanceGroupManagerVersionTargetSizeGetArgs build() {
+        }        public RegionInstanceGroupManagerVersionTargetSizeGetArgs build() {
             return new RegionInstanceGroupManagerVersionTargetSizeGetArgs(fixed, percent);
         }
     }

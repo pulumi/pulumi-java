@@ -73,12 +73,10 @@ public final class TableReplica {
             this.kmsKeyArn = kmsKeyArn;
             return this;
         }
-
         public Builder regionName(String regionName) {
             this.regionName = Objects.requireNonNull(regionName);
             return this;
-        }
-        public TableReplica build() {
+        }        public TableReplica build() {
             return new TableReplica(kmsKeyArn, regionName);
         }
     }

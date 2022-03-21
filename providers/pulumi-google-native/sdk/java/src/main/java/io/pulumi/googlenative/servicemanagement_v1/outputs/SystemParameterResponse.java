@@ -85,17 +85,14 @@ public final class SystemParameterResponse {
             this.httpHeader = Objects.requireNonNull(httpHeader);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder urlQueryParameter(String urlQueryParameter) {
             this.urlQueryParameter = Objects.requireNonNull(urlQueryParameter);
             return this;
-        }
-        public SystemParameterResponse build() {
+        }        public SystemParameterResponse build() {
             return new SystemParameterResponse(httpHeader, name, urlQueryParameter);
         }
     }

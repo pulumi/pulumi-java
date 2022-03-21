@@ -56,12 +56,10 @@ public final class TimeoutConfigPropertiesArgs extends io.pulumi.resources.Resou
             this.inProgressTimeoutInMinutes = Objects.requireNonNull(inProgressTimeoutInMinutes);
             return this;
         }
-
         public Builder inProgressTimeoutInMinutes(Integer inProgressTimeoutInMinutes) {
             this.inProgressTimeoutInMinutes = Output.of(Objects.requireNonNull(inProgressTimeoutInMinutes));
             return this;
-        }
-        public TimeoutConfigPropertiesArgs build() {
+        }        public TimeoutConfigPropertiesArgs build() {
             return new TimeoutConfigPropertiesArgs(inProgressTimeoutInMinutes);
         }
     }

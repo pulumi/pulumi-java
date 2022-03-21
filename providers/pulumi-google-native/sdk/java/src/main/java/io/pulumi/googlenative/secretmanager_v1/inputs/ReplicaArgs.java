@@ -79,22 +79,18 @@ public final class ReplicaArgs extends io.pulumi.resources.ResourceArgs {
             this.customerManagedEncryption = customerManagedEncryption;
             return this;
         }
-
         public Builder customerManagedEncryption(@Nullable CustomerManagedEncryptionArgs customerManagedEncryption) {
             this.customerManagedEncryption = Output.ofNullable(customerManagedEncryption);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
-        }
-        public ReplicaArgs build() {
+        }        public ReplicaArgs build() {
             return new ReplicaArgs(customerManagedEncryption, location);
         }
     }

@@ -87,17 +87,14 @@ public final class TopicRuleErrorActionFirehose {
             this.deliveryStreamName = Objects.requireNonNull(deliveryStreamName);
             return this;
         }
-
         public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public Builder separator(@Nullable String separator) {
             this.separator = separator;
             return this;
-        }
-        public TopicRuleErrorActionFirehose build() {
+        }        public TopicRuleErrorActionFirehose build() {
             return new TopicRuleErrorActionFirehose(deliveryStreamName, roleArn, separator);
         }
     }

@@ -207,102 +207,88 @@ public final class StorageClassArgs extends io.pulumi.resources.ResourceArgs {
             this.allowVolumeExpansion = allowVolumeExpansion;
             return this;
         }
-
         public Builder allowVolumeExpansion(@Nullable Boolean allowVolumeExpansion) {
             this.allowVolumeExpansion = Output.ofNullable(allowVolumeExpansion);
             return this;
         }
-
         public Builder allowedTopologies(@Nullable Output<List<TopologySelectorTermArgs>> allowedTopologies) {
             this.allowedTopologies = allowedTopologies;
             return this;
         }
-
         public Builder allowedTopologies(@Nullable List<TopologySelectorTermArgs> allowedTopologies) {
             this.allowedTopologies = Output.ofNullable(allowedTopologies);
             return this;
         }
-
+        public Builder allowedTopologies(TopologySelectorTermArgs... allowedTopologies) {
+            return allowedTopologies(List.of(allowedTopologies));
+        }
         public Builder apiVersion(@Nullable Output<String> apiVersion) {
             this.apiVersion = apiVersion;
             return this;
         }
-
         public Builder apiVersion(@Nullable String apiVersion) {
             this.apiVersion = Output.ofNullable(apiVersion);
             return this;
         }
-
         public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder metadata(@Nullable Output<ObjectMetaArgs> metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder metadata(@Nullable ObjectMetaArgs metadata) {
             this.metadata = Output.ofNullable(metadata);
             return this;
         }
-
         public Builder mountOptions(@Nullable Output<List<String>> mountOptions) {
             this.mountOptions = mountOptions;
             return this;
         }
-
         public Builder mountOptions(@Nullable List<String> mountOptions) {
             this.mountOptions = Output.ofNullable(mountOptions);
             return this;
         }
-
+        public Builder mountOptions(String... mountOptions) {
+            return mountOptions(List.of(mountOptions));
+        }
         public Builder parameters(@Nullable Output<Map<String,String>> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder parameters(@Nullable Map<String,String> parameters) {
             this.parameters = Output.ofNullable(parameters);
             return this;
         }
-
         public Builder provisioner(Output<String> provisioner) {
             this.provisioner = Objects.requireNonNull(provisioner);
             return this;
         }
-
         public Builder provisioner(String provisioner) {
             this.provisioner = Output.of(Objects.requireNonNull(provisioner));
             return this;
         }
-
         public Builder reclaimPolicy(@Nullable Output<String> reclaimPolicy) {
             this.reclaimPolicy = reclaimPolicy;
             return this;
         }
-
         public Builder reclaimPolicy(@Nullable String reclaimPolicy) {
             this.reclaimPolicy = Output.ofNullable(reclaimPolicy);
             return this;
         }
-
         public Builder volumeBindingMode(@Nullable Output<String> volumeBindingMode) {
             this.volumeBindingMode = volumeBindingMode;
             return this;
         }
-
         public Builder volumeBindingMode(@Nullable String volumeBindingMode) {
             this.volumeBindingMode = Output.ofNullable(volumeBindingMode);
             return this;
-        }
-        public StorageClassArgs build() {
+        }        public StorageClassArgs build() {
             return new StorageClassArgs(allowVolumeExpansion, allowedTopologies, apiVersion, kind, metadata, mountOptions, parameters, provisioner, reclaimPolicy, volumeBindingMode);
         }
     }

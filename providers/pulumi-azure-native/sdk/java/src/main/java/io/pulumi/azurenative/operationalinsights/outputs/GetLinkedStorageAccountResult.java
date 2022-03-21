@@ -119,27 +119,25 @@ public final class GetLinkedStorageAccountResult {
             this.dataSourceType = Objects.requireNonNull(dataSourceType);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder storageAccountIds(@Nullable List<String> storageAccountIds) {
             this.storageAccountIds = storageAccountIds;
             return this;
         }
-
+        public Builder storageAccountIds(String... storageAccountIds) {
+            return storageAccountIds(List.of(storageAccountIds));
+        }
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetLinkedStorageAccountResult build() {
+        }        public GetLinkedStorageAccountResult build() {
             return new GetLinkedStorageAccountResult(dataSourceType, id, name, storageAccountIds, type);
         }
     }

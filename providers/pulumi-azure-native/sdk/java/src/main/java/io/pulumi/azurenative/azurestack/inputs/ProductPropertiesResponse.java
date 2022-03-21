@@ -60,8 +60,7 @@ public final class ProductPropertiesResponse extends io.pulumi.resources.InvokeA
         public Builder version(@Nullable String version) {
             this.version = version;
             return this;
-        }
-        public ProductPropertiesResponse build() {
+        }        public ProductPropertiesResponse build() {
             return new ProductPropertiesResponse(version);
         }
     }

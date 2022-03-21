@@ -215,102 +215,85 @@ public final class ProjectSinkState extends io.pulumi.resources.ResourceArgs {
             this.bigqueryOptions = bigqueryOptions;
             return this;
         }
-
         public Builder bigqueryOptions(@Nullable ProjectSinkBigqueryOptionsGetArgs bigqueryOptions) {
             this.bigqueryOptions = Output.ofNullable(bigqueryOptions);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder destination(@Nullable Output<String> destination) {
             this.destination = destination;
             return this;
         }
-
         public Builder destination(@Nullable String destination) {
             this.destination = Output.ofNullable(destination);
             return this;
         }
-
         public Builder disabled(@Nullable Output<Boolean> disabled) {
             this.disabled = disabled;
             return this;
         }
-
         public Builder disabled(@Nullable Boolean disabled) {
             this.disabled = Output.ofNullable(disabled);
             return this;
         }
-
         public Builder exclusions(@Nullable Output<List<ProjectSinkExclusionGetArgs>> exclusions) {
             this.exclusions = exclusions;
             return this;
         }
-
         public Builder exclusions(@Nullable List<ProjectSinkExclusionGetArgs> exclusions) {
             this.exclusions = Output.ofNullable(exclusions);
             return this;
         }
-
+        public Builder exclusions(ProjectSinkExclusionGetArgs... exclusions) {
+            return exclusions(List.of(exclusions));
+        }
         public Builder filter(@Nullable Output<String> filter) {
             this.filter = filter;
             return this;
         }
-
         public Builder filter(@Nullable String filter) {
             this.filter = Output.ofNullable(filter);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder uniqueWriterIdentity(@Nullable Output<Boolean> uniqueWriterIdentity) {
             this.uniqueWriterIdentity = uniqueWriterIdentity;
             return this;
         }
-
         public Builder uniqueWriterIdentity(@Nullable Boolean uniqueWriterIdentity) {
             this.uniqueWriterIdentity = Output.ofNullable(uniqueWriterIdentity);
             return this;
         }
-
         public Builder writerIdentity(@Nullable Output<String> writerIdentity) {
             this.writerIdentity = writerIdentity;
             return this;
         }
-
         public Builder writerIdentity(@Nullable String writerIdentity) {
             this.writerIdentity = Output.ofNullable(writerIdentity);
             return this;
-        }
-        public ProjectSinkState build() {
+        }        public ProjectSinkState build() {
             return new ProjectSinkState(bigqueryOptions, description, destination, disabled, exclusions, filter, name, project, uniqueWriterIdentity, writerIdentity);
         }
     }

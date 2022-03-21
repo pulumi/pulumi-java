@@ -109,22 +109,18 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextRes
             this.aliasContext = Objects.requireNonNull(aliasContext);
             return this;
         }
-
         public Builder gerritProject(String gerritProject) {
             this.gerritProject = Objects.requireNonNull(gerritProject);
             return this;
         }
-
         public Builder hostUri(String hostUri) {
             this.hostUri = Objects.requireNonNull(hostUri);
             return this;
         }
-
         public Builder revisionId(String revisionId) {
             this.revisionId = Objects.requireNonNull(revisionId);
             return this;
-        }
-        public GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextResponse build() {
+        }        public GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextResponse build() {
             return new GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextResponse(aliasContext, gerritProject, hostUri, revisionId);
         }
     }

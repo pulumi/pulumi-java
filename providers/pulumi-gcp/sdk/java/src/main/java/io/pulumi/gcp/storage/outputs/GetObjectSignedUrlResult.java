@@ -136,52 +136,42 @@ public final class GetObjectSignedUrlResult {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
-
         public Builder contentMd5(@Nullable String contentMd5) {
             this.contentMd5 = contentMd5;
             return this;
         }
-
         public Builder contentType(@Nullable String contentType) {
             this.contentType = contentType;
             return this;
         }
-
         public Builder credentials(@Nullable String credentials) {
             this.credentials = credentials;
             return this;
         }
-
         public Builder duration(@Nullable String duration) {
             this.duration = duration;
             return this;
         }
-
         public Builder extensionHeaders(@Nullable Map<String,String> extensionHeaders) {
             this.extensionHeaders = extensionHeaders;
             return this;
         }
-
         public Builder httpMethod(@Nullable String httpMethod) {
             this.httpMethod = httpMethod;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
-
         public Builder signedUrl(String signedUrl) {
             this.signedUrl = Objects.requireNonNull(signedUrl);
             return this;
-        }
-        public GetObjectSignedUrlResult build() {
+        }        public GetObjectSignedUrlResult build() {
             return new GetObjectSignedUrlResult(bucket, contentMd5, contentType, credentials, duration, extensionHeaders, httpMethod, id, path, signedUrl);
         }
     }

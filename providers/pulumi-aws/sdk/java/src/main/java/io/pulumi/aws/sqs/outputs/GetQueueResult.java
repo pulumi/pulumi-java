@@ -110,27 +110,22 @@ public final class GetQueueResult {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
-
         public Builder url(String url) {
             this.url = Objects.requireNonNull(url);
             return this;
-        }
-        public GetQueueResult build() {
+        }        public GetQueueResult build() {
             return new GetQueueResult(arn, id, name, tags, url);
         }
     }

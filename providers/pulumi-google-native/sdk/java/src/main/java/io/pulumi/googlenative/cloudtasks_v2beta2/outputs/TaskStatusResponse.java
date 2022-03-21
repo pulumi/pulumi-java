@@ -102,22 +102,18 @@ public final class TaskStatusResponse {
             this.attemptDispatchCount = Objects.requireNonNull(attemptDispatchCount);
             return this;
         }
-
         public Builder attemptResponseCount(Integer attemptResponseCount) {
             this.attemptResponseCount = Objects.requireNonNull(attemptResponseCount);
             return this;
         }
-
         public Builder firstAttemptStatus(AttemptStatusResponse firstAttemptStatus) {
             this.firstAttemptStatus = Objects.requireNonNull(firstAttemptStatus);
             return this;
         }
-
         public Builder lastAttemptStatus(AttemptStatusResponse lastAttemptStatus) {
             this.lastAttemptStatus = Objects.requireNonNull(lastAttemptStatus);
             return this;
-        }
-        public TaskStatusResponse build() {
+        }        public TaskStatusResponse build() {
             return new TaskStatusResponse(attemptDispatchCount, attemptResponseCount, firstAttemptStatus, lastAttemptStatus);
         }
     }

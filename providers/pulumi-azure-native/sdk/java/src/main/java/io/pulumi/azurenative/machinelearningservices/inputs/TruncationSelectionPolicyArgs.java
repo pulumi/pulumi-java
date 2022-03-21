@@ -111,42 +111,34 @@ public final class TruncationSelectionPolicyArgs extends io.pulumi.resources.Res
             this.delayEvaluation = delayEvaluation;
             return this;
         }
-
         public Builder delayEvaluation(@Nullable Integer delayEvaluation) {
             this.delayEvaluation = Output.ofNullable(delayEvaluation);
             return this;
         }
-
         public Builder evaluationInterval(@Nullable Output<Integer> evaluationInterval) {
             this.evaluationInterval = evaluationInterval;
             return this;
         }
-
         public Builder evaluationInterval(@Nullable Integer evaluationInterval) {
             this.evaluationInterval = Output.ofNullable(evaluationInterval);
             return this;
         }
-
         public Builder policyType(Output<String> policyType) {
             this.policyType = Objects.requireNonNull(policyType);
             return this;
         }
-
         public Builder policyType(String policyType) {
             this.policyType = Output.of(Objects.requireNonNull(policyType));
             return this;
         }
-
         public Builder truncationPercentage(@Nullable Output<Integer> truncationPercentage) {
             this.truncationPercentage = truncationPercentage;
             return this;
         }
-
         public Builder truncationPercentage(@Nullable Integer truncationPercentage) {
             this.truncationPercentage = Output.ofNullable(truncationPercentage);
             return this;
-        }
-        public TruncationSelectionPolicyArgs build() {
+        }        public TruncationSelectionPolicyArgs build() {
             return new TruncationSelectionPolicyArgs(delayEvaluation, evaluationInterval, policyType, truncationPercentage);
         }
     }

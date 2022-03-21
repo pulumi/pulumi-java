@@ -264,132 +264,118 @@ public final class BuildOptionsArgs extends io.pulumi.resources.ResourceArgs {
             this.diskSizeGb = diskSizeGb;
             return this;
         }
-
         public Builder diskSizeGb(@Nullable String diskSizeGb) {
             this.diskSizeGb = Output.ofNullable(diskSizeGb);
             return this;
         }
-
         public Builder dynamicSubstitutions(@Nullable Output<Boolean> dynamicSubstitutions) {
             this.dynamicSubstitutions = dynamicSubstitutions;
             return this;
         }
-
         public Builder dynamicSubstitutions(@Nullable Boolean dynamicSubstitutions) {
             this.dynamicSubstitutions = Output.ofNullable(dynamicSubstitutions);
             return this;
         }
-
         public Builder env(@Nullable Output<List<String>> env) {
             this.env = env;
             return this;
         }
-
         public Builder env(@Nullable List<String> env) {
             this.env = Output.ofNullable(env);
             return this;
         }
-
+        public Builder env(String... env) {
+            return env(List.of(env));
+        }
         public Builder logStreamingOption(@Nullable Output<BuildOptionsLogStreamingOption> logStreamingOption) {
             this.logStreamingOption = logStreamingOption;
             return this;
         }
-
         public Builder logStreamingOption(@Nullable BuildOptionsLogStreamingOption logStreamingOption) {
             this.logStreamingOption = Output.ofNullable(logStreamingOption);
             return this;
         }
-
         public Builder logging(@Nullable Output<BuildOptionsLogging> logging) {
             this.logging = logging;
             return this;
         }
-
         public Builder logging(@Nullable BuildOptionsLogging logging) {
             this.logging = Output.ofNullable(logging);
             return this;
         }
-
         public Builder machineType(@Nullable Output<BuildOptionsMachineType> machineType) {
             this.machineType = machineType;
             return this;
         }
-
         public Builder machineType(@Nullable BuildOptionsMachineType machineType) {
             this.machineType = Output.ofNullable(machineType);
             return this;
         }
-
         public Builder pool(@Nullable Output<PoolOptionArgs> pool) {
             this.pool = pool;
             return this;
         }
-
         public Builder pool(@Nullable PoolOptionArgs pool) {
             this.pool = Output.ofNullable(pool);
             return this;
         }
-
         public Builder requestedVerifyOption(@Nullable Output<BuildOptionsRequestedVerifyOption> requestedVerifyOption) {
             this.requestedVerifyOption = requestedVerifyOption;
             return this;
         }
-
         public Builder requestedVerifyOption(@Nullable BuildOptionsRequestedVerifyOption requestedVerifyOption) {
             this.requestedVerifyOption = Output.ofNullable(requestedVerifyOption);
             return this;
         }
-
         public Builder secretEnv(@Nullable Output<List<String>> secretEnv) {
             this.secretEnv = secretEnv;
             return this;
         }
-
         public Builder secretEnv(@Nullable List<String> secretEnv) {
             this.secretEnv = Output.ofNullable(secretEnv);
             return this;
         }
-
+        public Builder secretEnv(String... secretEnv) {
+            return secretEnv(List.of(secretEnv));
+        }
         public Builder sourceProvenanceHash(@Nullable Output<List<BuildOptionsSourceProvenanceHashItem>> sourceProvenanceHash) {
             this.sourceProvenanceHash = sourceProvenanceHash;
             return this;
         }
-
         public Builder sourceProvenanceHash(@Nullable List<BuildOptionsSourceProvenanceHashItem> sourceProvenanceHash) {
             this.sourceProvenanceHash = Output.ofNullable(sourceProvenanceHash);
             return this;
         }
-
+        public Builder sourceProvenanceHash(BuildOptionsSourceProvenanceHashItem... sourceProvenanceHash) {
+            return sourceProvenanceHash(List.of(sourceProvenanceHash));
+        }
         public Builder substitutionOption(@Nullable Output<BuildOptionsSubstitutionOption> substitutionOption) {
             this.substitutionOption = substitutionOption;
             return this;
         }
-
         public Builder substitutionOption(@Nullable BuildOptionsSubstitutionOption substitutionOption) {
             this.substitutionOption = Output.ofNullable(substitutionOption);
             return this;
         }
-
         public Builder volumes(@Nullable Output<List<VolumeArgs>> volumes) {
             this.volumes = volumes;
             return this;
         }
-
         public Builder volumes(@Nullable List<VolumeArgs> volumes) {
             this.volumes = Output.ofNullable(volumes);
             return this;
         }
-
+        public Builder volumes(VolumeArgs... volumes) {
+            return volumes(List.of(volumes));
+        }
         public Builder workerPool(@Nullable Output<String> workerPool) {
             this.workerPool = workerPool;
             return this;
         }
-
         public Builder workerPool(@Nullable String workerPool) {
             this.workerPool = Output.ofNullable(workerPool);
             return this;
-        }
-        public BuildOptionsArgs build() {
+        }        public BuildOptionsArgs build() {
             return new BuildOptionsArgs(diskSizeGb, dynamicSubstitutions, env, logStreamingOption, logging, machineType, pool, requestedVerifyOption, secretEnv, sourceProvenanceHash, substitutionOption, volumes, workerPool);
         }
     }

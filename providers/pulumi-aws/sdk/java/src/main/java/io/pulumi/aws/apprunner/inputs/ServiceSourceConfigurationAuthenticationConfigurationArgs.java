@@ -74,22 +74,18 @@ public final class ServiceSourceConfigurationAuthenticationConfigurationArgs ext
             this.accessRoleArn = accessRoleArn;
             return this;
         }
-
         public Builder accessRoleArn(@Nullable String accessRoleArn) {
             this.accessRoleArn = Output.ofNullable(accessRoleArn);
             return this;
         }
-
         public Builder connectionArn(@Nullable Output<String> connectionArn) {
             this.connectionArn = connectionArn;
             return this;
         }
-
         public Builder connectionArn(@Nullable String connectionArn) {
             this.connectionArn = Output.ofNullable(connectionArn);
             return this;
-        }
-        public ServiceSourceConfigurationAuthenticationConfigurationArgs build() {
+        }        public ServiceSourceConfigurationAuthenticationConfigurationArgs build() {
             return new ServiceSourceConfigurationAuthenticationConfigurationArgs(accessRoleArn, connectionArn);
         }
     }

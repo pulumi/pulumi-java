@@ -72,12 +72,10 @@ public final class GetAdvancedThreatProtectionArgs extends io.pulumi.resources.I
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
         }
-
         public Builder settingName(String settingName) {
             this.settingName = Objects.requireNonNull(settingName);
             return this;
-        }
-        public GetAdvancedThreatProtectionArgs build() {
+        }        public GetAdvancedThreatProtectionArgs build() {
             return new GetAdvancedThreatProtectionArgs(resourceId, settingName);
         }
     }

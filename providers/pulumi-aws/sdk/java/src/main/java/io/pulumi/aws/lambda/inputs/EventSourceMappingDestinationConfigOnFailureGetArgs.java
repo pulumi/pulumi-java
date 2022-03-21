@@ -56,12 +56,10 @@ public final class EventSourceMappingDestinationConfigOnFailureGetArgs extends i
             this.destinationArn = Objects.requireNonNull(destinationArn);
             return this;
         }
-
         public Builder destinationArn(String destinationArn) {
             this.destinationArn = Output.of(Objects.requireNonNull(destinationArn));
             return this;
-        }
-        public EventSourceMappingDestinationConfigOnFailureGetArgs build() {
+        }        public EventSourceMappingDestinationConfigOnFailureGetArgs build() {
             return new EventSourceMappingDestinationConfigOnFailureGetArgs(destinationArn);
         }
     }

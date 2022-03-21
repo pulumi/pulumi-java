@@ -78,17 +78,14 @@ public final class GetKeyRingArgs extends io.pulumi.resources.InvokeArgs {
             this.keyRingId = Objects.requireNonNull(keyRingId);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetKeyRingArgs build() {
+        }        public GetKeyRingArgs build() {
             return new GetKeyRingArgs(keyRingId, location, project);
         }
     }

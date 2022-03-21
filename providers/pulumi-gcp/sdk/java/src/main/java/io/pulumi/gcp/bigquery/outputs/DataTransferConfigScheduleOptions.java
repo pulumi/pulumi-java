@@ -110,17 +110,14 @@ public final class DataTransferConfigScheduleOptions {
             this.disableAutoScheduling = disableAutoScheduling;
             return this;
         }
-
         public Builder endTime(@Nullable String endTime) {
             this.endTime = endTime;
             return this;
         }
-
         public Builder startTime(@Nullable String startTime) {
             this.startTime = startTime;
             return this;
-        }
-        public DataTransferConfigScheduleOptions build() {
+        }        public DataTransferConfigScheduleOptions build() {
             return new DataTransferConfigScheduleOptions(disableAutoScheduling, endTime, startTime);
         }
     }

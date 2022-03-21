@@ -110,42 +110,34 @@ public final class SyncPropertiesArgs extends io.pulumi.resources.ResourceArgs {
             this.messageTtl = Objects.requireNonNull(messageTtl);
             return this;
         }
-
         public Builder messageTtl(String messageTtl) {
             this.messageTtl = Output.of(Objects.requireNonNull(messageTtl));
             return this;
         }
-
         public Builder schedule(@Nullable Output<String> schedule) {
             this.schedule = schedule;
             return this;
         }
-
         public Builder schedule(@Nullable String schedule) {
             this.schedule = Output.ofNullable(schedule);
             return this;
         }
-
         public Builder syncWindow(@Nullable Output<String> syncWindow) {
             this.syncWindow = syncWindow;
             return this;
         }
-
         public Builder syncWindow(@Nullable String syncWindow) {
             this.syncWindow = Output.ofNullable(syncWindow);
             return this;
         }
-
         public Builder tokenId(Output<String> tokenId) {
             this.tokenId = Objects.requireNonNull(tokenId);
             return this;
         }
-
         public Builder tokenId(String tokenId) {
             this.tokenId = Output.of(Objects.requireNonNull(tokenId));
             return this;
-        }
-        public SyncPropertiesArgs build() {
+        }        public SyncPropertiesArgs build() {
             return new SyncPropertiesArgs(messageTtl, schedule, syncWindow, tokenId);
         }
     }

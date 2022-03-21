@@ -141,62 +141,50 @@ public final class ModelContainerGetArgs extends io.pulumi.resources.ResourceArg
             this.containerHostname = containerHostname;
             return this;
         }
-
         public Builder containerHostname(@Nullable String containerHostname) {
             this.containerHostname = Output.ofNullable(containerHostname);
             return this;
         }
-
         public Builder environment(@Nullable Output<Map<String,String>> environment) {
             this.environment = environment;
             return this;
         }
-
         public Builder environment(@Nullable Map<String,String> environment) {
             this.environment = Output.ofNullable(environment);
             return this;
         }
-
         public Builder image(Output<String> image) {
             this.image = Objects.requireNonNull(image);
             return this;
         }
-
         public Builder image(String image) {
             this.image = Output.of(Objects.requireNonNull(image));
             return this;
         }
-
         public Builder imageConfig(@Nullable Output<ModelContainerImageConfigGetArgs> imageConfig) {
             this.imageConfig = imageConfig;
             return this;
         }
-
         public Builder imageConfig(@Nullable ModelContainerImageConfigGetArgs imageConfig) {
             this.imageConfig = Output.ofNullable(imageConfig);
             return this;
         }
-
         public Builder mode(@Nullable Output<String> mode) {
             this.mode = mode;
             return this;
         }
-
         public Builder mode(@Nullable String mode) {
             this.mode = Output.ofNullable(mode);
             return this;
         }
-
         public Builder modelDataUrl(@Nullable Output<String> modelDataUrl) {
             this.modelDataUrl = modelDataUrl;
             return this;
         }
-
         public Builder modelDataUrl(@Nullable String modelDataUrl) {
             this.modelDataUrl = Output.ofNullable(modelDataUrl);
             return this;
-        }
-        public ModelContainerGetArgs build() {
+        }        public ModelContainerGetArgs build() {
             return new ModelContainerGetArgs(containerHostname, environment, image, imageConfig, mode, modelDataUrl);
         }
     }

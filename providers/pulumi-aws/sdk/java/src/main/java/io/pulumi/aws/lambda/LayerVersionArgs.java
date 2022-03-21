@@ -217,112 +217,96 @@ public final class LayerVersionArgs extends io.pulumi.resources.ResourceArgs {
             this.code = code;
             return this;
         }
-
         public Builder code(@Nullable Archive code) {
             this.code = Output.ofNullable(code);
             return this;
         }
-
         public Builder compatibleArchitectures(@Nullable Output<List<String>> compatibleArchitectures) {
             this.compatibleArchitectures = compatibleArchitectures;
             return this;
         }
-
         public Builder compatibleArchitectures(@Nullable List<String> compatibleArchitectures) {
             this.compatibleArchitectures = Output.ofNullable(compatibleArchitectures);
             return this;
         }
-
+        public Builder compatibleArchitectures(String... compatibleArchitectures) {
+            return compatibleArchitectures(List.of(compatibleArchitectures));
+        }
         public Builder compatibleRuntimes(@Nullable Output<List<String>> compatibleRuntimes) {
             this.compatibleRuntimes = compatibleRuntimes;
             return this;
         }
-
         public Builder compatibleRuntimes(@Nullable List<String> compatibleRuntimes) {
             this.compatibleRuntimes = Output.ofNullable(compatibleRuntimes);
             return this;
         }
-
+        public Builder compatibleRuntimes(String... compatibleRuntimes) {
+            return compatibleRuntimes(List.of(compatibleRuntimes));
+        }
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder layerName(Output<String> layerName) {
             this.layerName = Objects.requireNonNull(layerName);
             return this;
         }
-
         public Builder layerName(String layerName) {
             this.layerName = Output.of(Objects.requireNonNull(layerName));
             return this;
         }
-
         public Builder licenseInfo(@Nullable Output<String> licenseInfo) {
             this.licenseInfo = licenseInfo;
             return this;
         }
-
         public Builder licenseInfo(@Nullable String licenseInfo) {
             this.licenseInfo = Output.ofNullable(licenseInfo);
             return this;
         }
-
         public Builder s3Bucket(@Nullable Output<String> s3Bucket) {
             this.s3Bucket = s3Bucket;
             return this;
         }
-
         public Builder s3Bucket(@Nullable String s3Bucket) {
             this.s3Bucket = Output.ofNullable(s3Bucket);
             return this;
         }
-
         public Builder s3Key(@Nullable Output<String> s3Key) {
             this.s3Key = s3Key;
             return this;
         }
-
         public Builder s3Key(@Nullable String s3Key) {
             this.s3Key = Output.ofNullable(s3Key);
             return this;
         }
-
         public Builder s3ObjectVersion(@Nullable Output<String> s3ObjectVersion) {
             this.s3ObjectVersion = s3ObjectVersion;
             return this;
         }
-
         public Builder s3ObjectVersion(@Nullable String s3ObjectVersion) {
             this.s3ObjectVersion = Output.ofNullable(s3ObjectVersion);
             return this;
         }
-
         public Builder skipDestroy(@Nullable Output<Boolean> skipDestroy) {
             this.skipDestroy = skipDestroy;
             return this;
         }
-
         public Builder skipDestroy(@Nullable Boolean skipDestroy) {
             this.skipDestroy = Output.ofNullable(skipDestroy);
             return this;
         }
-
         public Builder sourceCodeHash(@Nullable Output<String> sourceCodeHash) {
             this.sourceCodeHash = sourceCodeHash;
             return this;
         }
-
         public Builder sourceCodeHash(@Nullable String sourceCodeHash) {
             this.sourceCodeHash = Output.ofNullable(sourceCodeHash);
             return this;
-        }
-        public LayerVersionArgs build() {
+        }        public LayerVersionArgs build() {
             return new LayerVersionArgs(code, compatibleArchitectures, compatibleRuntimes, description, layerName, licenseInfo, s3Bucket, s3Key, s3ObjectVersion, skipDestroy, sourceCodeHash);
         }
     }

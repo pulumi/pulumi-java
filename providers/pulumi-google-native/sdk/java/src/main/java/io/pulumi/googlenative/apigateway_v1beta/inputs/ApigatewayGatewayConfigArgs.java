@@ -60,12 +60,10 @@ public final class ApigatewayGatewayConfigArgs extends io.pulumi.resources.Resou
             this.backendConfig = Objects.requireNonNull(backendConfig);
             return this;
         }
-
         public Builder backendConfig(ApigatewayBackendConfigArgs backendConfig) {
             this.backendConfig = Output.of(Objects.requireNonNull(backendConfig));
             return this;
-        }
-        public ApigatewayGatewayConfigArgs build() {
+        }        public ApigatewayGatewayConfigArgs build() {
             return new ApigatewayGatewayConfigArgs(backendConfig);
         }
     }

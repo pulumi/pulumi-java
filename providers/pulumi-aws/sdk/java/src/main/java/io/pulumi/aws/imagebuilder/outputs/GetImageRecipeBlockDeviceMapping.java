@@ -103,22 +103,21 @@ public final class GetImageRecipeBlockDeviceMapping {
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }
-
         public Builder ebs(List<GetImageRecipeBlockDeviceMappingEb> ebs) {
             this.ebs = Objects.requireNonNull(ebs);
             return this;
         }
-
+        public Builder ebs(GetImageRecipeBlockDeviceMappingEb... ebs) {
+            return ebs(List.of(ebs));
+        }
         public Builder noDevice(String noDevice) {
             this.noDevice = Objects.requireNonNull(noDevice);
             return this;
         }
-
         public Builder virtualName(String virtualName) {
             this.virtualName = Objects.requireNonNull(virtualName);
             return this;
-        }
-        public GetImageRecipeBlockDeviceMapping build() {
+        }        public GetImageRecipeBlockDeviceMapping build() {
             return new GetImageRecipeBlockDeviceMapping(deviceName, ebs, noDevice, virtualName);
         }
     }

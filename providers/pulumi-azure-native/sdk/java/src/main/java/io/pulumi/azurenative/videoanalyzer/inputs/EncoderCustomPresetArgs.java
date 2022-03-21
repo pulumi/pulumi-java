@@ -97,32 +97,26 @@ public final class EncoderCustomPresetArgs extends io.pulumi.resources.ResourceA
             this.audioEncoder = audioEncoder;
             return this;
         }
-
         public Builder audioEncoder(@Nullable AudioEncoderAacArgs audioEncoder) {
             this.audioEncoder = Output.ofNullable(audioEncoder);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
-
         public Builder videoEncoder(@Nullable Output<VideoEncoderH264Args> videoEncoder) {
             this.videoEncoder = videoEncoder;
             return this;
         }
-
         public Builder videoEncoder(@Nullable VideoEncoderH264Args videoEncoder) {
             this.videoEncoder = Output.ofNullable(videoEncoder);
             return this;
-        }
-        public EncoderCustomPresetArgs build() {
+        }        public EncoderCustomPresetArgs build() {
             return new EncoderCustomPresetArgs(audioEncoder, type, videoEncoder);
         }
     }

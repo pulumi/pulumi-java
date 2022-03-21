@@ -72,12 +72,10 @@ public final class SSISPropertyOverrideResponse {
             this.isSensitive = isSensitive;
             return this;
         }
-
         public Builder value(Object value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public SSISPropertyOverrideResponse build() {
+        }        public SSISPropertyOverrideResponse build() {
             return new SSISPropertyOverrideResponse(isSensitive, value);
         }
     }

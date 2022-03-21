@@ -51,8 +51,7 @@ public final class UserPoolUsernameConfiguration {
         public Builder caseSensitive(Boolean caseSensitive) {
             this.caseSensitive = Objects.requireNonNull(caseSensitive);
             return this;
-        }
-        public UserPoolUsernameConfiguration build() {
+        }        public UserPoolUsernameConfiguration build() {
             return new UserPoolUsernameConfiguration(caseSensitive);
         }
     }

@@ -88,17 +88,14 @@ public final class RetentionPolicyResponse {
             this.days = days;
             return this;
         }
-
         public Builder lastUpdatedTime(String lastUpdatedTime) {
             this.lastUpdatedTime = Objects.requireNonNull(lastUpdatedTime);
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = status;
             return this;
-        }
-        public RetentionPolicyResponse build() {
+        }        public RetentionPolicyResponse build() {
             return new RetentionPolicyResponse(days, lastUpdatedTime, status);
         }
     }

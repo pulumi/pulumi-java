@@ -205,102 +205,85 @@ public final class FuotaTaskArgs extends io.pulumi.resources.ResourceArgs {
             this.associateMulticastGroup = associateMulticastGroup;
             return this;
         }
-
         public Builder associateMulticastGroup(@Nullable String associateMulticastGroup) {
             this.associateMulticastGroup = Output.ofNullable(associateMulticastGroup);
             return this;
         }
-
         public Builder associateWirelessDevice(@Nullable Output<String> associateWirelessDevice) {
             this.associateWirelessDevice = associateWirelessDevice;
             return this;
         }
-
         public Builder associateWirelessDevice(@Nullable String associateWirelessDevice) {
             this.associateWirelessDevice = Output.ofNullable(associateWirelessDevice);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder disassociateMulticastGroup(@Nullable Output<String> disassociateMulticastGroup) {
             this.disassociateMulticastGroup = disassociateMulticastGroup;
             return this;
         }
-
         public Builder disassociateMulticastGroup(@Nullable String disassociateMulticastGroup) {
             this.disassociateMulticastGroup = Output.ofNullable(disassociateMulticastGroup);
             return this;
         }
-
         public Builder disassociateWirelessDevice(@Nullable Output<String> disassociateWirelessDevice) {
             this.disassociateWirelessDevice = disassociateWirelessDevice;
             return this;
         }
-
         public Builder disassociateWirelessDevice(@Nullable String disassociateWirelessDevice) {
             this.disassociateWirelessDevice = Output.ofNullable(disassociateWirelessDevice);
             return this;
         }
-
         public Builder firmwareUpdateImage(Output<String> firmwareUpdateImage) {
             this.firmwareUpdateImage = Objects.requireNonNull(firmwareUpdateImage);
             return this;
         }
-
         public Builder firmwareUpdateImage(String firmwareUpdateImage) {
             this.firmwareUpdateImage = Output.of(Objects.requireNonNull(firmwareUpdateImage));
             return this;
         }
-
         public Builder firmwareUpdateRole(Output<String> firmwareUpdateRole) {
             this.firmwareUpdateRole = Objects.requireNonNull(firmwareUpdateRole);
             return this;
         }
-
         public Builder firmwareUpdateRole(String firmwareUpdateRole) {
             this.firmwareUpdateRole = Output.of(Objects.requireNonNull(firmwareUpdateRole));
             return this;
         }
-
         public Builder loRaWAN(Output<FuotaTaskLoRaWANArgs> loRaWAN) {
             this.loRaWAN = Objects.requireNonNull(loRaWAN);
             return this;
         }
-
         public Builder loRaWAN(FuotaTaskLoRaWANArgs loRaWAN) {
             this.loRaWAN = Output.of(Objects.requireNonNull(loRaWAN));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<FuotaTaskTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<FuotaTaskTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public FuotaTaskArgs build() {
+        public Builder tags(FuotaTaskTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public FuotaTaskArgs build() {
             return new FuotaTaskArgs(associateMulticastGroup, associateWirelessDevice, description, disassociateMulticastGroup, disassociateWirelessDevice, firmwareUpdateImage, firmwareUpdateRole, loRaWAN, name, tags);
         }
     }

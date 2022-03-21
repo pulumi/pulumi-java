@@ -123,52 +123,42 @@ public final class CloudFormationTypeArgs extends io.pulumi.resources.ResourceAr
             this.executionRoleArn = executionRoleArn;
             return this;
         }
-
         public Builder executionRoleArn(@Nullable String executionRoleArn) {
             this.executionRoleArn = Output.ofNullable(executionRoleArn);
             return this;
         }
-
         public Builder loggingConfig(@Nullable Output<CloudFormationTypeLoggingConfigArgs> loggingConfig) {
             this.loggingConfig = loggingConfig;
             return this;
         }
-
         public Builder loggingConfig(@Nullable CloudFormationTypeLoggingConfigArgs loggingConfig) {
             this.loggingConfig = Output.ofNullable(loggingConfig);
             return this;
         }
-
         public Builder schemaHandlerPackage(Output<String> schemaHandlerPackage) {
             this.schemaHandlerPackage = Objects.requireNonNull(schemaHandlerPackage);
             return this;
         }
-
         public Builder schemaHandlerPackage(String schemaHandlerPackage) {
             this.schemaHandlerPackage = Output.of(Objects.requireNonNull(schemaHandlerPackage));
             return this;
         }
-
         public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = Output.ofNullable(type);
             return this;
         }
-
         public Builder typeName(Output<String> typeName) {
             this.typeName = Objects.requireNonNull(typeName);
             return this;
         }
-
         public Builder typeName(String typeName) {
             this.typeName = Output.of(Objects.requireNonNull(typeName));
             return this;
-        }
-        public CloudFormationTypeArgs build() {
+        }        public CloudFormationTypeArgs build() {
             return new CloudFormationTypeArgs(executionRoleArn, loggingConfig, schemaHandlerPackage, type, typeName);
         }
     }

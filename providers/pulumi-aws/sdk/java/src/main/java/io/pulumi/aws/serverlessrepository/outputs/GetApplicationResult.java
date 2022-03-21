@@ -142,37 +142,33 @@ public final class GetApplicationResult {
             this.applicationId = Objects.requireNonNull(applicationId);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder requiredCapabilities(List<String> requiredCapabilities) {
             this.requiredCapabilities = Objects.requireNonNull(requiredCapabilities);
             return this;
         }
-
+        public Builder requiredCapabilities(String... requiredCapabilities) {
+            return requiredCapabilities(List.of(requiredCapabilities));
+        }
         public Builder semanticVersion(String semanticVersion) {
             this.semanticVersion = Objects.requireNonNull(semanticVersion);
             return this;
         }
-
         public Builder sourceCodeUrl(String sourceCodeUrl) {
             this.sourceCodeUrl = Objects.requireNonNull(sourceCodeUrl);
             return this;
         }
-
         public Builder templateUrl(String templateUrl) {
             this.templateUrl = Objects.requireNonNull(templateUrl);
             return this;
-        }
-        public GetApplicationResult build() {
+        }        public GetApplicationResult build() {
             return new GetApplicationResult(applicationId, id, name, requiredCapabilities, semanticVersion, sourceCodeUrl, templateUrl);
         }
     }

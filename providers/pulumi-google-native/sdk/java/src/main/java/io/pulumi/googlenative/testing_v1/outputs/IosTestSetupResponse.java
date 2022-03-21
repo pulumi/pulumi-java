@@ -104,22 +104,27 @@ public final class IosTestSetupResponse {
             this.additionalIpas = Objects.requireNonNull(additionalIpas);
             return this;
         }
-
+        public Builder additionalIpas(FileReferenceResponse... additionalIpas) {
+            return additionalIpas(List.of(additionalIpas));
+        }
         public Builder networkProfile(String networkProfile) {
             this.networkProfile = Objects.requireNonNull(networkProfile);
             return this;
         }
-
         public Builder pullDirectories(List<IosDeviceFileResponse> pullDirectories) {
             this.pullDirectories = Objects.requireNonNull(pullDirectories);
             return this;
         }
-
+        public Builder pullDirectories(IosDeviceFileResponse... pullDirectories) {
+            return pullDirectories(List.of(pullDirectories));
+        }
         public Builder pushFiles(List<IosDeviceFileResponse> pushFiles) {
             this.pushFiles = Objects.requireNonNull(pushFiles);
             return this;
         }
-        public IosTestSetupResponse build() {
+        public Builder pushFiles(IosDeviceFileResponse... pushFiles) {
+            return pushFiles(List.of(pushFiles));
+        }        public IosTestSetupResponse build() {
             return new IosTestSetupResponse(additionalIpas, networkProfile, pullDirectories, pushFiles);
         }
     }

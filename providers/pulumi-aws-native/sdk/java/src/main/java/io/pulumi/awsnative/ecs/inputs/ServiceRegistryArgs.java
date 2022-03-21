@@ -91,42 +91,34 @@ public final class ServiceRegistryArgs extends io.pulumi.resources.ResourceArgs 
             this.containerName = containerName;
             return this;
         }
-
         public Builder containerName(@Nullable String containerName) {
             this.containerName = Output.ofNullable(containerName);
             return this;
         }
-
         public Builder containerPort(@Nullable Output<Integer> containerPort) {
             this.containerPort = containerPort;
             return this;
         }
-
         public Builder containerPort(@Nullable Integer containerPort) {
             this.containerPort = Output.ofNullable(containerPort);
             return this;
         }
-
         public Builder port(@Nullable Output<Integer> port) {
             this.port = port;
             return this;
         }
-
         public Builder port(@Nullable Integer port) {
             this.port = Output.ofNullable(port);
             return this;
         }
-
         public Builder registryArn(@Nullable Output<String> registryArn) {
             this.registryArn = registryArn;
             return this;
         }
-
         public Builder registryArn(@Nullable String registryArn) {
             this.registryArn = Output.ofNullable(registryArn);
             return this;
-        }
-        public ServiceRegistryArgs build() {
+        }        public ServiceRegistryArgs build() {
             return new ServiceRegistryArgs(containerName, containerPort, port, registryArn);
         }
     }

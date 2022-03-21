@@ -79,22 +79,18 @@ public final class GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricArgs
             this.objectiveValue = objectiveValue;
             return this;
         }
-
         public Builder objectiveValue(@Nullable Double objectiveValue) {
             this.objectiveValue = Output.ofNullable(objectiveValue);
             return this;
         }
-
         public Builder trainingStep(@Nullable Output<String> trainingStep) {
             this.trainingStep = trainingStep;
             return this;
         }
-
         public Builder trainingStep(@Nullable String trainingStep) {
             this.trainingStep = Output.ofNullable(trainingStep);
             return this;
-        }
-        public GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricArgs build() {
+        }        public GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricArgs build() {
             return new GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricArgs(objectiveValue, trainingStep);
         }
     }

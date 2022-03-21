@@ -62,12 +62,10 @@ public final class ThemeGutterStyleArgs extends io.pulumi.resources.ResourceArgs
             this.show = show;
             return this;
         }
-
         public Builder show(@Nullable Boolean show) {
             this.show = Output.ofNullable(show);
             return this;
-        }
-        public ThemeGutterStyleArgs build() {
+        }        public ThemeGutterStyleArgs build() {
             return new ThemeGutterStyleArgs(show);
         }
     }

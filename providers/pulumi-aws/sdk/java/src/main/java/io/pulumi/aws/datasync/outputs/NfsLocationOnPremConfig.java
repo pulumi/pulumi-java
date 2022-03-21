@@ -53,7 +53,9 @@ public final class NfsLocationOnPremConfig {
             this.agentArns = Objects.requireNonNull(agentArns);
             return this;
         }
-        public NfsLocationOnPremConfig build() {
+        public Builder agentArns(String... agentArns) {
+            return agentArns(List.of(agentArns));
+        }        public NfsLocationOnPremConfig build() {
             return new NfsLocationOnPremConfig(agentArns);
         }
     }

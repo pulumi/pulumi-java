@@ -76,22 +76,21 @@ public final class RuleGroupRuleStatementAndStatementStatementNotStatementStatem
             this.fieldToMatch = fieldToMatch;
             return this;
         }
-
         public Builder fieldToMatch(@Nullable RuleGroupRuleStatementAndStatementStatementNotStatementStatementSqliMatchStatementFieldToMatchArgs fieldToMatch) {
             this.fieldToMatch = Output.ofNullable(fieldToMatch);
             return this;
         }
-
         public Builder textTransformations(Output<List<RuleGroupRuleStatementAndStatementStatementNotStatementStatementSqliMatchStatementTextTransformationArgs>> textTransformations) {
             this.textTransformations = Objects.requireNonNull(textTransformations);
             return this;
         }
-
         public Builder textTransformations(List<RuleGroupRuleStatementAndStatementStatementNotStatementStatementSqliMatchStatementTextTransformationArgs> textTransformations) {
             this.textTransformations = Output.of(Objects.requireNonNull(textTransformations));
             return this;
         }
-        public RuleGroupRuleStatementAndStatementStatementNotStatementStatementSqliMatchStatementArgs build() {
+        public Builder textTransformations(RuleGroupRuleStatementAndStatementStatementNotStatementStatementSqliMatchStatementTextTransformationArgs... textTransformations) {
+            return textTransformations(List.of(textTransformations));
+        }        public RuleGroupRuleStatementAndStatementStatementNotStatementStatementSqliMatchStatementArgs build() {
             return new RuleGroupRuleStatementAndStatementStatementNotStatementStatementSqliMatchStatementArgs(fieldToMatch, textTransformations);
         }
     }

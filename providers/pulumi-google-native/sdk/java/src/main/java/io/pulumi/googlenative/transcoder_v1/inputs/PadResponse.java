@@ -108,22 +108,18 @@ public final class PadResponse extends io.pulumi.resources.InvokeArgs {
             this.bottomPixels = Objects.requireNonNull(bottomPixels);
             return this;
         }
-
         public Builder leftPixels(Integer leftPixels) {
             this.leftPixels = Objects.requireNonNull(leftPixels);
             return this;
         }
-
         public Builder rightPixels(Integer rightPixels) {
             this.rightPixels = Objects.requireNonNull(rightPixels);
             return this;
         }
-
         public Builder topPixels(Integer topPixels) {
             this.topPixels = Objects.requireNonNull(topPixels);
             return this;
-        }
-        public PadResponse build() {
+        }        public PadResponse build() {
             return new PadResponse(bottomPixels, leftPixels, rightPixels, topPixels);
         }
     }

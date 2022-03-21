@@ -82,22 +82,21 @@ public final class BranchArgs extends io.pulumi.resources.ResourceArgs {
             this.actions = Objects.requireNonNull(actions);
             return this;
         }
-
         public Builder actions(List<Object> actions) {
             this.actions = Output.of(Objects.requireNonNull(actions));
             return this;
         }
-
+        public Builder actions(Object... actions) {
+            return actions(List.of(actions));
+        }
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
-        }
-        public BranchArgs build() {
+        }        public BranchArgs build() {
             return new BranchArgs(actions, name);
         }
     }

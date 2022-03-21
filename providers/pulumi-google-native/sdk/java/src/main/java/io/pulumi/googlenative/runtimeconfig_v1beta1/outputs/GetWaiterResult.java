@@ -152,37 +152,30 @@ public final class GetWaiterResult {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder done(Boolean done) {
             this.done = Objects.requireNonNull(done);
             return this;
         }
-
         public Builder error(StatusResponse error) {
             this.error = Objects.requireNonNull(error);
             return this;
         }
-
         public Builder failure(EndConditionResponse failure) {
             this.failure = Objects.requireNonNull(failure);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder success(EndConditionResponse success) {
             this.success = Objects.requireNonNull(success);
             return this;
         }
-
         public Builder timeout(String timeout) {
             this.timeout = Objects.requireNonNull(timeout);
             return this;
-        }
-        public GetWaiterResult build() {
+        }        public GetWaiterResult build() {
             return new GetWaiterResult(createTime, done, error, failure, name, success, timeout);
         }
     }

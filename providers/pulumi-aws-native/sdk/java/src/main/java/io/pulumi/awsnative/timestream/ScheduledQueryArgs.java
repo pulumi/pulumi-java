@@ -168,102 +168,85 @@ public final class ScheduledQueryArgs extends io.pulumi.resources.ResourceArgs {
             this.clientToken = clientToken;
             return this;
         }
-
         public Builder clientToken(@Nullable String clientToken) {
             this.clientToken = Output.ofNullable(clientToken);
             return this;
         }
-
         public Builder errorReportConfiguration(Output<ScheduledQueryErrorReportConfigurationArgs> errorReportConfiguration) {
             this.errorReportConfiguration = Objects.requireNonNull(errorReportConfiguration);
             return this;
         }
-
         public Builder errorReportConfiguration(ScheduledQueryErrorReportConfigurationArgs errorReportConfiguration) {
             this.errorReportConfiguration = Output.of(Objects.requireNonNull(errorReportConfiguration));
             return this;
         }
-
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
-
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = Output.ofNullable(kmsKeyId);
             return this;
         }
-
         public Builder notificationConfiguration(Output<ScheduledQueryNotificationConfigurationArgs> notificationConfiguration) {
             this.notificationConfiguration = Objects.requireNonNull(notificationConfiguration);
             return this;
         }
-
         public Builder notificationConfiguration(ScheduledQueryNotificationConfigurationArgs notificationConfiguration) {
             this.notificationConfiguration = Output.of(Objects.requireNonNull(notificationConfiguration));
             return this;
         }
-
         public Builder queryString(Output<String> queryString) {
             this.queryString = Objects.requireNonNull(queryString);
             return this;
         }
-
         public Builder queryString(String queryString) {
             this.queryString = Output.of(Objects.requireNonNull(queryString));
             return this;
         }
-
         public Builder scheduleConfiguration(Output<ScheduledQueryScheduleConfigurationArgs> scheduleConfiguration) {
             this.scheduleConfiguration = Objects.requireNonNull(scheduleConfiguration);
             return this;
         }
-
         public Builder scheduleConfiguration(ScheduledQueryScheduleConfigurationArgs scheduleConfiguration) {
             this.scheduleConfiguration = Output.of(Objects.requireNonNull(scheduleConfiguration));
             return this;
         }
-
         public Builder scheduledQueryExecutionRoleArn(Output<String> scheduledQueryExecutionRoleArn) {
             this.scheduledQueryExecutionRoleArn = Objects.requireNonNull(scheduledQueryExecutionRoleArn);
             return this;
         }
-
         public Builder scheduledQueryExecutionRoleArn(String scheduledQueryExecutionRoleArn) {
             this.scheduledQueryExecutionRoleArn = Output.of(Objects.requireNonNull(scheduledQueryExecutionRoleArn));
             return this;
         }
-
         public Builder scheduledQueryName(@Nullable Output<String> scheduledQueryName) {
             this.scheduledQueryName = scheduledQueryName;
             return this;
         }
-
         public Builder scheduledQueryName(@Nullable String scheduledQueryName) {
             this.scheduledQueryName = Output.ofNullable(scheduledQueryName);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<ScheduledQueryTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<ScheduledQueryTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
+        public Builder tags(ScheduledQueryTagArgs... tags) {
+            return tags(List.of(tags));
+        }
         public Builder targetConfiguration(@Nullable Output<ScheduledQueryTargetConfigurationArgs> targetConfiguration) {
             this.targetConfiguration = targetConfiguration;
             return this;
         }
-
         public Builder targetConfiguration(@Nullable ScheduledQueryTargetConfigurationArgs targetConfiguration) {
             this.targetConfiguration = Output.ofNullable(targetConfiguration);
             return this;
-        }
-        public ScheduledQueryArgs build() {
+        }        public ScheduledQueryArgs build() {
             return new ScheduledQueryArgs(clientToken, errorReportConfiguration, kmsKeyId, notificationConfiguration, queryString, scheduleConfiguration, scheduledQueryExecutionRoleArn, scheduledQueryName, tags, targetConfiguration);
         }
     }

@@ -68,12 +68,13 @@ public final class GroupConfigurationItem extends io.pulumi.resources.InvokeArgs
             this.parameters = parameters;
             return this;
         }
-
+        public Builder parameters(GroupConfigurationParameter... parameters) {
+            return parameters(List.of(parameters));
+        }
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
-        }
-        public GroupConfigurationItem build() {
+        }        public GroupConfigurationItem build() {
             return new GroupConfigurationItem(parameters, type);
         }
     }

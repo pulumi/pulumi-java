@@ -95,32 +95,26 @@ public final class IpMappingArgs extends io.pulumi.resources.ResourceArgs {
             this.ipAddress = ipAddress;
             return this;
         }
-
         public Builder ipAddress(@Nullable String ipAddress) {
             this.ipAddress = Output.ofNullable(ipAddress);
             return this;
         }
-
         public Builder timeToRetire(@Nullable Output<String> timeToRetire) {
             this.timeToRetire = timeToRetire;
             return this;
         }
-
         public Builder timeToRetire(@Nullable String timeToRetire) {
             this.timeToRetire = Output.ofNullable(timeToRetire);
             return this;
         }
-
         public Builder type(@Nullable Output<IpMappingType> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable IpMappingType type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public IpMappingArgs build() {
+        }        public IpMappingArgs build() {
             return new IpMappingArgs(ipAddress, timeToRetire, type);
         }
     }

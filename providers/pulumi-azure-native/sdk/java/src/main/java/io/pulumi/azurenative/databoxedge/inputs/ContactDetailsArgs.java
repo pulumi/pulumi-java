@@ -110,42 +110,37 @@ public final class ContactDetailsArgs extends io.pulumi.resources.ResourceArgs {
             this.companyName = Objects.requireNonNull(companyName);
             return this;
         }
-
         public Builder companyName(String companyName) {
             this.companyName = Output.of(Objects.requireNonNull(companyName));
             return this;
         }
-
         public Builder contactPerson(Output<String> contactPerson) {
             this.contactPerson = Objects.requireNonNull(contactPerson);
             return this;
         }
-
         public Builder contactPerson(String contactPerson) {
             this.contactPerson = Output.of(Objects.requireNonNull(contactPerson));
             return this;
         }
-
         public Builder emailList(Output<List<String>> emailList) {
             this.emailList = Objects.requireNonNull(emailList);
             return this;
         }
-
         public Builder emailList(List<String> emailList) {
             this.emailList = Output.of(Objects.requireNonNull(emailList));
             return this;
         }
-
+        public Builder emailList(String... emailList) {
+            return emailList(List.of(emailList));
+        }
         public Builder phone(Output<String> phone) {
             this.phone = Objects.requireNonNull(phone);
             return this;
         }
-
         public Builder phone(String phone) {
             this.phone = Output.of(Objects.requireNonNull(phone));
             return this;
-        }
-        public ContactDetailsArgs build() {
+        }        public ContactDetailsArgs build() {
             return new ContactDetailsArgs(companyName, contactPerson, emailList, phone);
         }
     }

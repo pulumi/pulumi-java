@@ -79,22 +79,18 @@ public final class IngressClassSpecArgs extends io.pulumi.resources.ResourceArgs
             this.controller = controller;
             return this;
         }
-
         public Builder controller(@Nullable String controller) {
             this.controller = Output.ofNullable(controller);
             return this;
         }
-
         public Builder parameters(@Nullable Output<TypedLocalObjectReferenceArgs> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder parameters(@Nullable TypedLocalObjectReferenceArgs parameters) {
             this.parameters = Output.ofNullable(parameters);
             return this;
-        }
-        public IngressClassSpecArgs build() {
+        }        public IngressClassSpecArgs build() {
             return new IngressClassSpecArgs(controller, parameters);
         }
     }

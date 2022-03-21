@@ -200,52 +200,42 @@ public final class CognitiveServicesAccountApiPropertiesResponse {
             this.aadClientId = aadClientId;
             return this;
         }
-
         public Builder aadTenantId(@Nullable String aadTenantId) {
             this.aadTenantId = aadTenantId;
             return this;
         }
-
         public Builder eventHubConnectionString(@Nullable String eventHubConnectionString) {
             this.eventHubConnectionString = eventHubConnectionString;
             return this;
         }
-
         public Builder qnaAzureSearchEndpointId(@Nullable String qnaAzureSearchEndpointId) {
             this.qnaAzureSearchEndpointId = qnaAzureSearchEndpointId;
             return this;
         }
-
         public Builder qnaAzureSearchEndpointKey(@Nullable String qnaAzureSearchEndpointKey) {
             this.qnaAzureSearchEndpointKey = qnaAzureSearchEndpointKey;
             return this;
         }
-
         public Builder qnaRuntimeEndpoint(@Nullable String qnaRuntimeEndpoint) {
             this.qnaRuntimeEndpoint = qnaRuntimeEndpoint;
             return this;
         }
-
         public Builder statisticsEnabled(@Nullable Boolean statisticsEnabled) {
             this.statisticsEnabled = statisticsEnabled;
             return this;
         }
-
         public Builder storageAccountConnectionString(@Nullable String storageAccountConnectionString) {
             this.storageAccountConnectionString = storageAccountConnectionString;
             return this;
         }
-
         public Builder superUser(@Nullable String superUser) {
             this.superUser = superUser;
             return this;
         }
-
         public Builder websiteName(@Nullable String websiteName) {
             this.websiteName = websiteName;
             return this;
-        }
-        public CognitiveServicesAccountApiPropertiesResponse build() {
+        }        public CognitiveServicesAccountApiPropertiesResponse build() {
             return new CognitiveServicesAccountApiPropertiesResponse(aadClientId, aadTenantId, eventHubConnectionString, qnaAzureSearchEndpointId, qnaAzureSearchEndpointKey, qnaRuntimeEndpoint, statisticsEnabled, storageAccountConnectionString, superUser, websiteName);
         }
     }

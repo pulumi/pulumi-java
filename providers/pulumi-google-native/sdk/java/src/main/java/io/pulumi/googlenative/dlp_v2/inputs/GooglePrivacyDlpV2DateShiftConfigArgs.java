@@ -112,42 +112,34 @@ public final class GooglePrivacyDlpV2DateShiftConfigArgs extends io.pulumi.resou
             this.context = context;
             return this;
         }
-
         public Builder context(@Nullable GooglePrivacyDlpV2FieldIdArgs context) {
             this.context = Output.ofNullable(context);
             return this;
         }
-
         public Builder cryptoKey(@Nullable Output<GooglePrivacyDlpV2CryptoKeyArgs> cryptoKey) {
             this.cryptoKey = cryptoKey;
             return this;
         }
-
         public Builder cryptoKey(@Nullable GooglePrivacyDlpV2CryptoKeyArgs cryptoKey) {
             this.cryptoKey = Output.ofNullable(cryptoKey);
             return this;
         }
-
         public Builder lowerBoundDays(Output<Integer> lowerBoundDays) {
             this.lowerBoundDays = Objects.requireNonNull(lowerBoundDays);
             return this;
         }
-
         public Builder lowerBoundDays(Integer lowerBoundDays) {
             this.lowerBoundDays = Output.of(Objects.requireNonNull(lowerBoundDays));
             return this;
         }
-
         public Builder upperBoundDays(Output<Integer> upperBoundDays) {
             this.upperBoundDays = Objects.requireNonNull(upperBoundDays);
             return this;
         }
-
         public Builder upperBoundDays(Integer upperBoundDays) {
             this.upperBoundDays = Output.of(Objects.requireNonNull(upperBoundDays));
             return this;
-        }
-        public GooglePrivacyDlpV2DateShiftConfigArgs build() {
+        }        public GooglePrivacyDlpV2DateShiftConfigArgs build() {
             return new GooglePrivacyDlpV2DateShiftConfigArgs(context, cryptoKey, lowerBoundDays, upperBoundDays);
         }
     }

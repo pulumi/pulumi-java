@@ -64,12 +64,10 @@ public final class GetServiceConsumerIamPolicyArgs extends io.pulumi.resources.I
             this.consumerId = Objects.requireNonNull(consumerId);
             return this;
         }
-
         public Builder serviceId(String serviceId) {
             this.serviceId = Objects.requireNonNull(serviceId);
             return this;
-        }
-        public GetServiceConsumerIamPolicyArgs build() {
+        }        public GetServiceConsumerIamPolicyArgs build() {
             return new GetServiceConsumerIamPolicyArgs(consumerId, serviceId);
         }
     }

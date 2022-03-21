@@ -57,12 +57,13 @@ public final class AzureClusterAuthorizationArgs extends io.pulumi.resources.Res
             this.adminUsers = Objects.requireNonNull(adminUsers);
             return this;
         }
-
         public Builder adminUsers(List<AzureClusterAuthorizationAdminUserArgs> adminUsers) {
             this.adminUsers = Output.of(Objects.requireNonNull(adminUsers));
             return this;
         }
-        public AzureClusterAuthorizationArgs build() {
+        public Builder adminUsers(AzureClusterAuthorizationAdminUserArgs... adminUsers) {
+            return adminUsers(List.of(adminUsers));
+        }        public AzureClusterAuthorizationArgs build() {
             return new AzureClusterAuthorizationArgs(adminUsers);
         }
     }

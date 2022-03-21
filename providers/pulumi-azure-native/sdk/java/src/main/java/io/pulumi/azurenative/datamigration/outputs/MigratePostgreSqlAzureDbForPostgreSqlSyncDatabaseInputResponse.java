@@ -120,27 +120,22 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputRespons
             this.migrationSetting = migrationSetting;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder sourceSetting(@Nullable Map<String,String> sourceSetting) {
             this.sourceSetting = sourceSetting;
             return this;
         }
-
         public Builder targetDatabaseName(@Nullable String targetDatabaseName) {
             this.targetDatabaseName = targetDatabaseName;
             return this;
         }
-
         public Builder targetSetting(@Nullable Map<String,String> targetSetting) {
             this.targetSetting = targetSetting;
             return this;
-        }
-        public MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputResponse build() {
+        }        public MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputResponse build() {
             return new MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputResponse(migrationSetting, name, sourceSetting, targetDatabaseName, targetSetting);
         }
     }

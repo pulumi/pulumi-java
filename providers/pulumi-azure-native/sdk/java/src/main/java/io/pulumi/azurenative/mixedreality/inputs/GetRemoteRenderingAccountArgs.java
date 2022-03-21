@@ -72,12 +72,10 @@ public final class GetRemoteRenderingAccountArgs extends io.pulumi.resources.Inv
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetRemoteRenderingAccountArgs build() {
+        }        public GetRemoteRenderingAccountArgs build() {
             return new GetRemoteRenderingAccountArgs(accountName, resourceGroupName);
         }
     }

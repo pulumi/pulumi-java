@@ -78,17 +78,14 @@ public final class GetConfigArgs extends io.pulumi.resources.InvokeArgs {
             this.configId = Objects.requireNonNull(configId);
             return this;
         }
-
         public Builder serviceName(String serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
-
         public Builder view(@Nullable String view) {
             this.view = view;
             return this;
-        }
-        public GetConfigArgs build() {
+        }        public GetConfigArgs build() {
             return new GetConfigArgs(configId, serviceName, view);
         }
     }

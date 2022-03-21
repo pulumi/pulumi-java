@@ -130,52 +130,42 @@ public final class LinkerArgs extends io.pulumi.resources.ResourceArgs {
             this.authInfo = authInfo;
             return this;
         }
-
         public Builder authInfo(@Nullable Object authInfo) {
             this.authInfo = Output.ofNullable(authInfo);
             return this;
         }
-
         public Builder clientType(@Nullable Output<Either<String,ClientType>> clientType) {
             this.clientType = clientType;
             return this;
         }
-
         public Builder clientType(@Nullable Either<String,ClientType> clientType) {
             this.clientType = Output.ofNullable(clientType);
             return this;
         }
-
         public Builder linkerName(@Nullable Output<String> linkerName) {
             this.linkerName = linkerName;
             return this;
         }
-
         public Builder linkerName(@Nullable String linkerName) {
             this.linkerName = Output.ofNullable(linkerName);
             return this;
         }
-
         public Builder resourceUri(Output<String> resourceUri) {
             this.resourceUri = Objects.requireNonNull(resourceUri);
             return this;
         }
-
         public Builder resourceUri(String resourceUri) {
             this.resourceUri = Output.of(Objects.requireNonNull(resourceUri));
             return this;
         }
-
         public Builder targetId(@Nullable Output<String> targetId) {
             this.targetId = targetId;
             return this;
         }
-
         public Builder targetId(@Nullable String targetId) {
             this.targetId = Output.ofNullable(targetId);
             return this;
-        }
-        public LinkerArgs build() {
+        }        public LinkerArgs build() {
             return new LinkerArgs(authInfo, clientType, linkerName, resourceUri, targetId);
         }
     }

@@ -107,42 +107,34 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
             this.privateEndpointConnectionName = privateEndpointConnectionName;
             return this;
         }
-
         public Builder privateEndpointConnectionName(@Nullable String privateEndpointConnectionName) {
             this.privateEndpointConnectionName = Output.ofNullable(privateEndpointConnectionName);
             return this;
         }
-
         public Builder privateLinkServiceConnectionState(Output<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState) {
             this.privateLinkServiceConnectionState = Objects.requireNonNull(privateLinkServiceConnectionState);
             return this;
         }
-
         public Builder privateLinkServiceConnectionState(PrivateLinkServiceConnectionStateArgs privateLinkServiceConnectionState) {
             this.privateLinkServiceConnectionState = Output.of(Objects.requireNonNull(privateLinkServiceConnectionState));
             return this;
         }
-
         public Builder providerName(Output<String> providerName) {
             this.providerName = Objects.requireNonNull(providerName);
             return this;
         }
-
         public Builder providerName(String providerName) {
             this.providerName = Output.of(Objects.requireNonNull(providerName));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
-        }
-        public PrivateEndpointConnectionArgs build() {
+        }        public PrivateEndpointConnectionArgs build() {
             return new PrivateEndpointConnectionArgs(privateEndpointConnectionName, privateLinkServiceConnectionState, providerName, resourceGroupName);
         }
     }

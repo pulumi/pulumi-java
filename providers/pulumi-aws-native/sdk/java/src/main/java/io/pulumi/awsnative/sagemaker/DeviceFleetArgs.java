@@ -125,52 +125,45 @@ public final class DeviceFleetArgs extends io.pulumi.resources.ResourceArgs {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder deviceFleetName(@Nullable Output<String> deviceFleetName) {
             this.deviceFleetName = deviceFleetName;
             return this;
         }
-
         public Builder deviceFleetName(@Nullable String deviceFleetName) {
             this.deviceFleetName = Output.ofNullable(deviceFleetName);
             return this;
         }
-
         public Builder outputConfig(Output<DeviceFleetEdgeOutputConfigArgs> outputConfig) {
             this.outputConfig = Objects.requireNonNull(outputConfig);
             return this;
         }
-
         public Builder outputConfig(DeviceFleetEdgeOutputConfigArgs outputConfig) {
             this.outputConfig = Output.of(Objects.requireNonNull(outputConfig));
             return this;
         }
-
         public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public Builder roleArn(String roleArn) {
             this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
         }
-
         public Builder tags(@Nullable Output<List<DeviceFleetTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<DeviceFleetTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public DeviceFleetArgs build() {
+        public Builder tags(DeviceFleetTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public DeviceFleetArgs build() {
             return new DeviceFleetArgs(description, deviceFleetName, outputConfig, roleArn, tags);
         }
     }

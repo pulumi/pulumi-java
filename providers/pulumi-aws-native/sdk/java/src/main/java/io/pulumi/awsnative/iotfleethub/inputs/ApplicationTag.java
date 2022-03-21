@@ -76,12 +76,10 @@ public final class ApplicationTag extends io.pulumi.resources.InvokeArgs {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public ApplicationTag build() {
+        }        public ApplicationTag build() {
             return new ApplicationTag(key, value);
         }
     }

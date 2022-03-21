@@ -106,22 +106,21 @@ public final class MutatingWebhookConfiguration {
             this.apiVersion = apiVersion;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder metadata(@Nullable ObjectMeta metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder webhooks(@Nullable List<MutatingWebhook> webhooks) {
             this.webhooks = webhooks;
             return this;
         }
-        public MutatingWebhookConfiguration build() {
+        public Builder webhooks(MutatingWebhook... webhooks) {
+            return webhooks(List.of(webhooks));
+        }        public MutatingWebhookConfiguration build() {
             return new MutatingWebhookConfiguration(apiVersion, kind, metadata, webhooks);
         }
     }

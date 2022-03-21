@@ -140,62 +140,50 @@ public final class ConfgurationSetState extends io.pulumi.resources.ResourceArgs
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder deliveryOptions(@Nullable Output<ConfgurationSetDeliveryOptionsGetArgs> deliveryOptions) {
             this.deliveryOptions = deliveryOptions;
             return this;
         }
-
         public Builder deliveryOptions(@Nullable ConfgurationSetDeliveryOptionsGetArgs deliveryOptions) {
             this.deliveryOptions = Output.ofNullable(deliveryOptions);
             return this;
         }
-
         public Builder lastFreshStart(@Nullable Output<String> lastFreshStart) {
             this.lastFreshStart = lastFreshStart;
             return this;
         }
-
         public Builder lastFreshStart(@Nullable String lastFreshStart) {
             this.lastFreshStart = Output.ofNullable(lastFreshStart);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder reputationMetricsEnabled(@Nullable Output<Boolean> reputationMetricsEnabled) {
             this.reputationMetricsEnabled = reputationMetricsEnabled;
             return this;
         }
-
         public Builder reputationMetricsEnabled(@Nullable Boolean reputationMetricsEnabled) {
             this.reputationMetricsEnabled = Output.ofNullable(reputationMetricsEnabled);
             return this;
         }
-
         public Builder sendingEnabled(@Nullable Output<Boolean> sendingEnabled) {
             this.sendingEnabled = sendingEnabled;
             return this;
         }
-
         public Builder sendingEnabled(@Nullable Boolean sendingEnabled) {
             this.sendingEnabled = Output.ofNullable(sendingEnabled);
             return this;
-        }
-        public ConfgurationSetState build() {
+        }        public ConfgurationSetState build() {
             return new ConfgurationSetState(arn, deliveryOptions, lastFreshStart, name, reputationMetricsEnabled, sendingEnabled);
         }
     }

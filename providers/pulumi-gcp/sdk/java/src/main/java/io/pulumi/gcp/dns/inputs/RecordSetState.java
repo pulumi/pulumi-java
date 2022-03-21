@@ -145,62 +145,53 @@ public final class RecordSetState extends io.pulumi.resources.ResourceArgs {
             this.managedZone = managedZone;
             return this;
         }
-
         public Builder managedZone(@Nullable String managedZone) {
             this.managedZone = Output.ofNullable(managedZone);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder rrdatas(@Nullable Output<List<String>> rrdatas) {
             this.rrdatas = rrdatas;
             return this;
         }
-
         public Builder rrdatas(@Nullable List<String> rrdatas) {
             this.rrdatas = Output.ofNullable(rrdatas);
             return this;
         }
-
+        public Builder rrdatas(String... rrdatas) {
+            return rrdatas(List.of(rrdatas));
+        }
         public Builder ttl(@Nullable Output<Integer> ttl) {
             this.ttl = ttl;
             return this;
         }
-
         public Builder ttl(@Nullable Integer ttl) {
             this.ttl = Output.ofNullable(ttl);
             return this;
         }
-
         public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public RecordSetState build() {
+        }        public RecordSetState build() {
             return new RecordSetState(managedZone, name, project, rrdatas, ttl, type);
         }
     }

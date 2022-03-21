@@ -179,102 +179,85 @@ public final class ModelExplainabilityJobDefinitionArgs extends io.pulumi.resour
             this.jobDefinitionName = jobDefinitionName;
             return this;
         }
-
         public Builder jobDefinitionName(@Nullable String jobDefinitionName) {
             this.jobDefinitionName = Output.ofNullable(jobDefinitionName);
             return this;
         }
-
         public Builder jobResources(Output<ModelExplainabilityJobDefinitionMonitoringResourcesArgs> jobResources) {
             this.jobResources = Objects.requireNonNull(jobResources);
             return this;
         }
-
         public Builder jobResources(ModelExplainabilityJobDefinitionMonitoringResourcesArgs jobResources) {
             this.jobResources = Output.of(Objects.requireNonNull(jobResources));
             return this;
         }
-
         public Builder modelExplainabilityAppSpecification(Output<ModelExplainabilityJobDefinitionModelExplainabilityAppSpecificationArgs> modelExplainabilityAppSpecification) {
             this.modelExplainabilityAppSpecification = Objects.requireNonNull(modelExplainabilityAppSpecification);
             return this;
         }
-
         public Builder modelExplainabilityAppSpecification(ModelExplainabilityJobDefinitionModelExplainabilityAppSpecificationArgs modelExplainabilityAppSpecification) {
             this.modelExplainabilityAppSpecification = Output.of(Objects.requireNonNull(modelExplainabilityAppSpecification));
             return this;
         }
-
         public Builder modelExplainabilityBaselineConfig(@Nullable Output<ModelExplainabilityJobDefinitionModelExplainabilityBaselineConfigArgs> modelExplainabilityBaselineConfig) {
             this.modelExplainabilityBaselineConfig = modelExplainabilityBaselineConfig;
             return this;
         }
-
         public Builder modelExplainabilityBaselineConfig(@Nullable ModelExplainabilityJobDefinitionModelExplainabilityBaselineConfigArgs modelExplainabilityBaselineConfig) {
             this.modelExplainabilityBaselineConfig = Output.ofNullable(modelExplainabilityBaselineConfig);
             return this;
         }
-
         public Builder modelExplainabilityJobInput(Output<ModelExplainabilityJobDefinitionModelExplainabilityJobInputArgs> modelExplainabilityJobInput) {
             this.modelExplainabilityJobInput = Objects.requireNonNull(modelExplainabilityJobInput);
             return this;
         }
-
         public Builder modelExplainabilityJobInput(ModelExplainabilityJobDefinitionModelExplainabilityJobInputArgs modelExplainabilityJobInput) {
             this.modelExplainabilityJobInput = Output.of(Objects.requireNonNull(modelExplainabilityJobInput));
             return this;
         }
-
         public Builder modelExplainabilityJobOutputConfig(Output<ModelExplainabilityJobDefinitionMonitoringOutputConfigArgs> modelExplainabilityJobOutputConfig) {
             this.modelExplainabilityJobOutputConfig = Objects.requireNonNull(modelExplainabilityJobOutputConfig);
             return this;
         }
-
         public Builder modelExplainabilityJobOutputConfig(ModelExplainabilityJobDefinitionMonitoringOutputConfigArgs modelExplainabilityJobOutputConfig) {
             this.modelExplainabilityJobOutputConfig = Output.of(Objects.requireNonNull(modelExplainabilityJobOutputConfig));
             return this;
         }
-
         public Builder networkConfig(@Nullable Output<ModelExplainabilityJobDefinitionNetworkConfigArgs> networkConfig) {
             this.networkConfig = networkConfig;
             return this;
         }
-
         public Builder networkConfig(@Nullable ModelExplainabilityJobDefinitionNetworkConfigArgs networkConfig) {
             this.networkConfig = Output.ofNullable(networkConfig);
             return this;
         }
-
         public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public Builder roleArn(String roleArn) {
             this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
         }
-
         public Builder stoppingCondition(@Nullable Output<ModelExplainabilityJobDefinitionStoppingConditionArgs> stoppingCondition) {
             this.stoppingCondition = stoppingCondition;
             return this;
         }
-
         public Builder stoppingCondition(@Nullable ModelExplainabilityJobDefinitionStoppingConditionArgs stoppingCondition) {
             this.stoppingCondition = Output.ofNullable(stoppingCondition);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<ModelExplainabilityJobDefinitionTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<ModelExplainabilityJobDefinitionTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public ModelExplainabilityJobDefinitionArgs build() {
+        public Builder tags(ModelExplainabilityJobDefinitionTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public ModelExplainabilityJobDefinitionArgs build() {
             return new ModelExplainabilityJobDefinitionArgs(jobDefinitionName, jobResources, modelExplainabilityAppSpecification, modelExplainabilityBaselineConfig, modelExplainabilityJobInput, modelExplainabilityJobOutputConfig, networkConfig, roleArn, stoppingCondition, tags);
         }
     }

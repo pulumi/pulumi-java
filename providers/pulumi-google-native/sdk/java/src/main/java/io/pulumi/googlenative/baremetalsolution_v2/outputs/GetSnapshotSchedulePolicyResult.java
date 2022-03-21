@@ -104,22 +104,21 @@ public final class GetSnapshotSchedulePolicyResult {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder schedules(List<ScheduleResponse> schedules) {
             this.schedules = Objects.requireNonNull(schedules);
             return this;
         }
-        public GetSnapshotSchedulePolicyResult build() {
+        public Builder schedules(ScheduleResponse... schedules) {
+            return schedules(List.of(schedules));
+        }        public GetSnapshotSchedulePolicyResult build() {
             return new GetSnapshotSchedulePolicyResult(description, labels, name, schedules);
         }
     }

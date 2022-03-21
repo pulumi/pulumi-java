@@ -220,112 +220,90 @@ public final class NetworkAclRuleState extends io.pulumi.resources.ResourceArgs 
             this.cidrBlock = cidrBlock;
             return this;
         }
-
         public Builder cidrBlock(@Nullable String cidrBlock) {
             this.cidrBlock = Output.ofNullable(cidrBlock);
             return this;
         }
-
         public Builder egress(@Nullable Output<Boolean> egress) {
             this.egress = egress;
             return this;
         }
-
         public Builder egress(@Nullable Boolean egress) {
             this.egress = Output.ofNullable(egress);
             return this;
         }
-
         public Builder fromPort(@Nullable Output<Integer> fromPort) {
             this.fromPort = fromPort;
             return this;
         }
-
         public Builder fromPort(@Nullable Integer fromPort) {
             this.fromPort = Output.ofNullable(fromPort);
             return this;
         }
-
         public Builder icmpCode(@Nullable Output<String> icmpCode) {
             this.icmpCode = icmpCode;
             return this;
         }
-
         public Builder icmpCode(@Nullable String icmpCode) {
             this.icmpCode = Output.ofNullable(icmpCode);
             return this;
         }
-
         public Builder icmpType(@Nullable Output<String> icmpType) {
             this.icmpType = icmpType;
             return this;
         }
-
         public Builder icmpType(@Nullable String icmpType) {
             this.icmpType = Output.ofNullable(icmpType);
             return this;
         }
-
         public Builder ipv6CidrBlock(@Nullable Output<String> ipv6CidrBlock) {
             this.ipv6CidrBlock = ipv6CidrBlock;
             return this;
         }
-
         public Builder ipv6CidrBlock(@Nullable String ipv6CidrBlock) {
             this.ipv6CidrBlock = Output.ofNullable(ipv6CidrBlock);
             return this;
         }
-
         public Builder networkAclId(@Nullable Output<String> networkAclId) {
             this.networkAclId = networkAclId;
             return this;
         }
-
         public Builder networkAclId(@Nullable String networkAclId) {
             this.networkAclId = Output.ofNullable(networkAclId);
             return this;
         }
-
         public Builder protocol(@Nullable Output<String> protocol) {
             this.protocol = protocol;
             return this;
         }
-
         public Builder protocol(@Nullable String protocol) {
             this.protocol = Output.ofNullable(protocol);
             return this;
         }
-
         public Builder ruleAction(@Nullable Output<String> ruleAction) {
             this.ruleAction = ruleAction;
             return this;
         }
-
         public Builder ruleAction(@Nullable String ruleAction) {
             this.ruleAction = Output.ofNullable(ruleAction);
             return this;
         }
-
         public Builder ruleNumber(@Nullable Output<Integer> ruleNumber) {
             this.ruleNumber = ruleNumber;
             return this;
         }
-
         public Builder ruleNumber(@Nullable Integer ruleNumber) {
             this.ruleNumber = Output.ofNullable(ruleNumber);
             return this;
         }
-
         public Builder toPort(@Nullable Output<Integer> toPort) {
             this.toPort = toPort;
             return this;
         }
-
         public Builder toPort(@Nullable Integer toPort) {
             this.toPort = Output.ofNullable(toPort);
             return this;
-        }
-        public NetworkAclRuleState build() {
+        }        public NetworkAclRuleState build() {
             return new NetworkAclRuleState(cidrBlock, egress, fromPort, icmpCode, icmpType, ipv6CidrBlock, networkAclId, protocol, ruleAction, ruleNumber, toPort);
         }
     }

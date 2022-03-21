@@ -77,32 +77,26 @@ public final class NodePoolNodeConfigTaintGetArgs extends io.pulumi.resources.Re
             this.effect = Objects.requireNonNull(effect);
             return this;
         }
-
         public Builder effect(String effect) {
             this.effect = Output.of(Objects.requireNonNull(effect));
             return this;
         }
-
         public Builder key(Output<String> key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder key(String key) {
             this.key = Output.of(Objects.requireNonNull(key));
             return this;
         }
-
         public Builder value(Output<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Output.of(Objects.requireNonNull(value));
             return this;
-        }
-        public NodePoolNodeConfigTaintGetArgs build() {
+        }        public NodePoolNodeConfigTaintGetArgs build() {
             return new NodePoolNodeConfigTaintGetArgs(effect, key, value);
         }
     }

@@ -157,72 +157,61 @@ public final class ClusterCoreInstanceGroupGetArgs extends io.pulumi.resources.R
             this.autoscalingPolicy = autoscalingPolicy;
             return this;
         }
-
         public Builder autoscalingPolicy(@Nullable String autoscalingPolicy) {
             this.autoscalingPolicy = Output.ofNullable(autoscalingPolicy);
             return this;
         }
-
         public Builder bidPrice(@Nullable Output<String> bidPrice) {
             this.bidPrice = bidPrice;
             return this;
         }
-
         public Builder bidPrice(@Nullable String bidPrice) {
             this.bidPrice = Output.ofNullable(bidPrice);
             return this;
         }
-
         public Builder ebsConfigs(@Nullable Output<List<ClusterCoreInstanceGroupEbsConfigGetArgs>> ebsConfigs) {
             this.ebsConfigs = ebsConfigs;
             return this;
         }
-
         public Builder ebsConfigs(@Nullable List<ClusterCoreInstanceGroupEbsConfigGetArgs> ebsConfigs) {
             this.ebsConfigs = Output.ofNullable(ebsConfigs);
             return this;
         }
-
+        public Builder ebsConfigs(ClusterCoreInstanceGroupEbsConfigGetArgs... ebsConfigs) {
+            return ebsConfigs(List.of(ebsConfigs));
+        }
         public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder instanceCount(@Nullable Output<Integer> instanceCount) {
             this.instanceCount = instanceCount;
             return this;
         }
-
         public Builder instanceCount(@Nullable Integer instanceCount) {
             this.instanceCount = Output.ofNullable(instanceCount);
             return this;
         }
-
         public Builder instanceType(Output<String> instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
-
         public Builder instanceType(String instanceType) {
             this.instanceType = Output.of(Objects.requireNonNull(instanceType));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
-        }
-        public ClusterCoreInstanceGroupGetArgs build() {
+        }        public ClusterCoreInstanceGroupGetArgs build() {
             return new ClusterCoreInstanceGroupGetArgs(autoscalingPolicy, bidPrice, ebsConfigs, id, instanceCount, instanceType, name);
         }
     }

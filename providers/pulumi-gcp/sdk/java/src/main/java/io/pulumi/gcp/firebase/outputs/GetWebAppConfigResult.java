@@ -127,52 +127,42 @@ public final class GetWebAppConfigResult {
             this.apiKey = Objects.requireNonNull(apiKey);
             return this;
         }
-
         public Builder authDomain(String authDomain) {
             this.authDomain = Objects.requireNonNull(authDomain);
             return this;
         }
-
         public Builder databaseUrl(String databaseUrl) {
             this.databaseUrl = Objects.requireNonNull(databaseUrl);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder locationId(String locationId) {
             this.locationId = Objects.requireNonNull(locationId);
             return this;
         }
-
         public Builder measurementId(String measurementId) {
             this.measurementId = Objects.requireNonNull(measurementId);
             return this;
         }
-
         public Builder messagingSenderId(String messagingSenderId) {
             this.messagingSenderId = Objects.requireNonNull(messagingSenderId);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder storageBucket(String storageBucket) {
             this.storageBucket = Objects.requireNonNull(storageBucket);
             return this;
         }
-
         public Builder webAppId(String webAppId) {
             this.webAppId = Objects.requireNonNull(webAppId);
             return this;
-        }
-        public GetWebAppConfigResult build() {
+        }        public GetWebAppConfigResult build() {
             return new GetWebAppConfigResult(apiKey, authDomain, databaseUrl, id, locationId, measurementId, messagingSenderId, project, storageBucket, webAppId);
         }
     }

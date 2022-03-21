@@ -95,17 +95,14 @@ public final class CloudServiceRoleSkuResponse extends io.pulumi.resources.Invok
             this.capacity = capacity;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder tier(@Nullable String tier) {
             this.tier = tier;
             return this;
-        }
-        public CloudServiceRoleSkuResponse build() {
+        }        public CloudServiceRoleSkuResponse build() {
             return new CloudServiceRoleSkuResponse(capacity, name, tier);
         }
     }

@@ -78,22 +78,18 @@ public final class MediaServicesForPutRequestArgs extends io.pulumi.resources.Re
             this.resourceId = resourceId;
             return this;
         }
-
         public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = Output.ofNullable(resourceId);
             return this;
         }
-
         public Builder userAssignedIdentity(@Nullable Output<String> userAssignedIdentity) {
             this.userAssignedIdentity = userAssignedIdentity;
             return this;
         }
-
         public Builder userAssignedIdentity(@Nullable String userAssignedIdentity) {
             this.userAssignedIdentity = Output.ofNullable(userAssignedIdentity);
             return this;
-        }
-        public MediaServicesForPutRequestArgs build() {
+        }        public MediaServicesForPutRequestArgs build() {
             return new MediaServicesForPutRequestArgs(resourceId, userAssignedIdentity);
         }
     }

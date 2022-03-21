@@ -65,12 +65,10 @@ public final class GrafeasV1beta1IntotoArtifactResponse extends io.pulumi.resour
             this.hashes = Objects.requireNonNull(hashes);
             return this;
         }
-
         public Builder resourceUri(String resourceUri) {
             this.resourceUri = Objects.requireNonNull(resourceUri);
             return this;
-        }
-        public GrafeasV1beta1IntotoArtifactResponse build() {
+        }        public GrafeasV1beta1IntotoArtifactResponse build() {
             return new GrafeasV1beta1IntotoArtifactResponse(hashes, resourceUri);
         }
     }

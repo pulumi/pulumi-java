@@ -70,12 +70,10 @@ public final class WebAclRuleStatementRateBasedStatementScopeDownStatementXssMat
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public WebAclRuleStatementRateBasedStatementScopeDownStatementXssMatchStatementTextTransformation build() {
+        }        public WebAclRuleStatementRateBasedStatementScopeDownStatementXssMatchStatementTextTransformation build() {
             return new WebAclRuleStatementRateBasedStatementScopeDownStatementXssMatchStatementTextTransformation(priority, type);
         }
     }

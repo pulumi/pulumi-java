@@ -70,12 +70,10 @@ public final class InsightFiltersCreatedAtDateRange {
             this.unit = Objects.requireNonNull(unit);
             return this;
         }
-
         public Builder value(Integer value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public InsightFiltersCreatedAtDateRange build() {
+        }        public InsightFiltersCreatedAtDateRange build() {
             return new InsightFiltersCreatedAtDateRange(unit, value);
         }
     }

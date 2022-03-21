@@ -76,22 +76,24 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupArgs extends io.pulumi
             this.inventoryFilters = inventoryFilters;
             return this;
         }
-
         public Builder inventoryFilters(@Nullable List<OsPolicyAssignmentOsPolicyResourceGroupInventoryFilterArgs> inventoryFilters) {
             this.inventoryFilters = Output.ofNullable(inventoryFilters);
             return this;
         }
-
+        public Builder inventoryFilters(OsPolicyAssignmentOsPolicyResourceGroupInventoryFilterArgs... inventoryFilters) {
+            return inventoryFilters(List.of(inventoryFilters));
+        }
         public Builder resources(Output<List<OsPolicyAssignmentOsPolicyResourceGroupResourceArgs>> resources) {
             this.resources = Objects.requireNonNull(resources);
             return this;
         }
-
         public Builder resources(List<OsPolicyAssignmentOsPolicyResourceGroupResourceArgs> resources) {
             this.resources = Output.of(Objects.requireNonNull(resources));
             return this;
         }
-        public OsPolicyAssignmentOsPolicyResourceGroupArgs build() {
+        public Builder resources(OsPolicyAssignmentOsPolicyResourceGroupResourceArgs... resources) {
+            return resources(List.of(resources));
+        }        public OsPolicyAssignmentOsPolicyResourceGroupArgs build() {
             return new OsPolicyAssignmentOsPolicyResourceGroupArgs(inventoryFilters, resources);
         }
     }

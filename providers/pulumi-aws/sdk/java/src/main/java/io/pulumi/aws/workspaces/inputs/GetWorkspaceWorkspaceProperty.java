@@ -121,27 +121,22 @@ public final class GetWorkspaceWorkspaceProperty extends io.pulumi.resources.Inv
             this.computeTypeName = Objects.requireNonNull(computeTypeName);
             return this;
         }
-
         public Builder rootVolumeSizeGib(Integer rootVolumeSizeGib) {
             this.rootVolumeSizeGib = Objects.requireNonNull(rootVolumeSizeGib);
             return this;
         }
-
         public Builder runningMode(String runningMode) {
             this.runningMode = Objects.requireNonNull(runningMode);
             return this;
         }
-
         public Builder runningModeAutoStopTimeoutInMinutes(Integer runningModeAutoStopTimeoutInMinutes) {
             this.runningModeAutoStopTimeoutInMinutes = Objects.requireNonNull(runningModeAutoStopTimeoutInMinutes);
             return this;
         }
-
         public Builder userVolumeSizeGib(Integer userVolumeSizeGib) {
             this.userVolumeSizeGib = Objects.requireNonNull(userVolumeSizeGib);
             return this;
-        }
-        public GetWorkspaceWorkspaceProperty build() {
+        }        public GetWorkspaceWorkspaceProperty build() {
             return new GetWorkspaceWorkspaceProperty(computeTypeName, rootVolumeSizeGib, runningMode, runningModeAutoStopTimeoutInMinutes, userVolumeSizeGib);
         }
     }

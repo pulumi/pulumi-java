@@ -143,62 +143,53 @@ public final class ResolverRuleArgs extends io.pulumi.resources.ResourceArgs {
             this.domainName = Objects.requireNonNull(domainName);
             return this;
         }
-
         public Builder domainName(String domainName) {
             this.domainName = Output.of(Objects.requireNonNull(domainName));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder resolverEndpointId(@Nullable Output<String> resolverEndpointId) {
             this.resolverEndpointId = resolverEndpointId;
             return this;
         }
-
         public Builder resolverEndpointId(@Nullable String resolverEndpointId) {
             this.resolverEndpointId = Output.ofNullable(resolverEndpointId);
             return this;
         }
-
         public Builder ruleType(Output<String> ruleType) {
             this.ruleType = Objects.requireNonNull(ruleType);
             return this;
         }
-
         public Builder ruleType(String ruleType) {
             this.ruleType = Output.of(Objects.requireNonNull(ruleType));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder targetIps(@Nullable Output<List<ResolverRuleTargetIpArgs>> targetIps) {
             this.targetIps = targetIps;
             return this;
         }
-
         public Builder targetIps(@Nullable List<ResolverRuleTargetIpArgs> targetIps) {
             this.targetIps = Output.ofNullable(targetIps);
             return this;
         }
-        public ResolverRuleArgs build() {
+        public Builder targetIps(ResolverRuleTargetIpArgs... targetIps) {
+            return targetIps(List.of(targetIps));
+        }        public ResolverRuleArgs build() {
             return new ResolverRuleArgs(domainName, name, resolverEndpointId, ruleType, tags, targetIps);
         }
     }

@@ -80,22 +80,21 @@ public final class RowArgs extends io.pulumi.resources.ResourceArgs {
             this.weight = weight;
             return this;
         }
-
         public Builder weight(@Nullable String weight) {
             this.weight = Output.ofNullable(weight);
             return this;
         }
-
         public Builder widgets(@Nullable Output<List<WidgetArgs>> widgets) {
             this.widgets = widgets;
             return this;
         }
-
         public Builder widgets(@Nullable List<WidgetArgs> widgets) {
             this.widgets = Output.ofNullable(widgets);
             return this;
         }
-        public RowArgs build() {
+        public Builder widgets(WidgetArgs... widgets) {
+            return widgets(List.of(widgets));
+        }        public RowArgs build() {
             return new RowArgs(weight, widgets);
         }
     }

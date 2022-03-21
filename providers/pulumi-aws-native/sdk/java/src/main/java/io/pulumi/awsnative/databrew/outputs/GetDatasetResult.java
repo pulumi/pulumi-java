@@ -106,22 +106,18 @@ public final class GetDatasetResult {
             this.format = format;
             return this;
         }
-
         public Builder formatOptions(@Nullable DatasetFormatOptions formatOptions) {
             this.formatOptions = formatOptions;
             return this;
         }
-
         public Builder input(@Nullable DatasetInput input) {
             this.input = input;
             return this;
         }
-
         public Builder pathOptions(@Nullable DatasetPathOptions pathOptions) {
             this.pathOptions = pathOptions;
             return this;
-        }
-        public GetDatasetResult build() {
+        }        public GetDatasetResult build() {
             return new GetDatasetResult(format, formatOptions, input, pathOptions);
         }
     }

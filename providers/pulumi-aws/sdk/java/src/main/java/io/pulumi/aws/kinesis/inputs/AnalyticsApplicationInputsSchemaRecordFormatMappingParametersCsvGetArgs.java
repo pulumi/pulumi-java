@@ -73,22 +73,18 @@ public final class AnalyticsApplicationInputsSchemaRecordFormatMappingParameters
             this.recordColumnDelimiter = Objects.requireNonNull(recordColumnDelimiter);
             return this;
         }
-
         public Builder recordColumnDelimiter(String recordColumnDelimiter) {
             this.recordColumnDelimiter = Output.of(Objects.requireNonNull(recordColumnDelimiter));
             return this;
         }
-
         public Builder recordRowDelimiter(Output<String> recordRowDelimiter) {
             this.recordRowDelimiter = Objects.requireNonNull(recordRowDelimiter);
             return this;
         }
-
         public Builder recordRowDelimiter(String recordRowDelimiter) {
             this.recordRowDelimiter = Output.of(Objects.requireNonNull(recordRowDelimiter));
             return this;
-        }
-        public AnalyticsApplicationInputsSchemaRecordFormatMappingParametersCsvGetArgs build() {
+        }        public AnalyticsApplicationInputsSchemaRecordFormatMappingParametersCsvGetArgs build() {
             return new AnalyticsApplicationInputsSchemaRecordFormatMappingParametersCsvGetArgs(recordColumnDelimiter, recordRowDelimiter);
         }
     }

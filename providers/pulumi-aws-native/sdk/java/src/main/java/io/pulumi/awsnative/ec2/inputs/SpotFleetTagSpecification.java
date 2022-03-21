@@ -68,12 +68,13 @@ public final class SpotFleetTagSpecification extends io.pulumi.resources.InvokeA
             this.resourceType = resourceType;
             return this;
         }
-
         public Builder tags(@Nullable List<SpotFleetTag> tags) {
             this.tags = tags;
             return this;
         }
-        public SpotFleetTagSpecification build() {
+        public Builder tags(SpotFleetTag... tags) {
+            return tags(List.of(tags));
+        }        public SpotFleetTagSpecification build() {
             return new SpotFleetTagSpecification(resourceType, tags);
         }
     }

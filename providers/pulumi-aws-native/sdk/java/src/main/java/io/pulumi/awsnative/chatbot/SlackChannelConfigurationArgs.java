@@ -172,82 +172,72 @@ public final class SlackChannelConfigurationArgs extends io.pulumi.resources.Res
             this.configurationName = Objects.requireNonNull(configurationName);
             return this;
         }
-
         public Builder configurationName(String configurationName) {
             this.configurationName = Output.of(Objects.requireNonNull(configurationName));
             return this;
         }
-
         public Builder guardrailPolicies(@Nullable Output<List<String>> guardrailPolicies) {
             this.guardrailPolicies = guardrailPolicies;
             return this;
         }
-
         public Builder guardrailPolicies(@Nullable List<String> guardrailPolicies) {
             this.guardrailPolicies = Output.ofNullable(guardrailPolicies);
             return this;
         }
-
+        public Builder guardrailPolicies(String... guardrailPolicies) {
+            return guardrailPolicies(List.of(guardrailPolicies));
+        }
         public Builder iamRoleArn(Output<String> iamRoleArn) {
             this.iamRoleArn = Objects.requireNonNull(iamRoleArn);
             return this;
         }
-
         public Builder iamRoleArn(String iamRoleArn) {
             this.iamRoleArn = Output.of(Objects.requireNonNull(iamRoleArn));
             return this;
         }
-
         public Builder loggingLevel(@Nullable Output<String> loggingLevel) {
             this.loggingLevel = loggingLevel;
             return this;
         }
-
         public Builder loggingLevel(@Nullable String loggingLevel) {
             this.loggingLevel = Output.ofNullable(loggingLevel);
             return this;
         }
-
         public Builder slackChannelId(Output<String> slackChannelId) {
             this.slackChannelId = Objects.requireNonNull(slackChannelId);
             return this;
         }
-
         public Builder slackChannelId(String slackChannelId) {
             this.slackChannelId = Output.of(Objects.requireNonNull(slackChannelId));
             return this;
         }
-
         public Builder slackWorkspaceId(Output<String> slackWorkspaceId) {
             this.slackWorkspaceId = Objects.requireNonNull(slackWorkspaceId);
             return this;
         }
-
         public Builder slackWorkspaceId(String slackWorkspaceId) {
             this.slackWorkspaceId = Output.of(Objects.requireNonNull(slackWorkspaceId));
             return this;
         }
-
         public Builder snsTopicArns(@Nullable Output<List<String>> snsTopicArns) {
             this.snsTopicArns = snsTopicArns;
             return this;
         }
-
         public Builder snsTopicArns(@Nullable List<String> snsTopicArns) {
             this.snsTopicArns = Output.ofNullable(snsTopicArns);
             return this;
         }
-
+        public Builder snsTopicArns(String... snsTopicArns) {
+            return snsTopicArns(List.of(snsTopicArns));
+        }
         public Builder userRoleRequired(@Nullable Output<Boolean> userRoleRequired) {
             this.userRoleRequired = userRoleRequired;
             return this;
         }
-
         public Builder userRoleRequired(@Nullable Boolean userRoleRequired) {
             this.userRoleRequired = Output.ofNullable(userRoleRequired);
             return this;
-        }
-        public SlackChannelConfigurationArgs build() {
+        }        public SlackChannelConfigurationArgs build() {
             return new SlackChannelConfigurationArgs(configurationName, guardrailPolicies, iamRoleArn, loggingLevel, slackChannelId, slackWorkspaceId, snsTopicArns, userRoleRequired);
         }
     }

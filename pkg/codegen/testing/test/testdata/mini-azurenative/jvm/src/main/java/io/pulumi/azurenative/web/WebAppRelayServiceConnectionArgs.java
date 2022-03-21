@@ -53,12 +53,10 @@ public final class WebAppRelayServiceConnectionArgs extends io.pulumi.resources.
             this.resourceType = resourceType;
             return this;
         }
-
         public Builder resourceType(@Nullable String resourceType) {
             this.resourceType = Output.ofNullable(resourceType);
             return this;
-        }
-        public WebAppRelayServiceConnectionArgs build() {
+        }        public WebAppRelayServiceConnectionArgs build() {
             return new WebAppRelayServiceConnectionArgs(resourceType);
         }
     }

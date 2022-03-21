@@ -514,147 +514,127 @@ public final class GetVirtualNetworkGatewayConnectionResult {
             this.authorizationKey = authorizationKey;
             return this;
         }
-
         public Builder connectionMode(@Nullable String connectionMode) {
             this.connectionMode = connectionMode;
             return this;
         }
-
         public Builder connectionProtocol(@Nullable String connectionProtocol) {
             this.connectionProtocol = connectionProtocol;
             return this;
         }
-
         public Builder connectionStatus(String connectionStatus) {
             this.connectionStatus = Objects.requireNonNull(connectionStatus);
             return this;
         }
-
         public Builder connectionType(String connectionType) {
             this.connectionType = Objects.requireNonNull(connectionType);
             return this;
         }
-
         public Builder dpdTimeoutSeconds(@Nullable Integer dpdTimeoutSeconds) {
             this.dpdTimeoutSeconds = dpdTimeoutSeconds;
             return this;
         }
-
         public Builder egressBytesTransferred(Double egressBytesTransferred) {
             this.egressBytesTransferred = Objects.requireNonNull(egressBytesTransferred);
             return this;
         }
-
         public Builder enableBgp(@Nullable Boolean enableBgp) {
             this.enableBgp = enableBgp;
             return this;
         }
-
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder expressRouteGatewayBypass(@Nullable Boolean expressRouteGatewayBypass) {
             this.expressRouteGatewayBypass = expressRouteGatewayBypass;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder ingressBytesTransferred(Double ingressBytesTransferred) {
             this.ingressBytesTransferred = Objects.requireNonNull(ingressBytesTransferred);
             return this;
         }
-
         public Builder ipsecPolicies(@Nullable List<IpsecPolicyResponse> ipsecPolicies) {
             this.ipsecPolicies = ipsecPolicies;
             return this;
         }
-
+        public Builder ipsecPolicies(IpsecPolicyResponse... ipsecPolicies) {
+            return ipsecPolicies(List.of(ipsecPolicies));
+        }
         public Builder localNetworkGateway2(@Nullable LocalNetworkGatewayResponse localNetworkGateway2) {
             this.localNetworkGateway2 = localNetworkGateway2;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder peer(@Nullable SubResourceResponse peer) {
             this.peer = peer;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder resourceGuid(String resourceGuid) {
             this.resourceGuid = Objects.requireNonNull(resourceGuid);
             return this;
         }
-
         public Builder routingWeight(@Nullable Integer routingWeight) {
             this.routingWeight = routingWeight;
             return this;
         }
-
         public Builder sharedKey(@Nullable String sharedKey) {
             this.sharedKey = sharedKey;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder trafficSelectorPolicies(@Nullable List<TrafficSelectorPolicyResponse> trafficSelectorPolicies) {
             this.trafficSelectorPolicies = trafficSelectorPolicies;
             return this;
         }
-
+        public Builder trafficSelectorPolicies(TrafficSelectorPolicyResponse... trafficSelectorPolicies) {
+            return trafficSelectorPolicies(List.of(trafficSelectorPolicies));
+        }
         public Builder tunnelConnectionStatus(List<TunnelConnectionHealthResponse> tunnelConnectionStatus) {
             this.tunnelConnectionStatus = Objects.requireNonNull(tunnelConnectionStatus);
             return this;
         }
-
+        public Builder tunnelConnectionStatus(TunnelConnectionHealthResponse... tunnelConnectionStatus) {
+            return tunnelConnectionStatus(List.of(tunnelConnectionStatus));
+        }
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder useLocalAzureIpAddress(@Nullable Boolean useLocalAzureIpAddress) {
             this.useLocalAzureIpAddress = useLocalAzureIpAddress;
             return this;
         }
-
         public Builder usePolicyBasedTrafficSelectors(@Nullable Boolean usePolicyBasedTrafficSelectors) {
             this.usePolicyBasedTrafficSelectors = usePolicyBasedTrafficSelectors;
             return this;
         }
-
         public Builder virtualNetworkGateway1(VirtualNetworkGatewayResponse virtualNetworkGateway1) {
             this.virtualNetworkGateway1 = Objects.requireNonNull(virtualNetworkGateway1);
             return this;
         }
-
         public Builder virtualNetworkGateway2(@Nullable VirtualNetworkGatewayResponse virtualNetworkGateway2) {
             this.virtualNetworkGateway2 = virtualNetworkGateway2;
             return this;
-        }
-        public GetVirtualNetworkGatewayConnectionResult build() {
+        }        public GetVirtualNetworkGatewayConnectionResult build() {
             return new GetVirtualNetworkGatewayConnectionResult(authorizationKey, connectionMode, connectionProtocol, connectionStatus, connectionType, dpdTimeoutSeconds, egressBytesTransferred, enableBgp, etag, expressRouteGatewayBypass, id, ingressBytesTransferred, ipsecPolicies, localNetworkGateway2, location, name, peer, provisioningState, resourceGuid, routingWeight, sharedKey, tags, trafficSelectorPolicies, tunnelConnectionStatus, type, useLocalAzureIpAddress, usePolicyBasedTrafficSelectors, virtualNetworkGateway1, virtualNetworkGateway2);
         }
     }

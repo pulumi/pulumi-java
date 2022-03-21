@@ -105,22 +105,27 @@ public final class GetCellResult {
             this.cellArn = cellArn;
             return this;
         }
-
         public Builder cells(@Nullable List<String> cells) {
             this.cells = cells;
             return this;
         }
-
+        public Builder cells(String... cells) {
+            return cells(List.of(cells));
+        }
         public Builder parentReadinessScopes(@Nullable List<String> parentReadinessScopes) {
             this.parentReadinessScopes = parentReadinessScopes;
             return this;
         }
-
+        public Builder parentReadinessScopes(String... parentReadinessScopes) {
+            return parentReadinessScopes(List.of(parentReadinessScopes));
+        }
         public Builder tags(@Nullable List<CellTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetCellResult build() {
+        public Builder tags(CellTag... tags) {
+            return tags(List.of(tags));
+        }        public GetCellResult build() {
             return new GetCellResult(cellArn, cells, parentReadinessScopes, tags);
         }
     }

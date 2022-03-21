@@ -130,32 +130,38 @@ public final class GetDataLakeSettingsResult {
             this.admins = Objects.requireNonNull(admins);
             return this;
         }
-
+        public Builder admins(String... admins) {
+            return admins(List.of(admins));
+        }
         public Builder catalogId(@Nullable String catalogId) {
             this.catalogId = catalogId;
             return this;
         }
-
         public Builder createDatabaseDefaultPermissions(List<GetDataLakeSettingsCreateDatabaseDefaultPermission> createDatabaseDefaultPermissions) {
             this.createDatabaseDefaultPermissions = Objects.requireNonNull(createDatabaseDefaultPermissions);
             return this;
         }
-
+        public Builder createDatabaseDefaultPermissions(GetDataLakeSettingsCreateDatabaseDefaultPermission... createDatabaseDefaultPermissions) {
+            return createDatabaseDefaultPermissions(List.of(createDatabaseDefaultPermissions));
+        }
         public Builder createTableDefaultPermissions(List<GetDataLakeSettingsCreateTableDefaultPermission> createTableDefaultPermissions) {
             this.createTableDefaultPermissions = Objects.requireNonNull(createTableDefaultPermissions);
             return this;
         }
-
+        public Builder createTableDefaultPermissions(GetDataLakeSettingsCreateTableDefaultPermission... createTableDefaultPermissions) {
+            return createTableDefaultPermissions(List.of(createTableDefaultPermissions));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder trustedResourceOwners(List<String> trustedResourceOwners) {
             this.trustedResourceOwners = Objects.requireNonNull(trustedResourceOwners);
             return this;
         }
-        public GetDataLakeSettingsResult build() {
+        public Builder trustedResourceOwners(String... trustedResourceOwners) {
+            return trustedResourceOwners(List.of(trustedResourceOwners));
+        }        public GetDataLakeSettingsResult build() {
             return new GetDataLakeSettingsResult(admins, catalogId, createDatabaseDefaultPermissions, createTableDefaultPermissions, id, trustedResourceOwners);
         }
     }

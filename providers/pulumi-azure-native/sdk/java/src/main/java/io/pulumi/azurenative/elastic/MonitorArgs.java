@@ -158,72 +158,58 @@ public final class MonitorArgs extends io.pulumi.resources.ResourceArgs {
             this.identity = identity;
             return this;
         }
-
         public Builder identity(@Nullable IdentityPropertiesArgs identity) {
             this.identity = Output.ofNullable(identity);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder monitorName(@Nullable Output<String> monitorName) {
             this.monitorName = monitorName;
             return this;
         }
-
         public Builder monitorName(@Nullable String monitorName) {
             this.monitorName = Output.ofNullable(monitorName);
             return this;
         }
-
         public Builder properties(@Nullable Output<MonitorPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder properties(@Nullable MonitorPropertiesArgs properties) {
             this.properties = Output.ofNullable(properties);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder sku(@Nullable Output<ResourceSkuArgs> sku) {
             this.sku = sku;
             return this;
         }
-
         public Builder sku(@Nullable ResourceSkuArgs sku) {
             this.sku = Output.ofNullable(sku);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public MonitorArgs build() {
+        }        public MonitorArgs build() {
             return new MonitorArgs(identity, location, monitorName, properties, resourceGroupName, sku, tags);
         }
     }

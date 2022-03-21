@@ -90,22 +90,18 @@ public final class GetTargetIamPolicyArgs extends io.pulumi.resources.InvokeArgs
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder optionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
             this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder targetId(String targetId) {
             this.targetId = Objects.requireNonNull(targetId);
             return this;
-        }
-        public GetTargetIamPolicyArgs build() {
+        }        public GetTargetIamPolicyArgs build() {
             return new GetTargetIamPolicyArgs(location, optionsRequestedPolicyVersion, project, targetId);
         }
     }

@@ -145,37 +145,30 @@ public final class GetSiteResult {
             this.eTag = eTag;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder properties(SitePropertiesResponse properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetSiteResult build() {
+        }        public GetSiteResult build() {
             return new GetSiteResult(eTag, id, location, name, properties, tags, type);
         }
     }

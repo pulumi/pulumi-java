@@ -120,27 +120,22 @@ public final class SecretPropertiesResponse {
             this.attributes = attributes;
             return this;
         }
-
         public Builder contentType(@Nullable String contentType) {
             this.contentType = contentType;
             return this;
         }
-
         public Builder secretUri(String secretUri) {
             this.secretUri = Objects.requireNonNull(secretUri);
             return this;
         }
-
         public Builder secretUriWithVersion(String secretUriWithVersion) {
             this.secretUriWithVersion = Objects.requireNonNull(secretUriWithVersion);
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public SecretPropertiesResponse build() {
+        }        public SecretPropertiesResponse build() {
             return new SecretPropertiesResponse(attributes, contentType, secretUri, secretUriWithVersion, value);
         }
     }

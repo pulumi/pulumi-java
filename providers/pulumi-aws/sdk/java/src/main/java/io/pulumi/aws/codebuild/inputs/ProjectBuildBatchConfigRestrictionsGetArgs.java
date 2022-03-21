@@ -76,22 +76,21 @@ public final class ProjectBuildBatchConfigRestrictionsGetArgs extends io.pulumi.
             this.computeTypesAlloweds = computeTypesAlloweds;
             return this;
         }
-
         public Builder computeTypesAlloweds(@Nullable List<String> computeTypesAlloweds) {
             this.computeTypesAlloweds = Output.ofNullable(computeTypesAlloweds);
             return this;
         }
-
+        public Builder computeTypesAlloweds(String... computeTypesAlloweds) {
+            return computeTypesAlloweds(List.of(computeTypesAlloweds));
+        }
         public Builder maximumBuildsAllowed(@Nullable Output<Integer> maximumBuildsAllowed) {
             this.maximumBuildsAllowed = maximumBuildsAllowed;
             return this;
         }
-
         public Builder maximumBuildsAllowed(@Nullable Integer maximumBuildsAllowed) {
             this.maximumBuildsAllowed = Output.ofNullable(maximumBuildsAllowed);
             return this;
-        }
-        public ProjectBuildBatchConfigRestrictionsGetArgs build() {
+        }        public ProjectBuildBatchConfigRestrictionsGetArgs build() {
             return new ProjectBuildBatchConfigRestrictionsGetArgs(computeTypesAlloweds, maximumBuildsAllowed);
         }
     }

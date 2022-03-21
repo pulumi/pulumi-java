@@ -77,22 +77,18 @@ public final class SecurityAssessmentPartnerDataArgs extends io.pulumi.resources
             this.partnerName = Objects.requireNonNull(partnerName);
             return this;
         }
-
         public Builder partnerName(String partnerName) {
             this.partnerName = Output.of(Objects.requireNonNull(partnerName));
             return this;
         }
-
         public Builder secret(Output<String> secret) {
             this.secret = Objects.requireNonNull(secret);
             return this;
         }
-
         public Builder secret(String secret) {
             this.secret = Output.of(Objects.requireNonNull(secret));
             return this;
-        }
-        public SecurityAssessmentPartnerDataArgs build() {
+        }        public SecurityAssessmentPartnerDataArgs build() {
             return new SecurityAssessmentPartnerDataArgs(partnerName, secret);
         }
     }

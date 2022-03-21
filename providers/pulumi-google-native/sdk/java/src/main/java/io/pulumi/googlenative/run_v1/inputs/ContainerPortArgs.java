@@ -95,32 +95,26 @@ public final class ContainerPortArgs extends io.pulumi.resources.ResourceArgs {
             this.containerPort = containerPort;
             return this;
         }
-
         public Builder containerPort(@Nullable Integer containerPort) {
             this.containerPort = Output.ofNullable(containerPort);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder protocol(@Nullable Output<String> protocol) {
             this.protocol = protocol;
             return this;
         }
-
         public Builder protocol(@Nullable String protocol) {
             this.protocol = Output.ofNullable(protocol);
             return this;
-        }
-        public ContainerPortArgs build() {
+        }        public ContainerPortArgs build() {
             return new ContainerPortArgs(containerPort, name, protocol);
         }
     }

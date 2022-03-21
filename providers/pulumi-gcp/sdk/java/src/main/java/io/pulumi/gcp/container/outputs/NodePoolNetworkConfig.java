@@ -64,17 +64,14 @@ public final class NodePoolNetworkConfig {
             this.createPodRange = createPodRange;
             return this;
         }
-
         public Builder podIpv4CidrBlock(@Nullable String podIpv4CidrBlock) {
             this.podIpv4CidrBlock = podIpv4CidrBlock;
             return this;
         }
-
         public Builder podRange(String podRange) {
             this.podRange = Objects.requireNonNull(podRange);
             return this;
-        }
-        public NodePoolNetworkConfig build() {
+        }        public NodePoolNetworkConfig build() {
             return new NodePoolNetworkConfig(createPodRange, podIpv4CidrBlock, podRange);
         }
     }

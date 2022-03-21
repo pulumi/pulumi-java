@@ -92,32 +92,29 @@ public final class EnvGroupArgs extends io.pulumi.resources.ResourceArgs {
             this.hostnames = hostnames;
             return this;
         }
-
         public Builder hostnames(@Nullable List<String> hostnames) {
             this.hostnames = Output.ofNullable(hostnames);
             return this;
         }
-
+        public Builder hostnames(String... hostnames) {
+            return hostnames(List.of(hostnames));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder orgId(Output<String> orgId) {
             this.orgId = Objects.requireNonNull(orgId);
             return this;
         }
-
         public Builder orgId(String orgId) {
             this.orgId = Output.of(Objects.requireNonNull(orgId));
             return this;
-        }
-        public EnvGroupArgs build() {
+        }        public EnvGroupArgs build() {
             return new EnvGroupArgs(hostnames, name, orgId);
         }
     }

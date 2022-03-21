@@ -205,102 +205,85 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder catalogId(@Nullable Output<String> catalogId) {
             this.catalogId = catalogId;
             return this;
         }
-
         public Builder catalogId(@Nullable String catalogId) {
             this.catalogId = Output.ofNullable(catalogId);
             return this;
         }
-
         public Builder connectionProperties(@Nullable Output<Map<String,String>> connectionProperties) {
             this.connectionProperties = connectionProperties;
             return this;
         }
-
         public Builder connectionProperties(@Nullable Map<String,String> connectionProperties) {
             this.connectionProperties = Output.ofNullable(connectionProperties);
             return this;
         }
-
         public Builder connectionType(@Nullable Output<String> connectionType) {
             this.connectionType = connectionType;
             return this;
         }
-
         public Builder connectionType(@Nullable String connectionType) {
             this.connectionType = Output.ofNullable(connectionType);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder matchCriterias(@Nullable Output<List<String>> matchCriterias) {
             this.matchCriterias = matchCriterias;
             return this;
         }
-
         public Builder matchCriterias(@Nullable List<String> matchCriterias) {
             this.matchCriterias = Output.ofNullable(matchCriterias);
             return this;
         }
-
+        public Builder matchCriterias(String... matchCriterias) {
+            return matchCriterias(List.of(matchCriterias));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder physicalConnectionRequirements(@Nullable Output<ConnectionPhysicalConnectionRequirementsGetArgs> physicalConnectionRequirements) {
             this.physicalConnectionRequirements = physicalConnectionRequirements;
             return this;
         }
-
         public Builder physicalConnectionRequirements(@Nullable ConnectionPhysicalConnectionRequirementsGetArgs physicalConnectionRequirements) {
             this.physicalConnectionRequirements = Output.ofNullable(physicalConnectionRequirements);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
-        }
-        public ConnectionState build() {
+        }        public ConnectionState build() {
             return new ConnectionState(arn, catalogId, connectionProperties, connectionType, description, matchCriterias, name, physicalConnectionRequirements, tags, tagsAll);
         }
     }

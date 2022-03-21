@@ -185,47 +185,38 @@ public final class GetProviderResult {
             this.attributeCondition = Objects.requireNonNull(attributeCondition);
             return this;
         }
-
         public Builder attributeMapping(Map<String,String> attributeMapping) {
             this.attributeMapping = Objects.requireNonNull(attributeMapping);
             return this;
         }
-
         public Builder aws(AwsResponse aws) {
             this.aws = Objects.requireNonNull(aws);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder disabled(Boolean disabled) {
             this.disabled = Objects.requireNonNull(disabled);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder oidc(OidcResponse oidc) {
             this.oidc = Objects.requireNonNull(oidc);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
-        }
-        public GetProviderResult build() {
+        }        public GetProviderResult build() {
             return new GetProviderResult(attributeCondition, attributeMapping, aws, description, disabled, displayName, name, oidc, state);
         }
     }

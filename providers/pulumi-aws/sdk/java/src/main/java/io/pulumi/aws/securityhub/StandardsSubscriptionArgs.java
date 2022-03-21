@@ -56,12 +56,10 @@ public final class StandardsSubscriptionArgs extends io.pulumi.resources.Resourc
             this.standardsArn = Objects.requireNonNull(standardsArn);
             return this;
         }
-
         public Builder standardsArn(String standardsArn) {
             this.standardsArn = Output.of(Objects.requireNonNull(standardsArn));
             return this;
-        }
-        public StandardsSubscriptionArgs build() {
+        }        public StandardsSubscriptionArgs build() {
             return new StandardsSubscriptionArgs(standardsArn);
         }
     }

@@ -64,12 +64,10 @@ public final class GetBudgetArgs extends io.pulumi.resources.InvokeArgs {
             this.billingAccountId = Objects.requireNonNull(billingAccountId);
             return this;
         }
-
         public Builder budgetId(String budgetId) {
             this.budgetId = Objects.requireNonNull(budgetId);
             return this;
-        }
-        public GetBudgetArgs build() {
+        }        public GetBudgetArgs build() {
             return new GetBudgetArgs(billingAccountId, budgetId);
         }
     }

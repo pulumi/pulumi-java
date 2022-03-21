@@ -88,17 +88,14 @@ public final class GetMediaGraphArgs extends io.pulumi.resources.InvokeArgs {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder mediaGraphName(String mediaGraphName) {
             this.mediaGraphName = Objects.requireNonNull(mediaGraphName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetMediaGraphArgs build() {
+        }        public GetMediaGraphArgs build() {
             return new GetMediaGraphArgs(accountName, mediaGraphName, resourceGroupName);
         }
     }

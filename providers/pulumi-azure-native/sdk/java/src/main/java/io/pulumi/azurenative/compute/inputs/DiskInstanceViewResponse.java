@@ -97,17 +97,20 @@ public final class DiskInstanceViewResponse extends io.pulumi.resources.InvokeAr
             this.encryptionSettings = encryptionSettings;
             return this;
         }
-
+        public Builder encryptionSettings(DiskEncryptionSettingsResponse... encryptionSettings) {
+            return encryptionSettings(List.of(encryptionSettings));
+        }
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder statuses(@Nullable List<InstanceViewStatusResponse> statuses) {
             this.statuses = statuses;
             return this;
         }
-        public DiskInstanceViewResponse build() {
+        public Builder statuses(InstanceViewStatusResponse... statuses) {
+            return statuses(List.of(statuses));
+        }        public DiskInstanceViewResponse build() {
             return new DiskInstanceViewResponse(encryptionSettings, name, statuses);
         }
     }

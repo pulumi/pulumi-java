@@ -62,12 +62,13 @@ public final class CacheSecuritySettingsArgs extends io.pulumi.resources.Resourc
             this.accessPolicies = accessPolicies;
             return this;
         }
-
         public Builder accessPolicies(@Nullable List<NfsAccessPolicyArgs> accessPolicies) {
             this.accessPolicies = Output.ofNullable(accessPolicies);
             return this;
         }
-        public CacheSecuritySettingsArgs build() {
+        public Builder accessPolicies(NfsAccessPolicyArgs... accessPolicies) {
+            return accessPolicies(List.of(accessPolicies));
+        }        public CacheSecuritySettingsArgs build() {
             return new CacheSecuritySettingsArgs(accessPolicies);
         }
     }

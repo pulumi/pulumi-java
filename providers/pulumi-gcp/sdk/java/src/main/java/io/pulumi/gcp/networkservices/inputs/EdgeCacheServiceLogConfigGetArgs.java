@@ -76,22 +76,18 @@ public final class EdgeCacheServiceLogConfigGetArgs extends io.pulumi.resources.
             this.enable = enable;
             return this;
         }
-
         public Builder enable(@Nullable Boolean enable) {
             this.enable = Output.ofNullable(enable);
             return this;
         }
-
         public Builder sampleRate(@Nullable Output<Double> sampleRate) {
             this.sampleRate = sampleRate;
             return this;
         }
-
         public Builder sampleRate(@Nullable Double sampleRate) {
             this.sampleRate = Output.ofNullable(sampleRate);
             return this;
-        }
-        public EdgeCacheServiceLogConfigGetArgs build() {
+        }        public EdgeCacheServiceLogConfigGetArgs build() {
             return new EdgeCacheServiceLogConfigGetArgs(enable, sampleRate);
         }
     }

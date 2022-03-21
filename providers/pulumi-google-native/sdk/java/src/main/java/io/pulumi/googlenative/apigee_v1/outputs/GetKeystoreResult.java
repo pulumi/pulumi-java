@@ -70,12 +70,13 @@ public final class GetKeystoreResult {
             this.aliases = Objects.requireNonNull(aliases);
             return this;
         }
-
+        public Builder aliases(String... aliases) {
+            return aliases(List.of(aliases));
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public GetKeystoreResult build() {
+        }        public GetKeystoreResult build() {
             return new GetKeystoreResult(aliases, name);
         }
     }

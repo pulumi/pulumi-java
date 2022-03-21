@@ -62,7 +62,9 @@ public final class StorageProfileResponse extends io.pulumi.resources.InvokeArgs
             this.storageaccounts = storageaccounts;
             return this;
         }
-        public StorageProfileResponse build() {
+        public Builder storageaccounts(StorageAccountResponse... storageaccounts) {
+            return storageaccounts(List.of(storageaccounts));
+        }        public StorageProfileResponse build() {
             return new StorageProfileResponse(storageaccounts);
         }
     }

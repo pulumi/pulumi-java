@@ -109,42 +109,37 @@ public final class WebAclRuleStatementNotStatementStatementAndStatementStatement
             this.fieldToMatch = fieldToMatch;
             return this;
         }
-
         public Builder fieldToMatch(@Nullable WebAclRuleStatementNotStatementStatementAndStatementStatementOrStatementStatementByteMatchStatementFieldToMatchArgs fieldToMatch) {
             this.fieldToMatch = Output.ofNullable(fieldToMatch);
             return this;
         }
-
         public Builder positionalConstraint(Output<String> positionalConstraint) {
             this.positionalConstraint = Objects.requireNonNull(positionalConstraint);
             return this;
         }
-
         public Builder positionalConstraint(String positionalConstraint) {
             this.positionalConstraint = Output.of(Objects.requireNonNull(positionalConstraint));
             return this;
         }
-
         public Builder searchString(Output<String> searchString) {
             this.searchString = Objects.requireNonNull(searchString);
             return this;
         }
-
         public Builder searchString(String searchString) {
             this.searchString = Output.of(Objects.requireNonNull(searchString));
             return this;
         }
-
         public Builder textTransformations(Output<List<WebAclRuleStatementNotStatementStatementAndStatementStatementOrStatementStatementByteMatchStatementTextTransformationArgs>> textTransformations) {
             this.textTransformations = Objects.requireNonNull(textTransformations);
             return this;
         }
-
         public Builder textTransformations(List<WebAclRuleStatementNotStatementStatementAndStatementStatementOrStatementStatementByteMatchStatementTextTransformationArgs> textTransformations) {
             this.textTransformations = Output.of(Objects.requireNonNull(textTransformations));
             return this;
         }
-        public WebAclRuleStatementNotStatementStatementAndStatementStatementOrStatementStatementByteMatchStatementArgs build() {
+        public Builder textTransformations(WebAclRuleStatementNotStatementStatementAndStatementStatementOrStatementStatementByteMatchStatementTextTransformationArgs... textTransformations) {
+            return textTransformations(List.of(textTransformations));
+        }        public WebAclRuleStatementNotStatementStatementAndStatementStatementOrStatementStatementByteMatchStatementArgs build() {
             return new WebAclRuleStatementNotStatementStatementAndStatementStatementOrStatementStatementByteMatchStatementArgs(fieldToMatch, positionalConstraint, searchString, textTransformations);
         }
     }

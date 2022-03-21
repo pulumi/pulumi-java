@@ -142,62 +142,50 @@ public final class BucketRuleArgs extends io.pulumi.resources.ResourceArgs {
             this.abortIncompleteMultipartUpload = abortIncompleteMultipartUpload;
             return this;
         }
-
         public Builder abortIncompleteMultipartUpload(@Nullable BucketAbortIncompleteMultipartUploadArgs abortIncompleteMultipartUpload) {
             this.abortIncompleteMultipartUpload = Output.ofNullable(abortIncompleteMultipartUpload);
             return this;
         }
-
         public Builder expirationDate(@Nullable Output<String> expirationDate) {
             this.expirationDate = expirationDate;
             return this;
         }
-
         public Builder expirationDate(@Nullable String expirationDate) {
             this.expirationDate = Output.ofNullable(expirationDate);
             return this;
         }
-
         public Builder expirationInDays(@Nullable Output<Integer> expirationInDays) {
             this.expirationInDays = expirationInDays;
             return this;
         }
-
         public Builder expirationInDays(@Nullable Integer expirationInDays) {
             this.expirationInDays = Output.ofNullable(expirationInDays);
             return this;
         }
-
         public Builder filter(@Nullable Output<BucketRuleFilterPropertiesArgs> filter) {
             this.filter = filter;
             return this;
         }
-
         public Builder filter(@Nullable BucketRuleFilterPropertiesArgs filter) {
             this.filter = Output.ofNullable(filter);
             return this;
         }
-
         public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder status(@Nullable Output<BucketRuleStatus> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable BucketRuleStatus status) {
             this.status = Output.ofNullable(status);
             return this;
-        }
-        public BucketRuleArgs build() {
+        }        public BucketRuleArgs build() {
             return new BucketRuleArgs(abortIncompleteMultipartUpload, expirationDate, expirationInDays, filter, id, status);
         }
     }

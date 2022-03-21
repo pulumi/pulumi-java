@@ -101,22 +101,18 @@ public final class GetDomainIdentityResult {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder domain(String domain) {
             this.domain = Objects.requireNonNull(domain);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder verificationToken(String verificationToken) {
             this.verificationToken = Objects.requireNonNull(verificationToken);
             return this;
-        }
-        public GetDomainIdentityResult build() {
+        }        public GetDomainIdentityResult build() {
             return new GetDomainIdentityResult(arn, domain, id, verificationToken);
         }
     }

@@ -54,12 +54,13 @@ public final class DatastoreSchemaDefinitionArgs extends io.pulumi.resources.Res
             this.columns = columns;
             return this;
         }
-
         public Builder columns(@Nullable List<DatastoreColumnArgs> columns) {
             this.columns = Output.ofNullable(columns);
             return this;
         }
-        public DatastoreSchemaDefinitionArgs build() {
+        public Builder columns(DatastoreColumnArgs... columns) {
+            return columns(List.of(columns));
+        }        public DatastoreSchemaDefinitionArgs build() {
             return new DatastoreSchemaDefinitionArgs(columns);
         }
     }

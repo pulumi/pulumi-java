@@ -56,12 +56,10 @@ public final class ListenerRuleTargetGroupTuple {
             this.targetGroupArn = targetGroupArn;
             return this;
         }
-
         public Builder weight(@Nullable Integer weight) {
             this.weight = weight;
             return this;
-        }
-        public ListenerRuleTargetGroupTuple build() {
+        }        public ListenerRuleTargetGroupTuple build() {
             return new ListenerRuleTargetGroupTuple(targetGroupArn, weight);
         }
     }

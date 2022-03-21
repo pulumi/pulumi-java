@@ -80,22 +80,18 @@ public final class ManagedClusterAddonProfileArgs extends io.pulumi.resources.Re
             this.config = config;
             return this;
         }
-
         public Builder config(@Nullable Map<String,String> config) {
             this.config = Output.ofNullable(config);
             return this;
         }
-
         public Builder enabled(Output<Boolean> enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public Builder enabled(Boolean enabled) {
             this.enabled = Output.of(Objects.requireNonNull(enabled));
             return this;
-        }
-        public ManagedClusterAddonProfileArgs build() {
+        }        public ManagedClusterAddonProfileArgs build() {
             return new ManagedClusterAddonProfileArgs(config, enabled);
         }
     }

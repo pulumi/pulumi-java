@@ -72,12 +72,10 @@ public final class GetPrivateStoreOfferArgs extends io.pulumi.resources.InvokeAr
             this.offerId = Objects.requireNonNull(offerId);
             return this;
         }
-
         public Builder privateStoreId(String privateStoreId) {
             this.privateStoreId = Objects.requireNonNull(privateStoreId);
             return this;
-        }
-        public GetPrivateStoreOfferArgs build() {
+        }        public GetPrivateStoreOfferArgs build() {
             return new GetPrivateStoreOfferArgs(offerId, privateStoreId);
         }
     }

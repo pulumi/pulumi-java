@@ -89,17 +89,17 @@ public final class GetReadinessCheckResult {
             this.readinessCheckArn = readinessCheckArn;
             return this;
         }
-
         public Builder resourceSetName(@Nullable String resourceSetName) {
             this.resourceSetName = resourceSetName;
             return this;
         }
-
         public Builder tags(@Nullable List<ReadinessCheckTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetReadinessCheckResult build() {
+        public Builder tags(ReadinessCheckTag... tags) {
+            return tags(List.of(tags));
+        }        public GetReadinessCheckResult build() {
             return new GetReadinessCheckResult(readinessCheckArn, resourceSetName, tags);
         }
     }

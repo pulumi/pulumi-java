@@ -93,17 +93,14 @@ public final class RegionDiskDiskEncryptionKey {
             this.kmsKeyName = kmsKeyName;
             return this;
         }
-
         public Builder rawKey(@Nullable String rawKey) {
             this.rawKey = rawKey;
             return this;
         }
-
         public Builder sha256(@Nullable String sha256) {
             this.sha256 = sha256;
             return this;
-        }
-        public RegionDiskDiskEncryptionKey build() {
+        }        public RegionDiskDiskEncryptionKey build() {
             return new RegionDiskDiskEncryptionKey(kmsKeyName, rawKey, sha256);
         }
     }

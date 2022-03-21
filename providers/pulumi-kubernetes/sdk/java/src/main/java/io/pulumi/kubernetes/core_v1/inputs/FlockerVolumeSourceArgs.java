@@ -78,22 +78,18 @@ public final class FlockerVolumeSourceArgs extends io.pulumi.resources.ResourceA
             this.datasetName = datasetName;
             return this;
         }
-
         public Builder datasetName(@Nullable String datasetName) {
             this.datasetName = Output.ofNullable(datasetName);
             return this;
         }
-
         public Builder datasetUUID(@Nullable Output<String> datasetUUID) {
             this.datasetUUID = datasetUUID;
             return this;
         }
-
         public Builder datasetUUID(@Nullable String datasetUUID) {
             this.datasetUUID = Output.ofNullable(datasetUUID);
             return this;
-        }
-        public FlockerVolumeSourceArgs build() {
+        }        public FlockerVolumeSourceArgs build() {
             return new FlockerVolumeSourceArgs(datasetName, datasetUUID);
         }
     }

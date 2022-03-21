@@ -56,12 +56,10 @@ public final class AwsNodePoolConfigConfigEncryptionGetArgs extends io.pulumi.re
             this.kmsKeyArn = Objects.requireNonNull(kmsKeyArn);
             return this;
         }
-
         public Builder kmsKeyArn(String kmsKeyArn) {
             this.kmsKeyArn = Output.of(Objects.requireNonNull(kmsKeyArn));
             return this;
-        }
-        public AwsNodePoolConfigConfigEncryptionGetArgs build() {
+        }        public AwsNodePoolConfigConfigEncryptionGetArgs build() {
             return new AwsNodePoolConfigConfigEncryptionGetArgs(kmsKeyArn);
         }
     }

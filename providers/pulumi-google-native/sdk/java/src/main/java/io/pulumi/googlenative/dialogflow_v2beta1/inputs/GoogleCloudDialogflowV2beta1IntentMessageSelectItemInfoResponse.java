@@ -77,12 +77,13 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageSelectItemInfoRespon
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder synonyms(List<String> synonyms) {
             this.synonyms = Objects.requireNonNull(synonyms);
             return this;
         }
-        public GoogleCloudDialogflowV2beta1IntentMessageSelectItemInfoResponse build() {
+        public Builder synonyms(String... synonyms) {
+            return synonyms(List.of(synonyms));
+        }        public GoogleCloudDialogflowV2beta1IntentMessageSelectItemInfoResponse build() {
             return new GoogleCloudDialogflowV2beta1IntentMessageSelectItemInfoResponse(key, synonyms);
         }
     }

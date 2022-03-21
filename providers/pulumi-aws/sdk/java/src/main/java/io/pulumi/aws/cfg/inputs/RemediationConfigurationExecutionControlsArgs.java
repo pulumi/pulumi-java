@@ -57,12 +57,10 @@ public final class RemediationConfigurationExecutionControlsArgs extends io.pulu
             this.ssmControls = ssmControls;
             return this;
         }
-
         public Builder ssmControls(@Nullable RemediationConfigurationExecutionControlsSsmControlsArgs ssmControls) {
             this.ssmControls = Output.ofNullable(ssmControls);
             return this;
-        }
-        public RemediationConfigurationExecutionControlsArgs build() {
+        }        public RemediationConfigurationExecutionControlsArgs build() {
             return new RemediationConfigurationExecutionControlsArgs(ssmControls);
         }
     }

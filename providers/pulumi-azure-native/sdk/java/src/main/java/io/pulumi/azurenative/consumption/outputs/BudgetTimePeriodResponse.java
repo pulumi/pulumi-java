@@ -71,12 +71,10 @@ public final class BudgetTimePeriodResponse {
             this.endDate = endDate;
             return this;
         }
-
         public Builder startDate(String startDate) {
             this.startDate = Objects.requireNonNull(startDate);
             return this;
-        }
-        public BudgetTimePeriodResponse build() {
+        }        public BudgetTimePeriodResponse build() {
             return new BudgetTimePeriodResponse(endDate, startDate);
         }
     }

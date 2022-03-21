@@ -88,17 +88,14 @@ public final class OriginEndpointStreamSelection {
             this.maxVideoBitsPerSecond = maxVideoBitsPerSecond;
             return this;
         }
-
         public Builder minVideoBitsPerSecond(@Nullable Integer minVideoBitsPerSecond) {
             this.minVideoBitsPerSecond = minVideoBitsPerSecond;
             return this;
         }
-
         public Builder streamOrder(@Nullable OriginEndpointStreamSelectionStreamOrder streamOrder) {
             this.streamOrder = streamOrder;
             return this;
-        }
-        public OriginEndpointStreamSelection build() {
+        }        public OriginEndpointStreamSelection build() {
             return new OriginEndpointStreamSelection(maxVideoBitsPerSecond, minVideoBitsPerSecond, streamOrder);
         }
     }

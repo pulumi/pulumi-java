@@ -193,102 +193,91 @@ public final class BotArgs extends io.pulumi.resources.ResourceArgs {
             this.autoBuildBotLocales = autoBuildBotLocales;
             return this;
         }
-
         public Builder autoBuildBotLocales(@Nullable Boolean autoBuildBotLocales) {
             this.autoBuildBotLocales = Output.ofNullable(autoBuildBotLocales);
             return this;
         }
-
         public Builder botFileS3Location(@Nullable Output<BotS3LocationArgs> botFileS3Location) {
             this.botFileS3Location = botFileS3Location;
             return this;
         }
-
         public Builder botFileS3Location(@Nullable BotS3LocationArgs botFileS3Location) {
             this.botFileS3Location = Output.ofNullable(botFileS3Location);
             return this;
         }
-
         public Builder botLocales(@Nullable Output<List<BotLocaleArgs>> botLocales) {
             this.botLocales = botLocales;
             return this;
         }
-
         public Builder botLocales(@Nullable List<BotLocaleArgs> botLocales) {
             this.botLocales = Output.ofNullable(botLocales);
             return this;
         }
-
+        public Builder botLocales(BotLocaleArgs... botLocales) {
+            return botLocales(List.of(botLocales));
+        }
         public Builder botTags(@Nullable Output<List<BotTagArgs>> botTags) {
             this.botTags = botTags;
             return this;
         }
-
         public Builder botTags(@Nullable List<BotTagArgs> botTags) {
             this.botTags = Output.ofNullable(botTags);
             return this;
         }
-
+        public Builder botTags(BotTagArgs... botTags) {
+            return botTags(List.of(botTags));
+        }
         public Builder dataPrivacy(Output<DataPrivacyPropertiesArgs> dataPrivacy) {
             this.dataPrivacy = Objects.requireNonNull(dataPrivacy);
             return this;
         }
-
         public Builder dataPrivacy(DataPrivacyPropertiesArgs dataPrivacy) {
             this.dataPrivacy = Output.of(Objects.requireNonNull(dataPrivacy));
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder idleSessionTTLInSeconds(Output<Integer> idleSessionTTLInSeconds) {
             this.idleSessionTTLInSeconds = Objects.requireNonNull(idleSessionTTLInSeconds);
             return this;
         }
-
         public Builder idleSessionTTLInSeconds(Integer idleSessionTTLInSeconds) {
             this.idleSessionTTLInSeconds = Output.of(Objects.requireNonNull(idleSessionTTLInSeconds));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public Builder roleArn(String roleArn) {
             this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
         }
-
         public Builder testBotAliasTags(@Nullable Output<List<BotTagArgs>> testBotAliasTags) {
             this.testBotAliasTags = testBotAliasTags;
             return this;
         }
-
         public Builder testBotAliasTags(@Nullable List<BotTagArgs> testBotAliasTags) {
             this.testBotAliasTags = Output.ofNullable(testBotAliasTags);
             return this;
         }
-        public BotArgs build() {
+        public Builder testBotAliasTags(BotTagArgs... testBotAliasTags) {
+            return testBotAliasTags(List.of(testBotAliasTags));
+        }        public BotArgs build() {
             return new BotArgs(autoBuildBotLocales, botFileS3Location, botLocales, botTags, dataPrivacy, description, idleSessionTTLInSeconds, name, roleArn, testBotAliasTags);
         }
     }

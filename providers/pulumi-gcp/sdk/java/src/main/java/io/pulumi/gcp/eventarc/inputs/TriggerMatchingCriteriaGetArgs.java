@@ -73,22 +73,18 @@ public final class TriggerMatchingCriteriaGetArgs extends io.pulumi.resources.Re
             this.attribute = Objects.requireNonNull(attribute);
             return this;
         }
-
         public Builder attribute(String attribute) {
             this.attribute = Output.of(Objects.requireNonNull(attribute));
             return this;
         }
-
         public Builder value(Output<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Output.of(Objects.requireNonNull(value));
             return this;
-        }
-        public TriggerMatchingCriteriaGetArgs build() {
+        }        public TriggerMatchingCriteriaGetArgs build() {
             return new TriggerMatchingCriteriaGetArgs(attribute, value);
         }
     }

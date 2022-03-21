@@ -71,12 +71,10 @@ public final class DocumentRequires {
             this.name = name;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = version;
             return this;
-        }
-        public DocumentRequires build() {
+        }        public DocumentRequires build() {
             return new DocumentRequires(name, version);
         }
     }

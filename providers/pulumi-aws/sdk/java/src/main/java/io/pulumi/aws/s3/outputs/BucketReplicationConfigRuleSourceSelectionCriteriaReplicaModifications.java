@@ -51,8 +51,7 @@ public final class BucketReplicationConfigRuleSourceSelectionCriteriaReplicaModi
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
-        }
-        public BucketReplicationConfigRuleSourceSelectionCriteriaReplicaModifications build() {
+        }        public BucketReplicationConfigRuleSourceSelectionCriteriaReplicaModifications build() {
             return new BucketReplicationConfigRuleSourceSelectionCriteriaReplicaModifications(status);
         }
     }

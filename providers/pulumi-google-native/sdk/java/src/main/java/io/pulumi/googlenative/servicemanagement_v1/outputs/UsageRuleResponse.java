@@ -86,17 +86,14 @@ public final class UsageRuleResponse {
             this.allowUnregisteredCalls = Objects.requireNonNull(allowUnregisteredCalls);
             return this;
         }
-
         public Builder selector(String selector) {
             this.selector = Objects.requireNonNull(selector);
             return this;
         }
-
         public Builder skipServiceControl(Boolean skipServiceControl) {
             this.skipServiceControl = Objects.requireNonNull(skipServiceControl);
             return this;
-        }
-        public UsageRuleResponse build() {
+        }        public UsageRuleResponse build() {
             return new UsageRuleResponse(allowUnregisteredCalls, selector, skipServiceControl);
         }
     }

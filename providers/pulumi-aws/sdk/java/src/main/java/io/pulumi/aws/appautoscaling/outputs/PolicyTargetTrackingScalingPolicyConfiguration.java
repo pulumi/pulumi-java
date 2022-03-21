@@ -139,32 +139,26 @@ public final class PolicyTargetTrackingScalingPolicyConfiguration {
             this.customizedMetricSpecification = customizedMetricSpecification;
             return this;
         }
-
         public Builder disableScaleIn(@Nullable Boolean disableScaleIn) {
             this.disableScaleIn = disableScaleIn;
             return this;
         }
-
         public Builder predefinedMetricSpecification(@Nullable PolicyTargetTrackingScalingPolicyConfigurationPredefinedMetricSpecification predefinedMetricSpecification) {
             this.predefinedMetricSpecification = predefinedMetricSpecification;
             return this;
         }
-
         public Builder scaleInCooldown(@Nullable Integer scaleInCooldown) {
             this.scaleInCooldown = scaleInCooldown;
             return this;
         }
-
         public Builder scaleOutCooldown(@Nullable Integer scaleOutCooldown) {
             this.scaleOutCooldown = scaleOutCooldown;
             return this;
         }
-
         public Builder targetValue(Double targetValue) {
             this.targetValue = Objects.requireNonNull(targetValue);
             return this;
-        }
-        public PolicyTargetTrackingScalingPolicyConfiguration build() {
+        }        public PolicyTargetTrackingScalingPolicyConfiguration build() {
             return new PolicyTargetTrackingScalingPolicyConfiguration(customizedMetricSpecification, disableScaleIn, predefinedMetricSpecification, scaleInCooldown, scaleOutCooldown, targetValue);
         }
     }

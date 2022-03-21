@@ -211,52 +211,42 @@ public final class AzureSQLAGWorkloadContainerProtectionContainerResponse extend
             this.backupManagementType = backupManagementType;
             return this;
         }
-
         public Builder containerType(String containerType) {
             this.containerType = Objects.requireNonNull(containerType);
             return this;
         }
-
         public Builder extendedInfo(@Nullable AzureWorkloadContainerExtendedInfoResponse extendedInfo) {
             this.extendedInfo = extendedInfo;
             return this;
         }
-
         public Builder friendlyName(@Nullable String friendlyName) {
             this.friendlyName = friendlyName;
             return this;
         }
-
         public Builder healthStatus(@Nullable String healthStatus) {
             this.healthStatus = healthStatus;
             return this;
         }
-
         public Builder lastUpdatedTime(@Nullable String lastUpdatedTime) {
             this.lastUpdatedTime = lastUpdatedTime;
             return this;
         }
-
         public Builder operationType(@Nullable String operationType) {
             this.operationType = operationType;
             return this;
         }
-
         public Builder registrationStatus(@Nullable String registrationStatus) {
             this.registrationStatus = registrationStatus;
             return this;
         }
-
         public Builder sourceResourceId(@Nullable String sourceResourceId) {
             this.sourceResourceId = sourceResourceId;
             return this;
         }
-
         public Builder workloadType(@Nullable String workloadType) {
             this.workloadType = workloadType;
             return this;
-        }
-        public AzureSQLAGWorkloadContainerProtectionContainerResponse build() {
+        }        public AzureSQLAGWorkloadContainerProtectionContainerResponse build() {
             return new AzureSQLAGWorkloadContainerProtectionContainerResponse(backupManagementType, containerType, extendedInfo, friendlyName, healthStatus, lastUpdatedTime, operationType, registrationStatus, sourceResourceId, workloadType);
         }
     }

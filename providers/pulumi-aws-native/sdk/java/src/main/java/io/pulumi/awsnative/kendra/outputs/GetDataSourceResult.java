@@ -122,47 +122,41 @@ public final class GetDataSourceResult {
             this.arn = arn;
             return this;
         }
-
         public Builder dataSourceConfiguration(@Nullable DataSourceConfiguration dataSourceConfiguration) {
             this.dataSourceConfiguration = dataSourceConfiguration;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder indexId(@Nullable String indexId) {
             this.indexId = indexId;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = roleArn;
             return this;
         }
-
         public Builder schedule(@Nullable String schedule) {
             this.schedule = schedule;
             return this;
         }
-
         public Builder tags(@Nullable List<DataSourceTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetDataSourceResult build() {
+        public Builder tags(DataSourceTag... tags) {
+            return tags(List.of(tags));
+        }        public GetDataSourceResult build() {
             return new GetDataSourceResult(arn, dataSourceConfiguration, description, id, indexId, name, roleArn, schedule, tags);
         }
     }

@@ -88,17 +88,14 @@ public final class GetWebAppSiteExtensionArgs extends io.pulumi.resources.Invoke
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder siteExtensionId(String siteExtensionId) {
             this.siteExtensionId = Objects.requireNonNull(siteExtensionId);
             return this;
-        }
-        public GetWebAppSiteExtensionArgs build() {
+        }        public GetWebAppSiteExtensionArgs build() {
             return new GetWebAppSiteExtensionArgs(name, resourceGroupName, siteExtensionId);
         }
     }

@@ -79,22 +79,18 @@ public final class LogMatchArgs extends io.pulumi.resources.ResourceArgs {
             this.filter = Objects.requireNonNull(filter);
             return this;
         }
-
         public Builder filter(String filter) {
             this.filter = Output.of(Objects.requireNonNull(filter));
             return this;
         }
-
         public Builder labelExtractors(@Nullable Output<Map<String,String>> labelExtractors) {
             this.labelExtractors = labelExtractors;
             return this;
         }
-
         public Builder labelExtractors(@Nullable Map<String,String> labelExtractors) {
             this.labelExtractors = Output.ofNullable(labelExtractors);
             return this;
-        }
-        public LogMatchArgs build() {
+        }        public LogMatchArgs build() {
             return new LogMatchArgs(filter, labelExtractors);
         }
     }

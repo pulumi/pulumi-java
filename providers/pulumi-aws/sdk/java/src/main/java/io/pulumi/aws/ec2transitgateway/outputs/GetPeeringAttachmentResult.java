@@ -129,37 +129,33 @@ public final class GetPeeringAttachmentResult {
             this.filters = filters;
             return this;
         }
-
+        public Builder filters(GetPeeringAttachmentFilter... filters) {
+            return filters(List.of(filters));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder peerAccountId(String peerAccountId) {
             this.peerAccountId = Objects.requireNonNull(peerAccountId);
             return this;
         }
-
         public Builder peerRegion(String peerRegion) {
             this.peerRegion = Objects.requireNonNull(peerRegion);
             return this;
         }
-
         public Builder peerTransitGatewayId(String peerTransitGatewayId) {
             this.peerTransitGatewayId = Objects.requireNonNull(peerTransitGatewayId);
             return this;
         }
-
         public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
-
         public Builder transitGatewayId(String transitGatewayId) {
             this.transitGatewayId = Objects.requireNonNull(transitGatewayId);
             return this;
-        }
-        public GetPeeringAttachmentResult build() {
+        }        public GetPeeringAttachmentResult build() {
             return new GetPeeringAttachmentResult(filters, id, peerAccountId, peerRegion, peerTransitGatewayId, tags, transitGatewayId);
         }
     }

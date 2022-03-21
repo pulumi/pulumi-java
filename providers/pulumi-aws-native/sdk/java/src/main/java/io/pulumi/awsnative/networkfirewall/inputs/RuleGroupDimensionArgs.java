@@ -52,12 +52,10 @@ public final class RuleGroupDimensionArgs extends io.pulumi.resources.ResourceAr
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Output.of(Objects.requireNonNull(value));
             return this;
-        }
-        public RuleGroupDimensionArgs build() {
+        }        public RuleGroupDimensionArgs build() {
             return new RuleGroupDimensionArgs(value);
         }
     }

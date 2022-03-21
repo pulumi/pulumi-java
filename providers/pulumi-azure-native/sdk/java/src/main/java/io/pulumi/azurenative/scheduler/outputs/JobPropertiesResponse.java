@@ -122,27 +122,22 @@ public final class JobPropertiesResponse {
             this.action = action;
             return this;
         }
-
         public Builder recurrence(@Nullable JobRecurrenceResponse recurrence) {
             this.recurrence = recurrence;
             return this;
         }
-
         public Builder startTime(@Nullable String startTime) {
             this.startTime = startTime;
             return this;
         }
-
         public Builder state(@Nullable String state) {
             this.state = state;
             return this;
         }
-
         public Builder status(JobStatusResponse status) {
             this.status = Objects.requireNonNull(status);
             return this;
-        }
-        public JobPropertiesResponse build() {
+        }        public JobPropertiesResponse build() {
             return new JobPropertiesResponse(action, recurrence, startTime, state, status);
         }
     }

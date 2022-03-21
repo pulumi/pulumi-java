@@ -136,32 +136,26 @@ public final class PurchaseMeterDetailsResponse {
             this.billingType = Objects.requireNonNull(billingType);
             return this;
         }
-
         public Builder chargingType(String chargingType) {
             this.chargingType = Objects.requireNonNull(chargingType);
             return this;
         }
-
         public Builder multiplier(Double multiplier) {
             this.multiplier = Objects.requireNonNull(multiplier);
             return this;
         }
-
         public Builder productId(String productId) {
             this.productId = Objects.requireNonNull(productId);
             return this;
         }
-
         public Builder skuId(String skuId) {
             this.skuId = Objects.requireNonNull(skuId);
             return this;
         }
-
         public Builder termId(String termId) {
             this.termId = Objects.requireNonNull(termId);
             return this;
-        }
-        public PurchaseMeterDetailsResponse build() {
+        }        public PurchaseMeterDetailsResponse build() {
             return new PurchaseMeterDetailsResponse(billingType, chargingType, multiplier, productId, skuId, termId);
         }
     }

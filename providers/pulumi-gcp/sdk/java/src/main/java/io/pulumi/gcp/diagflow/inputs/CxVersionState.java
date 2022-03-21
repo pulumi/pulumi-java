@@ -160,72 +160,61 @@ public final class CxVersionState extends io.pulumi.resources.ResourceArgs {
             this.createTime = createTime;
             return this;
         }
-
         public Builder createTime(@Nullable String createTime) {
             this.createTime = Output.ofNullable(createTime);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder nluSettings(@Nullable Output<List<CxVersionNluSettingGetArgs>> nluSettings) {
             this.nluSettings = nluSettings;
             return this;
         }
-
         public Builder nluSettings(@Nullable List<CxVersionNluSettingGetArgs> nluSettings) {
             this.nluSettings = Output.ofNullable(nluSettings);
             return this;
         }
-
+        public Builder nluSettings(CxVersionNluSettingGetArgs... nluSettings) {
+            return nluSettings(List.of(nluSettings));
+        }
         public Builder parent(@Nullable Output<String> parent) {
             this.parent = parent;
             return this;
         }
-
         public Builder parent(@Nullable String parent) {
             this.parent = Output.ofNullable(parent);
             return this;
         }
-
         public Builder state(@Nullable Output<String> state) {
             this.state = state;
             return this;
         }
-
         public Builder state(@Nullable String state) {
             this.state = Output.ofNullable(state);
             return this;
-        }
-        public CxVersionState build() {
+        }        public CxVersionState build() {
             return new CxVersionState(createTime, description, displayName, name, nluSettings, parent, state);
         }
     }

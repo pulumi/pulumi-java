@@ -90,22 +90,18 @@ public final class GetTemplateArgs extends io.pulumi.resources.InvokeArgs {
             this.gcsPath = Objects.requireNonNull(gcsPath);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder view(@Nullable String view) {
             this.view = view;
             return this;
-        }
-        public GetTemplateArgs build() {
+        }        public GetTemplateArgs build() {
             return new GetTemplateArgs(gcsPath, location, project, view);
         }
     }

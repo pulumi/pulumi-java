@@ -75,22 +75,18 @@ public final class ServiceSourceConfigurationCodeRepositoryCodeConfigurationGetA
             this.codeConfigurationValues = codeConfigurationValues;
             return this;
         }
-
         public Builder codeConfigurationValues(@Nullable ServiceSourceConfigurationCodeRepositoryCodeConfigurationCodeConfigurationValuesGetArgs codeConfigurationValues) {
             this.codeConfigurationValues = Output.ofNullable(codeConfigurationValues);
             return this;
         }
-
         public Builder configurationSource(Output<String> configurationSource) {
             this.configurationSource = Objects.requireNonNull(configurationSource);
             return this;
         }
-
         public Builder configurationSource(String configurationSource) {
             this.configurationSource = Output.of(Objects.requireNonNull(configurationSource));
             return this;
-        }
-        public ServiceSourceConfigurationCodeRepositoryCodeConfigurationGetArgs build() {
+        }        public ServiceSourceConfigurationCodeRepositoryCodeConfigurationGetArgs build() {
             return new ServiceSourceConfigurationCodeRepositoryCodeConfigurationGetArgs(codeConfigurationValues, configurationSource);
         }
     }

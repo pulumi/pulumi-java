@@ -120,27 +120,22 @@ public final class GetManagementAssociationArgs extends io.pulumi.resources.Invo
             this.managementAssociationName = Objects.requireNonNull(managementAssociationName);
             return this;
         }
-
         public Builder providerName(String providerName) {
             this.providerName = Objects.requireNonNull(providerName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceName(String resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
         }
-
         public Builder resourceType(String resourceType) {
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
-        }
-        public GetManagementAssociationArgs build() {
+        }        public GetManagementAssociationArgs build() {
             return new GetManagementAssociationArgs(managementAssociationName, providerName, resourceGroupName, resourceName, resourceType);
         }
     }

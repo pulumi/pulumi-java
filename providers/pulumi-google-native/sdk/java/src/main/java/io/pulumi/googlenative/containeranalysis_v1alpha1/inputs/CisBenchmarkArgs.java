@@ -79,22 +79,18 @@ public final class CisBenchmarkArgs extends io.pulumi.resources.ResourceArgs {
             this.profileLevel = profileLevel;
             return this;
         }
-
         public Builder profileLevel(@Nullable Integer profileLevel) {
             this.profileLevel = Output.ofNullable(profileLevel);
             return this;
         }
-
         public Builder severity(@Nullable Output<CisBenchmarkSeverity> severity) {
             this.severity = severity;
             return this;
         }
-
         public Builder severity(@Nullable CisBenchmarkSeverity severity) {
             this.severity = Output.ofNullable(severity);
             return this;
-        }
-        public CisBenchmarkArgs build() {
+        }        public CisBenchmarkArgs build() {
             return new CisBenchmarkArgs(profileLevel, severity);
         }
     }

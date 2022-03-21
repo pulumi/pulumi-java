@@ -93,17 +93,17 @@ public final class GetNetworkInterfaceArgs extends io.pulumi.resources.InvokeArg
             this.filters = filters;
             return this;
         }
-
+        public Builder filters(GetNetworkInterfaceFilter... filters) {
+            return filters(List.of(filters));
+        }
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
-        }
-        public GetNetworkInterfaceArgs build() {
+        }        public GetNetworkInterfaceArgs build() {
             return new GetNetworkInterfaceArgs(filters, id, tags);
         }
     }

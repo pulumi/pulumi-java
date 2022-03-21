@@ -61,12 +61,13 @@ public final class FilterTrackSelectionArgs extends io.pulumi.resources.Resource
             this.trackSelections = Objects.requireNonNull(trackSelections);
             return this;
         }
-
         public Builder trackSelections(List<FilterTrackPropertyConditionArgs> trackSelections) {
             this.trackSelections = Output.of(Objects.requireNonNull(trackSelections));
             return this;
         }
-        public FilterTrackSelectionArgs build() {
+        public Builder trackSelections(FilterTrackPropertyConditionArgs... trackSelections) {
+            return trackSelections(List.of(trackSelections));
+        }        public FilterTrackSelectionArgs build() {
             return new FilterTrackSelectionArgs(trackSelections);
         }
     }

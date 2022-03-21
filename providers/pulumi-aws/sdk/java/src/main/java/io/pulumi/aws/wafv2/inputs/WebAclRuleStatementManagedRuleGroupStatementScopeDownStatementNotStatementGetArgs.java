@@ -57,12 +57,13 @@ public final class WebAclRuleStatementManagedRuleGroupStatementScopeDownStatemen
             this.statements = Objects.requireNonNull(statements);
             return this;
         }
-
         public Builder statements(List<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementNotStatementStatementGetArgs> statements) {
             this.statements = Output.of(Objects.requireNonNull(statements));
             return this;
         }
-        public WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementNotStatementGetArgs build() {
+        public Builder statements(WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementNotStatementStatementGetArgs... statements) {
+            return statements(List.of(statements));
+        }        public WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementNotStatementGetArgs build() {
             return new WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementNotStatementGetArgs(statements);
         }
     }

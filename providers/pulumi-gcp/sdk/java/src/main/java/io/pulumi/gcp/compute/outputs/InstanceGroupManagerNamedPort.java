@@ -72,12 +72,10 @@ public final class InstanceGroupManagerNamedPort {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder port(Integer port) {
             this.port = Objects.requireNonNull(port);
             return this;
-        }
-        public InstanceGroupManagerNamedPort build() {
+        }        public InstanceGroupManagerNamedPort build() {
             return new InstanceGroupManagerNamedPort(name, port);
         }
     }

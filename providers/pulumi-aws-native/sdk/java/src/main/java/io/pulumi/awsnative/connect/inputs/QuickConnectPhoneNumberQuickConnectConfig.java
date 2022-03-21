@@ -54,8 +54,7 @@ public final class QuickConnectPhoneNumberQuickConnectConfig extends io.pulumi.r
         public Builder phoneNumber(String phoneNumber) {
             this.phoneNumber = Objects.requireNonNull(phoneNumber);
             return this;
-        }
-        public QuickConnectPhoneNumberQuickConnectConfig build() {
+        }        public QuickConnectPhoneNumberQuickConnectConfig build() {
             return new QuickConnectPhoneNumberQuickConnectConfig(phoneNumber);
         }
     }

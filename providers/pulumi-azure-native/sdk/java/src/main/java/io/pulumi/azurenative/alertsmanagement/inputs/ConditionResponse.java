@@ -79,12 +79,13 @@ public final class ConditionResponse extends io.pulumi.resources.InvokeArgs {
             this.operator = operator;
             return this;
         }
-
         public Builder values(@Nullable List<String> values) {
             this.values = values;
             return this;
         }
-        public ConditionResponse build() {
+        public Builder values(String... values) {
+            return values(List.of(values));
+        }        public ConditionResponse build() {
             return new ConditionResponse(operator, values);
         }
     }

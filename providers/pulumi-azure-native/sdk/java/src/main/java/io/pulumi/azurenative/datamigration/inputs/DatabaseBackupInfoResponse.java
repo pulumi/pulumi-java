@@ -175,42 +175,37 @@ public final class DatabaseBackupInfoResponse extends io.pulumi.resources.Invoke
             this.backupFiles = Objects.requireNonNull(backupFiles);
             return this;
         }
-
+        public Builder backupFiles(String... backupFiles) {
+            return backupFiles(List.of(backupFiles));
+        }
         public Builder backupFinishDate(String backupFinishDate) {
             this.backupFinishDate = Objects.requireNonNull(backupFinishDate);
             return this;
         }
-
         public Builder backupType(String backupType) {
             this.backupType = Objects.requireNonNull(backupType);
             return this;
         }
-
         public Builder databaseName(String databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
-
         public Builder familyCount(Integer familyCount) {
             this.familyCount = Objects.requireNonNull(familyCount);
             return this;
         }
-
         public Builder isCompressed(Boolean isCompressed) {
             this.isCompressed = Objects.requireNonNull(isCompressed);
             return this;
         }
-
         public Builder isDamaged(Boolean isDamaged) {
             this.isDamaged = Objects.requireNonNull(isDamaged);
             return this;
         }
-
         public Builder position(Integer position) {
             this.position = Objects.requireNonNull(position);
             return this;
-        }
-        public DatabaseBackupInfoResponse build() {
+        }        public DatabaseBackupInfoResponse build() {
             return new DatabaseBackupInfoResponse(backupFiles, backupFinishDate, backupType, databaseName, familyCount, isCompressed, isDamaged, position);
         }
     }

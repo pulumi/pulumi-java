@@ -53,8 +53,7 @@ public final class LabVhdResponse {
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
-        }
-        public LabVhdResponse build() {
+        }        public LabVhdResponse build() {
             return new LabVhdResponse(id);
         }
     }

@@ -61,12 +61,10 @@ public final class RunAsCredentialAssociationPropertyArgs extends io.pulumi.reso
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
-        }
-        public RunAsCredentialAssociationPropertyArgs build() {
+        }        public RunAsCredentialAssociationPropertyArgs build() {
             return new RunAsCredentialAssociationPropertyArgs(name);
         }
     }

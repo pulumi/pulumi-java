@@ -136,32 +136,26 @@ public final class ReceiptRuleBounceAction {
             this.message = Objects.requireNonNull(message);
             return this;
         }
-
         public Builder position(Integer position) {
             this.position = Objects.requireNonNull(position);
             return this;
         }
-
         public Builder sender(String sender) {
             this.sender = Objects.requireNonNull(sender);
             return this;
         }
-
         public Builder smtpReplyCode(String smtpReplyCode) {
             this.smtpReplyCode = Objects.requireNonNull(smtpReplyCode);
             return this;
         }
-
         public Builder statusCode(@Nullable String statusCode) {
             this.statusCode = statusCode;
             return this;
         }
-
         public Builder topicArn(@Nullable String topicArn) {
             this.topicArn = topicArn;
             return this;
-        }
-        public ReceiptRuleBounceAction build() {
+        }        public ReceiptRuleBounceAction build() {
             return new ReceiptRuleBounceAction(message, position, sender, smtpReplyCode, statusCode, topicArn);
         }
     }

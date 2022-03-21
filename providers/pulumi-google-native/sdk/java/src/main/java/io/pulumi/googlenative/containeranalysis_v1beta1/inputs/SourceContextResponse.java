@@ -112,22 +112,18 @@ public final class SourceContextResponse extends io.pulumi.resources.InvokeArgs 
             this.cloudRepo = Objects.requireNonNull(cloudRepo);
             return this;
         }
-
         public Builder gerrit(GerritSourceContextResponse gerrit) {
             this.gerrit = Objects.requireNonNull(gerrit);
             return this;
         }
-
         public Builder git(GitSourceContextResponse git) {
             this.git = Objects.requireNonNull(git);
             return this;
         }
-
         public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
-        }
-        public SourceContextResponse build() {
+        }        public SourceContextResponse build() {
             return new SourceContextResponse(cloudRepo, gerrit, git, labels);
         }
     }

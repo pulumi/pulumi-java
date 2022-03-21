@@ -111,22 +111,27 @@ public final class DestinationResponse extends io.pulumi.resources.InvokeArgs {
             this.hosts = Objects.requireNonNull(hosts);
             return this;
         }
-
+        public Builder hosts(String... hosts) {
+            return hosts(List.of(hosts));
+        }
         public Builder httpHeaderMatch(HttpHeaderMatchResponse httpHeaderMatch) {
             this.httpHeaderMatch = Objects.requireNonNull(httpHeaderMatch);
             return this;
         }
-
         public Builder methods(List<String> methods) {
             this.methods = Objects.requireNonNull(methods);
             return this;
         }
-
+        public Builder methods(String... methods) {
+            return methods(List.of(methods));
+        }
         public Builder ports(List<Integer> ports) {
             this.ports = Objects.requireNonNull(ports);
             return this;
         }
-        public DestinationResponse build() {
+        public Builder ports(Integer... ports) {
+            return ports(List.of(ports));
+        }        public DestinationResponse build() {
             return new DestinationResponse(hosts, httpHeaderMatch, methods, ports);
         }
     }

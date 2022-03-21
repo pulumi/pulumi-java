@@ -105,22 +105,18 @@ public final class CassandraKeyspaceGetPropertiesResponseResource extends io.pul
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder rid(String rid) {
             this.rid = Objects.requireNonNull(rid);
             return this;
         }
-
         public Builder ts(Double ts) {
             this.ts = Objects.requireNonNull(ts);
             return this;
-        }
-        public CassandraKeyspaceGetPropertiesResponseResource build() {
+        }        public CassandraKeyspaceGetPropertiesResponseResource build() {
             return new CassandraKeyspaceGetPropertiesResponseResource(etag, id, rid, ts);
         }
     }

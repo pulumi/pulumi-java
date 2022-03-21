@@ -151,37 +151,30 @@ public final class GetCredentialResult {
             this.creationTime = Objects.requireNonNull(creationTime);
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder lastModifiedTime(String lastModifiedTime) {
             this.lastModifiedTime = Objects.requireNonNull(lastModifiedTime);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder userName(String userName) {
             this.userName = Objects.requireNonNull(userName);
             return this;
-        }
-        public GetCredentialResult build() {
+        }        public GetCredentialResult build() {
             return new GetCredentialResult(creationTime, description, id, lastModifiedTime, name, type, userName);
         }
     }

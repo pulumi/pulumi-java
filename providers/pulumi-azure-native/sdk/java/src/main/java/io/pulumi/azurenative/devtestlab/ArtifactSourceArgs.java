@@ -254,132 +254,106 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
             this.armTemplateFolderPath = armTemplateFolderPath;
             return this;
         }
-
         public Builder armTemplateFolderPath(@Nullable String armTemplateFolderPath) {
             this.armTemplateFolderPath = Output.ofNullable(armTemplateFolderPath);
             return this;
         }
-
         public Builder branchRef(@Nullable Output<String> branchRef) {
             this.branchRef = branchRef;
             return this;
         }
-
         public Builder branchRef(@Nullable String branchRef) {
             this.branchRef = Output.ofNullable(branchRef);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder folderPath(@Nullable Output<String> folderPath) {
             this.folderPath = folderPath;
             return this;
         }
-
         public Builder folderPath(@Nullable String folderPath) {
             this.folderPath = Output.ofNullable(folderPath);
             return this;
         }
-
         public Builder labName(Output<String> labName) {
             this.labName = Objects.requireNonNull(labName);
             return this;
         }
-
         public Builder labName(String labName) {
             this.labName = Output.of(Objects.requireNonNull(labName));
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder securityToken(@Nullable Output<String> securityToken) {
             this.securityToken = securityToken;
             return this;
         }
-
         public Builder securityToken(@Nullable String securityToken) {
             this.securityToken = Output.ofNullable(securityToken);
             return this;
         }
-
         public Builder sourceType(@Nullable Output<Either<String,SourceControlType>> sourceType) {
             this.sourceType = sourceType;
             return this;
         }
-
         public Builder sourceType(@Nullable Either<String,SourceControlType> sourceType) {
             this.sourceType = Output.ofNullable(sourceType);
             return this;
         }
-
         public Builder status(@Nullable Output<Either<String,EnableStatus>> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable Either<String,EnableStatus> status) {
             this.status = Output.ofNullable(status);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder uri(@Nullable Output<String> uri) {
             this.uri = uri;
             return this;
         }
-
         public Builder uri(@Nullable String uri) {
             this.uri = Output.ofNullable(uri);
             return this;
-        }
-        public ArtifactSourceArgs build() {
+        }        public ArtifactSourceArgs build() {
             return new ArtifactSourceArgs(armTemplateFolderPath, branchRef, displayName, folderPath, labName, location, name, resourceGroupName, securityToken, sourceType, status, tags, uri);
         }
     }

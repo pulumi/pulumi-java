@@ -83,22 +83,21 @@ public final class FirewallDenyArgs extends io.pulumi.resources.ResourceArgs {
             this.ports = ports;
             return this;
         }
-
         public Builder ports(@Nullable List<String> ports) {
             this.ports = Output.ofNullable(ports);
             return this;
         }
-
+        public Builder ports(String... ports) {
+            return ports(List.of(ports));
+        }
         public Builder protocol(Output<String> protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
-
         public Builder protocol(String protocol) {
             this.protocol = Output.of(Objects.requireNonNull(protocol));
             return this;
-        }
-        public FirewallDenyArgs build() {
+        }        public FirewallDenyArgs build() {
             return new FirewallDenyArgs(ports, protocol);
         }
     }

@@ -134,32 +134,26 @@ public final class GetSnapshotResult {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder filesystemUsedBytes(String filesystemUsedBytes) {
             this.filesystemUsedBytes = Objects.requireNonNull(filesystemUsedBytes);
             return this;
         }
-
         public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
-        }
-        public GetSnapshotResult build() {
+        }        public GetSnapshotResult build() {
             return new GetSnapshotResult(createTime, description, filesystemUsedBytes, labels, name, state);
         }
     }

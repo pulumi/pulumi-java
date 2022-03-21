@@ -50,8 +50,7 @@ public final class GetProjectIamPolicyArgs extends io.pulumi.resources.InvokeArg
         public Builder resource(String resource) {
             this.resource = Objects.requireNonNull(resource);
             return this;
-        }
-        public GetProjectIamPolicyArgs build() {
+        }        public GetProjectIamPolicyArgs build() {
             return new GetProjectIamPolicyArgs(resource);
         }
     }

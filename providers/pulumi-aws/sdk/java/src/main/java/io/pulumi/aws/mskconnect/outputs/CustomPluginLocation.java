@@ -51,8 +51,7 @@ public final class CustomPluginLocation {
         public Builder s3(CustomPluginLocationS3 s3) {
             this.s3 = Objects.requireNonNull(s3);
             return this;
-        }
-        public CustomPluginLocation build() {
+        }        public CustomPluginLocation build() {
             return new CustomPluginLocation(s3);
         }
     }

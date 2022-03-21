@@ -72,12 +72,10 @@ public final class GetSiteArgs extends io.pulumi.resources.InvokeArgs {
             this.globalNetworkId = Objects.requireNonNull(globalNetworkId);
             return this;
         }
-
         public Builder siteId(String siteId) {
             this.siteId = Objects.requireNonNull(siteId);
             return this;
-        }
-        public GetSiteArgs build() {
+        }        public GetSiteArgs build() {
             return new GetSiteArgs(globalNetworkId, siteId);
         }
     }

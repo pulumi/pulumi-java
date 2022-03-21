@@ -73,22 +73,18 @@ public final class GetCapacityReservationFleetResult {
             this.capacityReservationFleetId = capacityReservationFleetId;
             return this;
         }
-
         public Builder noRemoveEndDate(@Nullable Boolean noRemoveEndDate) {
             this.noRemoveEndDate = noRemoveEndDate;
             return this;
         }
-
         public Builder removeEndDate(@Nullable Boolean removeEndDate) {
             this.removeEndDate = removeEndDate;
             return this;
         }
-
         public Builder totalTargetCapacity(@Nullable Integer totalTargetCapacity) {
             this.totalTargetCapacity = totalTargetCapacity;
             return this;
-        }
-        public GetCapacityReservationFleetResult build() {
+        }        public GetCapacityReservationFleetResult build() {
             return new GetCapacityReservationFleetResult(capacityReservationFleetId, noRemoveEndDate, removeEndDate, totalTargetCapacity);
         }
     }

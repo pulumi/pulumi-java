@@ -143,32 +143,32 @@ public final class InstanceSpecResponse extends io.pulumi.resources.InvokeArgs {
             this.activeDeadlineSeconds = Objects.requireNonNull(activeDeadlineSeconds);
             return this;
         }
-
         public Builder containers(List<ContainerResponse> containers) {
             this.containers = Objects.requireNonNull(containers);
             return this;
         }
-
+        public Builder containers(ContainerResponse... containers) {
+            return containers(List.of(containers));
+        }
         public Builder restartPolicy(String restartPolicy) {
             this.restartPolicy = Objects.requireNonNull(restartPolicy);
             return this;
         }
-
         public Builder serviceAccountName(String serviceAccountName) {
             this.serviceAccountName = Objects.requireNonNull(serviceAccountName);
             return this;
         }
-
         public Builder terminationGracePeriodSeconds(String terminationGracePeriodSeconds) {
             this.terminationGracePeriodSeconds = Objects.requireNonNull(terminationGracePeriodSeconds);
             return this;
         }
-
         public Builder volumes(List<VolumeResponse> volumes) {
             this.volumes = Objects.requireNonNull(volumes);
             return this;
         }
-        public InstanceSpecResponse build() {
+        public Builder volumes(VolumeResponse... volumes) {
+            return volumes(List.of(volumes));
+        }        public InstanceSpecResponse build() {
             return new InstanceSpecResponse(activeDeadlineSeconds, containers, restartPolicy, serviceAccountName, terminationGracePeriodSeconds, volumes);
         }
     }

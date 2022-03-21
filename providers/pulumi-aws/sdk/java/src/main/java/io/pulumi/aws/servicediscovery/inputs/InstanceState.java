@@ -91,32 +91,26 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
             this.attributes = attributes;
             return this;
         }
-
         public Builder attributes(@Nullable Map<String,String> attributes) {
             this.attributes = Output.ofNullable(attributes);
             return this;
         }
-
         public Builder instanceId(@Nullable Output<String> instanceId) {
             this.instanceId = instanceId;
             return this;
         }
-
         public Builder instanceId(@Nullable String instanceId) {
             this.instanceId = Output.ofNullable(instanceId);
             return this;
         }
-
         public Builder serviceId(@Nullable Output<String> serviceId) {
             this.serviceId = serviceId;
             return this;
         }
-
         public Builder serviceId(@Nullable String serviceId) {
             this.serviceId = Output.ofNullable(serviceId);
             return this;
-        }
-        public InstanceState build() {
+        }        public InstanceState build() {
             return new InstanceState(attributes, instanceId, serviceId);
         }
     }

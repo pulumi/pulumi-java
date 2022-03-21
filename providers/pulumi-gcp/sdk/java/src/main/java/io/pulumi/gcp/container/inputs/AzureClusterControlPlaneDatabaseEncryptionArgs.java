@@ -56,12 +56,10 @@ public final class AzureClusterControlPlaneDatabaseEncryptionArgs extends io.pul
             this.keyId = Objects.requireNonNull(keyId);
             return this;
         }
-
         public Builder keyId(String keyId) {
             this.keyId = Output.of(Objects.requireNonNull(keyId));
             return this;
-        }
-        public AzureClusterControlPlaneDatabaseEncryptionArgs build() {
+        }        public AzureClusterControlPlaneDatabaseEncryptionArgs build() {
             return new AzureClusterControlPlaneDatabaseEncryptionArgs(keyId);
         }
     }

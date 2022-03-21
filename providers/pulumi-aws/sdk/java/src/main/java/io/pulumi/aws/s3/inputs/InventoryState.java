@@ -175,82 +175,69 @@ public final class InventoryState extends io.pulumi.resources.ResourceArgs {
             this.bucket = bucket;
             return this;
         }
-
         public Builder bucket(@Nullable String bucket) {
             this.bucket = Output.ofNullable(bucket);
             return this;
         }
-
         public Builder destination(@Nullable Output<InventoryDestinationGetArgs> destination) {
             this.destination = destination;
             return this;
         }
-
         public Builder destination(@Nullable InventoryDestinationGetArgs destination) {
             this.destination = Output.ofNullable(destination);
             return this;
         }
-
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
         }
-
         public Builder filter(@Nullable Output<InventoryFilterGetArgs> filter) {
             this.filter = filter;
             return this;
         }
-
         public Builder filter(@Nullable InventoryFilterGetArgs filter) {
             this.filter = Output.ofNullable(filter);
             return this;
         }
-
         public Builder includedObjectVersions(@Nullable Output<String> includedObjectVersions) {
             this.includedObjectVersions = includedObjectVersions;
             return this;
         }
-
         public Builder includedObjectVersions(@Nullable String includedObjectVersions) {
             this.includedObjectVersions = Output.ofNullable(includedObjectVersions);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder optionalFields(@Nullable Output<List<String>> optionalFields) {
             this.optionalFields = optionalFields;
             return this;
         }
-
         public Builder optionalFields(@Nullable List<String> optionalFields) {
             this.optionalFields = Output.ofNullable(optionalFields);
             return this;
         }
-
+        public Builder optionalFields(String... optionalFields) {
+            return optionalFields(List.of(optionalFields));
+        }
         public Builder schedule(@Nullable Output<InventoryScheduleGetArgs> schedule) {
             this.schedule = schedule;
             return this;
         }
-
         public Builder schedule(@Nullable InventoryScheduleGetArgs schedule) {
             this.schedule = Output.ofNullable(schedule);
             return this;
-        }
-        public InventoryState build() {
+        }        public InventoryState build() {
             return new InventoryState(bucket, destination, enabled, filter, includedObjectVersions, name, optionalFields, schedule);
         }
     }

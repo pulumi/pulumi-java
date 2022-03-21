@@ -71,12 +71,10 @@ public final class VirtualDirectoryResponse {
             this.physicalPath = physicalPath;
             return this;
         }
-
         public Builder virtualPath(@Nullable String virtualPath) {
             this.virtualPath = virtualPath;
             return this;
-        }
-        public VirtualDirectoryResponse build() {
+        }        public VirtualDirectoryResponse build() {
             return new VirtualDirectoryResponse(physicalPath, virtualPath);
         }
     }

@@ -88,17 +88,14 @@ public final class GetMECRoleArgs extends io.pulumi.resources.InvokeArgs {
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetMECRoleArgs build() {
+        }        public GetMECRoleArgs build() {
             return new GetMECRoleArgs(deviceName, name, resourceGroupName);
         }
     }

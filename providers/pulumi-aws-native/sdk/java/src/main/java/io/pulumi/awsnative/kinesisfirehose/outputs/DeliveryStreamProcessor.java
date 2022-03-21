@@ -56,12 +56,13 @@ public final class DeliveryStreamProcessor {
             this.parameters = parameters;
             return this;
         }
-
+        public Builder parameters(DeliveryStreamProcessorParameter... parameters) {
+            return parameters(List.of(parameters));
+        }
         public Builder type(DeliveryStreamProcessorType type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public DeliveryStreamProcessor build() {
+        }        public DeliveryStreamProcessor build() {
             return new DeliveryStreamProcessor(parameters, type);
         }
     }

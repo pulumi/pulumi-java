@@ -72,12 +72,10 @@ public final class GetazureADMetricArgs extends io.pulumi.resources.InvokeArgs {
             this.azureADMetricsName = Objects.requireNonNull(azureADMetricsName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetazureADMetricArgs build() {
+        }        public GetazureADMetricArgs build() {
             return new GetazureADMetricArgs(azureADMetricsName, resourceGroupName);
         }
     }

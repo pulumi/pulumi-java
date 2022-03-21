@@ -78,12 +78,10 @@ public final class PublicIPPrefixSkuResponse extends io.pulumi.resources.InvokeA
             this.name = name;
             return this;
         }
-
         public Builder tier(@Nullable String tier) {
             this.tier = tier;
             return this;
-        }
-        public PublicIPPrefixSkuResponse build() {
+        }        public PublicIPPrefixSkuResponse build() {
             return new PublicIPPrefixSkuResponse(name, tier);
         }
     }

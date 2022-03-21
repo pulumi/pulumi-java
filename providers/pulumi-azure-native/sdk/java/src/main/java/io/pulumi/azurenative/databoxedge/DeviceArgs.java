@@ -159,72 +159,58 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
             this.dataBoxEdgeDeviceStatus = dataBoxEdgeDeviceStatus;
             return this;
         }
-
         public Builder dataBoxEdgeDeviceStatus(@Nullable Either<String,DataBoxEdgeDeviceStatus> dataBoxEdgeDeviceStatus) {
             this.dataBoxEdgeDeviceStatus = Output.ofNullable(dataBoxEdgeDeviceStatus);
             return this;
         }
-
         public Builder deviceName(@Nullable Output<String> deviceName) {
             this.deviceName = deviceName;
             return this;
         }
-
         public Builder deviceName(@Nullable String deviceName) {
             this.deviceName = Output.ofNullable(deviceName);
             return this;
         }
-
         public Builder identity(@Nullable Output<ResourceIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
-
         public Builder identity(@Nullable ResourceIdentityArgs identity) {
             this.identity = Output.ofNullable(identity);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder sku(@Nullable Output<SkuArgs> sku) {
             this.sku = sku;
             return this;
         }
-
         public Builder sku(@Nullable SkuArgs sku) {
             this.sku = Output.ofNullable(sku);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public DeviceArgs build() {
+        }        public DeviceArgs build() {
             return new DeviceArgs(dataBoxEdgeDeviceStatus, deviceName, identity, location, resourceGroupName, sku, tags);
         }
     }

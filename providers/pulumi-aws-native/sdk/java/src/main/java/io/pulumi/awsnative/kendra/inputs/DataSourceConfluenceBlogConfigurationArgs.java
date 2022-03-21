@@ -54,12 +54,13 @@ public final class DataSourceConfluenceBlogConfigurationArgs extends io.pulumi.r
             this.blogFieldMappings = blogFieldMappings;
             return this;
         }
-
         public Builder blogFieldMappings(@Nullable List<DataSourceConfluenceBlogToIndexFieldMappingArgs> blogFieldMappings) {
             this.blogFieldMappings = Output.ofNullable(blogFieldMappings);
             return this;
         }
-        public DataSourceConfluenceBlogConfigurationArgs build() {
+        public Builder blogFieldMappings(DataSourceConfluenceBlogToIndexFieldMappingArgs... blogFieldMappings) {
+            return blogFieldMappings(List.of(blogFieldMappings));
+        }        public DataSourceConfluenceBlogConfigurationArgs build() {
             return new DataSourceConfluenceBlogConfigurationArgs(blogFieldMappings);
         }
     }

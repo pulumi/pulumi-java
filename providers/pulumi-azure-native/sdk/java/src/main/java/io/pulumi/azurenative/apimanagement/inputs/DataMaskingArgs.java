@@ -75,22 +75,24 @@ public final class DataMaskingArgs extends io.pulumi.resources.ResourceArgs {
             this.headers = headers;
             return this;
         }
-
         public Builder headers(@Nullable List<DataMaskingEntityArgs> headers) {
             this.headers = Output.ofNullable(headers);
             return this;
         }
-
+        public Builder headers(DataMaskingEntityArgs... headers) {
+            return headers(List.of(headers));
+        }
         public Builder queryParams(@Nullable Output<List<DataMaskingEntityArgs>> queryParams) {
             this.queryParams = queryParams;
             return this;
         }
-
         public Builder queryParams(@Nullable List<DataMaskingEntityArgs> queryParams) {
             this.queryParams = Output.ofNullable(queryParams);
             return this;
         }
-        public DataMaskingArgs build() {
+        public Builder queryParams(DataMaskingEntityArgs... queryParams) {
+            return queryParams(List.of(queryParams));
+        }        public DataMaskingArgs build() {
             return new DataMaskingArgs(headers, queryParams);
         }
     }

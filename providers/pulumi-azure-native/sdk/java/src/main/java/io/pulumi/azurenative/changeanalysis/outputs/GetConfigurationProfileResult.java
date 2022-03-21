@@ -154,37 +154,30 @@ public final class GetConfigurationProfileResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder identity(@Nullable ResourceIdentityResponse identity) {
             this.identity = identity;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder properties(ConfigurationProfileResourcePropertiesResponse properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
-
         public Builder systemData(@Nullable SystemDataResponse systemData) {
             this.systemData = systemData;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetConfigurationProfileResult build() {
+        }        public GetConfigurationProfileResult build() {
             return new GetConfigurationProfileResult(id, identity, location, name, properties, systemData, type);
         }
     }

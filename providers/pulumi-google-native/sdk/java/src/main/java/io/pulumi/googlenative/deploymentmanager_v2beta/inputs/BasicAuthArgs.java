@@ -70,22 +70,18 @@ public final class BasicAuthArgs extends io.pulumi.resources.ResourceArgs {
             this.password = password;
             return this;
         }
-
         public Builder password(@Nullable String password) {
             this.password = Output.ofNullable(password);
             return this;
         }
-
         public Builder user(@Nullable Output<String> user) {
             this.user = user;
             return this;
         }
-
         public Builder user(@Nullable String user) {
             this.user = Output.ofNullable(user);
             return this;
-        }
-        public BasicAuthArgs build() {
+        }        public BasicAuthArgs build() {
             return new BasicAuthArgs(password, user);
         }
     }

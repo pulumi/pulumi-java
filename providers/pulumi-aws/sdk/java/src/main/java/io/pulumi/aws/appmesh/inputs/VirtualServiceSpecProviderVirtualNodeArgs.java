@@ -56,12 +56,10 @@ public final class VirtualServiceSpecProviderVirtualNodeArgs extends io.pulumi.r
             this.virtualNodeName = Objects.requireNonNull(virtualNodeName);
             return this;
         }
-
         public Builder virtualNodeName(String virtualNodeName) {
             this.virtualNodeName = Output.of(Objects.requireNonNull(virtualNodeName));
             return this;
-        }
-        public VirtualServiceSpecProviderVirtualNodeArgs build() {
+        }        public VirtualServiceSpecProviderVirtualNodeArgs build() {
             return new VirtualServiceSpecProviderVirtualNodeArgs(virtualNodeName);
         }
     }

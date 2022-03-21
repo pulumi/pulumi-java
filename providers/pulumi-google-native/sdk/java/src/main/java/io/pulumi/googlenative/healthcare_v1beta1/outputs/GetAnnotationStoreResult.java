@@ -70,12 +70,10 @@ public final class GetAnnotationStoreResult {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public GetAnnotationStoreResult build() {
+        }        public GetAnnotationStoreResult build() {
             return new GetAnnotationStoreResult(labels, name);
         }
     }

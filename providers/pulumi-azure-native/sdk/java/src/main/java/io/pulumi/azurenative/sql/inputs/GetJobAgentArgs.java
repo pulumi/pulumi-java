@@ -88,17 +88,14 @@ public final class GetJobAgentArgs extends io.pulumi.resources.InvokeArgs {
             this.jobAgentName = Objects.requireNonNull(jobAgentName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder serverName(String serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
-        }
-        public GetJobAgentArgs build() {
+        }        public GetJobAgentArgs build() {
             return new GetJobAgentArgs(jobAgentName, resourceGroupName, serverName);
         }
     }

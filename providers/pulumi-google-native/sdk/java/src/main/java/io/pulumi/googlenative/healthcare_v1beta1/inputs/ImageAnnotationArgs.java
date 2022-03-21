@@ -80,22 +80,21 @@ public final class ImageAnnotationArgs extends io.pulumi.resources.ResourceArgs 
             this.boundingPolys = boundingPolys;
             return this;
         }
-
         public Builder boundingPolys(@Nullable List<BoundingPolyArgs> boundingPolys) {
             this.boundingPolys = Output.ofNullable(boundingPolys);
             return this;
         }
-
+        public Builder boundingPolys(BoundingPolyArgs... boundingPolys) {
+            return boundingPolys(List.of(boundingPolys));
+        }
         public Builder frameIndex(@Nullable Output<Integer> frameIndex) {
             this.frameIndex = frameIndex;
             return this;
         }
-
         public Builder frameIndex(@Nullable Integer frameIndex) {
             this.frameIndex = Output.ofNullable(frameIndex);
             return this;
-        }
-        public ImageAnnotationArgs build() {
+        }        public ImageAnnotationArgs build() {
             return new ImageAnnotationArgs(boundingPolys, frameIndex);
         }
     }

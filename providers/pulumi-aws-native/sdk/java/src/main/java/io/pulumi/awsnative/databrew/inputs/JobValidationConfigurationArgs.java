@@ -75,22 +75,18 @@ public final class JobValidationConfigurationArgs extends io.pulumi.resources.Re
             this.rulesetArn = Objects.requireNonNull(rulesetArn);
             return this;
         }
-
         public Builder rulesetArn(String rulesetArn) {
             this.rulesetArn = Output.of(Objects.requireNonNull(rulesetArn));
             return this;
         }
-
         public Builder validationMode(@Nullable Output<JobValidationMode> validationMode) {
             this.validationMode = validationMode;
             return this;
         }
-
         public Builder validationMode(@Nullable JobValidationMode validationMode) {
             this.validationMode = Output.ofNullable(validationMode);
             return this;
-        }
-        public JobValidationConfigurationArgs build() {
+        }        public JobValidationConfigurationArgs build() {
             return new JobValidationConfigurationArgs(rulesetArn, validationMode);
         }
     }

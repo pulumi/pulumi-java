@@ -107,42 +107,34 @@ public final class IotDpsResourcePrivateEndpointConnectionArgs extends io.pulumi
             this.privateEndpointConnectionName = privateEndpointConnectionName;
             return this;
         }
-
         public Builder privateEndpointConnectionName(@Nullable String privateEndpointConnectionName) {
             this.privateEndpointConnectionName = Output.ofNullable(privateEndpointConnectionName);
             return this;
         }
-
         public Builder properties(Output<PrivateEndpointConnectionPropertiesArgs> properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
-
         public Builder properties(PrivateEndpointConnectionPropertiesArgs properties) {
             this.properties = Output.of(Objects.requireNonNull(properties));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder resourceName(Output<String> resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
         }
-
         public Builder resourceName(String resourceName) {
             this.resourceName = Output.of(Objects.requireNonNull(resourceName));
             return this;
-        }
-        public IotDpsResourcePrivateEndpointConnectionArgs build() {
+        }        public IotDpsResourcePrivateEndpointConnectionArgs build() {
             return new IotDpsResourcePrivateEndpointConnectionArgs(privateEndpointConnectionName, properties, resourceGroupName, resourceName);
         }
     }

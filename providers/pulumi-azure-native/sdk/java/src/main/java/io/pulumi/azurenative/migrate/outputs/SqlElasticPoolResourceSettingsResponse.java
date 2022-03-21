@@ -89,17 +89,14 @@ public final class SqlElasticPoolResourceSettingsResponse {
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
         }
-
         public Builder targetResourceName(String targetResourceName) {
             this.targetResourceName = Objects.requireNonNull(targetResourceName);
             return this;
         }
-
         public Builder zoneRedundant(@Nullable String zoneRedundant) {
             this.zoneRedundant = zoneRedundant;
             return this;
-        }
-        public SqlElasticPoolResourceSettingsResponse build() {
+        }        public SqlElasticPoolResourceSettingsResponse build() {
             return new SqlElasticPoolResourceSettingsResponse(resourceType, targetResourceName, zoneRedundant);
         }
     }

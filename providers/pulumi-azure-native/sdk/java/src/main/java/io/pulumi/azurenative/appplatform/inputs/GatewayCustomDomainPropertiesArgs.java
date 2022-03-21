@@ -61,12 +61,10 @@ public final class GatewayCustomDomainPropertiesArgs extends io.pulumi.resources
             this.thumbprint = thumbprint;
             return this;
         }
-
         public Builder thumbprint(@Nullable String thumbprint) {
             this.thumbprint = Output.ofNullable(thumbprint);
             return this;
-        }
-        public GatewayCustomDomainPropertiesArgs build() {
+        }        public GatewayCustomDomainPropertiesArgs build() {
             return new GatewayCustomDomainPropertiesArgs(thumbprint);
         }
     }

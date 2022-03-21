@@ -86,17 +86,14 @@ public final class ResourcePolicyDailyCycleResponse {
             this.daysInCycle = Objects.requireNonNull(daysInCycle);
             return this;
         }
-
         public Builder duration(String duration) {
             this.duration = Objects.requireNonNull(duration);
             return this;
         }
-
         public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
-        }
-        public ResourcePolicyDailyCycleResponse build() {
+        }        public ResourcePolicyDailyCycleResponse build() {
             return new ResourcePolicyDailyCycleResponse(daysInCycle, duration, startTime);
         }
     }

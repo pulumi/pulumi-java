@@ -53,12 +53,13 @@ public final class LoggingConfigurationArgs extends io.pulumi.resources.Resource
             this.logDestinationConfigs = Objects.requireNonNull(logDestinationConfigs);
             return this;
         }
-
         public Builder logDestinationConfigs(List<LoggingConfigurationLogDestinationConfigArgs> logDestinationConfigs) {
             this.logDestinationConfigs = Output.of(Objects.requireNonNull(logDestinationConfigs));
             return this;
         }
-        public LoggingConfigurationArgs build() {
+        public Builder logDestinationConfigs(LoggingConfigurationLogDestinationConfigArgs... logDestinationConfigs) {
+            return logDestinationConfigs(List.of(logDestinationConfigs));
+        }        public LoggingConfigurationArgs build() {
             return new LoggingConfigurationArgs(logDestinationConfigs);
         }
     }

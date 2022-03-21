@@ -53,8 +53,7 @@ public final class GetNotificationChannelResult {
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
-        }
-        public GetNotificationChannelResult build() {
+        }        public GetNotificationChannelResult build() {
             return new GetNotificationChannelResult(id);
         }
     }

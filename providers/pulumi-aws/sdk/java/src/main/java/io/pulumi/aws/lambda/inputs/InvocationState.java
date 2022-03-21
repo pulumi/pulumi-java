@@ -119,52 +119,42 @@ public final class InvocationState extends io.pulumi.resources.ResourceArgs {
             this.functionName = functionName;
             return this;
         }
-
         public Builder functionName(@Nullable String functionName) {
             this.functionName = Output.ofNullable(functionName);
             return this;
         }
-
         public Builder input(@Nullable Output<String> input) {
             this.input = input;
             return this;
         }
-
         public Builder input(@Nullable String input) {
             this.input = Output.ofNullable(input);
             return this;
         }
-
         public Builder qualifier(@Nullable Output<String> qualifier) {
             this.qualifier = qualifier;
             return this;
         }
-
         public Builder qualifier(@Nullable String qualifier) {
             this.qualifier = Output.ofNullable(qualifier);
             return this;
         }
-
         public Builder result(@Nullable Output<String> result) {
             this.result = result;
             return this;
         }
-
         public Builder result(@Nullable String result) {
             this.result = Output.ofNullable(result);
             return this;
         }
-
         public Builder triggers(@Nullable Output<Map<String,String>> triggers) {
             this.triggers = triggers;
             return this;
         }
-
         public Builder triggers(@Nullable Map<String,String> triggers) {
             this.triggers = Output.ofNullable(triggers);
             return this;
-        }
-        public InvocationState build() {
+        }        public InvocationState build() {
             return new InvocationState(functionName, input, qualifier, result, triggers);
         }
     }

@@ -60,12 +60,10 @@ public final class GoogleCloudDialogflowCxV3beta1IntentInputArgs extends io.pulu
             this.intent = Objects.requireNonNull(intent);
             return this;
         }
-
         public Builder intent(String intent) {
             this.intent = Output.of(Objects.requireNonNull(intent));
             return this;
-        }
-        public GoogleCloudDialogflowCxV3beta1IntentInputArgs build() {
+        }        public GoogleCloudDialogflowCxV3beta1IntentInputArgs build() {
             return new GoogleCloudDialogflowCxV3beta1IntentInputArgs(intent);
         }
     }

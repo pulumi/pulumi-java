@@ -113,42 +113,34 @@ public final class ElementaryStreamArgs extends io.pulumi.resources.ResourceArgs
             this.audioStream = audioStream;
             return this;
         }
-
         public Builder audioStream(@Nullable AudioStreamArgs audioStream) {
             this.audioStream = Output.ofNullable(audioStream);
             return this;
         }
-
         public Builder key(@Nullable Output<String> key) {
             this.key = key;
             return this;
         }
-
         public Builder key(@Nullable String key) {
             this.key = Output.ofNullable(key);
             return this;
         }
-
         public Builder textStream(@Nullable Output<TextStreamArgs> textStream) {
             this.textStream = textStream;
             return this;
         }
-
         public Builder textStream(@Nullable TextStreamArgs textStream) {
             this.textStream = Output.ofNullable(textStream);
             return this;
         }
-
         public Builder videoStream(@Nullable Output<VideoStreamArgs> videoStream) {
             this.videoStream = videoStream;
             return this;
         }
-
         public Builder videoStream(@Nullable VideoStreamArgs videoStream) {
             this.videoStream = Output.ofNullable(videoStream);
             return this;
-        }
-        public ElementaryStreamArgs build() {
+        }        public ElementaryStreamArgs build() {
             return new ElementaryStreamArgs(audioStream, key, textStream, videoStream);
         }
     }

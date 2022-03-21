@@ -79,22 +79,18 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
             this.mode = mode;
             return this;
         }
-
         public Builder mode(@Nullable AttachedDiskMode mode) {
             this.mode = Output.ofNullable(mode);
             return this;
         }
-
         public Builder sourceDisk(@Nullable Output<String> sourceDisk) {
             this.sourceDisk = sourceDisk;
             return this;
         }
-
         public Builder sourceDisk(@Nullable String sourceDisk) {
             this.sourceDisk = Output.ofNullable(sourceDisk);
             return this;
-        }
-        public AttachedDiskArgs build() {
+        }        public AttachedDiskArgs build() {
             return new AttachedDiskArgs(mode, sourceDisk);
         }
     }

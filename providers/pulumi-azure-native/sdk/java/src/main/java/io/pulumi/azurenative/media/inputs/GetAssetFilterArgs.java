@@ -104,22 +104,18 @@ public final class GetAssetFilterArgs extends io.pulumi.resources.InvokeArgs {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder assetName(String assetName) {
             this.assetName = Objects.requireNonNull(assetName);
             return this;
         }
-
         public Builder filterName(String filterName) {
             this.filterName = Objects.requireNonNull(filterName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetAssetFilterArgs build() {
+        }        public GetAssetFilterArgs build() {
             return new GetAssetFilterArgs(accountName, assetName, filterName, resourceGroupName);
         }
     }

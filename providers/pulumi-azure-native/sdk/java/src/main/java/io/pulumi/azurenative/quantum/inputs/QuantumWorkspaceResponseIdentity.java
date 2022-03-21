@@ -94,17 +94,14 @@ public final class QuantumWorkspaceResponseIdentity extends io.pulumi.resources.
             this.principalId = Objects.requireNonNull(principalId);
             return this;
         }
-
         public Builder tenantId(String tenantId) {
             this.tenantId = Objects.requireNonNull(tenantId);
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
-        }
-        public QuantumWorkspaceResponseIdentity build() {
+        }        public QuantumWorkspaceResponseIdentity build() {
             return new QuantumWorkspaceResponseIdentity(principalId, tenantId, type);
         }
     }

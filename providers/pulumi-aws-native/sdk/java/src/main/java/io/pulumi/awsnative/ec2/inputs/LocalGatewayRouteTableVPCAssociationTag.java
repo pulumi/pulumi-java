@@ -66,12 +66,10 @@ public final class LocalGatewayRouteTableVPCAssociationTag extends io.pulumi.res
             this.key = key;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public LocalGatewayRouteTableVPCAssociationTag build() {
+        }        public LocalGatewayRouteTableVPCAssociationTag build() {
             return new LocalGatewayRouteTableVPCAssociationTag(key, value);
         }
     }

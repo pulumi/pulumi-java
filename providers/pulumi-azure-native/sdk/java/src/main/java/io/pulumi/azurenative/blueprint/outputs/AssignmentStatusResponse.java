@@ -86,17 +86,17 @@ public final class AssignmentStatusResponse {
             this.lastModified = Objects.requireNonNull(lastModified);
             return this;
         }
-
         public Builder managedResources(List<String> managedResources) {
             this.managedResources = Objects.requireNonNull(managedResources);
             return this;
         }
-
+        public Builder managedResources(String... managedResources) {
+            return managedResources(List.of(managedResources));
+        }
         public Builder timeCreated(String timeCreated) {
             this.timeCreated = Objects.requireNonNull(timeCreated);
             return this;
-        }
-        public AssignmentStatusResponse build() {
+        }        public AssignmentStatusResponse build() {
             return new AssignmentStatusResponse(lastModified, managedResources, timeCreated);
         }
     }

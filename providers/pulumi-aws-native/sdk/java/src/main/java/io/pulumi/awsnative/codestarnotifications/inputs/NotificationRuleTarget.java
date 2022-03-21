@@ -64,12 +64,10 @@ public final class NotificationRuleTarget extends io.pulumi.resources.InvokeArgs
             this.targetAddress = Objects.requireNonNull(targetAddress);
             return this;
         }
-
         public Builder targetType(String targetType) {
             this.targetType = Objects.requireNonNull(targetType);
             return this;
-        }
-        public NotificationRuleTarget build() {
+        }        public NotificationRuleTarget build() {
             return new NotificationRuleTarget(targetAddress, targetType);
         }
     }

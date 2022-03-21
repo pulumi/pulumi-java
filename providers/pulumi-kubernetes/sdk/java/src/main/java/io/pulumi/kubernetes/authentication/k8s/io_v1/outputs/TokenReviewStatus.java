@@ -106,22 +106,21 @@ public final class TokenReviewStatus {
             this.audiences = audiences;
             return this;
         }
-
+        public Builder audiences(String... audiences) {
+            return audiences(List.of(audiences));
+        }
         public Builder authenticated(@Nullable Boolean authenticated) {
             this.authenticated = authenticated;
             return this;
         }
-
         public Builder error(@Nullable String error) {
             this.error = error;
             return this;
         }
-
         public Builder user(@Nullable UserInfo user) {
             this.user = user;
             return this;
-        }
-        public TokenReviewStatus build() {
+        }        public TokenReviewStatus build() {
             return new TokenReviewStatus(audiences, authenticated, error, user);
         }
     }

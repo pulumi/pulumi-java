@@ -54,8 +54,7 @@ public final class GetAlarmArgs extends io.pulumi.resources.InvokeArgs {
         public Builder alarmName(String alarmName) {
             this.alarmName = Objects.requireNonNull(alarmName);
             return this;
-        }
-        public GetAlarmArgs build() {
+        }        public GetAlarmArgs build() {
             return new GetAlarmArgs(alarmName);
         }
     }

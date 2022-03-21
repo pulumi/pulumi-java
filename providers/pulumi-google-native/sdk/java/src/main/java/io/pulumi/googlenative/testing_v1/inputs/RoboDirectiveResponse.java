@@ -92,17 +92,14 @@ public final class RoboDirectiveResponse extends io.pulumi.resources.InvokeArgs 
             this.actionType = Objects.requireNonNull(actionType);
             return this;
         }
-
         public Builder inputText(String inputText) {
             this.inputText = Objects.requireNonNull(inputText);
             return this;
         }
-
         public Builder resourceName(String resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
-        }
-        public RoboDirectiveResponse build() {
+        }        public RoboDirectiveResponse build() {
             return new RoboDirectiveResponse(actionType, inputText, resourceName);
         }
     }

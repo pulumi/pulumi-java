@@ -100,22 +100,18 @@ public final class GetSubAccountTagRuleArgs extends io.pulumi.resources.InvokeAr
             this.monitorName = Objects.requireNonNull(monitorName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder ruleSetName(String ruleSetName) {
             this.ruleSetName = Objects.requireNonNull(ruleSetName);
             return this;
         }
-
         public Builder subAccountName(String subAccountName) {
             this.subAccountName = Objects.requireNonNull(subAccountName);
             return this;
-        }
-        public GetSubAccountTagRuleArgs build() {
+        }        public GetSubAccountTagRuleArgs build() {
             return new GetSubAccountTagRuleArgs(monitorName, resourceGroupName, ruleSetName, subAccountName);
         }
     }

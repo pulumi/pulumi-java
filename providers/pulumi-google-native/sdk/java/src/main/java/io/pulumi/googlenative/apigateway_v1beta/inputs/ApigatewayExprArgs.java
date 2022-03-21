@@ -110,42 +110,34 @@ public final class ApigatewayExprArgs extends io.pulumi.resources.ResourceArgs {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder expression(@Nullable Output<String> expression) {
             this.expression = expression;
             return this;
         }
-
         public Builder expression(@Nullable String expression) {
             this.expression = Output.ofNullable(expression);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder title(@Nullable Output<String> title) {
             this.title = title;
             return this;
         }
-
         public Builder title(@Nullable String title) {
             this.title = Output.ofNullable(title);
             return this;
-        }
-        public ApigatewayExprArgs build() {
+        }        public ApigatewayExprArgs build() {
             return new ApigatewayExprArgs(description, expression, location, title);
         }
     }

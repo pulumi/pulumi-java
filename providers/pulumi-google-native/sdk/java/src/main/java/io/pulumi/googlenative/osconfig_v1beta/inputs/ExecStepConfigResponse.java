@@ -111,22 +111,21 @@ public final class ExecStepConfigResponse extends io.pulumi.resources.InvokeArgs
             this.allowedSuccessCodes = Objects.requireNonNull(allowedSuccessCodes);
             return this;
         }
-
+        public Builder allowedSuccessCodes(Integer... allowedSuccessCodes) {
+            return allowedSuccessCodes(List.of(allowedSuccessCodes));
+        }
         public Builder gcsObject(GcsObjectResponse gcsObject) {
             this.gcsObject = Objects.requireNonNull(gcsObject);
             return this;
         }
-
         public Builder interpreter(String interpreter) {
             this.interpreter = Objects.requireNonNull(interpreter);
             return this;
         }
-
         public Builder localPath(String localPath) {
             this.localPath = Objects.requireNonNull(localPath);
             return this;
-        }
-        public ExecStepConfigResponse build() {
+        }        public ExecStepConfigResponse build() {
             return new ExecStepConfigResponse(allowedSuccessCodes, gcsObject, interpreter, localPath);
         }
     }

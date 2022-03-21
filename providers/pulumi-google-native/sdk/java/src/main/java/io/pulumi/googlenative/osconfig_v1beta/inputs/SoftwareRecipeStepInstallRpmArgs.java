@@ -60,12 +60,10 @@ public final class SoftwareRecipeStepInstallRpmArgs extends io.pulumi.resources.
             this.artifactId = Objects.requireNonNull(artifactId);
             return this;
         }
-
         public Builder artifactId(String artifactId) {
             this.artifactId = Output.of(Objects.requireNonNull(artifactId));
             return this;
-        }
-        public SoftwareRecipeStepInstallRpmArgs build() {
+        }        public SoftwareRecipeStepInstallRpmArgs build() {
             return new SoftwareRecipeStepInstallRpmArgs(artifactId);
         }
     }

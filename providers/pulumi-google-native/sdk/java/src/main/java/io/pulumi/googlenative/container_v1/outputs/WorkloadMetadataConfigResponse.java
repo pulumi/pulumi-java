@@ -51,8 +51,7 @@ public final class WorkloadMetadataConfigResponse {
         public Builder mode(String mode) {
             this.mode = Objects.requireNonNull(mode);
             return this;
-        }
-        public WorkloadMetadataConfigResponse build() {
+        }        public WorkloadMetadataConfigResponse build() {
             return new WorkloadMetadataConfigResponse(mode);
         }
     }

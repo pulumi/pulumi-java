@@ -241,122 +241,98 @@ public final class RoutingStorageContainerPropertiesArgs extends io.pulumi.resou
             this.authenticationType = authenticationType;
             return this;
         }
-
         public Builder authenticationType(@Nullable Either<String,AuthenticationType> authenticationType) {
             this.authenticationType = Output.ofNullable(authenticationType);
             return this;
         }
-
         public Builder batchFrequencyInSeconds(@Nullable Output<Integer> batchFrequencyInSeconds) {
             this.batchFrequencyInSeconds = batchFrequencyInSeconds;
             return this;
         }
-
         public Builder batchFrequencyInSeconds(@Nullable Integer batchFrequencyInSeconds) {
             this.batchFrequencyInSeconds = Output.ofNullable(batchFrequencyInSeconds);
             return this;
         }
-
         public Builder connectionString(@Nullable Output<String> connectionString) {
             this.connectionString = connectionString;
             return this;
         }
-
         public Builder connectionString(@Nullable String connectionString) {
             this.connectionString = Output.ofNullable(connectionString);
             return this;
         }
-
         public Builder containerName(Output<String> containerName) {
             this.containerName = Objects.requireNonNull(containerName);
             return this;
         }
-
         public Builder containerName(String containerName) {
             this.containerName = Output.of(Objects.requireNonNull(containerName));
             return this;
         }
-
         public Builder encoding(@Nullable Output<String> encoding) {
             this.encoding = encoding;
             return this;
         }
-
         public Builder encoding(@Nullable String encoding) {
             this.encoding = Output.ofNullable(encoding);
             return this;
         }
-
         public Builder endpointUri(@Nullable Output<String> endpointUri) {
             this.endpointUri = endpointUri;
             return this;
         }
-
         public Builder endpointUri(@Nullable String endpointUri) {
             this.endpointUri = Output.ofNullable(endpointUri);
             return this;
         }
-
         public Builder fileNameFormat(@Nullable Output<String> fileNameFormat) {
             this.fileNameFormat = fileNameFormat;
             return this;
         }
-
         public Builder fileNameFormat(@Nullable String fileNameFormat) {
             this.fileNameFormat = Output.ofNullable(fileNameFormat);
             return this;
         }
-
         public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder maxChunkSizeInBytes(@Nullable Output<Integer> maxChunkSizeInBytes) {
             this.maxChunkSizeInBytes = maxChunkSizeInBytes;
             return this;
         }
-
         public Builder maxChunkSizeInBytes(@Nullable Integer maxChunkSizeInBytes) {
             this.maxChunkSizeInBytes = Output.ofNullable(maxChunkSizeInBytes);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder resourceGroup(@Nullable Output<String> resourceGroup) {
             this.resourceGroup = resourceGroup;
             return this;
         }
-
         public Builder resourceGroup(@Nullable String resourceGroup) {
             this.resourceGroup = Output.ofNullable(resourceGroup);
             return this;
         }
-
         public Builder subscriptionId(@Nullable Output<String> subscriptionId) {
             this.subscriptionId = subscriptionId;
             return this;
         }
-
         public Builder subscriptionId(@Nullable String subscriptionId) {
             this.subscriptionId = Output.ofNullable(subscriptionId);
             return this;
-        }
-        public RoutingStorageContainerPropertiesArgs build() {
+        }        public RoutingStorageContainerPropertiesArgs build() {
             return new RoutingStorageContainerPropertiesArgs(authenticationType, batchFrequencyInSeconds, connectionString, containerName, encoding, endpointUri, fileNameFormat, id, maxChunkSizeInBytes, name, resourceGroup, subscriptionId);
         }
     }

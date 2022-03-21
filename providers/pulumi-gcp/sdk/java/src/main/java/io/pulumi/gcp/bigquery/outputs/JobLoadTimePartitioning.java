@@ -93,17 +93,14 @@ public final class JobLoadTimePartitioning {
             this.expirationMs = expirationMs;
             return this;
         }
-
         public Builder field(@Nullable String field) {
             this.field = field;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public JobLoadTimePartitioning build() {
+        }        public JobLoadTimePartitioning build() {
             return new JobLoadTimePartitioning(expirationMs, field, type);
         }
     }

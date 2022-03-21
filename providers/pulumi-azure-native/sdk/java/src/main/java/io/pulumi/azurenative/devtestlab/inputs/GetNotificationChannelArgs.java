@@ -106,22 +106,18 @@ public final class GetNotificationChannelArgs extends io.pulumi.resources.Invoke
             this.expand = expand;
             return this;
         }
-
         public Builder labName(String labName) {
             this.labName = Objects.requireNonNull(labName);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetNotificationChannelArgs build() {
+        }        public GetNotificationChannelArgs build() {
             return new GetNotificationChannelArgs(expand, labName, name, resourceGroupName);
         }
     }

@@ -71,12 +71,10 @@ public final class NodePoolManagement {
             this.autoRepair = autoRepair;
             return this;
         }
-
         public Builder autoUpgrade(@Nullable Boolean autoUpgrade) {
             this.autoUpgrade = autoUpgrade;
             return this;
-        }
-        public NodePoolManagement build() {
+        }        public NodePoolManagement build() {
             return new NodePoolManagement(autoRepair, autoUpgrade);
         }
     }

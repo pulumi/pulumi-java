@@ -56,12 +56,10 @@ public final class ClusterClusterConfigSecurityConfigArgs extends io.pulumi.reso
             this.kerberosConfig = Objects.requireNonNull(kerberosConfig);
             return this;
         }
-
         public Builder kerberosConfig(ClusterClusterConfigSecurityConfigKerberosConfigArgs kerberosConfig) {
             this.kerberosConfig = Output.of(Objects.requireNonNull(kerberosConfig));
             return this;
-        }
-        public ClusterClusterConfigSecurityConfigArgs build() {
+        }        public ClusterClusterConfigSecurityConfigArgs build() {
             return new ClusterClusterConfigSecurityConfigArgs(kerberosConfig);
         }
     }

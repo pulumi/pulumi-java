@@ -96,32 +96,26 @@ public final class AppleArgs extends io.pulumi.resources.ResourceArgs {
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
         }
-
         public Builder login(@Nullable Output<LoginScopesArgs> login) {
             this.login = login;
             return this;
         }
-
         public Builder login(@Nullable LoginScopesArgs login) {
             this.login = Output.ofNullable(login);
             return this;
         }
-
         public Builder registration(@Nullable Output<AppleRegistrationArgs> registration) {
             this.registration = registration;
             return this;
         }
-
         public Builder registration(@Nullable AppleRegistrationArgs registration) {
             this.registration = Output.ofNullable(registration);
             return this;
-        }
-        public AppleArgs build() {
+        }        public AppleArgs build() {
             return new AppleArgs(enabled, login, registration);
         }
     }

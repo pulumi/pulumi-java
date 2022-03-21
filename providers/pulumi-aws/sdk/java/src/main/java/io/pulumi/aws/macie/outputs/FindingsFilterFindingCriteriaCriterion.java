@@ -168,42 +168,43 @@ public final class FindingsFilterFindingCriteriaCriterion {
             this.eqExactMatches = eqExactMatches;
             return this;
         }
-
+        public Builder eqExactMatches(String... eqExactMatches) {
+            return eqExactMatches(List.of(eqExactMatches));
+        }
         public Builder eqs(@Nullable List<String> eqs) {
             this.eqs = eqs;
             return this;
         }
-
+        public Builder eqs(String... eqs) {
+            return eqs(List.of(eqs));
+        }
         public Builder field(String field) {
             this.field = Objects.requireNonNull(field);
             return this;
         }
-
         public Builder gt(@Nullable String gt) {
             this.gt = gt;
             return this;
         }
-
         public Builder gte(@Nullable String gte) {
             this.gte = gte;
             return this;
         }
-
         public Builder lt(@Nullable String lt) {
             this.lt = lt;
             return this;
         }
-
         public Builder lte(@Nullable String lte) {
             this.lte = lte;
             return this;
         }
-
         public Builder neqs(@Nullable List<String> neqs) {
             this.neqs = neqs;
             return this;
         }
-        public FindingsFilterFindingCriteriaCriterion build() {
+        public Builder neqs(String... neqs) {
+            return neqs(List.of(neqs));
+        }        public FindingsFilterFindingCriteriaCriterion build() {
             return new FindingsFilterFindingCriteriaCriterion(eqExactMatches, eqs, field, gt, gte, lt, lte, neqs);
         }
     }

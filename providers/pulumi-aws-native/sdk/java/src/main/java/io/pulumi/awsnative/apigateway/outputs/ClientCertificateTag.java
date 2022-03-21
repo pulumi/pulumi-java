@@ -53,12 +53,10 @@ public final class ClientCertificateTag {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public ClientCertificateTag build() {
+        }        public ClientCertificateTag build() {
             return new ClientCertificateTag(key, value);
         }
     }

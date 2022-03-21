@@ -71,12 +71,13 @@ public final class GetIAMPolicyAuditConfig {
             this.auditLogConfigs = Objects.requireNonNull(auditLogConfigs);
             return this;
         }
-
+        public Builder auditLogConfigs(GetIAMPolicyAuditConfigAuditLogConfig... auditLogConfigs) {
+            return auditLogConfigs(List.of(auditLogConfigs));
+        }
         public Builder service(String service) {
             this.service = Objects.requireNonNull(service);
             return this;
-        }
-        public GetIAMPolicyAuditConfig build() {
+        }        public GetIAMPolicyAuditConfig build() {
             return new GetIAMPolicyAuditConfig(auditLogConfigs, service);
         }
     }

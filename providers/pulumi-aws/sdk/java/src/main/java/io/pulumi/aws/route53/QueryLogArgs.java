@@ -73,22 +73,18 @@ public final class QueryLogArgs extends io.pulumi.resources.ResourceArgs {
             this.cloudwatchLogGroupArn = Objects.requireNonNull(cloudwatchLogGroupArn);
             return this;
         }
-
         public Builder cloudwatchLogGroupArn(String cloudwatchLogGroupArn) {
             this.cloudwatchLogGroupArn = Output.of(Objects.requireNonNull(cloudwatchLogGroupArn));
             return this;
         }
-
         public Builder zoneId(Output<String> zoneId) {
             this.zoneId = Objects.requireNonNull(zoneId);
             return this;
         }
-
         public Builder zoneId(String zoneId) {
             this.zoneId = Output.of(Objects.requireNonNull(zoneId));
             return this;
-        }
-        public QueryLogArgs build() {
+        }        public QueryLogArgs build() {
             return new QueryLogArgs(cloudwatchLogGroupArn, zoneId);
         }
     }

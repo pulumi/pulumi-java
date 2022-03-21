@@ -144,62 +144,53 @@ public final class AuthProviderArgs extends io.pulumi.resources.ResourceArgs {
             this.audiences = audiences;
             return this;
         }
-
         public Builder audiences(@Nullable String audiences) {
             this.audiences = Output.ofNullable(audiences);
             return this;
         }
-
         public Builder authorizationUrl(@Nullable Output<String> authorizationUrl) {
             this.authorizationUrl = authorizationUrl;
             return this;
         }
-
         public Builder authorizationUrl(@Nullable String authorizationUrl) {
             this.authorizationUrl = Output.ofNullable(authorizationUrl);
             return this;
         }
-
         public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder issuer(@Nullable Output<String> issuer) {
             this.issuer = issuer;
             return this;
         }
-
         public Builder issuer(@Nullable String issuer) {
             this.issuer = Output.ofNullable(issuer);
             return this;
         }
-
         public Builder jwksUri(@Nullable Output<String> jwksUri) {
             this.jwksUri = jwksUri;
             return this;
         }
-
         public Builder jwksUri(@Nullable String jwksUri) {
             this.jwksUri = Output.ofNullable(jwksUri);
             return this;
         }
-
         public Builder jwtLocations(@Nullable Output<List<JwtLocationArgs>> jwtLocations) {
             this.jwtLocations = jwtLocations;
             return this;
         }
-
         public Builder jwtLocations(@Nullable List<JwtLocationArgs> jwtLocations) {
             this.jwtLocations = Output.ofNullable(jwtLocations);
             return this;
         }
-        public AuthProviderArgs build() {
+        public Builder jwtLocations(JwtLocationArgs... jwtLocations) {
+            return jwtLocations(List.of(jwtLocations));
+        }        public AuthProviderArgs build() {
             return new AuthProviderArgs(audiences, authorizationUrl, id, issuer, jwksUri, jwtLocations);
         }
     }

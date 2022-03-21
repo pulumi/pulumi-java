@@ -181,47 +181,38 @@ public final class VpnTunnelInfoResponse {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder networkUri(String networkUri) {
             this.networkUri = Objects.requireNonNull(networkUri);
             return this;
         }
-
         public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
-
         public Builder remoteGateway(String remoteGateway) {
             this.remoteGateway = Objects.requireNonNull(remoteGateway);
             return this;
         }
-
         public Builder remoteGatewayIp(String remoteGatewayIp) {
             this.remoteGatewayIp = Objects.requireNonNull(remoteGatewayIp);
             return this;
         }
-
         public Builder routingType(String routingType) {
             this.routingType = Objects.requireNonNull(routingType);
             return this;
         }
-
         public Builder sourceGateway(String sourceGateway) {
             this.sourceGateway = Objects.requireNonNull(sourceGateway);
             return this;
         }
-
         public Builder sourceGatewayIp(String sourceGatewayIp) {
             this.sourceGatewayIp = Objects.requireNonNull(sourceGatewayIp);
             return this;
         }
-
         public Builder uri(String uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
-        }
-        public VpnTunnelInfoResponse build() {
+        }        public VpnTunnelInfoResponse build() {
             return new VpnTunnelInfoResponse(displayName, networkUri, region, remoteGateway, remoteGatewayIp, routingType, sourceGateway, sourceGatewayIp, uri);
         }
     }

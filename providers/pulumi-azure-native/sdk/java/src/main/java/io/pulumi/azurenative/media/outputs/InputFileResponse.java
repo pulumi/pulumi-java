@@ -97,17 +97,17 @@ public final class InputFileResponse {
             this.filename = filename;
             return this;
         }
-
         public Builder includedTracks(@Nullable List<Object> includedTracks) {
             this.includedTracks = includedTracks;
             return this;
         }
-
+        public Builder includedTracks(Object... includedTracks) {
+            return includedTracks(List.of(includedTracks));
+        }
         public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
-        }
-        public InputFileResponse build() {
+        }        public InputFileResponse build() {
             return new InputFileResponse(filename, includedTracks, odataType);
         }
     }

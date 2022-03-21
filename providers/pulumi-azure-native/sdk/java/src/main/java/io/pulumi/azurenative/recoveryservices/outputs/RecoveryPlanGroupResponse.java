@@ -105,22 +105,27 @@ public final class RecoveryPlanGroupResponse {
             this.endGroupActions = endGroupActions;
             return this;
         }
-
+        public Builder endGroupActions(RecoveryPlanActionResponse... endGroupActions) {
+            return endGroupActions(List.of(endGroupActions));
+        }
         public Builder groupType(String groupType) {
             this.groupType = Objects.requireNonNull(groupType);
             return this;
         }
-
         public Builder replicationProtectedItems(@Nullable List<RecoveryPlanProtectedItemResponse> replicationProtectedItems) {
             this.replicationProtectedItems = replicationProtectedItems;
             return this;
         }
-
+        public Builder replicationProtectedItems(RecoveryPlanProtectedItemResponse... replicationProtectedItems) {
+            return replicationProtectedItems(List.of(replicationProtectedItems));
+        }
         public Builder startGroupActions(@Nullable List<RecoveryPlanActionResponse> startGroupActions) {
             this.startGroupActions = startGroupActions;
             return this;
         }
-        public RecoveryPlanGroupResponse build() {
+        public Builder startGroupActions(RecoveryPlanActionResponse... startGroupActions) {
+            return startGroupActions(List.of(startGroupActions));
+        }        public RecoveryPlanGroupResponse build() {
             return new RecoveryPlanGroupResponse(endGroupActions, groupType, replicationProtectedItems, startGroupActions);
         }
     }

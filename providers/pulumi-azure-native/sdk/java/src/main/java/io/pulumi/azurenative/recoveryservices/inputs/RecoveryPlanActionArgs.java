@@ -97,32 +97,32 @@ public final class RecoveryPlanActionArgs extends io.pulumi.resources.ResourceAr
             this.actionName = Objects.requireNonNull(actionName);
             return this;
         }
-
         public Builder actionName(String actionName) {
             this.actionName = Output.of(Objects.requireNonNull(actionName));
             return this;
         }
-
         public Builder failoverDirections(Output<List<Either<String,PossibleOperationsDirections>>> failoverDirections) {
             this.failoverDirections = Objects.requireNonNull(failoverDirections);
             return this;
         }
-
         public Builder failoverDirections(List<Either<String,PossibleOperationsDirections>> failoverDirections) {
             this.failoverDirections = Output.of(Objects.requireNonNull(failoverDirections));
             return this;
         }
-
+        public Builder failoverDirections(Either<String,PossibleOperationsDirections>... failoverDirections) {
+            return failoverDirections(List.of(failoverDirections));
+        }
         public Builder failoverTypes(Output<List<Either<String,ReplicationProtectedItemOperation>>> failoverTypes) {
             this.failoverTypes = Objects.requireNonNull(failoverTypes);
             return this;
         }
-
         public Builder failoverTypes(List<Either<String,ReplicationProtectedItemOperation>> failoverTypes) {
             this.failoverTypes = Output.of(Objects.requireNonNull(failoverTypes));
             return this;
         }
-        public RecoveryPlanActionArgs build() {
+        public Builder failoverTypes(Either<String,ReplicationProtectedItemOperation>... failoverTypes) {
+            return failoverTypes(List.of(failoverTypes));
+        }        public RecoveryPlanActionArgs build() {
             return new RecoveryPlanActionArgs(actionName, failoverDirections, failoverTypes);
         }
     }

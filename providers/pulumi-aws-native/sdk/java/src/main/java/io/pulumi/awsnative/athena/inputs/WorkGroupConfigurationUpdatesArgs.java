@@ -133,72 +133,58 @@ public final class WorkGroupConfigurationUpdatesArgs extends io.pulumi.resources
             this.bytesScannedCutoffPerQuery = bytesScannedCutoffPerQuery;
             return this;
         }
-
         public Builder bytesScannedCutoffPerQuery(@Nullable Integer bytesScannedCutoffPerQuery) {
             this.bytesScannedCutoffPerQuery = Output.ofNullable(bytesScannedCutoffPerQuery);
             return this;
         }
-
         public Builder enforceWorkGroupConfiguration(@Nullable Output<Boolean> enforceWorkGroupConfiguration) {
             this.enforceWorkGroupConfiguration = enforceWorkGroupConfiguration;
             return this;
         }
-
         public Builder enforceWorkGroupConfiguration(@Nullable Boolean enforceWorkGroupConfiguration) {
             this.enforceWorkGroupConfiguration = Output.ofNullable(enforceWorkGroupConfiguration);
             return this;
         }
-
         public Builder engineVersion(@Nullable Output<WorkGroupEngineVersionArgs> engineVersion) {
             this.engineVersion = engineVersion;
             return this;
         }
-
         public Builder engineVersion(@Nullable WorkGroupEngineVersionArgs engineVersion) {
             this.engineVersion = Output.ofNullable(engineVersion);
             return this;
         }
-
         public Builder publishCloudWatchMetricsEnabled(@Nullable Output<Boolean> publishCloudWatchMetricsEnabled) {
             this.publishCloudWatchMetricsEnabled = publishCloudWatchMetricsEnabled;
             return this;
         }
-
         public Builder publishCloudWatchMetricsEnabled(@Nullable Boolean publishCloudWatchMetricsEnabled) {
             this.publishCloudWatchMetricsEnabled = Output.ofNullable(publishCloudWatchMetricsEnabled);
             return this;
         }
-
         public Builder removeBytesScannedCutoffPerQuery(@Nullable Output<Boolean> removeBytesScannedCutoffPerQuery) {
             this.removeBytesScannedCutoffPerQuery = removeBytesScannedCutoffPerQuery;
             return this;
         }
-
         public Builder removeBytesScannedCutoffPerQuery(@Nullable Boolean removeBytesScannedCutoffPerQuery) {
             this.removeBytesScannedCutoffPerQuery = Output.ofNullable(removeBytesScannedCutoffPerQuery);
             return this;
         }
-
         public Builder requesterPaysEnabled(@Nullable Output<Boolean> requesterPaysEnabled) {
             this.requesterPaysEnabled = requesterPaysEnabled;
             return this;
         }
-
         public Builder requesterPaysEnabled(@Nullable Boolean requesterPaysEnabled) {
             this.requesterPaysEnabled = Output.ofNullable(requesterPaysEnabled);
             return this;
         }
-
         public Builder resultConfigurationUpdates(@Nullable Output<WorkGroupResultConfigurationUpdatesArgs> resultConfigurationUpdates) {
             this.resultConfigurationUpdates = resultConfigurationUpdates;
             return this;
         }
-
         public Builder resultConfigurationUpdates(@Nullable WorkGroupResultConfigurationUpdatesArgs resultConfigurationUpdates) {
             this.resultConfigurationUpdates = Output.ofNullable(resultConfigurationUpdates);
             return this;
-        }
-        public WorkGroupConfigurationUpdatesArgs build() {
+        }        public WorkGroupConfigurationUpdatesArgs build() {
             return new WorkGroupConfigurationUpdatesArgs(bytesScannedCutoffPerQuery, enforceWorkGroupConfiguration, engineVersion, publishCloudWatchMetricsEnabled, removeBytesScannedCutoffPerQuery, requesterPaysEnabled, resultConfigurationUpdates);
         }
     }

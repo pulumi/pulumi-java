@@ -78,22 +78,18 @@ public final class ScoringConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.disableFreshness = disableFreshness;
             return this;
         }
-
         public Builder disableFreshness(@Nullable Boolean disableFreshness) {
             this.disableFreshness = Output.ofNullable(disableFreshness);
             return this;
         }
-
         public Builder disablePersonalization(@Nullable Output<Boolean> disablePersonalization) {
             this.disablePersonalization = disablePersonalization;
             return this;
         }
-
         public Builder disablePersonalization(@Nullable Boolean disablePersonalization) {
             this.disablePersonalization = Output.ofNullable(disablePersonalization);
             return this;
-        }
-        public ScoringConfigArgs build() {
+        }        public ScoringConfigArgs build() {
             return new ScoringConfigArgs(disableFreshness, disablePersonalization);
         }
     }

@@ -209,102 +209,82 @@ public final class EdifactValidationSettingsArgs extends io.pulumi.resources.Res
             this.allowLeadingAndTrailingSpacesAndZeroes = Objects.requireNonNull(allowLeadingAndTrailingSpacesAndZeroes);
             return this;
         }
-
         public Builder allowLeadingAndTrailingSpacesAndZeroes(Boolean allowLeadingAndTrailingSpacesAndZeroes) {
             this.allowLeadingAndTrailingSpacesAndZeroes = Output.of(Objects.requireNonNull(allowLeadingAndTrailingSpacesAndZeroes));
             return this;
         }
-
         public Builder checkDuplicateGroupControlNumber(Output<Boolean> checkDuplicateGroupControlNumber) {
             this.checkDuplicateGroupControlNumber = Objects.requireNonNull(checkDuplicateGroupControlNumber);
             return this;
         }
-
         public Builder checkDuplicateGroupControlNumber(Boolean checkDuplicateGroupControlNumber) {
             this.checkDuplicateGroupControlNumber = Output.of(Objects.requireNonNull(checkDuplicateGroupControlNumber));
             return this;
         }
-
         public Builder checkDuplicateInterchangeControlNumber(Output<Boolean> checkDuplicateInterchangeControlNumber) {
             this.checkDuplicateInterchangeControlNumber = Objects.requireNonNull(checkDuplicateInterchangeControlNumber);
             return this;
         }
-
         public Builder checkDuplicateInterchangeControlNumber(Boolean checkDuplicateInterchangeControlNumber) {
             this.checkDuplicateInterchangeControlNumber = Output.of(Objects.requireNonNull(checkDuplicateInterchangeControlNumber));
             return this;
         }
-
         public Builder checkDuplicateTransactionSetControlNumber(Output<Boolean> checkDuplicateTransactionSetControlNumber) {
             this.checkDuplicateTransactionSetControlNumber = Objects.requireNonNull(checkDuplicateTransactionSetControlNumber);
             return this;
         }
-
         public Builder checkDuplicateTransactionSetControlNumber(Boolean checkDuplicateTransactionSetControlNumber) {
             this.checkDuplicateTransactionSetControlNumber = Output.of(Objects.requireNonNull(checkDuplicateTransactionSetControlNumber));
             return this;
         }
-
         public Builder interchangeControlNumberValidityDays(Output<Integer> interchangeControlNumberValidityDays) {
             this.interchangeControlNumberValidityDays = Objects.requireNonNull(interchangeControlNumberValidityDays);
             return this;
         }
-
         public Builder interchangeControlNumberValidityDays(Integer interchangeControlNumberValidityDays) {
             this.interchangeControlNumberValidityDays = Output.of(Objects.requireNonNull(interchangeControlNumberValidityDays));
             return this;
         }
-
         public Builder trailingSeparatorPolicy(Output<Either<String,TrailingSeparatorPolicy>> trailingSeparatorPolicy) {
             this.trailingSeparatorPolicy = Objects.requireNonNull(trailingSeparatorPolicy);
             return this;
         }
-
         public Builder trailingSeparatorPolicy(Either<String,TrailingSeparatorPolicy> trailingSeparatorPolicy) {
             this.trailingSeparatorPolicy = Output.of(Objects.requireNonNull(trailingSeparatorPolicy));
             return this;
         }
-
         public Builder trimLeadingAndTrailingSpacesAndZeroes(Output<Boolean> trimLeadingAndTrailingSpacesAndZeroes) {
             this.trimLeadingAndTrailingSpacesAndZeroes = Objects.requireNonNull(trimLeadingAndTrailingSpacesAndZeroes);
             return this;
         }
-
         public Builder trimLeadingAndTrailingSpacesAndZeroes(Boolean trimLeadingAndTrailingSpacesAndZeroes) {
             this.trimLeadingAndTrailingSpacesAndZeroes = Output.of(Objects.requireNonNull(trimLeadingAndTrailingSpacesAndZeroes));
             return this;
         }
-
         public Builder validateCharacterSet(Output<Boolean> validateCharacterSet) {
             this.validateCharacterSet = Objects.requireNonNull(validateCharacterSet);
             return this;
         }
-
         public Builder validateCharacterSet(Boolean validateCharacterSet) {
             this.validateCharacterSet = Output.of(Objects.requireNonNull(validateCharacterSet));
             return this;
         }
-
         public Builder validateEDITypes(Output<Boolean> validateEDITypes) {
             this.validateEDITypes = Objects.requireNonNull(validateEDITypes);
             return this;
         }
-
         public Builder validateEDITypes(Boolean validateEDITypes) {
             this.validateEDITypes = Output.of(Objects.requireNonNull(validateEDITypes));
             return this;
         }
-
         public Builder validateXSDTypes(Output<Boolean> validateXSDTypes) {
             this.validateXSDTypes = Objects.requireNonNull(validateXSDTypes);
             return this;
         }
-
         public Builder validateXSDTypes(Boolean validateXSDTypes) {
             this.validateXSDTypes = Output.of(Objects.requireNonNull(validateXSDTypes));
             return this;
-        }
-        public EdifactValidationSettingsArgs build() {
+        }        public EdifactValidationSettingsArgs build() {
             return new EdifactValidationSettingsArgs(allowLeadingAndTrailingSpacesAndZeroes, checkDuplicateGroupControlNumber, checkDuplicateInterchangeControlNumber, checkDuplicateTransactionSetControlNumber, interchangeControlNumberValidityDays, trailingSeparatorPolicy, trimLeadingAndTrailingSpacesAndZeroes, validateCharacterSet, validateEDITypes, validateXSDTypes);
         }
     }

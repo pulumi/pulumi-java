@@ -90,32 +90,26 @@ public final class NodeGroupTaintGetArgs extends io.pulumi.resources.ResourceArg
             this.effect = Objects.requireNonNull(effect);
             return this;
         }
-
         public Builder effect(String effect) {
             this.effect = Output.of(Objects.requireNonNull(effect));
             return this;
         }
-
         public Builder key(Output<String> key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder key(String key) {
             this.key = Output.of(Objects.requireNonNull(key));
             return this;
         }
-
         public Builder value(@Nullable Output<String> value) {
             this.value = value;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = Output.ofNullable(value);
             return this;
-        }
-        public NodeGroupTaintGetArgs build() {
+        }        public NodeGroupTaintGetArgs build() {
             return new NodeGroupTaintGetArgs(effect, key, value);
         }
     }

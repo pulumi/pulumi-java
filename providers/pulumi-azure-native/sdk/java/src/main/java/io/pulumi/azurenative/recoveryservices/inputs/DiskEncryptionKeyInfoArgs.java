@@ -78,22 +78,18 @@ public final class DiskEncryptionKeyInfoArgs extends io.pulumi.resources.Resourc
             this.keyVaultResourceArmId = keyVaultResourceArmId;
             return this;
         }
-
         public Builder keyVaultResourceArmId(@Nullable String keyVaultResourceArmId) {
             this.keyVaultResourceArmId = Output.ofNullable(keyVaultResourceArmId);
             return this;
         }
-
         public Builder secretIdentifier(@Nullable Output<String> secretIdentifier) {
             this.secretIdentifier = secretIdentifier;
             return this;
         }
-
         public Builder secretIdentifier(@Nullable String secretIdentifier) {
             this.secretIdentifier = Output.ofNullable(secretIdentifier);
             return this;
-        }
-        public DiskEncryptionKeyInfoArgs build() {
+        }        public DiskEncryptionKeyInfoArgs build() {
             return new DiskEncryptionKeyInfoArgs(keyVaultResourceArmId, secretIdentifier);
         }
     }

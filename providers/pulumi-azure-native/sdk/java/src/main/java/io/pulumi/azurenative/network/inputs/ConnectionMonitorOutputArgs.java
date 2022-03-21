@@ -81,22 +81,18 @@ public final class ConnectionMonitorOutputArgs extends io.pulumi.resources.Resou
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable Either<String,OutputType> type) {
             this.type = Output.ofNullable(type);
             return this;
         }
-
         public Builder workspaceSettings(@Nullable Output<ConnectionMonitorWorkspaceSettingsArgs> workspaceSettings) {
             this.workspaceSettings = workspaceSettings;
             return this;
         }
-
         public Builder workspaceSettings(@Nullable ConnectionMonitorWorkspaceSettingsArgs workspaceSettings) {
             this.workspaceSettings = Output.ofNullable(workspaceSettings);
             return this;
-        }
-        public ConnectionMonitorOutputArgs build() {
+        }        public ConnectionMonitorOutputArgs build() {
             return new ConnectionMonitorOutputArgs(type, workspaceSettings);
         }
     }

@@ -74,22 +74,18 @@ public final class DataSourceElasticsearchConfigArgs extends io.pulumi.resources
             this.endpoint = Objects.requireNonNull(endpoint);
             return this;
         }
-
         public Builder endpoint(String endpoint) {
             this.endpoint = Output.of(Objects.requireNonNull(endpoint));
             return this;
         }
-
         public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
-
         public Builder region(@Nullable String region) {
             this.region = Output.ofNullable(region);
             return this;
-        }
-        public DataSourceElasticsearchConfigArgs build() {
+        }        public DataSourceElasticsearchConfigArgs build() {
             return new DataSourceElasticsearchConfigArgs(endpoint, region);
         }
     }

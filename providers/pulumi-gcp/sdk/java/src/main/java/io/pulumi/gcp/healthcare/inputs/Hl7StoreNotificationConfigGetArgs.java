@@ -61,12 +61,10 @@ public final class Hl7StoreNotificationConfigGetArgs extends io.pulumi.resources
             this.pubsubTopic = Objects.requireNonNull(pubsubTopic);
             return this;
         }
-
         public Builder pubsubTopic(String pubsubTopic) {
             this.pubsubTopic = Output.of(Objects.requireNonNull(pubsubTopic));
             return this;
-        }
-        public Hl7StoreNotificationConfigGetArgs build() {
+        }        public Hl7StoreNotificationConfigGetArgs build() {
             return new Hl7StoreNotificationConfigGetArgs(pubsubTopic);
         }
     }

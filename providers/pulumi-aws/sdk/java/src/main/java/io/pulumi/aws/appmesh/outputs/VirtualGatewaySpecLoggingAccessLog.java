@@ -53,8 +53,7 @@ public final class VirtualGatewaySpecLoggingAccessLog {
         public Builder file(@Nullable VirtualGatewaySpecLoggingAccessLogFile file) {
             this.file = file;
             return this;
-        }
-        public VirtualGatewaySpecLoggingAccessLog build() {
+        }        public VirtualGatewaySpecLoggingAccessLog build() {
             return new VirtualGatewaySpecLoggingAccessLog(file);
         }
     }

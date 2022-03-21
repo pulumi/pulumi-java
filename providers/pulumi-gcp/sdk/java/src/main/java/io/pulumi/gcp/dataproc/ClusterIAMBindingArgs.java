@@ -136,62 +136,53 @@ public final class ClusterIAMBindingArgs extends io.pulumi.resources.ResourceArg
             this.cluster = Objects.requireNonNull(cluster);
             return this;
         }
-
         public Builder cluster(String cluster) {
             this.cluster = Output.of(Objects.requireNonNull(cluster));
             return this;
         }
-
         public Builder condition(@Nullable Output<ClusterIAMBindingConditionArgs> condition) {
             this.condition = condition;
             return this;
         }
-
         public Builder condition(@Nullable ClusterIAMBindingConditionArgs condition) {
             this.condition = Output.ofNullable(condition);
             return this;
         }
-
         public Builder members(Output<List<String>> members) {
             this.members = Objects.requireNonNull(members);
             return this;
         }
-
         public Builder members(List<String> members) {
             this.members = Output.of(Objects.requireNonNull(members));
             return this;
         }
-
+        public Builder members(String... members) {
+            return members(List.of(members));
+        }
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
-
         public Builder region(@Nullable String region) {
             this.region = Output.ofNullable(region);
             return this;
         }
-
         public Builder role(Output<String> role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }
-
         public Builder role(String role) {
             this.role = Output.of(Objects.requireNonNull(role));
             return this;
-        }
-        public ClusterIAMBindingArgs build() {
+        }        public ClusterIAMBindingArgs build() {
             return new ClusterIAMBindingArgs(cluster, condition, members, project, region, role);
         }
     }

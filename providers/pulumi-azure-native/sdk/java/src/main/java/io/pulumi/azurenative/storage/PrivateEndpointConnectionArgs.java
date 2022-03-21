@@ -107,42 +107,34 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder accountName(String accountName) {
             this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
-
         public Builder privateEndpointConnectionName(@Nullable Output<String> privateEndpointConnectionName) {
             this.privateEndpointConnectionName = privateEndpointConnectionName;
             return this;
         }
-
         public Builder privateEndpointConnectionName(@Nullable String privateEndpointConnectionName) {
             this.privateEndpointConnectionName = Output.ofNullable(privateEndpointConnectionName);
             return this;
         }
-
         public Builder privateLinkServiceConnectionState(Output<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState) {
             this.privateLinkServiceConnectionState = Objects.requireNonNull(privateLinkServiceConnectionState);
             return this;
         }
-
         public Builder privateLinkServiceConnectionState(PrivateLinkServiceConnectionStateArgs privateLinkServiceConnectionState) {
             this.privateLinkServiceConnectionState = Output.of(Objects.requireNonNull(privateLinkServiceConnectionState));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
-        }
-        public PrivateEndpointConnectionArgs build() {
+        }        public PrivateEndpointConnectionArgs build() {
             return new PrivateEndpointConnectionArgs(accountName, privateEndpointConnectionName, privateLinkServiceConnectionState, resourceGroupName);
         }
     }

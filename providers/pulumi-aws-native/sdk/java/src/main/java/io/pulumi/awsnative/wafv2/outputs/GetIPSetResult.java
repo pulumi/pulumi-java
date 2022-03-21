@@ -98,32 +98,32 @@ public final class GetIPSetResult {
             this.addresses = addresses;
             return this;
         }
-
+        public Builder addresses(String... addresses) {
+            return addresses(List.of(addresses));
+        }
         public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder iPAddressVersion(@Nullable IPSetIPAddressVersion iPAddressVersion) {
             this.iPAddressVersion = iPAddressVersion;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder tags(@Nullable List<IPSetTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetIPSetResult build() {
+        public Builder tags(IPSetTag... tags) {
+            return tags(List.of(tags));
+        }        public GetIPSetResult build() {
             return new GetIPSetResult(addresses, arn, description, iPAddressVersion, id, tags);
         }
     }

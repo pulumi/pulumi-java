@@ -140,32 +140,35 @@ public final class AKSServiceResponseResponseEnvironmentImageRequest {
             this.assets = assets;
             return this;
         }
-
+        public Builder assets(ImageAssetResponse... assets) {
+            return assets(List.of(assets));
+        }
         public Builder driverProgram(@Nullable String driverProgram) {
             this.driverProgram = driverProgram;
             return this;
         }
-
         public Builder environment(@Nullable EnvironmentImageResponseResponseEnvironment environment) {
             this.environment = environment;
             return this;
         }
-
         public Builder environmentReference(@Nullable EnvironmentImageResponseResponseEnvironmentReference environmentReference) {
             this.environmentReference = environmentReference;
             return this;
         }
-
         public Builder modelIds(@Nullable List<String> modelIds) {
             this.modelIds = modelIds;
             return this;
         }
-
+        public Builder modelIds(String... modelIds) {
+            return modelIds(List.of(modelIds));
+        }
         public Builder models(@Nullable List<ModelResponse> models) {
             this.models = models;
             return this;
         }
-        public AKSServiceResponseResponseEnvironmentImageRequest build() {
+        public Builder models(ModelResponse... models) {
+            return models(List.of(models));
+        }        public AKSServiceResponseResponseEnvironmentImageRequest build() {
             return new AKSServiceResponseResponseEnvironmentImageRequest(assets, driverProgram, environment, environmentReference, modelIds, models);
         }
     }

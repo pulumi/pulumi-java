@@ -252,132 +252,106 @@ public final class WebAppHybridConnectionSlotArgs extends io.pulumi.resources.Re
             this.hostname = hostname;
             return this;
         }
-
         public Builder hostname(@Nullable String hostname) {
             this.hostname = Output.ofNullable(hostname);
             return this;
         }
-
         public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder namespaceName(Output<String> namespaceName) {
             this.namespaceName = Objects.requireNonNull(namespaceName);
             return this;
         }
-
         public Builder namespaceName(String namespaceName) {
             this.namespaceName = Output.of(Objects.requireNonNull(namespaceName));
             return this;
         }
-
         public Builder port(@Nullable Output<Integer> port) {
             this.port = port;
             return this;
         }
-
         public Builder port(@Nullable Integer port) {
             this.port = Output.ofNullable(port);
             return this;
         }
-
         public Builder relayArmUri(@Nullable Output<String> relayArmUri) {
             this.relayArmUri = relayArmUri;
             return this;
         }
-
         public Builder relayArmUri(@Nullable String relayArmUri) {
             this.relayArmUri = Output.ofNullable(relayArmUri);
             return this;
         }
-
         public Builder relayName(@Nullable Output<String> relayName) {
             this.relayName = relayName;
             return this;
         }
-
         public Builder relayName(@Nullable String relayName) {
             this.relayName = Output.ofNullable(relayName);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder sendKeyName(@Nullable Output<String> sendKeyName) {
             this.sendKeyName = sendKeyName;
             return this;
         }
-
         public Builder sendKeyName(@Nullable String sendKeyName) {
             this.sendKeyName = Output.ofNullable(sendKeyName);
             return this;
         }
-
         public Builder sendKeyValue(@Nullable Output<String> sendKeyValue) {
             this.sendKeyValue = sendKeyValue;
             return this;
         }
-
         public Builder sendKeyValue(@Nullable String sendKeyValue) {
             this.sendKeyValue = Output.ofNullable(sendKeyValue);
             return this;
         }
-
         public Builder serviceBusNamespace(@Nullable Output<String> serviceBusNamespace) {
             this.serviceBusNamespace = serviceBusNamespace;
             return this;
         }
-
         public Builder serviceBusNamespace(@Nullable String serviceBusNamespace) {
             this.serviceBusNamespace = Output.ofNullable(serviceBusNamespace);
             return this;
         }
-
         public Builder serviceBusSuffix(@Nullable Output<String> serviceBusSuffix) {
             this.serviceBusSuffix = serviceBusSuffix;
             return this;
         }
-
         public Builder serviceBusSuffix(@Nullable String serviceBusSuffix) {
             this.serviceBusSuffix = Output.ofNullable(serviceBusSuffix);
             return this;
         }
-
         public Builder slot(Output<String> slot) {
             this.slot = Objects.requireNonNull(slot);
             return this;
         }
-
         public Builder slot(String slot) {
             this.slot = Output.of(Objects.requireNonNull(slot));
             return this;
-        }
-        public WebAppHybridConnectionSlotArgs build() {
+        }        public WebAppHybridConnectionSlotArgs build() {
             return new WebAppHybridConnectionSlotArgs(hostname, kind, name, namespaceName, port, relayArmUri, relayName, resourceGroupName, sendKeyName, sendKeyValue, serviceBusNamespace, serviceBusSuffix, slot);
         }
     }

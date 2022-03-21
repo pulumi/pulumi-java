@@ -160,37 +160,36 @@ public final class AllocationSpecificSKUAllocationReservedInstancePropertiesResp
             this.guestAccelerators = Objects.requireNonNull(guestAccelerators);
             return this;
         }
-
+        public Builder guestAccelerators(AcceleratorConfigResponse... guestAccelerators) {
+            return guestAccelerators(List.of(guestAccelerators));
+        }
         public Builder localSsds(List<AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskResponse> localSsds) {
             this.localSsds = Objects.requireNonNull(localSsds);
             return this;
         }
-
+        public Builder localSsds(AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskResponse... localSsds) {
+            return localSsds(List.of(localSsds));
+        }
         public Builder locationHint(String locationHint) {
             this.locationHint = Objects.requireNonNull(locationHint);
             return this;
         }
-
         public Builder machineType(String machineType) {
             this.machineType = Objects.requireNonNull(machineType);
             return this;
         }
-
         public Builder maintenanceFreezeDurationHours(Integer maintenanceFreezeDurationHours) {
             this.maintenanceFreezeDurationHours = Objects.requireNonNull(maintenanceFreezeDurationHours);
             return this;
         }
-
         public Builder maintenanceInterval(String maintenanceInterval) {
             this.maintenanceInterval = Objects.requireNonNull(maintenanceInterval);
             return this;
         }
-
         public Builder minCpuPlatform(String minCpuPlatform) {
             this.minCpuPlatform = Objects.requireNonNull(minCpuPlatform);
             return this;
-        }
-        public AllocationSpecificSKUAllocationReservedInstancePropertiesResponse build() {
+        }        public AllocationSpecificSKUAllocationReservedInstancePropertiesResponse build() {
             return new AllocationSpecificSKUAllocationReservedInstancePropertiesResponse(guestAccelerators, localSsds, locationHint, machineType, maintenanceFreezeDurationHours, maintenanceInterval, minCpuPlatform);
         }
     }

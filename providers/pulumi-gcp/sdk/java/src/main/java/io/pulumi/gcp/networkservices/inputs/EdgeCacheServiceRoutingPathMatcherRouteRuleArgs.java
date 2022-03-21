@@ -168,72 +168,61 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleArgs extends io.pu
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder headerAction(@Nullable Output<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionArgs> headerAction) {
             this.headerAction = headerAction;
             return this;
         }
-
         public Builder headerAction(@Nullable EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionArgs headerAction) {
             this.headerAction = Output.ofNullable(headerAction);
             return this;
         }
-
         public Builder matchRules(Output<List<EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleArgs>> matchRules) {
             this.matchRules = Objects.requireNonNull(matchRules);
             return this;
         }
-
         public Builder matchRules(List<EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleArgs> matchRules) {
             this.matchRules = Output.of(Objects.requireNonNull(matchRules));
             return this;
         }
-
+        public Builder matchRules(EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleArgs... matchRules) {
+            return matchRules(List.of(matchRules));
+        }
         public Builder origin(@Nullable Output<String> origin) {
             this.origin = origin;
             return this;
         }
-
         public Builder origin(@Nullable String origin) {
             this.origin = Output.ofNullable(origin);
             return this;
         }
-
         public Builder priority(Output<String> priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
-
         public Builder priority(String priority) {
             this.priority = Output.of(Objects.requireNonNull(priority));
             return this;
         }
-
         public Builder routeAction(@Nullable Output<EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionArgs> routeAction) {
             this.routeAction = routeAction;
             return this;
         }
-
         public Builder routeAction(@Nullable EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionArgs routeAction) {
             this.routeAction = Output.ofNullable(routeAction);
             return this;
         }
-
         public Builder urlRedirect(@Nullable Output<EdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedirectArgs> urlRedirect) {
             this.urlRedirect = urlRedirect;
             return this;
         }
-
         public Builder urlRedirect(@Nullable EdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedirectArgs urlRedirect) {
             this.urlRedirect = Output.ofNullable(urlRedirect);
             return this;
-        }
-        public EdgeCacheServiceRoutingPathMatcherRouteRuleArgs build() {
+        }        public EdgeCacheServiceRoutingPathMatcherRouteRuleArgs build() {
             return new EdgeCacheServiceRoutingPathMatcherRouteRuleArgs(description, headerAction, matchRules, origin, priority, routeAction, urlRedirect);
         }
     }

@@ -109,52 +109,42 @@ public final class InstanceServerCaCertGetArgs extends io.pulumi.resources.Resou
             this.cert = cert;
             return this;
         }
-
         public Builder cert(@Nullable String cert) {
             this.cert = Output.ofNullable(cert);
             return this;
         }
-
         public Builder createTime(@Nullable Output<String> createTime) {
             this.createTime = createTime;
             return this;
         }
-
         public Builder createTime(@Nullable String createTime) {
             this.createTime = Output.ofNullable(createTime);
             return this;
         }
-
         public Builder expireTime(@Nullable Output<String> expireTime) {
             this.expireTime = expireTime;
             return this;
         }
-
         public Builder expireTime(@Nullable String expireTime) {
             this.expireTime = Output.ofNullable(expireTime);
             return this;
         }
-
         public Builder serialNumber(@Nullable Output<String> serialNumber) {
             this.serialNumber = serialNumber;
             return this;
         }
-
         public Builder serialNumber(@Nullable String serialNumber) {
             this.serialNumber = Output.ofNullable(serialNumber);
             return this;
         }
-
         public Builder sha1Fingerprint(@Nullable Output<String> sha1Fingerprint) {
             this.sha1Fingerprint = sha1Fingerprint;
             return this;
         }
-
         public Builder sha1Fingerprint(@Nullable String sha1Fingerprint) {
             this.sha1Fingerprint = Output.ofNullable(sha1Fingerprint);
             return this;
-        }
-        public InstanceServerCaCertGetArgs build() {
+        }        public InstanceServerCaCertGetArgs build() {
             return new InstanceServerCaCertGetArgs(cert, createTime, expireTime, serialNumber, sha1Fingerprint);
         }
     }

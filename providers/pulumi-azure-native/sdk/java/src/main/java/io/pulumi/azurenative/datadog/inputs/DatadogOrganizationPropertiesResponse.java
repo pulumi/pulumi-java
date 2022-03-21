@@ -76,12 +76,10 @@ public final class DatadogOrganizationPropertiesResponse extends io.pulumi.resou
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public DatadogOrganizationPropertiesResponse build() {
+        }        public DatadogOrganizationPropertiesResponse build() {
             return new DatadogOrganizationPropertiesResponse(id, name);
         }
     }

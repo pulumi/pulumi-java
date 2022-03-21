@@ -242,122 +242,101 @@ public final class GetForwardingRuleResult {
             this.allPorts = Objects.requireNonNull(allPorts);
             return this;
         }
-
         public Builder allowGlobalAccess(Boolean allowGlobalAccess) {
             this.allowGlobalAccess = Objects.requireNonNull(allowGlobalAccess);
             return this;
         }
-
         public Builder backendService(String backendService) {
             this.backendService = Objects.requireNonNull(backendService);
             return this;
         }
-
         public Builder creationTimestamp(String creationTimestamp) {
             this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder ipAddress(String ipAddress) {
             this.ipAddress = Objects.requireNonNull(ipAddress);
             return this;
         }
-
         public Builder ipProtocol(String ipProtocol) {
             this.ipProtocol = Objects.requireNonNull(ipProtocol);
             return this;
         }
-
         public Builder isMirroringCollector(Boolean isMirroringCollector) {
             this.isMirroringCollector = Objects.requireNonNull(isMirroringCollector);
             return this;
         }
-
         public Builder labelFingerprint(String labelFingerprint) {
             this.labelFingerprint = Objects.requireNonNull(labelFingerprint);
             return this;
         }
-
         public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder loadBalancingScheme(String loadBalancingScheme) {
             this.loadBalancingScheme = Objects.requireNonNull(loadBalancingScheme);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder network(String network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }
-
         public Builder networkTier(String networkTier) {
             this.networkTier = Objects.requireNonNull(networkTier);
             return this;
         }
-
         public Builder portRange(String portRange) {
             this.portRange = Objects.requireNonNull(portRange);
             return this;
         }
-
         public Builder ports(List<String> ports) {
             this.ports = Objects.requireNonNull(ports);
             return this;
         }
-
+        public Builder ports(String... ports) {
+            return ports(List.of(ports));
+        }
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder region(@Nullable String region) {
             this.region = region;
             return this;
         }
-
         public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
-
         public Builder serviceLabel(String serviceLabel) {
             this.serviceLabel = Objects.requireNonNull(serviceLabel);
             return this;
         }
-
         public Builder serviceName(String serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
-
         public Builder subnetwork(String subnetwork) {
             this.subnetwork = Objects.requireNonNull(subnetwork);
             return this;
         }
-
         public Builder target(String target) {
             this.target = Objects.requireNonNull(target);
             return this;
-        }
-        public GetForwardingRuleResult build() {
+        }        public GetForwardingRuleResult build() {
             return new GetForwardingRuleResult(allPorts, allowGlobalAccess, backendService, creationTimestamp, description, id, ipAddress, ipProtocol, isMirroringCollector, labelFingerprint, labels, loadBalancingScheme, name, network, networkTier, portRange, ports, project, region, selfLink, serviceLabel, serviceName, subnetwork, target);
         }
     }

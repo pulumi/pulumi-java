@@ -121,17 +121,14 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotal
             this.badServiceFilter = badServiceFilter;
             return this;
         }
-
         public Builder goodServiceFilter(@Nullable String goodServiceFilter) {
             this.goodServiceFilter = goodServiceFilter;
             return this;
         }
-
         public Builder totalServiceFilter(@Nullable String totalServiceFilter) {
             this.totalServiceFilter = totalServiceFilter;
             return this;
-        }
-        public SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotalRatio build() {
+        }        public SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotalRatio build() {
             return new SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotalRatio(badServiceFilter, goodServiceFilter, totalServiceFilter);
         }
     }

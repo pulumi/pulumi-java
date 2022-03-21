@@ -142,32 +142,26 @@ public final class RewriteResponse extends io.pulumi.resources.InvokeArgs {
             this.dynamicLinks = Objects.requireNonNull(dynamicLinks);
             return this;
         }
-
         public Builder function(String function) {
             this.function = Objects.requireNonNull(function);
             return this;
         }
-
         public Builder glob(String glob) {
             this.glob = Objects.requireNonNull(glob);
             return this;
         }
-
         public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
-
         public Builder regex(String regex) {
             this.regex = Objects.requireNonNull(regex);
             return this;
         }
-
         public Builder run(CloudRunRewriteResponse run) {
             this.run = Objects.requireNonNull(run);
             return this;
-        }
-        public RewriteResponse build() {
+        }        public RewriteResponse build() {
             return new RewriteResponse(dynamicLinks, function, glob, path, regex, run);
         }
     }

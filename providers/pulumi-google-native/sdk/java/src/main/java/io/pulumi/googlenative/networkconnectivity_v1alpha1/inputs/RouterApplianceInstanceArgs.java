@@ -90,32 +90,26 @@ public final class RouterApplianceInstanceArgs extends io.pulumi.resources.Resou
             this.ipAddress = ipAddress;
             return this;
         }
-
         public Builder ipAddress(@Nullable String ipAddress) {
             this.ipAddress = Output.ofNullable(ipAddress);
             return this;
         }
-
         public Builder networkInterface(@Nullable Output<String> networkInterface) {
             this.networkInterface = networkInterface;
             return this;
         }
-
         public Builder networkInterface(@Nullable String networkInterface) {
             this.networkInterface = Output.ofNullable(networkInterface);
             return this;
         }
-
         public Builder virtualMachine(@Nullable Output<String> virtualMachine) {
             this.virtualMachine = virtualMachine;
             return this;
         }
-
         public Builder virtualMachine(@Nullable String virtualMachine) {
             this.virtualMachine = Output.ofNullable(virtualMachine);
             return this;
-        }
-        public RouterApplianceInstanceArgs build() {
+        }        public RouterApplianceInstanceArgs build() {
             return new RouterApplianceInstanceArgs(ipAddress, networkInterface, virtualMachine);
         }
     }

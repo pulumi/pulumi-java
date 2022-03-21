@@ -208,52 +208,42 @@ public final class CorrelationFilterResponse extends io.pulumi.resources.InvokeA
             this.contentType = contentType;
             return this;
         }
-
         public Builder correlationId(@Nullable String correlationId) {
             this.correlationId = correlationId;
             return this;
         }
-
         public Builder label(@Nullable String label) {
             this.label = label;
             return this;
         }
-
         public Builder messageId(@Nullable String messageId) {
             this.messageId = messageId;
             return this;
         }
-
         public Builder properties(@Nullable Map<String,String> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder replyTo(@Nullable String replyTo) {
             this.replyTo = replyTo;
             return this;
         }
-
         public Builder replyToSessionId(@Nullable String replyToSessionId) {
             this.replyToSessionId = replyToSessionId;
             return this;
         }
-
         public Builder requiresPreprocessing(@Nullable Boolean requiresPreprocessing) {
             this.requiresPreprocessing = requiresPreprocessing;
             return this;
         }
-
         public Builder sessionId(@Nullable String sessionId) {
             this.sessionId = sessionId;
             return this;
         }
-
         public Builder to(@Nullable String to) {
             this.to = to;
             return this;
-        }
-        public CorrelationFilterResponse build() {
+        }        public CorrelationFilterResponse build() {
             return new CorrelationFilterResponse(contentType, correlationId, label, messageId, properties, replyTo, replyToSessionId, requiresPreprocessing, sessionId, to);
         }
     }

@@ -52,12 +52,10 @@ public final class TypedErrorInfoArgs extends io.pulumi.resources.ResourceArgs {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public TypedErrorInfoArgs build() {
+        }        public TypedErrorInfoArgs build() {
             return new TypedErrorInfoArgs(type);
         }
     }

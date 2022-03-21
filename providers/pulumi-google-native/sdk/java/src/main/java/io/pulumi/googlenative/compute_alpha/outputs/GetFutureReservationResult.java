@@ -225,62 +225,50 @@ public final class GetFutureReservationResult {
             this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder namePrefix(String namePrefix) {
             this.namePrefix = Objects.requireNonNull(namePrefix);
             return this;
         }
-
         public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
-
         public Builder selfLinkWithId(String selfLinkWithId) {
             this.selfLinkWithId = Objects.requireNonNull(selfLinkWithId);
             return this;
         }
-
         public Builder shareSettings(ShareSettingsResponse shareSettings) {
             this.shareSettings = Objects.requireNonNull(shareSettings);
             return this;
         }
-
         public Builder specificSkuProperties(FutureReservationSpecificSKUPropertiesResponse specificSkuProperties) {
             this.specificSkuProperties = Objects.requireNonNull(specificSkuProperties);
             return this;
         }
-
         public Builder status(FutureReservationStatusResponse status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder timeWindow(FutureReservationTimeWindowResponse timeWindow) {
             this.timeWindow = Objects.requireNonNull(timeWindow);
             return this;
         }
-
         public Builder zone(String zone) {
             this.zone = Objects.requireNonNull(zone);
             return this;
-        }
-        public GetFutureReservationResult build() {
+        }        public GetFutureReservationResult build() {
             return new GetFutureReservationResult(creationTimestamp, description, kind, name, namePrefix, selfLink, selfLinkWithId, shareSettings, specificSkuProperties, status, timeWindow, zone);
         }
     }

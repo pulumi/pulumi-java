@@ -221,112 +221,93 @@ public final class FavoriteArgs extends io.pulumi.resources.ResourceArgs {
             this.category = category;
             return this;
         }
-
         public Builder category(@Nullable String category) {
             this.category = Output.ofNullable(category);
             return this;
         }
-
         public Builder config(@Nullable Output<String> config) {
             this.config = config;
             return this;
         }
-
         public Builder config(@Nullable String config) {
             this.config = Output.ofNullable(config);
             return this;
         }
-
         public Builder favoriteId(@Nullable Output<String> favoriteId) {
             this.favoriteId = favoriteId;
             return this;
         }
-
         public Builder favoriteId(@Nullable String favoriteId) {
             this.favoriteId = Output.ofNullable(favoriteId);
             return this;
         }
-
         public Builder favoriteType(@Nullable Output<FavoriteType> favoriteType) {
             this.favoriteType = favoriteType;
             return this;
         }
-
         public Builder favoriteType(@Nullable FavoriteType favoriteType) {
             this.favoriteType = Output.ofNullable(favoriteType);
             return this;
         }
-
         public Builder isGeneratedFromTemplate(@Nullable Output<Boolean> isGeneratedFromTemplate) {
             this.isGeneratedFromTemplate = isGeneratedFromTemplate;
             return this;
         }
-
         public Builder isGeneratedFromTemplate(@Nullable Boolean isGeneratedFromTemplate) {
             this.isGeneratedFromTemplate = Output.ofNullable(isGeneratedFromTemplate);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder resourceName(Output<String> resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
         }
-
         public Builder resourceName(String resourceName) {
             this.resourceName = Output.of(Objects.requireNonNull(resourceName));
             return this;
         }
-
         public Builder sourceType(@Nullable Output<String> sourceType) {
             this.sourceType = sourceType;
             return this;
         }
-
         public Builder sourceType(@Nullable String sourceType) {
             this.sourceType = Output.ofNullable(sourceType);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
+        public Builder tags(String... tags) {
+            return tags(List.of(tags));
+        }
         public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = Output.ofNullable(version);
             return this;
-        }
-        public FavoriteArgs build() {
+        }        public FavoriteArgs build() {
             return new FavoriteArgs(category, config, favoriteId, favoriteType, isGeneratedFromTemplate, name, resourceGroupName, resourceName, sourceType, tags, version);
         }
     }

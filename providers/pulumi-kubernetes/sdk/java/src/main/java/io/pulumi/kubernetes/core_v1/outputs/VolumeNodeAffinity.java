@@ -53,8 +53,7 @@ public final class VolumeNodeAffinity {
         public Builder required(@Nullable NodeSelector required) {
             this.required = required;
             return this;
-        }
-        public VolumeNodeAffinity build() {
+        }        public VolumeNodeAffinity build() {
             return new VolumeNodeAffinity(required);
         }
     }

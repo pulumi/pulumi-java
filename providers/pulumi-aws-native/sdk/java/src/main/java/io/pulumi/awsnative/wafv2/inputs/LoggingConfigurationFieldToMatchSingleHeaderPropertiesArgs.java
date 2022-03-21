@@ -60,12 +60,10 @@ public final class LoggingConfigurationFieldToMatchSingleHeaderPropertiesArgs ex
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
-        }
-        public LoggingConfigurationFieldToMatchSingleHeaderPropertiesArgs build() {
+        }        public LoggingConfigurationFieldToMatchSingleHeaderPropertiesArgs build() {
             return new LoggingConfigurationFieldToMatchSingleHeaderPropertiesArgs(name);
         }
     }

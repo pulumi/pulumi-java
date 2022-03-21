@@ -156,72 +156,61 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder cidrBlock(@Nullable Output<String> cidrBlock) {
             this.cidrBlock = cidrBlock;
             return this;
         }
-
         public Builder cidrBlock(@Nullable String cidrBlock) {
             this.cidrBlock = Output.ofNullable(cidrBlock);
             return this;
         }
-
         public Builder creationTime(@Nullable Output<String> creationTime) {
             this.creationTime = creationTime;
             return this;
         }
-
         public Builder creationTime(@Nullable String creationTime) {
             this.creationTime = Output.ofNullable(creationTime);
             return this;
         }
-
         public Builder networkInterfaces(@Nullable Output<List<EndpointNetworkInterfaceGetArgs>> networkInterfaces) {
             this.networkInterfaces = networkInterfaces;
             return this;
         }
-
         public Builder networkInterfaces(@Nullable List<EndpointNetworkInterfaceGetArgs> networkInterfaces) {
             this.networkInterfaces = Output.ofNullable(networkInterfaces);
             return this;
         }
-
+        public Builder networkInterfaces(EndpointNetworkInterfaceGetArgs... networkInterfaces) {
+            return networkInterfaces(List.of(networkInterfaces));
+        }
         public Builder outpostId(@Nullable Output<String> outpostId) {
             this.outpostId = outpostId;
             return this;
         }
-
         public Builder outpostId(@Nullable String outpostId) {
             this.outpostId = Output.ofNullable(outpostId);
             return this;
         }
-
         public Builder securityGroupId(@Nullable Output<String> securityGroupId) {
             this.securityGroupId = securityGroupId;
             return this;
         }
-
         public Builder securityGroupId(@Nullable String securityGroupId) {
             this.securityGroupId = Output.ofNullable(securityGroupId);
             return this;
         }
-
         public Builder subnetId(@Nullable Output<String> subnetId) {
             this.subnetId = subnetId;
             return this;
         }
-
         public Builder subnetId(@Nullable String subnetId) {
             this.subnetId = Output.ofNullable(subnetId);
             return this;
-        }
-        public EndpointState build() {
+        }        public EndpointState build() {
             return new EndpointState(arn, cidrBlock, creationTime, networkInterfaces, outpostId, securityGroupId, subnetId);
         }
     }

@@ -158,72 +158,58 @@ public final class SqlManagedInstanceArgs extends io.pulumi.resources.ResourceAr
             this.extendedLocation = extendedLocation;
             return this;
         }
-
         public Builder extendedLocation(@Nullable ExtendedLocationArgs extendedLocation) {
             this.extendedLocation = Output.ofNullable(extendedLocation);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder properties(Output<SqlManagedInstancePropertiesArgs> properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
-
         public Builder properties(SqlManagedInstancePropertiesArgs properties) {
             this.properties = Output.of(Objects.requireNonNull(properties));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder sku(@Nullable Output<SqlManagedInstanceSkuArgs> sku) {
             this.sku = sku;
             return this;
         }
-
         public Builder sku(@Nullable SqlManagedInstanceSkuArgs sku) {
             this.sku = Output.ofNullable(sku);
             return this;
         }
-
         public Builder sqlManagedInstanceName(@Nullable Output<String> sqlManagedInstanceName) {
             this.sqlManagedInstanceName = sqlManagedInstanceName;
             return this;
         }
-
         public Builder sqlManagedInstanceName(@Nullable String sqlManagedInstanceName) {
             this.sqlManagedInstanceName = Output.ofNullable(sqlManagedInstanceName);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public SqlManagedInstanceArgs build() {
+        }        public SqlManagedInstanceArgs build() {
             return new SqlManagedInstanceArgs(extendedLocation, location, properties, resourceGroupName, sku, sqlManagedInstanceName, tags);
         }
     }

@@ -276,142 +276,129 @@ public final class IotSecuritySolutionArgs extends io.pulumi.resources.ResourceA
             this.additionalWorkspaces = additionalWorkspaces;
             return this;
         }
-
         public Builder additionalWorkspaces(@Nullable List<AdditionalWorkspacesPropertiesArgs> additionalWorkspaces) {
             this.additionalWorkspaces = Output.ofNullable(additionalWorkspaces);
             return this;
         }
-
+        public Builder additionalWorkspaces(AdditionalWorkspacesPropertiesArgs... additionalWorkspaces) {
+            return additionalWorkspaces(List.of(additionalWorkspaces));
+        }
         public Builder disabledDataSources(@Nullable Output<List<Either<String,DataSource>>> disabledDataSources) {
             this.disabledDataSources = disabledDataSources;
             return this;
         }
-
         public Builder disabledDataSources(@Nullable List<Either<String,DataSource>> disabledDataSources) {
             this.disabledDataSources = Output.ofNullable(disabledDataSources);
             return this;
         }
-
+        public Builder disabledDataSources(Either<String,DataSource>... disabledDataSources) {
+            return disabledDataSources(List.of(disabledDataSources));
+        }
         public Builder displayName(Output<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
-
         public Builder export(@Nullable Output<List<Either<String,ExportData>>> export) {
             this.export = export;
             return this;
         }
-
         public Builder export(@Nullable List<Either<String,ExportData>> export) {
             this.export = Output.ofNullable(export);
             return this;
         }
-
+        public Builder export(Either<String,ExportData>... export) {
+            return export(List.of(export));
+        }
         public Builder iotHubs(Output<List<String>> iotHubs) {
             this.iotHubs = Objects.requireNonNull(iotHubs);
             return this;
         }
-
         public Builder iotHubs(List<String> iotHubs) {
             this.iotHubs = Output.of(Objects.requireNonNull(iotHubs));
             return this;
         }
-
+        public Builder iotHubs(String... iotHubs) {
+            return iotHubs(List.of(iotHubs));
+        }
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder recommendationsConfiguration(@Nullable Output<List<RecommendationConfigurationPropertiesArgs>> recommendationsConfiguration) {
             this.recommendationsConfiguration = recommendationsConfiguration;
             return this;
         }
-
         public Builder recommendationsConfiguration(@Nullable List<RecommendationConfigurationPropertiesArgs> recommendationsConfiguration) {
             this.recommendationsConfiguration = Output.ofNullable(recommendationsConfiguration);
             return this;
         }
-
+        public Builder recommendationsConfiguration(RecommendationConfigurationPropertiesArgs... recommendationsConfiguration) {
+            return recommendationsConfiguration(List.of(recommendationsConfiguration));
+        }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder solutionName(@Nullable Output<String> solutionName) {
             this.solutionName = solutionName;
             return this;
         }
-
         public Builder solutionName(@Nullable String solutionName) {
             this.solutionName = Output.ofNullable(solutionName);
             return this;
         }
-
         public Builder status(@Nullable Output<Either<String,SecuritySolutionStatus>> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable Either<String,SecuritySolutionStatus> status) {
             this.status = Output.ofNullable(status);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder unmaskedIpLoggingStatus(@Nullable Output<Either<String,UnmaskedIpLoggingStatus>> unmaskedIpLoggingStatus) {
             this.unmaskedIpLoggingStatus = unmaskedIpLoggingStatus;
             return this;
         }
-
         public Builder unmaskedIpLoggingStatus(@Nullable Either<String,UnmaskedIpLoggingStatus> unmaskedIpLoggingStatus) {
             this.unmaskedIpLoggingStatus = Output.ofNullable(unmaskedIpLoggingStatus);
             return this;
         }
-
         public Builder userDefinedResources(@Nullable Output<UserDefinedResourcesPropertiesArgs> userDefinedResources) {
             this.userDefinedResources = userDefinedResources;
             return this;
         }
-
         public Builder userDefinedResources(@Nullable UserDefinedResourcesPropertiesArgs userDefinedResources) {
             this.userDefinedResources = Output.ofNullable(userDefinedResources);
             return this;
         }
-
         public Builder workspace(@Nullable Output<String> workspace) {
             this.workspace = workspace;
             return this;
         }
-
         public Builder workspace(@Nullable String workspace) {
             this.workspace = Output.ofNullable(workspace);
             return this;
-        }
-        public IotSecuritySolutionArgs build() {
+        }        public IotSecuritySolutionArgs build() {
             return new IotSecuritySolutionArgs(additionalWorkspaces, disabledDataSources, displayName, export, iotHubs, location, recommendationsConfiguration, resourceGroupName, solutionName, status, tags, unmaskedIpLoggingStatus, userDefinedResources, workspace);
         }
     }

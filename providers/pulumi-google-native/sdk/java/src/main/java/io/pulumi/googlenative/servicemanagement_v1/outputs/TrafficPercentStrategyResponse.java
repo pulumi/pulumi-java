@@ -52,8 +52,7 @@ public final class TrafficPercentStrategyResponse {
         public Builder percentages(Map<String,String> percentages) {
             this.percentages = Objects.requireNonNull(percentages);
             return this;
-        }
-        public TrafficPercentStrategyResponse build() {
+        }        public TrafficPercentStrategyResponse build() {
             return new TrafficPercentStrategyResponse(percentages);
         }
     }

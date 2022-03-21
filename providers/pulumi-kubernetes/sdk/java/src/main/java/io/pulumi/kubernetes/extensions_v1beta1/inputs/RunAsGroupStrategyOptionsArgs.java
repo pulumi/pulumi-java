@@ -80,22 +80,21 @@ public final class RunAsGroupStrategyOptionsArgs extends io.pulumi.resources.Res
             this.ranges = ranges;
             return this;
         }
-
         public Builder ranges(@Nullable List<IDRangeArgs> ranges) {
             this.ranges = Output.ofNullable(ranges);
             return this;
         }
-
+        public Builder ranges(IDRangeArgs... ranges) {
+            return ranges(List.of(ranges));
+        }
         public Builder rule(Output<String> rule) {
             this.rule = Objects.requireNonNull(rule);
             return this;
         }
-
         public Builder rule(String rule) {
             this.rule = Output.of(Objects.requireNonNull(rule));
             return this;
-        }
-        public RunAsGroupStrategyOptionsArgs build() {
+        }        public RunAsGroupStrategyOptionsArgs build() {
             return new RunAsGroupStrategyOptionsArgs(ranges, rule);
         }
     }

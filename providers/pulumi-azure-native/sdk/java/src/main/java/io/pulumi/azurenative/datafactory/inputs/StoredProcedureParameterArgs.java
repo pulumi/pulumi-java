@@ -81,22 +81,18 @@ public final class StoredProcedureParameterArgs extends io.pulumi.resources.Reso
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable Either<String,StoredProcedureParameterType> type) {
             this.type = Output.ofNullable(type);
             return this;
         }
-
         public Builder value(@Nullable Output<Object> value) {
             this.value = value;
             return this;
         }
-
         public Builder value(@Nullable Object value) {
             this.value = Output.ofNullable(value);
             return this;
-        }
-        public StoredProcedureParameterArgs build() {
+        }        public StoredProcedureParameterArgs build() {
             return new StoredProcedureParameterArgs(type, value);
         }
     }

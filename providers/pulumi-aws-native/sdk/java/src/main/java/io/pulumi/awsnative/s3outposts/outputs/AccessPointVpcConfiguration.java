@@ -53,8 +53,7 @@ public final class AccessPointVpcConfiguration {
         public Builder vpcId(@Nullable String vpcId) {
             this.vpcId = vpcId;
             return this;
-        }
-        public AccessPointVpcConfiguration build() {
+        }        public AccessPointVpcConfiguration build() {
             return new AccessPointVpcConfiguration(vpcId);
         }
     }

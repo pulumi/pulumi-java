@@ -147,62 +147,50 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
             this.deviceKey = deviceKey;
             return this;
         }
-
         public Builder deviceKey(@Nullable Integer deviceKey) {
             this.deviceKey = Output.ofNullable(deviceKey);
             return this;
         }
-
         public Builder ipSettings(@Nullable Output<NicIPSettingsArgs> ipSettings) {
             this.ipSettings = ipSettings;
             return this;
         }
-
         public Builder ipSettings(@Nullable NicIPSettingsArgs ipSettings) {
             this.ipSettings = Output.ofNullable(ipSettings);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder networkId(@Nullable Output<String> networkId) {
             this.networkId = networkId;
             return this;
         }
-
         public Builder networkId(@Nullable String networkId) {
             this.networkId = Output.ofNullable(networkId);
             return this;
         }
-
         public Builder nicType(@Nullable Output<Either<String,NICType>> nicType) {
             this.nicType = nicType;
             return this;
         }
-
         public Builder nicType(@Nullable Either<String,NICType> nicType) {
             this.nicType = Output.ofNullable(nicType);
             return this;
         }
-
         public Builder powerOnBoot(@Nullable Output<Either<String,PowerOnBootOption>> powerOnBoot) {
             this.powerOnBoot = powerOnBoot;
             return this;
         }
-
         public Builder powerOnBoot(@Nullable Either<String,PowerOnBootOption> powerOnBoot) {
             this.powerOnBoot = Output.ofNullable(powerOnBoot);
             return this;
-        }
-        public NetworkInterfaceArgs build() {
+        }        public NetworkInterfaceArgs build() {
             return new NetworkInterfaceArgs(deviceKey, ipSettings, name, networkId, nicType, powerOnBoot);
         }
     }

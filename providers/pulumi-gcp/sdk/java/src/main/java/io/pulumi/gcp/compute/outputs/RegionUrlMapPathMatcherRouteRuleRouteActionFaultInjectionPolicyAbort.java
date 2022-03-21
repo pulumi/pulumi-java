@@ -78,12 +78,10 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPoli
             this.httpStatus = httpStatus;
             return this;
         }
-
         public Builder percentage(@Nullable Double percentage) {
             this.percentage = percentage;
             return this;
-        }
-        public RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyAbort build() {
+        }        public RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyAbort build() {
             return new RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyAbort(httpStatus, percentage);
         }
     }

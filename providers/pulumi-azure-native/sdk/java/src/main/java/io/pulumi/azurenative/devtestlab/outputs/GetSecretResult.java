@@ -168,42 +168,34 @@ public final class GetSecretResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder uniqueIdentifier(String uniqueIdentifier) {
             this.uniqueIdentifier = Objects.requireNonNull(uniqueIdentifier);
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public GetSecretResult build() {
+        }        public GetSecretResult build() {
             return new GetSecretResult(id, location, name, provisioningState, tags, type, uniqueIdentifier, value);
         }
     }

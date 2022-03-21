@@ -78,32 +78,26 @@ public final class HmacKeyArgs extends io.pulumi.resources.ResourceArgs {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder serviceAccountEmail(Output<String> serviceAccountEmail) {
             this.serviceAccountEmail = Objects.requireNonNull(serviceAccountEmail);
             return this;
         }
-
         public Builder serviceAccountEmail(String serviceAccountEmail) {
             this.serviceAccountEmail = Output.of(Objects.requireNonNull(serviceAccountEmail));
             return this;
         }
-
         public Builder userProject(@Nullable Output<String> userProject) {
             this.userProject = userProject;
             return this;
         }
-
         public Builder userProject(@Nullable String userProject) {
             this.userProject = Output.ofNullable(userProject);
             return this;
-        }
-        public HmacKeyArgs build() {
+        }        public HmacKeyArgs build() {
             return new HmacKeyArgs(project, serviceAccountEmail, userProject);
         }
     }

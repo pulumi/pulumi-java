@@ -140,62 +140,50 @@ public final class RouteTableState extends io.pulumi.resources.ResourceArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder defaultAssociationRouteTable(@Nullable Output<Boolean> defaultAssociationRouteTable) {
             this.defaultAssociationRouteTable = defaultAssociationRouteTable;
             return this;
         }
-
         public Builder defaultAssociationRouteTable(@Nullable Boolean defaultAssociationRouteTable) {
             this.defaultAssociationRouteTable = Output.ofNullable(defaultAssociationRouteTable);
             return this;
         }
-
         public Builder defaultPropagationRouteTable(@Nullable Output<Boolean> defaultPropagationRouteTable) {
             this.defaultPropagationRouteTable = defaultPropagationRouteTable;
             return this;
         }
-
         public Builder defaultPropagationRouteTable(@Nullable Boolean defaultPropagationRouteTable) {
             this.defaultPropagationRouteTable = Output.ofNullable(defaultPropagationRouteTable);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
-
         public Builder transitGatewayId(@Nullable Output<String> transitGatewayId) {
             this.transitGatewayId = transitGatewayId;
             return this;
         }
-
         public Builder transitGatewayId(@Nullable String transitGatewayId) {
             this.transitGatewayId = Output.ofNullable(transitGatewayId);
             return this;
-        }
-        public RouteTableState build() {
+        }        public RouteTableState build() {
             return new RouteTableState(arn, defaultAssociationRouteTable, defaultPropagationRouteTable, tags, tagsAll, transitGatewayId);
         }
     }

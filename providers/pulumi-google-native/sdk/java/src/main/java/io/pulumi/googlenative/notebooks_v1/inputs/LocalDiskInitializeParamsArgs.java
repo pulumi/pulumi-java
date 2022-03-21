@@ -128,52 +128,42 @@ public final class LocalDiskInitializeParamsArgs extends io.pulumi.resources.Res
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder diskName(@Nullable Output<String> diskName) {
             this.diskName = diskName;
             return this;
         }
-
         public Builder diskName(@Nullable String diskName) {
             this.diskName = Output.ofNullable(diskName);
             return this;
         }
-
         public Builder diskSizeGb(@Nullable Output<String> diskSizeGb) {
             this.diskSizeGb = diskSizeGb;
             return this;
         }
-
         public Builder diskSizeGb(@Nullable String diskSizeGb) {
             this.diskSizeGb = Output.ofNullable(diskSizeGb);
             return this;
         }
-
         public Builder diskType(@Nullable Output<LocalDiskInitializeParamsDiskType> diskType) {
             this.diskType = diskType;
             return this;
         }
-
         public Builder diskType(@Nullable LocalDiskInitializeParamsDiskType diskType) {
             this.diskType = Output.ofNullable(diskType);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
-        }
-        public LocalDiskInitializeParamsArgs build() {
+        }        public LocalDiskInitializeParamsArgs build() {
             return new LocalDiskInitializeParamsArgs(description, diskName, diskSizeGb, diskType, labels);
         }
     }

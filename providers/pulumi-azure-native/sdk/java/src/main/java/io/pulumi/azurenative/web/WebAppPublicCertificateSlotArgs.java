@@ -155,72 +155,58 @@ public final class WebAppPublicCertificateSlotArgs extends io.pulumi.resources.R
             this.blob = blob;
             return this;
         }
-
         public Builder blob(@Nullable String blob) {
             this.blob = Output.ofNullable(blob);
             return this;
         }
-
         public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder publicCertificateLocation(@Nullable Output<PublicCertificateLocation> publicCertificateLocation) {
             this.publicCertificateLocation = publicCertificateLocation;
             return this;
         }
-
         public Builder publicCertificateLocation(@Nullable PublicCertificateLocation publicCertificateLocation) {
             this.publicCertificateLocation = Output.ofNullable(publicCertificateLocation);
             return this;
         }
-
         public Builder publicCertificateName(@Nullable Output<String> publicCertificateName) {
             this.publicCertificateName = publicCertificateName;
             return this;
         }
-
         public Builder publicCertificateName(@Nullable String publicCertificateName) {
             this.publicCertificateName = Output.ofNullable(publicCertificateName);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder slot(Output<String> slot) {
             this.slot = Objects.requireNonNull(slot);
             return this;
         }
-
         public Builder slot(String slot) {
             this.slot = Output.of(Objects.requireNonNull(slot));
             return this;
-        }
-        public WebAppPublicCertificateSlotArgs build() {
+        }        public WebAppPublicCertificateSlotArgs build() {
             return new WebAppPublicCertificateSlotArgs(blob, kind, name, publicCertificateLocation, publicCertificateName, resourceGroupName, slot);
         }
     }

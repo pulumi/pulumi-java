@@ -71,12 +71,10 @@ public final class ProductLinkResponse {
             this.displayName = displayName;
             return this;
         }
-
         public Builder uri(@Nullable String uri) {
             this.uri = uri;
             return this;
-        }
-        public ProductLinkResponse build() {
+        }        public ProductLinkResponse build() {
             return new ProductLinkResponse(displayName, uri);
         }
     }

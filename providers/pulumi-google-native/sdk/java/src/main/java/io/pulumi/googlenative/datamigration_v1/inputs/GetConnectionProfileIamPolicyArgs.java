@@ -90,22 +90,18 @@ public final class GetConnectionProfileIamPolicyArgs extends io.pulumi.resources
             this.connectionProfileId = Objects.requireNonNull(connectionProfileId);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder optionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
             this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetConnectionProfileIamPolicyArgs build() {
+        }        public GetConnectionProfileIamPolicyArgs build() {
             return new GetConnectionProfileIamPolicyArgs(connectionProfileId, location, optionsRequestedPolicyVersion, project);
         }
     }

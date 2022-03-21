@@ -212,102 +212,82 @@ public final class ProjectSecondarySourceGetArgs extends io.pulumi.resources.Res
             this.auth = auth;
             return this;
         }
-
         public Builder auth(@Nullable ProjectSecondarySourceAuthGetArgs auth) {
             this.auth = Output.ofNullable(auth);
             return this;
         }
-
         public Builder buildStatusConfig(@Nullable Output<ProjectSecondarySourceBuildStatusConfigGetArgs> buildStatusConfig) {
             this.buildStatusConfig = buildStatusConfig;
             return this;
         }
-
         public Builder buildStatusConfig(@Nullable ProjectSecondarySourceBuildStatusConfigGetArgs buildStatusConfig) {
             this.buildStatusConfig = Output.ofNullable(buildStatusConfig);
             return this;
         }
-
         public Builder buildspec(@Nullable Output<String> buildspec) {
             this.buildspec = buildspec;
             return this;
         }
-
         public Builder buildspec(@Nullable String buildspec) {
             this.buildspec = Output.ofNullable(buildspec);
             return this;
         }
-
         public Builder gitCloneDepth(@Nullable Output<Integer> gitCloneDepth) {
             this.gitCloneDepth = gitCloneDepth;
             return this;
         }
-
         public Builder gitCloneDepth(@Nullable Integer gitCloneDepth) {
             this.gitCloneDepth = Output.ofNullable(gitCloneDepth);
             return this;
         }
-
         public Builder gitSubmodulesConfig(@Nullable Output<ProjectSecondarySourceGitSubmodulesConfigGetArgs> gitSubmodulesConfig) {
             this.gitSubmodulesConfig = gitSubmodulesConfig;
             return this;
         }
-
         public Builder gitSubmodulesConfig(@Nullable ProjectSecondarySourceGitSubmodulesConfigGetArgs gitSubmodulesConfig) {
             this.gitSubmodulesConfig = Output.ofNullable(gitSubmodulesConfig);
             return this;
         }
-
         public Builder insecureSsl(@Nullable Output<Boolean> insecureSsl) {
             this.insecureSsl = insecureSsl;
             return this;
         }
-
         public Builder insecureSsl(@Nullable Boolean insecureSsl) {
             this.insecureSsl = Output.ofNullable(insecureSsl);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder reportBuildStatus(@Nullable Output<Boolean> reportBuildStatus) {
             this.reportBuildStatus = reportBuildStatus;
             return this;
         }
-
         public Builder reportBuildStatus(@Nullable Boolean reportBuildStatus) {
             this.reportBuildStatus = Output.ofNullable(reportBuildStatus);
             return this;
         }
-
         public Builder sourceIdentifier(Output<String> sourceIdentifier) {
             this.sourceIdentifier = Objects.requireNonNull(sourceIdentifier);
             return this;
         }
-
         public Builder sourceIdentifier(String sourceIdentifier) {
             this.sourceIdentifier = Output.of(Objects.requireNonNull(sourceIdentifier));
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public ProjectSecondarySourceGetArgs build() {
+        }        public ProjectSecondarySourceGetArgs build() {
             return new ProjectSecondarySourceGetArgs(auth, buildStatusConfig, buildspec, gitCloneDepth, gitSubmodulesConfig, insecureSsl, location, reportBuildStatus, sourceIdentifier, type);
         }
     }

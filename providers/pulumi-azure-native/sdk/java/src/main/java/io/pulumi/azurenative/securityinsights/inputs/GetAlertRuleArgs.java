@@ -88,17 +88,14 @@ public final class GetAlertRuleArgs extends io.pulumi.resources.InvokeArgs {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder ruleId(String ruleId) {
             this.ruleId = Objects.requireNonNull(ruleId);
             return this;
         }
-
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
-        }
-        public GetAlertRuleArgs build() {
+        }        public GetAlertRuleArgs build() {
             return new GetAlertRuleArgs(resourceGroupName, ruleId, workspaceName);
         }
     }

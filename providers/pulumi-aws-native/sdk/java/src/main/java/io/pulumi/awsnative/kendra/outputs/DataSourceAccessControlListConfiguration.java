@@ -45,8 +45,7 @@ public final class DataSourceAccessControlListConfiguration {
         public Builder keyPath(@Nullable String keyPath) {
             this.keyPath = keyPath;
             return this;
-        }
-        public DataSourceAccessControlListConfiguration build() {
+        }        public DataSourceAccessControlListConfiguration build() {
             return new DataSourceAccessControlListConfiguration(keyPath);
         }
     }

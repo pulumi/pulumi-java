@@ -90,32 +90,26 @@ public final class UserPoolAdminCreateUserConfigInviteMessageTemplateGetArgs ext
             this.emailMessage = emailMessage;
             return this;
         }
-
         public Builder emailMessage(@Nullable String emailMessage) {
             this.emailMessage = Output.ofNullable(emailMessage);
             return this;
         }
-
         public Builder emailSubject(@Nullable Output<String> emailSubject) {
             this.emailSubject = emailSubject;
             return this;
         }
-
         public Builder emailSubject(@Nullable String emailSubject) {
             this.emailSubject = Output.ofNullable(emailSubject);
             return this;
         }
-
         public Builder smsMessage(@Nullable Output<String> smsMessage) {
             this.smsMessage = smsMessage;
             return this;
         }
-
         public Builder smsMessage(@Nullable String smsMessage) {
             this.smsMessage = Output.ofNullable(smsMessage);
             return this;
-        }
-        public UserPoolAdminCreateUserConfigInviteMessageTemplateGetArgs build() {
+        }        public UserPoolAdminCreateUserConfigInviteMessageTemplateGetArgs build() {
             return new UserPoolAdminCreateUserConfigInviteMessageTemplateGetArgs(emailMessage, emailSubject, smsMessage);
         }
     }

@@ -73,22 +73,18 @@ public final class VpnGatewayAttachmentArgs extends io.pulumi.resources.Resource
             this.vpcId = Objects.requireNonNull(vpcId);
             return this;
         }
-
         public Builder vpcId(String vpcId) {
             this.vpcId = Output.of(Objects.requireNonNull(vpcId));
             return this;
         }
-
         public Builder vpnGatewayId(Output<String> vpnGatewayId) {
             this.vpnGatewayId = Objects.requireNonNull(vpnGatewayId);
             return this;
         }
-
         public Builder vpnGatewayId(String vpnGatewayId) {
             this.vpnGatewayId = Output.of(Objects.requireNonNull(vpnGatewayId));
             return this;
-        }
-        public VpnGatewayAttachmentArgs build() {
+        }        public VpnGatewayAttachmentArgs build() {
             return new VpnGatewayAttachmentArgs(vpcId, vpnGatewayId);
         }
     }

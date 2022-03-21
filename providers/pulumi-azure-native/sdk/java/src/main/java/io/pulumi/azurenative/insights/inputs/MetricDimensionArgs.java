@@ -94,32 +94,29 @@ public final class MetricDimensionArgs extends io.pulumi.resources.ResourceArgs 
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder operator(Output<String> operator) {
             this.operator = Objects.requireNonNull(operator);
             return this;
         }
-
         public Builder operator(String operator) {
             this.operator = Output.of(Objects.requireNonNull(operator));
             return this;
         }
-
         public Builder values(Output<List<String>> values) {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-
         public Builder values(List<String> values) {
             this.values = Output.of(Objects.requireNonNull(values));
             return this;
         }
-        public MetricDimensionArgs build() {
+        public Builder values(String... values) {
+            return values(List.of(values));
+        }        public MetricDimensionArgs build() {
             return new MetricDimensionArgs(name, operator, values);
         }
     }

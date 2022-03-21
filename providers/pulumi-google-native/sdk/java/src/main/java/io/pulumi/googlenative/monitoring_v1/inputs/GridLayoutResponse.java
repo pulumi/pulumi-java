@@ -78,12 +78,13 @@ public final class GridLayoutResponse extends io.pulumi.resources.InvokeArgs {
             this.columns = Objects.requireNonNull(columns);
             return this;
         }
-
         public Builder widgets(List<WidgetResponse> widgets) {
             this.widgets = Objects.requireNonNull(widgets);
             return this;
         }
-        public GridLayoutResponse build() {
+        public Builder widgets(WidgetResponse... widgets) {
+            return widgets(List.of(widgets));
+        }        public GridLayoutResponse build() {
             return new GridLayoutResponse(columns, widgets);
         }
     }

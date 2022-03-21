@@ -270,142 +270,120 @@ public final class NotebookInstanceArgs extends io.pulumi.resources.ResourceArgs
             this.additionalCodeRepositories = additionalCodeRepositories;
             return this;
         }
-
         public Builder additionalCodeRepositories(@Nullable List<String> additionalCodeRepositories) {
             this.additionalCodeRepositories = Output.ofNullable(additionalCodeRepositories);
             return this;
         }
-
+        public Builder additionalCodeRepositories(String... additionalCodeRepositories) {
+            return additionalCodeRepositories(List.of(additionalCodeRepositories));
+        }
         public Builder defaultCodeRepository(@Nullable Output<String> defaultCodeRepository) {
             this.defaultCodeRepository = defaultCodeRepository;
             return this;
         }
-
         public Builder defaultCodeRepository(@Nullable String defaultCodeRepository) {
             this.defaultCodeRepository = Output.ofNullable(defaultCodeRepository);
             return this;
         }
-
         public Builder directInternetAccess(@Nullable Output<String> directInternetAccess) {
             this.directInternetAccess = directInternetAccess;
             return this;
         }
-
         public Builder directInternetAccess(@Nullable String directInternetAccess) {
             this.directInternetAccess = Output.ofNullable(directInternetAccess);
             return this;
         }
-
         public Builder instanceType(Output<String> instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
-
         public Builder instanceType(String instanceType) {
             this.instanceType = Output.of(Objects.requireNonNull(instanceType));
             return this;
         }
-
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
-
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = Output.ofNullable(kmsKeyId);
             return this;
         }
-
         public Builder lifecycleConfigName(@Nullable Output<String> lifecycleConfigName) {
             this.lifecycleConfigName = lifecycleConfigName;
             return this;
         }
-
         public Builder lifecycleConfigName(@Nullable String lifecycleConfigName) {
             this.lifecycleConfigName = Output.ofNullable(lifecycleConfigName);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder platformIdentifier(@Nullable Output<String> platformIdentifier) {
             this.platformIdentifier = platformIdentifier;
             return this;
         }
-
         public Builder platformIdentifier(@Nullable String platformIdentifier) {
             this.platformIdentifier = Output.ofNullable(platformIdentifier);
             return this;
         }
-
         public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public Builder roleArn(String roleArn) {
             this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
         }
-
         public Builder rootAccess(@Nullable Output<String> rootAccess) {
             this.rootAccess = rootAccess;
             return this;
         }
-
         public Builder rootAccess(@Nullable String rootAccess) {
             this.rootAccess = Output.ofNullable(rootAccess);
             return this;
         }
-
         public Builder securityGroups(@Nullable Output<List<String>> securityGroups) {
             this.securityGroups = securityGroups;
             return this;
         }
-
         public Builder securityGroups(@Nullable List<String> securityGroups) {
             this.securityGroups = Output.ofNullable(securityGroups);
             return this;
         }
-
+        public Builder securityGroups(String... securityGroups) {
+            return securityGroups(List.of(securityGroups));
+        }
         public Builder subnetId(@Nullable Output<String> subnetId) {
             this.subnetId = subnetId;
             return this;
         }
-
         public Builder subnetId(@Nullable String subnetId) {
             this.subnetId = Output.ofNullable(subnetId);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder volumeSize(@Nullable Output<Integer> volumeSize) {
             this.volumeSize = volumeSize;
             return this;
         }
-
         public Builder volumeSize(@Nullable Integer volumeSize) {
             this.volumeSize = Output.ofNullable(volumeSize);
             return this;
-        }
-        public NotebookInstanceArgs build() {
+        }        public NotebookInstanceArgs build() {
             return new NotebookInstanceArgs(additionalCodeRepositories, defaultCodeRepository, directInternetAccess, instanceType, kmsKeyId, lifecycleConfigName, name, platformIdentifier, roleArn, rootAccess, securityGroups, subnetId, tags, volumeSize);
         }
     }

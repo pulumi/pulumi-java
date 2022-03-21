@@ -201,57 +201,46 @@ public final class GetSchemaRegistryResult {
             this.createdAtUtc = Objects.requireNonNull(createdAtUtc);
             return this;
         }
-
         public Builder eTag(String eTag) {
             this.eTag = Objects.requireNonNull(eTag);
             return this;
         }
-
         public Builder groupProperties(@Nullable Map<String,String> groupProperties) {
             this.groupProperties = groupProperties;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder schemaCompatibility(@Nullable String schemaCompatibility) {
             this.schemaCompatibility = schemaCompatibility;
             return this;
         }
-
         public Builder schemaType(@Nullable String schemaType) {
             this.schemaType = schemaType;
             return this;
         }
-
         public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder updatedAtUtc(String updatedAtUtc) {
             this.updatedAtUtc = Objects.requireNonNull(updatedAtUtc);
             return this;
-        }
-        public GetSchemaRegistryResult build() {
+        }        public GetSchemaRegistryResult build() {
             return new GetSchemaRegistryResult(createdAtUtc, eTag, groupProperties, id, location, name, schemaCompatibility, schemaType, systemData, type, updatedAtUtc);
         }
     }

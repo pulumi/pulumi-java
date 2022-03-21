@@ -357,192 +357,169 @@ public final class AttachedDiskInitializeParamsArgs extends io.pulumi.resources.
             this.architecture = architecture;
             return this;
         }
-
         public Builder architecture(@Nullable AttachedDiskInitializeParamsArchitecture architecture) {
             this.architecture = Output.ofNullable(architecture);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder diskName(@Nullable Output<String> diskName) {
             this.diskName = diskName;
             return this;
         }
-
         public Builder diskName(@Nullable String diskName) {
             this.diskName = Output.ofNullable(diskName);
             return this;
         }
-
         public Builder diskSizeGb(@Nullable Output<String> diskSizeGb) {
             this.diskSizeGb = diskSizeGb;
             return this;
         }
-
         public Builder diskSizeGb(@Nullable String diskSizeGb) {
             this.diskSizeGb = Output.ofNullable(diskSizeGb);
             return this;
         }
-
         public Builder diskType(@Nullable Output<String> diskType) {
             this.diskType = diskType;
             return this;
         }
-
         public Builder diskType(@Nullable String diskType) {
             this.diskType = Output.ofNullable(diskType);
             return this;
         }
-
         public Builder guestOsFeatures(@Nullable Output<List<GuestOsFeatureArgs>> guestOsFeatures) {
             this.guestOsFeatures = guestOsFeatures;
             return this;
         }
-
         public Builder guestOsFeatures(@Nullable List<GuestOsFeatureArgs> guestOsFeatures) {
             this.guestOsFeatures = Output.ofNullable(guestOsFeatures);
             return this;
         }
-
+        public Builder guestOsFeatures(GuestOsFeatureArgs... guestOsFeatures) {
+            return guestOsFeatures(List.of(guestOsFeatures));
+        }
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder licenseCodes(@Nullable Output<List<String>> licenseCodes) {
             this.licenseCodes = licenseCodes;
             return this;
         }
-
         public Builder licenseCodes(@Nullable List<String> licenseCodes) {
             this.licenseCodes = Output.ofNullable(licenseCodes);
             return this;
         }
-
+        public Builder licenseCodes(String... licenseCodes) {
+            return licenseCodes(List.of(licenseCodes));
+        }
         public Builder licenses(@Nullable Output<List<String>> licenses) {
             this.licenses = licenses;
             return this;
         }
-
         public Builder licenses(@Nullable List<String> licenses) {
             this.licenses = Output.ofNullable(licenses);
             return this;
         }
-
+        public Builder licenses(String... licenses) {
+            return licenses(List.of(licenses));
+        }
         public Builder multiWriter(@Nullable Output<Boolean> multiWriter) {
             this.multiWriter = multiWriter;
             return this;
         }
-
         public Builder multiWriter(@Nullable Boolean multiWriter) {
             this.multiWriter = Output.ofNullable(multiWriter);
             return this;
         }
-
         public Builder onUpdateAction(@Nullable Output<AttachedDiskInitializeParamsOnUpdateAction> onUpdateAction) {
             this.onUpdateAction = onUpdateAction;
             return this;
         }
-
         public Builder onUpdateAction(@Nullable AttachedDiskInitializeParamsOnUpdateAction onUpdateAction) {
             this.onUpdateAction = Output.ofNullable(onUpdateAction);
             return this;
         }
-
         public Builder provisionedIops(@Nullable Output<String> provisionedIops) {
             this.provisionedIops = provisionedIops;
             return this;
         }
-
         public Builder provisionedIops(@Nullable String provisionedIops) {
             this.provisionedIops = Output.ofNullable(provisionedIops);
             return this;
         }
-
         public Builder replicaZones(@Nullable Output<List<String>> replicaZones) {
             this.replicaZones = replicaZones;
             return this;
         }
-
         public Builder replicaZones(@Nullable List<String> replicaZones) {
             this.replicaZones = Output.ofNullable(replicaZones);
             return this;
         }
-
+        public Builder replicaZones(String... replicaZones) {
+            return replicaZones(List.of(replicaZones));
+        }
         public Builder resourcePolicies(@Nullable Output<List<String>> resourcePolicies) {
             this.resourcePolicies = resourcePolicies;
             return this;
         }
-
         public Builder resourcePolicies(@Nullable List<String> resourcePolicies) {
             this.resourcePolicies = Output.ofNullable(resourcePolicies);
             return this;
         }
-
+        public Builder resourcePolicies(String... resourcePolicies) {
+            return resourcePolicies(List.of(resourcePolicies));
+        }
         public Builder sourceImage(@Nullable Output<String> sourceImage) {
             this.sourceImage = sourceImage;
             return this;
         }
-
         public Builder sourceImage(@Nullable String sourceImage) {
             this.sourceImage = Output.ofNullable(sourceImage);
             return this;
         }
-
         public Builder sourceImageEncryptionKey(@Nullable Output<CustomerEncryptionKeyArgs> sourceImageEncryptionKey) {
             this.sourceImageEncryptionKey = sourceImageEncryptionKey;
             return this;
         }
-
         public Builder sourceImageEncryptionKey(@Nullable CustomerEncryptionKeyArgs sourceImageEncryptionKey) {
             this.sourceImageEncryptionKey = Output.ofNullable(sourceImageEncryptionKey);
             return this;
         }
-
         public Builder sourceInstantSnapshot(@Nullable Output<String> sourceInstantSnapshot) {
             this.sourceInstantSnapshot = sourceInstantSnapshot;
             return this;
         }
-
         public Builder sourceInstantSnapshot(@Nullable String sourceInstantSnapshot) {
             this.sourceInstantSnapshot = Output.ofNullable(sourceInstantSnapshot);
             return this;
         }
-
         public Builder sourceSnapshot(@Nullable Output<String> sourceSnapshot) {
             this.sourceSnapshot = sourceSnapshot;
             return this;
         }
-
         public Builder sourceSnapshot(@Nullable String sourceSnapshot) {
             this.sourceSnapshot = Output.ofNullable(sourceSnapshot);
             return this;
         }
-
         public Builder sourceSnapshotEncryptionKey(@Nullable Output<CustomerEncryptionKeyArgs> sourceSnapshotEncryptionKey) {
             this.sourceSnapshotEncryptionKey = sourceSnapshotEncryptionKey;
             return this;
         }
-
         public Builder sourceSnapshotEncryptionKey(@Nullable CustomerEncryptionKeyArgs sourceSnapshotEncryptionKey) {
             this.sourceSnapshotEncryptionKey = Output.ofNullable(sourceSnapshotEncryptionKey);
             return this;
-        }
-        public AttachedDiskInitializeParamsArgs build() {
+        }        public AttachedDiskInitializeParamsArgs build() {
             return new AttachedDiskInitializeParamsArgs(architecture, description, diskName, diskSizeGb, diskType, guestOsFeatures, labels, licenseCodes, licenses, multiWriter, onUpdateAction, provisionedIops, replicaZones, resourcePolicies, sourceImage, sourceImageEncryptionKey, sourceInstantSnapshot, sourceSnapshot, sourceSnapshotEncryptionKey);
         }
     }

@@ -94,42 +94,34 @@ public final class LoggingRuleArgs extends io.pulumi.resources.ResourceArgs {
             this.action = Objects.requireNonNull(action);
             return this;
         }
-
         public Builder action(String action) {
             this.action = Output.of(Objects.requireNonNull(action));
             return this;
         }
-
         public Builder detailLevel(Output<Either<String,LoggingDetails>> detailLevel) {
             this.detailLevel = Objects.requireNonNull(detailLevel);
             return this;
         }
-
         public Builder detailLevel(Either<String,LoggingDetails> detailLevel) {
             this.detailLevel = Output.of(Objects.requireNonNull(detailLevel));
             return this;
         }
-
         public Builder direction(Output<Either<String,LoggingDirections>> direction) {
             this.direction = Objects.requireNonNull(direction);
             return this;
         }
-
         public Builder direction(Either<String,LoggingDirections> direction) {
             this.direction = Output.of(Objects.requireNonNull(direction));
             return this;
         }
-
         public Builder hiddenPropertyPaths(@Nullable Output<LoggingRuleHiddenPropertyPathsArgs> hiddenPropertyPaths) {
             this.hiddenPropertyPaths = hiddenPropertyPaths;
             return this;
         }
-
         public Builder hiddenPropertyPaths(@Nullable LoggingRuleHiddenPropertyPathsArgs hiddenPropertyPaths) {
             this.hiddenPropertyPaths = Output.ofNullable(hiddenPropertyPaths);
             return this;
-        }
-        public LoggingRuleArgs build() {
+        }        public LoggingRuleArgs build() {
             return new LoggingRuleArgs(action, detailLevel, direction, hiddenPropertyPaths);
         }
     }

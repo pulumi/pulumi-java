@@ -135,22 +135,24 @@ public final class DeliveryRuleResponse extends io.pulumi.resources.InvokeArgs {
             this.actions = Objects.requireNonNull(actions);
             return this;
         }
-
+        public Builder actions(Object... actions) {
+            return actions(List.of(actions));
+        }
         public Builder conditions(@Nullable List<Object> conditions) {
             this.conditions = conditions;
             return this;
         }
-
+        public Builder conditions(Object... conditions) {
+            return conditions(List.of(conditions));
+        }
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder order(Integer order) {
             this.order = Objects.requireNonNull(order);
             return this;
-        }
-        public DeliveryRuleResponse build() {
+        }        public DeliveryRuleResponse build() {
             return new DeliveryRuleResponse(actions, conditions, name, order);
         }
     }

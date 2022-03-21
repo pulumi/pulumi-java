@@ -70,12 +70,10 @@ public final class BudgetActionActionThreshold {
             this.actionThresholdType = Objects.requireNonNull(actionThresholdType);
             return this;
         }
-
         public Builder actionThresholdValue(Double actionThresholdValue) {
             this.actionThresholdValue = Objects.requireNonNull(actionThresholdValue);
             return this;
-        }
-        public BudgetActionActionThreshold build() {
+        }        public BudgetActionActionThreshold build() {
             return new BudgetActionActionThreshold(actionThresholdType, actionThresholdValue);
         }
     }

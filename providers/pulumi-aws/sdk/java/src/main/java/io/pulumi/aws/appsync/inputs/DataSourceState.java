@@ -223,112 +223,90 @@ public final class DataSourceState extends io.pulumi.resources.ResourceArgs {
             this.apiId = apiId;
             return this;
         }
-
         public Builder apiId(@Nullable String apiId) {
             this.apiId = Output.ofNullable(apiId);
             return this;
         }
-
         public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder dynamodbConfig(@Nullable Output<DataSourceDynamodbConfigGetArgs> dynamodbConfig) {
             this.dynamodbConfig = dynamodbConfig;
             return this;
         }
-
         public Builder dynamodbConfig(@Nullable DataSourceDynamodbConfigGetArgs dynamodbConfig) {
             this.dynamodbConfig = Output.ofNullable(dynamodbConfig);
             return this;
         }
-
         public Builder elasticsearchConfig(@Nullable Output<DataSourceElasticsearchConfigGetArgs> elasticsearchConfig) {
             this.elasticsearchConfig = elasticsearchConfig;
             return this;
         }
-
         public Builder elasticsearchConfig(@Nullable DataSourceElasticsearchConfigGetArgs elasticsearchConfig) {
             this.elasticsearchConfig = Output.ofNullable(elasticsearchConfig);
             return this;
         }
-
         public Builder httpConfig(@Nullable Output<DataSourceHttpConfigGetArgs> httpConfig) {
             this.httpConfig = httpConfig;
             return this;
         }
-
         public Builder httpConfig(@Nullable DataSourceHttpConfigGetArgs httpConfig) {
             this.httpConfig = Output.ofNullable(httpConfig);
             return this;
         }
-
         public Builder lambdaConfig(@Nullable Output<DataSourceLambdaConfigGetArgs> lambdaConfig) {
             this.lambdaConfig = lambdaConfig;
             return this;
         }
-
         public Builder lambdaConfig(@Nullable DataSourceLambdaConfigGetArgs lambdaConfig) {
             this.lambdaConfig = Output.ofNullable(lambdaConfig);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder relationalDatabaseConfig(@Nullable Output<DataSourceRelationalDatabaseConfigGetArgs> relationalDatabaseConfig) {
             this.relationalDatabaseConfig = relationalDatabaseConfig;
             return this;
         }
-
         public Builder relationalDatabaseConfig(@Nullable DataSourceRelationalDatabaseConfigGetArgs relationalDatabaseConfig) {
             this.relationalDatabaseConfig = Output.ofNullable(relationalDatabaseConfig);
             return this;
         }
-
         public Builder serviceRoleArn(@Nullable Output<String> serviceRoleArn) {
             this.serviceRoleArn = serviceRoleArn;
             return this;
         }
-
         public Builder serviceRoleArn(@Nullable String serviceRoleArn) {
             this.serviceRoleArn = Output.ofNullable(serviceRoleArn);
             return this;
         }
-
         public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public DataSourceState build() {
+        }        public DataSourceState build() {
             return new DataSourceState(apiId, arn, description, dynamodbConfig, elasticsearchConfig, httpConfig, lambdaConfig, name, relationalDatabaseConfig, serviceRoleArn, type);
         }
     }

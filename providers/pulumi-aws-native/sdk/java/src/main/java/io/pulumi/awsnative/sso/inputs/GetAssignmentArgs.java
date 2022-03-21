@@ -138,32 +138,26 @@ public final class GetAssignmentArgs extends io.pulumi.resources.InvokeArgs {
             this.instanceArn = Objects.requireNonNull(instanceArn);
             return this;
         }
-
         public Builder permissionSetArn(String permissionSetArn) {
             this.permissionSetArn = Objects.requireNonNull(permissionSetArn);
             return this;
         }
-
         public Builder principalId(String principalId) {
             this.principalId = Objects.requireNonNull(principalId);
             return this;
         }
-
         public Builder principalType(AssignmentPrincipalType principalType) {
             this.principalType = Objects.requireNonNull(principalType);
             return this;
         }
-
         public Builder targetId(String targetId) {
             this.targetId = Objects.requireNonNull(targetId);
             return this;
         }
-
         public Builder targetType(AssignmentTargetType targetType) {
             this.targetType = Objects.requireNonNull(targetType);
             return this;
-        }
-        public GetAssignmentArgs build() {
+        }        public GetAssignmentArgs build() {
             return new GetAssignmentArgs(instanceArn, permissionSetArn, principalId, principalType, targetId, targetType);
         }
     }

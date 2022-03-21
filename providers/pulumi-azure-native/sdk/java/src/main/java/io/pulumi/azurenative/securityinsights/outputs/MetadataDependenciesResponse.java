@@ -136,32 +136,29 @@ public final class MetadataDependenciesResponse {
             this.contentId = contentId;
             return this;
         }
-
         public Builder criteria(@Nullable List<MetadataDependenciesResponse> criteria) {
             this.criteria = criteria;
             return this;
         }
-
+        public Builder criteria(MetadataDependenciesResponse... criteria) {
+            return criteria(List.of(criteria));
+        }
         public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder operator(@Nullable String operator) {
             this.operator = operator;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = version;
             return this;
-        }
-        public MetadataDependenciesResponse build() {
+        }        public MetadataDependenciesResponse build() {
             return new MetadataDependenciesResponse(contentId, criteria, kind, name, operator, version);
         }
     }

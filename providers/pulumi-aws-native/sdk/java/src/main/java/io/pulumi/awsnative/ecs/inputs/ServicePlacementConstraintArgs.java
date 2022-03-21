@@ -67,22 +67,18 @@ public final class ServicePlacementConstraintArgs extends io.pulumi.resources.Re
             this.expression = expression;
             return this;
         }
-
         public Builder expression(@Nullable String expression) {
             this.expression = Output.ofNullable(expression);
             return this;
         }
-
         public Builder type(Output<ServicePlacementConstraintType> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(ServicePlacementConstraintType type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public ServicePlacementConstraintArgs build() {
+        }        public ServicePlacementConstraintArgs build() {
             return new ServicePlacementConstraintArgs(expression, type);
         }
     }

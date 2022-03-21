@@ -967,502 +967,429 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
             this.clusterSecurityGroup = clusterSecurityGroup;
             return this;
         }
-
         public Builder clusterSecurityGroup(@Nullable SecurityGroup clusterSecurityGroup) {
             this.clusterSecurityGroup = Output.ofNullable(clusterSecurityGroup);
             return this;
         }
-
         public Builder clusterSecurityGroupTags(@Nullable Output<Map<String,String>> clusterSecurityGroupTags) {
             this.clusterSecurityGroupTags = clusterSecurityGroupTags;
             return this;
         }
-
         public Builder clusterSecurityGroupTags(@Nullable Map<String,String> clusterSecurityGroupTags) {
             this.clusterSecurityGroupTags = Output.ofNullable(clusterSecurityGroupTags);
             return this;
         }
-
         public Builder clusterTags(@Nullable Output<Map<String,String>> clusterTags) {
             this.clusterTags = clusterTags;
             return this;
         }
-
         public Builder clusterTags(@Nullable Map<String,String> clusterTags) {
             this.clusterTags = Output.ofNullable(clusterTags);
             return this;
         }
-
         public Builder createOidcProvider(@Nullable Output<Boolean> createOidcProvider) {
             this.createOidcProvider = createOidcProvider;
             return this;
         }
-
         public Builder createOidcProvider(@Nullable Boolean createOidcProvider) {
             this.createOidcProvider = Output.ofNullable(createOidcProvider);
             return this;
         }
-
         public Builder creationRoleProvider(@Nullable Output<CreationRoleProviderArgs> creationRoleProvider) {
             this.creationRoleProvider = creationRoleProvider;
             return this;
         }
-
         public Builder creationRoleProvider(@Nullable CreationRoleProviderArgs creationRoleProvider) {
             this.creationRoleProvider = Output.ofNullable(creationRoleProvider);
             return this;
         }
-
         public Builder desiredCapacity(@Nullable Output<Integer> desiredCapacity) {
             this.desiredCapacity = desiredCapacity;
             return this;
         }
-
         public Builder desiredCapacity(@Nullable Integer desiredCapacity) {
             this.desiredCapacity = Output.ofNullable(desiredCapacity);
             return this;
         }
-
         public Builder enabledClusterLogTypes(@Nullable Output<List<String>> enabledClusterLogTypes) {
             this.enabledClusterLogTypes = enabledClusterLogTypes;
             return this;
         }
-
         public Builder enabledClusterLogTypes(@Nullable List<String> enabledClusterLogTypes) {
             this.enabledClusterLogTypes = Output.ofNullable(enabledClusterLogTypes);
             return this;
         }
-
+        public Builder enabledClusterLogTypes(String... enabledClusterLogTypes) {
+            return enabledClusterLogTypes(List.of(enabledClusterLogTypes));
+        }
         public Builder encryptRootBlockDevice(@Nullable Output<Boolean> encryptRootBlockDevice) {
             this.encryptRootBlockDevice = encryptRootBlockDevice;
             return this;
         }
-
         public Builder encryptRootBlockDevice(@Nullable Boolean encryptRootBlockDevice) {
             this.encryptRootBlockDevice = Output.ofNullable(encryptRootBlockDevice);
             return this;
         }
-
         public Builder encryptionConfigKeyArn(@Nullable Output<String> encryptionConfigKeyArn) {
             this.encryptionConfigKeyArn = encryptionConfigKeyArn;
             return this;
         }
-
         public Builder encryptionConfigKeyArn(@Nullable String encryptionConfigKeyArn) {
             this.encryptionConfigKeyArn = Output.ofNullable(encryptionConfigKeyArn);
             return this;
         }
-
         public Builder endpointPrivateAccess(@Nullable Output<Boolean> endpointPrivateAccess) {
             this.endpointPrivateAccess = endpointPrivateAccess;
             return this;
         }
-
         public Builder endpointPrivateAccess(@Nullable Boolean endpointPrivateAccess) {
             this.endpointPrivateAccess = Output.ofNullable(endpointPrivateAccess);
             return this;
         }
-
         public Builder endpointPublicAccess(@Nullable Output<Boolean> endpointPublicAccess) {
             this.endpointPublicAccess = endpointPublicAccess;
             return this;
         }
-
         public Builder endpointPublicAccess(@Nullable Boolean endpointPublicAccess) {
             this.endpointPublicAccess = Output.ofNullable(endpointPublicAccess);
             return this;
         }
-
         public Builder fargate(@Nullable Output<Either<Boolean,FargateProfileArgs>> fargate) {
             this.fargate = fargate;
             return this;
         }
-
         public Builder fargate(@Nullable Either<Boolean,FargateProfileArgs> fargate) {
             this.fargate = Output.ofNullable(fargate);
             return this;
         }
-
         public Builder gpu(@Nullable Output<Boolean> gpu) {
             this.gpu = gpu;
             return this;
         }
-
         public Builder gpu(@Nullable Boolean gpu) {
             this.gpu = Output.ofNullable(gpu);
             return this;
         }
-
         public Builder instanceProfileName(@Nullable Output<String> instanceProfileName) {
             this.instanceProfileName = instanceProfileName;
             return this;
         }
-
         public Builder instanceProfileName(@Nullable String instanceProfileName) {
             this.instanceProfileName = Output.ofNullable(instanceProfileName);
             return this;
         }
-
         public Builder instanceRole(@Nullable Output<Role> instanceRole) {
             this.instanceRole = instanceRole;
             return this;
         }
-
         public Builder instanceRole(@Nullable Role instanceRole) {
             this.instanceRole = Output.ofNullable(instanceRole);
             return this;
         }
-
         public Builder instanceRoles(@Nullable Output<List<Role>> instanceRoles) {
             this.instanceRoles = instanceRoles;
             return this;
         }
-
         public Builder instanceRoles(@Nullable List<Role> instanceRoles) {
             this.instanceRoles = Output.ofNullable(instanceRoles);
             return this;
         }
-
+        public Builder instanceRoles(Role... instanceRoles) {
+            return instanceRoles(List.of(instanceRoles));
+        }
         public Builder instanceType(@Nullable Output<String> instanceType) {
             this.instanceType = instanceType;
             return this;
         }
-
         public Builder instanceType(@Nullable String instanceType) {
             this.instanceType = Output.ofNullable(instanceType);
             return this;
         }
-
         public Builder kubernetesServiceIpAddressRange(@Nullable Output<String> kubernetesServiceIpAddressRange) {
             this.kubernetesServiceIpAddressRange = kubernetesServiceIpAddressRange;
             return this;
         }
-
         public Builder kubernetesServiceIpAddressRange(@Nullable String kubernetesServiceIpAddressRange) {
             this.kubernetesServiceIpAddressRange = Output.ofNullable(kubernetesServiceIpAddressRange);
             return this;
         }
-
         public Builder maxSize(@Nullable Output<Integer> maxSize) {
             this.maxSize = maxSize;
             return this;
         }
-
         public Builder maxSize(@Nullable Integer maxSize) {
             this.maxSize = Output.ofNullable(maxSize);
             return this;
         }
-
         public Builder minSize(@Nullable Output<Integer> minSize) {
             this.minSize = minSize;
             return this;
         }
-
         public Builder minSize(@Nullable Integer minSize) {
             this.minSize = Output.ofNullable(minSize);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder nodeAmiId(@Nullable Output<String> nodeAmiId) {
             this.nodeAmiId = nodeAmiId;
             return this;
         }
-
         public Builder nodeAmiId(@Nullable String nodeAmiId) {
             this.nodeAmiId = Output.ofNullable(nodeAmiId);
             return this;
         }
-
         public Builder nodeAssociatePublicIpAddress(@Nullable Output<Boolean> nodeAssociatePublicIpAddress) {
             this.nodeAssociatePublicIpAddress = nodeAssociatePublicIpAddress;
             return this;
         }
-
         public Builder nodeAssociatePublicIpAddress(@Nullable Boolean nodeAssociatePublicIpAddress) {
             this.nodeAssociatePublicIpAddress = Output.ofNullable(nodeAssociatePublicIpAddress);
             return this;
         }
-
         public Builder nodeGroupOptions(@Nullable Output<ClusterNodeGroupOptionsArgs> nodeGroupOptions) {
             this.nodeGroupOptions = nodeGroupOptions;
             return this;
         }
-
         public Builder nodeGroupOptions(@Nullable ClusterNodeGroupOptionsArgs nodeGroupOptions) {
             this.nodeGroupOptions = Output.ofNullable(nodeGroupOptions);
             return this;
         }
-
         public Builder nodePublicKey(@Nullable Output<String> nodePublicKey) {
             this.nodePublicKey = nodePublicKey;
             return this;
         }
-
         public Builder nodePublicKey(@Nullable String nodePublicKey) {
             this.nodePublicKey = Output.ofNullable(nodePublicKey);
             return this;
         }
-
         public Builder nodeRootVolumeDeleteOnTermination(@Nullable Output<Boolean> nodeRootVolumeDeleteOnTermination) {
             this.nodeRootVolumeDeleteOnTermination = nodeRootVolumeDeleteOnTermination;
             return this;
         }
-
         public Builder nodeRootVolumeDeleteOnTermination(@Nullable Boolean nodeRootVolumeDeleteOnTermination) {
             this.nodeRootVolumeDeleteOnTermination = Output.ofNullable(nodeRootVolumeDeleteOnTermination);
             return this;
         }
-
         public Builder nodeRootVolumeEncrypted(@Nullable Output<Boolean> nodeRootVolumeEncrypted) {
             this.nodeRootVolumeEncrypted = nodeRootVolumeEncrypted;
             return this;
         }
-
         public Builder nodeRootVolumeEncrypted(@Nullable Boolean nodeRootVolumeEncrypted) {
             this.nodeRootVolumeEncrypted = Output.ofNullable(nodeRootVolumeEncrypted);
             return this;
         }
-
         public Builder nodeRootVolumeIops(@Nullable Output<Integer> nodeRootVolumeIops) {
             this.nodeRootVolumeIops = nodeRootVolumeIops;
             return this;
         }
-
         public Builder nodeRootVolumeIops(@Nullable Integer nodeRootVolumeIops) {
             this.nodeRootVolumeIops = Output.ofNullable(nodeRootVolumeIops);
             return this;
         }
-
         public Builder nodeRootVolumeSize(@Nullable Output<Integer> nodeRootVolumeSize) {
             this.nodeRootVolumeSize = nodeRootVolumeSize;
             return this;
         }
-
         public Builder nodeRootVolumeSize(@Nullable Integer nodeRootVolumeSize) {
             this.nodeRootVolumeSize = Output.ofNullable(nodeRootVolumeSize);
             return this;
         }
-
         public Builder nodeRootVolumeThroughput(@Nullable Output<Integer> nodeRootVolumeThroughput) {
             this.nodeRootVolumeThroughput = nodeRootVolumeThroughput;
             return this;
         }
-
         public Builder nodeRootVolumeThroughput(@Nullable Integer nodeRootVolumeThroughput) {
             this.nodeRootVolumeThroughput = Output.ofNullable(nodeRootVolumeThroughput);
             return this;
         }
-
         public Builder nodeRootVolumeType(@Nullable Output<String> nodeRootVolumeType) {
             this.nodeRootVolumeType = nodeRootVolumeType;
             return this;
         }
-
         public Builder nodeRootVolumeType(@Nullable String nodeRootVolumeType) {
             this.nodeRootVolumeType = Output.ofNullable(nodeRootVolumeType);
             return this;
         }
-
         public Builder nodeSecurityGroupTags(@Nullable Output<Map<String,String>> nodeSecurityGroupTags) {
             this.nodeSecurityGroupTags = nodeSecurityGroupTags;
             return this;
         }
-
         public Builder nodeSecurityGroupTags(@Nullable Map<String,String> nodeSecurityGroupTags) {
             this.nodeSecurityGroupTags = Output.ofNullable(nodeSecurityGroupTags);
             return this;
         }
-
         public Builder nodeSubnetIds(@Nullable Output<List<String>> nodeSubnetIds) {
             this.nodeSubnetIds = nodeSubnetIds;
             return this;
         }
-
         public Builder nodeSubnetIds(@Nullable List<String> nodeSubnetIds) {
             this.nodeSubnetIds = Output.ofNullable(nodeSubnetIds);
             return this;
         }
-
+        public Builder nodeSubnetIds(String... nodeSubnetIds) {
+            return nodeSubnetIds(List.of(nodeSubnetIds));
+        }
         public Builder nodeUserData(@Nullable Output<String> nodeUserData) {
             this.nodeUserData = nodeUserData;
             return this;
         }
-
         public Builder nodeUserData(@Nullable String nodeUserData) {
             this.nodeUserData = Output.ofNullable(nodeUserData);
             return this;
         }
-
         public Builder privateSubnetIds(@Nullable Output<List<String>> privateSubnetIds) {
             this.privateSubnetIds = privateSubnetIds;
             return this;
         }
-
         public Builder privateSubnetIds(@Nullable List<String> privateSubnetIds) {
             this.privateSubnetIds = Output.ofNullable(privateSubnetIds);
             return this;
         }
-
+        public Builder privateSubnetIds(String... privateSubnetIds) {
+            return privateSubnetIds(List.of(privateSubnetIds));
+        }
         public Builder providerCredentialOpts(@Nullable Output<KubeconfigOptionsArgs> providerCredentialOpts) {
             this.providerCredentialOpts = providerCredentialOpts;
             return this;
         }
-
         public Builder providerCredentialOpts(@Nullable KubeconfigOptionsArgs providerCredentialOpts) {
             this.providerCredentialOpts = Output.ofNullable(providerCredentialOpts);
             return this;
         }
-
         public Builder proxy(@Nullable Output<String> proxy) {
             this.proxy = proxy;
             return this;
         }
-
         public Builder proxy(@Nullable String proxy) {
             this.proxy = Output.ofNullable(proxy);
             return this;
         }
-
         public Builder publicAccessCidrs(@Nullable Output<List<String>> publicAccessCidrs) {
             this.publicAccessCidrs = publicAccessCidrs;
             return this;
         }
-
         public Builder publicAccessCidrs(@Nullable List<String> publicAccessCidrs) {
             this.publicAccessCidrs = Output.ofNullable(publicAccessCidrs);
             return this;
         }
-
+        public Builder publicAccessCidrs(String... publicAccessCidrs) {
+            return publicAccessCidrs(List.of(publicAccessCidrs));
+        }
         public Builder publicSubnetIds(@Nullable Output<List<String>> publicSubnetIds) {
             this.publicSubnetIds = publicSubnetIds;
             return this;
         }
-
         public Builder publicSubnetIds(@Nullable List<String> publicSubnetIds) {
             this.publicSubnetIds = Output.ofNullable(publicSubnetIds);
             return this;
         }
-
+        public Builder publicSubnetIds(String... publicSubnetIds) {
+            return publicSubnetIds(List.of(publicSubnetIds));
+        }
         public Builder roleMappings(@Nullable Output<List<RoleMappingArgs>> roleMappings) {
             this.roleMappings = roleMappings;
             return this;
         }
-
         public Builder roleMappings(@Nullable List<RoleMappingArgs> roleMappings) {
             this.roleMappings = Output.ofNullable(roleMappings);
             return this;
         }
-
+        public Builder roleMappings(RoleMappingArgs... roleMappings) {
+            return roleMappings(List.of(roleMappings));
+        }
         public Builder serviceRole(@Nullable Output<Role> serviceRole) {
             this.serviceRole = serviceRole;
             return this;
         }
-
         public Builder serviceRole(@Nullable Role serviceRole) {
             this.serviceRole = Output.ofNullable(serviceRole);
             return this;
         }
-
         public Builder skipDefaultNodeGroup(@Nullable Output<Boolean> skipDefaultNodeGroup) {
             this.skipDefaultNodeGroup = skipDefaultNodeGroup;
             return this;
         }
-
         public Builder skipDefaultNodeGroup(@Nullable Boolean skipDefaultNodeGroup) {
             this.skipDefaultNodeGroup = Output.ofNullable(skipDefaultNodeGroup);
             return this;
         }
-
         public Builder storageClasses(@Nullable Output<Either<String,Map<String,StorageClassArgs>>> storageClasses) {
             this.storageClasses = storageClasses;
             return this;
         }
-
         public Builder storageClasses(@Nullable Either<String,Map<String,StorageClassArgs>> storageClasses) {
             this.storageClasses = Output.ofNullable(storageClasses);
             return this;
         }
-
         public Builder subnetIds(@Nullable Output<List<String>> subnetIds) {
             this.subnetIds = subnetIds;
             return this;
         }
-
         public Builder subnetIds(@Nullable List<String> subnetIds) {
             this.subnetIds = Output.ofNullable(subnetIds);
             return this;
         }
-
+        public Builder subnetIds(String... subnetIds) {
+            return subnetIds(List.of(subnetIds));
+        }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder useDefaultVpcCni(@Nullable Output<Boolean> useDefaultVpcCni) {
             this.useDefaultVpcCni = useDefaultVpcCni;
             return this;
         }
-
         public Builder useDefaultVpcCni(@Nullable Boolean useDefaultVpcCni) {
             this.useDefaultVpcCni = Output.ofNullable(useDefaultVpcCni);
             return this;
         }
-
         public Builder userMappings(@Nullable Output<List<UserMappingArgs>> userMappings) {
             this.userMappings = userMappings;
             return this;
         }
-
         public Builder userMappings(@Nullable List<UserMappingArgs> userMappings) {
             this.userMappings = Output.ofNullable(userMappings);
             return this;
         }
-
+        public Builder userMappings(UserMappingArgs... userMappings) {
+            return userMappings(List.of(userMappings));
+        }
         public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = Output.ofNullable(version);
             return this;
         }
-
         public Builder vpcCniOptions(@Nullable Output<VpcCniOptionsArgs> vpcCniOptions) {
             this.vpcCniOptions = vpcCniOptions;
             return this;
         }
-
         public Builder vpcCniOptions(@Nullable VpcCniOptionsArgs vpcCniOptions) {
             this.vpcCniOptions = Output.ofNullable(vpcCniOptions);
             return this;
         }
-
         public Builder vpcId(@Nullable Output<String> vpcId) {
             this.vpcId = vpcId;
             return this;
         }
-
         public Builder vpcId(@Nullable String vpcId) {
             this.vpcId = Output.ofNullable(vpcId);
             return this;
-        }
-        public ClusterArgs build() {
+        }        public ClusterArgs build() {
             return new ClusterArgs(clusterSecurityGroup, clusterSecurityGroupTags, clusterTags, createOidcProvider, creationRoleProvider, desiredCapacity, enabledClusterLogTypes, encryptRootBlockDevice, encryptionConfigKeyArn, endpointPrivateAccess, endpointPublicAccess, fargate, gpu, instanceProfileName, instanceRole, instanceRoles, instanceType, kubernetesServiceIpAddressRange, maxSize, minSize, name, nodeAmiId, nodeAssociatePublicIpAddress, nodeGroupOptions, nodePublicKey, nodeRootVolumeDeleteOnTermination, nodeRootVolumeEncrypted, nodeRootVolumeIops, nodeRootVolumeSize, nodeRootVolumeThroughput, nodeRootVolumeType, nodeSecurityGroupTags, nodeSubnetIds, nodeUserData, privateSubnetIds, providerCredentialOpts, proxy, publicAccessCidrs, publicSubnetIds, roleMappings, serviceRole, skipDefaultNodeGroup, storageClasses, subnetIds, tags, useDefaultVpcCni, userMappings, version, vpcCniOptions, vpcId);
         }
     }

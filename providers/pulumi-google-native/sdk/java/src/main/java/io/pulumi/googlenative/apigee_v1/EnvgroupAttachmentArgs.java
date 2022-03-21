@@ -98,42 +98,34 @@ public final class EnvgroupAttachmentArgs extends io.pulumi.resources.ResourceAr
             this.envgroupId = Objects.requireNonNull(envgroupId);
             return this;
         }
-
         public Builder envgroupId(String envgroupId) {
             this.envgroupId = Output.of(Objects.requireNonNull(envgroupId));
             return this;
         }
-
         public Builder environment(Output<String> environment) {
             this.environment = Objects.requireNonNull(environment);
             return this;
         }
-
         public Builder environment(String environment) {
             this.environment = Output.of(Objects.requireNonNull(environment));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder organizationId(Output<String> organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }
-
         public Builder organizationId(String organizationId) {
             this.organizationId = Output.of(Objects.requireNonNull(organizationId));
             return this;
-        }
-        public EnvgroupAttachmentArgs build() {
+        }        public EnvgroupAttachmentArgs build() {
             return new EnvgroupAttachmentArgs(envgroupId, environment, name, organizationId);
         }
     }

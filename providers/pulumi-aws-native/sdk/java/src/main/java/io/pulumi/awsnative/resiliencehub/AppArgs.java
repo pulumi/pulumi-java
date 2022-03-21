@@ -137,62 +137,53 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
             this.appTemplateBody = Objects.requireNonNull(appTemplateBody);
             return this;
         }
-
         public Builder appTemplateBody(String appTemplateBody) {
             this.appTemplateBody = Output.of(Objects.requireNonNull(appTemplateBody));
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder resiliencyPolicyArn(@Nullable Output<String> resiliencyPolicyArn) {
             this.resiliencyPolicyArn = resiliencyPolicyArn;
             return this;
         }
-
         public Builder resiliencyPolicyArn(@Nullable String resiliencyPolicyArn) {
             this.resiliencyPolicyArn = Output.ofNullable(resiliencyPolicyArn);
             return this;
         }
-
         public Builder resourceMappings(Output<List<AppResourceMappingArgs>> resourceMappings) {
             this.resourceMappings = Objects.requireNonNull(resourceMappings);
             return this;
         }
-
         public Builder resourceMappings(List<AppResourceMappingArgs> resourceMappings) {
             this.resourceMappings = Output.of(Objects.requireNonNull(resourceMappings));
             return this;
         }
-
+        public Builder resourceMappings(AppResourceMappingArgs... resourceMappings) {
+            return resourceMappings(List.of(resourceMappings));
+        }
         public Builder tags(@Nullable Output<AppTagMapArgs> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable AppTagMapArgs tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public AppArgs build() {
+        }        public AppArgs build() {
             return new AppArgs(appTemplateBody, description, name, resiliencyPolicyArn, resourceMappings, tags);
         }
     }

@@ -154,37 +154,30 @@ public final class PriorityClass {
             this.apiVersion = apiVersion;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder globalDefault(@Nullable Boolean globalDefault) {
             this.globalDefault = globalDefault;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder metadata(@Nullable ObjectMeta metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder preemptionPolicy(@Nullable String preemptionPolicy) {
             this.preemptionPolicy = preemptionPolicy;
             return this;
         }
-
         public Builder value(Integer value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public PriorityClass build() {
+        }        public PriorityClass build() {
             return new PriorityClass(apiVersion, description, globalDefault, kind, metadata, preemptionPolicy, value);
         }
     }

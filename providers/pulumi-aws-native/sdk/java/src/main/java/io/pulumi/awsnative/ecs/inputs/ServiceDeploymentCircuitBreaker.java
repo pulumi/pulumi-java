@@ -64,12 +64,10 @@ public final class ServiceDeploymentCircuitBreaker extends io.pulumi.resources.I
             this.enable = Objects.requireNonNull(enable);
             return this;
         }
-
         public Builder rollback(Boolean rollback) {
             this.rollback = Objects.requireNonNull(rollback);
             return this;
-        }
-        public ServiceDeploymentCircuitBreaker build() {
+        }        public ServiceDeploymentCircuitBreaker build() {
             return new ServiceDeploymentCircuitBreaker(enable, rollback);
         }
     }

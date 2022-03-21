@@ -219,112 +219,90 @@ public final class DataRepositoryAssociationState extends io.pulumi.resources.Re
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder associationId(@Nullable Output<String> associationId) {
             this.associationId = associationId;
             return this;
         }
-
         public Builder associationId(@Nullable String associationId) {
             this.associationId = Output.ofNullable(associationId);
             return this;
         }
-
         public Builder batchImportMetaDataOnCreate(@Nullable Output<Boolean> batchImportMetaDataOnCreate) {
             this.batchImportMetaDataOnCreate = batchImportMetaDataOnCreate;
             return this;
         }
-
         public Builder batchImportMetaDataOnCreate(@Nullable Boolean batchImportMetaDataOnCreate) {
             this.batchImportMetaDataOnCreate = Output.ofNullable(batchImportMetaDataOnCreate);
             return this;
         }
-
         public Builder dataRepositoryPath(@Nullable Output<String> dataRepositoryPath) {
             this.dataRepositoryPath = dataRepositoryPath;
             return this;
         }
-
         public Builder dataRepositoryPath(@Nullable String dataRepositoryPath) {
             this.dataRepositoryPath = Output.ofNullable(dataRepositoryPath);
             return this;
         }
-
         public Builder deleteDataInFilesystem(@Nullable Output<Boolean> deleteDataInFilesystem) {
             this.deleteDataInFilesystem = deleteDataInFilesystem;
             return this;
         }
-
         public Builder deleteDataInFilesystem(@Nullable Boolean deleteDataInFilesystem) {
             this.deleteDataInFilesystem = Output.ofNullable(deleteDataInFilesystem);
             return this;
         }
-
         public Builder fileSystemId(@Nullable Output<String> fileSystemId) {
             this.fileSystemId = fileSystemId;
             return this;
         }
-
         public Builder fileSystemId(@Nullable String fileSystemId) {
             this.fileSystemId = Output.ofNullable(fileSystemId);
             return this;
         }
-
         public Builder fileSystemPath(@Nullable Output<String> fileSystemPath) {
             this.fileSystemPath = fileSystemPath;
             return this;
         }
-
         public Builder fileSystemPath(@Nullable String fileSystemPath) {
             this.fileSystemPath = Output.ofNullable(fileSystemPath);
             return this;
         }
-
         public Builder importedFileChunkSize(@Nullable Output<Integer> importedFileChunkSize) {
             this.importedFileChunkSize = importedFileChunkSize;
             return this;
         }
-
         public Builder importedFileChunkSize(@Nullable Integer importedFileChunkSize) {
             this.importedFileChunkSize = Output.ofNullable(importedFileChunkSize);
             return this;
         }
-
         public Builder s3(@Nullable Output<DataRepositoryAssociationS3GetArgs> s3) {
             this.s3 = s3;
             return this;
         }
-
         public Builder s3(@Nullable DataRepositoryAssociationS3GetArgs s3) {
             this.s3 = Output.ofNullable(s3);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
-        }
-        public DataRepositoryAssociationState build() {
+        }        public DataRepositoryAssociationState build() {
             return new DataRepositoryAssociationState(arn, associationId, batchImportMetaDataOnCreate, dataRepositoryPath, deleteDataInFilesystem, fileSystemId, fileSystemPath, importedFileChunkSize, s3, tags, tagsAll);
         }
     }

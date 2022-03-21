@@ -62,12 +62,13 @@ public final class GoogleCloudRetailV2betaRuleIgnoreActionArgs extends io.pulumi
             this.ignoreTerms = ignoreTerms;
             return this;
         }
-
         public Builder ignoreTerms(@Nullable List<String> ignoreTerms) {
             this.ignoreTerms = Output.ofNullable(ignoreTerms);
             return this;
         }
-        public GoogleCloudRetailV2betaRuleIgnoreActionArgs build() {
+        public Builder ignoreTerms(String... ignoreTerms) {
+            return ignoreTerms(List.of(ignoreTerms));
+        }        public GoogleCloudRetailV2betaRuleIgnoreActionArgs build() {
             return new GoogleCloudRetailV2betaRuleIgnoreActionArgs(ignoreTerms);
         }
     }

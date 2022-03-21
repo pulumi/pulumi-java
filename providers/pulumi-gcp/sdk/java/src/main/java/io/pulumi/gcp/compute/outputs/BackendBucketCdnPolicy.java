@@ -195,42 +195,37 @@ public final class BackendBucketCdnPolicy {
             this.cacheMode = cacheMode;
             return this;
         }
-
         public Builder clientTtl(@Nullable Integer clientTtl) {
             this.clientTtl = clientTtl;
             return this;
         }
-
         public Builder defaultTtl(@Nullable Integer defaultTtl) {
             this.defaultTtl = defaultTtl;
             return this;
         }
-
         public Builder maxTtl(@Nullable Integer maxTtl) {
             this.maxTtl = maxTtl;
             return this;
         }
-
         public Builder negativeCaching(@Nullable Boolean negativeCaching) {
             this.negativeCaching = negativeCaching;
             return this;
         }
-
         public Builder negativeCachingPolicies(@Nullable List<BackendBucketCdnPolicyNegativeCachingPolicy> negativeCachingPolicies) {
             this.negativeCachingPolicies = negativeCachingPolicies;
             return this;
         }
-
+        public Builder negativeCachingPolicies(BackendBucketCdnPolicyNegativeCachingPolicy... negativeCachingPolicies) {
+            return negativeCachingPolicies(List.of(negativeCachingPolicies));
+        }
         public Builder serveWhileStale(@Nullable Integer serveWhileStale) {
             this.serveWhileStale = serveWhileStale;
             return this;
         }
-
         public Builder signedUrlCacheMaxAgeSec(@Nullable Integer signedUrlCacheMaxAgeSec) {
             this.signedUrlCacheMaxAgeSec = signedUrlCacheMaxAgeSec;
             return this;
-        }
-        public BackendBucketCdnPolicy build() {
+        }        public BackendBucketCdnPolicy build() {
             return new BackendBucketCdnPolicy(cacheMode, clientTtl, defaultTtl, maxTtl, negativeCaching, negativeCachingPolicies, serveWhileStale, signedUrlCacheMaxAgeSec);
         }
     }

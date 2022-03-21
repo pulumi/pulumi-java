@@ -79,22 +79,18 @@ public final class SslSettingsArgs extends io.pulumi.resources.ResourceArgs {
             this.certificateId = certificateId;
             return this;
         }
-
         public Builder certificateId(@Nullable String certificateId) {
             this.certificateId = Output.ofNullable(certificateId);
             return this;
         }
-
         public Builder sslManagementType(@Nullable Output<SslSettingsSslManagementType> sslManagementType) {
             this.sslManagementType = sslManagementType;
             return this;
         }
-
         public Builder sslManagementType(@Nullable SslSettingsSslManagementType sslManagementType) {
             this.sslManagementType = Output.ofNullable(sslManagementType);
             return this;
-        }
-        public SslSettingsArgs build() {
+        }        public SslSettingsArgs build() {
             return new SslSettingsArgs(certificateId, sslManagementType);
         }
     }

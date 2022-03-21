@@ -362,202 +362,168 @@ public final class TaskSetState extends io.pulumi.resources.ResourceArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder capacityProviderStrategies(@Nullable Output<List<TaskSetCapacityProviderStrategyGetArgs>> capacityProviderStrategies) {
             this.capacityProviderStrategies = capacityProviderStrategies;
             return this;
         }
-
         public Builder capacityProviderStrategies(@Nullable List<TaskSetCapacityProviderStrategyGetArgs> capacityProviderStrategies) {
             this.capacityProviderStrategies = Output.ofNullable(capacityProviderStrategies);
             return this;
         }
-
+        public Builder capacityProviderStrategies(TaskSetCapacityProviderStrategyGetArgs... capacityProviderStrategies) {
+            return capacityProviderStrategies(List.of(capacityProviderStrategies));
+        }
         public Builder cluster(@Nullable Output<String> cluster) {
             this.cluster = cluster;
             return this;
         }
-
         public Builder cluster(@Nullable String cluster) {
             this.cluster = Output.ofNullable(cluster);
             return this;
         }
-
         public Builder externalId(@Nullable Output<String> externalId) {
             this.externalId = externalId;
             return this;
         }
-
         public Builder externalId(@Nullable String externalId) {
             this.externalId = Output.ofNullable(externalId);
             return this;
         }
-
         public Builder forceDelete(@Nullable Output<Boolean> forceDelete) {
             this.forceDelete = forceDelete;
             return this;
         }
-
         public Builder forceDelete(@Nullable Boolean forceDelete) {
             this.forceDelete = Output.ofNullable(forceDelete);
             return this;
         }
-
         public Builder launchType(@Nullable Output<String> launchType) {
             this.launchType = launchType;
             return this;
         }
-
         public Builder launchType(@Nullable String launchType) {
             this.launchType = Output.ofNullable(launchType);
             return this;
         }
-
         public Builder loadBalancers(@Nullable Output<List<TaskSetLoadBalancerGetArgs>> loadBalancers) {
             this.loadBalancers = loadBalancers;
             return this;
         }
-
         public Builder loadBalancers(@Nullable List<TaskSetLoadBalancerGetArgs> loadBalancers) {
             this.loadBalancers = Output.ofNullable(loadBalancers);
             return this;
         }
-
+        public Builder loadBalancers(TaskSetLoadBalancerGetArgs... loadBalancers) {
+            return loadBalancers(List.of(loadBalancers));
+        }
         public Builder networkConfiguration(@Nullable Output<TaskSetNetworkConfigurationGetArgs> networkConfiguration) {
             this.networkConfiguration = networkConfiguration;
             return this;
         }
-
         public Builder networkConfiguration(@Nullable TaskSetNetworkConfigurationGetArgs networkConfiguration) {
             this.networkConfiguration = Output.ofNullable(networkConfiguration);
             return this;
         }
-
         public Builder platformVersion(@Nullable Output<String> platformVersion) {
             this.platformVersion = platformVersion;
             return this;
         }
-
         public Builder platformVersion(@Nullable String platformVersion) {
             this.platformVersion = Output.ofNullable(platformVersion);
             return this;
         }
-
         public Builder scale(@Nullable Output<TaskSetScaleGetArgs> scale) {
             this.scale = scale;
             return this;
         }
-
         public Builder scale(@Nullable TaskSetScaleGetArgs scale) {
             this.scale = Output.ofNullable(scale);
             return this;
         }
-
         public Builder service(@Nullable Output<String> service) {
             this.service = service;
             return this;
         }
-
         public Builder service(@Nullable String service) {
             this.service = Output.ofNullable(service);
             return this;
         }
-
         public Builder serviceRegistries(@Nullable Output<TaskSetServiceRegistriesGetArgs> serviceRegistries) {
             this.serviceRegistries = serviceRegistries;
             return this;
         }
-
         public Builder serviceRegistries(@Nullable TaskSetServiceRegistriesGetArgs serviceRegistries) {
             this.serviceRegistries = Output.ofNullable(serviceRegistries);
             return this;
         }
-
         public Builder stabilityStatus(@Nullable Output<String> stabilityStatus) {
             this.stabilityStatus = stabilityStatus;
             return this;
         }
-
         public Builder stabilityStatus(@Nullable String stabilityStatus) {
             this.stabilityStatus = Output.ofNullable(stabilityStatus);
             return this;
         }
-
         public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = Output.ofNullable(status);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
-
         public Builder taskDefinition(@Nullable Output<String> taskDefinition) {
             this.taskDefinition = taskDefinition;
             return this;
         }
-
         public Builder taskDefinition(@Nullable String taskDefinition) {
             this.taskDefinition = Output.ofNullable(taskDefinition);
             return this;
         }
-
         public Builder taskSetId(@Nullable Output<String> taskSetId) {
             this.taskSetId = taskSetId;
             return this;
         }
-
         public Builder taskSetId(@Nullable String taskSetId) {
             this.taskSetId = Output.ofNullable(taskSetId);
             return this;
         }
-
         public Builder waitUntilStable(@Nullable Output<Boolean> waitUntilStable) {
             this.waitUntilStable = waitUntilStable;
             return this;
         }
-
         public Builder waitUntilStable(@Nullable Boolean waitUntilStable) {
             this.waitUntilStable = Output.ofNullable(waitUntilStable);
             return this;
         }
-
         public Builder waitUntilStableTimeout(@Nullable Output<String> waitUntilStableTimeout) {
             this.waitUntilStableTimeout = waitUntilStableTimeout;
             return this;
         }
-
         public Builder waitUntilStableTimeout(@Nullable String waitUntilStableTimeout) {
             this.waitUntilStableTimeout = Output.ofNullable(waitUntilStableTimeout);
             return this;
-        }
-        public TaskSetState build() {
+        }        public TaskSetState build() {
             return new TaskSetState(arn, capacityProviderStrategies, cluster, externalId, forceDelete, launchType, loadBalancers, networkConfiguration, platformVersion, scale, service, serviceRegistries, stabilityStatus, status, tags, tagsAll, taskDefinition, taskSetId, waitUntilStable, waitUntilStableTimeout);
         }
     }

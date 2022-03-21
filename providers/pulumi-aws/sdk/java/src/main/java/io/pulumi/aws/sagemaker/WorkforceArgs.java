@@ -109,42 +109,34 @@ public final class WorkforceArgs extends io.pulumi.resources.ResourceArgs {
             this.cognitoConfig = cognitoConfig;
             return this;
         }
-
         public Builder cognitoConfig(@Nullable WorkforceCognitoConfigArgs cognitoConfig) {
             this.cognitoConfig = Output.ofNullable(cognitoConfig);
             return this;
         }
-
         public Builder oidcConfig(@Nullable Output<WorkforceOidcConfigArgs> oidcConfig) {
             this.oidcConfig = oidcConfig;
             return this;
         }
-
         public Builder oidcConfig(@Nullable WorkforceOidcConfigArgs oidcConfig) {
             this.oidcConfig = Output.ofNullable(oidcConfig);
             return this;
         }
-
         public Builder sourceIpConfig(@Nullable Output<WorkforceSourceIpConfigArgs> sourceIpConfig) {
             this.sourceIpConfig = sourceIpConfig;
             return this;
         }
-
         public Builder sourceIpConfig(@Nullable WorkforceSourceIpConfigArgs sourceIpConfig) {
             this.sourceIpConfig = Output.ofNullable(sourceIpConfig);
             return this;
         }
-
         public Builder workforceName(Output<String> workforceName) {
             this.workforceName = Objects.requireNonNull(workforceName);
             return this;
         }
-
         public Builder workforceName(String workforceName) {
             this.workforceName = Output.of(Objects.requireNonNull(workforceName));
             return this;
-        }
-        public WorkforceArgs build() {
+        }        public WorkforceArgs build() {
             return new WorkforceArgs(cognitoConfig, oidcConfig, sourceIpConfig, workforceName);
         }
     }

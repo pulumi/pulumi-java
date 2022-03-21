@@ -100,27 +100,22 @@ public final class GetDebugSessionArgs extends io.pulumi.resources.InvokeArgs {
             this.apiId = Objects.requireNonNull(apiId);
             return this;
         }
-
         public Builder debugsessionId(String debugsessionId) {
             this.debugsessionId = Objects.requireNonNull(debugsessionId);
             return this;
         }
-
         public Builder environmentId(String environmentId) {
             this.environmentId = Objects.requireNonNull(environmentId);
             return this;
         }
-
         public Builder organizationId(String organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }
-
         public Builder revisionId(String revisionId) {
             this.revisionId = Objects.requireNonNull(revisionId);
             return this;
-        }
-        public GetDebugSessionArgs build() {
+        }        public GetDebugSessionArgs build() {
             return new GetDebugSessionArgs(apiId, debugsessionId, environmentId, organizationId, revisionId);
         }
     }

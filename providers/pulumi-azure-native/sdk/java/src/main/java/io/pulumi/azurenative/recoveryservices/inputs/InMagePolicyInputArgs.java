@@ -130,52 +130,42 @@ public final class InMagePolicyInputArgs extends io.pulumi.resources.ResourceArg
             this.appConsistentFrequencyInMinutes = appConsistentFrequencyInMinutes;
             return this;
         }
-
         public Builder appConsistentFrequencyInMinutes(@Nullable Integer appConsistentFrequencyInMinutes) {
             this.appConsistentFrequencyInMinutes = Output.ofNullable(appConsistentFrequencyInMinutes);
             return this;
         }
-
         public Builder instanceType(@Nullable Output<String> instanceType) {
             this.instanceType = instanceType;
             return this;
         }
-
         public Builder instanceType(@Nullable String instanceType) {
             this.instanceType = Output.ofNullable(instanceType);
             return this;
         }
-
         public Builder multiVmSyncStatus(Output<Either<String,SetMultiVmSyncStatus>> multiVmSyncStatus) {
             this.multiVmSyncStatus = Objects.requireNonNull(multiVmSyncStatus);
             return this;
         }
-
         public Builder multiVmSyncStatus(Either<String,SetMultiVmSyncStatus> multiVmSyncStatus) {
             this.multiVmSyncStatus = Output.of(Objects.requireNonNull(multiVmSyncStatus));
             return this;
         }
-
         public Builder recoveryPointHistory(@Nullable Output<Integer> recoveryPointHistory) {
             this.recoveryPointHistory = recoveryPointHistory;
             return this;
         }
-
         public Builder recoveryPointHistory(@Nullable Integer recoveryPointHistory) {
             this.recoveryPointHistory = Output.ofNullable(recoveryPointHistory);
             return this;
         }
-
         public Builder recoveryPointThresholdInMinutes(@Nullable Output<Integer> recoveryPointThresholdInMinutes) {
             this.recoveryPointThresholdInMinutes = recoveryPointThresholdInMinutes;
             return this;
         }
-
         public Builder recoveryPointThresholdInMinutes(@Nullable Integer recoveryPointThresholdInMinutes) {
             this.recoveryPointThresholdInMinutes = Output.ofNullable(recoveryPointThresholdInMinutes);
             return this;
-        }
-        public InMagePolicyInputArgs build() {
+        }        public InMagePolicyInputArgs build() {
             return new InMagePolicyInputArgs(appConsistentFrequencyInMinutes, instanceType, multiVmSyncStatus, recoveryPointHistory, recoveryPointThresholdInMinutes);
         }
     }

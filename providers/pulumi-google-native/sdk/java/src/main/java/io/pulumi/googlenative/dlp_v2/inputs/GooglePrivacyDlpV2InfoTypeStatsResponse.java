@@ -77,12 +77,10 @@ public final class GooglePrivacyDlpV2InfoTypeStatsResponse extends io.pulumi.res
             this.count = Objects.requireNonNull(count);
             return this;
         }
-
         public Builder infoType(GooglePrivacyDlpV2InfoTypeResponse infoType) {
             this.infoType = Objects.requireNonNull(infoType);
             return this;
-        }
-        public GooglePrivacyDlpV2InfoTypeStatsResponse build() {
+        }        public GooglePrivacyDlpV2InfoTypeStatsResponse build() {
             return new GooglePrivacyDlpV2InfoTypeStatsResponse(count, infoType);
         }
     }

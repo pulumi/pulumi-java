@@ -56,12 +56,10 @@ public final class GetAccountResult {
             this.accountId = accountId;
             return this;
         }
-
         public Builder expiryEventsConfiguration(@Nullable AccountExpiryEventsConfiguration expiryEventsConfiguration) {
             this.expiryEventsConfiguration = expiryEventsConfiguration;
             return this;
-        }
-        public GetAccountResult build() {
+        }        public GetAccountResult build() {
             return new GetAccountResult(accountId, expiryEventsConfiguration);
         }
     }

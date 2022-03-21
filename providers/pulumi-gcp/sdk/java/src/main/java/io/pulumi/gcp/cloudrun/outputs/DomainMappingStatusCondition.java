@@ -71,22 +71,18 @@ public final class DomainMappingStatusCondition {
             this.message = message;
             return this;
         }
-
         public Builder reason(@Nullable String reason) {
             this.reason = reason;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
-        }
-        public DomainMappingStatusCondition build() {
+        }        public DomainMappingStatusCondition build() {
             return new DomainMappingStatusCondition(message, reason, status, type);
         }
     }

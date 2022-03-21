@@ -51,8 +51,7 @@ public final class GetTopicResult {
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public GetTopicResult build() {
+        }        public GetTopicResult build() {
             return new GetTopicResult(name);
         }
     }

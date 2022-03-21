@@ -88,17 +88,14 @@ public final class GetAATPDataConnectorArgs extends io.pulumi.resources.InvokeAr
             this.dataConnectorId = Objects.requireNonNull(dataConnectorId);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
-        }
-        public GetAATPDataConnectorArgs build() {
+        }        public GetAATPDataConnectorArgs build() {
             return new GetAATPDataConnectorArgs(dataConnectorId, resourceGroupName, workspaceName);
         }
     }

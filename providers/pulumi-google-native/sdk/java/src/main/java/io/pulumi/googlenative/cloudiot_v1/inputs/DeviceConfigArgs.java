@@ -61,12 +61,10 @@ public final class DeviceConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.binaryData = binaryData;
             return this;
         }
-
         public Builder binaryData(@Nullable String binaryData) {
             this.binaryData = Output.ofNullable(binaryData);
             return this;
-        }
-        public DeviceConfigArgs build() {
+        }        public DeviceConfigArgs build() {
             return new DeviceConfigArgs(binaryData);
         }
     }

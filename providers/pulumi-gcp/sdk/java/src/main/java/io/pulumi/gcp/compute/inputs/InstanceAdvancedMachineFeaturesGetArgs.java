@@ -75,22 +75,18 @@ public final class InstanceAdvancedMachineFeaturesGetArgs extends io.pulumi.reso
             this.enableNestedVirtualization = enableNestedVirtualization;
             return this;
         }
-
         public Builder enableNestedVirtualization(@Nullable Boolean enableNestedVirtualization) {
             this.enableNestedVirtualization = Output.ofNullable(enableNestedVirtualization);
             return this;
         }
-
         public Builder threadsPerCore(@Nullable Output<Integer> threadsPerCore) {
             this.threadsPerCore = threadsPerCore;
             return this;
         }
-
         public Builder threadsPerCore(@Nullable Integer threadsPerCore) {
             this.threadsPerCore = Output.ofNullable(threadsPerCore);
             return this;
-        }
-        public InstanceAdvancedMachineFeaturesGetArgs build() {
+        }        public InstanceAdvancedMachineFeaturesGetArgs build() {
             return new InstanceAdvancedMachineFeaturesGetArgs(enableNestedVirtualization, threadsPerCore);
         }
     }

@@ -80,22 +80,18 @@ public final class ConnectToTargetAzureDbForPostgreSqlSyncTaskPropertiesArgs ext
             this.input = input;
             return this;
         }
-
         public Builder input(@Nullable ConnectToTargetAzureDbForPostgreSqlSyncTaskInputArgs input) {
             this.input = Output.ofNullable(input);
             return this;
         }
-
         public Builder taskType(Output<String> taskType) {
             this.taskType = Objects.requireNonNull(taskType);
             return this;
         }
-
         public Builder taskType(String taskType) {
             this.taskType = Output.of(Objects.requireNonNull(taskType));
             return this;
-        }
-        public ConnectToTargetAzureDbForPostgreSqlSyncTaskPropertiesArgs build() {
+        }        public ConnectToTargetAzureDbForPostgreSqlSyncTaskPropertiesArgs build() {
             return new ConnectToTargetAzureDbForPostgreSqlSyncTaskPropertiesArgs(input, taskType);
         }
     }

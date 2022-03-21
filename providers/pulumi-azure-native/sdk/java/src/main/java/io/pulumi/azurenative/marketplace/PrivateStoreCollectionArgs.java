@@ -156,72 +156,61 @@ public final class PrivateStoreCollectionArgs extends io.pulumi.resources.Resour
             this.allSubscriptions = allSubscriptions;
             return this;
         }
-
         public Builder allSubscriptions(@Nullable Boolean allSubscriptions) {
             this.allSubscriptions = Output.ofNullable(allSubscriptions);
             return this;
         }
-
         public Builder claim(@Nullable Output<String> claim) {
             this.claim = claim;
             return this;
         }
-
         public Builder claim(@Nullable String claim) {
             this.claim = Output.ofNullable(claim);
             return this;
         }
-
         public Builder collectionId(@Nullable Output<String> collectionId) {
             this.collectionId = collectionId;
             return this;
         }
-
         public Builder collectionId(@Nullable String collectionId) {
             this.collectionId = Output.ofNullable(collectionId);
             return this;
         }
-
         public Builder collectionName(@Nullable Output<String> collectionName) {
             this.collectionName = collectionName;
             return this;
         }
-
         public Builder collectionName(@Nullable String collectionName) {
             this.collectionName = Output.ofNullable(collectionName);
             return this;
         }
-
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
         }
-
         public Builder privateStoreId(Output<String> privateStoreId) {
             this.privateStoreId = Objects.requireNonNull(privateStoreId);
             return this;
         }
-
         public Builder privateStoreId(String privateStoreId) {
             this.privateStoreId = Output.of(Objects.requireNonNull(privateStoreId));
             return this;
         }
-
         public Builder subscriptionsList(@Nullable Output<List<String>> subscriptionsList) {
             this.subscriptionsList = subscriptionsList;
             return this;
         }
-
         public Builder subscriptionsList(@Nullable List<String> subscriptionsList) {
             this.subscriptionsList = Output.ofNullable(subscriptionsList);
             return this;
         }
-        public PrivateStoreCollectionArgs build() {
+        public Builder subscriptionsList(String... subscriptionsList) {
+            return subscriptionsList(List.of(subscriptionsList));
+        }        public PrivateStoreCollectionArgs build() {
             return new PrivateStoreCollectionArgs(allSubscriptions, claim, collectionId, collectionName, enabled, privateStoreId, subscriptionsList);
         }
     }

@@ -83,12 +83,13 @@ public final class WorkloadIdentityPoolProviderOidc {
             this.allowedAudiences = allowedAudiences;
             return this;
         }
-
+        public Builder allowedAudiences(String... allowedAudiences) {
+            return allowedAudiences(List.of(allowedAudiences));
+        }
         public Builder issuerUri(String issuerUri) {
             this.issuerUri = Objects.requireNonNull(issuerUri);
             return this;
-        }
-        public WorkloadIdentityPoolProviderOidc build() {
+        }        public WorkloadIdentityPoolProviderOidc build() {
             return new WorkloadIdentityPoolProviderOidc(allowedAudiences, issuerUri);
         }
     }

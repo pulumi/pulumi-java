@@ -91,32 +91,26 @@ public final class ModelQualityJobDefinitionNetworkConfigArgs extends io.pulumi.
             this.enableInterContainerTrafficEncryption = enableInterContainerTrafficEncryption;
             return this;
         }
-
         public Builder enableInterContainerTrafficEncryption(@Nullable Boolean enableInterContainerTrafficEncryption) {
             this.enableInterContainerTrafficEncryption = Output.ofNullable(enableInterContainerTrafficEncryption);
             return this;
         }
-
         public Builder enableNetworkIsolation(@Nullable Output<Boolean> enableNetworkIsolation) {
             this.enableNetworkIsolation = enableNetworkIsolation;
             return this;
         }
-
         public Builder enableNetworkIsolation(@Nullable Boolean enableNetworkIsolation) {
             this.enableNetworkIsolation = Output.ofNullable(enableNetworkIsolation);
             return this;
         }
-
         public Builder vpcConfig(@Nullable Output<ModelQualityJobDefinitionVpcConfigArgs> vpcConfig) {
             this.vpcConfig = vpcConfig;
             return this;
         }
-
         public Builder vpcConfig(@Nullable ModelQualityJobDefinitionVpcConfigArgs vpcConfig) {
             this.vpcConfig = Output.ofNullable(vpcConfig);
             return this;
-        }
-        public ModelQualityJobDefinitionNetworkConfigArgs build() {
+        }        public ModelQualityJobDefinitionNetworkConfigArgs build() {
             return new ModelQualityJobDefinitionNetworkConfigArgs(enableInterContainerTrafficEncryption, enableNetworkIsolation, vpcConfig);
         }
     }

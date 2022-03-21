@@ -45,8 +45,7 @@ public final class EC2FleetCapacityReservationOptionsRequest {
         public Builder usageStrategy(@Nullable EC2FleetCapacityReservationOptionsRequestUsageStrategy usageStrategy) {
             this.usageStrategy = usageStrategy;
             return this;
-        }
-        public EC2FleetCapacityReservationOptionsRequest build() {
+        }        public EC2FleetCapacityReservationOptionsRequest build() {
             return new EC2FleetCapacityReservationOptionsRequest(usageStrategy);
         }
     }

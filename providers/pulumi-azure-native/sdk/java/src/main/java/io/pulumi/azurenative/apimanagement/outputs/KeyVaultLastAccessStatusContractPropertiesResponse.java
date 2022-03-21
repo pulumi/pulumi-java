@@ -87,17 +87,14 @@ public final class KeyVaultLastAccessStatusContractPropertiesResponse {
             this.code = code;
             return this;
         }
-
         public Builder message(@Nullable String message) {
             this.message = message;
             return this;
         }
-
         public Builder timeStampUtc(@Nullable String timeStampUtc) {
             this.timeStampUtc = timeStampUtc;
             return this;
-        }
-        public KeyVaultLastAccessStatusContractPropertiesResponse build() {
+        }        public KeyVaultLastAccessStatusContractPropertiesResponse build() {
             return new KeyVaultLastAccessStatusContractPropertiesResponse(code, message, timeStampUtc);
         }
     }

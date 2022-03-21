@@ -78,22 +78,18 @@ public final class ProjectRepoIdArgs extends io.pulumi.resources.ResourceArgs {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder repoName(@Nullable Output<String> repoName) {
             this.repoName = repoName;
             return this;
         }
-
         public Builder repoName(@Nullable String repoName) {
             this.repoName = Output.ofNullable(repoName);
             return this;
-        }
-        public ProjectRepoIdArgs build() {
+        }        public ProjectRepoIdArgs build() {
             return new ProjectRepoIdArgs(project, repoName);
         }
     }

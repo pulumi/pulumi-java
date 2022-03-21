@@ -119,27 +119,22 @@ public final class DataSourceRelationalDatabaseConfigHttpEndpointConfig {
             this.awsSecretStoreArn = Objects.requireNonNull(awsSecretStoreArn);
             return this;
         }
-
         public Builder databaseName(@Nullable String databaseName) {
             this.databaseName = databaseName;
             return this;
         }
-
         public Builder dbClusterIdentifier(String dbClusterIdentifier) {
             this.dbClusterIdentifier = Objects.requireNonNull(dbClusterIdentifier);
             return this;
         }
-
         public Builder region(@Nullable String region) {
             this.region = region;
             return this;
         }
-
         public Builder schema(@Nullable String schema) {
             this.schema = schema;
             return this;
-        }
-        public DataSourceRelationalDatabaseConfigHttpEndpointConfig build() {
+        }        public DataSourceRelationalDatabaseConfigHttpEndpointConfig build() {
             return new DataSourceRelationalDatabaseConfigHttpEndpointConfig(awsSecretStoreArn, databaseName, dbClusterIdentifier, region, schema);
         }
     }

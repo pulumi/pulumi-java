@@ -77,17 +77,14 @@ public final class JitSchedulingPolicyResponse {
             this.duration = Objects.requireNonNull(duration);
             return this;
         }
-
         public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public JitSchedulingPolicyResponse build() {
+        }        public JitSchedulingPolicyResponse build() {
             return new JitSchedulingPolicyResponse(duration, startTime, type);
         }
     }

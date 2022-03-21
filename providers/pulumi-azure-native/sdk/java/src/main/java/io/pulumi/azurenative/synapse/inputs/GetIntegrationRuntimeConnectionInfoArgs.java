@@ -88,17 +88,14 @@ public final class GetIntegrationRuntimeConnectionInfoArgs extends io.pulumi.res
             this.integrationRuntimeName = Objects.requireNonNull(integrationRuntimeName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
-        }
-        public GetIntegrationRuntimeConnectionInfoArgs build() {
+        }        public GetIntegrationRuntimeConnectionInfoArgs build() {
             return new GetIntegrationRuntimeConnectionInfoArgs(integrationRuntimeName, resourceGroupName, workspaceName);
         }
     }

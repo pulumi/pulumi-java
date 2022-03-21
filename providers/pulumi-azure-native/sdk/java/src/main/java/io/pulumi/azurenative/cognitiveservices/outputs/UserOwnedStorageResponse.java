@@ -53,8 +53,7 @@ public final class UserOwnedStorageResponse {
         public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = resourceId;
             return this;
-        }
-        public UserOwnedStorageResponse build() {
+        }        public UserOwnedStorageResponse build() {
             return new UserOwnedStorageResponse(resourceId);
         }
     }

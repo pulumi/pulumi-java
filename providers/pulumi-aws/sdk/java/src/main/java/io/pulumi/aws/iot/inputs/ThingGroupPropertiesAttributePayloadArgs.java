@@ -58,12 +58,10 @@ public final class ThingGroupPropertiesAttributePayloadArgs extends io.pulumi.re
             this.attributes = attributes;
             return this;
         }
-
         public Builder attributes(@Nullable Map<String,String> attributes) {
             this.attributes = Output.ofNullable(attributes);
             return this;
-        }
-        public ThingGroupPropertiesAttributePayloadArgs build() {
+        }        public ThingGroupPropertiesAttributePayloadArgs build() {
             return new ThingGroupPropertiesAttributePayloadArgs(attributes);
         }
     }

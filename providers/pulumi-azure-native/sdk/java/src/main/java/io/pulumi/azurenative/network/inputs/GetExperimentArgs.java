@@ -88,17 +88,14 @@ public final class GetExperimentArgs extends io.pulumi.resources.InvokeArgs {
             this.experimentName = Objects.requireNonNull(experimentName);
             return this;
         }
-
         public Builder profileName(String profileName) {
             this.profileName = Objects.requireNonNull(profileName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetExperimentArgs build() {
+        }        public GetExperimentArgs build() {
             return new GetExperimentArgs(experimentName, profileName, resourceGroupName);
         }
     }

@@ -140,72 +140,58 @@ public final class PrivateConnectionArgs extends io.pulumi.resources.ResourceArg
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder privateConnectionId(Output<String> privateConnectionId) {
             this.privateConnectionId = Objects.requireNonNull(privateConnectionId);
             return this;
         }
-
         public Builder privateConnectionId(String privateConnectionId) {
             this.privateConnectionId = Output.of(Objects.requireNonNull(privateConnectionId));
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder requestId(@Nullable Output<String> requestId) {
             this.requestId = requestId;
             return this;
         }
-
         public Builder requestId(@Nullable String requestId) {
             this.requestId = Output.ofNullable(requestId);
             return this;
         }
-
         public Builder vpcPeeringConfig(@Nullable Output<VpcPeeringConfigArgs> vpcPeeringConfig) {
             this.vpcPeeringConfig = vpcPeeringConfig;
             return this;
         }
-
         public Builder vpcPeeringConfig(@Nullable VpcPeeringConfigArgs vpcPeeringConfig) {
             this.vpcPeeringConfig = Output.ofNullable(vpcPeeringConfig);
             return this;
-        }
-        public PrivateConnectionArgs build() {
+        }        public PrivateConnectionArgs build() {
             return new PrivateConnectionArgs(displayName, labels, location, privateConnectionId, project, requestId, vpcPeeringConfig);
         }
     }

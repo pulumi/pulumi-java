@@ -90,32 +90,26 @@ public final class CodeRepositoryGitConfigGetArgs extends io.pulumi.resources.Re
             this.branch = branch;
             return this;
         }
-
         public Builder branch(@Nullable String branch) {
             this.branch = Output.ofNullable(branch);
             return this;
         }
-
         public Builder repositoryUrl(Output<String> repositoryUrl) {
             this.repositoryUrl = Objects.requireNonNull(repositoryUrl);
             return this;
         }
-
         public Builder repositoryUrl(String repositoryUrl) {
             this.repositoryUrl = Output.of(Objects.requireNonNull(repositoryUrl));
             return this;
         }
-
         public Builder secretArn(@Nullable Output<String> secretArn) {
             this.secretArn = secretArn;
             return this;
         }
-
         public Builder secretArn(@Nullable String secretArn) {
             this.secretArn = Output.ofNullable(secretArn);
             return this;
-        }
-        public CodeRepositoryGitConfigGetArgs build() {
+        }        public CodeRepositoryGitConfigGetArgs build() {
             return new CodeRepositoryGitConfigGetArgs(branch, repositoryUrl, secretArn);
         }
     }

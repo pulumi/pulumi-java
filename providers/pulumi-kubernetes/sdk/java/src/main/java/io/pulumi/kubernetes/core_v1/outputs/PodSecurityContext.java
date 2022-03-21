@@ -214,52 +214,48 @@ public final class PodSecurityContext {
             this.fsGroup = fsGroup;
             return this;
         }
-
         public Builder fsGroupChangePolicy(@Nullable String fsGroupChangePolicy) {
             this.fsGroupChangePolicy = fsGroupChangePolicy;
             return this;
         }
-
         public Builder runAsGroup(@Nullable Integer runAsGroup) {
             this.runAsGroup = runAsGroup;
             return this;
         }
-
         public Builder runAsNonRoot(@Nullable Boolean runAsNonRoot) {
             this.runAsNonRoot = runAsNonRoot;
             return this;
         }
-
         public Builder runAsUser(@Nullable Integer runAsUser) {
             this.runAsUser = runAsUser;
             return this;
         }
-
         public Builder seLinuxOptions(@Nullable SELinuxOptions seLinuxOptions) {
             this.seLinuxOptions = seLinuxOptions;
             return this;
         }
-
         public Builder seccompProfile(@Nullable SeccompProfile seccompProfile) {
             this.seccompProfile = seccompProfile;
             return this;
         }
-
         public Builder supplementalGroups(@Nullable List<Integer> supplementalGroups) {
             this.supplementalGroups = supplementalGroups;
             return this;
         }
-
+        public Builder supplementalGroups(Integer... supplementalGroups) {
+            return supplementalGroups(List.of(supplementalGroups));
+        }
         public Builder sysctls(@Nullable List<Sysctl> sysctls) {
             this.sysctls = sysctls;
             return this;
         }
-
+        public Builder sysctls(Sysctl... sysctls) {
+            return sysctls(List.of(sysctls));
+        }
         public Builder windowsOptions(@Nullable WindowsSecurityContextOptions windowsOptions) {
             this.windowsOptions = windowsOptions;
             return this;
-        }
-        public PodSecurityContext build() {
+        }        public PodSecurityContext build() {
             return new PodSecurityContext(fsGroup, fsGroupChangePolicy, runAsGroup, runAsNonRoot, runAsUser, seLinuxOptions, seccompProfile, supplementalGroups, sysctls, windowsOptions);
         }
     }

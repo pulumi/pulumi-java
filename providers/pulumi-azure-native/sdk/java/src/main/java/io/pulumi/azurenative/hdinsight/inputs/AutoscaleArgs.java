@@ -79,22 +79,18 @@ public final class AutoscaleArgs extends io.pulumi.resources.ResourceArgs {
             this.capacity = capacity;
             return this;
         }
-
         public Builder capacity(@Nullable AutoscaleCapacityArgs capacity) {
             this.capacity = Output.ofNullable(capacity);
             return this;
         }
-
         public Builder recurrence(@Nullable Output<AutoscaleRecurrenceArgs> recurrence) {
             this.recurrence = recurrence;
             return this;
         }
-
         public Builder recurrence(@Nullable AutoscaleRecurrenceArgs recurrence) {
             this.recurrence = Output.ofNullable(recurrence);
             return this;
-        }
-        public AutoscaleArgs build() {
+        }        public AutoscaleArgs build() {
             return new AutoscaleArgs(capacity, recurrence);
         }
     }

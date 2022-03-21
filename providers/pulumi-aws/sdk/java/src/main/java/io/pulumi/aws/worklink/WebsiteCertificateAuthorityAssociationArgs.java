@@ -90,32 +90,26 @@ public final class WebsiteCertificateAuthorityAssociationArgs extends io.pulumi.
             this.certificate = Objects.requireNonNull(certificate);
             return this;
         }
-
         public Builder certificate(String certificate) {
             this.certificate = Output.of(Objects.requireNonNull(certificate));
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder fleetArn(Output<String> fleetArn) {
             this.fleetArn = Objects.requireNonNull(fleetArn);
             return this;
         }
-
         public Builder fleetArn(String fleetArn) {
             this.fleetArn = Output.of(Objects.requireNonNull(fleetArn));
             return this;
-        }
-        public WebsiteCertificateAuthorityAssociationArgs build() {
+        }        public WebsiteCertificateAuthorityAssociationArgs build() {
             return new WebsiteCertificateAuthorityAssociationArgs(certificate, displayName, fleetArn);
         }
     }

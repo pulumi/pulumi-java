@@ -107,42 +107,34 @@ public final class MoveResourceArgs extends io.pulumi.resources.ResourceArgs {
             this.moveCollectionName = Objects.requireNonNull(moveCollectionName);
             return this;
         }
-
         public Builder moveCollectionName(String moveCollectionName) {
             this.moveCollectionName = Output.of(Objects.requireNonNull(moveCollectionName));
             return this;
         }
-
         public Builder moveResourceName(@Nullable Output<String> moveResourceName) {
             this.moveResourceName = moveResourceName;
             return this;
         }
-
         public Builder moveResourceName(@Nullable String moveResourceName) {
             this.moveResourceName = Output.ofNullable(moveResourceName);
             return this;
         }
-
         public Builder properties(@Nullable Output<MoveResourcePropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder properties(@Nullable MoveResourcePropertiesArgs properties) {
             this.properties = Output.ofNullable(properties);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
-        }
-        public MoveResourceArgs build() {
+        }        public MoveResourceArgs build() {
             return new MoveResourceArgs(moveCollectionName, moveResourceName, properties, resourceGroupName);
         }
     }

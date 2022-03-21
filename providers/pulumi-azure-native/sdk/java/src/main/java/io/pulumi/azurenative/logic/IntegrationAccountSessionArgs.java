@@ -140,62 +140,50 @@ public final class IntegrationAccountSessionArgs extends io.pulumi.resources.Res
             this.content = content;
             return this;
         }
-
         public Builder content(@Nullable Object content) {
             this.content = Output.ofNullable(content);
             return this;
         }
-
         public Builder integrationAccountName(Output<String> integrationAccountName) {
             this.integrationAccountName = Objects.requireNonNull(integrationAccountName);
             return this;
         }
-
         public Builder integrationAccountName(String integrationAccountName) {
             this.integrationAccountName = Output.of(Objects.requireNonNull(integrationAccountName));
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder sessionName(@Nullable Output<String> sessionName) {
             this.sessionName = sessionName;
             return this;
         }
-
         public Builder sessionName(@Nullable String sessionName) {
             this.sessionName = Output.ofNullable(sessionName);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public IntegrationAccountSessionArgs build() {
+        }        public IntegrationAccountSessionArgs build() {
             return new IntegrationAccountSessionArgs(content, integrationAccountName, location, resourceGroupName, sessionName, tags);
         }
     }

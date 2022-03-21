@@ -64,12 +64,10 @@ public final class GetDatabaseInstanceClone extends io.pulumi.resources.InvokeAr
             this.pointInTime = Objects.requireNonNull(pointInTime);
             return this;
         }
-
         public Builder sourceInstanceName(String sourceInstanceName) {
             this.sourceInstanceName = Objects.requireNonNull(sourceInstanceName);
             return this;
-        }
-        public GetDatabaseInstanceClone build() {
+        }        public GetDatabaseInstanceClone build() {
             return new GetDatabaseInstanceClone(pointInTime, sourceInstanceName);
         }
     }

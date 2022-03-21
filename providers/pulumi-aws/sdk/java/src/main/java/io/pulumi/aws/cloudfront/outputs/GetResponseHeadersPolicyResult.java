@@ -137,37 +137,39 @@ public final class GetResponseHeadersPolicyResult {
             this.comment = Objects.requireNonNull(comment);
             return this;
         }
-
         public Builder corsConfigs(List<GetResponseHeadersPolicyCorsConfig> corsConfigs) {
             this.corsConfigs = Objects.requireNonNull(corsConfigs);
             return this;
         }
-
+        public Builder corsConfigs(GetResponseHeadersPolicyCorsConfig... corsConfigs) {
+            return corsConfigs(List.of(corsConfigs));
+        }
         public Builder customHeadersConfigs(List<GetResponseHeadersPolicyCustomHeadersConfig> customHeadersConfigs) {
             this.customHeadersConfigs = Objects.requireNonNull(customHeadersConfigs);
             return this;
         }
-
+        public Builder customHeadersConfigs(GetResponseHeadersPolicyCustomHeadersConfig... customHeadersConfigs) {
+            return customHeadersConfigs(List.of(customHeadersConfigs));
+        }
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder securityHeadersConfigs(List<GetResponseHeadersPolicySecurityHeadersConfig> securityHeadersConfigs) {
             this.securityHeadersConfigs = Objects.requireNonNull(securityHeadersConfigs);
             return this;
         }
-        public GetResponseHeadersPolicyResult build() {
+        public Builder securityHeadersConfigs(GetResponseHeadersPolicySecurityHeadersConfig... securityHeadersConfigs) {
+            return securityHeadersConfigs(List.of(securityHeadersConfigs));
+        }        public GetResponseHeadersPolicyResult build() {
             return new GetResponseHeadersPolicyResult(comment, corsConfigs, customHeadersConfigs, etag, id, name, securityHeadersConfigs);
         }
     }

@@ -73,22 +73,18 @@ public final class PipelineDefinitionParameterObjectAttributeGetArgs extends io.
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder key(String key) {
             this.key = Output.of(Objects.requireNonNull(key));
             return this;
         }
-
         public Builder stringValue(Output<String> stringValue) {
             this.stringValue = Objects.requireNonNull(stringValue);
             return this;
         }
-
         public Builder stringValue(String stringValue) {
             this.stringValue = Output.of(Objects.requireNonNull(stringValue));
             return this;
-        }
-        public PipelineDefinitionParameterObjectAttributeGetArgs build() {
+        }        public PipelineDefinitionParameterObjectAttributeGetArgs build() {
             return new PipelineDefinitionParameterObjectAttributeGetArgs(key, stringValue);
         }
     }

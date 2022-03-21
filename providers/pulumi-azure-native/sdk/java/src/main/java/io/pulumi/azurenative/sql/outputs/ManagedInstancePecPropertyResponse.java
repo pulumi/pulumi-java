@@ -70,12 +70,10 @@ public final class ManagedInstancePecPropertyResponse {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder properties(ManagedInstancePrivateEndpointConnectionPropertiesResponse properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
-        }
-        public ManagedInstancePecPropertyResponse build() {
+        }        public ManagedInstancePecPropertyResponse build() {
             return new ManagedInstancePecPropertyResponse(id, properties);
         }
     }

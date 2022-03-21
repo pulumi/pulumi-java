@@ -69,12 +69,10 @@ public final class GetDataCatalogEncryptionSettingsDataCatalogEncryptionSettingE
             this.catalogEncryptionMode = Objects.requireNonNull(catalogEncryptionMode);
             return this;
         }
-
         public Builder sseAwsKmsKeyId(String sseAwsKmsKeyId) {
             this.sseAwsKmsKeyId = Objects.requireNonNull(sseAwsKmsKeyId);
             return this;
-        }
-        public GetDataCatalogEncryptionSettingsDataCatalogEncryptionSettingEncryptionAtRest build() {
+        }        public GetDataCatalogEncryptionSettingsDataCatalogEncryptionSettingEncryptionAtRest build() {
             return new GetDataCatalogEncryptionSettingsDataCatalogEncryptionSettingEncryptionAtRest(catalogEncryptionMode, sseAwsKmsKeyId);
         }
     }

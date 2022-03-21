@@ -66,22 +66,18 @@ public final class LicenseIssuerDataArgs extends io.pulumi.resources.ResourceArg
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder signKey(@Nullable Output<String> signKey) {
             this.signKey = signKey;
             return this;
         }
-
         public Builder signKey(@Nullable String signKey) {
             this.signKey = Output.ofNullable(signKey);
             return this;
-        }
-        public LicenseIssuerDataArgs build() {
+        }        public LicenseIssuerDataArgs build() {
             return new LicenseIssuerDataArgs(name, signKey);
         }
     }

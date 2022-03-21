@@ -136,62 +136,50 @@ public final class AccessLevelArgs extends io.pulumi.resources.ResourceArgs {
             this.accessPolicyId = Objects.requireNonNull(accessPolicyId);
             return this;
         }
-
         public Builder accessPolicyId(String accessPolicyId) {
             this.accessPolicyId = Output.of(Objects.requireNonNull(accessPolicyId));
             return this;
         }
-
         public Builder basic(@Nullable Output<BasicLevelArgs> basic) {
             this.basic = basic;
             return this;
         }
-
         public Builder basic(@Nullable BasicLevelArgs basic) {
             this.basic = Output.ofNullable(basic);
             return this;
         }
-
         public Builder custom(@Nullable Output<CustomLevelArgs> custom) {
             this.custom = custom;
             return this;
         }
-
         public Builder custom(@Nullable CustomLevelArgs custom) {
             this.custom = Output.ofNullable(custom);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder title(@Nullable Output<String> title) {
             this.title = title;
             return this;
         }
-
         public Builder title(@Nullable String title) {
             this.title = Output.ofNullable(title);
             return this;
-        }
-        public AccessLevelArgs build() {
+        }        public AccessLevelArgs build() {
             return new AccessLevelArgs(accessPolicyId, basic, custom, description, name, title);
         }
     }

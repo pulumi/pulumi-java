@@ -61,12 +61,10 @@ public final class ProtocolSettingsArgs extends io.pulumi.resources.ResourceArgs
             this.smb = smb;
             return this;
         }
-
         public Builder smb(@Nullable SmbSettingArgs smb) {
             this.smb = Output.ofNullable(smb);
             return this;
-        }
-        public ProtocolSettingsArgs build() {
+        }        public ProtocolSettingsArgs build() {
             return new ProtocolSettingsArgs(smb);
         }
     }

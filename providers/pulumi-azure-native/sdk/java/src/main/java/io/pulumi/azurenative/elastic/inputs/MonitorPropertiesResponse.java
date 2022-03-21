@@ -124,27 +124,22 @@ public final class MonitorPropertiesResponse extends io.pulumi.resources.InvokeA
             this.elasticProperties = elasticProperties;
             return this;
         }
-
         public Builder liftrResourceCategory(String liftrResourceCategory) {
             this.liftrResourceCategory = Objects.requireNonNull(liftrResourceCategory);
             return this;
         }
-
         public Builder liftrResourcePreference(Integer liftrResourcePreference) {
             this.liftrResourcePreference = Objects.requireNonNull(liftrResourcePreference);
             return this;
         }
-
         public Builder monitoringStatus(@Nullable String monitoringStatus) {
             this.monitoringStatus = monitoringStatus;
             return this;
         }
-
         public Builder provisioningState(@Nullable String provisioningState) {
             this.provisioningState = provisioningState;
             return this;
-        }
-        public MonitorPropertiesResponse build() {
+        }        public MonitorPropertiesResponse build() {
             return new MonitorPropertiesResponse(elasticProperties, liftrResourceCategory, liftrResourcePreference, monitoringStatus, provisioningState);
         }
     }

@@ -135,32 +135,26 @@ public final class GetNamespaceIpFilterRuleResult {
             this.action = action;
             return this;
         }
-
         public Builder filterName(@Nullable String filterName) {
             this.filterName = filterName;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder ipMask(@Nullable String ipMask) {
             this.ipMask = ipMask;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetNamespaceIpFilterRuleResult build() {
+        }        public GetNamespaceIpFilterRuleResult build() {
             return new GetNamespaceIpFilterRuleResult(action, filterName, id, ipMask, name, type);
         }
     }

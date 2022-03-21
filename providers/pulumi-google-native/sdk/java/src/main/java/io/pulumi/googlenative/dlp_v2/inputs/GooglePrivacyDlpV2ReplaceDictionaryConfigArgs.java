@@ -61,12 +61,10 @@ public final class GooglePrivacyDlpV2ReplaceDictionaryConfigArgs extends io.pulu
             this.wordList = wordList;
             return this;
         }
-
         public Builder wordList(@Nullable GooglePrivacyDlpV2WordListArgs wordList) {
             this.wordList = Output.ofNullable(wordList);
             return this;
-        }
-        public GooglePrivacyDlpV2ReplaceDictionaryConfigArgs build() {
+        }        public GooglePrivacyDlpV2ReplaceDictionaryConfigArgs build() {
             return new GooglePrivacyDlpV2ReplaceDictionaryConfigArgs(wordList);
         }
     }

@@ -124,52 +124,42 @@ public final class ServerKeyArgs extends io.pulumi.resources.ResourceArgs {
             this.keyName = keyName;
             return this;
         }
-
         public Builder keyName(@Nullable String keyName) {
             this.keyName = Output.ofNullable(keyName);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder serverKeyType(Output<Either<String,ServerKeyType>> serverKeyType) {
             this.serverKeyType = Objects.requireNonNull(serverKeyType);
             return this;
         }
-
         public Builder serverKeyType(Either<String,ServerKeyType> serverKeyType) {
             this.serverKeyType = Output.of(Objects.requireNonNull(serverKeyType));
             return this;
         }
-
         public Builder serverName(Output<String> serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
         }
-
         public Builder serverName(String serverName) {
             this.serverName = Output.of(Objects.requireNonNull(serverName));
             return this;
         }
-
         public Builder uri(@Nullable Output<String> uri) {
             this.uri = uri;
             return this;
         }
-
         public Builder uri(@Nullable String uri) {
             this.uri = Output.ofNullable(uri);
             return this;
-        }
-        public ServerKeyArgs build() {
+        }        public ServerKeyArgs build() {
             return new ServerKeyArgs(keyName, resourceGroupName, serverKeyType, serverName, uri);
         }
     }

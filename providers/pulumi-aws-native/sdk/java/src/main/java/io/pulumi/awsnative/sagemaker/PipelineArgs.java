@@ -146,72 +146,61 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
             this.parallelismConfiguration = parallelismConfiguration;
             return this;
         }
-
         public Builder parallelismConfiguration(@Nullable ParallelismConfigurationPropertiesArgs parallelismConfiguration) {
             this.parallelismConfiguration = Output.ofNullable(parallelismConfiguration);
             return this;
         }
-
         public Builder pipelineDefinition(Output<Object> pipelineDefinition) {
             this.pipelineDefinition = Objects.requireNonNull(pipelineDefinition);
             return this;
         }
-
         public Builder pipelineDefinition(Object pipelineDefinition) {
             this.pipelineDefinition = Output.of(Objects.requireNonNull(pipelineDefinition));
             return this;
         }
-
         public Builder pipelineDescription(@Nullable Output<String> pipelineDescription) {
             this.pipelineDescription = pipelineDescription;
             return this;
         }
-
         public Builder pipelineDescription(@Nullable String pipelineDescription) {
             this.pipelineDescription = Output.ofNullable(pipelineDescription);
             return this;
         }
-
         public Builder pipelineDisplayName(@Nullable Output<String> pipelineDisplayName) {
             this.pipelineDisplayName = pipelineDisplayName;
             return this;
         }
-
         public Builder pipelineDisplayName(@Nullable String pipelineDisplayName) {
             this.pipelineDisplayName = Output.ofNullable(pipelineDisplayName);
             return this;
         }
-
         public Builder pipelineName(@Nullable Output<String> pipelineName) {
             this.pipelineName = pipelineName;
             return this;
         }
-
         public Builder pipelineName(@Nullable String pipelineName) {
             this.pipelineName = Output.ofNullable(pipelineName);
             return this;
         }
-
         public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public Builder roleArn(String roleArn) {
             this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
         }
-
         public Builder tags(@Nullable Output<List<PipelineTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<PipelineTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public PipelineArgs build() {
+        public Builder tags(PipelineTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public PipelineArgs build() {
             return new PipelineArgs(parallelismConfiguration, pipelineDefinition, pipelineDescription, pipelineDisplayName, pipelineName, roleArn, tags);
         }
     }

@@ -80,22 +80,18 @@ public final class PyTorchArgs extends io.pulumi.resources.ResourceArgs {
             this.distributionType = Objects.requireNonNull(distributionType);
             return this;
         }
-
         public Builder distributionType(String distributionType) {
             this.distributionType = Output.of(Objects.requireNonNull(distributionType));
             return this;
         }
-
         public Builder processCount(@Nullable Output<Integer> processCount) {
             this.processCount = processCount;
             return this;
         }
-
         public Builder processCount(@Nullable Integer processCount) {
             this.processCount = Output.ofNullable(processCount);
             return this;
-        }
-        public PyTorchArgs build() {
+        }        public PyTorchArgs build() {
             return new PyTorchArgs(distributionType, processCount);
         }
     }

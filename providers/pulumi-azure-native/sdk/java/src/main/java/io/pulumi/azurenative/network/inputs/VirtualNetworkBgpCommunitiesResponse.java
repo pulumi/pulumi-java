@@ -76,12 +76,10 @@ public final class VirtualNetworkBgpCommunitiesResponse extends io.pulumi.resour
             this.regionalCommunity = Objects.requireNonNull(regionalCommunity);
             return this;
         }
-
         public Builder virtualNetworkCommunity(String virtualNetworkCommunity) {
             this.virtualNetworkCommunity = Objects.requireNonNull(virtualNetworkCommunity);
             return this;
-        }
-        public VirtualNetworkBgpCommunitiesResponse build() {
+        }        public VirtualNetworkBgpCommunitiesResponse build() {
             return new VirtualNetworkBgpCommunitiesResponse(regionalCommunity, virtualNetworkCommunity);
         }
     }

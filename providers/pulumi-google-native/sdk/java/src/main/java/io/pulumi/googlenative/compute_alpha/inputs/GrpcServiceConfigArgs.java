@@ -96,32 +96,26 @@ public final class GrpcServiceConfigArgs extends io.pulumi.resources.ResourceArg
             this.callCredentials = callCredentials;
             return this;
         }
-
         public Builder callCredentials(@Nullable CallCredentialsArgs callCredentials) {
             this.callCredentials = Output.ofNullable(callCredentials);
             return this;
         }
-
         public Builder channelCredentials(@Nullable Output<ChannelCredentialsArgs> channelCredentials) {
             this.channelCredentials = channelCredentials;
             return this;
         }
-
         public Builder channelCredentials(@Nullable ChannelCredentialsArgs channelCredentials) {
             this.channelCredentials = Output.ofNullable(channelCredentials);
             return this;
         }
-
         public Builder targetUri(@Nullable Output<String> targetUri) {
             this.targetUri = targetUri;
             return this;
         }
-
         public Builder targetUri(@Nullable String targetUri) {
             this.targetUri = Output.ofNullable(targetUri);
             return this;
-        }
-        public GrpcServiceConfigArgs build() {
+        }        public GrpcServiceConfigArgs build() {
             return new GrpcServiceConfigArgs(callCredentials, channelCredentials, targetUri);
         }
     }

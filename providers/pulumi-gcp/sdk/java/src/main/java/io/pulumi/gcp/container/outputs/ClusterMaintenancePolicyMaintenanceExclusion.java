@@ -61,17 +61,14 @@ public final class ClusterMaintenancePolicyMaintenanceExclusion {
             this.endTime = Objects.requireNonNull(endTime);
             return this;
         }
-
         public Builder exclusionName(String exclusionName) {
             this.exclusionName = Objects.requireNonNull(exclusionName);
             return this;
         }
-
         public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
-        }
-        public ClusterMaintenancePolicyMaintenanceExclusion build() {
+        }        public ClusterMaintenancePolicyMaintenanceExclusion build() {
             return new ClusterMaintenancePolicyMaintenanceExclusion(endTime, exclusionName, startTime);
         }
     }

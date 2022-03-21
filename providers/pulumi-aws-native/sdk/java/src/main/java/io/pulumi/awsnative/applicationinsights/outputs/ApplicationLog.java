@@ -120,27 +120,22 @@ public final class ApplicationLog {
             this.encoding = encoding;
             return this;
         }
-
         public Builder logGroupName(@Nullable String logGroupName) {
             this.logGroupName = logGroupName;
             return this;
         }
-
         public Builder logPath(@Nullable String logPath) {
             this.logPath = logPath;
             return this;
         }
-
         public Builder logType(String logType) {
             this.logType = Objects.requireNonNull(logType);
             return this;
         }
-
         public Builder patternSet(@Nullable String patternSet) {
             this.patternSet = patternSet;
             return this;
-        }
-        public ApplicationLog build() {
+        }        public ApplicationLog build() {
             return new ApplicationLog(encoding, logGroupName, logPath, logType, patternSet);
         }
     }

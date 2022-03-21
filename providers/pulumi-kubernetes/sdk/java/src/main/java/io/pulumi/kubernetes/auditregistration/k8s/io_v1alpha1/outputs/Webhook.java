@@ -72,12 +72,10 @@ public final class Webhook {
             this.clientConfig = Objects.requireNonNull(clientConfig);
             return this;
         }
-
         public Builder throttle(@Nullable WebhookThrottleConfig throttle) {
             this.throttle = throttle;
             return this;
-        }
-        public Webhook build() {
+        }        public Webhook build() {
             return new Webhook(clientConfig, throttle);
         }
     }

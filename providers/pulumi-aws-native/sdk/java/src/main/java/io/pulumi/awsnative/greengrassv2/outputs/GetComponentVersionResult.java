@@ -72,22 +72,18 @@ public final class GetComponentVersionResult {
             this.arn = arn;
             return this;
         }
-
         public Builder componentName(@Nullable String componentName) {
             this.componentName = componentName;
             return this;
         }
-
         public Builder componentVersion(@Nullable String componentVersion) {
             this.componentVersion = componentVersion;
             return this;
         }
-
         public Builder tags(@Nullable Object tags) {
             this.tags = tags;
             return this;
-        }
-        public GetComponentVersionResult build() {
+        }        public GetComponentVersionResult build() {
             return new GetComponentVersionResult(arn, componentName, componentVersion, tags);
         }
     }

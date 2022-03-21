@@ -70,12 +70,10 @@ public final class WebAclRuleStatementOrStatementStatementByteMatchStatementText
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public WebAclRuleStatementOrStatementStatementByteMatchStatementTextTransformation build() {
+        }        public WebAclRuleStatementOrStatementStatementByteMatchStatementTextTransformation build() {
             return new WebAclRuleStatementOrStatementStatementByteMatchStatementTextTransformation(priority, type);
         }
     }

@@ -128,52 +128,45 @@ public final class NetworkArgs extends io.pulumi.resources.ResourceArgs {
             this.forwardedPorts = forwardedPorts;
             return this;
         }
-
         public Builder forwardedPorts(@Nullable List<String> forwardedPorts) {
             this.forwardedPorts = Output.ofNullable(forwardedPorts);
             return this;
         }
-
+        public Builder forwardedPorts(String... forwardedPorts) {
+            return forwardedPorts(List.of(forwardedPorts));
+        }
         public Builder instanceTag(@Nullable Output<String> instanceTag) {
             this.instanceTag = instanceTag;
             return this;
         }
-
         public Builder instanceTag(@Nullable String instanceTag) {
             this.instanceTag = Output.ofNullable(instanceTag);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder sessionAffinity(@Nullable Output<Boolean> sessionAffinity) {
             this.sessionAffinity = sessionAffinity;
             return this;
         }
-
         public Builder sessionAffinity(@Nullable Boolean sessionAffinity) {
             this.sessionAffinity = Output.ofNullable(sessionAffinity);
             return this;
         }
-
         public Builder subnetworkName(@Nullable Output<String> subnetworkName) {
             this.subnetworkName = subnetworkName;
             return this;
         }
-
         public Builder subnetworkName(@Nullable String subnetworkName) {
             this.subnetworkName = Output.ofNullable(subnetworkName);
             return this;
-        }
-        public NetworkArgs build() {
+        }        public NetworkArgs build() {
             return new NetworkArgs(forwardedPorts, instanceTag, name, sessionAffinity, subnetworkName);
         }
     }

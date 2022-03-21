@@ -85,17 +85,14 @@ public final class MembershipStateResponse {
             this.code = Objects.requireNonNull(code);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
-        }
-        public MembershipStateResponse build() {
+        }        public MembershipStateResponse build() {
             return new MembershipStateResponse(code, description, updateTime);
         }
     }

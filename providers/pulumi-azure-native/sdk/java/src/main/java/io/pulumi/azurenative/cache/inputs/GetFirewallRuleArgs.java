@@ -88,17 +88,14 @@ public final class GetFirewallRuleArgs extends io.pulumi.resources.InvokeArgs {
             this.cacheName = Objects.requireNonNull(cacheName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder ruleName(String ruleName) {
             this.ruleName = Objects.requireNonNull(ruleName);
             return this;
-        }
-        public GetFirewallRuleArgs build() {
+        }        public GetFirewallRuleArgs build() {
             return new GetFirewallRuleArgs(cacheName, resourceGroupName, ruleName);
         }
     }

@@ -76,12 +76,10 @@ public final class GoogleCloudAssuredworkloadsV1WorkloadResourceInfoResponse ext
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
         }
-
         public Builder resourceType(String resourceType) {
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
-        }
-        public GoogleCloudAssuredworkloadsV1WorkloadResourceInfoResponse build() {
+        }        public GoogleCloudAssuredworkloadsV1WorkloadResourceInfoResponse build() {
             return new GoogleCloudAssuredworkloadsV1WorkloadResourceInfoResponse(resourceId, resourceType);
         }
     }

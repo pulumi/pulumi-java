@@ -72,12 +72,10 @@ public final class VirtualNodeSpecListenerTlsValidation {
             this.subjectAlternativeNames = subjectAlternativeNames;
             return this;
         }
-
         public Builder trust(VirtualNodeSpecListenerTlsValidationTrust trust) {
             this.trust = Objects.requireNonNull(trust);
             return this;
-        }
-        public VirtualNodeSpecListenerTlsValidation build() {
+        }        public VirtualNodeSpecListenerTlsValidation build() {
             return new VirtualNodeSpecListenerTlsValidation(subjectAlternativeNames, trust);
         }
     }

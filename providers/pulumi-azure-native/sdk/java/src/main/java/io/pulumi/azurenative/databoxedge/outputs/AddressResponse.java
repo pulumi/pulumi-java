@@ -151,37 +151,30 @@ public final class AddressResponse {
             this.addressLine1 = addressLine1;
             return this;
         }
-
         public Builder addressLine2(@Nullable String addressLine2) {
             this.addressLine2 = addressLine2;
             return this;
         }
-
         public Builder addressLine3(@Nullable String addressLine3) {
             this.addressLine3 = addressLine3;
             return this;
         }
-
         public Builder city(@Nullable String city) {
             this.city = city;
             return this;
         }
-
         public Builder country(String country) {
             this.country = Objects.requireNonNull(country);
             return this;
         }
-
         public Builder postalCode(@Nullable String postalCode) {
             this.postalCode = postalCode;
             return this;
         }
-
         public Builder state(@Nullable String state) {
             this.state = state;
             return this;
-        }
-        public AddressResponse build() {
+        }        public AddressResponse build() {
             return new AddressResponse(addressLine1, addressLine2, addressLine3, city, country, postalCode, state);
         }
     }

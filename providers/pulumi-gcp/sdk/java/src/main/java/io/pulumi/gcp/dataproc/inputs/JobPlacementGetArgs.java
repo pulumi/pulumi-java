@@ -66,22 +66,18 @@ public final class JobPlacementGetArgs extends io.pulumi.resources.ResourceArgs 
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
-
         public Builder clusterName(String clusterName) {
             this.clusterName = Output.of(Objects.requireNonNull(clusterName));
             return this;
         }
-
         public Builder clusterUuid(@Nullable Output<String> clusterUuid) {
             this.clusterUuid = clusterUuid;
             return this;
         }
-
         public Builder clusterUuid(@Nullable String clusterUuid) {
             this.clusterUuid = Output.ofNullable(clusterUuid);
             return this;
-        }
-        public JobPlacementGetArgs build() {
+        }        public JobPlacementGetArgs build() {
             return new JobPlacementGetArgs(clusterName, clusterUuid);
         }
     }

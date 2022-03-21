@@ -222,122 +222,101 @@ public final class ConsentArtifactArgs extends io.pulumi.resources.ResourceArgs 
             this.consentContentScreenshots = consentContentScreenshots;
             return this;
         }
-
         public Builder consentContentScreenshots(@Nullable List<ImageArgs> consentContentScreenshots) {
             this.consentContentScreenshots = Output.ofNullable(consentContentScreenshots);
             return this;
         }
-
+        public Builder consentContentScreenshots(ImageArgs... consentContentScreenshots) {
+            return consentContentScreenshots(List.of(consentContentScreenshots));
+        }
         public Builder consentContentVersion(@Nullable Output<String> consentContentVersion) {
             this.consentContentVersion = consentContentVersion;
             return this;
         }
-
         public Builder consentContentVersion(@Nullable String consentContentVersion) {
             this.consentContentVersion = Output.ofNullable(consentContentVersion);
             return this;
         }
-
         public Builder consentStoreId(Output<String> consentStoreId) {
             this.consentStoreId = Objects.requireNonNull(consentStoreId);
             return this;
         }
-
         public Builder consentStoreId(String consentStoreId) {
             this.consentStoreId = Output.of(Objects.requireNonNull(consentStoreId));
             return this;
         }
-
         public Builder datasetId(Output<String> datasetId) {
             this.datasetId = Objects.requireNonNull(datasetId);
             return this;
         }
-
         public Builder datasetId(String datasetId) {
             this.datasetId = Output.of(Objects.requireNonNull(datasetId));
             return this;
         }
-
         public Builder guardianSignature(@Nullable Output<SignatureArgs> guardianSignature) {
             this.guardianSignature = guardianSignature;
             return this;
         }
-
         public Builder guardianSignature(@Nullable SignatureArgs guardianSignature) {
             this.guardianSignature = Output.ofNullable(guardianSignature);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder metadata(@Nullable Map<String,String> metadata) {
             this.metadata = Output.ofNullable(metadata);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder userId(Output<String> userId) {
             this.userId = Objects.requireNonNull(userId);
             return this;
         }
-
         public Builder userId(String userId) {
             this.userId = Output.of(Objects.requireNonNull(userId));
             return this;
         }
-
         public Builder userSignature(@Nullable Output<SignatureArgs> userSignature) {
             this.userSignature = userSignature;
             return this;
         }
-
         public Builder userSignature(@Nullable SignatureArgs userSignature) {
             this.userSignature = Output.ofNullable(userSignature);
             return this;
         }
-
         public Builder witnessSignature(@Nullable Output<SignatureArgs> witnessSignature) {
             this.witnessSignature = witnessSignature;
             return this;
         }
-
         public Builder witnessSignature(@Nullable SignatureArgs witnessSignature) {
             this.witnessSignature = Output.ofNullable(witnessSignature);
             return this;
-        }
-        public ConsentArtifactArgs build() {
+        }        public ConsentArtifactArgs build() {
             return new ConsentArtifactArgs(consentContentScreenshots, consentContentVersion, consentStoreId, datasetId, guardianSignature, location, metadata, name, project, userId, userSignature, witnessSignature);
         }
     }

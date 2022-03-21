@@ -119,42 +119,34 @@ public final class MabProtectionPolicyArgs extends io.pulumi.resources.ResourceA
             this.backupManagementType = Objects.requireNonNull(backupManagementType);
             return this;
         }
-
         public Builder backupManagementType(String backupManagementType) {
             this.backupManagementType = Output.of(Objects.requireNonNull(backupManagementType));
             return this;
         }
-
         public Builder protectedItemsCount(@Nullable Output<Integer> protectedItemsCount) {
             this.protectedItemsCount = protectedItemsCount;
             return this;
         }
-
         public Builder protectedItemsCount(@Nullable Integer protectedItemsCount) {
             this.protectedItemsCount = Output.ofNullable(protectedItemsCount);
             return this;
         }
-
         public Builder retentionPolicy(@Nullable Output<Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs>> retentionPolicy) {
             this.retentionPolicy = retentionPolicy;
             return this;
         }
-
         public Builder retentionPolicy(@Nullable Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs> retentionPolicy) {
             this.retentionPolicy = Output.ofNullable(retentionPolicy);
             return this;
         }
-
         public Builder schedulePolicy(@Nullable Output<Object> schedulePolicy) {
             this.schedulePolicy = schedulePolicy;
             return this;
         }
-
         public Builder schedulePolicy(@Nullable Object schedulePolicy) {
             this.schedulePolicy = Output.ofNullable(schedulePolicy);
             return this;
-        }
-        public MabProtectionPolicyArgs build() {
+        }        public MabProtectionPolicyArgs build() {
             return new MabProtectionPolicyArgs(backupManagementType, protectedItemsCount, retentionPolicy, schedulePolicy);
         }
     }

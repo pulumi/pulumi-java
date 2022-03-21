@@ -74,22 +74,18 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDay
             this.day = Objects.requireNonNull(day);
             return this;
         }
-
         public Builder day(String day) {
             this.day = Output.of(Objects.requireNonNull(day));
             return this;
         }
-
         public Builder startTime(Output<String> startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public Builder startTime(String startTime) {
             this.startTime = Output.of(Objects.requireNonNull(startTime));
             return this;
-        }
-        public ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeekGetArgs build() {
+        }        public ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeekGetArgs build() {
             return new ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeekGetArgs(day, startTime);
         }
     }

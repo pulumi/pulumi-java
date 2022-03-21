@@ -151,37 +151,30 @@ public final class GetServerKeyResult {
             this.creationDate = Objects.requireNonNull(creationDate);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder serverKeyType(String serverKeyType) {
             this.serverKeyType = Objects.requireNonNull(serverKeyType);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder uri(@Nullable String uri) {
             this.uri = uri;
             return this;
-        }
-        public GetServerKeyResult build() {
+        }        public GetServerKeyResult build() {
             return new GetServerKeyResult(creationDate, id, kind, name, serverKeyType, type, uri);
         }
     }

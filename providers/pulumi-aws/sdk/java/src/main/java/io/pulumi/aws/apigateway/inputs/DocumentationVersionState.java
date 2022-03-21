@@ -90,32 +90,26 @@ public final class DocumentationVersionState extends io.pulumi.resources.Resourc
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder restApiId(@Nullable Output<String> restApiId) {
             this.restApiId = restApiId;
             return this;
         }
-
         public Builder restApiId(@Nullable String restApiId) {
             this.restApiId = Output.ofNullable(restApiId);
             return this;
         }
-
         public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = Output.ofNullable(version);
             return this;
-        }
-        public DocumentationVersionState build() {
+        }        public DocumentationVersionState build() {
             return new DocumentationVersionState(description, restApiId, version);
         }
     }

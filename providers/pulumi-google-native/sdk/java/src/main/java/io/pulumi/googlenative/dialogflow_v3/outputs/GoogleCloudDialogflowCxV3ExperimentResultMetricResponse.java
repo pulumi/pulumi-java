@@ -119,27 +119,22 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultMetricResponse {
             this.confidenceInterval = Objects.requireNonNull(confidenceInterval);
             return this;
         }
-
         public Builder count(Double count) {
             this.count = Objects.requireNonNull(count);
             return this;
         }
-
         public Builder countType(String countType) {
             this.countType = Objects.requireNonNull(countType);
             return this;
         }
-
         public Builder ratio(Double ratio) {
             this.ratio = Objects.requireNonNull(ratio);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GoogleCloudDialogflowCxV3ExperimentResultMetricResponse build() {
+        }        public GoogleCloudDialogflowCxV3ExperimentResultMetricResponse build() {
             return new GoogleCloudDialogflowCxV3ExperimentResultMetricResponse(confidenceInterval, count, countType, ratio, type);
         }
     }

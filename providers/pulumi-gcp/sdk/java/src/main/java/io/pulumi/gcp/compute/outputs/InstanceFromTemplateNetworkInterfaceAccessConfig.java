@@ -63,17 +63,14 @@ public final class InstanceFromTemplateNetworkInterfaceAccessConfig {
             this.natIp = natIp;
             return this;
         }
-
         public Builder networkTier(@Nullable String networkTier) {
             this.networkTier = networkTier;
             return this;
         }
-
         public Builder publicPtrDomainName(@Nullable String publicPtrDomainName) {
             this.publicPtrDomainName = publicPtrDomainName;
             return this;
-        }
-        public InstanceFromTemplateNetworkInterfaceAccessConfig build() {
+        }        public InstanceFromTemplateNetworkInterfaceAccessConfig build() {
             return new InstanceFromTemplateNetworkInterfaceAccessConfig(natIp, networkTier, publicPtrDomainName);
         }
     }

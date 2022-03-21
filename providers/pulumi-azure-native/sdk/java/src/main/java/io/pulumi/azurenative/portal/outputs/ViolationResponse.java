@@ -85,17 +85,14 @@ public final class ViolationResponse {
             this.errorMessage = Objects.requireNonNull(errorMessage);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder userId(String userId) {
             this.userId = Objects.requireNonNull(userId);
             return this;
-        }
-        public ViolationResponse build() {
+        }        public ViolationResponse build() {
             return new ViolationResponse(errorMessage, id, userId);
         }
     }

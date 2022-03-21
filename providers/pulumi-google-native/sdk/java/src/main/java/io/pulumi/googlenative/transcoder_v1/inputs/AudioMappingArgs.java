@@ -144,62 +144,50 @@ public final class AudioMappingArgs extends io.pulumi.resources.ResourceArgs {
             this.atomKey = Objects.requireNonNull(atomKey);
             return this;
         }
-
         public Builder atomKey(String atomKey) {
             this.atomKey = Output.of(Objects.requireNonNull(atomKey));
             return this;
         }
-
         public Builder gainDb(@Nullable Output<Double> gainDb) {
             this.gainDb = gainDb;
             return this;
         }
-
         public Builder gainDb(@Nullable Double gainDb) {
             this.gainDb = Output.ofNullable(gainDb);
             return this;
         }
-
         public Builder inputChannel(Output<Integer> inputChannel) {
             this.inputChannel = Objects.requireNonNull(inputChannel);
             return this;
         }
-
         public Builder inputChannel(Integer inputChannel) {
             this.inputChannel = Output.of(Objects.requireNonNull(inputChannel));
             return this;
         }
-
         public Builder inputKey(Output<String> inputKey) {
             this.inputKey = Objects.requireNonNull(inputKey);
             return this;
         }
-
         public Builder inputKey(String inputKey) {
             this.inputKey = Output.of(Objects.requireNonNull(inputKey));
             return this;
         }
-
         public Builder inputTrack(Output<Integer> inputTrack) {
             this.inputTrack = Objects.requireNonNull(inputTrack);
             return this;
         }
-
         public Builder inputTrack(Integer inputTrack) {
             this.inputTrack = Output.of(Objects.requireNonNull(inputTrack));
             return this;
         }
-
         public Builder outputChannel(Output<Integer> outputChannel) {
             this.outputChannel = Objects.requireNonNull(outputChannel);
             return this;
         }
-
         public Builder outputChannel(Integer outputChannel) {
             this.outputChannel = Output.of(Objects.requireNonNull(outputChannel));
             return this;
-        }
-        public AudioMappingArgs build() {
+        }        public AudioMappingArgs build() {
             return new AudioMappingArgs(atomKey, gainDb, inputChannel, inputKey, inputTrack, outputChannel);
         }
     }

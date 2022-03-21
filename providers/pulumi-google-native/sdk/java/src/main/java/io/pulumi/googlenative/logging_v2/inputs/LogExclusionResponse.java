@@ -141,32 +141,26 @@ public final class LogExclusionResponse extends io.pulumi.resources.InvokeArgs {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder disabled(Boolean disabled) {
             this.disabled = Objects.requireNonNull(disabled);
             return this;
         }
-
         public Builder filter(String filter) {
             this.filter = Objects.requireNonNull(filter);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
-        }
-        public LogExclusionResponse build() {
+        }        public LogExclusionResponse build() {
             return new LogExclusionResponse(createTime, description, disabled, filter, name, updateTime);
         }
     }

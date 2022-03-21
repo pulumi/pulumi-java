@@ -143,32 +143,26 @@ public final class ThresholdCustomAlertRuleResponse extends io.pulumi.resources.
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder isEnabled(Boolean isEnabled) {
             this.isEnabled = Objects.requireNonNull(isEnabled);
             return this;
         }
-
         public Builder maxThreshold(Integer maxThreshold) {
             this.maxThreshold = Objects.requireNonNull(maxThreshold);
             return this;
         }
-
         public Builder minThreshold(Integer minThreshold) {
             this.minThreshold = Objects.requireNonNull(minThreshold);
             return this;
         }
-
         public Builder ruleType(String ruleType) {
             this.ruleType = Objects.requireNonNull(ruleType);
             return this;
-        }
-        public ThresholdCustomAlertRuleResponse build() {
+        }        public ThresholdCustomAlertRuleResponse build() {
             return new ThresholdCustomAlertRuleResponse(description, displayName, isEnabled, maxThreshold, minThreshold, ruleType);
         }
     }

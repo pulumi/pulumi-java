@@ -79,22 +79,18 @@ public final class NonceArgs extends io.pulumi.resources.ResourceArgs {
             this.nonceExpirationInterval = nonceExpirationInterval;
             return this;
         }
-
         public Builder nonceExpirationInterval(@Nullable String nonceExpirationInterval) {
             this.nonceExpirationInterval = Output.ofNullable(nonceExpirationInterval);
             return this;
         }
-
         public Builder validateNonce(@Nullable Output<Boolean> validateNonce) {
             this.validateNonce = validateNonce;
             return this;
         }
-
         public Builder validateNonce(@Nullable Boolean validateNonce) {
             this.validateNonce = Output.ofNullable(validateNonce);
             return this;
-        }
-        public NonceArgs build() {
+        }        public NonceArgs build() {
             return new NonceArgs(nonceExpirationInterval, validateNonce);
         }
     }

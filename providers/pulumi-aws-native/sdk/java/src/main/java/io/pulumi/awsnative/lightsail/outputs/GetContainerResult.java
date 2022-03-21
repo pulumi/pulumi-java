@@ -165,42 +165,40 @@ public final class GetContainerResult {
             this.containerArn = containerArn;
             return this;
         }
-
         public Builder containerServiceDeployment(@Nullable ContainerServiceDeployment containerServiceDeployment) {
             this.containerServiceDeployment = containerServiceDeployment;
             return this;
         }
-
         public Builder isDisabled(@Nullable Boolean isDisabled) {
             this.isDisabled = isDisabled;
             return this;
         }
-
         public Builder power(@Nullable String power) {
             this.power = power;
             return this;
         }
-
         public Builder publicDomainNames(@Nullable List<ContainerPublicDomainName> publicDomainNames) {
             this.publicDomainNames = publicDomainNames;
             return this;
         }
-
+        public Builder publicDomainNames(ContainerPublicDomainName... publicDomainNames) {
+            return publicDomainNames(List.of(publicDomainNames));
+        }
         public Builder scale(@Nullable Integer scale) {
             this.scale = scale;
             return this;
         }
-
         public Builder tags(@Nullable List<ContainerTag> tags) {
             this.tags = tags;
             return this;
         }
-
+        public Builder tags(ContainerTag... tags) {
+            return tags(List.of(tags));
+        }
         public Builder url(@Nullable String url) {
             this.url = url;
             return this;
-        }
-        public GetContainerResult build() {
+        }        public GetContainerResult build() {
             return new GetContainerResult(containerArn, containerServiceDeployment, isDisabled, power, publicDomainNames, scale, tags, url);
         }
     }

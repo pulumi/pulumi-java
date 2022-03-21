@@ -224,112 +224,93 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
             this.accessControlRecordIds = Objects.requireNonNull(accessControlRecordIds);
             return this;
         }
-
         public Builder accessControlRecordIds(List<String> accessControlRecordIds) {
             this.accessControlRecordIds = Output.of(Objects.requireNonNull(accessControlRecordIds));
             return this;
         }
-
+        public Builder accessControlRecordIds(String... accessControlRecordIds) {
+            return accessControlRecordIds(List.of(accessControlRecordIds));
+        }
         public Builder deviceName(Output<String> deviceName) {
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }
-
         public Builder deviceName(String deviceName) {
             this.deviceName = Output.of(Objects.requireNonNull(deviceName));
             return this;
         }
-
         public Builder kind(@Nullable Output<Kind> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable Kind kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder managerName(Output<String> managerName) {
             this.managerName = Objects.requireNonNull(managerName);
             return this;
         }
-
         public Builder managerName(String managerName) {
             this.managerName = Output.of(Objects.requireNonNull(managerName));
             return this;
         }
-
         public Builder monitoringStatus(Output<MonitoringStatus> monitoringStatus) {
             this.monitoringStatus = Objects.requireNonNull(monitoringStatus);
             return this;
         }
-
         public Builder monitoringStatus(MonitoringStatus monitoringStatus) {
             this.monitoringStatus = Output.of(Objects.requireNonNull(monitoringStatus));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder sizeInBytes(Output<Double> sizeInBytes) {
             this.sizeInBytes = Objects.requireNonNull(sizeInBytes);
             return this;
         }
-
         public Builder sizeInBytes(Double sizeInBytes) {
             this.sizeInBytes = Output.of(Objects.requireNonNull(sizeInBytes));
             return this;
         }
-
         public Builder volumeContainerName(Output<String> volumeContainerName) {
             this.volumeContainerName = Objects.requireNonNull(volumeContainerName);
             return this;
         }
-
         public Builder volumeContainerName(String volumeContainerName) {
             this.volumeContainerName = Output.of(Objects.requireNonNull(volumeContainerName));
             return this;
         }
-
         public Builder volumeName(@Nullable Output<String> volumeName) {
             this.volumeName = volumeName;
             return this;
         }
-
         public Builder volumeName(@Nullable String volumeName) {
             this.volumeName = Output.ofNullable(volumeName);
             return this;
         }
-
         public Builder volumeStatus(Output<VolumeStatus> volumeStatus) {
             this.volumeStatus = Objects.requireNonNull(volumeStatus);
             return this;
         }
-
         public Builder volumeStatus(VolumeStatus volumeStatus) {
             this.volumeStatus = Output.of(Objects.requireNonNull(volumeStatus));
             return this;
         }
-
         public Builder volumeType(Output<VolumeType> volumeType) {
             this.volumeType = Objects.requireNonNull(volumeType);
             return this;
         }
-
         public Builder volumeType(VolumeType volumeType) {
             this.volumeType = Output.of(Objects.requireNonNull(volumeType));
             return this;
-        }
-        public VolumeArgs build() {
+        }        public VolumeArgs build() {
             return new VolumeArgs(accessControlRecordIds, deviceName, kind, managerName, monitoringStatus, resourceGroupName, sizeInBytes, volumeContainerName, volumeName, volumeStatus, volumeType);
         }
     }

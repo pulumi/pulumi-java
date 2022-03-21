@@ -244,132 +244,109 @@ public final class WorkloadArgs extends io.pulumi.resources.ResourceArgs {
             this.billingAccount = billingAccount;
             return this;
         }
-
         public Builder billingAccount(@Nullable String billingAccount) {
             this.billingAccount = Output.ofNullable(billingAccount);
             return this;
         }
-
         public Builder complianceRegime(Output<WorkloadComplianceRegime> complianceRegime) {
             this.complianceRegime = Objects.requireNonNull(complianceRegime);
             return this;
         }
-
         public Builder complianceRegime(WorkloadComplianceRegime complianceRegime) {
             this.complianceRegime = Output.of(Objects.requireNonNull(complianceRegime));
             return this;
         }
-
         public Builder displayName(Output<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
-
         public Builder enableSovereignControls(@Nullable Output<Boolean> enableSovereignControls) {
             this.enableSovereignControls = enableSovereignControls;
             return this;
         }
-
         public Builder enableSovereignControls(@Nullable Boolean enableSovereignControls) {
             this.enableSovereignControls = Output.ofNullable(enableSovereignControls);
             return this;
         }
-
         public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
-
         public Builder etag(@Nullable String etag) {
             this.etag = Output.ofNullable(etag);
             return this;
         }
-
         public Builder externalId(@Nullable Output<String> externalId) {
             this.externalId = externalId;
             return this;
         }
-
         public Builder externalId(@Nullable String externalId) {
             this.externalId = Output.ofNullable(externalId);
             return this;
         }
-
         public Builder kmsSettings(@Nullable Output<GoogleCloudAssuredworkloadsV1WorkloadKMSSettingsArgs> kmsSettings) {
             this.kmsSettings = kmsSettings;
             return this;
         }
-
         public Builder kmsSettings(@Nullable GoogleCloudAssuredworkloadsV1WorkloadKMSSettingsArgs kmsSettings) {
             this.kmsSettings = Output.ofNullable(kmsSettings);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder organizationId(Output<String> organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }
-
         public Builder organizationId(String organizationId) {
             this.organizationId = Output.of(Objects.requireNonNull(organizationId));
             return this;
         }
-
         public Builder provisionedResourcesParent(@Nullable Output<String> provisionedResourcesParent) {
             this.provisionedResourcesParent = provisionedResourcesParent;
             return this;
         }
-
         public Builder provisionedResourcesParent(@Nullable String provisionedResourcesParent) {
             this.provisionedResourcesParent = Output.ofNullable(provisionedResourcesParent);
             return this;
         }
-
         public Builder resourceSettings(@Nullable Output<List<GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsArgs>> resourceSettings) {
             this.resourceSettings = resourceSettings;
             return this;
         }
-
         public Builder resourceSettings(@Nullable List<GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsArgs> resourceSettings) {
             this.resourceSettings = Output.ofNullable(resourceSettings);
             return this;
         }
-        public WorkloadArgs build() {
+        public Builder resourceSettings(GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsArgs... resourceSettings) {
+            return resourceSettings(List.of(resourceSettings));
+        }        public WorkloadArgs build() {
             return new WorkloadArgs(billingAccount, complianceRegime, displayName, enableSovereignControls, etag, externalId, kmsSettings, labels, location, name, organizationId, provisionedResourcesParent, resourceSettings);
         }
     }

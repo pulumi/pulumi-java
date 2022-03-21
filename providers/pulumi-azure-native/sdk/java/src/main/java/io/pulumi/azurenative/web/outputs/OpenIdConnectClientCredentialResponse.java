@@ -71,12 +71,10 @@ public final class OpenIdConnectClientCredentialResponse {
             this.clientSecretSettingName = clientSecretSettingName;
             return this;
         }
-
         public Builder method(@Nullable String method) {
             this.method = method;
             return this;
-        }
-        public OpenIdConnectClientCredentialResponse build() {
+        }        public OpenIdConnectClientCredentialResponse build() {
             return new OpenIdConnectClientCredentialResponse(clientSecretSettingName, method);
         }
     }

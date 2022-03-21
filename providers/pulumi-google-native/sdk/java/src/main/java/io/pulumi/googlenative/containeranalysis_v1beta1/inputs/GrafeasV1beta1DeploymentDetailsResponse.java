@@ -58,8 +58,7 @@ public final class GrafeasV1beta1DeploymentDetailsResponse extends io.pulumi.res
         public Builder deployment(DeploymentResponse deployment) {
             this.deployment = Objects.requireNonNull(deployment);
             return this;
-        }
-        public GrafeasV1beta1DeploymentDetailsResponse build() {
+        }        public GrafeasV1beta1DeploymentDetailsResponse build() {
             return new GrafeasV1beta1DeploymentDetailsResponse(deployment);
         }
     }

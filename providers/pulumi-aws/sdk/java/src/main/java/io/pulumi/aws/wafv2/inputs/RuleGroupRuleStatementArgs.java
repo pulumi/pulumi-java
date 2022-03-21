@@ -228,112 +228,90 @@ public final class RuleGroupRuleStatementArgs extends io.pulumi.resources.Resour
             this.andStatement = andStatement;
             return this;
         }
-
         public Builder andStatement(@Nullable RuleGroupRuleStatementAndStatementArgs andStatement) {
             this.andStatement = Output.ofNullable(andStatement);
             return this;
         }
-
         public Builder byteMatchStatement(@Nullable Output<RuleGroupRuleStatementByteMatchStatementArgs> byteMatchStatement) {
             this.byteMatchStatement = byteMatchStatement;
             return this;
         }
-
         public Builder byteMatchStatement(@Nullable RuleGroupRuleStatementByteMatchStatementArgs byteMatchStatement) {
             this.byteMatchStatement = Output.ofNullable(byteMatchStatement);
             return this;
         }
-
         public Builder geoMatchStatement(@Nullable Output<RuleGroupRuleStatementGeoMatchStatementArgs> geoMatchStatement) {
             this.geoMatchStatement = geoMatchStatement;
             return this;
         }
-
         public Builder geoMatchStatement(@Nullable RuleGroupRuleStatementGeoMatchStatementArgs geoMatchStatement) {
             this.geoMatchStatement = Output.ofNullable(geoMatchStatement);
             return this;
         }
-
         public Builder ipSetReferenceStatement(@Nullable Output<RuleGroupRuleStatementIpSetReferenceStatementArgs> ipSetReferenceStatement) {
             this.ipSetReferenceStatement = ipSetReferenceStatement;
             return this;
         }
-
         public Builder ipSetReferenceStatement(@Nullable RuleGroupRuleStatementIpSetReferenceStatementArgs ipSetReferenceStatement) {
             this.ipSetReferenceStatement = Output.ofNullable(ipSetReferenceStatement);
             return this;
         }
-
         public Builder labelMatchStatement(@Nullable Output<RuleGroupRuleStatementLabelMatchStatementArgs> labelMatchStatement) {
             this.labelMatchStatement = labelMatchStatement;
             return this;
         }
-
         public Builder labelMatchStatement(@Nullable RuleGroupRuleStatementLabelMatchStatementArgs labelMatchStatement) {
             this.labelMatchStatement = Output.ofNullable(labelMatchStatement);
             return this;
         }
-
         public Builder notStatement(@Nullable Output<RuleGroupRuleStatementNotStatementArgs> notStatement) {
             this.notStatement = notStatement;
             return this;
         }
-
         public Builder notStatement(@Nullable RuleGroupRuleStatementNotStatementArgs notStatement) {
             this.notStatement = Output.ofNullable(notStatement);
             return this;
         }
-
         public Builder orStatement(@Nullable Output<RuleGroupRuleStatementOrStatementArgs> orStatement) {
             this.orStatement = orStatement;
             return this;
         }
-
         public Builder orStatement(@Nullable RuleGroupRuleStatementOrStatementArgs orStatement) {
             this.orStatement = Output.ofNullable(orStatement);
             return this;
         }
-
         public Builder regexPatternSetReferenceStatement(@Nullable Output<RuleGroupRuleStatementRegexPatternSetReferenceStatementArgs> regexPatternSetReferenceStatement) {
             this.regexPatternSetReferenceStatement = regexPatternSetReferenceStatement;
             return this;
         }
-
         public Builder regexPatternSetReferenceStatement(@Nullable RuleGroupRuleStatementRegexPatternSetReferenceStatementArgs regexPatternSetReferenceStatement) {
             this.regexPatternSetReferenceStatement = Output.ofNullable(regexPatternSetReferenceStatement);
             return this;
         }
-
         public Builder sizeConstraintStatement(@Nullable Output<RuleGroupRuleStatementSizeConstraintStatementArgs> sizeConstraintStatement) {
             this.sizeConstraintStatement = sizeConstraintStatement;
             return this;
         }
-
         public Builder sizeConstraintStatement(@Nullable RuleGroupRuleStatementSizeConstraintStatementArgs sizeConstraintStatement) {
             this.sizeConstraintStatement = Output.ofNullable(sizeConstraintStatement);
             return this;
         }
-
         public Builder sqliMatchStatement(@Nullable Output<RuleGroupRuleStatementSqliMatchStatementArgs> sqliMatchStatement) {
             this.sqliMatchStatement = sqliMatchStatement;
             return this;
         }
-
         public Builder sqliMatchStatement(@Nullable RuleGroupRuleStatementSqliMatchStatementArgs sqliMatchStatement) {
             this.sqliMatchStatement = Output.ofNullable(sqliMatchStatement);
             return this;
         }
-
         public Builder xssMatchStatement(@Nullable Output<RuleGroupRuleStatementXssMatchStatementArgs> xssMatchStatement) {
             this.xssMatchStatement = xssMatchStatement;
             return this;
         }
-
         public Builder xssMatchStatement(@Nullable RuleGroupRuleStatementXssMatchStatementArgs xssMatchStatement) {
             this.xssMatchStatement = Output.ofNullable(xssMatchStatement);
             return this;
-        }
-        public RuleGroupRuleStatementArgs build() {
+        }        public RuleGroupRuleStatementArgs build() {
             return new RuleGroupRuleStatementArgs(andStatement, byteMatchStatement, geoMatchStatement, ipSetReferenceStatement, labelMatchStatement, notStatement, orStatement, regexPatternSetReferenceStatement, sizeConstraintStatement, sqliMatchStatement, xssMatchStatement);
         }
     }

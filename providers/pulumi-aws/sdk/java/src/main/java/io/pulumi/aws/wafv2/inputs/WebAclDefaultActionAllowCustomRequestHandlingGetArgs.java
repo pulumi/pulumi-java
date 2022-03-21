@@ -57,12 +57,13 @@ public final class WebAclDefaultActionAllowCustomRequestHandlingGetArgs extends 
             this.insertHeaders = Objects.requireNonNull(insertHeaders);
             return this;
         }
-
         public Builder insertHeaders(List<WebAclDefaultActionAllowCustomRequestHandlingInsertHeaderGetArgs> insertHeaders) {
             this.insertHeaders = Output.of(Objects.requireNonNull(insertHeaders));
             return this;
         }
-        public WebAclDefaultActionAllowCustomRequestHandlingGetArgs build() {
+        public Builder insertHeaders(WebAclDefaultActionAllowCustomRequestHandlingInsertHeaderGetArgs... insertHeaders) {
+            return insertHeaders(List.of(insertHeaders));
+        }        public WebAclDefaultActionAllowCustomRequestHandlingGetArgs build() {
             return new WebAclDefaultActionAllowCustomRequestHandlingGetArgs(insertHeaders);
         }
     }

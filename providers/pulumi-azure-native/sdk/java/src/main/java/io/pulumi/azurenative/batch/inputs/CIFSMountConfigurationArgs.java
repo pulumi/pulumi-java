@@ -110,52 +110,42 @@ public final class CIFSMountConfigurationArgs extends io.pulumi.resources.Resour
             this.mountOptions = mountOptions;
             return this;
         }
-
         public Builder mountOptions(@Nullable String mountOptions) {
             this.mountOptions = Output.ofNullable(mountOptions);
             return this;
         }
-
         public Builder password(Output<String> password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
-
         public Builder password(String password) {
             this.password = Output.of(Objects.requireNonNull(password));
             return this;
         }
-
         public Builder relativeMountPath(Output<String> relativeMountPath) {
             this.relativeMountPath = Objects.requireNonNull(relativeMountPath);
             return this;
         }
-
         public Builder relativeMountPath(String relativeMountPath) {
             this.relativeMountPath = Output.of(Objects.requireNonNull(relativeMountPath));
             return this;
         }
-
         public Builder source(Output<String> source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }
-
         public Builder source(String source) {
             this.source = Output.of(Objects.requireNonNull(source));
             return this;
         }
-
         public Builder username(Output<String> username) {
             this.username = Objects.requireNonNull(username);
             return this;
         }
-
         public Builder username(String username) {
             this.username = Output.of(Objects.requireNonNull(username));
             return this;
-        }
-        public CIFSMountConfigurationArgs build() {
+        }        public CIFSMountConfigurationArgs build() {
             return new CIFSMountConfigurationArgs(mountOptions, password, relativeMountPath, source, username);
         }
     }

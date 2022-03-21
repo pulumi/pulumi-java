@@ -339,102 +339,100 @@ public final class GetNetworkInterfaceResult {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder associations(List<GetNetworkInterfaceAssociation> associations) {
             this.associations = Objects.requireNonNull(associations);
             return this;
         }
-
+        public Builder associations(GetNetworkInterfaceAssociation... associations) {
+            return associations(List.of(associations));
+        }
         public Builder attachments(List<GetNetworkInterfaceAttachment> attachments) {
             this.attachments = Objects.requireNonNull(attachments);
             return this;
         }
-
+        public Builder attachments(GetNetworkInterfaceAttachment... attachments) {
+            return attachments(List.of(attachments));
+        }
         public Builder availabilityZone(String availabilityZone) {
             this.availabilityZone = Objects.requireNonNull(availabilityZone);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder filters(@Nullable List<GetNetworkInterfaceFilter> filters) {
             this.filters = filters;
             return this;
         }
-
+        public Builder filters(GetNetworkInterfaceFilter... filters) {
+            return filters(List.of(filters));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder interfaceType(String interfaceType) {
             this.interfaceType = Objects.requireNonNull(interfaceType);
             return this;
         }
-
         public Builder ipv6Addresses(List<String> ipv6Addresses) {
             this.ipv6Addresses = Objects.requireNonNull(ipv6Addresses);
             return this;
         }
-
+        public Builder ipv6Addresses(String... ipv6Addresses) {
+            return ipv6Addresses(List.of(ipv6Addresses));
+        }
         public Builder macAddress(String macAddress) {
             this.macAddress = Objects.requireNonNull(macAddress);
             return this;
         }
-
         public Builder outpostArn(String outpostArn) {
             this.outpostArn = Objects.requireNonNull(outpostArn);
             return this;
         }
-
         public Builder ownerId(String ownerId) {
             this.ownerId = Objects.requireNonNull(ownerId);
             return this;
         }
-
         public Builder privateDnsName(String privateDnsName) {
             this.privateDnsName = Objects.requireNonNull(privateDnsName);
             return this;
         }
-
         public Builder privateIp(String privateIp) {
             this.privateIp = Objects.requireNonNull(privateIp);
             return this;
         }
-
         public Builder privateIps(List<String> privateIps) {
             this.privateIps = Objects.requireNonNull(privateIps);
             return this;
         }
-
+        public Builder privateIps(String... privateIps) {
+            return privateIps(List.of(privateIps));
+        }
         public Builder requesterId(String requesterId) {
             this.requesterId = Objects.requireNonNull(requesterId);
             return this;
         }
-
         public Builder securityGroups(List<String> securityGroups) {
             this.securityGroups = Objects.requireNonNull(securityGroups);
             return this;
         }
-
+        public Builder securityGroups(String... securityGroups) {
+            return securityGroups(List.of(securityGroups));
+        }
         public Builder subnetId(String subnetId) {
             this.subnetId = Objects.requireNonNull(subnetId);
             return this;
         }
-
         public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
-
         public Builder vpcId(String vpcId) {
             this.vpcId = Objects.requireNonNull(vpcId);
             return this;
-        }
-        public GetNetworkInterfaceResult build() {
+        }        public GetNetworkInterfaceResult build() {
             return new GetNetworkInterfaceResult(arn, associations, attachments, availabilityZone, description, filters, id, interfaceType, ipv6Addresses, macAddress, outpostArn, ownerId, privateDnsName, privateIp, privateIps, requesterId, securityGroups, subnetId, tags, vpcId);
         }
     }

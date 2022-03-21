@@ -77,22 +77,18 @@ public final class RegionBackendServiceConsistentHashHttpCookieTtlArgs extends i
             this.nanos = nanos;
             return this;
         }
-
         public Builder nanos(@Nullable Integer nanos) {
             this.nanos = Output.ofNullable(nanos);
             return this;
         }
-
         public Builder seconds(Output<Integer> seconds) {
             this.seconds = Objects.requireNonNull(seconds);
             return this;
         }
-
         public Builder seconds(Integer seconds) {
             this.seconds = Output.of(Objects.requireNonNull(seconds));
             return this;
-        }
-        public RegionBackendServiceConsistentHashHttpCookieTtlArgs build() {
+        }        public RegionBackendServiceConsistentHashHttpCookieTtlArgs build() {
             return new RegionBackendServiceConsistentHashHttpCookieTtlArgs(nanos, seconds);
         }
     }

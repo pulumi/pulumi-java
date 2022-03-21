@@ -79,22 +79,18 @@ public final class BucketRedirectAllRequestsToArgs extends io.pulumi.resources.R
             this.hostName = Objects.requireNonNull(hostName);
             return this;
         }
-
         public Builder hostName(String hostName) {
             this.hostName = Output.of(Objects.requireNonNull(hostName));
             return this;
         }
-
         public Builder protocol(@Nullable Output<BucketRedirectAllRequestsToProtocol> protocol) {
             this.protocol = protocol;
             return this;
         }
-
         public Builder protocol(@Nullable BucketRedirectAllRequestsToProtocol protocol) {
             this.protocol = Output.ofNullable(protocol);
             return this;
-        }
-        public BucketRedirectAllRequestsToArgs build() {
+        }        public BucketRedirectAllRequestsToArgs build() {
             return new BucketRedirectAllRequestsToArgs(hostName, protocol);
         }
     }

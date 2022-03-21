@@ -186,47 +186,38 @@ public final class ImageOSDiskResponse {
             this.blobUri = blobUri;
             return this;
         }
-
         public Builder caching(@Nullable String caching) {
             this.caching = caching;
             return this;
         }
-
         public Builder diskEncryptionSet(@Nullable DiskEncryptionSetParametersResponse diskEncryptionSet) {
             this.diskEncryptionSet = diskEncryptionSet;
             return this;
         }
-
         public Builder diskSizeGB(@Nullable Integer diskSizeGB) {
             this.diskSizeGB = diskSizeGB;
             return this;
         }
-
         public Builder managedDisk(@Nullable SubResourceResponse managedDisk) {
             this.managedDisk = managedDisk;
             return this;
         }
-
         public Builder osState(String osState) {
             this.osState = Objects.requireNonNull(osState);
             return this;
         }
-
         public Builder osType(String osType) {
             this.osType = Objects.requireNonNull(osType);
             return this;
         }
-
         public Builder snapshot(@Nullable SubResourceResponse snapshot) {
             this.snapshot = snapshot;
             return this;
         }
-
         public Builder storageAccountType(@Nullable String storageAccountType) {
             this.storageAccountType = storageAccountType;
             return this;
-        }
-        public ImageOSDiskResponse build() {
+        }        public ImageOSDiskResponse build() {
             return new ImageOSDiskResponse(blobUri, caching, diskEncryptionSet, diskSizeGB, managedDisk, osState, osType, snapshot, storageAccountType);
         }
     }

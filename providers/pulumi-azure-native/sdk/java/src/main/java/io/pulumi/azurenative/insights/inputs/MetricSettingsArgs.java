@@ -112,42 +112,34 @@ public final class MetricSettingsArgs extends io.pulumi.resources.ResourceArgs {
             this.category = category;
             return this;
         }
-
         public Builder category(@Nullable String category) {
             this.category = Output.ofNullable(category);
             return this;
         }
-
         public Builder enabled(Output<Boolean> enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public Builder enabled(Boolean enabled) {
             this.enabled = Output.of(Objects.requireNonNull(enabled));
             return this;
         }
-
         public Builder retentionPolicy(@Nullable Output<RetentionPolicyArgs> retentionPolicy) {
             this.retentionPolicy = retentionPolicy;
             return this;
         }
-
         public Builder retentionPolicy(@Nullable RetentionPolicyArgs retentionPolicy) {
             this.retentionPolicy = Output.ofNullable(retentionPolicy);
             return this;
         }
-
         public Builder timeGrain(@Nullable Output<String> timeGrain) {
             this.timeGrain = timeGrain;
             return this;
         }
-
         public Builder timeGrain(@Nullable String timeGrain) {
             this.timeGrain = Output.ofNullable(timeGrain);
             return this;
-        }
-        public MetricSettingsArgs build() {
+        }        public MetricSettingsArgs build() {
             return new MetricSettingsArgs(category, enabled, retentionPolicy, timeGrain);
         }
     }

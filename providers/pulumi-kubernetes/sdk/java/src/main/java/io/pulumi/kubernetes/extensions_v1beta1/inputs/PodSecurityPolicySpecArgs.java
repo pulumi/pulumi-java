@@ -446,242 +446,227 @@ public final class PodSecurityPolicySpecArgs extends io.pulumi.resources.Resourc
             this.allowPrivilegeEscalation = allowPrivilegeEscalation;
             return this;
         }
-
         public Builder allowPrivilegeEscalation(@Nullable Boolean allowPrivilegeEscalation) {
             this.allowPrivilegeEscalation = Output.ofNullable(allowPrivilegeEscalation);
             return this;
         }
-
         public Builder allowedCSIDrivers(@Nullable Output<List<AllowedCSIDriverArgs>> allowedCSIDrivers) {
             this.allowedCSIDrivers = allowedCSIDrivers;
             return this;
         }
-
         public Builder allowedCSIDrivers(@Nullable List<AllowedCSIDriverArgs> allowedCSIDrivers) {
             this.allowedCSIDrivers = Output.ofNullable(allowedCSIDrivers);
             return this;
         }
-
+        public Builder allowedCSIDrivers(AllowedCSIDriverArgs... allowedCSIDrivers) {
+            return allowedCSIDrivers(List.of(allowedCSIDrivers));
+        }
         public Builder allowedCapabilities(@Nullable Output<List<String>> allowedCapabilities) {
             this.allowedCapabilities = allowedCapabilities;
             return this;
         }
-
         public Builder allowedCapabilities(@Nullable List<String> allowedCapabilities) {
             this.allowedCapabilities = Output.ofNullable(allowedCapabilities);
             return this;
         }
-
+        public Builder allowedCapabilities(String... allowedCapabilities) {
+            return allowedCapabilities(List.of(allowedCapabilities));
+        }
         public Builder allowedFlexVolumes(@Nullable Output<List<AllowedFlexVolumeArgs>> allowedFlexVolumes) {
             this.allowedFlexVolumes = allowedFlexVolumes;
             return this;
         }
-
         public Builder allowedFlexVolumes(@Nullable List<AllowedFlexVolumeArgs> allowedFlexVolumes) {
             this.allowedFlexVolumes = Output.ofNullable(allowedFlexVolumes);
             return this;
         }
-
+        public Builder allowedFlexVolumes(AllowedFlexVolumeArgs... allowedFlexVolumes) {
+            return allowedFlexVolumes(List.of(allowedFlexVolumes));
+        }
         public Builder allowedHostPaths(@Nullable Output<List<AllowedHostPathArgs>> allowedHostPaths) {
             this.allowedHostPaths = allowedHostPaths;
             return this;
         }
-
         public Builder allowedHostPaths(@Nullable List<AllowedHostPathArgs> allowedHostPaths) {
             this.allowedHostPaths = Output.ofNullable(allowedHostPaths);
             return this;
         }
-
+        public Builder allowedHostPaths(AllowedHostPathArgs... allowedHostPaths) {
+            return allowedHostPaths(List.of(allowedHostPaths));
+        }
         public Builder allowedProcMountTypes(@Nullable Output<List<String>> allowedProcMountTypes) {
             this.allowedProcMountTypes = allowedProcMountTypes;
             return this;
         }
-
         public Builder allowedProcMountTypes(@Nullable List<String> allowedProcMountTypes) {
             this.allowedProcMountTypes = Output.ofNullable(allowedProcMountTypes);
             return this;
         }
-
+        public Builder allowedProcMountTypes(String... allowedProcMountTypes) {
+            return allowedProcMountTypes(List.of(allowedProcMountTypes));
+        }
         public Builder allowedUnsafeSysctls(@Nullable Output<List<String>> allowedUnsafeSysctls) {
             this.allowedUnsafeSysctls = allowedUnsafeSysctls;
             return this;
         }
-
         public Builder allowedUnsafeSysctls(@Nullable List<String> allowedUnsafeSysctls) {
             this.allowedUnsafeSysctls = Output.ofNullable(allowedUnsafeSysctls);
             return this;
         }
-
+        public Builder allowedUnsafeSysctls(String... allowedUnsafeSysctls) {
+            return allowedUnsafeSysctls(List.of(allowedUnsafeSysctls));
+        }
         public Builder defaultAddCapabilities(@Nullable Output<List<String>> defaultAddCapabilities) {
             this.defaultAddCapabilities = defaultAddCapabilities;
             return this;
         }
-
         public Builder defaultAddCapabilities(@Nullable List<String> defaultAddCapabilities) {
             this.defaultAddCapabilities = Output.ofNullable(defaultAddCapabilities);
             return this;
         }
-
+        public Builder defaultAddCapabilities(String... defaultAddCapabilities) {
+            return defaultAddCapabilities(List.of(defaultAddCapabilities));
+        }
         public Builder defaultAllowPrivilegeEscalation(@Nullable Output<Boolean> defaultAllowPrivilegeEscalation) {
             this.defaultAllowPrivilegeEscalation = defaultAllowPrivilegeEscalation;
             return this;
         }
-
         public Builder defaultAllowPrivilegeEscalation(@Nullable Boolean defaultAllowPrivilegeEscalation) {
             this.defaultAllowPrivilegeEscalation = Output.ofNullable(defaultAllowPrivilegeEscalation);
             return this;
         }
-
         public Builder forbiddenSysctls(@Nullable Output<List<String>> forbiddenSysctls) {
             this.forbiddenSysctls = forbiddenSysctls;
             return this;
         }
-
         public Builder forbiddenSysctls(@Nullable List<String> forbiddenSysctls) {
             this.forbiddenSysctls = Output.ofNullable(forbiddenSysctls);
             return this;
         }
-
+        public Builder forbiddenSysctls(String... forbiddenSysctls) {
+            return forbiddenSysctls(List.of(forbiddenSysctls));
+        }
         public Builder fsGroup(Output<FSGroupStrategyOptionsArgs> fsGroup) {
             this.fsGroup = Objects.requireNonNull(fsGroup);
             return this;
         }
-
         public Builder fsGroup(FSGroupStrategyOptionsArgs fsGroup) {
             this.fsGroup = Output.of(Objects.requireNonNull(fsGroup));
             return this;
         }
-
         public Builder hostIPC(@Nullable Output<Boolean> hostIPC) {
             this.hostIPC = hostIPC;
             return this;
         }
-
         public Builder hostIPC(@Nullable Boolean hostIPC) {
             this.hostIPC = Output.ofNullable(hostIPC);
             return this;
         }
-
         public Builder hostNetwork(@Nullable Output<Boolean> hostNetwork) {
             this.hostNetwork = hostNetwork;
             return this;
         }
-
         public Builder hostNetwork(@Nullable Boolean hostNetwork) {
             this.hostNetwork = Output.ofNullable(hostNetwork);
             return this;
         }
-
         public Builder hostPID(@Nullable Output<Boolean> hostPID) {
             this.hostPID = hostPID;
             return this;
         }
-
         public Builder hostPID(@Nullable Boolean hostPID) {
             this.hostPID = Output.ofNullable(hostPID);
             return this;
         }
-
         public Builder hostPorts(@Nullable Output<List<HostPortRangeArgs>> hostPorts) {
             this.hostPorts = hostPorts;
             return this;
         }
-
         public Builder hostPorts(@Nullable List<HostPortRangeArgs> hostPorts) {
             this.hostPorts = Output.ofNullable(hostPorts);
             return this;
         }
-
+        public Builder hostPorts(HostPortRangeArgs... hostPorts) {
+            return hostPorts(List.of(hostPorts));
+        }
         public Builder privileged(@Nullable Output<Boolean> privileged) {
             this.privileged = privileged;
             return this;
         }
-
         public Builder privileged(@Nullable Boolean privileged) {
             this.privileged = Output.ofNullable(privileged);
             return this;
         }
-
         public Builder readOnlyRootFilesystem(@Nullable Output<Boolean> readOnlyRootFilesystem) {
             this.readOnlyRootFilesystem = readOnlyRootFilesystem;
             return this;
         }
-
         public Builder readOnlyRootFilesystem(@Nullable Boolean readOnlyRootFilesystem) {
             this.readOnlyRootFilesystem = Output.ofNullable(readOnlyRootFilesystem);
             return this;
         }
-
         public Builder requiredDropCapabilities(@Nullable Output<List<String>> requiredDropCapabilities) {
             this.requiredDropCapabilities = requiredDropCapabilities;
             return this;
         }
-
         public Builder requiredDropCapabilities(@Nullable List<String> requiredDropCapabilities) {
             this.requiredDropCapabilities = Output.ofNullable(requiredDropCapabilities);
             return this;
         }
-
+        public Builder requiredDropCapabilities(String... requiredDropCapabilities) {
+            return requiredDropCapabilities(List.of(requiredDropCapabilities));
+        }
         public Builder runAsGroup(@Nullable Output<RunAsGroupStrategyOptionsArgs> runAsGroup) {
             this.runAsGroup = runAsGroup;
             return this;
         }
-
         public Builder runAsGroup(@Nullable RunAsGroupStrategyOptionsArgs runAsGroup) {
             this.runAsGroup = Output.ofNullable(runAsGroup);
             return this;
         }
-
         public Builder runAsUser(Output<RunAsUserStrategyOptionsArgs> runAsUser) {
             this.runAsUser = Objects.requireNonNull(runAsUser);
             return this;
         }
-
         public Builder runAsUser(RunAsUserStrategyOptionsArgs runAsUser) {
             this.runAsUser = Output.of(Objects.requireNonNull(runAsUser));
             return this;
         }
-
         public Builder runtimeClass(@Nullable Output<RuntimeClassStrategyOptionsArgs> runtimeClass) {
             this.runtimeClass = runtimeClass;
             return this;
         }
-
         public Builder runtimeClass(@Nullable RuntimeClassStrategyOptionsArgs runtimeClass) {
             this.runtimeClass = Output.ofNullable(runtimeClass);
             return this;
         }
-
         public Builder seLinux(Output<SELinuxStrategyOptionsArgs> seLinux) {
             this.seLinux = Objects.requireNonNull(seLinux);
             return this;
         }
-
         public Builder seLinux(SELinuxStrategyOptionsArgs seLinux) {
             this.seLinux = Output.of(Objects.requireNonNull(seLinux));
             return this;
         }
-
         public Builder supplementalGroups(Output<SupplementalGroupsStrategyOptionsArgs> supplementalGroups) {
             this.supplementalGroups = Objects.requireNonNull(supplementalGroups);
             return this;
         }
-
         public Builder supplementalGroups(SupplementalGroupsStrategyOptionsArgs supplementalGroups) {
             this.supplementalGroups = Output.of(Objects.requireNonNull(supplementalGroups));
             return this;
         }
-
         public Builder volumes(@Nullable Output<List<String>> volumes) {
             this.volumes = volumes;
             return this;
         }
-
         public Builder volumes(@Nullable List<String> volumes) {
             this.volumes = Output.ofNullable(volumes);
             return this;
         }
-        public PodSecurityPolicySpecArgs build() {
+        public Builder volumes(String... volumes) {
+            return volumes(List.of(volumes));
+        }        public PodSecurityPolicySpecArgs build() {
             return new PodSecurityPolicySpecArgs(allowPrivilegeEscalation, allowedCSIDrivers, allowedCapabilities, allowedFlexVolumes, allowedHostPaths, allowedProcMountTypes, allowedUnsafeSysctls, defaultAddCapabilities, defaultAllowPrivilegeEscalation, forbiddenSysctls, fsGroup, hostIPC, hostNetwork, hostPID, hostPorts, privileged, readOnlyRootFilesystem, requiredDropCapabilities, runAsGroup, runAsUser, runtimeClass, seLinux, supplementalGroups, volumes);
         }
     }

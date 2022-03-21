@@ -117,42 +117,40 @@ public final class ConfigurationArgs extends io.pulumi.resources.ResourceArgs {
             this.activeRevisionsMode = activeRevisionsMode;
             return this;
         }
-
         public Builder activeRevisionsMode(@Nullable Either<String,ActiveRevisionsMode> activeRevisionsMode) {
             this.activeRevisionsMode = Output.ofNullable(activeRevisionsMode);
             return this;
         }
-
         public Builder ingress(@Nullable Output<IngressArgs> ingress) {
             this.ingress = ingress;
             return this;
         }
-
         public Builder ingress(@Nullable IngressArgs ingress) {
             this.ingress = Output.ofNullable(ingress);
             return this;
         }
-
         public Builder registries(@Nullable Output<List<RegistryCredentialsArgs>> registries) {
             this.registries = registries;
             return this;
         }
-
         public Builder registries(@Nullable List<RegistryCredentialsArgs> registries) {
             this.registries = Output.ofNullable(registries);
             return this;
         }
-
+        public Builder registries(RegistryCredentialsArgs... registries) {
+            return registries(List.of(registries));
+        }
         public Builder secrets(@Nullable Output<List<SecretArgs>> secrets) {
             this.secrets = secrets;
             return this;
         }
-
         public Builder secrets(@Nullable List<SecretArgs> secrets) {
             this.secrets = Output.ofNullable(secrets);
             return this;
         }
-        public ConfigurationArgs build() {
+        public Builder secrets(SecretArgs... secrets) {
+            return secrets(List.of(secrets));
+        }        public ConfigurationArgs build() {
             return new ConfigurationArgs(activeRevisionsMode, ingress, registries, secrets);
         }
     }

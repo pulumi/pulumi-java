@@ -205,102 +205,85 @@ public final class SavedSearchArgs extends io.pulumi.resources.ResourceArgs {
             this.category = Objects.requireNonNull(category);
             return this;
         }
-
         public Builder category(String category) {
             this.category = Output.of(Objects.requireNonNull(category));
             return this;
         }
-
         public Builder displayName(Output<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
-
         public Builder functionAlias(@Nullable Output<String> functionAlias) {
             this.functionAlias = functionAlias;
             return this;
         }
-
         public Builder functionAlias(@Nullable String functionAlias) {
             this.functionAlias = Output.ofNullable(functionAlias);
             return this;
         }
-
         public Builder functionParameters(@Nullable Output<String> functionParameters) {
             this.functionParameters = functionParameters;
             return this;
         }
-
         public Builder functionParameters(@Nullable String functionParameters) {
             this.functionParameters = Output.ofNullable(functionParameters);
             return this;
         }
-
         public Builder query(Output<String> query) {
             this.query = Objects.requireNonNull(query);
             return this;
         }
-
         public Builder query(String query) {
             this.query = Output.of(Objects.requireNonNull(query));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder savedSearchId(@Nullable Output<String> savedSearchId) {
             this.savedSearchId = savedSearchId;
             return this;
         }
-
         public Builder savedSearchId(@Nullable String savedSearchId) {
             this.savedSearchId = Output.ofNullable(savedSearchId);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<TagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<TagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
+        public Builder tags(TagArgs... tags) {
+            return tags(List.of(tags));
+        }
         public Builder version(@Nullable Output<Double> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable Double version) {
             this.version = Output.ofNullable(version);
             return this;
         }
-
         public Builder workspaceName(Output<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
-
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
             return this;
-        }
-        public SavedSearchArgs build() {
+        }        public SavedSearchArgs build() {
             return new SavedSearchArgs(category, displayName, functionAlias, functionParameters, query, resourceGroupName, savedSearchId, tags, version, workspaceName);
         }
     }

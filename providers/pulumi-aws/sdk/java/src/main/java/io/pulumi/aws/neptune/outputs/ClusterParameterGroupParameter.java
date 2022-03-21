@@ -87,17 +87,14 @@ public final class ClusterParameterGroupParameter {
             this.applyMethod = applyMethod;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public ClusterParameterGroupParameter build() {
+        }        public ClusterParameterGroupParameter build() {
             return new ClusterParameterGroupParameter(applyMethod, name, value);
         }
     }

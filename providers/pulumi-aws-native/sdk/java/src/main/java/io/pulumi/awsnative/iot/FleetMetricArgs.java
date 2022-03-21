@@ -202,102 +202,85 @@ public final class FleetMetricArgs extends io.pulumi.resources.ResourceArgs {
             this.aggregationField = aggregationField;
             return this;
         }
-
         public Builder aggregationField(@Nullable String aggregationField) {
             this.aggregationField = Output.ofNullable(aggregationField);
             return this;
         }
-
         public Builder aggregationType(@Nullable Output<FleetMetricAggregationTypeArgs> aggregationType) {
             this.aggregationType = aggregationType;
             return this;
         }
-
         public Builder aggregationType(@Nullable FleetMetricAggregationTypeArgs aggregationType) {
             this.aggregationType = Output.ofNullable(aggregationType);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder indexName(@Nullable Output<String> indexName) {
             this.indexName = indexName;
             return this;
         }
-
         public Builder indexName(@Nullable String indexName) {
             this.indexName = Output.ofNullable(indexName);
             return this;
         }
-
         public Builder metricName(Output<String> metricName) {
             this.metricName = Objects.requireNonNull(metricName);
             return this;
         }
-
         public Builder metricName(String metricName) {
             this.metricName = Output.of(Objects.requireNonNull(metricName));
             return this;
         }
-
         public Builder period(@Nullable Output<Integer> period) {
             this.period = period;
             return this;
         }
-
         public Builder period(@Nullable Integer period) {
             this.period = Output.ofNullable(period);
             return this;
         }
-
         public Builder queryString(@Nullable Output<String> queryString) {
             this.queryString = queryString;
             return this;
         }
-
         public Builder queryString(@Nullable String queryString) {
             this.queryString = Output.ofNullable(queryString);
             return this;
         }
-
         public Builder queryVersion(@Nullable Output<String> queryVersion) {
             this.queryVersion = queryVersion;
             return this;
         }
-
         public Builder queryVersion(@Nullable String queryVersion) {
             this.queryVersion = Output.ofNullable(queryVersion);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<FleetMetricTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<FleetMetricTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
+        public Builder tags(FleetMetricTagArgs... tags) {
+            return tags(List.of(tags));
+        }
         public Builder unit(@Nullable Output<String> unit) {
             this.unit = unit;
             return this;
         }
-
         public Builder unit(@Nullable String unit) {
             this.unit = Output.ofNullable(unit);
             return this;
-        }
-        public FleetMetricArgs build() {
+        }        public FleetMetricArgs build() {
             return new FleetMetricArgs(aggregationField, aggregationType, description, indexName, metricName, period, queryString, queryVersion, tags, unit);
         }
     }

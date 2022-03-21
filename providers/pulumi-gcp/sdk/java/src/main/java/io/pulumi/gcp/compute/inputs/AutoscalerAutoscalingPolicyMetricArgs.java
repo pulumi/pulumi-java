@@ -166,52 +166,42 @@ public final class AutoscalerAutoscalingPolicyMetricArgs extends io.pulumi.resou
             this.filter = filter;
             return this;
         }
-
         public Builder filter(@Nullable String filter) {
             this.filter = Output.ofNullable(filter);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder singleInstanceAssignment(@Nullable Output<Double> singleInstanceAssignment) {
             this.singleInstanceAssignment = singleInstanceAssignment;
             return this;
         }
-
         public Builder singleInstanceAssignment(@Nullable Double singleInstanceAssignment) {
             this.singleInstanceAssignment = Output.ofNullable(singleInstanceAssignment);
             return this;
         }
-
         public Builder target(@Nullable Output<Double> target) {
             this.target = target;
             return this;
         }
-
         public Builder target(@Nullable Double target) {
             this.target = Output.ofNullable(target);
             return this;
         }
-
         public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public AutoscalerAutoscalingPolicyMetricArgs build() {
+        }        public AutoscalerAutoscalingPolicyMetricArgs build() {
             return new AutoscalerAutoscalingPolicyMetricArgs(filter, name, singleInstanceAssignment, target, type);
         }
     }

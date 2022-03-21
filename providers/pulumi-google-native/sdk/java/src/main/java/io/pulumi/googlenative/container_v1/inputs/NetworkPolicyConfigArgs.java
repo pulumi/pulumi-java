@@ -61,12 +61,10 @@ public final class NetworkPolicyConfigArgs extends io.pulumi.resources.ResourceA
             this.disabled = disabled;
             return this;
         }
-
         public Builder disabled(@Nullable Boolean disabled) {
             this.disabled = Output.ofNullable(disabled);
             return this;
-        }
-        public NetworkPolicyConfigArgs build() {
+        }        public NetworkPolicyConfigArgs build() {
             return new NetworkPolicyConfigArgs(disabled);
         }
     }

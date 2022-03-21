@@ -73,12 +73,10 @@ public final class LaunchTemplateCpuOptions {
             this.coreCount = coreCount;
             return this;
         }
-
         public Builder threadsPerCore(@Nullable Integer threadsPerCore) {
             this.threadsPerCore = threadsPerCore;
             return this;
-        }
-        public LaunchTemplateCpuOptions build() {
+        }        public LaunchTemplateCpuOptions build() {
             return new LaunchTemplateCpuOptions(coreCount, threadsPerCore);
         }
     }

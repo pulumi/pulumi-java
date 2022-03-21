@@ -53,8 +53,7 @@ public final class ConfgurationSetDeliveryOptions {
         public Builder tlsPolicy(@Nullable String tlsPolicy) {
             this.tlsPolicy = tlsPolicy;
             return this;
-        }
-        public ConfgurationSetDeliveryOptions build() {
+        }        public ConfgurationSetDeliveryOptions build() {
             return new ConfgurationSetDeliveryOptions(tlsPolicy);
         }
     }

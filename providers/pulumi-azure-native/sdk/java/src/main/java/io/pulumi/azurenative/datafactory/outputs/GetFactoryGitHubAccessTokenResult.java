@@ -53,8 +53,7 @@ public final class GetFactoryGitHubAccessTokenResult {
         public Builder gitHubAccessToken(@Nullable String gitHubAccessToken) {
             this.gitHubAccessToken = gitHubAccessToken;
             return this;
-        }
-        public GetFactoryGitHubAccessTokenResult build() {
+        }        public GetFactoryGitHubAccessTokenResult build() {
             return new GetFactoryGitHubAccessTokenResult(gitHubAccessToken);
         }
     }

@@ -54,7 +54,9 @@ public final class DownwardAPIProjection {
             this.items = items;
             return this;
         }
-        public DownwardAPIProjection build() {
+        public Builder items(DownwardAPIVolumeFile... items) {
+            return items(List.of(items));
+        }        public DownwardAPIProjection build() {
             return new DownwardAPIProjection(items);
         }
     }

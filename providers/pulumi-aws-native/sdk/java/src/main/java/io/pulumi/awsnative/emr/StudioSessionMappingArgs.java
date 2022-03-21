@@ -106,42 +106,34 @@ public final class StudioSessionMappingArgs extends io.pulumi.resources.Resource
             this.identityName = Objects.requireNonNull(identityName);
             return this;
         }
-
         public Builder identityName(String identityName) {
             this.identityName = Output.of(Objects.requireNonNull(identityName));
             return this;
         }
-
         public Builder identityType(Output<StudioSessionMappingIdentityType> identityType) {
             this.identityType = Objects.requireNonNull(identityType);
             return this;
         }
-
         public Builder identityType(StudioSessionMappingIdentityType identityType) {
             this.identityType = Output.of(Objects.requireNonNull(identityType));
             return this;
         }
-
         public Builder sessionPolicyArn(Output<String> sessionPolicyArn) {
             this.sessionPolicyArn = Objects.requireNonNull(sessionPolicyArn);
             return this;
         }
-
         public Builder sessionPolicyArn(String sessionPolicyArn) {
             this.sessionPolicyArn = Output.of(Objects.requireNonNull(sessionPolicyArn));
             return this;
         }
-
         public Builder studioId(Output<String> studioId) {
             this.studioId = Objects.requireNonNull(studioId);
             return this;
         }
-
         public Builder studioId(String studioId) {
             this.studioId = Output.of(Objects.requireNonNull(studioId));
             return this;
-        }
-        public StudioSessionMappingArgs build() {
+        }        public StudioSessionMappingArgs build() {
             return new StudioSessionMappingArgs(identityName, identityType, sessionPolicyArn, studioId);
         }
     }

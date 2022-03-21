@@ -95,17 +95,14 @@ public final class IotDpsSkuInfoResponse extends io.pulumi.resources.InvokeArgs 
             this.capacity = capacity;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder tier(String tier) {
             this.tier = Objects.requireNonNull(tier);
             return this;
-        }
-        public IotDpsSkuInfoResponse build() {
+        }        public IotDpsSkuInfoResponse build() {
             return new IotDpsSkuInfoResponse(capacity, name, tier);
         }
     }

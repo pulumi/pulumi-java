@@ -96,17 +96,14 @@ public final class SqlFilterResponse extends io.pulumi.resources.InvokeArgs {
             this.compatibilityLevel = compatibilityLevel;
             return this;
         }
-
         public Builder requiresPreprocessing(@Nullable Boolean requiresPreprocessing) {
             this.requiresPreprocessing = requiresPreprocessing;
             return this;
         }
-
         public Builder sqlExpression(@Nullable String sqlExpression) {
             this.sqlExpression = sqlExpression;
             return this;
-        }
-        public SqlFilterResponse build() {
+        }        public SqlFilterResponse build() {
             return new SqlFilterResponse(compatibilityLevel, requiresPreprocessing, sqlExpression);
         }
     }

@@ -61,12 +61,10 @@ public final class DicomStoreNotificationConfigGetArgs extends io.pulumi.resourc
             this.pubsubTopic = Objects.requireNonNull(pubsubTopic);
             return this;
         }
-
         public Builder pubsubTopic(String pubsubTopic) {
             this.pubsubTopic = Output.of(Objects.requireNonNull(pubsubTopic));
             return this;
-        }
-        public DicomStoreNotificationConfigGetArgs build() {
+        }        public DicomStoreNotificationConfigGetArgs build() {
             return new DicomStoreNotificationConfigGetArgs(pubsubTopic);
         }
     }

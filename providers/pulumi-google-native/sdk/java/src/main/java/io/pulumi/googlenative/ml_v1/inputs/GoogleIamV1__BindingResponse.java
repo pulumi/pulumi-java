@@ -94,17 +94,17 @@ public final class GoogleIamV1__BindingResponse extends io.pulumi.resources.Invo
             this.condition = Objects.requireNonNull(condition);
             return this;
         }
-
         public Builder members(List<String> members) {
             this.members = Objects.requireNonNull(members);
             return this;
         }
-
+        public Builder members(String... members) {
+            return members(List.of(members));
+        }
         public Builder role(String role) {
             this.role = Objects.requireNonNull(role);
             return this;
-        }
-        public GoogleIamV1__BindingResponse build() {
+        }        public GoogleIamV1__BindingResponse build() {
             return new GoogleIamV1__BindingResponse(condition, members, role);
         }
     }

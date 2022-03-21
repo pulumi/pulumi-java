@@ -96,17 +96,14 @@ public final class TransferConfigurationResponse extends io.pulumi.resources.Inv
             this.transferAllDetails = transferAllDetails;
             return this;
         }
-
         public Builder transferConfigurationType(String transferConfigurationType) {
             this.transferConfigurationType = Objects.requireNonNull(transferConfigurationType);
             return this;
         }
-
         public Builder transferFilterDetails(@Nullable TransferConfigurationResponseTransferFilterDetails transferFilterDetails) {
             this.transferFilterDetails = transferFilterDetails;
             return this;
-        }
-        public TransferConfigurationResponse build() {
+        }        public TransferConfigurationResponse build() {
             return new TransferConfigurationResponse(transferAllDetails, transferConfigurationType, transferFilterDetails);
         }
     }

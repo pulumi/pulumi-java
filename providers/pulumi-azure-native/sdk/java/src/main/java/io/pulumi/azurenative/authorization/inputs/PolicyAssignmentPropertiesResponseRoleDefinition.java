@@ -94,17 +94,14 @@ public final class PolicyAssignmentPropertiesResponseRoleDefinition extends io.p
             this.displayName = displayName;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
-        }
-        public PolicyAssignmentPropertiesResponseRoleDefinition build() {
+        }        public PolicyAssignmentPropertiesResponseRoleDefinition build() {
             return new PolicyAssignmentPropertiesResponseRoleDefinition(displayName, id, type);
         }
     }

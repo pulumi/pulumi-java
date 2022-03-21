@@ -93,32 +93,29 @@ public final class RuleGroupRuleActionBlockCustomResponseGetArgs extends io.pulu
             this.customResponseBodyKey = customResponseBodyKey;
             return this;
         }
-
         public Builder customResponseBodyKey(@Nullable String customResponseBodyKey) {
             this.customResponseBodyKey = Output.ofNullable(customResponseBodyKey);
             return this;
         }
-
         public Builder responseCode(Output<Integer> responseCode) {
             this.responseCode = Objects.requireNonNull(responseCode);
             return this;
         }
-
         public Builder responseCode(Integer responseCode) {
             this.responseCode = Output.of(Objects.requireNonNull(responseCode));
             return this;
         }
-
         public Builder responseHeaders(@Nullable Output<List<RuleGroupRuleActionBlockCustomResponseResponseHeaderGetArgs>> responseHeaders) {
             this.responseHeaders = responseHeaders;
             return this;
         }
-
         public Builder responseHeaders(@Nullable List<RuleGroupRuleActionBlockCustomResponseResponseHeaderGetArgs> responseHeaders) {
             this.responseHeaders = Output.ofNullable(responseHeaders);
             return this;
         }
-        public RuleGroupRuleActionBlockCustomResponseGetArgs build() {
+        public Builder responseHeaders(RuleGroupRuleActionBlockCustomResponseResponseHeaderGetArgs... responseHeaders) {
+            return responseHeaders(List.of(responseHeaders));
+        }        public RuleGroupRuleActionBlockCustomResponseGetArgs build() {
             return new RuleGroupRuleActionBlockCustomResponseGetArgs(customResponseBodyKey, responseCode, responseHeaders);
         }
     }

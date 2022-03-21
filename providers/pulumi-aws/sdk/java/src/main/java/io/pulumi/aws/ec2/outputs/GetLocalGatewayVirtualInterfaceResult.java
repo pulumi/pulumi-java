@@ -170,52 +170,48 @@ public final class GetLocalGatewayVirtualInterfaceResult {
             this.filters = filters;
             return this;
         }
-
+        public Builder filters(GetLocalGatewayVirtualInterfaceFilter... filters) {
+            return filters(List.of(filters));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder localAddress(String localAddress) {
             this.localAddress = Objects.requireNonNull(localAddress);
             return this;
         }
-
         public Builder localBgpAsn(Integer localBgpAsn) {
             this.localBgpAsn = Objects.requireNonNull(localBgpAsn);
             return this;
         }
-
         public Builder localGatewayId(String localGatewayId) {
             this.localGatewayId = Objects.requireNonNull(localGatewayId);
             return this;
         }
-
         public Builder localGatewayVirtualInterfaceIds(List<String> localGatewayVirtualInterfaceIds) {
             this.localGatewayVirtualInterfaceIds = Objects.requireNonNull(localGatewayVirtualInterfaceIds);
             return this;
         }
-
+        public Builder localGatewayVirtualInterfaceIds(String... localGatewayVirtualInterfaceIds) {
+            return localGatewayVirtualInterfaceIds(List.of(localGatewayVirtualInterfaceIds));
+        }
         public Builder peerAddress(String peerAddress) {
             this.peerAddress = Objects.requireNonNull(peerAddress);
             return this;
         }
-
         public Builder peerBgpAsn(Integer peerBgpAsn) {
             this.peerBgpAsn = Objects.requireNonNull(peerBgpAsn);
             return this;
         }
-
         public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
-
         public Builder vlan(Integer vlan) {
             this.vlan = Objects.requireNonNull(vlan);
             return this;
-        }
-        public GetLocalGatewayVirtualInterfaceResult build() {
+        }        public GetLocalGatewayVirtualInterfaceResult build() {
             return new GetLocalGatewayVirtualInterfaceResult(filters, id, localAddress, localBgpAsn, localGatewayId, localGatewayVirtualInterfaceIds, peerAddress, peerBgpAsn, tags, vlan);
         }
     }

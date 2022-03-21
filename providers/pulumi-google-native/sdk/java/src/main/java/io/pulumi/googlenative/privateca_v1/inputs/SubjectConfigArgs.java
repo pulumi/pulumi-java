@@ -79,22 +79,18 @@ public final class SubjectConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.subject = Objects.requireNonNull(subject);
             return this;
         }
-
         public Builder subject(SubjectArgs subject) {
             this.subject = Output.of(Objects.requireNonNull(subject));
             return this;
         }
-
         public Builder subjectAltName(@Nullable Output<SubjectAltNamesArgs> subjectAltName) {
             this.subjectAltName = subjectAltName;
             return this;
         }
-
         public Builder subjectAltName(@Nullable SubjectAltNamesArgs subjectAltName) {
             this.subjectAltName = Output.ofNullable(subjectAltName);
             return this;
-        }
-        public SubjectConfigArgs build() {
+        }        public SubjectConfigArgs build() {
             return new SubjectConfigArgs(subject, subjectAltName);
         }
     }

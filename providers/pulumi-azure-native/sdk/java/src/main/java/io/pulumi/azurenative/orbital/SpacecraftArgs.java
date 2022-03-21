@@ -189,92 +189,77 @@ public final class SpacecraftArgs extends io.pulumi.resources.ResourceArgs {
             this.links = links;
             return this;
         }
-
         public Builder links(@Nullable List<SpacecraftLinkArgs> links) {
             this.links = Output.ofNullable(links);
             return this;
         }
-
+        public Builder links(SpacecraftLinkArgs... links) {
+            return links(List.of(links));
+        }
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder noradId(Output<String> noradId) {
             this.noradId = Objects.requireNonNull(noradId);
             return this;
         }
-
         public Builder noradId(String noradId) {
             this.noradId = Output.of(Objects.requireNonNull(noradId));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder spacecraftName(@Nullable Output<String> spacecraftName) {
             this.spacecraftName = spacecraftName;
             return this;
         }
-
         public Builder spacecraftName(@Nullable String spacecraftName) {
             this.spacecraftName = Output.ofNullable(spacecraftName);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder titleLine(@Nullable Output<String> titleLine) {
             this.titleLine = titleLine;
             return this;
         }
-
         public Builder titleLine(@Nullable String titleLine) {
             this.titleLine = Output.ofNullable(titleLine);
             return this;
         }
-
         public Builder tleLine1(@Nullable Output<String> tleLine1) {
             this.tleLine1 = tleLine1;
             return this;
         }
-
         public Builder tleLine1(@Nullable String tleLine1) {
             this.tleLine1 = Output.ofNullable(tleLine1);
             return this;
         }
-
         public Builder tleLine2(@Nullable Output<String> tleLine2) {
             this.tleLine2 = tleLine2;
             return this;
         }
-
         public Builder tleLine2(@Nullable String tleLine2) {
             this.tleLine2 = Output.ofNullable(tleLine2);
             return this;
-        }
-        public SpacecraftArgs build() {
+        }        public SpacecraftArgs build() {
             return new SpacecraftArgs(links, location, noradId, resourceGroupName, spacecraftName, tags, titleLine, tleLine1, tleLine2);
         }
     }

@@ -153,37 +153,30 @@ public final class GetGlossaryResult {
             this.endTime = Objects.requireNonNull(endTime);
             return this;
         }
-
         public Builder entryCount(Integer entryCount) {
             this.entryCount = Objects.requireNonNull(entryCount);
             return this;
         }
-
         public Builder inputConfig(GlossaryInputConfigResponse inputConfig) {
             this.inputConfig = Objects.requireNonNull(inputConfig);
             return this;
         }
-
         public Builder languageCodesSet(LanguageCodesSetResponse languageCodesSet) {
             this.languageCodesSet = Objects.requireNonNull(languageCodesSet);
             return this;
         }
-
         public Builder languagePair(LanguageCodePairResponse languagePair) {
             this.languagePair = Objects.requireNonNull(languagePair);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder submitTime(String submitTime) {
             this.submitTime = Objects.requireNonNull(submitTime);
             return this;
-        }
-        public GetGlossaryResult build() {
+        }        public GetGlossaryResult build() {
             return new GetGlossaryResult(endTime, entryCount, inputConfig, languageCodesSet, languagePair, name, submitTime);
         }
     }

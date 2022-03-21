@@ -88,17 +88,14 @@ public final class AzureFileVolumeSource {
             this.readOnly = readOnly;
             return this;
         }
-
         public Builder secretName(String secretName) {
             this.secretName = Objects.requireNonNull(secretName);
             return this;
         }
-
         public Builder shareName(String shareName) {
             this.shareName = Objects.requireNonNull(shareName);
             return this;
-        }
-        public AzureFileVolumeSource build() {
+        }        public AzureFileVolumeSource build() {
             return new AzureFileVolumeSource(readOnly, secretName, shareName);
         }
     }

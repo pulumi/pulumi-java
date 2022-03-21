@@ -171,82 +171,66 @@ public final class NetworkSecurityPerimeterArgs extends io.pulumi.resources.Reso
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder networkSecurityPerimeterName(@Nullable Output<String> networkSecurityPerimeterName) {
             this.networkSecurityPerimeterName = networkSecurityPerimeterName;
             return this;
         }
-
         public Builder networkSecurityPerimeterName(@Nullable String networkSecurityPerimeterName) {
             this.networkSecurityPerimeterName = Output.ofNullable(networkSecurityPerimeterName);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public NetworkSecurityPerimeterArgs build() {
+        }        public NetworkSecurityPerimeterArgs build() {
             return new NetworkSecurityPerimeterArgs(description, displayName, id, location, name, networkSecurityPerimeterName, resourceGroupName, tags);
         }
     }

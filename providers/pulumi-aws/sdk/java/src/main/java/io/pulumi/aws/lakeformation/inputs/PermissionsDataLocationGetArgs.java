@@ -74,22 +74,18 @@ public final class PermissionsDataLocationGetArgs extends io.pulumi.resources.Re
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder arn(String arn) {
             this.arn = Output.of(Objects.requireNonNull(arn));
             return this;
         }
-
         public Builder catalogId(@Nullable Output<String> catalogId) {
             this.catalogId = catalogId;
             return this;
         }
-
         public Builder catalogId(@Nullable String catalogId) {
             this.catalogId = Output.ofNullable(catalogId);
             return this;
-        }
-        public PermissionsDataLocationGetArgs build() {
+        }        public PermissionsDataLocationGetArgs build() {
             return new PermissionsDataLocationGetArgs(arn, catalogId);
         }
     }

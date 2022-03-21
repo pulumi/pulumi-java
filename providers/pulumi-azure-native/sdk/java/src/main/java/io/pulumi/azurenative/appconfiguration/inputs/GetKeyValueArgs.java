@@ -88,17 +88,14 @@ public final class GetKeyValueArgs extends io.pulumi.resources.InvokeArgs {
             this.configStoreName = Objects.requireNonNull(configStoreName);
             return this;
         }
-
         public Builder keyValueName(String keyValueName) {
             this.keyValueName = Objects.requireNonNull(keyValueName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetKeyValueArgs build() {
+        }        public GetKeyValueArgs build() {
             return new GetKeyValueArgs(configStoreName, keyValueName, resourceGroupName);
         }
     }

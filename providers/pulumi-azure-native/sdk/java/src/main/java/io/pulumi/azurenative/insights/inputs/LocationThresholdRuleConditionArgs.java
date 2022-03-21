@@ -115,42 +115,34 @@ public final class LocationThresholdRuleConditionArgs extends io.pulumi.resource
             this.dataSource = dataSource;
             return this;
         }
-
         public Builder dataSource(@Nullable Either<RuleManagementEventDataSourceArgs,RuleMetricDataSourceArgs> dataSource) {
             this.dataSource = Output.ofNullable(dataSource);
             return this;
         }
-
         public Builder failedLocationCount(Output<Integer> failedLocationCount) {
             this.failedLocationCount = Objects.requireNonNull(failedLocationCount);
             return this;
         }
-
         public Builder failedLocationCount(Integer failedLocationCount) {
             this.failedLocationCount = Output.of(Objects.requireNonNull(failedLocationCount));
             return this;
         }
-
         public Builder odataType(Output<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public Builder odataType(String odataType) {
             this.odataType = Output.of(Objects.requireNonNull(odataType));
             return this;
         }
-
         public Builder windowSize(@Nullable Output<String> windowSize) {
             this.windowSize = windowSize;
             return this;
         }
-
         public Builder windowSize(@Nullable String windowSize) {
             this.windowSize = Output.ofNullable(windowSize);
             return this;
-        }
-        public LocationThresholdRuleConditionArgs build() {
+        }        public LocationThresholdRuleConditionArgs build() {
             return new LocationThresholdRuleConditionArgs(dataSource, failedLocationCount, odataType, windowSize);
         }
     }

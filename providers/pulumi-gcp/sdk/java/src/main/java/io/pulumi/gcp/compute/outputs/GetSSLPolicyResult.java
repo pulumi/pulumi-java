@@ -196,57 +196,52 @@ public final class GetSSLPolicyResult {
             this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
             return this;
         }
-
         public Builder customFeatures(List<String> customFeatures) {
             this.customFeatures = Objects.requireNonNull(customFeatures);
             return this;
         }
-
+        public Builder customFeatures(String... customFeatures) {
+            return customFeatures(List.of(customFeatures));
+        }
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder enabledFeatures(List<String> enabledFeatures) {
             this.enabledFeatures = Objects.requireNonNull(enabledFeatures);
             return this;
         }
-
+        public Builder enabledFeatures(String... enabledFeatures) {
+            return enabledFeatures(List.of(enabledFeatures));
+        }
         public Builder fingerprint(String fingerprint) {
             this.fingerprint = Objects.requireNonNull(fingerprint);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder minTlsVersion(String minTlsVersion) {
             this.minTlsVersion = Objects.requireNonNull(minTlsVersion);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder profile(String profile) {
             this.profile = Objects.requireNonNull(profile);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
-        }
-        public GetSSLPolicyResult build() {
+        }        public GetSSLPolicyResult build() {
             return new GetSSLPolicyResult(creationTimestamp, customFeatures, description, enabledFeatures, fingerprint, id, minTlsVersion, name, profile, project, selfLink);
         }
     }

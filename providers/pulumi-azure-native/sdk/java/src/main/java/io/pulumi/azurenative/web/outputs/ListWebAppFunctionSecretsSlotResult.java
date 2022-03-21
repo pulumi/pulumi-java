@@ -71,12 +71,10 @@ public final class ListWebAppFunctionSecretsSlotResult {
             this.key = key;
             return this;
         }
-
         public Builder triggerUrl(@Nullable String triggerUrl) {
             this.triggerUrl = triggerUrl;
             return this;
-        }
-        public ListWebAppFunctionSecretsSlotResult build() {
+        }        public ListWebAppFunctionSecretsSlotResult build() {
             return new ListWebAppFunctionSecretsSlotResult(key, triggerUrl);
         }
     }

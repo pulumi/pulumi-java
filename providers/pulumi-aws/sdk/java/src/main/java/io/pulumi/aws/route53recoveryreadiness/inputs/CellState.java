@@ -140,62 +140,56 @@ public final class CellState extends io.pulumi.resources.ResourceArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder cellName(@Nullable Output<String> cellName) {
             this.cellName = cellName;
             return this;
         }
-
         public Builder cellName(@Nullable String cellName) {
             this.cellName = Output.ofNullable(cellName);
             return this;
         }
-
         public Builder cells(@Nullable Output<List<String>> cells) {
             this.cells = cells;
             return this;
         }
-
         public Builder cells(@Nullable List<String> cells) {
             this.cells = Output.ofNullable(cells);
             return this;
         }
-
+        public Builder cells(String... cells) {
+            return cells(List.of(cells));
+        }
         public Builder parentReadinessScopes(@Nullable Output<List<String>> parentReadinessScopes) {
             this.parentReadinessScopes = parentReadinessScopes;
             return this;
         }
-
         public Builder parentReadinessScopes(@Nullable List<String> parentReadinessScopes) {
             this.parentReadinessScopes = Output.ofNullable(parentReadinessScopes);
             return this;
         }
-
+        public Builder parentReadinessScopes(String... parentReadinessScopes) {
+            return parentReadinessScopes(List.of(parentReadinessScopes));
+        }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
-        }
-        public CellState build() {
+        }        public CellState build() {
             return new CellState(arn, cellName, cells, parentReadinessScopes, tags, tagsAll);
         }
     }

@@ -54,8 +54,7 @@ public final class GetViewArgs extends io.pulumi.resources.InvokeArgs {
         public Builder viewName(String viewName) {
             this.viewName = Objects.requireNonNull(viewName);
             return this;
-        }
-        public GetViewArgs build() {
+        }        public GetViewArgs build() {
             return new GetViewArgs(viewName);
         }
     }

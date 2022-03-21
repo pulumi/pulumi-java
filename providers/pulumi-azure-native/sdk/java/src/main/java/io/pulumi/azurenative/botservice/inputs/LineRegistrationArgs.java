@@ -78,22 +78,18 @@ public final class LineRegistrationArgs extends io.pulumi.resources.ResourceArgs
             this.channelAccessToken = channelAccessToken;
             return this;
         }
-
         public Builder channelAccessToken(@Nullable String channelAccessToken) {
             this.channelAccessToken = Output.ofNullable(channelAccessToken);
             return this;
         }
-
         public Builder channelSecret(@Nullable Output<String> channelSecret) {
             this.channelSecret = channelSecret;
             return this;
         }
-
         public Builder channelSecret(@Nullable String channelSecret) {
             this.channelSecret = Output.ofNullable(channelSecret);
             return this;
-        }
-        public LineRegistrationArgs build() {
+        }        public LineRegistrationArgs build() {
             return new LineRegistrationArgs(channelAccessToken, channelSecret);
         }
     }

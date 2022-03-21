@@ -66,12 +66,10 @@ public final class AuthorizationActionMappingResponse extends io.pulumi.resource
             this.desired = desired;
             return this;
         }
-
         public Builder original(@Nullable String original) {
             this.original = original;
             return this;
-        }
-        public AuthorizationActionMappingResponse build() {
+        }        public AuthorizationActionMappingResponse build() {
             return new AuthorizationActionMappingResponse(desired, original);
         }
     }

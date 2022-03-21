@@ -79,22 +79,18 @@ public final class ObjectiveArgs extends io.pulumi.resources.ResourceArgs {
             this.goal = Objects.requireNonNull(goal);
             return this;
         }
-
         public Builder goal(Either<String,Goal> goal) {
             this.goal = Output.of(Objects.requireNonNull(goal));
             return this;
         }
-
         public Builder primaryMetric(Output<String> primaryMetric) {
             this.primaryMetric = Objects.requireNonNull(primaryMetric);
             return this;
         }
-
         public Builder primaryMetric(String primaryMetric) {
             this.primaryMetric = Output.of(Objects.requireNonNull(primaryMetric));
             return this;
-        }
-        public ObjectiveArgs build() {
+        }        public ObjectiveArgs build() {
             return new ObjectiveArgs(goal, primaryMetric);
         }
     }

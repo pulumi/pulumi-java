@@ -158,72 +158,58 @@ public final class EdifactSchemaReferenceArgs extends io.pulumi.resources.Resour
             this.associationAssignedCode = associationAssignedCode;
             return this;
         }
-
         public Builder associationAssignedCode(@Nullable String associationAssignedCode) {
             this.associationAssignedCode = Output.ofNullable(associationAssignedCode);
             return this;
         }
-
         public Builder messageId(Output<String> messageId) {
             this.messageId = Objects.requireNonNull(messageId);
             return this;
         }
-
         public Builder messageId(String messageId) {
             this.messageId = Output.of(Objects.requireNonNull(messageId));
             return this;
         }
-
         public Builder messageRelease(Output<String> messageRelease) {
             this.messageRelease = Objects.requireNonNull(messageRelease);
             return this;
         }
-
         public Builder messageRelease(String messageRelease) {
             this.messageRelease = Output.of(Objects.requireNonNull(messageRelease));
             return this;
         }
-
         public Builder messageVersion(Output<String> messageVersion) {
             this.messageVersion = Objects.requireNonNull(messageVersion);
             return this;
         }
-
         public Builder messageVersion(String messageVersion) {
             this.messageVersion = Output.of(Objects.requireNonNull(messageVersion));
             return this;
         }
-
         public Builder schemaName(Output<String> schemaName) {
             this.schemaName = Objects.requireNonNull(schemaName);
             return this;
         }
-
         public Builder schemaName(String schemaName) {
             this.schemaName = Output.of(Objects.requireNonNull(schemaName));
             return this;
         }
-
         public Builder senderApplicationId(@Nullable Output<String> senderApplicationId) {
             this.senderApplicationId = senderApplicationId;
             return this;
         }
-
         public Builder senderApplicationId(@Nullable String senderApplicationId) {
             this.senderApplicationId = Output.ofNullable(senderApplicationId);
             return this;
         }
-
         public Builder senderApplicationQualifier(@Nullable Output<String> senderApplicationQualifier) {
             this.senderApplicationQualifier = senderApplicationQualifier;
             return this;
         }
-
         public Builder senderApplicationQualifier(@Nullable String senderApplicationQualifier) {
             this.senderApplicationQualifier = Output.ofNullable(senderApplicationQualifier);
             return this;
-        }
-        public EdifactSchemaReferenceArgs build() {
+        }        public EdifactSchemaReferenceArgs build() {
             return new EdifactSchemaReferenceArgs(associationAssignedCode, messageId, messageRelease, messageVersion, schemaName, senderApplicationId, senderApplicationQualifier);
         }
     }

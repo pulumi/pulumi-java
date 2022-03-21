@@ -72,12 +72,10 @@ public final class GetDataCollectionRuleAssociationArgs extends io.pulumi.resour
             this.associationName = Objects.requireNonNull(associationName);
             return this;
         }
-
         public Builder resourceUri(String resourceUri) {
             this.resourceUri = Objects.requireNonNull(resourceUri);
             return this;
-        }
-        public GetDataCollectionRuleAssociationArgs build() {
+        }        public GetDataCollectionRuleAssociationArgs build() {
             return new GetDataCollectionRuleAssociationArgs(associationName, resourceUri);
         }
     }

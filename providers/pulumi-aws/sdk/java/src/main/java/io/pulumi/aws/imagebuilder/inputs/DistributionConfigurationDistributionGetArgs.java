@@ -109,42 +109,37 @@ public final class DistributionConfigurationDistributionGetArgs extends io.pulum
             this.amiDistributionConfiguration = amiDistributionConfiguration;
             return this;
         }
-
         public Builder amiDistributionConfiguration(@Nullable DistributionConfigurationDistributionAmiDistributionConfigurationGetArgs amiDistributionConfiguration) {
             this.amiDistributionConfiguration = Output.ofNullable(amiDistributionConfiguration);
             return this;
         }
-
         public Builder containerDistributionConfiguration(@Nullable Output<DistributionConfigurationDistributionContainerDistributionConfigurationGetArgs> containerDistributionConfiguration) {
             this.containerDistributionConfiguration = containerDistributionConfiguration;
             return this;
         }
-
         public Builder containerDistributionConfiguration(@Nullable DistributionConfigurationDistributionContainerDistributionConfigurationGetArgs containerDistributionConfiguration) {
             this.containerDistributionConfiguration = Output.ofNullable(containerDistributionConfiguration);
             return this;
         }
-
         public Builder licenseConfigurationArns(@Nullable Output<List<String>> licenseConfigurationArns) {
             this.licenseConfigurationArns = licenseConfigurationArns;
             return this;
         }
-
         public Builder licenseConfigurationArns(@Nullable List<String> licenseConfigurationArns) {
             this.licenseConfigurationArns = Output.ofNullable(licenseConfigurationArns);
             return this;
         }
-
+        public Builder licenseConfigurationArns(String... licenseConfigurationArns) {
+            return licenseConfigurationArns(List.of(licenseConfigurationArns));
+        }
         public Builder region(Output<String> region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
-
         public Builder region(String region) {
             this.region = Output.of(Objects.requireNonNull(region));
             return this;
-        }
-        public DistributionConfigurationDistributionGetArgs build() {
+        }        public DistributionConfigurationDistributionGetArgs build() {
             return new DistributionConfigurationDistributionGetArgs(amiDistributionConfiguration, containerDistributionConfiguration, licenseConfigurationArns, region);
         }
     }

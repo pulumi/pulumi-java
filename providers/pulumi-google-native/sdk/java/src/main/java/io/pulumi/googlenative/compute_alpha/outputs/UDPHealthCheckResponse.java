@@ -102,22 +102,18 @@ public final class UDPHealthCheckResponse {
             this.port = Objects.requireNonNull(port);
             return this;
         }
-
         public Builder portName(String portName) {
             this.portName = Objects.requireNonNull(portName);
             return this;
         }
-
         public Builder request(String request) {
             this.request = Objects.requireNonNull(request);
             return this;
         }
-
         public Builder response(String response) {
             this.response = Objects.requireNonNull(response);
             return this;
-        }
-        public UDPHealthCheckResponse build() {
+        }        public UDPHealthCheckResponse build() {
             return new UDPHealthCheckResponse(port, portName, request, response);
         }
     }

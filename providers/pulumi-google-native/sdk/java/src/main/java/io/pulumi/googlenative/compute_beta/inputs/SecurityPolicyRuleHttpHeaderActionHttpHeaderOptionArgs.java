@@ -74,22 +74,18 @@ public final class SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionArgs extend
             this.headerName = headerName;
             return this;
         }
-
         public Builder headerName(@Nullable String headerName) {
             this.headerName = Output.ofNullable(headerName);
             return this;
         }
-
         public Builder headerValue(@Nullable Output<String> headerValue) {
             this.headerValue = headerValue;
             return this;
         }
-
         public Builder headerValue(@Nullable String headerValue) {
             this.headerValue = Output.ofNullable(headerValue);
             return this;
-        }
-        public SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionArgs build() {
+        }        public SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionArgs build() {
             return new SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionArgs(headerName, headerValue);
         }
     }

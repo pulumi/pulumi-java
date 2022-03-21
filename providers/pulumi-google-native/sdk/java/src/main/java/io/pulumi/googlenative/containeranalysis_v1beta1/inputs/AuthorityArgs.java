@@ -61,12 +61,10 @@ public final class AuthorityArgs extends io.pulumi.resources.ResourceArgs {
             this.hint = hint;
             return this;
         }
-
         public Builder hint(@Nullable HintArgs hint) {
             this.hint = Output.ofNullable(hint);
             return this;
-        }
-        public AuthorityArgs build() {
+        }        public AuthorityArgs build() {
             return new AuthorityArgs(hint);
         }
     }

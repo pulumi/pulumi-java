@@ -79,32 +79,26 @@ public final class FlowS3DestinationPropertiesArgs extends io.pulumi.resources.R
             this.bucketName = Objects.requireNonNull(bucketName);
             return this;
         }
-
         public Builder bucketName(String bucketName) {
             this.bucketName = Output.of(Objects.requireNonNull(bucketName));
             return this;
         }
-
         public Builder bucketPrefix(@Nullable Output<String> bucketPrefix) {
             this.bucketPrefix = bucketPrefix;
             return this;
         }
-
         public Builder bucketPrefix(@Nullable String bucketPrefix) {
             this.bucketPrefix = Output.ofNullable(bucketPrefix);
             return this;
         }
-
         public Builder s3OutputFormatConfig(@Nullable Output<FlowS3OutputFormatConfigArgs> s3OutputFormatConfig) {
             this.s3OutputFormatConfig = s3OutputFormatConfig;
             return this;
         }
-
         public Builder s3OutputFormatConfig(@Nullable FlowS3OutputFormatConfigArgs s3OutputFormatConfig) {
             this.s3OutputFormatConfig = Output.ofNullable(s3OutputFormatConfig);
             return this;
-        }
-        public FlowS3DestinationPropertiesArgs build() {
+        }        public FlowS3DestinationPropertiesArgs build() {
             return new FlowS3DestinationPropertiesArgs(bucketName, bucketPrefix, s3OutputFormatConfig);
         }
     }

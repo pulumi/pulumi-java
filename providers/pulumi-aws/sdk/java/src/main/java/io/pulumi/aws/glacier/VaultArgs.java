@@ -109,42 +109,34 @@ public final class VaultArgs extends io.pulumi.resources.ResourceArgs {
             this.accessPolicy = accessPolicy;
             return this;
         }
-
         public Builder accessPolicy(@Nullable String accessPolicy) {
             this.accessPolicy = Output.ofNullable(accessPolicy);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder notification(@Nullable Output<VaultNotificationArgs> notification) {
             this.notification = notification;
             return this;
         }
-
         public Builder notification(@Nullable VaultNotificationArgs notification) {
             this.notification = Output.ofNullable(notification);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public VaultArgs build() {
+        }        public VaultArgs build() {
             return new VaultArgs(accessPolicy, name, notification, tags);
         }
     }

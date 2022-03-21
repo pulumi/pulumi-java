@@ -56,7 +56,9 @@ public final class CxPageForm {
             this.parameters = parameters;
             return this;
         }
-        public CxPageForm build() {
+        public Builder parameters(CxPageFormParameter... parameters) {
+            return parameters(List.of(parameters));
+        }        public CxPageForm build() {
             return new CxPageForm(parameters);
         }
     }

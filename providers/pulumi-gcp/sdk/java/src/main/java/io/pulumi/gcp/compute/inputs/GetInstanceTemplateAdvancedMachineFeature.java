@@ -65,12 +65,10 @@ public final class GetInstanceTemplateAdvancedMachineFeature extends io.pulumi.r
             this.enableNestedVirtualization = Objects.requireNonNull(enableNestedVirtualization);
             return this;
         }
-
         public Builder threadsPerCore(Integer threadsPerCore) {
             this.threadsPerCore = Objects.requireNonNull(threadsPerCore);
             return this;
-        }
-        public GetInstanceTemplateAdvancedMachineFeature build() {
+        }        public GetInstanceTemplateAdvancedMachineFeature build() {
             return new GetInstanceTemplateAdvancedMachineFeature(enableNestedVirtualization, threadsPerCore);
         }
     }

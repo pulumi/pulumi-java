@@ -117,27 +117,22 @@ public final class GetWorkspaceSettingResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder scope(String scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder workspaceId(String workspaceId) {
             this.workspaceId = Objects.requireNonNull(workspaceId);
             return this;
-        }
-        public GetWorkspaceSettingResult build() {
+        }        public GetWorkspaceSettingResult build() {
             return new GetWorkspaceSettingResult(id, name, scope, type, workspaceId);
         }
     }

@@ -146,62 +146,50 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder filter(@Nullable Output<String> filter) {
             this.filter = filter;
             return this;
         }
-
         public Builder filter(@Nullable String filter) {
             this.filter = Output.ofNullable(filter);
             return this;
         }
-
         public Builder isCluster(@Nullable Output<Boolean> isCluster) {
             this.isCluster = isCluster;
             return this;
         }
-
         public Builder isCluster(@Nullable Boolean isCluster) {
             this.isCluster = Output.ofNullable(isCluster);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder parentName(@Nullable Output<String> parentName) {
             this.parentName = parentName;
             return this;
         }
-
         public Builder parentName(@Nullable String parentName) {
             this.parentName = Output.ofNullable(parentName);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
-        }
-        public GroupState build() {
+        }        public GroupState build() {
             return new GroupState(displayName, filter, isCluster, name, parentName, project);
         }
     }

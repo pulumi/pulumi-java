@@ -154,37 +154,30 @@ public final class HyperVReplicaAzurePolicyDetailsResponse {
             this.activeStorageAccountId = activeStorageAccountId;
             return this;
         }
-
         public Builder applicationConsistentSnapshotFrequencyInHours(@Nullable Integer applicationConsistentSnapshotFrequencyInHours) {
             this.applicationConsistentSnapshotFrequencyInHours = applicationConsistentSnapshotFrequencyInHours;
             return this;
         }
-
         public Builder encryption(@Nullable String encryption) {
             this.encryption = encryption;
             return this;
         }
-
         public Builder instanceType(String instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
-
         public Builder onlineReplicationStartTime(@Nullable String onlineReplicationStartTime) {
             this.onlineReplicationStartTime = onlineReplicationStartTime;
             return this;
         }
-
         public Builder recoveryPointHistoryDurationInHours(@Nullable Integer recoveryPointHistoryDurationInHours) {
             this.recoveryPointHistoryDurationInHours = recoveryPointHistoryDurationInHours;
             return this;
         }
-
         public Builder replicationInterval(@Nullable Integer replicationInterval) {
             this.replicationInterval = replicationInterval;
             return this;
-        }
-        public HyperVReplicaAzurePolicyDetailsResponse build() {
+        }        public HyperVReplicaAzurePolicyDetailsResponse build() {
             return new HyperVReplicaAzurePolicyDetailsResponse(activeStorageAccountId, applicationConsistentSnapshotFrequencyInHours, encryption, instanceType, onlineReplicationStartTime, recoveryPointHistoryDurationInHours, replicationInterval);
         }
     }

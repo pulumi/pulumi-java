@@ -108,42 +108,37 @@ public final class DirectoryConfigState extends io.pulumi.resources.ResourceArgs
             this.createdTime = createdTime;
             return this;
         }
-
         public Builder createdTime(@Nullable String createdTime) {
             this.createdTime = Output.ofNullable(createdTime);
             return this;
         }
-
         public Builder directoryName(@Nullable Output<String> directoryName) {
             this.directoryName = directoryName;
             return this;
         }
-
         public Builder directoryName(@Nullable String directoryName) {
             this.directoryName = Output.ofNullable(directoryName);
             return this;
         }
-
         public Builder organizationalUnitDistinguishedNames(@Nullable Output<List<String>> organizationalUnitDistinguishedNames) {
             this.organizationalUnitDistinguishedNames = organizationalUnitDistinguishedNames;
             return this;
         }
-
         public Builder organizationalUnitDistinguishedNames(@Nullable List<String> organizationalUnitDistinguishedNames) {
             this.organizationalUnitDistinguishedNames = Output.ofNullable(organizationalUnitDistinguishedNames);
             return this;
         }
-
+        public Builder organizationalUnitDistinguishedNames(String... organizationalUnitDistinguishedNames) {
+            return organizationalUnitDistinguishedNames(List.of(organizationalUnitDistinguishedNames));
+        }
         public Builder serviceAccountCredentials(@Nullable Output<DirectoryConfigServiceAccountCredentialsGetArgs> serviceAccountCredentials) {
             this.serviceAccountCredentials = serviceAccountCredentials;
             return this;
         }
-
         public Builder serviceAccountCredentials(@Nullable DirectoryConfigServiceAccountCredentialsGetArgs serviceAccountCredentials) {
             this.serviceAccountCredentials = Output.ofNullable(serviceAccountCredentials);
             return this;
-        }
-        public DirectoryConfigState build() {
+        }        public DirectoryConfigState build() {
             return new DirectoryConfigState(createdTime, directoryName, organizationalUnitDistinguishedNames, serviceAccountCredentials);
         }
     }

@@ -217,112 +217,93 @@ public final class JobTemplateArgs extends io.pulumi.resources.ResourceArgs {
             this.abortConfig = abortConfig;
             return this;
         }
-
         public Builder abortConfig(@Nullable AbortConfigPropertiesArgs abortConfig) {
             this.abortConfig = Output.ofNullable(abortConfig);
             return this;
         }
-
         public Builder description(Output<String> description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Output.of(Objects.requireNonNull(description));
             return this;
         }
-
         public Builder document(@Nullable Output<String> document) {
             this.document = document;
             return this;
         }
-
         public Builder document(@Nullable String document) {
             this.document = Output.ofNullable(document);
             return this;
         }
-
         public Builder documentSource(@Nullable Output<String> documentSource) {
             this.documentSource = documentSource;
             return this;
         }
-
         public Builder documentSource(@Nullable String documentSource) {
             this.documentSource = Output.ofNullable(documentSource);
             return this;
         }
-
         public Builder jobArn(@Nullable Output<String> jobArn) {
             this.jobArn = jobArn;
             return this;
         }
-
         public Builder jobArn(@Nullable String jobArn) {
             this.jobArn = Output.ofNullable(jobArn);
             return this;
         }
-
         public Builder jobExecutionsRetryConfig(@Nullable Output<JobExecutionsRetryConfigPropertiesArgs> jobExecutionsRetryConfig) {
             this.jobExecutionsRetryConfig = jobExecutionsRetryConfig;
             return this;
         }
-
         public Builder jobExecutionsRetryConfig(@Nullable JobExecutionsRetryConfigPropertiesArgs jobExecutionsRetryConfig) {
             this.jobExecutionsRetryConfig = Output.ofNullable(jobExecutionsRetryConfig);
             return this;
         }
-
         public Builder jobExecutionsRolloutConfig(@Nullable Output<JobExecutionsRolloutConfigPropertiesArgs> jobExecutionsRolloutConfig) {
             this.jobExecutionsRolloutConfig = jobExecutionsRolloutConfig;
             return this;
         }
-
         public Builder jobExecutionsRolloutConfig(@Nullable JobExecutionsRolloutConfigPropertiesArgs jobExecutionsRolloutConfig) {
             this.jobExecutionsRolloutConfig = Output.ofNullable(jobExecutionsRolloutConfig);
             return this;
         }
-
         public Builder jobTemplateId(Output<String> jobTemplateId) {
             this.jobTemplateId = Objects.requireNonNull(jobTemplateId);
             return this;
         }
-
         public Builder jobTemplateId(String jobTemplateId) {
             this.jobTemplateId = Output.of(Objects.requireNonNull(jobTemplateId));
             return this;
         }
-
         public Builder presignedUrlConfig(@Nullable Output<PresignedUrlConfigPropertiesArgs> presignedUrlConfig) {
             this.presignedUrlConfig = presignedUrlConfig;
             return this;
         }
-
         public Builder presignedUrlConfig(@Nullable PresignedUrlConfigPropertiesArgs presignedUrlConfig) {
             this.presignedUrlConfig = Output.ofNullable(presignedUrlConfig);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<JobTemplateTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<JobTemplateTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
+        public Builder tags(JobTemplateTagArgs... tags) {
+            return tags(List.of(tags));
+        }
         public Builder timeoutConfig(@Nullable Output<TimeoutConfigPropertiesArgs> timeoutConfig) {
             this.timeoutConfig = timeoutConfig;
             return this;
         }
-
         public Builder timeoutConfig(@Nullable TimeoutConfigPropertiesArgs timeoutConfig) {
             this.timeoutConfig = Output.ofNullable(timeoutConfig);
             return this;
-        }
-        public JobTemplateArgs build() {
+        }        public JobTemplateArgs build() {
             return new JobTemplateArgs(abortConfig, description, document, documentSource, jobArn, jobExecutionsRetryConfig, jobExecutionsRolloutConfig, jobTemplateId, presignedUrlConfig, tags, timeoutConfig);
         }
     }

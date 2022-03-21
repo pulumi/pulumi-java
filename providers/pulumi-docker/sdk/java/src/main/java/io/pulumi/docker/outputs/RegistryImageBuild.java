@@ -301,162 +301,145 @@ public final class RegistryImageBuild {
             this.authConfigs = authConfigs;
             return this;
         }
-
+        public Builder authConfigs(RegistryImageBuildAuthConfig... authConfigs) {
+            return authConfigs(List.of(authConfigs));
+        }
         public Builder buildArgs(@Nullable Map<String,String> buildArgs) {
             this.buildArgs = buildArgs;
             return this;
         }
-
         public Builder buildId(@Nullable String buildId) {
             this.buildId = buildId;
             return this;
         }
-
         public Builder cacheFroms(@Nullable List<String> cacheFroms) {
             this.cacheFroms = cacheFroms;
             return this;
         }
-
+        public Builder cacheFroms(String... cacheFroms) {
+            return cacheFroms(List.of(cacheFroms));
+        }
         public Builder cgroupParent(@Nullable String cgroupParent) {
             this.cgroupParent = cgroupParent;
             return this;
         }
-
         public Builder context(String context) {
             this.context = Objects.requireNonNull(context);
             return this;
         }
-
         public Builder cpuPeriod(@Nullable Integer cpuPeriod) {
             this.cpuPeriod = cpuPeriod;
             return this;
         }
-
         public Builder cpuQuota(@Nullable Integer cpuQuota) {
             this.cpuQuota = cpuQuota;
             return this;
         }
-
         public Builder cpuSetCpus(@Nullable String cpuSetCpus) {
             this.cpuSetCpus = cpuSetCpus;
             return this;
         }
-
         public Builder cpuSetMems(@Nullable String cpuSetMems) {
             this.cpuSetMems = cpuSetMems;
             return this;
         }
-
         public Builder cpuShares(@Nullable Integer cpuShares) {
             this.cpuShares = cpuShares;
             return this;
         }
-
         public Builder dockerfile(@Nullable String dockerfile) {
             this.dockerfile = dockerfile;
             return this;
         }
-
         public Builder extraHosts(@Nullable List<String> extraHosts) {
             this.extraHosts = extraHosts;
             return this;
         }
-
+        public Builder extraHosts(String... extraHosts) {
+            return extraHosts(List.of(extraHosts));
+        }
         public Builder forceRemove(@Nullable Boolean forceRemove) {
             this.forceRemove = forceRemove;
             return this;
         }
-
         public Builder isolation(@Nullable String isolation) {
             this.isolation = isolation;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder memory(@Nullable Integer memory) {
             this.memory = memory;
             return this;
         }
-
         public Builder memorySwap(@Nullable Integer memorySwap) {
             this.memorySwap = memorySwap;
             return this;
         }
-
         public Builder networkMode(@Nullable String networkMode) {
             this.networkMode = networkMode;
             return this;
         }
-
         public Builder noCache(@Nullable Boolean noCache) {
             this.noCache = noCache;
             return this;
         }
-
         public Builder platform(@Nullable String platform) {
             this.platform = platform;
             return this;
         }
-
         public Builder pullParent(@Nullable Boolean pullParent) {
             this.pullParent = pullParent;
             return this;
         }
-
         public Builder remoteContext(@Nullable String remoteContext) {
             this.remoteContext = remoteContext;
             return this;
         }
-
         public Builder remove(@Nullable Boolean remove) {
             this.remove = remove;
             return this;
         }
-
         public Builder securityOpts(@Nullable List<String> securityOpts) {
             this.securityOpts = securityOpts;
             return this;
         }
-
+        public Builder securityOpts(String... securityOpts) {
+            return securityOpts(List.of(securityOpts));
+        }
         public Builder sessionId(@Nullable String sessionId) {
             this.sessionId = sessionId;
             return this;
         }
-
         public Builder shmSize(@Nullable Integer shmSize) {
             this.shmSize = shmSize;
             return this;
         }
-
         public Builder squash(@Nullable Boolean squash) {
             this.squash = squash;
             return this;
         }
-
         public Builder suppressOutput(@Nullable Boolean suppressOutput) {
             this.suppressOutput = suppressOutput;
             return this;
         }
-
         public Builder target(@Nullable String target) {
             this.target = target;
             return this;
         }
-
         public Builder ulimits(@Nullable List<RegistryImageBuildUlimit> ulimits) {
             this.ulimits = ulimits;
             return this;
         }
-
+        public Builder ulimits(RegistryImageBuildUlimit... ulimits) {
+            return ulimits(List.of(ulimits));
+        }
         public Builder version(@Nullable String version) {
             this.version = version;
             return this;
-        }
-        public RegistryImageBuild build() {
+        }        public RegistryImageBuild build() {
             return new RegistryImageBuild(authConfigs, buildArgs, buildId, cacheFroms, cgroupParent, context, cpuPeriod, cpuQuota, cpuSetCpus, cpuSetMems, cpuShares, dockerfile, extraHosts, forceRemove, isolation, labels, memory, memorySwap, networkMode, noCache, platform, pullParent, remoteContext, remove, securityOpts, sessionId, shmSize, squash, suppressOutput, target, ulimits, version);
         }
     }

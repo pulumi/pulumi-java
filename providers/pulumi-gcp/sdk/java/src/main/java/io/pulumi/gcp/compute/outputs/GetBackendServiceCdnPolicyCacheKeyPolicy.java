@@ -79,27 +79,28 @@ public final class GetBackendServiceCdnPolicyCacheKeyPolicy {
             this.includeHost = Objects.requireNonNull(includeHost);
             return this;
         }
-
         public Builder includeProtocol(Boolean includeProtocol) {
             this.includeProtocol = Objects.requireNonNull(includeProtocol);
             return this;
         }
-
         public Builder includeQueryString(Boolean includeQueryString) {
             this.includeQueryString = Objects.requireNonNull(includeQueryString);
             return this;
         }
-
         public Builder queryStringBlacklists(List<String> queryStringBlacklists) {
             this.queryStringBlacklists = Objects.requireNonNull(queryStringBlacklists);
             return this;
         }
-
+        public Builder queryStringBlacklists(String... queryStringBlacklists) {
+            return queryStringBlacklists(List.of(queryStringBlacklists));
+        }
         public Builder queryStringWhitelists(List<String> queryStringWhitelists) {
             this.queryStringWhitelists = Objects.requireNonNull(queryStringWhitelists);
             return this;
         }
-        public GetBackendServiceCdnPolicyCacheKeyPolicy build() {
+        public Builder queryStringWhitelists(String... queryStringWhitelists) {
+            return queryStringWhitelists(List.of(queryStringWhitelists));
+        }        public GetBackendServiceCdnPolicyCacheKeyPolicy build() {
             return new GetBackendServiceCdnPolicyCacheKeyPolicy(includeHost, includeProtocol, includeQueryString, queryStringBlacklists, queryStringWhitelists);
         }
     }

@@ -70,12 +70,10 @@ public final class GoogleCloudChannelV1TrialSettingsResponse {
             this.endTime = Objects.requireNonNull(endTime);
             return this;
         }
-
         public Builder trial(Boolean trial) {
             this.trial = Objects.requireNonNull(trial);
             return this;
-        }
-        public GoogleCloudChannelV1TrialSettingsResponse build() {
+        }        public GoogleCloudChannelV1TrialSettingsResponse build() {
             return new GoogleCloudChannelV1TrialSettingsResponse(endTime, trial);
         }
     }

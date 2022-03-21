@@ -151,37 +151,30 @@ public final class ResourceAttributes {
             this.group = group;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder namespace(@Nullable String namespace) {
             this.namespace = namespace;
             return this;
         }
-
         public Builder resource(@Nullable String resource) {
             this.resource = resource;
             return this;
         }
-
         public Builder subresource(@Nullable String subresource) {
             this.subresource = subresource;
             return this;
         }
-
         public Builder verb(@Nullable String verb) {
             this.verb = verb;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = version;
             return this;
-        }
-        public ResourceAttributes build() {
+        }        public ResourceAttributes build() {
             return new ResourceAttributes(group, name, namespace, resource, subresource, verb, version);
         }
     }

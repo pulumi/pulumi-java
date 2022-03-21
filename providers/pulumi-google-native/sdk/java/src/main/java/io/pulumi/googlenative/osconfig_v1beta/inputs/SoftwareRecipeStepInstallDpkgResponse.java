@@ -58,8 +58,7 @@ public final class SoftwareRecipeStepInstallDpkgResponse extends io.pulumi.resou
         public Builder artifactId(String artifactId) {
             this.artifactId = Objects.requireNonNull(artifactId);
             return this;
-        }
-        public SoftwareRecipeStepInstallDpkgResponse build() {
+        }        public SoftwareRecipeStepInstallDpkgResponse build() {
             return new SoftwareRecipeStepInstallDpkgResponse(artifactId);
         }
     }

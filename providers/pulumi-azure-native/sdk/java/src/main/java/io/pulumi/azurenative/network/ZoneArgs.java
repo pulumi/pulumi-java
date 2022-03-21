@@ -158,72 +158,64 @@ public final class ZoneArgs extends io.pulumi.resources.ResourceArgs {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder registrationVirtualNetworks(@Nullable Output<List<SubResourceArgs>> registrationVirtualNetworks) {
             this.registrationVirtualNetworks = registrationVirtualNetworks;
             return this;
         }
-
         public Builder registrationVirtualNetworks(@Nullable List<SubResourceArgs> registrationVirtualNetworks) {
             this.registrationVirtualNetworks = Output.ofNullable(registrationVirtualNetworks);
             return this;
         }
-
+        public Builder registrationVirtualNetworks(SubResourceArgs... registrationVirtualNetworks) {
+            return registrationVirtualNetworks(List.of(registrationVirtualNetworks));
+        }
         public Builder resolutionVirtualNetworks(@Nullable Output<List<SubResourceArgs>> resolutionVirtualNetworks) {
             this.resolutionVirtualNetworks = resolutionVirtualNetworks;
             return this;
         }
-
         public Builder resolutionVirtualNetworks(@Nullable List<SubResourceArgs> resolutionVirtualNetworks) {
             this.resolutionVirtualNetworks = Output.ofNullable(resolutionVirtualNetworks);
             return this;
         }
-
+        public Builder resolutionVirtualNetworks(SubResourceArgs... resolutionVirtualNetworks) {
+            return resolutionVirtualNetworks(List.of(resolutionVirtualNetworks));
+        }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder zoneName(@Nullable Output<String> zoneName) {
             this.zoneName = zoneName;
             return this;
         }
-
         public Builder zoneName(@Nullable String zoneName) {
             this.zoneName = Output.ofNullable(zoneName);
             return this;
         }
-
         public Builder zoneType(@Nullable Output<ZoneType> zoneType) {
             this.zoneType = zoneType;
             return this;
         }
-
         public Builder zoneType(@Nullable ZoneType zoneType) {
             this.zoneType = Output.ofNullable(zoneType);
             return this;
-        }
-        public ZoneArgs build() {
+        }        public ZoneArgs build() {
             return new ZoneArgs(location, registrationVirtualNetworks, resolutionVirtualNetworks, resourceGroupName, tags, zoneName, zoneType);
         }
     }

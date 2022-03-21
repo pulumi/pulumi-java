@@ -108,52 +108,45 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
             this.imageDescription = imageDescription;
             return this;
         }
-
         public Builder imageDescription(@Nullable String imageDescription) {
             this.imageDescription = Output.ofNullable(imageDescription);
             return this;
         }
-
         public Builder imageDisplayName(@Nullable Output<String> imageDisplayName) {
             this.imageDisplayName = imageDisplayName;
             return this;
         }
-
         public Builder imageDisplayName(@Nullable String imageDisplayName) {
             this.imageDisplayName = Output.ofNullable(imageDisplayName);
             return this;
         }
-
         public Builder imageName(@Nullable Output<String> imageName) {
             this.imageName = imageName;
             return this;
         }
-
         public Builder imageName(@Nullable String imageName) {
             this.imageName = Output.ofNullable(imageName);
             return this;
         }
-
         public Builder imageRoleArn(Output<String> imageRoleArn) {
             this.imageRoleArn = Objects.requireNonNull(imageRoleArn);
             return this;
         }
-
         public Builder imageRoleArn(String imageRoleArn) {
             this.imageRoleArn = Output.of(Objects.requireNonNull(imageRoleArn));
             return this;
         }
-
         public Builder tags(@Nullable Output<List<ImageTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<ImageTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public ImageArgs build() {
+        public Builder tags(ImageTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public ImageArgs build() {
             return new ImageArgs(imageDescription, imageDisplayName, imageName, imageRoleArn, tags);
         }
     }

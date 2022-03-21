@@ -56,12 +56,10 @@ public final class DataSourceParametersAwsIotAnalyticsGetArgs extends io.pulumi.
             this.dataSetName = Objects.requireNonNull(dataSetName);
             return this;
         }
-
         public Builder dataSetName(String dataSetName) {
             this.dataSetName = Output.of(Objects.requireNonNull(dataSetName));
             return this;
-        }
-        public DataSourceParametersAwsIotAnalyticsGetArgs build() {
+        }        public DataSourceParametersAwsIotAnalyticsGetArgs build() {
             return new DataSourceParametersAwsIotAnalyticsGetArgs(dataSetName);
         }
     }

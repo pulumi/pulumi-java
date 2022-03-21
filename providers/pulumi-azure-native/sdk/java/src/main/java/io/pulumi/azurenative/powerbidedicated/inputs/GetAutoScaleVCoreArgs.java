@@ -72,12 +72,10 @@ public final class GetAutoScaleVCoreArgs extends io.pulumi.resources.InvokeArgs 
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder vcoreName(String vcoreName) {
             this.vcoreName = Objects.requireNonNull(vcoreName);
             return this;
-        }
-        public GetAutoScaleVCoreArgs build() {
+        }        public GetAutoScaleVCoreArgs build() {
             return new GetAutoScaleVCoreArgs(resourceGroupName, vcoreName);
         }
     }

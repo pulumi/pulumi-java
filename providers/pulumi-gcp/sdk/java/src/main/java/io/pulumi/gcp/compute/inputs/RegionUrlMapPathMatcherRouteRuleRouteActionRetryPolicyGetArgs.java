@@ -114,32 +114,29 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionRetryPolicyGetArgs
             this.numRetries = Objects.requireNonNull(numRetries);
             return this;
         }
-
         public Builder numRetries(Integer numRetries) {
             this.numRetries = Output.of(Objects.requireNonNull(numRetries));
             return this;
         }
-
         public Builder perTryTimeout(@Nullable Output<RegionUrlMapPathMatcherRouteRuleRouteActionRetryPolicyPerTryTimeoutGetArgs> perTryTimeout) {
             this.perTryTimeout = perTryTimeout;
             return this;
         }
-
         public Builder perTryTimeout(@Nullable RegionUrlMapPathMatcherRouteRuleRouteActionRetryPolicyPerTryTimeoutGetArgs perTryTimeout) {
             this.perTryTimeout = Output.ofNullable(perTryTimeout);
             return this;
         }
-
         public Builder retryConditions(@Nullable Output<List<String>> retryConditions) {
             this.retryConditions = retryConditions;
             return this;
         }
-
         public Builder retryConditions(@Nullable List<String> retryConditions) {
             this.retryConditions = Output.ofNullable(retryConditions);
             return this;
         }
-        public RegionUrlMapPathMatcherRouteRuleRouteActionRetryPolicyGetArgs build() {
+        public Builder retryConditions(String... retryConditions) {
+            return retryConditions(List.of(retryConditions));
+        }        public RegionUrlMapPathMatcherRouteRuleRouteActionRetryPolicyGetArgs build() {
             return new RegionUrlMapPathMatcherRouteRuleRouteActionRetryPolicyGetArgs(numRetries, perTryTimeout, retryConditions);
         }
     }

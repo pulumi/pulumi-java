@@ -74,22 +74,18 @@ public final class WebAclRuleStatementRateBasedStatementScopeDownStatementOrStat
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
-
         public Builder priority(Integer priority) {
             this.priority = Output.of(Objects.requireNonNull(priority));
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementSqliMatchStatementTextTransformationGetArgs build() {
+        }        public WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementSqliMatchStatementTextTransformationGetArgs build() {
             return new WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementSqliMatchStatementTextTransformationGetArgs(priority, type);
         }
     }

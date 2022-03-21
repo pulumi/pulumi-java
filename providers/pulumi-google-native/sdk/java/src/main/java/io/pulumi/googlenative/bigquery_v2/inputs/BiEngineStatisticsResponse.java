@@ -74,12 +74,13 @@ public final class BiEngineStatisticsResponse extends io.pulumi.resources.Invoke
             this.biEngineMode = Objects.requireNonNull(biEngineMode);
             return this;
         }
-
         public Builder biEngineReasons(List<BiEngineReasonResponse> biEngineReasons) {
             this.biEngineReasons = Objects.requireNonNull(biEngineReasons);
             return this;
         }
-        public BiEngineStatisticsResponse build() {
+        public Builder biEngineReasons(BiEngineReasonResponse... biEngineReasons) {
+            return biEngineReasons(List.of(biEngineReasons));
+        }        public BiEngineStatisticsResponse build() {
             return new BiEngineStatisticsResponse(biEngineMode, biEngineReasons);
         }
     }

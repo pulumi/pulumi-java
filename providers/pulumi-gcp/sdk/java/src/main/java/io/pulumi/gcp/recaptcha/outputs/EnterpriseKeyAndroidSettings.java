@@ -73,12 +73,13 @@ public final class EnterpriseKeyAndroidSettings {
             this.allowAllPackageNames = allowAllPackageNames;
             return this;
         }
-
         public Builder allowedPackageNames(@Nullable List<String> allowedPackageNames) {
             this.allowedPackageNames = allowedPackageNames;
             return this;
         }
-        public EnterpriseKeyAndroidSettings build() {
+        public Builder allowedPackageNames(String... allowedPackageNames) {
+            return allowedPackageNames(List.of(allowedPackageNames));
+        }        public EnterpriseKeyAndroidSettings build() {
             return new EnterpriseKeyAndroidSettings(allowAllPackageNames, allowedPackageNames);
         }
     }

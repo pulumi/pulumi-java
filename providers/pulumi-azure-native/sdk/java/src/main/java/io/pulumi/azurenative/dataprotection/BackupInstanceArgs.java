@@ -106,42 +106,34 @@ public final class BackupInstanceArgs extends io.pulumi.resources.ResourceArgs {
             this.backupInstanceName = backupInstanceName;
             return this;
         }
-
         public Builder backupInstanceName(@Nullable String backupInstanceName) {
             this.backupInstanceName = Output.ofNullable(backupInstanceName);
             return this;
         }
-
         public Builder properties(@Nullable Output<io.pulumi.azurenative.dataprotection.inputs.BackupInstanceArgs> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder properties(@Nullable io.pulumi.azurenative.dataprotection.inputs.BackupInstanceArgs properties) {
             this.properties = Output.ofNullable(properties);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder vaultName(Output<String> vaultName) {
             this.vaultName = Objects.requireNonNull(vaultName);
             return this;
         }
-
         public Builder vaultName(String vaultName) {
             this.vaultName = Output.of(Objects.requireNonNull(vaultName));
             return this;
-        }
-        public BackupInstanceArgs build() {
+        }        public BackupInstanceArgs build() {
             return new BackupInstanceArgs(backupInstanceName, properties, resourceGroupName, vaultName);
         }
     }

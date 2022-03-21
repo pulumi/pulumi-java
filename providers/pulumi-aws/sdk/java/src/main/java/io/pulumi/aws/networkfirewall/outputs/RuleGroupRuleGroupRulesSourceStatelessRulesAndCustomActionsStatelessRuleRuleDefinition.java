@@ -71,12 +71,13 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsSt
             this.actions = Objects.requireNonNull(actions);
             return this;
         }
-
+        public Builder actions(String... actions) {
+            return actions(List.of(actions));
+        }
         public Builder matchAttributes(RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributes matchAttributes) {
             this.matchAttributes = Objects.requireNonNull(matchAttributes);
             return this;
-        }
-        public RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinition build() {
+        }        public RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinition build() {
             return new RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinition(actions, matchAttributes);
         }
     }

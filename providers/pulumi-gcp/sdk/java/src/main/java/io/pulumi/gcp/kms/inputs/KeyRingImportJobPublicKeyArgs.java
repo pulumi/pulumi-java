@@ -53,12 +53,10 @@ public final class KeyRingImportJobPublicKeyArgs extends io.pulumi.resources.Res
             this.pem = pem;
             return this;
         }
-
         public Builder pem(@Nullable String pem) {
             this.pem = Output.ofNullable(pem);
             return this;
-        }
-        public KeyRingImportJobPublicKeyArgs build() {
+        }        public KeyRingImportJobPublicKeyArgs build() {
             return new KeyRingImportJobPublicKeyArgs(pem);
         }
     }

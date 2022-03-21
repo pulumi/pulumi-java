@@ -121,27 +121,25 @@ public final class GooglePrivacyDlpV2StoredInfoTypeVersionResponse {
             this.config = Objects.requireNonNull(config);
             return this;
         }
-
         public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder errors(List<GooglePrivacyDlpV2ErrorResponse> errors) {
             this.errors = Objects.requireNonNull(errors);
             return this;
         }
-
+        public Builder errors(GooglePrivacyDlpV2ErrorResponse... errors) {
+            return errors(List.of(errors));
+        }
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder stats(GooglePrivacyDlpV2StoredInfoTypeStatsResponse stats) {
             this.stats = Objects.requireNonNull(stats);
             return this;
-        }
-        public GooglePrivacyDlpV2StoredInfoTypeVersionResponse build() {
+        }        public GooglePrivacyDlpV2StoredInfoTypeVersionResponse build() {
             return new GooglePrivacyDlpV2StoredInfoTypeVersionResponse(config, createTime, errors, state, stats);
         }
     }

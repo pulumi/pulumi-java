@@ -60,8 +60,7 @@ public final class ManagementLockOwnerResponse extends io.pulumi.resources.Invok
         public Builder applicationId(@Nullable String applicationId) {
             this.applicationId = applicationId;
             return this;
-        }
-        public ManagementLockOwnerResponse build() {
+        }        public ManagementLockOwnerResponse build() {
             return new ManagementLockOwnerResponse(applicationId);
         }
     }

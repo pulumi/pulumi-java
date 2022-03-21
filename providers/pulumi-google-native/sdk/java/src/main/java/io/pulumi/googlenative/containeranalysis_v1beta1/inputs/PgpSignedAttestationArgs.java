@@ -95,32 +95,26 @@ public final class PgpSignedAttestationArgs extends io.pulumi.resources.Resource
             this.contentType = contentType;
             return this;
         }
-
         public Builder contentType(@Nullable PgpSignedAttestationContentType contentType) {
             this.contentType = Output.ofNullable(contentType);
             return this;
         }
-
         public Builder pgpKeyId(@Nullable Output<String> pgpKeyId) {
             this.pgpKeyId = pgpKeyId;
             return this;
         }
-
         public Builder pgpKeyId(@Nullable String pgpKeyId) {
             this.pgpKeyId = Output.ofNullable(pgpKeyId);
             return this;
         }
-
         public Builder signature(Output<String> signature) {
             this.signature = Objects.requireNonNull(signature);
             return this;
         }
-
         public Builder signature(String signature) {
             this.signature = Output.of(Objects.requireNonNull(signature));
             return this;
-        }
-        public PgpSignedAttestationArgs build() {
+        }        public PgpSignedAttestationArgs build() {
             return new PgpSignedAttestationArgs(contentType, pgpKeyId, signature);
         }
     }

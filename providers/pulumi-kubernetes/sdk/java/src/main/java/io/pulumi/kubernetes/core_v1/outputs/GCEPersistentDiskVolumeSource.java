@@ -105,22 +105,18 @@ public final class GCEPersistentDiskVolumeSource {
             this.fsType = fsType;
             return this;
         }
-
         public Builder partition(@Nullable Integer partition) {
             this.partition = partition;
             return this;
         }
-
         public Builder pdName(String pdName) {
             this.pdName = Objects.requireNonNull(pdName);
             return this;
         }
-
         public Builder readOnly(@Nullable Boolean readOnly) {
             this.readOnly = readOnly;
             return this;
-        }
-        public GCEPersistentDiskVolumeSource build() {
+        }        public GCEPersistentDiskVolumeSource build() {
             return new GCEPersistentDiskVolumeSource(fsType, partition, pdName, readOnly);
         }
     }

@@ -79,22 +79,24 @@ public final class ProviderIgnoreTagsArgs extends io.pulumi.resources.ResourceAr
             this.keyPrefixes = keyPrefixes;
             return this;
         }
-
         public Builder keyPrefixes(@Nullable List<String> keyPrefixes) {
             this.keyPrefixes = Output.ofNullable(keyPrefixes);
             return this;
         }
-
+        public Builder keyPrefixes(String... keyPrefixes) {
+            return keyPrefixes(List.of(keyPrefixes));
+        }
         public Builder keys(@Nullable Output<List<String>> keys) {
             this.keys = keys;
             return this;
         }
-
         public Builder keys(@Nullable List<String> keys) {
             this.keys = Output.ofNullable(keys);
             return this;
         }
-        public ProviderIgnoreTagsArgs build() {
+        public Builder keys(String... keys) {
+            return keys(List.of(keys));
+        }        public ProviderIgnoreTagsArgs build() {
             return new ProviderIgnoreTagsArgs(keyPrefixes, keys);
         }
     }

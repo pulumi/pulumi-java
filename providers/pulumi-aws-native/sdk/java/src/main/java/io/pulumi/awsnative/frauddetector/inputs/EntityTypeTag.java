@@ -64,12 +64,10 @@ public final class EntityTypeTag extends io.pulumi.resources.InvokeArgs {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public EntityTypeTag build() {
+        }        public EntityTypeTag build() {
             return new EntityTypeTag(key, value);
         }
     }

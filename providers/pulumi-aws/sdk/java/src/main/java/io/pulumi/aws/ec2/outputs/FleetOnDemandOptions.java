@@ -53,8 +53,7 @@ public final class FleetOnDemandOptions {
         public Builder allocationStrategy(@Nullable String allocationStrategy) {
             this.allocationStrategy = allocationStrategy;
             return this;
-        }
-        public FleetOnDemandOptions build() {
+        }        public FleetOnDemandOptions build() {
             return new FleetOnDemandOptions(allocationStrategy);
         }
     }

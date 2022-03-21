@@ -95,32 +95,26 @@ public final class FieldDefinitionArgs extends io.pulumi.resources.ResourceArgs 
             this.isEncrypted = isEncrypted;
             return this;
         }
-
         public Builder isEncrypted(@Nullable Boolean isEncrypted) {
             this.isEncrypted = Output.ofNullable(isEncrypted);
             return this;
         }
-
         public Builder isOptional(@Nullable Output<Boolean> isOptional) {
             this.isOptional = isOptional;
             return this;
         }
-
         public Builder isOptional(@Nullable Boolean isOptional) {
             this.isOptional = Output.ofNullable(isOptional);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public FieldDefinitionArgs build() {
+        }        public FieldDefinitionArgs build() {
             return new FieldDefinitionArgs(isEncrypted, isOptional, type);
         }
     }

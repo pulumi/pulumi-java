@@ -74,22 +74,21 @@ public final class BudgetActionDefinitionScpActionDefinitionArgs extends io.pulu
             this.policyId = Objects.requireNonNull(policyId);
             return this;
         }
-
         public Builder policyId(String policyId) {
             this.policyId = Output.of(Objects.requireNonNull(policyId));
             return this;
         }
-
         public Builder targetIds(Output<List<String>> targetIds) {
             this.targetIds = Objects.requireNonNull(targetIds);
             return this;
         }
-
         public Builder targetIds(List<String> targetIds) {
             this.targetIds = Output.of(Objects.requireNonNull(targetIds));
             return this;
         }
-        public BudgetActionDefinitionScpActionDefinitionArgs build() {
+        public Builder targetIds(String... targetIds) {
+            return targetIds(List.of(targetIds));
+        }        public BudgetActionDefinitionScpActionDefinitionArgs build() {
             return new BudgetActionDefinitionScpActionDefinitionArgs(policyId, targetIds);
         }
     }

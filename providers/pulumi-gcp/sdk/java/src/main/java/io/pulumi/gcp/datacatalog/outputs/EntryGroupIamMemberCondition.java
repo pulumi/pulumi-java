@@ -63,17 +63,14 @@ public final class EntryGroupIamMemberCondition {
             this.description = description;
             return this;
         }
-
         public Builder expression(String expression) {
             this.expression = Objects.requireNonNull(expression);
             return this;
         }
-
         public Builder title(String title) {
             this.title = Objects.requireNonNull(title);
             return this;
-        }
-        public EntryGroupIamMemberCondition build() {
+        }        public EntryGroupIamMemberCondition build() {
             return new EntryGroupIamMemberCondition(description, expression, title);
         }
     }

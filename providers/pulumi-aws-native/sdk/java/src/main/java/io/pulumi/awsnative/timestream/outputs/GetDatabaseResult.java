@@ -81,17 +81,17 @@ public final class GetDatabaseResult {
             this.arn = arn;
             return this;
         }
-
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
-
         public Builder tags(@Nullable List<DatabaseTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetDatabaseResult build() {
+        public Builder tags(DatabaseTag... tags) {
+            return tags(List.of(tags));
+        }        public GetDatabaseResult build() {
             return new GetDatabaseResult(arn, kmsKeyId, tags);
         }
     }

@@ -127,52 +127,42 @@ public final class PackageInfoOccurrenceArgs extends io.pulumi.resources.Resourc
             this.comment = comment;
             return this;
         }
-
         public Builder comment(@Nullable String comment) {
             this.comment = Output.ofNullable(comment);
             return this;
         }
-
         public Builder filename(@Nullable Output<String> filename) {
             this.filename = filename;
             return this;
         }
-
         public Builder filename(@Nullable String filename) {
             this.filename = Output.ofNullable(filename);
             return this;
         }
-
         public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder licenseConcluded(@Nullable Output<LicenseArgs> licenseConcluded) {
             this.licenseConcluded = licenseConcluded;
             return this;
         }
-
         public Builder licenseConcluded(@Nullable LicenseArgs licenseConcluded) {
             this.licenseConcluded = Output.ofNullable(licenseConcluded);
             return this;
         }
-
         public Builder sourceInfo(@Nullable Output<String> sourceInfo) {
             this.sourceInfo = sourceInfo;
             return this;
         }
-
         public Builder sourceInfo(@Nullable String sourceInfo) {
             this.sourceInfo = Output.ofNullable(sourceInfo);
             return this;
-        }
-        public PackageInfoOccurrenceArgs build() {
+        }        public PackageInfoOccurrenceArgs build() {
             return new PackageInfoOccurrenceArgs(comment, filename, id, licenseConcluded, sourceInfo);
         }
     }

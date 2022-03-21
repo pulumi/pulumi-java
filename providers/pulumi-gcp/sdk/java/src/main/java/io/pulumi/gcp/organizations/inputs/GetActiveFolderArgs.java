@@ -72,12 +72,10 @@ public final class GetActiveFolderArgs extends io.pulumi.resources.InvokeArgs {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder parent(String parent) {
             this.parent = Objects.requireNonNull(parent);
             return this;
-        }
-        public GetActiveFolderArgs build() {
+        }        public GetActiveFolderArgs build() {
             return new GetActiveFolderArgs(displayName, parent);
         }
     }

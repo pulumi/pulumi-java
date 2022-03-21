@@ -87,17 +87,14 @@ public final class TlsCertificateContextResponse {
             this.certificatePaths = Objects.requireNonNull(certificatePaths);
             return this;
         }
-
         public Builder certificateSource(String certificateSource) {
             this.certificateSource = Objects.requireNonNull(certificateSource);
             return this;
         }
-
         public Builder sdsConfig(SdsConfigResponse sdsConfig) {
             this.sdsConfig = Objects.requireNonNull(sdsConfig);
             return this;
-        }
-        public TlsCertificateContextResponse build() {
+        }        public TlsCertificateContextResponse build() {
             return new TlsCertificateContextResponse(certificatePaths, certificateSource, sdsConfig);
         }
     }

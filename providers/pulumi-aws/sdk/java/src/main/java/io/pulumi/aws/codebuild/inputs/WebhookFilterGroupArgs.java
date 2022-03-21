@@ -58,12 +58,13 @@ public final class WebhookFilterGroupArgs extends io.pulumi.resources.ResourceAr
             this.filters = filters;
             return this;
         }
-
         public Builder filters(@Nullable List<WebhookFilterGroupFilterArgs> filters) {
             this.filters = Output.ofNullable(filters);
             return this;
         }
-        public WebhookFilterGroupArgs build() {
+        public Builder filters(WebhookFilterGroupFilterArgs... filters) {
+            return filters(List.of(filters));
+        }        public WebhookFilterGroupArgs build() {
             return new WebhookFilterGroupArgs(filters);
         }
     }

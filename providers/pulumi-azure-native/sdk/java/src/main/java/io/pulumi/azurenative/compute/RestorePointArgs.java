@@ -124,52 +124,45 @@ public final class RestorePointArgs extends io.pulumi.resources.ResourceArgs {
             this.excludeDisks = excludeDisks;
             return this;
         }
-
         public Builder excludeDisks(@Nullable List<ApiEntityReferenceArgs> excludeDisks) {
             this.excludeDisks = Output.ofNullable(excludeDisks);
             return this;
         }
-
+        public Builder excludeDisks(ApiEntityReferenceArgs... excludeDisks) {
+            return excludeDisks(List.of(excludeDisks));
+        }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder restorePointCollectionName(Output<String> restorePointCollectionName) {
             this.restorePointCollectionName = Objects.requireNonNull(restorePointCollectionName);
             return this;
         }
-
         public Builder restorePointCollectionName(String restorePointCollectionName) {
             this.restorePointCollectionName = Output.of(Objects.requireNonNull(restorePointCollectionName));
             return this;
         }
-
         public Builder restorePointName(@Nullable Output<String> restorePointName) {
             this.restorePointName = restorePointName;
             return this;
         }
-
         public Builder restorePointName(@Nullable String restorePointName) {
             this.restorePointName = Output.ofNullable(restorePointName);
             return this;
         }
-
         public Builder timeCreated(@Nullable Output<String> timeCreated) {
             this.timeCreated = timeCreated;
             return this;
         }
-
         public Builder timeCreated(@Nullable String timeCreated) {
             this.timeCreated = Output.ofNullable(timeCreated);
             return this;
-        }
-        public RestorePointArgs build() {
+        }        public RestorePointArgs build() {
             return new RestorePointArgs(excludeDisks, resourceGroupName, restorePointCollectionName, restorePointName, timeCreated);
         }
     }

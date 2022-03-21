@@ -79,22 +79,18 @@ public final class BackendServiceLogConfigArgs extends io.pulumi.resources.Resou
             this.enable = enable;
             return this;
         }
-
         public Builder enable(@Nullable Boolean enable) {
             this.enable = Output.ofNullable(enable);
             return this;
         }
-
         public Builder sampleRate(@Nullable Output<Double> sampleRate) {
             this.sampleRate = sampleRate;
             return this;
         }
-
         public Builder sampleRate(@Nullable Double sampleRate) {
             this.sampleRate = Output.ofNullable(sampleRate);
             return this;
-        }
-        public BackendServiceLogConfigArgs build() {
+        }        public BackendServiceLogConfigArgs build() {
             return new BackendServiceLogConfigArgs(enable, sampleRate);
         }
     }

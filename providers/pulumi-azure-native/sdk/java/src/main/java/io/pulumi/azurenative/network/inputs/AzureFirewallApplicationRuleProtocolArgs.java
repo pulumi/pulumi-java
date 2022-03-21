@@ -81,22 +81,18 @@ public final class AzureFirewallApplicationRuleProtocolArgs extends io.pulumi.re
             this.port = port;
             return this;
         }
-
         public Builder port(@Nullable Integer port) {
             this.port = Output.ofNullable(port);
             return this;
         }
-
         public Builder protocolType(@Nullable Output<Either<String,AzureFirewallApplicationRuleProtocolType>> protocolType) {
             this.protocolType = protocolType;
             return this;
         }
-
         public Builder protocolType(@Nullable Either<String,AzureFirewallApplicationRuleProtocolType> protocolType) {
             this.protocolType = Output.ofNullable(protocolType);
             return this;
-        }
-        public AzureFirewallApplicationRuleProtocolArgs build() {
+        }        public AzureFirewallApplicationRuleProtocolArgs build() {
             return new AzureFirewallApplicationRuleProtocolArgs(port, protocolType);
         }
     }

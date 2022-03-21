@@ -54,7 +54,9 @@ public final class LoginScopesResponse {
             this.scopes = scopes;
             return this;
         }
-        public LoginScopesResponse build() {
+        public Builder scopes(String... scopes) {
+            return scopes(List.of(scopes));
+        }        public LoginScopesResponse build() {
             return new LoginScopesResponse(scopes);
         }
     }

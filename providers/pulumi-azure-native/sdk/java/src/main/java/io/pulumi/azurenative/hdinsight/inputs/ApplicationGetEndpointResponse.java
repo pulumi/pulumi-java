@@ -111,22 +111,18 @@ public final class ApplicationGetEndpointResponse extends io.pulumi.resources.In
             this.destinationPort = destinationPort;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder privateIPAddress(@Nullable String privateIPAddress) {
             this.privateIPAddress = privateIPAddress;
             return this;
         }
-
         public Builder publicPort(@Nullable Integer publicPort) {
             this.publicPort = publicPort;
             return this;
-        }
-        public ApplicationGetEndpointResponse build() {
+        }        public ApplicationGetEndpointResponse build() {
             return new ApplicationGetEndpointResponse(destinationPort, location, privateIPAddress, publicPort);
         }
     }

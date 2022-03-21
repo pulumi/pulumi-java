@@ -51,8 +51,7 @@ public final class EndConditionResponse {
         public Builder cardinality(CardinalityResponse cardinality) {
             this.cardinality = Objects.requireNonNull(cardinality);
             return this;
-        }
-        public EndConditionResponse build() {
+        }        public EndConditionResponse build() {
             return new EndConditionResponse(cardinality);
         }
     }

@@ -96,17 +96,14 @@ public final class DdosSettingsResponse extends io.pulumi.resources.InvokeArgs {
             this.ddosCustomPolicy = ddosCustomPolicy;
             return this;
         }
-
         public Builder protectedIP(@Nullable Boolean protectedIP) {
             this.protectedIP = protectedIP;
             return this;
         }
-
         public Builder protectionCoverage(@Nullable String protectionCoverage) {
             this.protectionCoverage = protectionCoverage;
             return this;
-        }
-        public DdosSettingsResponse build() {
+        }        public DdosSettingsResponse build() {
             return new DdosSettingsResponse(ddosCustomPolicy, protectedIP, protectionCoverage);
         }
     }

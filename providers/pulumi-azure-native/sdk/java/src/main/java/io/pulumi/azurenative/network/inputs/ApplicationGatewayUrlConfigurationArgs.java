@@ -95,32 +95,26 @@ public final class ApplicationGatewayUrlConfigurationArgs extends io.pulumi.reso
             this.modifiedPath = modifiedPath;
             return this;
         }
-
         public Builder modifiedPath(@Nullable String modifiedPath) {
             this.modifiedPath = Output.ofNullable(modifiedPath);
             return this;
         }
-
         public Builder modifiedQueryString(@Nullable Output<String> modifiedQueryString) {
             this.modifiedQueryString = modifiedQueryString;
             return this;
         }
-
         public Builder modifiedQueryString(@Nullable String modifiedQueryString) {
             this.modifiedQueryString = Output.ofNullable(modifiedQueryString);
             return this;
         }
-
         public Builder reroute(@Nullable Output<Boolean> reroute) {
             this.reroute = reroute;
             return this;
         }
-
         public Builder reroute(@Nullable Boolean reroute) {
             this.reroute = Output.ofNullable(reroute);
             return this;
-        }
-        public ApplicationGatewayUrlConfigurationArgs build() {
+        }        public ApplicationGatewayUrlConfigurationArgs build() {
             return new ApplicationGatewayUrlConfigurationArgs(modifiedPath, modifiedQueryString, reroute);
         }
     }

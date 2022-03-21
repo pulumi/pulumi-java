@@ -60,8 +60,7 @@ public final class FirewallPolicyFilterRuleCollectionActionResponse extends io.p
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
-        }
-        public FirewallPolicyFilterRuleCollectionActionResponse build() {
+        }        public FirewallPolicyFilterRuleCollectionActionResponse build() {
             return new FirewallPolicyFilterRuleCollectionActionResponse(type);
         }
     }

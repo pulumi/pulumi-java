@@ -90,17 +90,14 @@ public final class GetServiceQuotaArgs extends io.pulumi.resources.InvokeArgs {
             this.quotaCode = quotaCode;
             return this;
         }
-
         public Builder quotaName(@Nullable String quotaName) {
             this.quotaName = quotaName;
             return this;
         }
-
         public Builder serviceCode(String serviceCode) {
             this.serviceCode = Objects.requireNonNull(serviceCode);
             return this;
-        }
-        public GetServiceQuotaArgs build() {
+        }        public GetServiceQuotaArgs build() {
             return new GetServiceQuotaArgs(quotaCode, quotaName, serviceCode);
         }
     }

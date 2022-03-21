@@ -78,22 +78,18 @@ public final class IosXcTestArgs extends io.pulumi.resources.ResourceArgs {
             this.bundleId = bundleId;
             return this;
         }
-
         public Builder bundleId(@Nullable String bundleId) {
             this.bundleId = Output.ofNullable(bundleId);
             return this;
         }
-
         public Builder xcodeVersion(@Nullable Output<String> xcodeVersion) {
             this.xcodeVersion = xcodeVersion;
             return this;
         }
-
         public Builder xcodeVersion(@Nullable String xcodeVersion) {
             this.xcodeVersion = Output.ofNullable(xcodeVersion);
             return this;
-        }
-        public IosXcTestArgs build() {
+        }        public IosXcTestArgs build() {
             return new IosXcTestArgs(bundleId, xcodeVersion);
         }
     }

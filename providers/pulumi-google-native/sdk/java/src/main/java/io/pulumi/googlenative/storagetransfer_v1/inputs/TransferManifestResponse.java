@@ -58,8 +58,7 @@ public final class TransferManifestResponse extends io.pulumi.resources.InvokeAr
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
-        }
-        public TransferManifestResponse build() {
+        }        public TransferManifestResponse build() {
             return new TransferManifestResponse(location);
         }
     }

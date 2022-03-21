@@ -127,27 +127,25 @@ public final class ContactDetailsResponse extends io.pulumi.resources.InvokeArgs
             this.contactName = Objects.requireNonNull(contactName);
             return this;
         }
-
         public Builder emailList(List<String> emailList) {
             this.emailList = Objects.requireNonNull(emailList);
             return this;
         }
-
+        public Builder emailList(String... emailList) {
+            return emailList(List.of(emailList));
+        }
         public Builder mobile(@Nullable String mobile) {
             this.mobile = mobile;
             return this;
         }
-
         public Builder phone(String phone) {
             this.phone = Objects.requireNonNull(phone);
             return this;
         }
-
         public Builder phoneExtension(@Nullable String phoneExtension) {
             this.phoneExtension = phoneExtension;
             return this;
-        }
-        public ContactDetailsResponse build() {
+        }        public ContactDetailsResponse build() {
             return new ContactDetailsResponse(contactName, emailList, mobile, phone, phoneExtension);
         }
     }

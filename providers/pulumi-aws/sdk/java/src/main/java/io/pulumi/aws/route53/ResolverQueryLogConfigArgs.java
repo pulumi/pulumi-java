@@ -92,32 +92,26 @@ public final class ResolverQueryLogConfigArgs extends io.pulumi.resources.Resour
             this.destinationArn = Objects.requireNonNull(destinationArn);
             return this;
         }
-
         public Builder destinationArn(String destinationArn) {
             this.destinationArn = Output.of(Objects.requireNonNull(destinationArn));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public ResolverQueryLogConfigArgs build() {
+        }        public ResolverQueryLogConfigArgs build() {
             return new ResolverQueryLogConfigArgs(destinationArn, name, tags);
         }
     }

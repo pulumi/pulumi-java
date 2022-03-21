@@ -61,12 +61,10 @@ public final class SubnetPropertiesArgs extends io.pulumi.resources.ResourceArgs
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
-        }
-        public SubnetPropertiesArgs build() {
+        }        public SubnetPropertiesArgs build() {
             return new SubnetPropertiesArgs(name);
         }
     }

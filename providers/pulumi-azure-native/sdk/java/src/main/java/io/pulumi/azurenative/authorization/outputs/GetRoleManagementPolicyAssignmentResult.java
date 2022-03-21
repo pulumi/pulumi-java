@@ -152,37 +152,30 @@ public final class GetRoleManagementPolicyAssignmentResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder policyAssignmentProperties(PolicyAssignmentPropertiesResponse policyAssignmentProperties) {
             this.policyAssignmentProperties = Objects.requireNonNull(policyAssignmentProperties);
             return this;
         }
-
         public Builder policyId(@Nullable String policyId) {
             this.policyId = policyId;
             return this;
         }
-
         public Builder roleDefinitionId(@Nullable String roleDefinitionId) {
             this.roleDefinitionId = roleDefinitionId;
             return this;
         }
-
         public Builder scope(@Nullable String scope) {
             this.scope = scope;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetRoleManagementPolicyAssignmentResult build() {
+        }        public GetRoleManagementPolicyAssignmentResult build() {
             return new GetRoleManagementPolicyAssignmentResult(id, name, policyAssignmentProperties, policyId, roleDefinitionId, scope, type);
         }
     }

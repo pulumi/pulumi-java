@@ -72,12 +72,10 @@ public final class ListMonitoredResourceArgs extends io.pulumi.resources.InvokeA
             this.monitorName = Objects.requireNonNull(monitorName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public ListMonitoredResourceArgs build() {
+        }        public ListMonitoredResourceArgs build() {
             return new ListMonitoredResourceArgs(monitorName, resourceGroupName);
         }
     }

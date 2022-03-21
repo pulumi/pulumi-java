@@ -94,32 +94,26 @@ public final class MigrationValidationOptionsArgs extends io.pulumi.resources.Re
             this.enableDataIntegrityValidation = enableDataIntegrityValidation;
             return this;
         }
-
         public Builder enableDataIntegrityValidation(@Nullable Boolean enableDataIntegrityValidation) {
             this.enableDataIntegrityValidation = Output.ofNullable(enableDataIntegrityValidation);
             return this;
         }
-
         public Builder enableQueryAnalysisValidation(@Nullable Output<Boolean> enableQueryAnalysisValidation) {
             this.enableQueryAnalysisValidation = enableQueryAnalysisValidation;
             return this;
         }
-
         public Builder enableQueryAnalysisValidation(@Nullable Boolean enableQueryAnalysisValidation) {
             this.enableQueryAnalysisValidation = Output.ofNullable(enableQueryAnalysisValidation);
             return this;
         }
-
         public Builder enableSchemaValidation(@Nullable Output<Boolean> enableSchemaValidation) {
             this.enableSchemaValidation = enableSchemaValidation;
             return this;
         }
-
         public Builder enableSchemaValidation(@Nullable Boolean enableSchemaValidation) {
             this.enableSchemaValidation = Output.ofNullable(enableSchemaValidation);
             return this;
-        }
-        public MigrationValidationOptionsArgs build() {
+        }        public MigrationValidationOptionsArgs build() {
             return new MigrationValidationOptionsArgs(enableDataIntegrityValidation, enableQueryAnalysisValidation, enableSchemaValidation);
         }
     }

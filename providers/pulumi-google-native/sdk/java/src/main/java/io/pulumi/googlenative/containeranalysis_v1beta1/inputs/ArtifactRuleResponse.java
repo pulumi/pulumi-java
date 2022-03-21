@@ -56,7 +56,9 @@ public final class ArtifactRuleResponse extends io.pulumi.resources.InvokeArgs {
             this.artifactRule = Objects.requireNonNull(artifactRule);
             return this;
         }
-        public ArtifactRuleResponse build() {
+        public Builder artifactRule(String... artifactRule) {
+            return artifactRule(List.of(artifactRule));
+        }        public ArtifactRuleResponse build() {
             return new ArtifactRuleResponse(artifactRule);
         }
     }

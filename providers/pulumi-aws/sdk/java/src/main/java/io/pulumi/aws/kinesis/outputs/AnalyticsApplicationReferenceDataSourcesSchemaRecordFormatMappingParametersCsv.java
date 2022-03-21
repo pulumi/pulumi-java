@@ -69,12 +69,10 @@ public final class AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMap
             this.recordColumnDelimiter = Objects.requireNonNull(recordColumnDelimiter);
             return this;
         }
-
         public Builder recordRowDelimiter(String recordRowDelimiter) {
             this.recordRowDelimiter = Objects.requireNonNull(recordRowDelimiter);
             return this;
-        }
-        public AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersCsv build() {
+        }        public AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersCsv build() {
             return new AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersCsv(recordColumnDelimiter, recordRowDelimiter);
         }
     }

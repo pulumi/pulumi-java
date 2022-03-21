@@ -72,12 +72,10 @@ public final class AzureFilesIdentityBasedAuthenticationResponse {
             this.activeDirectoryProperties = activeDirectoryProperties;
             return this;
         }
-
         public Builder directoryServiceOptions(String directoryServiceOptions) {
             this.directoryServiceOptions = Objects.requireNonNull(directoryServiceOptions);
             return this;
-        }
-        public AzureFilesIdentityBasedAuthenticationResponse build() {
+        }        public AzureFilesIdentityBasedAuthenticationResponse build() {
             return new AzureFilesIdentityBasedAuthenticationResponse(activeDirectoryProperties, directoryServiceOptions);
         }
     }

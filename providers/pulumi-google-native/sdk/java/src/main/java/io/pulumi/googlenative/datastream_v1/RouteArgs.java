@@ -168,92 +168,74 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
             this.destinationAddress = Objects.requireNonNull(destinationAddress);
             return this;
         }
-
         public Builder destinationAddress(String destinationAddress) {
             this.destinationAddress = Output.of(Objects.requireNonNull(destinationAddress));
             return this;
         }
-
         public Builder destinationPort(@Nullable Output<Integer> destinationPort) {
             this.destinationPort = destinationPort;
             return this;
         }
-
         public Builder destinationPort(@Nullable Integer destinationPort) {
             this.destinationPort = Output.ofNullable(destinationPort);
             return this;
         }
-
         public Builder displayName(Output<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder privateConnectionId(Output<String> privateConnectionId) {
             this.privateConnectionId = Objects.requireNonNull(privateConnectionId);
             return this;
         }
-
         public Builder privateConnectionId(String privateConnectionId) {
             this.privateConnectionId = Output.of(Objects.requireNonNull(privateConnectionId));
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder requestId(@Nullable Output<String> requestId) {
             this.requestId = requestId;
             return this;
         }
-
         public Builder requestId(@Nullable String requestId) {
             this.requestId = Output.ofNullable(requestId);
             return this;
         }
-
         public Builder routeId(Output<String> routeId) {
             this.routeId = Objects.requireNonNull(routeId);
             return this;
         }
-
         public Builder routeId(String routeId) {
             this.routeId = Output.of(Objects.requireNonNull(routeId));
             return this;
-        }
-        public RouteArgs build() {
+        }        public RouteArgs build() {
             return new RouteArgs(destinationAddress, destinationPort, displayName, labels, location, privateConnectionId, project, requestId, routeId);
         }
     }

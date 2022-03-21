@@ -67,12 +67,10 @@ public final class DataflowEndpointGroupSocketAddress extends io.pulumi.resource
             this.name = name;
             return this;
         }
-
         public Builder port(@Nullable Integer port) {
             this.port = port;
             return this;
-        }
-        public DataflowEndpointGroupSocketAddress build() {
+        }        public DataflowEndpointGroupSocketAddress build() {
             return new DataflowEndpointGroupSocketAddress(name, port);
         }
     }

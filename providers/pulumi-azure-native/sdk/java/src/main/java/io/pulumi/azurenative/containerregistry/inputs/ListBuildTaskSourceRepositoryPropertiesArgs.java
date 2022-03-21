@@ -88,17 +88,14 @@ public final class ListBuildTaskSourceRepositoryPropertiesArgs extends io.pulumi
             this.buildTaskName = Objects.requireNonNull(buildTaskName);
             return this;
         }
-
         public Builder registryName(String registryName) {
             this.registryName = Objects.requireNonNull(registryName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public ListBuildTaskSourceRepositoryPropertiesArgs build() {
+        }        public ListBuildTaskSourceRepositoryPropertiesArgs build() {
             return new ListBuildTaskSourceRepositoryPropertiesArgs(buildTaskName, registryName, resourceGroupName);
         }
     }

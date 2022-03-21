@@ -93,32 +93,29 @@ public final class SigningProfileArgs extends io.pulumi.resources.ResourceArgs {
             this.platformId = Objects.requireNonNull(platformId);
             return this;
         }
-
         public Builder platformId(SigningProfilePlatformId platformId) {
             this.platformId = Output.of(Objects.requireNonNull(platformId));
             return this;
         }
-
         public Builder signatureValidityPeriod(@Nullable Output<SigningProfileSignatureValidityPeriodArgs> signatureValidityPeriod) {
             this.signatureValidityPeriod = signatureValidityPeriod;
             return this;
         }
-
         public Builder signatureValidityPeriod(@Nullable SigningProfileSignatureValidityPeriodArgs signatureValidityPeriod) {
             this.signatureValidityPeriod = Output.ofNullable(signatureValidityPeriod);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<SigningProfileTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<SigningProfileTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public SigningProfileArgs build() {
+        public Builder tags(SigningProfileTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public SigningProfileArgs build() {
             return new SigningProfileArgs(platformId, signatureValidityPeriod, tags);
         }
     }

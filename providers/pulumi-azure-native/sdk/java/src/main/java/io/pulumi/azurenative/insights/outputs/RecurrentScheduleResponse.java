@@ -103,22 +103,27 @@ public final class RecurrentScheduleResponse {
             this.days = Objects.requireNonNull(days);
             return this;
         }
-
+        public Builder days(String... days) {
+            return days(List.of(days));
+        }
         public Builder hours(List<Integer> hours) {
             this.hours = Objects.requireNonNull(hours);
             return this;
         }
-
+        public Builder hours(Integer... hours) {
+            return hours(List.of(hours));
+        }
         public Builder minutes(List<Integer> minutes) {
             this.minutes = Objects.requireNonNull(minutes);
             return this;
         }
-
+        public Builder minutes(Integer... minutes) {
+            return minutes(List.of(minutes));
+        }
         public Builder timeZone(String timeZone) {
             this.timeZone = Objects.requireNonNull(timeZone);
             return this;
-        }
-        public RecurrentScheduleResponse build() {
+        }        public RecurrentScheduleResponse build() {
             return new RecurrentScheduleResponse(days, hours, minutes, timeZone);
         }
     }

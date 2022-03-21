@@ -106,42 +106,34 @@ public final class CustomDomainAssociationCertificateValidationRecordArgs extend
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = Output.ofNullable(status);
             return this;
         }
-
         public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = Output.ofNullable(type);
             return this;
         }
-
         public Builder value(@Nullable Output<String> value) {
             this.value = value;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = Output.ofNullable(value);
             return this;
-        }
-        public CustomDomainAssociationCertificateValidationRecordArgs build() {
+        }        public CustomDomainAssociationCertificateValidationRecordArgs build() {
             return new CustomDomainAssociationCertificateValidationRecordArgs(name, status, type, value);
         }
     }

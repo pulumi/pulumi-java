@@ -58,8 +58,7 @@ public final class DefenderSettingsPropertiesResponseMdeIntegration extends io.p
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
-        }
-        public DefenderSettingsPropertiesResponseMdeIntegration build() {
+        }        public DefenderSettingsPropertiesResponseMdeIntegration build() {
             return new DefenderSettingsPropertiesResponseMdeIntegration(status);
         }
     }

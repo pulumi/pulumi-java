@@ -75,22 +75,18 @@ public final class AwsClusterFleetArgs extends io.pulumi.resources.ResourceArgs 
             this.membership = membership;
             return this;
         }
-
         public Builder membership(@Nullable String membership) {
             this.membership = Output.ofNullable(membership);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
-        }
-        public AwsClusterFleetArgs build() {
+        }        public AwsClusterFleetArgs build() {
             return new AwsClusterFleetArgs(membership, project);
         }
     }

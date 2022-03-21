@@ -120,27 +120,22 @@ public final class GetBuildServiceBuildResultLogArgs extends io.pulumi.resources
             this.buildName = Objects.requireNonNull(buildName);
             return this;
         }
-
         public Builder buildResultName(String buildResultName) {
             this.buildResultName = Objects.requireNonNull(buildResultName);
             return this;
         }
-
         public Builder buildServiceName(String buildServiceName) {
             this.buildServiceName = Objects.requireNonNull(buildServiceName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder serviceName(String serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
-        }
-        public GetBuildServiceBuildResultLogArgs build() {
+        }        public GetBuildServiceBuildResultLogArgs build() {
             return new GetBuildServiceBuildResultLogArgs(buildName, buildResultName, buildServiceName, resourceGroupName, serviceName);
         }
     }

@@ -70,12 +70,10 @@ public final class UserPoolAccountRecoverySettingRecoveryMechanism {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder priority(Integer priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
-        }
-        public UserPoolAccountRecoverySettingRecoveryMechanism build() {
+        }        public UserPoolAccountRecoverySettingRecoveryMechanism build() {
             return new UserPoolAccountRecoverySettingRecoveryMechanism(name, priority);
         }
     }

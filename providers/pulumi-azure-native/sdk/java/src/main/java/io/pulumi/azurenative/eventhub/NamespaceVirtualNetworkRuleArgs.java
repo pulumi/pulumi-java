@@ -106,42 +106,34 @@ public final class NamespaceVirtualNetworkRuleArgs extends io.pulumi.resources.R
             this.namespaceName = Objects.requireNonNull(namespaceName);
             return this;
         }
-
         public Builder namespaceName(String namespaceName) {
             this.namespaceName = Output.of(Objects.requireNonNull(namespaceName));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder virtualNetworkRuleName(@Nullable Output<String> virtualNetworkRuleName) {
             this.virtualNetworkRuleName = virtualNetworkRuleName;
             return this;
         }
-
         public Builder virtualNetworkRuleName(@Nullable String virtualNetworkRuleName) {
             this.virtualNetworkRuleName = Output.ofNullable(virtualNetworkRuleName);
             return this;
         }
-
         public Builder virtualNetworkSubnetId(@Nullable Output<String> virtualNetworkSubnetId) {
             this.virtualNetworkSubnetId = virtualNetworkSubnetId;
             return this;
         }
-
         public Builder virtualNetworkSubnetId(@Nullable String virtualNetworkSubnetId) {
             this.virtualNetworkSubnetId = Output.ofNullable(virtualNetworkSubnetId);
             return this;
-        }
-        public NamespaceVirtualNetworkRuleArgs build() {
+        }        public NamespaceVirtualNetworkRuleArgs build() {
             return new NamespaceVirtualNetworkRuleArgs(namespaceName, resourceGroupName, virtualNetworkRuleName, virtualNetworkSubnetId);
         }
     }

@@ -54,12 +54,10 @@ public final class BotAliasAudioLogSetting {
             this.destination = Objects.requireNonNull(destination);
             return this;
         }
-
         public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
-        }
-        public BotAliasAudioLogSetting build() {
+        }        public BotAliasAudioLogSetting build() {
             return new BotAliasAudioLogSetting(destination, enabled);
         }
     }

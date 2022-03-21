@@ -206,52 +206,45 @@ public final class GetSubnetArgs extends io.pulumi.resources.InvokeArgs {
             this.availabilityZone = availabilityZone;
             return this;
         }
-
         public Builder availabilityZoneId(@Nullable String availabilityZoneId) {
             this.availabilityZoneId = availabilityZoneId;
             return this;
         }
-
         public Builder cidrBlock(@Nullable String cidrBlock) {
             this.cidrBlock = cidrBlock;
             return this;
         }
-
         public Builder defaultForAz(@Nullable Boolean defaultForAz) {
             this.defaultForAz = defaultForAz;
             return this;
         }
-
         public Builder filters(@Nullable List<GetSubnetFilter> filters) {
             this.filters = filters;
             return this;
         }
-
+        public Builder filters(GetSubnetFilter... filters) {
+            return filters(List.of(filters));
+        }
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder ipv6CidrBlock(@Nullable String ipv6CidrBlock) {
             this.ipv6CidrBlock = ipv6CidrBlock;
             return this;
         }
-
         public Builder state(@Nullable String state) {
             this.state = state;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder vpcId(@Nullable String vpcId) {
             this.vpcId = vpcId;
             return this;
-        }
-        public GetSubnetArgs build() {
+        }        public GetSubnetArgs build() {
             return new GetSubnetArgs(availabilityZone, availabilityZoneId, cidrBlock, defaultForAz, filters, id, ipv6CidrBlock, state, tags, vpcId);
         }
     }

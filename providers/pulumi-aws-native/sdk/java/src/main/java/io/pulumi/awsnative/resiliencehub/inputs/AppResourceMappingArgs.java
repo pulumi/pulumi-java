@@ -95,42 +95,34 @@ public final class AppResourceMappingArgs extends io.pulumi.resources.ResourceAr
             this.logicalStackName = logicalStackName;
             return this;
         }
-
         public Builder logicalStackName(@Nullable String logicalStackName) {
             this.logicalStackName = Output.ofNullable(logicalStackName);
             return this;
         }
-
         public Builder mappingType(Output<String> mappingType) {
             this.mappingType = Objects.requireNonNull(mappingType);
             return this;
         }
-
         public Builder mappingType(String mappingType) {
             this.mappingType = Output.of(Objects.requireNonNull(mappingType));
             return this;
         }
-
         public Builder physicalResourceId(Output<AppPhysicalResourceIdArgs> physicalResourceId) {
             this.physicalResourceId = Objects.requireNonNull(physicalResourceId);
             return this;
         }
-
         public Builder physicalResourceId(AppPhysicalResourceIdArgs physicalResourceId) {
             this.physicalResourceId = Output.of(Objects.requireNonNull(physicalResourceId));
             return this;
         }
-
         public Builder resourceName(@Nullable Output<String> resourceName) {
             this.resourceName = resourceName;
             return this;
         }
-
         public Builder resourceName(@Nullable String resourceName) {
             this.resourceName = Output.ofNullable(resourceName);
             return this;
-        }
-        public AppResourceMappingArgs build() {
+        }        public AppResourceMappingArgs build() {
             return new AppResourceMappingArgs(logicalStackName, mappingType, physicalResourceId, resourceName);
         }
     }

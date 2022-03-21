@@ -79,22 +79,18 @@ public final class OptionArgs extends io.pulumi.resources.ResourceArgs {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder value(@Nullable Output<Map<String,String>> value) {
             this.value = value;
             return this;
         }
-
         public Builder value(@Nullable Map<String,String> value) {
             this.value = Output.ofNullable(value);
             return this;
-        }
-        public OptionArgs build() {
+        }        public OptionArgs build() {
             return new OptionArgs(name, value);
         }
     }

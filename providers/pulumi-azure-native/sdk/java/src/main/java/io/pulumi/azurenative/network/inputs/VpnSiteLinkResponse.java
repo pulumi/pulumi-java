@@ -192,47 +192,38 @@ public final class VpnSiteLinkResponse extends io.pulumi.resources.InvokeArgs {
             this.bgpProperties = bgpProperties;
             return this;
         }
-
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder fqdn(@Nullable String fqdn) {
             this.fqdn = fqdn;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder ipAddress(@Nullable String ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
-
         public Builder linkProperties(@Nullable VpnLinkProviderPropertiesResponse linkProperties) {
             this.linkProperties = linkProperties;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public VpnSiteLinkResponse build() {
+        }        public VpnSiteLinkResponse build() {
             return new VpnSiteLinkResponse(bgpProperties, etag, fqdn, id, ipAddress, linkProperties, name, provisioningState, type);
         }
     }

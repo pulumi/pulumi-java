@@ -70,12 +70,10 @@ public final class ReplicationResponse {
             this.automatic = Objects.requireNonNull(automatic);
             return this;
         }
-
         public Builder userManaged(UserManagedResponse userManaged) {
             this.userManaged = Objects.requireNonNull(userManaged);
             return this;
-        }
-        public ReplicationResponse build() {
+        }        public ReplicationResponse build() {
             return new ReplicationResponse(automatic, userManaged);
         }
     }

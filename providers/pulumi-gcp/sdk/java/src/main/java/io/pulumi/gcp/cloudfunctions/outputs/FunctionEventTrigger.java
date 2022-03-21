@@ -94,17 +94,14 @@ public final class FunctionEventTrigger {
             this.eventType = Objects.requireNonNull(eventType);
             return this;
         }
-
         public Builder failurePolicy(@Nullable FunctionEventTriggerFailurePolicy failurePolicy) {
             this.failurePolicy = failurePolicy;
             return this;
         }
-
         public Builder resource(String resource) {
             this.resource = Objects.requireNonNull(resource);
             return this;
-        }
-        public FunctionEventTrigger build() {
+        }        public FunctionEventTrigger build() {
             return new FunctionEventTrigger(eventType, failurePolicy, resource);
         }
     }

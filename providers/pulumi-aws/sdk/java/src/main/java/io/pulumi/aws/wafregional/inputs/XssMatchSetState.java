@@ -76,22 +76,21 @@ public final class XssMatchSetState extends io.pulumi.resources.ResourceArgs {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder xssMatchTuples(@Nullable Output<List<XssMatchSetXssMatchTupleGetArgs>> xssMatchTuples) {
             this.xssMatchTuples = xssMatchTuples;
             return this;
         }
-
         public Builder xssMatchTuples(@Nullable List<XssMatchSetXssMatchTupleGetArgs> xssMatchTuples) {
             this.xssMatchTuples = Output.ofNullable(xssMatchTuples);
             return this;
         }
-        public XssMatchSetState build() {
+        public Builder xssMatchTuples(XssMatchSetXssMatchTupleGetArgs... xssMatchTuples) {
+            return xssMatchTuples(List.of(xssMatchTuples));
+        }        public XssMatchSetState build() {
             return new XssMatchSetState(name, xssMatchTuples);
         }
     }

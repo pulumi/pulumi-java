@@ -115,62 +115,50 @@ public final class ServiceTaskSpecContainerSpecConfigArgs extends io.pulumi.reso
             this.configId = Objects.requireNonNull(configId);
             return this;
         }
-
         public Builder configId(String configId) {
             this.configId = Output.of(Objects.requireNonNull(configId));
             return this;
         }
-
         public Builder configName(@Nullable Output<String> configName) {
             this.configName = configName;
             return this;
         }
-
         public Builder configName(@Nullable String configName) {
             this.configName = Output.ofNullable(configName);
             return this;
         }
-
         public Builder fileGid(@Nullable Output<String> fileGid) {
             this.fileGid = fileGid;
             return this;
         }
-
         public Builder fileGid(@Nullable String fileGid) {
             this.fileGid = Output.ofNullable(fileGid);
             return this;
         }
-
         public Builder fileMode(@Nullable Output<Integer> fileMode) {
             this.fileMode = fileMode;
             return this;
         }
-
         public Builder fileMode(@Nullable Integer fileMode) {
             this.fileMode = Output.ofNullable(fileMode);
             return this;
         }
-
         public Builder fileName(Output<String> fileName) {
             this.fileName = Objects.requireNonNull(fileName);
             return this;
         }
-
         public Builder fileName(String fileName) {
             this.fileName = Output.of(Objects.requireNonNull(fileName));
             return this;
         }
-
         public Builder fileUid(@Nullable Output<String> fileUid) {
             this.fileUid = fileUid;
             return this;
         }
-
         public Builder fileUid(@Nullable String fileUid) {
             this.fileUid = Output.ofNullable(fileUid);
             return this;
-        }
-        public ServiceTaskSpecContainerSpecConfigArgs build() {
+        }        public ServiceTaskSpecContainerSpecConfigArgs build() {
             return new ServiceTaskSpecContainerSpecConfigArgs(configId, configName, fileGid, fileMode, fileName, fileUid);
         }
     }

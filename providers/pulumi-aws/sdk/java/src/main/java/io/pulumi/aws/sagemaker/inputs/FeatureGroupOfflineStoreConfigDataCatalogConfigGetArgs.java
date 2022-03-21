@@ -90,32 +90,26 @@ public final class FeatureGroupOfflineStoreConfigDataCatalogConfigGetArgs extend
             this.catalog = catalog;
             return this;
         }
-
         public Builder catalog(@Nullable String catalog) {
             this.catalog = Output.ofNullable(catalog);
             return this;
         }
-
         public Builder database(@Nullable Output<String> database) {
             this.database = database;
             return this;
         }
-
         public Builder database(@Nullable String database) {
             this.database = Output.ofNullable(database);
             return this;
         }
-
         public Builder tableName(@Nullable Output<String> tableName) {
             this.tableName = tableName;
             return this;
         }
-
         public Builder tableName(@Nullable String tableName) {
             this.tableName = Output.ofNullable(tableName);
             return this;
-        }
-        public FeatureGroupOfflineStoreConfigDataCatalogConfigGetArgs build() {
+        }        public FeatureGroupOfflineStoreConfigDataCatalogConfigGetArgs build() {
             return new FeatureGroupOfflineStoreConfigDataCatalogConfigGetArgs(catalog, database, tableName);
         }
     }

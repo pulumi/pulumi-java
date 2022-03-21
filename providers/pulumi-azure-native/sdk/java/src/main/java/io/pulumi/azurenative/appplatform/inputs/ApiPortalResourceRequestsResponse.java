@@ -76,12 +76,10 @@ public final class ApiPortalResourceRequestsResponse extends io.pulumi.resources
             this.cpu = Objects.requireNonNull(cpu);
             return this;
         }
-
         public Builder memory(String memory) {
             this.memory = Objects.requireNonNull(memory);
             return this;
-        }
-        public ApiPortalResourceRequestsResponse build() {
+        }        public ApiPortalResourceRequestsResponse build() {
             return new ApiPortalResourceRequestsResponse(cpu, memory);
         }
     }

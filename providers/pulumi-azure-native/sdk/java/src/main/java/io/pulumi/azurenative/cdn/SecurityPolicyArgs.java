@@ -107,42 +107,34 @@ public final class SecurityPolicyArgs extends io.pulumi.resources.ResourceArgs {
             this.parameters = parameters;
             return this;
         }
-
         public Builder parameters(@Nullable SecurityPolicyWebApplicationFirewallParametersArgs parameters) {
             this.parameters = Output.ofNullable(parameters);
             return this;
         }
-
         public Builder profileName(Output<String> profileName) {
             this.profileName = Objects.requireNonNull(profileName);
             return this;
         }
-
         public Builder profileName(String profileName) {
             this.profileName = Output.of(Objects.requireNonNull(profileName));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder securityPolicyName(@Nullable Output<String> securityPolicyName) {
             this.securityPolicyName = securityPolicyName;
             return this;
         }
-
         public Builder securityPolicyName(@Nullable String securityPolicyName) {
             this.securityPolicyName = Output.ofNullable(securityPolicyName);
             return this;
-        }
-        public SecurityPolicyArgs build() {
+        }        public SecurityPolicyArgs build() {
             return new SecurityPolicyArgs(parameters, profileName, resourceGroupName, securityPolicyName);
         }
     }

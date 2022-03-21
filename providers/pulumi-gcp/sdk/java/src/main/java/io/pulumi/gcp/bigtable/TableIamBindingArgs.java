@@ -135,62 +135,53 @@ public final class TableIamBindingArgs extends io.pulumi.resources.ResourceArgs 
             this.condition = condition;
             return this;
         }
-
         public Builder condition(@Nullable TableIamBindingConditionArgs condition) {
             this.condition = Output.ofNullable(condition);
             return this;
         }
-
         public Builder instance(Output<String> instance) {
             this.instance = Objects.requireNonNull(instance);
             return this;
         }
-
         public Builder instance(String instance) {
             this.instance = Output.of(Objects.requireNonNull(instance));
             return this;
         }
-
         public Builder members(Output<List<String>> members) {
             this.members = Objects.requireNonNull(members);
             return this;
         }
-
         public Builder members(List<String> members) {
             this.members = Output.of(Objects.requireNonNull(members));
             return this;
         }
-
+        public Builder members(String... members) {
+            return members(List.of(members));
+        }
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder role(Output<String> role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }
-
         public Builder role(String role) {
             this.role = Output.of(Objects.requireNonNull(role));
             return this;
         }
-
         public Builder table(Output<String> table) {
             this.table = Objects.requireNonNull(table);
             return this;
         }
-
         public Builder table(String table) {
             this.table = Output.of(Objects.requireNonNull(table));
             return this;
-        }
-        public TableIamBindingArgs build() {
+        }        public TableIamBindingArgs build() {
             return new TableIamBindingArgs(condition, instance, members, project, role, table);
         }
     }

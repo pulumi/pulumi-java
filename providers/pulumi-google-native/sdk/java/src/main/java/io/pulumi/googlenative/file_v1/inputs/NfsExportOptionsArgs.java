@@ -129,52 +129,45 @@ public final class NfsExportOptionsArgs extends io.pulumi.resources.ResourceArgs
             this.accessMode = accessMode;
             return this;
         }
-
         public Builder accessMode(@Nullable NfsExportOptionsAccessMode accessMode) {
             this.accessMode = Output.ofNullable(accessMode);
             return this;
         }
-
         public Builder anonGid(@Nullable Output<String> anonGid) {
             this.anonGid = anonGid;
             return this;
         }
-
         public Builder anonGid(@Nullable String anonGid) {
             this.anonGid = Output.ofNullable(anonGid);
             return this;
         }
-
         public Builder anonUid(@Nullable Output<String> anonUid) {
             this.anonUid = anonUid;
             return this;
         }
-
         public Builder anonUid(@Nullable String anonUid) {
             this.anonUid = Output.ofNullable(anonUid);
             return this;
         }
-
         public Builder ipRanges(@Nullable Output<List<String>> ipRanges) {
             this.ipRanges = ipRanges;
             return this;
         }
-
         public Builder ipRanges(@Nullable List<String> ipRanges) {
             this.ipRanges = Output.ofNullable(ipRanges);
             return this;
         }
-
+        public Builder ipRanges(String... ipRanges) {
+            return ipRanges(List.of(ipRanges));
+        }
         public Builder squashMode(@Nullable Output<NfsExportOptionsSquashMode> squashMode) {
             this.squashMode = squashMode;
             return this;
         }
-
         public Builder squashMode(@Nullable NfsExportOptionsSquashMode squashMode) {
             this.squashMode = Output.ofNullable(squashMode);
             return this;
-        }
-        public NfsExportOptionsArgs build() {
+        }        public NfsExportOptionsArgs build() {
             return new NfsExportOptionsArgs(accessMode, anonGid, anonUid, ipRanges, squashMode);
         }
     }

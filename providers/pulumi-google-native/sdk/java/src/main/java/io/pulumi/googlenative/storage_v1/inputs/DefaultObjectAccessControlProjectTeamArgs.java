@@ -78,22 +78,18 @@ public final class DefaultObjectAccessControlProjectTeamArgs extends io.pulumi.r
             this.projectNumber = projectNumber;
             return this;
         }
-
         public Builder projectNumber(@Nullable String projectNumber) {
             this.projectNumber = Output.ofNullable(projectNumber);
             return this;
         }
-
         public Builder team(@Nullable Output<String> team) {
             this.team = team;
             return this;
         }
-
         public Builder team(@Nullable String team) {
             this.team = Output.ofNullable(team);
             return this;
-        }
-        public DefaultObjectAccessControlProjectTeamArgs build() {
+        }        public DefaultObjectAccessControlProjectTeamArgs build() {
             return new DefaultObjectAccessControlProjectTeamArgs(projectNumber, team);
         }
     }

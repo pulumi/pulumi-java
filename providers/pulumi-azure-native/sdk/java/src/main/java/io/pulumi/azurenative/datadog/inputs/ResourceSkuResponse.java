@@ -54,8 +54,7 @@ public final class ResourceSkuResponse extends io.pulumi.resources.InvokeArgs {
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public ResourceSkuResponse build() {
+        }        public ResourceSkuResponse build() {
             return new ResourceSkuResponse(name);
         }
     }

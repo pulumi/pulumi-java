@@ -123,52 +123,42 @@ public final class IotHubResourceEventHubConsumerGroupArgs extends io.pulumi.res
             this.eventHubEndpointName = Objects.requireNonNull(eventHubEndpointName);
             return this;
         }
-
         public Builder eventHubEndpointName(String eventHubEndpointName) {
             this.eventHubEndpointName = Output.of(Objects.requireNonNull(eventHubEndpointName));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder properties(@Nullable Output<EventHubConsumerGroupNameArgs> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder properties(@Nullable EventHubConsumerGroupNameArgs properties) {
             this.properties = Output.ofNullable(properties);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder resourceName(Output<String> resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
         }
-
         public Builder resourceName(String resourceName) {
             this.resourceName = Output.of(Objects.requireNonNull(resourceName));
             return this;
-        }
-        public IotHubResourceEventHubConsumerGroupArgs build() {
+        }        public IotHubResourceEventHubConsumerGroupArgs build() {
             return new IotHubResourceEventHubConsumerGroupArgs(eventHubEndpointName, name, properties, resourceGroupName, resourceName);
         }
     }

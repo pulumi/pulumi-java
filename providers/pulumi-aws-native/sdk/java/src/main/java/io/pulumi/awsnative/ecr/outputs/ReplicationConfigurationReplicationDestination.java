@@ -53,12 +53,10 @@ public final class ReplicationConfigurationReplicationDestination {
             this.region = Objects.requireNonNull(region);
             return this;
         }
-
         public Builder registryId(String registryId) {
             this.registryId = Objects.requireNonNull(registryId);
             return this;
-        }
-        public ReplicationConfigurationReplicationDestination build() {
+        }        public ReplicationConfigurationReplicationDestination build() {
             return new ReplicationConfigurationReplicationDestination(region, registryId);
         }
     }

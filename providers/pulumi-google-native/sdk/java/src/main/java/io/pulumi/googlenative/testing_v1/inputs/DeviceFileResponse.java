@@ -77,12 +77,10 @@ public final class DeviceFileResponse extends io.pulumi.resources.InvokeArgs {
             this.obbFile = Objects.requireNonNull(obbFile);
             return this;
         }
-
         public Builder regularFile(RegularFileResponse regularFile) {
             this.regularFile = Objects.requireNonNull(regularFile);
             return this;
-        }
-        public DeviceFileResponse build() {
+        }        public DeviceFileResponse build() {
             return new DeviceFileResponse(obbFile, regularFile);
         }
     }

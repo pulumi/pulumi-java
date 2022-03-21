@@ -353,97 +353,84 @@ public final class GetNoteResult {
             this.attestation = Objects.requireNonNull(attestation);
             return this;
         }
-
         public Builder build(BuildNoteResponse build) {
             this.build = Objects.requireNonNull(build);
             return this;
         }
-
         public Builder compliance(ComplianceNoteResponse compliance) {
             this.compliance = Objects.requireNonNull(compliance);
             return this;
         }
-
         public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder deployment(DeploymentNoteResponse deployment) {
             this.deployment = Objects.requireNonNull(deployment);
             return this;
         }
-
         public Builder discovery(DiscoveryNoteResponse discovery) {
             this.discovery = Objects.requireNonNull(discovery);
             return this;
         }
-
         public Builder dsseAttestation(DSSEAttestationNoteResponse dsseAttestation) {
             this.dsseAttestation = Objects.requireNonNull(dsseAttestation);
             return this;
         }
-
         public Builder expirationTime(String expirationTime) {
             this.expirationTime = Objects.requireNonNull(expirationTime);
             return this;
         }
-
         public Builder image(ImageNoteResponse image) {
             this.image = Objects.requireNonNull(image);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder longDescription(String longDescription) {
             this.longDescription = Objects.requireNonNull(longDescription);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder $package(PackageNoteResponse $package) {
             this.$package = Objects.requireNonNull($package);
             return this;
         }
-
         public Builder relatedNoteNames(List<String> relatedNoteNames) {
             this.relatedNoteNames = Objects.requireNonNull(relatedNoteNames);
             return this;
         }
-
+        public Builder relatedNoteNames(String... relatedNoteNames) {
+            return relatedNoteNames(List.of(relatedNoteNames));
+        }
         public Builder relatedUrl(List<RelatedUrlResponse> relatedUrl) {
             this.relatedUrl = Objects.requireNonNull(relatedUrl);
             return this;
         }
-
+        public Builder relatedUrl(RelatedUrlResponse... relatedUrl) {
+            return relatedUrl(List.of(relatedUrl));
+        }
         public Builder shortDescription(String shortDescription) {
             this.shortDescription = Objects.requireNonNull(shortDescription);
             return this;
         }
-
         public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public Builder upgrade(UpgradeNoteResponse upgrade) {
             this.upgrade = Objects.requireNonNull(upgrade);
             return this;
         }
-
         public Builder vulnerability(VulnerabilityNoteResponse vulnerability) {
             this.vulnerability = Objects.requireNonNull(vulnerability);
             return this;
-        }
-        public GetNoteResult build() {
+        }        public GetNoteResult build() {
             return new GetNoteResult(attestation, build, compliance, createTime, deployment, discovery, dsseAttestation, expirationTime, image, kind, longDescription, name, $package, relatedNoteNames, relatedUrl, shortDescription, updateTime, upgrade, vulnerability);
         }
     }

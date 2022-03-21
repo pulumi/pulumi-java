@@ -69,12 +69,10 @@ public final class ServiceAccountSubject {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder namespace(String namespace) {
             this.namespace = Objects.requireNonNull(namespace);
             return this;
-        }
-        public ServiceAccountSubject build() {
+        }        public ServiceAccountSubject build() {
             return new ServiceAccountSubject(name, namespace);
         }
     }

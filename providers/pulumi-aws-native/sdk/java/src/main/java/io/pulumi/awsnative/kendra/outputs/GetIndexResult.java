@@ -157,52 +157,51 @@ public final class GetIndexResult {
             this.arn = arn;
             return this;
         }
-
         public Builder capacityUnits(@Nullable IndexCapacityUnitsConfiguration capacityUnits) {
             this.capacityUnits = capacityUnits;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder documentMetadataConfigurations(@Nullable List<IndexDocumentMetadataConfiguration> documentMetadataConfigurations) {
             this.documentMetadataConfigurations = documentMetadataConfigurations;
             return this;
         }
-
+        public Builder documentMetadataConfigurations(IndexDocumentMetadataConfiguration... documentMetadataConfigurations) {
+            return documentMetadataConfigurations(List.of(documentMetadataConfigurations));
+        }
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = roleArn;
             return this;
         }
-
         public Builder tags(@Nullable List<IndexTag> tags) {
             this.tags = tags;
             return this;
         }
-
+        public Builder tags(IndexTag... tags) {
+            return tags(List.of(tags));
+        }
         public Builder userContextPolicy(@Nullable IndexUserContextPolicy userContextPolicy) {
             this.userContextPolicy = userContextPolicy;
             return this;
         }
-
         public Builder userTokenConfigurations(@Nullable List<IndexUserTokenConfiguration> userTokenConfigurations) {
             this.userTokenConfigurations = userTokenConfigurations;
             return this;
         }
-        public GetIndexResult build() {
+        public Builder userTokenConfigurations(IndexUserTokenConfiguration... userTokenConfigurations) {
+            return userTokenConfigurations(List.of(userTokenConfigurations));
+        }        public GetIndexResult build() {
             return new GetIndexResult(arn, capacityUnits, description, documentMetadataConfigurations, id, name, roleArn, tags, userContextPolicy, userTokenConfigurations);
         }
     }

@@ -43,8 +43,7 @@ public final class VirtualClusterContainerInfo {
         public Builder eksInfo(VirtualClusterEksInfo eksInfo) {
             this.eksInfo = Objects.requireNonNull(eksInfo);
             return this;
-        }
-        public VirtualClusterContainerInfo build() {
+        }        public VirtualClusterContainerInfo build() {
             return new VirtualClusterContainerInfo(eksInfo);
         }
     }

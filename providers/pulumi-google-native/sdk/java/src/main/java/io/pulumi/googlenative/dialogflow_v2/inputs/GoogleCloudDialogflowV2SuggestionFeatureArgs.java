@@ -61,12 +61,10 @@ public final class GoogleCloudDialogflowV2SuggestionFeatureArgs extends io.pulum
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable GoogleCloudDialogflowV2SuggestionFeatureType type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public GoogleCloudDialogflowV2SuggestionFeatureArgs build() {
+        }        public GoogleCloudDialogflowV2SuggestionFeatureArgs build() {
             return new GoogleCloudDialogflowV2SuggestionFeatureArgs(type);
         }
     }

@@ -94,17 +94,14 @@ public final class ApplicationPackageContactResponse extends io.pulumi.resources
             this.contactName = contactName;
             return this;
         }
-
         public Builder email(String email) {
             this.email = Objects.requireNonNull(email);
             return this;
         }
-
         public Builder phone(String phone) {
             this.phone = Objects.requireNonNull(phone);
             return this;
-        }
-        public ApplicationPackageContactResponse build() {
+        }        public ApplicationPackageContactResponse build() {
             return new ApplicationPackageContactResponse(contactName, email, phone);
         }
     }

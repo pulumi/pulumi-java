@@ -97,32 +97,29 @@ public final class GalleryImageVersionStorageProfileArgs extends io.pulumi.resou
             this.dataDiskImages = dataDiskImages;
             return this;
         }
-
         public Builder dataDiskImages(@Nullable List<GalleryDataDiskImageArgs> dataDiskImages) {
             this.dataDiskImages = Output.ofNullable(dataDiskImages);
             return this;
         }
-
+        public Builder dataDiskImages(GalleryDataDiskImageArgs... dataDiskImages) {
+            return dataDiskImages(List.of(dataDiskImages));
+        }
         public Builder osDiskImage(@Nullable Output<GalleryOSDiskImageArgs> osDiskImage) {
             this.osDiskImage = osDiskImage;
             return this;
         }
-
         public Builder osDiskImage(@Nullable GalleryOSDiskImageArgs osDiskImage) {
             this.osDiskImage = Output.ofNullable(osDiskImage);
             return this;
         }
-
         public Builder source(@Nullable Output<GalleryArtifactVersionSourceArgs> source) {
             this.source = source;
             return this;
         }
-
         public Builder source(@Nullable GalleryArtifactVersionSourceArgs source) {
             this.source = Output.ofNullable(source);
             return this;
-        }
-        public GalleryImageVersionStorageProfileArgs build() {
+        }        public GalleryImageVersionStorageProfileArgs build() {
             return new GalleryImageVersionStorageProfileArgs(dataDiskImages, osDiskImage, source);
         }
     }

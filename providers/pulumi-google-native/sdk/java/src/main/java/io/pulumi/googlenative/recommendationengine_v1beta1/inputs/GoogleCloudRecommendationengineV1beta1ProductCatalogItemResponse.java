@@ -177,42 +177,37 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemRespo
             this.availableQuantity = Objects.requireNonNull(availableQuantity);
             return this;
         }
-
         public Builder canonicalProductUri(String canonicalProductUri) {
             this.canonicalProductUri = Objects.requireNonNull(canonicalProductUri);
             return this;
         }
-
         public Builder costs(Map<String,String> costs) {
             this.costs = Objects.requireNonNull(costs);
             return this;
         }
-
         public Builder currencyCode(String currencyCode) {
             this.currencyCode = Objects.requireNonNull(currencyCode);
             return this;
         }
-
         public Builder exactPrice(GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPriceResponse exactPrice) {
             this.exactPrice = Objects.requireNonNull(exactPrice);
             return this;
         }
-
         public Builder images(List<GoogleCloudRecommendationengineV1beta1ImageResponse> images) {
             this.images = Objects.requireNonNull(images);
             return this;
         }
-
+        public Builder images(GoogleCloudRecommendationengineV1beta1ImageResponse... images) {
+            return images(List.of(images));
+        }
         public Builder priceRange(GoogleCloudRecommendationengineV1beta1ProductCatalogItemPriceRangeResponse priceRange) {
             this.priceRange = Objects.requireNonNull(priceRange);
             return this;
         }
-
         public Builder stockState(String stockState) {
             this.stockState = Objects.requireNonNull(stockState);
             return this;
-        }
-        public GoogleCloudRecommendationengineV1beta1ProductCatalogItemResponse build() {
+        }        public GoogleCloudRecommendationengineV1beta1ProductCatalogItemResponse build() {
             return new GoogleCloudRecommendationengineV1beta1ProductCatalogItemResponse(availableQuantity, canonicalProductUri, costs, currencyCode, exactPrice, images, priceRange, stockState);
         }
     }

@@ -104,22 +104,18 @@ public final class EndpointPort {
             this.appProtocol = appProtocol;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder port(@Nullable Integer port) {
             this.port = port;
             return this;
         }
-
         public Builder protocol(@Nullable String protocol) {
             this.protocol = protocol;
             return this;
-        }
-        public EndpointPort build() {
+        }        public EndpointPort build() {
             return new EndpointPort(appProtocol, name, port, protocol);
         }
     }

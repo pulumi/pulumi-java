@@ -88,22 +88,24 @@ public final class ApplicationApplicationConfigurationVpcConfiguration {
             this.securityGroupIds = Objects.requireNonNull(securityGroupIds);
             return this;
         }
-
+        public Builder securityGroupIds(String... securityGroupIds) {
+            return securityGroupIds(List.of(securityGroupIds));
+        }
         public Builder subnetIds(List<String> subnetIds) {
             this.subnetIds = Objects.requireNonNull(subnetIds);
             return this;
         }
-
+        public Builder subnetIds(String... subnetIds) {
+            return subnetIds(List.of(subnetIds));
+        }
         public Builder vpcConfigurationId(@Nullable String vpcConfigurationId) {
             this.vpcConfigurationId = vpcConfigurationId;
             return this;
         }
-
         public Builder vpcId(@Nullable String vpcId) {
             this.vpcId = vpcId;
             return this;
-        }
-        public ApplicationApplicationConfigurationVpcConfiguration build() {
+        }        public ApplicationApplicationConfigurationVpcConfiguration build() {
             return new ApplicationApplicationConfigurationVpcConfiguration(securityGroupIds, subnetIds, vpcConfigurationId, vpcId);
         }
     }

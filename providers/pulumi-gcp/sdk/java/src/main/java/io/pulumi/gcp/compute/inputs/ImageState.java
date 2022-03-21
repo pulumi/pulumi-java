@@ -331,162 +331,136 @@ public final class ImageState extends io.pulumi.resources.ResourceArgs {
             this.archiveSizeBytes = archiveSizeBytes;
             return this;
         }
-
         public Builder archiveSizeBytes(@Nullable Integer archiveSizeBytes) {
             this.archiveSizeBytes = Output.ofNullable(archiveSizeBytes);
             return this;
         }
-
         public Builder creationTimestamp(@Nullable Output<String> creationTimestamp) {
             this.creationTimestamp = creationTimestamp;
             return this;
         }
-
         public Builder creationTimestamp(@Nullable String creationTimestamp) {
             this.creationTimestamp = Output.ofNullable(creationTimestamp);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder diskSizeGb(@Nullable Output<Integer> diskSizeGb) {
             this.diskSizeGb = diskSizeGb;
             return this;
         }
-
         public Builder diskSizeGb(@Nullable Integer diskSizeGb) {
             this.diskSizeGb = Output.ofNullable(diskSizeGb);
             return this;
         }
-
         public Builder family(@Nullable Output<String> family) {
             this.family = family;
             return this;
         }
-
         public Builder family(@Nullable String family) {
             this.family = Output.ofNullable(family);
             return this;
         }
-
         public Builder guestOsFeatures(@Nullable Output<List<ImageGuestOsFeatureGetArgs>> guestOsFeatures) {
             this.guestOsFeatures = guestOsFeatures;
             return this;
         }
-
         public Builder guestOsFeatures(@Nullable List<ImageGuestOsFeatureGetArgs> guestOsFeatures) {
             this.guestOsFeatures = Output.ofNullable(guestOsFeatures);
             return this;
         }
-
+        public Builder guestOsFeatures(ImageGuestOsFeatureGetArgs... guestOsFeatures) {
+            return guestOsFeatures(List.of(guestOsFeatures));
+        }
         public Builder labelFingerprint(@Nullable Output<String> labelFingerprint) {
             this.labelFingerprint = labelFingerprint;
             return this;
         }
-
         public Builder labelFingerprint(@Nullable String labelFingerprint) {
             this.labelFingerprint = Output.ofNullable(labelFingerprint);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder licenses(@Nullable Output<List<String>> licenses) {
             this.licenses = licenses;
             return this;
         }
-
         public Builder licenses(@Nullable List<String> licenses) {
             this.licenses = Output.ofNullable(licenses);
             return this;
         }
-
+        public Builder licenses(String... licenses) {
+            return licenses(List.of(licenses));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder rawDisk(@Nullable Output<ImageRawDiskGetArgs> rawDisk) {
             this.rawDisk = rawDisk;
             return this;
         }
-
         public Builder rawDisk(@Nullable ImageRawDiskGetArgs rawDisk) {
             this.rawDisk = Output.ofNullable(rawDisk);
             return this;
         }
-
         public Builder selfLink(@Nullable Output<String> selfLink) {
             this.selfLink = selfLink;
             return this;
         }
-
         public Builder selfLink(@Nullable String selfLink) {
             this.selfLink = Output.ofNullable(selfLink);
             return this;
         }
-
         public Builder sourceDisk(@Nullable Output<String> sourceDisk) {
             this.sourceDisk = sourceDisk;
             return this;
         }
-
         public Builder sourceDisk(@Nullable String sourceDisk) {
             this.sourceDisk = Output.ofNullable(sourceDisk);
             return this;
         }
-
         public Builder sourceImage(@Nullable Output<String> sourceImage) {
             this.sourceImage = sourceImage;
             return this;
         }
-
         public Builder sourceImage(@Nullable String sourceImage) {
             this.sourceImage = Output.ofNullable(sourceImage);
             return this;
         }
-
         public Builder sourceSnapshot(@Nullable Output<String> sourceSnapshot) {
             this.sourceSnapshot = sourceSnapshot;
             return this;
         }
-
         public Builder sourceSnapshot(@Nullable String sourceSnapshot) {
             this.sourceSnapshot = Output.ofNullable(sourceSnapshot);
             return this;
-        }
-        public ImageState build() {
+        }        public ImageState build() {
             return new ImageState(archiveSizeBytes, creationTimestamp, description, diskSizeGb, family, guestOsFeatures, labelFingerprint, labels, licenses, name, project, rawDisk, selfLink, sourceDisk, sourceImage, sourceSnapshot);
         }
     }

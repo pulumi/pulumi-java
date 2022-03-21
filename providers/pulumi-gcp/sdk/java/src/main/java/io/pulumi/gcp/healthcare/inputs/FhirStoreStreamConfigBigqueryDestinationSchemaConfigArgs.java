@@ -82,22 +82,18 @@ public final class FhirStoreStreamConfigBigqueryDestinationSchemaConfigArgs exte
             this.recursiveStructureDepth = Objects.requireNonNull(recursiveStructureDepth);
             return this;
         }
-
         public Builder recursiveStructureDepth(Integer recursiveStructureDepth) {
             this.recursiveStructureDepth = Output.of(Objects.requireNonNull(recursiveStructureDepth));
             return this;
         }
-
         public Builder schemaType(@Nullable Output<String> schemaType) {
             this.schemaType = schemaType;
             return this;
         }
-
         public Builder schemaType(@Nullable String schemaType) {
             this.schemaType = Output.ofNullable(schemaType);
             return this;
-        }
-        public FhirStoreStreamConfigBigqueryDestinationSchemaConfigArgs build() {
+        }        public FhirStoreStreamConfigBigqueryDestinationSchemaConfigArgs build() {
             return new FhirStoreStreamConfigBigqueryDestinationSchemaConfigArgs(recursiveStructureDepth, schemaType);
         }
     }

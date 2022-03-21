@@ -73,22 +73,18 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfig
             this.parameterName = Objects.requireNonNull(parameterName);
             return this;
         }
-
         public Builder parameterName(String parameterName) {
             this.parameterName = Output.of(Objects.requireNonNull(parameterName));
             return this;
         }
-
         public Builder parameterValue(Output<String> parameterValue) {
             this.parameterValue = Objects.requireNonNull(parameterValue);
             return this;
         }
-
         public Builder parameterValue(String parameterValue) {
             this.parameterValue = Output.of(Objects.requireNonNull(parameterValue));
             return this;
-        }
-        public FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationProcessorParameterArgs build() {
+        }        public FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationProcessorParameterArgs build() {
             return new FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationProcessorParameterArgs(parameterName, parameterValue);
         }
     }

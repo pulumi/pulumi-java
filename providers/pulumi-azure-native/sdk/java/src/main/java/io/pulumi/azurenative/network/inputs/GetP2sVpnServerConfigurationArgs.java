@@ -88,17 +88,14 @@ public final class GetP2sVpnServerConfigurationArgs extends io.pulumi.resources.
             this.p2SVpnServerConfigurationName = Objects.requireNonNull(p2SVpnServerConfigurationName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder virtualWanName(String virtualWanName) {
             this.virtualWanName = Objects.requireNonNull(virtualWanName);
             return this;
-        }
-        public GetP2sVpnServerConfigurationArgs build() {
+        }        public GetP2sVpnServerConfigurationArgs build() {
             return new GetP2sVpnServerConfigurationArgs(p2SVpnServerConfigurationName, resourceGroupName, virtualWanName);
         }
     }

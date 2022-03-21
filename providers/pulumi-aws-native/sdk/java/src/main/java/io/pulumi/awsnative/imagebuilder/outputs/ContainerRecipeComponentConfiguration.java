@@ -53,8 +53,7 @@ public final class ContainerRecipeComponentConfiguration {
         public Builder componentArn(@Nullable String componentArn) {
             this.componentArn = componentArn;
             return this;
-        }
-        public ContainerRecipeComponentConfiguration build() {
+        }        public ContainerRecipeComponentConfiguration build() {
             return new ContainerRecipeComponentConfiguration(componentArn);
         }
     }

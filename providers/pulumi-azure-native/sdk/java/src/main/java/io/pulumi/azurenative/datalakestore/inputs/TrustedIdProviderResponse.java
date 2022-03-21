@@ -108,22 +108,18 @@ public final class TrustedIdProviderResponse extends io.pulumi.resources.InvokeA
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder idProvider(String idProvider) {
             this.idProvider = Objects.requireNonNull(idProvider);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public TrustedIdProviderResponse build() {
+        }        public TrustedIdProviderResponse build() {
             return new TrustedIdProviderResponse(id, idProvider, name, type);
         }
     }

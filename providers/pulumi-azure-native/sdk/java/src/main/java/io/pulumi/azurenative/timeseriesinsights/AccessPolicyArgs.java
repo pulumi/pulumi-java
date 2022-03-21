@@ -141,62 +141,53 @@ public final class AccessPolicyArgs extends io.pulumi.resources.ResourceArgs {
             this.accessPolicyName = accessPolicyName;
             return this;
         }
-
         public Builder accessPolicyName(@Nullable String accessPolicyName) {
             this.accessPolicyName = Output.ofNullable(accessPolicyName);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder environmentName(Output<String> environmentName) {
             this.environmentName = Objects.requireNonNull(environmentName);
             return this;
         }
-
         public Builder environmentName(String environmentName) {
             this.environmentName = Output.of(Objects.requireNonNull(environmentName));
             return this;
         }
-
         public Builder principalObjectId(@Nullable Output<String> principalObjectId) {
             this.principalObjectId = principalObjectId;
             return this;
         }
-
         public Builder principalObjectId(@Nullable String principalObjectId) {
             this.principalObjectId = Output.ofNullable(principalObjectId);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder roles(@Nullable Output<List<Either<String,AccessPolicyRole>>> roles) {
             this.roles = roles;
             return this;
         }
-
         public Builder roles(@Nullable List<Either<String,AccessPolicyRole>> roles) {
             this.roles = Output.ofNullable(roles);
             return this;
         }
-        public AccessPolicyArgs build() {
+        public Builder roles(Either<String,AccessPolicyRole>... roles) {
+            return roles(List.of(roles));
+        }        public AccessPolicyArgs build() {
             return new AccessPolicyArgs(accessPolicyName, description, environmentName, principalObjectId, resourceGroupName, roles);
         }
     }

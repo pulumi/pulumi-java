@@ -145,32 +145,26 @@ public final class PreprocessingConfigResponse extends io.pulumi.resources.Invok
             this.audio = Objects.requireNonNull(audio);
             return this;
         }
-
         public Builder color(ColorResponse color) {
             this.color = Objects.requireNonNull(color);
             return this;
         }
-
         public Builder crop(CropResponse crop) {
             this.crop = Objects.requireNonNull(crop);
             return this;
         }
-
         public Builder deblock(DeblockResponse deblock) {
             this.deblock = Objects.requireNonNull(deblock);
             return this;
         }
-
         public Builder denoise(DenoiseResponse denoise) {
             this.denoise = Objects.requireNonNull(denoise);
             return this;
         }
-
         public Builder pad(PadResponse pad) {
             this.pad = Objects.requireNonNull(pad);
             return this;
-        }
-        public PreprocessingConfigResponse build() {
+        }        public PreprocessingConfigResponse build() {
             return new PreprocessingConfigResponse(audio, color, crop, deblock, denoise, pad);
         }
     }

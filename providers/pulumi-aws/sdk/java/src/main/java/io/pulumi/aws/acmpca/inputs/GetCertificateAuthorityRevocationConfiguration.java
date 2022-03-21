@@ -52,7 +52,9 @@ public final class GetCertificateAuthorityRevocationConfiguration extends io.pul
             this.crlConfigurations = Objects.requireNonNull(crlConfigurations);
             return this;
         }
-        public GetCertificateAuthorityRevocationConfiguration build() {
+        public Builder crlConfigurations(GetCertificateAuthorityRevocationConfigurationCrlConfiguration... crlConfigurations) {
+            return crlConfigurations(List.of(crlConfigurations));
+        }        public GetCertificateAuthorityRevocationConfiguration build() {
             return new GetCertificateAuthorityRevocationConfiguration(crlConfigurations);
         }
     }

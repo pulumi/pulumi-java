@@ -104,42 +104,34 @@ public final class JobIAMPolicyArgs extends io.pulumi.resources.ResourceArgs {
             this.jobId = Objects.requireNonNull(jobId);
             return this;
         }
-
         public Builder jobId(String jobId) {
             this.jobId = Output.of(Objects.requireNonNull(jobId));
             return this;
         }
-
         public Builder policyData(Output<String> policyData) {
             this.policyData = Objects.requireNonNull(policyData);
             return this;
         }
-
         public Builder policyData(String policyData) {
             this.policyData = Output.of(Objects.requireNonNull(policyData));
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
-
         public Builder region(@Nullable String region) {
             this.region = Output.ofNullable(region);
             return this;
-        }
-        public JobIAMPolicyArgs build() {
+        }        public JobIAMPolicyArgs build() {
             return new JobIAMPolicyArgs(jobId, policyData, project, region);
         }
     }

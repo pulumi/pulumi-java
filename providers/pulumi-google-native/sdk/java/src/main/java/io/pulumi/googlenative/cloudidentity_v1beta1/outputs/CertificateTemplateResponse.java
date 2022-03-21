@@ -69,12 +69,10 @@ public final class CertificateTemplateResponse {
             this.majorVersion = Objects.requireNonNull(majorVersion);
             return this;
         }
-
         public Builder minorVersion(Integer minorVersion) {
             this.minorVersion = Objects.requireNonNull(minorVersion);
             return this;
-        }
-        public CertificateTemplateResponse build() {
+        }        public CertificateTemplateResponse build() {
             return new CertificateTemplateResponse(majorVersion, minorVersion);
         }
     }

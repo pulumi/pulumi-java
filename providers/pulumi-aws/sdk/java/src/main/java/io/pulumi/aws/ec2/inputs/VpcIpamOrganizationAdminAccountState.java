@@ -118,52 +118,42 @@ public final class VpcIpamOrganizationAdminAccountState extends io.pulumi.resour
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder delegatedAdminAccountId(@Nullable Output<String> delegatedAdminAccountId) {
             this.delegatedAdminAccountId = delegatedAdminAccountId;
             return this;
         }
-
         public Builder delegatedAdminAccountId(@Nullable String delegatedAdminAccountId) {
             this.delegatedAdminAccountId = Output.ofNullable(delegatedAdminAccountId);
             return this;
         }
-
         public Builder email(@Nullable Output<String> email) {
             this.email = email;
             return this;
         }
-
         public Builder email(@Nullable String email) {
             this.email = Output.ofNullable(email);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder servicePrincipal(@Nullable Output<String> servicePrincipal) {
             this.servicePrincipal = servicePrincipal;
             return this;
         }
-
         public Builder servicePrincipal(@Nullable String servicePrincipal) {
             this.servicePrincipal = Output.ofNullable(servicePrincipal);
             return this;
-        }
-        public VpcIpamOrganizationAdminAccountState build() {
+        }        public VpcIpamOrganizationAdminAccountState build() {
             return new VpcIpamOrganizationAdminAccountState(arn, delegatedAdminAccountId, email, name, servicePrincipal);
         }
     }

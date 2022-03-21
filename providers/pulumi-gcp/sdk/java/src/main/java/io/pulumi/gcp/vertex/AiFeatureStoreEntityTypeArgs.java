@@ -110,42 +110,34 @@ public final class AiFeatureStoreEntityTypeArgs extends io.pulumi.resources.Reso
             this.featurestore = Objects.requireNonNull(featurestore);
             return this;
         }
-
         public Builder featurestore(String featurestore) {
             this.featurestore = Output.of(Objects.requireNonNull(featurestore));
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder monitoringConfig(@Nullable Output<AiFeatureStoreEntityTypeMonitoringConfigArgs> monitoringConfig) {
             this.monitoringConfig = monitoringConfig;
             return this;
         }
-
         public Builder monitoringConfig(@Nullable AiFeatureStoreEntityTypeMonitoringConfigArgs monitoringConfig) {
             this.monitoringConfig = Output.ofNullable(monitoringConfig);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
-        }
-        public AiFeatureStoreEntityTypeArgs build() {
+        }        public AiFeatureStoreEntityTypeArgs build() {
             return new AiFeatureStoreEntityTypeArgs(featurestore, labels, monitoringConfig, name);
         }
     }

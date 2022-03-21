@@ -110,42 +110,34 @@ public final class BigQueryIODetailsArgs extends io.pulumi.resources.ResourceArg
             this.dataset = dataset;
             return this;
         }
-
         public Builder dataset(@Nullable String dataset) {
             this.dataset = Output.ofNullable(dataset);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder query(@Nullable Output<String> query) {
             this.query = query;
             return this;
         }
-
         public Builder query(@Nullable String query) {
             this.query = Output.ofNullable(query);
             return this;
         }
-
         public Builder table(@Nullable Output<String> table) {
             this.table = table;
             return this;
         }
-
         public Builder table(@Nullable String table) {
             this.table = Output.ofNullable(table);
             return this;
-        }
-        public BigQueryIODetailsArgs build() {
+        }        public BigQueryIODetailsArgs build() {
             return new BigQueryIODetailsArgs(dataset, project, query, table);
         }
     }

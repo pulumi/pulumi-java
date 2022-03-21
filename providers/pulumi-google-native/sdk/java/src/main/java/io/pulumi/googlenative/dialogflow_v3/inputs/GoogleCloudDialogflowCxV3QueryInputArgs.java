@@ -147,62 +147,50 @@ public final class GoogleCloudDialogflowCxV3QueryInputArgs extends io.pulumi.res
             this.audio = audio;
             return this;
         }
-
         public Builder audio(@Nullable GoogleCloudDialogflowCxV3AudioInputArgs audio) {
             this.audio = Output.ofNullable(audio);
             return this;
         }
-
         public Builder dtmf(@Nullable Output<GoogleCloudDialogflowCxV3DtmfInputArgs> dtmf) {
             this.dtmf = dtmf;
             return this;
         }
-
         public Builder dtmf(@Nullable GoogleCloudDialogflowCxV3DtmfInputArgs dtmf) {
             this.dtmf = Output.ofNullable(dtmf);
             return this;
         }
-
         public Builder event(@Nullable Output<GoogleCloudDialogflowCxV3EventInputArgs> event) {
             this.event = event;
             return this;
         }
-
         public Builder event(@Nullable GoogleCloudDialogflowCxV3EventInputArgs event) {
             this.event = Output.ofNullable(event);
             return this;
         }
-
         public Builder intent(@Nullable Output<GoogleCloudDialogflowCxV3IntentInputArgs> intent) {
             this.intent = intent;
             return this;
         }
-
         public Builder intent(@Nullable GoogleCloudDialogflowCxV3IntentInputArgs intent) {
             this.intent = Output.ofNullable(intent);
             return this;
         }
-
         public Builder languageCode(Output<String> languageCode) {
             this.languageCode = Objects.requireNonNull(languageCode);
             return this;
         }
-
         public Builder languageCode(String languageCode) {
             this.languageCode = Output.of(Objects.requireNonNull(languageCode));
             return this;
         }
-
         public Builder text(@Nullable Output<GoogleCloudDialogflowCxV3TextInputArgs> text) {
             this.text = text;
             return this;
         }
-
         public Builder text(@Nullable GoogleCloudDialogflowCxV3TextInputArgs text) {
             this.text = Output.ofNullable(text);
             return this;
-        }
-        public GoogleCloudDialogflowCxV3QueryInputArgs build() {
+        }        public GoogleCloudDialogflowCxV3QueryInputArgs build() {
             return new GoogleCloudDialogflowCxV3QueryInputArgs(audio, dtmf, event, intent, languageCode, text);
         }
     }

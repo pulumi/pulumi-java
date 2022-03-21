@@ -70,22 +70,18 @@ public final class ResourcePolicyState extends io.pulumi.resources.ResourceArgs 
             this.enableHybrid = enableHybrid;
             return this;
         }
-
         public Builder enableHybrid(@Nullable String enableHybrid) {
             this.enableHybrid = Output.ofNullable(enableHybrid);
             return this;
         }
-
         public Builder policy(@Nullable Output<String> policy) {
             this.policy = policy;
             return this;
         }
-
         public Builder policy(@Nullable String policy) {
             this.policy = Output.ofNullable(policy);
             return this;
-        }
-        public ResourcePolicyState build() {
+        }        public ResourcePolicyState build() {
             return new ResourcePolicyState(enableHybrid, policy);
         }
     }

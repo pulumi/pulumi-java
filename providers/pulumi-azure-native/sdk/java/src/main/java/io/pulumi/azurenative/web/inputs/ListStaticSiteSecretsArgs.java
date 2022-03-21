@@ -72,12 +72,10 @@ public final class ListStaticSiteSecretsArgs extends io.pulumi.resources.InvokeA
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public ListStaticSiteSecretsArgs build() {
+        }        public ListStaticSiteSecretsArgs build() {
             return new ListStaticSiteSecretsArgs(name, resourceGroupName);
         }
     }

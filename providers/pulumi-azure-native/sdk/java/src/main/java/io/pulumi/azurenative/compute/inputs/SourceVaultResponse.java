@@ -60,8 +60,7 @@ public final class SourceVaultResponse extends io.pulumi.resources.InvokeArgs {
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
-        }
-        public SourceVaultResponse build() {
+        }        public SourceVaultResponse build() {
             return new SourceVaultResponse(id);
         }
     }

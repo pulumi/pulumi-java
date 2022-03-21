@@ -71,12 +71,13 @@ public final class LinkedInterconnectAttachmentsResponse {
             this.siteToSiteDataTransfer = Objects.requireNonNull(siteToSiteDataTransfer);
             return this;
         }
-
         public Builder uris(List<String> uris) {
             this.uris = Objects.requireNonNull(uris);
             return this;
         }
-        public LinkedInterconnectAttachmentsResponse build() {
+        public Builder uris(String... uris) {
+            return uris(List.of(uris));
+        }        public LinkedInterconnectAttachmentsResponse build() {
             return new LinkedInterconnectAttachmentsResponse(siteToSiteDataTransfer, uris);
         }
     }

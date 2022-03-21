@@ -56,12 +56,10 @@ public final class RegexPatternSetRegularExpressionGetArgs extends io.pulumi.res
             this.regexString = Objects.requireNonNull(regexString);
             return this;
         }
-
         public Builder regexString(String regexString) {
             this.regexString = Output.of(Objects.requireNonNull(regexString));
             return this;
-        }
-        public RegexPatternSetRegularExpressionGetArgs build() {
+        }        public RegexPatternSetRegularExpressionGetArgs build() {
             return new RegexPatternSetRegularExpressionGetArgs(regexString);
         }
     }

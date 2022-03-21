@@ -153,72 +153,61 @@ public final class OrganizationContactArgs extends io.pulumi.resources.ResourceA
             this.email = Objects.requireNonNull(email);
             return this;
         }
-
         public Builder email(String email) {
             this.email = Output.of(Objects.requireNonNull(email));
             return this;
         }
-
         public Builder languageTag(@Nullable Output<String> languageTag) {
             this.languageTag = languageTag;
             return this;
         }
-
         public Builder languageTag(@Nullable String languageTag) {
             this.languageTag = Output.ofNullable(languageTag);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder notificationCategorySubscriptions(@Nullable Output<List<OrganizationContactNotificationCategorySubscriptionsItem>> notificationCategorySubscriptions) {
             this.notificationCategorySubscriptions = notificationCategorySubscriptions;
             return this;
         }
-
         public Builder notificationCategorySubscriptions(@Nullable List<OrganizationContactNotificationCategorySubscriptionsItem> notificationCategorySubscriptions) {
             this.notificationCategorySubscriptions = Output.ofNullable(notificationCategorySubscriptions);
             return this;
         }
-
+        public Builder notificationCategorySubscriptions(OrganizationContactNotificationCategorySubscriptionsItem... notificationCategorySubscriptions) {
+            return notificationCategorySubscriptions(List.of(notificationCategorySubscriptions));
+        }
         public Builder organizationId(Output<String> organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }
-
         public Builder organizationId(String organizationId) {
             this.organizationId = Output.of(Objects.requireNonNull(organizationId));
             return this;
         }
-
         public Builder validateTime(@Nullable Output<String> validateTime) {
             this.validateTime = validateTime;
             return this;
         }
-
         public Builder validateTime(@Nullable String validateTime) {
             this.validateTime = Output.ofNullable(validateTime);
             return this;
         }
-
         public Builder validationState(@Nullable Output<OrganizationContactValidationState> validationState) {
             this.validationState = validationState;
             return this;
         }
-
         public Builder validationState(@Nullable OrganizationContactValidationState validationState) {
             this.validationState = Output.ofNullable(validationState);
             return this;
-        }
-        public OrganizationContactArgs build() {
+        }        public OrganizationContactArgs build() {
             return new OrganizationContactArgs(email, languageTag, name, notificationCategorySubscriptions, organizationId, validateTime, validationState);
         }
     }

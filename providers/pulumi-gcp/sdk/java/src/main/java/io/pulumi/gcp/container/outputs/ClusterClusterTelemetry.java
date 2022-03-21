@@ -51,8 +51,7 @@ public final class ClusterClusterTelemetry {
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public ClusterClusterTelemetry build() {
+        }        public ClusterClusterTelemetry build() {
             return new ClusterClusterTelemetry(type);
         }
     }

@@ -128,52 +128,54 @@ public final class ResourcePolicyRuleArgs extends io.pulumi.resources.ResourceAr
             this.apiGroups = Objects.requireNonNull(apiGroups);
             return this;
         }
-
         public Builder apiGroups(List<String> apiGroups) {
             this.apiGroups = Output.of(Objects.requireNonNull(apiGroups));
             return this;
         }
-
+        public Builder apiGroups(String... apiGroups) {
+            return apiGroups(List.of(apiGroups));
+        }
         public Builder clusterScope(@Nullable Output<Boolean> clusterScope) {
             this.clusterScope = clusterScope;
             return this;
         }
-
         public Builder clusterScope(@Nullable Boolean clusterScope) {
             this.clusterScope = Output.ofNullable(clusterScope);
             return this;
         }
-
         public Builder namespaces(@Nullable Output<List<String>> namespaces) {
             this.namespaces = namespaces;
             return this;
         }
-
         public Builder namespaces(@Nullable List<String> namespaces) {
             this.namespaces = Output.ofNullable(namespaces);
             return this;
         }
-
+        public Builder namespaces(String... namespaces) {
+            return namespaces(List.of(namespaces));
+        }
         public Builder resources(Output<List<String>> resources) {
             this.resources = Objects.requireNonNull(resources);
             return this;
         }
-
         public Builder resources(List<String> resources) {
             this.resources = Output.of(Objects.requireNonNull(resources));
             return this;
         }
-
+        public Builder resources(String... resources) {
+            return resources(List.of(resources));
+        }
         public Builder verbs(Output<List<String>> verbs) {
             this.verbs = Objects.requireNonNull(verbs);
             return this;
         }
-
         public Builder verbs(List<String> verbs) {
             this.verbs = Output.of(Objects.requireNonNull(verbs));
             return this;
         }
-        public ResourcePolicyRuleArgs build() {
+        public Builder verbs(String... verbs) {
+            return verbs(List.of(verbs));
+        }        public ResourcePolicyRuleArgs build() {
             return new ResourcePolicyRuleArgs(apiGroups, clusterScope, namespaces, resources, verbs);
         }
     }

@@ -141,62 +141,50 @@ public final class EncryptionProtectorArgs extends io.pulumi.resources.ResourceA
             this.autoRotationEnabled = autoRotationEnabled;
             return this;
         }
-
         public Builder autoRotationEnabled(@Nullable Boolean autoRotationEnabled) {
             this.autoRotationEnabled = Output.ofNullable(autoRotationEnabled);
             return this;
         }
-
         public Builder encryptionProtectorName(@Nullable Output<String> encryptionProtectorName) {
             this.encryptionProtectorName = encryptionProtectorName;
             return this;
         }
-
         public Builder encryptionProtectorName(@Nullable String encryptionProtectorName) {
             this.encryptionProtectorName = Output.ofNullable(encryptionProtectorName);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder serverKeyName(@Nullable Output<String> serverKeyName) {
             this.serverKeyName = serverKeyName;
             return this;
         }
-
         public Builder serverKeyName(@Nullable String serverKeyName) {
             this.serverKeyName = Output.ofNullable(serverKeyName);
             return this;
         }
-
         public Builder serverKeyType(Output<Either<String,ServerKeyType>> serverKeyType) {
             this.serverKeyType = Objects.requireNonNull(serverKeyType);
             return this;
         }
-
         public Builder serverKeyType(Either<String,ServerKeyType> serverKeyType) {
             this.serverKeyType = Output.of(Objects.requireNonNull(serverKeyType));
             return this;
         }
-
         public Builder serverName(Output<String> serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
         }
-
         public Builder serverName(String serverName) {
             this.serverName = Output.of(Objects.requireNonNull(serverName));
             return this;
-        }
-        public EncryptionProtectorArgs build() {
+        }        public EncryptionProtectorArgs build() {
             return new EncryptionProtectorArgs(autoRotationEnabled, encryptionProtectorName, resourceGroupName, serverKeyName, serverKeyType, serverName);
         }
     }

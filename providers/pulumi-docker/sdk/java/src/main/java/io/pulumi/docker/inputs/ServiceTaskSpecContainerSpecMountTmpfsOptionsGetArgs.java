@@ -66,22 +66,18 @@ public final class ServiceTaskSpecContainerSpecMountTmpfsOptionsGetArgs extends 
             this.mode = mode;
             return this;
         }
-
         public Builder mode(@Nullable Integer mode) {
             this.mode = Output.ofNullable(mode);
             return this;
         }
-
         public Builder sizeBytes(@Nullable Output<Integer> sizeBytes) {
             this.sizeBytes = sizeBytes;
             return this;
         }
-
         public Builder sizeBytes(@Nullable Integer sizeBytes) {
             this.sizeBytes = Output.ofNullable(sizeBytes);
             return this;
-        }
-        public ServiceTaskSpecContainerSpecMountTmpfsOptionsGetArgs build() {
+        }        public ServiceTaskSpecContainerSpecMountTmpfsOptionsGetArgs build() {
             return new ServiceTaskSpecContainerSpecMountTmpfsOptionsGetArgs(mode, sizeBytes);
         }
     }

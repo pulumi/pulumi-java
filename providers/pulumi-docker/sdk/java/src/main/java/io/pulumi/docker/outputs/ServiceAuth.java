@@ -63,17 +63,14 @@ public final class ServiceAuth {
             this.password = password;
             return this;
         }
-
         public Builder serverAddress(String serverAddress) {
             this.serverAddress = Objects.requireNonNull(serverAddress);
             return this;
         }
-
         public Builder username(@Nullable String username) {
             this.username = username;
             return this;
-        }
-        public ServiceAuth build() {
+        }        public ServiceAuth build() {
             return new ServiceAuth(password, serverAddress, username);
         }
     }

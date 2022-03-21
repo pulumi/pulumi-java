@@ -72,12 +72,10 @@ public final class GetNamespaceNetworkRuleSetArgs extends io.pulumi.resources.In
             this.namespaceName = Objects.requireNonNull(namespaceName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetNamespaceNetworkRuleSetArgs build() {
+        }        public GetNamespaceNetworkRuleSetArgs build() {
             return new GetNamespaceNetworkRuleSetArgs(namespaceName, resourceGroupName);
         }
     }

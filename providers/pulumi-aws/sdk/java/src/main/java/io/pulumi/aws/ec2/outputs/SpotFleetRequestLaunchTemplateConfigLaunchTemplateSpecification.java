@@ -87,17 +87,14 @@ public final class SpotFleetRequestLaunchTemplateConfigLaunchTemplateSpecificati
             this.id = id;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = version;
             return this;
-        }
-        public SpotFleetRequestLaunchTemplateConfigLaunchTemplateSpecification build() {
+        }        public SpotFleetRequestLaunchTemplateConfigLaunchTemplateSpecification build() {
             return new SpotFleetRequestLaunchTemplateConfigLaunchTemplateSpecification(id, name, version);
         }
     }

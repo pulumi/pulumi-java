@@ -67,12 +67,10 @@ public final class DomainConfigurationAuthorizerConfig extends io.pulumi.resourc
             this.allowAuthorizerOverride = allowAuthorizerOverride;
             return this;
         }
-
         public Builder defaultAuthorizerName(@Nullable String defaultAuthorizerName) {
             this.defaultAuthorizerName = defaultAuthorizerName;
             return this;
-        }
-        public DomainConfigurationAuthorizerConfig build() {
+        }        public DomainConfigurationAuthorizerConfig build() {
             return new DomainConfigurationAuthorizerConfig(allowAuthorizerOverride, defaultAuthorizerName);
         }
     }

@@ -154,37 +154,39 @@ public final class GoogleCloudDialogflowCxV3beta1PageResponse {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder entryFulfillment(GoogleCloudDialogflowCxV3beta1FulfillmentResponse entryFulfillment) {
             this.entryFulfillment = Objects.requireNonNull(entryFulfillment);
             return this;
         }
-
         public Builder eventHandlers(List<GoogleCloudDialogflowCxV3beta1EventHandlerResponse> eventHandlers) {
             this.eventHandlers = Objects.requireNonNull(eventHandlers);
             return this;
         }
-
+        public Builder eventHandlers(GoogleCloudDialogflowCxV3beta1EventHandlerResponse... eventHandlers) {
+            return eventHandlers(List.of(eventHandlers));
+        }
         public Builder form(GoogleCloudDialogflowCxV3beta1FormResponse form) {
             this.form = Objects.requireNonNull(form);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder transitionRouteGroups(List<String> transitionRouteGroups) {
             this.transitionRouteGroups = Objects.requireNonNull(transitionRouteGroups);
             return this;
         }
-
+        public Builder transitionRouteGroups(String... transitionRouteGroups) {
+            return transitionRouteGroups(List.of(transitionRouteGroups));
+        }
         public Builder transitionRoutes(List<GoogleCloudDialogflowCxV3beta1TransitionRouteResponse> transitionRoutes) {
             this.transitionRoutes = Objects.requireNonNull(transitionRoutes);
             return this;
         }
-        public GoogleCloudDialogflowCxV3beta1PageResponse build() {
+        public Builder transitionRoutes(GoogleCloudDialogflowCxV3beta1TransitionRouteResponse... transitionRoutes) {
+            return transitionRoutes(List.of(transitionRoutes));
+        }        public GoogleCloudDialogflowCxV3beta1PageResponse build() {
             return new GoogleCloudDialogflowCxV3beta1PageResponse(displayName, entryFulfillment, eventHandlers, form, name, transitionRouteGroups, transitionRoutes);
         }
     }

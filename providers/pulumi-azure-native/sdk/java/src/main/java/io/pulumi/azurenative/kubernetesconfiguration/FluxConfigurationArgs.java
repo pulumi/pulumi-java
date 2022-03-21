@@ -241,122 +241,98 @@ public final class FluxConfigurationArgs extends io.pulumi.resources.ResourceArg
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
-
         public Builder clusterName(String clusterName) {
             this.clusterName = Output.of(Objects.requireNonNull(clusterName));
             return this;
         }
-
         public Builder clusterResourceName(Output<String> clusterResourceName) {
             this.clusterResourceName = Objects.requireNonNull(clusterResourceName);
             return this;
         }
-
         public Builder clusterResourceName(String clusterResourceName) {
             this.clusterResourceName = Output.of(Objects.requireNonNull(clusterResourceName));
             return this;
         }
-
         public Builder clusterRp(Output<String> clusterRp) {
             this.clusterRp = Objects.requireNonNull(clusterRp);
             return this;
         }
-
         public Builder clusterRp(String clusterRp) {
             this.clusterRp = Output.of(Objects.requireNonNull(clusterRp));
             return this;
         }
-
         public Builder configurationProtectedSettings(@Nullable Output<Map<String,String>> configurationProtectedSettings) {
             this.configurationProtectedSettings = configurationProtectedSettings;
             return this;
         }
-
         public Builder configurationProtectedSettings(@Nullable Map<String,String> configurationProtectedSettings) {
             this.configurationProtectedSettings = Output.ofNullable(configurationProtectedSettings);
             return this;
         }
-
         public Builder fluxConfigurationName(@Nullable Output<String> fluxConfigurationName) {
             this.fluxConfigurationName = fluxConfigurationName;
             return this;
         }
-
         public Builder fluxConfigurationName(@Nullable String fluxConfigurationName) {
             this.fluxConfigurationName = Output.ofNullable(fluxConfigurationName);
             return this;
         }
-
         public Builder gitRepository(@Nullable Output<GitRepositoryDefinitionArgs> gitRepository) {
             this.gitRepository = gitRepository;
             return this;
         }
-
         public Builder gitRepository(@Nullable GitRepositoryDefinitionArgs gitRepository) {
             this.gitRepository = Output.ofNullable(gitRepository);
             return this;
         }
-
         public Builder kustomizations(@Nullable Output<Map<String,KustomizationDefinitionArgs>> kustomizations) {
             this.kustomizations = kustomizations;
             return this;
         }
-
         public Builder kustomizations(@Nullable Map<String,KustomizationDefinitionArgs> kustomizations) {
             this.kustomizations = Output.ofNullable(kustomizations);
             return this;
         }
-
         public Builder namespace(@Nullable Output<String> namespace) {
             this.namespace = namespace;
             return this;
         }
-
         public Builder namespace(@Nullable String namespace) {
             this.namespace = Output.ofNullable(namespace);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder scope(@Nullable Output<Either<String,ScopeType>> scope) {
             this.scope = scope;
             return this;
         }
-
         public Builder scope(@Nullable Either<String,ScopeType> scope) {
             this.scope = Output.ofNullable(scope);
             return this;
         }
-
         public Builder sourceKind(@Nullable Output<Either<String,SourceKindType>> sourceKind) {
             this.sourceKind = sourceKind;
             return this;
         }
-
         public Builder sourceKind(@Nullable Either<String,SourceKindType> sourceKind) {
             this.sourceKind = Output.ofNullable(sourceKind);
             return this;
         }
-
         public Builder suspend(@Nullable Output<Boolean> suspend) {
             this.suspend = suspend;
             return this;
         }
-
         public Builder suspend(@Nullable Boolean suspend) {
             this.suspend = Output.ofNullable(suspend);
             return this;
-        }
-        public FluxConfigurationArgs build() {
+        }        public FluxConfigurationArgs build() {
             return new FluxConfigurationArgs(clusterName, clusterResourceName, clusterRp, configurationProtectedSettings, fluxConfigurationName, gitRepository, kustomizations, namespace, resourceGroupName, scope, sourceKind, suspend);
         }
     }

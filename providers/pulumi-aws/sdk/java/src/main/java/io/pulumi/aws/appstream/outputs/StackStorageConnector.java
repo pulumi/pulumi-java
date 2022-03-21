@@ -88,17 +88,17 @@ public final class StackStorageConnector {
             this.connectorType = Objects.requireNonNull(connectorType);
             return this;
         }
-
         public Builder domains(@Nullable List<String> domains) {
             this.domains = domains;
             return this;
         }
-
+        public Builder domains(String... domains) {
+            return domains(List.of(domains));
+        }
         public Builder resourceIdentifier(@Nullable String resourceIdentifier) {
             this.resourceIdentifier = resourceIdentifier;
             return this;
-        }
-        public StackStorageConnector build() {
+        }        public StackStorageConnector build() {
             return new StackStorageConnector(connectorType, domains, resourceIdentifier);
         }
     }

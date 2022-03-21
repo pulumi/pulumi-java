@@ -75,12 +75,13 @@ public final class GetVpcPeeringConnectionsFilter extends io.pulumi.resources.In
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder values(List<String> values) {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-        public GetVpcPeeringConnectionsFilter build() {
+        public Builder values(String... values) {
+            return values(List.of(values));
+        }        public GetVpcPeeringConnectionsFilter build() {
             return new GetVpcPeeringConnectionsFilter(name, values);
         }
     }

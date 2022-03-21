@@ -57,12 +57,10 @@ public final class RegionInstanceGroupManagerStatusStatefulPerInstanceConfigArgs
             this.allEffective = allEffective;
             return this;
         }
-
         public Builder allEffective(@Nullable Boolean allEffective) {
             this.allEffective = Output.ofNullable(allEffective);
             return this;
-        }
-        public RegionInstanceGroupManagerStatusStatefulPerInstanceConfigArgs build() {
+        }        public RegionInstanceGroupManagerStatusStatefulPerInstanceConfigArgs build() {
             return new RegionInstanceGroupManagerStatusStatefulPerInstanceConfigArgs(allEffective);
         }
     }

@@ -61,12 +61,10 @@ public final class ARecordArgs extends io.pulumi.resources.ResourceArgs {
             this.ipv4Address = ipv4Address;
             return this;
         }
-
         public Builder ipv4Address(@Nullable String ipv4Address) {
             this.ipv4Address = Output.ofNullable(ipv4Address);
             return this;
-        }
-        public ARecordArgs build() {
+        }        public ARecordArgs build() {
             return new ARecordArgs(ipv4Address);
         }
     }

@@ -60,7 +60,9 @@ public final class LanguageCodesSetResponse extends io.pulumi.resources.InvokeAr
             this.languageCodes = Objects.requireNonNull(languageCodes);
             return this;
         }
-        public LanguageCodesSetResponse build() {
+        public Builder languageCodes(String... languageCodes) {
+            return languageCodes(List.of(languageCodes));
+        }        public LanguageCodesSetResponse build() {
             return new LanguageCodesSetResponse(languageCodes);
         }
     }

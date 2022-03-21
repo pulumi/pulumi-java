@@ -90,32 +90,26 @@ public final class QueryLogState extends io.pulumi.resources.ResourceArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder cloudwatchLogGroupArn(@Nullable Output<String> cloudwatchLogGroupArn) {
             this.cloudwatchLogGroupArn = cloudwatchLogGroupArn;
             return this;
         }
-
         public Builder cloudwatchLogGroupArn(@Nullable String cloudwatchLogGroupArn) {
             this.cloudwatchLogGroupArn = Output.ofNullable(cloudwatchLogGroupArn);
             return this;
         }
-
         public Builder zoneId(@Nullable Output<String> zoneId) {
             this.zoneId = zoneId;
             return this;
         }
-
         public Builder zoneId(@Nullable String zoneId) {
             this.zoneId = Output.ofNullable(zoneId);
             return this;
-        }
-        public QueryLogState build() {
+        }        public QueryLogState build() {
             return new QueryLogState(arn, cloudwatchLogGroupArn, zoneId);
         }
     }

@@ -108,42 +108,37 @@ public final class ComponentCurrentBillingFeatureArgs extends io.pulumi.resource
             this.currentBillingFeatures = currentBillingFeatures;
             return this;
         }
-
         public Builder currentBillingFeatures(@Nullable List<String> currentBillingFeatures) {
             this.currentBillingFeatures = Output.ofNullable(currentBillingFeatures);
             return this;
         }
-
+        public Builder currentBillingFeatures(String... currentBillingFeatures) {
+            return currentBillingFeatures(List.of(currentBillingFeatures));
+        }
         public Builder dataVolumeCap(@Nullable Output<ApplicationInsightsComponentDataVolumeCapArgs> dataVolumeCap) {
             this.dataVolumeCap = dataVolumeCap;
             return this;
         }
-
         public Builder dataVolumeCap(@Nullable ApplicationInsightsComponentDataVolumeCapArgs dataVolumeCap) {
             this.dataVolumeCap = Output.ofNullable(dataVolumeCap);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder resourceName(Output<String> resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
         }
-
         public Builder resourceName(String resourceName) {
             this.resourceName = Output.of(Objects.requireNonNull(resourceName));
             return this;
-        }
-        public ComponentCurrentBillingFeatureArgs build() {
+        }        public ComponentCurrentBillingFeatureArgs build() {
             return new ComponentCurrentBillingFeatureArgs(currentBillingFeatures, dataVolumeCap, resourceGroupName, resourceName);
         }
     }

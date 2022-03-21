@@ -354,102 +354,85 @@ public final class GetImageResult {
             this.archiveSizeBytes = Objects.requireNonNull(archiveSizeBytes);
             return this;
         }
-
         public Builder creationTimestamp(String creationTimestamp) {
             this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder diskSizeGb(Integer diskSizeGb) {
             this.diskSizeGb = Objects.requireNonNull(diskSizeGb);
             return this;
         }
-
         public Builder family(String family) {
             this.family = Objects.requireNonNull(family);
             return this;
         }
-
         public Builder filter(@Nullable String filter) {
             this.filter = filter;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder imageEncryptionKeySha256(String imageEncryptionKeySha256) {
             this.imageEncryptionKeySha256 = Objects.requireNonNull(imageEncryptionKeySha256);
             return this;
         }
-
         public Builder imageId(String imageId) {
             this.imageId = Objects.requireNonNull(imageId);
             return this;
         }
-
         public Builder labelFingerprint(String labelFingerprint) {
             this.labelFingerprint = Objects.requireNonNull(labelFingerprint);
             return this;
         }
-
         public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder licenses(List<String> licenses) {
             this.licenses = Objects.requireNonNull(licenses);
             return this;
         }
-
+        public Builder licenses(String... licenses) {
+            return licenses(List.of(licenses));
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
-
         public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
-
         public Builder sourceDisk(String sourceDisk) {
             this.sourceDisk = Objects.requireNonNull(sourceDisk);
             return this;
         }
-
         public Builder sourceDiskEncryptionKeySha256(String sourceDiskEncryptionKeySha256) {
             this.sourceDiskEncryptionKeySha256 = Objects.requireNonNull(sourceDiskEncryptionKeySha256);
             return this;
         }
-
         public Builder sourceDiskId(String sourceDiskId) {
             this.sourceDiskId = Objects.requireNonNull(sourceDiskId);
             return this;
         }
-
         public Builder sourceImageId(String sourceImageId) {
             this.sourceImageId = Objects.requireNonNull(sourceImageId);
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
-        }
-        public GetImageResult build() {
+        }        public GetImageResult build() {
             return new GetImageResult(archiveSizeBytes, creationTimestamp, description, diskSizeGb, family, filter, id, imageEncryptionKeySha256, imageId, labelFingerprint, labels, licenses, name, project, selfLink, sourceDisk, sourceDiskEncryptionKeySha256, sourceDiskId, sourceImageId, status);
         }
     }

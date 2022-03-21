@@ -80,22 +80,21 @@ public final class DeploymentTargetGetArgs extends io.pulumi.resources.ResourceA
             this.config = Objects.requireNonNull(config);
             return this;
         }
-
         public Builder config(DeploymentTargetConfigGetArgs config) {
             this.config = Output.of(Objects.requireNonNull(config));
             return this;
         }
-
         public Builder imports(@Nullable Output<List<DeploymentTargetImportGetArgs>> imports) {
             this.imports = imports;
             return this;
         }
-
         public Builder imports(@Nullable List<DeploymentTargetImportGetArgs> imports) {
             this.imports = Output.ofNullable(imports);
             return this;
         }
-        public DeploymentTargetGetArgs build() {
+        public Builder imports(DeploymentTargetImportGetArgs... imports) {
+            return imports(List.of(imports));
+        }        public DeploymentTargetGetArgs build() {
             return new DeploymentTargetGetArgs(config, imports);
         }
     }

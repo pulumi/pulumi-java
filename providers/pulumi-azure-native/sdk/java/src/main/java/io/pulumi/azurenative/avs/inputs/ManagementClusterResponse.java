@@ -110,22 +110,21 @@ public final class ManagementClusterResponse extends io.pulumi.resources.InvokeA
             this.clusterId = Objects.requireNonNull(clusterId);
             return this;
         }
-
         public Builder clusterSize(Integer clusterSize) {
             this.clusterSize = Objects.requireNonNull(clusterSize);
             return this;
         }
-
         public Builder hosts(List<String> hosts) {
             this.hosts = Objects.requireNonNull(hosts);
             return this;
         }
-
+        public Builder hosts(String... hosts) {
+            return hosts(List.of(hosts));
+        }
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
-        }
-        public ManagementClusterResponse build() {
+        }        public ManagementClusterResponse build() {
             return new ManagementClusterResponse(clusterId, clusterSize, hosts, provisioningState);
         }
     }

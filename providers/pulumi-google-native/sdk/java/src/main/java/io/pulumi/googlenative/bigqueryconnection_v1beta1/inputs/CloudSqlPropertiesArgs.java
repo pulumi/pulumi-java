@@ -112,42 +112,34 @@ public final class CloudSqlPropertiesArgs extends io.pulumi.resources.ResourceAr
             this.credential = credential;
             return this;
         }
-
         public Builder credential(@Nullable CloudSqlCredentialArgs credential) {
             this.credential = Output.ofNullable(credential);
             return this;
         }
-
         public Builder database(@Nullable Output<String> database) {
             this.database = database;
             return this;
         }
-
         public Builder database(@Nullable String database) {
             this.database = Output.ofNullable(database);
             return this;
         }
-
         public Builder instanceId(@Nullable Output<String> instanceId) {
             this.instanceId = instanceId;
             return this;
         }
-
         public Builder instanceId(@Nullable String instanceId) {
             this.instanceId = Output.ofNullable(instanceId);
             return this;
         }
-
         public Builder type(@Nullable Output<CloudSqlPropertiesType> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable CloudSqlPropertiesType type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public CloudSqlPropertiesArgs build() {
+        }        public CloudSqlPropertiesArgs build() {
             return new CloudSqlPropertiesArgs(credential, database, instanceId, type);
         }
     }

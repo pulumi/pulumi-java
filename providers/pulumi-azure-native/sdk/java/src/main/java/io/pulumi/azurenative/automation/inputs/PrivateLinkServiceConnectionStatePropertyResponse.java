@@ -94,17 +94,14 @@ public final class PrivateLinkServiceConnectionStatePropertyResponse extends io.
             this.actionsRequired = Objects.requireNonNull(actionsRequired);
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = status;
             return this;
-        }
-        public PrivateLinkServiceConnectionStatePropertyResponse build() {
+        }        public PrivateLinkServiceConnectionStatePropertyResponse build() {
             return new PrivateLinkServiceConnectionStatePropertyResponse(actionsRequired, description, status);
         }
     }

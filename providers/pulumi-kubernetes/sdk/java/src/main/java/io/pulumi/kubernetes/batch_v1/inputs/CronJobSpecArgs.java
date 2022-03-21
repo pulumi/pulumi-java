@@ -166,72 +166,58 @@ public final class CronJobSpecArgs extends io.pulumi.resources.ResourceArgs {
             this.concurrencyPolicy = concurrencyPolicy;
             return this;
         }
-
         public Builder concurrencyPolicy(@Nullable String concurrencyPolicy) {
             this.concurrencyPolicy = Output.ofNullable(concurrencyPolicy);
             return this;
         }
-
         public Builder failedJobsHistoryLimit(@Nullable Output<Integer> failedJobsHistoryLimit) {
             this.failedJobsHistoryLimit = failedJobsHistoryLimit;
             return this;
         }
-
         public Builder failedJobsHistoryLimit(@Nullable Integer failedJobsHistoryLimit) {
             this.failedJobsHistoryLimit = Output.ofNullable(failedJobsHistoryLimit);
             return this;
         }
-
         public Builder jobTemplate(Output<JobTemplateSpecArgs> jobTemplate) {
             this.jobTemplate = Objects.requireNonNull(jobTemplate);
             return this;
         }
-
         public Builder jobTemplate(JobTemplateSpecArgs jobTemplate) {
             this.jobTemplate = Output.of(Objects.requireNonNull(jobTemplate));
             return this;
         }
-
         public Builder schedule(Output<String> schedule) {
             this.schedule = Objects.requireNonNull(schedule);
             return this;
         }
-
         public Builder schedule(String schedule) {
             this.schedule = Output.of(Objects.requireNonNull(schedule));
             return this;
         }
-
         public Builder startingDeadlineSeconds(@Nullable Output<Integer> startingDeadlineSeconds) {
             this.startingDeadlineSeconds = startingDeadlineSeconds;
             return this;
         }
-
         public Builder startingDeadlineSeconds(@Nullable Integer startingDeadlineSeconds) {
             this.startingDeadlineSeconds = Output.ofNullable(startingDeadlineSeconds);
             return this;
         }
-
         public Builder successfulJobsHistoryLimit(@Nullable Output<Integer> successfulJobsHistoryLimit) {
             this.successfulJobsHistoryLimit = successfulJobsHistoryLimit;
             return this;
         }
-
         public Builder successfulJobsHistoryLimit(@Nullable Integer successfulJobsHistoryLimit) {
             this.successfulJobsHistoryLimit = Output.ofNullable(successfulJobsHistoryLimit);
             return this;
         }
-
         public Builder suspend(@Nullable Output<Boolean> suspend) {
             this.suspend = suspend;
             return this;
         }
-
         public Builder suspend(@Nullable Boolean suspend) {
             this.suspend = Output.ofNullable(suspend);
             return this;
-        }
-        public CronJobSpecArgs build() {
+        }        public CronJobSpecArgs build() {
             return new CronJobSpecArgs(concurrencyPolicy, failedJobsHistoryLimit, jobTemplate, schedule, startingDeadlineSeconds, successfulJobsHistoryLimit, suspend);
         }
     }

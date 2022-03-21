@@ -91,32 +91,26 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
             this.computePlatform = computePlatform;
             return this;
         }
-
         public Builder computePlatform(@Nullable String computePlatform) {
             this.computePlatform = Output.ofNullable(computePlatform);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public ApplicationArgs build() {
+        }        public ApplicationArgs build() {
             return new ApplicationArgs(computePlatform, name, tags);
         }
     }

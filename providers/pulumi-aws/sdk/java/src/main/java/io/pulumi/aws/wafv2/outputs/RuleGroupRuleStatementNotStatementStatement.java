@@ -225,57 +225,46 @@ public final class RuleGroupRuleStatementNotStatementStatement {
             this.andStatement = andStatement;
             return this;
         }
-
         public Builder byteMatchStatement(@Nullable RuleGroupRuleStatementNotStatementStatementByteMatchStatement byteMatchStatement) {
             this.byteMatchStatement = byteMatchStatement;
             return this;
         }
-
         public Builder geoMatchStatement(@Nullable RuleGroupRuleStatementNotStatementStatementGeoMatchStatement geoMatchStatement) {
             this.geoMatchStatement = geoMatchStatement;
             return this;
         }
-
         public Builder ipSetReferenceStatement(@Nullable RuleGroupRuleStatementNotStatementStatementIpSetReferenceStatement ipSetReferenceStatement) {
             this.ipSetReferenceStatement = ipSetReferenceStatement;
             return this;
         }
-
         public Builder labelMatchStatement(@Nullable RuleGroupRuleStatementNotStatementStatementLabelMatchStatement labelMatchStatement) {
             this.labelMatchStatement = labelMatchStatement;
             return this;
         }
-
         public Builder notStatement(@Nullable RuleGroupRuleStatementNotStatementStatementNotStatement notStatement) {
             this.notStatement = notStatement;
             return this;
         }
-
         public Builder orStatement(@Nullable RuleGroupRuleStatementNotStatementStatementOrStatement orStatement) {
             this.orStatement = orStatement;
             return this;
         }
-
         public Builder regexPatternSetReferenceStatement(@Nullable RuleGroupRuleStatementNotStatementStatementRegexPatternSetReferenceStatement regexPatternSetReferenceStatement) {
             this.regexPatternSetReferenceStatement = regexPatternSetReferenceStatement;
             return this;
         }
-
         public Builder sizeConstraintStatement(@Nullable RuleGroupRuleStatementNotStatementStatementSizeConstraintStatement sizeConstraintStatement) {
             this.sizeConstraintStatement = sizeConstraintStatement;
             return this;
         }
-
         public Builder sqliMatchStatement(@Nullable RuleGroupRuleStatementNotStatementStatementSqliMatchStatement sqliMatchStatement) {
             this.sqliMatchStatement = sqliMatchStatement;
             return this;
         }
-
         public Builder xssMatchStatement(@Nullable RuleGroupRuleStatementNotStatementStatementXssMatchStatement xssMatchStatement) {
             this.xssMatchStatement = xssMatchStatement;
             return this;
-        }
-        public RuleGroupRuleStatementNotStatementStatement build() {
+        }        public RuleGroupRuleStatementNotStatementStatement build() {
             return new RuleGroupRuleStatementNotStatementStatement(andStatement, byteMatchStatement, geoMatchStatement, ipSetReferenceStatement, labelMatchStatement, notStatement, orStatement, regexPatternSetReferenceStatement, sizeConstraintStatement, sqliMatchStatement, xssMatchStatement);
         }
     }

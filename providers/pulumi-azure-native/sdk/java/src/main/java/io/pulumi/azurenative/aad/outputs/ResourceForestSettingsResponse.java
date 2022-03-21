@@ -73,12 +73,13 @@ public final class ResourceForestSettingsResponse {
             this.resourceForest = resourceForest;
             return this;
         }
-
         public Builder settings(@Nullable List<ForestTrustResponse> settings) {
             this.settings = settings;
             return this;
         }
-        public ResourceForestSettingsResponse build() {
+        public Builder settings(ForestTrustResponse... settings) {
+            return settings(List.of(settings));
+        }        public ResourceForestSettingsResponse build() {
             return new ResourceForestSettingsResponse(resourceForest, settings);
         }
     }

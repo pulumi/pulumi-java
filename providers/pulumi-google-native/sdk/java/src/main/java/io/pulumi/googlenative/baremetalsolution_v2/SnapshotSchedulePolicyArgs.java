@@ -145,72 +145,61 @@ public final class SnapshotSchedulePolicyArgs extends io.pulumi.resources.Resour
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder schedules(@Nullable Output<List<ScheduleArgs>> schedules) {
             this.schedules = schedules;
             return this;
         }
-
         public Builder schedules(@Nullable List<ScheduleArgs> schedules) {
             this.schedules = Output.ofNullable(schedules);
             return this;
         }
-
+        public Builder schedules(ScheduleArgs... schedules) {
+            return schedules(List.of(schedules));
+        }
         public Builder snapshotSchedulePolicyId(Output<String> snapshotSchedulePolicyId) {
             this.snapshotSchedulePolicyId = Objects.requireNonNull(snapshotSchedulePolicyId);
             return this;
         }
-
         public Builder snapshotSchedulePolicyId(String snapshotSchedulePolicyId) {
             this.snapshotSchedulePolicyId = Output.of(Objects.requireNonNull(snapshotSchedulePolicyId));
             return this;
-        }
-        public SnapshotSchedulePolicyArgs build() {
+        }        public SnapshotSchedulePolicyArgs build() {
             return new SnapshotSchedulePolicyArgs(description, id, labels, location, project, schedules, snapshotSchedulePolicyId);
         }
     }

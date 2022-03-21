@@ -261,102 +261,82 @@ public final class WorkloadIdentityPoolProviderArgs extends io.pulumi.resources.
             this.attributeCondition = attributeCondition;
             return this;
         }
-
         public Builder attributeCondition(@Nullable String attributeCondition) {
             this.attributeCondition = Output.ofNullable(attributeCondition);
             return this;
         }
-
         public Builder attributeMapping(@Nullable Output<Map<String,String>> attributeMapping) {
             this.attributeMapping = attributeMapping;
             return this;
         }
-
         public Builder attributeMapping(@Nullable Map<String,String> attributeMapping) {
             this.attributeMapping = Output.ofNullable(attributeMapping);
             return this;
         }
-
         public Builder aws(@Nullable Output<WorkloadIdentityPoolProviderAwsArgs> aws) {
             this.aws = aws;
             return this;
         }
-
         public Builder aws(@Nullable WorkloadIdentityPoolProviderAwsArgs aws) {
             this.aws = Output.ofNullable(aws);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder disabled(@Nullable Output<Boolean> disabled) {
             this.disabled = disabled;
             return this;
         }
-
         public Builder disabled(@Nullable Boolean disabled) {
             this.disabled = Output.ofNullable(disabled);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder oidc(@Nullable Output<WorkloadIdentityPoolProviderOidcArgs> oidc) {
             this.oidc = oidc;
             return this;
         }
-
         public Builder oidc(@Nullable WorkloadIdentityPoolProviderOidcArgs oidc) {
             this.oidc = Output.ofNullable(oidc);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder workloadIdentityPoolId(Output<String> workloadIdentityPoolId) {
             this.workloadIdentityPoolId = Objects.requireNonNull(workloadIdentityPoolId);
             return this;
         }
-
         public Builder workloadIdentityPoolId(String workloadIdentityPoolId) {
             this.workloadIdentityPoolId = Output.of(Objects.requireNonNull(workloadIdentityPoolId));
             return this;
         }
-
         public Builder workloadIdentityPoolProviderId(Output<String> workloadIdentityPoolProviderId) {
             this.workloadIdentityPoolProviderId = Objects.requireNonNull(workloadIdentityPoolProviderId);
             return this;
         }
-
         public Builder workloadIdentityPoolProviderId(String workloadIdentityPoolProviderId) {
             this.workloadIdentityPoolProviderId = Output.of(Objects.requireNonNull(workloadIdentityPoolProviderId));
             return this;
-        }
-        public WorkloadIdentityPoolProviderArgs build() {
+        }        public WorkloadIdentityPoolProviderArgs build() {
             return new WorkloadIdentityPoolProviderArgs(attributeCondition, attributeMapping, aws, description, disabled, displayName, oidc, project, workloadIdentityPoolId, workloadIdentityPoolProviderId);
         }
     }

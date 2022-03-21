@@ -317,87 +317,73 @@ public final class GetWebTestResult {
             this.configuration = configuration;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
-
         public Builder frequency(@Nullable Integer frequency) {
             this.frequency = frequency;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder locations(List<WebTestGeolocationResponse> locations) {
             this.locations = Objects.requireNonNull(locations);
             return this;
         }
-
+        public Builder locations(WebTestGeolocationResponse... locations) {
+            return locations(List.of(locations));
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder retryEnabled(@Nullable Boolean retryEnabled) {
             this.retryEnabled = retryEnabled;
             return this;
         }
-
         public Builder syntheticMonitorId(String syntheticMonitorId) {
             this.syntheticMonitorId = Objects.requireNonNull(syntheticMonitorId);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder timeout(@Nullable Integer timeout) {
             this.timeout = timeout;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder webTestKind(String webTestKind) {
             this.webTestKind = Objects.requireNonNull(webTestKind);
             return this;
         }
-
         public Builder webTestName(String webTestName) {
             this.webTestName = Objects.requireNonNull(webTestName);
             return this;
-        }
-        public GetWebTestResult build() {
+        }        public GetWebTestResult build() {
             return new GetWebTestResult(configuration, description, enabled, frequency, id, kind, location, locations, name, provisioningState, retryEnabled, syntheticMonitorId, tags, timeout, type, webTestKind, webTestName);
         }
     }

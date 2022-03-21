@@ -104,22 +104,21 @@ public final class GooglePrivacyDlpV2HybridOptionsResponse {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder requiredFindingLabelKeys(List<String> requiredFindingLabelKeys) {
             this.requiredFindingLabelKeys = Objects.requireNonNull(requiredFindingLabelKeys);
             return this;
         }
-
+        public Builder requiredFindingLabelKeys(String... requiredFindingLabelKeys) {
+            return requiredFindingLabelKeys(List.of(requiredFindingLabelKeys));
+        }
         public Builder tableOptions(GooglePrivacyDlpV2TableOptionsResponse tableOptions) {
             this.tableOptions = Objects.requireNonNull(tableOptions);
             return this;
-        }
-        public GooglePrivacyDlpV2HybridOptionsResponse build() {
+        }        public GooglePrivacyDlpV2HybridOptionsResponse build() {
             return new GooglePrivacyDlpV2HybridOptionsResponse(description, labels, requiredFindingLabelKeys, tableOptions);
         }
     }

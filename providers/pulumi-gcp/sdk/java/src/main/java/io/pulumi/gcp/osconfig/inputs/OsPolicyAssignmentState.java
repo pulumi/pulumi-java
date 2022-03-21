@@ -292,152 +292,125 @@ public final class OsPolicyAssignmentState extends io.pulumi.resources.ResourceA
             this.baseline = baseline;
             return this;
         }
-
         public Builder baseline(@Nullable Boolean baseline) {
             this.baseline = Output.ofNullable(baseline);
             return this;
         }
-
         public Builder deleted(@Nullable Output<Boolean> deleted) {
             this.deleted = deleted;
             return this;
         }
-
         public Builder deleted(@Nullable Boolean deleted) {
             this.deleted = Output.ofNullable(deleted);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
-
         public Builder etag(@Nullable String etag) {
             this.etag = Output.ofNullable(etag);
             return this;
         }
-
         public Builder instanceFilter(@Nullable Output<OsPolicyAssignmentInstanceFilterGetArgs> instanceFilter) {
             this.instanceFilter = instanceFilter;
             return this;
         }
-
         public Builder instanceFilter(@Nullable OsPolicyAssignmentInstanceFilterGetArgs instanceFilter) {
             this.instanceFilter = Output.ofNullable(instanceFilter);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder osPolicies(@Nullable Output<List<OsPolicyAssignmentOsPolicyGetArgs>> osPolicies) {
             this.osPolicies = osPolicies;
             return this;
         }
-
         public Builder osPolicies(@Nullable List<OsPolicyAssignmentOsPolicyGetArgs> osPolicies) {
             this.osPolicies = Output.ofNullable(osPolicies);
             return this;
         }
-
+        public Builder osPolicies(OsPolicyAssignmentOsPolicyGetArgs... osPolicies) {
+            return osPolicies(List.of(osPolicies));
+        }
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder reconciling(@Nullable Output<Boolean> reconciling) {
             this.reconciling = reconciling;
             return this;
         }
-
         public Builder reconciling(@Nullable Boolean reconciling) {
             this.reconciling = Output.ofNullable(reconciling);
             return this;
         }
-
         public Builder revisionCreateTime(@Nullable Output<String> revisionCreateTime) {
             this.revisionCreateTime = revisionCreateTime;
             return this;
         }
-
         public Builder revisionCreateTime(@Nullable String revisionCreateTime) {
             this.revisionCreateTime = Output.ofNullable(revisionCreateTime);
             return this;
         }
-
         public Builder revisionId(@Nullable Output<String> revisionId) {
             this.revisionId = revisionId;
             return this;
         }
-
         public Builder revisionId(@Nullable String revisionId) {
             this.revisionId = Output.ofNullable(revisionId);
             return this;
         }
-
         public Builder rollout(@Nullable Output<OsPolicyAssignmentRolloutGetArgs> rollout) {
             this.rollout = rollout;
             return this;
         }
-
         public Builder rollout(@Nullable OsPolicyAssignmentRolloutGetArgs rollout) {
             this.rollout = Output.ofNullable(rollout);
             return this;
         }
-
         public Builder rolloutState(@Nullable Output<String> rolloutState) {
             this.rolloutState = rolloutState;
             return this;
         }
-
         public Builder rolloutState(@Nullable String rolloutState) {
             this.rolloutState = Output.ofNullable(rolloutState);
             return this;
         }
-
         public Builder uid(@Nullable Output<String> uid) {
             this.uid = uid;
             return this;
         }
-
         public Builder uid(@Nullable String uid) {
             this.uid = Output.ofNullable(uid);
             return this;
-        }
-        public OsPolicyAssignmentState build() {
+        }        public OsPolicyAssignmentState build() {
             return new OsPolicyAssignmentState(baseline, deleted, description, etag, instanceFilter, location, name, osPolicies, project, reconciling, revisionCreateTime, revisionId, rollout, rolloutState, uid);
         }
     }

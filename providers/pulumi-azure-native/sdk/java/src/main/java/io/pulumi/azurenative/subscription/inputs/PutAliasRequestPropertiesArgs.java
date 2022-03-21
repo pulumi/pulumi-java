@@ -128,52 +128,42 @@ public final class PutAliasRequestPropertiesArgs extends io.pulumi.resources.Res
             this.billingScope = billingScope;
             return this;
         }
-
         public Builder billingScope(@Nullable String billingScope) {
             this.billingScope = Output.ofNullable(billingScope);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder resellerId(@Nullable Output<String> resellerId) {
             this.resellerId = resellerId;
             return this;
         }
-
         public Builder resellerId(@Nullable String resellerId) {
             this.resellerId = Output.ofNullable(resellerId);
             return this;
         }
-
         public Builder subscriptionId(@Nullable Output<String> subscriptionId) {
             this.subscriptionId = subscriptionId;
             return this;
         }
-
         public Builder subscriptionId(@Nullable String subscriptionId) {
             this.subscriptionId = Output.ofNullable(subscriptionId);
             return this;
         }
-
         public Builder workload(@Nullable Output<Either<String,Workload>> workload) {
             this.workload = workload;
             return this;
         }
-
         public Builder workload(@Nullable Either<String,Workload> workload) {
             this.workload = Output.ofNullable(workload);
             return this;
-        }
-        public PutAliasRequestPropertiesArgs build() {
+        }        public PutAliasRequestPropertiesArgs build() {
             return new PutAliasRequestPropertiesArgs(billingScope, displayName, resellerId, subscriptionId, workload);
         }
     }

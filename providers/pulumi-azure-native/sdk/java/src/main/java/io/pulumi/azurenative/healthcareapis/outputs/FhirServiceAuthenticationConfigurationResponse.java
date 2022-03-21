@@ -88,17 +88,14 @@ public final class FhirServiceAuthenticationConfigurationResponse {
             this.audience = audience;
             return this;
         }
-
         public Builder authority(@Nullable String authority) {
             this.authority = authority;
             return this;
         }
-
         public Builder smartProxyEnabled(@Nullable Boolean smartProxyEnabled) {
             this.smartProxyEnabled = smartProxyEnabled;
             return this;
-        }
-        public FhirServiceAuthenticationConfigurationResponse build() {
+        }        public FhirServiceAuthenticationConfigurationResponse build() {
             return new FhirServiceAuthenticationConfigurationResponse(audience, authority, smartProxyEnabled);
         }
     }

@@ -53,7 +53,9 @@ public final class VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTru
             this.certificateAuthorityArns = Objects.requireNonNull(certificateAuthorityArns);
             return this;
         }
-        public VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustAcm build() {
+        public Builder certificateAuthorityArns(String... certificateAuthorityArns) {
+            return certificateAuthorityArns(List.of(certificateAuthorityArns));
+        }        public VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustAcm build() {
             return new VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustAcm(certificateAuthorityArns);
         }
     }

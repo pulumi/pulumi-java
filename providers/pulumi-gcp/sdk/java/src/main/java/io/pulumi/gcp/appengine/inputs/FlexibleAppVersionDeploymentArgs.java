@@ -115,42 +115,37 @@ public final class FlexibleAppVersionDeploymentArgs extends io.pulumi.resources.
             this.cloudBuildOptions = cloudBuildOptions;
             return this;
         }
-
         public Builder cloudBuildOptions(@Nullable FlexibleAppVersionDeploymentCloudBuildOptionsArgs cloudBuildOptions) {
             this.cloudBuildOptions = Output.ofNullable(cloudBuildOptions);
             return this;
         }
-
         public Builder container(@Nullable Output<FlexibleAppVersionDeploymentContainerArgs> container) {
             this.container = container;
             return this;
         }
-
         public Builder container(@Nullable FlexibleAppVersionDeploymentContainerArgs container) {
             this.container = Output.ofNullable(container);
             return this;
         }
-
         public Builder files(@Nullable Output<List<FlexibleAppVersionDeploymentFileArgs>> files) {
             this.files = files;
             return this;
         }
-
         public Builder files(@Nullable List<FlexibleAppVersionDeploymentFileArgs> files) {
             this.files = Output.ofNullable(files);
             return this;
         }
-
+        public Builder files(FlexibleAppVersionDeploymentFileArgs... files) {
+            return files(List.of(files));
+        }
         public Builder zip(@Nullable Output<FlexibleAppVersionDeploymentZipArgs> zip) {
             this.zip = zip;
             return this;
         }
-
         public Builder zip(@Nullable FlexibleAppVersionDeploymentZipArgs zip) {
             this.zip = Output.ofNullable(zip);
             return this;
-        }
-        public FlexibleAppVersionDeploymentArgs build() {
+        }        public FlexibleAppVersionDeploymentArgs build() {
             return new FlexibleAppVersionDeploymentArgs(cloudBuildOptions, container, files, zip);
         }
     }

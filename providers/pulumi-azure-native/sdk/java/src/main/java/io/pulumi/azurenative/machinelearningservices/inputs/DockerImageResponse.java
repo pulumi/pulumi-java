@@ -97,17 +97,14 @@ public final class DockerImageResponse extends io.pulumi.resources.InvokeArgs {
             this.dockerImageUri = Objects.requireNonNull(dockerImageUri);
             return this;
         }
-
         public Builder dockerSpecificationType(String dockerSpecificationType) {
             this.dockerSpecificationType = Objects.requireNonNull(dockerSpecificationType);
             return this;
         }
-
         public Builder platform(@Nullable DockerImagePlatformResponse platform) {
             this.platform = platform;
             return this;
-        }
-        public DockerImageResponse build() {
+        }        public DockerImageResponse build() {
             return new DockerImageResponse(dockerImageUri, dockerSpecificationType, platform);
         }
     }

@@ -88,17 +88,14 @@ public final class GetVirtualNetworkGatewayAdvertisedRoutesArgs extends io.pulum
             this.peer = Objects.requireNonNull(peer);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder virtualNetworkGatewayName(String virtualNetworkGatewayName) {
             this.virtualNetworkGatewayName = Objects.requireNonNull(virtualNetworkGatewayName);
             return this;
-        }
-        public GetVirtualNetworkGatewayAdvertisedRoutesArgs build() {
+        }        public GetVirtualNetworkGatewayAdvertisedRoutesArgs build() {
             return new GetVirtualNetworkGatewayAdvertisedRoutesArgs(peer, resourceGroupName, virtualNetworkGatewayName);
         }
     }

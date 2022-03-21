@@ -51,8 +51,7 @@ public final class EdifactMessageIdentifierResponse {
         public Builder messageId(String messageId) {
             this.messageId = Objects.requireNonNull(messageId);
             return this;
-        }
-        public EdifactMessageIdentifierResponse build() {
+        }        public EdifactMessageIdentifierResponse build() {
             return new EdifactMessageIdentifierResponse(messageId);
         }
     }

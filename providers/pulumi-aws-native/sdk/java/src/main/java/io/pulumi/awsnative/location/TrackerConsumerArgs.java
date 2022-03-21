@@ -65,22 +65,18 @@ public final class TrackerConsumerArgs extends io.pulumi.resources.ResourceArgs 
             this.consumerArn = Objects.requireNonNull(consumerArn);
             return this;
         }
-
         public Builder consumerArn(String consumerArn) {
             this.consumerArn = Output.of(Objects.requireNonNull(consumerArn));
             return this;
         }
-
         public Builder trackerName(Output<String> trackerName) {
             this.trackerName = Objects.requireNonNull(trackerName);
             return this;
         }
-
         public Builder trackerName(String trackerName) {
             this.trackerName = Output.of(Objects.requireNonNull(trackerName));
             return this;
-        }
-        public TrackerConsumerArgs build() {
+        }        public TrackerConsumerArgs build() {
             return new TrackerConsumerArgs(consumerArn, trackerName);
         }
     }

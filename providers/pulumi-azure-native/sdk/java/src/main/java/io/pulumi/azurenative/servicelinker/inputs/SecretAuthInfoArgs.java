@@ -95,32 +95,26 @@ public final class SecretAuthInfoArgs extends io.pulumi.resources.ResourceArgs {
             this.authType = Objects.requireNonNull(authType);
             return this;
         }
-
         public Builder authType(String authType) {
             this.authType = Output.of(Objects.requireNonNull(authType));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder secret(@Nullable Output<String> secret) {
             this.secret = secret;
             return this;
         }
-
         public Builder secret(@Nullable String secret) {
             this.secret = Output.ofNullable(secret);
             return this;
-        }
-        public SecretAuthInfoArgs build() {
+        }        public SecretAuthInfoArgs build() {
             return new SecretAuthInfoArgs(authType, name, secret);
         }
     }

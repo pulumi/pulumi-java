@@ -123,52 +123,42 @@ public final class ConnectorProfileGoogleAnalyticsConnectorProfileCredentialsArg
             this.accessToken = accessToken;
             return this;
         }
-
         public Builder accessToken(@Nullable String accessToken) {
             this.accessToken = Output.ofNullable(accessToken);
             return this;
         }
-
         public Builder clientId(Output<String> clientId) {
             this.clientId = Objects.requireNonNull(clientId);
             return this;
         }
-
         public Builder clientId(String clientId) {
             this.clientId = Output.of(Objects.requireNonNull(clientId));
             return this;
         }
-
         public Builder clientSecret(Output<String> clientSecret) {
             this.clientSecret = Objects.requireNonNull(clientSecret);
             return this;
         }
-
         public Builder clientSecret(String clientSecret) {
             this.clientSecret = Output.of(Objects.requireNonNull(clientSecret));
             return this;
         }
-
         public Builder connectorOAuthRequest(@Nullable Output<ConnectorProfileConnectorOAuthRequestArgs> connectorOAuthRequest) {
             this.connectorOAuthRequest = connectorOAuthRequest;
             return this;
         }
-
         public Builder connectorOAuthRequest(@Nullable ConnectorProfileConnectorOAuthRequestArgs connectorOAuthRequest) {
             this.connectorOAuthRequest = Output.ofNullable(connectorOAuthRequest);
             return this;
         }
-
         public Builder refreshToken(@Nullable Output<String> refreshToken) {
             this.refreshToken = refreshToken;
             return this;
         }
-
         public Builder refreshToken(@Nullable String refreshToken) {
             this.refreshToken = Output.ofNullable(refreshToken);
             return this;
-        }
-        public ConnectorProfileGoogleAnalyticsConnectorProfileCredentialsArgs build() {
+        }        public ConnectorProfileGoogleAnalyticsConnectorProfileCredentialsArgs build() {
             return new ConnectorProfileGoogleAnalyticsConnectorProfileCredentialsArgs(accessToken, clientId, clientSecret, connectorOAuthRequest, refreshToken);
         }
     }

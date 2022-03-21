@@ -79,22 +79,18 @@ public final class ValidationOptionsArgs extends io.pulumi.resources.ResourceArg
             this.schemaValidation = schemaValidation;
             return this;
         }
-
         public Builder schemaValidation(@Nullable ValidationOptionsSchemaValidation schemaValidation) {
             this.schemaValidation = Output.ofNullable(schemaValidation);
             return this;
         }
-
         public Builder undeclaredProperties(@Nullable Output<ValidationOptionsUndeclaredProperties> undeclaredProperties) {
             this.undeclaredProperties = undeclaredProperties;
             return this;
         }
-
         public Builder undeclaredProperties(@Nullable ValidationOptionsUndeclaredProperties undeclaredProperties) {
             this.undeclaredProperties = Output.ofNullable(undeclaredProperties);
             return this;
-        }
-        public ValidationOptionsArgs build() {
+        }        public ValidationOptionsArgs build() {
             return new ValidationOptionsArgs(schemaValidation, undeclaredProperties);
         }
     }

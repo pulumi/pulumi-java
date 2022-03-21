@@ -80,17 +80,17 @@ public final class CatalogTablePartitionIndex {
             this.indexName = Objects.requireNonNull(indexName);
             return this;
         }
-
         public Builder indexStatus(@Nullable String indexStatus) {
             this.indexStatus = indexStatus;
             return this;
         }
-
         public Builder keys(List<String> keys) {
             this.keys = Objects.requireNonNull(keys);
             return this;
         }
-        public CatalogTablePartitionIndex build() {
+        public Builder keys(String... keys) {
+            return keys(List.of(keys));
+        }        public CatalogTablePartitionIndex build() {
             return new CatalogTablePartitionIndex(indexName, indexStatus, keys);
         }
     }

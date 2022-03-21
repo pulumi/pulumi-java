@@ -141,62 +141,50 @@ public final class TestBaseAccountArgs extends io.pulumi.resources.ResourceArgs 
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder restore(@Nullable Output<Boolean> restore) {
             this.restore = restore;
             return this;
         }
-
         public Builder restore(@Nullable Boolean restore) {
             this.restore = Output.ofNullable(restore);
             return this;
         }
-
         public Builder sku(Output<TestBaseAccountSKUArgs> sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
-
         public Builder sku(TestBaseAccountSKUArgs sku) {
             this.sku = Output.of(Objects.requireNonNull(sku));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder testBaseAccountName(@Nullable Output<String> testBaseAccountName) {
             this.testBaseAccountName = testBaseAccountName;
             return this;
         }
-
         public Builder testBaseAccountName(@Nullable String testBaseAccountName) {
             this.testBaseAccountName = Output.ofNullable(testBaseAccountName);
             return this;
-        }
-        public TestBaseAccountArgs build() {
+        }        public TestBaseAccountArgs build() {
             return new TestBaseAccountArgs(location, resourceGroupName, restore, sku, tags, testBaseAccountName);
         }
     }

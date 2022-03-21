@@ -84,17 +84,14 @@ public final class GetBackupPolicyArgs extends io.pulumi.resources.InvokeArgs {
             this.backupPolicyName = Objects.requireNonNull(backupPolicyName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder vaultName(String vaultName) {
             this.vaultName = Objects.requireNonNull(vaultName);
             return this;
-        }
-        public GetBackupPolicyArgs build() {
+        }        public GetBackupPolicyArgs build() {
             return new GetBackupPolicyArgs(backupPolicyName, resourceGroupName, vaultName);
         }
     }

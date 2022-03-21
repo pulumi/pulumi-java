@@ -134,32 +134,26 @@ public final class GetDeidentifyTemplateResult {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder deidentifyConfig(GooglePrivacyDlpV2DeidentifyConfigResponse deidentifyConfig) {
             this.deidentifyConfig = Objects.requireNonNull(deidentifyConfig);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
-        }
-        public GetDeidentifyTemplateResult build() {
+        }        public GetDeidentifyTemplateResult build() {
             return new GetDeidentifyTemplateResult(createTime, deidentifyConfig, description, displayName, name, updateTime);
         }
     }

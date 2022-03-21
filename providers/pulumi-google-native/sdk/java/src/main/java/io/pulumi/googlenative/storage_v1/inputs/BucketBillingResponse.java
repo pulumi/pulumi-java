@@ -58,8 +58,7 @@ public final class BucketBillingResponse extends io.pulumi.resources.InvokeArgs 
         public Builder requesterPays(Boolean requesterPays) {
             this.requesterPays = Objects.requireNonNull(requesterPays);
             return this;
-        }
-        public BucketBillingResponse build() {
+        }        public BucketBillingResponse build() {
             return new BucketBillingResponse(requesterPays);
         }
     }

@@ -149,32 +149,32 @@ public final class EndpointSlice {
             this.addressType = Objects.requireNonNull(addressType);
             return this;
         }
-
         public Builder apiVersion(@Nullable String apiVersion) {
             this.apiVersion = apiVersion;
             return this;
         }
-
         public Builder endpoints(List<Endpoint> endpoints) {
             this.endpoints = Objects.requireNonNull(endpoints);
             return this;
         }
-
+        public Builder endpoints(Endpoint... endpoints) {
+            return endpoints(List.of(endpoints));
+        }
         public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder metadata(@Nullable ObjectMeta metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder ports(@Nullable List<EndpointPort> ports) {
             this.ports = ports;
             return this;
         }
-        public EndpointSlice build() {
+        public Builder ports(EndpointPort... ports) {
+            return ports(List.of(ports));
+        }        public EndpointSlice build() {
             return new EndpointSlice(addressType, apiVersion, endpoints, kind, metadata, ports);
         }
     }

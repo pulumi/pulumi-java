@@ -185,47 +185,38 @@ public final class NetworkConfigResponse {
             this.datapathProvider = Objects.requireNonNull(datapathProvider);
             return this;
         }
-
         public Builder defaultSnatStatus(DefaultSnatStatusResponse defaultSnatStatus) {
             this.defaultSnatStatus = Objects.requireNonNull(defaultSnatStatus);
             return this;
         }
-
         public Builder dnsConfig(DNSConfigResponse dnsConfig) {
             this.dnsConfig = Objects.requireNonNull(dnsConfig);
             return this;
         }
-
         public Builder enableIntraNodeVisibility(Boolean enableIntraNodeVisibility) {
             this.enableIntraNodeVisibility = Objects.requireNonNull(enableIntraNodeVisibility);
             return this;
         }
-
         public Builder enableL4ilbSubsetting(Boolean enableL4ilbSubsetting) {
             this.enableL4ilbSubsetting = Objects.requireNonNull(enableL4ilbSubsetting);
             return this;
         }
-
         public Builder network(String network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }
-
         public Builder privateIpv6GoogleAccess(String privateIpv6GoogleAccess) {
             this.privateIpv6GoogleAccess = Objects.requireNonNull(privateIpv6GoogleAccess);
             return this;
         }
-
         public Builder serviceExternalIpsConfig(ServiceExternalIPsConfigResponse serviceExternalIpsConfig) {
             this.serviceExternalIpsConfig = Objects.requireNonNull(serviceExternalIpsConfig);
             return this;
         }
-
         public Builder subnetwork(String subnetwork) {
             this.subnetwork = Objects.requireNonNull(subnetwork);
             return this;
-        }
-        public NetworkConfigResponse build() {
+        }        public NetworkConfigResponse build() {
             return new NetworkConfigResponse(datapathProvider, defaultSnatStatus, dnsConfig, enableIntraNodeVisibility, enableL4ilbSubsetting, network, privateIpv6GoogleAccess, serviceExternalIpsConfig, subnetwork);
         }
     }

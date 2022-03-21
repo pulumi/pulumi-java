@@ -71,12 +71,10 @@ public final class RoleInlinePolicy {
             this.name = name;
             return this;
         }
-
         public Builder policy(@Nullable String policy) {
             this.policy = policy;
             return this;
-        }
-        public RoleInlinePolicy build() {
+        }        public RoleInlinePolicy build() {
             return new RoleInlinePolicy(name, policy);
         }
     }

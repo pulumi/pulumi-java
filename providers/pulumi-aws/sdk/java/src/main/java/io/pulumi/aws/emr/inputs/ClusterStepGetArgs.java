@@ -90,32 +90,26 @@ public final class ClusterStepGetArgs extends io.pulumi.resources.ResourceArgs {
             this.actionOnFailure = Objects.requireNonNull(actionOnFailure);
             return this;
         }
-
         public Builder actionOnFailure(String actionOnFailure) {
             this.actionOnFailure = Output.of(Objects.requireNonNull(actionOnFailure));
             return this;
         }
-
         public Builder hadoopJarStep(Output<ClusterStepHadoopJarStepGetArgs> hadoopJarStep) {
             this.hadoopJarStep = Objects.requireNonNull(hadoopJarStep);
             return this;
         }
-
         public Builder hadoopJarStep(ClusterStepHadoopJarStepGetArgs hadoopJarStep) {
             this.hadoopJarStep = Output.of(Objects.requireNonNull(hadoopJarStep));
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
-        }
-        public ClusterStepGetArgs build() {
+        }        public ClusterStepGetArgs build() {
             return new ClusterStepGetArgs(actionOnFailure, hadoopJarStep, name);
         }
     }

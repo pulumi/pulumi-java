@@ -105,42 +105,37 @@ public final class BucketAnalyticsConfigurationArgs extends io.pulumi.resources.
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Output.of(Objects.requireNonNull(id));
             return this;
         }
-
         public Builder prefix(@Nullable Output<String> prefix) {
             this.prefix = prefix;
             return this;
         }
-
         public Builder prefix(@Nullable String prefix) {
             this.prefix = Output.ofNullable(prefix);
             return this;
         }
-
         public Builder storageClassAnalysis(Output<BucketStorageClassAnalysisArgs> storageClassAnalysis) {
             this.storageClassAnalysis = Objects.requireNonNull(storageClassAnalysis);
             return this;
         }
-
         public Builder storageClassAnalysis(BucketStorageClassAnalysisArgs storageClassAnalysis) {
             this.storageClassAnalysis = Output.of(Objects.requireNonNull(storageClassAnalysis));
             return this;
         }
-
         public Builder tagFilters(@Nullable Output<List<BucketTagFilterArgs>> tagFilters) {
             this.tagFilters = tagFilters;
             return this;
         }
-
         public Builder tagFilters(@Nullable List<BucketTagFilterArgs> tagFilters) {
             this.tagFilters = Output.ofNullable(tagFilters);
             return this;
         }
-        public BucketAnalyticsConfigurationArgs build() {
+        public Builder tagFilters(BucketTagFilterArgs... tagFilters) {
+            return tagFilters(List.of(tagFilters));
+        }        public BucketAnalyticsConfigurationArgs build() {
             return new BucketAnalyticsConfigurationArgs(id, prefix, storageClassAnalysis, tagFilters);
         }
     }

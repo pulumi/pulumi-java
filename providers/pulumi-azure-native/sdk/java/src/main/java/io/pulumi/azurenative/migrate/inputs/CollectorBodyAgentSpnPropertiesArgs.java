@@ -122,52 +122,42 @@ public final class CollectorBodyAgentSpnPropertiesArgs extends io.pulumi.resourc
             this.applicationId = applicationId;
             return this;
         }
-
         public Builder applicationId(@Nullable String applicationId) {
             this.applicationId = Output.ofNullable(applicationId);
             return this;
         }
-
         public Builder audience(@Nullable Output<String> audience) {
             this.audience = audience;
             return this;
         }
-
         public Builder audience(@Nullable String audience) {
             this.audience = Output.ofNullable(audience);
             return this;
         }
-
         public Builder authority(@Nullable Output<String> authority) {
             this.authority = authority;
             return this;
         }
-
         public Builder authority(@Nullable String authority) {
             this.authority = Output.ofNullable(authority);
             return this;
         }
-
         public Builder objectId(@Nullable Output<String> objectId) {
             this.objectId = objectId;
             return this;
         }
-
         public Builder objectId(@Nullable String objectId) {
             this.objectId = Output.ofNullable(objectId);
             return this;
         }
-
         public Builder tenantId(@Nullable Output<String> tenantId) {
             this.tenantId = tenantId;
             return this;
         }
-
         public Builder tenantId(@Nullable String tenantId) {
             this.tenantId = Output.ofNullable(tenantId);
             return this;
-        }
-        public CollectorBodyAgentSpnPropertiesArgs build() {
+        }        public CollectorBodyAgentSpnPropertiesArgs build() {
             return new CollectorBodyAgentSpnPropertiesArgs(applicationId, audience, authority, objectId, tenantId);
         }
     }

@@ -136,32 +136,26 @@ public final class GetHierarchySettingResult {
             this.defaultManagementGroup = defaultManagementGroup;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder requireAuthorizationForGroupCreation(@Nullable Boolean requireAuthorizationForGroupCreation) {
             this.requireAuthorizationForGroupCreation = requireAuthorizationForGroupCreation;
             return this;
         }
-
         public Builder tenantId(@Nullable String tenantId) {
             this.tenantId = tenantId;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetHierarchySettingResult build() {
+        }        public GetHierarchySettingResult build() {
             return new GetHierarchySettingResult(defaultManagementGroup, id, name, requireAuthorizationForGroupCreation, tenantId, type);
         }
     }

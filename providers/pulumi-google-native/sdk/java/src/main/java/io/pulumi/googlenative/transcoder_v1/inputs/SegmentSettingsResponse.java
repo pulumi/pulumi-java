@@ -77,12 +77,10 @@ public final class SegmentSettingsResponse extends io.pulumi.resources.InvokeArg
             this.individualSegments = Objects.requireNonNull(individualSegments);
             return this;
         }
-
         public Builder segmentDuration(String segmentDuration) {
             this.segmentDuration = Objects.requireNonNull(segmentDuration);
             return this;
-        }
-        public SegmentSettingsResponse build() {
+        }        public SegmentSettingsResponse build() {
             return new SegmentSettingsResponse(individualSegments, segmentDuration);
         }
     }

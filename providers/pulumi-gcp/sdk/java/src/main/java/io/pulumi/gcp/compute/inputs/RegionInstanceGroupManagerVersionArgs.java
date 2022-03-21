@@ -91,32 +91,26 @@ public final class RegionInstanceGroupManagerVersionArgs extends io.pulumi.resou
             this.instanceTemplate = Objects.requireNonNull(instanceTemplate);
             return this;
         }
-
         public Builder instanceTemplate(String instanceTemplate) {
             this.instanceTemplate = Output.of(Objects.requireNonNull(instanceTemplate));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder targetSize(@Nullable Output<RegionInstanceGroupManagerVersionTargetSizeArgs> targetSize) {
             this.targetSize = targetSize;
             return this;
         }
-
         public Builder targetSize(@Nullable RegionInstanceGroupManagerVersionTargetSizeArgs targetSize) {
             this.targetSize = Output.ofNullable(targetSize);
             return this;
-        }
-        public RegionInstanceGroupManagerVersionArgs build() {
+        }        public RegionInstanceGroupManagerVersionArgs build() {
             return new RegionInstanceGroupManagerVersionArgs(instanceTemplate, name, targetSize);
         }
     }

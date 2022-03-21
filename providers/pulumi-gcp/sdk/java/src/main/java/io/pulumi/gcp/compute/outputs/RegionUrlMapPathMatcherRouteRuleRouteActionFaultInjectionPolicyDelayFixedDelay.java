@@ -78,12 +78,10 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPoli
             this.nanos = nanos;
             return this;
         }
-
         public Builder seconds(String seconds) {
             this.seconds = Objects.requireNonNull(seconds);
             return this;
-        }
-        public RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyDelayFixedDelay build() {
+        }        public RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyDelayFixedDelay build() {
             return new RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyDelayFixedDelay(nanos, seconds);
         }
     }

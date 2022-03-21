@@ -81,32 +81,26 @@ public final class ClusterCapacityProviderAssociationsCapacityProviderStrategyAr
             this.base = base;
             return this;
         }
-
         public Builder base(@Nullable Integer base) {
             this.base = Output.ofNullable(base);
             return this;
         }
-
         public Builder capacityProvider(Output<Either<ClusterCapacityProviderAssociationsCapacityProvider,String>> capacityProvider) {
             this.capacityProvider = Objects.requireNonNull(capacityProvider);
             return this;
         }
-
         public Builder capacityProvider(Either<ClusterCapacityProviderAssociationsCapacityProvider,String> capacityProvider) {
             this.capacityProvider = Output.of(Objects.requireNonNull(capacityProvider));
             return this;
         }
-
         public Builder weight(@Nullable Output<Integer> weight) {
             this.weight = weight;
             return this;
         }
-
         public Builder weight(@Nullable Integer weight) {
             this.weight = Output.ofNullable(weight);
             return this;
-        }
-        public ClusterCapacityProviderAssociationsCapacityProviderStrategyArgs build() {
+        }        public ClusterCapacityProviderAssociationsCapacityProviderStrategyArgs build() {
             return new ClusterCapacityProviderAssociationsCapacityProviderStrategyArgs(base, capacityProvider, weight);
         }
     }

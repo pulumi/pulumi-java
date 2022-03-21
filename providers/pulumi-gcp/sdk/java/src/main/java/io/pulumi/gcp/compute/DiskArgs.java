@@ -383,172 +383,141 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder diskEncryptionKey(@Nullable Output<DiskDiskEncryptionKeyArgs> diskEncryptionKey) {
             this.diskEncryptionKey = diskEncryptionKey;
             return this;
         }
-
         public Builder diskEncryptionKey(@Nullable DiskDiskEncryptionKeyArgs diskEncryptionKey) {
             this.diskEncryptionKey = Output.ofNullable(diskEncryptionKey);
             return this;
         }
-
         public Builder image(@Nullable Output<String> image) {
             this.image = image;
             return this;
         }
-
         public Builder image(@Nullable String image) {
             this.image = Output.ofNullable(image);
             return this;
         }
-
         public Builder $interface(@Nullable Output<String> $interface) {
             this.$interface = $interface;
             return this;
         }
-
         public Builder $interface(@Nullable String $interface) {
             this.$interface = Output.ofNullable($interface);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder multiWriter(@Nullable Output<Boolean> multiWriter) {
             this.multiWriter = multiWriter;
             return this;
         }
-
         public Builder multiWriter(@Nullable Boolean multiWriter) {
             this.multiWriter = Output.ofNullable(multiWriter);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder physicalBlockSizeBytes(@Nullable Output<Integer> physicalBlockSizeBytes) {
             this.physicalBlockSizeBytes = physicalBlockSizeBytes;
             return this;
         }
-
         public Builder physicalBlockSizeBytes(@Nullable Integer physicalBlockSizeBytes) {
             this.physicalBlockSizeBytes = Output.ofNullable(physicalBlockSizeBytes);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder provisionedIops(@Nullable Output<Integer> provisionedIops) {
             this.provisionedIops = provisionedIops;
             return this;
         }
-
         public Builder provisionedIops(@Nullable Integer provisionedIops) {
             this.provisionedIops = Output.ofNullable(provisionedIops);
             return this;
         }
-
         public Builder resourcePolicies(@Nullable Output<List<String>> resourcePolicies) {
             this.resourcePolicies = resourcePolicies;
             return this;
         }
-
         public Builder resourcePolicies(@Nullable List<String> resourcePolicies) {
             this.resourcePolicies = Output.ofNullable(resourcePolicies);
             return this;
         }
-
+        public Builder resourcePolicies(String... resourcePolicies) {
+            return resourcePolicies(List.of(resourcePolicies));
+        }
         public Builder size(@Nullable Output<Integer> size) {
             this.size = size;
             return this;
         }
-
         public Builder size(@Nullable Integer size) {
             this.size = Output.ofNullable(size);
             return this;
         }
-
         public Builder snapshot(@Nullable Output<String> snapshot) {
             this.snapshot = snapshot;
             return this;
         }
-
         public Builder snapshot(@Nullable String snapshot) {
             this.snapshot = Output.ofNullable(snapshot);
             return this;
         }
-
         public Builder sourceImageEncryptionKey(@Nullable Output<DiskSourceImageEncryptionKeyArgs> sourceImageEncryptionKey) {
             this.sourceImageEncryptionKey = sourceImageEncryptionKey;
             return this;
         }
-
         public Builder sourceImageEncryptionKey(@Nullable DiskSourceImageEncryptionKeyArgs sourceImageEncryptionKey) {
             this.sourceImageEncryptionKey = Output.ofNullable(sourceImageEncryptionKey);
             return this;
         }
-
         public Builder sourceSnapshotEncryptionKey(@Nullable Output<DiskSourceSnapshotEncryptionKeyArgs> sourceSnapshotEncryptionKey) {
             this.sourceSnapshotEncryptionKey = sourceSnapshotEncryptionKey;
             return this;
         }
-
         public Builder sourceSnapshotEncryptionKey(@Nullable DiskSourceSnapshotEncryptionKeyArgs sourceSnapshotEncryptionKey) {
             this.sourceSnapshotEncryptionKey = Output.ofNullable(sourceSnapshotEncryptionKey);
             return this;
         }
-
         public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = Output.ofNullable(type);
             return this;
         }
-
         public Builder zone(@Nullable Output<String> zone) {
             this.zone = zone;
             return this;
         }
-
         public Builder zone(@Nullable String zone) {
             this.zone = Output.ofNullable(zone);
             return this;
-        }
-        public DiskArgs build() {
+        }        public DiskArgs build() {
             return new DiskArgs(description, diskEncryptionKey, image, $interface, labels, multiWriter, name, physicalBlockSizeBytes, project, provisionedIops, resourcePolicies, size, snapshot, sourceImageEncryptionKey, sourceSnapshotEncryptionKey, type, zone);
         }
     }

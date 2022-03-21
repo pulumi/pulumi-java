@@ -86,32 +86,26 @@ public final class ManagedZoneServiceDirectoryConfigNamespaceArgs extends io.pul
             this.deletionTime = deletionTime;
             return this;
         }
-
         public Builder deletionTime(@Nullable String deletionTime) {
             this.deletionTime = Output.ofNullable(deletionTime);
             return this;
         }
-
         public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder namespaceUrl(@Nullable Output<String> namespaceUrl) {
             this.namespaceUrl = namespaceUrl;
             return this;
         }
-
         public Builder namespaceUrl(@Nullable String namespaceUrl) {
             this.namespaceUrl = Output.ofNullable(namespaceUrl);
             return this;
-        }
-        public ManagedZoneServiceDirectoryConfigNamespaceArgs build() {
+        }        public ManagedZoneServiceDirectoryConfigNamespaceArgs build() {
             return new ManagedZoneServiceDirectoryConfigNamespaceArgs(deletionTime, kind, namespaceUrl);
         }
     }

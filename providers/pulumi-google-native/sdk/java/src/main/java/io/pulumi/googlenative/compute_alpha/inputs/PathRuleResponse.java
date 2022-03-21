@@ -111,22 +111,21 @@ public final class PathRuleResponse extends io.pulumi.resources.InvokeArgs {
             this.paths = Objects.requireNonNull(paths);
             return this;
         }
-
+        public Builder paths(String... paths) {
+            return paths(List.of(paths));
+        }
         public Builder routeAction(HttpRouteActionResponse routeAction) {
             this.routeAction = Objects.requireNonNull(routeAction);
             return this;
         }
-
         public Builder service(String service) {
             this.service = Objects.requireNonNull(service);
             return this;
         }
-
         public Builder urlRedirect(HttpRedirectActionResponse urlRedirect) {
             this.urlRedirect = Objects.requireNonNull(urlRedirect);
             return this;
-        }
-        public PathRuleResponse build() {
+        }        public PathRuleResponse build() {
             return new PathRuleResponse(paths, routeAction, service, urlRedirect);
         }
     }

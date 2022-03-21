@@ -45,8 +45,7 @@ public final class RuleGroupLabelSummary {
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
-        }
-        public RuleGroupLabelSummary build() {
+        }        public RuleGroupLabelSummary build() {
             return new RuleGroupLabelSummary(name);
         }
     }

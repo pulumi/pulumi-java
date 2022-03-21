@@ -95,17 +95,20 @@ public final class GooglePrivacyDlpV2DeltaPresenceEstimationConfigResponse exten
             this.auxiliaryTables = Objects.requireNonNull(auxiliaryTables);
             return this;
         }
-
+        public Builder auxiliaryTables(GooglePrivacyDlpV2StatisticalTableResponse... auxiliaryTables) {
+            return auxiliaryTables(List.of(auxiliaryTables));
+        }
         public Builder quasiIds(List<GooglePrivacyDlpV2QuasiIdResponse> quasiIds) {
             this.quasiIds = Objects.requireNonNull(quasiIds);
             return this;
         }
-
+        public Builder quasiIds(GooglePrivacyDlpV2QuasiIdResponse... quasiIds) {
+            return quasiIds(List.of(quasiIds));
+        }
         public Builder regionCode(String regionCode) {
             this.regionCode = Objects.requireNonNull(regionCode);
             return this;
-        }
-        public GooglePrivacyDlpV2DeltaPresenceEstimationConfigResponse build() {
+        }        public GooglePrivacyDlpV2DeltaPresenceEstimationConfigResponse build() {
             return new GooglePrivacyDlpV2DeltaPresenceEstimationConfigResponse(auxiliaryTables, quasiIds, regionCode);
         }
     }

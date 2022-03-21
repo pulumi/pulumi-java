@@ -121,22 +121,18 @@ public final class RoutineArgument {
             this.argumentKind = argumentKind;
             return this;
         }
-
         public Builder dataType(@Nullable String dataType) {
             this.dataType = dataType;
             return this;
         }
-
         public Builder mode(@Nullable String mode) {
             this.mode = mode;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
-        }
-        public RoutineArgument build() {
+        }        public RoutineArgument build() {
             return new RoutineArgument(argumentKind, dataType, mode, name);
         }
     }

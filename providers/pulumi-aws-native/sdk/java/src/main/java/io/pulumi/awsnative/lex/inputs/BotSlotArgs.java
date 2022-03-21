@@ -121,62 +121,50 @@ public final class BotSlotArgs extends io.pulumi.resources.ResourceArgs {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder multipleValuesSetting(@Nullable Output<BotMultipleValuesSettingArgs> multipleValuesSetting) {
             this.multipleValuesSetting = multipleValuesSetting;
             return this;
         }
-
         public Builder multipleValuesSetting(@Nullable BotMultipleValuesSettingArgs multipleValuesSetting) {
             this.multipleValuesSetting = Output.ofNullable(multipleValuesSetting);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder obfuscationSetting(@Nullable Output<BotObfuscationSettingArgs> obfuscationSetting) {
             this.obfuscationSetting = obfuscationSetting;
             return this;
         }
-
         public Builder obfuscationSetting(@Nullable BotObfuscationSettingArgs obfuscationSetting) {
             this.obfuscationSetting = Output.ofNullable(obfuscationSetting);
             return this;
         }
-
         public Builder slotTypeName(Output<String> slotTypeName) {
             this.slotTypeName = Objects.requireNonNull(slotTypeName);
             return this;
         }
-
         public Builder slotTypeName(String slotTypeName) {
             this.slotTypeName = Output.of(Objects.requireNonNull(slotTypeName));
             return this;
         }
-
         public Builder valueElicitationSetting(Output<BotSlotValueElicitationSettingArgs> valueElicitationSetting) {
             this.valueElicitationSetting = Objects.requireNonNull(valueElicitationSetting);
             return this;
         }
-
         public Builder valueElicitationSetting(BotSlotValueElicitationSettingArgs valueElicitationSetting) {
             this.valueElicitationSetting = Output.of(Objects.requireNonNull(valueElicitationSetting));
             return this;
-        }
-        public BotSlotArgs build() {
+        }        public BotSlotArgs build() {
             return new BotSlotArgs(description, multipleValuesSetting, name, obfuscationSetting, slotTypeName, valueElicitationSetting);
         }
     }

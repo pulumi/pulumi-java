@@ -281,47 +281,56 @@ public final class ServiceTemplateSpecContainer {
             this.args = args;
             return this;
         }
-
+        public Builder args(String... args) {
+            return args(List.of(args));
+        }
         public Builder commands(@Nullable List<String> commands) {
             this.commands = commands;
             return this;
         }
-
+        public Builder commands(String... commands) {
+            return commands(List.of(commands));
+        }
         public Builder envFroms(@Nullable List<ServiceTemplateSpecContainerEnvFrom> envFroms) {
             this.envFroms = envFroms;
             return this;
         }
-
+        public Builder envFroms(ServiceTemplateSpecContainerEnvFrom... envFroms) {
+            return envFroms(List.of(envFroms));
+        }
         public Builder envs(@Nullable List<ServiceTemplateSpecContainerEnv> envs) {
             this.envs = envs;
             return this;
         }
-
+        public Builder envs(ServiceTemplateSpecContainerEnv... envs) {
+            return envs(List.of(envs));
+        }
         public Builder image(String image) {
             this.image = Objects.requireNonNull(image);
             return this;
         }
-
         public Builder ports(@Nullable List<ServiceTemplateSpecContainerPort> ports) {
             this.ports = ports;
             return this;
         }
-
+        public Builder ports(ServiceTemplateSpecContainerPort... ports) {
+            return ports(List.of(ports));
+        }
         public Builder resources(@Nullable ServiceTemplateSpecContainerResources resources) {
             this.resources = resources;
             return this;
         }
-
         public Builder volumeMounts(@Nullable List<ServiceTemplateSpecContainerVolumeMount> volumeMounts) {
             this.volumeMounts = volumeMounts;
             return this;
         }
-
+        public Builder volumeMounts(ServiceTemplateSpecContainerVolumeMount... volumeMounts) {
+            return volumeMounts(List.of(volumeMounts));
+        }
         public Builder workingDir(@Nullable String workingDir) {
             this.workingDir = workingDir;
             return this;
-        }
-        public ServiceTemplateSpecContainer build() {
+        }        public ServiceTemplateSpecContainer build() {
             return new ServiceTemplateSpecContainer(args, commands, envFroms, envs, image, ports, resources, volumeMounts, workingDir);
         }
     }

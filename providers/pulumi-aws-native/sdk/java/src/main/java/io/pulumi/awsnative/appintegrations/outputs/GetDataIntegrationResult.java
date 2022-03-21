@@ -121,27 +121,25 @@ public final class GetDataIntegrationResult {
             this.dataIntegrationArn = dataIntegrationArn;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder tags(@Nullable List<DataIntegrationTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetDataIntegrationResult build() {
+        public Builder tags(DataIntegrationTag... tags) {
+            return tags(List.of(tags));
+        }        public GetDataIntegrationResult build() {
             return new GetDataIntegrationResult(dataIntegrationArn, description, id, name, tags);
         }
     }

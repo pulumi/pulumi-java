@@ -71,12 +71,10 @@ public final class ListOnlineEndpointKeysResult {
             this.primaryKey = primaryKey;
             return this;
         }
-
         public Builder secondaryKey(@Nullable String secondaryKey) {
             this.secondaryKey = secondaryKey;
             return this;
-        }
-        public ListOnlineEndpointKeysResult build() {
+        }        public ListOnlineEndpointKeysResult build() {
             return new ListOnlineEndpointKeysResult(primaryKey, secondaryKey);
         }
     }

@@ -92,32 +92,29 @@ public final class LocalGatewayRouteTableVPCAssociationArgs extends io.pulumi.re
             this.localGatewayRouteTableId = Objects.requireNonNull(localGatewayRouteTableId);
             return this;
         }
-
         public Builder localGatewayRouteTableId(String localGatewayRouteTableId) {
             this.localGatewayRouteTableId = Output.of(Objects.requireNonNull(localGatewayRouteTableId));
             return this;
         }
-
         public Builder tags(@Nullable Output<List<LocalGatewayRouteTableVPCAssociationTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<LocalGatewayRouteTableVPCAssociationTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
+        public Builder tags(LocalGatewayRouteTableVPCAssociationTagArgs... tags) {
+            return tags(List.of(tags));
+        }
         public Builder vpcId(Output<String> vpcId) {
             this.vpcId = Objects.requireNonNull(vpcId);
             return this;
         }
-
         public Builder vpcId(String vpcId) {
             this.vpcId = Output.of(Objects.requireNonNull(vpcId));
             return this;
-        }
-        public LocalGatewayRouteTableVPCAssociationArgs build() {
+        }        public LocalGatewayRouteTableVPCAssociationArgs build() {
             return new LocalGatewayRouteTableVPCAssociationArgs(localGatewayRouteTableId, tags, vpcId);
         }
     }

@@ -51,8 +51,7 @@ public final class ServiceTemplateSpecContainerEnvFromConfigMapRefLocalObjectRef
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public ServiceTemplateSpecContainerEnvFromConfigMapRefLocalObjectReference build() {
+        }        public ServiceTemplateSpecContainerEnvFromConfigMapRefLocalObjectReference build() {
             return new ServiceTemplateSpecContainerEnvFromConfigMapRefLocalObjectReference(name);
         }
     }

@@ -130,52 +130,48 @@ public final class AndroidTestLoopArgs extends io.pulumi.resources.ResourceArgs 
             this.appApk = appApk;
             return this;
         }
-
         public Builder appApk(@Nullable FileReferenceArgs appApk) {
             this.appApk = Output.ofNullable(appApk);
             return this;
         }
-
         public Builder appBundle(@Nullable Output<AppBundleArgs> appBundle) {
             this.appBundle = appBundle;
             return this;
         }
-
         public Builder appBundle(@Nullable AppBundleArgs appBundle) {
             this.appBundle = Output.ofNullable(appBundle);
             return this;
         }
-
         public Builder appPackageId(@Nullable Output<String> appPackageId) {
             this.appPackageId = appPackageId;
             return this;
         }
-
         public Builder appPackageId(@Nullable String appPackageId) {
             this.appPackageId = Output.ofNullable(appPackageId);
             return this;
         }
-
         public Builder scenarioLabels(@Nullable Output<List<String>> scenarioLabels) {
             this.scenarioLabels = scenarioLabels;
             return this;
         }
-
         public Builder scenarioLabels(@Nullable List<String> scenarioLabels) {
             this.scenarioLabels = Output.ofNullable(scenarioLabels);
             return this;
         }
-
+        public Builder scenarioLabels(String... scenarioLabels) {
+            return scenarioLabels(List.of(scenarioLabels));
+        }
         public Builder scenarios(@Nullable Output<List<Integer>> scenarios) {
             this.scenarios = scenarios;
             return this;
         }
-
         public Builder scenarios(@Nullable List<Integer> scenarios) {
             this.scenarios = Output.ofNullable(scenarios);
             return this;
         }
-        public AndroidTestLoopArgs build() {
+        public Builder scenarios(Integer... scenarios) {
+            return scenarios(List.of(scenarios));
+        }        public AndroidTestLoopArgs build() {
             return new AndroidTestLoopArgs(appApk, appBundle, appPackageId, scenarioLabels, scenarios);
         }
     }

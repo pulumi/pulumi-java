@@ -90,32 +90,26 @@ public final class VendorSkuPreviewArgs extends io.pulumi.resources.ResourceArgs
             this.previewSubscription = previewSubscription;
             return this;
         }
-
         public Builder previewSubscription(@Nullable String previewSubscription) {
             this.previewSubscription = Output.ofNullable(previewSubscription);
             return this;
         }
-
         public Builder skuName(Output<String> skuName) {
             this.skuName = Objects.requireNonNull(skuName);
             return this;
         }
-
         public Builder skuName(String skuName) {
             this.skuName = Output.of(Objects.requireNonNull(skuName));
             return this;
         }
-
         public Builder vendorName(Output<String> vendorName) {
             this.vendorName = Objects.requireNonNull(vendorName);
             return this;
         }
-
         public Builder vendorName(String vendorName) {
             this.vendorName = Output.of(Objects.requireNonNull(vendorName));
             return this;
-        }
-        public VendorSkuPreviewArgs build() {
+        }        public VendorSkuPreviewArgs build() {
             return new VendorSkuPreviewArgs(previewSubscription, skuName, vendorName);
         }
     }

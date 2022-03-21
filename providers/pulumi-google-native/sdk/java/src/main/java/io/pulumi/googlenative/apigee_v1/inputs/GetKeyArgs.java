@@ -88,22 +88,18 @@ public final class GetKeyArgs extends io.pulumi.resources.InvokeArgs {
             this.appId = Objects.requireNonNull(appId);
             return this;
         }
-
         public Builder developerId(String developerId) {
             this.developerId = Objects.requireNonNull(developerId);
             return this;
         }
-
         public Builder keyId(String keyId) {
             this.keyId = Objects.requireNonNull(keyId);
             return this;
         }
-
         public Builder organizationId(String organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
-        }
-        public GetKeyArgs build() {
+        }        public GetKeyArgs build() {
             return new GetKeyArgs(appId, developerId, keyId, organizationId);
         }
     }

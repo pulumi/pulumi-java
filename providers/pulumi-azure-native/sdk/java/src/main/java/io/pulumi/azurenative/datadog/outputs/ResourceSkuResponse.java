@@ -51,8 +51,7 @@ public final class ResourceSkuResponse {
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public ResourceSkuResponse build() {
+        }        public ResourceSkuResponse build() {
             return new ResourceSkuResponse(name);
         }
     }

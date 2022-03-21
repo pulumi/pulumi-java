@@ -125,52 +125,48 @@ public final class MaintenanceConfigurationArgs extends io.pulumi.resources.Reso
             this.configName = configName;
             return this;
         }
-
         public Builder configName(@Nullable String configName) {
             this.configName = Output.ofNullable(configName);
             return this;
         }
-
         public Builder notAllowedTime(@Nullable Output<List<TimeSpanArgs>> notAllowedTime) {
             this.notAllowedTime = notAllowedTime;
             return this;
         }
-
         public Builder notAllowedTime(@Nullable List<TimeSpanArgs> notAllowedTime) {
             this.notAllowedTime = Output.ofNullable(notAllowedTime);
             return this;
         }
-
+        public Builder notAllowedTime(TimeSpanArgs... notAllowedTime) {
+            return notAllowedTime(List.of(notAllowedTime));
+        }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder resourceName(Output<String> resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
         }
-
         public Builder resourceName(String resourceName) {
             this.resourceName = Output.of(Objects.requireNonNull(resourceName));
             return this;
         }
-
         public Builder timeInWeek(@Nullable Output<List<TimeInWeekArgs>> timeInWeek) {
             this.timeInWeek = timeInWeek;
             return this;
         }
-
         public Builder timeInWeek(@Nullable List<TimeInWeekArgs> timeInWeek) {
             this.timeInWeek = Output.ofNullable(timeInWeek);
             return this;
         }
-        public MaintenanceConfigurationArgs build() {
+        public Builder timeInWeek(TimeInWeekArgs... timeInWeek) {
+            return timeInWeek(List.of(timeInWeek));
+        }        public MaintenanceConfigurationArgs build() {
             return new MaintenanceConfigurationArgs(configName, notAllowedTime, resourceGroupName, resourceName, timeInWeek);
         }
     }

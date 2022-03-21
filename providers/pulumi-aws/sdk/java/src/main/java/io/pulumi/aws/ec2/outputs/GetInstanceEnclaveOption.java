@@ -51,8 +51,7 @@ public final class GetInstanceEnclaveOption {
         public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
-        }
-        public GetInstanceEnclaveOption build() {
+        }        public GetInstanceEnclaveOption build() {
             return new GetInstanceEnclaveOption(enabled);
         }
     }

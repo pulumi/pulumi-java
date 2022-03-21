@@ -131,32 +131,26 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
             this.destinationSchema = Objects.requireNonNull(destinationSchema);
             return this;
         }
-
         public Builder kinesisFirehoseOutput(@Nullable ApplicationApplicationConfigurationSqlApplicationConfigurationOutputKinesisFirehoseOutput kinesisFirehoseOutput) {
             this.kinesisFirehoseOutput = kinesisFirehoseOutput;
             return this;
         }
-
         public Builder kinesisStreamsOutput(@Nullable ApplicationApplicationConfigurationSqlApplicationConfigurationOutputKinesisStreamsOutput kinesisStreamsOutput) {
             this.kinesisStreamsOutput = kinesisStreamsOutput;
             return this;
         }
-
         public Builder lambdaOutput(@Nullable ApplicationApplicationConfigurationSqlApplicationConfigurationOutputLambdaOutput lambdaOutput) {
             this.lambdaOutput = lambdaOutput;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder outputId(@Nullable String outputId) {
             this.outputId = outputId;
             return this;
-        }
-        public ApplicationApplicationConfigurationSqlApplicationConfigurationOutput build() {
+        }        public ApplicationApplicationConfigurationSqlApplicationConfigurationOutput build() {
             return new ApplicationApplicationConfigurationSqlApplicationConfigurationOutput(destinationSchema, kinesisFirehoseOutput, kinesisStreamsOutput, lambdaOutput, name, outputId);
         }
     }

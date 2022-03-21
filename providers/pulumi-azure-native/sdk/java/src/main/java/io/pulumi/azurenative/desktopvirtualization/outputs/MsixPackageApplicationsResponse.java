@@ -151,37 +151,30 @@ public final class MsixPackageApplicationsResponse {
             this.appId = appId;
             return this;
         }
-
         public Builder appUserModelID(@Nullable String appUserModelID) {
             this.appUserModelID = appUserModelID;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder friendlyName(@Nullable String friendlyName) {
             this.friendlyName = friendlyName;
             return this;
         }
-
         public Builder iconImageName(@Nullable String iconImageName) {
             this.iconImageName = iconImageName;
             return this;
         }
-
         public Builder rawIcon(@Nullable String rawIcon) {
             this.rawIcon = rawIcon;
             return this;
         }
-
         public Builder rawPng(@Nullable String rawPng) {
             this.rawPng = rawPng;
             return this;
-        }
-        public MsixPackageApplicationsResponse build() {
+        }        public MsixPackageApplicationsResponse build() {
             return new MsixPackageApplicationsResponse(appId, appUserModelID, description, friendlyName, iconImageName, rawIcon, rawPng);
         }
     }

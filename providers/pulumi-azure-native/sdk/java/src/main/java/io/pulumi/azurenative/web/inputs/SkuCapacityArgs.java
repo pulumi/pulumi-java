@@ -127,52 +127,42 @@ public final class SkuCapacityArgs extends io.pulumi.resources.ResourceArgs {
             this.$default = $default;
             return this;
         }
-
         public Builder $default(@Nullable Integer $default) {
             this.$default = Output.ofNullable($default);
             return this;
         }
-
         public Builder elasticMaximum(@Nullable Output<Integer> elasticMaximum) {
             this.elasticMaximum = elasticMaximum;
             return this;
         }
-
         public Builder elasticMaximum(@Nullable Integer elasticMaximum) {
             this.elasticMaximum = Output.ofNullable(elasticMaximum);
             return this;
         }
-
         public Builder maximum(@Nullable Output<Integer> maximum) {
             this.maximum = maximum;
             return this;
         }
-
         public Builder maximum(@Nullable Integer maximum) {
             this.maximum = Output.ofNullable(maximum);
             return this;
         }
-
         public Builder minimum(@Nullable Output<Integer> minimum) {
             this.minimum = minimum;
             return this;
         }
-
         public Builder minimum(@Nullable Integer minimum) {
             this.minimum = Output.ofNullable(minimum);
             return this;
         }
-
         public Builder scaleType(@Nullable Output<String> scaleType) {
             this.scaleType = scaleType;
             return this;
         }
-
         public Builder scaleType(@Nullable String scaleType) {
             this.scaleType = Output.ofNullable(scaleType);
             return this;
-        }
-        public SkuCapacityArgs build() {
+        }        public SkuCapacityArgs build() {
             return new SkuCapacityArgs($default, elasticMaximum, maximum, minimum, scaleType);
         }
     }

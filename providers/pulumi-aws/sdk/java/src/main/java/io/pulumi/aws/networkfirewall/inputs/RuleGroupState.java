@@ -205,102 +205,82 @@ public final class RuleGroupState extends io.pulumi.resources.ResourceArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder capacity(@Nullable Output<Integer> capacity) {
             this.capacity = capacity;
             return this;
         }
-
         public Builder capacity(@Nullable Integer capacity) {
             this.capacity = Output.ofNullable(capacity);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder ruleGroup(@Nullable Output<RuleGroupRuleGroupGetArgs> ruleGroup) {
             this.ruleGroup = ruleGroup;
             return this;
         }
-
         public Builder ruleGroup(@Nullable RuleGroupRuleGroupGetArgs ruleGroup) {
             this.ruleGroup = Output.ofNullable(ruleGroup);
             return this;
         }
-
         public Builder rules(@Nullable Output<String> rules) {
             this.rules = rules;
             return this;
         }
-
         public Builder rules(@Nullable String rules) {
             this.rules = Output.ofNullable(rules);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
-
         public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = Output.ofNullable(type);
             return this;
         }
-
         public Builder updateToken(@Nullable Output<String> updateToken) {
             this.updateToken = updateToken;
             return this;
         }
-
         public Builder updateToken(@Nullable String updateToken) {
             this.updateToken = Output.ofNullable(updateToken);
             return this;
-        }
-        public RuleGroupState build() {
+        }        public RuleGroupState build() {
             return new RuleGroupState(arn, capacity, description, name, ruleGroup, rules, tags, tagsAll, type, updateToken);
         }
     }

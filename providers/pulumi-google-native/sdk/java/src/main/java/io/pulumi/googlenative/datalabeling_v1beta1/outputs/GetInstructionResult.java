@@ -167,42 +167,37 @@ public final class GetInstructionResult {
             this.blockingResources = Objects.requireNonNull(blockingResources);
             return this;
         }
-
+        public Builder blockingResources(String... blockingResources) {
+            return blockingResources(List.of(blockingResources));
+        }
         public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder dataType(String dataType) {
             this.dataType = Objects.requireNonNull(dataType);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder pdfInstruction(GoogleCloudDatalabelingV1beta1PdfInstructionResponse pdfInstruction) {
             this.pdfInstruction = Objects.requireNonNull(pdfInstruction);
             return this;
         }
-
         public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
-        }
-        public GetInstructionResult build() {
+        }        public GetInstructionResult build() {
             return new GetInstructionResult(blockingResources, createTime, dataType, description, displayName, name, pdfInstruction, updateTime);
         }
     }

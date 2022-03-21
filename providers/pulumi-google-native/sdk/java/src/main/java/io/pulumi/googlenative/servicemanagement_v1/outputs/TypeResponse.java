@@ -137,32 +137,35 @@ public final class TypeResponse {
             this.fields = Objects.requireNonNull(fields);
             return this;
         }
-
+        public Builder fields(FieldResponse... fields) {
+            return fields(List.of(fields));
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder oneofs(List<String> oneofs) {
             this.oneofs = Objects.requireNonNull(oneofs);
             return this;
         }
-
+        public Builder oneofs(String... oneofs) {
+            return oneofs(List.of(oneofs));
+        }
         public Builder options(List<OptionResponse> options) {
             this.options = Objects.requireNonNull(options);
             return this;
         }
-
+        public Builder options(OptionResponse... options) {
+            return options(List.of(options));
+        }
         public Builder sourceContext(SourceContextResponse sourceContext) {
             this.sourceContext = Objects.requireNonNull(sourceContext);
             return this;
         }
-
         public Builder syntax(String syntax) {
             this.syntax = Objects.requireNonNull(syntax);
             return this;
-        }
-        public TypeResponse build() {
+        }        public TypeResponse build() {
             return new TypeResponse(fields, name, oneofs, options, sourceContext, syntax);
         }
     }

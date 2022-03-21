@@ -89,17 +89,14 @@ public final class ImageTemplateVmProfileResponse {
             this.osDiskSizeGB = osDiskSizeGB;
             return this;
         }
-
         public Builder vmSize(@Nullable String vmSize) {
             this.vmSize = vmSize;
             return this;
         }
-
         public Builder vnetConfig(@Nullable VirtualNetworkConfigResponse vnetConfig) {
             this.vnetConfig = vnetConfig;
             return this;
-        }
-        public ImageTemplateVmProfileResponse build() {
+        }        public ImageTemplateVmProfileResponse build() {
             return new ImageTemplateVmProfileResponse(osDiskSizeGB, vmSize, vnetConfig);
         }
     }

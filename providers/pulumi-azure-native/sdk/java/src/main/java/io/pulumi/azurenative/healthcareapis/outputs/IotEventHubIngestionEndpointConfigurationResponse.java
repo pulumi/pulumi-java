@@ -87,17 +87,14 @@ public final class IotEventHubIngestionEndpointConfigurationResponse {
             this.consumerGroup = consumerGroup;
             return this;
         }
-
         public Builder eventHubName(@Nullable String eventHubName) {
             this.eventHubName = eventHubName;
             return this;
         }
-
         public Builder fullyQualifiedEventHubNamespace(@Nullable String fullyQualifiedEventHubNamespace) {
             this.fullyQualifiedEventHubNamespace = fullyQualifiedEventHubNamespace;
             return this;
-        }
-        public IotEventHubIngestionEndpointConfigurationResponse build() {
+        }        public IotEventHubIngestionEndpointConfigurationResponse build() {
             return new IotEventHubIngestionEndpointConfigurationResponse(consumerGroup, eventHubName, fullyQualifiedEventHubNamespace);
         }
     }

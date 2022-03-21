@@ -222,102 +222,88 @@ public final class CxEntityTypeState extends io.pulumi.resources.ResourceArgs {
             this.autoExpansionMode = autoExpansionMode;
             return this;
         }
-
         public Builder autoExpansionMode(@Nullable String autoExpansionMode) {
             this.autoExpansionMode = Output.ofNullable(autoExpansionMode);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder enableFuzzyExtraction(@Nullable Output<Boolean> enableFuzzyExtraction) {
             this.enableFuzzyExtraction = enableFuzzyExtraction;
             return this;
         }
-
         public Builder enableFuzzyExtraction(@Nullable Boolean enableFuzzyExtraction) {
             this.enableFuzzyExtraction = Output.ofNullable(enableFuzzyExtraction);
             return this;
         }
-
         public Builder entities(@Nullable Output<List<CxEntityTypeEntityGetArgs>> entities) {
             this.entities = entities;
             return this;
         }
-
         public Builder entities(@Nullable List<CxEntityTypeEntityGetArgs> entities) {
             this.entities = Output.ofNullable(entities);
             return this;
         }
-
+        public Builder entities(CxEntityTypeEntityGetArgs... entities) {
+            return entities(List.of(entities));
+        }
         public Builder excludedPhrases(@Nullable Output<List<CxEntityTypeExcludedPhraseGetArgs>> excludedPhrases) {
             this.excludedPhrases = excludedPhrases;
             return this;
         }
-
         public Builder excludedPhrases(@Nullable List<CxEntityTypeExcludedPhraseGetArgs> excludedPhrases) {
             this.excludedPhrases = Output.ofNullable(excludedPhrases);
             return this;
         }
-
+        public Builder excludedPhrases(CxEntityTypeExcludedPhraseGetArgs... excludedPhrases) {
+            return excludedPhrases(List.of(excludedPhrases));
+        }
         public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder languageCode(@Nullable Output<String> languageCode) {
             this.languageCode = languageCode;
             return this;
         }
-
         public Builder languageCode(@Nullable String languageCode) {
             this.languageCode = Output.ofNullable(languageCode);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder parent(@Nullable Output<String> parent) {
             this.parent = parent;
             return this;
         }
-
         public Builder parent(@Nullable String parent) {
             this.parent = Output.ofNullable(parent);
             return this;
         }
-
         public Builder redact(@Nullable Output<Boolean> redact) {
             this.redact = redact;
             return this;
         }
-
         public Builder redact(@Nullable Boolean redact) {
             this.redact = Output.ofNullable(redact);
             return this;
-        }
-        public CxEntityTypeState build() {
+        }        public CxEntityTypeState build() {
             return new CxEntityTypeState(autoExpansionMode, displayName, enableFuzzyExtraction, entities, excludedPhrases, kind, languageCode, name, parent, redact);
         }
     }

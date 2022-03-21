@@ -86,17 +86,17 @@ public final class GetPolicyDocumentStatementCondition {
             this.test = Objects.requireNonNull(test);
             return this;
         }
-
         public Builder values(List<String> values) {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-
+        public Builder values(String... values) {
+            return values(List.of(values));
+        }
         public Builder variable(String variable) {
             this.variable = Objects.requireNonNull(variable);
             return this;
-        }
-        public GetPolicyDocumentStatementCondition build() {
+        }        public GetPolicyDocumentStatementCondition build() {
             return new GetPolicyDocumentStatementCondition(test, values, variable);
         }
     }

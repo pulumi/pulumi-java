@@ -192,47 +192,38 @@ public final class FactoryGitHubConfigurationResponse extends io.pulumi.resource
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder clientId(@Nullable String clientId) {
             this.clientId = clientId;
             return this;
         }
-
         public Builder clientSecret(@Nullable GitHubClientSecretResponse clientSecret) {
             this.clientSecret = clientSecret;
             return this;
         }
-
         public Builder collaborationBranch(String collaborationBranch) {
             this.collaborationBranch = Objects.requireNonNull(collaborationBranch);
             return this;
         }
-
         public Builder hostName(@Nullable String hostName) {
             this.hostName = hostName;
             return this;
         }
-
         public Builder lastCommitId(@Nullable String lastCommitId) {
             this.lastCommitId = lastCommitId;
             return this;
         }
-
         public Builder repositoryName(String repositoryName) {
             this.repositoryName = Objects.requireNonNull(repositoryName);
             return this;
         }
-
         public Builder rootFolder(String rootFolder) {
             this.rootFolder = Objects.requireNonNull(rootFolder);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public FactoryGitHubConfigurationResponse build() {
+        }        public FactoryGitHubConfigurationResponse build() {
             return new FactoryGitHubConfigurationResponse(accountName, clientId, clientSecret, collaborationBranch, hostName, lastCommitId, repositoryName, rootFolder, type);
         }
     }

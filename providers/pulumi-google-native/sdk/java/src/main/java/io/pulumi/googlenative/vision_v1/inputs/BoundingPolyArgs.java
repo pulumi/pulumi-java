@@ -80,22 +80,24 @@ public final class BoundingPolyArgs extends io.pulumi.resources.ResourceArgs {
             this.normalizedVertices = normalizedVertices;
             return this;
         }
-
         public Builder normalizedVertices(@Nullable List<NormalizedVertexArgs> normalizedVertices) {
             this.normalizedVertices = Output.ofNullable(normalizedVertices);
             return this;
         }
-
+        public Builder normalizedVertices(NormalizedVertexArgs... normalizedVertices) {
+            return normalizedVertices(List.of(normalizedVertices));
+        }
         public Builder vertices(@Nullable Output<List<VertexArgs>> vertices) {
             this.vertices = vertices;
             return this;
         }
-
         public Builder vertices(@Nullable List<VertexArgs> vertices) {
             this.vertices = Output.ofNullable(vertices);
             return this;
         }
-        public BoundingPolyArgs build() {
+        public Builder vertices(VertexArgs... vertices) {
+            return vertices(List.of(vertices));
+        }        public BoundingPolyArgs build() {
             return new BoundingPolyArgs(normalizedVertices, vertices);
         }
     }

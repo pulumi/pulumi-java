@@ -56,12 +56,10 @@ public final class SigningProfileSignatureValidityPeriod {
             this.type = type;
             return this;
         }
-
         public Builder value(@Nullable Integer value) {
             this.value = value;
             return this;
-        }
-        public SigningProfileSignatureValidityPeriod build() {
+        }        public SigningProfileSignatureValidityPeriod build() {
             return new SigningProfileSignatureValidityPeriod(type, value);
         }
     }

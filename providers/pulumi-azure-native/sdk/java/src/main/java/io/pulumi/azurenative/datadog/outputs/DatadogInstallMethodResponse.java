@@ -87,17 +87,14 @@ public final class DatadogInstallMethodResponse {
             this.installerVersion = installerVersion;
             return this;
         }
-
         public Builder tool(@Nullable String tool) {
             this.tool = tool;
             return this;
         }
-
         public Builder toolVersion(@Nullable String toolVersion) {
             this.toolVersion = toolVersion;
             return this;
-        }
-        public DatadogInstallMethodResponse build() {
+        }        public DatadogInstallMethodResponse build() {
             return new DatadogInstallMethodResponse(installerVersion, tool, toolVersion);
         }
     }

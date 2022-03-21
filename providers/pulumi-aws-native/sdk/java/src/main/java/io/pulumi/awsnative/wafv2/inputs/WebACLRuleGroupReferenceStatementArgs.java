@@ -68,22 +68,21 @@ public final class WebACLRuleGroupReferenceStatementArgs extends io.pulumi.resou
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder arn(String arn) {
             this.arn = Output.of(Objects.requireNonNull(arn));
             return this;
         }
-
         public Builder excludedRules(@Nullable Output<List<WebACLExcludedRuleArgs>> excludedRules) {
             this.excludedRules = excludedRules;
             return this;
         }
-
         public Builder excludedRules(@Nullable List<WebACLExcludedRuleArgs> excludedRules) {
             this.excludedRules = Output.ofNullable(excludedRules);
             return this;
         }
-        public WebACLRuleGroupReferenceStatementArgs build() {
+        public Builder excludedRules(WebACLExcludedRuleArgs... excludedRules) {
+            return excludedRules(List.of(excludedRules));
+        }        public WebACLRuleGroupReferenceStatementArgs build() {
             return new WebACLRuleGroupReferenceStatementArgs(arn, excludedRules);
         }
     }

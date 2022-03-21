@@ -66,12 +66,10 @@ public final class GetNoteArgs extends io.pulumi.resources.InvokeArgs {
             this.noteId = Objects.requireNonNull(noteId);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetNoteArgs build() {
+        }        public GetNoteArgs build() {
             return new GetNoteArgs(noteId, project);
         }
     }

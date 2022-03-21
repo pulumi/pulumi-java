@@ -54,8 +54,7 @@ public final class GetRepositoryArgs extends io.pulumi.resources.InvokeArgs {
         public Builder repositoryName(String repositoryName) {
             this.repositoryName = Objects.requireNonNull(repositoryName);
             return this;
-        }
-        public GetRepositoryArgs build() {
+        }        public GetRepositoryArgs build() {
             return new GetRepositoryArgs(repositoryName);
         }
     }

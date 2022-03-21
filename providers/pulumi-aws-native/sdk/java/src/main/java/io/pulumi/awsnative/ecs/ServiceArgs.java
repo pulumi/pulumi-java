@@ -309,212 +309,188 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             this.capacityProviderStrategy = capacityProviderStrategy;
             return this;
         }
-
         public Builder capacityProviderStrategy(@Nullable List<ServiceCapacityProviderStrategyItemArgs> capacityProviderStrategy) {
             this.capacityProviderStrategy = Output.ofNullable(capacityProviderStrategy);
             return this;
         }
-
+        public Builder capacityProviderStrategy(ServiceCapacityProviderStrategyItemArgs... capacityProviderStrategy) {
+            return capacityProviderStrategy(List.of(capacityProviderStrategy));
+        }
         public Builder cluster(@Nullable Output<String> cluster) {
             this.cluster = cluster;
             return this;
         }
-
         public Builder cluster(@Nullable String cluster) {
             this.cluster = Output.ofNullable(cluster);
             return this;
         }
-
         public Builder deploymentConfiguration(@Nullable Output<ServiceDeploymentConfigurationArgs> deploymentConfiguration) {
             this.deploymentConfiguration = deploymentConfiguration;
             return this;
         }
-
         public Builder deploymentConfiguration(@Nullable ServiceDeploymentConfigurationArgs deploymentConfiguration) {
             this.deploymentConfiguration = Output.ofNullable(deploymentConfiguration);
             return this;
         }
-
         public Builder deploymentController(@Nullable Output<ServiceDeploymentControllerArgs> deploymentController) {
             this.deploymentController = deploymentController;
             return this;
         }
-
         public Builder deploymentController(@Nullable ServiceDeploymentControllerArgs deploymentController) {
             this.deploymentController = Output.ofNullable(deploymentController);
             return this;
         }
-
         public Builder desiredCount(@Nullable Output<Integer> desiredCount) {
             this.desiredCount = desiredCount;
             return this;
         }
-
         public Builder desiredCount(@Nullable Integer desiredCount) {
             this.desiredCount = Output.ofNullable(desiredCount);
             return this;
         }
-
         public Builder enableECSManagedTags(@Nullable Output<Boolean> enableECSManagedTags) {
             this.enableECSManagedTags = enableECSManagedTags;
             return this;
         }
-
         public Builder enableECSManagedTags(@Nullable Boolean enableECSManagedTags) {
             this.enableECSManagedTags = Output.ofNullable(enableECSManagedTags);
             return this;
         }
-
         public Builder enableExecuteCommand(@Nullable Output<Boolean> enableExecuteCommand) {
             this.enableExecuteCommand = enableExecuteCommand;
             return this;
         }
-
         public Builder enableExecuteCommand(@Nullable Boolean enableExecuteCommand) {
             this.enableExecuteCommand = Output.ofNullable(enableExecuteCommand);
             return this;
         }
-
         public Builder healthCheckGracePeriodSeconds(@Nullable Output<Integer> healthCheckGracePeriodSeconds) {
             this.healthCheckGracePeriodSeconds = healthCheckGracePeriodSeconds;
             return this;
         }
-
         public Builder healthCheckGracePeriodSeconds(@Nullable Integer healthCheckGracePeriodSeconds) {
             this.healthCheckGracePeriodSeconds = Output.ofNullable(healthCheckGracePeriodSeconds);
             return this;
         }
-
         public Builder launchType(@Nullable Output<ServiceLaunchType> launchType) {
             this.launchType = launchType;
             return this;
         }
-
         public Builder launchType(@Nullable ServiceLaunchType launchType) {
             this.launchType = Output.ofNullable(launchType);
             return this;
         }
-
         public Builder loadBalancers(@Nullable Output<List<ServiceLoadBalancerArgs>> loadBalancers) {
             this.loadBalancers = loadBalancers;
             return this;
         }
-
         public Builder loadBalancers(@Nullable List<ServiceLoadBalancerArgs> loadBalancers) {
             this.loadBalancers = Output.ofNullable(loadBalancers);
             return this;
         }
-
+        public Builder loadBalancers(ServiceLoadBalancerArgs... loadBalancers) {
+            return loadBalancers(List.of(loadBalancers));
+        }
         public Builder networkConfiguration(@Nullable Output<ServiceNetworkConfigurationArgs> networkConfiguration) {
             this.networkConfiguration = networkConfiguration;
             return this;
         }
-
         public Builder networkConfiguration(@Nullable ServiceNetworkConfigurationArgs networkConfiguration) {
             this.networkConfiguration = Output.ofNullable(networkConfiguration);
             return this;
         }
-
         public Builder placementConstraints(@Nullable Output<List<ServicePlacementConstraintArgs>> placementConstraints) {
             this.placementConstraints = placementConstraints;
             return this;
         }
-
         public Builder placementConstraints(@Nullable List<ServicePlacementConstraintArgs> placementConstraints) {
             this.placementConstraints = Output.ofNullable(placementConstraints);
             return this;
         }
-
+        public Builder placementConstraints(ServicePlacementConstraintArgs... placementConstraints) {
+            return placementConstraints(List.of(placementConstraints));
+        }
         public Builder placementStrategies(@Nullable Output<List<ServicePlacementStrategyArgs>> placementStrategies) {
             this.placementStrategies = placementStrategies;
             return this;
         }
-
         public Builder placementStrategies(@Nullable List<ServicePlacementStrategyArgs> placementStrategies) {
             this.placementStrategies = Output.ofNullable(placementStrategies);
             return this;
         }
-
+        public Builder placementStrategies(ServicePlacementStrategyArgs... placementStrategies) {
+            return placementStrategies(List.of(placementStrategies));
+        }
         public Builder platformVersion(@Nullable Output<String> platformVersion) {
             this.platformVersion = platformVersion;
             return this;
         }
-
         public Builder platformVersion(@Nullable String platformVersion) {
             this.platformVersion = Output.ofNullable(platformVersion);
             return this;
         }
-
         public Builder propagateTags(@Nullable Output<ServicePropagateTags> propagateTags) {
             this.propagateTags = propagateTags;
             return this;
         }
-
         public Builder propagateTags(@Nullable ServicePropagateTags propagateTags) {
             this.propagateTags = Output.ofNullable(propagateTags);
             return this;
         }
-
         public Builder role(@Nullable Output<String> role) {
             this.role = role;
             return this;
         }
-
         public Builder role(@Nullable String role) {
             this.role = Output.ofNullable(role);
             return this;
         }
-
         public Builder schedulingStrategy(@Nullable Output<ServiceSchedulingStrategy> schedulingStrategy) {
             this.schedulingStrategy = schedulingStrategy;
             return this;
         }
-
         public Builder schedulingStrategy(@Nullable ServiceSchedulingStrategy schedulingStrategy) {
             this.schedulingStrategy = Output.ofNullable(schedulingStrategy);
             return this;
         }
-
         public Builder serviceName(@Nullable Output<String> serviceName) {
             this.serviceName = serviceName;
             return this;
         }
-
         public Builder serviceName(@Nullable String serviceName) {
             this.serviceName = Output.ofNullable(serviceName);
             return this;
         }
-
         public Builder serviceRegistries(@Nullable Output<List<ServiceRegistryArgs>> serviceRegistries) {
             this.serviceRegistries = serviceRegistries;
             return this;
         }
-
         public Builder serviceRegistries(@Nullable List<ServiceRegistryArgs> serviceRegistries) {
             this.serviceRegistries = Output.ofNullable(serviceRegistries);
             return this;
         }
-
+        public Builder serviceRegistries(ServiceRegistryArgs... serviceRegistries) {
+            return serviceRegistries(List.of(serviceRegistries));
+        }
         public Builder tags(@Nullable Output<List<ServiceTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<ServiceTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
+        public Builder tags(ServiceTagArgs... tags) {
+            return tags(List.of(tags));
+        }
         public Builder taskDefinition(@Nullable Output<String> taskDefinition) {
             this.taskDefinition = taskDefinition;
             return this;
         }
-
         public Builder taskDefinition(@Nullable String taskDefinition) {
             this.taskDefinition = Output.ofNullable(taskDefinition);
             return this;
-        }
-        public ServiceArgs build() {
+        }        public ServiceArgs build() {
             return new ServiceArgs(capacityProviderStrategy, cluster, deploymentConfiguration, deploymentController, desiredCount, enableECSManagedTags, enableExecuteCommand, healthCheckGracePeriodSeconds, launchType, loadBalancers, networkConfiguration, placementConstraints, placementStrategies, platformVersion, propagateTags, role, schedulingStrategy, serviceName, serviceRegistries, tags, taskDefinition);
         }
     }

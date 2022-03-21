@@ -282,77 +282,62 @@ public final class MigrateSqlServerSqlDbSyncTaskOutputTableLevelResponse extends
             this.cdcDeleteCounter = Objects.requireNonNull(cdcDeleteCounter);
             return this;
         }
-
         public Builder cdcInsertCounter(Double cdcInsertCounter) {
             this.cdcInsertCounter = Objects.requireNonNull(cdcInsertCounter);
             return this;
         }
-
         public Builder cdcUpdateCounter(Double cdcUpdateCounter) {
             this.cdcUpdateCounter = Objects.requireNonNull(cdcUpdateCounter);
             return this;
         }
-
         public Builder dataErrorsCounter(Double dataErrorsCounter) {
             this.dataErrorsCounter = Objects.requireNonNull(dataErrorsCounter);
             return this;
         }
-
         public Builder databaseName(String databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
-
         public Builder fullLoadEndedOn(String fullLoadEndedOn) {
             this.fullLoadEndedOn = Objects.requireNonNull(fullLoadEndedOn);
             return this;
         }
-
         public Builder fullLoadEstFinishTime(String fullLoadEstFinishTime) {
             this.fullLoadEstFinishTime = Objects.requireNonNull(fullLoadEstFinishTime);
             return this;
         }
-
         public Builder fullLoadStartedOn(String fullLoadStartedOn) {
             this.fullLoadStartedOn = Objects.requireNonNull(fullLoadStartedOn);
             return this;
         }
-
         public Builder fullLoadTotalRows(Double fullLoadTotalRows) {
             this.fullLoadTotalRows = Objects.requireNonNull(fullLoadTotalRows);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder lastModifiedTime(String lastModifiedTime) {
             this.lastModifiedTime = Objects.requireNonNull(lastModifiedTime);
             return this;
         }
-
         public Builder resultType(String resultType) {
             this.resultType = Objects.requireNonNull(resultType);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder tableName(String tableName) {
             this.tableName = Objects.requireNonNull(tableName);
             return this;
         }
-
         public Builder totalChangesApplied(Double totalChangesApplied) {
             this.totalChangesApplied = Objects.requireNonNull(totalChangesApplied);
             return this;
-        }
-        public MigrateSqlServerSqlDbSyncTaskOutputTableLevelResponse build() {
+        }        public MigrateSqlServerSqlDbSyncTaskOutputTableLevelResponse build() {
             return new MigrateSqlServerSqlDbSyncTaskOutputTableLevelResponse(cdcDeleteCounter, cdcInsertCounter, cdcUpdateCounter, dataErrorsCounter, databaseName, fullLoadEndedOn, fullLoadEstFinishTime, fullLoadStartedOn, fullLoadTotalRows, id, lastModifiedTime, resultType, state, tableName, totalChangesApplied);
         }
     }

@@ -71,12 +71,10 @@ public final class AzurePlanResponse {
             this.skuDescription = Objects.requireNonNull(skuDescription);
             return this;
         }
-
         public Builder skuId(@Nullable String skuId) {
             this.skuId = skuId;
             return this;
-        }
-        public AzurePlanResponse build() {
+        }        public AzurePlanResponse build() {
             return new AzurePlanResponse(skuDescription, skuId);
         }
     }

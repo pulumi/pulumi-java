@@ -196,92 +196,74 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
             this.copy = copy;
             return this;
         }
-
         public Builder copy(@Nullable JobCopyArgs copy) {
             this.copy = Output.ofNullable(copy);
             return this;
         }
-
         public Builder extract(@Nullable Output<JobExtractArgs> extract) {
             this.extract = extract;
             return this;
         }
-
         public Builder extract(@Nullable JobExtractArgs extract) {
             this.extract = Output.ofNullable(extract);
             return this;
         }
-
         public Builder jobId(Output<String> jobId) {
             this.jobId = Objects.requireNonNull(jobId);
             return this;
         }
-
         public Builder jobId(String jobId) {
             this.jobId = Output.of(Objects.requireNonNull(jobId));
             return this;
         }
-
         public Builder jobTimeoutMs(@Nullable Output<String> jobTimeoutMs) {
             this.jobTimeoutMs = jobTimeoutMs;
             return this;
         }
-
         public Builder jobTimeoutMs(@Nullable String jobTimeoutMs) {
             this.jobTimeoutMs = Output.ofNullable(jobTimeoutMs);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder load(@Nullable Output<JobLoadArgs> load) {
             this.load = load;
             return this;
         }
-
         public Builder load(@Nullable JobLoadArgs load) {
             this.load = Output.ofNullable(load);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder query(@Nullable Output<JobQueryArgs> query) {
             this.query = query;
             return this;
         }
-
         public Builder query(@Nullable JobQueryArgs query) {
             this.query = Output.ofNullable(query);
             return this;
-        }
-        public JobArgs build() {
+        }        public JobArgs build() {
             return new JobArgs(copy, extract, jobId, jobTimeoutMs, labels, load, location, project, query);
         }
     }

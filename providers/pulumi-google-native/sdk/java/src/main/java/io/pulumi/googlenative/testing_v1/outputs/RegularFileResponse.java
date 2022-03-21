@@ -70,12 +70,10 @@ public final class RegularFileResponse {
             this.content = Objects.requireNonNull(content);
             return this;
         }
-
         public Builder devicePath(String devicePath) {
             this.devicePath = Objects.requireNonNull(devicePath);
             return this;
-        }
-        public RegularFileResponse build() {
+        }        public RegularFileResponse build() {
             return new RegularFileResponse(content, devicePath);
         }
     }

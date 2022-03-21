@@ -61,12 +61,10 @@ public final class ManagedZonePrivateVisibilityConfigGKEClusterResponse {
             this.gkeClusterName = Objects.requireNonNull(gkeClusterName);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
-        }
-        public ManagedZonePrivateVisibilityConfigGKEClusterResponse build() {
+        }        public ManagedZonePrivateVisibilityConfigGKEClusterResponse build() {
             return new ManagedZonePrivateVisibilityConfigGKEClusterResponse(gkeClusterName, kind);
         }
     }

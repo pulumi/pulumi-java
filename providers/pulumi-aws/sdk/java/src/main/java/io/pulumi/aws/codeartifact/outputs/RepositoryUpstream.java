@@ -51,8 +51,7 @@ public final class RepositoryUpstream {
         public Builder repositoryName(String repositoryName) {
             this.repositoryName = Objects.requireNonNull(repositoryName);
             return this;
-        }
-        public RepositoryUpstream build() {
+        }        public RepositoryUpstream build() {
             return new RepositoryUpstream(repositoryName);
         }
     }

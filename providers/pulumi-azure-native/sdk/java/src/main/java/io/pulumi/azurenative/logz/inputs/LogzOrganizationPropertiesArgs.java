@@ -90,32 +90,26 @@ public final class LogzOrganizationPropertiesArgs extends io.pulumi.resources.Re
             this.companyName = companyName;
             return this;
         }
-
         public Builder companyName(@Nullable String companyName) {
             this.companyName = Output.ofNullable(companyName);
             return this;
         }
-
         public Builder enterpriseAppId(@Nullable Output<String> enterpriseAppId) {
             this.enterpriseAppId = enterpriseAppId;
             return this;
         }
-
         public Builder enterpriseAppId(@Nullable String enterpriseAppId) {
             this.enterpriseAppId = Output.ofNullable(enterpriseAppId);
             return this;
         }
-
         public Builder singleSignOnUrl(@Nullable Output<String> singleSignOnUrl) {
             this.singleSignOnUrl = singleSignOnUrl;
             return this;
         }
-
         public Builder singleSignOnUrl(@Nullable String singleSignOnUrl) {
             this.singleSignOnUrl = Output.ofNullable(singleSignOnUrl);
             return this;
-        }
-        public LogzOrganizationPropertiesArgs build() {
+        }        public LogzOrganizationPropertiesArgs build() {
             return new LogzOrganizationPropertiesArgs(companyName, enterpriseAppId, singleSignOnUrl);
         }
     }

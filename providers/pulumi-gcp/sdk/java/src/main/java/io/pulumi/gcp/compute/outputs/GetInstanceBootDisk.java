@@ -148,42 +148,37 @@ public final class GetInstanceBootDisk {
             this.autoDelete = Objects.requireNonNull(autoDelete);
             return this;
         }
-
         public Builder deviceName(String deviceName) {
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }
-
         public Builder diskEncryptionKeyRaw(String diskEncryptionKeyRaw) {
             this.diskEncryptionKeyRaw = Objects.requireNonNull(diskEncryptionKeyRaw);
             return this;
         }
-
         public Builder diskEncryptionKeySha256(String diskEncryptionKeySha256) {
             this.diskEncryptionKeySha256 = Objects.requireNonNull(diskEncryptionKeySha256);
             return this;
         }
-
         public Builder initializeParams(List<GetInstanceBootDiskInitializeParam> initializeParams) {
             this.initializeParams = Objects.requireNonNull(initializeParams);
             return this;
         }
-
+        public Builder initializeParams(GetInstanceBootDiskInitializeParam... initializeParams) {
+            return initializeParams(List.of(initializeParams));
+        }
         public Builder kmsKeySelfLink(String kmsKeySelfLink) {
             this.kmsKeySelfLink = Objects.requireNonNull(kmsKeySelfLink);
             return this;
         }
-
         public Builder mode(String mode) {
             this.mode = Objects.requireNonNull(mode);
             return this;
         }
-
         public Builder source(String source) {
             this.source = Objects.requireNonNull(source);
             return this;
-        }
-        public GetInstanceBootDisk build() {
+        }        public GetInstanceBootDisk build() {
             return new GetInstanceBootDisk(autoDelete, deviceName, diskEncryptionKeyRaw, diskEncryptionKeySha256, initializeParams, kmsKeySelfLink, mode, source);
         }
     }

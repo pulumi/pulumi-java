@@ -69,12 +69,10 @@ public final class MitigationActionTag {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public MitigationActionTag build() {
+        }        public MitigationActionTag build() {
             return new MitigationActionTag(key, value);
         }
     }

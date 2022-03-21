@@ -164,72 +164,61 @@ public final class DatabaseState extends io.pulumi.resources.ResourceArgs {
             this.ddls = ddls;
             return this;
         }
-
         public Builder ddls(@Nullable List<String> ddls) {
             this.ddls = Output.ofNullable(ddls);
             return this;
         }
-
+        public Builder ddls(String... ddls) {
+            return ddls(List.of(ddls));
+        }
         public Builder deletionProtection(@Nullable Output<Boolean> deletionProtection) {
             this.deletionProtection = deletionProtection;
             return this;
         }
-
         public Builder deletionProtection(@Nullable Boolean deletionProtection) {
             this.deletionProtection = Output.ofNullable(deletionProtection);
             return this;
         }
-
         public Builder encryptionConfig(@Nullable Output<DatabaseEncryptionConfigGetArgs> encryptionConfig) {
             this.encryptionConfig = encryptionConfig;
             return this;
         }
-
         public Builder encryptionConfig(@Nullable DatabaseEncryptionConfigGetArgs encryptionConfig) {
             this.encryptionConfig = Output.ofNullable(encryptionConfig);
             return this;
         }
-
         public Builder instance(@Nullable Output<String> instance) {
             this.instance = instance;
             return this;
         }
-
         public Builder instance(@Nullable String instance) {
             this.instance = Output.ofNullable(instance);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder state(@Nullable Output<String> state) {
             this.state = state;
             return this;
         }
-
         public Builder state(@Nullable String state) {
             this.state = Output.ofNullable(state);
             return this;
-        }
-        public DatabaseState build() {
+        }        public DatabaseState build() {
             return new DatabaseState(ddls, deletionProtection, encryptionConfig, instance, name, project, state);
         }
     }

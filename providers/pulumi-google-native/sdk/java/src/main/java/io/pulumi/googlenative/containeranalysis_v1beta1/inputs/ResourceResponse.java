@@ -58,8 +58,7 @@ public final class ResourceResponse extends io.pulumi.resources.InvokeArgs {
         public Builder uri(String uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
-        }
-        public ResourceResponse build() {
+        }        public ResourceResponse build() {
             return new ResourceResponse(uri);
         }
     }

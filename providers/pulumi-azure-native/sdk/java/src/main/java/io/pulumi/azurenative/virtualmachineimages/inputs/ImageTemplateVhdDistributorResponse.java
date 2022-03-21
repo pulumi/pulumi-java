@@ -96,17 +96,14 @@ public final class ImageTemplateVhdDistributorResponse extends io.pulumi.resourc
             this.artifactTags = artifactTags;
             return this;
         }
-
         public Builder runOutputName(String runOutputName) {
             this.runOutputName = Objects.requireNonNull(runOutputName);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public ImageTemplateVhdDistributorResponse build() {
+        }        public ImageTemplateVhdDistributorResponse build() {
             return new ImageTemplateVhdDistributorResponse(artifactTags, runOutputName, type);
         }
     }

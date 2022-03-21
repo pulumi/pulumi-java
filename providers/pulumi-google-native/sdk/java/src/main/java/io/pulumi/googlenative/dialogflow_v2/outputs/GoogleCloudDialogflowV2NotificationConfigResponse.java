@@ -69,12 +69,10 @@ public final class GoogleCloudDialogflowV2NotificationConfigResponse {
             this.messageFormat = Objects.requireNonNull(messageFormat);
             return this;
         }
-
         public Builder topic(String topic) {
             this.topic = Objects.requireNonNull(topic);
             return this;
-        }
-        public GoogleCloudDialogflowV2NotificationConfigResponse build() {
+        }        public GoogleCloudDialogflowV2NotificationConfigResponse build() {
             return new GoogleCloudDialogflowV2NotificationConfigResponse(messageFormat, topic);
         }
     }

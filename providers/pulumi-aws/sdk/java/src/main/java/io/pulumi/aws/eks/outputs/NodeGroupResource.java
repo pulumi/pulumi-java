@@ -73,12 +73,13 @@ public final class NodeGroupResource {
             this.autoscalingGroups = autoscalingGroups;
             return this;
         }
-
+        public Builder autoscalingGroups(NodeGroupResourceAutoscalingGroup... autoscalingGroups) {
+            return autoscalingGroups(List.of(autoscalingGroups));
+        }
         public Builder remoteAccessSecurityGroupId(@Nullable String remoteAccessSecurityGroupId) {
             this.remoteAccessSecurityGroupId = remoteAccessSecurityGroupId;
             return this;
-        }
-        public NodeGroupResource build() {
+        }        public NodeGroupResource build() {
             return new NodeGroupResource(autoscalingGroups, remoteAccessSecurityGroupId);
         }
     }

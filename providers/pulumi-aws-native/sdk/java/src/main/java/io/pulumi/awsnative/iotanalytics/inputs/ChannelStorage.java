@@ -67,12 +67,10 @@ public final class ChannelStorage extends io.pulumi.resources.InvokeArgs {
             this.customerManagedS3 = customerManagedS3;
             return this;
         }
-
         public Builder serviceManagedS3(@Nullable ChannelServiceManagedS3 serviceManagedS3) {
             this.serviceManagedS3 = serviceManagedS3;
             return this;
-        }
-        public ChannelStorage build() {
+        }        public ChannelStorage build() {
             return new ChannelStorage(customerManagedS3, serviceManagedS3);
         }
     }

@@ -51,8 +51,7 @@ public final class GoogleCloudRetailV2alphaPromotionResponse {
         public Builder promotionId(String promotionId) {
             this.promotionId = Objects.requireNonNull(promotionId);
             return this;
-        }
-        public GoogleCloudRetailV2alphaPromotionResponse build() {
+        }        public GoogleCloudRetailV2alphaPromotionResponse build() {
             return new GoogleCloudRetailV2alphaPromotionResponse(promotionId);
         }
     }

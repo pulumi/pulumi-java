@@ -44,8 +44,7 @@ public final class EnvironmentResponse {
         public Builder customValues(Map<String,String> customValues) {
             this.customValues = Objects.requireNonNull(customValues);
             return this;
-        }
-        public EnvironmentResponse build() {
+        }        public EnvironmentResponse build() {
             return new EnvironmentResponse(customValues);
         }
     }

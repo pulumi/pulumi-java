@@ -71,12 +71,10 @@ public final class GetAppResourceUploadUrlResult {
             this.relativePath = relativePath;
             return this;
         }
-
         public Builder uploadUrl(@Nullable String uploadUrl) {
             this.uploadUrl = uploadUrl;
             return this;
-        }
-        public GetAppResourceUploadUrlResult build() {
+        }        public GetAppResourceUploadUrlResult build() {
             return new GetAppResourceUploadUrlResult(relativePath, uploadUrl);
         }
     }

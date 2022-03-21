@@ -105,22 +105,18 @@ public final class MaterializedViewDefinitionResponse extends io.pulumi.resource
             this.enableRefresh = Objects.requireNonNull(enableRefresh);
             return this;
         }
-
         public Builder lastRefreshTime(String lastRefreshTime) {
             this.lastRefreshTime = Objects.requireNonNull(lastRefreshTime);
             return this;
         }
-
         public Builder query(String query) {
             this.query = Objects.requireNonNull(query);
             return this;
         }
-
         public Builder refreshIntervalMs(String refreshIntervalMs) {
             this.refreshIntervalMs = Objects.requireNonNull(refreshIntervalMs);
             return this;
-        }
-        public MaterializedViewDefinitionResponse build() {
+        }        public MaterializedViewDefinitionResponse build() {
             return new MaterializedViewDefinitionResponse(enableRefresh, lastRefreshTime, query, refreshIntervalMs);
         }
     }

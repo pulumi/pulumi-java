@@ -160,37 +160,30 @@ public final class ContainerProbeResponse extends io.pulumi.resources.InvokeArgs
             this.exec = exec;
             return this;
         }
-
         public Builder failureThreshold(@Nullable Integer failureThreshold) {
             this.failureThreshold = failureThreshold;
             return this;
         }
-
         public Builder httpGet(@Nullable ContainerHttpGetResponse httpGet) {
             this.httpGet = httpGet;
             return this;
         }
-
         public Builder initialDelaySeconds(@Nullable Integer initialDelaySeconds) {
             this.initialDelaySeconds = initialDelaySeconds;
             return this;
         }
-
         public Builder periodSeconds(@Nullable Integer periodSeconds) {
             this.periodSeconds = periodSeconds;
             return this;
         }
-
         public Builder successThreshold(@Nullable Integer successThreshold) {
             this.successThreshold = successThreshold;
             return this;
         }
-
         public Builder timeoutSeconds(@Nullable Integer timeoutSeconds) {
             this.timeoutSeconds = timeoutSeconds;
             return this;
-        }
-        public ContainerProbeResponse build() {
+        }        public ContainerProbeResponse build() {
             return new ContainerProbeResponse(exec, failureThreshold, httpGet, initialDelaySeconds, periodSeconds, successThreshold, timeoutSeconds);
         }
     }

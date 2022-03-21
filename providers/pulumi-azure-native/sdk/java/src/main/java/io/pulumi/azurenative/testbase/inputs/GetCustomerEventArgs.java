@@ -88,17 +88,14 @@ public final class GetCustomerEventArgs extends io.pulumi.resources.InvokeArgs {
             this.customerEventName = Objects.requireNonNull(customerEventName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder testBaseAccountName(String testBaseAccountName) {
             this.testBaseAccountName = Objects.requireNonNull(testBaseAccountName);
             return this;
-        }
-        public GetCustomerEventArgs build() {
+        }        public GetCustomerEventArgs build() {
             return new GetCustomerEventArgs(customerEventName, resourceGroupName, testBaseAccountName);
         }
     }

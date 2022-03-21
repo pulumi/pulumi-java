@@ -113,42 +113,34 @@ public final class ParserConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.allowNullHeader = allowNullHeader;
             return this;
         }
-
         public Builder allowNullHeader(@Nullable Boolean allowNullHeader) {
             this.allowNullHeader = Output.ofNullable(allowNullHeader);
             return this;
         }
-
         public Builder schema(@Nullable Output<SchemaPackageArgs> schema) {
             this.schema = schema;
             return this;
         }
-
         public Builder schema(@Nullable SchemaPackageArgs schema) {
             this.schema = Output.ofNullable(schema);
             return this;
         }
-
         public Builder segmentTerminator(@Nullable Output<String> segmentTerminator) {
             this.segmentTerminator = segmentTerminator;
             return this;
         }
-
         public Builder segmentTerminator(@Nullable String segmentTerminator) {
             this.segmentTerminator = Output.ofNullable(segmentTerminator);
             return this;
         }
-
         public Builder version(@Nullable Output<ParserConfigVersion> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable ParserConfigVersion version) {
             this.version = Output.ofNullable(version);
             return this;
-        }
-        public ParserConfigArgs build() {
+        }        public ParserConfigArgs build() {
             return new ParserConfigArgs(allowNullHeader, schema, segmentTerminator, version);
         }
     }

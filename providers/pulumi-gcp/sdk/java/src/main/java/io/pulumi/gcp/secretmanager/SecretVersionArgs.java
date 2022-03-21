@@ -92,32 +92,26 @@ public final class SecretVersionArgs extends io.pulumi.resources.ResourceArgs {
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
         }
-
         public Builder secret(Output<String> secret) {
             this.secret = Objects.requireNonNull(secret);
             return this;
         }
-
         public Builder secret(String secret) {
             this.secret = Output.of(Objects.requireNonNull(secret));
             return this;
         }
-
         public Builder secretData(Output<String> secretData) {
             this.secretData = Objects.requireNonNull(secretData);
             return this;
         }
-
         public Builder secretData(String secretData) {
             this.secretData = Output.of(Objects.requireNonNull(secretData));
             return this;
-        }
-        public SecretVersionArgs build() {
+        }        public SecretVersionArgs build() {
             return new SecretVersionArgs(enabled, secret, secretData);
         }
     }

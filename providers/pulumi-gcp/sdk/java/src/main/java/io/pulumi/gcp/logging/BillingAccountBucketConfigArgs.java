@@ -123,52 +123,42 @@ public final class BillingAccountBucketConfigArgs extends io.pulumi.resources.Re
             this.billingAccount = Objects.requireNonNull(billingAccount);
             return this;
         }
-
         public Builder billingAccount(String billingAccount) {
             this.billingAccount = Output.of(Objects.requireNonNull(billingAccount));
             return this;
         }
-
         public Builder bucketId(Output<String> bucketId) {
             this.bucketId = Objects.requireNonNull(bucketId);
             return this;
         }
-
         public Builder bucketId(String bucketId) {
             this.bucketId = Output.of(Objects.requireNonNull(bucketId));
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder location(Output<String> location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Output.of(Objects.requireNonNull(location));
             return this;
         }
-
         public Builder retentionDays(@Nullable Output<Integer> retentionDays) {
             this.retentionDays = retentionDays;
             return this;
         }
-
         public Builder retentionDays(@Nullable Integer retentionDays) {
             this.retentionDays = Output.ofNullable(retentionDays);
             return this;
-        }
-        public BillingAccountBucketConfigArgs build() {
+        }        public BillingAccountBucketConfigArgs build() {
             return new BillingAccountBucketConfigArgs(billingAccount, bucketId, description, location, retentionDays);
         }
     }

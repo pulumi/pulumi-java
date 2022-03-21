@@ -126,52 +126,42 @@ public final class ImageReferenceArgs extends io.pulumi.resources.ResourceArgs {
             this.exactVersion = exactVersion;
             return this;
         }
-
         public Builder exactVersion(@Nullable String exactVersion) {
             this.exactVersion = Output.ofNullable(exactVersion);
             return this;
         }
-
         public Builder offer(@Nullable Output<String> offer) {
             this.offer = offer;
             return this;
         }
-
         public Builder offer(@Nullable String offer) {
             this.offer = Output.ofNullable(offer);
             return this;
         }
-
         public Builder publisher(@Nullable Output<String> publisher) {
             this.publisher = publisher;
             return this;
         }
-
         public Builder publisher(@Nullable String publisher) {
             this.publisher = Output.ofNullable(publisher);
             return this;
         }
-
         public Builder sku(@Nullable Output<String> sku) {
             this.sku = sku;
             return this;
         }
-
         public Builder sku(@Nullable String sku) {
             this.sku = Output.ofNullable(sku);
             return this;
         }
-
         public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = Output.ofNullable(version);
             return this;
-        }
-        public ImageReferenceArgs build() {
+        }        public ImageReferenceArgs build() {
             return new ImageReferenceArgs(exactVersion, offer, publisher, sku, version);
         }
     }

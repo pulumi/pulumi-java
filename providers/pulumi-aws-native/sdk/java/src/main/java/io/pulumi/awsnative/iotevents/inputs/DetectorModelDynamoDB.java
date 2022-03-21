@@ -225,52 +225,42 @@ public final class DetectorModelDynamoDB extends io.pulumi.resources.InvokeArgs 
             this.hashKeyField = Objects.requireNonNull(hashKeyField);
             return this;
         }
-
         public Builder hashKeyType(@Nullable String hashKeyType) {
             this.hashKeyType = hashKeyType;
             return this;
         }
-
         public Builder hashKeyValue(String hashKeyValue) {
             this.hashKeyValue = Objects.requireNonNull(hashKeyValue);
             return this;
         }
-
         public Builder operation(@Nullable String operation) {
             this.operation = operation;
             return this;
         }
-
         public Builder payload(@Nullable DetectorModelPayload payload) {
             this.payload = payload;
             return this;
         }
-
         public Builder payloadField(@Nullable String payloadField) {
             this.payloadField = payloadField;
             return this;
         }
-
         public Builder rangeKeyField(@Nullable String rangeKeyField) {
             this.rangeKeyField = rangeKeyField;
             return this;
         }
-
         public Builder rangeKeyType(@Nullable String rangeKeyType) {
             this.rangeKeyType = rangeKeyType;
             return this;
         }
-
         public Builder rangeKeyValue(@Nullable String rangeKeyValue) {
             this.rangeKeyValue = rangeKeyValue;
             return this;
         }
-
         public Builder tableName(String tableName) {
             this.tableName = Objects.requireNonNull(tableName);
             return this;
-        }
-        public DetectorModelDynamoDB build() {
+        }        public DetectorModelDynamoDB build() {
             return new DetectorModelDynamoDB(hashKeyField, hashKeyType, hashKeyValue, operation, payload, payloadField, rangeKeyField, rangeKeyType, rangeKeyValue, tableName);
         }
     }

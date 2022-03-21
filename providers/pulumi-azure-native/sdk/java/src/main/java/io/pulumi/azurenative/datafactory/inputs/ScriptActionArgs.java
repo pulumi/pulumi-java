@@ -111,42 +111,34 @@ public final class ScriptActionArgs extends io.pulumi.resources.ResourceArgs {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder parameters(@Nullable Output<String> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder parameters(@Nullable String parameters) {
             this.parameters = Output.ofNullable(parameters);
             return this;
         }
-
         public Builder roles(Output<Object> roles) {
             this.roles = Objects.requireNonNull(roles);
             return this;
         }
-
         public Builder roles(Object roles) {
             this.roles = Output.of(Objects.requireNonNull(roles));
             return this;
         }
-
         public Builder uri(Output<String> uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public Builder uri(String uri) {
             this.uri = Output.of(Objects.requireNonNull(uri));
             return this;
-        }
-        public ScriptActionArgs build() {
+        }        public ScriptActionArgs build() {
             return new ScriptActionArgs(name, parameters, roles, uri);
         }
     }

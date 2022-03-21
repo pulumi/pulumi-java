@@ -250,67 +250,63 @@ public final class GetInstanceResult {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder fileShares(List<FileShareConfigResponse> fileShares) {
             this.fileShares = Objects.requireNonNull(fileShares);
             return this;
         }
-
+        public Builder fileShares(FileShareConfigResponse... fileShares) {
+            return fileShares(List.of(fileShares));
+        }
         public Builder kmsKeyName(String kmsKeyName) {
             this.kmsKeyName = Objects.requireNonNull(kmsKeyName);
             return this;
         }
-
         public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder networks(List<NetworkConfigResponse> networks) {
             this.networks = Objects.requireNonNull(networks);
             return this;
         }
-
+        public Builder networks(NetworkConfigResponse... networks) {
+            return networks(List.of(networks));
+        }
         public Builder satisfiesPzs(Boolean satisfiesPzs) {
             this.satisfiesPzs = Objects.requireNonNull(satisfiesPzs);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder statusMessage(String statusMessage) {
             this.statusMessage = Objects.requireNonNull(statusMessage);
             return this;
         }
-
         public Builder suspensionReasons(List<String> suspensionReasons) {
             this.suspensionReasons = Objects.requireNonNull(suspensionReasons);
             return this;
         }
-
+        public Builder suspensionReasons(String... suspensionReasons) {
+            return suspensionReasons(List.of(suspensionReasons));
+        }
         public Builder tier(String tier) {
             this.tier = Objects.requireNonNull(tier);
             return this;
-        }
-        public GetInstanceResult build() {
+        }        public GetInstanceResult build() {
             return new GetInstanceResult(createTime, description, etag, fileShares, kmsKeyName, labels, name, networks, satisfiesPzs, state, statusMessage, suspensionReasons, tier);
         }
     }

@@ -90,32 +90,26 @@ public final class DomainTopicArgs extends io.pulumi.resources.ResourceArgs {
             this.domainName = Objects.requireNonNull(domainName);
             return this;
         }
-
         public Builder domainName(String domainName) {
             this.domainName = Output.of(Objects.requireNonNull(domainName));
             return this;
         }
-
         public Builder domainTopicName(@Nullable Output<String> domainTopicName) {
             this.domainTopicName = domainTopicName;
             return this;
         }
-
         public Builder domainTopicName(@Nullable String domainTopicName) {
             this.domainTopicName = Output.ofNullable(domainTopicName);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
-        }
-        public DomainTopicArgs build() {
+        }        public DomainTopicArgs build() {
             return new DomainTopicArgs(domainName, domainTopicName, resourceGroupName);
         }
     }

@@ -113,32 +113,26 @@ public final class AlertPolicyConditionConditionMonitoringQueryLanguageGetArgs e
             this.duration = Objects.requireNonNull(duration);
             return this;
         }
-
         public Builder duration(String duration) {
             this.duration = Output.of(Objects.requireNonNull(duration));
             return this;
         }
-
         public Builder query(Output<String> query) {
             this.query = Objects.requireNonNull(query);
             return this;
         }
-
         public Builder query(String query) {
             this.query = Output.of(Objects.requireNonNull(query));
             return this;
         }
-
         public Builder trigger(@Nullable Output<AlertPolicyConditionConditionMonitoringQueryLanguageTriggerGetArgs> trigger) {
             this.trigger = trigger;
             return this;
         }
-
         public Builder trigger(@Nullable AlertPolicyConditionConditionMonitoringQueryLanguageTriggerGetArgs trigger) {
             this.trigger = Output.ofNullable(trigger);
             return this;
-        }
-        public AlertPolicyConditionConditionMonitoringQueryLanguageGetArgs build() {
+        }        public AlertPolicyConditionConditionMonitoringQueryLanguageGetArgs build() {
             return new AlertPolicyConditionConditionMonitoringQueryLanguageGetArgs(duration, query, trigger);
         }
     }

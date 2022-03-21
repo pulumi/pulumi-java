@@ -55,12 +55,10 @@ public final class SubscriptionRegisteredFeaturesResponse {
             this.name = name;
             return this;
         }
-
         public Builder state(@Nullable String state) {
             this.state = state;
             return this;
-        }
-        public SubscriptionRegisteredFeaturesResponse build() {
+        }        public SubscriptionRegisteredFeaturesResponse build() {
             return new SubscriptionRegisteredFeaturesResponse(name, state);
         }
     }

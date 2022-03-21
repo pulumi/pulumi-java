@@ -100,17 +100,14 @@ public final class JobPubsubTarget {
             this.attributes = attributes;
             return this;
         }
-
         public Builder data(@Nullable String data) {
             this.data = data;
             return this;
         }
-
         public Builder topicName(String topicName) {
             this.topicName = Objects.requireNonNull(topicName);
             return this;
-        }
-        public JobPubsubTarget build() {
+        }        public JobPubsubTarget build() {
             return new JobPubsubTarget(attributes, data, topicName);
         }
     }

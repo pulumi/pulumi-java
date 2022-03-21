@@ -89,22 +89,18 @@ public final class PodPreset {
             this.apiVersion = apiVersion;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder metadata(@Nullable ObjectMeta metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder spec(@Nullable PodPresetSpec spec) {
             this.spec = spec;
             return this;
-        }
-        public PodPreset build() {
+        }        public PodPreset build() {
             return new PodPreset(apiVersion, kind, metadata, spec);
         }
     }

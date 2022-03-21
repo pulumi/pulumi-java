@@ -71,12 +71,10 @@ public final class HostPathVolumeSource {
             this.path = Objects.requireNonNull(path);
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
-        }
-        public HostPathVolumeSource build() {
+        }        public HostPathVolumeSource build() {
             return new HostPathVolumeSource(path, type);
         }
     }

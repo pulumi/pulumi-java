@@ -477,272 +477,218 @@ public final class TopicState extends io.pulumi.resources.ResourceArgs {
             this.applicationFailureFeedbackRoleArn = applicationFailureFeedbackRoleArn;
             return this;
         }
-
         public Builder applicationFailureFeedbackRoleArn(@Nullable String applicationFailureFeedbackRoleArn) {
             this.applicationFailureFeedbackRoleArn = Output.ofNullable(applicationFailureFeedbackRoleArn);
             return this;
         }
-
         public Builder applicationSuccessFeedbackRoleArn(@Nullable Output<String> applicationSuccessFeedbackRoleArn) {
             this.applicationSuccessFeedbackRoleArn = applicationSuccessFeedbackRoleArn;
             return this;
         }
-
         public Builder applicationSuccessFeedbackRoleArn(@Nullable String applicationSuccessFeedbackRoleArn) {
             this.applicationSuccessFeedbackRoleArn = Output.ofNullable(applicationSuccessFeedbackRoleArn);
             return this;
         }
-
         public Builder applicationSuccessFeedbackSampleRate(@Nullable Output<Integer> applicationSuccessFeedbackSampleRate) {
             this.applicationSuccessFeedbackSampleRate = applicationSuccessFeedbackSampleRate;
             return this;
         }
-
         public Builder applicationSuccessFeedbackSampleRate(@Nullable Integer applicationSuccessFeedbackSampleRate) {
             this.applicationSuccessFeedbackSampleRate = Output.ofNullable(applicationSuccessFeedbackSampleRate);
             return this;
         }
-
         public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder contentBasedDeduplication(@Nullable Output<Boolean> contentBasedDeduplication) {
             this.contentBasedDeduplication = contentBasedDeduplication;
             return this;
         }
-
         public Builder contentBasedDeduplication(@Nullable Boolean contentBasedDeduplication) {
             this.contentBasedDeduplication = Output.ofNullable(contentBasedDeduplication);
             return this;
         }
-
         public Builder deliveryPolicy(@Nullable Output<String> deliveryPolicy) {
             this.deliveryPolicy = deliveryPolicy;
             return this;
         }
-
         public Builder deliveryPolicy(@Nullable String deliveryPolicy) {
             this.deliveryPolicy = Output.ofNullable(deliveryPolicy);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder fifoTopic(@Nullable Output<Boolean> fifoTopic) {
             this.fifoTopic = fifoTopic;
             return this;
         }
-
         public Builder fifoTopic(@Nullable Boolean fifoTopic) {
             this.fifoTopic = Output.ofNullable(fifoTopic);
             return this;
         }
-
         public Builder firehoseFailureFeedbackRoleArn(@Nullable Output<String> firehoseFailureFeedbackRoleArn) {
             this.firehoseFailureFeedbackRoleArn = firehoseFailureFeedbackRoleArn;
             return this;
         }
-
         public Builder firehoseFailureFeedbackRoleArn(@Nullable String firehoseFailureFeedbackRoleArn) {
             this.firehoseFailureFeedbackRoleArn = Output.ofNullable(firehoseFailureFeedbackRoleArn);
             return this;
         }
-
         public Builder firehoseSuccessFeedbackRoleArn(@Nullable Output<String> firehoseSuccessFeedbackRoleArn) {
             this.firehoseSuccessFeedbackRoleArn = firehoseSuccessFeedbackRoleArn;
             return this;
         }
-
         public Builder firehoseSuccessFeedbackRoleArn(@Nullable String firehoseSuccessFeedbackRoleArn) {
             this.firehoseSuccessFeedbackRoleArn = Output.ofNullable(firehoseSuccessFeedbackRoleArn);
             return this;
         }
-
         public Builder firehoseSuccessFeedbackSampleRate(@Nullable Output<Integer> firehoseSuccessFeedbackSampleRate) {
             this.firehoseSuccessFeedbackSampleRate = firehoseSuccessFeedbackSampleRate;
             return this;
         }
-
         public Builder firehoseSuccessFeedbackSampleRate(@Nullable Integer firehoseSuccessFeedbackSampleRate) {
             this.firehoseSuccessFeedbackSampleRate = Output.ofNullable(firehoseSuccessFeedbackSampleRate);
             return this;
         }
-
         public Builder httpFailureFeedbackRoleArn(@Nullable Output<String> httpFailureFeedbackRoleArn) {
             this.httpFailureFeedbackRoleArn = httpFailureFeedbackRoleArn;
             return this;
         }
-
         public Builder httpFailureFeedbackRoleArn(@Nullable String httpFailureFeedbackRoleArn) {
             this.httpFailureFeedbackRoleArn = Output.ofNullable(httpFailureFeedbackRoleArn);
             return this;
         }
-
         public Builder httpSuccessFeedbackRoleArn(@Nullable Output<String> httpSuccessFeedbackRoleArn) {
             this.httpSuccessFeedbackRoleArn = httpSuccessFeedbackRoleArn;
             return this;
         }
-
         public Builder httpSuccessFeedbackRoleArn(@Nullable String httpSuccessFeedbackRoleArn) {
             this.httpSuccessFeedbackRoleArn = Output.ofNullable(httpSuccessFeedbackRoleArn);
             return this;
         }
-
         public Builder httpSuccessFeedbackSampleRate(@Nullable Output<Integer> httpSuccessFeedbackSampleRate) {
             this.httpSuccessFeedbackSampleRate = httpSuccessFeedbackSampleRate;
             return this;
         }
-
         public Builder httpSuccessFeedbackSampleRate(@Nullable Integer httpSuccessFeedbackSampleRate) {
             this.httpSuccessFeedbackSampleRate = Output.ofNullable(httpSuccessFeedbackSampleRate);
             return this;
         }
-
         public Builder kmsMasterKeyId(@Nullable Output<String> kmsMasterKeyId) {
             this.kmsMasterKeyId = kmsMasterKeyId;
             return this;
         }
-
         public Builder kmsMasterKeyId(@Nullable String kmsMasterKeyId) {
             this.kmsMasterKeyId = Output.ofNullable(kmsMasterKeyId);
             return this;
         }
-
         public Builder lambdaFailureFeedbackRoleArn(@Nullable Output<String> lambdaFailureFeedbackRoleArn) {
             this.lambdaFailureFeedbackRoleArn = lambdaFailureFeedbackRoleArn;
             return this;
         }
-
         public Builder lambdaFailureFeedbackRoleArn(@Nullable String lambdaFailureFeedbackRoleArn) {
             this.lambdaFailureFeedbackRoleArn = Output.ofNullable(lambdaFailureFeedbackRoleArn);
             return this;
         }
-
         public Builder lambdaSuccessFeedbackRoleArn(@Nullable Output<String> lambdaSuccessFeedbackRoleArn) {
             this.lambdaSuccessFeedbackRoleArn = lambdaSuccessFeedbackRoleArn;
             return this;
         }
-
         public Builder lambdaSuccessFeedbackRoleArn(@Nullable String lambdaSuccessFeedbackRoleArn) {
             this.lambdaSuccessFeedbackRoleArn = Output.ofNullable(lambdaSuccessFeedbackRoleArn);
             return this;
         }
-
         public Builder lambdaSuccessFeedbackSampleRate(@Nullable Output<Integer> lambdaSuccessFeedbackSampleRate) {
             this.lambdaSuccessFeedbackSampleRate = lambdaSuccessFeedbackSampleRate;
             return this;
         }
-
         public Builder lambdaSuccessFeedbackSampleRate(@Nullable Integer lambdaSuccessFeedbackSampleRate) {
             this.lambdaSuccessFeedbackSampleRate = Output.ofNullable(lambdaSuccessFeedbackSampleRate);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder namePrefix(@Nullable Output<String> namePrefix) {
             this.namePrefix = namePrefix;
             return this;
         }
-
         public Builder namePrefix(@Nullable String namePrefix) {
             this.namePrefix = Output.ofNullable(namePrefix);
             return this;
         }
-
         public Builder owner(@Nullable Output<String> owner) {
             this.owner = owner;
             return this;
         }
-
         public Builder owner(@Nullable String owner) {
             this.owner = Output.ofNullable(owner);
             return this;
         }
-
         public Builder policy(@Nullable Output<String> policy) {
             this.policy = policy;
             return this;
         }
-
         public Builder policy(@Nullable String policy) {
             this.policy = Output.ofNullable(policy);
             return this;
         }
-
         public Builder sqsFailureFeedbackRoleArn(@Nullable Output<String> sqsFailureFeedbackRoleArn) {
             this.sqsFailureFeedbackRoleArn = sqsFailureFeedbackRoleArn;
             return this;
         }
-
         public Builder sqsFailureFeedbackRoleArn(@Nullable String sqsFailureFeedbackRoleArn) {
             this.sqsFailureFeedbackRoleArn = Output.ofNullable(sqsFailureFeedbackRoleArn);
             return this;
         }
-
         public Builder sqsSuccessFeedbackRoleArn(@Nullable Output<String> sqsSuccessFeedbackRoleArn) {
             this.sqsSuccessFeedbackRoleArn = sqsSuccessFeedbackRoleArn;
             return this;
         }
-
         public Builder sqsSuccessFeedbackRoleArn(@Nullable String sqsSuccessFeedbackRoleArn) {
             this.sqsSuccessFeedbackRoleArn = Output.ofNullable(sqsSuccessFeedbackRoleArn);
             return this;
         }
-
         public Builder sqsSuccessFeedbackSampleRate(@Nullable Output<Integer> sqsSuccessFeedbackSampleRate) {
             this.sqsSuccessFeedbackSampleRate = sqsSuccessFeedbackSampleRate;
             return this;
         }
-
         public Builder sqsSuccessFeedbackSampleRate(@Nullable Integer sqsSuccessFeedbackSampleRate) {
             this.sqsSuccessFeedbackSampleRate = Output.ofNullable(sqsSuccessFeedbackSampleRate);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
-        }
-        public TopicState build() {
+        }        public TopicState build() {
             return new TopicState(applicationFailureFeedbackRoleArn, applicationSuccessFeedbackRoleArn, applicationSuccessFeedbackSampleRate, arn, contentBasedDeduplication, deliveryPolicy, displayName, fifoTopic, firehoseFailureFeedbackRoleArn, firehoseSuccessFeedbackRoleArn, firehoseSuccessFeedbackSampleRate, httpFailureFeedbackRoleArn, httpSuccessFeedbackRoleArn, httpSuccessFeedbackSampleRate, kmsMasterKeyId, lambdaFailureFeedbackRoleArn, lambdaSuccessFeedbackRoleArn, lambdaSuccessFeedbackSampleRate, name, namePrefix, owner, policy, sqsFailureFeedbackRoleArn, sqsSuccessFeedbackRoleArn, sqsSuccessFeedbackSampleRate, tags, tagsAll);
         }
     }

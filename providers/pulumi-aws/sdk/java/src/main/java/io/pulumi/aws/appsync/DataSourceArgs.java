@@ -207,102 +207,82 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
             this.apiId = Objects.requireNonNull(apiId);
             return this;
         }
-
         public Builder apiId(String apiId) {
             this.apiId = Output.of(Objects.requireNonNull(apiId));
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder dynamodbConfig(@Nullable Output<DataSourceDynamodbConfigArgs> dynamodbConfig) {
             this.dynamodbConfig = dynamodbConfig;
             return this;
         }
-
         public Builder dynamodbConfig(@Nullable DataSourceDynamodbConfigArgs dynamodbConfig) {
             this.dynamodbConfig = Output.ofNullable(dynamodbConfig);
             return this;
         }
-
         public Builder elasticsearchConfig(@Nullable Output<DataSourceElasticsearchConfigArgs> elasticsearchConfig) {
             this.elasticsearchConfig = elasticsearchConfig;
             return this;
         }
-
         public Builder elasticsearchConfig(@Nullable DataSourceElasticsearchConfigArgs elasticsearchConfig) {
             this.elasticsearchConfig = Output.ofNullable(elasticsearchConfig);
             return this;
         }
-
         public Builder httpConfig(@Nullable Output<DataSourceHttpConfigArgs> httpConfig) {
             this.httpConfig = httpConfig;
             return this;
         }
-
         public Builder httpConfig(@Nullable DataSourceHttpConfigArgs httpConfig) {
             this.httpConfig = Output.ofNullable(httpConfig);
             return this;
         }
-
         public Builder lambdaConfig(@Nullable Output<DataSourceLambdaConfigArgs> lambdaConfig) {
             this.lambdaConfig = lambdaConfig;
             return this;
         }
-
         public Builder lambdaConfig(@Nullable DataSourceLambdaConfigArgs lambdaConfig) {
             this.lambdaConfig = Output.ofNullable(lambdaConfig);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder relationalDatabaseConfig(@Nullable Output<DataSourceRelationalDatabaseConfigArgs> relationalDatabaseConfig) {
             this.relationalDatabaseConfig = relationalDatabaseConfig;
             return this;
         }
-
         public Builder relationalDatabaseConfig(@Nullable DataSourceRelationalDatabaseConfigArgs relationalDatabaseConfig) {
             this.relationalDatabaseConfig = Output.ofNullable(relationalDatabaseConfig);
             return this;
         }
-
         public Builder serviceRoleArn(@Nullable Output<String> serviceRoleArn) {
             this.serviceRoleArn = serviceRoleArn;
             return this;
         }
-
         public Builder serviceRoleArn(@Nullable String serviceRoleArn) {
             this.serviceRoleArn = Output.ofNullable(serviceRoleArn);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public DataSourceArgs build() {
+        }        public DataSourceArgs build() {
             return new DataSourceArgs(apiId, description, dynamodbConfig, elasticsearchConfig, httpConfig, lambdaConfig, name, relationalDatabaseConfig, serviceRoleArn, type);
         }
     }

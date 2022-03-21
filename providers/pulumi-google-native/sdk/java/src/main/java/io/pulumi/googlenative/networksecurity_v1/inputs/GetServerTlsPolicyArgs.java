@@ -78,17 +78,14 @@ public final class GetServerTlsPolicyArgs extends io.pulumi.resources.InvokeArgs
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder serverTlsPolicyId(String serverTlsPolicyId) {
             this.serverTlsPolicyId = Objects.requireNonNull(serverTlsPolicyId);
             return this;
-        }
-        public GetServerTlsPolicyArgs build() {
+        }        public GetServerTlsPolicyArgs build() {
             return new GetServerTlsPolicyArgs(location, project, serverTlsPolicyId);
         }
     }

@@ -109,22 +109,18 @@ public final class OptimizedAutoscaleResponse extends io.pulumi.resources.Invoke
             this.isEnabled = Objects.requireNonNull(isEnabled);
             return this;
         }
-
         public Builder maximum(Integer maximum) {
             this.maximum = Objects.requireNonNull(maximum);
             return this;
         }
-
         public Builder minimum(Integer minimum) {
             this.minimum = Objects.requireNonNull(minimum);
             return this;
         }
-
         public Builder version(Integer version) {
             this.version = Objects.requireNonNull(version);
             return this;
-        }
-        public OptimizedAutoscaleResponse build() {
+        }        public OptimizedAutoscaleResponse build() {
             return new OptimizedAutoscaleResponse(isEnabled, maximum, minimum, version);
         }
     }

@@ -332,182 +332,146 @@ public final class EndpointKafkaSettingsArgs extends io.pulumi.resources.Resourc
             this.broker = Objects.requireNonNull(broker);
             return this;
         }
-
         public Builder broker(String broker) {
             this.broker = Output.of(Objects.requireNonNull(broker));
             return this;
         }
-
         public Builder includeControlDetails(@Nullable Output<Boolean> includeControlDetails) {
             this.includeControlDetails = includeControlDetails;
             return this;
         }
-
         public Builder includeControlDetails(@Nullable Boolean includeControlDetails) {
             this.includeControlDetails = Output.ofNullable(includeControlDetails);
             return this;
         }
-
         public Builder includeNullAndEmpty(@Nullable Output<Boolean> includeNullAndEmpty) {
             this.includeNullAndEmpty = includeNullAndEmpty;
             return this;
         }
-
         public Builder includeNullAndEmpty(@Nullable Boolean includeNullAndEmpty) {
             this.includeNullAndEmpty = Output.ofNullable(includeNullAndEmpty);
             return this;
         }
-
         public Builder includePartitionValue(@Nullable Output<Boolean> includePartitionValue) {
             this.includePartitionValue = includePartitionValue;
             return this;
         }
-
         public Builder includePartitionValue(@Nullable Boolean includePartitionValue) {
             this.includePartitionValue = Output.ofNullable(includePartitionValue);
             return this;
         }
-
         public Builder includeTableAlterOperations(@Nullable Output<Boolean> includeTableAlterOperations) {
             this.includeTableAlterOperations = includeTableAlterOperations;
             return this;
         }
-
         public Builder includeTableAlterOperations(@Nullable Boolean includeTableAlterOperations) {
             this.includeTableAlterOperations = Output.ofNullable(includeTableAlterOperations);
             return this;
         }
-
         public Builder includeTransactionDetails(@Nullable Output<Boolean> includeTransactionDetails) {
             this.includeTransactionDetails = includeTransactionDetails;
             return this;
         }
-
         public Builder includeTransactionDetails(@Nullable Boolean includeTransactionDetails) {
             this.includeTransactionDetails = Output.ofNullable(includeTransactionDetails);
             return this;
         }
-
         public Builder messageFormat(@Nullable Output<String> messageFormat) {
             this.messageFormat = messageFormat;
             return this;
         }
-
         public Builder messageFormat(@Nullable String messageFormat) {
             this.messageFormat = Output.ofNullable(messageFormat);
             return this;
         }
-
         public Builder messageMaxBytes(@Nullable Output<Integer> messageMaxBytes) {
             this.messageMaxBytes = messageMaxBytes;
             return this;
         }
-
         public Builder messageMaxBytes(@Nullable Integer messageMaxBytes) {
             this.messageMaxBytes = Output.ofNullable(messageMaxBytes);
             return this;
         }
-
         public Builder noHexPrefix(@Nullable Output<Boolean> noHexPrefix) {
             this.noHexPrefix = noHexPrefix;
             return this;
         }
-
         public Builder noHexPrefix(@Nullable Boolean noHexPrefix) {
             this.noHexPrefix = Output.ofNullable(noHexPrefix);
             return this;
         }
-
         public Builder partitionIncludeSchemaTable(@Nullable Output<Boolean> partitionIncludeSchemaTable) {
             this.partitionIncludeSchemaTable = partitionIncludeSchemaTable;
             return this;
         }
-
         public Builder partitionIncludeSchemaTable(@Nullable Boolean partitionIncludeSchemaTable) {
             this.partitionIncludeSchemaTable = Output.ofNullable(partitionIncludeSchemaTable);
             return this;
         }
-
         public Builder saslPassword(@Nullable Output<String> saslPassword) {
             this.saslPassword = saslPassword;
             return this;
         }
-
         public Builder saslPassword(@Nullable String saslPassword) {
             this.saslPassword = Output.ofNullable(saslPassword);
             return this;
         }
-
         public Builder saslUsername(@Nullable Output<String> saslUsername) {
             this.saslUsername = saslUsername;
             return this;
         }
-
         public Builder saslUsername(@Nullable String saslUsername) {
             this.saslUsername = Output.ofNullable(saslUsername);
             return this;
         }
-
         public Builder securityProtocol(@Nullable Output<String> securityProtocol) {
             this.securityProtocol = securityProtocol;
             return this;
         }
-
         public Builder securityProtocol(@Nullable String securityProtocol) {
             this.securityProtocol = Output.ofNullable(securityProtocol);
             return this;
         }
-
         public Builder sslCaCertificateArn(@Nullable Output<String> sslCaCertificateArn) {
             this.sslCaCertificateArn = sslCaCertificateArn;
             return this;
         }
-
         public Builder sslCaCertificateArn(@Nullable String sslCaCertificateArn) {
             this.sslCaCertificateArn = Output.ofNullable(sslCaCertificateArn);
             return this;
         }
-
         public Builder sslClientCertificateArn(@Nullable Output<String> sslClientCertificateArn) {
             this.sslClientCertificateArn = sslClientCertificateArn;
             return this;
         }
-
         public Builder sslClientCertificateArn(@Nullable String sslClientCertificateArn) {
             this.sslClientCertificateArn = Output.ofNullable(sslClientCertificateArn);
             return this;
         }
-
         public Builder sslClientKeyArn(@Nullable Output<String> sslClientKeyArn) {
             this.sslClientKeyArn = sslClientKeyArn;
             return this;
         }
-
         public Builder sslClientKeyArn(@Nullable String sslClientKeyArn) {
             this.sslClientKeyArn = Output.ofNullable(sslClientKeyArn);
             return this;
         }
-
         public Builder sslClientKeyPassword(@Nullable Output<String> sslClientKeyPassword) {
             this.sslClientKeyPassword = sslClientKeyPassword;
             return this;
         }
-
         public Builder sslClientKeyPassword(@Nullable String sslClientKeyPassword) {
             this.sslClientKeyPassword = Output.ofNullable(sslClientKeyPassword);
             return this;
         }
-
         public Builder topic(@Nullable Output<String> topic) {
             this.topic = topic;
             return this;
         }
-
         public Builder topic(@Nullable String topic) {
             this.topic = Output.ofNullable(topic);
             return this;
-        }
-        public EndpointKafkaSettingsArgs build() {
+        }        public EndpointKafkaSettingsArgs build() {
             return new EndpointKafkaSettingsArgs(broker, includeControlDetails, includeNullAndEmpty, includePartitionValue, includeTableAlterOperations, includeTransactionDetails, messageFormat, messageMaxBytes, noHexPrefix, partitionIncludeSchemaTable, saslPassword, saslUsername, securityProtocol, sslCaCertificateArn, sslClientCertificateArn, sslClientKeyArn, sslClientKeyPassword, topic);
         }
     }

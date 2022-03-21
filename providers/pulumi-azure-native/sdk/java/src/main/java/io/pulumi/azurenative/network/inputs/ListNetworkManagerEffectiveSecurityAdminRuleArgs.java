@@ -90,17 +90,14 @@ public final class ListNetworkManagerEffectiveSecurityAdminRuleArgs extends io.p
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder skipToken(@Nullable String skipToken) {
             this.skipToken = skipToken;
             return this;
         }
-
         public Builder virtualNetworkName(String virtualNetworkName) {
             this.virtualNetworkName = Objects.requireNonNull(virtualNetworkName);
             return this;
-        }
-        public ListNetworkManagerEffectiveSecurityAdminRuleArgs build() {
+        }        public ListNetworkManagerEffectiveSecurityAdminRuleArgs build() {
             return new ListNetworkManagerEffectiveSecurityAdminRuleArgs(resourceGroupName, skipToken, virtualNetworkName);
         }
     }

@@ -55,7 +55,9 @@ public final class RouteSpecHttp2RouteAction {
             this.weightedTargets = Objects.requireNonNull(weightedTargets);
             return this;
         }
-        public RouteSpecHttp2RouteAction build() {
+        public Builder weightedTargets(RouteSpecHttp2RouteActionWeightedTarget... weightedTargets) {
+            return weightedTargets(List.of(weightedTargets));
+        }        public RouteSpecHttp2RouteAction build() {
             return new RouteSpecHttp2RouteAction(weightedTargets);
         }
     }

@@ -53,8 +53,7 @@ public final class SecurityProfileMachineLearningDetectionConfig {
         public Builder confidenceLevel(@Nullable SecurityProfileMachineLearningDetectionConfigConfidenceLevel confidenceLevel) {
             this.confidenceLevel = confidenceLevel;
             return this;
-        }
-        public SecurityProfileMachineLearningDetectionConfig build() {
+        }        public SecurityProfileMachineLearningDetectionConfig build() {
             return new SecurityProfileMachineLearningDetectionConfig(confidenceLevel);
         }
     }

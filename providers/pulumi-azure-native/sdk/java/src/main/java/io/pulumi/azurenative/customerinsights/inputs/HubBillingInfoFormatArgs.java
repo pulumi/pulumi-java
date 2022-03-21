@@ -95,32 +95,26 @@ public final class HubBillingInfoFormatArgs extends io.pulumi.resources.Resource
             this.maxUnits = maxUnits;
             return this;
         }
-
         public Builder maxUnits(@Nullable Integer maxUnits) {
             this.maxUnits = Output.ofNullable(maxUnits);
             return this;
         }
-
         public Builder minUnits(@Nullable Output<Integer> minUnits) {
             this.minUnits = minUnits;
             return this;
         }
-
         public Builder minUnits(@Nullable Integer minUnits) {
             this.minUnits = Output.ofNullable(minUnits);
             return this;
         }
-
         public Builder skuName(@Nullable Output<String> skuName) {
             this.skuName = skuName;
             return this;
         }
-
         public Builder skuName(@Nullable String skuName) {
             this.skuName = Output.ofNullable(skuName);
             return this;
-        }
-        public HubBillingInfoFormatArgs build() {
+        }        public HubBillingInfoFormatArgs build() {
             return new HubBillingInfoFormatArgs(maxUnits, minUnits, skuName);
         }
     }

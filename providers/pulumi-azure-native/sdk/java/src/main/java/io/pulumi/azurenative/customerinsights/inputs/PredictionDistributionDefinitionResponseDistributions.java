@@ -127,27 +127,22 @@ public final class PredictionDistributionDefinitionResponseDistributions extends
             this.negatives = negatives;
             return this;
         }
-
         public Builder negativesAboveThreshold(@Nullable Double negativesAboveThreshold) {
             this.negativesAboveThreshold = negativesAboveThreshold;
             return this;
         }
-
         public Builder positives(@Nullable Double positives) {
             this.positives = positives;
             return this;
         }
-
         public Builder positivesAboveThreshold(@Nullable Double positivesAboveThreshold) {
             this.positivesAboveThreshold = positivesAboveThreshold;
             return this;
         }
-
         public Builder scoreThreshold(@Nullable Integer scoreThreshold) {
             this.scoreThreshold = scoreThreshold;
             return this;
-        }
-        public PredictionDistributionDefinitionResponseDistributions build() {
+        }        public PredictionDistributionDefinitionResponseDistributions build() {
             return new PredictionDistributionDefinitionResponseDistributions(negatives, negativesAboveThreshold, positives, positivesAboveThreshold, scoreThreshold);
         }
     }

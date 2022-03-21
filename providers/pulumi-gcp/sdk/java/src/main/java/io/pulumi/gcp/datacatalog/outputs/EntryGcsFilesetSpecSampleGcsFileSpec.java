@@ -76,12 +76,10 @@ public final class EntryGcsFilesetSpecSampleGcsFileSpec {
             this.filePath = filePath;
             return this;
         }
-
         public Builder sizeBytes(@Nullable Integer sizeBytes) {
             this.sizeBytes = sizeBytes;
             return this;
-        }
-        public EntryGcsFilesetSpecSampleGcsFileSpec build() {
+        }        public EntryGcsFilesetSpecSampleGcsFileSpec build() {
             return new EntryGcsFilesetSpecSampleGcsFileSpec(filePath, sizeBytes);
         }
     }

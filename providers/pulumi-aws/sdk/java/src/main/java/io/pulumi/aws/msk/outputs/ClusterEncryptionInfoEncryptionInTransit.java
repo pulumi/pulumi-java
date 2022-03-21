@@ -72,12 +72,10 @@ public final class ClusterEncryptionInfoEncryptionInTransit {
             this.clientBroker = clientBroker;
             return this;
         }
-
         public Builder inCluster(@Nullable Boolean inCluster) {
             this.inCluster = inCluster;
             return this;
-        }
-        public ClusterEncryptionInfoEncryptionInTransit build() {
+        }        public ClusterEncryptionInfoEncryptionInTransit build() {
             return new ClusterEncryptionInfoEncryptionInTransit(clientBroker, inCluster);
         }
     }

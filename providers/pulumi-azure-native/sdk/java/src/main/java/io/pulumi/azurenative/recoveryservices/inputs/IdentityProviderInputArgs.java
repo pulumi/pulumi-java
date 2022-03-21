@@ -125,52 +125,42 @@ public final class IdentityProviderInputArgs extends io.pulumi.resources.Resourc
             this.aadAuthority = Objects.requireNonNull(aadAuthority);
             return this;
         }
-
         public Builder aadAuthority(String aadAuthority) {
             this.aadAuthority = Output.of(Objects.requireNonNull(aadAuthority));
             return this;
         }
-
         public Builder applicationId(Output<String> applicationId) {
             this.applicationId = Objects.requireNonNull(applicationId);
             return this;
         }
-
         public Builder applicationId(String applicationId) {
             this.applicationId = Output.of(Objects.requireNonNull(applicationId));
             return this;
         }
-
         public Builder audience(Output<String> audience) {
             this.audience = Objects.requireNonNull(audience);
             return this;
         }
-
         public Builder audience(String audience) {
             this.audience = Output.of(Objects.requireNonNull(audience));
             return this;
         }
-
         public Builder objectId(Output<String> objectId) {
             this.objectId = Objects.requireNonNull(objectId);
             return this;
         }
-
         public Builder objectId(String objectId) {
             this.objectId = Output.of(Objects.requireNonNull(objectId));
             return this;
         }
-
         public Builder tenantId(Output<String> tenantId) {
             this.tenantId = Objects.requireNonNull(tenantId);
             return this;
         }
-
         public Builder tenantId(String tenantId) {
             this.tenantId = Output.of(Objects.requireNonNull(tenantId));
             return this;
-        }
-        public IdentityProviderInputArgs build() {
+        }        public IdentityProviderInputArgs build() {
             return new IdentityProviderInputArgs(aadAuthority, applicationId, audience, objectId, tenantId);
         }
     }
