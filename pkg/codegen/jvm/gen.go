@@ -59,18 +59,6 @@ func (mod *modContext) propertyName(p *schema.Property) string {
 	return p.Name
 }
 
-func getListType(ctx *classFileContext, propertyType TypeShape) string {
-	if propertyType.Type.String() == names.List.String() {
-		for _, a := range propertyType.Parameters {
-			if strings.HasPrefix(a.Type.String(), names.JavaUtil.Dot("").String()) {
-				continue
-			}
-			return a.ToCode(ctx.imports)
-		}
-	}
-	return ""
-}
-
 func (mod *modContext) details(t *schema.ObjectType) *typeDetails {
 	details, ok := mod.typeDetails[t]
 	if !ok {
@@ -662,7 +650,7 @@ func (pt *plainType) genJumboInputType(ctx *classFileContext) error {
 			PropertyType: propertyType.ToCode(ctx.imports),
 			PropertyName: propertyName.String(),
 			Assignment:   assignment(propertyName),
-			ListType:     getListType(ctx, propertyType),
+			ListType:     propertyType.ListType(ctx),
 		})
 
 		if isInputType(prop.Type) { // we have a wrapped field so we add an unwrapped helper setter
@@ -700,7 +688,7 @@ func (pt *plainType) genJumboInputType(ctx *classFileContext) error {
 					PropertyType: propertyTypeUnwrapped.ToCode(ctx.imports),
 					PropertyName: propertyName.String(),
 					Assignment:   assignmentUnwrapped(propertyName),
-					ListType:     getListType(ctx, propertyTypeUnwrapped),
+					ListType:     propertyTypeUnwrapped.ListType(ctx),
 				})
 			}
 		}
@@ -868,7 +856,7 @@ func (pt *plainType) genNormalInputType(ctx *classFileContext) error {
 			PropertyType: propertyType.ToCode(ctx.imports),
 			PropertyName: propertyName.String(),
 			Assignment:   assignment(propertyName),
-			ListType:     getListType(ctx, propertyType),
+			ListType:     propertyType.ListType(ctx),
 		})
 
 		if isInputType(prop.Type) { // we have a wrapped field so we add an unwrapped helper setter
@@ -905,7 +893,7 @@ func (pt *plainType) genNormalInputType(ctx *classFileContext) error {
 					PropertyType: propertyTypeUnwrapped.ToCode(ctx.imports),
 					PropertyName: propertyName.String(),
 					Assignment:   assignmentUnwrapped(propertyName),
-					ListType:     getListType(ctx, propertyTypeUnwrapped),
+					ListType:     propertyTypeUnwrapped.ListType(ctx),
 				})
 			}
 		}
@@ -1115,7 +1103,7 @@ func (pt *plainType) genJumboOutputType(ctx *classFileContext) error {
 			PropertyType: propertyType.ToCode(ctx.imports),
 			PropertyName: propertyName.String(),
 			Assignment:   assignment(propertyName),
-			ListType:     getListType(ctx, propertyType),
+			ListType:     propertyType.ListType(ctx),
 		})
 	}
 
@@ -1342,7 +1330,7 @@ func (pt *plainType) genNormalOutputType(ctx *classFileContext) error {
 			PropertyType: propertyType.ToCode(ctx.imports),
 			PropertyName: propertyName.String(),
 			Assignment:   assignment(propertyName),
-			ListType:     getListType(ctx, propertyType),
+			ListType:     propertyType.ListType(ctx),
 		})
 	}
 
