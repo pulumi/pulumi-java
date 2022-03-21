@@ -5,6 +5,7 @@ import com.google.common.base.Suppliers;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
 import com.google.common.reflect.ClassPath;
+import io.pulumi.core.Output;
 import io.pulumi.core.Tuples;
 import io.pulumi.core.Tuples.Tuple2;
 import io.pulumi.core.annotations.ResourceType;
@@ -26,7 +27,6 @@ import java.util.Optional;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
-import static io.pulumi.core.internal.PulumiCollectors.toSingleton;
 import static java.util.Comparator.comparing;
 import static java.util.stream.Collectors.collectingAndThen;
 
@@ -151,15 +151,24 @@ public class ResourcePackages {
         var urnParts = urn.split("::");
         var urnName = urnParts[3];
 
-        var constructorCandidates = Arrays.stream(resourceType.get().getDeclaredConstructors())
-                .filter(c -> c.getParameterCount() == 3).collect(Collectors.toList());
-
-        if (constructorCandidates.size() > 1) {
-            constructorCandidates.removeIf(c -> !c.getParameterTypes()[1].getCanonicalName().endsWith("Args"));
-        }
+        // Looking for a constructor with the following signature:
+        //
+        //     (String name, SomeResourceArgs args, CustomResourceOptions options)
+        //
+        // The search is approximate. We may need to consider using annotations instead in future versions.
+        var constructorCandidates =
+                Arrays.stream(resourceType.get().getDeclaredConstructors())
+                        .filter(c -> c.getParameterCount() == 3)
+                        // Remove confusion of constructors with the second param of type:
+                        //     Output<String> id
+                        .filter(c -> !c.getParameterTypes()[1].equals(Output.class))
+                        .collect(Collectors.toList());
 
         if (constructorCandidates.size() != 1) {
-            throw new IllegalArgumentException(String.format("Could not identify the right constructor for %s",
+            throw new IllegalArgumentException(String.format(
+                    "Resource provider error. Could not find a constructor for resource %s" +
+                            " with the following signature:" +
+                            " `(String name, SomeResourceArgs args, CustomResourceOptions options)`",
                     resourceType.get()));
         }
 

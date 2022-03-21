@@ -62,7 +62,7 @@ public class ConstructorConfusionTest {
             super("test:index/MinifiedConfigMap", name, ResourceArgs.Empty, CustomResourceOptions.Empty);
         }
 
-        private MinifiedConfigMap(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+        private MinifiedConfigMap(String name, Output<String> id, @Nullable CustomResourceOptions options) {
             super("test:index/MinifiedConfigMap", name, null, options);
         }
     }
