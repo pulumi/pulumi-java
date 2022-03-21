@@ -78,17 +78,14 @@ public final class GetDomainIamPolicyArgs extends io.pulumi.resources.InvokeArgs
             this.domainId = Objects.requireNonNull(domainId);
             return this;
         }
-
         public Builder optionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
             this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetDomainIamPolicyArgs build() {
+        }        public GetDomainIamPolicyArgs build() {
             return new GetDomainIamPolicyArgs(domainId, optionsRequestedPolicyVersion, project);
         }
     }

@@ -113,42 +113,37 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.connectMode = connectMode;
             return this;
         }
-
         public Builder connectMode(@Nullable NetworkConfigConnectMode connectMode) {
             this.connectMode = Output.ofNullable(connectMode);
             return this;
         }
-
         public Builder modes(@Nullable Output<List<NetworkConfigModesItem>> modes) {
             this.modes = modes;
             return this;
         }
-
         public Builder modes(@Nullable List<NetworkConfigModesItem> modes) {
             this.modes = Output.ofNullable(modes);
             return this;
         }
-
+        public Builder modes(NetworkConfigModesItem... modes) {
+            return modes(List.of(modes));
+        }
         public Builder network(@Nullable Output<String> network) {
             this.network = network;
             return this;
         }
-
         public Builder network(@Nullable String network) {
             this.network = Output.ofNullable(network);
             return this;
         }
-
         public Builder reservedIpRange(@Nullable Output<String> reservedIpRange) {
             this.reservedIpRange = reservedIpRange;
             return this;
         }
-
         public Builder reservedIpRange(@Nullable String reservedIpRange) {
             this.reservedIpRange = Output.ofNullable(reservedIpRange);
             return this;
-        }
-        public NetworkConfigArgs build() {
+        }        public NetworkConfigArgs build() {
             return new NetworkConfigArgs(connectMode, modes, network, reservedIpRange);
         }
     }

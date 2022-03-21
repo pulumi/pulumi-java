@@ -77,22 +77,18 @@ public final class GoogleCloudDatalabelingV1beta1GcsSourceArgs extends io.pulumi
             this.inputUri = Objects.requireNonNull(inputUri);
             return this;
         }
-
         public Builder inputUri(String inputUri) {
             this.inputUri = Output.of(Objects.requireNonNull(inputUri));
             return this;
         }
-
         public Builder mimeType(Output<String> mimeType) {
             this.mimeType = Objects.requireNonNull(mimeType);
             return this;
         }
-
         public Builder mimeType(String mimeType) {
             this.mimeType = Output.of(Objects.requireNonNull(mimeType));
             return this;
-        }
-        public GoogleCloudDatalabelingV1beta1GcsSourceArgs build() {
+        }        public GoogleCloudDatalabelingV1beta1GcsSourceArgs build() {
             return new GoogleCloudDatalabelingV1beta1GcsSourceArgs(inputUri, mimeType);
         }
     }

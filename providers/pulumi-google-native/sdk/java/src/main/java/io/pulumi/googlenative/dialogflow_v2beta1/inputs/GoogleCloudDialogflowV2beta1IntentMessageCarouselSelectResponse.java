@@ -60,7 +60,9 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectRespon
             this.items = Objects.requireNonNull(items);
             return this;
         }
-        public GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectResponse build() {
+        public Builder items(GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectItemResponse... items) {
+            return items(List.of(items));
+        }        public GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectResponse build() {
             return new GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectResponse(items);
         }
     }

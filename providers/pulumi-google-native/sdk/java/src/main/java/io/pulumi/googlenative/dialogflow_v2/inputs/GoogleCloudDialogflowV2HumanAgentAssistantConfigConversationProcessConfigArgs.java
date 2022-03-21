@@ -61,12 +61,10 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationP
             this.recentSentencesCount = recentSentencesCount;
             return this;
         }
-
         public Builder recentSentencesCount(@Nullable Integer recentSentencesCount) {
             this.recentSentencesCount = Output.ofNullable(recentSentencesCount);
             return this;
-        }
-        public GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationProcessConfigArgs build() {
+        }        public GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationProcessConfigArgs build() {
             return new GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationProcessConfigArgs(recentSentencesCount);
         }
     }

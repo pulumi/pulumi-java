@@ -77,12 +77,10 @@ public final class FirewallLogConfigResponse extends io.pulumi.resources.InvokeA
             this.enable = Objects.requireNonNull(enable);
             return this;
         }
-
         public Builder metadata(String metadata) {
             this.metadata = Objects.requireNonNull(metadata);
             return this;
-        }
-        public FirewallLogConfigResponse build() {
+        }        public FirewallLogConfigResponse build() {
             return new FirewallLogConfigResponse(enable, metadata);
         }
     }

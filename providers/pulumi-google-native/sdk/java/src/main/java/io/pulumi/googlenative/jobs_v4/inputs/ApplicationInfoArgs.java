@@ -95,32 +95,32 @@ public final class ApplicationInfoArgs extends io.pulumi.resources.ResourceArgs 
             this.emails = emails;
             return this;
         }
-
         public Builder emails(@Nullable List<String> emails) {
             this.emails = Output.ofNullable(emails);
             return this;
         }
-
+        public Builder emails(String... emails) {
+            return emails(List.of(emails));
+        }
         public Builder instruction(@Nullable Output<String> instruction) {
             this.instruction = instruction;
             return this;
         }
-
         public Builder instruction(@Nullable String instruction) {
             this.instruction = Output.ofNullable(instruction);
             return this;
         }
-
         public Builder uris(@Nullable Output<List<String>> uris) {
             this.uris = uris;
             return this;
         }
-
         public Builder uris(@Nullable List<String> uris) {
             this.uris = Output.ofNullable(uris);
             return this;
         }
-        public ApplicationInfoArgs build() {
+        public Builder uris(String... uris) {
+            return uris(List.of(uris));
+        }        public ApplicationInfoArgs build() {
             return new ApplicationInfoArgs(emails, instruction, uris);
         }
     }

@@ -85,17 +85,14 @@ public final class GoogleCloudDatacatalogV1RoutineSpecArgumentResponse {
             this.mode = Objects.requireNonNull(mode);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GoogleCloudDatacatalogV1RoutineSpecArgumentResponse build() {
+        }        public GoogleCloudDatacatalogV1RoutineSpecArgumentResponse build() {
             return new GoogleCloudDatacatalogV1RoutineSpecArgumentResponse(mode, name, type);
         }
     }

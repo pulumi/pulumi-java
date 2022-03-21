@@ -78,22 +78,18 @@ public final class DiskEncryptionConfigurationArgs extends io.pulumi.resources.R
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder kmsKeyName(@Nullable Output<String> kmsKeyName) {
             this.kmsKeyName = kmsKeyName;
             return this;
         }
-
         public Builder kmsKeyName(@Nullable String kmsKeyName) {
             this.kmsKeyName = Output.ofNullable(kmsKeyName);
             return this;
-        }
-        public DiskEncryptionConfigurationArgs build() {
+        }        public DiskEncryptionConfigurationArgs build() {
             return new DiskEncryptionConfigurationArgs(kind, kmsKeyName);
         }
     }

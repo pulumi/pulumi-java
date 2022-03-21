@@ -201,52 +201,42 @@ public final class HttpCheckResponse {
             this.authInfo = Objects.requireNonNull(authInfo);
             return this;
         }
-
         public Builder body(String body) {
             this.body = Objects.requireNonNull(body);
             return this;
         }
-
         public Builder contentType(String contentType) {
             this.contentType = Objects.requireNonNull(contentType);
             return this;
         }
-
         public Builder headers(Map<String,String> headers) {
             this.headers = Objects.requireNonNull(headers);
             return this;
         }
-
         public Builder maskHeaders(Boolean maskHeaders) {
             this.maskHeaders = Objects.requireNonNull(maskHeaders);
             return this;
         }
-
         public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
-
         public Builder port(Integer port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
-
         public Builder requestMethod(String requestMethod) {
             this.requestMethod = Objects.requireNonNull(requestMethod);
             return this;
         }
-
         public Builder useSsl(Boolean useSsl) {
             this.useSsl = Objects.requireNonNull(useSsl);
             return this;
         }
-
         public Builder validateSsl(Boolean validateSsl) {
             this.validateSsl = Objects.requireNonNull(validateSsl);
             return this;
-        }
-        public HttpCheckResponse build() {
+        }        public HttpCheckResponse build() {
             return new HttpCheckResponse(authInfo, body, contentType, headers, maskHeaders, path, port, requestMethod, useSsl, validateSsl);
         }
     }

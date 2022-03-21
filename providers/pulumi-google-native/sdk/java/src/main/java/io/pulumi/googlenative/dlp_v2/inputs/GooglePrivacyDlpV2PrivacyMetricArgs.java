@@ -147,62 +147,50 @@ public final class GooglePrivacyDlpV2PrivacyMetricArgs extends io.pulumi.resourc
             this.categoricalStatsConfig = categoricalStatsConfig;
             return this;
         }
-
         public Builder categoricalStatsConfig(@Nullable GooglePrivacyDlpV2CategoricalStatsConfigArgs categoricalStatsConfig) {
             this.categoricalStatsConfig = Output.ofNullable(categoricalStatsConfig);
             return this;
         }
-
         public Builder deltaPresenceEstimationConfig(@Nullable Output<GooglePrivacyDlpV2DeltaPresenceEstimationConfigArgs> deltaPresenceEstimationConfig) {
             this.deltaPresenceEstimationConfig = deltaPresenceEstimationConfig;
             return this;
         }
-
         public Builder deltaPresenceEstimationConfig(@Nullable GooglePrivacyDlpV2DeltaPresenceEstimationConfigArgs deltaPresenceEstimationConfig) {
             this.deltaPresenceEstimationConfig = Output.ofNullable(deltaPresenceEstimationConfig);
             return this;
         }
-
         public Builder kAnonymityConfig(@Nullable Output<GooglePrivacyDlpV2KAnonymityConfigArgs> kAnonymityConfig) {
             this.kAnonymityConfig = kAnonymityConfig;
             return this;
         }
-
         public Builder kAnonymityConfig(@Nullable GooglePrivacyDlpV2KAnonymityConfigArgs kAnonymityConfig) {
             this.kAnonymityConfig = Output.ofNullable(kAnonymityConfig);
             return this;
         }
-
         public Builder kMapEstimationConfig(@Nullable Output<GooglePrivacyDlpV2KMapEstimationConfigArgs> kMapEstimationConfig) {
             this.kMapEstimationConfig = kMapEstimationConfig;
             return this;
         }
-
         public Builder kMapEstimationConfig(@Nullable GooglePrivacyDlpV2KMapEstimationConfigArgs kMapEstimationConfig) {
             this.kMapEstimationConfig = Output.ofNullable(kMapEstimationConfig);
             return this;
         }
-
         public Builder lDiversityConfig(@Nullable Output<GooglePrivacyDlpV2LDiversityConfigArgs> lDiversityConfig) {
             this.lDiversityConfig = lDiversityConfig;
             return this;
         }
-
         public Builder lDiversityConfig(@Nullable GooglePrivacyDlpV2LDiversityConfigArgs lDiversityConfig) {
             this.lDiversityConfig = Output.ofNullable(lDiversityConfig);
             return this;
         }
-
         public Builder numericalStatsConfig(@Nullable Output<GooglePrivacyDlpV2NumericalStatsConfigArgs> numericalStatsConfig) {
             this.numericalStatsConfig = numericalStatsConfig;
             return this;
         }
-
         public Builder numericalStatsConfig(@Nullable GooglePrivacyDlpV2NumericalStatsConfigArgs numericalStatsConfig) {
             this.numericalStatsConfig = Output.ofNullable(numericalStatsConfig);
             return this;
-        }
-        public GooglePrivacyDlpV2PrivacyMetricArgs build() {
+        }        public GooglePrivacyDlpV2PrivacyMetricArgs build() {
             return new GooglePrivacyDlpV2PrivacyMetricArgs(categoricalStatsConfig, deltaPresenceEstimationConfig, kAnonymityConfig, kMapEstimationConfig, lDiversityConfig, numericalStatsConfig);
         }
     }

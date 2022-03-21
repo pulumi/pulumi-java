@@ -70,12 +70,10 @@ public final class SnapshotDefinitionResponse {
             this.baseTableReference = Objects.requireNonNull(baseTableReference);
             return this;
         }
-
         public Builder snapshotTime(String snapshotTime) {
             this.snapshotTime = Objects.requireNonNull(snapshotTime);
             return this;
-        }
-        public SnapshotDefinitionResponse build() {
+        }        public SnapshotDefinitionResponse build() {
             return new SnapshotDefinitionResponse(baseTableReference, snapshotTime);
         }
     }

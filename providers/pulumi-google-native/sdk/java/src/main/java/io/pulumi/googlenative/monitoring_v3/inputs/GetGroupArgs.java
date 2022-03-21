@@ -66,12 +66,10 @@ public final class GetGroupArgs extends io.pulumi.resources.InvokeArgs {
             this.groupId = Objects.requireNonNull(groupId);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetGroupArgs build() {
+        }        public GetGroupArgs build() {
             return new GetGroupArgs(groupId, project);
         }
     }

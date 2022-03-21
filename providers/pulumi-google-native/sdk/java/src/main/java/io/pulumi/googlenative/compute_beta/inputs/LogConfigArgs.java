@@ -96,32 +96,26 @@ public final class LogConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.cloudAudit = cloudAudit;
             return this;
         }
-
         public Builder cloudAudit(@Nullable LogConfigCloudAuditOptionsArgs cloudAudit) {
             this.cloudAudit = Output.ofNullable(cloudAudit);
             return this;
         }
-
         public Builder counter(@Nullable Output<LogConfigCounterOptionsArgs> counter) {
             this.counter = counter;
             return this;
         }
-
         public Builder counter(@Nullable LogConfigCounterOptionsArgs counter) {
             this.counter = Output.ofNullable(counter);
             return this;
         }
-
         public Builder dataAccess(@Nullable Output<LogConfigDataAccessOptionsArgs> dataAccess) {
             this.dataAccess = dataAccess;
             return this;
         }
-
         public Builder dataAccess(@Nullable LogConfigDataAccessOptionsArgs dataAccess) {
             this.dataAccess = Output.ofNullable(dataAccess);
             return this;
-        }
-        public LogConfigArgs build() {
+        }        public LogConfigArgs build() {
             return new LogConfigArgs(cloudAudit, counter, dataAccess);
         }
     }

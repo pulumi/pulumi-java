@@ -80,22 +80,21 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupArgs ex
             this.phraseMatchRules = phraseMatchRules;
             return this;
         }
-
         public Builder phraseMatchRules(@Nullable List<GoogleCloudContactcenterinsightsV1PhraseMatchRuleArgs> phraseMatchRules) {
             this.phraseMatchRules = Output.ofNullable(phraseMatchRules);
             return this;
         }
-
+        public Builder phraseMatchRules(GoogleCloudContactcenterinsightsV1PhraseMatchRuleArgs... phraseMatchRules) {
+            return phraseMatchRules(List.of(phraseMatchRules));
+        }
         public Builder type(Output<GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupType> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupType type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupArgs build() {
+        }        public GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupArgs build() {
             return new GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupArgs(phraseMatchRules, type);
         }
     }

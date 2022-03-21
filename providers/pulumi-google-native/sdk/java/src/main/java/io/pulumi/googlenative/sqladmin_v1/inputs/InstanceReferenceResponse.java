@@ -92,17 +92,14 @@ public final class InstanceReferenceResponse extends io.pulumi.resources.InvokeA
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
-
         public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
-        }
-        public InstanceReferenceResponse build() {
+        }        public InstanceReferenceResponse build() {
             return new InstanceReferenceResponse(name, project, region);
         }
     }

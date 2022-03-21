@@ -182,92 +182,74 @@ public final class TargetServerArgs extends io.pulumi.resources.ResourceArgs {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder environmentId(Output<String> environmentId) {
             this.environmentId = Objects.requireNonNull(environmentId);
             return this;
         }
-
         public Builder environmentId(String environmentId) {
             this.environmentId = Output.of(Objects.requireNonNull(environmentId));
             return this;
         }
-
         public Builder host(Output<String> host) {
             this.host = Objects.requireNonNull(host);
             return this;
         }
-
         public Builder host(String host) {
             this.host = Output.of(Objects.requireNonNull(host));
             return this;
         }
-
         public Builder isEnabled(@Nullable Output<Boolean> isEnabled) {
             this.isEnabled = isEnabled;
             return this;
         }
-
         public Builder isEnabled(@Nullable Boolean isEnabled) {
             this.isEnabled = Output.ofNullable(isEnabled);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder organizationId(Output<String> organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }
-
         public Builder organizationId(String organizationId) {
             this.organizationId = Output.of(Objects.requireNonNull(organizationId));
             return this;
         }
-
         public Builder port(Output<Integer> port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
-
         public Builder port(Integer port) {
             this.port = Output.of(Objects.requireNonNull(port));
             return this;
         }
-
         public Builder protocol(@Nullable Output<TargetServerProtocol> protocol) {
             this.protocol = protocol;
             return this;
         }
-
         public Builder protocol(@Nullable TargetServerProtocol protocol) {
             this.protocol = Output.ofNullable(protocol);
             return this;
         }
-
         public Builder sSLInfo(@Nullable Output<GoogleCloudApigeeV1TlsInfoArgs> sSLInfo) {
             this.sSLInfo = sSLInfo;
             return this;
         }
-
         public Builder sSLInfo(@Nullable GoogleCloudApigeeV1TlsInfoArgs sSLInfo) {
             this.sSLInfo = Output.ofNullable(sSLInfo);
             return this;
-        }
-        public TargetServerArgs build() {
+        }        public TargetServerArgs build() {
             return new TargetServerArgs(description, environmentId, host, isEnabled, name, organizationId, port, protocol, sSLInfo);
         }
     }

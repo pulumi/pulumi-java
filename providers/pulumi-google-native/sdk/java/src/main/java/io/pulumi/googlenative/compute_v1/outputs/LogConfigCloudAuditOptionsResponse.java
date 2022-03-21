@@ -70,12 +70,10 @@ public final class LogConfigCloudAuditOptionsResponse {
             this.authorizationLoggingOptions = Objects.requireNonNull(authorizationLoggingOptions);
             return this;
         }
-
         public Builder logName(String logName) {
             this.logName = Objects.requireNonNull(logName);
             return this;
-        }
-        public LogConfigCloudAuditOptionsResponse build() {
+        }        public LogConfigCloudAuditOptionsResponse build() {
             return new LogConfigCloudAuditOptionsResponse(authorizationLoggingOptions, logName);
         }
     }

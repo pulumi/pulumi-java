@@ -62,12 +62,10 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageConversationSuccessAr
             this.metadata = metadata;
             return this;
         }
-
         public Builder metadata(@Nullable Map<String,String> metadata) {
             this.metadata = Output.ofNullable(metadata);
             return this;
-        }
-        public GoogleCloudDialogflowCxV3ResponseMessageConversationSuccessArgs build() {
+        }        public GoogleCloudDialogflowCxV3ResponseMessageConversationSuccessArgs build() {
             return new GoogleCloudDialogflowCxV3ResponseMessageConversationSuccessArgs(metadata);
         }
     }

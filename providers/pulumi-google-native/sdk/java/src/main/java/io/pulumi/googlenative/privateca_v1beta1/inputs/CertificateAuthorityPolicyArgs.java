@@ -164,72 +164,64 @@ public final class CertificateAuthorityPolicyArgs extends io.pulumi.resources.Re
             this.allowedCommonNames = allowedCommonNames;
             return this;
         }
-
         public Builder allowedCommonNames(@Nullable List<String> allowedCommonNames) {
             this.allowedCommonNames = Output.ofNullable(allowedCommonNames);
             return this;
         }
-
+        public Builder allowedCommonNames(String... allowedCommonNames) {
+            return allowedCommonNames(List.of(allowedCommonNames));
+        }
         public Builder allowedConfigList(@Nullable Output<AllowedConfigListArgs> allowedConfigList) {
             this.allowedConfigList = allowedConfigList;
             return this;
         }
-
         public Builder allowedConfigList(@Nullable AllowedConfigListArgs allowedConfigList) {
             this.allowedConfigList = Output.ofNullable(allowedConfigList);
             return this;
         }
-
         public Builder allowedIssuanceModes(@Nullable Output<IssuanceModesArgs> allowedIssuanceModes) {
             this.allowedIssuanceModes = allowedIssuanceModes;
             return this;
         }
-
         public Builder allowedIssuanceModes(@Nullable IssuanceModesArgs allowedIssuanceModes) {
             this.allowedIssuanceModes = Output.ofNullable(allowedIssuanceModes);
             return this;
         }
-
         public Builder allowedLocationsAndOrganizations(@Nullable Output<List<SubjectArgs>> allowedLocationsAndOrganizations) {
             this.allowedLocationsAndOrganizations = allowedLocationsAndOrganizations;
             return this;
         }
-
         public Builder allowedLocationsAndOrganizations(@Nullable List<SubjectArgs> allowedLocationsAndOrganizations) {
             this.allowedLocationsAndOrganizations = Output.ofNullable(allowedLocationsAndOrganizations);
             return this;
         }
-
+        public Builder allowedLocationsAndOrganizations(SubjectArgs... allowedLocationsAndOrganizations) {
+            return allowedLocationsAndOrganizations(List.of(allowedLocationsAndOrganizations));
+        }
         public Builder allowedSans(@Nullable Output<AllowedSubjectAltNamesArgs> allowedSans) {
             this.allowedSans = allowedSans;
             return this;
         }
-
         public Builder allowedSans(@Nullable AllowedSubjectAltNamesArgs allowedSans) {
             this.allowedSans = Output.ofNullable(allowedSans);
             return this;
         }
-
         public Builder maximumLifetime(@Nullable Output<String> maximumLifetime) {
             this.maximumLifetime = maximumLifetime;
             return this;
         }
-
         public Builder maximumLifetime(@Nullable String maximumLifetime) {
             this.maximumLifetime = Output.ofNullable(maximumLifetime);
             return this;
         }
-
         public Builder overwriteConfigValues(@Nullable Output<ReusableConfigWrapperArgs> overwriteConfigValues) {
             this.overwriteConfigValues = overwriteConfigValues;
             return this;
         }
-
         public Builder overwriteConfigValues(@Nullable ReusableConfigWrapperArgs overwriteConfigValues) {
             this.overwriteConfigValues = Output.ofNullable(overwriteConfigValues);
             return this;
-        }
-        public CertificateAuthorityPolicyArgs build() {
+        }        public CertificateAuthorityPolicyArgs build() {
             return new CertificateAuthorityPolicyArgs(allowedCommonNames, allowedConfigList, allowedIssuanceModes, allowedLocationsAndOrganizations, allowedSans, maximumLifetime, overwriteConfigValues);
         }
     }

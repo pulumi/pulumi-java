@@ -229,112 +229,96 @@ public final class BackendBucketCdnPolicyArgs extends io.pulumi.resources.Resour
             this.bypassCacheOnRequestHeaders = bypassCacheOnRequestHeaders;
             return this;
         }
-
         public Builder bypassCacheOnRequestHeaders(@Nullable List<BackendBucketCdnPolicyBypassCacheOnRequestHeaderArgs> bypassCacheOnRequestHeaders) {
             this.bypassCacheOnRequestHeaders = Output.ofNullable(bypassCacheOnRequestHeaders);
             return this;
         }
-
+        public Builder bypassCacheOnRequestHeaders(BackendBucketCdnPolicyBypassCacheOnRequestHeaderArgs... bypassCacheOnRequestHeaders) {
+            return bypassCacheOnRequestHeaders(List.of(bypassCacheOnRequestHeaders));
+        }
         public Builder cacheKeyPolicy(@Nullable Output<BackendBucketCdnPolicyCacheKeyPolicyArgs> cacheKeyPolicy) {
             this.cacheKeyPolicy = cacheKeyPolicy;
             return this;
         }
-
         public Builder cacheKeyPolicy(@Nullable BackendBucketCdnPolicyCacheKeyPolicyArgs cacheKeyPolicy) {
             this.cacheKeyPolicy = Output.ofNullable(cacheKeyPolicy);
             return this;
         }
-
         public Builder cacheMode(@Nullable Output<BackendBucketCdnPolicyCacheMode> cacheMode) {
             this.cacheMode = cacheMode;
             return this;
         }
-
         public Builder cacheMode(@Nullable BackendBucketCdnPolicyCacheMode cacheMode) {
             this.cacheMode = Output.ofNullable(cacheMode);
             return this;
         }
-
         public Builder clientTtl(@Nullable Output<Integer> clientTtl) {
             this.clientTtl = clientTtl;
             return this;
         }
-
         public Builder clientTtl(@Nullable Integer clientTtl) {
             this.clientTtl = Output.ofNullable(clientTtl);
             return this;
         }
-
         public Builder defaultTtl(@Nullable Output<Integer> defaultTtl) {
             this.defaultTtl = defaultTtl;
             return this;
         }
-
         public Builder defaultTtl(@Nullable Integer defaultTtl) {
             this.defaultTtl = Output.ofNullable(defaultTtl);
             return this;
         }
-
         public Builder maxTtl(@Nullable Output<Integer> maxTtl) {
             this.maxTtl = maxTtl;
             return this;
         }
-
         public Builder maxTtl(@Nullable Integer maxTtl) {
             this.maxTtl = Output.ofNullable(maxTtl);
             return this;
         }
-
         public Builder negativeCaching(@Nullable Output<Boolean> negativeCaching) {
             this.negativeCaching = negativeCaching;
             return this;
         }
-
         public Builder negativeCaching(@Nullable Boolean negativeCaching) {
             this.negativeCaching = Output.ofNullable(negativeCaching);
             return this;
         }
-
         public Builder negativeCachingPolicy(@Nullable Output<List<BackendBucketCdnPolicyNegativeCachingPolicyArgs>> negativeCachingPolicy) {
             this.negativeCachingPolicy = negativeCachingPolicy;
             return this;
         }
-
         public Builder negativeCachingPolicy(@Nullable List<BackendBucketCdnPolicyNegativeCachingPolicyArgs> negativeCachingPolicy) {
             this.negativeCachingPolicy = Output.ofNullable(negativeCachingPolicy);
             return this;
         }
-
+        public Builder negativeCachingPolicy(BackendBucketCdnPolicyNegativeCachingPolicyArgs... negativeCachingPolicy) {
+            return negativeCachingPolicy(List.of(negativeCachingPolicy));
+        }
         public Builder requestCoalescing(@Nullable Output<Boolean> requestCoalescing) {
             this.requestCoalescing = requestCoalescing;
             return this;
         }
-
         public Builder requestCoalescing(@Nullable Boolean requestCoalescing) {
             this.requestCoalescing = Output.ofNullable(requestCoalescing);
             return this;
         }
-
         public Builder serveWhileStale(@Nullable Output<Integer> serveWhileStale) {
             this.serveWhileStale = serveWhileStale;
             return this;
         }
-
         public Builder serveWhileStale(@Nullable Integer serveWhileStale) {
             this.serveWhileStale = Output.ofNullable(serveWhileStale);
             return this;
         }
-
         public Builder signedUrlCacheMaxAgeSec(@Nullable Output<String> signedUrlCacheMaxAgeSec) {
             this.signedUrlCacheMaxAgeSec = signedUrlCacheMaxAgeSec;
             return this;
         }
-
         public Builder signedUrlCacheMaxAgeSec(@Nullable String signedUrlCacheMaxAgeSec) {
             this.signedUrlCacheMaxAgeSec = Output.ofNullable(signedUrlCacheMaxAgeSec);
             return this;
-        }
-        public BackendBucketCdnPolicyArgs build() {
+        }        public BackendBucketCdnPolicyArgs build() {
             return new BackendBucketCdnPolicyArgs(bypassCacheOnRequestHeaders, cacheKeyPolicy, cacheMode, clientTtl, defaultTtl, maxTtl, negativeCaching, negativeCachingPolicy, requestCoalescing, serveWhileStale, signedUrlCacheMaxAgeSec);
         }
     }

@@ -561,162 +561,139 @@ public final class GetInstanceResult {
             this.backendType = Objects.requireNonNull(backendType);
             return this;
         }
-
         public Builder connectionName(String connectionName) {
             this.connectionName = Objects.requireNonNull(connectionName);
             return this;
         }
-
         public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder currentDiskSize(String currentDiskSize) {
             this.currentDiskSize = Objects.requireNonNull(currentDiskSize);
             return this;
         }
-
         public Builder databaseInstalledVersion(String databaseInstalledVersion) {
             this.databaseInstalledVersion = Objects.requireNonNull(databaseInstalledVersion);
             return this;
         }
-
         public Builder databaseVersion(String databaseVersion) {
             this.databaseVersion = Objects.requireNonNull(databaseVersion);
             return this;
         }
-
         public Builder diskEncryptionConfiguration(DiskEncryptionConfigurationResponse diskEncryptionConfiguration) {
             this.diskEncryptionConfiguration = Objects.requireNonNull(diskEncryptionConfiguration);
             return this;
         }
-
         public Builder diskEncryptionStatus(DiskEncryptionStatusResponse diskEncryptionStatus) {
             this.diskEncryptionStatus = Objects.requireNonNull(diskEncryptionStatus);
             return this;
         }
-
         public Builder failoverReplica(InstanceFailoverReplicaResponse failoverReplica) {
             this.failoverReplica = Objects.requireNonNull(failoverReplica);
             return this;
         }
-
         public Builder gceZone(String gceZone) {
             this.gceZone = Objects.requireNonNull(gceZone);
             return this;
         }
-
         public Builder instanceType(String instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
-
         public Builder ipAddresses(List<IpMappingResponse> ipAddresses) {
             this.ipAddresses = Objects.requireNonNull(ipAddresses);
             return this;
         }
-
+        public Builder ipAddresses(IpMappingResponse... ipAddresses) {
+            return ipAddresses(List.of(ipAddresses));
+        }
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder masterInstanceName(String masterInstanceName) {
             this.masterInstanceName = Objects.requireNonNull(masterInstanceName);
             return this;
         }
-
         public Builder maxDiskSize(String maxDiskSize) {
             this.maxDiskSize = Objects.requireNonNull(maxDiskSize);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder onPremisesConfiguration(OnPremisesConfigurationResponse onPremisesConfiguration) {
             this.onPremisesConfiguration = Objects.requireNonNull(onPremisesConfiguration);
             return this;
         }
-
         public Builder outOfDiskReport(SqlOutOfDiskReportResponse outOfDiskReport) {
             this.outOfDiskReport = Objects.requireNonNull(outOfDiskReport);
             return this;
         }
-
         public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
-
         public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
-
         public Builder replicaConfiguration(ReplicaConfigurationResponse replicaConfiguration) {
             this.replicaConfiguration = Objects.requireNonNull(replicaConfiguration);
             return this;
         }
-
         public Builder replicaNames(List<String> replicaNames) {
             this.replicaNames = Objects.requireNonNull(replicaNames);
             return this;
         }
-
+        public Builder replicaNames(String... replicaNames) {
+            return replicaNames(List.of(replicaNames));
+        }
         public Builder rootPassword(String rootPassword) {
             this.rootPassword = Objects.requireNonNull(rootPassword);
             return this;
         }
-
         public Builder satisfiesPzs(Boolean satisfiesPzs) {
             this.satisfiesPzs = Objects.requireNonNull(satisfiesPzs);
             return this;
         }
-
         public Builder scheduledMaintenance(SqlScheduledMaintenanceResponse scheduledMaintenance) {
             this.scheduledMaintenance = Objects.requireNonNull(scheduledMaintenance);
             return this;
         }
-
         public Builder secondaryGceZone(String secondaryGceZone) {
             this.secondaryGceZone = Objects.requireNonNull(secondaryGceZone);
             return this;
         }
-
         public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
-
         public Builder serverCaCert(SslCertResponse serverCaCert) {
             this.serverCaCert = Objects.requireNonNull(serverCaCert);
             return this;
         }
-
         public Builder serviceAccountEmailAddress(String serviceAccountEmailAddress) {
             this.serviceAccountEmailAddress = Objects.requireNonNull(serviceAccountEmailAddress);
             return this;
         }
-
         public Builder settings(SettingsResponse settings) {
             this.settings = Objects.requireNonNull(settings);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder suspensionReason(List<String> suspensionReason) {
             this.suspensionReason = Objects.requireNonNull(suspensionReason);
             return this;
         }
-        public GetInstanceResult build() {
+        public Builder suspensionReason(String... suspensionReason) {
+            return suspensionReason(List.of(suspensionReason));
+        }        public GetInstanceResult build() {
             return new GetInstanceResult(backendType, connectionName, createTime, currentDiskSize, databaseInstalledVersion, databaseVersion, diskEncryptionConfiguration, diskEncryptionStatus, failoverReplica, gceZone, instanceType, ipAddresses, kind, masterInstanceName, maxDiskSize, name, onPremisesConfiguration, outOfDiskReport, project, region, replicaConfiguration, replicaNames, rootPassword, satisfiesPzs, scheduledMaintenance, secondaryGceZone, selfLink, serverCaCert, serviceAccountEmailAddress, settings, state, suspensionReason);
         }
     }

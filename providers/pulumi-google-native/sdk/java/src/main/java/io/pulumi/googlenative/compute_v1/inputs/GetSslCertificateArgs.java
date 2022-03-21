@@ -66,12 +66,10 @@ public final class GetSslCertificateArgs extends io.pulumi.resources.InvokeArgs 
             this.project = project;
             return this;
         }
-
         public Builder sslCertificate(String sslCertificate) {
             this.sslCertificate = Objects.requireNonNull(sslCertificate);
             return this;
-        }
-        public GetSslCertificateArgs build() {
+        }        public GetSslCertificateArgs build() {
             return new GetSslCertificateArgs(project, sslCertificate);
         }
     }

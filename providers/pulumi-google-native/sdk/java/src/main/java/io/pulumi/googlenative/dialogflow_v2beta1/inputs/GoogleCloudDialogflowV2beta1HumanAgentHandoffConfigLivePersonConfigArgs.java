@@ -60,12 +60,10 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigLivePerson
             this.accountNumber = Objects.requireNonNull(accountNumber);
             return this;
         }
-
         public Builder accountNumber(String accountNumber) {
             this.accountNumber = Output.of(Objects.requireNonNull(accountNumber));
             return this;
-        }
-        public GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigLivePersonConfigArgs build() {
+        }        public GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigLivePersonConfigArgs build() {
             return new GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigLivePersonConfigArgs(accountNumber);
         }
     }

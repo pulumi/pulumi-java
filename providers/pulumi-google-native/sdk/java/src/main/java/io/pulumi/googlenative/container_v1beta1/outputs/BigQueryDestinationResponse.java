@@ -51,8 +51,7 @@ public final class BigQueryDestinationResponse {
         public Builder datasetId(String datasetId) {
             this.datasetId = Objects.requireNonNull(datasetId);
             return this;
-        }
-        public BigQueryDestinationResponse build() {
+        }        public BigQueryDestinationResponse build() {
             return new BigQueryDestinationResponse(datasetId);
         }
     }

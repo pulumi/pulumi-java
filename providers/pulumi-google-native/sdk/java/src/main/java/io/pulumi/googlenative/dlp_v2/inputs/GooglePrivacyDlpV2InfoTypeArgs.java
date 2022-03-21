@@ -78,22 +78,18 @@ public final class GooglePrivacyDlpV2InfoTypeArgs extends io.pulumi.resources.Re
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = Output.ofNullable(version);
             return this;
-        }
-        public GooglePrivacyDlpV2InfoTypeArgs build() {
+        }        public GooglePrivacyDlpV2InfoTypeArgs build() {
             return new GooglePrivacyDlpV2InfoTypeArgs(name, version);
         }
     }

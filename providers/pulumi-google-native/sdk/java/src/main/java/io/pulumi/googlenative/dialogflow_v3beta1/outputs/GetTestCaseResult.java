@@ -169,42 +169,40 @@ public final class GetTestCaseResult {
             this.creationTime = Objects.requireNonNull(creationTime);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder lastTestResult(GoogleCloudDialogflowCxV3beta1TestCaseResultResponse lastTestResult) {
             this.lastTestResult = Objects.requireNonNull(lastTestResult);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder notes(String notes) {
             this.notes = Objects.requireNonNull(notes);
             return this;
         }
-
         public Builder tags(List<String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
-
+        public Builder tags(String... tags) {
+            return tags(List.of(tags));
+        }
         public Builder testCaseConversationTurns(List<GoogleCloudDialogflowCxV3beta1ConversationTurnResponse> testCaseConversationTurns) {
             this.testCaseConversationTurns = Objects.requireNonNull(testCaseConversationTurns);
             return this;
         }
-
+        public Builder testCaseConversationTurns(GoogleCloudDialogflowCxV3beta1ConversationTurnResponse... testCaseConversationTurns) {
+            return testCaseConversationTurns(List.of(testCaseConversationTurns));
+        }
         public Builder testConfig(GoogleCloudDialogflowCxV3beta1TestConfigResponse testConfig) {
             this.testConfig = Objects.requireNonNull(testConfig);
             return this;
-        }
-        public GetTestCaseResult build() {
+        }        public GetTestCaseResult build() {
             return new GetTestCaseResult(creationTime, displayName, lastTestResult, name, notes, tags, testCaseConversationTurns, testConfig);
         }
     }

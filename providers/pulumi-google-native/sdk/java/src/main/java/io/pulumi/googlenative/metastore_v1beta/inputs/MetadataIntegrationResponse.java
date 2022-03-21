@@ -77,12 +77,10 @@ public final class MetadataIntegrationResponse extends io.pulumi.resources.Invok
             this.dataCatalogConfig = Objects.requireNonNull(dataCatalogConfig);
             return this;
         }
-
         public Builder dataplexConfig(DataplexConfigResponse dataplexConfig) {
             this.dataplexConfig = Objects.requireNonNull(dataplexConfig);
             return this;
-        }
-        public MetadataIntegrationResponse build() {
+        }        public MetadataIntegrationResponse build() {
             return new MetadataIntegrationResponse(dataCatalogConfig, dataplexConfig);
         }
     }

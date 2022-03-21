@@ -78,17 +78,14 @@ public final class GetOsPolicyAssignmentArgs extends io.pulumi.resources.InvokeA
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder osPolicyAssignmentId(String osPolicyAssignmentId) {
             this.osPolicyAssignmentId = Objects.requireNonNull(osPolicyAssignmentId);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetOsPolicyAssignmentArgs build() {
+        }        public GetOsPolicyAssignmentArgs build() {
             return new GetOsPolicyAssignmentArgs(location, osPolicyAssignmentId, project);
         }
     }

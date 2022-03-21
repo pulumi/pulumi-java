@@ -119,27 +119,22 @@ public final class BackendServiceIAPResponse {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public Builder oauth2ClientId(String oauth2ClientId) {
             this.oauth2ClientId = Objects.requireNonNull(oauth2ClientId);
             return this;
         }
-
         public Builder oauth2ClientInfo(BackendServiceIAPOAuth2ClientInfoResponse oauth2ClientInfo) {
             this.oauth2ClientInfo = Objects.requireNonNull(oauth2ClientInfo);
             return this;
         }
-
         public Builder oauth2ClientSecret(String oauth2ClientSecret) {
             this.oauth2ClientSecret = Objects.requireNonNull(oauth2ClientSecret);
             return this;
         }
-
         public Builder oauth2ClientSecretSha256(String oauth2ClientSecretSha256) {
             this.oauth2ClientSecretSha256 = Objects.requireNonNull(oauth2ClientSecretSha256);
             return this;
-        }
-        public BackendServiceIAPResponse build() {
+        }        public BackendServiceIAPResponse build() {
             return new BackendServiceIAPResponse(enabled, oauth2ClientId, oauth2ClientInfo, oauth2ClientSecret, oauth2ClientSecretSha256);
         }
     }

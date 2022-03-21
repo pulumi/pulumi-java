@@ -104,22 +104,18 @@ public final class GoogleCloudApigeeV1AddonsConfigResponse {
             this.advancedApiOpsConfig = Objects.requireNonNull(advancedApiOpsConfig);
             return this;
         }
-
         public Builder connectorsPlatformConfig(GoogleCloudApigeeV1ConnectorsPlatformConfigResponse connectorsPlatformConfig) {
             this.connectorsPlatformConfig = Objects.requireNonNull(connectorsPlatformConfig);
             return this;
         }
-
         public Builder integrationConfig(GoogleCloudApigeeV1IntegrationConfigResponse integrationConfig) {
             this.integrationConfig = Objects.requireNonNull(integrationConfig);
             return this;
         }
-
         public Builder monetizationConfig(GoogleCloudApigeeV1MonetizationConfigResponse monetizationConfig) {
             this.monetizationConfig = Objects.requireNonNull(monetizationConfig);
             return this;
-        }
-        public GoogleCloudApigeeV1AddonsConfigResponse build() {
+        }        public GoogleCloudApigeeV1AddonsConfigResponse build() {
             return new GoogleCloudApigeeV1AddonsConfigResponse(advancedApiOpsConfig, connectorsPlatformConfig, integrationConfig, monetizationConfig);
         }
     }

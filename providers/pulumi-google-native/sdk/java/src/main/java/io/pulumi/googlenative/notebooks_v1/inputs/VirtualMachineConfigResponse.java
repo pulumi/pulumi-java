@@ -292,77 +292,68 @@ public final class VirtualMachineConfigResponse extends io.pulumi.resources.Invo
             this.acceleratorConfig = Objects.requireNonNull(acceleratorConfig);
             return this;
         }
-
         public Builder containerImages(List<ContainerImageResponse> containerImages) {
             this.containerImages = Objects.requireNonNull(containerImages);
             return this;
         }
-
+        public Builder containerImages(ContainerImageResponse... containerImages) {
+            return containerImages(List.of(containerImages));
+        }
         public Builder dataDisk(LocalDiskResponse dataDisk) {
             this.dataDisk = Objects.requireNonNull(dataDisk);
             return this;
         }
-
         public Builder encryptionConfig(EncryptionConfigResponse encryptionConfig) {
             this.encryptionConfig = Objects.requireNonNull(encryptionConfig);
             return this;
         }
-
         public Builder guestAttributes(Map<String,String> guestAttributes) {
             this.guestAttributes = Objects.requireNonNull(guestAttributes);
             return this;
         }
-
         public Builder internalIpOnly(Boolean internalIpOnly) {
             this.internalIpOnly = Objects.requireNonNull(internalIpOnly);
             return this;
         }
-
         public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder machineType(String machineType) {
             this.machineType = Objects.requireNonNull(machineType);
             return this;
         }
-
         public Builder metadata(Map<String,String> metadata) {
             this.metadata = Objects.requireNonNull(metadata);
             return this;
         }
-
         public Builder network(String network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }
-
         public Builder nicType(String nicType) {
             this.nicType = Objects.requireNonNull(nicType);
             return this;
         }
-
         public Builder shieldedInstanceConfig(RuntimeShieldedInstanceConfigResponse shieldedInstanceConfig) {
             this.shieldedInstanceConfig = Objects.requireNonNull(shieldedInstanceConfig);
             return this;
         }
-
         public Builder subnet(String subnet) {
             this.subnet = Objects.requireNonNull(subnet);
             return this;
         }
-
         public Builder tags(List<String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
-
+        public Builder tags(String... tags) {
+            return tags(List.of(tags));
+        }
         public Builder zone(String zone) {
             this.zone = Objects.requireNonNull(zone);
             return this;
-        }
-        public VirtualMachineConfigResponse build() {
+        }        public VirtualMachineConfigResponse build() {
             return new VirtualMachineConfigResponse(acceleratorConfig, containerImages, dataDisk, encryptionConfig, guestAttributes, internalIpOnly, labels, machineType, metadata, network, nicType, shieldedInstanceConfig, subnet, tags, zone);
         }
     }

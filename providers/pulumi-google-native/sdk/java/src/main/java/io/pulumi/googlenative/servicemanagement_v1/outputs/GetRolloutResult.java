@@ -135,32 +135,26 @@ public final class GetRolloutResult {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder deleteServiceStrategy(DeleteServiceStrategyResponse deleteServiceStrategy) {
             this.deleteServiceStrategy = Objects.requireNonNull(deleteServiceStrategy);
             return this;
         }
-
         public Builder rolloutId(String rolloutId) {
             this.rolloutId = Objects.requireNonNull(rolloutId);
             return this;
         }
-
         public Builder serviceName(String serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder trafficPercentStrategy(TrafficPercentStrategyResponse trafficPercentStrategy) {
             this.trafficPercentStrategy = Objects.requireNonNull(trafficPercentStrategy);
             return this;
-        }
-        public GetRolloutResult build() {
+        }        public GetRolloutResult build() {
             return new GetRolloutResult(createTime, deleteServiceStrategy, rolloutId, serviceName, status, trafficPercentStrategy);
         }
     }

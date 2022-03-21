@@ -365,102 +365,106 @@ public final class GetIntentResult {
             this.action = Objects.requireNonNull(action);
             return this;
         }
-
         public Builder defaultResponsePlatforms(List<String> defaultResponsePlatforms) {
             this.defaultResponsePlatforms = Objects.requireNonNull(defaultResponsePlatforms);
             return this;
         }
-
+        public Builder defaultResponsePlatforms(String... defaultResponsePlatforms) {
+            return defaultResponsePlatforms(List.of(defaultResponsePlatforms));
+        }
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder endInteraction(Boolean endInteraction) {
             this.endInteraction = Objects.requireNonNull(endInteraction);
             return this;
         }
-
         public Builder events(List<String> events) {
             this.events = Objects.requireNonNull(events);
             return this;
         }
-
+        public Builder events(String... events) {
+            return events(List.of(events));
+        }
         public Builder followupIntentInfo(List<GoogleCloudDialogflowV2beta1IntentFollowupIntentInfoResponse> followupIntentInfo) {
             this.followupIntentInfo = Objects.requireNonNull(followupIntentInfo);
             return this;
         }
-
+        public Builder followupIntentInfo(GoogleCloudDialogflowV2beta1IntentFollowupIntentInfoResponse... followupIntentInfo) {
+            return followupIntentInfo(List.of(followupIntentInfo));
+        }
         public Builder inputContextNames(List<String> inputContextNames) {
             this.inputContextNames = Objects.requireNonNull(inputContextNames);
             return this;
         }
-
+        public Builder inputContextNames(String... inputContextNames) {
+            return inputContextNames(List.of(inputContextNames));
+        }
         public Builder isFallback(Boolean isFallback) {
             this.isFallback = Objects.requireNonNull(isFallback);
             return this;
         }
-
         public Builder liveAgentHandoff(Boolean liveAgentHandoff) {
             this.liveAgentHandoff = Objects.requireNonNull(liveAgentHandoff);
             return this;
         }
-
         public Builder messages(List<GoogleCloudDialogflowV2beta1IntentMessageResponse> messages) {
             this.messages = Objects.requireNonNull(messages);
             return this;
         }
-
+        public Builder messages(GoogleCloudDialogflowV2beta1IntentMessageResponse... messages) {
+            return messages(List.of(messages));
+        }
         public Builder mlDisabled(Boolean mlDisabled) {
             this.mlDisabled = Objects.requireNonNull(mlDisabled);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder outputContexts(List<GoogleCloudDialogflowV2beta1ContextResponse> outputContexts) {
             this.outputContexts = Objects.requireNonNull(outputContexts);
             return this;
         }
-
+        public Builder outputContexts(GoogleCloudDialogflowV2beta1ContextResponse... outputContexts) {
+            return outputContexts(List.of(outputContexts));
+        }
         public Builder parameters(List<GoogleCloudDialogflowV2beta1IntentParameterResponse> parameters) {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
-
+        public Builder parameters(GoogleCloudDialogflowV2beta1IntentParameterResponse... parameters) {
+            return parameters(List.of(parameters));
+        }
         public Builder parentFollowupIntentName(String parentFollowupIntentName) {
             this.parentFollowupIntentName = Objects.requireNonNull(parentFollowupIntentName);
             return this;
         }
-
         public Builder priority(Integer priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
-
         public Builder resetContexts(Boolean resetContexts) {
             this.resetContexts = Objects.requireNonNull(resetContexts);
             return this;
         }
-
         public Builder rootFollowupIntentName(String rootFollowupIntentName) {
             this.rootFollowupIntentName = Objects.requireNonNull(rootFollowupIntentName);
             return this;
         }
-
         public Builder trainingPhrases(List<GoogleCloudDialogflowV2beta1IntentTrainingPhraseResponse> trainingPhrases) {
             this.trainingPhrases = Objects.requireNonNull(trainingPhrases);
             return this;
         }
-
+        public Builder trainingPhrases(GoogleCloudDialogflowV2beta1IntentTrainingPhraseResponse... trainingPhrases) {
+            return trainingPhrases(List.of(trainingPhrases));
+        }
         public Builder webhookState(String webhookState) {
             this.webhookState = Objects.requireNonNull(webhookState);
             return this;
-        }
-        public GetIntentResult build() {
+        }        public GetIntentResult build() {
             return new GetIntentResult(action, defaultResponsePlatforms, displayName, endInteraction, events, followupIntentInfo, inputContextNames, isFallback, liveAgentHandoff, messages, mlDisabled, name, outputContexts, parameters, parentFollowupIntentName, priority, resetContexts, rootFollowupIntentName, trainingPhrases, webhookState);
         }
     }

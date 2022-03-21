@@ -252,142 +252,117 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
             this.annotations = annotations;
             return this;
         }
-
         public Builder annotations(@Nullable Map<String,String> annotations) {
             this.annotations = Output.ofNullable(annotations);
             return this;
         }
-
         public Builder anthosCluster(@Nullable Output<AnthosClusterArgs> anthosCluster) {
             this.anthosCluster = anthosCluster;
             return this;
         }
-
         public Builder anthosCluster(@Nullable AnthosClusterArgs anthosCluster) {
             this.anthosCluster = Output.ofNullable(anthosCluster);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
-
         public Builder etag(@Nullable String etag) {
             this.etag = Output.ofNullable(etag);
             return this;
         }
-
         public Builder executionConfigs(@Nullable Output<List<ExecutionConfigArgs>> executionConfigs) {
             this.executionConfigs = executionConfigs;
             return this;
         }
-
         public Builder executionConfigs(@Nullable List<ExecutionConfigArgs> executionConfigs) {
             this.executionConfigs = Output.ofNullable(executionConfigs);
             return this;
         }
-
+        public Builder executionConfigs(ExecutionConfigArgs... executionConfigs) {
+            return executionConfigs(List.of(executionConfigs));
+        }
         public Builder gke(@Nullable Output<GkeClusterArgs> gke) {
             this.gke = gke;
             return this;
         }
-
         public Builder gke(@Nullable GkeClusterArgs gke) {
             this.gke = Output.ofNullable(gke);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder requestId(@Nullable Output<String> requestId) {
             this.requestId = requestId;
             return this;
         }
-
         public Builder requestId(@Nullable String requestId) {
             this.requestId = Output.ofNullable(requestId);
             return this;
         }
-
         public Builder requireApproval(@Nullable Output<Boolean> requireApproval) {
             this.requireApproval = requireApproval;
             return this;
         }
-
         public Builder requireApproval(@Nullable Boolean requireApproval) {
             this.requireApproval = Output.ofNullable(requireApproval);
             return this;
         }
-
         public Builder targetId(Output<String> targetId) {
             this.targetId = Objects.requireNonNull(targetId);
             return this;
         }
-
         public Builder targetId(String targetId) {
             this.targetId = Output.of(Objects.requireNonNull(targetId));
             return this;
         }
-
         public Builder validateOnly(@Nullable Output<String> validateOnly) {
             this.validateOnly = validateOnly;
             return this;
         }
-
         public Builder validateOnly(@Nullable String validateOnly) {
             this.validateOnly = Output.ofNullable(validateOnly);
             return this;
-        }
-        public TargetArgs build() {
+        }        public TargetArgs build() {
             return new TargetArgs(annotations, anthosCluster, description, etag, executionConfigs, gke, labels, location, name, project, requestId, requireApproval, targetId, validateOnly);
         }
     }

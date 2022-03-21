@@ -73,12 +73,13 @@ public final class JobStatistics4Response extends io.pulumi.resources.InvokeArgs
             this.destinationUriFileCounts = Objects.requireNonNull(destinationUriFileCounts);
             return this;
         }
-
+        public Builder destinationUriFileCounts(String... destinationUriFileCounts) {
+            return destinationUriFileCounts(List.of(destinationUriFileCounts));
+        }
         public Builder inputBytes(String inputBytes) {
             this.inputBytes = Objects.requireNonNull(inputBytes);
             return this;
-        }
-        public JobStatistics4Response build() {
+        }        public JobStatistics4Response build() {
             return new JobStatistics4Response(destinationUriFileCounts, inputBytes);
         }
     }

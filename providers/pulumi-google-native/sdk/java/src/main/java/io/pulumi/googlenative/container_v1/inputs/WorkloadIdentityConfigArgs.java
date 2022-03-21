@@ -61,12 +61,10 @@ public final class WorkloadIdentityConfigArgs extends io.pulumi.resources.Resour
             this.workloadPool = workloadPool;
             return this;
         }
-
         public Builder workloadPool(@Nullable String workloadPool) {
             this.workloadPool = Output.ofNullable(workloadPool);
             return this;
-        }
-        public WorkloadIdentityConfigArgs build() {
+        }        public WorkloadIdentityConfigArgs build() {
             return new WorkloadIdentityConfigArgs(workloadPool);
         }
     }

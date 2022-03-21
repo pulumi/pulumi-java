@@ -102,22 +102,21 @@ public final class ManagedZoneDnsSecConfigResponse extends io.pulumi.resources.I
             this.defaultKeySpecs = Objects.requireNonNull(defaultKeySpecs);
             return this;
         }
-
+        public Builder defaultKeySpecs(DnsKeySpecResponse... defaultKeySpecs) {
+            return defaultKeySpecs(List.of(defaultKeySpecs));
+        }
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder nonExistence(String nonExistence) {
             this.nonExistence = Objects.requireNonNull(nonExistence);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
-        }
-        public ManagedZoneDnsSecConfigResponse build() {
+        }        public ManagedZoneDnsSecConfigResponse build() {
             return new ManagedZoneDnsSecConfigResponse(defaultKeySpecs, kind, nonExistence, state);
         }
     }

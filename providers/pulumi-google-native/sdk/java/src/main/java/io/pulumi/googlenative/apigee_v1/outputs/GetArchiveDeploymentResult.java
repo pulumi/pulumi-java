@@ -134,32 +134,26 @@ public final class GetArchiveDeploymentResult {
             this.createdAt = Objects.requireNonNull(createdAt);
             return this;
         }
-
         public Builder gcsUri(String gcsUri) {
             this.gcsUri = Objects.requireNonNull(gcsUri);
             return this;
         }
-
         public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder operation(String operation) {
             this.operation = Objects.requireNonNull(operation);
             return this;
         }
-
         public Builder updatedAt(String updatedAt) {
             this.updatedAt = Objects.requireNonNull(updatedAt);
             return this;
-        }
-        public GetArchiveDeploymentResult build() {
+        }        public GetArchiveDeploymentResult build() {
             return new GetArchiveDeploymentResult(createdAt, gcsUri, labels, name, operation, updatedAt);
         }
     }

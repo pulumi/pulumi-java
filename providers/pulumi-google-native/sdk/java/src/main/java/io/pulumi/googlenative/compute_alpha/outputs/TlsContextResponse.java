@@ -70,12 +70,10 @@ public final class TlsContextResponse {
             this.certificateContext = Objects.requireNonNull(certificateContext);
             return this;
         }
-
         public Builder validationContext(TlsValidationContextResponse validationContext) {
             this.validationContext = Objects.requireNonNull(validationContext);
             return this;
-        }
-        public TlsContextResponse build() {
+        }        public TlsContextResponse build() {
             return new TlsContextResponse(certificateContext, validationContext);
         }
     }

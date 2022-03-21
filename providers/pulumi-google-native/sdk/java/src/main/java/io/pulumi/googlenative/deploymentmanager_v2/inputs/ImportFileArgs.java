@@ -74,22 +74,18 @@ public final class ImportFileArgs extends io.pulumi.resources.ResourceArgs {
             this.content = content;
             return this;
         }
-
         public Builder content(@Nullable String content) {
             this.content = Output.ofNullable(content);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
-        }
-        public ImportFileArgs build() {
+        }        public ImportFileArgs build() {
             return new ImportFileArgs(content, name);
         }
     }

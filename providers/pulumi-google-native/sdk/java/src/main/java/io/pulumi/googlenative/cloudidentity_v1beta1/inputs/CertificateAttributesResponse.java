@@ -189,47 +189,38 @@ public final class CertificateAttributesResponse extends io.pulumi.resources.Inv
             this.certificateTemplate = Objects.requireNonNull(certificateTemplate);
             return this;
         }
-
         public Builder fingerprint(String fingerprint) {
             this.fingerprint = Objects.requireNonNull(fingerprint);
             return this;
         }
-
         public Builder issuer(String issuer) {
             this.issuer = Objects.requireNonNull(issuer);
             return this;
         }
-
         public Builder serialNumber(String serialNumber) {
             this.serialNumber = Objects.requireNonNull(serialNumber);
             return this;
         }
-
         public Builder subject(String subject) {
             this.subject = Objects.requireNonNull(subject);
             return this;
         }
-
         public Builder thumbprint(String thumbprint) {
             this.thumbprint = Objects.requireNonNull(thumbprint);
             return this;
         }
-
         public Builder validationState(String validationState) {
             this.validationState = Objects.requireNonNull(validationState);
             return this;
         }
-
         public Builder validityExpirationTime(String validityExpirationTime) {
             this.validityExpirationTime = Objects.requireNonNull(validityExpirationTime);
             return this;
         }
-
         public Builder validityStartTime(String validityStartTime) {
             this.validityStartTime = Objects.requireNonNull(validityStartTime);
             return this;
-        }
-        public CertificateAttributesResponse build() {
+        }        public CertificateAttributesResponse build() {
             return new CertificateAttributesResponse(certificateTemplate, fingerprint, issuer, serialNumber, subject, thumbprint, validationState, validityExpirationTime, validityStartTime);
         }
     }

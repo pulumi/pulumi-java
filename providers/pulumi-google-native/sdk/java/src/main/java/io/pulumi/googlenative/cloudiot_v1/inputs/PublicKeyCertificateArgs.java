@@ -79,22 +79,18 @@ public final class PublicKeyCertificateArgs extends io.pulumi.resources.Resource
             this.certificate = certificate;
             return this;
         }
-
         public Builder certificate(@Nullable String certificate) {
             this.certificate = Output.ofNullable(certificate);
             return this;
         }
-
         public Builder format(@Nullable Output<PublicKeyCertificateFormat> format) {
             this.format = format;
             return this;
         }
-
         public Builder format(@Nullable PublicKeyCertificateFormat format) {
             this.format = Output.ofNullable(format);
             return this;
-        }
-        public PublicKeyCertificateArgs build() {
+        }        public PublicKeyCertificateArgs build() {
             return new PublicKeyCertificateArgs(certificate, format);
         }
     }

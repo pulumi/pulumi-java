@@ -103,22 +103,21 @@ public final class TemplateParameterResponse {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder fields(List<String> fields) {
             this.fields = Objects.requireNonNull(fields);
             return this;
         }
-
+        public Builder fields(String... fields) {
+            return fields(List.of(fields));
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder validation(ParameterValidationResponse validation) {
             this.validation = Objects.requireNonNull(validation);
             return this;
-        }
-        public TemplateParameterResponse build() {
+        }        public TemplateParameterResponse build() {
             return new TemplateParameterResponse(description, fields, name, validation);
         }
     }

@@ -79,22 +79,18 @@ public final class SandboxConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.sandboxType = sandboxType;
             return this;
         }
-
         public Builder sandboxType(@Nullable String sandboxType) {
             this.sandboxType = Output.ofNullable(sandboxType);
             return this;
         }
-
         public Builder type(@Nullable Output<SandboxConfigType> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable SandboxConfigType type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public SandboxConfigArgs build() {
+        }        public SandboxConfigArgs build() {
             return new SandboxConfigArgs(sandboxType, type);
         }
     }

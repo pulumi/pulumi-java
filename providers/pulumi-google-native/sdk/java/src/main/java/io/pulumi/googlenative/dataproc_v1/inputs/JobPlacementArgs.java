@@ -79,22 +79,18 @@ public final class JobPlacementArgs extends io.pulumi.resources.ResourceArgs {
             this.clusterLabels = clusterLabels;
             return this;
         }
-
         public Builder clusterLabels(@Nullable Map<String,String> clusterLabels) {
             this.clusterLabels = Output.ofNullable(clusterLabels);
             return this;
         }
-
         public Builder clusterName(Output<String> clusterName) {
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
-
         public Builder clusterName(String clusterName) {
             this.clusterName = Output.of(Objects.requireNonNull(clusterName));
             return this;
-        }
-        public JobPlacementArgs build() {
+        }        public JobPlacementArgs build() {
             return new JobPlacementArgs(clusterLabels, clusterName);
         }
     }

@@ -214,112 +214,90 @@ public final class InterconnectArgs extends io.pulumi.resources.ResourceArgs {
             this.adminEnabled = adminEnabled;
             return this;
         }
-
         public Builder adminEnabled(@Nullable Boolean adminEnabled) {
             this.adminEnabled = Output.ofNullable(adminEnabled);
             return this;
         }
-
         public Builder customerName(@Nullable Output<String> customerName) {
             this.customerName = customerName;
             return this;
         }
-
         public Builder customerName(@Nullable String customerName) {
             this.customerName = Output.ofNullable(customerName);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder interconnectType(@Nullable Output<InterconnectInterconnectType> interconnectType) {
             this.interconnectType = interconnectType;
             return this;
         }
-
         public Builder interconnectType(@Nullable InterconnectInterconnectType interconnectType) {
             this.interconnectType = Output.ofNullable(interconnectType);
             return this;
         }
-
         public Builder linkType(@Nullable Output<InterconnectLinkType> linkType) {
             this.linkType = linkType;
             return this;
         }
-
         public Builder linkType(@Nullable InterconnectLinkType linkType) {
             this.linkType = Output.ofNullable(linkType);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder nocContactEmail(@Nullable Output<String> nocContactEmail) {
             this.nocContactEmail = nocContactEmail;
             return this;
         }
-
         public Builder nocContactEmail(@Nullable String nocContactEmail) {
             this.nocContactEmail = Output.ofNullable(nocContactEmail);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder requestId(@Nullable Output<String> requestId) {
             this.requestId = requestId;
             return this;
         }
-
         public Builder requestId(@Nullable String requestId) {
             this.requestId = Output.ofNullable(requestId);
             return this;
         }
-
         public Builder requestedLinkCount(@Nullable Output<Integer> requestedLinkCount) {
             this.requestedLinkCount = requestedLinkCount;
             return this;
         }
-
         public Builder requestedLinkCount(@Nullable Integer requestedLinkCount) {
             this.requestedLinkCount = Output.ofNullable(requestedLinkCount);
             return this;
-        }
-        public InterconnectArgs build() {
+        }        public InterconnectArgs build() {
             return new InterconnectArgs(adminEnabled, customerName, description, interconnectType, linkType, location, name, nocContactEmail, project, requestId, requestedLinkCount);
         }
     }

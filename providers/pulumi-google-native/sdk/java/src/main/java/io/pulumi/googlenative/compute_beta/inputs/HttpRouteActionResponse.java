@@ -175,42 +175,37 @@ public final class HttpRouteActionResponse extends io.pulumi.resources.InvokeArg
             this.corsPolicy = Objects.requireNonNull(corsPolicy);
             return this;
         }
-
         public Builder faultInjectionPolicy(HttpFaultInjectionResponse faultInjectionPolicy) {
             this.faultInjectionPolicy = Objects.requireNonNull(faultInjectionPolicy);
             return this;
         }
-
         public Builder maxStreamDuration(DurationResponse maxStreamDuration) {
             this.maxStreamDuration = Objects.requireNonNull(maxStreamDuration);
             return this;
         }
-
         public Builder requestMirrorPolicy(RequestMirrorPolicyResponse requestMirrorPolicy) {
             this.requestMirrorPolicy = Objects.requireNonNull(requestMirrorPolicy);
             return this;
         }
-
         public Builder retryPolicy(HttpRetryPolicyResponse retryPolicy) {
             this.retryPolicy = Objects.requireNonNull(retryPolicy);
             return this;
         }
-
         public Builder timeout(DurationResponse timeout) {
             this.timeout = Objects.requireNonNull(timeout);
             return this;
         }
-
         public Builder urlRewrite(UrlRewriteResponse urlRewrite) {
             this.urlRewrite = Objects.requireNonNull(urlRewrite);
             return this;
         }
-
         public Builder weightedBackendServices(List<WeightedBackendServiceResponse> weightedBackendServices) {
             this.weightedBackendServices = Objects.requireNonNull(weightedBackendServices);
             return this;
         }
-        public HttpRouteActionResponse build() {
+        public Builder weightedBackendServices(WeightedBackendServiceResponse... weightedBackendServices) {
+            return weightedBackendServices(List.of(weightedBackendServices));
+        }        public HttpRouteActionResponse build() {
             return new HttpRouteActionResponse(corsPolicy, faultInjectionPolicy, maxStreamDuration, requestMirrorPolicy, retryPolicy, timeout, urlRewrite, weightedBackendServices);
         }
     }

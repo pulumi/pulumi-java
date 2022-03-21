@@ -111,52 +111,42 @@ public final class DomainMappingArgs extends io.pulumi.resources.ResourceArgs {
             this.appId = Objects.requireNonNull(appId);
             return this;
         }
-
         public Builder appId(String appId) {
             this.appId = Output.of(Objects.requireNonNull(appId));
             return this;
         }
-
         public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder noManagedCertificate(@Nullable Output<String> noManagedCertificate) {
             this.noManagedCertificate = noManagedCertificate;
             return this;
         }
-
         public Builder noManagedCertificate(@Nullable String noManagedCertificate) {
             this.noManagedCertificate = Output.ofNullable(noManagedCertificate);
             return this;
         }
-
         public Builder overrideStrategy(@Nullable Output<String> overrideStrategy) {
             this.overrideStrategy = overrideStrategy;
             return this;
         }
-
         public Builder overrideStrategy(@Nullable String overrideStrategy) {
             this.overrideStrategy = Output.ofNullable(overrideStrategy);
             return this;
         }
-
         public Builder sslSettings(@Nullable Output<SslSettingsArgs> sslSettings) {
             this.sslSettings = sslSettings;
             return this;
         }
-
         public Builder sslSettings(@Nullable SslSettingsArgs sslSettings) {
             this.sslSettings = Output.ofNullable(sslSettings);
             return this;
-        }
-        public DomainMappingArgs build() {
+        }        public DomainMappingArgs build() {
             return new DomainMappingArgs(appId, id, noManagedCertificate, overrideStrategy, sslSettings);
         }
     }

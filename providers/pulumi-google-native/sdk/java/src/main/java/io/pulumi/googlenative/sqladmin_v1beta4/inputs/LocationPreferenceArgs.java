@@ -110,42 +110,34 @@ public final class LocationPreferenceArgs extends io.pulumi.resources.ResourceAr
             this.followGaeApplication = followGaeApplication;
             return this;
         }
-
         public Builder followGaeApplication(@Nullable String followGaeApplication) {
             this.followGaeApplication = Output.ofNullable(followGaeApplication);
             return this;
         }
-
         public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder secondaryZone(@Nullable Output<String> secondaryZone) {
             this.secondaryZone = secondaryZone;
             return this;
         }
-
         public Builder secondaryZone(@Nullable String secondaryZone) {
             this.secondaryZone = Output.ofNullable(secondaryZone);
             return this;
         }
-
         public Builder zone(@Nullable Output<String> zone) {
             this.zone = zone;
             return this;
         }
-
         public Builder zone(@Nullable String zone) {
             this.zone = Output.ofNullable(zone);
             return this;
-        }
-        public LocationPreferenceArgs build() {
+        }        public LocationPreferenceArgs build() {
             return new LocationPreferenceArgs(followGaeApplication, kind, secondaryZone, zone);
         }
     }

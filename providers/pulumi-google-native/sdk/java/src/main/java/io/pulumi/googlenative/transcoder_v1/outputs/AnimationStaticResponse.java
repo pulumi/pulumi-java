@@ -70,12 +70,10 @@ public final class AnimationStaticResponse {
             this.startTimeOffset = Objects.requireNonNull(startTimeOffset);
             return this;
         }
-
         public Builder xy(NormalizedCoordinateResponse xy) {
             this.xy = Objects.requireNonNull(xy);
             return this;
-        }
-        public AnimationStaticResponse build() {
+        }        public AnimationStaticResponse build() {
             return new AnimationStaticResponse(startTimeOffset, xy);
         }
     }

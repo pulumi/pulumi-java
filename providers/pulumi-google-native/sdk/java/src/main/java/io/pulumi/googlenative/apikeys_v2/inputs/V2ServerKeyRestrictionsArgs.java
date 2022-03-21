@@ -62,12 +62,13 @@ public final class V2ServerKeyRestrictionsArgs extends io.pulumi.resources.Resou
             this.allowedIps = allowedIps;
             return this;
         }
-
         public Builder allowedIps(@Nullable List<String> allowedIps) {
             this.allowedIps = Output.ofNullable(allowedIps);
             return this;
         }
-        public V2ServerKeyRestrictionsArgs build() {
+        public Builder allowedIps(String... allowedIps) {
+            return allowedIps(List.of(allowedIps));
+        }        public V2ServerKeyRestrictionsArgs build() {
             return new V2ServerKeyRestrictionsArgs(allowedIps);
         }
     }

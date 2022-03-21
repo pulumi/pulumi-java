@@ -58,12 +58,13 @@ public final class ClusteringArgs extends io.pulumi.resources.ResourceArgs {
             this.fields = fields;
             return this;
         }
-
         public Builder fields(@Nullable List<String> fields) {
             this.fields = Output.ofNullable(fields);
             return this;
         }
-        public ClusteringArgs build() {
+        public Builder fields(String... fields) {
+            return fields(List.of(fields));
+        }        public ClusteringArgs build() {
             return new ClusteringArgs(fields);
         }
     }

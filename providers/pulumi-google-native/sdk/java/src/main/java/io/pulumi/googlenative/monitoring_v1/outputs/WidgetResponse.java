@@ -172,42 +172,34 @@ public final class WidgetResponse {
             this.alertChart = Objects.requireNonNull(alertChart);
             return this;
         }
-
         public Builder blank(EmptyResponse blank) {
             this.blank = Objects.requireNonNull(blank);
             return this;
         }
-
         public Builder logsPanel(LogsPanelResponse logsPanel) {
             this.logsPanel = Objects.requireNonNull(logsPanel);
             return this;
         }
-
         public Builder scorecard(ScorecardResponse scorecard) {
             this.scorecard = Objects.requireNonNull(scorecard);
             return this;
         }
-
         public Builder text(TextResponse text) {
             this.text = Objects.requireNonNull(text);
             return this;
         }
-
         public Builder timeSeriesTable(TimeSeriesTableResponse timeSeriesTable) {
             this.timeSeriesTable = Objects.requireNonNull(timeSeriesTable);
             return this;
         }
-
         public Builder title(String title) {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public Builder xyChart(XyChartResponse xyChart) {
             this.xyChart = Objects.requireNonNull(xyChart);
             return this;
-        }
-        public WidgetResponse build() {
+        }        public WidgetResponse build() {
             return new WidgetResponse(alertChart, blank, logsPanel, scorecard, text, timeSeriesTable, title, xyChart);
         }
     }

@@ -78,22 +78,18 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageCardButtonArgs exten
             this.postback = postback;
             return this;
         }
-
         public Builder postback(@Nullable String postback) {
             this.postback = Output.ofNullable(postback);
             return this;
         }
-
         public Builder text(@Nullable Output<String> text) {
             this.text = text;
             return this;
         }
-
         public Builder text(@Nullable String text) {
             this.text = Output.ofNullable(text);
             return this;
-        }
-        public GoogleCloudDialogflowV2beta1IntentMessageCardButtonArgs build() {
+        }        public GoogleCloudDialogflowV2beta1IntentMessageCardButtonArgs build() {
             return new GoogleCloudDialogflowV2beta1IntentMessageCardButtonArgs(postback, text);
         }
     }

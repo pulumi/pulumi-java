@@ -126,27 +126,22 @@ public final class EndpointResponse extends io.pulumi.resources.InvokeArgs {
             this.address = Objects.requireNonNull(address);
             return this;
         }
-
         public Builder annotations(Map<String,String> annotations) {
             this.annotations = Objects.requireNonNull(annotations);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder network(String network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }
-
         public Builder port(Integer port) {
             this.port = Objects.requireNonNull(port);
             return this;
-        }
-        public EndpointResponse build() {
+        }        public EndpointResponse build() {
             return new EndpointResponse(address, annotations, name, network, port);
         }
     }

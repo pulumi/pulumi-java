@@ -102,22 +102,18 @@ public final class GoogleCloudMlV1_Trial_ParameterResponse {
             this.floatValue = Objects.requireNonNull(floatValue);
             return this;
         }
-
         public Builder intValue(String intValue) {
             this.intValue = Objects.requireNonNull(intValue);
             return this;
         }
-
         public Builder parameter(String parameter) {
             this.parameter = Objects.requireNonNull(parameter);
             return this;
         }
-
         public Builder stringValue(String stringValue) {
             this.stringValue = Objects.requireNonNull(stringValue);
             return this;
-        }
-        public GoogleCloudMlV1_Trial_ParameterResponse build() {
+        }        public GoogleCloudMlV1_Trial_ParameterResponse build() {
             return new GoogleCloudMlV1_Trial_ParameterResponse(floatValue, intValue, parameter, stringValue);
         }
     }

@@ -70,22 +70,18 @@ public final class PolicyNetworkArgs extends io.pulumi.resources.ResourceArgs {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder networkUrl(@Nullable Output<String> networkUrl) {
             this.networkUrl = networkUrl;
             return this;
         }
-
         public Builder networkUrl(@Nullable String networkUrl) {
             this.networkUrl = Output.ofNullable(networkUrl);
             return this;
-        }
-        public PolicyNetworkArgs build() {
+        }        public PolicyNetworkArgs build() {
             return new PolicyNetworkArgs(kind, networkUrl);
         }
     }

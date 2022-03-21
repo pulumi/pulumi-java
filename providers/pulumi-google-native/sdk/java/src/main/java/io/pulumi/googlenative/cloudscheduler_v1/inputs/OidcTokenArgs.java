@@ -78,22 +78,18 @@ public final class OidcTokenArgs extends io.pulumi.resources.ResourceArgs {
             this.audience = audience;
             return this;
         }
-
         public Builder audience(@Nullable String audience) {
             this.audience = Output.ofNullable(audience);
             return this;
         }
-
         public Builder serviceAccountEmail(@Nullable Output<String> serviceAccountEmail) {
             this.serviceAccountEmail = serviceAccountEmail;
             return this;
         }
-
         public Builder serviceAccountEmail(@Nullable String serviceAccountEmail) {
             this.serviceAccountEmail = Output.ofNullable(serviceAccountEmail);
             return this;
-        }
-        public OidcTokenArgs build() {
+        }        public OidcTokenArgs build() {
             return new OidcTokenArgs(audience, serviceAccountEmail);
         }
     }

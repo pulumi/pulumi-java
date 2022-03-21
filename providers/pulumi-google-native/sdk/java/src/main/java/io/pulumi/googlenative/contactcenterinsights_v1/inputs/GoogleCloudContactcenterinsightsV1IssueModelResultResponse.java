@@ -78,12 +78,13 @@ public final class GoogleCloudContactcenterinsightsV1IssueModelResultResponse ex
             this.issueModel = Objects.requireNonNull(issueModel);
             return this;
         }
-
         public Builder issues(List<GoogleCloudContactcenterinsightsV1IssueAssignmentResponse> issues) {
             this.issues = Objects.requireNonNull(issues);
             return this;
         }
-        public GoogleCloudContactcenterinsightsV1IssueModelResultResponse build() {
+        public Builder issues(GoogleCloudContactcenterinsightsV1IssueAssignmentResponse... issues) {
+            return issues(List.of(issues));
+        }        public GoogleCloudContactcenterinsightsV1IssueModelResultResponse build() {
             return new GoogleCloudContactcenterinsightsV1IssueModelResultResponse(issueModel, issues);
         }
     }

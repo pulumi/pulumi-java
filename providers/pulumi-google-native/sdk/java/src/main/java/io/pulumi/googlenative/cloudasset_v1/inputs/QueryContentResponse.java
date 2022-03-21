@@ -58,8 +58,7 @@ public final class QueryContentResponse extends io.pulumi.resources.InvokeArgs {
         public Builder iamPolicyAnalysisQuery(IamPolicyAnalysisQueryResponse iamPolicyAnalysisQuery) {
             this.iamPolicyAnalysisQuery = Objects.requireNonNull(iamPolicyAnalysisQuery);
             return this;
-        }
-        public QueryContentResponse build() {
+        }        public QueryContentResponse build() {
             return new QueryContentResponse(iamPolicyAnalysisQuery);
         }
     }

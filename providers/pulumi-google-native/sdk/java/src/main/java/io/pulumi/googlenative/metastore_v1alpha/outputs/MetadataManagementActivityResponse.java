@@ -71,12 +71,16 @@ public final class MetadataManagementActivityResponse {
             this.metadataExports = Objects.requireNonNull(metadataExports);
             return this;
         }
-
+        public Builder metadataExports(MetadataExportResponse... metadataExports) {
+            return metadataExports(List.of(metadataExports));
+        }
         public Builder restores(List<RestoreResponse> restores) {
             this.restores = Objects.requireNonNull(restores);
             return this;
         }
-        public MetadataManagementActivityResponse build() {
+        public Builder restores(RestoreResponse... restores) {
+            return restores(List.of(restores));
+        }        public MetadataManagementActivityResponse build() {
             return new MetadataManagementActivityResponse(metadataExports, restores);
         }
     }

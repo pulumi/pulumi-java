@@ -215,57 +215,46 @@ public final class GetEndpointResult {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder endpointForwardingRule(String endpointForwardingRule) {
             this.endpointForwardingRule = Objects.requireNonNull(endpointForwardingRule);
             return this;
         }
-
         public Builder endpointIp(String endpointIp) {
             this.endpointIp = Objects.requireNonNull(endpointIp);
             return this;
         }
-
         public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder network(String network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }
-
         public Builder severity(String severity) {
             this.severity = Objects.requireNonNull(severity);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder trafficLogs(Boolean trafficLogs) {
             this.trafficLogs = Objects.requireNonNull(trafficLogs);
             return this;
         }
-
         public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
-        }
-        public GetEndpointResult build() {
+        }        public GetEndpointResult build() {
             return new GetEndpointResult(createTime, description, endpointForwardingRule, endpointIp, labels, name, network, severity, state, trafficLogs, updateTime);
         }
     }

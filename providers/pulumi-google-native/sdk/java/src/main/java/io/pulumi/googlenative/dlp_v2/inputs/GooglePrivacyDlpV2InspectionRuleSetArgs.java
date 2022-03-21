@@ -80,22 +80,24 @@ public final class GooglePrivacyDlpV2InspectionRuleSetArgs extends io.pulumi.res
             this.infoTypes = infoTypes;
             return this;
         }
-
         public Builder infoTypes(@Nullable List<GooglePrivacyDlpV2InfoTypeArgs> infoTypes) {
             this.infoTypes = Output.ofNullable(infoTypes);
             return this;
         }
-
+        public Builder infoTypes(GooglePrivacyDlpV2InfoTypeArgs... infoTypes) {
+            return infoTypes(List.of(infoTypes));
+        }
         public Builder rules(@Nullable Output<List<GooglePrivacyDlpV2InspectionRuleArgs>> rules) {
             this.rules = rules;
             return this;
         }
-
         public Builder rules(@Nullable List<GooglePrivacyDlpV2InspectionRuleArgs> rules) {
             this.rules = Output.ofNullable(rules);
             return this;
         }
-        public GooglePrivacyDlpV2InspectionRuleSetArgs build() {
+        public Builder rules(GooglePrivacyDlpV2InspectionRuleArgs... rules) {
+            return rules(List.of(rules));
+        }        public GooglePrivacyDlpV2InspectionRuleSetArgs build() {
             return new GooglePrivacyDlpV2InspectionRuleSetArgs(infoTypes, rules);
         }
     }

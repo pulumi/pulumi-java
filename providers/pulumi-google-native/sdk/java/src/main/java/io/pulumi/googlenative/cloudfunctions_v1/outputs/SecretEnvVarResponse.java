@@ -101,22 +101,18 @@ public final class SecretEnvVarResponse {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
-
         public Builder secret(String secret) {
             this.secret = Objects.requireNonNull(secret);
             return this;
         }
-
         public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
-        }
-        public SecretEnvVarResponse build() {
+        }        public SecretEnvVarResponse build() {
             return new SecretEnvVarResponse(key, project, secret, version);
         }
     }

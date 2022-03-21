@@ -78,17 +78,14 @@ public final class GetTargetArgs extends io.pulumi.resources.InvokeArgs {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder targetId(String targetId) {
             this.targetId = Objects.requireNonNull(targetId);
             return this;
-        }
-        public GetTargetArgs build() {
+        }        public GetTargetArgs build() {
             return new GetTargetArgs(location, project, targetId);
         }
     }

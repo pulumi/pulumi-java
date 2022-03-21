@@ -90,22 +90,18 @@ public final class GetGatewayIamPolicyArgs extends io.pulumi.resources.InvokeArg
             this.gatewayId = Objects.requireNonNull(gatewayId);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder optionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
             this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetGatewayIamPolicyArgs build() {
+        }        public GetGatewayIamPolicyArgs build() {
             return new GetGatewayIamPolicyArgs(gatewayId, location, optionsRequestedPolicyVersion, project);
         }
     }

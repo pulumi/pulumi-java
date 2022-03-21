@@ -80,22 +80,21 @@ public final class OracleSchemaArgs extends io.pulumi.resources.ResourceArgs {
             this.oracleTables = oracleTables;
             return this;
         }
-
         public Builder oracleTables(@Nullable List<OracleTableArgs> oracleTables) {
             this.oracleTables = Output.ofNullable(oracleTables);
             return this;
         }
-
+        public Builder oracleTables(OracleTableArgs... oracleTables) {
+            return oracleTables(List.of(oracleTables));
+        }
         public Builder schema(@Nullable Output<String> schema) {
             this.schema = schema;
             return this;
         }
-
         public Builder schema(@Nullable String schema) {
             this.schema = Output.ofNullable(schema);
             return this;
-        }
-        public OracleSchemaArgs build() {
+        }        public OracleSchemaArgs build() {
             return new OracleSchemaArgs(oracleTables, schema);
         }
     }

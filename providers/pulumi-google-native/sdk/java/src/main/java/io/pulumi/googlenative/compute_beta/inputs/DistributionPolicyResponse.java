@@ -74,12 +74,13 @@ public final class DistributionPolicyResponse extends io.pulumi.resources.Invoke
             this.targetShape = Objects.requireNonNull(targetShape);
             return this;
         }
-
         public Builder zones(List<DistributionPolicyZoneConfigurationResponse> zones) {
             this.zones = Objects.requireNonNull(zones);
             return this;
         }
-        public DistributionPolicyResponse build() {
+        public Builder zones(DistributionPolicyZoneConfigurationResponse... zones) {
+            return zones(List.of(zones));
+        }        public DistributionPolicyResponse build() {
             return new DistributionPolicyResponse(targetShape, zones);
         }
     }

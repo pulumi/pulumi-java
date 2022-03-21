@@ -112,22 +112,21 @@ public final class GoogleCloudRetailV2alphaSearchRequestFacetSpecResponse extend
             this.enableDynamicPosition = Objects.requireNonNull(enableDynamicPosition);
             return this;
         }
-
         public Builder excludedFilterKeys(List<String> excludedFilterKeys) {
             this.excludedFilterKeys = Objects.requireNonNull(excludedFilterKeys);
             return this;
         }
-
+        public Builder excludedFilterKeys(String... excludedFilterKeys) {
+            return excludedFilterKeys(List.of(excludedFilterKeys));
+        }
         public Builder facetKey(GoogleCloudRetailV2alphaSearchRequestFacetSpecFacetKeyResponse facetKey) {
             this.facetKey = Objects.requireNonNull(facetKey);
             return this;
         }
-
         public Builder limit(Integer limit) {
             this.limit = Objects.requireNonNull(limit);
             return this;
-        }
-        public GoogleCloudRetailV2alphaSearchRequestFacetSpecResponse build() {
+        }        public GoogleCloudRetailV2alphaSearchRequestFacetSpecResponse build() {
             return new GoogleCloudRetailV2alphaSearchRequestFacetSpecResponse(enableDynamicPosition, excludedFilterKeys, facetKey, limit);
         }
     }

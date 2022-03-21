@@ -90,32 +90,26 @@ public final class TableReferenceArgs extends io.pulumi.resources.ResourceArgs {
             this.datasetId = datasetId;
             return this;
         }
-
         public Builder datasetId(@Nullable String datasetId) {
             this.datasetId = Output.ofNullable(datasetId);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder tableId(@Nullable Output<String> tableId) {
             this.tableId = tableId;
             return this;
         }
-
         public Builder tableId(@Nullable String tableId) {
             this.tableId = Output.ofNullable(tableId);
             return this;
-        }
-        public TableReferenceArgs build() {
+        }        public TableReferenceArgs build() {
             return new TableReferenceArgs(datasetId, project, tableId);
         }
     }

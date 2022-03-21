@@ -61,17 +61,14 @@ public final class BasicPerfSampleSeriesResponse {
             this.perfMetricType = Objects.requireNonNull(perfMetricType);
             return this;
         }
-
         public Builder perfUnit(String perfUnit) {
             this.perfUnit = Objects.requireNonNull(perfUnit);
             return this;
         }
-
         public Builder sampleSeriesLabel(String sampleSeriesLabel) {
             this.sampleSeriesLabel = Objects.requireNonNull(sampleSeriesLabel);
             return this;
-        }
-        public BasicPerfSampleSeriesResponse build() {
+        }        public BasicPerfSampleSeriesResponse build() {
             return new BasicPerfSampleSeriesResponse(perfMetricType, perfUnit, sampleSeriesLabel);
         }
     }

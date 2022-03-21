@@ -102,27 +102,22 @@ public final class GetAttributeDefinitionArgs extends io.pulumi.resources.Invoke
             this.attributeDefinitionId = Objects.requireNonNull(attributeDefinitionId);
             return this;
         }
-
         public Builder consentStoreId(String consentStoreId) {
             this.consentStoreId = Objects.requireNonNull(consentStoreId);
             return this;
         }
-
         public Builder datasetId(String datasetId) {
             this.datasetId = Objects.requireNonNull(datasetId);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetAttributeDefinitionArgs build() {
+        }        public GetAttributeDefinitionArgs build() {
             return new GetAttributeDefinitionArgs(attributeDefinitionId, consentStoreId, datasetId, location, project);
         }
     }

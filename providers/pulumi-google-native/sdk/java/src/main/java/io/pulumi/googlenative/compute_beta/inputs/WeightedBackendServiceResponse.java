@@ -94,17 +94,14 @@ public final class WeightedBackendServiceResponse extends io.pulumi.resources.In
             this.backendService = Objects.requireNonNull(backendService);
             return this;
         }
-
         public Builder headerAction(HttpHeaderActionResponse headerAction) {
             this.headerAction = Objects.requireNonNull(headerAction);
             return this;
         }
-
         public Builder weight(Integer weight) {
             this.weight = Objects.requireNonNull(weight);
             return this;
-        }
-        public WeightedBackendServiceResponse build() {
+        }        public WeightedBackendServiceResponse build() {
             return new WeightedBackendServiceResponse(backendService, headerAction, weight);
         }
     }

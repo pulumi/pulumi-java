@@ -252,62 +252,50 @@ public final class GetDefaultObjectAccessControlResult {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
-
         public Builder domain(String domain) {
             this.domain = Objects.requireNonNull(domain);
             return this;
         }
-
         public Builder email(String email) {
             this.email = Objects.requireNonNull(email);
             return this;
         }
-
         public Builder entity(String entity) {
             this.entity = Objects.requireNonNull(entity);
             return this;
         }
-
         public Builder entityId(String entityId) {
             this.entityId = Objects.requireNonNull(entityId);
             return this;
         }
-
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder generation(String generation) {
             this.generation = Objects.requireNonNull(generation);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder object(String object) {
             this.object = Objects.requireNonNull(object);
             return this;
         }
-
         public Builder projectTeam(DefaultObjectAccessControlProjectTeamResponse projectTeam) {
             this.projectTeam = Objects.requireNonNull(projectTeam);
             return this;
         }
-
         public Builder role(String role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }
-
         public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
-        }
-        public GetDefaultObjectAccessControlResult build() {
+        }        public GetDefaultObjectAccessControlResult build() {
             return new GetDefaultObjectAccessControlResult(bucket, domain, email, entity, entityId, etag, generation, kind, object, projectTeam, role, selfLink);
         }
     }

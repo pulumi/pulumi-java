@@ -60,12 +60,10 @@ public final class ResourceSelectorArgs extends io.pulumi.resources.ResourceArgs
             this.fullResourceName = Objects.requireNonNull(fullResourceName);
             return this;
         }
-
         public Builder fullResourceName(String fullResourceName) {
             this.fullResourceName = Output.of(Objects.requireNonNull(fullResourceName));
             return this;
-        }
-        public ResourceSelectorArgs build() {
+        }        public ResourceSelectorArgs build() {
             return new ResourceSelectorArgs(fullResourceName);
         }
     }

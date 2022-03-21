@@ -118,27 +118,22 @@ public final class GetGroupResult {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder filter(String filter) {
             this.filter = Objects.requireNonNull(filter);
             return this;
         }
-
         public Builder isCluster(Boolean isCluster) {
             this.isCluster = Objects.requireNonNull(isCluster);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder parentName(String parentName) {
             this.parentName = Objects.requireNonNull(parentName);
             return this;
-        }
-        public GetGroupResult build() {
+        }        public GetGroupResult build() {
             return new GetGroupResult(displayName, filter, isCluster, name, parentName);
         }
     }

@@ -118,27 +118,22 @@ public final class GetApicategoryResult {
             this.data = Objects.requireNonNull(data);
             return this;
         }
-
         public Builder errorCode(String errorCode) {
             this.errorCode = Objects.requireNonNull(errorCode);
             return this;
         }
-
         public Builder message(String message) {
             this.message = Objects.requireNonNull(message);
             return this;
         }
-
         public Builder requestId(String requestId) {
             this.requestId = Objects.requireNonNull(requestId);
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
-        }
-        public GetApicategoryResult build() {
+        }        public GetApicategoryResult build() {
             return new GetApicategoryResult(data, errorCode, message, requestId, status);
         }
     }

@@ -76,12 +76,10 @@ public final class GooglePrivacyDlpV2CharsToIgnoreResponse extends io.pulumi.res
             this.charactersToSkip = Objects.requireNonNull(charactersToSkip);
             return this;
         }
-
         public Builder commonCharactersToIgnore(String commonCharactersToIgnore) {
             this.commonCharactersToIgnore = Objects.requireNonNull(commonCharactersToIgnore);
             return this;
-        }
-        public GooglePrivacyDlpV2CharsToIgnoreResponse build() {
+        }        public GooglePrivacyDlpV2CharsToIgnoreResponse build() {
             return new GooglePrivacyDlpV2CharsToIgnoreResponse(charactersToSkip, commonCharactersToIgnore);
         }
     }

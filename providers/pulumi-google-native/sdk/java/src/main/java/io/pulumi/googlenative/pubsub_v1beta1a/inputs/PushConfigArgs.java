@@ -61,12 +61,10 @@ public final class PushConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.pushEndpoint = pushEndpoint;
             return this;
         }
-
         public Builder pushEndpoint(@Nullable String pushEndpoint) {
             this.pushEndpoint = Output.ofNullable(pushEndpoint);
             return this;
-        }
-        public PushConfigArgs build() {
+        }        public PushConfigArgs build() {
             return new PushConfigArgs(pushEndpoint);
         }
     }

@@ -78,22 +78,18 @@ public final class ResourceIdArgs extends io.pulumi.resources.ResourceArgs {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public ResourceIdArgs build() {
+        }        public ResourceIdArgs build() {
             return new ResourceIdArgs(id, type);
         }
     }

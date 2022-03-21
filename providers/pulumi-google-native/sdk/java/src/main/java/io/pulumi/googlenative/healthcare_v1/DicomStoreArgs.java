@@ -140,72 +140,58 @@ public final class DicomStoreArgs extends io.pulumi.resources.ResourceArgs {
             this.datasetId = Objects.requireNonNull(datasetId);
             return this;
         }
-
         public Builder datasetId(String datasetId) {
             this.datasetId = Output.of(Objects.requireNonNull(datasetId));
             return this;
         }
-
         public Builder dicomStoreId(@Nullable Output<String> dicomStoreId) {
             this.dicomStoreId = dicomStoreId;
             return this;
         }
-
         public Builder dicomStoreId(@Nullable String dicomStoreId) {
             this.dicomStoreId = Output.ofNullable(dicomStoreId);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder notificationConfig(@Nullable Output<NotificationConfigArgs> notificationConfig) {
             this.notificationConfig = notificationConfig;
             return this;
         }
-
         public Builder notificationConfig(@Nullable NotificationConfigArgs notificationConfig) {
             this.notificationConfig = Output.ofNullable(notificationConfig);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
-        }
-        public DicomStoreArgs build() {
+        }        public DicomStoreArgs build() {
             return new DicomStoreArgs(datasetId, dicomStoreId, labels, location, name, notificationConfig, project);
         }
     }

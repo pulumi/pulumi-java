@@ -225,112 +225,90 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArg
             this.accelerator = accelerator;
             return this;
         }
-
         public Builder accelerator(@Nullable GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConfigArgs accelerator) {
             this.accelerator = Output.ofNullable(accelerator);
             return this;
         }
-
         public Builder diskSizeGb(Output<String> diskSizeGb) {
             this.diskSizeGb = Objects.requireNonNull(diskSizeGb);
             return this;
         }
-
         public Builder diskSizeGb(String diskSizeGb) {
             this.diskSizeGb = Output.of(Objects.requireNonNull(diskSizeGb));
             return this;
         }
-
         public Builder diskType(Output<String> diskType) {
             this.diskType = Objects.requireNonNull(diskType);
             return this;
         }
-
         public Builder diskType(String diskType) {
             this.diskType = Output.of(Objects.requireNonNull(diskType));
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder machineType(Output<String> machineType) {
             this.machineType = Objects.requireNonNull(machineType);
             return this;
         }
-
         public Builder machineType(String machineType) {
             this.machineType = Output.of(Objects.requireNonNull(machineType));
             return this;
         }
-
         public Builder maxConcurrentActions(@Nullable Output<String> maxConcurrentActions) {
             this.maxConcurrentActions = maxConcurrentActions;
             return this;
         }
-
         public Builder maxConcurrentActions(@Nullable String maxConcurrentActions) {
             this.maxConcurrentActions = Output.ofNullable(maxConcurrentActions);
             return this;
         }
-
         public Builder minCpuPlatform(@Nullable Output<String> minCpuPlatform) {
             this.minCpuPlatform = minCpuPlatform;
             return this;
         }
-
         public Builder minCpuPlatform(@Nullable String minCpuPlatform) {
             this.minCpuPlatform = Output.ofNullable(minCpuPlatform);
             return this;
         }
-
         public Builder networkAccess(@Nullable Output<String> networkAccess) {
             this.networkAccess = networkAccess;
             return this;
         }
-
         public Builder networkAccess(@Nullable String networkAccess) {
             this.networkAccess = Output.ofNullable(networkAccess);
             return this;
         }
-
         public Builder reserved(@Nullable Output<Boolean> reserved) {
             this.reserved = reserved;
             return this;
         }
-
         public Builder reserved(@Nullable Boolean reserved) {
             this.reserved = Output.ofNullable(reserved);
             return this;
         }
-
         public Builder soleTenantNodeType(@Nullable Output<String> soleTenantNodeType) {
             this.soleTenantNodeType = soleTenantNodeType;
             return this;
         }
-
         public Builder soleTenantNodeType(@Nullable String soleTenantNodeType) {
             this.soleTenantNodeType = Output.ofNullable(soleTenantNodeType);
             return this;
         }
-
         public Builder vmImage(@Nullable Output<String> vmImage) {
             this.vmImage = vmImage;
             return this;
         }
-
         public Builder vmImage(@Nullable String vmImage) {
             this.vmImage = Output.ofNullable(vmImage);
             return this;
-        }
-        public GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArgs build() {
+        }        public GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArgs build() {
             return new GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArgs(accelerator, diskSizeGb, diskType, labels, machineType, maxConcurrentActions, minCpuPlatform, networkAccess, reserved, soleTenantNodeType, vmImage);
         }
     }

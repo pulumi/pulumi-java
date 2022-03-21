@@ -114,32 +114,26 @@ public final class GetPageArgs extends io.pulumi.resources.InvokeArgs {
             this.agentId = Objects.requireNonNull(agentId);
             return this;
         }
-
         public Builder flowId(String flowId) {
             this.flowId = Objects.requireNonNull(flowId);
             return this;
         }
-
         public Builder languageCode(@Nullable String languageCode) {
             this.languageCode = languageCode;
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder pageId(String pageId) {
             this.pageId = Objects.requireNonNull(pageId);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetPageArgs build() {
+        }        public GetPageArgs build() {
             return new GetPageArgs(agentId, flowId, languageCode, location, pageId, project);
         }
     }

@@ -216,57 +216,46 @@ public final class GetJobResult {
             this.config = Objects.requireNonNull(config);
             return this;
         }
-
         public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder endTime(String endTime) {
             this.endTime = Objects.requireNonNull(endTime);
             return this;
         }
-
         public Builder error(StatusResponse error) {
             this.error = Objects.requireNonNull(error);
             return this;
         }
-
         public Builder inputUri(String inputUri) {
             this.inputUri = Objects.requireNonNull(inputUri);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder outputUri(String outputUri) {
             this.outputUri = Objects.requireNonNull(outputUri);
             return this;
         }
-
         public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder templateId(String templateId) {
             this.templateId = Objects.requireNonNull(templateId);
             return this;
         }
-
         public Builder ttlAfterCompletionDays(Integer ttlAfterCompletionDays) {
             this.ttlAfterCompletionDays = Objects.requireNonNull(ttlAfterCompletionDays);
             return this;
-        }
-        public GetJobResult build() {
+        }        public GetJobResult build() {
             return new GetJobResult(config, createTime, endTime, error, inputUri, name, outputUri, startTime, state, templateId, ttlAfterCompletionDays);
         }
     }

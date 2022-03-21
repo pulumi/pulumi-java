@@ -61,12 +61,10 @@ public final class StateNotificationConfigArgs extends io.pulumi.resources.Resou
             this.pubsubTopicName = pubsubTopicName;
             return this;
         }
-
         public Builder pubsubTopicName(@Nullable String pubsubTopicName) {
             this.pubsubTopicName = Output.ofNullable(pubsubTopicName);
             return this;
-        }
-        public StateNotificationConfigArgs build() {
+        }        public StateNotificationConfigArgs build() {
             return new StateNotificationConfigArgs(pubsubTopicName);
         }
     }

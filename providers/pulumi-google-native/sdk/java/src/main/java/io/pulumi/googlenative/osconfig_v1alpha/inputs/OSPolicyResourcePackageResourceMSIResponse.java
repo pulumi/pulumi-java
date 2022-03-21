@@ -78,12 +78,13 @@ public final class OSPolicyResourcePackageResourceMSIResponse extends io.pulumi.
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
-
+        public Builder properties(String... properties) {
+            return properties(List.of(properties));
+        }
         public Builder source(OSPolicyResourceFileResponse source) {
             this.source = Objects.requireNonNull(source);
             return this;
-        }
-        public OSPolicyResourcePackageResourceMSIResponse build() {
+        }        public OSPolicyResourcePackageResourceMSIResponse build() {
             return new OSPolicyResourcePackageResourceMSIResponse(properties, source);
         }
     }

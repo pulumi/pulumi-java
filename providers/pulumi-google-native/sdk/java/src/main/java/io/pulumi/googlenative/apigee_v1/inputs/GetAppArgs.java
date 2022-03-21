@@ -102,27 +102,22 @@ public final class GetAppArgs extends io.pulumi.resources.InvokeArgs {
             this.appId = Objects.requireNonNull(appId);
             return this;
         }
-
         public Builder developerId(String developerId) {
             this.developerId = Objects.requireNonNull(developerId);
             return this;
         }
-
         public Builder entity(@Nullable String entity) {
             this.entity = entity;
             return this;
         }
-
         public Builder organizationId(String organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }
-
         public Builder query(@Nullable String query) {
             this.query = query;
             return this;
-        }
-        public GetAppArgs build() {
+        }        public GetAppArgs build() {
             return new GetAppArgs(appId, developerId, entity, organizationId, query);
         }
     }

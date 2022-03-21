@@ -58,8 +58,7 @@ public final class KubernetesDashboardResponse extends io.pulumi.resources.Invok
         public Builder disabled(Boolean disabled) {
             this.disabled = Objects.requireNonNull(disabled);
             return this;
-        }
-        public KubernetesDashboardResponse build() {
+        }        public KubernetesDashboardResponse build() {
             return new KubernetesDashboardResponse(disabled);
         }
     }

@@ -212,112 +212,93 @@ public final class ExecutionArgs extends io.pulumi.resources.ResourceArgs {
             this.completionTime = completionTime;
             return this;
         }
-
         public Builder completionTime(@Nullable TimestampArgs completionTime) {
             this.completionTime = Output.ofNullable(completionTime);
             return this;
         }
-
         public Builder creationTime(@Nullable Output<TimestampArgs> creationTime) {
             this.creationTime = creationTime;
             return this;
         }
-
         public Builder creationTime(@Nullable TimestampArgs creationTime) {
             this.creationTime = Output.ofNullable(creationTime);
             return this;
         }
-
         public Builder dimensionDefinitions(@Nullable Output<List<MatrixDimensionDefinitionArgs>> dimensionDefinitions) {
             this.dimensionDefinitions = dimensionDefinitions;
             return this;
         }
-
         public Builder dimensionDefinitions(@Nullable List<MatrixDimensionDefinitionArgs> dimensionDefinitions) {
             this.dimensionDefinitions = Output.ofNullable(dimensionDefinitions);
             return this;
         }
-
+        public Builder dimensionDefinitions(MatrixDimensionDefinitionArgs... dimensionDefinitions) {
+            return dimensionDefinitions(List.of(dimensionDefinitions));
+        }
         public Builder executionId(@Nullable Output<String> executionId) {
             this.executionId = executionId;
             return this;
         }
-
         public Builder executionId(@Nullable String executionId) {
             this.executionId = Output.ofNullable(executionId);
             return this;
         }
-
         public Builder historyId(Output<String> historyId) {
             this.historyId = Objects.requireNonNull(historyId);
             return this;
         }
-
         public Builder historyId(String historyId) {
             this.historyId = Output.of(Objects.requireNonNull(historyId));
             return this;
         }
-
         public Builder outcome(@Nullable Output<OutcomeArgs> outcome) {
             this.outcome = outcome;
             return this;
         }
-
         public Builder outcome(@Nullable OutcomeArgs outcome) {
             this.outcome = Output.ofNullable(outcome);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder requestId(@Nullable Output<String> requestId) {
             this.requestId = requestId;
             return this;
         }
-
         public Builder requestId(@Nullable String requestId) {
             this.requestId = Output.ofNullable(requestId);
             return this;
         }
-
         public Builder specification(@Nullable Output<SpecificationArgs> specification) {
             this.specification = specification;
             return this;
         }
-
         public Builder specification(@Nullable SpecificationArgs specification) {
             this.specification = Output.ofNullable(specification);
             return this;
         }
-
         public Builder state(@Nullable Output<ExecutionState> state) {
             this.state = state;
             return this;
         }
-
         public Builder state(@Nullable ExecutionState state) {
             this.state = Output.ofNullable(state);
             return this;
         }
-
         public Builder testExecutionMatrixId(@Nullable Output<String> testExecutionMatrixId) {
             this.testExecutionMatrixId = testExecutionMatrixId;
             return this;
         }
-
         public Builder testExecutionMatrixId(@Nullable String testExecutionMatrixId) {
             this.testExecutionMatrixId = Output.ofNullable(testExecutionMatrixId);
             return this;
-        }
-        public ExecutionArgs build() {
+        }        public ExecutionArgs build() {
             return new ExecutionArgs(completionTime, creationTime, dimensionDefinitions, executionId, historyId, outcome, project, requestId, specification, state, testExecutionMatrixId);
         }
     }

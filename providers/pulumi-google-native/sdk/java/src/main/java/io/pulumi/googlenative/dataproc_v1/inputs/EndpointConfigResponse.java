@@ -78,12 +78,10 @@ public final class EndpointConfigResponse extends io.pulumi.resources.InvokeArgs
             this.enableHttpPortAccess = Objects.requireNonNull(enableHttpPortAccess);
             return this;
         }
-
         public Builder httpPorts(Map<String,String> httpPorts) {
             this.httpPorts = Objects.requireNonNull(httpPorts);
             return this;
-        }
-        public EndpointConfigResponse build() {
+        }        public EndpointConfigResponse build() {
             return new EndpointConfigResponse(enableHttpPortAccess, httpPorts);
         }
     }

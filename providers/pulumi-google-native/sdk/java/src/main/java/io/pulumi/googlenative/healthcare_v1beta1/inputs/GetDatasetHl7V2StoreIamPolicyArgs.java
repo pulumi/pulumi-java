@@ -102,27 +102,22 @@ public final class GetDatasetHl7V2StoreIamPolicyArgs extends io.pulumi.resources
             this.datasetId = Objects.requireNonNull(datasetId);
             return this;
         }
-
         public Builder hl7V2StoreId(String hl7V2StoreId) {
             this.hl7V2StoreId = Objects.requireNonNull(hl7V2StoreId);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder optionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
             this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetDatasetHl7V2StoreIamPolicyArgs build() {
+        }        public GetDatasetHl7V2StoreIamPolicyArgs build() {
             return new GetDatasetHl7V2StoreIamPolicyArgs(datasetId, hl7V2StoreId, location, optionsRequestedPolicyVersion, project);
         }
     }

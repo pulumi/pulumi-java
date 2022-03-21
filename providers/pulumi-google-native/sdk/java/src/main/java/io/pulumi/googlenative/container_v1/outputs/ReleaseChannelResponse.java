@@ -51,8 +51,7 @@ public final class ReleaseChannelResponse {
         public Builder channel(String channel) {
             this.channel = Objects.requireNonNull(channel);
             return this;
-        }
-        public ReleaseChannelResponse build() {
+        }        public ReleaseChannelResponse build() {
             return new ReleaseChannelResponse(channel);
         }
     }

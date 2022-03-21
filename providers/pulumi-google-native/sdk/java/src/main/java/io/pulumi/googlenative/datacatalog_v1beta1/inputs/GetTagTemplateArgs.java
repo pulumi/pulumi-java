@@ -78,17 +78,14 @@ public final class GetTagTemplateArgs extends io.pulumi.resources.InvokeArgs {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder tagTemplateId(String tagTemplateId) {
             this.tagTemplateId = Objects.requireNonNull(tagTemplateId);
             return this;
-        }
-        public GetTagTemplateArgs build() {
+        }        public GetTagTemplateArgs build() {
             return new GetTagTemplateArgs(location, project, tagTemplateId);
         }
     }

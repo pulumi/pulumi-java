@@ -525,152 +525,134 @@ public final class GetImageResult {
             this.archiveSizeBytes = Objects.requireNonNull(archiveSizeBytes);
             return this;
         }
-
         public Builder creationTimestamp(String creationTimestamp) {
             this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
             return this;
         }
-
         public Builder deprecated(DeprecationStatusResponse deprecated) {
             this.deprecated = Objects.requireNonNull(deprecated);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder diskSizeGb(String diskSizeGb) {
             this.diskSizeGb = Objects.requireNonNull(diskSizeGb);
             return this;
         }
-
         public Builder family(String family) {
             this.family = Objects.requireNonNull(family);
             return this;
         }
-
         public Builder guestOsFeatures(List<GuestOsFeatureResponse> guestOsFeatures) {
             this.guestOsFeatures = Objects.requireNonNull(guestOsFeatures);
             return this;
         }
-
+        public Builder guestOsFeatures(GuestOsFeatureResponse... guestOsFeatures) {
+            return guestOsFeatures(List.of(guestOsFeatures));
+        }
         public Builder imageEncryptionKey(CustomerEncryptionKeyResponse imageEncryptionKey) {
             this.imageEncryptionKey = Objects.requireNonNull(imageEncryptionKey);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder labelFingerprint(String labelFingerprint) {
             this.labelFingerprint = Objects.requireNonNull(labelFingerprint);
             return this;
         }
-
         public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder licenseCodes(List<String> licenseCodes) {
             this.licenseCodes = Objects.requireNonNull(licenseCodes);
             return this;
         }
-
+        public Builder licenseCodes(String... licenseCodes) {
+            return licenseCodes(List.of(licenseCodes));
+        }
         public Builder licenses(List<String> licenses) {
             this.licenses = Objects.requireNonNull(licenses);
             return this;
         }
-
+        public Builder licenses(String... licenses) {
+            return licenses(List.of(licenses));
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder rawDisk(ImageRawDiskResponse rawDisk) {
             this.rawDisk = Objects.requireNonNull(rawDisk);
             return this;
         }
-
         public Builder satisfiesPzs(Boolean satisfiesPzs) {
             this.satisfiesPzs = Objects.requireNonNull(satisfiesPzs);
             return this;
         }
-
         public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
-
         public Builder shieldedInstanceInitialState(InitialStateConfigResponse shieldedInstanceInitialState) {
             this.shieldedInstanceInitialState = Objects.requireNonNull(shieldedInstanceInitialState);
             return this;
         }
-
         public Builder sourceDisk(String sourceDisk) {
             this.sourceDisk = Objects.requireNonNull(sourceDisk);
             return this;
         }
-
         public Builder sourceDiskEncryptionKey(CustomerEncryptionKeyResponse sourceDiskEncryptionKey) {
             this.sourceDiskEncryptionKey = Objects.requireNonNull(sourceDiskEncryptionKey);
             return this;
         }
-
         public Builder sourceDiskId(String sourceDiskId) {
             this.sourceDiskId = Objects.requireNonNull(sourceDiskId);
             return this;
         }
-
         public Builder sourceImage(String sourceImage) {
             this.sourceImage = Objects.requireNonNull(sourceImage);
             return this;
         }
-
         public Builder sourceImageEncryptionKey(CustomerEncryptionKeyResponse sourceImageEncryptionKey) {
             this.sourceImageEncryptionKey = Objects.requireNonNull(sourceImageEncryptionKey);
             return this;
         }
-
         public Builder sourceImageId(String sourceImageId) {
             this.sourceImageId = Objects.requireNonNull(sourceImageId);
             return this;
         }
-
         public Builder sourceSnapshot(String sourceSnapshot) {
             this.sourceSnapshot = Objects.requireNonNull(sourceSnapshot);
             return this;
         }
-
         public Builder sourceSnapshotEncryptionKey(CustomerEncryptionKeyResponse sourceSnapshotEncryptionKey) {
             this.sourceSnapshotEncryptionKey = Objects.requireNonNull(sourceSnapshotEncryptionKey);
             return this;
         }
-
         public Builder sourceSnapshotId(String sourceSnapshotId) {
             this.sourceSnapshotId = Objects.requireNonNull(sourceSnapshotId);
             return this;
         }
-
         public Builder sourceType(String sourceType) {
             this.sourceType = Objects.requireNonNull(sourceType);
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder storageLocations(List<String> storageLocations) {
             this.storageLocations = Objects.requireNonNull(storageLocations);
             return this;
         }
-        public GetImageResult build() {
+        public Builder storageLocations(String... storageLocations) {
+            return storageLocations(List.of(storageLocations));
+        }        public GetImageResult build() {
             return new GetImageResult(archiveSizeBytes, creationTimestamp, deprecated, description, diskSizeGb, family, guestOsFeatures, imageEncryptionKey, kind, labelFingerprint, labels, licenseCodes, licenses, name, rawDisk, satisfiesPzs, selfLink, shieldedInstanceInitialState, sourceDisk, sourceDiskEncryptionKey, sourceDiskId, sourceImage, sourceImageEncryptionKey, sourceImageId, sourceSnapshot, sourceSnapshotEncryptionKey, sourceSnapshotId, sourceType, status, storageLocations);
         }
     }

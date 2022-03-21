@@ -92,17 +92,14 @@ public final class IpMappingResponse extends io.pulumi.resources.InvokeArgs {
             this.ipAddress = Objects.requireNonNull(ipAddress);
             return this;
         }
-
         public Builder timeToRetire(String timeToRetire) {
             this.timeToRetire = Objects.requireNonNull(timeToRetire);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public IpMappingResponse build() {
+        }        public IpMappingResponse build() {
             return new IpMappingResponse(ipAddress, timeToRetire, type);
         }
     }

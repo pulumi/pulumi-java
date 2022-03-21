@@ -95,17 +95,17 @@ public final class DnsSettingsResponse extends io.pulumi.resources.InvokeArgs {
             this.customDns = Objects.requireNonNull(customDns);
             return this;
         }
-
         public Builder glueRecords(List<GlueRecordResponse> glueRecords) {
             this.glueRecords = Objects.requireNonNull(glueRecords);
             return this;
         }
-
+        public Builder glueRecords(GlueRecordResponse... glueRecords) {
+            return glueRecords(List.of(glueRecords));
+        }
         public Builder googleDomainsDns(GoogleDomainsDnsResponse googleDomainsDns) {
             this.googleDomainsDns = Objects.requireNonNull(googleDomainsDns);
             return this;
-        }
-        public DnsSettingsResponse build() {
+        }        public DnsSettingsResponse build() {
             return new DnsSettingsResponse(customDns, glueRecords, googleDomainsDns);
         }
     }

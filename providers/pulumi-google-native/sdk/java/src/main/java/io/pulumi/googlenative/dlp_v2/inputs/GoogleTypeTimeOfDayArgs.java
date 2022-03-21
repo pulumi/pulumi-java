@@ -110,42 +110,34 @@ public final class GoogleTypeTimeOfDayArgs extends io.pulumi.resources.ResourceA
             this.hours = hours;
             return this;
         }
-
         public Builder hours(@Nullable Integer hours) {
             this.hours = Output.ofNullable(hours);
             return this;
         }
-
         public Builder minutes(@Nullable Output<Integer> minutes) {
             this.minutes = minutes;
             return this;
         }
-
         public Builder minutes(@Nullable Integer minutes) {
             this.minutes = Output.ofNullable(minutes);
             return this;
         }
-
         public Builder nanos(@Nullable Output<Integer> nanos) {
             this.nanos = nanos;
             return this;
         }
-
         public Builder nanos(@Nullable Integer nanos) {
             this.nanos = Output.ofNullable(nanos);
             return this;
         }
-
         public Builder seconds(@Nullable Output<Integer> seconds) {
             this.seconds = seconds;
             return this;
         }
-
         public Builder seconds(@Nullable Integer seconds) {
             this.seconds = Output.ofNullable(seconds);
             return this;
-        }
-        public GoogleTypeTimeOfDayArgs build() {
+        }        public GoogleTypeTimeOfDayArgs build() {
             return new GoogleTypeTimeOfDayArgs(hours, minutes, nanos, seconds);
         }
     }

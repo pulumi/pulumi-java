@@ -96,32 +96,26 @@ public final class SourceConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.mysqlSourceConfig = mysqlSourceConfig;
             return this;
         }
-
         public Builder mysqlSourceConfig(@Nullable MysqlSourceConfigArgs mysqlSourceConfig) {
             this.mysqlSourceConfig = Output.ofNullable(mysqlSourceConfig);
             return this;
         }
-
         public Builder oracleSourceConfig(@Nullable Output<OracleSourceConfigArgs> oracleSourceConfig) {
             this.oracleSourceConfig = oracleSourceConfig;
             return this;
         }
-
         public Builder oracleSourceConfig(@Nullable OracleSourceConfigArgs oracleSourceConfig) {
             this.oracleSourceConfig = Output.ofNullable(oracleSourceConfig);
             return this;
         }
-
         public Builder sourceConnectionProfile(Output<String> sourceConnectionProfile) {
             this.sourceConnectionProfile = Objects.requireNonNull(sourceConnectionProfile);
             return this;
         }
-
         public Builder sourceConnectionProfile(String sourceConnectionProfile) {
             this.sourceConnectionProfile = Output.of(Objects.requireNonNull(sourceConnectionProfile));
             return this;
-        }
-        public SourceConfigArgs build() {
+        }        public SourceConfigArgs build() {
             return new SourceConfigArgs(mysqlSourceConfig, oracleSourceConfig, sourceConnectionProfile);
         }
     }

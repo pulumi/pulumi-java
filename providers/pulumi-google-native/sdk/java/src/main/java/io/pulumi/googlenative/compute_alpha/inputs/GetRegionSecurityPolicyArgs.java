@@ -78,17 +78,14 @@ public final class GetRegionSecurityPolicyArgs extends io.pulumi.resources.Invok
             this.project = project;
             return this;
         }
-
         public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
-
         public Builder securityPolicy(String securityPolicy) {
             this.securityPolicy = Objects.requireNonNull(securityPolicy);
             return this;
-        }
-        public GetRegionSecurityPolicyArgs build() {
+        }        public GetRegionSecurityPolicyArgs build() {
             return new GetRegionSecurityPolicyArgs(project, region, securityPolicy);
         }
     }

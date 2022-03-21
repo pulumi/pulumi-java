@@ -130,52 +130,48 @@ public final class DomainMappingStatusArgs extends io.pulumi.resources.ResourceA
             this.conditions = conditions;
             return this;
         }
-
         public Builder conditions(@Nullable List<GoogleCloudRunV1ConditionArgs> conditions) {
             this.conditions = Output.ofNullable(conditions);
             return this;
         }
-
+        public Builder conditions(GoogleCloudRunV1ConditionArgs... conditions) {
+            return conditions(List.of(conditions));
+        }
         public Builder mappedRouteName(@Nullable Output<String> mappedRouteName) {
             this.mappedRouteName = mappedRouteName;
             return this;
         }
-
         public Builder mappedRouteName(@Nullable String mappedRouteName) {
             this.mappedRouteName = Output.ofNullable(mappedRouteName);
             return this;
         }
-
         public Builder observedGeneration(@Nullable Output<Integer> observedGeneration) {
             this.observedGeneration = observedGeneration;
             return this;
         }
-
         public Builder observedGeneration(@Nullable Integer observedGeneration) {
             this.observedGeneration = Output.ofNullable(observedGeneration);
             return this;
         }
-
         public Builder resourceRecords(@Nullable Output<List<ResourceRecordArgs>> resourceRecords) {
             this.resourceRecords = resourceRecords;
             return this;
         }
-
         public Builder resourceRecords(@Nullable List<ResourceRecordArgs> resourceRecords) {
             this.resourceRecords = Output.ofNullable(resourceRecords);
             return this;
         }
-
+        public Builder resourceRecords(ResourceRecordArgs... resourceRecords) {
+            return resourceRecords(List.of(resourceRecords));
+        }
         public Builder url(@Nullable Output<String> url) {
             this.url = url;
             return this;
         }
-
         public Builder url(@Nullable String url) {
             this.url = Output.ofNullable(url);
             return this;
-        }
-        public DomainMappingStatusArgs build() {
+        }        public DomainMappingStatusArgs build() {
             return new DomainMappingStatusArgs(conditions, mappedRouteName, observedGeneration, resourceRecords, url);
         }
     }

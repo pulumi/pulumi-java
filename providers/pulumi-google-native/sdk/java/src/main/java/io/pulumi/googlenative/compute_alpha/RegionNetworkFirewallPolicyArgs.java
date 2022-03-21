@@ -162,82 +162,72 @@ public final class RegionNetworkFirewallPolicyArgs extends io.pulumi.resources.R
             this.associations = associations;
             return this;
         }
-
         public Builder associations(@Nullable List<FirewallPolicyAssociationArgs> associations) {
             this.associations = Output.ofNullable(associations);
             return this;
         }
-
+        public Builder associations(FirewallPolicyAssociationArgs... associations) {
+            return associations(List.of(associations));
+        }
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder region(Output<String> region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
-
         public Builder region(String region) {
             this.region = Output.of(Objects.requireNonNull(region));
             return this;
         }
-
         public Builder requestId(@Nullable Output<String> requestId) {
             this.requestId = requestId;
             return this;
         }
-
         public Builder requestId(@Nullable String requestId) {
             this.requestId = Output.ofNullable(requestId);
             return this;
         }
-
         public Builder rules(@Nullable Output<List<FirewallPolicyRuleArgs>> rules) {
             this.rules = rules;
             return this;
         }
-
         public Builder rules(@Nullable List<FirewallPolicyRuleArgs> rules) {
             this.rules = Output.ofNullable(rules);
             return this;
         }
-
+        public Builder rules(FirewallPolicyRuleArgs... rules) {
+            return rules(List.of(rules));
+        }
         public Builder shortName(@Nullable Output<String> shortName) {
             this.shortName = shortName;
             return this;
         }
-
         public Builder shortName(@Nullable String shortName) {
             this.shortName = Output.ofNullable(shortName);
             return this;
         }
-
         public Builder vpcNetworkScope(@Nullable Output<RegionNetworkFirewallPolicyVpcNetworkScope> vpcNetworkScope) {
             this.vpcNetworkScope = vpcNetworkScope;
             return this;
         }
-
         public Builder vpcNetworkScope(@Nullable RegionNetworkFirewallPolicyVpcNetworkScope vpcNetworkScope) {
             this.vpcNetworkScope = Output.ofNullable(vpcNetworkScope);
             return this;
-        }
-        public RegionNetworkFirewallPolicyArgs build() {
+        }        public RegionNetworkFirewallPolicyArgs build() {
             return new RegionNetworkFirewallPolicyArgs(associations, description, project, region, requestId, rules, shortName, vpcNetworkScope);
         }
     }

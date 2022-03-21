@@ -57,12 +57,10 @@ public final class InstanceGroupManagerAllInstancesConfigArgs extends io.pulumi.
             this.properties = properties;
             return this;
         }
-
         public Builder properties(@Nullable InstancePropertiesPatchArgs properties) {
             this.properties = Output.ofNullable(properties);
             return this;
-        }
-        public InstanceGroupManagerAllInstancesConfigArgs build() {
+        }        public InstanceGroupManagerAllInstancesConfigArgs build() {
             return new InstanceGroupManagerAllInstancesConfigArgs(properties);
         }
     }

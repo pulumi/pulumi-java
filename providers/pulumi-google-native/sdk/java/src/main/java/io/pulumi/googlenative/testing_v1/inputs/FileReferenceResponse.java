@@ -58,8 +58,7 @@ public final class FileReferenceResponse extends io.pulumi.resources.InvokeArgs 
         public Builder gcsPath(String gcsPath) {
             this.gcsPath = Objects.requireNonNull(gcsPath);
             return this;
-        }
-        public FileReferenceResponse build() {
+        }        public FileReferenceResponse build() {
             return new FileReferenceResponse(gcsPath);
         }
     }

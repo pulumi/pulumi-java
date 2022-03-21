@@ -70,12 +70,10 @@ public final class GoogleCloudApigeeV1ConnectorsPlatformConfigResponse {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public Builder expiresAt(String expiresAt) {
             this.expiresAt = Objects.requireNonNull(expiresAt);
             return this;
-        }
-        public GoogleCloudApigeeV1ConnectorsPlatformConfigResponse build() {
+        }        public GoogleCloudApigeeV1ConnectorsPlatformConfigResponse build() {
             return new GoogleCloudApigeeV1ConnectorsPlatformConfigResponse(enabled, expiresAt);
         }
     }

@@ -492,272 +492,242 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.apis = apis;
             return this;
         }
-
         public Builder apis(@Nullable List<ApiArgs> apis) {
             this.apis = Output.ofNullable(apis);
             return this;
         }
-
+        public Builder apis(ApiArgs... apis) {
+            return apis(List.of(apis));
+        }
         public Builder authentication(@Nullable Output<AuthenticationArgs> authentication) {
             this.authentication = authentication;
             return this;
         }
-
         public Builder authentication(@Nullable AuthenticationArgs authentication) {
             this.authentication = Output.ofNullable(authentication);
             return this;
         }
-
         public Builder backend(@Nullable Output<BackendArgs> backend) {
             this.backend = backend;
             return this;
         }
-
         public Builder backend(@Nullable BackendArgs backend) {
             this.backend = Output.ofNullable(backend);
             return this;
         }
-
         public Builder billing(@Nullable Output<BillingArgs> billing) {
             this.billing = billing;
             return this;
         }
-
         public Builder billing(@Nullable BillingArgs billing) {
             this.billing = Output.ofNullable(billing);
             return this;
         }
-
         public Builder configVersion(@Nullable Output<Integer> configVersion) {
             this.configVersion = configVersion;
             return this;
         }
-
         public Builder configVersion(@Nullable Integer configVersion) {
             this.configVersion = Output.ofNullable(configVersion);
             return this;
         }
-
         public Builder context(@Nullable Output<ContextArgs> context) {
             this.context = context;
             return this;
         }
-
         public Builder context(@Nullable ContextArgs context) {
             this.context = Output.ofNullable(context);
             return this;
         }
-
         public Builder control(@Nullable Output<ControlArgs> control) {
             this.control = control;
             return this;
         }
-
         public Builder control(@Nullable ControlArgs control) {
             this.control = Output.ofNullable(control);
             return this;
         }
-
         public Builder customError(@Nullable Output<CustomErrorArgs> customError) {
             this.customError = customError;
             return this;
         }
-
         public Builder customError(@Nullable CustomErrorArgs customError) {
             this.customError = Output.ofNullable(customError);
             return this;
         }
-
         public Builder documentation(@Nullable Output<DocumentationArgs> documentation) {
             this.documentation = documentation;
             return this;
         }
-
         public Builder documentation(@Nullable DocumentationArgs documentation) {
             this.documentation = Output.ofNullable(documentation);
             return this;
         }
-
         public Builder endpoints(@Nullable Output<List<EndpointArgs>> endpoints) {
             this.endpoints = endpoints;
             return this;
         }
-
         public Builder endpoints(@Nullable List<EndpointArgs> endpoints) {
             this.endpoints = Output.ofNullable(endpoints);
             return this;
         }
-
+        public Builder endpoints(EndpointArgs... endpoints) {
+            return endpoints(List.of(endpoints));
+        }
         public Builder enums(@Nullable Output<List<EnumArgs>> enums) {
             this.enums = enums;
             return this;
         }
-
         public Builder enums(@Nullable List<EnumArgs> enums) {
             this.enums = Output.ofNullable(enums);
             return this;
         }
-
+        public Builder enums(EnumArgs... enums) {
+            return enums(List.of(enums));
+        }
         public Builder http(@Nullable Output<HttpArgs> http) {
             this.http = http;
             return this;
         }
-
         public Builder http(@Nullable HttpArgs http) {
             this.http = Output.ofNullable(http);
             return this;
         }
-
         public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder logging(@Nullable Output<LoggingArgs> logging) {
             this.logging = logging;
             return this;
         }
-
         public Builder logging(@Nullable LoggingArgs logging) {
             this.logging = Output.ofNullable(logging);
             return this;
         }
-
         public Builder logs(@Nullable Output<List<LogDescriptorArgs>> logs) {
             this.logs = logs;
             return this;
         }
-
         public Builder logs(@Nullable List<LogDescriptorArgs> logs) {
             this.logs = Output.ofNullable(logs);
             return this;
         }
-
+        public Builder logs(LogDescriptorArgs... logs) {
+            return logs(List.of(logs));
+        }
         public Builder metrics(@Nullable Output<List<MetricDescriptorArgs>> metrics) {
             this.metrics = metrics;
             return this;
         }
-
         public Builder metrics(@Nullable List<MetricDescriptorArgs> metrics) {
             this.metrics = Output.ofNullable(metrics);
             return this;
         }
-
+        public Builder metrics(MetricDescriptorArgs... metrics) {
+            return metrics(List.of(metrics));
+        }
         public Builder monitoredResources(@Nullable Output<List<MonitoredResourceDescriptorArgs>> monitoredResources) {
             this.monitoredResources = monitoredResources;
             return this;
         }
-
         public Builder monitoredResources(@Nullable List<MonitoredResourceDescriptorArgs> monitoredResources) {
             this.monitoredResources = Output.ofNullable(monitoredResources);
             return this;
         }
-
+        public Builder monitoredResources(MonitoredResourceDescriptorArgs... monitoredResources) {
+            return monitoredResources(List.of(monitoredResources));
+        }
         public Builder monitoring(@Nullable Output<MonitoringArgs> monitoring) {
             this.monitoring = monitoring;
             return this;
         }
-
         public Builder monitoring(@Nullable MonitoringArgs monitoring) {
             this.monitoring = Output.ofNullable(monitoring);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder producerProjectId(@Nullable Output<String> producerProjectId) {
             this.producerProjectId = producerProjectId;
             return this;
         }
-
         public Builder producerProjectId(@Nullable String producerProjectId) {
             this.producerProjectId = Output.ofNullable(producerProjectId);
             return this;
         }
-
         public Builder quota(@Nullable Output<QuotaArgs> quota) {
             this.quota = quota;
             return this;
         }
-
         public Builder quota(@Nullable QuotaArgs quota) {
             this.quota = Output.ofNullable(quota);
             return this;
         }
-
         public Builder serviceName(Output<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
-
         public Builder serviceName(String serviceName) {
             this.serviceName = Output.of(Objects.requireNonNull(serviceName));
             return this;
         }
-
         public Builder systemParameters(@Nullable Output<SystemParametersArgs> systemParameters) {
             this.systemParameters = systemParameters;
             return this;
         }
-
         public Builder systemParameters(@Nullable SystemParametersArgs systemParameters) {
             this.systemParameters = Output.ofNullable(systemParameters);
             return this;
         }
-
         public Builder systemTypes(@Nullable Output<List<TypeArgs>> systemTypes) {
             this.systemTypes = systemTypes;
             return this;
         }
-
         public Builder systemTypes(@Nullable List<TypeArgs> systemTypes) {
             this.systemTypes = Output.ofNullable(systemTypes);
             return this;
         }
-
+        public Builder systemTypes(TypeArgs... systemTypes) {
+            return systemTypes(List.of(systemTypes));
+        }
         public Builder title(@Nullable Output<String> title) {
             this.title = title;
             return this;
         }
-
         public Builder title(@Nullable String title) {
             this.title = Output.ofNullable(title);
             return this;
         }
-
         public Builder types(@Nullable Output<List<TypeArgs>> types) {
             this.types = types;
             return this;
         }
-
         public Builder types(@Nullable List<TypeArgs> types) {
             this.types = Output.ofNullable(types);
             return this;
         }
-
+        public Builder types(TypeArgs... types) {
+            return types(List.of(types));
+        }
         public Builder usage(@Nullable Output<UsageArgs> usage) {
             this.usage = usage;
             return this;
         }
-
         public Builder usage(@Nullable UsageArgs usage) {
             this.usage = Output.ofNullable(usage);
             return this;
-        }
-        public ConfigArgs build() {
+        }        public ConfigArgs build() {
             return new ConfigArgs(apis, authentication, backend, billing, configVersion, context, control, customError, documentation, endpoints, enums, http, id, logging, logs, metrics, monitoredResources, monitoring, name, producerProjectId, quota, serviceName, systemParameters, systemTypes, title, types, usage);
         }
     }

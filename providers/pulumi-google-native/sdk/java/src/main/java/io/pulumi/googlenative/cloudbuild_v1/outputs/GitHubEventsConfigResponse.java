@@ -135,32 +135,26 @@ public final class GitHubEventsConfigResponse {
             this.enterpriseConfigResourceName = Objects.requireNonNull(enterpriseConfigResourceName);
             return this;
         }
-
         public Builder installationId(String installationId) {
             this.installationId = Objects.requireNonNull(installationId);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder owner(String owner) {
             this.owner = Objects.requireNonNull(owner);
             return this;
         }
-
         public Builder pullRequest(PullRequestFilterResponse pullRequest) {
             this.pullRequest = Objects.requireNonNull(pullRequest);
             return this;
         }
-
         public Builder push(PushFilterResponse push) {
             this.push = Objects.requireNonNull(push);
             return this;
-        }
-        public GitHubEventsConfigResponse build() {
+        }        public GitHubEventsConfigResponse build() {
             return new GitHubEventsConfigResponse(enterpriseConfigResourceName, installationId, name, owner, pullRequest, push);
         }
     }

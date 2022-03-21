@@ -250,67 +250,54 @@ public final class GetJobResult {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder endTime(String endTime) {
             this.endTime = Objects.requireNonNull(endTime);
             return this;
         }
-
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = Objects.requireNonNull(errorMessage);
             return this;
         }
-
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder jobId(String jobId) {
             this.jobId = Objects.requireNonNull(jobId);
             return this;
         }
-
         public Builder jobPosition(String jobPosition) {
             this.jobPosition = Objects.requireNonNull(jobPosition);
             return this;
         }
-
         public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder predictionInput(GoogleCloudMlV1__PredictionInputResponse predictionInput) {
             this.predictionInput = Objects.requireNonNull(predictionInput);
             return this;
         }
-
         public Builder predictionOutput(GoogleCloudMlV1__PredictionOutputResponse predictionOutput) {
             this.predictionOutput = Objects.requireNonNull(predictionOutput);
             return this;
         }
-
         public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder trainingInput(GoogleCloudMlV1__TrainingInputResponse trainingInput) {
             this.trainingInput = Objects.requireNonNull(trainingInput);
             return this;
         }
-
         public Builder trainingOutput(GoogleCloudMlV1__TrainingOutputResponse trainingOutput) {
             this.trainingOutput = Objects.requireNonNull(trainingOutput);
             return this;
-        }
-        public GetJobResult build() {
+        }        public GetJobResult build() {
             return new GetJobResult(createTime, endTime, errorMessage, etag, jobId, jobPosition, labels, predictionInput, predictionOutput, startTime, state, trainingInput, trainingOutput);
         }
     }

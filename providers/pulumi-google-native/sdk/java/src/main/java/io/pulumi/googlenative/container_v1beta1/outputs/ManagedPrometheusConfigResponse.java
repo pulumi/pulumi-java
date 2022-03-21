@@ -51,8 +51,7 @@ public final class ManagedPrometheusConfigResponse {
         public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
-        }
-        public ManagedPrometheusConfigResponse build() {
+        }        public ManagedPrometheusConfigResponse build() {
             return new ManagedPrometheusConfigResponse(enabled);
         }
     }

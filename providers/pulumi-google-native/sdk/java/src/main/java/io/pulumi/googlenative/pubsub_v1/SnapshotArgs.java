@@ -99,42 +99,34 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder snapshotId(Output<String> snapshotId) {
             this.snapshotId = Objects.requireNonNull(snapshotId);
             return this;
         }
-
         public Builder snapshotId(String snapshotId) {
             this.snapshotId = Output.of(Objects.requireNonNull(snapshotId));
             return this;
         }
-
         public Builder subscription(Output<String> subscription) {
             this.subscription = Objects.requireNonNull(subscription);
             return this;
         }
-
         public Builder subscription(String subscription) {
             this.subscription = Output.of(Objects.requireNonNull(subscription));
             return this;
-        }
-        public SnapshotArgs build() {
+        }        public SnapshotArgs build() {
             return new SnapshotArgs(labels, project, snapshotId, subscription);
         }
     }

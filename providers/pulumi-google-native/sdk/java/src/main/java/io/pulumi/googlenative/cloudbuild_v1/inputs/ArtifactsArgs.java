@@ -80,22 +80,21 @@ public final class ArtifactsArgs extends io.pulumi.resources.ResourceArgs {
             this.images = images;
             return this;
         }
-
         public Builder images(@Nullable List<String> images) {
             this.images = Output.ofNullable(images);
             return this;
         }
-
+        public Builder images(String... images) {
+            return images(List.of(images));
+        }
         public Builder objects(@Nullable Output<ArtifactObjectsArgs> objects) {
             this.objects = objects;
             return this;
         }
-
         public Builder objects(@Nullable ArtifactObjectsArgs objects) {
             this.objects = Output.ofNullable(objects);
             return this;
-        }
-        public ArtifactsArgs build() {
+        }        public ArtifactsArgs build() {
             return new ArtifactsArgs(images, objects);
         }
     }

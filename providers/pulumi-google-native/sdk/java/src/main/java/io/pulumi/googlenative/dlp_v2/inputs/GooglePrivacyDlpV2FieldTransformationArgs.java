@@ -114,42 +114,37 @@ public final class GooglePrivacyDlpV2FieldTransformationArgs extends io.pulumi.r
             this.condition = condition;
             return this;
         }
-
         public Builder condition(@Nullable GooglePrivacyDlpV2RecordConditionArgs condition) {
             this.condition = Output.ofNullable(condition);
             return this;
         }
-
         public Builder fields(Output<List<GooglePrivacyDlpV2FieldIdArgs>> fields) {
             this.fields = Objects.requireNonNull(fields);
             return this;
         }
-
         public Builder fields(List<GooglePrivacyDlpV2FieldIdArgs> fields) {
             this.fields = Output.of(Objects.requireNonNull(fields));
             return this;
         }
-
+        public Builder fields(GooglePrivacyDlpV2FieldIdArgs... fields) {
+            return fields(List.of(fields));
+        }
         public Builder infoTypeTransformations(@Nullable Output<GooglePrivacyDlpV2InfoTypeTransformationsArgs> infoTypeTransformations) {
             this.infoTypeTransformations = infoTypeTransformations;
             return this;
         }
-
         public Builder infoTypeTransformations(@Nullable GooglePrivacyDlpV2InfoTypeTransformationsArgs infoTypeTransformations) {
             this.infoTypeTransformations = Output.ofNullable(infoTypeTransformations);
             return this;
         }
-
         public Builder primitiveTransformation(@Nullable Output<GooglePrivacyDlpV2PrimitiveTransformationArgs> primitiveTransformation) {
             this.primitiveTransformation = primitiveTransformation;
             return this;
         }
-
         public Builder primitiveTransformation(@Nullable GooglePrivacyDlpV2PrimitiveTransformationArgs primitiveTransformation) {
             this.primitiveTransformation = Output.ofNullable(primitiveTransformation);
             return this;
-        }
-        public GooglePrivacyDlpV2FieldTransformationArgs build() {
+        }        public GooglePrivacyDlpV2FieldTransformationArgs build() {
             return new GooglePrivacyDlpV2FieldTransformationArgs(condition, fields, infoTypeTransformations, primitiveTransformation);
         }
     }

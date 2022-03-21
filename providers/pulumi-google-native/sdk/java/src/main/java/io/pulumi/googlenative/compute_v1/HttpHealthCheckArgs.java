@@ -211,112 +211,90 @@ public final class HttpHealthCheckArgs extends io.pulumi.resources.ResourceArgs 
             this.checkIntervalSec = checkIntervalSec;
             return this;
         }
-
         public Builder checkIntervalSec(@Nullable Integer checkIntervalSec) {
             this.checkIntervalSec = Output.ofNullable(checkIntervalSec);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder healthyThreshold(@Nullable Output<Integer> healthyThreshold) {
             this.healthyThreshold = healthyThreshold;
             return this;
         }
-
         public Builder healthyThreshold(@Nullable Integer healthyThreshold) {
             this.healthyThreshold = Output.ofNullable(healthyThreshold);
             return this;
         }
-
         public Builder host(@Nullable Output<String> host) {
             this.host = host;
             return this;
         }
-
         public Builder host(@Nullable String host) {
             this.host = Output.ofNullable(host);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder port(@Nullable Output<Integer> port) {
             this.port = port;
             return this;
         }
-
         public Builder port(@Nullable Integer port) {
             this.port = Output.ofNullable(port);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder requestId(@Nullable Output<String> requestId) {
             this.requestId = requestId;
             return this;
         }
-
         public Builder requestId(@Nullable String requestId) {
             this.requestId = Output.ofNullable(requestId);
             return this;
         }
-
         public Builder requestPath(@Nullable Output<String> requestPath) {
             this.requestPath = requestPath;
             return this;
         }
-
         public Builder requestPath(@Nullable String requestPath) {
             this.requestPath = Output.ofNullable(requestPath);
             return this;
         }
-
         public Builder timeoutSec(@Nullable Output<Integer> timeoutSec) {
             this.timeoutSec = timeoutSec;
             return this;
         }
-
         public Builder timeoutSec(@Nullable Integer timeoutSec) {
             this.timeoutSec = Output.ofNullable(timeoutSec);
             return this;
         }
-
         public Builder unhealthyThreshold(@Nullable Output<Integer> unhealthyThreshold) {
             this.unhealthyThreshold = unhealthyThreshold;
             return this;
         }
-
         public Builder unhealthyThreshold(@Nullable Integer unhealthyThreshold) {
             this.unhealthyThreshold = Output.ofNullable(unhealthyThreshold);
             return this;
-        }
-        public HttpHealthCheckArgs build() {
+        }        public HttpHealthCheckArgs build() {
             return new HttpHealthCheckArgs(checkIntervalSec, description, healthyThreshold, host, name, port, project, requestId, requestPath, timeoutSec, unhealthyThreshold);
         }
     }

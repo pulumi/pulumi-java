@@ -206,112 +206,99 @@ public final class FlowArgs extends io.pulumi.resources.ResourceArgs {
             this.agentId = Objects.requireNonNull(agentId);
             return this;
         }
-
         public Builder agentId(String agentId) {
             this.agentId = Output.of(Objects.requireNonNull(agentId));
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder displayName(Output<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
-
         public Builder eventHandlers(@Nullable Output<List<GoogleCloudDialogflowCxV3EventHandlerArgs>> eventHandlers) {
             this.eventHandlers = eventHandlers;
             return this;
         }
-
         public Builder eventHandlers(@Nullable List<GoogleCloudDialogflowCxV3EventHandlerArgs> eventHandlers) {
             this.eventHandlers = Output.ofNullable(eventHandlers);
             return this;
         }
-
+        public Builder eventHandlers(GoogleCloudDialogflowCxV3EventHandlerArgs... eventHandlers) {
+            return eventHandlers(List.of(eventHandlers));
+        }
         public Builder languageCode(@Nullable Output<String> languageCode) {
             this.languageCode = languageCode;
             return this;
         }
-
         public Builder languageCode(@Nullable String languageCode) {
             this.languageCode = Output.ofNullable(languageCode);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder nluSettings(@Nullable Output<GoogleCloudDialogflowCxV3NluSettingsArgs> nluSettings) {
             this.nluSettings = nluSettings;
             return this;
         }
-
         public Builder nluSettings(@Nullable GoogleCloudDialogflowCxV3NluSettingsArgs nluSettings) {
             this.nluSettings = Output.ofNullable(nluSettings);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder transitionRouteGroups(@Nullable Output<List<String>> transitionRouteGroups) {
             this.transitionRouteGroups = transitionRouteGroups;
             return this;
         }
-
         public Builder transitionRouteGroups(@Nullable List<String> transitionRouteGroups) {
             this.transitionRouteGroups = Output.ofNullable(transitionRouteGroups);
             return this;
         }
-
+        public Builder transitionRouteGroups(String... transitionRouteGroups) {
+            return transitionRouteGroups(List.of(transitionRouteGroups));
+        }
         public Builder transitionRoutes(@Nullable Output<List<GoogleCloudDialogflowCxV3TransitionRouteArgs>> transitionRoutes) {
             this.transitionRoutes = transitionRoutes;
             return this;
         }
-
         public Builder transitionRoutes(@Nullable List<GoogleCloudDialogflowCxV3TransitionRouteArgs> transitionRoutes) {
             this.transitionRoutes = Output.ofNullable(transitionRoutes);
             return this;
         }
-        public FlowArgs build() {
+        public Builder transitionRoutes(GoogleCloudDialogflowCxV3TransitionRouteArgs... transitionRoutes) {
+            return transitionRoutes(List.of(transitionRoutes));
+        }        public FlowArgs build() {
             return new FlowArgs(agentId, description, displayName, eventHandlers, languageCode, location, name, nluSettings, project, transitionRouteGroups, transitionRoutes);
         }
     }

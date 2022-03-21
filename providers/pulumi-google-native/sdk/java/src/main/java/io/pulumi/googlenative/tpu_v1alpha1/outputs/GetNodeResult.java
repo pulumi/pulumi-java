@@ -315,87 +315,76 @@ public final class GetNodeResult {
             this.acceleratorType = Objects.requireNonNull(acceleratorType);
             return this;
         }
-
         public Builder apiVersion(String apiVersion) {
             this.apiVersion = Objects.requireNonNull(apiVersion);
             return this;
         }
-
         public Builder cidrBlock(String cidrBlock) {
             this.cidrBlock = Objects.requireNonNull(cidrBlock);
             return this;
         }
-
         public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder health(String health) {
             this.health = Objects.requireNonNull(health);
             return this;
         }
-
         public Builder healthDescription(String healthDescription) {
             this.healthDescription = Objects.requireNonNull(healthDescription);
             return this;
         }
-
         public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder network(String network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }
-
         public Builder networkEndpoints(List<NetworkEndpointResponse> networkEndpoints) {
             this.networkEndpoints = Objects.requireNonNull(networkEndpoints);
             return this;
         }
-
+        public Builder networkEndpoints(NetworkEndpointResponse... networkEndpoints) {
+            return networkEndpoints(List.of(networkEndpoints));
+        }
         public Builder schedulingConfig(SchedulingConfigResponse schedulingConfig) {
             this.schedulingConfig = Objects.requireNonNull(schedulingConfig);
             return this;
         }
-
         public Builder serviceAccount(String serviceAccount) {
             this.serviceAccount = Objects.requireNonNull(serviceAccount);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder symptoms(List<SymptomResponse> symptoms) {
             this.symptoms = Objects.requireNonNull(symptoms);
             return this;
         }
-
+        public Builder symptoms(SymptomResponse... symptoms) {
+            return symptoms(List.of(symptoms));
+        }
         public Builder tensorflowVersion(String tensorflowVersion) {
             this.tensorflowVersion = Objects.requireNonNull(tensorflowVersion);
             return this;
         }
-
         public Builder useServiceNetworking(Boolean useServiceNetworking) {
             this.useServiceNetworking = Objects.requireNonNull(useServiceNetworking);
             return this;
-        }
-        public GetNodeResult build() {
+        }        public GetNodeResult build() {
             return new GetNodeResult(acceleratorType, apiVersion, cidrBlock, createTime, description, health, healthDescription, labels, name, network, networkEndpoints, schedulingConfig, serviceAccount, state, symptoms, tensorflowVersion, useServiceNetworking);
         }
     }

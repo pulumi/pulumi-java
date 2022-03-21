@@ -131,62 +131,50 @@ public final class NotificationConfigArgs extends io.pulumi.resources.ResourceAr
             this.configId = Objects.requireNonNull(configId);
             return this;
         }
-
         public Builder configId(String configId) {
             this.configId = Output.of(Objects.requireNonNull(configId));
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder organizationId(Output<String> organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }
-
         public Builder organizationId(String organizationId) {
             this.organizationId = Output.of(Objects.requireNonNull(organizationId));
             return this;
         }
-
         public Builder pubsubTopic(@Nullable Output<String> pubsubTopic) {
             this.pubsubTopic = pubsubTopic;
             return this;
         }
-
         public Builder pubsubTopic(@Nullable String pubsubTopic) {
             this.pubsubTopic = Output.ofNullable(pubsubTopic);
             return this;
         }
-
         public Builder streamingConfig(@Nullable Output<StreamingConfigArgs> streamingConfig) {
             this.streamingConfig = streamingConfig;
             return this;
         }
-
         public Builder streamingConfig(@Nullable StreamingConfigArgs streamingConfig) {
             this.streamingConfig = Output.ofNullable(streamingConfig);
             return this;
-        }
-        public NotificationConfigArgs build() {
+        }        public NotificationConfigArgs build() {
             return new NotificationConfigArgs(configId, description, name, organizationId, pubsubTopic, streamingConfig);
         }
     }

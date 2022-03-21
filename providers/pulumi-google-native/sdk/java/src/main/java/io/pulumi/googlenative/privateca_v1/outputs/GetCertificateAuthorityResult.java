@@ -316,87 +316,76 @@ public final class GetCertificateAuthorityResult {
             this.accessUrls = Objects.requireNonNull(accessUrls);
             return this;
         }
-
         public Builder caCertificateDescriptions(List<CertificateDescriptionResponse> caCertificateDescriptions) {
             this.caCertificateDescriptions = Objects.requireNonNull(caCertificateDescriptions);
             return this;
         }
-
+        public Builder caCertificateDescriptions(CertificateDescriptionResponse... caCertificateDescriptions) {
+            return caCertificateDescriptions(List.of(caCertificateDescriptions));
+        }
         public Builder config(CertificateConfigResponse config) {
             this.config = Objects.requireNonNull(config);
             return this;
         }
-
         public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder deleteTime(String deleteTime) {
             this.deleteTime = Objects.requireNonNull(deleteTime);
             return this;
         }
-
         public Builder expireTime(String expireTime) {
             this.expireTime = Objects.requireNonNull(expireTime);
             return this;
         }
-
         public Builder gcsBucket(String gcsBucket) {
             this.gcsBucket = Objects.requireNonNull(gcsBucket);
             return this;
         }
-
         public Builder keySpec(KeyVersionSpecResponse keySpec) {
             this.keySpec = Objects.requireNonNull(keySpec);
             return this;
         }
-
         public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder lifetime(String lifetime) {
             this.lifetime = Objects.requireNonNull(lifetime);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder pemCaCertificates(List<String> pemCaCertificates) {
             this.pemCaCertificates = Objects.requireNonNull(pemCaCertificates);
             return this;
         }
-
+        public Builder pemCaCertificates(String... pemCaCertificates) {
+            return pemCaCertificates(List.of(pemCaCertificates));
+        }
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder subordinateConfig(SubordinateConfigResponse subordinateConfig) {
             this.subordinateConfig = Objects.requireNonNull(subordinateConfig);
             return this;
         }
-
         public Builder tier(String tier) {
             this.tier = Objects.requireNonNull(tier);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
-        }
-        public GetCertificateAuthorityResult build() {
+        }        public GetCertificateAuthorityResult build() {
             return new GetCertificateAuthorityResult(accessUrls, caCertificateDescriptions, config, createTime, deleteTime, expireTime, gcsBucket, keySpec, labels, lifetime, name, pemCaCertificates, state, subordinateConfig, tier, type, updateTime);
         }
     }

@@ -61,12 +61,10 @@ public final class GooglePrivacyDlpV2KindExpressionArgs extends io.pulumi.resour
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
-        }
-        public GooglePrivacyDlpV2KindExpressionArgs build() {
+        }        public GooglePrivacyDlpV2KindExpressionArgs build() {
             return new GooglePrivacyDlpV2KindExpressionArgs(name);
         }
     }

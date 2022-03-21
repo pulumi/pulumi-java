@@ -61,12 +61,10 @@ public final class ClassItemArgs extends io.pulumi.resources.ResourceArgs {
             this.value = value;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = Output.ofNullable(value);
             return this;
-        }
-        public ClassItemArgs build() {
+        }        public ClassItemArgs build() {
             return new ClassItemArgs(value);
         }
     }

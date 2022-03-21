@@ -135,32 +135,26 @@ public final class ReleaseResponse {
             this.message = Objects.requireNonNull(message);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder releaseTime(String releaseTime) {
             this.releaseTime = Objects.requireNonNull(releaseTime);
             return this;
         }
-
         public Builder releaseUser(ActingUserResponse releaseUser) {
             this.releaseUser = Objects.requireNonNull(releaseUser);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder version(VersionResponse version) {
             this.version = Objects.requireNonNull(version);
             return this;
-        }
-        public ReleaseResponse build() {
+        }        public ReleaseResponse build() {
             return new ReleaseResponse(message, name, releaseTime, releaseUser, type, version);
         }
     }

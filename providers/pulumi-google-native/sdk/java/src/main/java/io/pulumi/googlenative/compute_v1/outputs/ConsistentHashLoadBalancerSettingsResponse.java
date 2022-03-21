@@ -86,17 +86,14 @@ public final class ConsistentHashLoadBalancerSettingsResponse {
             this.httpCookie = Objects.requireNonNull(httpCookie);
             return this;
         }
-
         public Builder httpHeaderName(String httpHeaderName) {
             this.httpHeaderName = Objects.requireNonNull(httpHeaderName);
             return this;
         }
-
         public Builder minimumRingSize(String minimumRingSize) {
             this.minimumRingSize = Objects.requireNonNull(minimumRingSize);
             return this;
-        }
-        public ConsistentHashLoadBalancerSettingsResponse build() {
+        }        public ConsistentHashLoadBalancerSettingsResponse build() {
             return new ConsistentHashLoadBalancerSettingsResponse(httpCookie, httpHeaderName, minimumRingSize);
         }
     }

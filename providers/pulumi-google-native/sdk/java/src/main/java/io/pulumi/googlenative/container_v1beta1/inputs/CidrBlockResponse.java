@@ -76,12 +76,10 @@ public final class CidrBlockResponse extends io.pulumi.resources.InvokeArgs {
             this.cidrBlock = Objects.requireNonNull(cidrBlock);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
-        }
-        public CidrBlockResponse build() {
+        }        public CidrBlockResponse build() {
             return new CidrBlockResponse(cidrBlock, displayName);
         }
     }

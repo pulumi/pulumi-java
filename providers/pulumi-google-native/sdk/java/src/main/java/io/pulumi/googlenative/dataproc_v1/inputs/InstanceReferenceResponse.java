@@ -108,22 +108,18 @@ public final class InstanceReferenceResponse extends io.pulumi.resources.InvokeA
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
-
         public Builder instanceName(String instanceName) {
             this.instanceName = Objects.requireNonNull(instanceName);
             return this;
         }
-
         public Builder publicEciesKey(String publicEciesKey) {
             this.publicEciesKey = Objects.requireNonNull(publicEciesKey);
             return this;
         }
-
         public Builder publicKey(String publicKey) {
             this.publicKey = Objects.requireNonNull(publicKey);
             return this;
-        }
-        public InstanceReferenceResponse build() {
+        }        public InstanceReferenceResponse build() {
             return new InstanceReferenceResponse(instanceId, instanceName, publicEciesKey, publicKey);
         }
     }

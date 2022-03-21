@@ -108,22 +108,18 @@ public final class PubsubConfigResponse extends io.pulumi.resources.InvokeArgs {
             this.serviceAccountEmail = Objects.requireNonNull(serviceAccountEmail);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder subscription(String subscription) {
             this.subscription = Objects.requireNonNull(subscription);
             return this;
         }
-
         public Builder topic(String topic) {
             this.topic = Objects.requireNonNull(topic);
             return this;
-        }
-        public PubsubConfigResponse build() {
+        }        public PubsubConfigResponse build() {
             return new PubsubConfigResponse(serviceAccountEmail, state, subscription, topic);
         }
     }

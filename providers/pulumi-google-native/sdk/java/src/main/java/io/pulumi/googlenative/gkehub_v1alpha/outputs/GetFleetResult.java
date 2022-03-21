@@ -149,37 +149,30 @@ public final class GetFleetResult {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder deleteTime(String deleteTime) {
             this.deleteTime = Objects.requireNonNull(deleteTime);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder fleetName(String fleetName) {
             this.fleetName = Objects.requireNonNull(fleetName);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder uid(String uid) {
             this.uid = Objects.requireNonNull(uid);
             return this;
         }
-
         public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
-        }
-        public GetFleetResult build() {
+        }        public GetFleetResult build() {
             return new GetFleetResult(createTime, deleteTime, displayName, fleetName, name, uid, updateTime);
         }
     }

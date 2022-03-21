@@ -51,8 +51,7 @@ public final class TestTimingResponse {
         public Builder testProcessDuration(DurationResponse testProcessDuration) {
             this.testProcessDuration = Objects.requireNonNull(testProcessDuration);
             return this;
-        }
-        public TestTimingResponse build() {
+        }        public TestTimingResponse build() {
             return new TestTimingResponse(testProcessDuration);
         }
     }

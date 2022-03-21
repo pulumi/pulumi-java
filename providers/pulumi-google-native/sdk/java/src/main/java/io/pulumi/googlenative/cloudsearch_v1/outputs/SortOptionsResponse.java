@@ -69,12 +69,10 @@ public final class SortOptionsResponse {
             this.operatorName = Objects.requireNonNull(operatorName);
             return this;
         }
-
         public Builder sortOrder(String sortOrder) {
             this.sortOrder = Objects.requireNonNull(sortOrder);
             return this;
-        }
-        public SortOptionsResponse build() {
+        }        public SortOptionsResponse build() {
             return new SortOptionsResponse(operatorName, sortOrder);
         }
     }

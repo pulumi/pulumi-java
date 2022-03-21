@@ -113,42 +113,34 @@ public final class DsRecordArgs extends io.pulumi.resources.ResourceArgs {
             this.algorithm = algorithm;
             return this;
         }
-
         public Builder algorithm(@Nullable DsRecordAlgorithm algorithm) {
             this.algorithm = Output.ofNullable(algorithm);
             return this;
         }
-
         public Builder digest(@Nullable Output<String> digest) {
             this.digest = digest;
             return this;
         }
-
         public Builder digest(@Nullable String digest) {
             this.digest = Output.ofNullable(digest);
             return this;
         }
-
         public Builder digestType(@Nullable Output<DsRecordDigestType> digestType) {
             this.digestType = digestType;
             return this;
         }
-
         public Builder digestType(@Nullable DsRecordDigestType digestType) {
             this.digestType = Output.ofNullable(digestType);
             return this;
         }
-
         public Builder keyTag(@Nullable Output<Integer> keyTag) {
             this.keyTag = keyTag;
             return this;
         }
-
         public Builder keyTag(@Nullable Integer keyTag) {
             this.keyTag = Output.ofNullable(keyTag);
             return this;
-        }
-        public DsRecordArgs build() {
+        }        public DsRecordArgs build() {
             return new DsRecordArgs(algorithm, digest, digestType, keyTag);
         }
     }

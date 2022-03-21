@@ -78,17 +78,14 @@ public final class GetWaiterArgs extends io.pulumi.resources.InvokeArgs {
             this.configId = Objects.requireNonNull(configId);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder waiterId(String waiterId) {
             this.waiterId = Objects.requireNonNull(waiterId);
             return this;
-        }
-        public GetWaiterArgs build() {
+        }        public GetWaiterArgs build() {
             return new GetWaiterArgs(configId, project, waiterId);
         }
     }

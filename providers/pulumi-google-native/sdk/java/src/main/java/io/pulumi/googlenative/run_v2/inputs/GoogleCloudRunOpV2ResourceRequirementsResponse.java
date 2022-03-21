@@ -78,12 +78,10 @@ public final class GoogleCloudRunOpV2ResourceRequirementsResponse extends io.pul
             this.cpuIdle = Objects.requireNonNull(cpuIdle);
             return this;
         }
-
         public Builder limits(Map<String,String> limits) {
             this.limits = Objects.requireNonNull(limits);
             return this;
-        }
-        public GoogleCloudRunOpV2ResourceRequirementsResponse build() {
+        }        public GoogleCloudRunOpV2ResourceRequirementsResponse build() {
             return new GoogleCloudRunOpV2ResourceRequirementsResponse(cpuIdle, limits);
         }
     }

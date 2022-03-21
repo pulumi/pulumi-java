@@ -77,12 +77,10 @@ public final class EnvironmentConfigResponse extends io.pulumi.resources.InvokeA
             this.executionConfig = Objects.requireNonNull(executionConfig);
             return this;
         }
-
         public Builder peripheralsConfig(PeripheralsConfigResponse peripheralsConfig) {
             this.peripheralsConfig = Objects.requireNonNull(peripheralsConfig);
             return this;
-        }
-        public EnvironmentConfigResponse build() {
+        }        public EnvironmentConfigResponse build() {
             return new EnvironmentConfigResponse(executionConfig, peripheralsConfig);
         }
     }

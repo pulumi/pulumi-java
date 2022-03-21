@@ -129,52 +129,42 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionAr
             this.dial = dial;
             return this;
         }
-
         public Builder dial(@Nullable GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionDialArgs dial) {
             this.dial = Output.ofNullable(dial);
             return this;
         }
-
         public Builder openUrl(@Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionOpenUriArgs> openUrl) {
             this.openUrl = openUrl;
             return this;
         }
-
         public Builder openUrl(@Nullable GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionOpenUriArgs openUrl) {
             this.openUrl = Output.ofNullable(openUrl);
             return this;
         }
-
         public Builder postbackData(@Nullable Output<String> postbackData) {
             this.postbackData = postbackData;
             return this;
         }
-
         public Builder postbackData(@Nullable String postbackData) {
             this.postbackData = Output.ofNullable(postbackData);
             return this;
         }
-
         public Builder shareLocation(@Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionShareLocationArgs> shareLocation) {
             this.shareLocation = shareLocation;
             return this;
         }
-
         public Builder shareLocation(@Nullable GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionShareLocationArgs shareLocation) {
             this.shareLocation = Output.ofNullable(shareLocation);
             return this;
         }
-
         public Builder text(@Nullable Output<String> text) {
             this.text = text;
             return this;
         }
-
         public Builder text(@Nullable String text) {
             this.text = Output.ofNullable(text);
             return this;
-        }
-        public GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionArgs build() {
+        }        public GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionArgs build() {
             return new GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionArgs(dial, openUrl, postbackData, shareLocation, text);
         }
     }

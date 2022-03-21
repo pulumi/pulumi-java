@@ -70,12 +70,10 @@ public final class GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricResp
             this.objectiveValue = Objects.requireNonNull(objectiveValue);
             return this;
         }
-
         public Builder trainingStep(String trainingStep) {
             this.trainingStep = Objects.requireNonNull(trainingStep);
             return this;
-        }
-        public GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricResponse build() {
+        }        public GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricResponse build() {
             return new GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricResponse(objectiveValue, trainingStep);
         }
     }

@@ -86,17 +86,14 @@ public final class IosDeviceFileResponse {
             this.bundleId = Objects.requireNonNull(bundleId);
             return this;
         }
-
         public Builder content(FileReferenceResponse content) {
             this.content = Objects.requireNonNull(content);
             return this;
         }
-
         public Builder devicePath(String devicePath) {
             this.devicePath = Objects.requireNonNull(devicePath);
             return this;
-        }
-        public IosDeviceFileResponse build() {
+        }        public IosDeviceFileResponse build() {
             return new IosDeviceFileResponse(bundleId, content, devicePath);
         }
     }

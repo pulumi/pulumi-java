@@ -94,32 +94,26 @@ public final class ResourceLimitArgs extends io.pulumi.resources.ResourceArgs {
             this.maximum = maximum;
             return this;
         }
-
         public Builder maximum(@Nullable String maximum) {
             this.maximum = Output.ofNullable(maximum);
             return this;
         }
-
         public Builder minimum(@Nullable Output<String> minimum) {
             this.minimum = minimum;
             return this;
         }
-
         public Builder minimum(@Nullable String minimum) {
             this.minimum = Output.ofNullable(minimum);
             return this;
         }
-
         public Builder resourceType(@Nullable Output<String> resourceType) {
             this.resourceType = resourceType;
             return this;
         }
-
         public Builder resourceType(@Nullable String resourceType) {
             this.resourceType = Output.ofNullable(resourceType);
             return this;
-        }
-        public ResourceLimitArgs build() {
+        }        public ResourceLimitArgs build() {
             return new ResourceLimitArgs(maximum, minimum, resourceType);
         }
     }

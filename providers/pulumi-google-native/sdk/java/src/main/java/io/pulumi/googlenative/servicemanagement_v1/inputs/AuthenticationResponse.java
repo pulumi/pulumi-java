@@ -78,12 +78,16 @@ public final class AuthenticationResponse extends io.pulumi.resources.InvokeArgs
             this.providers = Objects.requireNonNull(providers);
             return this;
         }
-
+        public Builder providers(AuthProviderResponse... providers) {
+            return providers(List.of(providers));
+        }
         public Builder rules(List<AuthenticationRuleResponse> rules) {
             this.rules = Objects.requireNonNull(rules);
             return this;
         }
-        public AuthenticationResponse build() {
+        public Builder rules(AuthenticationRuleResponse... rules) {
+            return rules(List.of(rules));
+        }        public AuthenticationResponse build() {
             return new AuthenticationResponse(providers, rules);
         }
     }

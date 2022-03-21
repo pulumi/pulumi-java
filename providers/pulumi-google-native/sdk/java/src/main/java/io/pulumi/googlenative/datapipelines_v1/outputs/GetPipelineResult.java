@@ -217,57 +217,46 @@ public final class GetPipelineResult {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder jobCount(Integer jobCount) {
             this.jobCount = Objects.requireNonNull(jobCount);
             return this;
         }
-
         public Builder lastUpdateTime(String lastUpdateTime) {
             this.lastUpdateTime = Objects.requireNonNull(lastUpdateTime);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder pipelineSources(Map<String,String> pipelineSources) {
             this.pipelineSources = Objects.requireNonNull(pipelineSources);
             return this;
         }
-
         public Builder scheduleInfo(GoogleCloudDatapipelinesV1ScheduleSpecResponse scheduleInfo) {
             this.scheduleInfo = Objects.requireNonNull(scheduleInfo);
             return this;
         }
-
         public Builder schedulerServiceAccountEmail(String schedulerServiceAccountEmail) {
             this.schedulerServiceAccountEmail = Objects.requireNonNull(schedulerServiceAccountEmail);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder workload(GoogleCloudDatapipelinesV1WorkloadResponse workload) {
             this.workload = Objects.requireNonNull(workload);
             return this;
-        }
-        public GetPipelineResult build() {
+        }        public GetPipelineResult build() {
             return new GetPipelineResult(createTime, displayName, jobCount, lastUpdateTime, name, pipelineSources, scheduleInfo, schedulerServiceAccountEmail, state, type, workload);
         }
     }

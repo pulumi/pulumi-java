@@ -104,22 +104,18 @@ public final class LocationResponse {
             this.latLng = Objects.requireNonNull(latLng);
             return this;
         }
-
         public Builder locationType(String locationType) {
             this.locationType = Objects.requireNonNull(locationType);
             return this;
         }
-
         public Builder postalAddress(PostalAddressResponse postalAddress) {
             this.postalAddress = Objects.requireNonNull(postalAddress);
             return this;
         }
-
         public Builder radiusInMiles(Double radiusInMiles) {
             this.radiusInMiles = Objects.requireNonNull(radiusInMiles);
             return this;
-        }
-        public LocationResponse build() {
+        }        public LocationResponse build() {
             return new LocationResponse(latLng, locationType, postalAddress, radiusInMiles);
         }
     }

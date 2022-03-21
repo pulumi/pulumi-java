@@ -168,42 +168,34 @@ public final class SecurityPolicyRuleRateLimitOptionsResponse {
             this.banDurationSec = Objects.requireNonNull(banDurationSec);
             return this;
         }
-
         public Builder banThreshold(SecurityPolicyRuleRateLimitOptionsThresholdResponse banThreshold) {
             this.banThreshold = Objects.requireNonNull(banThreshold);
             return this;
         }
-
         public Builder conformAction(String conformAction) {
             this.conformAction = Objects.requireNonNull(conformAction);
             return this;
         }
-
         public Builder enforceOnKey(String enforceOnKey) {
             this.enforceOnKey = Objects.requireNonNull(enforceOnKey);
             return this;
         }
-
         public Builder enforceOnKeyName(String enforceOnKeyName) {
             this.enforceOnKeyName = Objects.requireNonNull(enforceOnKeyName);
             return this;
         }
-
         public Builder exceedAction(String exceedAction) {
             this.exceedAction = Objects.requireNonNull(exceedAction);
             return this;
         }
-
         public Builder exceedRedirectOptions(SecurityPolicyRuleRedirectOptionsResponse exceedRedirectOptions) {
             this.exceedRedirectOptions = Objects.requireNonNull(exceedRedirectOptions);
             return this;
         }
-
         public Builder rateLimitThreshold(SecurityPolicyRuleRateLimitOptionsThresholdResponse rateLimitThreshold) {
             this.rateLimitThreshold = Objects.requireNonNull(rateLimitThreshold);
             return this;
-        }
-        public SecurityPolicyRuleRateLimitOptionsResponse build() {
+        }        public SecurityPolicyRuleRateLimitOptionsResponse build() {
             return new SecurityPolicyRuleRateLimitOptionsResponse(banDurationSec, banThreshold, conformAction, enforceOnKey, enforceOnKeyName, exceedAction, exceedRedirectOptions, rateLimitThreshold);
         }
     }

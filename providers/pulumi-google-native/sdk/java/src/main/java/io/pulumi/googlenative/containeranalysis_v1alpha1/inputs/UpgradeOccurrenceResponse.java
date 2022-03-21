@@ -94,17 +94,14 @@ public final class UpgradeOccurrenceResponse extends io.pulumi.resources.InvokeA
             this.distribution = Objects.requireNonNull(distribution);
             return this;
         }
-
         public Builder $package(String $package) {
             this.$package = Objects.requireNonNull($package);
             return this;
         }
-
         public Builder parsedVersion(VersionResponse parsedVersion) {
             this.parsedVersion = Objects.requireNonNull(parsedVersion);
             return this;
-        }
-        public UpgradeOccurrenceResponse build() {
+        }        public UpgradeOccurrenceResponse build() {
             return new UpgradeOccurrenceResponse(distribution, $package, parsedVersion);
         }
     }

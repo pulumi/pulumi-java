@@ -76,12 +76,10 @@ public final class UrlMapTestHeaderResponse extends io.pulumi.resources.InvokeAr
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public UrlMapTestHeaderResponse build() {
+        }        public UrlMapTestHeaderResponse build() {
             return new UrlMapTestHeaderResponse(name, value);
         }
     }

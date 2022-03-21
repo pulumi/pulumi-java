@@ -104,22 +104,18 @@ public final class ErrorProtoResponse extends io.pulumi.resources.InvokeArgs {
             this.debugInfo = Objects.requireNonNull(debugInfo);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder message(String message) {
             this.message = Objects.requireNonNull(message);
             return this;
         }
-
         public Builder reason(String reason) {
             this.reason = Objects.requireNonNull(reason);
             return this;
-        }
-        public ErrorProtoResponse build() {
+        }        public ErrorProtoResponse build() {
             return new ErrorProtoResponse(debugInfo, location, message, reason);
         }
     }

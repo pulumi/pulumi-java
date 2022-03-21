@@ -78,22 +78,18 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
             this.gcsUri = gcsUri;
             return this;
         }
-
         public Builder gcsUri(@Nullable String gcsUri) {
             this.gcsUri = Output.ofNullable(gcsUri);
             return this;
         }
-
         public Builder rawBytes(@Nullable Output<String> rawBytes) {
             this.rawBytes = rawBytes;
             return this;
         }
-
         public Builder rawBytes(@Nullable String rawBytes) {
             this.rawBytes = Output.ofNullable(rawBytes);
             return this;
-        }
-        public ImageArgs build() {
+        }        public ImageArgs build() {
             return new ImageArgs(gcsUri, rawBytes);
         }
     }

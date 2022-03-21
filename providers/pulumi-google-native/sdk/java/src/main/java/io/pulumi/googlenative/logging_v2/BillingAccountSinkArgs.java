@@ -198,102 +198,85 @@ public final class BillingAccountSinkArgs extends io.pulumi.resources.ResourceAr
             this.bigqueryOptions = bigqueryOptions;
             return this;
         }
-
         public Builder bigqueryOptions(@Nullable BigQueryOptionsArgs bigqueryOptions) {
             this.bigqueryOptions = Output.ofNullable(bigqueryOptions);
             return this;
         }
-
         public Builder billingAccountId(Output<String> billingAccountId) {
             this.billingAccountId = Objects.requireNonNull(billingAccountId);
             return this;
         }
-
         public Builder billingAccountId(String billingAccountId) {
             this.billingAccountId = Output.of(Objects.requireNonNull(billingAccountId));
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder destination(Output<String> destination) {
             this.destination = Objects.requireNonNull(destination);
             return this;
         }
-
         public Builder destination(String destination) {
             this.destination = Output.of(Objects.requireNonNull(destination));
             return this;
         }
-
         public Builder disabled(@Nullable Output<Boolean> disabled) {
             this.disabled = disabled;
             return this;
         }
-
         public Builder disabled(@Nullable Boolean disabled) {
             this.disabled = Output.ofNullable(disabled);
             return this;
         }
-
         public Builder exclusions(@Nullable Output<List<LogExclusionArgs>> exclusions) {
             this.exclusions = exclusions;
             return this;
         }
-
         public Builder exclusions(@Nullable List<LogExclusionArgs> exclusions) {
             this.exclusions = Output.ofNullable(exclusions);
             return this;
         }
-
+        public Builder exclusions(LogExclusionArgs... exclusions) {
+            return exclusions(List.of(exclusions));
+        }
         public Builder filter(@Nullable Output<String> filter) {
             this.filter = filter;
             return this;
         }
-
         public Builder filter(@Nullable String filter) {
             this.filter = Output.ofNullable(filter);
             return this;
         }
-
         public Builder includeChildren(@Nullable Output<Boolean> includeChildren) {
             this.includeChildren = includeChildren;
             return this;
         }
-
         public Builder includeChildren(@Nullable Boolean includeChildren) {
             this.includeChildren = Output.ofNullable(includeChildren);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder uniqueWriterIdentity(@Nullable Output<String> uniqueWriterIdentity) {
             this.uniqueWriterIdentity = uniqueWriterIdentity;
             return this;
         }
-
         public Builder uniqueWriterIdentity(@Nullable String uniqueWriterIdentity) {
             this.uniqueWriterIdentity = Output.ofNullable(uniqueWriterIdentity);
             return this;
-        }
-        public BillingAccountSinkArgs build() {
+        }        public BillingAccountSinkArgs build() {
             return new BillingAccountSinkArgs(bigqueryOptions, billingAccountId, description, destination, disabled, exclusions, filter, includeChildren, name, uniqueWriterIdentity);
         }
     }

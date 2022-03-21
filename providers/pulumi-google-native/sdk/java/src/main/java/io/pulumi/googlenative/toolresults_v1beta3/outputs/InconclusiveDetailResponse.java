@@ -85,17 +85,14 @@ public final class InconclusiveDetailResponse {
             this.abortedByUser = Objects.requireNonNull(abortedByUser);
             return this;
         }
-
         public Builder hasErrorLogs(Boolean hasErrorLogs) {
             this.hasErrorLogs = Objects.requireNonNull(hasErrorLogs);
             return this;
         }
-
         public Builder infrastructureFailure(Boolean infrastructureFailure) {
             this.infrastructureFailure = Objects.requireNonNull(infrastructureFailure);
             return this;
-        }
-        public InconclusiveDetailResponse build() {
+        }        public InconclusiveDetailResponse build() {
             return new InconclusiveDetailResponse(abortedByUser, hasErrorLogs, infrastructureFailure);
         }
     }

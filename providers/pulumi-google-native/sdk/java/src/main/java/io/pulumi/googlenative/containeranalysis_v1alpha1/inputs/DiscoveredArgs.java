@@ -113,42 +113,34 @@ public final class DiscoveredArgs extends io.pulumi.resources.ResourceArgs {
             this.analysisStatus = analysisStatus;
             return this;
         }
-
         public Builder analysisStatus(@Nullable DiscoveredAnalysisStatus analysisStatus) {
             this.analysisStatus = Output.ofNullable(analysisStatus);
             return this;
         }
-
         public Builder analysisStatusError(@Nullable Output<StatusArgs> analysisStatusError) {
             this.analysisStatusError = analysisStatusError;
             return this;
         }
-
         public Builder analysisStatusError(@Nullable StatusArgs analysisStatusError) {
             this.analysisStatusError = Output.ofNullable(analysisStatusError);
             return this;
         }
-
         public Builder continuousAnalysis(@Nullable Output<DiscoveredContinuousAnalysis> continuousAnalysis) {
             this.continuousAnalysis = continuousAnalysis;
             return this;
         }
-
         public Builder continuousAnalysis(@Nullable DiscoveredContinuousAnalysis continuousAnalysis) {
             this.continuousAnalysis = Output.ofNullable(continuousAnalysis);
             return this;
         }
-
         public Builder cpe(@Nullable Output<String> cpe) {
             this.cpe = cpe;
             return this;
         }
-
         public Builder cpe(@Nullable String cpe) {
             this.cpe = Output.ofNullable(cpe);
             return this;
-        }
-        public DiscoveredArgs build() {
+        }        public DiscoveredArgs build() {
             return new DiscoveredArgs(analysisStatus, analysisStatusError, continuousAnalysis, cpe);
         }
     }

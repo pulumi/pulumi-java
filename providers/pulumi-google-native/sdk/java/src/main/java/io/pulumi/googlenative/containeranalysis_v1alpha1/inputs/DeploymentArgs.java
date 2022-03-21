@@ -143,62 +143,50 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
             this.address = address;
             return this;
         }
-
         public Builder address(@Nullable String address) {
             this.address = Output.ofNullable(address);
             return this;
         }
-
         public Builder config(@Nullable Output<String> config) {
             this.config = config;
             return this;
         }
-
         public Builder config(@Nullable String config) {
             this.config = Output.ofNullable(config);
             return this;
         }
-
         public Builder deployTime(@Nullable Output<String> deployTime) {
             this.deployTime = deployTime;
             return this;
         }
-
         public Builder deployTime(@Nullable String deployTime) {
             this.deployTime = Output.ofNullable(deployTime);
             return this;
         }
-
         public Builder platform(@Nullable Output<DeploymentPlatform> platform) {
             this.platform = platform;
             return this;
         }
-
         public Builder platform(@Nullable DeploymentPlatform platform) {
             this.platform = Output.ofNullable(platform);
             return this;
         }
-
         public Builder undeployTime(@Nullable Output<String> undeployTime) {
             this.undeployTime = undeployTime;
             return this;
         }
-
         public Builder undeployTime(@Nullable String undeployTime) {
             this.undeployTime = Output.ofNullable(undeployTime);
             return this;
         }
-
         public Builder userEmail(@Nullable Output<String> userEmail) {
             this.userEmail = userEmail;
             return this;
         }
-
         public Builder userEmail(@Nullable String userEmail) {
             this.userEmail = Output.ofNullable(userEmail);
             return this;
-        }
-        public DeploymentArgs build() {
+        }        public DeploymentArgs build() {
             return new DeploymentArgs(address, config, deployTime, platform, undeployTime, userEmail);
         }
     }

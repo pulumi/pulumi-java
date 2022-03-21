@@ -143,62 +143,50 @@ public final class WorkerSettingsArgs extends io.pulumi.resources.ResourceArgs {
             this.baseUrl = baseUrl;
             return this;
         }
-
         public Builder baseUrl(@Nullable String baseUrl) {
             this.baseUrl = Output.ofNullable(baseUrl);
             return this;
         }
-
         public Builder reportingEnabled(@Nullable Output<Boolean> reportingEnabled) {
             this.reportingEnabled = reportingEnabled;
             return this;
         }
-
         public Builder reportingEnabled(@Nullable Boolean reportingEnabled) {
             this.reportingEnabled = Output.ofNullable(reportingEnabled);
             return this;
         }
-
         public Builder servicePath(@Nullable Output<String> servicePath) {
             this.servicePath = servicePath;
             return this;
         }
-
         public Builder servicePath(@Nullable String servicePath) {
             this.servicePath = Output.ofNullable(servicePath);
             return this;
         }
-
         public Builder shuffleServicePath(@Nullable Output<String> shuffleServicePath) {
             this.shuffleServicePath = shuffleServicePath;
             return this;
         }
-
         public Builder shuffleServicePath(@Nullable String shuffleServicePath) {
             this.shuffleServicePath = Output.ofNullable(shuffleServicePath);
             return this;
         }
-
         public Builder tempStoragePrefix(@Nullable Output<String> tempStoragePrefix) {
             this.tempStoragePrefix = tempStoragePrefix;
             return this;
         }
-
         public Builder tempStoragePrefix(@Nullable String tempStoragePrefix) {
             this.tempStoragePrefix = Output.ofNullable(tempStoragePrefix);
             return this;
         }
-
         public Builder workerId(@Nullable Output<String> workerId) {
             this.workerId = workerId;
             return this;
         }
-
         public Builder workerId(@Nullable String workerId) {
             this.workerId = Output.ofNullable(workerId);
             return this;
-        }
-        public WorkerSettingsArgs build() {
+        }        public WorkerSettingsArgs build() {
             return new WorkerSettingsArgs(baseUrl, reportingEnabled, servicePath, shuffleServicePath, tempStoragePrefix, workerId);
         }
     }

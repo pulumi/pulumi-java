@@ -51,8 +51,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageSuggestionResponse {
         public Builder title(String title) {
             this.title = Objects.requireNonNull(title);
             return this;
-        }
-        public GoogleCloudDialogflowV2beta1IntentMessageSuggestionResponse build() {
+        }        public GoogleCloudDialogflowV2beta1IntentMessageSuggestionResponse build() {
             return new GoogleCloudDialogflowV2beta1IntentMessageSuggestionResponse(title);
         }
     }

@@ -102,27 +102,22 @@ public final class GetPerfSampleSeriesArgs extends io.pulumi.resources.InvokeArg
             this.executionId = Objects.requireNonNull(executionId);
             return this;
         }
-
         public Builder historyId(String historyId) {
             this.historyId = Objects.requireNonNull(historyId);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder sampleSeriesId(String sampleSeriesId) {
             this.sampleSeriesId = Objects.requireNonNull(sampleSeriesId);
             return this;
         }
-
         public Builder stepId(String stepId) {
             this.stepId = Objects.requireNonNull(stepId);
             return this;
-        }
-        public GetPerfSampleSeriesArgs build() {
+        }        public GetPerfSampleSeriesArgs build() {
             return new GetPerfSampleSeriesArgs(executionId, historyId, project, sampleSeriesId, stepId);
         }
     }

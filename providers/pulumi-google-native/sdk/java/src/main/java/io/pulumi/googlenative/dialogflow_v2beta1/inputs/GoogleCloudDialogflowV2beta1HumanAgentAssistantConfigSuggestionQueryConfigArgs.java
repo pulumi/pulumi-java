@@ -147,62 +147,50 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
             this.confidenceThreshold = confidenceThreshold;
             return this;
         }
-
         public Builder confidenceThreshold(@Nullable Double confidenceThreshold) {
             this.confidenceThreshold = Output.ofNullable(confidenceThreshold);
             return this;
         }
-
         public Builder contextFilterSettings(@Nullable Output<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigContextFilterSettingsArgs> contextFilterSettings) {
             this.contextFilterSettings = contextFilterSettings;
             return this;
         }
-
         public Builder contextFilterSettings(@Nullable GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigContextFilterSettingsArgs contextFilterSettings) {
             this.contextFilterSettings = Output.ofNullable(contextFilterSettings);
             return this;
         }
-
         public Builder dialogflowQuerySource(@Nullable Output<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigDialogflowQuerySourceArgs> dialogflowQuerySource) {
             this.dialogflowQuerySource = dialogflowQuerySource;
             return this;
         }
-
         public Builder dialogflowQuerySource(@Nullable GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigDialogflowQuerySourceArgs dialogflowQuerySource) {
             this.dialogflowQuerySource = Output.ofNullable(dialogflowQuerySource);
             return this;
         }
-
         public Builder documentQuerySource(@Nullable Output<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigDocumentQuerySourceArgs> documentQuerySource) {
             this.documentQuerySource = documentQuerySource;
             return this;
         }
-
         public Builder documentQuerySource(@Nullable GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigDocumentQuerySourceArgs documentQuerySource) {
             this.documentQuerySource = Output.ofNullable(documentQuerySource);
             return this;
         }
-
         public Builder knowledgeBaseQuerySource(@Nullable Output<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigKnowledgeBaseQuerySourceArgs> knowledgeBaseQuerySource) {
             this.knowledgeBaseQuerySource = knowledgeBaseQuerySource;
             return this;
         }
-
         public Builder knowledgeBaseQuerySource(@Nullable GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigKnowledgeBaseQuerySourceArgs knowledgeBaseQuerySource) {
             this.knowledgeBaseQuerySource = Output.ofNullable(knowledgeBaseQuerySource);
             return this;
         }
-
         public Builder maxResults(@Nullable Output<Integer> maxResults) {
             this.maxResults = maxResults;
             return this;
         }
-
         public Builder maxResults(@Nullable Integer maxResults) {
             this.maxResults = Output.ofNullable(maxResults);
             return this;
-        }
-        public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigArgs build() {
+        }        public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigArgs build() {
             return new GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigArgs(confidenceThreshold, contextFilterSettings, dialogflowQuerySource, documentQuerySource, knowledgeBaseQuerySource, maxResults);
         }
     }

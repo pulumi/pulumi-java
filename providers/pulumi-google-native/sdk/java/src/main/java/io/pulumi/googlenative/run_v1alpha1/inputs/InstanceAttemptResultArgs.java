@@ -79,22 +79,18 @@ public final class InstanceAttemptResultArgs extends io.pulumi.resources.Resourc
             this.exitCode = exitCode;
             return this;
         }
-
         public Builder exitCode(@Nullable Integer exitCode) {
             this.exitCode = Output.ofNullable(exitCode);
             return this;
         }
-
         public Builder status(@Nullable Output<GoogleRpcStatusArgs> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable GoogleRpcStatusArgs status) {
             this.status = Output.ofNullable(status);
             return this;
-        }
-        public InstanceAttemptResultArgs build() {
+        }        public InstanceAttemptResultArgs build() {
             return new InstanceAttemptResultArgs(exitCode, status);
         }
     }

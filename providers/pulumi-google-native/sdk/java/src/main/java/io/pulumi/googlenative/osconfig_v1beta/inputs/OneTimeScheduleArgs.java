@@ -60,12 +60,10 @@ public final class OneTimeScheduleArgs extends io.pulumi.resources.ResourceArgs 
             this.executeTime = Objects.requireNonNull(executeTime);
             return this;
         }
-
         public Builder executeTime(String executeTime) {
             this.executeTime = Output.of(Objects.requireNonNull(executeTime));
             return this;
-        }
-        public OneTimeScheduleArgs build() {
+        }        public OneTimeScheduleArgs build() {
             return new OneTimeScheduleArgs(executeTime);
         }
     }

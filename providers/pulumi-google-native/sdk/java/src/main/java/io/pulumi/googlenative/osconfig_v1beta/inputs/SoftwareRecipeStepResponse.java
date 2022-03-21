@@ -162,37 +162,30 @@ public final class SoftwareRecipeStepResponse extends io.pulumi.resources.Invoke
             this.archiveExtraction = Objects.requireNonNull(archiveExtraction);
             return this;
         }
-
         public Builder dpkgInstallation(SoftwareRecipeStepInstallDpkgResponse dpkgInstallation) {
             this.dpkgInstallation = Objects.requireNonNull(dpkgInstallation);
             return this;
         }
-
         public Builder fileCopy(SoftwareRecipeStepCopyFileResponse fileCopy) {
             this.fileCopy = Objects.requireNonNull(fileCopy);
             return this;
         }
-
         public Builder fileExec(SoftwareRecipeStepExecFileResponse fileExec) {
             this.fileExec = Objects.requireNonNull(fileExec);
             return this;
         }
-
         public Builder msiInstallation(SoftwareRecipeStepInstallMsiResponse msiInstallation) {
             this.msiInstallation = Objects.requireNonNull(msiInstallation);
             return this;
         }
-
         public Builder rpmInstallation(SoftwareRecipeStepInstallRpmResponse rpmInstallation) {
             this.rpmInstallation = Objects.requireNonNull(rpmInstallation);
             return this;
         }
-
         public Builder scriptRun(SoftwareRecipeStepRunScriptResponse scriptRun) {
             this.scriptRun = Objects.requireNonNull(scriptRun);
             return this;
-        }
-        public SoftwareRecipeStepResponse build() {
+        }        public SoftwareRecipeStepResponse build() {
             return new SoftwareRecipeStepResponse(archiveExtraction, dpkgInstallation, fileCopy, fileExec, msiInstallation, rpmInstallation, scriptRun);
         }
     }

@@ -70,12 +70,16 @@ public final class LoggingResponse {
             this.consumerDestinations = Objects.requireNonNull(consumerDestinations);
             return this;
         }
-
+        public Builder consumerDestinations(LoggingDestinationResponse... consumerDestinations) {
+            return consumerDestinations(List.of(consumerDestinations));
+        }
         public Builder producerDestinations(List<LoggingDestinationResponse> producerDestinations) {
             this.producerDestinations = Objects.requireNonNull(producerDestinations);
             return this;
         }
-        public LoggingResponse build() {
+        public Builder producerDestinations(LoggingDestinationResponse... producerDestinations) {
+            return producerDestinations(List.of(producerDestinations));
+        }        public LoggingResponse build() {
             return new LoggingResponse(consumerDestinations, producerDestinations);
         }
     }

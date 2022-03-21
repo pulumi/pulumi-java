@@ -120,27 +120,34 @@ public final class GoogleCloudMlV1__ContainerSpecResponse {
             this.args = Objects.requireNonNull(args);
             return this;
         }
-
+        public Builder args(String... args) {
+            return args(List.of(args));
+        }
         public Builder command(List<String> command) {
             this.command = Objects.requireNonNull(command);
             return this;
         }
-
+        public Builder command(String... command) {
+            return command(List.of(command));
+        }
         public Builder env(List<GoogleCloudMlV1__EnvVarResponse> env) {
             this.env = Objects.requireNonNull(env);
             return this;
         }
-
+        public Builder env(GoogleCloudMlV1__EnvVarResponse... env) {
+            return env(List.of(env));
+        }
         public Builder image(String image) {
             this.image = Objects.requireNonNull(image);
             return this;
         }
-
         public Builder ports(List<GoogleCloudMlV1__ContainerPortResponse> ports) {
             this.ports = Objects.requireNonNull(ports);
             return this;
         }
-        public GoogleCloudMlV1__ContainerSpecResponse build() {
+        public Builder ports(GoogleCloudMlV1__ContainerPortResponse... ports) {
+            return ports(List.of(ports));
+        }        public GoogleCloudMlV1__ContainerSpecResponse build() {
             return new GoogleCloudMlV1__ContainerSpecResponse(args, command, env, image, ports);
         }
     }

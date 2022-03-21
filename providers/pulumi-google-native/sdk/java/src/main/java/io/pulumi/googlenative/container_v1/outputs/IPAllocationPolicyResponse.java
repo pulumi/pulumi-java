@@ -198,52 +198,42 @@ public final class IPAllocationPolicyResponse {
             this.clusterIpv4CidrBlock = Objects.requireNonNull(clusterIpv4CidrBlock);
             return this;
         }
-
         public Builder clusterSecondaryRangeName(String clusterSecondaryRangeName) {
             this.clusterSecondaryRangeName = Objects.requireNonNull(clusterSecondaryRangeName);
             return this;
         }
-
         public Builder createSubnetwork(Boolean createSubnetwork) {
             this.createSubnetwork = Objects.requireNonNull(createSubnetwork);
             return this;
         }
-
         public Builder nodeIpv4CidrBlock(String nodeIpv4CidrBlock) {
             this.nodeIpv4CidrBlock = Objects.requireNonNull(nodeIpv4CidrBlock);
             return this;
         }
-
         public Builder servicesIpv4CidrBlock(String servicesIpv4CidrBlock) {
             this.servicesIpv4CidrBlock = Objects.requireNonNull(servicesIpv4CidrBlock);
             return this;
         }
-
         public Builder servicesSecondaryRangeName(String servicesSecondaryRangeName) {
             this.servicesSecondaryRangeName = Objects.requireNonNull(servicesSecondaryRangeName);
             return this;
         }
-
         public Builder subnetworkName(String subnetworkName) {
             this.subnetworkName = Objects.requireNonNull(subnetworkName);
             return this;
         }
-
         public Builder tpuIpv4CidrBlock(String tpuIpv4CidrBlock) {
             this.tpuIpv4CidrBlock = Objects.requireNonNull(tpuIpv4CidrBlock);
             return this;
         }
-
         public Builder useIpAliases(Boolean useIpAliases) {
             this.useIpAliases = Objects.requireNonNull(useIpAliases);
             return this;
         }
-
         public Builder useRoutes(Boolean useRoutes) {
             this.useRoutes = Objects.requireNonNull(useRoutes);
             return this;
-        }
-        public IPAllocationPolicyResponse build() {
+        }        public IPAllocationPolicyResponse build() {
             return new IPAllocationPolicyResponse(clusterIpv4CidrBlock, clusterSecondaryRangeName, createSubnetwork, nodeIpv4CidrBlock, servicesIpv4CidrBlock, servicesSecondaryRangeName, subnetworkName, tpuIpv4CidrBlock, useIpAliases, useRoutes);
         }
     }

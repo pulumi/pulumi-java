@@ -69,12 +69,10 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextRespon
             this.revisionId = Objects.requireNonNull(revisionId);
             return this;
         }
-
         public Builder url(String url) {
             this.url = Objects.requireNonNull(url);
             return this;
-        }
-        public GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextResponse build() {
+        }        public GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextResponse build() {
             return new GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextResponse(revisionId, url);
         }
     }

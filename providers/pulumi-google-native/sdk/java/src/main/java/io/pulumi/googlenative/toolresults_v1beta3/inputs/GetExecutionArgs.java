@@ -78,17 +78,14 @@ public final class GetExecutionArgs extends io.pulumi.resources.InvokeArgs {
             this.executionId = Objects.requireNonNull(executionId);
             return this;
         }
-
         public Builder historyId(String historyId) {
             this.historyId = Objects.requireNonNull(historyId);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetExecutionArgs build() {
+        }        public GetExecutionArgs build() {
             return new GetExecutionArgs(executionId, historyId, project);
         }
     }

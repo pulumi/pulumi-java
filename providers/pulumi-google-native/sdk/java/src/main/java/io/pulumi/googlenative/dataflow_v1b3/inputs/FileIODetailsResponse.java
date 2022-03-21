@@ -58,8 +58,7 @@ public final class FileIODetailsResponse extends io.pulumi.resources.InvokeArgs 
         public Builder filePattern(String filePattern) {
             this.filePattern = Objects.requireNonNull(filePattern);
             return this;
-        }
-        public FileIODetailsResponse build() {
+        }        public FileIODetailsResponse build() {
             return new FileIODetailsResponse(filePattern);
         }
     }

@@ -205,52 +205,42 @@ public final class GoogleCloudContactcenterinsightsV1CallAnnotationResponse {
             this.annotationEndBoundary = Objects.requireNonNull(annotationEndBoundary);
             return this;
         }
-
         public Builder annotationStartBoundary(GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse annotationStartBoundary) {
             this.annotationStartBoundary = Objects.requireNonNull(annotationStartBoundary);
             return this;
         }
-
         public Builder channelTag(Integer channelTag) {
             this.channelTag = Objects.requireNonNull(channelTag);
             return this;
         }
-
         public Builder entityMentionData(GoogleCloudContactcenterinsightsV1EntityMentionDataResponse entityMentionData) {
             this.entityMentionData = Objects.requireNonNull(entityMentionData);
             return this;
         }
-
         public Builder holdData(GoogleCloudContactcenterinsightsV1HoldDataResponse holdData) {
             this.holdData = Objects.requireNonNull(holdData);
             return this;
         }
-
         public Builder intentMatchData(GoogleCloudContactcenterinsightsV1IntentMatchDataResponse intentMatchData) {
             this.intentMatchData = Objects.requireNonNull(intentMatchData);
             return this;
         }
-
         public Builder interruptionData(GoogleCloudContactcenterinsightsV1InterruptionDataResponse interruptionData) {
             this.interruptionData = Objects.requireNonNull(interruptionData);
             return this;
         }
-
         public Builder phraseMatchData(GoogleCloudContactcenterinsightsV1PhraseMatchDataResponse phraseMatchData) {
             this.phraseMatchData = Objects.requireNonNull(phraseMatchData);
             return this;
         }
-
         public Builder sentimentData(GoogleCloudContactcenterinsightsV1SentimentDataResponse sentimentData) {
             this.sentimentData = Objects.requireNonNull(sentimentData);
             return this;
         }
-
         public Builder silenceData(GoogleCloudContactcenterinsightsV1SilenceDataResponse silenceData) {
             this.silenceData = Objects.requireNonNull(silenceData);
             return this;
-        }
-        public GoogleCloudContactcenterinsightsV1CallAnnotationResponse build() {
+        }        public GoogleCloudContactcenterinsightsV1CallAnnotationResponse build() {
             return new GoogleCloudContactcenterinsightsV1CallAnnotationResponse(annotationEndBoundary, annotationStartBoundary, channelTag, entityMentionData, holdData, intentMatchData, interruptionData, phraseMatchData, sentimentData, silenceData);
         }
     }

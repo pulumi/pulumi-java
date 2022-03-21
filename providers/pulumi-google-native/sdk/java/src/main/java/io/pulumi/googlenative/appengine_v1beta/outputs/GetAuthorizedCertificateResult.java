@@ -169,42 +169,40 @@ public final class GetAuthorizedCertificateResult {
             this.certificateRawData = Objects.requireNonNull(certificateRawData);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder domainMappingsCount(Integer domainMappingsCount) {
             this.domainMappingsCount = Objects.requireNonNull(domainMappingsCount);
             return this;
         }
-
         public Builder domainNames(List<String> domainNames) {
             this.domainNames = Objects.requireNonNull(domainNames);
             return this;
         }
-
+        public Builder domainNames(String... domainNames) {
+            return domainNames(List.of(domainNames));
+        }
         public Builder expireTime(String expireTime) {
             this.expireTime = Objects.requireNonNull(expireTime);
             return this;
         }
-
         public Builder managedCertificate(ManagedCertificateResponse managedCertificate) {
             this.managedCertificate = Objects.requireNonNull(managedCertificate);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder visibleDomainMappings(List<String> visibleDomainMappings) {
             this.visibleDomainMappings = Objects.requireNonNull(visibleDomainMappings);
             return this;
         }
-        public GetAuthorizedCertificateResult build() {
+        public Builder visibleDomainMappings(String... visibleDomainMappings) {
+            return visibleDomainMappings(List.of(visibleDomainMappings));
+        }        public GetAuthorizedCertificateResult build() {
             return new GetAuthorizedCertificateResult(certificateRawData, displayName, domainMappingsCount, domainNames, expireTime, managedCertificate, name, visibleDomainMappings);
         }
     }

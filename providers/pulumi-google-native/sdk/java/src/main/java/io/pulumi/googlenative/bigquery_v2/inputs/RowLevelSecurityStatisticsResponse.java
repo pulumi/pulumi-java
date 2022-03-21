@@ -54,8 +54,7 @@ public final class RowLevelSecurityStatisticsResponse extends io.pulumi.resource
         public Builder rowLevelSecurityApplied(Boolean rowLevelSecurityApplied) {
             this.rowLevelSecurityApplied = Objects.requireNonNull(rowLevelSecurityApplied);
             return this;
-        }
-        public RowLevelSecurityStatisticsResponse build() {
+        }        public RowLevelSecurityStatisticsResponse build() {
             return new RowLevelSecurityStatisticsResponse(rowLevelSecurityApplied);
         }
     }

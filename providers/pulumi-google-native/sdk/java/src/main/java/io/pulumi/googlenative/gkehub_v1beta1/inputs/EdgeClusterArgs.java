@@ -61,12 +61,10 @@ public final class EdgeClusterArgs extends io.pulumi.resources.ResourceArgs {
             this.resourceLink = resourceLink;
             return this;
         }
-
         public Builder resourceLink(@Nullable String resourceLink) {
             this.resourceLink = Output.ofNullable(resourceLink);
             return this;
-        }
-        public EdgeClusterArgs build() {
+        }        public EdgeClusterArgs build() {
             return new EdgeClusterArgs(resourceLink);
         }
     }

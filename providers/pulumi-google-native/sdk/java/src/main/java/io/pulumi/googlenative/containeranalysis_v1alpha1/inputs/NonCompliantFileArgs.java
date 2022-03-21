@@ -94,32 +94,26 @@ public final class NonCompliantFileArgs extends io.pulumi.resources.ResourceArgs
             this.displayCommand = displayCommand;
             return this;
         }
-
         public Builder displayCommand(@Nullable String displayCommand) {
             this.displayCommand = Output.ofNullable(displayCommand);
             return this;
         }
-
         public Builder path(@Nullable Output<String> path) {
             this.path = path;
             return this;
         }
-
         public Builder path(@Nullable String path) {
             this.path = Output.ofNullable(path);
             return this;
         }
-
         public Builder reason(@Nullable Output<String> reason) {
             this.reason = reason;
             return this;
         }
-
         public Builder reason(@Nullable String reason) {
             this.reason = Output.ofNullable(reason);
             return this;
-        }
-        public NonCompliantFileArgs build() {
+        }        public NonCompliantFileArgs build() {
             return new NonCompliantFileArgs(displayCommand, path, reason);
         }
     }

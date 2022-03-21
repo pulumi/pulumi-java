@@ -76,12 +76,10 @@ public final class RelatedUrlResponse extends io.pulumi.resources.InvokeArgs {
             this.label = Objects.requireNonNull(label);
             return this;
         }
-
         public Builder url(String url) {
             this.url = Objects.requireNonNull(url);
             return this;
-        }
-        public RelatedUrlResponse build() {
+        }        public RelatedUrlResponse build() {
             return new RelatedUrlResponse(label, url);
         }
     }

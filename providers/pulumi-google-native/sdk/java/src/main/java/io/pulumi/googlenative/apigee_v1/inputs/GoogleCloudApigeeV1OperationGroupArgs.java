@@ -80,22 +80,21 @@ public final class GoogleCloudApigeeV1OperationGroupArgs extends io.pulumi.resou
             this.operationConfigType = operationConfigType;
             return this;
         }
-
         public Builder operationConfigType(@Nullable String operationConfigType) {
             this.operationConfigType = Output.ofNullable(operationConfigType);
             return this;
         }
-
         public Builder operationConfigs(Output<List<GoogleCloudApigeeV1OperationConfigArgs>> operationConfigs) {
             this.operationConfigs = Objects.requireNonNull(operationConfigs);
             return this;
         }
-
         public Builder operationConfigs(List<GoogleCloudApigeeV1OperationConfigArgs> operationConfigs) {
             this.operationConfigs = Output.of(Objects.requireNonNull(operationConfigs));
             return this;
         }
-        public GoogleCloudApigeeV1OperationGroupArgs build() {
+        public Builder operationConfigs(GoogleCloudApigeeV1OperationConfigArgs... operationConfigs) {
+            return operationConfigs(List.of(operationConfigs));
+        }        public GoogleCloudApigeeV1OperationGroupArgs build() {
             return new GoogleCloudApigeeV1OperationGroupArgs(operationConfigType, operationConfigs);
         }
     }

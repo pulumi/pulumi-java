@@ -93,17 +93,14 @@ public final class ResourcePolicyGroupPlacementPolicyResponse extends io.pulumi.
             this.availabilityDomainCount = Objects.requireNonNull(availabilityDomainCount);
             return this;
         }
-
         public Builder collocation(String collocation) {
             this.collocation = Objects.requireNonNull(collocation);
             return this;
         }
-
         public Builder vmCount(Integer vmCount) {
             this.vmCount = Objects.requireNonNull(vmCount);
             return this;
-        }
-        public ResourcePolicyGroupPlacementPolicyResponse build() {
+        }        public ResourcePolicyGroupPlacementPolicyResponse build() {
             return new ResourcePolicyGroupPlacementPolicyResponse(availabilityDomainCount, collocation, vmCount);
         }
     }

@@ -165,82 +165,72 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
             this.auditLogsEnabled = auditLogsEnabled;
             return this;
         }
-
         public Builder auditLogsEnabled(@Nullable Boolean auditLogsEnabled) {
             this.auditLogsEnabled = Output.ofNullable(auditLogsEnabled);
             return this;
         }
-
         public Builder authorizedNetworks(@Nullable Output<List<String>> authorizedNetworks) {
             this.authorizedNetworks = authorizedNetworks;
             return this;
         }
-
         public Builder authorizedNetworks(@Nullable List<String> authorizedNetworks) {
             this.authorizedNetworks = Output.ofNullable(authorizedNetworks);
             return this;
         }
-
+        public Builder authorizedNetworks(String... authorizedNetworks) {
+            return authorizedNetworks(List.of(authorizedNetworks));
+        }
         public Builder domainName(@Nullable Output<String> domainName) {
             this.domainName = domainName;
             return this;
         }
-
         public Builder domainName(@Nullable String domainName) {
             this.domainName = Output.ofNullable(domainName);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder locations(Output<List<String>> locations) {
             this.locations = Objects.requireNonNull(locations);
             return this;
         }
-
         public Builder locations(List<String> locations) {
             this.locations = Output.of(Objects.requireNonNull(locations));
             return this;
         }
-
+        public Builder locations(String... locations) {
+            return locations(List.of(locations));
+        }
         public Builder managedIdentitiesAdminName(@Nullable Output<String> managedIdentitiesAdminName) {
             this.managedIdentitiesAdminName = managedIdentitiesAdminName;
             return this;
         }
-
         public Builder managedIdentitiesAdminName(@Nullable String managedIdentitiesAdminName) {
             this.managedIdentitiesAdminName = Output.ofNullable(managedIdentitiesAdminName);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder reservedIpRange(Output<String> reservedIpRange) {
             this.reservedIpRange = Objects.requireNonNull(reservedIpRange);
             return this;
         }
-
         public Builder reservedIpRange(String reservedIpRange) {
             this.reservedIpRange = Output.of(Objects.requireNonNull(reservedIpRange));
             return this;
-        }
-        public DomainArgs build() {
+        }        public DomainArgs build() {
             return new DomainArgs(auditLogsEnabled, authorizedNetworks, domainName, labels, locations, managedIdentitiesAdminName, project, reservedIpRange);
         }
     }

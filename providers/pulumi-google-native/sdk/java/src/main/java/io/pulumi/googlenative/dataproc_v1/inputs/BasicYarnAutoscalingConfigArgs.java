@@ -127,52 +127,42 @@ public final class BasicYarnAutoscalingConfigArgs extends io.pulumi.resources.Re
             this.gracefulDecommissionTimeout = Objects.requireNonNull(gracefulDecommissionTimeout);
             return this;
         }
-
         public Builder gracefulDecommissionTimeout(String gracefulDecommissionTimeout) {
             this.gracefulDecommissionTimeout = Output.of(Objects.requireNonNull(gracefulDecommissionTimeout));
             return this;
         }
-
         public Builder scaleDownFactor(Output<Double> scaleDownFactor) {
             this.scaleDownFactor = Objects.requireNonNull(scaleDownFactor);
             return this;
         }
-
         public Builder scaleDownFactor(Double scaleDownFactor) {
             this.scaleDownFactor = Output.of(Objects.requireNonNull(scaleDownFactor));
             return this;
         }
-
         public Builder scaleDownMinWorkerFraction(@Nullable Output<Double> scaleDownMinWorkerFraction) {
             this.scaleDownMinWorkerFraction = scaleDownMinWorkerFraction;
             return this;
         }
-
         public Builder scaleDownMinWorkerFraction(@Nullable Double scaleDownMinWorkerFraction) {
             this.scaleDownMinWorkerFraction = Output.ofNullable(scaleDownMinWorkerFraction);
             return this;
         }
-
         public Builder scaleUpFactor(Output<Double> scaleUpFactor) {
             this.scaleUpFactor = Objects.requireNonNull(scaleUpFactor);
             return this;
         }
-
         public Builder scaleUpFactor(Double scaleUpFactor) {
             this.scaleUpFactor = Output.of(Objects.requireNonNull(scaleUpFactor));
             return this;
         }
-
         public Builder scaleUpMinWorkerFraction(@Nullable Output<Double> scaleUpMinWorkerFraction) {
             this.scaleUpMinWorkerFraction = scaleUpMinWorkerFraction;
             return this;
         }
-
         public Builder scaleUpMinWorkerFraction(@Nullable Double scaleUpMinWorkerFraction) {
             this.scaleUpMinWorkerFraction = Output.ofNullable(scaleUpMinWorkerFraction);
             return this;
-        }
-        public BasicYarnAutoscalingConfigArgs build() {
+        }        public BasicYarnAutoscalingConfigArgs build() {
             return new BasicYarnAutoscalingConfigArgs(gracefulDecommissionTimeout, scaleDownFactor, scaleDownMinWorkerFraction, scaleUpFactor, scaleUpMinWorkerFraction);
         }
     }

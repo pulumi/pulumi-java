@@ -70,12 +70,10 @@ public final class PhraseResponse {
             this.boost = Objects.requireNonNull(boost);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public PhraseResponse build() {
+        }        public PhraseResponse build() {
             return new PhraseResponse(boost, value);
         }
     }

@@ -61,12 +61,10 @@ public final class SourceRepositoryArgs extends io.pulumi.resources.ResourceArgs
             this.url = url;
             return this;
         }
-
         public Builder url(@Nullable String url) {
             this.url = Output.ofNullable(url);
             return this;
-        }
-        public SourceRepositoryArgs build() {
+        }        public SourceRepositoryArgs build() {
             return new SourceRepositoryArgs(url);
         }
     }

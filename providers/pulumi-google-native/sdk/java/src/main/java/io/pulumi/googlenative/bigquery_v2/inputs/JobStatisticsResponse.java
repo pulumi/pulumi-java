@@ -322,87 +322,76 @@ public final class JobStatisticsResponse extends io.pulumi.resources.InvokeArgs 
             this.completionRatio = Objects.requireNonNull(completionRatio);
             return this;
         }
-
         public Builder creationTime(String creationTime) {
             this.creationTime = Objects.requireNonNull(creationTime);
             return this;
         }
-
         public Builder endTime(String endTime) {
             this.endTime = Objects.requireNonNull(endTime);
             return this;
         }
-
         public Builder extract(JobStatistics4Response extract) {
             this.extract = Objects.requireNonNull(extract);
             return this;
         }
-
         public Builder load(JobStatistics3Response load) {
             this.load = Objects.requireNonNull(load);
             return this;
         }
-
         public Builder numChildJobs(String numChildJobs) {
             this.numChildJobs = Objects.requireNonNull(numChildJobs);
             return this;
         }
-
         public Builder parentJobId(String parentJobId) {
             this.parentJobId = Objects.requireNonNull(parentJobId);
             return this;
         }
-
         public Builder query(JobStatistics2Response query) {
             this.query = Objects.requireNonNull(query);
             return this;
         }
-
         public Builder quotaDeferments(List<String> quotaDeferments) {
             this.quotaDeferments = Objects.requireNonNull(quotaDeferments);
             return this;
         }
-
+        public Builder quotaDeferments(String... quotaDeferments) {
+            return quotaDeferments(List.of(quotaDeferments));
+        }
         public Builder reservationId(String reservationId) {
             this.reservationId = Objects.requireNonNull(reservationId);
             return this;
         }
-
         public Builder reservationUsage(List<JobStatisticsReservationUsageItemResponse> reservationUsage) {
             this.reservationUsage = Objects.requireNonNull(reservationUsage);
             return this;
         }
-
+        public Builder reservationUsage(JobStatisticsReservationUsageItemResponse... reservationUsage) {
+            return reservationUsage(List.of(reservationUsage));
+        }
         public Builder rowLevelSecurityStatistics(RowLevelSecurityStatisticsResponse rowLevelSecurityStatistics) {
             this.rowLevelSecurityStatistics = Objects.requireNonNull(rowLevelSecurityStatistics);
             return this;
         }
-
         public Builder scriptStatistics(ScriptStatisticsResponse scriptStatistics) {
             this.scriptStatistics = Objects.requireNonNull(scriptStatistics);
             return this;
         }
-
         public Builder sessionInfo(SessionInfoResponse sessionInfo) {
             this.sessionInfo = Objects.requireNonNull(sessionInfo);
             return this;
         }
-
         public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public Builder totalSlotMs(String totalSlotMs) {
             this.totalSlotMs = Objects.requireNonNull(totalSlotMs);
             return this;
         }
-
         public Builder transactionInfo(TransactionInfoResponse transactionInfo) {
             this.transactionInfo = Objects.requireNonNull(transactionInfo);
             return this;
-        }
-        public JobStatisticsResponse build() {
+        }        public JobStatisticsResponse build() {
             return new JobStatisticsResponse(completionRatio, creationTime, endTime, extract, load, numChildJobs, parentJobId, query, quotaDeferments, reservationId, reservationUsage, rowLevelSecurityStatistics, scriptStatistics, sessionInfo, startTime, totalSlotMs, transactionInfo);
         }
     }

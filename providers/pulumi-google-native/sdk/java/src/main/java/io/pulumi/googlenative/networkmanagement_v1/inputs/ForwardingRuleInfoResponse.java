@@ -156,37 +156,30 @@ public final class ForwardingRuleInfoResponse extends io.pulumi.resources.Invoke
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder matchedPortRange(String matchedPortRange) {
             this.matchedPortRange = Objects.requireNonNull(matchedPortRange);
             return this;
         }
-
         public Builder matchedProtocol(String matchedProtocol) {
             this.matchedProtocol = Objects.requireNonNull(matchedProtocol);
             return this;
         }
-
         public Builder networkUri(String networkUri) {
             this.networkUri = Objects.requireNonNull(networkUri);
             return this;
         }
-
         public Builder target(String target) {
             this.target = Objects.requireNonNull(target);
             return this;
         }
-
         public Builder uri(String uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public Builder vip(String vip) {
             this.vip = Objects.requireNonNull(vip);
             return this;
-        }
-        public ForwardingRuleInfoResponse build() {
+        }        public ForwardingRuleInfoResponse build() {
             return new ForwardingRuleInfoResponse(displayName, matchedPortRange, matchedProtocol, networkUri, target, uri, vip);
         }
     }

@@ -120,27 +120,22 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateParametersResponse {
             this.environment = Objects.requireNonNull(environment);
             return this;
         }
-
         public Builder jobName(String jobName) {
             this.jobName = Objects.requireNonNull(jobName);
             return this;
         }
-
         public Builder parameters(Map<String,String> parameters) {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
-
         public Builder transformNameMapping(Map<String,String> transformNameMapping) {
             this.transformNameMapping = Objects.requireNonNull(transformNameMapping);
             return this;
         }
-
         public Builder update(Boolean update) {
             this.update = Objects.requireNonNull(update);
             return this;
-        }
-        public GoogleCloudDatapipelinesV1LaunchTemplateParametersResponse build() {
+        }        public GoogleCloudDatapipelinesV1LaunchTemplateParametersResponse build() {
             return new GoogleCloudDatapipelinesV1LaunchTemplateParametersResponse(environment, jobName, parameters, transformNameMapping, update);
         }
     }

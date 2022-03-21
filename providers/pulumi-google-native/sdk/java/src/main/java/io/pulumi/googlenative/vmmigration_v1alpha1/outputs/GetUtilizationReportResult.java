@@ -217,57 +217,49 @@ public final class GetUtilizationReportResult {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder error(StatusResponse error) {
             this.error = Objects.requireNonNull(error);
             return this;
         }
-
         public Builder frameEndTime(String frameEndTime) {
             this.frameEndTime = Objects.requireNonNull(frameEndTime);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder stateTime(String stateTime) {
             this.stateTime = Objects.requireNonNull(stateTime);
             return this;
         }
-
         public Builder timeFrame(String timeFrame) {
             this.timeFrame = Objects.requireNonNull(timeFrame);
             return this;
         }
-
         public Builder vmCount(Integer vmCount) {
             this.vmCount = Objects.requireNonNull(vmCount);
             return this;
         }
-
         public Builder vms(List<VmUtilizationInfoResponse> vms) {
             this.vms = Objects.requireNonNull(vms);
             return this;
         }
-
+        public Builder vms(VmUtilizationInfoResponse... vms) {
+            return vms(List.of(vms));
+        }
         public Builder vmsCount(Integer vmsCount) {
             this.vmsCount = Objects.requireNonNull(vmsCount);
             return this;
-        }
-        public GetUtilizationReportResult build() {
+        }        public GetUtilizationReportResult build() {
             return new GetUtilizationReportResult(createTime, displayName, error, frameEndTime, name, state, stateTime, timeFrame, vmCount, vms, vmsCount);
         }
     }

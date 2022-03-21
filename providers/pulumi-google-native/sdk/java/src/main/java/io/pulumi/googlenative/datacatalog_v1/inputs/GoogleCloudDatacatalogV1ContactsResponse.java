@@ -60,7 +60,9 @@ public final class GoogleCloudDatacatalogV1ContactsResponse extends io.pulumi.re
             this.people = Objects.requireNonNull(people);
             return this;
         }
-        public GoogleCloudDatacatalogV1ContactsResponse build() {
+        public Builder people(GoogleCloudDatacatalogV1ContactsPersonResponse... people) {
+            return people(List.of(people));
+        }        public GoogleCloudDatacatalogV1ContactsResponse build() {
             return new GoogleCloudDatacatalogV1ContactsResponse(people);
         }
     }

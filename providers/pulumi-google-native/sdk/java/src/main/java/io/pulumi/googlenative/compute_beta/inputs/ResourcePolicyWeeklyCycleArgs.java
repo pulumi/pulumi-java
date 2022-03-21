@@ -62,12 +62,13 @@ public final class ResourcePolicyWeeklyCycleArgs extends io.pulumi.resources.Res
             this.dayOfWeeks = dayOfWeeks;
             return this;
         }
-
         public Builder dayOfWeeks(@Nullable List<ResourcePolicyWeeklyCycleDayOfWeekArgs> dayOfWeeks) {
             this.dayOfWeeks = Output.ofNullable(dayOfWeeks);
             return this;
         }
-        public ResourcePolicyWeeklyCycleArgs build() {
+        public Builder dayOfWeeks(ResourcePolicyWeeklyCycleDayOfWeekArgs... dayOfWeeks) {
+            return dayOfWeeks(List.of(dayOfWeeks));
+        }        public ResourcePolicyWeeklyCycleArgs build() {
             return new ResourcePolicyWeeklyCycleArgs(dayOfWeeks);
         }
     }

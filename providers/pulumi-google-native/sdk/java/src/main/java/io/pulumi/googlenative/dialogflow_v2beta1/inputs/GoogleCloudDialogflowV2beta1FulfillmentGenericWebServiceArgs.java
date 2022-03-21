@@ -128,52 +128,42 @@ public final class GoogleCloudDialogflowV2beta1FulfillmentGenericWebServiceArgs 
             this.isCloudFunction = isCloudFunction;
             return this;
         }
-
         public Builder isCloudFunction(@Nullable Boolean isCloudFunction) {
             this.isCloudFunction = Output.ofNullable(isCloudFunction);
             return this;
         }
-
         public Builder password(@Nullable Output<String> password) {
             this.password = password;
             return this;
         }
-
         public Builder password(@Nullable String password) {
             this.password = Output.ofNullable(password);
             return this;
         }
-
         public Builder requestHeaders(@Nullable Output<Map<String,String>> requestHeaders) {
             this.requestHeaders = requestHeaders;
             return this;
         }
-
         public Builder requestHeaders(@Nullable Map<String,String> requestHeaders) {
             this.requestHeaders = Output.ofNullable(requestHeaders);
             return this;
         }
-
         public Builder uri(Output<String> uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public Builder uri(String uri) {
             this.uri = Output.of(Objects.requireNonNull(uri));
             return this;
         }
-
         public Builder username(@Nullable Output<String> username) {
             this.username = username;
             return this;
         }
-
         public Builder username(@Nullable String username) {
             this.username = Output.ofNullable(username);
             return this;
-        }
-        public GoogleCloudDialogflowV2beta1FulfillmentGenericWebServiceArgs build() {
+        }        public GoogleCloudDialogflowV2beta1FulfillmentGenericWebServiceArgs build() {
             return new GoogleCloudDialogflowV2beta1FulfillmentGenericWebServiceArgs(isCloudFunction, password, requestHeaders, uri, username);
         }
     }

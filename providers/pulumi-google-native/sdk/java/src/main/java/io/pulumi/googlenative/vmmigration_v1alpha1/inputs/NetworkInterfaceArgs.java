@@ -110,42 +110,34 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
             this.externalIp = externalIp;
             return this;
         }
-
         public Builder externalIp(@Nullable String externalIp) {
             this.externalIp = Output.ofNullable(externalIp);
             return this;
         }
-
         public Builder internalIp(@Nullable Output<String> internalIp) {
             this.internalIp = internalIp;
             return this;
         }
-
         public Builder internalIp(@Nullable String internalIp) {
             this.internalIp = Output.ofNullable(internalIp);
             return this;
         }
-
         public Builder network(@Nullable Output<String> network) {
             this.network = network;
             return this;
         }
-
         public Builder network(@Nullable String network) {
             this.network = Output.ofNullable(network);
             return this;
         }
-
         public Builder subnetwork(@Nullable Output<String> subnetwork) {
             this.subnetwork = subnetwork;
             return this;
         }
-
         public Builder subnetwork(@Nullable String subnetwork) {
             this.subnetwork = Output.ofNullable(subnetwork);
             return this;
-        }
-        public NetworkInterfaceArgs build() {
+        }        public NetworkInterfaceArgs build() {
             return new NetworkInterfaceArgs(externalIp, internalIp, network, subnetwork);
         }
     }

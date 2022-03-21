@@ -58,8 +58,7 @@ public final class GoogleCloudDatacatalogV1TableSpecResponse extends io.pulumi.r
         public Builder groupedEntry(String groupedEntry) {
             this.groupedEntry = Objects.requireNonNull(groupedEntry);
             return this;
-        }
-        public GoogleCloudDatacatalogV1TableSpecResponse build() {
+        }        public GoogleCloudDatacatalogV1TableSpecResponse build() {
             return new GoogleCloudDatacatalogV1TableSpecResponse(groupedEntry);
         }
     }

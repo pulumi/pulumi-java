@@ -103,22 +103,18 @@ public final class GetConsentStoreResult {
             this.defaultConsentTtl = Objects.requireNonNull(defaultConsentTtl);
             return this;
         }
-
         public Builder enableConsentCreateOnUpdate(Boolean enableConsentCreateOnUpdate) {
             this.enableConsentCreateOnUpdate = Objects.requireNonNull(enableConsentCreateOnUpdate);
             return this;
         }
-
         public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public GetConsentStoreResult build() {
+        }        public GetConsentStoreResult build() {
             return new GetConsentStoreResult(defaultConsentTtl, enableConsentCreateOnUpdate, labels, name);
         }
     }

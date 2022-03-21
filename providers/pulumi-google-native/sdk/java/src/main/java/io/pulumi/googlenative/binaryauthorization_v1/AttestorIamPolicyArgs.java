@@ -117,52 +117,45 @@ public final class AttestorIamPolicyArgs extends io.pulumi.resources.ResourceArg
             this.attestorId = Objects.requireNonNull(attestorId);
             return this;
         }
-
         public Builder attestorId(String attestorId) {
             this.attestorId = Output.of(Objects.requireNonNull(attestorId));
             return this;
         }
-
         public Builder bindings(@Nullable Output<List<BindingArgs>> bindings) {
             this.bindings = bindings;
             return this;
         }
-
         public Builder bindings(@Nullable List<BindingArgs> bindings) {
             this.bindings = Output.ofNullable(bindings);
             return this;
         }
-
+        public Builder bindings(BindingArgs... bindings) {
+            return bindings(List.of(bindings));
+        }
         public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
-
         public Builder etag(@Nullable String etag) {
             this.etag = Output.ofNullable(etag);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder version(@Nullable Output<Integer> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable Integer version) {
             this.version = Output.ofNullable(version);
             return this;
-        }
-        public AttestorIamPolicyArgs build() {
+        }        public AttestorIamPolicyArgs build() {
             return new AttestorIamPolicyArgs(attestorId, bindings, etag, project, version);
         }
     }

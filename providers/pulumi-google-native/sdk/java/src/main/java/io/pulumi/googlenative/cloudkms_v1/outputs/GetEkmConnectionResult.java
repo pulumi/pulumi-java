@@ -103,22 +103,21 @@ public final class GetEkmConnectionResult {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder serviceResolvers(List<ServiceResolverResponse> serviceResolvers) {
             this.serviceResolvers = Objects.requireNonNull(serviceResolvers);
             return this;
         }
-        public GetEkmConnectionResult build() {
+        public Builder serviceResolvers(ServiceResolverResponse... serviceResolvers) {
+            return serviceResolvers(List.of(serviceResolvers));
+        }        public GetEkmConnectionResult build() {
             return new GetEkmConnectionResult(createTime, etag, name, serviceResolvers);
         }
     }

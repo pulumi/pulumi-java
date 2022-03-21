@@ -58,8 +58,7 @@ public final class IosAppInfoResponse extends io.pulumi.resources.InvokeArgs {
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public IosAppInfoResponse build() {
+        }        public IosAppInfoResponse build() {
             return new IosAppInfoResponse(name);
         }
     }

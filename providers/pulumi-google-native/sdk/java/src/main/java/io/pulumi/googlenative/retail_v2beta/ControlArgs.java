@@ -174,92 +174,77 @@ public final class ControlArgs extends io.pulumi.resources.ResourceArgs {
             this.catalogId = Objects.requireNonNull(catalogId);
             return this;
         }
-
         public Builder catalogId(String catalogId) {
             this.catalogId = Output.of(Objects.requireNonNull(catalogId));
             return this;
         }
-
         public Builder controlId(Output<String> controlId) {
             this.controlId = Objects.requireNonNull(controlId);
             return this;
         }
-
         public Builder controlId(String controlId) {
             this.controlId = Output.of(Objects.requireNonNull(controlId));
             return this;
         }
-
         public Builder displayName(Output<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
-
         public Builder facetSpec(@Nullable Output<GoogleCloudRetailV2betaSearchRequestFacetSpecArgs> facetSpec) {
             this.facetSpec = facetSpec;
             return this;
         }
-
         public Builder facetSpec(@Nullable GoogleCloudRetailV2betaSearchRequestFacetSpecArgs facetSpec) {
             this.facetSpec = Output.ofNullable(facetSpec);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder rule(@Nullable Output<GoogleCloudRetailV2betaRuleArgs> rule) {
             this.rule = rule;
             return this;
         }
-
         public Builder rule(@Nullable GoogleCloudRetailV2betaRuleArgs rule) {
             this.rule = Output.ofNullable(rule);
             return this;
         }
-
         public Builder solutionTypes(Output<List<ControlSolutionTypesItem>> solutionTypes) {
             this.solutionTypes = Objects.requireNonNull(solutionTypes);
             return this;
         }
-
         public Builder solutionTypes(List<ControlSolutionTypesItem> solutionTypes) {
             this.solutionTypes = Output.of(Objects.requireNonNull(solutionTypes));
             return this;
         }
-        public ControlArgs build() {
+        public Builder solutionTypes(ControlSolutionTypesItem... solutionTypes) {
+            return solutionTypes(List.of(solutionTypes));
+        }        public ControlArgs build() {
             return new ControlArgs(catalogId, controlId, displayName, facetSpec, location, name, project, rule, solutionTypes);
         }
     }

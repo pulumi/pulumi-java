@@ -126,62 +126,50 @@ public final class PolicyTagArgs extends io.pulumi.resources.ResourceArgs {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder displayName(Output<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder parentPolicyTag(@Nullable Output<String> parentPolicyTag) {
             this.parentPolicyTag = parentPolicyTag;
             return this;
         }
-
         public Builder parentPolicyTag(@Nullable String parentPolicyTag) {
             this.parentPolicyTag = Output.ofNullable(parentPolicyTag);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder taxonomyId(Output<String> taxonomyId) {
             this.taxonomyId = Objects.requireNonNull(taxonomyId);
             return this;
         }
-
         public Builder taxonomyId(String taxonomyId) {
             this.taxonomyId = Output.of(Objects.requireNonNull(taxonomyId));
             return this;
-        }
-        public PolicyTagArgs build() {
+        }        public PolicyTagArgs build() {
             return new PolicyTagArgs(description, displayName, location, parentPolicyTag, project, taxonomyId);
         }
     }

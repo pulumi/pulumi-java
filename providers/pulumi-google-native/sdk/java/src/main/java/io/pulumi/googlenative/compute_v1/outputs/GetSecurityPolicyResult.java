@@ -194,57 +194,49 @@ public final class GetSecurityPolicyResult {
             this.adaptiveProtectionConfig = Objects.requireNonNull(adaptiveProtectionConfig);
             return this;
         }
-
         public Builder advancedOptionsConfig(SecurityPolicyAdvancedOptionsConfigResponse advancedOptionsConfig) {
             this.advancedOptionsConfig = Objects.requireNonNull(advancedOptionsConfig);
             return this;
         }
-
         public Builder creationTimestamp(String creationTimestamp) {
             this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder fingerprint(String fingerprint) {
             this.fingerprint = Objects.requireNonNull(fingerprint);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder recaptchaOptionsConfig(SecurityPolicyRecaptchaOptionsConfigResponse recaptchaOptionsConfig) {
             this.recaptchaOptionsConfig = Objects.requireNonNull(recaptchaOptionsConfig);
             return this;
         }
-
         public Builder rules(List<SecurityPolicyRuleResponse> rules) {
             this.rules = Objects.requireNonNull(rules);
             return this;
         }
-
+        public Builder rules(SecurityPolicyRuleResponse... rules) {
+            return rules(List.of(rules));
+        }
         public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetSecurityPolicyResult build() {
+        }        public GetSecurityPolicyResult build() {
             return new GetSecurityPolicyResult(adaptiveProtectionConfig, advancedOptionsConfig, creationTimestamp, description, fingerprint, kind, name, recaptchaOptionsConfig, rules, selfLink, type);
         }
     }

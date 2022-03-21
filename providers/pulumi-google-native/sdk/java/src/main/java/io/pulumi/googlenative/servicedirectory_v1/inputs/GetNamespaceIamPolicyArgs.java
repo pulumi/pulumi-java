@@ -78,17 +78,14 @@ public final class GetNamespaceIamPolicyArgs extends io.pulumi.resources.InvokeA
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder namespaceId(String namespaceId) {
             this.namespaceId = Objects.requireNonNull(namespaceId);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetNamespaceIamPolicyArgs build() {
+        }        public GetNamespaceIamPolicyArgs build() {
             return new GetNamespaceIamPolicyArgs(location, namespaceId, project);
         }
     }

@@ -86,17 +86,14 @@ public final class NodeGroupAutoscalingPolicyResponse {
             this.maxNodes = Objects.requireNonNull(maxNodes);
             return this;
         }
-
         public Builder minNodes(Integer minNodes) {
             this.minNodes = Objects.requireNonNull(minNodes);
             return this;
         }
-
         public Builder mode(String mode) {
             this.mode = Objects.requireNonNull(mode);
             return this;
-        }
-        public NodeGroupAutoscalingPolicyResponse build() {
+        }        public NodeGroupAutoscalingPolicyResponse build() {
             return new NodeGroupAutoscalingPolicyResponse(maxNodes, minNodes, mode);
         }
     }

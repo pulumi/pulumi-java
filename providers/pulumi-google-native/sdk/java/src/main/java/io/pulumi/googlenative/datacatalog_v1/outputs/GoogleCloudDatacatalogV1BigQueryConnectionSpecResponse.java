@@ -87,17 +87,14 @@ public final class GoogleCloudDatacatalogV1BigQueryConnectionSpecResponse {
             this.cloudSql = Objects.requireNonNull(cloudSql);
             return this;
         }
-
         public Builder connectionType(String connectionType) {
             this.connectionType = Objects.requireNonNull(connectionType);
             return this;
         }
-
         public Builder hasCredential(Boolean hasCredential) {
             this.hasCredential = Objects.requireNonNull(hasCredential);
             return this;
-        }
-        public GoogleCloudDatacatalogV1BigQueryConnectionSpecResponse build() {
+        }        public GoogleCloudDatacatalogV1BigQueryConnectionSpecResponse build() {
             return new GoogleCloudDatacatalogV1BigQueryConnectionSpecResponse(cloudSql, connectionType, hasCredential);
         }
     }

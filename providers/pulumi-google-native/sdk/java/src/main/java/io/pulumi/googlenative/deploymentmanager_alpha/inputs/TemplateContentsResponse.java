@@ -126,27 +126,25 @@ public final class TemplateContentsResponse extends io.pulumi.resources.InvokeAr
             this.imports = Objects.requireNonNull(imports);
             return this;
         }
-
+        public Builder imports(ImportFileResponse... imports) {
+            return imports(List.of(imports));
+        }
         public Builder interpreter(String interpreter) {
             this.interpreter = Objects.requireNonNull(interpreter);
             return this;
         }
-
         public Builder mainTemplate(String mainTemplate) {
             this.mainTemplate = Objects.requireNonNull(mainTemplate);
             return this;
         }
-
         public Builder schema(String schema) {
             this.schema = Objects.requireNonNull(schema);
             return this;
         }
-
         public Builder template(String template) {
             this.template = Objects.requireNonNull(template);
             return this;
-        }
-        public TemplateContentsResponse build() {
+        }        public TemplateContentsResponse build() {
             return new TemplateContentsResponse(imports, interpreter, mainTemplate, schema, template);
         }
     }

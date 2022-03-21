@@ -61,12 +61,10 @@ public final class BackendBucketCdnPolicyBypassCacheOnRequestHeaderArgs extends 
             this.headerName = headerName;
             return this;
         }
-
         public Builder headerName(@Nullable String headerName) {
             this.headerName = Output.ofNullable(headerName);
             return this;
-        }
-        public BackendBucketCdnPolicyBypassCacheOnRequestHeaderArgs build() {
+        }        public BackendBucketCdnPolicyBypassCacheOnRequestHeaderArgs build() {
             return new BackendBucketCdnPolicyBypassCacheOnRequestHeaderArgs(headerName);
         }
     }

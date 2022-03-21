@@ -60,7 +60,9 @@ public final class V2IosKeyRestrictionsResponse extends io.pulumi.resources.Invo
             this.allowedBundleIds = Objects.requireNonNull(allowedBundleIds);
             return this;
         }
-        public V2IosKeyRestrictionsResponse build() {
+        public Builder allowedBundleIds(String... allowedBundleIds) {
+            return allowedBundleIds(List.of(allowedBundleIds));
+        }        public V2IosKeyRestrictionsResponse build() {
             return new V2IosKeyRestrictionsResponse(allowedBundleIds);
         }
     }

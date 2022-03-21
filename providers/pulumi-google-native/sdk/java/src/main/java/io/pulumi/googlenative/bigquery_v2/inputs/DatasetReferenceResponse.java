@@ -72,12 +72,10 @@ public final class DatasetReferenceResponse extends io.pulumi.resources.InvokeAr
             this.datasetId = Objects.requireNonNull(datasetId);
             return this;
         }
-
         public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
-        }
-        public DatasetReferenceResponse build() {
+        }        public DatasetReferenceResponse build() {
             return new DatasetReferenceResponse(datasetId, project);
         }
     }

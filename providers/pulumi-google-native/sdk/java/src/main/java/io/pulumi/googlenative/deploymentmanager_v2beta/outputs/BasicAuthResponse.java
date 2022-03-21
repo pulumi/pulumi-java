@@ -53,12 +53,10 @@ public final class BasicAuthResponse {
             this.password = Objects.requireNonNull(password);
             return this;
         }
-
         public Builder user(String user) {
             this.user = Objects.requireNonNull(user);
             return this;
-        }
-        public BasicAuthResponse build() {
+        }        public BasicAuthResponse build() {
             return new BasicAuthResponse(password, user);
         }
     }

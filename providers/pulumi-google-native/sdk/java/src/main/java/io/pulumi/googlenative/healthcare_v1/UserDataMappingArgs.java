@@ -156,82 +156,69 @@ public final class UserDataMappingArgs extends io.pulumi.resources.ResourceArgs 
             this.consentStoreId = Objects.requireNonNull(consentStoreId);
             return this;
         }
-
         public Builder consentStoreId(String consentStoreId) {
             this.consentStoreId = Output.of(Objects.requireNonNull(consentStoreId));
             return this;
         }
-
         public Builder dataId(Output<String> dataId) {
             this.dataId = Objects.requireNonNull(dataId);
             return this;
         }
-
         public Builder dataId(String dataId) {
             this.dataId = Output.of(Objects.requireNonNull(dataId));
             return this;
         }
-
         public Builder datasetId(Output<String> datasetId) {
             this.datasetId = Objects.requireNonNull(datasetId);
             return this;
         }
-
         public Builder datasetId(String datasetId) {
             this.datasetId = Output.of(Objects.requireNonNull(datasetId));
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder resourceAttributes(@Nullable Output<List<AttributeArgs>> resourceAttributes) {
             this.resourceAttributes = resourceAttributes;
             return this;
         }
-
         public Builder resourceAttributes(@Nullable List<AttributeArgs> resourceAttributes) {
             this.resourceAttributes = Output.ofNullable(resourceAttributes);
             return this;
         }
-
+        public Builder resourceAttributes(AttributeArgs... resourceAttributes) {
+            return resourceAttributes(List.of(resourceAttributes));
+        }
         public Builder userId(Output<String> userId) {
             this.userId = Objects.requireNonNull(userId);
             return this;
         }
-
         public Builder userId(String userId) {
             this.userId = Output.of(Objects.requireNonNull(userId));
             return this;
-        }
-        public UserDataMappingArgs build() {
+        }        public UserDataMappingArgs build() {
             return new UserDataMappingArgs(consentStoreId, dataId, datasetId, location, name, project, resourceAttributes, userId);
         }
     }

@@ -93,17 +93,14 @@ public final class GoogleCloudChannelV1CommitmentSettingsResponse extends io.pul
             this.endTime = Objects.requireNonNull(endTime);
             return this;
         }
-
         public Builder renewalSettings(GoogleCloudChannelV1RenewalSettingsResponse renewalSettings) {
             this.renewalSettings = Objects.requireNonNull(renewalSettings);
             return this;
         }
-
         public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
-        }
-        public GoogleCloudChannelV1CommitmentSettingsResponse build() {
+        }        public GoogleCloudChannelV1CommitmentSettingsResponse build() {
             return new GoogleCloudChannelV1CommitmentSettingsResponse(endTime, renewalSettings, startTime);
         }
     }

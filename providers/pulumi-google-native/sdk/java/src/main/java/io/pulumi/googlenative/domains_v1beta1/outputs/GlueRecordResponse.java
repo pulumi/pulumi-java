@@ -86,17 +86,20 @@ public final class GlueRecordResponse {
             this.hostName = Objects.requireNonNull(hostName);
             return this;
         }
-
         public Builder ipv4Addresses(List<String> ipv4Addresses) {
             this.ipv4Addresses = Objects.requireNonNull(ipv4Addresses);
             return this;
         }
-
+        public Builder ipv4Addresses(String... ipv4Addresses) {
+            return ipv4Addresses(List.of(ipv4Addresses));
+        }
         public Builder ipv6Addresses(List<String> ipv6Addresses) {
             this.ipv6Addresses = Objects.requireNonNull(ipv6Addresses);
             return this;
         }
-        public GlueRecordResponse build() {
+        public Builder ipv6Addresses(String... ipv6Addresses) {
+            return ipv6Addresses(List.of(ipv6Addresses));
+        }        public GlueRecordResponse build() {
             return new GlueRecordResponse(hostName, ipv4Addresses, ipv6Addresses);
         }
     }

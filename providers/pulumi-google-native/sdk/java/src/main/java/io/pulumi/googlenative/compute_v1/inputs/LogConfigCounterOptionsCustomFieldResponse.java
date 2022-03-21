@@ -76,12 +76,10 @@ public final class LogConfigCounterOptionsCustomFieldResponse extends io.pulumi.
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public LogConfigCounterOptionsCustomFieldResponse build() {
+        }        public LogConfigCounterOptionsCustomFieldResponse build() {
             return new LogConfigCounterOptionsCustomFieldResponse(name, value);
         }
     }

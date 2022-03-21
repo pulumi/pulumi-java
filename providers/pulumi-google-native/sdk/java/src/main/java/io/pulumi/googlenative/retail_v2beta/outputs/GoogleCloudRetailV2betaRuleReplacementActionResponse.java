@@ -86,17 +86,17 @@ public final class GoogleCloudRetailV2betaRuleReplacementActionResponse {
             this.queryTerms = Objects.requireNonNull(queryTerms);
             return this;
         }
-
+        public Builder queryTerms(String... queryTerms) {
+            return queryTerms(List.of(queryTerms));
+        }
         public Builder replacementTerm(String replacementTerm) {
             this.replacementTerm = Objects.requireNonNull(replacementTerm);
             return this;
         }
-
         public Builder term(String term) {
             this.term = Objects.requireNonNull(term);
             return this;
-        }
-        public GoogleCloudRetailV2betaRuleReplacementActionResponse build() {
+        }        public GoogleCloudRetailV2betaRuleReplacementActionResponse build() {
             return new GoogleCloudRetailV2betaRuleReplacementActionResponse(queryTerms, replacementTerm, term);
         }
     }

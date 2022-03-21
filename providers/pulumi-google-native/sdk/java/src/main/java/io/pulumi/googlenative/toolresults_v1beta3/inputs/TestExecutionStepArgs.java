@@ -114,42 +114,40 @@ public final class TestExecutionStepArgs extends io.pulumi.resources.ResourceArg
             this.testIssues = testIssues;
             return this;
         }
-
         public Builder testIssues(@Nullable List<TestIssueArgs> testIssues) {
             this.testIssues = Output.ofNullable(testIssues);
             return this;
         }
-
+        public Builder testIssues(TestIssueArgs... testIssues) {
+            return testIssues(List.of(testIssues));
+        }
         public Builder testSuiteOverviews(@Nullable Output<List<TestSuiteOverviewArgs>> testSuiteOverviews) {
             this.testSuiteOverviews = testSuiteOverviews;
             return this;
         }
-
         public Builder testSuiteOverviews(@Nullable List<TestSuiteOverviewArgs> testSuiteOverviews) {
             this.testSuiteOverviews = Output.ofNullable(testSuiteOverviews);
             return this;
         }
-
+        public Builder testSuiteOverviews(TestSuiteOverviewArgs... testSuiteOverviews) {
+            return testSuiteOverviews(List.of(testSuiteOverviews));
+        }
         public Builder testTiming(@Nullable Output<TestTimingArgs> testTiming) {
             this.testTiming = testTiming;
             return this;
         }
-
         public Builder testTiming(@Nullable TestTimingArgs testTiming) {
             this.testTiming = Output.ofNullable(testTiming);
             return this;
         }
-
         public Builder toolExecution(@Nullable Output<ToolExecutionArgs> toolExecution) {
             this.toolExecution = toolExecution;
             return this;
         }
-
         public Builder toolExecution(@Nullable ToolExecutionArgs toolExecution) {
             this.toolExecution = Output.ofNullable(toolExecution);
             return this;
-        }
-        public TestExecutionStepArgs build() {
+        }        public TestExecutionStepArgs build() {
             return new TestExecutionStepArgs(testIssues, testSuiteOverviews, testTiming, toolExecution);
         }
     }

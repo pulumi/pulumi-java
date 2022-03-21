@@ -60,12 +60,10 @@ public final class OSPolicyResourcePackageResourceYUMArgs extends io.pulumi.reso
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
-        }
-        public OSPolicyResourcePackageResourceYUMArgs build() {
+        }        public OSPolicyResourcePackageResourceYUMArgs build() {
             return new OSPolicyResourcePackageResourceYUMArgs(name);
         }
     }

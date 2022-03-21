@@ -78,22 +78,18 @@ public final class V2AndroidApplicationArgs extends io.pulumi.resources.Resource
             this.packageName = packageName;
             return this;
         }
-
         public Builder packageName(@Nullable String packageName) {
             this.packageName = Output.ofNullable(packageName);
             return this;
         }
-
         public Builder sha1Fingerprint(@Nullable Output<String> sha1Fingerprint) {
             this.sha1Fingerprint = sha1Fingerprint;
             return this;
         }
-
         public Builder sha1Fingerprint(@Nullable String sha1Fingerprint) {
             this.sha1Fingerprint = Output.ofNullable(sha1Fingerprint);
             return this;
-        }
-        public V2AndroidApplicationArgs build() {
+        }        public V2AndroidApplicationArgs build() {
             return new V2AndroidApplicationArgs(packageName, sha1Fingerprint);
         }
     }

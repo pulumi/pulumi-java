@@ -87,17 +87,14 @@ public final class RoboStartingIntentResponse {
             this.launcherActivity = Objects.requireNonNull(launcherActivity);
             return this;
         }
-
         public Builder startActivity(StartActivityIntentResponse startActivity) {
             this.startActivity = Objects.requireNonNull(startActivity);
             return this;
         }
-
         public Builder timeout(String timeout) {
             this.timeout = Objects.requireNonNull(timeout);
             return this;
-        }
-        public RoboStartingIntentResponse build() {
+        }        public RoboStartingIntentResponse build() {
             return new RoboStartingIntentResponse(launcherActivity, startActivity, timeout);
         }
     }

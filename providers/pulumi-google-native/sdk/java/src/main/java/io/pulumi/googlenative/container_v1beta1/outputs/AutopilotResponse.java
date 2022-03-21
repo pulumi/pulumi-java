@@ -51,8 +51,7 @@ public final class AutopilotResponse {
         public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
-        }
-        public AutopilotResponse build() {
+        }        public AutopilotResponse build() {
             return new AutopilotResponse(enabled);
         }
     }

@@ -77,12 +77,10 @@ public final class ApkResponse extends io.pulumi.resources.InvokeArgs {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder packageName(String packageName) {
             this.packageName = Objects.requireNonNull(packageName);
             return this;
-        }
-        public ApkResponse build() {
+        }        public ApkResponse build() {
             return new ApkResponse(location, packageName);
         }
     }

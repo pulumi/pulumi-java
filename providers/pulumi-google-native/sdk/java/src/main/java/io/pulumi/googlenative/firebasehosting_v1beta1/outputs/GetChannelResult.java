@@ -184,47 +184,38 @@ public final class GetChannelResult {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder expireTime(String expireTime) {
             this.expireTime = Objects.requireNonNull(expireTime);
             return this;
         }
-
         public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder release(ReleaseResponse release) {
             this.release = Objects.requireNonNull(release);
             return this;
         }
-
         public Builder retainedReleaseCount(Integer retainedReleaseCount) {
             this.retainedReleaseCount = Objects.requireNonNull(retainedReleaseCount);
             return this;
         }
-
         public Builder ttl(String ttl) {
             this.ttl = Objects.requireNonNull(ttl);
             return this;
         }
-
         public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public Builder url(String url) {
             this.url = Objects.requireNonNull(url);
             return this;
-        }
-        public GetChannelResult build() {
+        }        public GetChannelResult build() {
             return new GetChannelResult(createTime, expireTime, labels, name, release, retainedReleaseCount, ttl, updateTime, url);
         }
     }

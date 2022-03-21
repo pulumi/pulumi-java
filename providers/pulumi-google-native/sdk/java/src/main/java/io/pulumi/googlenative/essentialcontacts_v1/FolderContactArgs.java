@@ -153,72 +153,61 @@ public final class FolderContactArgs extends io.pulumi.resources.ResourceArgs {
             this.email = Objects.requireNonNull(email);
             return this;
         }
-
         public Builder email(String email) {
             this.email = Output.of(Objects.requireNonNull(email));
             return this;
         }
-
         public Builder folderId(Output<String> folderId) {
             this.folderId = Objects.requireNonNull(folderId);
             return this;
         }
-
         public Builder folderId(String folderId) {
             this.folderId = Output.of(Objects.requireNonNull(folderId));
             return this;
         }
-
         public Builder languageTag(@Nullable Output<String> languageTag) {
             this.languageTag = languageTag;
             return this;
         }
-
         public Builder languageTag(@Nullable String languageTag) {
             this.languageTag = Output.ofNullable(languageTag);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder notificationCategorySubscriptions(@Nullable Output<List<FolderContactNotificationCategorySubscriptionsItem>> notificationCategorySubscriptions) {
             this.notificationCategorySubscriptions = notificationCategorySubscriptions;
             return this;
         }
-
         public Builder notificationCategorySubscriptions(@Nullable List<FolderContactNotificationCategorySubscriptionsItem> notificationCategorySubscriptions) {
             this.notificationCategorySubscriptions = Output.ofNullable(notificationCategorySubscriptions);
             return this;
         }
-
+        public Builder notificationCategorySubscriptions(FolderContactNotificationCategorySubscriptionsItem... notificationCategorySubscriptions) {
+            return notificationCategorySubscriptions(List.of(notificationCategorySubscriptions));
+        }
         public Builder validateTime(@Nullable Output<String> validateTime) {
             this.validateTime = validateTime;
             return this;
         }
-
         public Builder validateTime(@Nullable String validateTime) {
             this.validateTime = Output.ofNullable(validateTime);
             return this;
         }
-
         public Builder validationState(@Nullable Output<FolderContactValidationState> validationState) {
             this.validationState = validationState;
             return this;
         }
-
         public Builder validationState(@Nullable FolderContactValidationState validationState) {
             this.validationState = Output.ofNullable(validationState);
             return this;
-        }
-        public FolderContactArgs build() {
+        }        public FolderContactArgs build() {
             return new FolderContactArgs(email, folderId, languageTag, name, notificationCategorySubscriptions, validateTime, validationState);
         }
     }

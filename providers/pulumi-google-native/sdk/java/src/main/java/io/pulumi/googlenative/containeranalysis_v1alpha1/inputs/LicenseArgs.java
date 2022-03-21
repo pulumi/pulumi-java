@@ -78,22 +78,18 @@ public final class LicenseArgs extends io.pulumi.resources.ResourceArgs {
             this.comments = comments;
             return this;
         }
-
         public Builder comments(@Nullable String comments) {
             this.comments = Output.ofNullable(comments);
             return this;
         }
-
         public Builder expression(@Nullable Output<String> expression) {
             this.expression = expression;
             return this;
         }
-
         public Builder expression(@Nullable String expression) {
             this.expression = Output.ofNullable(expression);
             return this;
-        }
-        public LicenseArgs build() {
+        }        public LicenseArgs build() {
             return new LicenseArgs(comments, expression);
         }
     }

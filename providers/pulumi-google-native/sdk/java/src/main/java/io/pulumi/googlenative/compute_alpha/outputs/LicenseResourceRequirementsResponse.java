@@ -69,12 +69,10 @@ public final class LicenseResourceRequirementsResponse {
             this.minGuestCpuCount = Objects.requireNonNull(minGuestCpuCount);
             return this;
         }
-
         public Builder minMemoryMb(Integer minMemoryMb) {
             this.minMemoryMb = Objects.requireNonNull(minMemoryMb);
             return this;
-        }
-        public LicenseResourceRequirementsResponse build() {
+        }        public LicenseResourceRequirementsResponse build() {
             return new LicenseResourceRequirementsResponse(minGuestCpuCount, minMemoryMb);
         }
     }

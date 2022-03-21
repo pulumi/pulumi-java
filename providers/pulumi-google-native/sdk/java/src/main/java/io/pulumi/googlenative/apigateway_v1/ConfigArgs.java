@@ -191,102 +191,91 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.apiConfigId = Objects.requireNonNull(apiConfigId);
             return this;
         }
-
         public Builder apiConfigId(String apiConfigId) {
             this.apiConfigId = Output.of(Objects.requireNonNull(apiConfigId));
             return this;
         }
-
         public Builder apiId(Output<String> apiId) {
             this.apiId = Objects.requireNonNull(apiId);
             return this;
         }
-
         public Builder apiId(String apiId) {
             this.apiId = Output.of(Objects.requireNonNull(apiId));
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder gatewayServiceAccount(@Nullable Output<String> gatewayServiceAccount) {
             this.gatewayServiceAccount = gatewayServiceAccount;
             return this;
         }
-
         public Builder gatewayServiceAccount(@Nullable String gatewayServiceAccount) {
             this.gatewayServiceAccount = Output.ofNullable(gatewayServiceAccount);
             return this;
         }
-
         public Builder grpcServices(@Nullable Output<List<ApigatewayApiConfigGrpcServiceDefinitionArgs>> grpcServices) {
             this.grpcServices = grpcServices;
             return this;
         }
-
         public Builder grpcServices(@Nullable List<ApigatewayApiConfigGrpcServiceDefinitionArgs> grpcServices) {
             this.grpcServices = Output.ofNullable(grpcServices);
             return this;
         }
-
+        public Builder grpcServices(ApigatewayApiConfigGrpcServiceDefinitionArgs... grpcServices) {
+            return grpcServices(List.of(grpcServices));
+        }
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder managedServiceConfigs(@Nullable Output<List<ApigatewayApiConfigFileArgs>> managedServiceConfigs) {
             this.managedServiceConfigs = managedServiceConfigs;
             return this;
         }
-
         public Builder managedServiceConfigs(@Nullable List<ApigatewayApiConfigFileArgs> managedServiceConfigs) {
             this.managedServiceConfigs = Output.ofNullable(managedServiceConfigs);
             return this;
         }
-
+        public Builder managedServiceConfigs(ApigatewayApiConfigFileArgs... managedServiceConfigs) {
+            return managedServiceConfigs(List.of(managedServiceConfigs));
+        }
         public Builder openapiDocuments(@Nullable Output<List<ApigatewayApiConfigOpenApiDocumentArgs>> openapiDocuments) {
             this.openapiDocuments = openapiDocuments;
             return this;
         }
-
         public Builder openapiDocuments(@Nullable List<ApigatewayApiConfigOpenApiDocumentArgs> openapiDocuments) {
             this.openapiDocuments = Output.ofNullable(openapiDocuments);
             return this;
         }
-
+        public Builder openapiDocuments(ApigatewayApiConfigOpenApiDocumentArgs... openapiDocuments) {
+            return openapiDocuments(List.of(openapiDocuments));
+        }
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
-        }
-        public ConfigArgs build() {
+        }        public ConfigArgs build() {
             return new ConfigArgs(apiConfigId, apiId, displayName, gatewayServiceAccount, grpcServices, labels, location, managedServiceConfigs, openapiDocuments, project);
         }
     }

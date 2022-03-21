@@ -113,42 +113,37 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
             this.availableFeatures = availableFeatures;
             return this;
         }
-
         public Builder availableFeatures(@Nullable List<String> availableFeatures) {
             this.availableFeatures = Output.ofNullable(availableFeatures);
             return this;
         }
-
+        public Builder availableFeatures(String... availableFeatures) {
+            return availableFeatures(List.of(availableFeatures));
+        }
         public Builder defaultVersion(@Nullable Output<Boolean> defaultVersion) {
             this.defaultVersion = defaultVersion;
             return this;
         }
-
         public Builder defaultVersion(@Nullable Boolean defaultVersion) {
             this.defaultVersion = Output.ofNullable(defaultVersion);
             return this;
         }
-
         public Builder type(@Nullable Output<VersionType> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable VersionType type) {
             this.type = Output.ofNullable(type);
             return this;
         }
-
         public Builder versionNumber(@Nullable Output<String> versionNumber) {
             this.versionNumber = versionNumber;
             return this;
         }
-
         public Builder versionNumber(@Nullable String versionNumber) {
             this.versionNumber = Output.ofNullable(versionNumber);
             return this;
-        }
-        public VersionArgs build() {
+        }        public VersionArgs build() {
             return new VersionArgs(availableFeatures, defaultVersion, type, versionNumber);
         }
     }

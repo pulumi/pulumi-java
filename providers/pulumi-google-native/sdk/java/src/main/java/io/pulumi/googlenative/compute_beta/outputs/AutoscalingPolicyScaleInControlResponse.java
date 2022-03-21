@@ -70,12 +70,10 @@ public final class AutoscalingPolicyScaleInControlResponse {
             this.maxScaledInReplicas = Objects.requireNonNull(maxScaledInReplicas);
             return this;
         }
-
         public Builder timeWindowSec(Integer timeWindowSec) {
             this.timeWindowSec = Objects.requireNonNull(timeWindowSec);
             return this;
-        }
-        public AutoscalingPolicyScaleInControlResponse build() {
+        }        public AutoscalingPolicyScaleInControlResponse build() {
             return new AutoscalingPolicyScaleInControlResponse(maxScaledInReplicas, timeWindowSec);
         }
     }

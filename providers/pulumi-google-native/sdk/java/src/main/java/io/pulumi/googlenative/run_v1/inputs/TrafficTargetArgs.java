@@ -128,52 +128,42 @@ public final class TrafficTargetArgs extends io.pulumi.resources.ResourceArgs {
             this.configurationName = configurationName;
             return this;
         }
-
         public Builder configurationName(@Nullable String configurationName) {
             this.configurationName = Output.ofNullable(configurationName);
             return this;
         }
-
         public Builder latestRevision(@Nullable Output<Boolean> latestRevision) {
             this.latestRevision = latestRevision;
             return this;
         }
-
         public Builder latestRevision(@Nullable Boolean latestRevision) {
             this.latestRevision = Output.ofNullable(latestRevision);
             return this;
         }
-
         public Builder percent(@Nullable Output<Integer> percent) {
             this.percent = percent;
             return this;
         }
-
         public Builder percent(@Nullable Integer percent) {
             this.percent = Output.ofNullable(percent);
             return this;
         }
-
         public Builder revisionName(@Nullable Output<String> revisionName) {
             this.revisionName = revisionName;
             return this;
         }
-
         public Builder revisionName(@Nullable String revisionName) {
             this.revisionName = Output.ofNullable(revisionName);
             return this;
         }
-
         public Builder tag(@Nullable Output<String> tag) {
             this.tag = tag;
             return this;
         }
-
         public Builder tag(@Nullable String tag) {
             this.tag = Output.ofNullable(tag);
             return this;
-        }
-        public TrafficTargetArgs build() {
+        }        public TrafficTargetArgs build() {
             return new TrafficTargetArgs(configurationName, latestRevision, percent, revisionName, tag);
         }
     }

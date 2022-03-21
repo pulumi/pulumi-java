@@ -60,12 +60,10 @@ public final class MetastoreConfigArgs extends io.pulumi.resources.ResourceArgs 
             this.dataprocMetastoreService = Objects.requireNonNull(dataprocMetastoreService);
             return this;
         }
-
         public Builder dataprocMetastoreService(String dataprocMetastoreService) {
             this.dataprocMetastoreService = Output.of(Objects.requireNonNull(dataprocMetastoreService));
             return this;
-        }
-        public MetastoreConfigArgs build() {
+        }        public MetastoreConfigArgs build() {
             return new MetastoreConfigArgs(dataprocMetastoreService);
         }
     }

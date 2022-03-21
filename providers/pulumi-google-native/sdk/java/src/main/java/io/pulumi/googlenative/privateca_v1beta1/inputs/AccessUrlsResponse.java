@@ -76,12 +76,10 @@ public final class AccessUrlsResponse extends io.pulumi.resources.InvokeArgs {
             this.caCertificateAccessUrl = Objects.requireNonNull(caCertificateAccessUrl);
             return this;
         }
-
         public Builder crlAccessUrl(String crlAccessUrl) {
             this.crlAccessUrl = Objects.requireNonNull(crlAccessUrl);
             return this;
-        }
-        public AccessUrlsResponse build() {
+        }        public AccessUrlsResponse build() {
             return new AccessUrlsResponse(caCertificateAccessUrl, crlAccessUrl);
         }
     }

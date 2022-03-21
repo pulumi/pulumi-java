@@ -80,22 +80,21 @@ public final class SystemParameterRuleArgs extends io.pulumi.resources.ResourceA
             this.parameters = parameters;
             return this;
         }
-
         public Builder parameters(@Nullable List<SystemParameterArgs> parameters) {
             this.parameters = Output.ofNullable(parameters);
             return this;
         }
-
+        public Builder parameters(SystemParameterArgs... parameters) {
+            return parameters(List.of(parameters));
+        }
         public Builder selector(@Nullable Output<String> selector) {
             this.selector = selector;
             return this;
         }
-
         public Builder selector(@Nullable String selector) {
             this.selector = Output.ofNullable(selector);
             return this;
-        }
-        public SystemParameterRuleArgs build() {
+        }        public SystemParameterRuleArgs build() {
             return new SystemParameterRuleArgs(parameters, selector);
         }
     }

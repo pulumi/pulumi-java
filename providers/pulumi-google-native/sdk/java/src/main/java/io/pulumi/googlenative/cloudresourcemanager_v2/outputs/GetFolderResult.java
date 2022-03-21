@@ -117,27 +117,22 @@ public final class GetFolderResult {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder lifecycleState(String lifecycleState) {
             this.lifecycleState = Objects.requireNonNull(lifecycleState);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder parent(String parent) {
             this.parent = Objects.requireNonNull(parent);
             return this;
-        }
-        public GetFolderResult build() {
+        }        public GetFolderResult build() {
             return new GetFolderResult(createTime, displayName, lifecycleState, name, parent);
         }
     }

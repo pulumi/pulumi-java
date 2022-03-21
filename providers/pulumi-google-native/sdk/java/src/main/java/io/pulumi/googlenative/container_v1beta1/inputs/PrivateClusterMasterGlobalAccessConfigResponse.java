@@ -58,8 +58,7 @@ public final class PrivateClusterMasterGlobalAccessConfigResponse extends io.pul
         public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
-        }
-        public PrivateClusterMasterGlobalAccessConfigResponse build() {
+        }        public PrivateClusterMasterGlobalAccessConfigResponse build() {
             return new PrivateClusterMasterGlobalAccessConfigResponse(enabled);
         }
     }

@@ -102,27 +102,22 @@ public final class GetTagArgs extends io.pulumi.resources.InvokeArgs {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder packageId(String packageId) {
             this.packageId = Objects.requireNonNull(packageId);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder repositoryId(String repositoryId) {
             this.repositoryId = Objects.requireNonNull(repositoryId);
             return this;
         }
-
         public Builder tagId(String tagId) {
             this.tagId = Objects.requireNonNull(tagId);
             return this;
-        }
-        public GetTagArgs build() {
+        }        public GetTagArgs build() {
             return new GetTagArgs(location, packageId, project, repositoryId, tagId);
         }
     }

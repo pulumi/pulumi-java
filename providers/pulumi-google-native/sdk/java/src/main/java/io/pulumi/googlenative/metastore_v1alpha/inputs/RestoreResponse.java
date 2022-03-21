@@ -140,32 +140,26 @@ public final class RestoreResponse extends io.pulumi.resources.InvokeArgs {
             this.backup = Objects.requireNonNull(backup);
             return this;
         }
-
         public Builder details(String details) {
             this.details = Objects.requireNonNull(details);
             return this;
         }
-
         public Builder endTime(String endTime) {
             this.endTime = Objects.requireNonNull(endTime);
             return this;
         }
-
         public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public RestoreResponse build() {
+        }        public RestoreResponse build() {
             return new RestoreResponse(backup, details, endTime, startTime, state, type);
         }
     }

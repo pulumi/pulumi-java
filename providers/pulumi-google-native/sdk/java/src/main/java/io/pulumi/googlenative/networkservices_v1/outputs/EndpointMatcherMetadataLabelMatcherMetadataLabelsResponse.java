@@ -69,12 +69,10 @@ public final class EndpointMatcherMetadataLabelMatcherMetadataLabelsResponse {
             this.labelName = Objects.requireNonNull(labelName);
             return this;
         }
-
         public Builder labelValue(String labelValue) {
             this.labelValue = Objects.requireNonNull(labelValue);
             return this;
-        }
-        public EndpointMatcherMetadataLabelMatcherMetadataLabelsResponse build() {
+        }        public EndpointMatcherMetadataLabelMatcherMetadataLabelsResponse build() {
             return new EndpointMatcherMetadataLabelMatcherMetadataLabelsResponse(labelName, labelValue);
         }
     }

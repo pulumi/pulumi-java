@@ -76,12 +76,10 @@ public final class GooRepositoryResponse extends io.pulumi.resources.InvokeArgs 
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder url(String url) {
             this.url = Objects.requireNonNull(url);
             return this;
-        }
-        public GooRepositoryResponse build() {
+        }        public GooRepositoryResponse build() {
             return new GooRepositoryResponse(name, url);
         }
     }

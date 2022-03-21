@@ -170,42 +170,34 @@ public final class GetDashboardResult {
             this.columnLayout = Objects.requireNonNull(columnLayout);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder gridLayout(GridLayoutResponse gridLayout) {
             this.gridLayout = Objects.requireNonNull(gridLayout);
             return this;
         }
-
         public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder mosaicLayout(MosaicLayoutResponse mosaicLayout) {
             this.mosaicLayout = Objects.requireNonNull(mosaicLayout);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder rowLayout(RowLayoutResponse rowLayout) {
             this.rowLayout = Objects.requireNonNull(rowLayout);
             return this;
-        }
-        public GetDashboardResult build() {
+        }        public GetDashboardResult build() {
             return new GetDashboardResult(columnLayout, displayName, etag, gridLayout, labels, mosaicLayout, name, rowLayout);
         }
     }

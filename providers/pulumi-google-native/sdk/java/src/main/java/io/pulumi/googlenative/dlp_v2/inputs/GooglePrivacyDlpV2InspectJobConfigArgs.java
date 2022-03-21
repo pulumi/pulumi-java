@@ -114,42 +114,37 @@ public final class GooglePrivacyDlpV2InspectJobConfigArgs extends io.pulumi.reso
             this.actions = actions;
             return this;
         }
-
         public Builder actions(@Nullable List<GooglePrivacyDlpV2ActionArgs> actions) {
             this.actions = Output.ofNullable(actions);
             return this;
         }
-
+        public Builder actions(GooglePrivacyDlpV2ActionArgs... actions) {
+            return actions(List.of(actions));
+        }
         public Builder inspectConfig(@Nullable Output<GooglePrivacyDlpV2InspectConfigArgs> inspectConfig) {
             this.inspectConfig = inspectConfig;
             return this;
         }
-
         public Builder inspectConfig(@Nullable GooglePrivacyDlpV2InspectConfigArgs inspectConfig) {
             this.inspectConfig = Output.ofNullable(inspectConfig);
             return this;
         }
-
         public Builder inspectTemplateName(@Nullable Output<String> inspectTemplateName) {
             this.inspectTemplateName = inspectTemplateName;
             return this;
         }
-
         public Builder inspectTemplateName(@Nullable String inspectTemplateName) {
             this.inspectTemplateName = Output.ofNullable(inspectTemplateName);
             return this;
         }
-
         public Builder storageConfig(@Nullable Output<GooglePrivacyDlpV2StorageConfigArgs> storageConfig) {
             this.storageConfig = storageConfig;
             return this;
         }
-
         public Builder storageConfig(@Nullable GooglePrivacyDlpV2StorageConfigArgs storageConfig) {
             this.storageConfig = Output.ofNullable(storageConfig);
             return this;
-        }
-        public GooglePrivacyDlpV2InspectJobConfigArgs build() {
+        }        public GooglePrivacyDlpV2InspectJobConfigArgs build() {
             return new GooglePrivacyDlpV2InspectJobConfigArgs(actions, inspectConfig, inspectTemplateName, storageConfig);
         }
     }

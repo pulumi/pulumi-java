@@ -109,22 +109,18 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptTrans
             this.confidence = Objects.requireNonNull(confidence);
             return this;
         }
-
         public Builder endOffset(String endOffset) {
             this.endOffset = Objects.requireNonNull(endOffset);
             return this;
         }
-
         public Builder startOffset(String startOffset) {
             this.startOffset = Objects.requireNonNull(startOffset);
             return this;
         }
-
         public Builder word(String word) {
             this.word = Objects.requireNonNull(word);
             return this;
-        }
-        public GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentWordInfoResponse build() {
+        }        public GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentWordInfoResponse build() {
             return new GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentWordInfoResponse(confidence, endOffset, startOffset, word);
         }
     }

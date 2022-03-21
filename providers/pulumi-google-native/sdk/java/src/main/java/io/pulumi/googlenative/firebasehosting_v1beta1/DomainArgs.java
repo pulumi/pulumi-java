@@ -115,52 +115,42 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
             this.domainName = Objects.requireNonNull(domainName);
             return this;
         }
-
         public Builder domainName(String domainName) {
             this.domainName = Output.of(Objects.requireNonNull(domainName));
             return this;
         }
-
         public Builder domainRedirect(@Nullable Output<DomainRedirectArgs> domainRedirect) {
             this.domainRedirect = domainRedirect;
             return this;
         }
-
         public Builder domainRedirect(@Nullable DomainRedirectArgs domainRedirect) {
             this.domainRedirect = Output.ofNullable(domainRedirect);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder site(Output<String> site) {
             this.site = Objects.requireNonNull(site);
             return this;
         }
-
         public Builder site(String site) {
             this.site = Output.of(Objects.requireNonNull(site));
             return this;
         }
-
         public Builder siteId(Output<String> siteId) {
             this.siteId = Objects.requireNonNull(siteId);
             return this;
         }
-
         public Builder siteId(String siteId) {
             this.siteId = Output.of(Objects.requireNonNull(siteId));
             return this;
-        }
-        public DomainArgs build() {
+        }        public DomainArgs build() {
             return new DomainArgs(domainName, domainRedirect, project, site, siteId);
         }
     }

@@ -77,12 +77,10 @@ public final class GooglePrivacyDlpV2QuasiIdFieldResponse extends io.pulumi.reso
             this.customTag = Objects.requireNonNull(customTag);
             return this;
         }
-
         public Builder field(GooglePrivacyDlpV2FieldIdResponse field) {
             this.field = Objects.requireNonNull(field);
             return this;
-        }
-        public GooglePrivacyDlpV2QuasiIdFieldResponse build() {
+        }        public GooglePrivacyDlpV2QuasiIdFieldResponse build() {
             return new GooglePrivacyDlpV2QuasiIdFieldResponse(customTag, field);
         }
     }

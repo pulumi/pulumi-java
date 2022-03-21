@@ -142,32 +142,26 @@ public final class TrafficTargetResponse extends io.pulumi.resources.InvokeArgs 
             this.configurationName = Objects.requireNonNull(configurationName);
             return this;
         }
-
         public Builder latestRevision(Boolean latestRevision) {
             this.latestRevision = Objects.requireNonNull(latestRevision);
             return this;
         }
-
         public Builder percent(Integer percent) {
             this.percent = Objects.requireNonNull(percent);
             return this;
         }
-
         public Builder revisionName(String revisionName) {
             this.revisionName = Objects.requireNonNull(revisionName);
             return this;
         }
-
         public Builder tag(String tag) {
             this.tag = Objects.requireNonNull(tag);
             return this;
         }
-
         public Builder url(String url) {
             this.url = Objects.requireNonNull(url);
             return this;
-        }
-        public TrafficTargetResponse build() {
+        }        public TrafficTargetResponse build() {
             return new TrafficTargetResponse(configurationName, latestRevision, percent, revisionName, tag, url);
         }
     }

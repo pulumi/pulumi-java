@@ -66,12 +66,10 @@ public final class GetAttestorArgs extends io.pulumi.resources.InvokeArgs {
             this.attestorId = Objects.requireNonNull(attestorId);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetAttestorArgs build() {
+        }        public GetAttestorArgs build() {
             return new GetAttestorArgs(attestorId, project);
         }
     }

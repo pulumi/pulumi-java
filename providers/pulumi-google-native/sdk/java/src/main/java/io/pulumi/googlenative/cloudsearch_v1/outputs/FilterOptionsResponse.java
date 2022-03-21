@@ -70,12 +70,10 @@ public final class FilterOptionsResponse {
             this.filter = Objects.requireNonNull(filter);
             return this;
         }
-
         public Builder objectType(String objectType) {
             this.objectType = Objects.requireNonNull(objectType);
             return this;
-        }
-        public FilterOptionsResponse build() {
+        }        public FilterOptionsResponse build() {
             return new FilterOptionsResponse(filter, objectType);
         }
     }

@@ -94,17 +94,14 @@ public final class GoogleCloudDialogflowV2beta1ContextResponse extends io.pulumi
             this.lifespanCount = Objects.requireNonNull(lifespanCount);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder parameters(Map<String,String> parameters) {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
-        }
-        public GoogleCloudDialogflowV2beta1ContextResponse build() {
+        }        public GoogleCloudDialogflowV2beta1ContextResponse build() {
             return new GoogleCloudDialogflowV2beta1ContextResponse(lifespanCount, name, parameters);
         }
     }

@@ -119,27 +119,22 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateRequestResponse {
             this.gcsPath = Objects.requireNonNull(gcsPath);
             return this;
         }
-
         public Builder launchParameters(GoogleCloudDatapipelinesV1LaunchTemplateParametersResponse launchParameters) {
             this.launchParameters = Objects.requireNonNull(launchParameters);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
-
         public Builder validateOnly(Boolean validateOnly) {
             this.validateOnly = Objects.requireNonNull(validateOnly);
             return this;
-        }
-        public GoogleCloudDatapipelinesV1LaunchTemplateRequestResponse build() {
+        }        public GoogleCloudDatapipelinesV1LaunchTemplateRequestResponse build() {
             return new GoogleCloudDatapipelinesV1LaunchTemplateRequestResponse(gcsPath, launchParameters, location, project, validateOnly);
         }
     }

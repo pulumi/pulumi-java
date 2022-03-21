@@ -78,17 +78,14 @@ public final class GetCaPoolArgs extends io.pulumi.resources.InvokeArgs {
             this.caPoolId = Objects.requireNonNull(caPoolId);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetCaPoolArgs build() {
+        }        public GetCaPoolArgs build() {
             return new GetCaPoolArgs(caPoolId, location, project);
         }
     }

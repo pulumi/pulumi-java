@@ -79,22 +79,18 @@ public final class ContentMatcherArgs extends io.pulumi.resources.ResourceArgs {
             this.content = content;
             return this;
         }
-
         public Builder content(@Nullable String content) {
             this.content = Output.ofNullable(content);
             return this;
         }
-
         public Builder matcher(@Nullable Output<ContentMatcherMatcher> matcher) {
             this.matcher = matcher;
             return this;
         }
-
         public Builder matcher(@Nullable ContentMatcherMatcher matcher) {
             this.matcher = Output.ofNullable(matcher);
             return this;
-        }
-        public ContentMatcherArgs build() {
+        }        public ContentMatcherArgs build() {
             return new ContentMatcherArgs(content, matcher);
         }
     }

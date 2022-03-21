@@ -66,12 +66,10 @@ public final class GetRouteArgs extends io.pulumi.resources.InvokeArgs {
             this.project = project;
             return this;
         }
-
         public Builder route(String route) {
             this.route = Objects.requireNonNull(route);
             return this;
-        }
-        public GetRouteArgs build() {
+        }        public GetRouteArgs build() {
             return new GetRouteArgs(project, route);
         }
     }

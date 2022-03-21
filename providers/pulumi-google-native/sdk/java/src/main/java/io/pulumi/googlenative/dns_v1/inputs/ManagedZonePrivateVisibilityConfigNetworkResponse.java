@@ -68,12 +68,10 @@ public final class ManagedZonePrivateVisibilityConfigNetworkResponse extends io.
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder networkUrl(String networkUrl) {
             this.networkUrl = Objects.requireNonNull(networkUrl);
             return this;
-        }
-        public ManagedZonePrivateVisibilityConfigNetworkResponse build() {
+        }        public ManagedZonePrivateVisibilityConfigNetworkResponse build() {
             return new ManagedZonePrivateVisibilityConfigNetworkResponse(kind, networkUrl);
         }
     }

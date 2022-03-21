@@ -58,8 +58,7 @@ public final class OAuthRequirementsResponse extends io.pulumi.resources.InvokeA
         public Builder canonicalScopes(String canonicalScopes) {
             this.canonicalScopes = Objects.requireNonNull(canonicalScopes);
             return this;
-        }
-        public OAuthRequirementsResponse build() {
+        }        public OAuthRequirementsResponse build() {
             return new OAuthRequirementsResponse(canonicalScopes);
         }
     }

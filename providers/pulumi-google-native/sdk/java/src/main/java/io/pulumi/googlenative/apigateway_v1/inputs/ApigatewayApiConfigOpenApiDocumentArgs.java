@@ -61,12 +61,10 @@ public final class ApigatewayApiConfigOpenApiDocumentArgs extends io.pulumi.reso
             this.document = document;
             return this;
         }
-
         public Builder document(@Nullable ApigatewayApiConfigFileArgs document) {
             this.document = Output.ofNullable(document);
             return this;
-        }
-        public ApigatewayApiConfigOpenApiDocumentArgs build() {
+        }        public ApigatewayApiConfigOpenApiDocumentArgs build() {
             return new ApigatewayApiConfigOpenApiDocumentArgs(document);
         }
     }

@@ -94,17 +94,14 @@ public final class ConfigMapEnvSourceResponse extends io.pulumi.resources.Invoke
             this.localObjectReference = Objects.requireNonNull(localObjectReference);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder optional(Boolean optional) {
             this.optional = Objects.requireNonNull(optional);
             return this;
-        }
-        public ConfigMapEnvSourceResponse build() {
+        }        public ConfigMapEnvSourceResponse build() {
             return new ConfigMapEnvSourceResponse(localObjectReference, name, optional);
         }
     }

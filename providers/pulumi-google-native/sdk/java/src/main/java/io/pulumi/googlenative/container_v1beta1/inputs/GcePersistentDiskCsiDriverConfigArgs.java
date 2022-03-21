@@ -61,12 +61,10 @@ public final class GcePersistentDiskCsiDriverConfigArgs extends io.pulumi.resour
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
-        }
-        public GcePersistentDiskCsiDriverConfigArgs build() {
+        }        public GcePersistentDiskCsiDriverConfigArgs build() {
             return new GcePersistentDiskCsiDriverConfigArgs(enabled);
         }
     }

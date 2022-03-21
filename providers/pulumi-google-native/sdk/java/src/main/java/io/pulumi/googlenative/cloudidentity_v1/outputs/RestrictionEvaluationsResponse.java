@@ -51,8 +51,7 @@ public final class RestrictionEvaluationsResponse {
         public Builder memberRestrictionEvaluation(MembershipRoleRestrictionEvaluationResponse memberRestrictionEvaluation) {
             this.memberRestrictionEvaluation = Objects.requireNonNull(memberRestrictionEvaluation);
             return this;
-        }
-        public RestrictionEvaluationsResponse build() {
+        }        public RestrictionEvaluationsResponse build() {
             return new RestrictionEvaluationsResponse(memberRestrictionEvaluation);
         }
     }

@@ -300,82 +300,72 @@ public final class GetConnectionResult {
             this.authConfig = Objects.requireNonNull(authConfig);
             return this;
         }
-
         public Builder configVariables(List<ConfigVariableResponse> configVariables) {
             this.configVariables = Objects.requireNonNull(configVariables);
             return this;
         }
-
+        public Builder configVariables(ConfigVariableResponse... configVariables) {
+            return configVariables(List.of(configVariables));
+        }
         public Builder connectorVersion(String connectorVersion) {
             this.connectorVersion = Objects.requireNonNull(connectorVersion);
             return this;
         }
-
         public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder egressBackends(List<String> egressBackends) {
             this.egressBackends = Objects.requireNonNull(egressBackends);
             return this;
         }
-
+        public Builder egressBackends(String... egressBackends) {
+            return egressBackends(List.of(egressBackends));
+        }
         public Builder envoyImageLocation(String envoyImageLocation) {
             this.envoyImageLocation = Objects.requireNonNull(envoyImageLocation);
             return this;
         }
-
         public Builder imageLocation(String imageLocation) {
             this.imageLocation = Objects.requireNonNull(imageLocation);
             return this;
         }
-
         public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder lockConfig(LockConfigResponse lockConfig) {
             this.lockConfig = Objects.requireNonNull(lockConfig);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder serviceAccount(String serviceAccount) {
             this.serviceAccount = Objects.requireNonNull(serviceAccount);
             return this;
         }
-
         public Builder serviceDirectory(String serviceDirectory) {
             this.serviceDirectory = Objects.requireNonNull(serviceDirectory);
             return this;
         }
-
         public Builder status(ConnectionStatusResponse status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder suspended(Boolean suspended) {
             this.suspended = Objects.requireNonNull(suspended);
             return this;
         }
-
         public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
-        }
-        public GetConnectionResult build() {
+        }        public GetConnectionResult build() {
             return new GetConnectionResult(authConfig, configVariables, connectorVersion, createTime, description, egressBackends, envoyImageLocation, imageLocation, labels, lockConfig, name, serviceAccount, serviceDirectory, status, suspended, updateTime);
         }
     }

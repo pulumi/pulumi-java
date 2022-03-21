@@ -53,12 +53,10 @@ public final class SecurityPolicyDdosProtectionConfigArgs extends io.pulumi.reso
             this.ddosProtection = ddosProtection;
             return this;
         }
-
         public Builder ddosProtection(@Nullable SecurityPolicyDdosProtectionConfigDdosProtection ddosProtection) {
             this.ddosProtection = Output.ofNullable(ddosProtection);
             return this;
-        }
-        public SecurityPolicyDdosProtectionConfigArgs build() {
+        }        public SecurityPolicyDdosProtectionConfigArgs build() {
             return new SecurityPolicyDdosProtectionConfigArgs(ddosProtection);
         }
     }

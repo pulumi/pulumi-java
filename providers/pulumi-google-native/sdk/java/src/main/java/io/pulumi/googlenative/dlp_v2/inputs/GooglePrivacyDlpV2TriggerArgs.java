@@ -79,22 +79,18 @@ public final class GooglePrivacyDlpV2TriggerArgs extends io.pulumi.resources.Res
             this.manual = manual;
             return this;
         }
-
         public Builder manual(@Nullable GooglePrivacyDlpV2ManualArgs manual) {
             this.manual = Output.ofNullable(manual);
             return this;
         }
-
         public Builder schedule(@Nullable Output<GooglePrivacyDlpV2ScheduleArgs> schedule) {
             this.schedule = schedule;
             return this;
         }
-
         public Builder schedule(@Nullable GooglePrivacyDlpV2ScheduleArgs schedule) {
             this.schedule = Output.ofNullable(schedule);
             return this;
-        }
-        public GooglePrivacyDlpV2TriggerArgs build() {
+        }        public GooglePrivacyDlpV2TriggerArgs build() {
             return new GooglePrivacyDlpV2TriggerArgs(manual, schedule);
         }
     }

@@ -111,42 +111,34 @@ public final class GoogleCloudDialogflowV2beta1IntentTrainingPhrasePartArgs exte
             this.alias = alias;
             return this;
         }
-
         public Builder alias(@Nullable String alias) {
             this.alias = Output.ofNullable(alias);
             return this;
         }
-
         public Builder entityType(@Nullable Output<String> entityType) {
             this.entityType = entityType;
             return this;
         }
-
         public Builder entityType(@Nullable String entityType) {
             this.entityType = Output.ofNullable(entityType);
             return this;
         }
-
         public Builder text(Output<String> text) {
             this.text = Objects.requireNonNull(text);
             return this;
         }
-
         public Builder text(String text) {
             this.text = Output.of(Objects.requireNonNull(text));
             return this;
         }
-
         public Builder userDefined(@Nullable Output<Boolean> userDefined) {
             this.userDefined = userDefined;
             return this;
         }
-
         public Builder userDefined(@Nullable Boolean userDefined) {
             this.userDefined = Output.ofNullable(userDefined);
             return this;
-        }
-        public GoogleCloudDialogflowV2beta1IntentTrainingPhrasePartArgs build() {
+        }        public GoogleCloudDialogflowV2beta1IntentTrainingPhrasePartArgs build() {
             return new GoogleCloudDialogflowV2beta1IntentTrainingPhrasePartArgs(alias, entityType, text, userDefined);
         }
     }

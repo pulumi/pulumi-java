@@ -54,8 +54,7 @@ public final class SessionInfoResponse extends io.pulumi.resources.InvokeArgs {
         public Builder sessionId(String sessionId) {
             this.sessionId = Objects.requireNonNull(sessionId);
             return this;
-        }
-        public SessionInfoResponse build() {
+        }        public SessionInfoResponse build() {
             return new SessionInfoResponse(sessionId);
         }
     }

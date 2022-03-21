@@ -156,82 +156,66 @@ public final class ResponsePolicyRuleArgs extends io.pulumi.resources.ResourceAr
             this.behavior = behavior;
             return this;
         }
-
         public Builder behavior(@Nullable ResponsePolicyRuleBehavior behavior) {
             this.behavior = Output.ofNullable(behavior);
             return this;
         }
-
         public Builder clientOperationId(@Nullable Output<String> clientOperationId) {
             this.clientOperationId = clientOperationId;
             return this;
         }
-
         public Builder clientOperationId(@Nullable String clientOperationId) {
             this.clientOperationId = Output.ofNullable(clientOperationId);
             return this;
         }
-
         public Builder dnsName(@Nullable Output<String> dnsName) {
             this.dnsName = dnsName;
             return this;
         }
-
         public Builder dnsName(@Nullable String dnsName) {
             this.dnsName = Output.ofNullable(dnsName);
             return this;
         }
-
         public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder localData(@Nullable Output<ResponsePolicyRuleLocalDataArgs> localData) {
             this.localData = localData;
             return this;
         }
-
         public Builder localData(@Nullable ResponsePolicyRuleLocalDataArgs localData) {
             this.localData = Output.ofNullable(localData);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder responsePolicy(Output<String> responsePolicy) {
             this.responsePolicy = Objects.requireNonNull(responsePolicy);
             return this;
         }
-
         public Builder responsePolicy(String responsePolicy) {
             this.responsePolicy = Output.of(Objects.requireNonNull(responsePolicy));
             return this;
         }
-
         public Builder ruleName(@Nullable Output<String> ruleName) {
             this.ruleName = ruleName;
             return this;
         }
-
         public Builder ruleName(@Nullable String ruleName) {
             this.ruleName = Output.ofNullable(ruleName);
             return this;
-        }
-        public ResponsePolicyRuleArgs build() {
+        }        public ResponsePolicyRuleArgs build() {
             return new ResponsePolicyRuleArgs(behavior, clientOperationId, dnsName, kind, localData, project, responsePolicy, ruleName);
         }
     }

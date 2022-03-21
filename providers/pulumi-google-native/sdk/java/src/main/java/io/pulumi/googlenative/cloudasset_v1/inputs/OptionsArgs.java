@@ -142,62 +142,50 @@ public final class OptionsArgs extends io.pulumi.resources.ResourceArgs {
             this.analyzeServiceAccountImpersonation = analyzeServiceAccountImpersonation;
             return this;
         }
-
         public Builder analyzeServiceAccountImpersonation(@Nullable Boolean analyzeServiceAccountImpersonation) {
             this.analyzeServiceAccountImpersonation = Output.ofNullable(analyzeServiceAccountImpersonation);
             return this;
         }
-
         public Builder expandGroups(@Nullable Output<Boolean> expandGroups) {
             this.expandGroups = expandGroups;
             return this;
         }
-
         public Builder expandGroups(@Nullable Boolean expandGroups) {
             this.expandGroups = Output.ofNullable(expandGroups);
             return this;
         }
-
         public Builder expandResources(@Nullable Output<Boolean> expandResources) {
             this.expandResources = expandResources;
             return this;
         }
-
         public Builder expandResources(@Nullable Boolean expandResources) {
             this.expandResources = Output.ofNullable(expandResources);
             return this;
         }
-
         public Builder expandRoles(@Nullable Output<Boolean> expandRoles) {
             this.expandRoles = expandRoles;
             return this;
         }
-
         public Builder expandRoles(@Nullable Boolean expandRoles) {
             this.expandRoles = Output.ofNullable(expandRoles);
             return this;
         }
-
         public Builder outputGroupEdges(@Nullable Output<Boolean> outputGroupEdges) {
             this.outputGroupEdges = outputGroupEdges;
             return this;
         }
-
         public Builder outputGroupEdges(@Nullable Boolean outputGroupEdges) {
             this.outputGroupEdges = Output.ofNullable(outputGroupEdges);
             return this;
         }
-
         public Builder outputResourceEdges(@Nullable Output<Boolean> outputResourceEdges) {
             this.outputResourceEdges = outputResourceEdges;
             return this;
         }
-
         public Builder outputResourceEdges(@Nullable Boolean outputResourceEdges) {
             this.outputResourceEdges = Output.ofNullable(outputResourceEdges);
             return this;
-        }
-        public OptionsArgs build() {
+        }        public OptionsArgs build() {
             return new OptionsArgs(analyzeServiceAccountImpersonation, expandGroups, expandResources, expandRoles, outputGroupEdges, outputResourceEdges);
         }
     }

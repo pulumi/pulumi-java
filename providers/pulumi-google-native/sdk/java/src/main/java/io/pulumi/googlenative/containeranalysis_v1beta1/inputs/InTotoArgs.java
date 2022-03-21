@@ -141,62 +141,62 @@ public final class InTotoArgs extends io.pulumi.resources.ResourceArgs {
             this.expectedCommand = expectedCommand;
             return this;
         }
-
         public Builder expectedCommand(@Nullable List<String> expectedCommand) {
             this.expectedCommand = Output.ofNullable(expectedCommand);
             return this;
         }
-
+        public Builder expectedCommand(String... expectedCommand) {
+            return expectedCommand(List.of(expectedCommand));
+        }
         public Builder expectedMaterials(@Nullable Output<List<ArtifactRuleArgs>> expectedMaterials) {
             this.expectedMaterials = expectedMaterials;
             return this;
         }
-
         public Builder expectedMaterials(@Nullable List<ArtifactRuleArgs> expectedMaterials) {
             this.expectedMaterials = Output.ofNullable(expectedMaterials);
             return this;
         }
-
+        public Builder expectedMaterials(ArtifactRuleArgs... expectedMaterials) {
+            return expectedMaterials(List.of(expectedMaterials));
+        }
         public Builder expectedProducts(@Nullable Output<List<ArtifactRuleArgs>> expectedProducts) {
             this.expectedProducts = expectedProducts;
             return this;
         }
-
         public Builder expectedProducts(@Nullable List<ArtifactRuleArgs> expectedProducts) {
             this.expectedProducts = Output.ofNullable(expectedProducts);
             return this;
         }
-
+        public Builder expectedProducts(ArtifactRuleArgs... expectedProducts) {
+            return expectedProducts(List.of(expectedProducts));
+        }
         public Builder signingKeys(@Nullable Output<List<SigningKeyArgs>> signingKeys) {
             this.signingKeys = signingKeys;
             return this;
         }
-
         public Builder signingKeys(@Nullable List<SigningKeyArgs> signingKeys) {
             this.signingKeys = Output.ofNullable(signingKeys);
             return this;
         }
-
+        public Builder signingKeys(SigningKeyArgs... signingKeys) {
+            return signingKeys(List.of(signingKeys));
+        }
         public Builder stepName(@Nullable Output<String> stepName) {
             this.stepName = stepName;
             return this;
         }
-
         public Builder stepName(@Nullable String stepName) {
             this.stepName = Output.ofNullable(stepName);
             return this;
         }
-
         public Builder threshold(@Nullable Output<String> threshold) {
             this.threshold = threshold;
             return this;
         }
-
         public Builder threshold(@Nullable String threshold) {
             this.threshold = Output.ofNullable(threshold);
             return this;
-        }
-        public InTotoArgs build() {
+        }        public InTotoArgs build() {
             return new InTotoArgs(expectedCommand, expectedMaterials, expectedProducts, signingKeys, stepName, threshold);
         }
     }

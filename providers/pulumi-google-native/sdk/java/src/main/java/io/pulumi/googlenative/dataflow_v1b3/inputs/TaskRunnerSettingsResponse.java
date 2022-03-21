@@ -351,97 +351,81 @@ public final class TaskRunnerSettingsResponse extends io.pulumi.resources.Invoke
             this.alsologtostderr = Objects.requireNonNull(alsologtostderr);
             return this;
         }
-
         public Builder baseTaskDir(String baseTaskDir) {
             this.baseTaskDir = Objects.requireNonNull(baseTaskDir);
             return this;
         }
-
         public Builder baseUrl(String baseUrl) {
             this.baseUrl = Objects.requireNonNull(baseUrl);
             return this;
         }
-
         public Builder commandlinesFileName(String commandlinesFileName) {
             this.commandlinesFileName = Objects.requireNonNull(commandlinesFileName);
             return this;
         }
-
         public Builder continueOnException(Boolean continueOnException) {
             this.continueOnException = Objects.requireNonNull(continueOnException);
             return this;
         }
-
         public Builder dataflowApiVersion(String dataflowApiVersion) {
             this.dataflowApiVersion = Objects.requireNonNull(dataflowApiVersion);
             return this;
         }
-
         public Builder harnessCommand(String harnessCommand) {
             this.harnessCommand = Objects.requireNonNull(harnessCommand);
             return this;
         }
-
         public Builder languageHint(String languageHint) {
             this.languageHint = Objects.requireNonNull(languageHint);
             return this;
         }
-
         public Builder logDir(String logDir) {
             this.logDir = Objects.requireNonNull(logDir);
             return this;
         }
-
         public Builder logToSerialconsole(Boolean logToSerialconsole) {
             this.logToSerialconsole = Objects.requireNonNull(logToSerialconsole);
             return this;
         }
-
         public Builder logUploadLocation(String logUploadLocation) {
             this.logUploadLocation = Objects.requireNonNull(logUploadLocation);
             return this;
         }
-
         public Builder oauthScopes(List<String> oauthScopes) {
             this.oauthScopes = Objects.requireNonNull(oauthScopes);
             return this;
         }
-
+        public Builder oauthScopes(String... oauthScopes) {
+            return oauthScopes(List.of(oauthScopes));
+        }
         public Builder parallelWorkerSettings(WorkerSettingsResponse parallelWorkerSettings) {
             this.parallelWorkerSettings = Objects.requireNonNull(parallelWorkerSettings);
             return this;
         }
-
         public Builder streamingWorkerMainClass(String streamingWorkerMainClass) {
             this.streamingWorkerMainClass = Objects.requireNonNull(streamingWorkerMainClass);
             return this;
         }
-
         public Builder taskGroup(String taskGroup) {
             this.taskGroup = Objects.requireNonNull(taskGroup);
             return this;
         }
-
         public Builder taskUser(String taskUser) {
             this.taskUser = Objects.requireNonNull(taskUser);
             return this;
         }
-
         public Builder tempStoragePrefix(String tempStoragePrefix) {
             this.tempStoragePrefix = Objects.requireNonNull(tempStoragePrefix);
             return this;
         }
-
         public Builder vmId(String vmId) {
             this.vmId = Objects.requireNonNull(vmId);
             return this;
         }
-
         public Builder workflowFileName(String workflowFileName) {
             this.workflowFileName = Objects.requireNonNull(workflowFileName);
             return this;
-        }
-        public TaskRunnerSettingsResponse build() {
+        }        public TaskRunnerSettingsResponse build() {
             return new TaskRunnerSettingsResponse(alsologtostderr, baseTaskDir, baseUrl, commandlinesFileName, continueOnException, dataflowApiVersion, harnessCommand, languageHint, logDir, logToSerialconsole, logUploadLocation, oauthScopes, parallelWorkerSettings, streamingWorkerMainClass, taskGroup, taskUser, tempStoragePrefix, vmId, workflowFileName);
         }
     }

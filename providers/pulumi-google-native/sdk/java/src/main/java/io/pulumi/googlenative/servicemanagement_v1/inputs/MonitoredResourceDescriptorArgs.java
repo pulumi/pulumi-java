@@ -145,62 +145,53 @@ public final class MonitoredResourceDescriptorArgs extends io.pulumi.resources.R
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder labels(Output<List<LabelDescriptorArgs>> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder labels(List<LabelDescriptorArgs> labels) {
             this.labels = Output.of(Objects.requireNonNull(labels));
             return this;
         }
-
+        public Builder labels(LabelDescriptorArgs... labels) {
+            return labels(List.of(labels));
+        }
         public Builder launchStage(@Nullable Output<MonitoredResourceDescriptorLaunchStage> launchStage) {
             this.launchStage = launchStage;
             return this;
         }
-
         public Builder launchStage(@Nullable MonitoredResourceDescriptorLaunchStage launchStage) {
             this.launchStage = Output.ofNullable(launchStage);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public MonitoredResourceDescriptorArgs build() {
+        }        public MonitoredResourceDescriptorArgs build() {
             return new MonitoredResourceDescriptorArgs(description, displayName, labels, launchStage, name, type);
         }
     }

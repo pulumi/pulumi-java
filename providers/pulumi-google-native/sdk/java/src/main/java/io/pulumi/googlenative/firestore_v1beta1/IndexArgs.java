@@ -133,62 +133,53 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
             this.collectionId = collectionId;
             return this;
         }
-
         public Builder collectionId(@Nullable String collectionId) {
             this.collectionId = Output.ofNullable(collectionId);
             return this;
         }
-
         public Builder databaseId(Output<String> databaseId) {
             this.databaseId = Objects.requireNonNull(databaseId);
             return this;
         }
-
         public Builder databaseId(String databaseId) {
             this.databaseId = Output.of(Objects.requireNonNull(databaseId));
             return this;
         }
-
         public Builder fields(@Nullable Output<List<GoogleFirestoreAdminV1beta1IndexFieldArgs>> fields) {
             this.fields = fields;
             return this;
         }
-
         public Builder fields(@Nullable List<GoogleFirestoreAdminV1beta1IndexFieldArgs> fields) {
             this.fields = Output.ofNullable(fields);
             return this;
         }
-
+        public Builder fields(GoogleFirestoreAdminV1beta1IndexFieldArgs... fields) {
+            return fields(List.of(fields));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder state(@Nullable Output<IndexState> state) {
             this.state = state;
             return this;
         }
-
         public Builder state(@Nullable IndexState state) {
             this.state = Output.ofNullable(state);
             return this;
-        }
-        public IndexArgs build() {
+        }        public IndexArgs build() {
             return new IndexArgs(collectionId, databaseId, fields, name, project, state);
         }
     }

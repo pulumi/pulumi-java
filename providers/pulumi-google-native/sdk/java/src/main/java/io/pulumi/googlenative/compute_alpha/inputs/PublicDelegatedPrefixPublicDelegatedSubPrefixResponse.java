@@ -157,37 +157,30 @@ public final class PublicDelegatedPrefixPublicDelegatedSubPrefixResponse extends
             this.delegateeProject = Objects.requireNonNull(delegateeProject);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder ipCidrRange(String ipCidrRange) {
             this.ipCidrRange = Objects.requireNonNull(ipCidrRange);
             return this;
         }
-
         public Builder isAddress(Boolean isAddress) {
             this.isAddress = Objects.requireNonNull(isAddress);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
-        }
-        public PublicDelegatedPrefixPublicDelegatedSubPrefixResponse build() {
+        }        public PublicDelegatedPrefixPublicDelegatedSubPrefixResponse build() {
             return new PublicDelegatedPrefixPublicDelegatedSubPrefixResponse(delegateeProject, description, ipCidrRange, isAddress, name, region, status);
         }
     }

@@ -92,17 +92,14 @@ public final class PrivatePoolResponse extends io.pulumi.resources.InvokeArgs {
             this.artifactStorage = Objects.requireNonNull(artifactStorage);
             return this;
         }
-
         public Builder serviceAccount(String serviceAccount) {
             this.serviceAccount = Objects.requireNonNull(serviceAccount);
             return this;
         }
-
         public Builder workerPool(String workerPool) {
             this.workerPool = Objects.requireNonNull(workerPool);
             return this;
-        }
-        public PrivatePoolResponse build() {
+        }        public PrivatePoolResponse build() {
             return new PrivatePoolResponse(artifactStorage, serviceAccount, workerPool);
         }
     }

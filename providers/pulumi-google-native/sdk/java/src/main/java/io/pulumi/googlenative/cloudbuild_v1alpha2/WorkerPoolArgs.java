@@ -116,52 +116,42 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
             this.networkConfig = networkConfig;
             return this;
         }
-
         public Builder networkConfig(@Nullable NetworkConfigArgs networkConfig) {
             this.networkConfig = Output.ofNullable(networkConfig);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder region(Output<String> region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
-
         public Builder region(String region) {
             this.region = Output.of(Objects.requireNonNull(region));
             return this;
         }
-
         public Builder workerConfig(@Nullable Output<WorkerConfigArgs> workerConfig) {
             this.workerConfig = workerConfig;
             return this;
         }
-
         public Builder workerConfig(@Nullable WorkerConfigArgs workerConfig) {
             this.workerConfig = Output.ofNullable(workerConfig);
             return this;
         }
-
         public Builder workerPoolId(Output<String> workerPoolId) {
             this.workerPoolId = Objects.requireNonNull(workerPoolId);
             return this;
         }
-
         public Builder workerPoolId(String workerPoolId) {
             this.workerPoolId = Output.of(Objects.requireNonNull(workerPoolId));
             return this;
-        }
-        public WorkerPoolArgs build() {
+        }        public WorkerPoolArgs build() {
             return new WorkerPoolArgs(networkConfig, project, region, workerConfig, workerPoolId);
         }
     }

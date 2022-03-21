@@ -70,12 +70,10 @@ public final class HttpFaultAbortResponse {
             this.httpStatus = Objects.requireNonNull(httpStatus);
             return this;
         }
-
         public Builder percentage(Double percentage) {
             this.percentage = Objects.requireNonNull(percentage);
             return this;
-        }
-        public HttpFaultAbortResponse build() {
+        }        public HttpFaultAbortResponse build() {
             return new HttpFaultAbortResponse(httpStatus, percentage);
         }
     }

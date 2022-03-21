@@ -270,142 +270,120 @@ public final class ScanConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.authentication = authentication;
             return this;
         }
-
         public Builder authentication(@Nullable AuthenticationArgs authentication) {
             this.authentication = Output.ofNullable(authentication);
             return this;
         }
-
         public Builder blacklistPatterns(@Nullable Output<List<String>> blacklistPatterns) {
             this.blacklistPatterns = blacklistPatterns;
             return this;
         }
-
         public Builder blacklistPatterns(@Nullable List<String> blacklistPatterns) {
             this.blacklistPatterns = Output.ofNullable(blacklistPatterns);
             return this;
         }
-
+        public Builder blacklistPatterns(String... blacklistPatterns) {
+            return blacklistPatterns(List.of(blacklistPatterns));
+        }
         public Builder displayName(Output<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
-
         public Builder exportToSecurityCommandCenter(@Nullable Output<ScanConfigExportToSecurityCommandCenter> exportToSecurityCommandCenter) {
             this.exportToSecurityCommandCenter = exportToSecurityCommandCenter;
             return this;
         }
-
         public Builder exportToSecurityCommandCenter(@Nullable ScanConfigExportToSecurityCommandCenter exportToSecurityCommandCenter) {
             this.exportToSecurityCommandCenter = Output.ofNullable(exportToSecurityCommandCenter);
             return this;
         }
-
         public Builder ignoreHttpStatusErrors(@Nullable Output<Boolean> ignoreHttpStatusErrors) {
             this.ignoreHttpStatusErrors = ignoreHttpStatusErrors;
             return this;
         }
-
         public Builder ignoreHttpStatusErrors(@Nullable Boolean ignoreHttpStatusErrors) {
             this.ignoreHttpStatusErrors = Output.ofNullable(ignoreHttpStatusErrors);
             return this;
         }
-
         public Builder managedScan(@Nullable Output<Boolean> managedScan) {
             this.managedScan = managedScan;
             return this;
         }
-
         public Builder managedScan(@Nullable Boolean managedScan) {
             this.managedScan = Output.ofNullable(managedScan);
             return this;
         }
-
         public Builder maxQps(@Nullable Output<Integer> maxQps) {
             this.maxQps = maxQps;
             return this;
         }
-
         public Builder maxQps(@Nullable Integer maxQps) {
             this.maxQps = Output.ofNullable(maxQps);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder riskLevel(@Nullable Output<ScanConfigRiskLevel> riskLevel) {
             this.riskLevel = riskLevel;
             return this;
         }
-
         public Builder riskLevel(@Nullable ScanConfigRiskLevel riskLevel) {
             this.riskLevel = Output.ofNullable(riskLevel);
             return this;
         }
-
         public Builder schedule(@Nullable Output<ScheduleArgs> schedule) {
             this.schedule = schedule;
             return this;
         }
-
         public Builder schedule(@Nullable ScheduleArgs schedule) {
             this.schedule = Output.ofNullable(schedule);
             return this;
         }
-
         public Builder startingUrls(Output<List<String>> startingUrls) {
             this.startingUrls = Objects.requireNonNull(startingUrls);
             return this;
         }
-
         public Builder startingUrls(List<String> startingUrls) {
             this.startingUrls = Output.of(Objects.requireNonNull(startingUrls));
             return this;
         }
-
+        public Builder startingUrls(String... startingUrls) {
+            return startingUrls(List.of(startingUrls));
+        }
         public Builder staticIpScan(@Nullable Output<Boolean> staticIpScan) {
             this.staticIpScan = staticIpScan;
             return this;
         }
-
         public Builder staticIpScan(@Nullable Boolean staticIpScan) {
             this.staticIpScan = Output.ofNullable(staticIpScan);
             return this;
         }
-
         public Builder userAgent(@Nullable Output<ScanConfigUserAgent> userAgent) {
             this.userAgent = userAgent;
             return this;
         }
-
         public Builder userAgent(@Nullable ScanConfigUserAgent userAgent) {
             this.userAgent = Output.ofNullable(userAgent);
             return this;
-        }
-        public ScanConfigArgs build() {
+        }        public ScanConfigArgs build() {
             return new ScanConfigArgs(authentication, blacklistPatterns, displayName, exportToSecurityCommandCenter, ignoreHttpStatusErrors, managedScan, maxQps, name, project, riskLevel, schedule, startingUrls, staticIpScan, userAgent);
         }
     }

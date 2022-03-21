@@ -268,72 +268,64 @@ public final class GetWorkloadResult {
             this.billingAccount = Objects.requireNonNull(billingAccount);
             return this;
         }
-
         public Builder complianceRegime(String complianceRegime) {
             this.complianceRegime = Objects.requireNonNull(complianceRegime);
             return this;
         }
-
         public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder enableSovereignControls(Boolean enableSovereignControls) {
             this.enableSovereignControls = Objects.requireNonNull(enableSovereignControls);
             return this;
         }
-
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder kajEnrollmentState(String kajEnrollmentState) {
             this.kajEnrollmentState = Objects.requireNonNull(kajEnrollmentState);
             return this;
         }
-
         public Builder kmsSettings(GoogleCloudAssuredworkloadsV1WorkloadKMSSettingsResponse kmsSettings) {
             this.kmsSettings = Objects.requireNonNull(kmsSettings);
             return this;
         }
-
         public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder provisionedResourcesParent(String provisionedResourcesParent) {
             this.provisionedResourcesParent = Objects.requireNonNull(provisionedResourcesParent);
             return this;
         }
-
         public Builder resourceSettings(List<GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsResponse> resourceSettings) {
             this.resourceSettings = Objects.requireNonNull(resourceSettings);
             return this;
         }
-
+        public Builder resourceSettings(GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsResponse... resourceSettings) {
+            return resourceSettings(List.of(resourceSettings));
+        }
         public Builder resources(List<GoogleCloudAssuredworkloadsV1WorkloadResourceInfoResponse> resources) {
             this.resources = Objects.requireNonNull(resources);
             return this;
         }
-
+        public Builder resources(GoogleCloudAssuredworkloadsV1WorkloadResourceInfoResponse... resources) {
+            return resources(List.of(resources));
+        }
         public Builder saaEnrollmentResponse(GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponseResponse saaEnrollmentResponse) {
             this.saaEnrollmentResponse = Objects.requireNonNull(saaEnrollmentResponse);
             return this;
-        }
-        public GetWorkloadResult build() {
+        }        public GetWorkloadResult build() {
             return new GetWorkloadResult(billingAccount, complianceRegime, createTime, displayName, enableSovereignControls, etag, kajEnrollmentState, kmsSettings, labels, name, provisionedResourcesParent, resourceSettings, resources, saaEnrollmentResponse);
         }
     }

@@ -206,112 +206,90 @@ public final class RegionNetworkArgs extends io.pulumi.resources.ResourceArgs {
             this.autoCreateSubnetworks = autoCreateSubnetworks;
             return this;
         }
-
         public Builder autoCreateSubnetworks(@Nullable Boolean autoCreateSubnetworks) {
             this.autoCreateSubnetworks = Output.ofNullable(autoCreateSubnetworks);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder enableUlaInternalIpv6(@Nullable Output<Boolean> enableUlaInternalIpv6) {
             this.enableUlaInternalIpv6 = enableUlaInternalIpv6;
             return this;
         }
-
         public Builder enableUlaInternalIpv6(@Nullable Boolean enableUlaInternalIpv6) {
             this.enableUlaInternalIpv6 = Output.ofNullable(enableUlaInternalIpv6);
             return this;
         }
-
         public Builder internalIpv6Range(@Nullable Output<String> internalIpv6Range) {
             this.internalIpv6Range = internalIpv6Range;
             return this;
         }
-
         public Builder internalIpv6Range(@Nullable String internalIpv6Range) {
             this.internalIpv6Range = Output.ofNullable(internalIpv6Range);
             return this;
         }
-
         public Builder mtu(@Nullable Output<Integer> mtu) {
             this.mtu = mtu;
             return this;
         }
-
         public Builder mtu(@Nullable Integer mtu) {
             this.mtu = Output.ofNullable(mtu);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder networkFirewallPolicyEnforcementOrder(@Nullable Output<RegionNetworkNetworkFirewallPolicyEnforcementOrder> networkFirewallPolicyEnforcementOrder) {
             this.networkFirewallPolicyEnforcementOrder = networkFirewallPolicyEnforcementOrder;
             return this;
         }
-
         public Builder networkFirewallPolicyEnforcementOrder(@Nullable RegionNetworkNetworkFirewallPolicyEnforcementOrder networkFirewallPolicyEnforcementOrder) {
             this.networkFirewallPolicyEnforcementOrder = Output.ofNullable(networkFirewallPolicyEnforcementOrder);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder region(Output<String> region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
-
         public Builder region(String region) {
             this.region = Output.of(Objects.requireNonNull(region));
             return this;
         }
-
         public Builder requestId(@Nullable Output<String> requestId) {
             this.requestId = requestId;
             return this;
         }
-
         public Builder requestId(@Nullable String requestId) {
             this.requestId = Output.ofNullable(requestId);
             return this;
         }
-
         public Builder routingConfig(@Nullable Output<NetworkRoutingConfigArgs> routingConfig) {
             this.routingConfig = routingConfig;
             return this;
         }
-
         public Builder routingConfig(@Nullable NetworkRoutingConfigArgs routingConfig) {
             this.routingConfig = Output.ofNullable(routingConfig);
             return this;
-        }
-        public RegionNetworkArgs build() {
+        }        public RegionNetworkArgs build() {
             return new RegionNetworkArgs(autoCreateSubnetworks, description, enableUlaInternalIpv6, internalIpv6Range, mtu, name, networkFirewallPolicyEnforcementOrder, project, region, requestId, routingConfig);
         }
     }

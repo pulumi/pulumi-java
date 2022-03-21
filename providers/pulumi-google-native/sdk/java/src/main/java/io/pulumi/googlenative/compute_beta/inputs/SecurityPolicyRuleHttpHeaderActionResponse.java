@@ -56,7 +56,9 @@ public final class SecurityPolicyRuleHttpHeaderActionResponse extends io.pulumi.
             this.requestHeadersToAdds = Objects.requireNonNull(requestHeadersToAdds);
             return this;
         }
-        public SecurityPolicyRuleHttpHeaderActionResponse build() {
+        public Builder requestHeadersToAdds(SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionResponse... requestHeadersToAdds) {
+            return requestHeadersToAdds(List.of(requestHeadersToAdds));
+        }        public SecurityPolicyRuleHttpHeaderActionResponse build() {
             return new SecurityPolicyRuleHttpHeaderActionResponse(requestHeadersToAdds);
         }
     }

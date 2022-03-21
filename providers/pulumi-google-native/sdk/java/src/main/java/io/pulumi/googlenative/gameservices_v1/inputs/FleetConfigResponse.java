@@ -76,12 +76,10 @@ public final class FleetConfigResponse extends io.pulumi.resources.InvokeArgs {
             this.fleetSpec = Objects.requireNonNull(fleetSpec);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public FleetConfigResponse build() {
+        }        public FleetConfigResponse build() {
             return new FleetConfigResponse(fleetSpec, name);
         }
     }

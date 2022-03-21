@@ -78,22 +78,18 @@ public final class SqlActiveDirectoryConfigArgs extends io.pulumi.resources.Reso
             this.domain = domain;
             return this;
         }
-
         public Builder domain(@Nullable String domain) {
             this.domain = Output.ofNullable(domain);
             return this;
         }
-
         public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = Output.ofNullable(kind);
             return this;
-        }
-        public SqlActiveDirectoryConfigArgs build() {
+        }        public SqlActiveDirectoryConfigArgs build() {
             return new SqlActiveDirectoryConfigArgs(domain, kind);
         }
     }

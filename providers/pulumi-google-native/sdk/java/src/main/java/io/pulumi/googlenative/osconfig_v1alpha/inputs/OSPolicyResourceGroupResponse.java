@@ -78,12 +78,16 @@ public final class OSPolicyResourceGroupResponse extends io.pulumi.resources.Inv
             this.inventoryFilters = Objects.requireNonNull(inventoryFilters);
             return this;
         }
-
+        public Builder inventoryFilters(OSPolicyInventoryFilterResponse... inventoryFilters) {
+            return inventoryFilters(List.of(inventoryFilters));
+        }
         public Builder resources(List<OSPolicyResourceResponse> resources) {
             this.resources = Objects.requireNonNull(resources);
             return this;
         }
-        public OSPolicyResourceGroupResponse build() {
+        public Builder resources(OSPolicyResourceResponse... resources) {
+            return resources(List.of(resources));
+        }        public OSPolicyResourceGroupResponse build() {
             return new OSPolicyResourceGroupResponse(inventoryFilters, resources);
         }
     }

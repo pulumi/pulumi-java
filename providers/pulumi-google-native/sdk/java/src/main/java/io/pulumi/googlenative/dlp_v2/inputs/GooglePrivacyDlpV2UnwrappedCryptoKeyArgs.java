@@ -60,12 +60,10 @@ public final class GooglePrivacyDlpV2UnwrappedCryptoKeyArgs extends io.pulumi.re
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder key(String key) {
             this.key = Output.of(Objects.requireNonNull(key));
             return this;
-        }
-        public GooglePrivacyDlpV2UnwrappedCryptoKeyArgs build() {
+        }        public GooglePrivacyDlpV2UnwrappedCryptoKeyArgs build() {
             return new GooglePrivacyDlpV2UnwrappedCryptoKeyArgs(key);
         }
     }

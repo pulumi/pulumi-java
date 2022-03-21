@@ -181,92 +181,77 @@ public final class ConnectivityTestArgs extends io.pulumi.resources.ResourceArgs
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder destination(Output<EndpointArgs> destination) {
             this.destination = Objects.requireNonNull(destination);
             return this;
         }
-
         public Builder destination(EndpointArgs destination) {
             this.destination = Output.of(Objects.requireNonNull(destination));
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder protocol(@Nullable Output<String> protocol) {
             this.protocol = protocol;
             return this;
         }
-
         public Builder protocol(@Nullable String protocol) {
             this.protocol = Output.ofNullable(protocol);
             return this;
         }
-
         public Builder relatedProjects(@Nullable Output<List<String>> relatedProjects) {
             this.relatedProjects = relatedProjects;
             return this;
         }
-
         public Builder relatedProjects(@Nullable List<String> relatedProjects) {
             this.relatedProjects = Output.ofNullable(relatedProjects);
             return this;
         }
-
+        public Builder relatedProjects(String... relatedProjects) {
+            return relatedProjects(List.of(relatedProjects));
+        }
         public Builder source(Output<EndpointArgs> source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }
-
         public Builder source(EndpointArgs source) {
             this.source = Output.of(Objects.requireNonNull(source));
             return this;
         }
-
         public Builder testId(Output<String> testId) {
             this.testId = Objects.requireNonNull(testId);
             return this;
         }
-
         public Builder testId(String testId) {
             this.testId = Output.of(Objects.requireNonNull(testId));
             return this;
-        }
-        public ConnectivityTestArgs build() {
+        }        public ConnectivityTestArgs build() {
             return new ConnectivityTestArgs(description, destination, labels, name, project, protocol, relatedProjects, source, testId);
         }
     }

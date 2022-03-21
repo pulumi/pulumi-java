@@ -109,22 +109,18 @@ public final class AndroidAttributesResponse extends io.pulumi.resources.InvokeA
             this.enabledUnknownSources = Objects.requireNonNull(enabledUnknownSources);
             return this;
         }
-
         public Builder ownerProfileAccount(Boolean ownerProfileAccount) {
             this.ownerProfileAccount = Objects.requireNonNull(ownerProfileAccount);
             return this;
         }
-
         public Builder ownershipPrivilege(String ownershipPrivilege) {
             this.ownershipPrivilege = Objects.requireNonNull(ownershipPrivilege);
             return this;
         }
-
         public Builder supportsWorkProfile(Boolean supportsWorkProfile) {
             this.supportsWorkProfile = Objects.requireNonNull(supportsWorkProfile);
             return this;
-        }
-        public AndroidAttributesResponse build() {
+        }        public AndroidAttributesResponse build() {
             return new AndroidAttributesResponse(enabledUnknownSources, ownerProfileAccount, ownershipPrivilege, supportsWorkProfile);
         }
     }

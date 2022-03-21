@@ -161,72 +161,64 @@ public final class WindowsUpdateArgs extends io.pulumi.resources.ResourceArgs {
             this.categories = categories;
             return this;
         }
-
         public Builder categories(@Nullable List<CategoryArgs> categories) {
             this.categories = Output.ofNullable(categories);
             return this;
         }
-
+        public Builder categories(CategoryArgs... categories) {
+            return categories(List.of(categories));
+        }
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder identity(@Nullable Output<IdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
-
         public Builder identity(@Nullable IdentityArgs identity) {
             this.identity = Output.ofNullable(identity);
             return this;
         }
-
         public Builder kbArticleIds(@Nullable Output<List<String>> kbArticleIds) {
             this.kbArticleIds = kbArticleIds;
             return this;
         }
-
         public Builder kbArticleIds(@Nullable List<String> kbArticleIds) {
             this.kbArticleIds = Output.ofNullable(kbArticleIds);
             return this;
         }
-
+        public Builder kbArticleIds(String... kbArticleIds) {
+            return kbArticleIds(List.of(kbArticleIds));
+        }
         public Builder lastPublishedTimestamp(@Nullable Output<String> lastPublishedTimestamp) {
             this.lastPublishedTimestamp = lastPublishedTimestamp;
             return this;
         }
-
         public Builder lastPublishedTimestamp(@Nullable String lastPublishedTimestamp) {
             this.lastPublishedTimestamp = Output.ofNullable(lastPublishedTimestamp);
             return this;
         }
-
         public Builder supportUrl(@Nullable Output<String> supportUrl) {
             this.supportUrl = supportUrl;
             return this;
         }
-
         public Builder supportUrl(@Nullable String supportUrl) {
             this.supportUrl = Output.ofNullable(supportUrl);
             return this;
         }
-
         public Builder title(@Nullable Output<String> title) {
             this.title = title;
             return this;
         }
-
         public Builder title(@Nullable String title) {
             this.title = Output.ofNullable(title);
             return this;
-        }
-        public WindowsUpdateArgs build() {
+        }        public WindowsUpdateArgs build() {
             return new WindowsUpdateArgs(categories, description, identity, kbArticleIds, lastPublishedTimestamp, supportUrl, title);
         }
     }

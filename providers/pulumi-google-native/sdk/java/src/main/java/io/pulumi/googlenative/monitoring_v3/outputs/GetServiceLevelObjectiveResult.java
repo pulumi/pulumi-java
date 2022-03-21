@@ -152,37 +152,30 @@ public final class GetServiceLevelObjectiveResult {
             this.calendarPeriod = Objects.requireNonNull(calendarPeriod);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder goal(Double goal) {
             this.goal = Objects.requireNonNull(goal);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder rollingPeriod(String rollingPeriod) {
             this.rollingPeriod = Objects.requireNonNull(rollingPeriod);
             return this;
         }
-
         public Builder serviceLevelIndicator(ServiceLevelIndicatorResponse serviceLevelIndicator) {
             this.serviceLevelIndicator = Objects.requireNonNull(serviceLevelIndicator);
             return this;
         }
-
         public Builder userLabels(Map<String,String> userLabels) {
             this.userLabels = Objects.requireNonNull(userLabels);
             return this;
-        }
-        public GetServiceLevelObjectiveResult build() {
+        }        public GetServiceLevelObjectiveResult build() {
             return new GetServiceLevelObjectiveResult(calendarPeriod, displayName, goal, name, rollingPeriod, serviceLevelIndicator, userLabels);
         }
     }

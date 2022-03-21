@@ -144,72 +144,58 @@ public final class SavedQueryArgs extends io.pulumi.resources.ResourceArgs {
             this.content = content;
             return this;
         }
-
         public Builder content(@Nullable QueryContentArgs content) {
             this.content = Output.ofNullable(content);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder savedQueryId(Output<String> savedQueryId) {
             this.savedQueryId = Objects.requireNonNull(savedQueryId);
             return this;
         }
-
         public Builder savedQueryId(String savedQueryId) {
             this.savedQueryId = Output.of(Objects.requireNonNull(savedQueryId));
             return this;
         }
-
         public Builder v1Id(Output<String> v1Id) {
             this.v1Id = Objects.requireNonNull(v1Id);
             return this;
         }
-
         public Builder v1Id(String v1Id) {
             this.v1Id = Output.of(Objects.requireNonNull(v1Id));
             return this;
         }
-
         public Builder v1Id1(Output<String> v1Id1) {
             this.v1Id1 = Objects.requireNonNull(v1Id1);
             return this;
         }
-
         public Builder v1Id1(String v1Id1) {
             this.v1Id1 = Output.of(Objects.requireNonNull(v1Id1));
             return this;
-        }
-        public SavedQueryArgs build() {
+        }        public SavedQueryArgs build() {
             return new SavedQueryArgs(content, description, labels, name, savedQueryId, v1Id, v1Id1);
         }
     }

@@ -278,152 +278,125 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
             this.advancedSettings = advancedSettings;
             return this;
         }
-
         public Builder advancedSettings(@Nullable GoogleCloudDialogflowCxV3AdvancedSettingsArgs advancedSettings) {
             this.advancedSettings = Output.ofNullable(advancedSettings);
             return this;
         }
-
         public Builder avatarUri(@Nullable Output<String> avatarUri) {
             this.avatarUri = avatarUri;
             return this;
         }
-
         public Builder avatarUri(@Nullable String avatarUri) {
             this.avatarUri = Output.ofNullable(avatarUri);
             return this;
         }
-
         public Builder defaultLanguageCode(Output<String> defaultLanguageCode) {
             this.defaultLanguageCode = Objects.requireNonNull(defaultLanguageCode);
             return this;
         }
-
         public Builder defaultLanguageCode(String defaultLanguageCode) {
             this.defaultLanguageCode = Output.of(Objects.requireNonNull(defaultLanguageCode));
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder displayName(Output<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
-
         public Builder enableSpellCorrection(@Nullable Output<Boolean> enableSpellCorrection) {
             this.enableSpellCorrection = enableSpellCorrection;
             return this;
         }
-
         public Builder enableSpellCorrection(@Nullable Boolean enableSpellCorrection) {
             this.enableSpellCorrection = Output.ofNullable(enableSpellCorrection);
             return this;
         }
-
         public Builder enableStackdriverLogging(@Nullable Output<Boolean> enableStackdriverLogging) {
             this.enableStackdriverLogging = enableStackdriverLogging;
             return this;
         }
-
         public Builder enableStackdriverLogging(@Nullable Boolean enableStackdriverLogging) {
             this.enableStackdriverLogging = Output.ofNullable(enableStackdriverLogging);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder securitySettings(@Nullable Output<String> securitySettings) {
             this.securitySettings = securitySettings;
             return this;
         }
-
         public Builder securitySettings(@Nullable String securitySettings) {
             this.securitySettings = Output.ofNullable(securitySettings);
             return this;
         }
-
         public Builder speechToTextSettings(@Nullable Output<GoogleCloudDialogflowCxV3SpeechToTextSettingsArgs> speechToTextSettings) {
             this.speechToTextSettings = speechToTextSettings;
             return this;
         }
-
         public Builder speechToTextSettings(@Nullable GoogleCloudDialogflowCxV3SpeechToTextSettingsArgs speechToTextSettings) {
             this.speechToTextSettings = Output.ofNullable(speechToTextSettings);
             return this;
         }
-
         public Builder startFlow(@Nullable Output<String> startFlow) {
             this.startFlow = startFlow;
             return this;
         }
-
         public Builder startFlow(@Nullable String startFlow) {
             this.startFlow = Output.ofNullable(startFlow);
             return this;
         }
-
         public Builder supportedLanguageCodes(@Nullable Output<List<String>> supportedLanguageCodes) {
             this.supportedLanguageCodes = supportedLanguageCodes;
             return this;
         }
-
         public Builder supportedLanguageCodes(@Nullable List<String> supportedLanguageCodes) {
             this.supportedLanguageCodes = Output.ofNullable(supportedLanguageCodes);
             return this;
         }
-
+        public Builder supportedLanguageCodes(String... supportedLanguageCodes) {
+            return supportedLanguageCodes(List.of(supportedLanguageCodes));
+        }
         public Builder timeZone(Output<String> timeZone) {
             this.timeZone = Objects.requireNonNull(timeZone);
             return this;
         }
-
         public Builder timeZone(String timeZone) {
             this.timeZone = Output.of(Objects.requireNonNull(timeZone));
             return this;
-        }
-        public AgentArgs build() {
+        }        public AgentArgs build() {
             return new AgentArgs(advancedSettings, avatarUri, defaultLanguageCode, description, displayName, enableSpellCorrection, enableStackdriverLogging, location, name, project, securitySettings, speechToTextSettings, startFlow, supportedLanguageCodes, timeZone);
         }
     }

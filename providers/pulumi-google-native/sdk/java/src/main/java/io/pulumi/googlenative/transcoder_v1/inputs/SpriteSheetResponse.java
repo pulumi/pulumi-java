@@ -221,57 +221,46 @@ public final class SpriteSheetResponse extends io.pulumi.resources.InvokeArgs {
             this.columnCount = Objects.requireNonNull(columnCount);
             return this;
         }
-
         public Builder endTimeOffset(String endTimeOffset) {
             this.endTimeOffset = Objects.requireNonNull(endTimeOffset);
             return this;
         }
-
         public Builder filePrefix(String filePrefix) {
             this.filePrefix = Objects.requireNonNull(filePrefix);
             return this;
         }
-
         public Builder format(String format) {
             this.format = Objects.requireNonNull(format);
             return this;
         }
-
         public Builder interval(String interval) {
             this.interval = Objects.requireNonNull(interval);
             return this;
         }
-
         public Builder quality(Integer quality) {
             this.quality = Objects.requireNonNull(quality);
             return this;
         }
-
         public Builder rowCount(Integer rowCount) {
             this.rowCount = Objects.requireNonNull(rowCount);
             return this;
         }
-
         public Builder spriteHeightPixels(Integer spriteHeightPixels) {
             this.spriteHeightPixels = Objects.requireNonNull(spriteHeightPixels);
             return this;
         }
-
         public Builder spriteWidthPixels(Integer spriteWidthPixels) {
             this.spriteWidthPixels = Objects.requireNonNull(spriteWidthPixels);
             return this;
         }
-
         public Builder startTimeOffset(String startTimeOffset) {
             this.startTimeOffset = Objects.requireNonNull(startTimeOffset);
             return this;
         }
-
         public Builder totalCount(Integer totalCount) {
             this.totalCount = Objects.requireNonNull(totalCount);
             return this;
-        }
-        public SpriteSheetResponse build() {
+        }        public SpriteSheetResponse build() {
             return new SpriteSheetResponse(columnCount, endTimeOffset, filePrefix, format, interval, quality, rowCount, spriteHeightPixels, spriteWidthPixels, startTimeOffset, totalCount);
         }
     }

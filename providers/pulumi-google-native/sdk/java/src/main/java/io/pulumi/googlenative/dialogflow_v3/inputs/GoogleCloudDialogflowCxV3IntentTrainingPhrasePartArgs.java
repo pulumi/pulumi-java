@@ -78,22 +78,18 @@ public final class GoogleCloudDialogflowCxV3IntentTrainingPhrasePartArgs extends
             this.parameterId = parameterId;
             return this;
         }
-
         public Builder parameterId(@Nullable String parameterId) {
             this.parameterId = Output.ofNullable(parameterId);
             return this;
         }
-
         public Builder text(Output<String> text) {
             this.text = Objects.requireNonNull(text);
             return this;
         }
-
         public Builder text(String text) {
             this.text = Output.of(Objects.requireNonNull(text));
             return this;
-        }
-        public GoogleCloudDialogflowCxV3IntentTrainingPhrasePartArgs build() {
+        }        public GoogleCloudDialogflowCxV3IntentTrainingPhrasePartArgs build() {
             return new GoogleCloudDialogflowCxV3IntentTrainingPhrasePartArgs(parameterId, text);
         }
     }

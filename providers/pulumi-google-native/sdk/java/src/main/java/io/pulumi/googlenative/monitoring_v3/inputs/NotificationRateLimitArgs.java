@@ -61,12 +61,10 @@ public final class NotificationRateLimitArgs extends io.pulumi.resources.Resourc
             this.period = period;
             return this;
         }
-
         public Builder period(@Nullable String period) {
             this.period = Output.ofNullable(period);
             return this;
-        }
-        public NotificationRateLimitArgs build() {
+        }        public NotificationRateLimitArgs build() {
             return new NotificationRateLimitArgs(period);
         }
     }

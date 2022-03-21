@@ -60,12 +60,10 @@ public final class GoogleCloudNetworksecurityV1beta1GrpcEndpointArgs extends io.
             this.targetUri = Objects.requireNonNull(targetUri);
             return this;
         }
-
         public Builder targetUri(String targetUri) {
             this.targetUri = Output.of(Objects.requireNonNull(targetUri));
             return this;
-        }
-        public GoogleCloudNetworksecurityV1beta1GrpcEndpointArgs build() {
+        }        public GoogleCloudNetworksecurityV1beta1GrpcEndpointArgs build() {
             return new GoogleCloudNetworksecurityV1beta1GrpcEndpointArgs(targetUri);
         }
     }

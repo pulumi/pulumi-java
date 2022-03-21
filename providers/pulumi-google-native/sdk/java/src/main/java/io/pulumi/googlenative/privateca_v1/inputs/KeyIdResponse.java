@@ -58,8 +58,7 @@ public final class KeyIdResponse extends io.pulumi.resources.InvokeArgs {
         public Builder keyId(String keyId) {
             this.keyId = Objects.requireNonNull(keyId);
             return this;
-        }
-        public KeyIdResponse build() {
+        }        public KeyIdResponse build() {
             return new KeyIdResponse(keyId);
         }
     }

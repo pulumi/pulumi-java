@@ -78,22 +78,18 @@ public final class GoogleCloudContactcenterinsightsV1GcsSourceArgs extends io.pu
             this.audioUri = audioUri;
             return this;
         }
-
         public Builder audioUri(@Nullable String audioUri) {
             this.audioUri = Output.ofNullable(audioUri);
             return this;
         }
-
         public Builder transcriptUri(@Nullable Output<String> transcriptUri) {
             this.transcriptUri = transcriptUri;
             return this;
         }
-
         public Builder transcriptUri(@Nullable String transcriptUri) {
             this.transcriptUri = Output.ofNullable(transcriptUri);
             return this;
-        }
-        public GoogleCloudContactcenterinsightsV1GcsSourceArgs build() {
+        }        public GoogleCloudContactcenterinsightsV1GcsSourceArgs build() {
             return new GoogleCloudContactcenterinsightsV1GcsSourceArgs(audioUri, transcriptUri);
         }
     }

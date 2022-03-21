@@ -109,22 +109,18 @@ public final class FacetOptionsResponse extends io.pulumi.resources.InvokeArgs {
             this.numFacetBuckets = Objects.requireNonNull(numFacetBuckets);
             return this;
         }
-
         public Builder objectType(String objectType) {
             this.objectType = Objects.requireNonNull(objectType);
             return this;
         }
-
         public Builder operatorName(String operatorName) {
             this.operatorName = Objects.requireNonNull(operatorName);
             return this;
         }
-
         public Builder sourceName(String sourceName) {
             this.sourceName = Objects.requireNonNull(sourceName);
             return this;
-        }
-        public FacetOptionsResponse build() {
+        }        public FacetOptionsResponse build() {
             return new FacetOptionsResponse(numFacetBuckets, objectType, operatorName, sourceName);
         }
     }

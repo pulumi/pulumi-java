@@ -97,32 +97,29 @@ public final class TypeArgs extends io.pulumi.resources.ResourceArgs {
             this.fields = fields;
             return this;
         }
-
         public Builder fields(@Nullable List<FieldArgs> fields) {
             this.fields = Output.ofNullable(fields);
             return this;
         }
-
+        public Builder fields(FieldArgs... fields) {
+            return fields(List.of(fields));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder primitive(@Nullable Output<TypePrimitive> primitive) {
             this.primitive = primitive;
             return this;
         }
-
         public Builder primitive(@Nullable TypePrimitive primitive) {
             this.primitive = Output.ofNullable(primitive);
             return this;
-        }
-        public TypeArgs build() {
+        }        public TypeArgs build() {
             return new TypeArgs(fields, name, primitive);
         }
     }

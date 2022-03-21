@@ -76,12 +76,10 @@ public final class NodeConfigResponse extends io.pulumi.resources.InvokeArgs {
             this.cpuCount = Objects.requireNonNull(cpuCount);
             return this;
         }
-
         public Builder memorySizeMb(Integer memorySizeMb) {
             this.memorySizeMb = Objects.requireNonNull(memorySizeMb);
             return this;
-        }
-        public NodeConfigResponse build() {
+        }        public NodeConfigResponse build() {
             return new NodeConfigResponse(cpuCount, memorySizeMb);
         }
     }

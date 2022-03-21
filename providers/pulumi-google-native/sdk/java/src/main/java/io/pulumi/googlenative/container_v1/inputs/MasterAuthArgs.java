@@ -95,32 +95,26 @@ public final class MasterAuthArgs extends io.pulumi.resources.ResourceArgs {
             this.clientCertificateConfig = clientCertificateConfig;
             return this;
         }
-
         public Builder clientCertificateConfig(@Nullable ClientCertificateConfigArgs clientCertificateConfig) {
             this.clientCertificateConfig = Output.ofNullable(clientCertificateConfig);
             return this;
         }
-
         public Builder password(@Nullable Output<String> password) {
             this.password = password;
             return this;
         }
-
         public Builder password(@Nullable String password) {
             this.password = Output.ofNullable(password);
             return this;
         }
-
         public Builder username(@Nullable Output<String> username) {
             this.username = username;
             return this;
         }
-
         public Builder username(@Nullable String username) {
             this.username = Output.ofNullable(username);
             return this;
-        }
-        public MasterAuthArgs build() {
+        }        public MasterAuthArgs build() {
             return new MasterAuthArgs(clientCertificateConfig, password, username);
         }
     }

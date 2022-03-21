@@ -79,22 +79,18 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCase
             this.additionalCases = additionalCases;
             return this;
         }
-
         public Builder additionalCases(@Nullable GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesArgs additionalCases) {
             this.additionalCases = Output.ofNullable(additionalCases);
             return this;
         }
-
         public Builder message(@Nullable Output<GoogleCloudDialogflowCxV3beta1ResponseMessageArgs> message) {
             this.message = message;
             return this;
         }
-
         public Builder message(@Nullable GoogleCloudDialogflowCxV3beta1ResponseMessageArgs message) {
             this.message = Output.ofNullable(message);
             return this;
-        }
-        public GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCaseCaseContentArgs build() {
+        }        public GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCaseCaseContentArgs build() {
             return new GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCaseCaseContentArgs(additionalCases, message);
         }
     }

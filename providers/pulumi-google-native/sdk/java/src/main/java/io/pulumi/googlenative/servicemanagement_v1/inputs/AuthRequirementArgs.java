@@ -78,22 +78,18 @@ public final class AuthRequirementArgs extends io.pulumi.resources.ResourceArgs 
             this.audiences = audiences;
             return this;
         }
-
         public Builder audiences(@Nullable String audiences) {
             this.audiences = Output.ofNullable(audiences);
             return this;
         }
-
         public Builder providerId(@Nullable Output<String> providerId) {
             this.providerId = providerId;
             return this;
         }
-
         public Builder providerId(@Nullable String providerId) {
             this.providerId = Output.ofNullable(providerId);
             return this;
-        }
-        public AuthRequirementArgs build() {
+        }        public AuthRequirementArgs build() {
             return new AuthRequirementArgs(audiences, providerId);
         }
     }

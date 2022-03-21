@@ -71,12 +71,13 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentResultResponse {
             this.lastUpdateTime = Objects.requireNonNull(lastUpdateTime);
             return this;
         }
-
         public Builder versionMetrics(List<GoogleCloudDialogflowCxV3beta1ExperimentResultVersionMetricsResponse> versionMetrics) {
             this.versionMetrics = Objects.requireNonNull(versionMetrics);
             return this;
         }
-        public GoogleCloudDialogflowCxV3beta1ExperimentResultResponse build() {
+        public Builder versionMetrics(GoogleCloudDialogflowCxV3beta1ExperimentResultVersionMetricsResponse... versionMetrics) {
+            return versionMetrics(List.of(versionMetrics));
+        }        public GoogleCloudDialogflowCxV3beta1ExperimentResultResponse build() {
             return new GoogleCloudDialogflowCxV3beta1ExperimentResultResponse(lastUpdateTime, versionMetrics);
         }
     }

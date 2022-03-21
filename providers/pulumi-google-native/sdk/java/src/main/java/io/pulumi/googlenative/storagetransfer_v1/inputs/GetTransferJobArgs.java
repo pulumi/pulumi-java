@@ -64,12 +64,10 @@ public final class GetTransferJobArgs extends io.pulumi.resources.InvokeArgs {
             this.projectId = Objects.requireNonNull(projectId);
             return this;
         }
-
         public Builder transferJobId(String transferJobId) {
             this.transferJobId = Objects.requireNonNull(transferJobId);
             return this;
-        }
-        public GetTransferJobArgs build() {
+        }        public GetTransferJobArgs build() {
             return new GetTransferJobArgs(projectId, transferJobId);
         }
     }

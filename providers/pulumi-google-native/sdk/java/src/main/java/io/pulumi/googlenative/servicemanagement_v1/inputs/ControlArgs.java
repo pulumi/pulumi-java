@@ -61,12 +61,10 @@ public final class ControlArgs extends io.pulumi.resources.ResourceArgs {
             this.environment = environment;
             return this;
         }
-
         public Builder environment(@Nullable String environment) {
             this.environment = Output.ofNullable(environment);
             return this;
-        }
-        public ControlArgs build() {
+        }        public ControlArgs build() {
             return new ControlArgs(environment);
         }
     }

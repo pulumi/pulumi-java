@@ -212,102 +212,91 @@ public final class FirewallPolicyRuleArgs extends io.pulumi.resources.ResourceAr
             this.action = action;
             return this;
         }
-
         public Builder action(@Nullable String action) {
             this.action = Output.ofNullable(action);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder direction(@Nullable Output<FirewallPolicyRuleDirection> direction) {
             this.direction = direction;
             return this;
         }
-
         public Builder direction(@Nullable FirewallPolicyRuleDirection direction) {
             this.direction = Output.ofNullable(direction);
             return this;
         }
-
         public Builder disabled(@Nullable Output<Boolean> disabled) {
             this.disabled = disabled;
             return this;
         }
-
         public Builder disabled(@Nullable Boolean disabled) {
             this.disabled = Output.ofNullable(disabled);
             return this;
         }
-
         public Builder enableLogging(@Nullable Output<Boolean> enableLogging) {
             this.enableLogging = enableLogging;
             return this;
         }
-
         public Builder enableLogging(@Nullable Boolean enableLogging) {
             this.enableLogging = Output.ofNullable(enableLogging);
             return this;
         }
-
         public Builder match(@Nullable Output<FirewallPolicyRuleMatcherArgs> match) {
             this.match = match;
             return this;
         }
-
         public Builder match(@Nullable FirewallPolicyRuleMatcherArgs match) {
             this.match = Output.ofNullable(match);
             return this;
         }
-
         public Builder priority(@Nullable Output<Integer> priority) {
             this.priority = priority;
             return this;
         }
-
         public Builder priority(@Nullable Integer priority) {
             this.priority = Output.ofNullable(priority);
             return this;
         }
-
         public Builder targetResources(@Nullable Output<List<String>> targetResources) {
             this.targetResources = targetResources;
             return this;
         }
-
         public Builder targetResources(@Nullable List<String> targetResources) {
             this.targetResources = Output.ofNullable(targetResources);
             return this;
         }
-
+        public Builder targetResources(String... targetResources) {
+            return targetResources(List.of(targetResources));
+        }
         public Builder targetSecureTags(@Nullable Output<List<FirewallPolicyRuleSecureTagArgs>> targetSecureTags) {
             this.targetSecureTags = targetSecureTags;
             return this;
         }
-
         public Builder targetSecureTags(@Nullable List<FirewallPolicyRuleSecureTagArgs> targetSecureTags) {
             this.targetSecureTags = Output.ofNullable(targetSecureTags);
             return this;
         }
-
+        public Builder targetSecureTags(FirewallPolicyRuleSecureTagArgs... targetSecureTags) {
+            return targetSecureTags(List.of(targetSecureTags));
+        }
         public Builder targetServiceAccounts(@Nullable Output<List<String>> targetServiceAccounts) {
             this.targetServiceAccounts = targetServiceAccounts;
             return this;
         }
-
         public Builder targetServiceAccounts(@Nullable List<String> targetServiceAccounts) {
             this.targetServiceAccounts = Output.ofNullable(targetServiceAccounts);
             return this;
         }
-        public FirewallPolicyRuleArgs build() {
+        public Builder targetServiceAccounts(String... targetServiceAccounts) {
+            return targetServiceAccounts(List.of(targetServiceAccounts));
+        }        public FirewallPolicyRuleArgs build() {
             return new FirewallPolicyRuleArgs(action, description, direction, disabled, enableLogging, match, priority, targetResources, targetSecureTags, targetServiceAccounts);
         }
     }

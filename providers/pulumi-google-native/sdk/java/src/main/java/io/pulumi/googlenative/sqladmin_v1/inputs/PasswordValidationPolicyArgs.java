@@ -129,52 +129,42 @@ public final class PasswordValidationPolicyArgs extends io.pulumi.resources.Reso
             this.complexity = complexity;
             return this;
         }
-
         public Builder complexity(@Nullable PasswordValidationPolicyComplexity complexity) {
             this.complexity = Output.ofNullable(complexity);
             return this;
         }
-
         public Builder disallowUsernameSubstring(@Nullable Output<Boolean> disallowUsernameSubstring) {
             this.disallowUsernameSubstring = disallowUsernameSubstring;
             return this;
         }
-
         public Builder disallowUsernameSubstring(@Nullable Boolean disallowUsernameSubstring) {
             this.disallowUsernameSubstring = Output.ofNullable(disallowUsernameSubstring);
             return this;
         }
-
         public Builder minLength(@Nullable Output<Integer> minLength) {
             this.minLength = minLength;
             return this;
         }
-
         public Builder minLength(@Nullable Integer minLength) {
             this.minLength = Output.ofNullable(minLength);
             return this;
         }
-
         public Builder passwordChangeInterval(@Nullable Output<String> passwordChangeInterval) {
             this.passwordChangeInterval = passwordChangeInterval;
             return this;
         }
-
         public Builder passwordChangeInterval(@Nullable String passwordChangeInterval) {
             this.passwordChangeInterval = Output.ofNullable(passwordChangeInterval);
             return this;
         }
-
         public Builder reuseInterval(@Nullable Output<Integer> reuseInterval) {
             this.reuseInterval = reuseInterval;
             return this;
         }
-
         public Builder reuseInterval(@Nullable Integer reuseInterval) {
             this.reuseInterval = Output.ofNullable(reuseInterval);
             return this;
-        }
-        public PasswordValidationPolicyArgs build() {
+        }        public PasswordValidationPolicyArgs build() {
             return new PasswordValidationPolicyArgs(complexity, disallowUsernameSubstring, minLength, passwordChangeInterval, reuseInterval);
         }
     }

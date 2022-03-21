@@ -58,8 +58,7 @@ public final class AttestationNoteResponse extends io.pulumi.resources.InvokeArg
         public Builder hint(HintResponse hint) {
             this.hint = Objects.requireNonNull(hint);
             return this;
-        }
-        public AttestationNoteResponse build() {
+        }        public AttestationNoteResponse build() {
             return new AttestationNoteResponse(hint);
         }
     }

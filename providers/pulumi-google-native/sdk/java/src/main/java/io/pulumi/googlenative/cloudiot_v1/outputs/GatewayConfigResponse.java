@@ -101,22 +101,18 @@ public final class GatewayConfigResponse {
             this.gatewayAuthMethod = Objects.requireNonNull(gatewayAuthMethod);
             return this;
         }
-
         public Builder gatewayType(String gatewayType) {
             this.gatewayType = Objects.requireNonNull(gatewayType);
             return this;
         }
-
         public Builder lastAccessedGatewayId(String lastAccessedGatewayId) {
             this.lastAccessedGatewayId = Objects.requireNonNull(lastAccessedGatewayId);
             return this;
         }
-
         public Builder lastAccessedGatewayTime(String lastAccessedGatewayTime) {
             this.lastAccessedGatewayTime = Objects.requireNonNull(lastAccessedGatewayTime);
             return this;
-        }
-        public GatewayConfigResponse build() {
+        }        public GatewayConfigResponse build() {
             return new GatewayConfigResponse(gatewayAuthMethod, gatewayType, lastAccessedGatewayId, lastAccessedGatewayTime);
         }
     }

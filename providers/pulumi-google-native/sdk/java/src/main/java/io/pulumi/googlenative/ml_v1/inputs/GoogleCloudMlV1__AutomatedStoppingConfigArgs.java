@@ -71,22 +71,18 @@ public final class GoogleCloudMlV1__AutomatedStoppingConfigArgs extends io.pulum
             this.decayCurveStoppingConfig = decayCurveStoppingConfig;
             return this;
         }
-
         public Builder decayCurveStoppingConfig(@Nullable GoogleCloudMlV1_AutomatedStoppingConfig_DecayCurveAutomatedStoppingConfigArgs decayCurveStoppingConfig) {
             this.decayCurveStoppingConfig = Output.ofNullable(decayCurveStoppingConfig);
             return this;
         }
-
         public Builder medianAutomatedStoppingConfig(@Nullable Output<GoogleCloudMlV1_AutomatedStoppingConfig_MedianAutomatedStoppingConfigArgs> medianAutomatedStoppingConfig) {
             this.medianAutomatedStoppingConfig = medianAutomatedStoppingConfig;
             return this;
         }
-
         public Builder medianAutomatedStoppingConfig(@Nullable GoogleCloudMlV1_AutomatedStoppingConfig_MedianAutomatedStoppingConfigArgs medianAutomatedStoppingConfig) {
             this.medianAutomatedStoppingConfig = Output.ofNullable(medianAutomatedStoppingConfig);
             return this;
-        }
-        public GoogleCloudMlV1__AutomatedStoppingConfigArgs build() {
+        }        public GoogleCloudMlV1__AutomatedStoppingConfigArgs build() {
             return new GoogleCloudMlV1__AutomatedStoppingConfigArgs(decayCurveStoppingConfig, medianAutomatedStoppingConfig);
         }
     }

@@ -79,17 +79,20 @@ public final class AuditConfigResponse {
             this.auditLogConfigs = Objects.requireNonNull(auditLogConfigs);
             return this;
         }
-
+        public Builder auditLogConfigs(AuditLogConfigResponse... auditLogConfigs) {
+            return auditLogConfigs(List.of(auditLogConfigs));
+        }
         public Builder exemptedMembers(List<String> exemptedMembers) {
             this.exemptedMembers = Objects.requireNonNull(exemptedMembers);
             return this;
         }
-
+        public Builder exemptedMembers(String... exemptedMembers) {
+            return exemptedMembers(List.of(exemptedMembers));
+        }
         public Builder service(String service) {
             this.service = Objects.requireNonNull(service);
             return this;
-        }
-        public AuditConfigResponse build() {
+        }        public AuditConfigResponse build() {
             return new AuditConfigResponse(auditLogConfigs, exemptedMembers, service);
         }
     }

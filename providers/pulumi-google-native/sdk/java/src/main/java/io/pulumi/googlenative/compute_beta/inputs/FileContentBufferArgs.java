@@ -75,22 +75,18 @@ public final class FileContentBufferArgs extends io.pulumi.resources.ResourceArg
             this.content = content;
             return this;
         }
-
         public Builder content(@Nullable String content) {
             this.content = Output.ofNullable(content);
             return this;
         }
-
         public Builder fileType(@Nullable Output<FileContentBufferFileType> fileType) {
             this.fileType = fileType;
             return this;
         }
-
         public Builder fileType(@Nullable FileContentBufferFileType fileType) {
             this.fileType = Output.ofNullable(fileType);
             return this;
-        }
-        public FileContentBufferArgs build() {
+        }        public FileContentBufferArgs build() {
             return new FileContentBufferArgs(content, fileType);
         }
     }

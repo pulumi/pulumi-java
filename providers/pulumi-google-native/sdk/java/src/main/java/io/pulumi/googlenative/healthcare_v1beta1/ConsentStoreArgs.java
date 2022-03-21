@@ -156,82 +156,66 @@ public final class ConsentStoreArgs extends io.pulumi.resources.ResourceArgs {
             this.consentStoreId = Objects.requireNonNull(consentStoreId);
             return this;
         }
-
         public Builder consentStoreId(String consentStoreId) {
             this.consentStoreId = Output.of(Objects.requireNonNull(consentStoreId));
             return this;
         }
-
         public Builder datasetId(Output<String> datasetId) {
             this.datasetId = Objects.requireNonNull(datasetId);
             return this;
         }
-
         public Builder datasetId(String datasetId) {
             this.datasetId = Output.of(Objects.requireNonNull(datasetId));
             return this;
         }
-
         public Builder defaultConsentTtl(@Nullable Output<String> defaultConsentTtl) {
             this.defaultConsentTtl = defaultConsentTtl;
             return this;
         }
-
         public Builder defaultConsentTtl(@Nullable String defaultConsentTtl) {
             this.defaultConsentTtl = Output.ofNullable(defaultConsentTtl);
             return this;
         }
-
         public Builder enableConsentCreateOnUpdate(@Nullable Output<Boolean> enableConsentCreateOnUpdate) {
             this.enableConsentCreateOnUpdate = enableConsentCreateOnUpdate;
             return this;
         }
-
         public Builder enableConsentCreateOnUpdate(@Nullable Boolean enableConsentCreateOnUpdate) {
             this.enableConsentCreateOnUpdate = Output.ofNullable(enableConsentCreateOnUpdate);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
-        }
-        public ConsentStoreArgs build() {
+        }        public ConsentStoreArgs build() {
             return new ConsentStoreArgs(consentStoreId, datasetId, defaultConsentTtl, enableConsentCreateOnUpdate, labels, location, name, project);
         }
     }

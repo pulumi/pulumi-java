@@ -92,17 +92,14 @@ public final class SpannerIODetailsResponse extends io.pulumi.resources.InvokeAr
             this.databaseId = Objects.requireNonNull(databaseId);
             return this;
         }
-
         public Builder instanceId(String instanceId) {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
-
         public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
-        }
-        public SpannerIODetailsResponse build() {
+        }        public SpannerIODetailsResponse build() {
             return new SpannerIODetailsResponse(databaseId, instanceId, project);
         }
     }

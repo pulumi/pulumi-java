@@ -94,17 +94,17 @@ public final class GoogleCloudDialogflowCxV3EnvironmentTestCasesConfigResponse e
             this.enableContinuousRun = Objects.requireNonNull(enableContinuousRun);
             return this;
         }
-
         public Builder enablePredeploymentRun(Boolean enablePredeploymentRun) {
             this.enablePredeploymentRun = Objects.requireNonNull(enablePredeploymentRun);
             return this;
         }
-
         public Builder testCases(List<String> testCases) {
             this.testCases = Objects.requireNonNull(testCases);
             return this;
         }
-        public GoogleCloudDialogflowCxV3EnvironmentTestCasesConfigResponse build() {
+        public Builder testCases(String... testCases) {
+            return testCases(List.of(testCases));
+        }        public GoogleCloudDialogflowCxV3EnvironmentTestCasesConfigResponse build() {
             return new GoogleCloudDialogflowCxV3EnvironmentTestCasesConfigResponse(enableContinuousRun, enablePredeploymentRun, testCases);
         }
     }

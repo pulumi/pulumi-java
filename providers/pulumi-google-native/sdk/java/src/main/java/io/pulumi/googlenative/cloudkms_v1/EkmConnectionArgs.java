@@ -112,52 +112,45 @@ public final class EkmConnectionArgs extends io.pulumi.resources.ResourceArgs {
             this.ekmConnectionId = Objects.requireNonNull(ekmConnectionId);
             return this;
         }
-
         public Builder ekmConnectionId(String ekmConnectionId) {
             this.ekmConnectionId = Output.of(Objects.requireNonNull(ekmConnectionId));
             return this;
         }
-
         public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
-
         public Builder etag(@Nullable String etag) {
             this.etag = Output.ofNullable(etag);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder serviceResolvers(@Nullable Output<List<ServiceResolverArgs>> serviceResolvers) {
             this.serviceResolvers = serviceResolvers;
             return this;
         }
-
         public Builder serviceResolvers(@Nullable List<ServiceResolverArgs> serviceResolvers) {
             this.serviceResolvers = Output.ofNullable(serviceResolvers);
             return this;
         }
-        public EkmConnectionArgs build() {
+        public Builder serviceResolvers(ServiceResolverArgs... serviceResolvers) {
+            return serviceResolvers(List.of(serviceResolvers));
+        }        public EkmConnectionArgs build() {
             return new EkmConnectionArgs(ekmConnectionId, etag, location, project, serviceResolvers);
         }
     }

@@ -78,22 +78,18 @@ public final class MysqlSourceConfigArgs extends io.pulumi.resources.ResourceArg
             this.allowlist = allowlist;
             return this;
         }
-
         public Builder allowlist(@Nullable MysqlRdbmsArgs allowlist) {
             this.allowlist = Output.ofNullable(allowlist);
             return this;
         }
-
         public Builder rejectlist(@Nullable Output<MysqlRdbmsArgs> rejectlist) {
             this.rejectlist = rejectlist;
             return this;
         }
-
         public Builder rejectlist(@Nullable MysqlRdbmsArgs rejectlist) {
             this.rejectlist = Output.ofNullable(rejectlist);
             return this;
-        }
-        public MysqlSourceConfigArgs build() {
+        }        public MysqlSourceConfigArgs build() {
             return new MysqlSourceConfigArgs(allowlist, rejectlist);
         }
     }

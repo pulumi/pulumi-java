@@ -287,77 +287,68 @@ public final class GetStepResult {
             this.completionTime = Objects.requireNonNull(completionTime);
             return this;
         }
-
         public Builder creationTime(TimestampResponse creationTime) {
             this.creationTime = Objects.requireNonNull(creationTime);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder deviceUsageDuration(DurationResponse deviceUsageDuration) {
             this.deviceUsageDuration = Objects.requireNonNull(deviceUsageDuration);
             return this;
         }
-
         public Builder dimensionValue(List<StepDimensionValueEntryResponse> dimensionValue) {
             this.dimensionValue = Objects.requireNonNull(dimensionValue);
             return this;
         }
-
+        public Builder dimensionValue(StepDimensionValueEntryResponse... dimensionValue) {
+            return dimensionValue(List.of(dimensionValue));
+        }
         public Builder hasImages(Boolean hasImages) {
             this.hasImages = Objects.requireNonNull(hasImages);
             return this;
         }
-
         public Builder labels(List<StepLabelsEntryResponse> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
+        public Builder labels(StepLabelsEntryResponse... labels) {
+            return labels(List.of(labels));
+        }
         public Builder multiStep(MultiStepResponse multiStep) {
             this.multiStep = Objects.requireNonNull(multiStep);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder outcome(OutcomeResponse outcome) {
             this.outcome = Objects.requireNonNull(outcome);
             return this;
         }
-
         public Builder runDuration(DurationResponse runDuration) {
             this.runDuration = Objects.requireNonNull(runDuration);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder stepId(String stepId) {
             this.stepId = Objects.requireNonNull(stepId);
             return this;
         }
-
         public Builder testExecutionStep(TestExecutionStepResponse testExecutionStep) {
             this.testExecutionStep = Objects.requireNonNull(testExecutionStep);
             return this;
         }
-
         public Builder toolExecutionStep(ToolExecutionStepResponse toolExecutionStep) {
             this.toolExecutionStep = Objects.requireNonNull(toolExecutionStep);
             return this;
-        }
-        public GetStepResult build() {
+        }        public GetStepResult build() {
             return new GetStepResult(completionTime, creationTime, description, deviceUsageDuration, dimensionValue, hasImages, labels, multiStep, name, outcome, runDuration, state, stepId, testExecutionStep, toolExecutionStep);
         }
     }

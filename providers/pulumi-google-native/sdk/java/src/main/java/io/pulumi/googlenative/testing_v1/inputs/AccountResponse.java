@@ -58,8 +58,7 @@ public final class AccountResponse extends io.pulumi.resources.InvokeArgs {
         public Builder googleAuto(GoogleAutoResponse googleAuto) {
             this.googleAuto = Objects.requireNonNull(googleAuto);
             return this;
-        }
-        public AccountResponse build() {
+        }        public AccountResponse build() {
             return new AccountResponse(googleAuto);
         }
     }

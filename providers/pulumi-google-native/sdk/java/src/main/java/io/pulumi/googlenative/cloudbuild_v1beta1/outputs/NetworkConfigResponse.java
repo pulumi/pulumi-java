@@ -51,8 +51,7 @@ public final class NetworkConfigResponse {
         public Builder peeredNetwork(String peeredNetwork) {
             this.peeredNetwork = Objects.requireNonNull(peeredNetwork);
             return this;
-        }
-        public NetworkConfigResponse build() {
+        }        public NetworkConfigResponse build() {
             return new NetworkConfigResponse(peeredNetwork);
         }
     }

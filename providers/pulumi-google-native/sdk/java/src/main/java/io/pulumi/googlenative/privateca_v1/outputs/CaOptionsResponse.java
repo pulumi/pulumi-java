@@ -70,12 +70,10 @@ public final class CaOptionsResponse {
             this.isCa = Objects.requireNonNull(isCa);
             return this;
         }
-
         public Builder maxIssuerPathLength(Integer maxIssuerPathLength) {
             this.maxIssuerPathLength = Objects.requireNonNull(maxIssuerPathLength);
             return this;
-        }
-        public CaOptionsResponse build() {
+        }        public CaOptionsResponse build() {
             return new CaOptionsResponse(isCa, maxIssuerPathLength);
         }
     }

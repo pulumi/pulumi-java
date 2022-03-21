@@ -78,17 +78,14 @@ public final class GetStreamArgs extends io.pulumi.resources.InvokeArgs {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder streamId(String streamId) {
             this.streamId = Objects.requireNonNull(streamId);
             return this;
-        }
-        public GetStreamArgs build() {
+        }        public GetStreamArgs build() {
             return new GetStreamArgs(location, project, streamId);
         }
     }

@@ -95,32 +95,26 @@ public final class GoogleCloudRunOpV2VersionToPathArgs extends io.pulumi.resourc
             this.mode = mode;
             return this;
         }
-
         public Builder mode(@Nullable Integer mode) {
             this.mode = Output.ofNullable(mode);
             return this;
         }
-
         public Builder path(Output<String> path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
-
         public Builder path(String path) {
             this.path = Output.of(Objects.requireNonNull(path));
             return this;
         }
-
         public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = Output.ofNullable(version);
             return this;
-        }
-        public GoogleCloudRunOpV2VersionToPathArgs build() {
+        }        public GoogleCloudRunOpV2VersionToPathArgs build() {
             return new GoogleCloudRunOpV2VersionToPathArgs(mode, path, version);
         }
     }

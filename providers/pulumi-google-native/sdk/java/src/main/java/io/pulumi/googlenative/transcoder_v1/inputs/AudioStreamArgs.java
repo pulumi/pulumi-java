@@ -145,62 +145,56 @@ public final class AudioStreamArgs extends io.pulumi.resources.ResourceArgs {
             this.bitrateBps = Objects.requireNonNull(bitrateBps);
             return this;
         }
-
         public Builder bitrateBps(Integer bitrateBps) {
             this.bitrateBps = Output.of(Objects.requireNonNull(bitrateBps));
             return this;
         }
-
         public Builder channelCount(@Nullable Output<Integer> channelCount) {
             this.channelCount = channelCount;
             return this;
         }
-
         public Builder channelCount(@Nullable Integer channelCount) {
             this.channelCount = Output.ofNullable(channelCount);
             return this;
         }
-
         public Builder channelLayout(@Nullable Output<List<String>> channelLayout) {
             this.channelLayout = channelLayout;
             return this;
         }
-
         public Builder channelLayout(@Nullable List<String> channelLayout) {
             this.channelLayout = Output.ofNullable(channelLayout);
             return this;
         }
-
+        public Builder channelLayout(String... channelLayout) {
+            return channelLayout(List.of(channelLayout));
+        }
         public Builder codec(@Nullable Output<String> codec) {
             this.codec = codec;
             return this;
         }
-
         public Builder codec(@Nullable String codec) {
             this.codec = Output.ofNullable(codec);
             return this;
         }
-
         public Builder mapping(@Nullable Output<List<AudioMappingArgs>> mapping) {
             this.mapping = mapping;
             return this;
         }
-
         public Builder mapping(@Nullable List<AudioMappingArgs> mapping) {
             this.mapping = Output.ofNullable(mapping);
             return this;
         }
-
+        public Builder mapping(AudioMappingArgs... mapping) {
+            return mapping(List.of(mapping));
+        }
         public Builder sampleRateHertz(@Nullable Output<Integer> sampleRateHertz) {
             this.sampleRateHertz = sampleRateHertz;
             return this;
         }
-
         public Builder sampleRateHertz(@Nullable Integer sampleRateHertz) {
             this.sampleRateHertz = Output.ofNullable(sampleRateHertz);
             return this;
-        }
-        public AudioStreamArgs build() {
+        }        public AudioStreamArgs build() {
             return new AudioStreamArgs(bitrateBps, channelCount, channelLayout, codec, mapping, sampleRateHertz);
         }
     }

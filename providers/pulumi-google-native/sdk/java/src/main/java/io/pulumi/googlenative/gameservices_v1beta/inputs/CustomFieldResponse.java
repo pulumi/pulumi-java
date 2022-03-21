@@ -76,12 +76,10 @@ public final class CustomFieldResponse extends io.pulumi.resources.InvokeArgs {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public CustomFieldResponse build() {
+        }        public CustomFieldResponse build() {
             return new CustomFieldResponse(name, value);
         }
     }

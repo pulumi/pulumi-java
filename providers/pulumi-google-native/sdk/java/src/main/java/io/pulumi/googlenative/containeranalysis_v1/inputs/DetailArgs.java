@@ -272,142 +272,114 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
             this.affectedCpeUri = Objects.requireNonNull(affectedCpeUri);
             return this;
         }
-
         public Builder affectedCpeUri(String affectedCpeUri) {
             this.affectedCpeUri = Output.of(Objects.requireNonNull(affectedCpeUri));
             return this;
         }
-
         public Builder affectedPackage(Output<String> affectedPackage) {
             this.affectedPackage = Objects.requireNonNull(affectedPackage);
             return this;
         }
-
         public Builder affectedPackage(String affectedPackage) {
             this.affectedPackage = Output.of(Objects.requireNonNull(affectedPackage));
             return this;
         }
-
         public Builder affectedVersionEnd(@Nullable Output<VersionArgs> affectedVersionEnd) {
             this.affectedVersionEnd = affectedVersionEnd;
             return this;
         }
-
         public Builder affectedVersionEnd(@Nullable VersionArgs affectedVersionEnd) {
             this.affectedVersionEnd = Output.ofNullable(affectedVersionEnd);
             return this;
         }
-
         public Builder affectedVersionStart(@Nullable Output<VersionArgs> affectedVersionStart) {
             this.affectedVersionStart = affectedVersionStart;
             return this;
         }
-
         public Builder affectedVersionStart(@Nullable VersionArgs affectedVersionStart) {
             this.affectedVersionStart = Output.ofNullable(affectedVersionStart);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder fixedCpeUri(@Nullable Output<String> fixedCpeUri) {
             this.fixedCpeUri = fixedCpeUri;
             return this;
         }
-
         public Builder fixedCpeUri(@Nullable String fixedCpeUri) {
             this.fixedCpeUri = Output.ofNullable(fixedCpeUri);
             return this;
         }
-
         public Builder fixedPackage(@Nullable Output<String> fixedPackage) {
             this.fixedPackage = fixedPackage;
             return this;
         }
-
         public Builder fixedPackage(@Nullable String fixedPackage) {
             this.fixedPackage = Output.ofNullable(fixedPackage);
             return this;
         }
-
         public Builder fixedVersion(@Nullable Output<VersionArgs> fixedVersion) {
             this.fixedVersion = fixedVersion;
             return this;
         }
-
         public Builder fixedVersion(@Nullable VersionArgs fixedVersion) {
             this.fixedVersion = Output.ofNullable(fixedVersion);
             return this;
         }
-
         public Builder isObsolete(@Nullable Output<Boolean> isObsolete) {
             this.isObsolete = isObsolete;
             return this;
         }
-
         public Builder isObsolete(@Nullable Boolean isObsolete) {
             this.isObsolete = Output.ofNullable(isObsolete);
             return this;
         }
-
         public Builder packageType(@Nullable Output<String> packageType) {
             this.packageType = packageType;
             return this;
         }
-
         public Builder packageType(@Nullable String packageType) {
             this.packageType = Output.ofNullable(packageType);
             return this;
         }
-
         public Builder severityName(@Nullable Output<String> severityName) {
             this.severityName = severityName;
             return this;
         }
-
         public Builder severityName(@Nullable String severityName) {
             this.severityName = Output.ofNullable(severityName);
             return this;
         }
-
         public Builder source(@Nullable Output<String> source) {
             this.source = source;
             return this;
         }
-
         public Builder source(@Nullable String source) {
             this.source = Output.ofNullable(source);
             return this;
         }
-
         public Builder sourceUpdateTime(@Nullable Output<String> sourceUpdateTime) {
             this.sourceUpdateTime = sourceUpdateTime;
             return this;
         }
-
         public Builder sourceUpdateTime(@Nullable String sourceUpdateTime) {
             this.sourceUpdateTime = Output.ofNullable(sourceUpdateTime);
             return this;
         }
-
         public Builder vendor(@Nullable Output<String> vendor) {
             this.vendor = vendor;
             return this;
         }
-
         public Builder vendor(@Nullable String vendor) {
             this.vendor = Output.ofNullable(vendor);
             return this;
-        }
-        public DetailArgs build() {
+        }        public DetailArgs build() {
             return new DetailArgs(affectedCpeUri, affectedPackage, affectedVersionEnd, affectedVersionStart, description, fixedCpeUri, fixedPackage, fixedVersion, isObsolete, packageType, severityName, source, sourceUpdateTime, vendor);
         }
     }

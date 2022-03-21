@@ -115,52 +115,42 @@ public final class DataCollectorArgs extends io.pulumi.resources.ResourceArgs {
             this.dataCollectorId = dataCollectorId;
             return this;
         }
-
         public Builder dataCollectorId(@Nullable String dataCollectorId) {
             this.dataCollectorId = Output.ofNullable(dataCollectorId);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder organizationId(Output<String> organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }
-
         public Builder organizationId(String organizationId) {
             this.organizationId = Output.of(Objects.requireNonNull(organizationId));
             return this;
         }
-
         public Builder type(@Nullable Output<DataCollectorType> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable DataCollectorType type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public DataCollectorArgs build() {
+        }        public DataCollectorArgs build() {
             return new DataCollectorArgs(dataCollectorId, description, name, organizationId, type);
         }
     }

@@ -90,22 +90,18 @@ public final class GetRegionClusterIamPolicyArgs extends io.pulumi.resources.Inv
             this.clusterId = Objects.requireNonNull(clusterId);
             return this;
         }
-
         public Builder optionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
             this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder regionId(String regionId) {
             this.regionId = Objects.requireNonNull(regionId);
             return this;
-        }
-        public GetRegionClusterIamPolicyArgs build() {
+        }        public GetRegionClusterIamPolicyArgs build() {
             return new GetRegionClusterIamPolicyArgs(clusterId, optionsRequestedPolicyVersion, project, regionId);
         }
     }

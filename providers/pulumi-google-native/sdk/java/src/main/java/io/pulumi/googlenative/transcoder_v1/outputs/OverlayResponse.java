@@ -71,12 +71,13 @@ public final class OverlayResponse {
             this.animations = Objects.requireNonNull(animations);
             return this;
         }
-
+        public Builder animations(AnimationResponse... animations) {
+            return animations(List.of(animations));
+        }
         public Builder image(ImageResponse image) {
             this.image = Objects.requireNonNull(image);
             return this;
-        }
-        public OverlayResponse build() {
+        }        public OverlayResponse build() {
             return new OverlayResponse(animations, image);
         }
     }

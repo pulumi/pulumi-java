@@ -118,27 +118,22 @@ public final class AdvancedMachineFeaturesResponse {
             this.enableNestedVirtualization = Objects.requireNonNull(enableNestedVirtualization);
             return this;
         }
-
         public Builder enableUefiNetworking(Boolean enableUefiNetworking) {
             this.enableUefiNetworking = Objects.requireNonNull(enableUefiNetworking);
             return this;
         }
-
         public Builder numaNodeCount(Integer numaNodeCount) {
             this.numaNodeCount = Objects.requireNonNull(numaNodeCount);
             return this;
         }
-
         public Builder threadsPerCore(Integer threadsPerCore) {
             this.threadsPerCore = Objects.requireNonNull(threadsPerCore);
             return this;
         }
-
         public Builder visibleCoreCount(Integer visibleCoreCount) {
             this.visibleCoreCount = Objects.requireNonNull(visibleCoreCount);
             return this;
-        }
-        public AdvancedMachineFeaturesResponse build() {
+        }        public AdvancedMachineFeaturesResponse build() {
             return new AdvancedMachineFeaturesResponse(enableNestedVirtualization, enableUefiNetworking, numaNodeCount, threadsPerCore, visibleCoreCount);
         }
     }

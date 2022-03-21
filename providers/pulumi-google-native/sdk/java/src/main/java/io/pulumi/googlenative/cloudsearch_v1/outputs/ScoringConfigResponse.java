@@ -69,12 +69,10 @@ public final class ScoringConfigResponse {
             this.disableFreshness = Objects.requireNonNull(disableFreshness);
             return this;
         }
-
         public Builder disablePersonalization(Boolean disablePersonalization) {
             this.disablePersonalization = Objects.requireNonNull(disablePersonalization);
             return this;
-        }
-        public ScoringConfigResponse build() {
+        }        public ScoringConfigResponse build() {
             return new ScoringConfigResponse(disableFreshness, disablePersonalization);
         }
     }

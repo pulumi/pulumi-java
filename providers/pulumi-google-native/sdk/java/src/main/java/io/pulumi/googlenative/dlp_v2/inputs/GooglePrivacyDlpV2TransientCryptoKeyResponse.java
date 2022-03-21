@@ -58,8 +58,7 @@ public final class GooglePrivacyDlpV2TransientCryptoKeyResponse extends io.pulum
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public GooglePrivacyDlpV2TransientCryptoKeyResponse build() {
+        }        public GooglePrivacyDlpV2TransientCryptoKeyResponse build() {
             return new GooglePrivacyDlpV2TransientCryptoKeyResponse(name);
         }
     }

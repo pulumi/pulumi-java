@@ -61,12 +61,10 @@ public final class ScanRunWarningTraceArgs extends io.pulumi.resources.ResourceA
             this.code = code;
             return this;
         }
-
         public Builder code(@Nullable ScanRunWarningTraceCode code) {
             this.code = Output.ofNullable(code);
             return this;
-        }
-        public ScanRunWarningTraceArgs build() {
+        }        public ScanRunWarningTraceArgs build() {
             return new ScanRunWarningTraceArgs(code);
         }
     }

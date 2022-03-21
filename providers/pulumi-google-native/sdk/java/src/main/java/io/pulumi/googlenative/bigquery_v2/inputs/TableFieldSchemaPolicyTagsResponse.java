@@ -56,7 +56,9 @@ public final class TableFieldSchemaPolicyTagsResponse extends io.pulumi.resource
             this.names = Objects.requireNonNull(names);
             return this;
         }
-        public TableFieldSchemaPolicyTagsResponse build() {
+        public Builder names(String... names) {
+            return names(List.of(names));
+        }        public TableFieldSchemaPolicyTagsResponse build() {
             return new TableFieldSchemaPolicyTagsResponse(names);
         }
     }

@@ -154,37 +154,36 @@ public final class XyChartResponse {
             this.chartOptions = Objects.requireNonNull(chartOptions);
             return this;
         }
-
         public Builder dataSets(List<DataSetResponse> dataSets) {
             this.dataSets = Objects.requireNonNull(dataSets);
             return this;
         }
-
+        public Builder dataSets(DataSetResponse... dataSets) {
+            return dataSets(List.of(dataSets));
+        }
         public Builder thresholds(List<ThresholdResponse> thresholds) {
             this.thresholds = Objects.requireNonNull(thresholds);
             return this;
         }
-
+        public Builder thresholds(ThresholdResponse... thresholds) {
+            return thresholds(List.of(thresholds));
+        }
         public Builder timeshiftDuration(String timeshiftDuration) {
             this.timeshiftDuration = Objects.requireNonNull(timeshiftDuration);
             return this;
         }
-
         public Builder xAxis(AxisResponse xAxis) {
             this.xAxis = Objects.requireNonNull(xAxis);
             return this;
         }
-
         public Builder y2Axis(AxisResponse y2Axis) {
             this.y2Axis = Objects.requireNonNull(y2Axis);
             return this;
         }
-
         public Builder yAxis(AxisResponse yAxis) {
             this.yAxis = Objects.requireNonNull(yAxis);
             return this;
-        }
-        public XyChartResponse build() {
+        }        public XyChartResponse build() {
             return new XyChartResponse(chartOptions, dataSets, thresholds, timeshiftDuration, xAxis, y2Axis, yAxis);
         }
     }

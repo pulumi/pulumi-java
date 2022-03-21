@@ -72,12 +72,10 @@ public final class JobStatisticsReservationUsageItemResponse extends io.pulumi.r
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder slotMs(String slotMs) {
             this.slotMs = Objects.requireNonNull(slotMs);
             return this;
-        }
-        public JobStatisticsReservationUsageItemResponse build() {
+        }        public JobStatisticsReservationUsageItemResponse build() {
             return new JobStatisticsReservationUsageItemResponse(name, slotMs);
         }
     }

@@ -108,22 +108,18 @@ public final class CropResponse extends io.pulumi.resources.InvokeArgs {
             this.bottomPixels = Objects.requireNonNull(bottomPixels);
             return this;
         }
-
         public Builder leftPixels(Integer leftPixels) {
             this.leftPixels = Objects.requireNonNull(leftPixels);
             return this;
         }
-
         public Builder rightPixels(Integer rightPixels) {
             this.rightPixels = Objects.requireNonNull(rightPixels);
             return this;
         }
-
         public Builder topPixels(Integer topPixels) {
             this.topPixels = Objects.requireNonNull(topPixels);
             return this;
-        }
-        public CropResponse build() {
+        }        public CropResponse build() {
             return new CropResponse(bottomPixels, leftPixels, rightPixels, topPixels);
         }
     }

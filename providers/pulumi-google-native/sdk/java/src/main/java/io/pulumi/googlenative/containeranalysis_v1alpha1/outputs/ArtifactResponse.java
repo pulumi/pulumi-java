@@ -70,12 +70,13 @@ public final class ArtifactResponse {
             this.checksum = Objects.requireNonNull(checksum);
             return this;
         }
-
         public Builder names(List<String> names) {
             this.names = Objects.requireNonNull(names);
             return this;
         }
-        public ArtifactResponse build() {
+        public Builder names(String... names) {
+            return names(List.of(names));
+        }        public ArtifactResponse build() {
             return new ArtifactResponse(checksum, names);
         }
     }

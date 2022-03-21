@@ -77,12 +77,10 @@ public final class GoogleCloudDialogflowV2HumanAgentHandoffConfigResponse extend
             this.livePersonConfig = Objects.requireNonNull(livePersonConfig);
             return this;
         }
-
         public Builder salesforceLiveAgentConfig(GoogleCloudDialogflowV2HumanAgentHandoffConfigSalesforceLiveAgentConfigResponse salesforceLiveAgentConfig) {
             this.salesforceLiveAgentConfig = Objects.requireNonNull(salesforceLiveAgentConfig);
             return this;
-        }
-        public GoogleCloudDialogflowV2HumanAgentHandoffConfigResponse build() {
+        }        public GoogleCloudDialogflowV2HumanAgentHandoffConfigResponse build() {
             return new GoogleCloudDialogflowV2HumanAgentHandoffConfigResponse(livePersonConfig, salesforceLiveAgentConfig);
         }
     }

@@ -101,22 +101,18 @@ public final class GetSourceResult {
             this.canonicalName = Objects.requireNonNull(canonicalName);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public GetSourceResult build() {
+        }        public GetSourceResult build() {
             return new GetSourceResult(canonicalName, description, displayName, name);
         }
     }

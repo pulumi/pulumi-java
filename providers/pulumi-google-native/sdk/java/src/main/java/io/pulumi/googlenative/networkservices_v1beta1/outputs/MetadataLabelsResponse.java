@@ -69,12 +69,10 @@ public final class MetadataLabelsResponse {
             this.labelName = Objects.requireNonNull(labelName);
             return this;
         }
-
         public Builder labelValue(String labelValue) {
             this.labelValue = Objects.requireNonNull(labelValue);
             return this;
-        }
-        public MetadataLabelsResponse build() {
+        }        public MetadataLabelsResponse build() {
             return new MetadataLabelsResponse(labelName, labelValue);
         }
     }

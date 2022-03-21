@@ -77,22 +77,18 @@ public final class NodeConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.cpuCount = Objects.requireNonNull(cpuCount);
             return this;
         }
-
         public Builder cpuCount(Integer cpuCount) {
             this.cpuCount = Output.of(Objects.requireNonNull(cpuCount));
             return this;
         }
-
         public Builder memorySizeMb(Output<Integer> memorySizeMb) {
             this.memorySizeMb = Objects.requireNonNull(memorySizeMb);
             return this;
         }
-
         public Builder memorySizeMb(Integer memorySizeMb) {
             this.memorySizeMb = Output.of(Objects.requireNonNull(memorySizeMb));
             return this;
-        }
-        public NodeConfigArgs build() {
+        }        public NodeConfigArgs build() {
             return new NodeConfigArgs(cpuCount, memorySizeMb);
         }
     }

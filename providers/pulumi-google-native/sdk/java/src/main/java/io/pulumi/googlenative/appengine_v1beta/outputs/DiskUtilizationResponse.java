@@ -101,22 +101,18 @@ public final class DiskUtilizationResponse {
             this.targetReadBytesPerSecond = Objects.requireNonNull(targetReadBytesPerSecond);
             return this;
         }
-
         public Builder targetReadOpsPerSecond(Integer targetReadOpsPerSecond) {
             this.targetReadOpsPerSecond = Objects.requireNonNull(targetReadOpsPerSecond);
             return this;
         }
-
         public Builder targetWriteBytesPerSecond(Integer targetWriteBytesPerSecond) {
             this.targetWriteBytesPerSecond = Objects.requireNonNull(targetWriteBytesPerSecond);
             return this;
         }
-
         public Builder targetWriteOpsPerSecond(Integer targetWriteOpsPerSecond) {
             this.targetWriteOpsPerSecond = Objects.requireNonNull(targetWriteOpsPerSecond);
             return this;
-        }
-        public DiskUtilizationResponse build() {
+        }        public DiskUtilizationResponse build() {
             return new DiskUtilizationResponse(targetReadBytesPerSecond, targetReadOpsPerSecond, targetWriteBytesPerSecond, targetWriteOpsPerSecond);
         }
     }

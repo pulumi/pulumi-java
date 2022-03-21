@@ -94,17 +94,17 @@ public final class ShareSettingsResponse extends io.pulumi.resources.InvokeArgs 
             this.projectMap = Objects.requireNonNull(projectMap);
             return this;
         }
-
         public Builder projects(List<String> projects) {
             this.projects = Objects.requireNonNull(projects);
             return this;
         }
-
+        public Builder projects(String... projects) {
+            return projects(List.of(projects));
+        }
         public Builder shareType(String shareType) {
             this.shareType = Objects.requireNonNull(shareType);
             return this;
-        }
-        public ShareSettingsResponse build() {
+        }        public ShareSettingsResponse build() {
             return new ShareSettingsResponse(projectMap, projects, shareType);
         }
     }

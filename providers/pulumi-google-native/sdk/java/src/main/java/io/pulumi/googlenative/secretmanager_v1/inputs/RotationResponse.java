@@ -76,12 +76,10 @@ public final class RotationResponse extends io.pulumi.resources.InvokeArgs {
             this.nextRotationTime = Objects.requireNonNull(nextRotationTime);
             return this;
         }
-
         public Builder rotationPeriod(String rotationPeriod) {
             this.rotationPeriod = Objects.requireNonNull(rotationPeriod);
             return this;
-        }
-        public RotationResponse build() {
+        }        public RotationResponse build() {
             return new RotationResponse(nextRotationTime, rotationPeriod);
         }
     }

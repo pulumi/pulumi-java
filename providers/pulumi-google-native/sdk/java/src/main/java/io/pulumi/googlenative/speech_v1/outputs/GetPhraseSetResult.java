@@ -88,17 +88,17 @@ public final class GetPhraseSetResult {
             this.boost = Objects.requireNonNull(boost);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder phrases(List<PhraseResponse> phrases) {
             this.phrases = Objects.requireNonNull(phrases);
             return this;
         }
-        public GetPhraseSetResult build() {
+        public Builder phrases(PhraseResponse... phrases) {
+            return phrases(List.of(phrases));
+        }        public GetPhraseSetResult build() {
             return new GetPhraseSetResult(boost, name, phrases);
         }
     }

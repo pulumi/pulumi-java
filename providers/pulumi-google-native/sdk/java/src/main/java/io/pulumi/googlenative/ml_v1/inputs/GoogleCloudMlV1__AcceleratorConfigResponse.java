@@ -76,12 +76,10 @@ public final class GoogleCloudMlV1__AcceleratorConfigResponse extends io.pulumi.
             this.count = Objects.requireNonNull(count);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GoogleCloudMlV1__AcceleratorConfigResponse build() {
+        }        public GoogleCloudMlV1__AcceleratorConfigResponse build() {
             return new GoogleCloudMlV1__AcceleratorConfigResponse(count, type);
         }
     }

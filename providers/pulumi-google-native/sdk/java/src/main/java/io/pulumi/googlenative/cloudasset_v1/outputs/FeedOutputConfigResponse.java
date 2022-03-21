@@ -51,8 +51,7 @@ public final class FeedOutputConfigResponse {
         public Builder pubsubDestination(PubsubDestinationResponse pubsubDestination) {
             this.pubsubDestination = Objects.requireNonNull(pubsubDestination);
             return this;
-        }
-        public FeedOutputConfigResponse build() {
+        }        public FeedOutputConfigResponse build() {
             return new FeedOutputConfigResponse(pubsubDestination);
         }
     }

@@ -77,12 +77,10 @@ public final class GoogleCloudDialogflowCxV3ResponseMessagePlayAudioResponse ext
             this.allowPlaybackInterruption = Objects.requireNonNull(allowPlaybackInterruption);
             return this;
         }
-
         public Builder audioUri(String audioUri) {
             this.audioUri = Objects.requireNonNull(audioUri);
             return this;
-        }
-        public GoogleCloudDialogflowCxV3ResponseMessagePlayAudioResponse build() {
+        }        public GoogleCloudDialogflowCxV3ResponseMessagePlayAudioResponse build() {
             return new GoogleCloudDialogflowCxV3ResponseMessagePlayAudioResponse(allowPlaybackInterruption, audioUri);
         }
     }

@@ -118,27 +118,25 @@ public final class AptRepositoryResponse {
             this.archiveType = Objects.requireNonNull(archiveType);
             return this;
         }
-
         public Builder components(List<String> components) {
             this.components = Objects.requireNonNull(components);
             return this;
         }
-
+        public Builder components(String... components) {
+            return components(List.of(components));
+        }
         public Builder distribution(String distribution) {
             this.distribution = Objects.requireNonNull(distribution);
             return this;
         }
-
         public Builder gpgKey(String gpgKey) {
             this.gpgKey = Objects.requireNonNull(gpgKey);
             return this;
         }
-
         public Builder uri(String uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
-        }
-        public AptRepositoryResponse build() {
+        }        public AptRepositoryResponse build() {
             return new AptRepositoryResponse(archiveType, components, distribution, gpgKey, uri);
         }
     }

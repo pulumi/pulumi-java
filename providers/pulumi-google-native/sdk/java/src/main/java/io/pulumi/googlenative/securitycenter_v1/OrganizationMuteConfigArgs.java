@@ -130,62 +130,50 @@ public final class OrganizationMuteConfigArgs extends io.pulumi.resources.Resour
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder filter(Output<String> filter) {
             this.filter = Objects.requireNonNull(filter);
             return this;
         }
-
         public Builder filter(String filter) {
             this.filter = Output.of(Objects.requireNonNull(filter));
             return this;
         }
-
         public Builder muteConfigId(Output<String> muteConfigId) {
             this.muteConfigId = Objects.requireNonNull(muteConfigId);
             return this;
         }
-
         public Builder muteConfigId(String muteConfigId) {
             this.muteConfigId = Output.of(Objects.requireNonNull(muteConfigId));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder organizationId(Output<String> organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }
-
         public Builder organizationId(String organizationId) {
             this.organizationId = Output.of(Objects.requireNonNull(organizationId));
             return this;
-        }
-        public OrganizationMuteConfigArgs build() {
+        }        public OrganizationMuteConfigArgs build() {
             return new OrganizationMuteConfigArgs(description, displayName, filter, muteConfigId, name, organizationId);
         }
     }

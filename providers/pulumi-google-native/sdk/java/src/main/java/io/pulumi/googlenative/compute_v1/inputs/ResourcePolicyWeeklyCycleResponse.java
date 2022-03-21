@@ -60,7 +60,9 @@ public final class ResourcePolicyWeeklyCycleResponse extends io.pulumi.resources
             this.dayOfWeeks = Objects.requireNonNull(dayOfWeeks);
             return this;
         }
-        public ResourcePolicyWeeklyCycleResponse build() {
+        public Builder dayOfWeeks(ResourcePolicyWeeklyCycleDayOfWeekResponse... dayOfWeeks) {
+            return dayOfWeeks(List.of(dayOfWeeks));
+        }        public ResourcePolicyWeeklyCycleResponse build() {
             return new ResourcePolicyWeeklyCycleResponse(dayOfWeeks);
         }
     }

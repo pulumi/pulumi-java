@@ -88,17 +88,23 @@ public final class PipelineDescriptionResponse {
             this.displayData = Objects.requireNonNull(displayData);
             return this;
         }
-
+        public Builder displayData(DisplayDataResponse... displayData) {
+            return displayData(List.of(displayData));
+        }
         public Builder executionPipelineStage(List<ExecutionStageSummaryResponse> executionPipelineStage) {
             this.executionPipelineStage = Objects.requireNonNull(executionPipelineStage);
             return this;
         }
-
+        public Builder executionPipelineStage(ExecutionStageSummaryResponse... executionPipelineStage) {
+            return executionPipelineStage(List.of(executionPipelineStage));
+        }
         public Builder originalPipelineTransform(List<TransformSummaryResponse> originalPipelineTransform) {
             this.originalPipelineTransform = Objects.requireNonNull(originalPipelineTransform);
             return this;
         }
-        public PipelineDescriptionResponse build() {
+        public Builder originalPipelineTransform(TransformSummaryResponse... originalPipelineTransform) {
+            return originalPipelineTransform(List.of(originalPipelineTransform));
+        }        public PipelineDescriptionResponse build() {
             return new PipelineDescriptionResponse(displayData, executionPipelineStage, originalPipelineTransform);
         }
     }

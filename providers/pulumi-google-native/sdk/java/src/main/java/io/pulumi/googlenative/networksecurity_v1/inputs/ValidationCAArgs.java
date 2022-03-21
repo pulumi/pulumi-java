@@ -79,22 +79,18 @@ public final class ValidationCAArgs extends io.pulumi.resources.ResourceArgs {
             this.certificateProviderInstance = certificateProviderInstance;
             return this;
         }
-
         public Builder certificateProviderInstance(@Nullable CertificateProviderInstanceArgs certificateProviderInstance) {
             this.certificateProviderInstance = Output.ofNullable(certificateProviderInstance);
             return this;
         }
-
         public Builder grpcEndpoint(@Nullable Output<GoogleCloudNetworksecurityV1GrpcEndpointArgs> grpcEndpoint) {
             this.grpcEndpoint = grpcEndpoint;
             return this;
         }
-
         public Builder grpcEndpoint(@Nullable GoogleCloudNetworksecurityV1GrpcEndpointArgs grpcEndpoint) {
             this.grpcEndpoint = Output.ofNullable(grpcEndpoint);
             return this;
-        }
-        public ValidationCAArgs build() {
+        }        public ValidationCAArgs build() {
             return new ValidationCAArgs(certificateProviderInstance, grpcEndpoint);
         }
     }

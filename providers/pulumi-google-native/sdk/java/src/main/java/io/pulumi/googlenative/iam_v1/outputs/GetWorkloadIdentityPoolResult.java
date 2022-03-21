@@ -118,27 +118,22 @@ public final class GetWorkloadIdentityPoolResult {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder disabled(Boolean disabled) {
             this.disabled = Objects.requireNonNull(disabled);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
-        }
-        public GetWorkloadIdentityPoolResult build() {
+        }        public GetWorkloadIdentityPoolResult build() {
             return new GetWorkloadIdentityPoolResult(description, disabled, displayName, name, state);
         }
     }

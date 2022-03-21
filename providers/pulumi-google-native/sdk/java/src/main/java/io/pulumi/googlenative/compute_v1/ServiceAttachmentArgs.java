@@ -242,132 +242,118 @@ public final class ServiceAttachmentArgs extends io.pulumi.resources.ResourceArg
             this.connectionPreference = connectionPreference;
             return this;
         }
-
         public Builder connectionPreference(@Nullable ServiceAttachmentConnectionPreference connectionPreference) {
             this.connectionPreference = Output.ofNullable(connectionPreference);
             return this;
         }
-
         public Builder consumerAcceptLists(@Nullable Output<List<ServiceAttachmentConsumerProjectLimitArgs>> consumerAcceptLists) {
             this.consumerAcceptLists = consumerAcceptLists;
             return this;
         }
-
         public Builder consumerAcceptLists(@Nullable List<ServiceAttachmentConsumerProjectLimitArgs> consumerAcceptLists) {
             this.consumerAcceptLists = Output.ofNullable(consumerAcceptLists);
             return this;
         }
-
+        public Builder consumerAcceptLists(ServiceAttachmentConsumerProjectLimitArgs... consumerAcceptLists) {
+            return consumerAcceptLists(List.of(consumerAcceptLists));
+        }
         public Builder consumerRejectLists(@Nullable Output<List<String>> consumerRejectLists) {
             this.consumerRejectLists = consumerRejectLists;
             return this;
         }
-
         public Builder consumerRejectLists(@Nullable List<String> consumerRejectLists) {
             this.consumerRejectLists = Output.ofNullable(consumerRejectLists);
             return this;
         }
-
+        public Builder consumerRejectLists(String... consumerRejectLists) {
+            return consumerRejectLists(List.of(consumerRejectLists));
+        }
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder domainNames(@Nullable Output<List<String>> domainNames) {
             this.domainNames = domainNames;
             return this;
         }
-
         public Builder domainNames(@Nullable List<String> domainNames) {
             this.domainNames = Output.ofNullable(domainNames);
             return this;
         }
-
+        public Builder domainNames(String... domainNames) {
+            return domainNames(List.of(domainNames));
+        }
         public Builder enableProxyProtocol(@Nullable Output<Boolean> enableProxyProtocol) {
             this.enableProxyProtocol = enableProxyProtocol;
             return this;
         }
-
         public Builder enableProxyProtocol(@Nullable Boolean enableProxyProtocol) {
             this.enableProxyProtocol = Output.ofNullable(enableProxyProtocol);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder natSubnets(@Nullable Output<List<String>> natSubnets) {
             this.natSubnets = natSubnets;
             return this;
         }
-
         public Builder natSubnets(@Nullable List<String> natSubnets) {
             this.natSubnets = Output.ofNullable(natSubnets);
             return this;
         }
-
+        public Builder natSubnets(String... natSubnets) {
+            return natSubnets(List.of(natSubnets));
+        }
         public Builder producerForwardingRule(@Nullable Output<String> producerForwardingRule) {
             this.producerForwardingRule = producerForwardingRule;
             return this;
         }
-
         public Builder producerForwardingRule(@Nullable String producerForwardingRule) {
             this.producerForwardingRule = Output.ofNullable(producerForwardingRule);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder region(Output<String> region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
-
         public Builder region(String region) {
             this.region = Output.of(Objects.requireNonNull(region));
             return this;
         }
-
         public Builder requestId(@Nullable Output<String> requestId) {
             this.requestId = requestId;
             return this;
         }
-
         public Builder requestId(@Nullable String requestId) {
             this.requestId = Output.ofNullable(requestId);
             return this;
         }
-
         public Builder targetService(@Nullable Output<String> targetService) {
             this.targetService = targetService;
             return this;
         }
-
         public Builder targetService(@Nullable String targetService) {
             this.targetService = Output.ofNullable(targetService);
             return this;
-        }
-        public ServiceAttachmentArgs build() {
+        }        public ServiceAttachmentArgs build() {
             return new ServiceAttachmentArgs(connectionPreference, consumerAcceptLists, consumerRejectLists, description, domainNames, enableProxyProtocol, name, natSubnets, producerForwardingRule, project, region, requestId, targetService);
         }
     }

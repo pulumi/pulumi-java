@@ -61,12 +61,10 @@ public final class DailyMaintenanceWindowArgs extends io.pulumi.resources.Resour
             this.startTime = startTime;
             return this;
         }
-
         public Builder startTime(@Nullable String startTime) {
             this.startTime = Output.ofNullable(startTime);
             return this;
-        }
-        public DailyMaintenanceWindowArgs build() {
+        }        public DailyMaintenanceWindowArgs build() {
             return new DailyMaintenanceWindowArgs(startTime);
         }
     }

@@ -94,32 +94,26 @@ public final class PrivatePoolArgs extends io.pulumi.resources.ResourceArgs {
             this.artifactStorage = artifactStorage;
             return this;
         }
-
         public Builder artifactStorage(@Nullable String artifactStorage) {
             this.artifactStorage = Output.ofNullable(artifactStorage);
             return this;
         }
-
         public Builder serviceAccount(@Nullable Output<String> serviceAccount) {
             this.serviceAccount = serviceAccount;
             return this;
         }
-
         public Builder serviceAccount(@Nullable String serviceAccount) {
             this.serviceAccount = Output.ofNullable(serviceAccount);
             return this;
         }
-
         public Builder workerPool(Output<String> workerPool) {
             this.workerPool = Objects.requireNonNull(workerPool);
             return this;
         }
-
         public Builder workerPool(String workerPool) {
             this.workerPool = Output.of(Objects.requireNonNull(workerPool));
             return this;
-        }
-        public PrivatePoolArgs build() {
+        }        public PrivatePoolArgs build() {
             return new PrivatePoolArgs(artifactStorage, serviceAccount, workerPool);
         }
     }

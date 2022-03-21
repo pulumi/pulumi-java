@@ -96,32 +96,26 @@ public final class ReplicaConfigurationArgs extends io.pulumi.resources.Resource
             this.failoverTarget = failoverTarget;
             return this;
         }
-
         public Builder failoverTarget(@Nullable Boolean failoverTarget) {
             this.failoverTarget = Output.ofNullable(failoverTarget);
             return this;
         }
-
         public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder mysqlReplicaConfiguration(@Nullable Output<MySqlReplicaConfigurationArgs> mysqlReplicaConfiguration) {
             this.mysqlReplicaConfiguration = mysqlReplicaConfiguration;
             return this;
         }
-
         public Builder mysqlReplicaConfiguration(@Nullable MySqlReplicaConfigurationArgs mysqlReplicaConfiguration) {
             this.mysqlReplicaConfiguration = Output.ofNullable(mysqlReplicaConfiguration);
             return this;
-        }
-        public ReplicaConfigurationArgs build() {
+        }        public ReplicaConfigurationArgs build() {
             return new ReplicaConfigurationArgs(failoverTarget, kind, mysqlReplicaConfiguration);
         }
     }

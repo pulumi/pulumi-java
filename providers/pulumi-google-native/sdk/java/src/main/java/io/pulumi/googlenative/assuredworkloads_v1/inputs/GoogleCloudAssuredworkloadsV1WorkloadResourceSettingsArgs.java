@@ -95,32 +95,26 @@ public final class GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsArgs ext
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder resourceId(@Nullable Output<String> resourceId) {
             this.resourceId = resourceId;
             return this;
         }
-
         public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = Output.ofNullable(resourceId);
             return this;
         }
-
         public Builder resourceType(@Nullable Output<GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsResourceType> resourceType) {
             this.resourceType = resourceType;
             return this;
         }
-
         public Builder resourceType(@Nullable GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsResourceType resourceType) {
             this.resourceType = Output.ofNullable(resourceType);
             return this;
-        }
-        public GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsArgs build() {
+        }        public GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsArgs build() {
             return new GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsArgs(displayName, resourceId, resourceType);
         }
     }

@@ -422,242 +422,206 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
             this.archiveSizeBytes = archiveSizeBytes;
             return this;
         }
-
         public Builder archiveSizeBytes(@Nullable String archiveSizeBytes) {
             this.archiveSizeBytes = Output.ofNullable(archiveSizeBytes);
             return this;
         }
-
         public Builder deprecated(@Nullable Output<DeprecationStatusArgs> deprecated) {
             this.deprecated = deprecated;
             return this;
         }
-
         public Builder deprecated(@Nullable DeprecationStatusArgs deprecated) {
             this.deprecated = Output.ofNullable(deprecated);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder diskSizeGb(@Nullable Output<String> diskSizeGb) {
             this.diskSizeGb = diskSizeGb;
             return this;
         }
-
         public Builder diskSizeGb(@Nullable String diskSizeGb) {
             this.diskSizeGb = Output.ofNullable(diskSizeGb);
             return this;
         }
-
         public Builder family(@Nullable Output<String> family) {
             this.family = family;
             return this;
         }
-
         public Builder family(@Nullable String family) {
             this.family = Output.ofNullable(family);
             return this;
         }
-
         public Builder forceCreate(@Nullable Output<String> forceCreate) {
             this.forceCreate = forceCreate;
             return this;
         }
-
         public Builder forceCreate(@Nullable String forceCreate) {
             this.forceCreate = Output.ofNullable(forceCreate);
             return this;
         }
-
         public Builder guestOsFeatures(@Nullable Output<List<GuestOsFeatureArgs>> guestOsFeatures) {
             this.guestOsFeatures = guestOsFeatures;
             return this;
         }
-
         public Builder guestOsFeatures(@Nullable List<GuestOsFeatureArgs> guestOsFeatures) {
             this.guestOsFeatures = Output.ofNullable(guestOsFeatures);
             return this;
         }
-
+        public Builder guestOsFeatures(GuestOsFeatureArgs... guestOsFeatures) {
+            return guestOsFeatures(List.of(guestOsFeatures));
+        }
         public Builder imageEncryptionKey(@Nullable Output<CustomerEncryptionKeyArgs> imageEncryptionKey) {
             this.imageEncryptionKey = imageEncryptionKey;
             return this;
         }
-
         public Builder imageEncryptionKey(@Nullable CustomerEncryptionKeyArgs imageEncryptionKey) {
             this.imageEncryptionKey = Output.ofNullable(imageEncryptionKey);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder licenseCodes(@Nullable Output<List<String>> licenseCodes) {
             this.licenseCodes = licenseCodes;
             return this;
         }
-
         public Builder licenseCodes(@Nullable List<String> licenseCodes) {
             this.licenseCodes = Output.ofNullable(licenseCodes);
             return this;
         }
-
+        public Builder licenseCodes(String... licenseCodes) {
+            return licenseCodes(List.of(licenseCodes));
+        }
         public Builder licenses(@Nullable Output<List<String>> licenses) {
             this.licenses = licenses;
             return this;
         }
-
         public Builder licenses(@Nullable List<String> licenses) {
             this.licenses = Output.ofNullable(licenses);
             return this;
         }
-
+        public Builder licenses(String... licenses) {
+            return licenses(List.of(licenses));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder rawDisk(@Nullable Output<ImageRawDiskArgs> rawDisk) {
             this.rawDisk = rawDisk;
             return this;
         }
-
         public Builder rawDisk(@Nullable ImageRawDiskArgs rawDisk) {
             this.rawDisk = Output.ofNullable(rawDisk);
             return this;
         }
-
         public Builder requestId(@Nullable Output<String> requestId) {
             this.requestId = requestId;
             return this;
         }
-
         public Builder requestId(@Nullable String requestId) {
             this.requestId = Output.ofNullable(requestId);
             return this;
         }
-
         public Builder shieldedInstanceInitialState(@Nullable Output<InitialStateConfigArgs> shieldedInstanceInitialState) {
             this.shieldedInstanceInitialState = shieldedInstanceInitialState;
             return this;
         }
-
         public Builder shieldedInstanceInitialState(@Nullable InitialStateConfigArgs shieldedInstanceInitialState) {
             this.shieldedInstanceInitialState = Output.ofNullable(shieldedInstanceInitialState);
             return this;
         }
-
         public Builder sourceDisk(@Nullable Output<String> sourceDisk) {
             this.sourceDisk = sourceDisk;
             return this;
         }
-
         public Builder sourceDisk(@Nullable String sourceDisk) {
             this.sourceDisk = Output.ofNullable(sourceDisk);
             return this;
         }
-
         public Builder sourceDiskEncryptionKey(@Nullable Output<CustomerEncryptionKeyArgs> sourceDiskEncryptionKey) {
             this.sourceDiskEncryptionKey = sourceDiskEncryptionKey;
             return this;
         }
-
         public Builder sourceDiskEncryptionKey(@Nullable CustomerEncryptionKeyArgs sourceDiskEncryptionKey) {
             this.sourceDiskEncryptionKey = Output.ofNullable(sourceDiskEncryptionKey);
             return this;
         }
-
         public Builder sourceImage(@Nullable Output<String> sourceImage) {
             this.sourceImage = sourceImage;
             return this;
         }
-
         public Builder sourceImage(@Nullable String sourceImage) {
             this.sourceImage = Output.ofNullable(sourceImage);
             return this;
         }
-
         public Builder sourceImageEncryptionKey(@Nullable Output<CustomerEncryptionKeyArgs> sourceImageEncryptionKey) {
             this.sourceImageEncryptionKey = sourceImageEncryptionKey;
             return this;
         }
-
         public Builder sourceImageEncryptionKey(@Nullable CustomerEncryptionKeyArgs sourceImageEncryptionKey) {
             this.sourceImageEncryptionKey = Output.ofNullable(sourceImageEncryptionKey);
             return this;
         }
-
         public Builder sourceSnapshot(@Nullable Output<String> sourceSnapshot) {
             this.sourceSnapshot = sourceSnapshot;
             return this;
         }
-
         public Builder sourceSnapshot(@Nullable String sourceSnapshot) {
             this.sourceSnapshot = Output.ofNullable(sourceSnapshot);
             return this;
         }
-
         public Builder sourceSnapshotEncryptionKey(@Nullable Output<CustomerEncryptionKeyArgs> sourceSnapshotEncryptionKey) {
             this.sourceSnapshotEncryptionKey = sourceSnapshotEncryptionKey;
             return this;
         }
-
         public Builder sourceSnapshotEncryptionKey(@Nullable CustomerEncryptionKeyArgs sourceSnapshotEncryptionKey) {
             this.sourceSnapshotEncryptionKey = Output.ofNullable(sourceSnapshotEncryptionKey);
             return this;
         }
-
         public Builder sourceType(@Nullable Output<ImageSourceType> sourceType) {
             this.sourceType = sourceType;
             return this;
         }
-
         public Builder sourceType(@Nullable ImageSourceType sourceType) {
             this.sourceType = Output.ofNullable(sourceType);
             return this;
         }
-
         public Builder storageLocations(@Nullable Output<List<String>> storageLocations) {
             this.storageLocations = storageLocations;
             return this;
         }
-
         public Builder storageLocations(@Nullable List<String> storageLocations) {
             this.storageLocations = Output.ofNullable(storageLocations);
             return this;
         }
-        public ImageArgs build() {
+        public Builder storageLocations(String... storageLocations) {
+            return storageLocations(List.of(storageLocations));
+        }        public ImageArgs build() {
             return new ImageArgs(archiveSizeBytes, deprecated, description, diskSizeGb, family, forceCreate, guestOsFeatures, imageEncryptionKey, labels, licenseCodes, licenses, name, project, rawDisk, requestId, shieldedInstanceInitialState, sourceDisk, sourceDiskEncryptionKey, sourceImage, sourceImageEncryptionKey, sourceSnapshot, sourceSnapshotEncryptionKey, sourceType, storageLocations);
         }
     }

@@ -129,52 +129,42 @@ public final class DataSetArgs extends io.pulumi.resources.ResourceArgs {
             this.legendTemplate = legendTemplate;
             return this;
         }
-
         public Builder legendTemplate(@Nullable String legendTemplate) {
             this.legendTemplate = Output.ofNullable(legendTemplate);
             return this;
         }
-
         public Builder minAlignmentPeriod(@Nullable Output<String> minAlignmentPeriod) {
             this.minAlignmentPeriod = minAlignmentPeriod;
             return this;
         }
-
         public Builder minAlignmentPeriod(@Nullable String minAlignmentPeriod) {
             this.minAlignmentPeriod = Output.ofNullable(minAlignmentPeriod);
             return this;
         }
-
         public Builder plotType(@Nullable Output<DataSetPlotType> plotType) {
             this.plotType = plotType;
             return this;
         }
-
         public Builder plotType(@Nullable DataSetPlotType plotType) {
             this.plotType = Output.ofNullable(plotType);
             return this;
         }
-
         public Builder targetAxis(@Nullable Output<DataSetTargetAxis> targetAxis) {
             this.targetAxis = targetAxis;
             return this;
         }
-
         public Builder targetAxis(@Nullable DataSetTargetAxis targetAxis) {
             this.targetAxis = Output.ofNullable(targetAxis);
             return this;
         }
-
         public Builder timeSeriesQuery(Output<TimeSeriesQueryArgs> timeSeriesQuery) {
             this.timeSeriesQuery = Objects.requireNonNull(timeSeriesQuery);
             return this;
         }
-
         public Builder timeSeriesQuery(TimeSeriesQueryArgs timeSeriesQuery) {
             this.timeSeriesQuery = Output.of(Objects.requireNonNull(timeSeriesQuery));
             return this;
-        }
-        public DataSetArgs build() {
+        }        public DataSetArgs build() {
             return new DataSetArgs(legendTemplate, minAlignmentPeriod, plotType, targetAxis, timeSeriesQuery);
         }
     }

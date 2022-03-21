@@ -240,72 +240,58 @@ public final class GetNodeGroupResult {
             this.autoscalingPolicy = Objects.requireNonNull(autoscalingPolicy);
             return this;
         }
-
         public Builder creationTimestamp(String creationTimestamp) {
             this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder fingerprint(String fingerprint) {
             this.fingerprint = Objects.requireNonNull(fingerprint);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder locationHint(String locationHint) {
             this.locationHint = Objects.requireNonNull(locationHint);
             return this;
         }
-
         public Builder maintenancePolicy(String maintenancePolicy) {
             this.maintenancePolicy = Objects.requireNonNull(maintenancePolicy);
             return this;
         }
-
         public Builder maintenanceWindow(NodeGroupMaintenanceWindowResponse maintenanceWindow) {
             this.maintenanceWindow = Objects.requireNonNull(maintenanceWindow);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder nodeTemplate(String nodeTemplate) {
             this.nodeTemplate = Objects.requireNonNull(nodeTemplate);
             return this;
         }
-
         public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
-
         public Builder size(Integer size) {
             this.size = Objects.requireNonNull(size);
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder zone(String zone) {
             this.zone = Objects.requireNonNull(zone);
             return this;
-        }
-        public GetNodeGroupResult build() {
+        }        public GetNodeGroupResult build() {
             return new GetNodeGroupResult(autoscalingPolicy, creationTimestamp, description, fingerprint, kind, locationHint, maintenancePolicy, maintenanceWindow, name, nodeTemplate, selfLink, size, status, zone);
         }
     }

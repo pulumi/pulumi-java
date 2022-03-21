@@ -60,7 +60,9 @@ public final class GooglePrivacyDlpV2WordListResponse extends io.pulumi.resource
             this.words = Objects.requireNonNull(words);
             return this;
         }
-        public GooglePrivacyDlpV2WordListResponse build() {
+        public Builder words(String... words) {
+            return words(List.of(words));
+        }        public GooglePrivacyDlpV2WordListResponse build() {
             return new GooglePrivacyDlpV2WordListResponse(words);
         }
     }

@@ -242,132 +242,106 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
             this.connectionProfileId = Objects.requireNonNull(connectionProfileId);
             return this;
         }
-
         public Builder connectionProfileId(String connectionProfileId) {
             this.connectionProfileId = Output.of(Objects.requireNonNull(connectionProfileId));
             return this;
         }
-
         public Builder displayName(Output<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
-
         public Builder forwardSshConnectivity(@Nullable Output<ForwardSshTunnelConnectivityArgs> forwardSshConnectivity) {
             this.forwardSshConnectivity = forwardSshConnectivity;
             return this;
         }
-
         public Builder forwardSshConnectivity(@Nullable ForwardSshTunnelConnectivityArgs forwardSshConnectivity) {
             this.forwardSshConnectivity = Output.ofNullable(forwardSshConnectivity);
             return this;
         }
-
         public Builder gcsProfile(@Nullable Output<GcsProfileArgs> gcsProfile) {
             this.gcsProfile = gcsProfile;
             return this;
         }
-
         public Builder gcsProfile(@Nullable GcsProfileArgs gcsProfile) {
             this.gcsProfile = Output.ofNullable(gcsProfile);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder mysqlProfile(@Nullable Output<MysqlProfileArgs> mysqlProfile) {
             this.mysqlProfile = mysqlProfile;
             return this;
         }
-
         public Builder mysqlProfile(@Nullable MysqlProfileArgs mysqlProfile) {
             this.mysqlProfile = Output.ofNullable(mysqlProfile);
             return this;
         }
-
         public Builder noConnectivity(@Nullable Output<NoConnectivitySettingsArgs> noConnectivity) {
             this.noConnectivity = noConnectivity;
             return this;
         }
-
         public Builder noConnectivity(@Nullable NoConnectivitySettingsArgs noConnectivity) {
             this.noConnectivity = Output.ofNullable(noConnectivity);
             return this;
         }
-
         public Builder oracleProfile(@Nullable Output<OracleProfileArgs> oracleProfile) {
             this.oracleProfile = oracleProfile;
             return this;
         }
-
         public Builder oracleProfile(@Nullable OracleProfileArgs oracleProfile) {
             this.oracleProfile = Output.ofNullable(oracleProfile);
             return this;
         }
-
         public Builder privateConnectivity(@Nullable Output<PrivateConnectivityArgs> privateConnectivity) {
             this.privateConnectivity = privateConnectivity;
             return this;
         }
-
         public Builder privateConnectivity(@Nullable PrivateConnectivityArgs privateConnectivity) {
             this.privateConnectivity = Output.ofNullable(privateConnectivity);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder requestId(@Nullable Output<String> requestId) {
             this.requestId = requestId;
             return this;
         }
-
         public Builder requestId(@Nullable String requestId) {
             this.requestId = Output.ofNullable(requestId);
             return this;
         }
-
         public Builder staticServiceIpConnectivity(@Nullable Output<StaticServiceIpConnectivityArgs> staticServiceIpConnectivity) {
             this.staticServiceIpConnectivity = staticServiceIpConnectivity;
             return this;
         }
-
         public Builder staticServiceIpConnectivity(@Nullable StaticServiceIpConnectivityArgs staticServiceIpConnectivity) {
             this.staticServiceIpConnectivity = Output.ofNullable(staticServiceIpConnectivity);
             return this;
-        }
-        public ConnectionProfileArgs build() {
+        }        public ConnectionProfileArgs build() {
             return new ConnectionProfileArgs(connectionProfileId, displayName, forwardSshConnectivity, gcsProfile, labels, location, mysqlProfile, noConnectivity, oracleProfile, privateConnectivity, project, requestId, staticServiceIpConnectivity);
         }
     }

@@ -77,12 +77,10 @@ public final class PipelineConditionResponse extends io.pulumi.resources.InvokeA
             this.pipelineReadyCondition = Objects.requireNonNull(pipelineReadyCondition);
             return this;
         }
-
         public Builder targetsPresentCondition(TargetsPresentConditionResponse targetsPresentCondition) {
             this.targetsPresentCondition = Objects.requireNonNull(targetsPresentCondition);
             return this;
-        }
-        public PipelineConditionResponse build() {
+        }        public PipelineConditionResponse build() {
             return new PipelineConditionResponse(pipelineReadyCondition, targetsPresentCondition);
         }
     }

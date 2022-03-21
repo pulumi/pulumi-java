@@ -61,12 +61,10 @@ public final class ApigatewayBackendConfigArgs extends io.pulumi.resources.Resou
             this.googleServiceAccount = googleServiceAccount;
             return this;
         }
-
         public Builder googleServiceAccount(@Nullable String googleServiceAccount) {
             this.googleServiceAccount = Output.ofNullable(googleServiceAccount);
             return this;
-        }
-        public ApigatewayBackendConfigArgs build() {
+        }        public ApigatewayBackendConfigArgs build() {
             return new ApigatewayBackendConfigArgs(googleServiceAccount);
         }
     }

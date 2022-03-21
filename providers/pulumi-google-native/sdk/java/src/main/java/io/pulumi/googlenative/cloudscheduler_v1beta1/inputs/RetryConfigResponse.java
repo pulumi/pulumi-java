@@ -125,27 +125,22 @@ public final class RetryConfigResponse extends io.pulumi.resources.InvokeArgs {
             this.maxBackoffDuration = Objects.requireNonNull(maxBackoffDuration);
             return this;
         }
-
         public Builder maxDoublings(Integer maxDoublings) {
             this.maxDoublings = Objects.requireNonNull(maxDoublings);
             return this;
         }
-
         public Builder maxRetryDuration(String maxRetryDuration) {
             this.maxRetryDuration = Objects.requireNonNull(maxRetryDuration);
             return this;
         }
-
         public Builder minBackoffDuration(String minBackoffDuration) {
             this.minBackoffDuration = Objects.requireNonNull(minBackoffDuration);
             return this;
         }
-
         public Builder retryCount(Integer retryCount) {
             this.retryCount = Objects.requireNonNull(retryCount);
             return this;
-        }
-        public RetryConfigResponse build() {
+        }        public RetryConfigResponse build() {
             return new RetryConfigResponse(maxBackoffDuration, maxDoublings, maxRetryDuration, minBackoffDuration, retryCount);
         }
     }

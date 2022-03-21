@@ -90,22 +90,18 @@ public final class GetInternalRangeIamPolicyArgs extends io.pulumi.resources.Inv
             this.internalRangeId = Objects.requireNonNull(internalRangeId);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder optionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
             this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetInternalRangeIamPolicyArgs build() {
+        }        public GetInternalRangeIamPolicyArgs build() {
             return new GetInternalRangeIamPolicyArgs(internalRangeId, location, optionsRequestedPolicyVersion, project);
         }
     }

@@ -248,67 +248,69 @@ public final class BuildStepResponse {
             this.args = Objects.requireNonNull(args);
             return this;
         }
-
+        public Builder args(String... args) {
+            return args(List.of(args));
+        }
         public Builder dir(String dir) {
             this.dir = Objects.requireNonNull(dir);
             return this;
         }
-
         public Builder entrypoint(String entrypoint) {
             this.entrypoint = Objects.requireNonNull(entrypoint);
             return this;
         }
-
         public Builder env(List<String> env) {
             this.env = Objects.requireNonNull(env);
             return this;
         }
-
+        public Builder env(String... env) {
+            return env(List.of(env));
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder pullTiming(TimeSpanResponse pullTiming) {
             this.pullTiming = Objects.requireNonNull(pullTiming);
             return this;
         }
-
         public Builder script(String script) {
             this.script = Objects.requireNonNull(script);
             return this;
         }
-
         public Builder secretEnv(List<String> secretEnv) {
             this.secretEnv = Objects.requireNonNull(secretEnv);
             return this;
         }
-
+        public Builder secretEnv(String... secretEnv) {
+            return secretEnv(List.of(secretEnv));
+        }
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder timeout(String timeout) {
             this.timeout = Objects.requireNonNull(timeout);
             return this;
         }
-
         public Builder timing(TimeSpanResponse timing) {
             this.timing = Objects.requireNonNull(timing);
             return this;
         }
-
         public Builder volumes(List<VolumeResponse> volumes) {
             this.volumes = Objects.requireNonNull(volumes);
             return this;
         }
-
+        public Builder volumes(VolumeResponse... volumes) {
+            return volumes(List.of(volumes));
+        }
         public Builder waitFor(List<String> waitFor) {
             this.waitFor = Objects.requireNonNull(waitFor);
             return this;
         }
-        public BuildStepResponse build() {
+        public Builder waitFor(String... waitFor) {
+            return waitFor(List.of(waitFor));
+        }        public BuildStepResponse build() {
             return new BuildStepResponse(args, dir, entrypoint, env, name, pullTiming, script, secretEnv, status, timeout, timing, volumes, waitFor);
         }
     }

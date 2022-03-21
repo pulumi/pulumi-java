@@ -127,52 +127,42 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse
             this.contentUrl = Objects.requireNonNull(contentUrl);
             return this;
         }
-
         public Builder contentUrl(String contentUrl) {
             this.contentUrl = Output.of(Objects.requireNonNull(contentUrl));
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder icon(@Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageImageArgs> icon) {
             this.icon = icon;
             return this;
         }
-
         public Builder icon(@Nullable GoogleCloudDialogflowV2beta1IntentMessageImageArgs icon) {
             this.icon = Output.ofNullable(icon);
             return this;
         }
-
         public Builder largeImage(@Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageImageArgs> largeImage) {
             this.largeImage = largeImage;
             return this;
         }
-
         public Builder largeImage(@Nullable GoogleCloudDialogflowV2beta1IntentMessageImageArgs largeImage) {
             this.largeImage = Output.ofNullable(largeImage);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
-        }
-        public GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponseMediaObjectArgs build() {
+        }        public GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponseMediaObjectArgs build() {
             return new GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponseMediaObjectArgs(contentUrl, description, icon, largeImage, name);
         }
     }

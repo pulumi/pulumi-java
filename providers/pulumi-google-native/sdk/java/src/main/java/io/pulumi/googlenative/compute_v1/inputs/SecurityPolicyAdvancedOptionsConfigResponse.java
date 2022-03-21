@@ -64,12 +64,10 @@ public final class SecurityPolicyAdvancedOptionsConfigResponse extends io.pulumi
             this.jsonParsing = Objects.requireNonNull(jsonParsing);
             return this;
         }
-
         public Builder logLevel(String logLevel) {
             this.logLevel = Objects.requireNonNull(logLevel);
             return this;
-        }
-        public SecurityPolicyAdvancedOptionsConfigResponse build() {
+        }        public SecurityPolicyAdvancedOptionsConfigResponse build() {
             return new SecurityPolicyAdvancedOptionsConfigResponse(jsonParsing, logLevel);
         }
     }

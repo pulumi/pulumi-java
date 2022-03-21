@@ -134,32 +134,26 @@ public final class WorkerSettingsResponse {
             this.baseUrl = Objects.requireNonNull(baseUrl);
             return this;
         }
-
         public Builder reportingEnabled(Boolean reportingEnabled) {
             this.reportingEnabled = Objects.requireNonNull(reportingEnabled);
             return this;
         }
-
         public Builder servicePath(String servicePath) {
             this.servicePath = Objects.requireNonNull(servicePath);
             return this;
         }
-
         public Builder shuffleServicePath(String shuffleServicePath) {
             this.shuffleServicePath = Objects.requireNonNull(shuffleServicePath);
             return this;
         }
-
         public Builder tempStoragePrefix(String tempStoragePrefix) {
             this.tempStoragePrefix = Objects.requireNonNull(tempStoragePrefix);
             return this;
         }
-
         public Builder workerId(String workerId) {
             this.workerId = Objects.requireNonNull(workerId);
             return this;
-        }
-        public WorkerSettingsResponse build() {
+        }        public WorkerSettingsResponse build() {
             return new WorkerSettingsResponse(baseUrl, reportingEnabled, servicePath, shuffleServicePath, tempStoragePrefix, workerId);
         }
     }

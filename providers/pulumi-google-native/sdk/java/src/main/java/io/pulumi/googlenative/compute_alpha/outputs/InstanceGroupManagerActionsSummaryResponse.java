@@ -245,67 +245,54 @@ public final class InstanceGroupManagerActionsSummaryResponse {
             this.abandoning = Objects.requireNonNull(abandoning);
             return this;
         }
-
         public Builder creating(Integer creating) {
             this.creating = Objects.requireNonNull(creating);
             return this;
         }
-
         public Builder creatingWithoutRetries(Integer creatingWithoutRetries) {
             this.creatingWithoutRetries = Objects.requireNonNull(creatingWithoutRetries);
             return this;
         }
-
         public Builder deleting(Integer deleting) {
             this.deleting = Objects.requireNonNull(deleting);
             return this;
         }
-
         public Builder none(Integer none) {
             this.none = Objects.requireNonNull(none);
             return this;
         }
-
         public Builder recreating(Integer recreating) {
             this.recreating = Objects.requireNonNull(recreating);
             return this;
         }
-
         public Builder refreshing(Integer refreshing) {
             this.refreshing = Objects.requireNonNull(refreshing);
             return this;
         }
-
         public Builder restarting(Integer restarting) {
             this.restarting = Objects.requireNonNull(restarting);
             return this;
         }
-
         public Builder resuming(Integer resuming) {
             this.resuming = Objects.requireNonNull(resuming);
             return this;
         }
-
         public Builder starting(Integer starting) {
             this.starting = Objects.requireNonNull(starting);
             return this;
         }
-
         public Builder stopping(Integer stopping) {
             this.stopping = Objects.requireNonNull(stopping);
             return this;
         }
-
         public Builder suspending(Integer suspending) {
             this.suspending = Objects.requireNonNull(suspending);
             return this;
         }
-
         public Builder verifying(Integer verifying) {
             this.verifying = Objects.requireNonNull(verifying);
             return this;
-        }
-        public InstanceGroupManagerActionsSummaryResponse build() {
+        }        public InstanceGroupManagerActionsSummaryResponse build() {
             return new InstanceGroupManagerActionsSummaryResponse(abandoning, creating, creatingWithoutRetries, deleting, none, recreating, refreshing, restarting, resuming, starting, stopping, suspending, verifying);
         }
     }

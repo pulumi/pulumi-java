@@ -69,12 +69,10 @@ public final class ToolResultsHistoryResponse {
             this.historyId = Objects.requireNonNull(historyId);
             return this;
         }
-
         public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
-        }
-        public ToolResultsHistoryResponse build() {
+        }        public ToolResultsHistoryResponse build() {
             return new ToolResultsHistoryResponse(historyId, project);
         }
     }

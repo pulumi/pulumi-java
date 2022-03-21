@@ -69,12 +69,10 @@ public final class SchemaConfigResponse {
             this.recursiveStructureDepth = Objects.requireNonNull(recursiveStructureDepth);
             return this;
         }
-
         public Builder schemaType(String schemaType) {
             this.schemaType = Objects.requireNonNull(schemaType);
             return this;
-        }
-        public SchemaConfigResponse build() {
+        }        public SchemaConfigResponse build() {
             return new SchemaConfigResponse(recursiveStructureDepth, schemaType);
         }
     }

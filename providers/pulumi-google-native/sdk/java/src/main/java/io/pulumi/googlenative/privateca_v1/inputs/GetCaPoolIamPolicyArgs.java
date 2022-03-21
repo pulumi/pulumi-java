@@ -90,22 +90,18 @@ public final class GetCaPoolIamPolicyArgs extends io.pulumi.resources.InvokeArgs
             this.caPoolId = Objects.requireNonNull(caPoolId);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder optionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
             this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetCaPoolIamPolicyArgs build() {
+        }        public GetCaPoolIamPolicyArgs build() {
             return new GetCaPoolIamPolicyArgs(caPoolId, location, optionsRequestedPolicyVersion, project);
         }
     }

@@ -182,47 +182,38 @@ public final class GetCanaryEvaluationResult {
             this.control = Objects.requireNonNull(control);
             return this;
         }
-
         public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder endTime(String endTime) {
             this.endTime = Objects.requireNonNull(endTime);
             return this;
         }
-
         public Builder metricLabels(GoogleCloudApigeeV1CanaryEvaluationMetricLabelsResponse metricLabels) {
             this.metricLabels = Objects.requireNonNull(metricLabels);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder treatment(String treatment) {
             this.treatment = Objects.requireNonNull(treatment);
             return this;
         }
-
         public Builder verdict(String verdict) {
             this.verdict = Objects.requireNonNull(verdict);
             return this;
-        }
-        public GetCanaryEvaluationResult build() {
+        }        public GetCanaryEvaluationResult build() {
             return new GetCanaryEvaluationResult(control, createTime, endTime, metricLabels, name, startTime, state, treatment, verdict);
         }
     }

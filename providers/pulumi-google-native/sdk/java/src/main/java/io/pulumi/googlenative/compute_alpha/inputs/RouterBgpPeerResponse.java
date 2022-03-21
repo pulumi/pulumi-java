@@ -317,87 +317,76 @@ public final class RouterBgpPeerResponse extends io.pulumi.resources.InvokeArgs 
             this.advertiseMode = Objects.requireNonNull(advertiseMode);
             return this;
         }
-
         public Builder advertisedGroups(List<String> advertisedGroups) {
             this.advertisedGroups = Objects.requireNonNull(advertisedGroups);
             return this;
         }
-
+        public Builder advertisedGroups(String... advertisedGroups) {
+            return advertisedGroups(List.of(advertisedGroups));
+        }
         public Builder advertisedIpRanges(List<RouterAdvertisedIpRangeResponse> advertisedIpRanges) {
             this.advertisedIpRanges = Objects.requireNonNull(advertisedIpRanges);
             return this;
         }
-
+        public Builder advertisedIpRanges(RouterAdvertisedIpRangeResponse... advertisedIpRanges) {
+            return advertisedIpRanges(List.of(advertisedIpRanges));
+        }
         public Builder advertisedRoutePriority(Integer advertisedRoutePriority) {
             this.advertisedRoutePriority = Objects.requireNonNull(advertisedRoutePriority);
             return this;
         }
-
         public Builder bfd(RouterBgpPeerBfdResponse bfd) {
             this.bfd = Objects.requireNonNull(bfd);
             return this;
         }
-
         public Builder enable(String enable) {
             this.enable = Objects.requireNonNull(enable);
             return this;
         }
-
         public Builder enableIpv6(Boolean enableIpv6) {
             this.enableIpv6 = Objects.requireNonNull(enableIpv6);
             return this;
         }
-
         public Builder interfaceName(String interfaceName) {
             this.interfaceName = Objects.requireNonNull(interfaceName);
             return this;
         }
-
         public Builder ipAddress(String ipAddress) {
             this.ipAddress = Objects.requireNonNull(ipAddress);
             return this;
         }
-
         public Builder ipv6NexthopAddress(String ipv6NexthopAddress) {
             this.ipv6NexthopAddress = Objects.requireNonNull(ipv6NexthopAddress);
             return this;
         }
-
         public Builder managementType(String managementType) {
             this.managementType = Objects.requireNonNull(managementType);
             return this;
         }
-
         public Builder md5AuthenticationKeyName(String md5AuthenticationKeyName) {
             this.md5AuthenticationKeyName = Objects.requireNonNull(md5AuthenticationKeyName);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder peerAsn(Integer peerAsn) {
             this.peerAsn = Objects.requireNonNull(peerAsn);
             return this;
         }
-
         public Builder peerIpAddress(String peerIpAddress) {
             this.peerIpAddress = Objects.requireNonNull(peerIpAddress);
             return this;
         }
-
         public Builder peerIpv6NexthopAddress(String peerIpv6NexthopAddress) {
             this.peerIpv6NexthopAddress = Objects.requireNonNull(peerIpv6NexthopAddress);
             return this;
         }
-
         public Builder routerApplianceInstance(String routerApplianceInstance) {
             this.routerApplianceInstance = Objects.requireNonNull(routerApplianceInstance);
             return this;
-        }
-        public RouterBgpPeerResponse build() {
+        }        public RouterBgpPeerResponse build() {
             return new RouterBgpPeerResponse(advertiseMode, advertisedGroups, advertisedIpRanges, advertisedRoutePriority, bfd, enable, enableIpv6, interfaceName, ipAddress, ipv6NexthopAddress, managementType, md5AuthenticationKeyName, name, peerAsn, peerIpAddress, peerIpv6NexthopAddress, routerApplianceInstance);
         }
     }

@@ -129,52 +129,42 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
             this.epoch = epoch;
             return this;
         }
-
         public Builder epoch(@Nullable Integer epoch) {
             this.epoch = Output.ofNullable(epoch);
             return this;
         }
-
         public Builder inclusive(@Nullable Output<Boolean> inclusive) {
             this.inclusive = inclusive;
             return this;
         }
-
         public Builder inclusive(@Nullable Boolean inclusive) {
             this.inclusive = Output.ofNullable(inclusive);
             return this;
         }
-
         public Builder kind(Output<VersionKind> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder kind(VersionKind kind) {
             this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder revision(@Nullable Output<String> revision) {
             this.revision = revision;
             return this;
         }
-
         public Builder revision(@Nullable String revision) {
             this.revision = Output.ofNullable(revision);
             return this;
-        }
-        public VersionArgs build() {
+        }        public VersionArgs build() {
             return new VersionArgs(epoch, inclusive, kind, name, revision);
         }
     }

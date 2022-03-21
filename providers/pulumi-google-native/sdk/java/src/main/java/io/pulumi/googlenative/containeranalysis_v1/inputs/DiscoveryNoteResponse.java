@@ -58,8 +58,7 @@ public final class DiscoveryNoteResponse extends io.pulumi.resources.InvokeArgs 
         public Builder analysisKind(String analysisKind) {
             this.analysisKind = Objects.requireNonNull(analysisKind);
             return this;
-        }
-        public DiscoveryNoteResponse build() {
+        }        public DiscoveryNoteResponse build() {
             return new DiscoveryNoteResponse(analysisKind);
         }
     }

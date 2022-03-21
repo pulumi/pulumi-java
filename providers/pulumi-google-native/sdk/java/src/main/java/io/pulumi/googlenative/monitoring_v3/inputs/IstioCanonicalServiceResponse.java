@@ -92,17 +92,14 @@ public final class IstioCanonicalServiceResponse extends io.pulumi.resources.Inv
             this.canonicalService = Objects.requireNonNull(canonicalService);
             return this;
         }
-
         public Builder canonicalServiceNamespace(String canonicalServiceNamespace) {
             this.canonicalServiceNamespace = Objects.requireNonNull(canonicalServiceNamespace);
             return this;
         }
-
         public Builder meshUid(String meshUid) {
             this.meshUid = Objects.requireNonNull(meshUid);
             return this;
-        }
-        public IstioCanonicalServiceResponse build() {
+        }        public IstioCanonicalServiceResponse build() {
             return new IstioCanonicalServiceResponse(canonicalService, canonicalServiceNamespace, meshUid);
         }
     }

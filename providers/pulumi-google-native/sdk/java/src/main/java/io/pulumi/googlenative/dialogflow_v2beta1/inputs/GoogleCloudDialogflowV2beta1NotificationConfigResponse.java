@@ -76,12 +76,10 @@ public final class GoogleCloudDialogflowV2beta1NotificationConfigResponse extend
             this.messageFormat = Objects.requireNonNull(messageFormat);
             return this;
         }
-
         public Builder topic(String topic) {
             this.topic = Objects.requireNonNull(topic);
             return this;
-        }
-        public GoogleCloudDialogflowV2beta1NotificationConfigResponse build() {
+        }        public GoogleCloudDialogflowV2beta1NotificationConfigResponse build() {
             return new GoogleCloudDialogflowV2beta1NotificationConfigResponse(messageFormat, topic);
         }
     }

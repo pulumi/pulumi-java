@@ -112,42 +112,37 @@ public final class ServiceResolverArgs extends io.pulumi.resources.ResourceArgs 
             this.endpointFilter = endpointFilter;
             return this;
         }
-
         public Builder endpointFilter(@Nullable String endpointFilter) {
             this.endpointFilter = Output.ofNullable(endpointFilter);
             return this;
         }
-
         public Builder hostname(Output<String> hostname) {
             this.hostname = Objects.requireNonNull(hostname);
             return this;
         }
-
         public Builder hostname(String hostname) {
             this.hostname = Output.of(Objects.requireNonNull(hostname));
             return this;
         }
-
         public Builder serverCertificates(Output<List<CertificateArgs>> serverCertificates) {
             this.serverCertificates = Objects.requireNonNull(serverCertificates);
             return this;
         }
-
         public Builder serverCertificates(List<CertificateArgs> serverCertificates) {
             this.serverCertificates = Output.of(Objects.requireNonNull(serverCertificates));
             return this;
         }
-
+        public Builder serverCertificates(CertificateArgs... serverCertificates) {
+            return serverCertificates(List.of(serverCertificates));
+        }
         public Builder serviceDirectoryService(Output<String> serviceDirectoryService) {
             this.serviceDirectoryService = Objects.requireNonNull(serviceDirectoryService);
             return this;
         }
-
         public Builder serviceDirectoryService(String serviceDirectoryService) {
             this.serviceDirectoryService = Output.of(Objects.requireNonNull(serviceDirectoryService));
             return this;
-        }
-        public ServiceResolverArgs build() {
+        }        public ServiceResolverArgs build() {
             return new ServiceResolverArgs(endpointFilter, hostname, serverCertificates, serviceDirectoryService);
         }
     }

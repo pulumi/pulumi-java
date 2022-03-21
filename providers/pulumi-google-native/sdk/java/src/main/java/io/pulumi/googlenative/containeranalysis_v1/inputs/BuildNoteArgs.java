@@ -60,12 +60,10 @@ public final class BuildNoteArgs extends io.pulumi.resources.ResourceArgs {
             this.builderVersion = Objects.requireNonNull(builderVersion);
             return this;
         }
-
         public Builder builderVersion(String builderVersion) {
             this.builderVersion = Output.of(Objects.requireNonNull(builderVersion));
             return this;
-        }
-        public BuildNoteArgs build() {
+        }        public BuildNoteArgs build() {
             return new BuildNoteArgs(builderVersion);
         }
     }

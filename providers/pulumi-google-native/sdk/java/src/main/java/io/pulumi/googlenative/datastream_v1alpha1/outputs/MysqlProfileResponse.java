@@ -119,27 +119,22 @@ public final class MysqlProfileResponse {
             this.hostname = Objects.requireNonNull(hostname);
             return this;
         }
-
         public Builder password(String password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
-
         public Builder port(Integer port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
-
         public Builder sslConfig(MysqlSslConfigResponse sslConfig) {
             this.sslConfig = Objects.requireNonNull(sslConfig);
             return this;
         }
-
         public Builder username(String username) {
             this.username = Objects.requireNonNull(username);
             return this;
-        }
-        public MysqlProfileResponse build() {
+        }        public MysqlProfileResponse build() {
             return new MysqlProfileResponse(hostname, password, port, sslConfig, username);
         }
     }

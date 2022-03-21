@@ -53,7 +53,9 @@ public final class NetworkConfigResponse {
             this.consumers = Objects.requireNonNull(consumers);
             return this;
         }
-        public NetworkConfigResponse build() {
+        public Builder consumers(ConsumerResponse... consumers) {
+            return consumers(List.of(consumers));
+        }        public NetworkConfigResponse build() {
             return new NetworkConfigResponse(consumers);
         }
     }

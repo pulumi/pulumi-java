@@ -61,12 +61,10 @@ public final class TelemetryArgs extends io.pulumi.resources.ResourceArgs {
             this.resourceName = resourceName;
             return this;
         }
-
         public Builder resourceName(@Nullable String resourceName) {
             this.resourceName = Output.ofNullable(resourceName);
             return this;
-        }
-        public TelemetryArgs build() {
+        }        public TelemetryArgs build() {
             return new TelemetryArgs(resourceName);
         }
     }

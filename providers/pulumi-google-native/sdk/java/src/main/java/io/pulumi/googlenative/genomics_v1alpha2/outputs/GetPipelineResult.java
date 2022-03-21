@@ -169,42 +169,40 @@ public final class GetPipelineResult {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder docker(DockerExecutorResponse docker) {
             this.docker = Objects.requireNonNull(docker);
             return this;
         }
-
         public Builder inputParameters(List<PipelineParameterResponse> inputParameters) {
             this.inputParameters = Objects.requireNonNull(inputParameters);
             return this;
         }
-
+        public Builder inputParameters(PipelineParameterResponse... inputParameters) {
+            return inputParameters(List.of(inputParameters));
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder outputParameters(List<PipelineParameterResponse> outputParameters) {
             this.outputParameters = Objects.requireNonNull(outputParameters);
             return this;
         }
-
+        public Builder outputParameters(PipelineParameterResponse... outputParameters) {
+            return outputParameters(List.of(outputParameters));
+        }
         public Builder pipelineId(String pipelineId) {
             this.pipelineId = Objects.requireNonNull(pipelineId);
             return this;
         }
-
         public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
-
         public Builder resources(PipelineResourcesResponse resources) {
             this.resources = Objects.requireNonNull(resources);
             return this;
-        }
-        public GetPipelineResult build() {
+        }        public GetPipelineResult build() {
             return new GetPipelineResult(description, docker, inputParameters, name, outputParameters, pipelineId, project, resources);
         }
     }

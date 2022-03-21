@@ -126,32 +126,26 @@ public final class MasterAuthResponse {
             this.clientCertificate = Objects.requireNonNull(clientCertificate);
             return this;
         }
-
         public Builder clientCertificateConfig(ClientCertificateConfigResponse clientCertificateConfig) {
             this.clientCertificateConfig = Objects.requireNonNull(clientCertificateConfig);
             return this;
         }
-
         public Builder clientKey(String clientKey) {
             this.clientKey = Objects.requireNonNull(clientKey);
             return this;
         }
-
         public Builder clusterCaCertificate(String clusterCaCertificate) {
             this.clusterCaCertificate = Objects.requireNonNull(clusterCaCertificate);
             return this;
         }
-
         public Builder password(String password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
-
         public Builder username(String username) {
             this.username = Objects.requireNonNull(username);
             return this;
-        }
-        public MasterAuthResponse build() {
+        }        public MasterAuthResponse build() {
             return new MasterAuthResponse(clientCertificate, clientCertificateConfig, clientKey, clusterCaCertificate, password, username);
         }
     }

@@ -207,52 +207,45 @@ public final class BucketLifecycleRuleItemConditionResponse extends io.pulumi.re
             this.age = Objects.requireNonNull(age);
             return this;
         }
-
         public Builder createdBefore(String createdBefore) {
             this.createdBefore = Objects.requireNonNull(createdBefore);
             return this;
         }
-
         public Builder customTimeBefore(String customTimeBefore) {
             this.customTimeBefore = Objects.requireNonNull(customTimeBefore);
             return this;
         }
-
         public Builder daysSinceCustomTime(Integer daysSinceCustomTime) {
             this.daysSinceCustomTime = Objects.requireNonNull(daysSinceCustomTime);
             return this;
         }
-
         public Builder daysSinceNoncurrentTime(Integer daysSinceNoncurrentTime) {
             this.daysSinceNoncurrentTime = Objects.requireNonNull(daysSinceNoncurrentTime);
             return this;
         }
-
         public Builder isLive(Boolean isLive) {
             this.isLive = Objects.requireNonNull(isLive);
             return this;
         }
-
         public Builder matchesPattern(String matchesPattern) {
             this.matchesPattern = Objects.requireNonNull(matchesPattern);
             return this;
         }
-
         public Builder matchesStorageClass(List<String> matchesStorageClass) {
             this.matchesStorageClass = Objects.requireNonNull(matchesStorageClass);
             return this;
         }
-
+        public Builder matchesStorageClass(String... matchesStorageClass) {
+            return matchesStorageClass(List.of(matchesStorageClass));
+        }
         public Builder noncurrentTimeBefore(String noncurrentTimeBefore) {
             this.noncurrentTimeBefore = Objects.requireNonNull(noncurrentTimeBefore);
             return this;
         }
-
         public Builder numNewerVersions(Integer numNewerVersions) {
             this.numNewerVersions = Objects.requireNonNull(numNewerVersions);
             return this;
-        }
-        public BucketLifecycleRuleItemConditionResponse build() {
+        }        public BucketLifecycleRuleItemConditionResponse build() {
             return new BucketLifecycleRuleItemConditionResponse(age, createdBefore, customTimeBefore, daysSinceCustomTime, daysSinceNoncurrentTime, isLive, matchesPattern, matchesStorageClass, noncurrentTimeBefore, numNewerVersions);
         }
     }

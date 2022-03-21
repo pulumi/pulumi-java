@@ -79,22 +79,18 @@ public final class GoogleCloudBillingBudgetsV1ThresholdRuleArgs extends io.pulum
             this.spendBasis = spendBasis;
             return this;
         }
-
         public Builder spendBasis(@Nullable GoogleCloudBillingBudgetsV1ThresholdRuleSpendBasis spendBasis) {
             this.spendBasis = Output.ofNullable(spendBasis);
             return this;
         }
-
         public Builder thresholdPercent(Output<Double> thresholdPercent) {
             this.thresholdPercent = Objects.requireNonNull(thresholdPercent);
             return this;
         }
-
         public Builder thresholdPercent(Double thresholdPercent) {
             this.thresholdPercent = Output.of(Objects.requireNonNull(thresholdPercent));
             return this;
-        }
-        public GoogleCloudBillingBudgetsV1ThresholdRuleArgs build() {
+        }        public GoogleCloudBillingBudgetsV1ThresholdRuleArgs build() {
             return new GoogleCloudBillingBudgetsV1ThresholdRuleArgs(spendBasis, thresholdPercent);
         }
     }

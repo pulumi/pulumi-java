@@ -60,12 +60,10 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.peeredNetwork = Objects.requireNonNull(peeredNetwork);
             return this;
         }
-
         public Builder peeredNetwork(String peeredNetwork) {
             this.peeredNetwork = Output.of(Objects.requireNonNull(peeredNetwork));
             return this;
-        }
-        public NetworkConfigArgs build() {
+        }        public NetworkConfigArgs build() {
             return new NetworkConfigArgs(peeredNetwork);
         }
     }

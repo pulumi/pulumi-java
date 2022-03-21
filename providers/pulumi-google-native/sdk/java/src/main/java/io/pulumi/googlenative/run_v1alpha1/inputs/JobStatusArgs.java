@@ -194,92 +194,80 @@ public final class JobStatusArgs extends io.pulumi.resources.ResourceArgs {
             this.active = active;
             return this;
         }
-
         public Builder active(@Nullable Integer active) {
             this.active = Output.ofNullable(active);
             return this;
         }
-
         public Builder completionTime(@Nullable Output<String> completionTime) {
             this.completionTime = completionTime;
             return this;
         }
-
         public Builder completionTime(@Nullable String completionTime) {
             this.completionTime = Output.ofNullable(completionTime);
             return this;
         }
-
         public Builder conditions(@Nullable Output<List<JobConditionArgs>> conditions) {
             this.conditions = conditions;
             return this;
         }
-
         public Builder conditions(@Nullable List<JobConditionArgs> conditions) {
             this.conditions = Output.ofNullable(conditions);
             return this;
         }
-
+        public Builder conditions(JobConditionArgs... conditions) {
+            return conditions(List.of(conditions));
+        }
         public Builder failed(@Nullable Output<Integer> failed) {
             this.failed = failed;
             return this;
         }
-
         public Builder failed(@Nullable Integer failed) {
             this.failed = Output.ofNullable(failed);
             return this;
         }
-
         public Builder imageDigest(@Nullable Output<String> imageDigest) {
             this.imageDigest = imageDigest;
             return this;
         }
-
         public Builder imageDigest(@Nullable String imageDigest) {
             this.imageDigest = Output.ofNullable(imageDigest);
             return this;
         }
-
         public Builder instances(@Nullable Output<List<InstanceStatusArgs>> instances) {
             this.instances = instances;
             return this;
         }
-
         public Builder instances(@Nullable List<InstanceStatusArgs> instances) {
             this.instances = Output.ofNullable(instances);
             return this;
         }
-
+        public Builder instances(InstanceStatusArgs... instances) {
+            return instances(List.of(instances));
+        }
         public Builder observedGeneration(@Nullable Output<Integer> observedGeneration) {
             this.observedGeneration = observedGeneration;
             return this;
         }
-
         public Builder observedGeneration(@Nullable Integer observedGeneration) {
             this.observedGeneration = Output.ofNullable(observedGeneration);
             return this;
         }
-
         public Builder startTime(@Nullable Output<String> startTime) {
             this.startTime = startTime;
             return this;
         }
-
         public Builder startTime(@Nullable String startTime) {
             this.startTime = Output.ofNullable(startTime);
             return this;
         }
-
         public Builder succeeded(@Nullable Output<Integer> succeeded) {
             this.succeeded = succeeded;
             return this;
         }
-
         public Builder succeeded(@Nullable Integer succeeded) {
             this.succeeded = Output.ofNullable(succeeded);
             return this;
-        }
-        public JobStatusArgs build() {
+        }        public JobStatusArgs build() {
             return new JobStatusArgs(active, completionTime, conditions, failed, imageDigest, instances, observedGeneration, startTime, succeeded);
         }
     }

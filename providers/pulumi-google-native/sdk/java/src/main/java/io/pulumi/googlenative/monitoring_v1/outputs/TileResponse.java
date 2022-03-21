@@ -118,27 +118,22 @@ public final class TileResponse {
             this.height = Objects.requireNonNull(height);
             return this;
         }
-
         public Builder widget(WidgetResponse widget) {
             this.widget = Objects.requireNonNull(widget);
             return this;
         }
-
         public Builder width(Integer width) {
             this.width = Objects.requireNonNull(width);
             return this;
         }
-
         public Builder xPos(Integer xPos) {
             this.xPos = Objects.requireNonNull(xPos);
             return this;
         }
-
         public Builder yPos(Integer yPos) {
             this.yPos = Objects.requireNonNull(yPos);
             return this;
-        }
-        public TileResponse build() {
+        }        public TileResponse build() {
             return new TileResponse(height, widget, width, xPos, yPos);
         }
     }

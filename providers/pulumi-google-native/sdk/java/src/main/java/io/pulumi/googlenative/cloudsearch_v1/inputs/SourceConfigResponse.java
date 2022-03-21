@@ -94,17 +94,14 @@ public final class SourceConfigResponse extends io.pulumi.resources.InvokeArgs {
             this.crowdingConfig = Objects.requireNonNull(crowdingConfig);
             return this;
         }
-
         public Builder scoringConfig(SourceScoringConfigResponse scoringConfig) {
             this.scoringConfig = Objects.requireNonNull(scoringConfig);
             return this;
         }
-
         public Builder source(SourceResponse source) {
             this.source = Objects.requireNonNull(source);
             return this;
-        }
-        public SourceConfigResponse build() {
+        }        public SourceConfigResponse build() {
             return new SourceConfigResponse(crowdingConfig, scoringConfig, source);
         }
     }

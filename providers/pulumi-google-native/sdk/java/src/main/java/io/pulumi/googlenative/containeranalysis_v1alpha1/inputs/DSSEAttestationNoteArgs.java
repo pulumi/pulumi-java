@@ -61,12 +61,10 @@ public final class DSSEAttestationNoteArgs extends io.pulumi.resources.ResourceA
             this.hint = hint;
             return this;
         }
-
         public Builder hint(@Nullable DSSEHintArgs hint) {
             this.hint = Output.ofNullable(hint);
             return this;
-        }
-        public DSSEAttestationNoteArgs build() {
+        }        public DSSEAttestationNoteArgs build() {
             return new DSSEAttestationNoteArgs(hint);
         }
     }

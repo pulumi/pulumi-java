@@ -124,27 +124,22 @@ public final class DeprecationStatusResponse extends io.pulumi.resources.InvokeA
             this.deleted = Objects.requireNonNull(deleted);
             return this;
         }
-
         public Builder deprecated(String deprecated) {
             this.deprecated = Objects.requireNonNull(deprecated);
             return this;
         }
-
         public Builder obsolete(String obsolete) {
             this.obsolete = Objects.requireNonNull(obsolete);
             return this;
         }
-
         public Builder replacement(String replacement) {
             this.replacement = Objects.requireNonNull(replacement);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
-        }
-        public DeprecationStatusResponse build() {
+        }        public DeprecationStatusResponse build() {
             return new DeprecationStatusResponse(deleted, deprecated, obsolete, replacement, state);
         }
     }

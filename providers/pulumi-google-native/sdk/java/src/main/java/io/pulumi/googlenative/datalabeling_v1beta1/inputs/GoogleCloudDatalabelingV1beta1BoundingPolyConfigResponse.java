@@ -76,12 +76,10 @@ public final class GoogleCloudDatalabelingV1beta1BoundingPolyConfigResponse exte
             this.annotationSpecSet = Objects.requireNonNull(annotationSpecSet);
             return this;
         }
-
         public Builder instructionMessage(String instructionMessage) {
             this.instructionMessage = Objects.requireNonNull(instructionMessage);
             return this;
-        }
-        public GoogleCloudDatalabelingV1beta1BoundingPolyConfigResponse build() {
+        }        public GoogleCloudDatalabelingV1beta1BoundingPolyConfigResponse build() {
             return new GoogleCloudDatalabelingV1beta1BoundingPolyConfigResponse(annotationSpecSet, instructionMessage);
         }
     }

@@ -417,117 +417,103 @@ public final class GetTriggerResult {
             this.approvalConfig = Objects.requireNonNull(approvalConfig);
             return this;
         }
-
         public Builder autodetect(Boolean autodetect) {
             this.autodetect = Objects.requireNonNull(autodetect);
             return this;
         }
-
         public Builder bitbucketServerTriggerConfig(BitbucketServerTriggerConfigResponse bitbucketServerTriggerConfig) {
             this.bitbucketServerTriggerConfig = Objects.requireNonNull(bitbucketServerTriggerConfig);
             return this;
         }
-
         public Builder build(BuildResponse build) {
             this.build = Objects.requireNonNull(build);
             return this;
         }
-
         public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder disabled(Boolean disabled) {
             this.disabled = Objects.requireNonNull(disabled);
             return this;
         }
-
         public Builder eventType(String eventType) {
             this.eventType = Objects.requireNonNull(eventType);
             return this;
         }
-
         public Builder filename(String filename) {
             this.filename = Objects.requireNonNull(filename);
             return this;
         }
-
         public Builder filter(String filter) {
             this.filter = Objects.requireNonNull(filter);
             return this;
         }
-
         public Builder gitFileSource(GitFileSourceResponse gitFileSource) {
             this.gitFileSource = Objects.requireNonNull(gitFileSource);
             return this;
         }
-
         public Builder github(GitHubEventsConfigResponse github) {
             this.github = Objects.requireNonNull(github);
             return this;
         }
-
         public Builder ignoredFiles(List<String> ignoredFiles) {
             this.ignoredFiles = Objects.requireNonNull(ignoredFiles);
             return this;
         }
-
+        public Builder ignoredFiles(String... ignoredFiles) {
+            return ignoredFiles(List.of(ignoredFiles));
+        }
         public Builder includedFiles(List<String> includedFiles) {
             this.includedFiles = Objects.requireNonNull(includedFiles);
             return this;
         }
-
+        public Builder includedFiles(String... includedFiles) {
+            return includedFiles(List.of(includedFiles));
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder pubsubConfig(PubsubConfigResponse pubsubConfig) {
             this.pubsubConfig = Objects.requireNonNull(pubsubConfig);
             return this;
         }
-
         public Builder resourceName(String resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
         }
-
         public Builder serviceAccount(String serviceAccount) {
             this.serviceAccount = Objects.requireNonNull(serviceAccount);
             return this;
         }
-
         public Builder sourceToBuild(GitRepoSourceResponse sourceToBuild) {
             this.sourceToBuild = Objects.requireNonNull(sourceToBuild);
             return this;
         }
-
         public Builder substitutions(Map<String,String> substitutions) {
             this.substitutions = Objects.requireNonNull(substitutions);
             return this;
         }
-
         public Builder tags(List<String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
-
+        public Builder tags(String... tags) {
+            return tags(List.of(tags));
+        }
         public Builder triggerTemplate(RepoSourceResponse triggerTemplate) {
             this.triggerTemplate = Objects.requireNonNull(triggerTemplate);
             return this;
         }
-
         public Builder webhookConfig(WebhookConfigResponse webhookConfig) {
             this.webhookConfig = Objects.requireNonNull(webhookConfig);
             return this;
-        }
-        public GetTriggerResult build() {
+        }        public GetTriggerResult build() {
             return new GetTriggerResult(approvalConfig, autodetect, bitbucketServerTriggerConfig, build, createTime, description, disabled, eventType, filename, filter, gitFileSource, github, ignoredFiles, includedFiles, name, pubsubConfig, resourceName, serviceAccount, sourceToBuild, substitutions, tags, triggerTemplate, webhookConfig);
         }
     }

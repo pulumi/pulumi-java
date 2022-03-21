@@ -96,32 +96,26 @@ public final class GoogleCloudDatacatalogV1BigQueryConnectionSpecArgs extends io
             this.cloudSql = cloudSql;
             return this;
         }
-
         public Builder cloudSql(@Nullable GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecArgs cloudSql) {
             this.cloudSql = Output.ofNullable(cloudSql);
             return this;
         }
-
         public Builder connectionType(@Nullable Output<GoogleCloudDatacatalogV1BigQueryConnectionSpecConnectionType> connectionType) {
             this.connectionType = connectionType;
             return this;
         }
-
         public Builder connectionType(@Nullable GoogleCloudDatacatalogV1BigQueryConnectionSpecConnectionType connectionType) {
             this.connectionType = Output.ofNullable(connectionType);
             return this;
         }
-
         public Builder hasCredential(@Nullable Output<Boolean> hasCredential) {
             this.hasCredential = hasCredential;
             return this;
         }
-
         public Builder hasCredential(@Nullable Boolean hasCredential) {
             this.hasCredential = Output.ofNullable(hasCredential);
             return this;
-        }
-        public GoogleCloudDatacatalogV1BigQueryConnectionSpecArgs build() {
+        }        public GoogleCloudDatacatalogV1BigQueryConnectionSpecArgs build() {
             return new GoogleCloudDatacatalogV1BigQueryConnectionSpecArgs(cloudSql, connectionType, hasCredential);
         }
     }

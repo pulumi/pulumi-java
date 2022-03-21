@@ -69,12 +69,10 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_IntegerValueSpecResp
             this.maxValue = Objects.requireNonNull(maxValue);
             return this;
         }
-
         public Builder minValue(String minValue) {
             this.minValue = Objects.requireNonNull(minValue);
             return this;
-        }
-        public GoogleCloudMlV1_StudyConfigParameterSpec_IntegerValueSpecResponse build() {
+        }        public GoogleCloudMlV1_StudyConfigParameterSpec_IntegerValueSpecResponse build() {
             return new GoogleCloudMlV1_StudyConfigParameterSpec_IntegerValueSpecResponse(maxValue, minValue);
         }
     }

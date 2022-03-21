@@ -162,82 +162,69 @@ public final class AuthorizationPolicyArgs extends io.pulumi.resources.ResourceA
             this.action = Objects.requireNonNull(action);
             return this;
         }
-
         public Builder action(AuthorizationPolicyAction action) {
             this.action = Output.of(Objects.requireNonNull(action));
             return this;
         }
-
         public Builder authorizationPolicyId(Output<String> authorizationPolicyId) {
             this.authorizationPolicyId = Objects.requireNonNull(authorizationPolicyId);
             return this;
         }
-
         public Builder authorizationPolicyId(String authorizationPolicyId) {
             this.authorizationPolicyId = Output.of(Objects.requireNonNull(authorizationPolicyId));
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder rules(@Nullable Output<List<RuleArgs>> rules) {
             this.rules = rules;
             return this;
         }
-
         public Builder rules(@Nullable List<RuleArgs> rules) {
             this.rules = Output.ofNullable(rules);
             return this;
         }
-        public AuthorizationPolicyArgs build() {
+        public Builder rules(RuleArgs... rules) {
+            return rules(List.of(rules));
+        }        public AuthorizationPolicyArgs build() {
             return new AuthorizationPolicyArgs(action, authorizationPolicyId, description, labels, location, name, project, rules);
         }
     }

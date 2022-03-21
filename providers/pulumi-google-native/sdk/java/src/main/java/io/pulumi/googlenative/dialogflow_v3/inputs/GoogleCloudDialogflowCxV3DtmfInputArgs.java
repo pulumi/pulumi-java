@@ -78,22 +78,18 @@ public final class GoogleCloudDialogflowCxV3DtmfInputArgs extends io.pulumi.reso
             this.digits = digits;
             return this;
         }
-
         public Builder digits(@Nullable String digits) {
             this.digits = Output.ofNullable(digits);
             return this;
         }
-
         public Builder finishDigit(@Nullable Output<String> finishDigit) {
             this.finishDigit = finishDigit;
             return this;
         }
-
         public Builder finishDigit(@Nullable String finishDigit) {
             this.finishDigit = Output.ofNullable(finishDigit);
             return this;
-        }
-        public GoogleCloudDialogflowCxV3DtmfInputArgs build() {
+        }        public GoogleCloudDialogflowCxV3DtmfInputArgs build() {
             return new GoogleCloudDialogflowCxV3DtmfInputArgs(digits, finishDigit);
         }
     }

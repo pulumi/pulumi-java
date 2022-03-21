@@ -92,17 +92,14 @@ public final class LicenseResourceCommitmentResponse extends io.pulumi.resources
             this.amount = Objects.requireNonNull(amount);
             return this;
         }
-
         public Builder coresPerLicense(String coresPerLicense) {
             this.coresPerLicense = Objects.requireNonNull(coresPerLicense);
             return this;
         }
-
         public Builder license(String license) {
             this.license = Objects.requireNonNull(license);
             return this;
-        }
-        public LicenseResourceCommitmentResponse build() {
+        }        public LicenseResourceCommitmentResponse build() {
             return new LicenseResourceCommitmentResponse(amount, coresPerLicense, license);
         }
     }

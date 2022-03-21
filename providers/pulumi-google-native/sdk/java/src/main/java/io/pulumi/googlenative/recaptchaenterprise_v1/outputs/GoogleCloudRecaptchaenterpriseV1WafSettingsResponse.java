@@ -69,12 +69,10 @@ public final class GoogleCloudRecaptchaenterpriseV1WafSettingsResponse {
             this.wafFeature = Objects.requireNonNull(wafFeature);
             return this;
         }
-
         public Builder wafService(String wafService) {
             this.wafService = Objects.requireNonNull(wafService);
             return this;
-        }
-        public GoogleCloudRecaptchaenterpriseV1WafSettingsResponse build() {
+        }        public GoogleCloudRecaptchaenterpriseV1WafSettingsResponse build() {
             return new GoogleCloudRecaptchaenterpriseV1WafSettingsResponse(wafFeature, wafService);
         }
     }

@@ -104,22 +104,18 @@ public final class SecurityPolicyAssociationResponse extends io.pulumi.resources
             this.attachmentId = Objects.requireNonNull(attachmentId);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder securityPolicyId(String securityPolicyId) {
             this.securityPolicyId = Objects.requireNonNull(securityPolicyId);
             return this;
-        }
-        public SecurityPolicyAssociationResponse build() {
+        }        public SecurityPolicyAssociationResponse build() {
             return new SecurityPolicyAssociationResponse(attachmentId, displayName, name, securityPolicyId);
         }
     }

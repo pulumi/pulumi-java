@@ -94,32 +94,26 @@ public final class LifecycleConfigArgs extends io.pulumi.resources.ResourceArgs 
             this.autoDeleteTime = autoDeleteTime;
             return this;
         }
-
         public Builder autoDeleteTime(@Nullable String autoDeleteTime) {
             this.autoDeleteTime = Output.ofNullable(autoDeleteTime);
             return this;
         }
-
         public Builder autoDeleteTtl(@Nullable Output<String> autoDeleteTtl) {
             this.autoDeleteTtl = autoDeleteTtl;
             return this;
         }
-
         public Builder autoDeleteTtl(@Nullable String autoDeleteTtl) {
             this.autoDeleteTtl = Output.ofNullable(autoDeleteTtl);
             return this;
         }
-
         public Builder idleDeleteTtl(@Nullable Output<String> idleDeleteTtl) {
             this.idleDeleteTtl = idleDeleteTtl;
             return this;
         }
-
         public Builder idleDeleteTtl(@Nullable String idleDeleteTtl) {
             this.idleDeleteTtl = Output.ofNullable(idleDeleteTtl);
             return this;
-        }
-        public LifecycleConfigArgs build() {
+        }        public LifecycleConfigArgs build() {
             return new LifecycleConfigArgs(autoDeleteTime, autoDeleteTtl, idleDeleteTtl);
         }
     }

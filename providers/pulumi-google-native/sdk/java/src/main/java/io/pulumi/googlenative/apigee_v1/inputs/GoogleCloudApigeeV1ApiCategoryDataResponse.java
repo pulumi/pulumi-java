@@ -92,17 +92,14 @@ public final class GoogleCloudApigeeV1ApiCategoryDataResponse extends io.pulumi.
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder siteId(String siteId) {
             this.siteId = Objects.requireNonNull(siteId);
             return this;
         }
-
         public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
-        }
-        public GoogleCloudApigeeV1ApiCategoryDataResponse build() {
+        }        public GoogleCloudApigeeV1ApiCategoryDataResponse build() {
             return new GoogleCloudApigeeV1ApiCategoryDataResponse(name, siteId, updateTime);
         }
     }

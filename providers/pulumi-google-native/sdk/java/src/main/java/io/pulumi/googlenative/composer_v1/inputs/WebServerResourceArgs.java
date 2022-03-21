@@ -94,32 +94,26 @@ public final class WebServerResourceArgs extends io.pulumi.resources.ResourceArg
             this.cpu = cpu;
             return this;
         }
-
         public Builder cpu(@Nullable Double cpu) {
             this.cpu = Output.ofNullable(cpu);
             return this;
         }
-
         public Builder memoryGb(@Nullable Output<Double> memoryGb) {
             this.memoryGb = memoryGb;
             return this;
         }
-
         public Builder memoryGb(@Nullable Double memoryGb) {
             this.memoryGb = Output.ofNullable(memoryGb);
             return this;
         }
-
         public Builder storageGb(@Nullable Output<Double> storageGb) {
             this.storageGb = storageGb;
             return this;
         }
-
         public Builder storageGb(@Nullable Double storageGb) {
             this.storageGb = Output.ofNullable(storageGb);
             return this;
-        }
-        public WebServerResourceArgs build() {
+        }        public WebServerResourceArgs build() {
             return new WebServerResourceArgs(cpu, memoryGb, storageGb);
         }
     }

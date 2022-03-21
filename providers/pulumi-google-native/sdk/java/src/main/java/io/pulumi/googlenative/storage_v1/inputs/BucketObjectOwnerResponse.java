@@ -76,12 +76,10 @@ public final class BucketObjectOwnerResponse extends io.pulumi.resources.InvokeA
             this.entity = Objects.requireNonNull(entity);
             return this;
         }
-
         public Builder entityId(String entityId) {
             this.entityId = Objects.requireNonNull(entityId);
             return this;
-        }
-        public BucketObjectOwnerResponse build() {
+        }        public BucketObjectOwnerResponse build() {
             return new BucketObjectOwnerResponse(entity, entityId);
         }
     }

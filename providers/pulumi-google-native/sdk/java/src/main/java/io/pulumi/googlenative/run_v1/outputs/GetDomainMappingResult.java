@@ -120,27 +120,22 @@ public final class GetDomainMappingResult {
             this.apiVersion = Objects.requireNonNull(apiVersion);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder metadata(ObjectMetaResponse metadata) {
             this.metadata = Objects.requireNonNull(metadata);
             return this;
         }
-
         public Builder spec(DomainMappingSpecResponse spec) {
             this.spec = Objects.requireNonNull(spec);
             return this;
         }
-
         public Builder status(DomainMappingStatusResponse status) {
             this.status = Objects.requireNonNull(status);
             return this;
-        }
-        public GetDomainMappingResult build() {
+        }        public GetDomainMappingResult build() {
             return new GetDomainMappingResult(apiVersion, kind, metadata, spec, status);
         }
     }

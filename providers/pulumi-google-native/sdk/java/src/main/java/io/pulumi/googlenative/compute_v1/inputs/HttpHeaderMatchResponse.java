@@ -174,42 +174,34 @@ public final class HttpHeaderMatchResponse extends io.pulumi.resources.InvokeArg
             this.exactMatch = Objects.requireNonNull(exactMatch);
             return this;
         }
-
         public Builder headerName(String headerName) {
             this.headerName = Objects.requireNonNull(headerName);
             return this;
         }
-
         public Builder invertMatch(Boolean invertMatch) {
             this.invertMatch = Objects.requireNonNull(invertMatch);
             return this;
         }
-
         public Builder prefixMatch(String prefixMatch) {
             this.prefixMatch = Objects.requireNonNull(prefixMatch);
             return this;
         }
-
         public Builder presentMatch(Boolean presentMatch) {
             this.presentMatch = Objects.requireNonNull(presentMatch);
             return this;
         }
-
         public Builder rangeMatch(Int64RangeMatchResponse rangeMatch) {
             this.rangeMatch = Objects.requireNonNull(rangeMatch);
             return this;
         }
-
         public Builder regexMatch(String regexMatch) {
             this.regexMatch = Objects.requireNonNull(regexMatch);
             return this;
         }
-
         public Builder suffixMatch(String suffixMatch) {
             this.suffixMatch = Objects.requireNonNull(suffixMatch);
             return this;
-        }
-        public HttpHeaderMatchResponse build() {
+        }        public HttpHeaderMatchResponse build() {
             return new HttpHeaderMatchResponse(exactMatch, headerName, invertMatch, prefixMatch, presentMatch, rangeMatch, regexMatch, suffixMatch);
         }
     }

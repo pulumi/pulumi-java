@@ -85,17 +85,14 @@ public final class ResourceRecordResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder rrdata(String rrdata) {
             this.rrdata = Objects.requireNonNull(rrdata);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public ResourceRecordResponse build() {
+        }        public ResourceRecordResponse build() {
             return new ResourceRecordResponse(name, rrdata, type);
         }
     }

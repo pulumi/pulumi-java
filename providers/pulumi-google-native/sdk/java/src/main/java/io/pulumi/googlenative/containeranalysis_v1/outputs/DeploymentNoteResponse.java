@@ -53,7 +53,9 @@ public final class DeploymentNoteResponse {
             this.resourceUri = Objects.requireNonNull(resourceUri);
             return this;
         }
-        public DeploymentNoteResponse build() {
+        public Builder resourceUri(String... resourceUri) {
+            return resourceUri(List.of(resourceUri));
+        }        public DeploymentNoteResponse build() {
             return new DeploymentNoteResponse(resourceUri);
         }
     }

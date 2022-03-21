@@ -58,8 +58,7 @@ public final class AppEngineHttpQueueResponse extends io.pulumi.resources.Invoke
         public Builder appEngineRoutingOverride(AppEngineRoutingResponse appEngineRoutingOverride) {
             this.appEngineRoutingOverride = Objects.requireNonNull(appEngineRoutingOverride);
             return this;
-        }
-        public AppEngineHttpQueueResponse build() {
+        }        public AppEngineHttpQueueResponse build() {
             return new AppEngineHttpQueueResponse(appEngineRoutingOverride);
         }
     }

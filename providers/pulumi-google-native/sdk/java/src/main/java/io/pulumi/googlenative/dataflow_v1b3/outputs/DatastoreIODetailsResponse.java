@@ -69,12 +69,10 @@ public final class DatastoreIODetailsResponse {
             this.namespace = Objects.requireNonNull(namespace);
             return this;
         }
-
         public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
-        }
-        public DatastoreIODetailsResponse build() {
+        }        public DatastoreIODetailsResponse build() {
             return new DatastoreIODetailsResponse(namespace, project);
         }
     }

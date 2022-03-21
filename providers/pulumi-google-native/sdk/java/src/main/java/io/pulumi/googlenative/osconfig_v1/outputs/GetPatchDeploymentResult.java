@@ -234,62 +234,50 @@ public final class GetPatchDeploymentResult {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder duration(String duration) {
             this.duration = Objects.requireNonNull(duration);
             return this;
         }
-
         public Builder instanceFilter(PatchInstanceFilterResponse instanceFilter) {
             this.instanceFilter = Objects.requireNonNull(instanceFilter);
             return this;
         }
-
         public Builder lastExecuteTime(String lastExecuteTime) {
             this.lastExecuteTime = Objects.requireNonNull(lastExecuteTime);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder oneTimeSchedule(OneTimeScheduleResponse oneTimeSchedule) {
             this.oneTimeSchedule = Objects.requireNonNull(oneTimeSchedule);
             return this;
         }
-
         public Builder patchConfig(PatchConfigResponse patchConfig) {
             this.patchConfig = Objects.requireNonNull(patchConfig);
             return this;
         }
-
         public Builder recurringSchedule(RecurringScheduleResponse recurringSchedule) {
             this.recurringSchedule = Objects.requireNonNull(recurringSchedule);
             return this;
         }
-
         public Builder rollout(PatchRolloutResponse rollout) {
             this.rollout = Objects.requireNonNull(rollout);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
-        }
-        public GetPatchDeploymentResult build() {
+        }        public GetPatchDeploymentResult build() {
             return new GetPatchDeploymentResult(createTime, description, duration, instanceFilter, lastExecuteTime, name, oneTimeSchedule, patchConfig, recurringSchedule, rollout, state, updateTime);
         }
     }

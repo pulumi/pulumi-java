@@ -292,152 +292,122 @@ public final class CloudSqlSettingsArgs extends io.pulumi.resources.ResourceArgs
             this.activationPolicy = activationPolicy;
             return this;
         }
-
         public Builder activationPolicy(@Nullable CloudSqlSettingsActivationPolicy activationPolicy) {
             this.activationPolicy = Output.ofNullable(activationPolicy);
             return this;
         }
-
         public Builder autoStorageIncrease(@Nullable Output<Boolean> autoStorageIncrease) {
             this.autoStorageIncrease = autoStorageIncrease;
             return this;
         }
-
         public Builder autoStorageIncrease(@Nullable Boolean autoStorageIncrease) {
             this.autoStorageIncrease = Output.ofNullable(autoStorageIncrease);
             return this;
         }
-
         public Builder cmekKeyName(@Nullable Output<String> cmekKeyName) {
             this.cmekKeyName = cmekKeyName;
             return this;
         }
-
         public Builder cmekKeyName(@Nullable String cmekKeyName) {
             this.cmekKeyName = Output.ofNullable(cmekKeyName);
             return this;
         }
-
         public Builder collation(@Nullable Output<String> collation) {
             this.collation = collation;
             return this;
         }
-
         public Builder collation(@Nullable String collation) {
             this.collation = Output.ofNullable(collation);
             return this;
         }
-
         public Builder dataDiskSizeGb(@Nullable Output<String> dataDiskSizeGb) {
             this.dataDiskSizeGb = dataDiskSizeGb;
             return this;
         }
-
         public Builder dataDiskSizeGb(@Nullable String dataDiskSizeGb) {
             this.dataDiskSizeGb = Output.ofNullable(dataDiskSizeGb);
             return this;
         }
-
         public Builder dataDiskType(@Nullable Output<CloudSqlSettingsDataDiskType> dataDiskType) {
             this.dataDiskType = dataDiskType;
             return this;
         }
-
         public Builder dataDiskType(@Nullable CloudSqlSettingsDataDiskType dataDiskType) {
             this.dataDiskType = Output.ofNullable(dataDiskType);
             return this;
         }
-
         public Builder databaseFlags(@Nullable Output<Map<String,String>> databaseFlags) {
             this.databaseFlags = databaseFlags;
             return this;
         }
-
         public Builder databaseFlags(@Nullable Map<String,String> databaseFlags) {
             this.databaseFlags = Output.ofNullable(databaseFlags);
             return this;
         }
-
         public Builder databaseVersion(@Nullable Output<CloudSqlSettingsDatabaseVersion> databaseVersion) {
             this.databaseVersion = databaseVersion;
             return this;
         }
-
         public Builder databaseVersion(@Nullable CloudSqlSettingsDatabaseVersion databaseVersion) {
             this.databaseVersion = Output.ofNullable(databaseVersion);
             return this;
         }
-
         public Builder ipConfig(@Nullable Output<SqlIpConfigArgs> ipConfig) {
             this.ipConfig = ipConfig;
             return this;
         }
-
         public Builder ipConfig(@Nullable SqlIpConfigArgs ipConfig) {
             this.ipConfig = Output.ofNullable(ipConfig);
             return this;
         }
-
         public Builder rootPassword(@Nullable Output<String> rootPassword) {
             this.rootPassword = rootPassword;
             return this;
         }
-
         public Builder rootPassword(@Nullable String rootPassword) {
             this.rootPassword = Output.ofNullable(rootPassword);
             return this;
         }
-
         public Builder sourceId(@Nullable Output<String> sourceId) {
             this.sourceId = sourceId;
             return this;
         }
-
         public Builder sourceId(@Nullable String sourceId) {
             this.sourceId = Output.ofNullable(sourceId);
             return this;
         }
-
         public Builder storageAutoResizeLimit(@Nullable Output<String> storageAutoResizeLimit) {
             this.storageAutoResizeLimit = storageAutoResizeLimit;
             return this;
         }
-
         public Builder storageAutoResizeLimit(@Nullable String storageAutoResizeLimit) {
             this.storageAutoResizeLimit = Output.ofNullable(storageAutoResizeLimit);
             return this;
         }
-
         public Builder tier(@Nullable Output<String> tier) {
             this.tier = tier;
             return this;
         }
-
         public Builder tier(@Nullable String tier) {
             this.tier = Output.ofNullable(tier);
             return this;
         }
-
         public Builder userLabels(@Nullable Output<Map<String,String>> userLabels) {
             this.userLabels = userLabels;
             return this;
         }
-
         public Builder userLabels(@Nullable Map<String,String> userLabels) {
             this.userLabels = Output.ofNullable(userLabels);
             return this;
         }
-
         public Builder zone(@Nullable Output<String> zone) {
             this.zone = zone;
             return this;
         }
-
         public Builder zone(@Nullable String zone) {
             this.zone = Output.ofNullable(zone);
             return this;
-        }
-        public CloudSqlSettingsArgs build() {
+        }        public CloudSqlSettingsArgs build() {
             return new CloudSqlSettingsArgs(activationPolicy, autoStorageIncrease, cmekKeyName, collation, dataDiskSizeGb, dataDiskType, databaseFlags, databaseVersion, ipConfig, rootPassword, sourceId, storageAutoResizeLimit, tier, userLabels, zone);
         }
     }

@@ -144,32 +144,29 @@ public final class SparkSqlJobResponse extends io.pulumi.resources.InvokeArgs {
             this.jarFileUris = Objects.requireNonNull(jarFileUris);
             return this;
         }
-
+        public Builder jarFileUris(String... jarFileUris) {
+            return jarFileUris(List.of(jarFileUris));
+        }
         public Builder loggingConfig(LoggingConfigResponse loggingConfig) {
             this.loggingConfig = Objects.requireNonNull(loggingConfig);
             return this;
         }
-
         public Builder properties(Map<String,String> properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
-
         public Builder queryFileUri(String queryFileUri) {
             this.queryFileUri = Objects.requireNonNull(queryFileUri);
             return this;
         }
-
         public Builder queryList(QueryListResponse queryList) {
             this.queryList = Objects.requireNonNull(queryList);
             return this;
         }
-
         public Builder scriptVariables(Map<String,String> scriptVariables) {
             this.scriptVariables = Objects.requireNonNull(scriptVariables);
             return this;
-        }
-        public SparkSqlJobResponse build() {
+        }        public SparkSqlJobResponse build() {
             return new SparkSqlJobResponse(jarFileUris, loggingConfig, properties, queryFileUri, queryList, scriptVariables);
         }
     }

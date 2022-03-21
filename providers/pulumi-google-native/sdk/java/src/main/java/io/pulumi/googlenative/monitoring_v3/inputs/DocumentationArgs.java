@@ -78,22 +78,18 @@ public final class DocumentationArgs extends io.pulumi.resources.ResourceArgs {
             this.content = content;
             return this;
         }
-
         public Builder content(@Nullable String content) {
             this.content = Output.ofNullable(content);
             return this;
         }
-
         public Builder mimeType(@Nullable Output<String> mimeType) {
             this.mimeType = mimeType;
             return this;
         }
-
         public Builder mimeType(@Nullable String mimeType) {
             this.mimeType = Output.ofNullable(mimeType);
             return this;
-        }
-        public DocumentationArgs build() {
+        }        public DocumentationArgs build() {
             return new DocumentationArgs(content, mimeType);
         }
     }

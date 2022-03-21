@@ -78,17 +78,14 @@ public final class GetRegionOperationIamPolicyArgs extends io.pulumi.resources.I
             this.operationId = Objects.requireNonNull(operationId);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder regionId(String regionId) {
             this.regionId = Objects.requireNonNull(regionId);
             return this;
-        }
-        public GetRegionOperationIamPolicyArgs build() {
+        }        public GetRegionOperationIamPolicyArgs build() {
             return new GetRegionOperationIamPolicyArgs(operationId, project, regionId);
         }
     }

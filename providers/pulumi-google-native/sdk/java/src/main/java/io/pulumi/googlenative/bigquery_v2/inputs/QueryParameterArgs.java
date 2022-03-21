@@ -92,32 +92,26 @@ public final class QueryParameterArgs extends io.pulumi.resources.ResourceArgs {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder parameterType(@Nullable Output<QueryParameterTypeArgs> parameterType) {
             this.parameterType = parameterType;
             return this;
         }
-
         public Builder parameterType(@Nullable QueryParameterTypeArgs parameterType) {
             this.parameterType = Output.ofNullable(parameterType);
             return this;
         }
-
         public Builder parameterValue(@Nullable Output<QueryParameterValueArgs> parameterValue) {
             this.parameterValue = parameterValue;
             return this;
         }
-
         public Builder parameterValue(@Nullable QueryParameterValueArgs parameterValue) {
             this.parameterValue = Output.ofNullable(parameterValue);
             return this;
-        }
-        public QueryParameterArgs build() {
+        }        public QueryParameterArgs build() {
             return new QueryParameterArgs(name, parameterType, parameterValue);
         }
     }

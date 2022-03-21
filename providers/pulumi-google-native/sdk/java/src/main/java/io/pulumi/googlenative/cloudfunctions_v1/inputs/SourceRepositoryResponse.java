@@ -76,12 +76,10 @@ public final class SourceRepositoryResponse extends io.pulumi.resources.InvokeAr
             this.deployedUrl = Objects.requireNonNull(deployedUrl);
             return this;
         }
-
         public Builder url(String url) {
             this.url = Objects.requireNonNull(url);
             return this;
-        }
-        public SourceRepositoryResponse build() {
+        }        public SourceRepositoryResponse build() {
             return new SourceRepositoryResponse(deployedUrl, url);
         }
     }

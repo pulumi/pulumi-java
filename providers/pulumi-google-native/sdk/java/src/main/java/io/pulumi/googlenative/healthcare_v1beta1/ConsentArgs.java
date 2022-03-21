@@ -222,122 +222,101 @@ public final class ConsentArgs extends io.pulumi.resources.ResourceArgs {
             this.consentArtifact = Objects.requireNonNull(consentArtifact);
             return this;
         }
-
         public Builder consentArtifact(String consentArtifact) {
             this.consentArtifact = Output.of(Objects.requireNonNull(consentArtifact));
             return this;
         }
-
         public Builder consentStoreId(Output<String> consentStoreId) {
             this.consentStoreId = Objects.requireNonNull(consentStoreId);
             return this;
         }
-
         public Builder consentStoreId(String consentStoreId) {
             this.consentStoreId = Output.of(Objects.requireNonNull(consentStoreId));
             return this;
         }
-
         public Builder datasetId(Output<String> datasetId) {
             this.datasetId = Objects.requireNonNull(datasetId);
             return this;
         }
-
         public Builder datasetId(String datasetId) {
             this.datasetId = Output.of(Objects.requireNonNull(datasetId));
             return this;
         }
-
         public Builder expireTime(@Nullable Output<String> expireTime) {
             this.expireTime = expireTime;
             return this;
         }
-
         public Builder expireTime(@Nullable String expireTime) {
             this.expireTime = Output.ofNullable(expireTime);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder metadata(@Nullable Map<String,String> metadata) {
             this.metadata = Output.ofNullable(metadata);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder policies(@Nullable Output<List<GoogleCloudHealthcareV1beta1ConsentPolicyArgs>> policies) {
             this.policies = policies;
             return this;
         }
-
         public Builder policies(@Nullable List<GoogleCloudHealthcareV1beta1ConsentPolicyArgs> policies) {
             this.policies = Output.ofNullable(policies);
             return this;
         }
-
+        public Builder policies(GoogleCloudHealthcareV1beta1ConsentPolicyArgs... policies) {
+            return policies(List.of(policies));
+        }
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder state(Output<ConsentState> state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder state(ConsentState state) {
             this.state = Output.of(Objects.requireNonNull(state));
             return this;
         }
-
         public Builder ttl(@Nullable Output<String> ttl) {
             this.ttl = ttl;
             return this;
         }
-
         public Builder ttl(@Nullable String ttl) {
             this.ttl = Output.ofNullable(ttl);
             return this;
         }
-
         public Builder userId(Output<String> userId) {
             this.userId = Objects.requireNonNull(userId);
             return this;
         }
-
         public Builder userId(String userId) {
             this.userId = Output.of(Objects.requireNonNull(userId));
             return this;
-        }
-        public ConsentArgs build() {
+        }        public ConsentArgs build() {
             return new ConsentArgs(consentArtifact, consentStoreId, datasetId, expireTime, location, metadata, name, policies, project, state, ttl, userId);
         }
     }

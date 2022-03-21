@@ -51,8 +51,7 @@ public final class AnnotationSourceResponse {
         public Builder cloudHealthcareSource(CloudHealthcareSourceResponse cloudHealthcareSource) {
             this.cloudHealthcareSource = Objects.requireNonNull(cloudHealthcareSource);
             return this;
-        }
-        public AnnotationSourceResponse build() {
+        }        public AnnotationSourceResponse build() {
             return new AnnotationSourceResponse(cloudHealthcareSource);
         }
     }

@@ -78,17 +78,14 @@ public final class GetSubscriptionArgs extends io.pulumi.resources.InvokeArgs {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder subscriptionId(String subscriptionId) {
             this.subscriptionId = Objects.requireNonNull(subscriptionId);
             return this;
-        }
-        public GetSubscriptionArgs build() {
+        }        public GetSubscriptionArgs build() {
             return new GetSubscriptionArgs(location, project, subscriptionId);
         }
     }

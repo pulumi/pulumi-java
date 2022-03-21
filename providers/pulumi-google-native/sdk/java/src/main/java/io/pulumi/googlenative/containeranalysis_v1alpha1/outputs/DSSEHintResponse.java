@@ -51,8 +51,7 @@ public final class DSSEHintResponse {
         public Builder humanReadableName(String humanReadableName) {
             this.humanReadableName = Objects.requireNonNull(humanReadableName);
             return this;
-        }
-        public DSSEHintResponse build() {
+        }        public DSSEHintResponse build() {
             return new DSSEHintResponse(humanReadableName);
         }
     }

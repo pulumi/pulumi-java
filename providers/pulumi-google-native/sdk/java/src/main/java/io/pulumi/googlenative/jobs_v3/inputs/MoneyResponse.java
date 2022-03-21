@@ -93,17 +93,14 @@ public final class MoneyResponse extends io.pulumi.resources.InvokeArgs {
             this.currencyCode = Objects.requireNonNull(currencyCode);
             return this;
         }
-
         public Builder nanos(Integer nanos) {
             this.nanos = Objects.requireNonNull(nanos);
             return this;
         }
-
         public Builder units(String units) {
             this.units = Objects.requireNonNull(units);
             return this;
-        }
-        public MoneyResponse build() {
+        }        public MoneyResponse build() {
             return new MoneyResponse(currencyCode, nanos, units);
         }
     }

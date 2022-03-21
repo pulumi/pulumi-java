@@ -61,12 +61,10 @@ public final class ReservationConfigArgs extends io.pulumi.resources.ResourceArg
             this.throughputReservation = throughputReservation;
             return this;
         }
-
         public Builder throughputReservation(@Nullable String throughputReservation) {
             this.throughputReservation = Output.ofNullable(throughputReservation);
             return this;
-        }
-        public ReservationConfigArgs build() {
+        }        public ReservationConfigArgs build() {
             return new ReservationConfigArgs(throughputReservation);
         }
     }

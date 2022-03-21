@@ -79,22 +79,18 @@ public final class GoogleCloudMlV1__DiskConfigArgs extends io.pulumi.resources.R
             this.bootDiskSizeGb = bootDiskSizeGb;
             return this;
         }
-
         public Builder bootDiskSizeGb(@Nullable Integer bootDiskSizeGb) {
             this.bootDiskSizeGb = Output.ofNullable(bootDiskSizeGb);
             return this;
         }
-
         public Builder bootDiskType(@Nullable Output<String> bootDiskType) {
             this.bootDiskType = bootDiskType;
             return this;
         }
-
         public Builder bootDiskType(@Nullable String bootDiskType) {
             this.bootDiskType = Output.ofNullable(bootDiskType);
             return this;
-        }
-        public GoogleCloudMlV1__DiskConfigArgs build() {
+        }        public GoogleCloudMlV1__DiskConfigArgs build() {
             return new GoogleCloudMlV1__DiskConfigArgs(bootDiskSizeGb, bootDiskType);
         }
     }

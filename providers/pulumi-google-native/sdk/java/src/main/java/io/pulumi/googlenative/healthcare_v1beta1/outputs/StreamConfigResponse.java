@@ -71,12 +71,13 @@ public final class StreamConfigResponse {
             this.bigqueryDestination = Objects.requireNonNull(bigqueryDestination);
             return this;
         }
-
         public Builder resourceTypes(List<String> resourceTypes) {
             this.resourceTypes = Objects.requireNonNull(resourceTypes);
             return this;
         }
-        public StreamConfigResponse build() {
+        public Builder resourceTypes(String... resourceTypes) {
+            return resourceTypes(List.of(resourceTypes));
+        }        public StreamConfigResponse build() {
             return new StreamConfigResponse(bigqueryDestination, resourceTypes);
         }
     }

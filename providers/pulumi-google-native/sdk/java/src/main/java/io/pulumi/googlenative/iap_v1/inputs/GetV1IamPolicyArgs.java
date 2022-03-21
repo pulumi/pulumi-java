@@ -50,8 +50,7 @@ public final class GetV1IamPolicyArgs extends io.pulumi.resources.InvokeArgs {
         public Builder v1Id(String v1Id) {
             this.v1Id = Objects.requireNonNull(v1Id);
             return this;
-        }
-        public GetV1IamPolicyArgs build() {
+        }        public GetV1IamPolicyArgs build() {
             return new GetV1IamPolicyArgs(v1Id);
         }
     }

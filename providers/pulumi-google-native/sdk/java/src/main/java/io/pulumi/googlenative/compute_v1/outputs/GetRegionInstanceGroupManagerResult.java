@@ -383,107 +383,98 @@ public final class GetRegionInstanceGroupManagerResult {
             this.autoHealingPolicies = Objects.requireNonNull(autoHealingPolicies);
             return this;
         }
-
+        public Builder autoHealingPolicies(InstanceGroupManagerAutoHealingPolicyResponse... autoHealingPolicies) {
+            return autoHealingPolicies(List.of(autoHealingPolicies));
+        }
         public Builder baseInstanceName(String baseInstanceName) {
             this.baseInstanceName = Objects.requireNonNull(baseInstanceName);
             return this;
         }
-
         public Builder creationTimestamp(String creationTimestamp) {
             this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
             return this;
         }
-
         public Builder currentActions(InstanceGroupManagerActionsSummaryResponse currentActions) {
             this.currentActions = Objects.requireNonNull(currentActions);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder distributionPolicy(DistributionPolicyResponse distributionPolicy) {
             this.distributionPolicy = Objects.requireNonNull(distributionPolicy);
             return this;
         }
-
         public Builder fingerprint(String fingerprint) {
             this.fingerprint = Objects.requireNonNull(fingerprint);
             return this;
         }
-
         public Builder instanceGroup(String instanceGroup) {
             this.instanceGroup = Objects.requireNonNull(instanceGroup);
             return this;
         }
-
         public Builder instanceTemplate(String instanceTemplate) {
             this.instanceTemplate = Objects.requireNonNull(instanceTemplate);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder namedPorts(List<NamedPortResponse> namedPorts) {
             this.namedPorts = Objects.requireNonNull(namedPorts);
             return this;
         }
-
+        public Builder namedPorts(NamedPortResponse... namedPorts) {
+            return namedPorts(List.of(namedPorts));
+        }
         public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
-
         public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
-
         public Builder statefulPolicy(StatefulPolicyResponse statefulPolicy) {
             this.statefulPolicy = Objects.requireNonNull(statefulPolicy);
             return this;
         }
-
         public Builder status(InstanceGroupManagerStatusResponse status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder targetPools(List<String> targetPools) {
             this.targetPools = Objects.requireNonNull(targetPools);
             return this;
         }
-
+        public Builder targetPools(String... targetPools) {
+            return targetPools(List.of(targetPools));
+        }
         public Builder targetSize(Integer targetSize) {
             this.targetSize = Objects.requireNonNull(targetSize);
             return this;
         }
-
         public Builder updatePolicy(InstanceGroupManagerUpdatePolicyResponse updatePolicy) {
             this.updatePolicy = Objects.requireNonNull(updatePolicy);
             return this;
         }
-
         public Builder versions(List<InstanceGroupManagerVersionResponse> versions) {
             this.versions = Objects.requireNonNull(versions);
             return this;
         }
-
+        public Builder versions(InstanceGroupManagerVersionResponse... versions) {
+            return versions(List.of(versions));
+        }
         public Builder zone(String zone) {
             this.zone = Objects.requireNonNull(zone);
             return this;
-        }
-        public GetRegionInstanceGroupManagerResult build() {
+        }        public GetRegionInstanceGroupManagerResult build() {
             return new GetRegionInstanceGroupManagerResult(autoHealingPolicies, baseInstanceName, creationTimestamp, currentActions, description, distributionPolicy, fingerprint, instanceGroup, instanceTemplate, kind, name, namedPorts, region, selfLink, statefulPolicy, status, targetPools, targetSize, updatePolicy, versions, zone);
         }
     }

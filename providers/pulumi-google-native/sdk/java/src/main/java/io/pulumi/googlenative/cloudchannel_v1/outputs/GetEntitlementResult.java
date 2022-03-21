@@ -235,62 +235,56 @@ public final class GetEntitlementResult {
             this.associationInfo = Objects.requireNonNull(associationInfo);
             return this;
         }
-
         public Builder commitmentSettings(GoogleCloudChannelV1CommitmentSettingsResponse commitmentSettings) {
             this.commitmentSettings = Objects.requireNonNull(commitmentSettings);
             return this;
         }
-
         public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder offer(String offer) {
             this.offer = Objects.requireNonNull(offer);
             return this;
         }
-
         public Builder parameters(List<GoogleCloudChannelV1ParameterResponse> parameters) {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
-
+        public Builder parameters(GoogleCloudChannelV1ParameterResponse... parameters) {
+            return parameters(List.of(parameters));
+        }
         public Builder provisionedService(GoogleCloudChannelV1ProvisionedServiceResponse provisionedService) {
             this.provisionedService = Objects.requireNonNull(provisionedService);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder purchaseOrderId(String purchaseOrderId) {
             this.purchaseOrderId = Objects.requireNonNull(purchaseOrderId);
             return this;
         }
-
         public Builder suspensionReasons(List<String> suspensionReasons) {
             this.suspensionReasons = Objects.requireNonNull(suspensionReasons);
             return this;
         }
-
+        public Builder suspensionReasons(String... suspensionReasons) {
+            return suspensionReasons(List.of(suspensionReasons));
+        }
         public Builder trialSettings(GoogleCloudChannelV1TrialSettingsResponse trialSettings) {
             this.trialSettings = Objects.requireNonNull(trialSettings);
             return this;
         }
-
         public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
-        }
-        public GetEntitlementResult build() {
+        }        public GetEntitlementResult build() {
             return new GetEntitlementResult(associationInfo, commitmentSettings, createTime, name, offer, parameters, provisionedService, provisioningState, purchaseOrderId, suspensionReasons, trialSettings, updateTime);
         }
     }

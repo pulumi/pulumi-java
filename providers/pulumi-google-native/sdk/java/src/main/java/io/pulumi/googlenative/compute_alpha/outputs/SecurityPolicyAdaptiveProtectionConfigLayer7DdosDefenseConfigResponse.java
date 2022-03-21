@@ -70,12 +70,10 @@ public final class SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfig
             this.enable = Objects.requireNonNull(enable);
             return this;
         }
-
         public Builder ruleVisibility(String ruleVisibility) {
             this.ruleVisibility = Objects.requireNonNull(ruleVisibility);
             return this;
-        }
-        public SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigResponse build() {
+        }        public SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigResponse build() {
             return new SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigResponse(enable, ruleVisibility);
         }
     }

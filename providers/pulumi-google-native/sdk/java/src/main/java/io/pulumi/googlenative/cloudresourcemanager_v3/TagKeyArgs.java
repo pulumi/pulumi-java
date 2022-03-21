@@ -134,62 +134,50 @@ public final class TagKeyArgs extends io.pulumi.resources.ResourceArgs {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
-
         public Builder etag(@Nullable String etag) {
             this.etag = Output.ofNullable(etag);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder parent(@Nullable Output<String> parent) {
             this.parent = parent;
             return this;
         }
-
         public Builder parent(@Nullable String parent) {
             this.parent = Output.ofNullable(parent);
             return this;
         }
-
         public Builder shortName(Output<String> shortName) {
             this.shortName = Objects.requireNonNull(shortName);
             return this;
         }
-
         public Builder shortName(String shortName) {
             this.shortName = Output.of(Objects.requireNonNull(shortName));
             return this;
         }
-
         public Builder validateOnly(@Nullable Output<String> validateOnly) {
             this.validateOnly = validateOnly;
             return this;
         }
-
         public Builder validateOnly(@Nullable String validateOnly) {
             this.validateOnly = Output.ofNullable(validateOnly);
             return this;
-        }
-        public TagKeyArgs build() {
+        }        public TagKeyArgs build() {
             return new TagKeyArgs(description, etag, name, parent, shortName, validateOnly);
         }
     }

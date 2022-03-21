@@ -141,32 +141,38 @@ public final class SparkBatchResponse extends io.pulumi.resources.InvokeArgs {
             this.archiveUris = Objects.requireNonNull(archiveUris);
             return this;
         }
-
+        public Builder archiveUris(String... archiveUris) {
+            return archiveUris(List.of(archiveUris));
+        }
         public Builder args(List<String> args) {
             this.args = Objects.requireNonNull(args);
             return this;
         }
-
+        public Builder args(String... args) {
+            return args(List.of(args));
+        }
         public Builder fileUris(List<String> fileUris) {
             this.fileUris = Objects.requireNonNull(fileUris);
             return this;
         }
-
+        public Builder fileUris(String... fileUris) {
+            return fileUris(List.of(fileUris));
+        }
         public Builder jarFileUris(List<String> jarFileUris) {
             this.jarFileUris = Objects.requireNonNull(jarFileUris);
             return this;
         }
-
+        public Builder jarFileUris(String... jarFileUris) {
+            return jarFileUris(List.of(jarFileUris));
+        }
         public Builder mainClass(String mainClass) {
             this.mainClass = Objects.requireNonNull(mainClass);
             return this;
         }
-
         public Builder mainJarFileUri(String mainJarFileUri) {
             this.mainJarFileUri = Objects.requireNonNull(mainJarFileUri);
             return this;
-        }
-        public SparkBatchResponse build() {
+        }        public SparkBatchResponse build() {
             return new SparkBatchResponse(archiveUris, args, fileUris, jarFileUris, mainClass, mainJarFileUri);
         }
     }

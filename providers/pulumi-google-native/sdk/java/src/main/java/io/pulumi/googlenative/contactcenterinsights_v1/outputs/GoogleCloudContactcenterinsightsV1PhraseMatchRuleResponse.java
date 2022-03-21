@@ -87,17 +87,14 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleResponse {
             this.config = Objects.requireNonNull(config);
             return this;
         }
-
         public Builder negated(Boolean negated) {
             this.negated = Objects.requireNonNull(negated);
             return this;
         }
-
         public Builder query(String query) {
             this.query = Objects.requireNonNull(query);
             return this;
-        }
-        public GoogleCloudContactcenterinsightsV1PhraseMatchRuleResponse build() {
+        }        public GoogleCloudContactcenterinsightsV1PhraseMatchRuleResponse build() {
             return new GoogleCloudContactcenterinsightsV1PhraseMatchRuleResponse(config, negated, query);
         }
     }

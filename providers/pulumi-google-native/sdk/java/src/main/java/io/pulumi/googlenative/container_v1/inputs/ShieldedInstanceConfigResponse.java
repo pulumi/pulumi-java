@@ -76,12 +76,10 @@ public final class ShieldedInstanceConfigResponse extends io.pulumi.resources.In
             this.enableIntegrityMonitoring = Objects.requireNonNull(enableIntegrityMonitoring);
             return this;
         }
-
         public Builder enableSecureBoot(Boolean enableSecureBoot) {
             this.enableSecureBoot = Objects.requireNonNull(enableSecureBoot);
             return this;
-        }
-        public ShieldedInstanceConfigResponse build() {
+        }        public ShieldedInstanceConfigResponse build() {
             return new ShieldedInstanceConfigResponse(enableIntegrityMonitoring, enableSecureBoot);
         }
     }

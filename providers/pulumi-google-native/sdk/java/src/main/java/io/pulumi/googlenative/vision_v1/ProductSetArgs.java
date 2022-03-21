@@ -110,52 +110,42 @@ public final class ProductSetArgs extends io.pulumi.resources.ResourceArgs {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder productSetId(@Nullable Output<String> productSetId) {
             this.productSetId = productSetId;
             return this;
         }
-
         public Builder productSetId(@Nullable String productSetId) {
             this.productSetId = Output.ofNullable(productSetId);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
-        }
-        public ProductSetArgs build() {
+        }        public ProductSetArgs build() {
             return new ProductSetArgs(displayName, location, name, productSetId, project);
         }
     }

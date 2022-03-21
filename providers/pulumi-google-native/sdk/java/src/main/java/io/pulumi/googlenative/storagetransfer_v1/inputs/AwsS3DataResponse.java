@@ -109,22 +109,18 @@ public final class AwsS3DataResponse extends io.pulumi.resources.InvokeArgs {
             this.awsAccessKey = Objects.requireNonNull(awsAccessKey);
             return this;
         }
-
         public Builder bucketName(String bucketName) {
             this.bucketName = Objects.requireNonNull(bucketName);
             return this;
         }
-
         public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
-
         public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
-        }
-        public AwsS3DataResponse build() {
+        }        public AwsS3DataResponse build() {
             return new AwsS3DataResponse(awsAccessKey, bucketName, path, roleArn);
         }
     }

@@ -90,22 +90,18 @@ public final class GetServiceBindingIamPolicyArgs extends io.pulumi.resources.In
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder optionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
             this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder serviceBindingId(String serviceBindingId) {
             this.serviceBindingId = Objects.requireNonNull(serviceBindingId);
             return this;
-        }
-        public GetServiceBindingIamPolicyArgs build() {
+        }        public GetServiceBindingIamPolicyArgs build() {
             return new GetServiceBindingIamPolicyArgs(location, optionsRequestedPolicyVersion, project, serviceBindingId);
         }
     }

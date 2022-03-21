@@ -97,32 +97,29 @@ public final class GooglePrivacyDlpV2RiskAnalysisJobConfigArgs extends io.pulumi
             this.actions = actions;
             return this;
         }
-
         public Builder actions(@Nullable List<GooglePrivacyDlpV2ActionArgs> actions) {
             this.actions = Output.ofNullable(actions);
             return this;
         }
-
+        public Builder actions(GooglePrivacyDlpV2ActionArgs... actions) {
+            return actions(List.of(actions));
+        }
         public Builder privacyMetric(@Nullable Output<GooglePrivacyDlpV2PrivacyMetricArgs> privacyMetric) {
             this.privacyMetric = privacyMetric;
             return this;
         }
-
         public Builder privacyMetric(@Nullable GooglePrivacyDlpV2PrivacyMetricArgs privacyMetric) {
             this.privacyMetric = Output.ofNullable(privacyMetric);
             return this;
         }
-
         public Builder sourceTable(@Nullable Output<GooglePrivacyDlpV2BigQueryTableArgs> sourceTable) {
             this.sourceTable = sourceTable;
             return this;
         }
-
         public Builder sourceTable(@Nullable GooglePrivacyDlpV2BigQueryTableArgs sourceTable) {
             this.sourceTable = Output.ofNullable(sourceTable);
             return this;
-        }
-        public GooglePrivacyDlpV2RiskAnalysisJobConfigArgs build() {
+        }        public GooglePrivacyDlpV2RiskAnalysisJobConfigArgs build() {
             return new GooglePrivacyDlpV2RiskAnalysisJobConfigArgs(actions, privacyMetric, sourceTable);
         }
     }

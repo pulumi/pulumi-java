@@ -129,52 +129,45 @@ public final class GoogleCloudDialogflowV2IntentMessageBasicCardArgs extends io.
             this.buttons = buttons;
             return this;
         }
-
         public Builder buttons(@Nullable List<GoogleCloudDialogflowV2IntentMessageBasicCardButtonArgs> buttons) {
             this.buttons = Output.ofNullable(buttons);
             return this;
         }
-
+        public Builder buttons(GoogleCloudDialogflowV2IntentMessageBasicCardButtonArgs... buttons) {
+            return buttons(List.of(buttons));
+        }
         public Builder formattedText(@Nullable Output<String> formattedText) {
             this.formattedText = formattedText;
             return this;
         }
-
         public Builder formattedText(@Nullable String formattedText) {
             this.formattedText = Output.ofNullable(formattedText);
             return this;
         }
-
         public Builder image(@Nullable Output<GoogleCloudDialogflowV2IntentMessageImageArgs> image) {
             this.image = image;
             return this;
         }
-
         public Builder image(@Nullable GoogleCloudDialogflowV2IntentMessageImageArgs image) {
             this.image = Output.ofNullable(image);
             return this;
         }
-
         public Builder subtitle(@Nullable Output<String> subtitle) {
             this.subtitle = subtitle;
             return this;
         }
-
         public Builder subtitle(@Nullable String subtitle) {
             this.subtitle = Output.ofNullable(subtitle);
             return this;
         }
-
         public Builder title(@Nullable Output<String> title) {
             this.title = title;
             return this;
         }
-
         public Builder title(@Nullable String title) {
             this.title = Output.ofNullable(title);
             return this;
-        }
-        public GoogleCloudDialogflowV2IntentMessageBasicCardArgs build() {
+        }        public GoogleCloudDialogflowV2IntentMessageBasicCardArgs build() {
             return new GoogleCloudDialogflowV2IntentMessageBasicCardArgs(buttons, formattedText, image, subtitle, title);
         }
     }

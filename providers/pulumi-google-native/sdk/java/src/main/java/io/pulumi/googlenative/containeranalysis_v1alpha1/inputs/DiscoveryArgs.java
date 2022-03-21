@@ -61,12 +61,10 @@ public final class DiscoveryArgs extends io.pulumi.resources.ResourceArgs {
             this.analysisKind = analysisKind;
             return this;
         }
-
         public Builder analysisKind(@Nullable DiscoveryAnalysisKind analysisKind) {
             this.analysisKind = Output.ofNullable(analysisKind);
             return this;
-        }
-        public DiscoveryArgs build() {
+        }        public DiscoveryArgs build() {
             return new DiscoveryArgs(analysisKind);
         }
     }

@@ -103,22 +103,18 @@ public final class SignatureResponse {
             this.image = Objects.requireNonNull(image);
             return this;
         }
-
         public Builder metadata(Map<String,String> metadata) {
             this.metadata = Objects.requireNonNull(metadata);
             return this;
         }
-
         public Builder signatureTime(String signatureTime) {
             this.signatureTime = Objects.requireNonNull(signatureTime);
             return this;
         }
-
         public Builder userId(String userId) {
             this.userId = Objects.requireNonNull(userId);
             return this;
-        }
-        public SignatureResponse build() {
+        }        public SignatureResponse build() {
             return new SignatureResponse(image, metadata, signatureTime, userId);
         }
     }

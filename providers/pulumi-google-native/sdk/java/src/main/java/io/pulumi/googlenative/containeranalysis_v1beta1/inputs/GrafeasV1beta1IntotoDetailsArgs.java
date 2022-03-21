@@ -72,22 +72,21 @@ public final class GrafeasV1beta1IntotoDetailsArgs extends io.pulumi.resources.R
             this.signatures = signatures;
             return this;
         }
-
         public Builder signatures(@Nullable List<GrafeasV1beta1IntotoSignatureArgs> signatures) {
             this.signatures = Output.ofNullable(signatures);
             return this;
         }
-
+        public Builder signatures(GrafeasV1beta1IntotoSignatureArgs... signatures) {
+            return signatures(List.of(signatures));
+        }
         public Builder signed(@Nullable Output<LinkArgs> signed) {
             this.signed = signed;
             return this;
         }
-
         public Builder signed(@Nullable LinkArgs signed) {
             this.signed = Output.ofNullable(signed);
             return this;
-        }
-        public GrafeasV1beta1IntotoDetailsArgs build() {
+        }        public GrafeasV1beta1IntotoDetailsArgs build() {
             return new GrafeasV1beta1IntotoDetailsArgs(signatures, signed);
         }
     }

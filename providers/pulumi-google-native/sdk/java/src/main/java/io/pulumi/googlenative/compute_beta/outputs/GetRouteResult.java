@@ -361,102 +361,91 @@ public final class GetRouteResult {
             this.asPaths = Objects.requireNonNull(asPaths);
             return this;
         }
-
+        public Builder asPaths(RouteAsPathResponse... asPaths) {
+            return asPaths(List.of(asPaths));
+        }
         public Builder creationTimestamp(String creationTimestamp) {
             this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder destRange(String destRange) {
             this.destRange = Objects.requireNonNull(destRange);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder network(String network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }
-
         public Builder nextHopGateway(String nextHopGateway) {
             this.nextHopGateway = Objects.requireNonNull(nextHopGateway);
             return this;
         }
-
         public Builder nextHopIlb(String nextHopIlb) {
             this.nextHopIlb = Objects.requireNonNull(nextHopIlb);
             return this;
         }
-
         public Builder nextHopInstance(String nextHopInstance) {
             this.nextHopInstance = Objects.requireNonNull(nextHopInstance);
             return this;
         }
-
         public Builder nextHopInterconnectAttachment(String nextHopInterconnectAttachment) {
             this.nextHopInterconnectAttachment = Objects.requireNonNull(nextHopInterconnectAttachment);
             return this;
         }
-
         public Builder nextHopIp(String nextHopIp) {
             this.nextHopIp = Objects.requireNonNull(nextHopIp);
             return this;
         }
-
         public Builder nextHopNetwork(String nextHopNetwork) {
             this.nextHopNetwork = Objects.requireNonNull(nextHopNetwork);
             return this;
         }
-
         public Builder nextHopPeering(String nextHopPeering) {
             this.nextHopPeering = Objects.requireNonNull(nextHopPeering);
             return this;
         }
-
         public Builder nextHopVpnTunnel(String nextHopVpnTunnel) {
             this.nextHopVpnTunnel = Objects.requireNonNull(nextHopVpnTunnel);
             return this;
         }
-
         public Builder priority(Integer priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
-
         public Builder routeType(String routeType) {
             this.routeType = Objects.requireNonNull(routeType);
             return this;
         }
-
         public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
-
         public Builder tags(List<String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
-
+        public Builder tags(String... tags) {
+            return tags(List.of(tags));
+        }
         public Builder warnings(List<RouteWarningsItemResponse> warnings) {
             this.warnings = Objects.requireNonNull(warnings);
             return this;
         }
-        public GetRouteResult build() {
+        public Builder warnings(RouteWarningsItemResponse... warnings) {
+            return warnings(List.of(warnings));
+        }        public GetRouteResult build() {
             return new GetRouteResult(asPaths, creationTimestamp, description, destRange, kind, name, network, nextHopGateway, nextHopIlb, nextHopInstance, nextHopInterconnectAttachment, nextHopIp, nextHopNetwork, nextHopPeering, nextHopVpnTunnel, priority, routeType, selfLink, tags, warnings);
         }
     }

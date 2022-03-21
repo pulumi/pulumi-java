@@ -129,52 +129,45 @@ public final class GoogleCloudDialogflowCxV3TestCaseResultArgs extends io.pulumi
             this.conversationTurns = conversationTurns;
             return this;
         }
-
         public Builder conversationTurns(@Nullable List<GoogleCloudDialogflowCxV3ConversationTurnArgs> conversationTurns) {
             this.conversationTurns = Output.ofNullable(conversationTurns);
             return this;
         }
-
+        public Builder conversationTurns(GoogleCloudDialogflowCxV3ConversationTurnArgs... conversationTurns) {
+            return conversationTurns(List.of(conversationTurns));
+        }
         public Builder environment(@Nullable Output<String> environment) {
             this.environment = environment;
             return this;
         }
-
         public Builder environment(@Nullable String environment) {
             this.environment = Output.ofNullable(environment);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder testResult(@Nullable Output<GoogleCloudDialogflowCxV3TestCaseResultTestResult> testResult) {
             this.testResult = testResult;
             return this;
         }
-
         public Builder testResult(@Nullable GoogleCloudDialogflowCxV3TestCaseResultTestResult testResult) {
             this.testResult = Output.ofNullable(testResult);
             return this;
         }
-
         public Builder testTime(@Nullable Output<String> testTime) {
             this.testTime = testTime;
             return this;
         }
-
         public Builder testTime(@Nullable String testTime) {
             this.testTime = Output.ofNullable(testTime);
             return this;
-        }
-        public GoogleCloudDialogflowCxV3TestCaseResultArgs build() {
+        }        public GoogleCloudDialogflowCxV3TestCaseResultArgs build() {
             return new GoogleCloudDialogflowCxV3TestCaseResultArgs(conversationTurns, environment, name, testResult, testTime);
         }
     }

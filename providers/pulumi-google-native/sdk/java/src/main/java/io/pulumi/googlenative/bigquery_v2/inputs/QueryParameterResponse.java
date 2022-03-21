@@ -90,17 +90,14 @@ public final class QueryParameterResponse extends io.pulumi.resources.InvokeArgs
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder parameterType(QueryParameterTypeResponse parameterType) {
             this.parameterType = Objects.requireNonNull(parameterType);
             return this;
         }
-
         public Builder parameterValue(QueryParameterValueResponse parameterValue) {
             this.parameterValue = Objects.requireNonNull(parameterValue);
             return this;
-        }
-        public QueryParameterResponse build() {
+        }        public QueryParameterResponse build() {
             return new QueryParameterResponse(name, parameterType, parameterValue);
         }
     }

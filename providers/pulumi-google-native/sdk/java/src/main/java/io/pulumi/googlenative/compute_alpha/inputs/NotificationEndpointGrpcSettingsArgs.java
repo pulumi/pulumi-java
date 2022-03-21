@@ -128,52 +128,42 @@ public final class NotificationEndpointGrpcSettingsArgs extends io.pulumi.resour
             this.authority = authority;
             return this;
         }
-
         public Builder authority(@Nullable String authority) {
             this.authority = Output.ofNullable(authority);
             return this;
         }
-
         public Builder endpoint(@Nullable Output<String> endpoint) {
             this.endpoint = endpoint;
             return this;
         }
-
         public Builder endpoint(@Nullable String endpoint) {
             this.endpoint = Output.ofNullable(endpoint);
             return this;
         }
-
         public Builder payloadName(@Nullable Output<String> payloadName) {
             this.payloadName = payloadName;
             return this;
         }
-
         public Builder payloadName(@Nullable String payloadName) {
             this.payloadName = Output.ofNullable(payloadName);
             return this;
         }
-
         public Builder resendInterval(@Nullable Output<DurationArgs> resendInterval) {
             this.resendInterval = resendInterval;
             return this;
         }
-
         public Builder resendInterval(@Nullable DurationArgs resendInterval) {
             this.resendInterval = Output.ofNullable(resendInterval);
             return this;
         }
-
         public Builder retryDurationSec(@Nullable Output<Integer> retryDurationSec) {
             this.retryDurationSec = retryDurationSec;
             return this;
         }
-
         public Builder retryDurationSec(@Nullable Integer retryDurationSec) {
             this.retryDurationSec = Output.ofNullable(retryDurationSec);
             return this;
-        }
-        public NotificationEndpointGrpcSettingsArgs build() {
+        }        public NotificationEndpointGrpcSettingsArgs build() {
             return new NotificationEndpointGrpcSettingsArgs(authority, endpoint, payloadName, resendInterval, retryDurationSec);
         }
     }

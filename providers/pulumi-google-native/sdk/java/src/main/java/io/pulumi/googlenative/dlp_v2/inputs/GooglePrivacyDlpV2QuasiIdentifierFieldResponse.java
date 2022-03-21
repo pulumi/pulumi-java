@@ -77,12 +77,10 @@ public final class GooglePrivacyDlpV2QuasiIdentifierFieldResponse extends io.pul
             this.customTag = Objects.requireNonNull(customTag);
             return this;
         }
-
         public Builder field(GooglePrivacyDlpV2FieldIdResponse field) {
             this.field = Objects.requireNonNull(field);
             return this;
-        }
-        public GooglePrivacyDlpV2QuasiIdentifierFieldResponse build() {
+        }        public GooglePrivacyDlpV2QuasiIdentifierFieldResponse build() {
             return new GooglePrivacyDlpV2QuasiIdentifierFieldResponse(customTag, field);
         }
     }

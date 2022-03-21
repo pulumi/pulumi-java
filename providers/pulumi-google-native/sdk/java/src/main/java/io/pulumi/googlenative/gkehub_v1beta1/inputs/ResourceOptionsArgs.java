@@ -95,32 +95,26 @@ public final class ResourceOptionsArgs extends io.pulumi.resources.ResourceArgs 
             this.connectVersion = connectVersion;
             return this;
         }
-
         public Builder connectVersion(@Nullable String connectVersion) {
             this.connectVersion = Output.ofNullable(connectVersion);
             return this;
         }
-
         public Builder k8sVersion(@Nullable Output<String> k8sVersion) {
             this.k8sVersion = k8sVersion;
             return this;
         }
-
         public Builder k8sVersion(@Nullable String k8sVersion) {
             this.k8sVersion = Output.ofNullable(k8sVersion);
             return this;
         }
-
         public Builder v1beta1Crd(@Nullable Output<Boolean> v1beta1Crd) {
             this.v1beta1Crd = v1beta1Crd;
             return this;
         }
-
         public Builder v1beta1Crd(@Nullable Boolean v1beta1Crd) {
             this.v1beta1Crd = Output.ofNullable(v1beta1Crd);
             return this;
-        }
-        public ResourceOptionsArgs build() {
+        }        public ResourceOptionsArgs build() {
             return new ResourceOptionsArgs(connectVersion, k8sVersion, v1beta1Crd);
         }
     }

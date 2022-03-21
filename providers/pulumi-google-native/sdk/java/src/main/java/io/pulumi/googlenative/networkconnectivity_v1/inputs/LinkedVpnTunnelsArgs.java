@@ -80,22 +80,21 @@ public final class LinkedVpnTunnelsArgs extends io.pulumi.resources.ResourceArgs
             this.siteToSiteDataTransfer = siteToSiteDataTransfer;
             return this;
         }
-
         public Builder siteToSiteDataTransfer(@Nullable Boolean siteToSiteDataTransfer) {
             this.siteToSiteDataTransfer = Output.ofNullable(siteToSiteDataTransfer);
             return this;
         }
-
         public Builder uris(@Nullable Output<List<String>> uris) {
             this.uris = uris;
             return this;
         }
-
         public Builder uris(@Nullable List<String> uris) {
             this.uris = Output.ofNullable(uris);
             return this;
         }
-        public LinkedVpnTunnelsArgs build() {
+        public Builder uris(String... uris) {
+            return uris(List.of(uris));
+        }        public LinkedVpnTunnelsArgs build() {
             return new LinkedVpnTunnelsArgs(siteToSiteDataTransfer, uris);
         }
     }

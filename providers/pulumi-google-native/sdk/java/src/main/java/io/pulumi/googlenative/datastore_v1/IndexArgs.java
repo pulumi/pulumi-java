@@ -105,42 +105,37 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
             this.ancestor = Objects.requireNonNull(ancestor);
             return this;
         }
-
         public Builder ancestor(IndexAncestor ancestor) {
             this.ancestor = Output.of(Objects.requireNonNull(ancestor));
             return this;
         }
-
         public Builder kind(Output<String> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder properties(Output<List<GoogleDatastoreAdminV1IndexedPropertyArgs>> properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
-
         public Builder properties(List<GoogleDatastoreAdminV1IndexedPropertyArgs> properties) {
             this.properties = Output.of(Objects.requireNonNull(properties));
             return this;
         }
-        public IndexArgs build() {
+        public Builder properties(GoogleDatastoreAdminV1IndexedPropertyArgs... properties) {
+            return properties(List.of(properties));
+        }        public IndexArgs build() {
             return new IndexArgs(ancestor, kind, project, properties);
         }
     }

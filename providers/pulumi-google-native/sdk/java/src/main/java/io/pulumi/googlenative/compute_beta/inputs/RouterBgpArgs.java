@@ -126,52 +126,48 @@ public final class RouterBgpArgs extends io.pulumi.resources.ResourceArgs {
             this.advertiseMode = advertiseMode;
             return this;
         }
-
         public Builder advertiseMode(@Nullable RouterBgpAdvertiseMode advertiseMode) {
             this.advertiseMode = Output.ofNullable(advertiseMode);
             return this;
         }
-
         public Builder advertisedGroups(@Nullable Output<List<RouterBgpAdvertisedGroupsItem>> advertisedGroups) {
             this.advertisedGroups = advertisedGroups;
             return this;
         }
-
         public Builder advertisedGroups(@Nullable List<RouterBgpAdvertisedGroupsItem> advertisedGroups) {
             this.advertisedGroups = Output.ofNullable(advertisedGroups);
             return this;
         }
-
+        public Builder advertisedGroups(RouterBgpAdvertisedGroupsItem... advertisedGroups) {
+            return advertisedGroups(List.of(advertisedGroups));
+        }
         public Builder advertisedIpRanges(@Nullable Output<List<RouterAdvertisedIpRangeArgs>> advertisedIpRanges) {
             this.advertisedIpRanges = advertisedIpRanges;
             return this;
         }
-
         public Builder advertisedIpRanges(@Nullable List<RouterAdvertisedIpRangeArgs> advertisedIpRanges) {
             this.advertisedIpRanges = Output.ofNullable(advertisedIpRanges);
             return this;
         }
-
+        public Builder advertisedIpRanges(RouterAdvertisedIpRangeArgs... advertisedIpRanges) {
+            return advertisedIpRanges(List.of(advertisedIpRanges));
+        }
         public Builder asn(@Nullable Output<Integer> asn) {
             this.asn = asn;
             return this;
         }
-
         public Builder asn(@Nullable Integer asn) {
             this.asn = Output.ofNullable(asn);
             return this;
         }
-
         public Builder keepaliveInterval(@Nullable Output<Integer> keepaliveInterval) {
             this.keepaliveInterval = keepaliveInterval;
             return this;
         }
-
         public Builder keepaliveInterval(@Nullable Integer keepaliveInterval) {
             this.keepaliveInterval = Output.ofNullable(keepaliveInterval);
             return this;
-        }
-        public RouterBgpArgs build() {
+        }        public RouterBgpArgs build() {
             return new RouterBgpArgs(advertiseMode, advertisedGroups, advertisedIpRanges, asn, keepaliveInterval);
         }
     }

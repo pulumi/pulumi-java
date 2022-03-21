@@ -113,42 +113,43 @@ public final class OSPolicyAssignmentInstanceFilterArgs extends io.pulumi.resour
             this.all = all;
             return this;
         }
-
         public Builder all(@Nullable Boolean all) {
             this.all = Output.ofNullable(all);
             return this;
         }
-
         public Builder exclusionLabels(@Nullable Output<List<OSPolicyAssignmentLabelSetArgs>> exclusionLabels) {
             this.exclusionLabels = exclusionLabels;
             return this;
         }
-
         public Builder exclusionLabels(@Nullable List<OSPolicyAssignmentLabelSetArgs> exclusionLabels) {
             this.exclusionLabels = Output.ofNullable(exclusionLabels);
             return this;
         }
-
+        public Builder exclusionLabels(OSPolicyAssignmentLabelSetArgs... exclusionLabels) {
+            return exclusionLabels(List.of(exclusionLabels));
+        }
         public Builder inclusionLabels(@Nullable Output<List<OSPolicyAssignmentLabelSetArgs>> inclusionLabels) {
             this.inclusionLabels = inclusionLabels;
             return this;
         }
-
         public Builder inclusionLabels(@Nullable List<OSPolicyAssignmentLabelSetArgs> inclusionLabels) {
             this.inclusionLabels = Output.ofNullable(inclusionLabels);
             return this;
         }
-
+        public Builder inclusionLabels(OSPolicyAssignmentLabelSetArgs... inclusionLabels) {
+            return inclusionLabels(List.of(inclusionLabels));
+        }
         public Builder inventories(@Nullable Output<List<OSPolicyAssignmentInstanceFilterInventoryArgs>> inventories) {
             this.inventories = inventories;
             return this;
         }
-
         public Builder inventories(@Nullable List<OSPolicyAssignmentInstanceFilterInventoryArgs> inventories) {
             this.inventories = Output.ofNullable(inventories);
             return this;
         }
-        public OSPolicyAssignmentInstanceFilterArgs build() {
+        public Builder inventories(OSPolicyAssignmentInstanceFilterInventoryArgs... inventories) {
+            return inventories(List.of(inventories));
+        }        public OSPolicyAssignmentInstanceFilterArgs build() {
             return new OSPolicyAssignmentInstanceFilterArgs(all, exclusionLabels, inclusionLabels, inventories);
         }
     }

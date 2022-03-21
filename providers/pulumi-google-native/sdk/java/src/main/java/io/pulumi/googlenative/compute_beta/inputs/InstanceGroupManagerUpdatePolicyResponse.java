@@ -170,42 +170,34 @@ public final class InstanceGroupManagerUpdatePolicyResponse extends io.pulumi.re
             this.instanceRedistributionType = Objects.requireNonNull(instanceRedistributionType);
             return this;
         }
-
         public Builder maxSurge(FixedOrPercentResponse maxSurge) {
             this.maxSurge = Objects.requireNonNull(maxSurge);
             return this;
         }
-
         public Builder maxUnavailable(FixedOrPercentResponse maxUnavailable) {
             this.maxUnavailable = Objects.requireNonNull(maxUnavailable);
             return this;
         }
-
         public Builder minReadySec(Integer minReadySec) {
             this.minReadySec = Objects.requireNonNull(minReadySec);
             return this;
         }
-
         public Builder minimalAction(String minimalAction) {
             this.minimalAction = Objects.requireNonNull(minimalAction);
             return this;
         }
-
         public Builder mostDisruptiveAllowedAction(String mostDisruptiveAllowedAction) {
             this.mostDisruptiveAllowedAction = Objects.requireNonNull(mostDisruptiveAllowedAction);
             return this;
         }
-
         public Builder replacementMethod(String replacementMethod) {
             this.replacementMethod = Objects.requireNonNull(replacementMethod);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public InstanceGroupManagerUpdatePolicyResponse build() {
+        }        public InstanceGroupManagerUpdatePolicyResponse build() {
             return new InstanceGroupManagerUpdatePolicyResponse(instanceRedistributionType, maxSurge, maxUnavailable, minReadySec, minimalAction, mostDisruptiveAllowedAction, replacementMethod, type);
         }
     }

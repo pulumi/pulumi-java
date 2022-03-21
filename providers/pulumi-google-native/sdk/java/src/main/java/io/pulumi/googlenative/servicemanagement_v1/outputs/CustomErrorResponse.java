@@ -71,12 +71,16 @@ public final class CustomErrorResponse {
             this.rules = Objects.requireNonNull(rules);
             return this;
         }
-
+        public Builder rules(CustomErrorRuleResponse... rules) {
+            return rules(List.of(rules));
+        }
         public Builder types(List<String> types) {
             this.types = Objects.requireNonNull(types);
             return this;
         }
-        public CustomErrorResponse build() {
+        public Builder types(String... types) {
+            return types(List.of(types));
+        }        public CustomErrorResponse build() {
             return new CustomErrorResponse(rules, types);
         }
     }

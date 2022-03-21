@@ -129,62 +129,53 @@ public final class RegionAutoscalingPolicyIamPolicyArgs extends io.pulumi.resour
             this.autoscalingPolicyId = Objects.requireNonNull(autoscalingPolicyId);
             return this;
         }
-
         public Builder autoscalingPolicyId(String autoscalingPolicyId) {
             this.autoscalingPolicyId = Output.of(Objects.requireNonNull(autoscalingPolicyId));
             return this;
         }
-
         public Builder bindings(@Nullable Output<List<BindingArgs>> bindings) {
             this.bindings = bindings;
             return this;
         }
-
         public Builder bindings(@Nullable List<BindingArgs> bindings) {
             this.bindings = Output.ofNullable(bindings);
             return this;
         }
-
+        public Builder bindings(BindingArgs... bindings) {
+            return bindings(List.of(bindings));
+        }
         public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
-
         public Builder etag(@Nullable String etag) {
             this.etag = Output.ofNullable(etag);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder regionId(Output<String> regionId) {
             this.regionId = Objects.requireNonNull(regionId);
             return this;
         }
-
         public Builder regionId(String regionId) {
             this.regionId = Output.of(Objects.requireNonNull(regionId));
             return this;
         }
-
         public Builder version(@Nullable Output<Integer> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable Integer version) {
             this.version = Output.ofNullable(version);
             return this;
-        }
-        public RegionAutoscalingPolicyIamPolicyArgs build() {
+        }        public RegionAutoscalingPolicyIamPolicyArgs build() {
             return new RegionAutoscalingPolicyIamPolicyArgs(autoscalingPolicyId, bindings, etag, project, regionId, version);
         }
     }

@@ -58,8 +58,7 @@ public final class GoogleCloudChannelV1AssociationInfoResponse extends io.pulumi
         public Builder baseEntitlement(String baseEntitlement) {
             this.baseEntitlement = Objects.requireNonNull(baseEntitlement);
             return this;
-        }
-        public GoogleCloudChannelV1AssociationInfoResponse build() {
+        }        public GoogleCloudChannelV1AssociationInfoResponse build() {
             return new GoogleCloudChannelV1AssociationInfoResponse(baseEntitlement);
         }
     }

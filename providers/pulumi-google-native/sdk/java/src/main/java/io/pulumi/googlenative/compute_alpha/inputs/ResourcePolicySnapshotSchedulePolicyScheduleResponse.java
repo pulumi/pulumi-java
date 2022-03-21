@@ -82,17 +82,14 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleResponse extends 
             this.dailySchedule = Objects.requireNonNull(dailySchedule);
             return this;
         }
-
         public Builder hourlySchedule(ResourcePolicyHourlyCycleResponse hourlySchedule) {
             this.hourlySchedule = Objects.requireNonNull(hourlySchedule);
             return this;
         }
-
         public Builder weeklySchedule(ResourcePolicyWeeklyCycleResponse weeklySchedule) {
             this.weeklySchedule = Objects.requireNonNull(weeklySchedule);
             return this;
-        }
-        public ResourcePolicySnapshotSchedulePolicyScheduleResponse build() {
+        }        public ResourcePolicySnapshotSchedulePolicyScheduleResponse build() {
             return new ResourcePolicySnapshotSchedulePolicyScheduleResponse(dailySchedule, hourlySchedule, weeklySchedule);
         }
     }

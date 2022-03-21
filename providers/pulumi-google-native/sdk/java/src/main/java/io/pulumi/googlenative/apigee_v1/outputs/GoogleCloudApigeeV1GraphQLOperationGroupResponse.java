@@ -71,12 +71,13 @@ public final class GoogleCloudApigeeV1GraphQLOperationGroupResponse {
             this.operationConfigType = Objects.requireNonNull(operationConfigType);
             return this;
         }
-
         public Builder operationConfigs(List<GoogleCloudApigeeV1GraphQLOperationConfigResponse> operationConfigs) {
             this.operationConfigs = Objects.requireNonNull(operationConfigs);
             return this;
         }
-        public GoogleCloudApigeeV1GraphQLOperationGroupResponse build() {
+        public Builder operationConfigs(GoogleCloudApigeeV1GraphQLOperationConfigResponse... operationConfigs) {
+            return operationConfigs(List.of(operationConfigs));
+        }        public GoogleCloudApigeeV1GraphQLOperationGroupResponse build() {
             return new GoogleCloudApigeeV1GraphQLOperationGroupResponse(operationConfigType, operationConfigs);
         }
     }

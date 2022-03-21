@@ -61,12 +61,10 @@ public final class SecurityPolicyAdaptiveProtectionConfigArgs extends io.pulumi.
             this.layer7DdosDefenseConfig = layer7DdosDefenseConfig;
             return this;
         }
-
         public Builder layer7DdosDefenseConfig(@Nullable SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigArgs layer7DdosDefenseConfig) {
             this.layer7DdosDefenseConfig = Output.ofNullable(layer7DdosDefenseConfig);
             return this;
-        }
-        public SecurityPolicyAdaptiveProtectionConfigArgs build() {
+        }        public SecurityPolicyAdaptiveProtectionConfigArgs build() {
             return new SecurityPolicyAdaptiveProtectionConfigArgs(layer7DdosDefenseConfig);
         }
     }

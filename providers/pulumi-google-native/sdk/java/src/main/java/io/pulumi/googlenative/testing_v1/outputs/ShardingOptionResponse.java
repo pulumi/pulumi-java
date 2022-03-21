@@ -70,12 +70,10 @@ public final class ShardingOptionResponse {
             this.manualSharding = Objects.requireNonNull(manualSharding);
             return this;
         }
-
         public Builder uniformSharding(UniformShardingResponse uniformSharding) {
             this.uniformSharding = Objects.requireNonNull(uniformSharding);
             return this;
-        }
-        public ShardingOptionResponse build() {
+        }        public ShardingOptionResponse build() {
             return new ShardingOptionResponse(manualSharding, uniformSharding);
         }
     }

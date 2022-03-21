@@ -212,102 +212,91 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
             this.accessConfigs = accessConfigs;
             return this;
         }
-
         public Builder accessConfigs(@Nullable List<AccessConfigArgs> accessConfigs) {
             this.accessConfigs = Output.ofNullable(accessConfigs);
             return this;
         }
-
+        public Builder accessConfigs(AccessConfigArgs... accessConfigs) {
+            return accessConfigs(List.of(accessConfigs));
+        }
         public Builder aliasIpRanges(@Nullable Output<List<AliasIpRangeArgs>> aliasIpRanges) {
             this.aliasIpRanges = aliasIpRanges;
             return this;
         }
-
         public Builder aliasIpRanges(@Nullable List<AliasIpRangeArgs> aliasIpRanges) {
             this.aliasIpRanges = Output.ofNullable(aliasIpRanges);
             return this;
         }
-
+        public Builder aliasIpRanges(AliasIpRangeArgs... aliasIpRanges) {
+            return aliasIpRanges(List.of(aliasIpRanges));
+        }
         public Builder ipv6AccessConfigs(@Nullable Output<List<AccessConfigArgs>> ipv6AccessConfigs) {
             this.ipv6AccessConfigs = ipv6AccessConfigs;
             return this;
         }
-
         public Builder ipv6AccessConfigs(@Nullable List<AccessConfigArgs> ipv6AccessConfigs) {
             this.ipv6AccessConfigs = Output.ofNullable(ipv6AccessConfigs);
             return this;
         }
-
+        public Builder ipv6AccessConfigs(AccessConfigArgs... ipv6AccessConfigs) {
+            return ipv6AccessConfigs(List.of(ipv6AccessConfigs));
+        }
         public Builder ipv6Address(@Nullable Output<String> ipv6Address) {
             this.ipv6Address = ipv6Address;
             return this;
         }
-
         public Builder ipv6Address(@Nullable String ipv6Address) {
             this.ipv6Address = Output.ofNullable(ipv6Address);
             return this;
         }
-
         public Builder network(@Nullable Output<String> network) {
             this.network = network;
             return this;
         }
-
         public Builder network(@Nullable String network) {
             this.network = Output.ofNullable(network);
             return this;
         }
-
         public Builder networkIP(@Nullable Output<String> networkIP) {
             this.networkIP = networkIP;
             return this;
         }
-
         public Builder networkIP(@Nullable String networkIP) {
             this.networkIP = Output.ofNullable(networkIP);
             return this;
         }
-
         public Builder nicType(@Nullable Output<NetworkInterfaceNicType> nicType) {
             this.nicType = nicType;
             return this;
         }
-
         public Builder nicType(@Nullable NetworkInterfaceNicType nicType) {
             this.nicType = Output.ofNullable(nicType);
             return this;
         }
-
         public Builder queueCount(@Nullable Output<Integer> queueCount) {
             this.queueCount = queueCount;
             return this;
         }
-
         public Builder queueCount(@Nullable Integer queueCount) {
             this.queueCount = Output.ofNullable(queueCount);
             return this;
         }
-
         public Builder stackType(@Nullable Output<NetworkInterfaceStackType> stackType) {
             this.stackType = stackType;
             return this;
         }
-
         public Builder stackType(@Nullable NetworkInterfaceStackType stackType) {
             this.stackType = Output.ofNullable(stackType);
             return this;
         }
-
         public Builder subnetwork(@Nullable Output<String> subnetwork) {
             this.subnetwork = subnetwork;
             return this;
         }
-
         public Builder subnetwork(@Nullable String subnetwork) {
             this.subnetwork = Output.ofNullable(subnetwork);
             return this;
-        }
-        public NetworkInterfaceArgs build() {
+        }        public NetworkInterfaceArgs build() {
             return new NetworkInterfaceArgs(accessConfigs, aliasIpRanges, ipv6AccessConfigs, ipv6Address, network, networkIP, nicType, queueCount, stackType, subnetwork);
         }
     }

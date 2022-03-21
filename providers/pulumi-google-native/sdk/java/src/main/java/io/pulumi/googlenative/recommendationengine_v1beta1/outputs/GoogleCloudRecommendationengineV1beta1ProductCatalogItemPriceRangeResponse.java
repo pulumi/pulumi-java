@@ -69,12 +69,10 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemPrice
             this.max = Objects.requireNonNull(max);
             return this;
         }
-
         public Builder min(Double min) {
             this.min = Objects.requireNonNull(min);
             return this;
-        }
-        public GoogleCloudRecommendationengineV1beta1ProductCatalogItemPriceRangeResponse build() {
+        }        public GoogleCloudRecommendationengineV1beta1ProductCatalogItemPriceRangeResponse build() {
             return new GoogleCloudRecommendationengineV1beta1ProductCatalogItemPriceRangeResponse(max, min);
         }
     }

@@ -102,27 +102,22 @@ public final class GetDatasetAnnotationStoreIamPolicyArgs extends io.pulumi.reso
             this.annotationStoreId = Objects.requireNonNull(annotationStoreId);
             return this;
         }
-
         public Builder datasetId(String datasetId) {
             this.datasetId = Objects.requireNonNull(datasetId);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder optionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
             this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetDatasetAnnotationStoreIamPolicyArgs build() {
+        }        public GetDatasetAnnotationStoreIamPolicyArgs build() {
             return new GetDatasetAnnotationStoreIamPolicyArgs(annotationStoreId, datasetId, location, optionsRequestedPolicyVersion, project);
         }
     }

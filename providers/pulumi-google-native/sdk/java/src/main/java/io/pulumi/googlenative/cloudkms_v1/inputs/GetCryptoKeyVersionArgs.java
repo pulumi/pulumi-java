@@ -102,27 +102,22 @@ public final class GetCryptoKeyVersionArgs extends io.pulumi.resources.InvokeArg
             this.cryptoKeyId = Objects.requireNonNull(cryptoKeyId);
             return this;
         }
-
         public Builder cryptoKeyVersionId(String cryptoKeyVersionId) {
             this.cryptoKeyVersionId = Objects.requireNonNull(cryptoKeyVersionId);
             return this;
         }
-
         public Builder keyRingId(String keyRingId) {
             this.keyRingId = Objects.requireNonNull(keyRingId);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetCryptoKeyVersionArgs build() {
+        }        public GetCryptoKeyVersionArgs build() {
             return new GetCryptoKeyVersionArgs(cryptoKeyId, cryptoKeyVersionId, keyRingId, location, project);
         }
     }

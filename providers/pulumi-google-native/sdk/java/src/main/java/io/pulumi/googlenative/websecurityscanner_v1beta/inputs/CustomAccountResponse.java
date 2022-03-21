@@ -92,17 +92,14 @@ public final class CustomAccountResponse extends io.pulumi.resources.InvokeArgs 
             this.loginUrl = Objects.requireNonNull(loginUrl);
             return this;
         }
-
         public Builder password(String password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
-
         public Builder username(String username) {
             this.username = Objects.requireNonNull(username);
             return this;
-        }
-        public CustomAccountResponse build() {
+        }        public CustomAccountResponse build() {
             return new CustomAccountResponse(loginUrl, password, username);
         }
     }

@@ -102,27 +102,22 @@ public final class GetExecutionArgs extends io.pulumi.resources.InvokeArgs {
             this.executionId = Objects.requireNonNull(executionId);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder view(@Nullable String view) {
             this.view = view;
             return this;
         }
-
         public Builder workflowId(String workflowId) {
             this.workflowId = Objects.requireNonNull(workflowId);
             return this;
-        }
-        public GetExecutionArgs build() {
+        }        public GetExecutionArgs build() {
             return new GetExecutionArgs(executionId, location, project, view, workflowId);
         }
     }

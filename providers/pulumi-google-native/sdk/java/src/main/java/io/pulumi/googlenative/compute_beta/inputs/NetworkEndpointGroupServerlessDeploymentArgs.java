@@ -110,42 +110,34 @@ public final class NetworkEndpointGroupServerlessDeploymentArgs extends io.pulum
             this.platform = platform;
             return this;
         }
-
         public Builder platform(@Nullable String platform) {
             this.platform = Output.ofNullable(platform);
             return this;
         }
-
         public Builder resource(@Nullable Output<String> resource) {
             this.resource = resource;
             return this;
         }
-
         public Builder resource(@Nullable String resource) {
             this.resource = Output.ofNullable(resource);
             return this;
         }
-
         public Builder urlMask(@Nullable Output<String> urlMask) {
             this.urlMask = urlMask;
             return this;
         }
-
         public Builder urlMask(@Nullable String urlMask) {
             this.urlMask = Output.ofNullable(urlMask);
             return this;
         }
-
         public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = Output.ofNullable(version);
             return this;
-        }
-        public NetworkEndpointGroupServerlessDeploymentArgs build() {
+        }        public NetworkEndpointGroupServerlessDeploymentArgs build() {
             return new NetworkEndpointGroupServerlessDeploymentArgs(platform, resource, urlMask, version);
         }
     }

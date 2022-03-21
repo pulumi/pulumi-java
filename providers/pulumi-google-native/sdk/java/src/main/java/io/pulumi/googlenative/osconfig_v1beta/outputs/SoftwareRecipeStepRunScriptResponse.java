@@ -87,17 +87,17 @@ public final class SoftwareRecipeStepRunScriptResponse {
             this.allowedExitCodes = Objects.requireNonNull(allowedExitCodes);
             return this;
         }
-
+        public Builder allowedExitCodes(Integer... allowedExitCodes) {
+            return allowedExitCodes(List.of(allowedExitCodes));
+        }
         public Builder interpreter(String interpreter) {
             this.interpreter = Objects.requireNonNull(interpreter);
             return this;
         }
-
         public Builder script(String script) {
             this.script = Objects.requireNonNull(script);
             return this;
-        }
-        public SoftwareRecipeStepRunScriptResponse build() {
+        }        public SoftwareRecipeStepRunScriptResponse build() {
             return new SoftwareRecipeStepRunScriptResponse(allowedExitCodes, interpreter, script);
         }
     }

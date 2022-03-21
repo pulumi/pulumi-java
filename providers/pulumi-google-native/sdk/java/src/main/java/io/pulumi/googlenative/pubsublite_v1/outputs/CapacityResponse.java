@@ -69,12 +69,10 @@ public final class CapacityResponse {
             this.publishMibPerSec = Objects.requireNonNull(publishMibPerSec);
             return this;
         }
-
         public Builder subscribeMibPerSec(Integer subscribeMibPerSec) {
             this.subscribeMibPerSec = Objects.requireNonNull(subscribeMibPerSec);
             return this;
-        }
-        public CapacityResponse build() {
+        }        public CapacityResponse build() {
             return new CapacityResponse(publishMibPerSec, subscribeMibPerSec);
         }
     }

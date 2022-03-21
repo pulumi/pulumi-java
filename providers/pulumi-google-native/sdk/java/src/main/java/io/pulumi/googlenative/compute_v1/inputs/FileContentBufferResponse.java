@@ -72,12 +72,10 @@ public final class FileContentBufferResponse extends io.pulumi.resources.InvokeA
             this.content = Objects.requireNonNull(content);
             return this;
         }
-
         public Builder fileType(String fileType) {
             this.fileType = Objects.requireNonNull(fileType);
             return this;
-        }
-        public FileContentBufferResponse build() {
+        }        public FileContentBufferResponse build() {
             return new FileContentBufferResponse(content, fileType);
         }
     }

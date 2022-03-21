@@ -71,12 +71,13 @@ public final class ClientInfoResponse {
             this.clientInfoDetails = Objects.requireNonNull(clientInfoDetails);
             return this;
         }
-
+        public Builder clientInfoDetails(ClientInfoDetailResponse... clientInfoDetails) {
+            return clientInfoDetails(List.of(clientInfoDetails));
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public ClientInfoResponse build() {
+        }        public ClientInfoResponse build() {
             return new ClientInfoResponse(clientInfoDetails, name);
         }
     }

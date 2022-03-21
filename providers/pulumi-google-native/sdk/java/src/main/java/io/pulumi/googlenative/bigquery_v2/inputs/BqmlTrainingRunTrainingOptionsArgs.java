@@ -156,92 +156,74 @@ public final class BqmlTrainingRunTrainingOptionsArgs extends io.pulumi.resource
             this.earlyStop = earlyStop;
             return this;
         }
-
         public Builder earlyStop(@Nullable Boolean earlyStop) {
             this.earlyStop = Output.ofNullable(earlyStop);
             return this;
         }
-
         public Builder l1Reg(@Nullable Output<Double> l1Reg) {
             this.l1Reg = l1Reg;
             return this;
         }
-
         public Builder l1Reg(@Nullable Double l1Reg) {
             this.l1Reg = Output.ofNullable(l1Reg);
             return this;
         }
-
         public Builder l2Reg(@Nullable Output<Double> l2Reg) {
             this.l2Reg = l2Reg;
             return this;
         }
-
         public Builder l2Reg(@Nullable Double l2Reg) {
             this.l2Reg = Output.ofNullable(l2Reg);
             return this;
         }
-
         public Builder learnRate(@Nullable Output<Double> learnRate) {
             this.learnRate = learnRate;
             return this;
         }
-
         public Builder learnRate(@Nullable Double learnRate) {
             this.learnRate = Output.ofNullable(learnRate);
             return this;
         }
-
         public Builder learnRateStrategy(@Nullable Output<String> learnRateStrategy) {
             this.learnRateStrategy = learnRateStrategy;
             return this;
         }
-
         public Builder learnRateStrategy(@Nullable String learnRateStrategy) {
             this.learnRateStrategy = Output.ofNullable(learnRateStrategy);
             return this;
         }
-
         public Builder lineSearchInitLearnRate(@Nullable Output<Double> lineSearchInitLearnRate) {
             this.lineSearchInitLearnRate = lineSearchInitLearnRate;
             return this;
         }
-
         public Builder lineSearchInitLearnRate(@Nullable Double lineSearchInitLearnRate) {
             this.lineSearchInitLearnRate = Output.ofNullable(lineSearchInitLearnRate);
             return this;
         }
-
         public Builder maxIteration(@Nullable Output<String> maxIteration) {
             this.maxIteration = maxIteration;
             return this;
         }
-
         public Builder maxIteration(@Nullable String maxIteration) {
             this.maxIteration = Output.ofNullable(maxIteration);
             return this;
         }
-
         public Builder minRelProgress(@Nullable Output<Double> minRelProgress) {
             this.minRelProgress = minRelProgress;
             return this;
         }
-
         public Builder minRelProgress(@Nullable Double minRelProgress) {
             this.minRelProgress = Output.ofNullable(minRelProgress);
             return this;
         }
-
         public Builder warmStart(@Nullable Output<Boolean> warmStart) {
             this.warmStart = warmStart;
             return this;
         }
-
         public Builder warmStart(@Nullable Boolean warmStart) {
             this.warmStart = Output.ofNullable(warmStart);
             return this;
-        }
-        public BqmlTrainingRunTrainingOptionsArgs build() {
+        }        public BqmlTrainingRunTrainingOptionsArgs build() {
             return new BqmlTrainingRunTrainingOptionsArgs(earlyStop, l1Reg, l2Reg, learnRate, learnRateStrategy, lineSearchInitLearnRate, maxIteration, minRelProgress, warmStart);
         }
     }

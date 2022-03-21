@@ -108,22 +108,18 @@ public final class InputMappingResponse extends io.pulumi.resources.InvokeArgs {
             this.fieldName = Objects.requireNonNull(fieldName);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder methodMatch(String methodMatch) {
             this.methodMatch = Objects.requireNonNull(methodMatch);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public InputMappingResponse build() {
+        }        public InputMappingResponse build() {
             return new InputMappingResponse(fieldName, location, methodMatch, value);
         }
     }

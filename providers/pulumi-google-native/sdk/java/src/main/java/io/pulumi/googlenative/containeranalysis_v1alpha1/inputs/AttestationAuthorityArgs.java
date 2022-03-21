@@ -57,12 +57,10 @@ public final class AttestationAuthorityArgs extends io.pulumi.resources.Resource
             this.hint = hint;
             return this;
         }
-
         public Builder hint(@Nullable AttestationAuthorityHintArgs hint) {
             this.hint = Output.ofNullable(hint);
             return this;
-        }
-        public AttestationAuthorityArgs build() {
+        }        public AttestationAuthorityArgs build() {
             return new AttestationAuthorityArgs(hint);
         }
     }

@@ -79,22 +79,18 @@ public final class GoogleCloudChannelV1ParameterArgs extends io.pulumi.resources
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder value(@Nullable Output<GoogleCloudChannelV1ValueArgs> value) {
             this.value = value;
             return this;
         }
-
         public Builder value(@Nullable GoogleCloudChannelV1ValueArgs value) {
             this.value = Output.ofNullable(value);
             return this;
-        }
-        public GoogleCloudChannelV1ParameterArgs build() {
+        }        public GoogleCloudChannelV1ParameterArgs build() {
             return new GoogleCloudChannelV1ParameterArgs(name, value);
         }
     }

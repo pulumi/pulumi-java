@@ -61,12 +61,10 @@ public final class GoogleCloudMlV1__IntegratedGradientsAttributionArgs extends i
             this.numIntegralSteps = numIntegralSteps;
             return this;
         }
-
         public Builder numIntegralSteps(@Nullable Integer numIntegralSteps) {
             this.numIntegralSteps = Output.ofNullable(numIntegralSteps);
             return this;
-        }
-        public GoogleCloudMlV1__IntegratedGradientsAttributionArgs build() {
+        }        public GoogleCloudMlV1__IntegratedGradientsAttributionArgs build() {
             return new GoogleCloudMlV1__IntegratedGradientsAttributionArgs(numIntegralSteps);
         }
     }

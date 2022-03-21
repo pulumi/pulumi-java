@@ -111,52 +111,42 @@ public final class ConversationArgs extends io.pulumi.resources.ResourceArgs {
             this.conversationId = conversationId;
             return this;
         }
-
         public Builder conversationId(@Nullable String conversationId) {
             this.conversationId = Output.ofNullable(conversationId);
             return this;
         }
-
         public Builder conversationProfile(Output<String> conversationProfile) {
             this.conversationProfile = Objects.requireNonNull(conversationProfile);
             return this;
         }
-
         public Builder conversationProfile(String conversationProfile) {
             this.conversationProfile = Output.of(Objects.requireNonNull(conversationProfile));
             return this;
         }
-
         public Builder conversationStage(@Nullable Output<ConversationConversationStage> conversationStage) {
             this.conversationStage = conversationStage;
             return this;
         }
-
         public Builder conversationStage(@Nullable ConversationConversationStage conversationStage) {
             this.conversationStage = Output.ofNullable(conversationStage);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
-        }
-        public ConversationArgs build() {
+        }        public ConversationArgs build() {
             return new ConversationArgs(conversationId, conversationProfile, conversationStage, location, project);
         }
     }

@@ -69,12 +69,10 @@ public final class SqlActiveDirectoryConfigResponse {
             this.domain = Objects.requireNonNull(domain);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
-        }
-        public SqlActiveDirectoryConfigResponse build() {
+        }        public SqlActiveDirectoryConfigResponse build() {
             return new SqlActiveDirectoryConfigResponse(domain, kind);
         }
     }

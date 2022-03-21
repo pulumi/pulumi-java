@@ -86,17 +86,14 @@ public final class BuiltImageResponse {
             this.digest = Objects.requireNonNull(digest);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder pushTiming(TimeSpanResponse pushTiming) {
             this.pushTiming = Objects.requireNonNull(pushTiming);
             return this;
-        }
-        public BuiltImageResponse build() {
+        }        public BuiltImageResponse build() {
             return new BuiltImageResponse(digest, name, pushTiming);
         }
     }

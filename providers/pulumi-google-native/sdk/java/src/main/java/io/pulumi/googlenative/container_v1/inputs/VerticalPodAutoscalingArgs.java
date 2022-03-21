@@ -61,12 +61,10 @@ public final class VerticalPodAutoscalingArgs extends io.pulumi.resources.Resour
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
-        }
-        public VerticalPodAutoscalingArgs build() {
+        }        public VerticalPodAutoscalingArgs build() {
             return new VerticalPodAutoscalingArgs(enabled);
         }
     }

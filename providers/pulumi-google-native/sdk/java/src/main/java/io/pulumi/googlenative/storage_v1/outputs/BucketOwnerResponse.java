@@ -69,12 +69,10 @@ public final class BucketOwnerResponse {
             this.entity = Objects.requireNonNull(entity);
             return this;
         }
-
         public Builder entityId(String entityId) {
             this.entityId = Objects.requireNonNull(entityId);
             return this;
-        }
-        public BucketOwnerResponse build() {
+        }        public BucketOwnerResponse build() {
             return new BucketOwnerResponse(entity, entityId);
         }
     }

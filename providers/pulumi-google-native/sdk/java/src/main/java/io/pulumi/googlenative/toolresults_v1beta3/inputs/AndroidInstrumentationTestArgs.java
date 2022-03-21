@@ -112,42 +112,37 @@ public final class AndroidInstrumentationTestArgs extends io.pulumi.resources.Re
             this.testPackageId = testPackageId;
             return this;
         }
-
         public Builder testPackageId(@Nullable String testPackageId) {
             this.testPackageId = Output.ofNullable(testPackageId);
             return this;
         }
-
         public Builder testRunnerClass(@Nullable Output<String> testRunnerClass) {
             this.testRunnerClass = testRunnerClass;
             return this;
         }
-
         public Builder testRunnerClass(@Nullable String testRunnerClass) {
             this.testRunnerClass = Output.ofNullable(testRunnerClass);
             return this;
         }
-
         public Builder testTargets(@Nullable Output<List<String>> testTargets) {
             this.testTargets = testTargets;
             return this;
         }
-
         public Builder testTargets(@Nullable List<String> testTargets) {
             this.testTargets = Output.ofNullable(testTargets);
             return this;
         }
-
+        public Builder testTargets(String... testTargets) {
+            return testTargets(List.of(testTargets));
+        }
         public Builder useOrchestrator(@Nullable Output<Boolean> useOrchestrator) {
             this.useOrchestrator = useOrchestrator;
             return this;
         }
-
         public Builder useOrchestrator(@Nullable Boolean useOrchestrator) {
             this.useOrchestrator = Output.ofNullable(useOrchestrator);
             return this;
-        }
-        public AndroidInstrumentationTestArgs build() {
+        }        public AndroidInstrumentationTestArgs build() {
             return new AndroidInstrumentationTestArgs(testPackageId, testRunnerClass, testTargets, useOrchestrator);
         }
     }

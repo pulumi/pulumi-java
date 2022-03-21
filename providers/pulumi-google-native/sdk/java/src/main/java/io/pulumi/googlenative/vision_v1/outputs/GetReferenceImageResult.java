@@ -87,17 +87,17 @@ public final class GetReferenceImageResult {
             this.boundingPolys = Objects.requireNonNull(boundingPolys);
             return this;
         }
-
+        public Builder boundingPolys(BoundingPolyResponse... boundingPolys) {
+            return boundingPolys(List.of(boundingPolys));
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder uri(String uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
-        }
-        public GetReferenceImageResult build() {
+        }        public GetReferenceImageResult build() {
             return new GetReferenceImageResult(boundingPolys, name, uri);
         }
     }

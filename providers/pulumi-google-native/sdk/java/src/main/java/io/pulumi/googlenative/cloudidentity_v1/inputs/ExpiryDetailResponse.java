@@ -58,8 +58,7 @@ public final class ExpiryDetailResponse extends io.pulumi.resources.InvokeArgs {
         public Builder expireTime(String expireTime) {
             this.expireTime = Objects.requireNonNull(expireTime);
             return this;
-        }
-        public ExpiryDetailResponse build() {
+        }        public ExpiryDetailResponse build() {
             return new ExpiryDetailResponse(expireTime);
         }
     }

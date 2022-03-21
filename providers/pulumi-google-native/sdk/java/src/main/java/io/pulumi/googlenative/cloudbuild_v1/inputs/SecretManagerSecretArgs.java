@@ -78,22 +78,18 @@ public final class SecretManagerSecretArgs extends io.pulumi.resources.ResourceA
             this.env = env;
             return this;
         }
-
         public Builder env(@Nullable String env) {
             this.env = Output.ofNullable(env);
             return this;
         }
-
         public Builder versionName(@Nullable Output<String> versionName) {
             this.versionName = versionName;
             return this;
         }
-
         public Builder versionName(@Nullable String versionName) {
             this.versionName = Output.ofNullable(versionName);
             return this;
-        }
-        public SecretManagerSecretArgs build() {
+        }        public SecretManagerSecretArgs build() {
             return new SecretManagerSecretArgs(env, versionName);
         }
     }

@@ -138,32 +138,26 @@ public final class GetAnnotationResult {
             this.annotationSource = Objects.requireNonNull(annotationSource);
             return this;
         }
-
         public Builder customData(Map<String,String> customData) {
             this.customData = Objects.requireNonNull(customData);
             return this;
         }
-
         public Builder imageAnnotation(ImageAnnotationResponse imageAnnotation) {
             this.imageAnnotation = Objects.requireNonNull(imageAnnotation);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder resourceAnnotation(ResourceAnnotationResponse resourceAnnotation) {
             this.resourceAnnotation = Objects.requireNonNull(resourceAnnotation);
             return this;
         }
-
         public Builder textAnnotation(SensitiveTextAnnotationResponse textAnnotation) {
             this.textAnnotation = Objects.requireNonNull(textAnnotation);
             return this;
-        }
-        public GetAnnotationResult build() {
+        }        public GetAnnotationResult build() {
             return new GetAnnotationResult(annotationSource, customData, imageAnnotation, name, resourceAnnotation, textAnnotation);
         }
     }

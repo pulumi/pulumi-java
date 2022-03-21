@@ -70,12 +70,10 @@ public final class MetricRuleResponse {
             this.metricCosts = Objects.requireNonNull(metricCosts);
             return this;
         }
-
         public Builder selector(String selector) {
             this.selector = Objects.requireNonNull(selector);
             return this;
-        }
-        public MetricRuleResponse build() {
+        }        public MetricRuleResponse build() {
             return new MetricRuleResponse(metricCosts, selector);
         }
     }

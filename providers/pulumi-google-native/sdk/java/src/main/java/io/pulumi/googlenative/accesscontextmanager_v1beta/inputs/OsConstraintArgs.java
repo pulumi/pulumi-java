@@ -96,32 +96,26 @@ public final class OsConstraintArgs extends io.pulumi.resources.ResourceArgs {
             this.minimumVersion = minimumVersion;
             return this;
         }
-
         public Builder minimumVersion(@Nullable String minimumVersion) {
             this.minimumVersion = Output.ofNullable(minimumVersion);
             return this;
         }
-
         public Builder osType(Output<OsConstraintOsType> osType) {
             this.osType = Objects.requireNonNull(osType);
             return this;
         }
-
         public Builder osType(OsConstraintOsType osType) {
             this.osType = Output.of(Objects.requireNonNull(osType));
             return this;
         }
-
         public Builder requireVerifiedChromeOs(@Nullable Output<Boolean> requireVerifiedChromeOs) {
             this.requireVerifiedChromeOs = requireVerifiedChromeOs;
             return this;
         }
-
         public Builder requireVerifiedChromeOs(@Nullable Boolean requireVerifiedChromeOs) {
             this.requireVerifiedChromeOs = Output.ofNullable(requireVerifiedChromeOs);
             return this;
-        }
-        public OsConstraintArgs build() {
+        }        public OsConstraintArgs build() {
             return new OsConstraintArgs(minimumVersion, osType, requireVerifiedChromeOs);
         }
     }

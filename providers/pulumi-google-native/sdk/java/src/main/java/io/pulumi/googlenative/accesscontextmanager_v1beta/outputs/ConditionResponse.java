@@ -136,32 +136,38 @@ public final class ConditionResponse {
             this.devicePolicy = Objects.requireNonNull(devicePolicy);
             return this;
         }
-
         public Builder ipSubnetworks(List<String> ipSubnetworks) {
             this.ipSubnetworks = Objects.requireNonNull(ipSubnetworks);
             return this;
         }
-
+        public Builder ipSubnetworks(String... ipSubnetworks) {
+            return ipSubnetworks(List.of(ipSubnetworks));
+        }
         public Builder members(List<String> members) {
             this.members = Objects.requireNonNull(members);
             return this;
         }
-
+        public Builder members(String... members) {
+            return members(List.of(members));
+        }
         public Builder negate(Boolean negate) {
             this.negate = Objects.requireNonNull(negate);
             return this;
         }
-
         public Builder regions(List<String> regions) {
             this.regions = Objects.requireNonNull(regions);
             return this;
         }
-
+        public Builder regions(String... regions) {
+            return regions(List.of(regions));
+        }
         public Builder requiredAccessLevels(List<String> requiredAccessLevels) {
             this.requiredAccessLevels = Objects.requireNonNull(requiredAccessLevels);
             return this;
         }
-        public ConditionResponse build() {
+        public Builder requiredAccessLevels(String... requiredAccessLevels) {
+            return requiredAccessLevels(List.of(requiredAccessLevels));
+        }        public ConditionResponse build() {
             return new ConditionResponse(devicePolicy, ipSubnetworks, members, negate, regions, requiredAccessLevels);
         }
     }

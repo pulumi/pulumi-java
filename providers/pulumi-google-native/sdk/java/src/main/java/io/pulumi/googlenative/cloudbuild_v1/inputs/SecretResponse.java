@@ -77,12 +77,10 @@ public final class SecretResponse extends io.pulumi.resources.InvokeArgs {
             this.kmsKeyName = Objects.requireNonNull(kmsKeyName);
             return this;
         }
-
         public Builder secretEnv(Map<String,String> secretEnv) {
             this.secretEnv = Objects.requireNonNull(secretEnv);
             return this;
-        }
-        public SecretResponse build() {
+        }        public SecretResponse build() {
             return new SecretResponse(kmsKeyName, secretEnv);
         }
     }

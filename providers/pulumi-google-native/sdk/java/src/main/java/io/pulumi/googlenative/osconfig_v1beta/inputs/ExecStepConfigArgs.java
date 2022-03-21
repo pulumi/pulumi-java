@@ -114,42 +114,37 @@ public final class ExecStepConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.allowedSuccessCodes = allowedSuccessCodes;
             return this;
         }
-
         public Builder allowedSuccessCodes(@Nullable List<Integer> allowedSuccessCodes) {
             this.allowedSuccessCodes = Output.ofNullable(allowedSuccessCodes);
             return this;
         }
-
+        public Builder allowedSuccessCodes(Integer... allowedSuccessCodes) {
+            return allowedSuccessCodes(List.of(allowedSuccessCodes));
+        }
         public Builder gcsObject(@Nullable Output<GcsObjectArgs> gcsObject) {
             this.gcsObject = gcsObject;
             return this;
         }
-
         public Builder gcsObject(@Nullable GcsObjectArgs gcsObject) {
             this.gcsObject = Output.ofNullable(gcsObject);
             return this;
         }
-
         public Builder interpreter(@Nullable Output<ExecStepConfigInterpreter> interpreter) {
             this.interpreter = interpreter;
             return this;
         }
-
         public Builder interpreter(@Nullable ExecStepConfigInterpreter interpreter) {
             this.interpreter = Output.ofNullable(interpreter);
             return this;
         }
-
         public Builder localPath(@Nullable Output<String> localPath) {
             this.localPath = localPath;
             return this;
         }
-
         public Builder localPath(@Nullable String localPath) {
             this.localPath = Output.ofNullable(localPath);
             return this;
-        }
-        public ExecStepConfigArgs build() {
+        }        public ExecStepConfigArgs build() {
             return new ExecStepConfigArgs(allowedSuccessCodes, gcsObject, interpreter, localPath);
         }
     }

@@ -95,32 +95,26 @@ public final class CertificateIdentityConstraintsArgs extends io.pulumi.resource
             this.allowSubjectAltNamesPassthrough = Objects.requireNonNull(allowSubjectAltNamesPassthrough);
             return this;
         }
-
         public Builder allowSubjectAltNamesPassthrough(Boolean allowSubjectAltNamesPassthrough) {
             this.allowSubjectAltNamesPassthrough = Output.of(Objects.requireNonNull(allowSubjectAltNamesPassthrough));
             return this;
         }
-
         public Builder allowSubjectPassthrough(Output<Boolean> allowSubjectPassthrough) {
             this.allowSubjectPassthrough = Objects.requireNonNull(allowSubjectPassthrough);
             return this;
         }
-
         public Builder allowSubjectPassthrough(Boolean allowSubjectPassthrough) {
             this.allowSubjectPassthrough = Output.of(Objects.requireNonNull(allowSubjectPassthrough));
             return this;
         }
-
         public Builder celExpression(@Nullable Output<ExprArgs> celExpression) {
             this.celExpression = celExpression;
             return this;
         }
-
         public Builder celExpression(@Nullable ExprArgs celExpression) {
             this.celExpression = Output.ofNullable(celExpression);
             return this;
-        }
-        public CertificateIdentityConstraintsArgs build() {
+        }        public CertificateIdentityConstraintsArgs build() {
             return new CertificateIdentityConstraintsArgs(allowSubjectAltNamesPassthrough, allowSubjectPassthrough, celExpression);
         }
     }

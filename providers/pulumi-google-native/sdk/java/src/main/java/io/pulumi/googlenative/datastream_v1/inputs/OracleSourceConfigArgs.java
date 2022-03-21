@@ -78,22 +78,18 @@ public final class OracleSourceConfigArgs extends io.pulumi.resources.ResourceAr
             this.excludeObjects = excludeObjects;
             return this;
         }
-
         public Builder excludeObjects(@Nullable OracleRdbmsArgs excludeObjects) {
             this.excludeObjects = Output.ofNullable(excludeObjects);
             return this;
         }
-
         public Builder includeObjects(@Nullable Output<OracleRdbmsArgs> includeObjects) {
             this.includeObjects = includeObjects;
             return this;
         }
-
         public Builder includeObjects(@Nullable OracleRdbmsArgs includeObjects) {
             this.includeObjects = Output.ofNullable(includeObjects);
             return this;
-        }
-        public OracleSourceConfigArgs build() {
+        }        public OracleSourceConfigArgs build() {
             return new OracleSourceConfigArgs(excludeObjects, includeObjects);
         }
     }

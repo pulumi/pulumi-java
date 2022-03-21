@@ -377,107 +377,92 @@ public final class GetOrganizationResult {
             this.addonsConfig = Objects.requireNonNull(addonsConfig);
             return this;
         }
-
         public Builder analyticsRegion(String analyticsRegion) {
             this.analyticsRegion = Objects.requireNonNull(analyticsRegion);
             return this;
         }
-
         public Builder attributes(List<String> attributes) {
             this.attributes = Objects.requireNonNull(attributes);
             return this;
         }
-
+        public Builder attributes(String... attributes) {
+            return attributes(List.of(attributes));
+        }
         public Builder authorizedNetwork(String authorizedNetwork) {
             this.authorizedNetwork = Objects.requireNonNull(authorizedNetwork);
             return this;
         }
-
         public Builder billingType(String billingType) {
             this.billingType = Objects.requireNonNull(billingType);
             return this;
         }
-
         public Builder caCertificate(String caCertificate) {
             this.caCertificate = Objects.requireNonNull(caCertificate);
             return this;
         }
-
         public Builder createdAt(String createdAt) {
             this.createdAt = Objects.requireNonNull(createdAt);
             return this;
         }
-
         public Builder customerName(String customerName) {
             this.customerName = Objects.requireNonNull(customerName);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder environments(List<String> environments) {
             this.environments = Objects.requireNonNull(environments);
             return this;
         }
-
+        public Builder environments(String... environments) {
+            return environments(List.of(environments));
+        }
         public Builder expiresAt(String expiresAt) {
             this.expiresAt = Objects.requireNonNull(expiresAt);
             return this;
         }
-
         public Builder lastModifiedAt(String lastModifiedAt) {
             this.lastModifiedAt = Objects.requireNonNull(lastModifiedAt);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder portalDisabled(Boolean portalDisabled) {
             this.portalDisabled = Objects.requireNonNull(portalDisabled);
             return this;
         }
-
         public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
-
         public Builder properties(GoogleCloudApigeeV1PropertiesResponse properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
-
         public Builder runtimeDatabaseEncryptionKeyName(String runtimeDatabaseEncryptionKeyName) {
             this.runtimeDatabaseEncryptionKeyName = Objects.requireNonNull(runtimeDatabaseEncryptionKeyName);
             return this;
         }
-
         public Builder runtimeType(String runtimeType) {
             this.runtimeType = Objects.requireNonNull(runtimeType);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetOrganizationResult build() {
+        }        public GetOrganizationResult build() {
             return new GetOrganizationResult(addonsConfig, analyticsRegion, attributes, authorizedNetwork, billingType, caCertificate, createdAt, customerName, description, displayName, environments, expiresAt, lastModifiedAt, name, portalDisabled, project, properties, runtimeDatabaseEncryptionKeyName, runtimeType, state, type);
         }
     }

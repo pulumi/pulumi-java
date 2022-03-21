@@ -85,17 +85,14 @@ public final class GetDebugTokenResult {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder token(String token) {
             this.token = Objects.requireNonNull(token);
             return this;
-        }
-        public GetDebugTokenResult build() {
+        }        public GetDebugTokenResult build() {
             return new GetDebugTokenResult(displayName, name, token);
         }
     }

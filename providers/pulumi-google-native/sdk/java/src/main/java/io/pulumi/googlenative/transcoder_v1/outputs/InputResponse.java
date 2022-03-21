@@ -86,17 +86,14 @@ public final class InputResponse {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder preprocessingConfig(PreprocessingConfigResponse preprocessingConfig) {
             this.preprocessingConfig = Objects.requireNonNull(preprocessingConfig);
             return this;
         }
-
         public Builder uri(String uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
-        }
-        public InputResponse build() {
+        }        public InputResponse build() {
             return new InputResponse(key, preprocessingConfig, uri);
         }
     }

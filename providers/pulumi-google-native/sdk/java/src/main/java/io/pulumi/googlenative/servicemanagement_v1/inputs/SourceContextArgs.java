@@ -61,12 +61,10 @@ public final class SourceContextArgs extends io.pulumi.resources.ResourceArgs {
             this.fileName = fileName;
             return this;
         }
-
         public Builder fileName(@Nullable String fileName) {
             this.fileName = Output.ofNullable(fileName);
             return this;
-        }
-        public SourceContextArgs build() {
+        }        public SourceContextArgs build() {
             return new SourceContextArgs(fileName);
         }
     }

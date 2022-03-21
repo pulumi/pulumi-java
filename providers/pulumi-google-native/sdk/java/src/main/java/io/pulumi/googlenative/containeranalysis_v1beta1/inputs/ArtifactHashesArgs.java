@@ -57,12 +57,10 @@ public final class ArtifactHashesArgs extends io.pulumi.resources.ResourceArgs {
             this.sha256 = sha256;
             return this;
         }
-
         public Builder sha256(@Nullable String sha256) {
             this.sha256 = Output.ofNullable(sha256);
             return this;
-        }
-        public ArtifactHashesArgs build() {
+        }        public ArtifactHashesArgs build() {
             return new ArtifactHashesArgs(sha256);
         }
     }

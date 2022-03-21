@@ -110,42 +110,34 @@ public final class SigningKeyArgs extends io.pulumi.resources.ResourceArgs {
             this.keyId = keyId;
             return this;
         }
-
         public Builder keyId(@Nullable String keyId) {
             this.keyId = Output.ofNullable(keyId);
             return this;
         }
-
         public Builder keyScheme(@Nullable Output<String> keyScheme) {
             this.keyScheme = keyScheme;
             return this;
         }
-
         public Builder keyScheme(@Nullable String keyScheme) {
             this.keyScheme = Output.ofNullable(keyScheme);
             return this;
         }
-
         public Builder keyType(@Nullable Output<String> keyType) {
             this.keyType = keyType;
             return this;
         }
-
         public Builder keyType(@Nullable String keyType) {
             this.keyType = Output.ofNullable(keyType);
             return this;
         }
-
         public Builder publicKeyValue(@Nullable Output<String> publicKeyValue) {
             this.publicKeyValue = publicKeyValue;
             return this;
         }
-
         public Builder publicKeyValue(@Nullable String publicKeyValue) {
             this.publicKeyValue = Output.ofNullable(publicKeyValue);
             return this;
-        }
-        public SigningKeyArgs build() {
+        }        public SigningKeyArgs build() {
             return new SigningKeyArgs(keyId, keyScheme, keyType, publicKeyValue);
         }
     }

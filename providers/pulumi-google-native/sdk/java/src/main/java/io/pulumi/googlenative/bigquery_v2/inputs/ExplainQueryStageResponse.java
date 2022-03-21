@@ -507,147 +507,124 @@ public final class ExplainQueryStageResponse extends io.pulumi.resources.InvokeA
             this.completedParallelInputs = Objects.requireNonNull(completedParallelInputs);
             return this;
         }
-
         public Builder computeMsAvg(String computeMsAvg) {
             this.computeMsAvg = Objects.requireNonNull(computeMsAvg);
             return this;
         }
-
         public Builder computeMsMax(String computeMsMax) {
             this.computeMsMax = Objects.requireNonNull(computeMsMax);
             return this;
         }
-
         public Builder computeRatioAvg(Double computeRatioAvg) {
             this.computeRatioAvg = Objects.requireNonNull(computeRatioAvg);
             return this;
         }
-
         public Builder computeRatioMax(Double computeRatioMax) {
             this.computeRatioMax = Objects.requireNonNull(computeRatioMax);
             return this;
         }
-
         public Builder endMs(String endMs) {
             this.endMs = Objects.requireNonNull(endMs);
             return this;
         }
-
         public Builder inputStages(List<String> inputStages) {
             this.inputStages = Objects.requireNonNull(inputStages);
             return this;
         }
-
+        public Builder inputStages(String... inputStages) {
+            return inputStages(List.of(inputStages));
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder parallelInputs(String parallelInputs) {
             this.parallelInputs = Objects.requireNonNull(parallelInputs);
             return this;
         }
-
         public Builder readMsAvg(String readMsAvg) {
             this.readMsAvg = Objects.requireNonNull(readMsAvg);
             return this;
         }
-
         public Builder readMsMax(String readMsMax) {
             this.readMsMax = Objects.requireNonNull(readMsMax);
             return this;
         }
-
         public Builder readRatioAvg(Double readRatioAvg) {
             this.readRatioAvg = Objects.requireNonNull(readRatioAvg);
             return this;
         }
-
         public Builder readRatioMax(Double readRatioMax) {
             this.readRatioMax = Objects.requireNonNull(readRatioMax);
             return this;
         }
-
         public Builder recordsRead(String recordsRead) {
             this.recordsRead = Objects.requireNonNull(recordsRead);
             return this;
         }
-
         public Builder recordsWritten(String recordsWritten) {
             this.recordsWritten = Objects.requireNonNull(recordsWritten);
             return this;
         }
-
         public Builder shuffleOutputBytes(String shuffleOutputBytes) {
             this.shuffleOutputBytes = Objects.requireNonNull(shuffleOutputBytes);
             return this;
         }
-
         public Builder shuffleOutputBytesSpilled(String shuffleOutputBytesSpilled) {
             this.shuffleOutputBytesSpilled = Objects.requireNonNull(shuffleOutputBytesSpilled);
             return this;
         }
-
         public Builder slotMs(String slotMs) {
             this.slotMs = Objects.requireNonNull(slotMs);
             return this;
         }
-
         public Builder startMs(String startMs) {
             this.startMs = Objects.requireNonNull(startMs);
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder steps(List<ExplainQueryStepResponse> steps) {
             this.steps = Objects.requireNonNull(steps);
             return this;
         }
-
+        public Builder steps(ExplainQueryStepResponse... steps) {
+            return steps(List.of(steps));
+        }
         public Builder waitMsAvg(String waitMsAvg) {
             this.waitMsAvg = Objects.requireNonNull(waitMsAvg);
             return this;
         }
-
         public Builder waitMsMax(String waitMsMax) {
             this.waitMsMax = Objects.requireNonNull(waitMsMax);
             return this;
         }
-
         public Builder waitRatioAvg(Double waitRatioAvg) {
             this.waitRatioAvg = Objects.requireNonNull(waitRatioAvg);
             return this;
         }
-
         public Builder waitRatioMax(Double waitRatioMax) {
             this.waitRatioMax = Objects.requireNonNull(waitRatioMax);
             return this;
         }
-
         public Builder writeMsAvg(String writeMsAvg) {
             this.writeMsAvg = Objects.requireNonNull(writeMsAvg);
             return this;
         }
-
         public Builder writeMsMax(String writeMsMax) {
             this.writeMsMax = Objects.requireNonNull(writeMsMax);
             return this;
         }
-
         public Builder writeRatioAvg(Double writeRatioAvg) {
             this.writeRatioAvg = Objects.requireNonNull(writeRatioAvg);
             return this;
         }
-
         public Builder writeRatioMax(Double writeRatioMax) {
             this.writeRatioMax = Objects.requireNonNull(writeRatioMax);
             return this;
-        }
-        public ExplainQueryStageResponse build() {
+        }        public ExplainQueryStageResponse build() {
             return new ExplainQueryStageResponse(completedParallelInputs, computeMsAvg, computeMsMax, computeRatioAvg, computeRatioMax, endMs, inputStages, name, parallelInputs, readMsAvg, readMsMax, readRatioAvg, readRatioMax, recordsRead, recordsWritten, shuffleOutputBytes, shuffleOutputBytesSpilled, slotMs, startMs, status, steps, waitMsAvg, waitMsMax, waitRatioAvg, waitRatioMax, writeMsAvg, writeMsMax, writeRatioAvg, writeRatioMax);
         }
     }

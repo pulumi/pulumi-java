@@ -71,12 +71,13 @@ public final class GoogleCloudRecaptchaenterpriseV1IOSKeySettingsResponse {
             this.allowAllBundleIds = Objects.requireNonNull(allowAllBundleIds);
             return this;
         }
-
         public Builder allowedBundleIds(List<String> allowedBundleIds) {
             this.allowedBundleIds = Objects.requireNonNull(allowedBundleIds);
             return this;
         }
-        public GoogleCloudRecaptchaenterpriseV1IOSKeySettingsResponse build() {
+        public Builder allowedBundleIds(String... allowedBundleIds) {
+            return allowedBundleIds(List.of(allowedBundleIds));
+        }        public GoogleCloudRecaptchaenterpriseV1IOSKeySettingsResponse build() {
             return new GoogleCloudRecaptchaenterpriseV1IOSKeySettingsResponse(allowAllBundleIds, allowedBundleIds);
         }
     }

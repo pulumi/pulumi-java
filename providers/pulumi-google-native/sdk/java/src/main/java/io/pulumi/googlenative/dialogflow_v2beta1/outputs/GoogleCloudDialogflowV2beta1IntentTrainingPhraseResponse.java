@@ -104,22 +104,21 @@ public final class GoogleCloudDialogflowV2beta1IntentTrainingPhraseResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder parts(List<GoogleCloudDialogflowV2beta1IntentTrainingPhrasePartResponse> parts) {
             this.parts = Objects.requireNonNull(parts);
             return this;
         }
-
+        public Builder parts(GoogleCloudDialogflowV2beta1IntentTrainingPhrasePartResponse... parts) {
+            return parts(List.of(parts));
+        }
         public Builder timesAddedCount(Integer timesAddedCount) {
             this.timesAddedCount = Objects.requireNonNull(timesAddedCount);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GoogleCloudDialogflowV2beta1IntentTrainingPhraseResponse build() {
+        }        public GoogleCloudDialogflowV2beta1IntentTrainingPhraseResponse build() {
             return new GoogleCloudDialogflowV2beta1IntentTrainingPhraseResponse(name, parts, timesAddedCount, type);
         }
     }

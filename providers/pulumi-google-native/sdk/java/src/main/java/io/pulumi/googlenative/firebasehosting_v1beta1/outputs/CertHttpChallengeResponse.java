@@ -69,12 +69,10 @@ public final class CertHttpChallengeResponse {
             this.path = Objects.requireNonNull(path);
             return this;
         }
-
         public Builder token(String token) {
             this.token = Objects.requireNonNull(token);
             return this;
-        }
-        public CertHttpChallengeResponse build() {
+        }        public CertHttpChallengeResponse build() {
             return new CertHttpChallengeResponse(path, token);
         }
     }

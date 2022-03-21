@@ -127,27 +127,22 @@ public final class GooglePrivacyDlpV2StoredInfoTypeConfigResponse extends io.pul
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder dictionary(GooglePrivacyDlpV2DictionaryResponse dictionary) {
             this.dictionary = Objects.requireNonNull(dictionary);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder largeCustomDictionary(GooglePrivacyDlpV2LargeCustomDictionaryConfigResponse largeCustomDictionary) {
             this.largeCustomDictionary = Objects.requireNonNull(largeCustomDictionary);
             return this;
         }
-
         public Builder regex(GooglePrivacyDlpV2RegexResponse regex) {
             this.regex = Objects.requireNonNull(regex);
             return this;
-        }
-        public GooglePrivacyDlpV2StoredInfoTypeConfigResponse build() {
+        }        public GooglePrivacyDlpV2StoredInfoTypeConfigResponse build() {
             return new GooglePrivacyDlpV2StoredInfoTypeConfigResponse(description, dictionary, displayName, largeCustomDictionary, regex);
         }
     }

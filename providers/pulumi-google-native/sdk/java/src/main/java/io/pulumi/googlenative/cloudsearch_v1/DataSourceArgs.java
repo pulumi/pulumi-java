@@ -189,92 +189,83 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
             this.disableModifications = disableModifications;
             return this;
         }
-
         public Builder disableModifications(@Nullable Boolean disableModifications) {
             this.disableModifications = Output.ofNullable(disableModifications);
             return this;
         }
-
         public Builder disableServing(@Nullable Output<Boolean> disableServing) {
             this.disableServing = disableServing;
             return this;
         }
-
         public Builder disableServing(@Nullable Boolean disableServing) {
             this.disableServing = Output.ofNullable(disableServing);
             return this;
         }
-
         public Builder displayName(Output<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
-
         public Builder indexingServiceAccounts(@Nullable Output<List<String>> indexingServiceAccounts) {
             this.indexingServiceAccounts = indexingServiceAccounts;
             return this;
         }
-
         public Builder indexingServiceAccounts(@Nullable List<String> indexingServiceAccounts) {
             this.indexingServiceAccounts = Output.ofNullable(indexingServiceAccounts);
             return this;
         }
-
+        public Builder indexingServiceAccounts(String... indexingServiceAccounts) {
+            return indexingServiceAccounts(List.of(indexingServiceAccounts));
+        }
         public Builder itemsVisibility(@Nullable Output<List<GSuitePrincipalArgs>> itemsVisibility) {
             this.itemsVisibility = itemsVisibility;
             return this;
         }
-
         public Builder itemsVisibility(@Nullable List<GSuitePrincipalArgs> itemsVisibility) {
             this.itemsVisibility = Output.ofNullable(itemsVisibility);
             return this;
         }
-
+        public Builder itemsVisibility(GSuitePrincipalArgs... itemsVisibility) {
+            return itemsVisibility(List.of(itemsVisibility));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder operationIds(@Nullable Output<List<String>> operationIds) {
             this.operationIds = operationIds;
             return this;
         }
-
         public Builder operationIds(@Nullable List<String> operationIds) {
             this.operationIds = Output.ofNullable(operationIds);
             return this;
         }
-
+        public Builder operationIds(String... operationIds) {
+            return operationIds(List.of(operationIds));
+        }
         public Builder returnThumbnailUrls(@Nullable Output<Boolean> returnThumbnailUrls) {
             this.returnThumbnailUrls = returnThumbnailUrls;
             return this;
         }
-
         public Builder returnThumbnailUrls(@Nullable Boolean returnThumbnailUrls) {
             this.returnThumbnailUrls = Output.ofNullable(returnThumbnailUrls);
             return this;
         }
-
         public Builder shortName(@Nullable Output<String> shortName) {
             this.shortName = shortName;
             return this;
         }
-
         public Builder shortName(@Nullable String shortName) {
             this.shortName = Output.ofNullable(shortName);
             return this;
-        }
-        public DataSourceArgs build() {
+        }        public DataSourceArgs build() {
             return new DataSourceArgs(disableModifications, disableServing, displayName, indexingServiceAccounts, itemsVisibility, name, operationIds, returnThumbnailUrls, shortName);
         }
     }

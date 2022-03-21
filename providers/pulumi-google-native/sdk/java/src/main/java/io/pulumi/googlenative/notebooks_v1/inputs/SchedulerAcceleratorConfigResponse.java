@@ -76,12 +76,10 @@ public final class SchedulerAcceleratorConfigResponse extends io.pulumi.resource
             this.coreCount = Objects.requireNonNull(coreCount);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public SchedulerAcceleratorConfigResponse build() {
+        }        public SchedulerAcceleratorConfigResponse build() {
             return new SchedulerAcceleratorConfigResponse(coreCount, type);
         }
     }

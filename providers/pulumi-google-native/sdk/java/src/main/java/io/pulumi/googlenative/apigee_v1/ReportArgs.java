@@ -329,182 +329,164 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
             this.chartType = chartType;
             return this;
         }
-
         public Builder chartType(@Nullable String chartType) {
             this.chartType = Output.ofNullable(chartType);
             return this;
         }
-
         public Builder comments(@Nullable Output<List<String>> comments) {
             this.comments = comments;
             return this;
         }
-
         public Builder comments(@Nullable List<String> comments) {
             this.comments = Output.ofNullable(comments);
             return this;
         }
-
+        public Builder comments(String... comments) {
+            return comments(List.of(comments));
+        }
         public Builder dimensions(@Nullable Output<List<String>> dimensions) {
             this.dimensions = dimensions;
             return this;
         }
-
         public Builder dimensions(@Nullable List<String> dimensions) {
             this.dimensions = Output.ofNullable(dimensions);
             return this;
         }
-
+        public Builder dimensions(String... dimensions) {
+            return dimensions(List.of(dimensions));
+        }
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder filter(@Nullable Output<String> filter) {
             this.filter = filter;
             return this;
         }
-
         public Builder filter(@Nullable String filter) {
             this.filter = Output.ofNullable(filter);
             return this;
         }
-
         public Builder fromTime(@Nullable Output<String> fromTime) {
             this.fromTime = fromTime;
             return this;
         }
-
         public Builder fromTime(@Nullable String fromTime) {
             this.fromTime = Output.ofNullable(fromTime);
             return this;
         }
-
         public Builder limit(@Nullable Output<String> limit) {
             this.limit = limit;
             return this;
         }
-
         public Builder limit(@Nullable String limit) {
             this.limit = Output.ofNullable(limit);
             return this;
         }
-
         public Builder metrics(Output<List<GoogleCloudApigeeV1CustomReportMetricArgs>> metrics) {
             this.metrics = Objects.requireNonNull(metrics);
             return this;
         }
-
         public Builder metrics(List<GoogleCloudApigeeV1CustomReportMetricArgs> metrics) {
             this.metrics = Output.of(Objects.requireNonNull(metrics));
             return this;
         }
-
+        public Builder metrics(GoogleCloudApigeeV1CustomReportMetricArgs... metrics) {
+            return metrics(List.of(metrics));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder offset(@Nullable Output<String> offset) {
             this.offset = offset;
             return this;
         }
-
         public Builder offset(@Nullable String offset) {
             this.offset = Output.ofNullable(offset);
             return this;
         }
-
         public Builder organizationId(Output<String> organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }
-
         public Builder organizationId(String organizationId) {
             this.organizationId = Output.of(Objects.requireNonNull(organizationId));
             return this;
         }
-
         public Builder properties(@Nullable Output<List<GoogleCloudApigeeV1ReportPropertyArgs>> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder properties(@Nullable List<GoogleCloudApigeeV1ReportPropertyArgs> properties) {
             this.properties = Output.ofNullable(properties);
             return this;
         }
-
+        public Builder properties(GoogleCloudApigeeV1ReportPropertyArgs... properties) {
+            return properties(List.of(properties));
+        }
         public Builder sortByCols(@Nullable Output<List<String>> sortByCols) {
             this.sortByCols = sortByCols;
             return this;
         }
-
         public Builder sortByCols(@Nullable List<String> sortByCols) {
             this.sortByCols = Output.ofNullable(sortByCols);
             return this;
         }
-
+        public Builder sortByCols(String... sortByCols) {
+            return sortByCols(List.of(sortByCols));
+        }
         public Builder sortOrder(@Nullable Output<String> sortOrder) {
             this.sortOrder = sortOrder;
             return this;
         }
-
         public Builder sortOrder(@Nullable String sortOrder) {
             this.sortOrder = Output.ofNullable(sortOrder);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
+        public Builder tags(String... tags) {
+            return tags(List.of(tags));
+        }
         public Builder timeUnit(@Nullable Output<String> timeUnit) {
             this.timeUnit = timeUnit;
             return this;
         }
-
         public Builder timeUnit(@Nullable String timeUnit) {
             this.timeUnit = Output.ofNullable(timeUnit);
             return this;
         }
-
         public Builder toTime(@Nullable Output<String> toTime) {
             this.toTime = toTime;
             return this;
         }
-
         public Builder toTime(@Nullable String toTime) {
             this.toTime = Output.ofNullable(toTime);
             return this;
         }
-
         public Builder topk(@Nullable Output<String> topk) {
             this.topk = topk;
             return this;
         }
-
         public Builder topk(@Nullable String topk) {
             this.topk = Output.ofNullable(topk);
             return this;
-        }
-        public ReportArgs build() {
+        }        public ReportArgs build() {
             return new ReportArgs(chartType, comments, dimensions, displayName, filter, fromTime, limit, metrics, name, offset, organizationId, properties, sortByCols, sortOrder, tags, timeUnit, toTime, topk);
         }
     }

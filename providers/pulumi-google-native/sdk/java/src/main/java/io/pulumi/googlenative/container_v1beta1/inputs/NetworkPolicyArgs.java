@@ -79,22 +79,18 @@ public final class NetworkPolicyArgs extends io.pulumi.resources.ResourceArgs {
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
         }
-
         public Builder provider(@Nullable Output<NetworkPolicyProvider> provider) {
             this.provider = provider;
             return this;
         }
-
         public Builder provider(@Nullable NetworkPolicyProvider provider) {
             this.provider = Output.ofNullable(provider);
             return this;
-        }
-        public NetworkPolicyArgs build() {
+        }        public NetworkPolicyArgs build() {
             return new NetworkPolicyArgs(enabled, provider);
         }
     }

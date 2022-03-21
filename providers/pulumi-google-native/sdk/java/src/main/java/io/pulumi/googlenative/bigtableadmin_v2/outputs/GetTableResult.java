@@ -119,27 +119,22 @@ public final class GetTableResult {
             this.clusterStates = Objects.requireNonNull(clusterStates);
             return this;
         }
-
         public Builder columnFamilies(Map<String,String> columnFamilies) {
             this.columnFamilies = Objects.requireNonNull(columnFamilies);
             return this;
         }
-
         public Builder granularity(String granularity) {
             this.granularity = Objects.requireNonNull(granularity);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder restoreInfo(RestoreInfoResponse restoreInfo) {
             this.restoreInfo = Objects.requireNonNull(restoreInfo);
             return this;
-        }
-        public GetTableResult build() {
+        }        public GetTableResult build() {
             return new GetTableResult(clusterStates, columnFamilies, granularity, name, restoreInfo);
         }
     }

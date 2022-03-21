@@ -155,37 +155,39 @@ public final class ServingConfigResponse {
             this.appAssociation = Objects.requireNonNull(appAssociation);
             return this;
         }
-
         public Builder cleanUrls(Boolean cleanUrls) {
             this.cleanUrls = Objects.requireNonNull(cleanUrls);
             return this;
         }
-
         public Builder headers(List<HeaderResponse> headers) {
             this.headers = Objects.requireNonNull(headers);
             return this;
         }
-
+        public Builder headers(HeaderResponse... headers) {
+            return headers(List.of(headers));
+        }
         public Builder i18n(I18nConfigResponse i18n) {
             this.i18n = Objects.requireNonNull(i18n);
             return this;
         }
-
         public Builder redirects(List<RedirectResponse> redirects) {
             this.redirects = Objects.requireNonNull(redirects);
             return this;
         }
-
+        public Builder redirects(RedirectResponse... redirects) {
+            return redirects(List.of(redirects));
+        }
         public Builder rewrites(List<RewriteResponse> rewrites) {
             this.rewrites = Objects.requireNonNull(rewrites);
             return this;
         }
-
+        public Builder rewrites(RewriteResponse... rewrites) {
+            return rewrites(List.of(rewrites));
+        }
         public Builder trailingSlashBehavior(String trailingSlashBehavior) {
             this.trailingSlashBehavior = Objects.requireNonNull(trailingSlashBehavior);
             return this;
-        }
-        public ServingConfigResponse build() {
+        }        public ServingConfigResponse build() {
             return new ServingConfigResponse(appAssociation, cleanUrls, headers, i18n, redirects, rewrites, trailingSlashBehavior);
         }
     }

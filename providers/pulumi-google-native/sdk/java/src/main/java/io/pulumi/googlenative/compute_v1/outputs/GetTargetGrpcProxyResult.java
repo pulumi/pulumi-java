@@ -182,47 +182,38 @@ public final class GetTargetGrpcProxyResult {
             this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder fingerprint(String fingerprint) {
             this.fingerprint = Objects.requireNonNull(fingerprint);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
-
         public Builder selfLinkWithId(String selfLinkWithId) {
             this.selfLinkWithId = Objects.requireNonNull(selfLinkWithId);
             return this;
         }
-
         public Builder urlMap(String urlMap) {
             this.urlMap = Objects.requireNonNull(urlMap);
             return this;
         }
-
         public Builder validateForProxyless(Boolean validateForProxyless) {
             this.validateForProxyless = Objects.requireNonNull(validateForProxyless);
             return this;
-        }
-        public GetTargetGrpcProxyResult build() {
+        }        public GetTargetGrpcProxyResult build() {
             return new GetTargetGrpcProxyResult(creationTimestamp, description, fingerprint, kind, name, selfLink, selfLinkWithId, urlMap, validateForProxyless);
         }
     }

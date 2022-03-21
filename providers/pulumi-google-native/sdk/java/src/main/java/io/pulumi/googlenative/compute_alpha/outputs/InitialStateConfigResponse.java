@@ -102,22 +102,27 @@ public final class InitialStateConfigResponse {
             this.dbs = Objects.requireNonNull(dbs);
             return this;
         }
-
+        public Builder dbs(FileContentBufferResponse... dbs) {
+            return dbs(List.of(dbs));
+        }
         public Builder dbxs(List<FileContentBufferResponse> dbxs) {
             this.dbxs = Objects.requireNonNull(dbxs);
             return this;
         }
-
+        public Builder dbxs(FileContentBufferResponse... dbxs) {
+            return dbxs(List.of(dbxs));
+        }
         public Builder keks(List<FileContentBufferResponse> keks) {
             this.keks = Objects.requireNonNull(keks);
             return this;
         }
-
+        public Builder keks(FileContentBufferResponse... keks) {
+            return keks(List.of(keks));
+        }
         public Builder pk(FileContentBufferResponse pk) {
             this.pk = Objects.requireNonNull(pk);
             return this;
-        }
-        public InitialStateConfigResponse build() {
+        }        public InitialStateConfigResponse build() {
             return new InitialStateConfigResponse(dbs, dbxs, keks, pk);
         }
     }

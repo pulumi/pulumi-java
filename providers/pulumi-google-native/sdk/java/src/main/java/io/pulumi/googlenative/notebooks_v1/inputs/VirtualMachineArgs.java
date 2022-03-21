@@ -61,12 +61,10 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
             this.virtualMachineConfig = virtualMachineConfig;
             return this;
         }
-
         public Builder virtualMachineConfig(@Nullable VirtualMachineConfigArgs virtualMachineConfig) {
             this.virtualMachineConfig = Output.ofNullable(virtualMachineConfig);
             return this;
-        }
-        public VirtualMachineArgs build() {
+        }        public VirtualMachineArgs build() {
             return new VirtualMachineArgs(virtualMachineConfig);
         }
     }

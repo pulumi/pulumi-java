@@ -79,22 +79,21 @@ public final class ServiceAccountArgs extends io.pulumi.resources.ResourceArgs {
             this.email = email;
             return this;
         }
-
         public Builder email(@Nullable String email) {
             this.email = Output.ofNullable(email);
             return this;
         }
-
         public Builder scope(@Nullable Output<List<String>> scope) {
             this.scope = scope;
             return this;
         }
-
         public Builder scope(@Nullable List<String> scope) {
             this.scope = Output.ofNullable(scope);
             return this;
         }
-        public ServiceAccountArgs build() {
+        public Builder scope(String... scope) {
+            return scope(List.of(scope));
+        }        public ServiceAccountArgs build() {
             return new ServiceAccountArgs(email, scope);
         }
     }

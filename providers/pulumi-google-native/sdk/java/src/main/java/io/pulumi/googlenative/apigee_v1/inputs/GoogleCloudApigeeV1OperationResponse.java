@@ -77,12 +77,13 @@ public final class GoogleCloudApigeeV1OperationResponse extends io.pulumi.resour
             this.methods = Objects.requireNonNull(methods);
             return this;
         }
-
+        public Builder methods(String... methods) {
+            return methods(List.of(methods));
+        }
         public Builder resource(String resource) {
             this.resource = Objects.requireNonNull(resource);
             return this;
-        }
-        public GoogleCloudApigeeV1OperationResponse build() {
+        }        public GoogleCloudApigeeV1OperationResponse build() {
             return new GoogleCloudApigeeV1OperationResponse(methods, resource);
         }
     }

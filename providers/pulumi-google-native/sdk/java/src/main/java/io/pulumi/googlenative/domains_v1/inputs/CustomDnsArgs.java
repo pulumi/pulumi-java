@@ -80,22 +80,24 @@ public final class CustomDnsArgs extends io.pulumi.resources.ResourceArgs {
             this.dsRecords = dsRecords;
             return this;
         }
-
         public Builder dsRecords(@Nullable List<DsRecordArgs> dsRecords) {
             this.dsRecords = Output.ofNullable(dsRecords);
             return this;
         }
-
+        public Builder dsRecords(DsRecordArgs... dsRecords) {
+            return dsRecords(List.of(dsRecords));
+        }
         public Builder nameServers(Output<List<String>> nameServers) {
             this.nameServers = Objects.requireNonNull(nameServers);
             return this;
         }
-
         public Builder nameServers(List<String> nameServers) {
             this.nameServers = Output.of(Objects.requireNonNull(nameServers));
             return this;
         }
-        public CustomDnsArgs build() {
+        public Builder nameServers(String... nameServers) {
+            return nameServers(List.of(nameServers));
+        }        public CustomDnsArgs build() {
             return new CustomDnsArgs(dsRecords, nameServers);
         }
     }

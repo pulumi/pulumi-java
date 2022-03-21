@@ -78,17 +78,14 @@ public final class GetSubnetworkArgs extends io.pulumi.resources.InvokeArgs {
             this.project = project;
             return this;
         }
-
         public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
-
         public Builder subnetwork(String subnetwork) {
             this.subnetwork = Objects.requireNonNull(subnetwork);
             return this;
-        }
-        public GetSubnetworkArgs build() {
+        }        public GetSubnetworkArgs build() {
             return new GetSubnetworkArgs(project, region, subnetwork);
         }
     }

@@ -111,42 +111,34 @@ public final class PipelineParameterArgs extends io.pulumi.resources.ResourceArg
             this.defaultValue = defaultValue;
             return this;
         }
-
         public Builder defaultValue(@Nullable String defaultValue) {
             this.defaultValue = Output.ofNullable(defaultValue);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder localCopy(@Nullable Output<LocalCopyArgs> localCopy) {
             this.localCopy = localCopy;
             return this;
         }
-
         public Builder localCopy(@Nullable LocalCopyArgs localCopy) {
             this.localCopy = Output.ofNullable(localCopy);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
-        }
-        public PipelineParameterArgs build() {
+        }        public PipelineParameterArgs build() {
             return new PipelineParameterArgs(defaultValue, description, localCopy, name);
         }
     }

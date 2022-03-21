@@ -62,12 +62,13 @@ public final class ExecActionArgs extends io.pulumi.resources.ResourceArgs {
             this.command = command;
             return this;
         }
-
         public Builder command(@Nullable List<String> command) {
             this.command = Output.ofNullable(command);
             return this;
         }
-        public ExecActionArgs build() {
+        public Builder command(String... command) {
+            return command(List.of(command));
+        }        public ExecActionArgs build() {
             return new ExecActionArgs(command);
         }
     }

@@ -61,12 +61,10 @@ public final class ConfidentialNodesArgs extends io.pulumi.resources.ResourceArg
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
-        }
-        public ConfidentialNodesArgs build() {
+        }        public ConfidentialNodesArgs build() {
             return new ConfidentialNodesArgs(enabled);
         }
     }

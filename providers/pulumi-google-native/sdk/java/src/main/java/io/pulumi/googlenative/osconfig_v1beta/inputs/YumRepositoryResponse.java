@@ -93,17 +93,17 @@ public final class YumRepositoryResponse extends io.pulumi.resources.InvokeArgs 
             this.baseUrl = Objects.requireNonNull(baseUrl);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder gpgKeys(List<String> gpgKeys) {
             this.gpgKeys = Objects.requireNonNull(gpgKeys);
             return this;
         }
-        public YumRepositoryResponse build() {
+        public Builder gpgKeys(String... gpgKeys) {
+            return gpgKeys(List.of(gpgKeys));
+        }        public YumRepositoryResponse build() {
             return new YumRepositoryResponse(baseUrl, displayName, gpgKeys);
         }
     }

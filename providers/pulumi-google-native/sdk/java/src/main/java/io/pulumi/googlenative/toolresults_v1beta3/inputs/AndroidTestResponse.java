@@ -128,27 +128,22 @@ public final class AndroidTestResponse extends io.pulumi.resources.InvokeArgs {
             this.androidAppInfo = Objects.requireNonNull(androidAppInfo);
             return this;
         }
-
         public Builder androidInstrumentationTest(AndroidInstrumentationTestResponse androidInstrumentationTest) {
             this.androidInstrumentationTest = Objects.requireNonNull(androidInstrumentationTest);
             return this;
         }
-
         public Builder androidRoboTest(AndroidRoboTestResponse androidRoboTest) {
             this.androidRoboTest = Objects.requireNonNull(androidRoboTest);
             return this;
         }
-
         public Builder androidTestLoop(AndroidTestLoopResponse androidTestLoop) {
             this.androidTestLoop = Objects.requireNonNull(androidTestLoop);
             return this;
         }
-
         public Builder testTimeout(DurationResponse testTimeout) {
             this.testTimeout = Objects.requireNonNull(testTimeout);
             return this;
-        }
-        public AndroidTestResponse build() {
+        }        public AndroidTestResponse build() {
             return new AndroidTestResponse(androidAppInfo, androidInstrumentationTest, androidRoboTest, androidTestLoop, testTimeout);
         }
     }

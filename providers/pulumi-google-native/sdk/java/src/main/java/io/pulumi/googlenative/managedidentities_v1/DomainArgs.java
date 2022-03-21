@@ -181,92 +181,80 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
             this.admin = admin;
             return this;
         }
-
         public Builder admin(@Nullable String admin) {
             this.admin = Output.ofNullable(admin);
             return this;
         }
-
         public Builder auditLogsEnabled(@Nullable Output<Boolean> auditLogsEnabled) {
             this.auditLogsEnabled = auditLogsEnabled;
             return this;
         }
-
         public Builder auditLogsEnabled(@Nullable Boolean auditLogsEnabled) {
             this.auditLogsEnabled = Output.ofNullable(auditLogsEnabled);
             return this;
         }
-
         public Builder authorizedNetworks(@Nullable Output<List<String>> authorizedNetworks) {
             this.authorizedNetworks = authorizedNetworks;
             return this;
         }
-
         public Builder authorizedNetworks(@Nullable List<String> authorizedNetworks) {
             this.authorizedNetworks = Output.ofNullable(authorizedNetworks);
             return this;
         }
-
+        public Builder authorizedNetworks(String... authorizedNetworks) {
+            return authorizedNetworks(List.of(authorizedNetworks));
+        }
         public Builder domainName(Output<String> domainName) {
             this.domainName = Objects.requireNonNull(domainName);
             return this;
         }
-
         public Builder domainName(String domainName) {
             this.domainName = Output.of(Objects.requireNonNull(domainName));
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder locations(Output<List<String>> locations) {
             this.locations = Objects.requireNonNull(locations);
             return this;
         }
-
         public Builder locations(List<String> locations) {
             this.locations = Output.of(Objects.requireNonNull(locations));
             return this;
         }
-
+        public Builder locations(String... locations) {
+            return locations(List.of(locations));
+        }
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder reservedIpRange(Output<String> reservedIpRange) {
             this.reservedIpRange = Objects.requireNonNull(reservedIpRange);
             return this;
         }
-
         public Builder reservedIpRange(String reservedIpRange) {
             this.reservedIpRange = Output.of(Objects.requireNonNull(reservedIpRange));
             return this;
-        }
-        public DomainArgs build() {
+        }        public DomainArgs build() {
             return new DomainArgs(admin, auditLogsEnabled, authorizedNetworks, domainName, labels, locations, name, project, reservedIpRange);
         }
     }

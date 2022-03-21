@@ -78,12 +78,13 @@ public final class GooglePrivacyDlpV2KAnonymityConfigResponse extends io.pulumi.
             this.entityId = Objects.requireNonNull(entityId);
             return this;
         }
-
         public Builder quasiIds(List<GooglePrivacyDlpV2FieldIdResponse> quasiIds) {
             this.quasiIds = Objects.requireNonNull(quasiIds);
             return this;
         }
-        public GooglePrivacyDlpV2KAnonymityConfigResponse build() {
+        public Builder quasiIds(GooglePrivacyDlpV2FieldIdResponse... quasiIds) {
+            return quasiIds(List.of(quasiIds));
+        }        public GooglePrivacyDlpV2KAnonymityConfigResponse build() {
             return new GooglePrivacyDlpV2KAnonymityConfigResponse(entityId, quasiIds);
         }
     }

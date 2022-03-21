@@ -62,12 +62,13 @@ public final class GooglePrivacyDlpV2TableOptionsArgs extends io.pulumi.resource
             this.identifyingFields = identifyingFields;
             return this;
         }
-
         public Builder identifyingFields(@Nullable List<GooglePrivacyDlpV2FieldIdArgs> identifyingFields) {
             this.identifyingFields = Output.ofNullable(identifyingFields);
             return this;
         }
-        public GooglePrivacyDlpV2TableOptionsArgs build() {
+        public Builder identifyingFields(GooglePrivacyDlpV2FieldIdArgs... identifyingFields) {
+            return identifyingFields(List.of(identifyingFields));
+        }        public GooglePrivacyDlpV2TableOptionsArgs build() {
             return new GooglePrivacyDlpV2TableOptionsArgs(identifyingFields);
         }
     }

@@ -76,12 +76,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageImageResponse extend
             this.accessibilityText = Objects.requireNonNull(accessibilityText);
             return this;
         }
-
         public Builder imageUri(String imageUri) {
             this.imageUri = Objects.requireNonNull(imageUri);
             return this;
-        }
-        public GoogleCloudDialogflowV2beta1IntentMessageImageResponse build() {
+        }        public GoogleCloudDialogflowV2beta1IntentMessageImageResponse build() {
             return new GoogleCloudDialogflowV2beta1IntentMessageImageResponse(accessibilityText, imageUri);
         }
     }

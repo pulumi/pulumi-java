@@ -87,17 +87,17 @@ public final class SoftwareConfigResponse {
             this.imageVersion = Objects.requireNonNull(imageVersion);
             return this;
         }
-
         public Builder optionalComponents(List<String> optionalComponents) {
             this.optionalComponents = Objects.requireNonNull(optionalComponents);
             return this;
         }
-
+        public Builder optionalComponents(String... optionalComponents) {
+            return optionalComponents(List.of(optionalComponents));
+        }
         public Builder properties(Map<String,String> properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
-        }
-        public SoftwareConfigResponse build() {
+        }        public SoftwareConfigResponse build() {
             return new SoftwareConfigResponse(imageVersion, optionalComponents, properties);
         }
     }

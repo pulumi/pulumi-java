@@ -449,252 +449,211 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
             this.clientRequestId = clientRequestId;
             return this;
         }
-
         public Builder clientRequestId(@Nullable String clientRequestId) {
             this.clientRequestId = Output.ofNullable(clientRequestId);
             return this;
         }
-
         public Builder createTime(@Nullable Output<String> createTime) {
             this.createTime = createTime;
             return this;
         }
-
         public Builder createTime(@Nullable String createTime) {
             this.createTime = Output.ofNullable(createTime);
             return this;
         }
-
         public Builder createdFromSnapshotId(@Nullable Output<String> createdFromSnapshotId) {
             this.createdFromSnapshotId = createdFromSnapshotId;
             return this;
         }
-
         public Builder createdFromSnapshotId(@Nullable String createdFromSnapshotId) {
             this.createdFromSnapshotId = Output.ofNullable(createdFromSnapshotId);
             return this;
         }
-
         public Builder currentState(@Nullable Output<JobCurrentState> currentState) {
             this.currentState = currentState;
             return this;
         }
-
         public Builder currentState(@Nullable JobCurrentState currentState) {
             this.currentState = Output.ofNullable(currentState);
             return this;
         }
-
         public Builder currentStateTime(@Nullable Output<String> currentStateTime) {
             this.currentStateTime = currentStateTime;
             return this;
         }
-
         public Builder currentStateTime(@Nullable String currentStateTime) {
             this.currentStateTime = Output.ofNullable(currentStateTime);
             return this;
         }
-
         public Builder environment(@Nullable Output<EnvironmentArgs> environment) {
             this.environment = environment;
             return this;
         }
-
         public Builder environment(@Nullable EnvironmentArgs environment) {
             this.environment = Output.ofNullable(environment);
             return this;
         }
-
         public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder jobMetadata(@Nullable Output<JobMetadataArgs> jobMetadata) {
             this.jobMetadata = jobMetadata;
             return this;
         }
-
         public Builder jobMetadata(@Nullable JobMetadataArgs jobMetadata) {
             this.jobMetadata = Output.ofNullable(jobMetadata);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder pipelineDescription(@Nullable Output<PipelineDescriptionArgs> pipelineDescription) {
             this.pipelineDescription = pipelineDescription;
             return this;
         }
-
         public Builder pipelineDescription(@Nullable PipelineDescriptionArgs pipelineDescription) {
             this.pipelineDescription = Output.ofNullable(pipelineDescription);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder replaceJobId(@Nullable Output<String> replaceJobId) {
             this.replaceJobId = replaceJobId;
             return this;
         }
-
         public Builder replaceJobId(@Nullable String replaceJobId) {
             this.replaceJobId = Output.ofNullable(replaceJobId);
             return this;
         }
-
         public Builder replacedByJobId(@Nullable Output<String> replacedByJobId) {
             this.replacedByJobId = replacedByJobId;
             return this;
         }
-
         public Builder replacedByJobId(@Nullable String replacedByJobId) {
             this.replacedByJobId = Output.ofNullable(replacedByJobId);
             return this;
         }
-
         public Builder requestedState(@Nullable Output<JobRequestedState> requestedState) {
             this.requestedState = requestedState;
             return this;
         }
-
         public Builder requestedState(@Nullable JobRequestedState requestedState) {
             this.requestedState = Output.ofNullable(requestedState);
             return this;
         }
-
         public Builder satisfiesPzs(@Nullable Output<Boolean> satisfiesPzs) {
             this.satisfiesPzs = satisfiesPzs;
             return this;
         }
-
         public Builder satisfiesPzs(@Nullable Boolean satisfiesPzs) {
             this.satisfiesPzs = Output.ofNullable(satisfiesPzs);
             return this;
         }
-
         public Builder stageStates(@Nullable Output<List<ExecutionStageStateArgs>> stageStates) {
             this.stageStates = stageStates;
             return this;
         }
-
         public Builder stageStates(@Nullable List<ExecutionStageStateArgs> stageStates) {
             this.stageStates = Output.ofNullable(stageStates);
             return this;
         }
-
+        public Builder stageStates(ExecutionStageStateArgs... stageStates) {
+            return stageStates(List.of(stageStates));
+        }
         public Builder startTime(@Nullable Output<String> startTime) {
             this.startTime = startTime;
             return this;
         }
-
         public Builder startTime(@Nullable String startTime) {
             this.startTime = Output.ofNullable(startTime);
             return this;
         }
-
         public Builder steps(@Nullable Output<List<StepArgs>> steps) {
             this.steps = steps;
             return this;
         }
-
         public Builder steps(@Nullable List<StepArgs> steps) {
             this.steps = Output.ofNullable(steps);
             return this;
         }
-
+        public Builder steps(StepArgs... steps) {
+            return steps(List.of(steps));
+        }
         public Builder stepsLocation(@Nullable Output<String> stepsLocation) {
             this.stepsLocation = stepsLocation;
             return this;
         }
-
         public Builder stepsLocation(@Nullable String stepsLocation) {
             this.stepsLocation = Output.ofNullable(stepsLocation);
             return this;
         }
-
         public Builder tempFiles(@Nullable Output<List<String>> tempFiles) {
             this.tempFiles = tempFiles;
             return this;
         }
-
         public Builder tempFiles(@Nullable List<String> tempFiles) {
             this.tempFiles = Output.ofNullable(tempFiles);
             return this;
         }
-
+        public Builder tempFiles(String... tempFiles) {
+            return tempFiles(List.of(tempFiles));
+        }
         public Builder transformNameMapping(@Nullable Output<Map<String,String>> transformNameMapping) {
             this.transformNameMapping = transformNameMapping;
             return this;
         }
-
         public Builder transformNameMapping(@Nullable Map<String,String> transformNameMapping) {
             this.transformNameMapping = Output.ofNullable(transformNameMapping);
             return this;
         }
-
         public Builder type(@Nullable Output<JobType> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable JobType type) {
             this.type = Output.ofNullable(type);
             return this;
         }
-
         public Builder view(@Nullable Output<String> view) {
             this.view = view;
             return this;
         }
-
         public Builder view(@Nullable String view) {
             this.view = Output.ofNullable(view);
             return this;
-        }
-        public JobArgs build() {
+        }        public JobArgs build() {
             return new JobArgs(clientRequestId, createTime, createdFromSnapshotId, currentState, currentStateTime, environment, id, jobMetadata, labels, location, name, pipelineDescription, project, replaceJobId, replacedByJobId, requestedState, satisfiesPzs, stageStates, startTime, steps, stepsLocation, tempFiles, transformNameMapping, type, view);
         }
     }

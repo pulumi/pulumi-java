@@ -70,12 +70,10 @@ public final class GooglePrivacyDlpV2DictionaryResponse {
             this.cloudStoragePath = Objects.requireNonNull(cloudStoragePath);
             return this;
         }
-
         public Builder wordList(GooglePrivacyDlpV2WordListResponse wordList) {
             this.wordList = Objects.requireNonNull(wordList);
             return this;
-        }
-        public GooglePrivacyDlpV2DictionaryResponse build() {
+        }        public GooglePrivacyDlpV2DictionaryResponse build() {
             return new GooglePrivacyDlpV2DictionaryResponse(cloudStoragePath, wordList);
         }
     }

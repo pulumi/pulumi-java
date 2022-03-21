@@ -381,107 +381,95 @@ public final class WorkerPoolResponse {
             this.autoscalingSettings = Objects.requireNonNull(autoscalingSettings);
             return this;
         }
-
         public Builder dataDisks(List<DiskResponse> dataDisks) {
             this.dataDisks = Objects.requireNonNull(dataDisks);
             return this;
         }
-
+        public Builder dataDisks(DiskResponse... dataDisks) {
+            return dataDisks(List.of(dataDisks));
+        }
         public Builder defaultPackageSet(String defaultPackageSet) {
             this.defaultPackageSet = Objects.requireNonNull(defaultPackageSet);
             return this;
         }
-
         public Builder diskSizeGb(Integer diskSizeGb) {
             this.diskSizeGb = Objects.requireNonNull(diskSizeGb);
             return this;
         }
-
         public Builder diskSourceImage(String diskSourceImage) {
             this.diskSourceImage = Objects.requireNonNull(diskSourceImage);
             return this;
         }
-
         public Builder diskType(String diskType) {
             this.diskType = Objects.requireNonNull(diskType);
             return this;
         }
-
         public Builder ipConfiguration(String ipConfiguration) {
             this.ipConfiguration = Objects.requireNonNull(ipConfiguration);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder machineType(String machineType) {
             this.machineType = Objects.requireNonNull(machineType);
             return this;
         }
-
         public Builder metadata(Map<String,String> metadata) {
             this.metadata = Objects.requireNonNull(metadata);
             return this;
         }
-
         public Builder network(String network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }
-
         public Builder numThreadsPerWorker(Integer numThreadsPerWorker) {
             this.numThreadsPerWorker = Objects.requireNonNull(numThreadsPerWorker);
             return this;
         }
-
         public Builder numWorkers(Integer numWorkers) {
             this.numWorkers = Objects.requireNonNull(numWorkers);
             return this;
         }
-
         public Builder onHostMaintenance(String onHostMaintenance) {
             this.onHostMaintenance = Objects.requireNonNull(onHostMaintenance);
             return this;
         }
-
         public Builder packages(List<PackageResponse> packages) {
             this.packages = Objects.requireNonNull(packages);
             return this;
         }
-
+        public Builder packages(PackageResponse... packages) {
+            return packages(List.of(packages));
+        }
         public Builder poolArgs(Map<String,String> poolArgs) {
             this.poolArgs = Objects.requireNonNull(poolArgs);
             return this;
         }
-
         public Builder sdkHarnessContainerImages(List<SdkHarnessContainerImageResponse> sdkHarnessContainerImages) {
             this.sdkHarnessContainerImages = Objects.requireNonNull(sdkHarnessContainerImages);
             return this;
         }
-
+        public Builder sdkHarnessContainerImages(SdkHarnessContainerImageResponse... sdkHarnessContainerImages) {
+            return sdkHarnessContainerImages(List.of(sdkHarnessContainerImages));
+        }
         public Builder subnetwork(String subnetwork) {
             this.subnetwork = Objects.requireNonNull(subnetwork);
             return this;
         }
-
         public Builder taskrunnerSettings(TaskRunnerSettingsResponse taskrunnerSettings) {
             this.taskrunnerSettings = Objects.requireNonNull(taskrunnerSettings);
             return this;
         }
-
         public Builder teardownPolicy(String teardownPolicy) {
             this.teardownPolicy = Objects.requireNonNull(teardownPolicy);
             return this;
         }
-
         public Builder zone(String zone) {
             this.zone = Objects.requireNonNull(zone);
             return this;
-        }
-        public WorkerPoolResponse build() {
+        }        public WorkerPoolResponse build() {
             return new WorkerPoolResponse(autoscalingSettings, dataDisks, defaultPackageSet, diskSizeGb, diskSourceImage, diskType, ipConfiguration, kind, machineType, metadata, network, numThreadsPerWorker, numWorkers, onHostMaintenance, packages, poolArgs, sdkHarnessContainerImages, subnetwork, taskrunnerSettings, teardownPolicy, zone);
         }
     }

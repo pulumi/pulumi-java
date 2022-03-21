@@ -96,32 +96,32 @@ public final class AptSettingsArgs extends io.pulumi.resources.ResourceArgs {
             this.excludes = excludes;
             return this;
         }
-
         public Builder excludes(@Nullable List<String> excludes) {
             this.excludes = Output.ofNullable(excludes);
             return this;
         }
-
+        public Builder excludes(String... excludes) {
+            return excludes(List.of(excludes));
+        }
         public Builder exclusivePackages(@Nullable Output<List<String>> exclusivePackages) {
             this.exclusivePackages = exclusivePackages;
             return this;
         }
-
         public Builder exclusivePackages(@Nullable List<String> exclusivePackages) {
             this.exclusivePackages = Output.ofNullable(exclusivePackages);
             return this;
         }
-
+        public Builder exclusivePackages(String... exclusivePackages) {
+            return exclusivePackages(List.of(exclusivePackages));
+        }
         public Builder type(@Nullable Output<AptSettingsType> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable AptSettingsType type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public AptSettingsArgs build() {
+        }        public AptSettingsArgs build() {
             return new AptSettingsArgs(excludes, exclusivePackages, type);
         }
     }

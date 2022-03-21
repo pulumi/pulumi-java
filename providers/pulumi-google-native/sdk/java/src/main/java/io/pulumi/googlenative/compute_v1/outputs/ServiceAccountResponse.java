@@ -70,12 +70,13 @@ public final class ServiceAccountResponse {
             this.email = Objects.requireNonNull(email);
             return this;
         }
-
         public Builder scopes(List<String> scopes) {
             this.scopes = Objects.requireNonNull(scopes);
             return this;
         }
-        public ServiceAccountResponse build() {
+        public Builder scopes(String... scopes) {
+            return scopes(List.of(scopes));
+        }        public ServiceAccountResponse build() {
             return new ServiceAccountResponse(email, scopes);
         }
     }

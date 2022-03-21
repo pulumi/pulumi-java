@@ -86,17 +86,17 @@ public final class OSPolicyResourceRepositoryResourceZypperRepositoryResponse {
             this.baseUrl = Objects.requireNonNull(baseUrl);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder gpgKeys(List<String> gpgKeys) {
             this.gpgKeys = Objects.requireNonNull(gpgKeys);
             return this;
         }
-        public OSPolicyResourceRepositoryResourceZypperRepositoryResponse build() {
+        public Builder gpgKeys(String... gpgKeys) {
+            return gpgKeys(List.of(gpgKeys));
+        }        public OSPolicyResourceRepositoryResourceZypperRepositoryResponse build() {
             return new OSPolicyResourceRepositoryResourceZypperRepositoryResponse(baseUrl, displayName, gpgKeys);
         }
     }

@@ -59,8 +59,7 @@ public final class LinuxNodeConfigResponse extends io.pulumi.resources.InvokeArg
         public Builder sysctls(Map<String,String> sysctls) {
             this.sysctls = Objects.requireNonNull(sysctls);
             return this;
-        }
-        public LinuxNodeConfigResponse build() {
+        }        public LinuxNodeConfigResponse build() {
             return new LinuxNodeConfigResponse(sysctls);
         }
     }

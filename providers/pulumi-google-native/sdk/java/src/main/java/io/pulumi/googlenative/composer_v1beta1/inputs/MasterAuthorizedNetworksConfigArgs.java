@@ -80,22 +80,21 @@ public final class MasterAuthorizedNetworksConfigArgs extends io.pulumi.resource
             this.cidrBlocks = cidrBlocks;
             return this;
         }
-
         public Builder cidrBlocks(@Nullable List<CidrBlockArgs> cidrBlocks) {
             this.cidrBlocks = Output.ofNullable(cidrBlocks);
             return this;
         }
-
+        public Builder cidrBlocks(CidrBlockArgs... cidrBlocks) {
+            return cidrBlocks(List.of(cidrBlocks));
+        }
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
-        }
-        public MasterAuthorizedNetworksConfigArgs build() {
+        }        public MasterAuthorizedNetworksConfigArgs build() {
             return new MasterAuthorizedNetworksConfigArgs(cidrBlocks, enabled);
         }
     }

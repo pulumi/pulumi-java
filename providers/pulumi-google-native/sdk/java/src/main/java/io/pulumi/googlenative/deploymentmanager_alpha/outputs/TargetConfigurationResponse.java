@@ -71,12 +71,13 @@ public final class TargetConfigurationResponse {
             this.config = Objects.requireNonNull(config);
             return this;
         }
-
         public Builder imports(List<ImportFileResponse> imports) {
             this.imports = Objects.requireNonNull(imports);
             return this;
         }
-        public TargetConfigurationResponse build() {
+        public Builder imports(ImportFileResponse... imports) {
+            return imports(List.of(imports));
+        }        public TargetConfigurationResponse build() {
             return new TargetConfigurationResponse(config, imports);
         }
     }

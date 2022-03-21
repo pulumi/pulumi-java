@@ -79,22 +79,18 @@ public final class TlsContextArgs extends io.pulumi.resources.ResourceArgs {
             this.certificateContext = certificateContext;
             return this;
         }
-
         public Builder certificateContext(@Nullable TlsCertificateContextArgs certificateContext) {
             this.certificateContext = Output.ofNullable(certificateContext);
             return this;
         }
-
         public Builder validationContext(@Nullable Output<TlsValidationContextArgs> validationContext) {
             this.validationContext = validationContext;
             return this;
         }
-
         public Builder validationContext(@Nullable TlsValidationContextArgs validationContext) {
             this.validationContext = Output.ofNullable(validationContext);
             return this;
-        }
-        public TlsContextArgs build() {
+        }        public TlsContextArgs build() {
             return new TlsContextArgs(certificateContext, validationContext);
         }
     }

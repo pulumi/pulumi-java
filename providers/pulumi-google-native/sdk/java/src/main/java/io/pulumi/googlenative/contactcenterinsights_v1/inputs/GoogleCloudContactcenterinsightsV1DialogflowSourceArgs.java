@@ -61,12 +61,10 @@ public final class GoogleCloudContactcenterinsightsV1DialogflowSourceArgs extend
             this.audioUri = audioUri;
             return this;
         }
-
         public Builder audioUri(@Nullable String audioUri) {
             this.audioUri = Output.ofNullable(audioUri);
             return this;
-        }
-        public GoogleCloudContactcenterinsightsV1DialogflowSourceArgs build() {
+        }        public GoogleCloudContactcenterinsightsV1DialogflowSourceArgs build() {
             return new GoogleCloudContactcenterinsightsV1DialogflowSourceArgs(audioUri);
         }
     }

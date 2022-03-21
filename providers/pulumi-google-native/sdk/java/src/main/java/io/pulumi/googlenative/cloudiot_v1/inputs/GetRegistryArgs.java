@@ -78,17 +78,14 @@ public final class GetRegistryArgs extends io.pulumi.resources.InvokeArgs {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder registryId(String registryId) {
             this.registryId = Objects.requireNonNull(registryId);
             return this;
-        }
-        public GetRegistryArgs build() {
+        }        public GetRegistryArgs build() {
             return new GetRegistryArgs(location, project, registryId);
         }
     }

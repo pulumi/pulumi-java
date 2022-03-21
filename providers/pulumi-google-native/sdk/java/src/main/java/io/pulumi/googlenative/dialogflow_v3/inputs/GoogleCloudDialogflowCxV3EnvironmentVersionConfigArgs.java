@@ -60,12 +60,10 @@ public final class GoogleCloudDialogflowCxV3EnvironmentVersionConfigArgs extends
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public Builder version(String version) {
             this.version = Output.of(Objects.requireNonNull(version));
             return this;
-        }
-        public GoogleCloudDialogflowCxV3EnvironmentVersionConfigArgs build() {
+        }        public GoogleCloudDialogflowCxV3EnvironmentVersionConfigArgs build() {
             return new GoogleCloudDialogflowCxV3EnvironmentVersionConfigArgs(version);
         }
     }

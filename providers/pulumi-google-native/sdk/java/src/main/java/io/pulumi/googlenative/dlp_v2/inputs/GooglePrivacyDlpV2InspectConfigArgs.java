@@ -164,72 +164,67 @@ public final class GooglePrivacyDlpV2InspectConfigArgs extends io.pulumi.resourc
             this.customInfoTypes = customInfoTypes;
             return this;
         }
-
         public Builder customInfoTypes(@Nullable List<GooglePrivacyDlpV2CustomInfoTypeArgs> customInfoTypes) {
             this.customInfoTypes = Output.ofNullable(customInfoTypes);
             return this;
         }
-
+        public Builder customInfoTypes(GooglePrivacyDlpV2CustomInfoTypeArgs... customInfoTypes) {
+            return customInfoTypes(List.of(customInfoTypes));
+        }
         public Builder excludeInfoTypes(@Nullable Output<Boolean> excludeInfoTypes) {
             this.excludeInfoTypes = excludeInfoTypes;
             return this;
         }
-
         public Builder excludeInfoTypes(@Nullable Boolean excludeInfoTypes) {
             this.excludeInfoTypes = Output.ofNullable(excludeInfoTypes);
             return this;
         }
-
         public Builder includeQuote(@Nullable Output<Boolean> includeQuote) {
             this.includeQuote = includeQuote;
             return this;
         }
-
         public Builder includeQuote(@Nullable Boolean includeQuote) {
             this.includeQuote = Output.ofNullable(includeQuote);
             return this;
         }
-
         public Builder infoTypes(@Nullable Output<List<GooglePrivacyDlpV2InfoTypeArgs>> infoTypes) {
             this.infoTypes = infoTypes;
             return this;
         }
-
         public Builder infoTypes(@Nullable List<GooglePrivacyDlpV2InfoTypeArgs> infoTypes) {
             this.infoTypes = Output.ofNullable(infoTypes);
             return this;
         }
-
+        public Builder infoTypes(GooglePrivacyDlpV2InfoTypeArgs... infoTypes) {
+            return infoTypes(List.of(infoTypes));
+        }
         public Builder limits(@Nullable Output<GooglePrivacyDlpV2FindingLimitsArgs> limits) {
             this.limits = limits;
             return this;
         }
-
         public Builder limits(@Nullable GooglePrivacyDlpV2FindingLimitsArgs limits) {
             this.limits = Output.ofNullable(limits);
             return this;
         }
-
         public Builder minLikelihood(@Nullable Output<GooglePrivacyDlpV2InspectConfigMinLikelihood> minLikelihood) {
             this.minLikelihood = minLikelihood;
             return this;
         }
-
         public Builder minLikelihood(@Nullable GooglePrivacyDlpV2InspectConfigMinLikelihood minLikelihood) {
             this.minLikelihood = Output.ofNullable(minLikelihood);
             return this;
         }
-
         public Builder ruleSet(@Nullable Output<List<GooglePrivacyDlpV2InspectionRuleSetArgs>> ruleSet) {
             this.ruleSet = ruleSet;
             return this;
         }
-
         public Builder ruleSet(@Nullable List<GooglePrivacyDlpV2InspectionRuleSetArgs> ruleSet) {
             this.ruleSet = Output.ofNullable(ruleSet);
             return this;
         }
-        public GooglePrivacyDlpV2InspectConfigArgs build() {
+        public Builder ruleSet(GooglePrivacyDlpV2InspectionRuleSetArgs... ruleSet) {
+            return ruleSet(List.of(ruleSet));
+        }        public GooglePrivacyDlpV2InspectConfigArgs build() {
             return new GooglePrivacyDlpV2InspectConfigArgs(customInfoTypes, excludeInfoTypes, includeQuote, infoTypes, limits, minLikelihood, ruleSet);
         }
     }

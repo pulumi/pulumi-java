@@ -238,132 +238,106 @@ public final class NodeArgs extends io.pulumi.resources.ResourceArgs {
             this.acceleratorType = Objects.requireNonNull(acceleratorType);
             return this;
         }
-
         public Builder acceleratorType(String acceleratorType) {
             this.acceleratorType = Output.of(Objects.requireNonNull(acceleratorType));
             return this;
         }
-
         public Builder cidrBlock(@Nullable Output<String> cidrBlock) {
             this.cidrBlock = cidrBlock;
             return this;
         }
-
         public Builder cidrBlock(@Nullable String cidrBlock) {
             this.cidrBlock = Output.ofNullable(cidrBlock);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder health(@Nullable Output<NodeHealth> health) {
             this.health = health;
             return this;
         }
-
         public Builder health(@Nullable NodeHealth health) {
             this.health = Output.ofNullable(health);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder network(@Nullable Output<String> network) {
             this.network = network;
             return this;
         }
-
         public Builder network(@Nullable String network) {
             this.network = Output.ofNullable(network);
             return this;
         }
-
         public Builder nodeId(@Nullable Output<String> nodeId) {
             this.nodeId = nodeId;
             return this;
         }
-
         public Builder nodeId(@Nullable String nodeId) {
             this.nodeId = Output.ofNullable(nodeId);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder requestId(@Nullable Output<String> requestId) {
             this.requestId = requestId;
             return this;
         }
-
         public Builder requestId(@Nullable String requestId) {
             this.requestId = Output.ofNullable(requestId);
             return this;
         }
-
         public Builder schedulingConfig(@Nullable Output<SchedulingConfigArgs> schedulingConfig) {
             this.schedulingConfig = schedulingConfig;
             return this;
         }
-
         public Builder schedulingConfig(@Nullable SchedulingConfigArgs schedulingConfig) {
             this.schedulingConfig = Output.ofNullable(schedulingConfig);
             return this;
         }
-
         public Builder tensorflowVersion(Output<String> tensorflowVersion) {
             this.tensorflowVersion = Objects.requireNonNull(tensorflowVersion);
             return this;
         }
-
         public Builder tensorflowVersion(String tensorflowVersion) {
             this.tensorflowVersion = Output.of(Objects.requireNonNull(tensorflowVersion));
             return this;
         }
-
         public Builder useServiceNetworking(@Nullable Output<Boolean> useServiceNetworking) {
             this.useServiceNetworking = useServiceNetworking;
             return this;
         }
-
         public Builder useServiceNetworking(@Nullable Boolean useServiceNetworking) {
             this.useServiceNetworking = Output.ofNullable(useServiceNetworking);
             return this;
-        }
-        public NodeArgs build() {
+        }        public NodeArgs build() {
             return new NodeArgs(acceleratorType, cidrBlock, description, health, labels, location, network, nodeId, project, requestId, schedulingConfig, tensorflowVersion, useServiceNetworking);
         }
     }

@@ -102,22 +102,21 @@ public final class UpgradeDistributionResponse {
             this.classification = Objects.requireNonNull(classification);
             return this;
         }
-
         public Builder cpeUri(String cpeUri) {
             this.cpeUri = Objects.requireNonNull(cpeUri);
             return this;
         }
-
         public Builder cve(List<String> cve) {
             this.cve = Objects.requireNonNull(cve);
             return this;
         }
-
+        public Builder cve(String... cve) {
+            return cve(List.of(cve));
+        }
         public Builder severity(String severity) {
             this.severity = Objects.requireNonNull(severity);
             return this;
-        }
-        public UpgradeDistributionResponse build() {
+        }        public UpgradeDistributionResponse build() {
             return new UpgradeDistributionResponse(classification, cpeUri, cve, severity);
         }
     }

@@ -113,42 +113,34 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationTurnUserInputArgs e
             this.enableSentimentAnalysis = enableSentimentAnalysis;
             return this;
         }
-
         public Builder enableSentimentAnalysis(@Nullable Boolean enableSentimentAnalysis) {
             this.enableSentimentAnalysis = Output.ofNullable(enableSentimentAnalysis);
             return this;
         }
-
         public Builder injectedParameters(@Nullable Output<Map<String,String>> injectedParameters) {
             this.injectedParameters = injectedParameters;
             return this;
         }
-
         public Builder injectedParameters(@Nullable Map<String,String> injectedParameters) {
             this.injectedParameters = Output.ofNullable(injectedParameters);
             return this;
         }
-
         public Builder input(@Nullable Output<GoogleCloudDialogflowCxV3beta1QueryInputArgs> input) {
             this.input = input;
             return this;
         }
-
         public Builder input(@Nullable GoogleCloudDialogflowCxV3beta1QueryInputArgs input) {
             this.input = Output.ofNullable(input);
             return this;
         }
-
         public Builder isWebhookEnabled(@Nullable Output<Boolean> isWebhookEnabled) {
             this.isWebhookEnabled = isWebhookEnabled;
             return this;
         }
-
         public Builder isWebhookEnabled(@Nullable Boolean isWebhookEnabled) {
             this.isWebhookEnabled = Output.ofNullable(isWebhookEnabled);
             return this;
-        }
-        public GoogleCloudDialogflowCxV3beta1ConversationTurnUserInputArgs build() {
+        }        public GoogleCloudDialogflowCxV3beta1ConversationTurnUserInputArgs build() {
             return new GoogleCloudDialogflowCxV3beta1ConversationTurnUserInputArgs(enableSentimentAnalysis, injectedParameters, input, isWebhookEnabled);
         }
     }

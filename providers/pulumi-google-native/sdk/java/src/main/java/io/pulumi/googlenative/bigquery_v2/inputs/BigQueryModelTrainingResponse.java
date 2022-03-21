@@ -73,12 +73,10 @@ public final class BigQueryModelTrainingResponse extends io.pulumi.resources.Inv
             this.currentIteration = Objects.requireNonNull(currentIteration);
             return this;
         }
-
         public Builder expectedTotalIterations(String expectedTotalIterations) {
             this.expectedTotalIterations = Objects.requireNonNull(expectedTotalIterations);
             return this;
-        }
-        public BigQueryModelTrainingResponse build() {
+        }        public BigQueryModelTrainingResponse build() {
             return new BigQueryModelTrainingResponse(currentIteration, expectedTotalIterations);
         }
     }

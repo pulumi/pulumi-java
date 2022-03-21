@@ -78,17 +78,14 @@ public final class GetInterconnectAttachmentArgs extends io.pulumi.resources.Inv
             this.interconnectAttachment = Objects.requireNonNull(interconnectAttachment);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
-        }
-        public GetInterconnectAttachmentArgs build() {
+        }        public GetInterconnectAttachmentArgs build() {
             return new GetInterconnectAttachmentArgs(interconnectAttachment, project, region);
         }
     }

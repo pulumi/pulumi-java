@@ -175,42 +175,34 @@ public final class ProbeResponse extends io.pulumi.resources.InvokeArgs {
             this.exec = Objects.requireNonNull(exec);
             return this;
         }
-
         public Builder failureThreshold(Integer failureThreshold) {
             this.failureThreshold = Objects.requireNonNull(failureThreshold);
             return this;
         }
-
         public Builder httpGet(HTTPGetActionResponse httpGet) {
             this.httpGet = Objects.requireNonNull(httpGet);
             return this;
         }
-
         public Builder initialDelaySeconds(Integer initialDelaySeconds) {
             this.initialDelaySeconds = Objects.requireNonNull(initialDelaySeconds);
             return this;
         }
-
         public Builder periodSeconds(Integer periodSeconds) {
             this.periodSeconds = Objects.requireNonNull(periodSeconds);
             return this;
         }
-
         public Builder successThreshold(Integer successThreshold) {
             this.successThreshold = Objects.requireNonNull(successThreshold);
             return this;
         }
-
         public Builder tcpSocket(TCPSocketActionResponse tcpSocket) {
             this.tcpSocket = Objects.requireNonNull(tcpSocket);
             return this;
         }
-
         public Builder timeoutSeconds(Integer timeoutSeconds) {
             this.timeoutSeconds = Objects.requireNonNull(timeoutSeconds);
             return this;
-        }
-        public ProbeResponse build() {
+        }        public ProbeResponse build() {
             return new ProbeResponse(exec, failureThreshold, httpGet, initialDelaySeconds, periodSeconds, successThreshold, tcpSocket, timeoutSeconds);
         }
     }

@@ -119,27 +119,22 @@ public final class GetInstanceResult {
             this.featurePolicy = Objects.requireNonNull(featurePolicy);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder loggingEnabled(Boolean loggingEnabled) {
             this.loggingEnabled = Objects.requireNonNull(loggingEnabled);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
-        }
-        public GetInstanceResult build() {
+        }        public GetInstanceResult build() {
             return new GetInstanceResult(featurePolicy, location, loggingEnabled, name, state);
         }
     }

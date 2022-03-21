@@ -58,8 +58,7 @@ public final class CertificateProviderInstanceResponse extends io.pulumi.resourc
         public Builder pluginInstance(String pluginInstance) {
             this.pluginInstance = Objects.requireNonNull(pluginInstance);
             return this;
-        }
-        public CertificateProviderInstanceResponse build() {
+        }        public CertificateProviderInstanceResponse build() {
             return new CertificateProviderInstanceResponse(pluginInstance);
         }
     }

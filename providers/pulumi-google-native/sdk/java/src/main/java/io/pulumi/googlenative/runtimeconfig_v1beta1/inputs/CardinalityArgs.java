@@ -79,22 +79,18 @@ public final class CardinalityArgs extends io.pulumi.resources.ResourceArgs {
             this.number = number;
             return this;
         }
-
         public Builder number(@Nullable Integer number) {
             this.number = Output.ofNullable(number);
             return this;
         }
-
         public Builder path(@Nullable Output<String> path) {
             this.path = path;
             return this;
         }
-
         public Builder path(@Nullable String path) {
             this.path = Output.ofNullable(path);
             return this;
-        }
-        public CardinalityArgs build() {
+        }        public CardinalityArgs build() {
             return new CardinalityArgs(number, path);
         }
     }

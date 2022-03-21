@@ -373,212 +373,170 @@ public final class EntryArgs extends io.pulumi.resources.ResourceArgs {
             this.bigqueryDateShardedSpec = bigqueryDateShardedSpec;
             return this;
         }
-
         public Builder bigqueryDateShardedSpec(@Nullable GoogleCloudDatacatalogV1BigQueryDateShardedSpecArgs bigqueryDateShardedSpec) {
             this.bigqueryDateShardedSpec = Output.ofNullable(bigqueryDateShardedSpec);
             return this;
         }
-
         public Builder bigqueryTableSpec(@Nullable Output<GoogleCloudDatacatalogV1BigQueryTableSpecArgs> bigqueryTableSpec) {
             this.bigqueryTableSpec = bigqueryTableSpec;
             return this;
         }
-
         public Builder bigqueryTableSpec(@Nullable GoogleCloudDatacatalogV1BigQueryTableSpecArgs bigqueryTableSpec) {
             this.bigqueryTableSpec = Output.ofNullable(bigqueryTableSpec);
             return this;
         }
-
         public Builder businessContext(@Nullable Output<GoogleCloudDatacatalogV1BusinessContextArgs> businessContext) {
             this.businessContext = businessContext;
             return this;
         }
-
         public Builder businessContext(@Nullable GoogleCloudDatacatalogV1BusinessContextArgs businessContext) {
             this.businessContext = Output.ofNullable(businessContext);
             return this;
         }
-
         public Builder dataSourceConnectionSpec(@Nullable Output<GoogleCloudDatacatalogV1DataSourceConnectionSpecArgs> dataSourceConnectionSpec) {
             this.dataSourceConnectionSpec = dataSourceConnectionSpec;
             return this;
         }
-
         public Builder dataSourceConnectionSpec(@Nullable GoogleCloudDatacatalogV1DataSourceConnectionSpecArgs dataSourceConnectionSpec) {
             this.dataSourceConnectionSpec = Output.ofNullable(dataSourceConnectionSpec);
             return this;
         }
-
         public Builder databaseTableSpec(@Nullable Output<GoogleCloudDatacatalogV1DatabaseTableSpecArgs> databaseTableSpec) {
             this.databaseTableSpec = databaseTableSpec;
             return this;
         }
-
         public Builder databaseTableSpec(@Nullable GoogleCloudDatacatalogV1DatabaseTableSpecArgs databaseTableSpec) {
             this.databaseTableSpec = Output.ofNullable(databaseTableSpec);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder entryGroupId(Output<String> entryGroupId) {
             this.entryGroupId = Objects.requireNonNull(entryGroupId);
             return this;
         }
-
         public Builder entryGroupId(String entryGroupId) {
             this.entryGroupId = Output.of(Objects.requireNonNull(entryGroupId));
             return this;
         }
-
         public Builder entryId(Output<String> entryId) {
             this.entryId = Objects.requireNonNull(entryId);
             return this;
         }
-
         public Builder entryId(String entryId) {
             this.entryId = Output.of(Objects.requireNonNull(entryId));
             return this;
         }
-
         public Builder fullyQualifiedName(@Nullable Output<String> fullyQualifiedName) {
             this.fullyQualifiedName = fullyQualifiedName;
             return this;
         }
-
         public Builder fullyQualifiedName(@Nullable String fullyQualifiedName) {
             this.fullyQualifiedName = Output.ofNullable(fullyQualifiedName);
             return this;
         }
-
         public Builder gcsFilesetSpec(@Nullable Output<GoogleCloudDatacatalogV1GcsFilesetSpecArgs> gcsFilesetSpec) {
             this.gcsFilesetSpec = gcsFilesetSpec;
             return this;
         }
-
         public Builder gcsFilesetSpec(@Nullable GoogleCloudDatacatalogV1GcsFilesetSpecArgs gcsFilesetSpec) {
             this.gcsFilesetSpec = Output.ofNullable(gcsFilesetSpec);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder linkedResource(@Nullable Output<String> linkedResource) {
             this.linkedResource = linkedResource;
             return this;
         }
-
         public Builder linkedResource(@Nullable String linkedResource) {
             this.linkedResource = Output.ofNullable(linkedResource);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder routineSpec(@Nullable Output<GoogleCloudDatacatalogV1RoutineSpecArgs> routineSpec) {
             this.routineSpec = routineSpec;
             return this;
         }
-
         public Builder routineSpec(@Nullable GoogleCloudDatacatalogV1RoutineSpecArgs routineSpec) {
             this.routineSpec = Output.ofNullable(routineSpec);
             return this;
         }
-
         public Builder schema(@Nullable Output<GoogleCloudDatacatalogV1SchemaArgs> schema) {
             this.schema = schema;
             return this;
         }
-
         public Builder schema(@Nullable GoogleCloudDatacatalogV1SchemaArgs schema) {
             this.schema = Output.ofNullable(schema);
             return this;
         }
-
         public Builder sourceSystemTimestamps(@Nullable Output<GoogleCloudDatacatalogV1SystemTimestampsArgs> sourceSystemTimestamps) {
             this.sourceSystemTimestamps = sourceSystemTimestamps;
             return this;
         }
-
         public Builder sourceSystemTimestamps(@Nullable GoogleCloudDatacatalogV1SystemTimestampsArgs sourceSystemTimestamps) {
             this.sourceSystemTimestamps = Output.ofNullable(sourceSystemTimestamps);
             return this;
         }
-
         public Builder type(@Nullable Output<EntryType> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable EntryType type) {
             this.type = Output.ofNullable(type);
             return this;
         }
-
         public Builder userSpecifiedSystem(@Nullable Output<String> userSpecifiedSystem) {
             this.userSpecifiedSystem = userSpecifiedSystem;
             return this;
         }
-
         public Builder userSpecifiedSystem(@Nullable String userSpecifiedSystem) {
             this.userSpecifiedSystem = Output.ofNullable(userSpecifiedSystem);
             return this;
         }
-
         public Builder userSpecifiedType(@Nullable Output<String> userSpecifiedType) {
             this.userSpecifiedType = userSpecifiedType;
             return this;
         }
-
         public Builder userSpecifiedType(@Nullable String userSpecifiedType) {
             this.userSpecifiedType = Output.ofNullable(userSpecifiedType);
             return this;
-        }
-        public EntryArgs build() {
+        }        public EntryArgs build() {
             return new EntryArgs(bigqueryDateShardedSpec, bigqueryTableSpec, businessContext, dataSourceConnectionSpec, databaseTableSpec, description, displayName, entryGroupId, entryId, fullyQualifiedName, gcsFilesetSpec, labels, linkedResource, location, project, routineSpec, schema, sourceSystemTimestamps, type, userSpecifiedSystem, userSpecifiedType);
         }
     }

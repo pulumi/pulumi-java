@@ -77,12 +77,10 @@ public final class ModelStateResponse extends io.pulumi.resources.InvokeArgs {
             this.published = Objects.requireNonNull(published);
             return this;
         }
-
         public Builder validationError(StatusResponse validationError) {
             this.validationError = Objects.requireNonNull(validationError);
             return this;
-        }
-        public ModelStateResponse build() {
+        }        public ModelStateResponse build() {
             return new ModelStateResponse(published, validationError);
         }
     }

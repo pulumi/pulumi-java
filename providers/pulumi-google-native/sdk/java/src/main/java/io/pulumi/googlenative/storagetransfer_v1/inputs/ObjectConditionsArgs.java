@@ -143,62 +143,56 @@ public final class ObjectConditionsArgs extends io.pulumi.resources.ResourceArgs
             this.excludePrefixes = excludePrefixes;
             return this;
         }
-
         public Builder excludePrefixes(@Nullable List<String> excludePrefixes) {
             this.excludePrefixes = Output.ofNullable(excludePrefixes);
             return this;
         }
-
+        public Builder excludePrefixes(String... excludePrefixes) {
+            return excludePrefixes(List.of(excludePrefixes));
+        }
         public Builder includePrefixes(@Nullable Output<List<String>> includePrefixes) {
             this.includePrefixes = includePrefixes;
             return this;
         }
-
         public Builder includePrefixes(@Nullable List<String> includePrefixes) {
             this.includePrefixes = Output.ofNullable(includePrefixes);
             return this;
         }
-
+        public Builder includePrefixes(String... includePrefixes) {
+            return includePrefixes(List.of(includePrefixes));
+        }
         public Builder lastModifiedBefore(@Nullable Output<String> lastModifiedBefore) {
             this.lastModifiedBefore = lastModifiedBefore;
             return this;
         }
-
         public Builder lastModifiedBefore(@Nullable String lastModifiedBefore) {
             this.lastModifiedBefore = Output.ofNullable(lastModifiedBefore);
             return this;
         }
-
         public Builder lastModifiedSince(@Nullable Output<String> lastModifiedSince) {
             this.lastModifiedSince = lastModifiedSince;
             return this;
         }
-
         public Builder lastModifiedSince(@Nullable String lastModifiedSince) {
             this.lastModifiedSince = Output.ofNullable(lastModifiedSince);
             return this;
         }
-
         public Builder maxTimeElapsedSinceLastModification(@Nullable Output<String> maxTimeElapsedSinceLastModification) {
             this.maxTimeElapsedSinceLastModification = maxTimeElapsedSinceLastModification;
             return this;
         }
-
         public Builder maxTimeElapsedSinceLastModification(@Nullable String maxTimeElapsedSinceLastModification) {
             this.maxTimeElapsedSinceLastModification = Output.ofNullable(maxTimeElapsedSinceLastModification);
             return this;
         }
-
         public Builder minTimeElapsedSinceLastModification(@Nullable Output<String> minTimeElapsedSinceLastModification) {
             this.minTimeElapsedSinceLastModification = minTimeElapsedSinceLastModification;
             return this;
         }
-
         public Builder minTimeElapsedSinceLastModification(@Nullable String minTimeElapsedSinceLastModification) {
             this.minTimeElapsedSinceLastModification = Output.ofNullable(minTimeElapsedSinceLastModification);
             return this;
-        }
-        public ObjectConditionsArgs build() {
+        }        public ObjectConditionsArgs build() {
             return new ObjectConditionsArgs(excludePrefixes, includePrefixes, lastModifiedBefore, lastModifiedSince, maxTimeElapsedSinceLastModification, minTimeElapsedSinceLastModification);
         }
     }

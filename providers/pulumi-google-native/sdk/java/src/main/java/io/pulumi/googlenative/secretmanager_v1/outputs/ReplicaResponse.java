@@ -70,12 +70,10 @@ public final class ReplicaResponse {
             this.customerManagedEncryption = Objects.requireNonNull(customerManagedEncryption);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
-        }
-        public ReplicaResponse build() {
+        }        public ReplicaResponse build() {
             return new ReplicaResponse(customerManagedEncryption, location);
         }
     }

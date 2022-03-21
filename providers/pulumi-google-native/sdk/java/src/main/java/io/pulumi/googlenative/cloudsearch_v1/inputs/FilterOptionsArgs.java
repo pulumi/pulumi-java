@@ -79,22 +79,18 @@ public final class FilterOptionsArgs extends io.pulumi.resources.ResourceArgs {
             this.filter = filter;
             return this;
         }
-
         public Builder filter(@Nullable FilterArgs filter) {
             this.filter = Output.ofNullable(filter);
             return this;
         }
-
         public Builder objectType(@Nullable Output<String> objectType) {
             this.objectType = objectType;
             return this;
         }
-
         public Builder objectType(@Nullable String objectType) {
             this.objectType = Output.ofNullable(objectType);
             return this;
-        }
-        public FilterOptionsArgs build() {
+        }        public FilterOptionsArgs build() {
             return new FilterOptionsArgs(filter, objectType);
         }
     }

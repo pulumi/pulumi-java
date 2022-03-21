@@ -77,22 +77,18 @@ public final class MetadataLabelsArgs extends io.pulumi.resources.ResourceArgs {
             this.labelName = Objects.requireNonNull(labelName);
             return this;
         }
-
         public Builder labelName(String labelName) {
             this.labelName = Output.of(Objects.requireNonNull(labelName));
             return this;
         }
-
         public Builder labelValue(Output<String> labelValue) {
             this.labelValue = Objects.requireNonNull(labelValue);
             return this;
         }
-
         public Builder labelValue(String labelValue) {
             this.labelValue = Output.of(Objects.requireNonNull(labelValue));
             return this;
-        }
-        public MetadataLabelsArgs build() {
+        }        public MetadataLabelsArgs build() {
             return new MetadataLabelsArgs(labelName, labelValue);
         }
     }

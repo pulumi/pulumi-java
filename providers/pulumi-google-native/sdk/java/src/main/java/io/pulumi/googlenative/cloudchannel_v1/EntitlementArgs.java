@@ -166,82 +166,69 @@ public final class EntitlementArgs extends io.pulumi.resources.ResourceArgs {
             this.accountId = Objects.requireNonNull(accountId);
             return this;
         }
-
         public Builder accountId(String accountId) {
             this.accountId = Output.of(Objects.requireNonNull(accountId));
             return this;
         }
-
         public Builder associationInfo(@Nullable Output<GoogleCloudChannelV1AssociationInfoArgs> associationInfo) {
             this.associationInfo = associationInfo;
             return this;
         }
-
         public Builder associationInfo(@Nullable GoogleCloudChannelV1AssociationInfoArgs associationInfo) {
             this.associationInfo = Output.ofNullable(associationInfo);
             return this;
         }
-
         public Builder commitmentSettings(@Nullable Output<GoogleCloudChannelV1CommitmentSettingsArgs> commitmentSettings) {
             this.commitmentSettings = commitmentSettings;
             return this;
         }
-
         public Builder commitmentSettings(@Nullable GoogleCloudChannelV1CommitmentSettingsArgs commitmentSettings) {
             this.commitmentSettings = Output.ofNullable(commitmentSettings);
             return this;
         }
-
         public Builder customerId(Output<String> customerId) {
             this.customerId = Objects.requireNonNull(customerId);
             return this;
         }
-
         public Builder customerId(String customerId) {
             this.customerId = Output.of(Objects.requireNonNull(customerId));
             return this;
         }
-
         public Builder offer(Output<String> offer) {
             this.offer = Objects.requireNonNull(offer);
             return this;
         }
-
         public Builder offer(String offer) {
             this.offer = Output.of(Objects.requireNonNull(offer));
             return this;
         }
-
         public Builder parameters(@Nullable Output<List<GoogleCloudChannelV1ParameterArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder parameters(@Nullable List<GoogleCloudChannelV1ParameterArgs> parameters) {
             this.parameters = Output.ofNullable(parameters);
             return this;
         }
-
+        public Builder parameters(GoogleCloudChannelV1ParameterArgs... parameters) {
+            return parameters(List.of(parameters));
+        }
         public Builder purchaseOrderId(@Nullable Output<String> purchaseOrderId) {
             this.purchaseOrderId = purchaseOrderId;
             return this;
         }
-
         public Builder purchaseOrderId(@Nullable String purchaseOrderId) {
             this.purchaseOrderId = Output.ofNullable(purchaseOrderId);
             return this;
         }
-
         public Builder requestId(@Nullable Output<String> requestId) {
             this.requestId = requestId;
             return this;
         }
-
         public Builder requestId(@Nullable String requestId) {
             this.requestId = Output.ofNullable(requestId);
             return this;
-        }
-        public EntitlementArgs build() {
+        }        public EntitlementArgs build() {
             return new EntitlementArgs(accountId, associationInfo, commitmentSettings, customerId, offer, parameters, purchaseOrderId, requestId);
         }
     }

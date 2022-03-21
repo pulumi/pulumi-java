@@ -60,7 +60,9 @@ public final class StackTraceResponse extends io.pulumi.resources.InvokeArgs {
             this.elements = Objects.requireNonNull(elements);
             return this;
         }
-        public StackTraceResponse build() {
+        public Builder elements(StackTraceElementResponse... elements) {
+            return elements(List.of(elements));
+        }        public StackTraceResponse build() {
             return new StackTraceResponse(elements);
         }
     }

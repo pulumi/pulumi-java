@@ -92,17 +92,14 @@ public final class FileResponse extends io.pulumi.resources.InvokeArgs {
             this.content = Objects.requireNonNull(content);
             return this;
         }
-
         public Builder fingerprint(String fingerprint) {
             this.fingerprint = Objects.requireNonNull(fingerprint);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public FileResponse build() {
+        }        public FileResponse build() {
             return new FileResponse(content, fingerprint, name);
         }
     }

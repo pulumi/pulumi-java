@@ -93,17 +93,14 @@ public final class GoogleCloudDatacatalogV1beta1GcsFileSpecResponse extends io.p
             this.filePath = Objects.requireNonNull(filePath);
             return this;
         }
-
         public Builder gcsTimestamps(GoogleCloudDatacatalogV1beta1SystemTimestampsResponse gcsTimestamps) {
             this.gcsTimestamps = Objects.requireNonNull(gcsTimestamps);
             return this;
         }
-
         public Builder sizeBytes(String sizeBytes) {
             this.sizeBytes = Objects.requireNonNull(sizeBytes);
             return this;
-        }
-        public GoogleCloudDatacatalogV1beta1GcsFileSpecResponse build() {
+        }        public GoogleCloudDatacatalogV1beta1GcsFileSpecResponse build() {
             return new GoogleCloudDatacatalogV1beta1GcsFileSpecResponse(filePath, gcsTimestamps, sizeBytes);
         }
     }

@@ -298,77 +298,62 @@ public final class GoogleCloudDialogflowV2IntentMessageResponse extends io.pulum
             this.basicCard = Objects.requireNonNull(basicCard);
             return this;
         }
-
         public Builder browseCarouselCard(GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardResponse browseCarouselCard) {
             this.browseCarouselCard = Objects.requireNonNull(browseCarouselCard);
             return this;
         }
-
         public Builder card(GoogleCloudDialogflowV2IntentMessageCardResponse card) {
             this.card = Objects.requireNonNull(card);
             return this;
         }
-
         public Builder carouselSelect(GoogleCloudDialogflowV2IntentMessageCarouselSelectResponse carouselSelect) {
             this.carouselSelect = Objects.requireNonNull(carouselSelect);
             return this;
         }
-
         public Builder image(GoogleCloudDialogflowV2IntentMessageImageResponse image) {
             this.image = Objects.requireNonNull(image);
             return this;
         }
-
         public Builder linkOutSuggestion(GoogleCloudDialogflowV2IntentMessageLinkOutSuggestionResponse linkOutSuggestion) {
             this.linkOutSuggestion = Objects.requireNonNull(linkOutSuggestion);
             return this;
         }
-
         public Builder listSelect(GoogleCloudDialogflowV2IntentMessageListSelectResponse listSelect) {
             this.listSelect = Objects.requireNonNull(listSelect);
             return this;
         }
-
         public Builder mediaContent(GoogleCloudDialogflowV2IntentMessageMediaContentResponse mediaContent) {
             this.mediaContent = Objects.requireNonNull(mediaContent);
             return this;
         }
-
         public Builder payload(Map<String,String> payload) {
             this.payload = Objects.requireNonNull(payload);
             return this;
         }
-
         public Builder platform(String platform) {
             this.platform = Objects.requireNonNull(platform);
             return this;
         }
-
         public Builder quickReplies(GoogleCloudDialogflowV2IntentMessageQuickRepliesResponse quickReplies) {
             this.quickReplies = Objects.requireNonNull(quickReplies);
             return this;
         }
-
         public Builder simpleResponses(GoogleCloudDialogflowV2IntentMessageSimpleResponsesResponse simpleResponses) {
             this.simpleResponses = Objects.requireNonNull(simpleResponses);
             return this;
         }
-
         public Builder suggestions(GoogleCloudDialogflowV2IntentMessageSuggestionsResponse suggestions) {
             this.suggestions = Objects.requireNonNull(suggestions);
             return this;
         }
-
         public Builder tableCard(GoogleCloudDialogflowV2IntentMessageTableCardResponse tableCard) {
             this.tableCard = Objects.requireNonNull(tableCard);
             return this;
         }
-
         public Builder text(GoogleCloudDialogflowV2IntentMessageTextResponse text) {
             this.text = Objects.requireNonNull(text);
             return this;
-        }
-        public GoogleCloudDialogflowV2IntentMessageResponse build() {
+        }        public GoogleCloudDialogflowV2IntentMessageResponse build() {
             return new GoogleCloudDialogflowV2IntentMessageResponse(basicCard, browseCarouselCard, card, carouselSelect, image, linkOutSuggestion, listSelect, mediaContent, payload, platform, quickReplies, simpleResponses, suggestions, tableCard, text);
         }
     }

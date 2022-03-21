@@ -94,17 +94,14 @@ public final class CredentialResponse extends io.pulumi.resources.InvokeArgs {
             this.basicAuth = Objects.requireNonNull(basicAuth);
             return this;
         }
-
         public Builder serviceAccount(ServiceAccountResponse serviceAccount) {
             this.serviceAccount = Objects.requireNonNull(serviceAccount);
             return this;
         }
-
         public Builder useProjectDefault(Boolean useProjectDefault) {
             this.useProjectDefault = Objects.requireNonNull(useProjectDefault);
             return this;
-        }
-        public CredentialResponse build() {
+        }        public CredentialResponse build() {
             return new CredentialResponse(basicAuth, serviceAccount, useProjectDefault);
         }
     }

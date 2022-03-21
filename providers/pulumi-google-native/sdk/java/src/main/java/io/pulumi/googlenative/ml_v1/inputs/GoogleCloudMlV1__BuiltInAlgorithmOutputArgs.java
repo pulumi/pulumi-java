@@ -110,42 +110,34 @@ public final class GoogleCloudMlV1__BuiltInAlgorithmOutputArgs extends io.pulumi
             this.framework = framework;
             return this;
         }
-
         public Builder framework(@Nullable String framework) {
             this.framework = Output.ofNullable(framework);
             return this;
         }
-
         public Builder modelPath(@Nullable Output<String> modelPath) {
             this.modelPath = modelPath;
             return this;
         }
-
         public Builder modelPath(@Nullable String modelPath) {
             this.modelPath = Output.ofNullable(modelPath);
             return this;
         }
-
         public Builder pythonVersion(@Nullable Output<String> pythonVersion) {
             this.pythonVersion = pythonVersion;
             return this;
         }
-
         public Builder pythonVersion(@Nullable String pythonVersion) {
             this.pythonVersion = Output.ofNullable(pythonVersion);
             return this;
         }
-
         public Builder runtimeVersion(@Nullable Output<String> runtimeVersion) {
             this.runtimeVersion = runtimeVersion;
             return this;
         }
-
         public Builder runtimeVersion(@Nullable String runtimeVersion) {
             this.runtimeVersion = Output.ofNullable(runtimeVersion);
             return this;
-        }
-        public GoogleCloudMlV1__BuiltInAlgorithmOutputArgs build() {
+        }        public GoogleCloudMlV1__BuiltInAlgorithmOutputArgs build() {
             return new GoogleCloudMlV1__BuiltInAlgorithmOutputArgs(framework, modelPath, pythonVersion, runtimeVersion);
         }
     }

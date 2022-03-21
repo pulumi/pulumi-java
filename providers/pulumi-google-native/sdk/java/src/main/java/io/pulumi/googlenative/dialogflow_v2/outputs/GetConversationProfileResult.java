@@ -267,72 +267,58 @@ public final class GetConversationProfileResult {
             this.automatedAgentConfig = Objects.requireNonNull(automatedAgentConfig);
             return this;
         }
-
         public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder humanAgentAssistantConfig(GoogleCloudDialogflowV2HumanAgentAssistantConfigResponse humanAgentAssistantConfig) {
             this.humanAgentAssistantConfig = Objects.requireNonNull(humanAgentAssistantConfig);
             return this;
         }
-
         public Builder humanAgentHandoffConfig(GoogleCloudDialogflowV2HumanAgentHandoffConfigResponse humanAgentHandoffConfig) {
             this.humanAgentHandoffConfig = Objects.requireNonNull(humanAgentHandoffConfig);
             return this;
         }
-
         public Builder languageCode(String languageCode) {
             this.languageCode = Objects.requireNonNull(languageCode);
             return this;
         }
-
         public Builder loggingConfig(GoogleCloudDialogflowV2LoggingConfigResponse loggingConfig) {
             this.loggingConfig = Objects.requireNonNull(loggingConfig);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder newMessageEventNotificationConfig(GoogleCloudDialogflowV2NotificationConfigResponse newMessageEventNotificationConfig) {
             this.newMessageEventNotificationConfig = Objects.requireNonNull(newMessageEventNotificationConfig);
             return this;
         }
-
         public Builder notificationConfig(GoogleCloudDialogflowV2NotificationConfigResponse notificationConfig) {
             this.notificationConfig = Objects.requireNonNull(notificationConfig);
             return this;
         }
-
         public Builder securitySettings(String securitySettings) {
             this.securitySettings = Objects.requireNonNull(securitySettings);
             return this;
         }
-
         public Builder sttConfig(GoogleCloudDialogflowV2SpeechToTextConfigResponse sttConfig) {
             this.sttConfig = Objects.requireNonNull(sttConfig);
             return this;
         }
-
         public Builder timeZone(String timeZone) {
             this.timeZone = Objects.requireNonNull(timeZone);
             return this;
         }
-
         public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
-        }
-        public GetConversationProfileResult build() {
+        }        public GetConversationProfileResult build() {
             return new GetConversationProfileResult(automatedAgentConfig, createTime, displayName, humanAgentAssistantConfig, humanAgentHandoffConfig, languageCode, loggingConfig, name, newMessageEventNotificationConfig, notificationConfig, securitySettings, sttConfig, timeZone, updateTime);
         }
     }

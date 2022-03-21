@@ -96,32 +96,29 @@ public final class ManifestArgs extends io.pulumi.resources.ResourceArgs {
             this.fileName = fileName;
             return this;
         }
-
         public Builder fileName(@Nullable String fileName) {
             this.fileName = Output.ofNullable(fileName);
             return this;
         }
-
         public Builder muxStreams(Output<List<String>> muxStreams) {
             this.muxStreams = Objects.requireNonNull(muxStreams);
             return this;
         }
-
         public Builder muxStreams(List<String> muxStreams) {
             this.muxStreams = Output.of(Objects.requireNonNull(muxStreams));
             return this;
         }
-
+        public Builder muxStreams(String... muxStreams) {
+            return muxStreams(List.of(muxStreams));
+        }
         public Builder type(Output<ManifestType> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(ManifestType type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public ManifestArgs build() {
+        }        public ManifestArgs build() {
             return new ManifestArgs(fileName, muxStreams, type);
         }
     }

@@ -77,12 +77,10 @@ public final class BackupRetentionSettingsResponse extends io.pulumi.resources.I
             this.retainedBackups = Objects.requireNonNull(retainedBackups);
             return this;
         }
-
         public Builder retentionUnit(String retentionUnit) {
             this.retentionUnit = Objects.requireNonNull(retentionUnit);
             return this;
-        }
-        public BackupRetentionSettingsResponse build() {
+        }        public BackupRetentionSettingsResponse build() {
             return new BackupRetentionSettingsResponse(retainedBackups, retentionUnit);
         }
     }

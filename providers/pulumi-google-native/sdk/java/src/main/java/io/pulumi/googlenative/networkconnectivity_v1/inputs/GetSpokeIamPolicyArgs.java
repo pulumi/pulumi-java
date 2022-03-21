@@ -90,22 +90,18 @@ public final class GetSpokeIamPolicyArgs extends io.pulumi.resources.InvokeArgs 
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder optionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
             this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder spokeId(String spokeId) {
             this.spokeId = Objects.requireNonNull(spokeId);
             return this;
-        }
-        public GetSpokeIamPolicyArgs build() {
+        }        public GetSpokeIamPolicyArgs build() {
             return new GetSpokeIamPolicyArgs(location, optionsRequestedPolicyVersion, project, spokeId);
         }
     }

@@ -74,22 +74,18 @@ public final class ConnectionPropertyArgs extends io.pulumi.resources.ResourceAr
             this.key = key;
             return this;
         }
-
         public Builder key(@Nullable String key) {
             this.key = Output.ofNullable(key);
             return this;
         }
-
         public Builder value(@Nullable Output<String> value) {
             this.value = value;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = Output.ofNullable(value);
             return this;
-        }
-        public ConnectionPropertyArgs build() {
+        }        public ConnectionPropertyArgs build() {
             return new ConnectionPropertyArgs(key, value);
         }
     }

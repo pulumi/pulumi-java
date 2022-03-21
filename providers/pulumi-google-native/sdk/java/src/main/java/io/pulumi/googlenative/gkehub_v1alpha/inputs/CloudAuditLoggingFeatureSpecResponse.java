@@ -60,7 +60,9 @@ public final class CloudAuditLoggingFeatureSpecResponse extends io.pulumi.resour
             this.allowlistedServiceAccounts = Objects.requireNonNull(allowlistedServiceAccounts);
             return this;
         }
-        public CloudAuditLoggingFeatureSpecResponse build() {
+        public Builder allowlistedServiceAccounts(String... allowlistedServiceAccounts) {
+            return allowlistedServiceAccounts(List.of(allowlistedServiceAccounts));
+        }        public CloudAuditLoggingFeatureSpecResponse build() {
             return new CloudAuditLoggingFeatureSpecResponse(allowlistedServiceAccounts);
         }
     }

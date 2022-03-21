@@ -58,8 +58,7 @@ public final class WebServerConfigResponse extends io.pulumi.resources.InvokeArg
         public Builder machineType(String machineType) {
             this.machineType = Objects.requireNonNull(machineType);
             return this;
-        }
-        public WebServerConfigResponse build() {
+        }        public WebServerConfigResponse build() {
             return new WebServerConfigResponse(machineType);
         }
     }

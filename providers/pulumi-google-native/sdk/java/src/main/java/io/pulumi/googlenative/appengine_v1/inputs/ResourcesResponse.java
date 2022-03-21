@@ -127,27 +127,25 @@ public final class ResourcesResponse extends io.pulumi.resources.InvokeArgs {
             this.cpu = Objects.requireNonNull(cpu);
             return this;
         }
-
         public Builder diskGb(Double diskGb) {
             this.diskGb = Objects.requireNonNull(diskGb);
             return this;
         }
-
         public Builder kmsKeyReference(String kmsKeyReference) {
             this.kmsKeyReference = Objects.requireNonNull(kmsKeyReference);
             return this;
         }
-
         public Builder memoryGb(Double memoryGb) {
             this.memoryGb = Objects.requireNonNull(memoryGb);
             return this;
         }
-
         public Builder volumes(List<VolumeResponse> volumes) {
             this.volumes = Objects.requireNonNull(volumes);
             return this;
         }
-        public ResourcesResponse build() {
+        public Builder volumes(VolumeResponse... volumes) {
+            return volumes(List.of(volumes));
+        }        public ResourcesResponse build() {
             return new ResourcesResponse(cpu, diskGb, kmsKeyReference, memoryGb, volumes);
         }
     }

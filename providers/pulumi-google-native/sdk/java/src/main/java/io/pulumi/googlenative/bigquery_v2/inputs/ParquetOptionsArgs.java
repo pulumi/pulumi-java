@@ -74,22 +74,18 @@ public final class ParquetOptionsArgs extends io.pulumi.resources.ResourceArgs {
             this.enableListInference = enableListInference;
             return this;
         }
-
         public Builder enableListInference(@Nullable Boolean enableListInference) {
             this.enableListInference = Output.ofNullable(enableListInference);
             return this;
         }
-
         public Builder enumAsString(@Nullable Output<Boolean> enumAsString) {
             this.enumAsString = enumAsString;
             return this;
         }
-
         public Builder enumAsString(@Nullable Boolean enumAsString) {
             this.enumAsString = Output.ofNullable(enumAsString);
             return this;
-        }
-        public ParquetOptionsArgs build() {
+        }        public ParquetOptionsArgs build() {
             return new ParquetOptionsArgs(enableListInference, enumAsString);
         }
     }

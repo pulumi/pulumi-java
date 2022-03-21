@@ -79,22 +79,18 @@ public final class CustomErrorRuleArgs extends io.pulumi.resources.ResourceArgs 
             this.isErrorType = isErrorType;
             return this;
         }
-
         public Builder isErrorType(@Nullable Boolean isErrorType) {
             this.isErrorType = Output.ofNullable(isErrorType);
             return this;
         }
-
         public Builder selector(@Nullable Output<String> selector) {
             this.selector = selector;
             return this;
         }
-
         public Builder selector(@Nullable String selector) {
             this.selector = Output.ofNullable(selector);
             return this;
-        }
-        public CustomErrorRuleArgs build() {
+        }        public CustomErrorRuleArgs build() {
             return new CustomErrorRuleArgs(isErrorType, selector);
         }
     }
